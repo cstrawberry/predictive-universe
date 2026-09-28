@@ -111,7 +111,7 @@ The three branches do not share one causal status: branches (i) and (ii) can sat
 $$
 P_C(a,b\mid x,y)=P_0(a,b\mid x,y)+\epsilon\,\ell_C(a,b\mid x,y)
 $$
-be a CC-deformed joint probability associated with Alice's context $C$, with $\epsilon\le\mathrm{CC}(S_A)$ the operational scale (Definition 30) and $\epsilon$ small enough that $P_C(a,b\mid x,y)\in[0,1]$ for every $(a,b,x,y)$. The deformation is normalization-preserving,
+be a CC-deformed joint probability associated with Alice's context $C$, on a branch with common scale $0<\epsilon\le\mathrm{CC}(S_A)$ (Definition 30) small enough that $P_C(a,b\mid x,y)\in[0,1]$ for every $(a,b,x,y)$. Strict positivity of $\epsilon$ is needed to identify a nonzero coefficient-array marginal with a nonzero probability shift. At zero scale every $P_C$ equals $P_0$ regardless of the coefficient arrays. The deformation is normalization-preserving,
 $$
 \sum_{a,b}\ell_C(a,b\mid x,y)=0
 $$
@@ -211,7 +211,7 @@ $$
 $$
 Since $\mathbb E_0[Z_C\mid\mathcal F_B]-1$ is $\mathcal F_B$-measurable and integrable, this forces $\mathbb E_0[Z_C\mid\mathcal F_B]=1$ almost surely. Applying the same argument to $\mathcal F_A$ proves (10.2.1c) when Alice's transcript law is also invariant. ∎
 
-**Remark 10.2.1a (Scope of the Radon-Nikodym Form).** Lemma 10.2.1 is a sharpening of the Bob-marginal-preserving part of branch (i) only; it is not an independent prohibition on branches (ii) or (iii). On branch (ii), a comparison between shared-past preparation laws may admit a Radon-Nikodym derivative when the laws are absolutely continuous, but that derivative belongs to a preparation-context comparison rather than to a late-randomized branch-(i) deformation. On branch (iii), the Bob-marginal kernel component is nonzero on the relevant Bob transcript algebra, so $\mathbb E_0[Z_C\mid\mathcal F_B]\ne1$ for at least one late-randomized context comparison. The branch-(iii) consistency claim is supplied separately by Theorems 39a–42 on the regular finite-window branch (Definition 10.2a). The Radon-Nikodym form therefore complements Lemma 10.2: it is the finite-transcript/algebraic restatement of Bob-marginal preservation, and it does not replace the three-branch structure of Postulate 3.
+**Remark 10.2.1a (Scope of the Radon-Nikodym Form).** Lemma 10.2.1 is a sharpening of the Bob-marginal-preserving part of branch (i) only; it is not an independent prohibition on branches (ii) or (iii). On branch (ii), a comparison between shared-past preparation laws may admit a Radon-Nikodym derivative when the laws are absolutely continuous, but that derivative belongs to a preparation-context comparison rather than to a late-randomized branch-(i) deformation. On branch (iii), a comparison that also satisfies $\mathbb P_C\ll\mathbb P_0$ has the Radon-Nikodym characterization of Lemma 10.2.1: a change in Bob's transcript law is equivalent to $\mathbb E_0[Z_C\mid\mathcal F_B]\ne1$ on a set of positive baseline probability. If this absolute continuity fails, the baseline derivative $Z_C$ need not exist and that conditional-expectation test is unavailable. Common support between the two context laws does not by itself establish absolute continuity with respect to the neutral baseline. The branch-(iii) consistency claim is supplied separately by Theorems 39a–42 on the regular finite-window branch (Definition 10.2a). The Radon-Nikodym form therefore complements Lemma 10.2: it is the finite-transcript/algebraic restatement of Bob-marginal preservation, and it does not replace the three-branch structure of Postulate 3.
 
 **Definition 10.2a (Regular Statistical Branch).** A branch-(iii) implementation is *regular* in the finite pre-lightcone window of $n\le n_{\max}=\lfloor r_{\max}L/c\rfloor$ trials when, under the two late-randomized Alice contexts, every admissible Bob-side transcript has positive probability under one context if and only if it has positive probability under the other. A sufficient per-trial condition is that the two conditional `Evolve` kernels have identical support after every admissible adaptive history. Products of the corresponding positive conditional probabilities then give identical support for every finite-$n$ transcript law.
 
@@ -404,7 +404,7 @@ $$
 $$
 only as continuum notation for the same finite event-algebra equality.
 
-**Theorem 39b (Predictive Current No-Loop and Precision-Cost Gate).** Let a branch-(iii) statistical influence model in the finite pre-lightcone window carry both Definition 10.2a and a finite predictive current certificate $\mathfrak J_\Omega$. Then the current representation cannot by itself create a deterministic or zero-error FTL causal loop: every decoder from Bob's projected current transcript still has strictly positive error probability whenever the two context-conditioned Bob transcript laws have common support.
+**Theorem 39b (Predictive Current No-Loop and Precision-Cost Gate).** Let a branch-(iii) statistical influence model in the finite pre-lightcone window carry both Definition 10.2a and a finite predictive current certificate $\mathfrak J_\Omega$. Assume additionally that its recorded finite current statistic $R$ is obtained from Bob's admitted transcript $Y$ through a registered stochastic kernel $K(r\mid y)$ that is the same under both Alice contexts. Then every decoder based on $R$ has strictly positive equal-prior error whenever the two laws of $Y$ have common support. Thus this processing cannot supply a zero-error context-decoding step.
 
 If, in addition, the selected finite Markov/KMS current branch carries the thermodynamic precision certificate
 $$
@@ -426,9 +426,15 @@ $$
 $$
 Thus a deterministic zero-variance current signal with nonzero mean is inadmissible on the finite-cost branch. If the branch lacks (61h), its current law remains a transport parametrization, not a theorem-level thermodynamic precision law.
 
-*Proof.* Equation (61g) says that the Bob observable produced by the current certificate is a function of the same finite Bob transcript algebra used in Theorem 39a. Theorem 39a proves that, under common support, every decoder on that finite transcript algebra has error at least $\Omega_n/2>0$. Passing through the current projection $\Pi_B$ is a deterministic coarse-graining of the transcript and cannot make two overlapping transcript laws disjoint. Hence the current representation does not create a zero-error decoder.
+*Proof.* Write $P_c(y)$ for the admitted Bob transcript laws and $Q_c(r)=\sum_yK(r\mid y)P_c(y)$ for the current-statistic laws. Since $K$ is nonnegative and normalized,
+$$
+\sum_r\min\{Q_0(r),Q_1(r)\}
+\ge\sum_{r,y}K(r\mid y)\min\{P_0(y),P_1(y)\}
+=\Omega_n>0.
+$$
+The optimal equal-prior error for decoding from $R$ is half its overlap, so it is at least $\Omega_n/2$. A deterministic statistic is included by taking $K(r\mid y)=\mathbf1_{r=g(y)}$. The distribution-level current identity (61g) alone does not supply this transcript-to-statistic kernel; it is the additional operational premise above.
 
-Assume now that the branch also supplies (61h). If $0<\Sigma_\Omega<\infty$ and $\langle Q\rangle\ne0$, multiplying (61h) by $\langle Q\rangle^2/\Sigma_\Omega$ gives (61i). Therefore a nonzero mean current at finite entropy cost cannot have zero variance. If $\Sigma_\Omega=0$, (61h) is incompatible with $\langle Q\rangle\ne0$; if $\Sigma_\Omega=\infty$, the event is not in the finite-cost branch. These alternatives exhaust the finite-current certificate cases. ∎
+Assume also that the branch also supplies (61h). If $0<\Sigma_\Omega<\infty$ and $\langle Q\rangle\ne0$, multiplying (61h) by $\langle Q\rangle^2/\Sigma_\Omega$ gives (61i). Therefore a nonzero mean current at finite entropy cost cannot have zero variance. If $\Sigma_\Omega=0$, (61h) is incompatible with $\langle Q\rangle\ne0$; if $\Sigma_\Omega=\infty$, the event is not in the finite-cost branch. These alternatives exhaust the finite-current certificate cases. ∎
 
 **Proposition 39d (Canonical Finite Algebraic Current Realization and Independence of the Support/KMS Gates).** Let $p$ and $q$ be probability laws on a finite alphabet $Y$, and put $\Delta(y)=q(y)-p(y)$. Write
 $$
@@ -576,7 +582,7 @@ P_+(\uparrow)=\frac12+\delta,\qquad
 P_-(\uparrow)=\frac12-\delta,\qquad
 0<\delta<\frac12,
 $$
-any decoder with error probability at most $\alpha_{\mathrm{err}}<\frac12$ must satisfy the necessary Bhattacharyya gate
+Assume Alice's equiprobable binary context is held constant across the block of $N$ observations and that, conditional on that context, Bob's observations are independent with the corresponding Bernoulli law above. For $0<\alpha_{\mathrm{err}}<1/2$, any decoder with equal-prior error probability at most $\alpha_{\mathrm{err}}$ must satisfy the necessary Bhattacharyya gate
 $$
 N
 \ge
@@ -661,7 +667,7 @@ Requiring this to be at most $\alpha_{\mathrm{err}}$ gives (62c). ∎
 $$
 I(C;Y)\le4(\kappa\,\mathrm{CC})^2
 $$
-nats/trial, with perturbative leading behavior $I(C;Y)=2\delta^2+O(\delta^4)$ for the symmetric Bernoulli channel. This statistical influence cannot be shaped into deterministic, pre-lightcone zero-error signals on the regular finite-window branch; finite-window zero-error decoding remains excluded by Theorem 39a and Theorem 42, while Theorem 39c classifies any nonzero pre-lightcone context channel as signaling. The full consistency analysis is provided in **Appendix F**.
+nats/trial, with perturbative leading behavior $I(C;Y)=2\delta^2+O(\delta^4)$ for the symmetric Bernoulli channel. This statistical influence cannot be shaped into deterministic, pre-lightcone zero-error signals on the regular finite-window branch; finite-window zero-error decoding remains excluded by Theorem 39a and Theorem 42, while Theorem 39c classifies any nonzero pre-lightcone context channel as signaling. **Appendix F** supplies the conditional local-AQFT baseline; the regular branch-(iii) finite-window analysis is given in this section.
 
 **No‑signaling equalities.** Assume the Appendix F continuum hypotheses and let each local measurement setting be represented by a nonselective trace-preserving instrument. Then, for all local settings $x,x'$ and $y,y'$ and outcomes $a,b$,
 $$
@@ -836,16 +842,16 @@ For two outcomes, $\Delta_1=-\Delta_2$, so $\|\Delta\|_2^2=B_{01}^2/2$; substitu
 The hypothesized statistical FTL influence (Postulate 3), when constrained by the independently declared bounded-bias ceiling and Theorem 39's endpoint-complete consequence, the zero-error gate of Theorem 39a on the regular finite-window branch (Definition 10.2a), the predictive-current no-loop and precision-cost gate of Theorem 39b whenever a current certificate is asserted, and the finite-window sampling bounds of Theorems 40–41, cannot realize a finite-window zero-error contradiction protocol. This is weaker than Postulate 2: if its freely selected context changes a pre-lightcone marginal, Theorem 39c classifies it as signaling despite the nonzero decoder error. This holds for any decoder $\mathcal D$ acting on a finite pre-lightcone transcript in the regular operating regime.
 
 *Proof:*
-1.  **Requirement for a Zero-Error Contradiction Protocol (Weaker than Postulate 2):** The construction of a logical causal paradox requires controllable deterministic information, equivalently a zero-error FTL decoding step in a finite pre-lightcone window. A finite-error statistical estimate is insufficient: if the estimate is wrong with nonzero probability, no contradiction follows from Alice choosing otherwise.
+1.  **Registered zero-error decoding requirement:** A zero-error contradiction protocol in this theorem means a registered construction that requires recovering an independently selected context with error probability zero before ordinary causal contact. The conclusion concerns this required decoding step. It does not establish chronology consistency for every stochastic spacetime feedback model.
 2.  **Endpoint exclusion (bounded-bias branch and Theorem 39):** The branch independently declares $\alpha_{CC,max}<1/2$, and Theorem 39 proves that this excludes forcing both deterministic endpoints of a binary coarse-graining. Thus an endpoint-complete one-shot message alphabet cannot be obtained on this branch; the theorem does not exclude every one-endpoint protocol.
 3.  **Finite-window zero-error exclusion (Theorem 39a, regular branch):** On branch (iii), Bob's marginal may depend on Alice's late context, so the ordinary Shannon information of Bob's record may be positive. However, on the regular finite-window branch (Definition 10.2a), every finite pre-lightcone transcript retains positive overlap between the two context-conditioned laws, so every decoder has strictly positive error probability:
     $$
     P_{\mathrm{err}}\ge\Omega_n/2>0.
     $$
     By Remark 10.2b, the relevant $n$ is bounded by the pre-lightcone budget of Lemma 10.3, so asymptotic overlap decay does not undermine this gate. Step 3 alone suffices to exclude the deterministic/zero-error decoding step needed for a zero-error contradiction protocol; this is weaker than Postulate 2; Steps 4–6 supply complementary quantitative bounds.
-4.  **Predictive-current gate (Theorem 39b, when asserted):** If the same branch is written as a finite predictive current, the Bob-side current transcript is a projection or coarse-graining of the same finite transcript algebra. It cannot turn overlapping transcript laws into disjoint laws. On branches carrying the thermodynamic precision certificate, a nonzero finite-cost current signal also has nonzero variance, so it cannot become a deterministic current pulse.
+4.  **Predictive-current gate (Theorem 39b, when asserted):** If the current record is obtained from Bob's admitted transcript through the same registered stochastic kernel under both contexts, its overlap is at least that of the transcript. It therefore cannot supply a zero-error decoder. On branches carrying the separate thermodynamic precision certificate, a nonzero finite-cost current signal also has nonzero variance.
 5.  **Sample and rate bounds (Theorems 40–41):** Theorem 40 gives the direct two-context test's sample-complexity scale for resolving a small branch-(iii) effect at a chosen nonzero error tolerance. Theorem 41 upper-bounds the finite-error mutual information rate by $O(\mathrm{CC}^2)$ at a regular operating point. Lemma 10.3 bounds the mutual information that can be accumulated before an ordinary light signal crosses the separation. These are statistical-detection limits, not deterministic-message constructions.
-6.  **Failure to close a deterministic loop:** A tachyonic anti-telephone or grandfather-style loop requires Alice to receive a definite contradiction-producing message about her own future choice. The PU statistical-FTL branch supplies at most a noisy estimate with nonzero finite-window error, by Steps 3--5.
+6.  **Conclusion for the registered construction:** Since the required finite-window zero-error decoder does not exist on this branch, a loop construction requiring that decoder cannot be implemented there. Whether a different stochastic feedback or spacetime model admits a consistent law requires its own causal and dynamical premises. The distributional consistency result for a finite channel-policy closure is stated separately in Proposition 42c.
 
 **Branch-by-branch closing summary.** Two versions of the proposal preserve ordinary causality: one leaves the remote outcome distribution unchanged, and the other reflects a shared earlier cause. A freely chosen late setting that changes a remote outcome distribution before light could arrive would instead create a noisy faster-than-light channel and violate ordinary no-signaling.
 
@@ -868,7 +874,13 @@ $$
 =\sum_yW(y\mid x)\sum_{x'}P(x'\mid y)
 =1.
 $$
-The affine map $\mu\mapsto T\mu$ sends the finite probability simplex continuously into itself, so it has a fixed point. For a deterministic $T$, a point mass is fixed exactly when its supporting symbol is fixed. The bit-flip calculation gives the stated separation. ∎
+Choose any probability vector $\mu$ and set $\mu_N=N^{-1}\sum_{j=0}^{N-1}T^j\mu$. Each $\mu_N$ lies in the compact probability simplex, and
+$$
+T\mu_N-\mu_N=\frac{T^N\mu-\mu}{N},
+\qquad
+\|T\mu_N-\mu_N\|_1\le\frac2N.
+$$
+A subsequence converges to a probability vector $\pi$. Continuity of matrix multiplication then gives $T\pi=\pi$. For a deterministic transition, $T\delta_x=\delta_x$ holds exactly when the transition sends $x$ to itself. The bit-flip sends $(1/2,1/2)$ to itself while sending each point mass to the other symbol, proving the stated separation. ∎
 
 **Proposition 42c.1 (Finite-Memory and Continuous-Policy Loop Classification).** Let $H$ be a finite history alphabet. Every fixed finite-memory channel-policy closure induces a stochastic matrix on $H$ and therefore has a stationary history law. More generally, if an adaptive policy induces a continuous map
 $$
@@ -893,7 +905,7 @@ has no fixed point.
 
 Appendix F supplies the conditional AQFT setting for the marginal-invariant and shared-past branches. Corollary F.1 formulates operator-level Einstein causality under Theorem F.0's continuum-bridge hypotheses. On the local CPTP branch, the prepared state $\omega_{C_A}$ may depend on Alice's context through the map $\mathcal M$ and ND-RID dynamics, so joint expectations such as $\omega_{C_A}(A\otimes B)$ in Equation (F.4) may vary while Bob's unconditional statistics $\omega_{C_A}(\mathbf{1}_A\otimes B)$ remain invariant. Thus operator locality, Equation (F.2), and state-mediated joint or conditional dependence coexist on the Bob-marginal-preserving branch.
 
-A late-randomized branch-(iii) Bob-marginal shift is PU's statistical-FTL hypothesis and the Theorem 39c/Corollary 39c.1 falsifier of exact pre-lightcone context independence. On the regular finite-window model, Theorems 39a–42 bound reliability, sample complexity, information rate, and zero-error accessibility. Implementation remains subject to ND-RID irreversibility, $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ on the registered reset branch, with a positive floor requiring $H_q(P\mid R)\ge h_{\min}>0$ (Theorem 31). On the separate refresh/minorization branch, Lemma E.1 gives $f_{RID}<1$ and Theorem E.2 gives $C_{\max}<\ln d_0$. These contraction and capacity results do not establish the common-support condition of Definition 10.2a, which remains an independent finite-window regularity hypothesis. The conditional Lorentz-invariant description applies to the exact marginal-invariant and shared-past branches, while branch (iii) supplies PU's statistical-FTL experimental alternative outside the exact Lorentz/AQFT causal branch.
+A late-randomized branch-(iii) Bob-marginal shift is PU's statistical-FTL hypothesis and the Theorem 39c/Corollary 39c.1 falsifier of exact pre-lightcone context independence. On the regular finite-window model, Theorems 39a–42 bound reliability, sample complexity, information rate, and zero-error accessibility. Implementation remains subject to ND-RID irreversibility, $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ on the registered reset branch, with a positive floor inferred from this entropy bound requiring $H_q(P\mid R)\ge h_{\min}>0$ (Theorem 31). On the separate refresh/minorization branch, Lemma E.1 gives $f_{RID}<1$ and Theorem E.2 gives $C_{\max}<\ln d_0$. These contraction and capacity results do not establish the common-support condition of Definition 10.2a, which remains an independent finite-window regularity hypothesis. The conditional Lorentz-invariant description applies to the exact marginal-invariant and shared-past branches, while branch (iii) supplies PU's statistical-FTL experimental alternative outside the exact Lorentz/AQFT causal branch.
 
 **Measurement-independence guardrail.** For experimental settings $x,y$ and a past variable $\lambda$, measurement independence is the separate condition
 $$
@@ -904,13 +916,13 @@ Logical indeterminacy, stochastic outcomes, no-signaling, and absence of a deter
 **Theorem 42b (Sharp CHSH Robustness on the Uniform Setting-Contamination Class).** Let $z=(x,y)\in\{0,1\}^2$ be uniformly selected settings, let $a,b\in\{0,1\}$, and fix $0\le\mu\le1$. Consider the causal-model class
 $$
 P(a,b\mid x,y)
-=(1-\mu)P_{mathrm{MI}}(a,b\mid x,y)
-+\mu P_{mathrm{SD}}(a,b\mid x,y),
+=(1-\mu)P_{\mathrm{MI}}(a,b\mid x,y)
++\mu P_{\mathrm{SD}}(a,b\mid x,y),
 \tag{63c}
 $$
-where $P_{mathrm{MI}}$ is a measurement-independent local hidden-variable model and $P_{mathrm{SD}}$ is a local-response model whose hidden-variable distribution may depend arbitrarily on the full setting pair. If $S_{mathrm{CHSH}}$ is the usual absolute CHSH value, then
+where $P_{\mathrm{MI}}$ is a measurement-independent local hidden-variable model and $P_{\mathrm{SD}}$ is a local-response model whose hidden-variable distribution may depend arbitrarily on the full setting pair. If $S_{\mathrm{CHSH}}$ is the usual absolute CHSH value, then
 $$
-S_{mathrm{CHSH}}\le 2+2\mu.
+S_{\mathrm{CHSH}}\le 2+2\mu.
 \tag{63d}
 $$
 The bound is sharp for every $\mu$. Therefore an observed value $S\in[2,4]$ requires
@@ -940,7 +952,7 @@ Theorem 42b is a complete robustness result for the explicitly frozen mixture cl
 | `TV-QCP-03` | The exact four-setting, binary-outcome mixture (63c), with uniform settings, a measurement-independent local component, an arbitrarily setting-dependent local-response component, and $0\le\mu\le1$. | Equality of the complete conditional outcome table in the fixed signed-CHSH convention. Budget: four setting pairs and the finite deterministic local-response assignments used at the two extremal values. | The bound $S_{\mathrm{CHSH}}\le2+2\mu$ and its sharp threshold are `positive-discharge` on this mixture class. | Evaluate the affine CHSH functional and the aligned value-$2$/value-$4$ witnesses. A member exceeding (63d), or failure of the witness to attain it, falsifies the artifact. The deterministic endpoint models prove nonvacuity. | Source-internal finite causal-model analysis. Consumers: Bell/CC setting-independence audits and the held-out causal comparison. |
 | `TV-QCP-05` | One fixed finite channel $W$ and one fixed finite feedback policy $P$, both normalized; the point-mass clause uses deterministic $T$, and the separator is the binary bit-flip with identity feedback. | Closed loops are compared by the induced stochastic matrix $T$ and stationary-law set; distributional fixed points are not identified with deterministic point-mass fixed symbols. Budget: the complete finite matrix (63b), its simplex, and the two-symbol separator. | Existence of a stationary distribution for every fixed finite closure is `positive-discharge`; positive capacity forcing a deterministic-symbol fixed point is `negative-refutation`. | Check stochasticity, solve $\pi=T\pi$, and evaluate the bit-flip capacity and symbols. A finite stochastic $T$ with no stationary law, or a fixed symbol for the displayed bit-flip, falsifies the corresponding artifact. The bit-flip law proves nonvacuity. | Source-internal finite stochastic-matrix analysis. Consumers: Theorems 42 and 14.1 and the chronology discussion. |
 
-**Theorem 42a (Relational Decoding Principle: No Actionable Capacity Without Shared Decoding).** Consider bipartite $AB$ in state $\rho_{AB}$. For each message $x$, let Alice apply a local CPTP channel $\Phi_x$ on $A$, equivalently the nonselective trace-preserving sum of a local instrument with its outcome discarded. Bob's detector is keyed by a classical variable $K$ with distribution $\pi(K)$ independent of $x$. For each $K$, let $\Lambda_K^*$ be a unital CP Heisenberg map and let $E_i^{(K)}=\Lambda_K^*(E_i)$. Assume
+**Theorem 42a (Relational Decoding Principle: No Actionable Capacity Without Shared Decoding).** Consider bipartite $AB$ in state $\rho_{AB}$. For each message $x$, let Alice apply a local CPTP channel $\Phi_x$ on $A$, equivalently the nonselective trace-preserving sum of a local instrument with its outcome discarded. Bob's detector is keyed by a classical variable $K$ sampled independently of both the message $x$ and the prepared quantum system, so the joint preparation is $\rho_{AB}\otimes\sum_K\pi(K)|K\rangle\langle K|$. For each $K$, let $\Lambda_K^*$ be a unital CP Heisenberg map and let $E_i^{(K)}=\Lambda_K^*(E_i)$. Assume
 $$
 \overline{\Lambda^*}:=\sum_K\pi(K)\Lambda_K^*
 $$
@@ -969,7 +981,7 @@ where $Y_B$ is Bob's record, $C$ is Alice's context label, and $K$ is the keying
 $$
 I(C;Y_A,Y_B,K)\;\text{may be}\;>0.
 $$
-Revealing the key $K$ alone does not unlock $C$ from Bob's stream because the averaged Heisenberg map is $x$-independent by hypothesis. On branch (i) of Postulate 3, Bob's marginal is invariant by Lemma 10.2. On branch (ii), any context dependence of Bob's marginal is a shared-past preparation effect and is excluded as an explanation of late-randomized branch-(iii) data by the branch definition and the certified causal timing of the randomization. Theorem L.12.8 separately constrains strict target-conditioned joint-correlation advantage above information-free policies. On branch (iii), Bob's marginal itself shifts under late randomization, but the shift is statistical with rate bounded by Theorem 41; on the regular finite-window branch (Definition 10.2a) it retains zero-error capacity zero by Theorem 39a in any pre-lightcone window of operational size. The QCP of Section 10.3.2 fixes a single shared decoding rule — the pre-agreed binary mapping between context and target measurement bias — and converts the relational structure into a one-shot decision advantage $\delta=O(\mathrm{CC})$ that cannot be amplified into deterministic or zero-error signaling under the regular-branch hypothesis.
+Revealing the key $K$ alone does not unlock $C$ from Bob's stream: for each $K$, the conditional law $p_B(i\mid x,K)=\operatorname{tr}[\rho_B\Lambda_K^*(E_i)]$ is independent of $x$, and the key distribution is also independent of $x$. On branch (i) of Postulate 3, Bob's marginal is invariant by Lemma 10.2. On branch (ii), any context dependence of Bob's marginal is a shared-past preparation effect and is excluded as an explanation of late-randomized branch-(iii) data by the branch definition and the certified causal timing of the randomization. Theorem L.12.8 separately constrains strict target-conditioned joint-correlation advantage above information-free policies. On branch (iii), Bob's marginal itself shifts under late randomization, but the shift is statistical with rate bounded by Theorem 41; on the regular finite-window branch (Definition 10.2a) it retains zero-error capacity zero by Theorem 39a in any pre-lightcone window of operational size. The QCP of Section 10.3.2 fixes a single shared decoding rule — the pre-agreed binary mapping between context and target measurement bias — and converts the relational structure into a one-shot decision advantage $\delta=O(\mathrm{CC})$ that cannot be amplified into deterministic or zero-error signaling under the regular-branch hypothesis.
 
 **10.6 Gravitational Self-Limitation of CC**
 

@@ -4,8 +4,8 @@ Hypothesis 3 nominates the response-active Consciousness Complexity mechanism te
 
 ### Assumption Checklist
 
-- Geometric regularity (Theorem 43) holds on the operational-continuum branch, with exact continuum ontology excluded by Theorem K.10.3a.
-- ND-RID irreversibility: $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31).
+- Geometric regularity (Theorem 43) holds on the operational-continuum branch. Theorem K.10.3a excludes an exact continuum interpretation for a single finite-resource instantiation when its independently addressable refinements require an unbounded number of mutually distinguishable alternatives on a bounded operational domain.
+- ND-RID irreversibility: $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive entropy-derived floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31).
 - Reflexivity Constraint: $\kappa_r>0$ (Theorem 33).
 - PCE equilibrium reached (Definition 15a).
 - Gauge sector realized as $G_{SM}$ on the Appendix G finite-response capacity/anomaly/hypercharge branch (Theorem G.8.4b and Corollary G.8.4c, with the Lagrangian gauge-realization branch for the generator bound where explicitly used).
@@ -88,7 +88,7 @@ where $\mathcal P$ is the list of predicted observables, $\mathcal C$ is the acc
 
 **Definition 13.0f (Prediction Status Class).** Every numerical claim in this paper carries one of the following four prediction statuses, and the status is recorded together with the predicted value.
 
-1. **Derived-retrodictive.** The numerical value is derived from a closed PU branch but the corresponding measurement was already published before the derivation was completed. The claim counts as mathematical compression evidence in the sense of Convention P.14.1d but does not count as forward empirical evidence.
+1. **Derived-retrodictive.** The numerical value is derived from a closed PU branch but the corresponding measurement was already published before the derivation was completed. The claim is classified here as mathematical compression evidence and remains subject to the prediction-table admissibility rule of Convention P.14.1d; it does not count as forward empirical evidence.
 
 2. **Certificate-retrodictive.** The numerical value is derived from a closed strict PPI/PCE certificate in the sense of Convention P.14.1k, but the measurement target was already published before the certificate was accepted. The claim counts as certificate compression evidence but does not count as forward empirical evidence.
 
@@ -168,7 +168,7 @@ N
 $$
 converges in distribution to $\chi^2_{m-r}$.
 
-*Proof.* Definition 13.0l makes $F$ a $C^1$ map, $DF$ has constant rank $r$ by hypothesis, and $\theta_*$ is an interior point. The constant-rank theorem [Bott & Tu 1982] therefore supplies local domain and codomain coordinates in which the image has $r$ free coordinates and $m-r$ zero coordinates. Pulling the latter coordinates back gives $m-r$ local relations with linearly independent differentials, proving the manifold and relation count.
+*Proof.* Definition 13.0l makes $F$ a $C^1$ map, $DF$ has constant rank $r$ by hypothesis, and $\theta_*$ is an interior point. The $C^1$ constant-rank theorem [Derdzinski, *Differential Geometry*, Theorem 9.1](https://people.math.osu.edu/derdzinski.1/courses/851-852-notes.pdf) therefore supplies local domain and codomain coordinates in which the image has $r$ free coordinates and $m-r$ zero coordinates. Pulling the latter coordinates back gives $m-r$ local relations with linearly independent differentials, proving the manifold and relation count.
 
 Take a reduced singular-value decomposition
 $$
@@ -190,7 +190,7 @@ $$
 $$
 the coordinates of this vector in the $U_\perp$ basis are $m-r$ independent $N(0,1)$ variables. Their squared sum is $\chi^2_{m-r}$, proving (13.0m.2).
 
-For the nonlinear assertion, use the constant-rank coordinates to parametrize the local image by $t\in\mathbb R^r$, with $t=0$ representing $\theta_*$. Define
+For the nonlinear assertion, if $r=0$, the constant-rank theorem makes $F$ constant on the retained local branch. With $Z_N=\sqrt N\,\mathsf C^{-1/2}(Y_N-F(\theta_*))$, the profiled statistic is then exactly $\lVert Z_N\rVert^2\sim\chi_m^2$, proving the claim in that case. Assume $r>0$ and use the constant-rank coordinates to parametrize the local image by $t\in\mathbb R^r$, with $t=0$ representing $\theta_*$. Define
 $$
 g(t)=\mathsf C^{-1/2}\bigl(F(\theta(t))-F(\theta_*)\bigr)
 =Bt+R(t),
@@ -234,7 +234,7 @@ $$
 =
 \|(I-BB^+)Z_N\|^2+o_p(1).
 $$
-Because $\operatorname{ran}B=\operatorname{ran}A$, one has $BB^+=AA^+$ and $I-BB^+=\Pi_\perp$. The leading term is therefore $\chi^2_{m-r}$ for every $N$, and Slutsky's theorem [van der Vaart 1998], whose required additive remainder is the displayed $o_p(1)$ term, proves convergence in distribution in (13.0m.3). ∎
+Because $\operatorname{ran}B=\operatorname{ran}A$, one has $BB^+=AA^+$ and $I-BB^+=\Pi_\perp$. The leading term is therefore $\chi^2_{m-r}$ for every $N$. Let $R_N=o_p(1)$ be the displayed additive remainder. For any bounded 1-Lipschitz function $h$, $|\mathbb E h(X_N+R_N)-\mathbb E h(X_N)|\le\mathbb E\min(|R_N|,2\|h\|_\infty)\to0$, because the bounded integrand tends to zero in probability. Thus the statistic converges in distribution to $\chi^2_{m-r}$ as claimed in (13.0m.3). $\square$
 
 **Corollary 13.0n (No Double Counting and Singular-Branch Rule).** When rank-$r$ branch coordinates are fitted or profiled from the same $m$-observable block, that block contributes $m-r$, not $m$, independent model-relation residual directions. If $\theta_*$ is specified independently before the block is observed, the full affine Gaussian point-prediction statistic $\lVert\mathsf C^{-1/2}(Y-F(\theta_*))\rVert^2$ has $m$ degrees of freedom; $\chi_\perp^2$ tests only its $m-r$ cross-observable normal relations. Registered residual intervals thicken the prediction manifold by their prespecified Minkowski set before the normal-distance statistic is evaluated. If the rank changes, a parameter lies on a boundary, the covariance is singular, or a discrete branch is selected after inspection, the $\chi^2_{m-r}$ calibration is not licensed; the branches must be profiled or tested separately under their preregistered mixture law.
 
@@ -314,7 +314,7 @@ Consequently, for an observed per-outcome shift $\delta=|\Delta P(i)|$, an exact
 $$
 \mathrm{CC}(S)\ge\delta.
 $$
-On the stricter Fisher-budget subbranch of Theorem 36, where $d_{\mathrm{FR}}(p,q)\le\mathrm{CC}(S)$, one has
+On the stricter Fisher-budget subbranch of Theorem 36, where $d_{\mathrm{FR}}(p,q)\le\mathrm{CC}(S)$ and $0\le\mathrm{CC}(S)\le\pi$, one has
 $$
 \mathrm{TV}(p,q)\le\sin(\mathrm{CC}(S)/2),
 $$
@@ -368,7 +368,7 @@ is fixed in the analysis plan, the primary discriminant is not merely a scalar b
 
 2.  **High-Complexity System (S):**
     *   *Biological:* Human participant performing standardized tasks generating specific internal states ($\mathrm{context}_S$, e.g., focused attention/intention). Optional physiological monitoring (EEG, fMRI, HRV).
-    *   *Artificial:* Sophisticated AI system. Major Challenge: Designing and verifying the physical interaction pathway $N(t)$ coupling the AI's internal $\text{context}_S$ (Definition L.1) to the QRNG's physical process, respecting constraints (speed, cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, PCE, orthogonality to noise, mapping stability Theorem L.1). The implementation record must fix the source spectrum and geometry, target coupling and detuning, coherence window, shielding, and likelihood map before an electromagnetic-to-gravitational channel ratio can be computed. Theorem L.2 gives a conditional coherent-field implementation, while effective Proposition L.5 supplies no universal dominance factor. Trial counts must be computed from the registered effect size, significance, power, multiplicity correction, and dependence model using the effective Protocol L.1. Appendix S supplies a gravitational-feedback benchmark only on its retained-energy, weak-field, and calibrated-response branches. This requires significant R&D and confirmation of both $C_{agg}>C_{op}$ and the strict-improvement and representability conditions needed for potential nonzero CC.
+    *   *Artificial:* Sophisticated AI system. Major Challenge: Designing and verifying the physical interaction pathway $N(t)$ coupling the AI's internal $\text{context}_S$ (Definition L.1) to the QRNG's physical process, respecting constraints (speed, cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive entropy-derived floor requires }H_q(P\mid R)\ge h_{\min}>0)$, PCE, orthogonality to noise, mapping stability Theorem L.1). The implementation record must fix the source spectrum and geometry, target coupling and detuning, coherence window, shielding, and likelihood map before an electromagnetic-to-gravitational channel ratio can be computed. Theorem L.2 gives a conditional coherent-field implementation, while effective Proposition L.5 supplies no universal dominance factor. Trial counts must be computed from the registered effect size, significance, power, multiplicity correction, and dependence model using the effective Protocol L.1. Appendix S supplies a gravitational-feedback benchmark only on its retained-energy, weak-field, and calibrated-response branches. This requires significant R&D and confirmation of both $C_{agg}>C_{op}$ and the strict-improvement and representability conditions needed for potential nonzero CC.
 3.  **Interaction Control & Shielding:** Meticulous shielding (EM, thermal, acoustic, vibration). Well-defined interaction pathway $N(t)$. Measurement and control/compensation for conventional physical side-effects from S. Continuous environmental monitoring.
     4.  **Automation & Data Acquisition:** Automated randomization of conditions (baseline, neutral, specific context runs), synchronized recording of QRNG outcomes and $\mathrm{context}_S$ indicators, precise timestamps, secure storage for large datasets ($10^7 - 10^9+$ trials). Mandatory blinding procedures.
 
@@ -384,10 +384,10 @@ is fixed in the analysis plan, the primary discriminant is not merely a scalar b
     N \approx \frac{ \left[ Z_{1-\alpha_{\mathrm{sig}}/2} \sqrt{ p_0(1-p_0) } + Z_{1-\beta_{\mathrm{II}}} \sqrt{ p'(1-p') } \right]^2 }{ (p' - p_0)^2 }
     $$
     where $Z_p$ is the $p$-quantile of the standard normal distribution ($\Phi(Z_p)=p$). If $p_0$ is estimated rather than known, the baseline calibration variance must be propagated (analytically or by simulation) into the test and sample-size calculation. If residual autocorrelation is present, replace $N$ by an effective sample size $N_{\mathrm{eff}}$ estimated from the output ACF and inflate the target $N$ accordingly.
-*   **Independence and Error Control:** Independence of trials will be rigorously assessed using autocorrelation functions (ACF), Ljung–Box tests, and Wald–Wolfowitz runs tests on the output streams and residuals. The NIST Statistical Test Suite [Bassham et al. 2010] will be applied to verify randomness properties. If correlations are detected, appropriate methods such as pre-whitening, block-bootstrap confidence intervals, or data thinning will be employed. Multiplicity of tests across outcomes or contexts will be controlled using standard methods (e.g., Bonferroni correction for family-wise error rate or Benjamini-Hochberg procedure for false discovery rate).
-*   **Sequential Analysis:** For high-statistics runs, a sequential analysis plan with pre-specified interim looks using O’Brien–Fleming-type boundaries (implemented via the Lan-DeMets error spending function [Lan & DeMets 1983]) is recommended. This allows for early stopping due to efficacy or futility while preserving the overall type-I error rate. The table below provides indicative total sample sizes ($N_{OBF}$) per context and expected stopping distributions under the alternative hypothesis for three equally spaced looks.
+*   **Independence and Error Control:** Trial dependence will be probed using preregistered ACF lags and, after a fitted time-series null and reference distribution are fixed, Ljung–Box residual lack-of-fit diagnostics [Ljung & Box 1978]. A runs statistic for a binary output stream requires calibration to that stream's registered null. Nonrejection does not establish independence. The NIST Statistical Test Suite [Bassham et al. 2010] applies only to binary streams under its independent fair-bit null; raw non-uniform QRNG or finite-POVM outcomes require Born-law-specific diagnostics, and passing the suite does not certify randomness. If dependence is detected, any prewhitening, block-bootstrap interval, or data-thinning rule requires preregistration and coverage/power calibration under the chosen dependence model. Multiplicity across endpoints requires a preregistered family-wise-error or false-discovery procedure with its assumptions and dependence calibrated to the chosen design.
+*   **Sequential Analysis:** For high-statistics runs, preregister the test statistic, joint null law, information fractions, sidedness, endpoint error allocation, efficacy boundaries, and any separate futility rule. A repeated-look design can be constructed with a chosen Lan–DeMets error-spending function [Lan & DeMets 1983]; that method does not specify a unique spending function or sample-size multiplier. Calibrate the cumulative rejection probability under the registered null, including the declared dependence and finite-sample or asymptotic approximation. Futility-only stops without rejection preserve an efficacy error bound when the efficacy boundaries were calibrated without relying on those stops. A design calibrated with binding futility must honor that rule or undergo joint recalibration. The table contains single-endpoint planning placeholders for three looks.
 
-| $\alpha_{\mathrm{sig}}$ | $\delta$ | $N_{\text{design}}$ | $N_{\text{OBF}}$ ($\approx 1.06 \times N_{\text{design}}$) | Expected stop % at looks 1/2/3 (under $H_1$) |
+| $\alpha_{\mathrm{sig}}$ | $\delta$ | $N_{\text{design}}$ | $N_{\text{plan}}=\lceil1.06N_{\text{design}}\rceil$ | Uncalibrated illustrative stop allocations at looks 1/2/3 |
 |---:|---:|---:|---:|:---|
 | 0.01 | $10^{-3}$ | 2,191,242 | 2,322,717 | ~5% / 20% / 75% |
 | 0.01 | $5 \times 10^{-4}$ | 8,762,099 | 9,287,825 | ~3% / 17% / 80% |
@@ -396,8 +396,8 @@ is fixed in the analysis plan, the primary discriminant is not merely a scalar b
 | 0.001 | $5 \times 10^{-4}$ | 12,809,459 | 13,578,027 | ~2% / 15% / 83% |
 | 0.001 | $10^{-4}$ | 320,167,012 | 339,377,033 | $\lesssim 1$% / 9% / 90% |
 
-*   *Assumptions for $N_{\rm design}$ in the table:* **One-sample proportion** design with baseline $p_0=0.25$, positive alternative $p'=p_0+\delta$, power $1-\beta_{\mathrm{II}}=0.80$, and $N_{\mathrm{design}}$ equal to the ceiling of the normal-approximation formula above.
-    *   *Sequential design:* O'Brien–Fleming boundaries with **3 equally spaced** looks at cumulative information fractions $1/3, 2/3, 1$. The overhead factor (~1.06) and stop percentages are **illustrative**; exact values will be determined by the preregistered simulations and released with the code.
+*   *Assumptions for $N_{\rm design}$ in the table:* **One-sample proportion** design with baseline $p_0=0.25$ treated as known, positive alternative $p'=p_0+\delta$, independent Bernoulli observations, one registered endpoint, power $1-\beta_{\mathrm{II}}=0.80$, and $N_{\mathrm{design}}$ equal to the ceiling of the normal-approximation formula above. For a family of endpoints, the significance level in each design must be its allocated endpoint budget.
+    *   *Sequential design:* The proposed **3 equally spaced** looks use cumulative information fractions $1/3, 2/3, 1$. The multiplier $1.06$ and stop allocations are **uncalibrated planning placeholders**. They establish neither the sequential power nor an expected stopping distribution. Those quantities require the registered joint calculation, including the spending function, efficacy and futility rules, alternative law, and treatment of final non-rejection, with numerical code and calibration results supplied before experimental use.
 
 *   **Primary Analysis:** Pre-register goodness-of-fit tests (e.g., $\chi^2$, z-tests) comparing observed frequencies $\hat{P}(i)$ to the Born rule probabilities. Where applicable, exact binomial tests or variance-stabilized (arcsin–sqrt) transformations will complement normal approximations to ensure proper calibration, especially for small $\delta$. Design-stage baselines will use device-specific $P_{\mathrm{Born}}(i)$ estimates. Report effect sizes (Cramér’s V, Cohen’s d) with 95% CIs. For a CTB-specific multi-outcome test with pre-registered target vector
     $$
@@ -415,7 +415,7 @@ is fixed in the analysis plan, the primary discriminant is not merely a scalar b
     when $v\ne0$, or the corresponding covariance-weighted quadratic form using the multinomial covariance matrix fixed in the analysis plan. On the CTB branch, $R_\perp$ must be zero up to the registered sampling and device-systematics error; a stable orthogonal residual falsifies the CTB explanation even if a scalar bias is present.
     *   **Correlation Analysis:** Model $\Delta\hat{P}(i)$ as a function of contextual variables $\text{context}_S$ via mixed-effects logistic regression. For paired target-swap contexts satisfying Corollary 37a, pre-register the sign-reversal contrast $\widehat{\Delta P}_{S_+}(i)+\widehat{\Delta P}_{S_-}(i)$ as a control endpoint.
     *   **Systematic Error Control (Paramount):** (i) electronic drift (ii) detector after-pulsing (iii) clock-sync bias (iv) experimenter degrees-of-freedom (blinding).
-    *   **Outcome:** Deviations that survive all controls give an empirical estimate of $\mathrm{CC}(S)$ (cf. Theorem 51); null results tighten the exclusion curve $\mathrm{CC}_{\max}(S) < \epsilon(N)$.
+    *   **Outcome:** Deviations that survive all controls estimate the tested probability shifts and give lower bounds on $\mathrm{CC}(S)$ through Theorem 51. Null results constrain those tested shifts. An upper bound on $\mathrm{CC}(S)$ additionally requires a preregistered realization map whose response to $\mathrm{CC}(S)$ is identifiable on the tested state and measurement.
 
 *   **Feasibility Assessment:** High statistics achievable. Shielding/control standard but requires extreme care. Biological context control depends on participants. AI interaction pathway is a major R&D challenge. Rigorous systematic error exclusion is the primary hurdle. Challenging but potentially feasible exploratory search.
 
@@ -618,19 +618,21 @@ If autocorrelation, block effects, participant effects, or drift are present, re
 
 *   **Falsification Rule:** A null result with a confidence or posterior interval excluding the registered effect scale falsifies the expectation-mediated CC branch at that scale for the tested aggregate, device, and expectation-induction class. A result is classified as artifact or failure, not support, if the effect appears in unseen or delayed-report controls, tracks $R_t$ rather than $E_t$ on false-report trials, fails target-swap reversal, depends on post-hoc exclusions, or correlates with ordinary device/environment channels.
 
-*   **CC Extraction:** For a binary report-match shift $\widehat{\delta}_{\mathrm{false}}$, if unseen and delayed-report controls are null within the preregistered tolerance, then $|\widehat{\delta}_{\mathrm{false}}|$ estimates the seen-context Born-rule shift and the conservative operational estimate is
+*   **CC Extraction:** Let $\delta_{\mathrm{seen}}$ and $\delta_{\mathrm{unseen}}$ be the true binary report-match shifts from the same registered Born baseline after the declared artifact adjustment, and put $d=\delta_{\mathrm{seen}}-\delta_{\mathrm{unseen}}$. Construct a simultaneous confidence event on which $d\in C\subseteq[-1,1]$ and $|\delta_{\mathrm{unseen}}|\le b_0$, where $C$ is nonempty and $0\le b_0\le1$. The contrast, control, calibration, and artifact uncertainties must all be included in its registered coverage. Define
 $$
-\widehat{\mathrm{CC}}_{\mathrm{op}}\ge |\widehat{\delta}_{\mathrm{false}}|.
+\ell:=\max\left\{0,\inf_{d'\in C}|d'|-b_0\right\}.
+$$
+On this event, the conservative operational lower bound is
+$$
+\mathrm{CC}_{\mathrm{op}}\ge|\delta_{\mathrm{seen}}|\ge\ell.
 \tag{79o}
 $$
-On the Fisher-budget subbranch, the stronger estimate is
+Indeed, $|\delta_{\mathrm{seen}}|\ge|d|-|\delta_{\mathrm{unseen}}|\ge\ell$. On the Fisher-budget subbranch of Theorem 36, the binary event also gives
 $$
-\widehat{\mathrm{CC}}_{\mathrm{Fisher}}
-\ge
-2\arcsin(|\widehat{\delta}_{\mathrm{false}}|).
+\mathrm{CC}_{\mathrm{Fisher}}\ge2\arcsin(\ell).
 \tag{79p}
 $$
-If the control arms are not null, the contrast alone does not license Protocol 1a support; at most it implies that at least one compared arm carries a context-dependent shift of size at least $|\widehat{\delta}_{\mathrm{false}}|/2$, subject to the artifact ledger. For multi-outcome tests, use the preregistered pointwise, total-variation, or CTB-vector norm corresponding to Theorem 51 and Corollary 37a.
+This follows from $|\delta_{\mathrm{seen}}|\le\mathrm{TV}(p,q)\le\sin(d_{\mathrm{FR}}(p,q)/2)$ and $d_{\mathrm{FR}}(p,q)\le\mathrm{CC}_{\mathrm{Fisher}}$. Without an accepted control bound, a covered contrast only implies that at least one arm has shift magnitude at least $\frac12\inf_{d'\in C}|d'|$ on the same confidence event. Neither that statement nor a point estimate alone licenses Protocol 1a support; all registered control and artifact gates remain required. For multi-outcome tests, use the preregistered pointwise, total-variation, or CTB-vector norm corresponding to Theorem 51 and Corollary 37a.
 
 *   **Feasibility Assessment:** Protocol 1a is experimentally attractive because it avoids requiring active intention or deliberate biasing. It tests passive expectation as a physically instantiated context variable, using true/false report structure as a placebo-style discriminator. The main difficulties are psychological variability, deception ethics, report internalization strength, large required sample size, and exclusion of timing, leakage, and device-label artifacts.
 
@@ -669,7 +671,7 @@ Here $\gamma'_{\mathrm{CC}}$ and $f_{\mathrm{context}}\in[-1,1]$ are free phenom
     *   **High-Complexity System (S):** Human or AI.
     *   **Interaction/Control:** Similar requirements as Protocol 1 (shielding, interaction $N(t)$, stability, blinding). Temperature stability critical.
 *   **Procedure:** Measure $\tau_{coh}$ (e.g., Ramsey, spin echo, $T_1/T_2$) repeatedly under randomized conditions (baseline, neutral context, specific context). Rapid interleaving mitigates drifts. Residual autocorrelation will be diagnosed and, if present, mitigated by prewhitening (e.g., AR(1)).
-*   **Analysis:** Detect small differences $\Delta \hat{\tau}_{coh} = \hat{\tau}_{coh, context} - \hat{\tau}_{coh, baseline}$. High precision/stability needed; effect size $|\Delta \tau_{coh}/\tau_{coh}| \approx |\gamma'_{CC} \cdot \mathrm{CC}(S)|$ may be small. Use appropriate statistical tests (t-tests, ANOVA) after rigorous systematic error checks (temperature, fields correlated with S).
+*   **Analysis:** Detect small differences $\Delta \hat{\tau}_{coh} = \hat{\tau}_{coh, context} - \hat{\tau}_{coh, baseline}$. With $\tau_0$ the baseline coherence time, $\Gamma_0=1/\tau_0>0$, and $x=\Delta\Gamma_{\mathrm{eff}}/\Gamma_0>-1$, the relative magnitude is $|\Delta\tau_{coh}|/\tau_0=|x|/(1+x)$. On the small-$x$ search-model branch it is $|\gamma'_{CC}\,\mathrm{CC}(S)\,f_{\mathrm{context}}|+O(x^2)$, with no nonzero floor supplied by the free phenomenological inputs. High precision and stability are needed. Use appropriate statistical tests (t-tests, ANOVA) after rigorous systematic error checks (temperature, fields correlated with S).
 *   **Feasibility Assessment:** Technically demanding (high-precision $\tau_{coh}$ measurement). Requires specialized equipment/expertise. Sensitivity depends on achievable baseline stability $\sigma_{\tau_{coh, base}}$. Highly exploratory.
 
 **13.3a Prediction/Protocol 2a: Chronometric Curvature-Dephasing Test**
@@ -686,27 +688,29 @@ $$
 :=
 \frac{\hbar\Gamma_{\mathrm{res}}^{(ij)}}{|\Delta E_{ij}|}.
 $$
-The deterministic phase theorem predicts
+The deterministic phase theorem predicts, on the static weak-field branch,
 $$
 \mathcal D_{ij}^{\phi}
 =
-\frac{|\Delta\Phi|}{c^2}.
+\frac{|\Delta\Phi|}{c^2}
++
+O\!\left(\frac{\Phi_0^2+\Phi_1^2}{c^4}\right).
 $$
-The saturated chronometric ND-RID branch predicts
+The saturated chronometric ND-RID branch predicts, in the same regime,
 $$
 \mathcal D_{ij}^{\Gamma}
 =
-\frac{|\Delta\Phi|}{c^2}.
-$$
-In a freely falling Fermi frame with one branch on the reference worldline and the other displaced by the spatial vector $L^a$, let $\lVert L\rVert$ denote its Euclidean norm in that frame. Then
-$$
 \frac{|\Delta\Phi|}{c^2}
-=
-\frac12|R_{0a0b}L^aL^b|
 +
-O\!\left(\lVert L\rVert^3\sup_{\mathcal U}\lVert\nabla R\rVert\right),
+O\!\left(\frac{\Phi_0^2+\Phi_1^2}{c^4}\right).
 $$
-where $\mathcal U$ is the Fermi neighborhood containing the two branches.
+In a freely falling Fermi frame, take one branch on the reference worldline and the other at the spatial displacement $L^a$, with both branches coordinate-stationary at the registered comparison instant. Assume the constant nonzero energy-gap and proper-time hypotheses of Theorem 47c. Write $q(x)=\sqrt{-g_{00}(x)}$ for the dimensionless proper-time rate on these timelike branches. Require $q$ to be $C^3$ on the segment from $0$ to $L$ and register a bound $K_3\ge\frac16\sup_{0\le s\le1}\lVert D_x^3q(sL)\rVert$. With curvature evaluated on the reference worldline and the Fermi convention $q(0)=1$, $D_xq(0)=0$, and $D_x^2q(0)_{ab}=R_{0a0b}$, Taylor's theorem gives
+$$
+\left|\mathcal D_{ij}^{\phi}
+-\frac12|R_{0a0b}L^aL^b|\right|
+\le K_3\lVert L\rVert^3.
+$$
+Here $\mathcal D_{ij}^{\phi}=|q(L)-q(0)|$; the same bound holds for $\mathcal D_{ij}^{\Gamma}$ only on the separately accepted saturated chronometric ND-RID branch. The bound on $D_x^3q$ includes every higher-order metric contribution on the segment and is not inferred from $\nabla R$ alone.
 
 *   **Objective:** Test whether residual clock dephasing, if present after all environmental subtractions, scales with internal energy splitting and tidal geometry rather than only with branch mass-density difference.
 *   **Setup:** A clock interferometer, trapped-ion/neutral-atom clock, molecular clock, or superconducting clock platform with at least two selectable internal splittings $\Delta E_1,\Delta E_2$, branch separation $L^a$, and independently modeled environmental decoherence budget. The preferred geometry is reference-anchored or otherwise has a nonzero Fermi-frame contraction $R_{0a0b}(x_1^a x_1^b-x_0^a x_0^b)$.
@@ -717,19 +721,26 @@ $$
 \frac{\hbar|\dot\Theta_2|}{|\Delta E_2|}
 =
 \frac{|\Delta\Phi|}{c^2}
++
+O\!\left(\frac{\Phi_0^2+\Phi_1^2}{c^4}\right)
 $$
-within the geometric calibration uncertainty.
+with the geometric calibration uncertainty and a certified weak-field remainder included in the comparison interval.
 *   **Primary dephasing check:** If a residual gravitational dephasing channel is present, test the saturated chronometric branch ratio
 $$
 \frac{\Gamma_{\mathrm{res}}^{(1)}}{\Gamma_{\mathrm{res}}^{(2)}}
 =
 \frac{|\Delta E_1|}{|\Delta E_2|}
 $$
-at fixed geometry, together with the absolute normalization
+at the same geometry, together with the weak-field normalization
 $$
 \Gamma_{\mathrm{res}}^{(i)}
 =
-\frac{|\Delta E_i|}{\hbar}\frac{|\Delta\Phi|}{c^2}.
+\frac{|\Delta E_i|}{\hbar}
+\left[
+\frac{|\Delta\Phi|}{c^2}
++
+O\!\left(\frac{\Phi_0^2+\Phi_1^2}{c^4}\right)
+\right].
 $$
 *   **Tidal angular check:** Rotate or reorient the separation vector where possible and test the quadrupolar dependence
 $$
@@ -742,7 +753,7 @@ $$
 
 **13.4 Identifiability Against Electromagnetic Confounds**
 
-A critical challenge for any experiment seeking to detect CC is to unambiguously distinguish the hypothesized effect from conventional physical influences, particularly subtle electromagnetic (EM) fields generated by the high-complexity system. The following protocol design creates a quantitative, verifiable gap between the maximum possible EM-induced bias and the potential CC signal floor.
+A critical challenge for any experiment seeking to detect CC is to distinguish the hypothesized effect from conventional physical influences, particularly electromagnetic (EM) fields generated by the high-complexity system. The following design supplies a quantitative upper bound on the registered Maxwell–Stark channel. A gap between that bound and an observed or independently calibrated nonzero CC response requires a separate response and artifact certificate; no positive CC signal floor follows from this bound or from the CC budget alone.
 
 **Theorem 52 (Maxwell--Stark Bound within the Triple-Blind Protocol)**
 
@@ -762,7 +773,7 @@ $$
 $$
 Indeed $|P(\pi/2+\Delta\phi)-P(\pi/2)|=|\sin\Delta\phi|/2\le|\Delta\phi|/2$ and $|\Delta\omega|=|\Delta\alpha|\langle E^2\rangle/(2\hbar)$. ∎
 
-A separate bound on algorithmic-predictability confounds is $P_{\rm guess}\le2^{-(H_\infty L-t)}$, where an adversary has at most $t$ bits of side information. If a nonzero CC response map is independently supplied, Theorem 51 bounds rather than fixes its effect:
+For algorithmic-predictability confounds, let $Z$ be the full $L$-bit basis block and suppose its block min-entropy satisfies $H_\infty(Z)\ge hL$ bits. If the classical side-information variable $E$ has an alphabet with $|\mathcal E|\le2^t$, then the average optimal block-guessing success satisfies $P_{\rm guess}(Z\mid E)=\sum_e\max_z P(Z=z,E=e)\le\min\{1,2^{-(hL-t)}\}$, since each summand is at most $\max_zP(Z=z)\le2^{-hL}$. A bound on each bit's marginal min-entropy does not supply this block certificate, and the average bound does not bound every selected posterior separately. If a nonzero CC response map is independently supplied, Theorem 51 bounds rather than fixes its effect:
 $$
 |\Delta P|_{\mathrm{CC}}\le\mathrm{CC}(S).
 $$
@@ -782,7 +793,7 @@ $|\Delta P|_{\rm EM}\lesssim5.36\times10^{-13}T$ with $T$ in seconds: approximat
 Tests the registered hypothesis that CC acting on entangled systems produces a late-randomized Bob-marginal shift (Postulate 3). PU takes exact pre-lightcone no-signaling as the current-physics baseline and tests class (iii) as a statistical-FTL hypothesis beyond that baseline. A certified and replicated occurrence would establish a noisy statistical-FTL channel, support PU's QCP/statistical-FTL hypothesis, and simultaneously falsify the exact pre-lightcone context-independence branch by Theorem 39c and Corollary 39c.1. The local CPTP branch (i) preserves Bob's marginal and permits only Alice-local or joint-correlation changes detectable after classical comparison of records, while the preparation-context branch (ii) admits a Bob-marginal dependence only when the context is fixed in the shared causal past and is excluded as an explanation of class-(iii) data by late randomization.
 
 *   **Objective:** Sensitive search for preregistered statistical dependence of Bob's local measurement outcomes on Alice's remote context $\mathrm{context}_S$ (associated with system $S_A$ at her station), with A and B space-like separated and with $\mathrm{context}_S$ randomized strictly later than the latest event in the shared causal past of the two measurement regions. On branch (i), only Alice-local or joint/conditional correlations after classical comparison can vary; on branch (ii), a Bob-marginal shift can occur only when context randomization precedes preparation; on branch (iii), Bob's marginal itself shifts under late randomization. Secondary search for context-dependent changes in Bell parameters.
-*   **Theoretical Basis:** Postulate 3 defines three branches. On branch (i), Bob's marginal probabilities are invariant by standard no-signaling (Bob-marginal kernel decomposition, Lemma 10.2). On branch (ii), Bob's marginal can depend on $C_A$ through common-cause statistics inherited from a preparation that, by the branch definition, occurs in the shared causal past. Theorem L.12.8 separately states that strict target-conditioned joint-correlation advantage above the best information-free policy requires causal or common-cause information about the entanglement record. On branch (iii), Alice's late-randomized context $C_A$ shifts Bob's marginal $P_{\mathrm{obs}}(b|B,C_A)$ while remaining non-deterministic and zero-error inaccessible in finite pre-lightcone windows on the regular branch, but by Theorem 39c this would falsify Postulate 2. Detection of a marginal shift requires $N \propto 1/\mathrm{CC}(S_A)^2$ trials (Theorem 40); joint-correlation tests require classical comparison of records; the pre-lightcone information budget and sampling gate are bounded by Lemma 10.3.
+*   **Theoretical Basis:** Postulate 3 defines three branches. On branch (i), Bob's marginal probabilities are invariant by standard no-signaling (Bob-marginal kernel decomposition, Lemma 10.2). On branch (ii), Bob's marginal can depend on $C_A$ through common-cause statistics inherited from a preparation that, by the branch definition, occurs in the shared causal past. Theorem L.12.8 separately states that strict target-conditioned joint-correlation advantage above the best information-free policy requires causal or common-cause information about the entanglement record. On branch (iii), Alice's late-randomized context $C_A$ shifts Bob's marginal $P_{\mathrm{obs}}(b|B,C_A)$ while remaining non-deterministic and zero-error inaccessible in finite pre-lightcone windows on the regular branch, but by Theorem 39c this would falsify Postulate 2. For a preregistered realized marginal contrast $\Delta>0$ and two independent Bernoulli samples of equal size, Theorem 40 supplies the sufficient total count $N\ge16\Delta^{-2}\ln(4/\alpha_{\mathrm{det}})$; joint-correlation tests require classical comparison of records; the pre-lightcone information budget and sampling gate are bounded by Lemma 10.3.
 *   **Experimental Setup:**
     1.  **Entanglement Source:** High-quality, stable source distributing entangled pairs to space-like separated stations (Alice, Bob).
     2.  **Measurement Stations (A, B):** Standard Bell test apparatus (independent, random settings $a, b$). High efficiency desirable. The setting generators are device‑independent and statistically independent of system $S$ and any hidden variables.
@@ -794,7 +805,7 @@ Tests the registered hypothesis that CC acting on entangled systems produces a l
     1.  **Standard Bell Test:** Verify entanglement, calibrate, establish baseline correlations $E(a,b)$.
     2.  **Context Intervention Runs:** Interleave runs with Alice generating contexts $C_{A,k}$ (e.g., $k=0, 1, 2$). Random settings $a, b$. Collect large statistics $N_{int}$ per context $k$.
 *   **Statistical Analysis:**
-    *   **Primary Focus (Statistical Influence):** Compare Bob's marginal probabilities $P(o_B | b, C_{A,k})$ across contexts $k$. Test the null hypothesis $H_0: P(o_B | b, C_{A,k=1}) = P(o_B | b, C_{A,k=2})$. Rejection under independently late-randomized $C_{A,k}$ supports the branch-(iii) anomaly model and simultaneously falsifies the sealed Lorentz/AQFT no-signaling branch by Theorem 39c. Estimate the shift $\Delta P_{marginal}=|P(o_B | b, C_{A,1})-P(o_B | b, C_{A,2})|$. If Theorem 36 bounds each context relative to the same reference law by $\mathrm{CC}(S_A)$, the triangle inequality gives $\Delta P_{marginal}\le2\mathrm{CC}(S_A)$. The sharper bound $\Delta P_{marginal}\le\mathrm{CC}(S_A)$ applies only when one of the two contexts is the reference context used in the theorem. Detection requires $N_{int}\gtrsim O(1/\mathrm{CC}(S_A)^2)$ (Theorem 40). Theorem 39a classifies the positive result as statistical rather than zero-error deterministic on the regular finite-window branch (Definition 10.2a).
+    *   **Primary Focus (Statistical Influence):** Compare Bob's marginal probabilities $P(o_B | b, C_{A,k})$ across contexts $k$. Test the null hypothesis $H_0: P(o_B | b, C_{A,k=1}) = P(o_B | b, C_{A,k=2})$. Rejection under independently late-randomized $C_{A,k}$ supports the branch-(iii) anomaly model and simultaneously falsifies the sealed Lorentz/AQFT no-signaling branch by Theorem 39c. Estimate the shift $\Delta P_{marginal}=|P(o_B | b, C_{A,1})-P(o_B | b, C_{A,2})|$. If Theorem 36 bounds each context relative to the same reference law by $\mathrm{CC}(S_A)$, the triangle inequality gives $\Delta P_{marginal}\le2\mathrm{CC}(S_A)$. The sharper bound $\Delta P_{marginal}\le\mathrm{CC}(S_A)$ applies only when one of the two contexts is the reference context used in the theorem. For the registered contrast $\Delta P_{marginal}>0$, Theorem 40 gives the sufficient total sample size $N\ge16(\Delta P_{marginal})^{-2}\ln(4/\alpha_{\mathrm{det}})$ with equal independent Bernoulli samples at the tested Bob setting $b$; each compared context-setting sample must contain $N/2$ trials, and the per-context allocation $N_{int}$ must account for the randomized setting frequencies. Theorem 39a classifies the positive result as statistical rather than zero-error deterministic on the regular finite-window branch (Definition 10.2a).
     *   **Secondary Analysis (Correlations):** Calculate correlations $E(a,b)_k$ and Bell parameters $S_{CHSH, k}$ conditioned on context $k$. Look for differences $S_{CHSH, k=1} \neq S_{CHSH, k=2}$. Joint-correlation deformations with Bob-marginal component $\Pi_B\ell_{C_{A,k}}=0$ are compatible with branch (i); the stronger double-centered diagnostic $\Pi_{\mathrm{joint}}\ell_{C_{A,k}}$ isolates the part with both local marginals removed.
     *   **Causal Anomaly Ledger:** Each preregistered analysis pipeline must report three primary residual quantities computed on the same data:
 $$
@@ -810,17 +821,17 @@ $$
 $$
 The CC term is itemized as (a) a *joint-correlation anomaly* $\Delta_{\rm CC}^{\rm joint}$ from $\Pi_{\mathrm{joint}}\ell_{C_{A,k}}$, (b) a *Bob-marginal anomaly* $\Delta_{\rm CC}^{\rm marg}$ from $\Pi_B\ell_{C_{A,k}}$, and (c) a *control/environment anomaly* $\Delta_{\rm ctrl}$ aggregating residuals attributable to $\Delta_{\rm drift},\Delta_{\rm EM},\Delta_{\rm thermal},\Delta_{\rm source},\Delta_{\rm detector}$. A branch-(i) consistent positive result is $\Delta_{\rm CC}^{\rm joint}\ne 0$, $\Delta_{\rm CC}^{\rm marg}=0$, and $\Delta_{\rm ctrl}$ within its preregistered tolerance. A branch-(iii) consistent positive result requires additionally $\Delta_{\rm CC}^{\rm marg}\ne 0$ under late-randomized context with all entries of $\Delta_{\rm ctrl}$ within their preregistered tolerances.
     *   **Systematic Error Control (Extreme Rigor):** Exclude conventional communication (light leaks, EM, acoustic), detector/setting correlations with $C_{A,k}$, statistical loopholes, biases. Branch-(ii) preparation-context confounds are excluded only by randomizing $C_{A,k}$ strictly after the latest event in the shared causal past of the two measurement regions; the preregistered protocol must report the spacelike-interval certificate for this randomization step.
-*   **Feasibility Assessment:** Extremely challenging. Requires state-of-the-art entanglement/measurement technology, robust space-like separation. Controlling systematics to demonstrate statistical FTL on the marginal-anomaly branch is extraordinarily difficult. Required statistics $N \propto 1/\mathrm{CC}(S_A)^2$ can be immense. Highly exploratory; positive indication needs exceptional scrutiny/replication.
+*   **Feasibility Assessment:** Extremely challenging. Requires state-of-the-art entanglement/measurement technology, robust space-like separation. Controlling systematics to demonstrate statistical FTL on the marginal-anomaly branch is extraordinarily difficult. The sufficient sample count from Theorem 40 scales as the inverse square of the registered nonzero marginal contrast at a prescribed error level and can be immense. Highly exploratory; positive indication needs exceptional scrutiny/replication.
 
 **13.6 Staged Experimental Approach and General Considerations**
 
 A pragmatic, staged approach is recommended to systematically test the framework's predictions:
 
-1.  **Stage 1 (Near-Term Focus):** High-statistics QRNG tests (Protocol 1) and report-induced expectation QRNG tests (Protocol 1a). Protocol 1 searches for context-correlated deviations under controlled internal states. Protocol 1a isolates passive expectation by comparing true, false, unseen, and delayed reports while generating the target quantum outcome only after the expectation window. These protocols are the most accessible for either detecting a signal or placing meaningful upper bounds on CC in the range of $10^{-3} - 10^{-4}$. Success is contingent on meticulous QRNG and interaction-pathway design, rigorous systematics control, and achieving the required statistical power as outlined in the protocols' power analyses.
+1.  **Stage 1 (Near-Term Focus):** High-statistics QRNG tests (Protocol 1) and report-induced expectation QRNG tests (Protocol 1a). Protocol 1 searches for context-correlated deviations under controlled internal states. Protocol 1a isolates passive expectation by comparing true, false, unseen, and delayed reports while generating the target quantum outcome only after the expectation window. These protocols target probability shifts in the range of $10^{-3} - 10^{-4}$. Their null results bound the tested shifts; an upper bound on CC requires the independently registered identifiable response map described in Protocol 1. Success is contingent on meticulous QRNG and interaction-pathway design, rigorous systematics control, and achieving the required statistical power as outlined in the protocols' power analyses.
 2.  **Stage 2 (Medium-Term):** If justified by positive and replicated results from Stage 1, coherence time tests (Protocol 2) should be pursued to seek complementary evidence. This stage would also involve refining the QRNG and expectation-induction protocols based on initial findings.
 3.  **Stage 3 (Long-Term / Contingent):** The extraordinarily demanding Bell-type experiments for a statistical FTL search (Protocol 3) should only be undertaken if compelling, independently verified evidence emerges from the earlier stages.
 
-All proposed experiments share common requirements for rigor and validity. They necessitate quantum systems with high stability over long integration times to achieve the required statistical power. Given the multiple hypotheses being tested, a clear, pre-registered statistical plan is mandatory to control the family-wise error rate. This should include specifying the use of sequential analyses with pre-defined stopping rules (e.g., O'Brien–Fleming boundaries) to allow for early termination for efficacy or futility while preserving the overall type-I error rate. As a concrete example, with three equally spaced looks, the canonical OBF boundaries (Z-scores) at a family-wise $\alpha_{\mathrm{sig}}=0.05$ are approximately $[3.47, 2.45, 2.00]$.
+All proposed experiments share common requirements for rigor and validity. They require quantum systems with high stability over long integration times and a pre-registered statistical plan covering both repeated looks and multiple endpoints. For $J$ endpoints, one sufficient family-wise error allocation assigns endpoint budgets $\alpha_j$ with $\sum_{j=1}^J\alpha_j\le\alpha_{\mathrm{sig}}$ and calibrates each endpoint's probability of rejection at any look to at most $\alpha_j$ under its null. The union bound then controls the family-wise error rate regardless of dependence between endpoints. As a single-endpoint Gaussian example, let $Z_k=B(t_k)/\sqrt{t_k}$ under the null, where $B$ is standard Brownian motion and $t_k=k/3$. For this declared Gaussian model, choose symmetric inverse-square-root-information boundaries $b_k=c/\sqrt{t_k}$, with $c$ chosen from $\Pr_0(\max_{k=1,2,3}|B(t_k)|\ge c)=0.05$. Joint Gaussian integration gives $c\approx2.00403558$ and $[b_1,b_2,b_3]\approx[3.47109144,2.45443230,2.00403558]$. This is a two-sided $0.05$ calibration across looks for one endpoint, not a simultaneous $0.05$ calibration for several endpoints. Implementation requires the registered endpoint budget, joint-law calibration and numerical precision; a Lan–DeMets spending design has its own jointly computed boundaries. Early futility without rejection preserves the efficacy error bound when that bound was calibrated without relying on futility; a binding-futility design requires its declared joint calibration.
 
 **13.7 Compliance with Causal Constraints**
 
@@ -828,9 +839,9 @@ The experimental program, especially Protocol 3, probes the framework's non-stan
 
 **13.7.1 Theorem 53 (CC Causal-Compliance Boundary)**
 
-The Consciousness Complexity mechanism (Hypothesis 3) is consistent with Postulate 2 only on branches with exact pre-lightcone marginal invariance. The bounded-bias branch independently declares $\mathrm{CC}\le\alpha_{CC,max}<0.5$, Theorem 39 proves the corresponding exclusion of endpoint-complete binary forcing, Theorem 39a supplies the finite-window zero-error gate on Definition 10.2a's regular branch, and Theorem 39b/Definition 10.2c supply the predictive-current no-loop/precision-cost gate when that representation is asserted. Preventing deterministic or zero-error decoding alone is insufficient by Theorem 39c. The potential statistical FTL influence (Postulate 3) may still have positive finite-error statistical information (Theorem 41), but it remains sample-complexity limited (Theorem 40) and unusable for constructing paradox-inducing deterministic causal loops (Theorems 39b and 42, whose consistency is supported by the AQFT analysis in Appendix F).
+The Consciousness Complexity mechanism (Hypothesis 3) is consistent with Postulate 2 only on branches with exact pre-lightcone marginal invariance. The bounded-bias branch independently declares $\mathrm{CC}\le\alpha_{CC,max}<0.5$, and Theorem 39 proves the corresponding exclusion of endpoint-complete binary forcing. Theorem 39a supplies the finite-window zero-error gate on Definition 10.2a's regular branch. With Definition 10.2c's predictive-current certificate, Theorem 39b preserves that gate on the same finite event algebra; its precision-cost conclusion additionally requires its independently supplied finite thermodynamic precision certificate. Preventing deterministic or zero-error decoding alone is insufficient by Theorem 39c. The potential statistical FTL influence (Postulate 3) may have positive finite-error statistical information (Theorem 41), while Theorem 40 supplies its direct test's sufficient sample bound in a registered realized contrast. Theorem 42 excludes finite-window zero-error contradiction protocols on its regular branch. Appendix F supplies the local AQFT baseline, and Section 10 supplies the regular statistical branch's reliability and causal-status analysis.
 
-*Proof.* The bounded-bias branch declares $\mathrm{CC}\le\alpha_{CC,max}<0.5$; Theorem 39 proves that this premise excludes endpoint-complete forcing of both binary outcomes. This rules out a protocol that deterministically selects either endpoint at will, but does not by itself exclude forcing one endpoint near a biased baseline or establish marginal invariance. Theorem 39a then addresses the finite-window statistical branch on the regular operating regime: under the common-support condition of Definition 10.2a — motivated by the endpoint gate, ND-RID finite-transfer limits, irreducible $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, PPI admissibility of probability kernels, and refresh-branch strict contractivity where available — the context-conditioned transcript distributions retain positive overlap, so every finite pre-lightcone decoder has nonzero error probability. Theorem 39b adds that any current representation of such a signal is a coarse-graining of the same finite transcript algebra and therefore cannot create a zero-error decoder; when a finite Markov/KMS precision certificate is supplied, nonzero finite-cost current signals also carry nonzero variance. Theorem 40 shows that any nonzero CC signal can only be detected statistically, with required sample size scaling as $N=O(\mathrm{CC}^{-2})$. Theorem 41 bounds the finite-error information rate by a quantity of order $\mathrm{CC}^2$ at a regular operating point. Finally, Theorem 42 excludes a finite-window zero-error contradiction protocol; Theorem 39c independently shows that any nonzero freely selected pre-lightcone channel already violates Postulate 2. Appendix F supplies the AQFT locality framework for the Bob-marginal-preserving branch and the operator-local baseline; the branch-(iii) finite-window reliability bounds are furnished by Theorems 39a–42, while its noncausal status is fixed by Theorem 39c, with Theorem 39b supplying the current-level no-loop gate when that representation is used. Therefore the CC mechanism is compatible with Postulate 2 exactly when its pre-lightcone marginal channel is constant; branch (iii) remains testable as a falsifier of that condition. ∎
+*Proof.* The bounded-bias branch declares $\mathrm{CC}\le\alpha_{CC,max}<0.5$; Theorem 39 proves that this premise excludes endpoint-complete forcing of both binary outcomes. This rules out a protocol that deterministically selects either endpoint at will, but does not by itself exclude forcing one endpoint near a biased baseline or establish marginal invariance. Theorem 39a then addresses the finite-window statistical branch on the regular operating regime: under the common-support condition of Definition 10.2a — motivated by the endpoint gate, ND-RID finite-transfer limits, irreducible $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive entropy-derived floor requires }H_q(P\mid R)\ge h_{\min}>0)$, PPI admissibility of probability kernels, and refresh-branch strict contractivity where available — the context-conditioned transcript distributions retain positive overlap, so every finite pre-lightcone decoder has nonzero error probability. Theorem 39b adds that any current representation of such a signal is a coarse-graining of the same finite transcript algebra and therefore cannot create a zero-error decoder; when a finite Markov/KMS precision certificate is supplied, nonzero finite-cost current signals also carry nonzero variance. Theorem 40 gives a sufficient sample size $N=O(\log(1/\alpha_{\mathrm{det}})/\Delta^2)$ for its direct two-context test of a registered realized contrast $\Delta>0$ under equal independent Bernoulli sampling. Theorem 41 bounds the finite-error information rate by a quantity of order $\mathrm{CC}^2$ at a regular operating point. Finally, Theorem 42 excludes a finite-window zero-error contradiction protocol; Theorem 39c independently shows that any nonzero freely selected pre-lightcone channel already violates Postulate 2. Appendix F supplies the AQFT locality framework for the Bob-marginal-preserving branch and the operator-local baseline; the branch-(iii) finite-window reliability bounds are furnished by Theorems 39a–42, while its noncausal status is fixed by Theorem 39c, with Theorem 39b supplying the current-level no-loop gate when that representation is used. Therefore the CC mechanism is compatible with Postulate 2 exactly when its pre-lightcone marginal channel is constant; branch (iii) remains testable as a falsifier of that condition. ∎
 
 *Protocol attribution:* Protocol 3 tests PU's branch-(iii) anomaly hypothesis. A certified late-randomized Bob-marginal shift would support the nonlocal/state-mediated branch and falsify the exact causal branch; a null result constrains branch (iii) without falsifying the local-CPTP or shared-past branches.
 
@@ -1057,7 +1068,7 @@ $$
 The model can be falsified in several ways:
 *   **Failure to Fit Galaxies:** If the scale-dependent $G(R)$ model (Equation I.4) fails to provide good fits to a large, diverse sample of galaxy rotation curves (e.g., the SPARC database) with a single, universal set of parameters $(L_0, A_G, m)$ and with the transition plotted against $\chi_b=|\nabla\Phi_b|/g_\Lambda$, the galaxy-scale mechanism is invalidated. On the backbone-channel-recruitment benchmark branch of Definition I.13a, the preregistered test pair is $(A_G,m)=(7,3)$ by Proposition I.13b, so exclusion of that pair refutes the benchmark branch rather than the whole dark-sector program.
 *   **Acceleration-Lock Failure:** If galaxy acceleration data require a best-fit acceleration scale significantly different from $g_\Lambda$ after baryonic nuisance propagation, the adopted Appendix H bridge representative is falsified.
-*   **Consistency with Early-Universe Constraints:** The galaxy-fit value for the asymptotic enhancement, $A_G$, must remain consistent with cosmological constraints on the effective gravitational coupling during recombination (e.g., CMB/BBN). A model that requires a larger $A_G$ to fit galaxies would be falsified.
+*   **Consistency with Early-Universe Constraints:** The registered covariant cosmological completion of the galaxy-fit kernel must satisfy its CMB-era projection and residual constraints, together with any separately certified primordial-nucleosynthesis constraint. A conflict under the preregistered comparison rule falsifies that completion; the galaxy-fit value of $A_G$ alone does not determine its early-Universe response.
 *   **Failure to Fit Clusters:** The non-local predictive matter model (Equation I.7) must be able to fit the observed lensing profiles of massive galaxy clusters (like Abell 1689 and stacked samples) using a **universal nonlinearity exponent $q$**, the locked acceleration $g_\Lambda$ on the acceleration-lock branch, and either a **universal kernel scale $L_0$ or one derivable from ND–RID microphysics (allowing mild environment dependence)**, with per‑cluster amplitudes $A_{\rm PM}$ bounded by baryon budgets. If no such consistent fit can be found, the cluster-scale mechanism is invalidated.
 *   **Parameter Incoherence:** The parameters derived from fitting galaxies (e.g., the transition scale $L_0$) and clusters (e.g., the kernel scale $L_0$ and the universal exponent $q$) must be coherently related by the underlying theory. A significant, unexplainable discrepancy between the best-fit parameters for the two regimes would falsify the claim of a unified underlying mechanism.
 *   **Redshift-Lock Failure:** On a constant-$\Lambda$ branch, high-redshift acceleration-threshold measurements should not scale with the full $H(z)$. If the transition scale robustly tracks $H(z)$ rather than $\sqrt{\Lambda_{\mathrm{eff}}(z)}$, the acceleration-lock branch fails.
@@ -1073,7 +1084,7 @@ $$
 \Sigma_\dagger = \frac{g_0}{2\pi G} = (134.4 \pm 2.3)\,M_\odot\,\mathrm{pc^{-2}}.
 $$
 
-This is the characteristic baryonic surface-density scale at which rotationally supported systems enter the low-acceleration regime. The prediction follows directly from Corollary H.1a and therefore inherits the same PU backbone as $g_0$.
+On the thin-sheet bridge of Corollary H.1a, the condition $g_N=2\pi G\Sigma_b=g_0$ defines the characteristic baryonic surface-density scale $\Sigma_\dagger=g_0/(2\pi G)$. Its use as an onset criterion for rotationally supported systems requires that sheet-to-galaxy bridge in addition to the hypotheses determining $g_0$.
 
 **Falsification Conditions:**
 - A preregistered joint analysis of an external cosmological posterior and an independent disk-galaxy likelihood excludes $16\pi G\Sigma_\dagger=c^2\sqrt{\Lambda}$ after cosmological, astrophysical, finite-thickness/geometry, and bridge-law uncertainties are jointly propagated.
@@ -1169,7 +1180,7 @@ $$
 =
 \mathcal C_{\mathrm{eff}}\mathcal F_{CP}f_{\mathrm{wash}}2^{-1/3}A_{EW}^{-1/2}
 $$
-on that branch. A change in the electroweak scale within the same certified baryogenesis regime gives $\delta\eta_B/\eta_B=\frac12\delta v/v$ only while the transport, thermal, CP-response, generation, and determinant prefactors are held constant.
+on that branch. For $\eta_B\ne0$, an infinitesimal variation of the electroweak scale within the same certified baryogenesis regime gives $d\eta_B/\eta_B=\frac12\,dv/v$ only while the transport, thermal, CP-response, generation, and determinant prefactors are held constant.
 
 ### 13.8.3 Retired Glueball Shell-Assignment Benchmark
 
@@ -1299,7 +1310,7 @@ P^{\rm PU}_{\Lambda\bar{\Lambda}}(r)
 \eta^{\rm PU}_{0^{++}\rightarrow\Lambda\bar{\Lambda}}
 \Omega_{\rm PU}(r),
 $$
-where $\Omega_{\rm PU}$ is the compact-support envelope of Corollary Z.8k.1. The discriminating test is not a generic nonzero hyperon correlation; it is the full selection pattern: nonzero short-range charge-conjugate $\Lambda\bar\Lambda$, no long-range scalar memory, and null same-sign/spin-zero controls. A stable nonzero same-sign or $K_S^0K_S^0$ spin-correlation slope in the same scalar-channel cuts falsifies the filter branch.
+where $\Omega_{\rm PU}$ is the compact-support envelope of Corollary Z.8k.1. Under the hypotheses of Corollary Z.8k.1a, the short-range scalar contribution is positive exactly when $\eta^{\rm PU}_{0^{++}\rightarrow\Lambda\bar{\Lambda}}>0$ and vanishes when this coefficient is zero. The long-range null uses Theorem Z.8k's additional averaging and source-exhaustion hypotheses. The scalar source contributes no same-sign hyperon slope, and the spin-zero control carries no spin slope. A stable nonzero control slope falsifies the corresponding null only when the measured observable satisfies its stated channel and spin-readout assumptions; an inclusive same-sign rejection requires other production contributions to be absent or bounded tightly enough to exclude the observed slope.
 
 ### 13.8.4 Conditional Landauer Horizon Spectroscopy
 
@@ -1328,16 +1339,16 @@ By Lemma Q.0.7b, $\alpha_L$ is transcendental and hence irrational.
 |:----:|:--------|:----------------:|:-------------------------:|
 | 1 | $(1,9)$ | $7.93\times10^{-4}$ | $0.0449$ |
 | 2 | $(15,136)$ | $2.37\times10^{-5}$ | $0.0202$ |
-| 3 | $(31,281)$ | $2.49\times10^{-6}$ | $0.00439$ |
+| 3 | $(31,281)$ | $2.48\times10^{-6}$ | $0.00439$ |
 | 4 | $(139,1260)$ | $3.40\times10^{-7}$ | $0.00269$ |
 | 5 | $(170,1541)$ | $1.75\times10^{-7}$ | $0.00170$ |
 
-**Three-gap finite-budget test.** For any finite cutoff $N_{\max}$, the exact central labels $\{N\ln2\bmod2\pi:N=1,\ldots,N_{\max}\}$ partition $[0,2\pi)$ into at most three distinct gap lengths by Proposition Q.0.7n. For cyclically order-matched measured peaks, each observed adjacent gap must lie within $2\varepsilon_{\mathrm{peak}}$ of its central gap.
+**Three-gap finite-budget test.** For any finite cutoff $N_{\max}$, the exact central labels $\{N\ln2\bmod2\pi:N=1,\ldots,N_{\max}\}$ partition $[0,2\pi)$ into at most three distinct gap lengths by Proposition Q.0.7n. If the labelled central and measured peaks admit compatible cyclic unwrappings with every matched displacement bounded by $\varepsilon_{\mathrm{peak}}$, each observed adjacent gap differs from its central gap by at most $2\varepsilon_{\mathrm{peak}}$. Cyclic order alone does not supply this compatible-lift condition.
 
-**Falsification conditions on this branch:**
-- no label-matched phase-grid component within the registered tolerance of $[N\ln2]_{2\pi}$ in a system independently shown to satisfy Definition Q.0.7u;
-- a measured exact rational phase-step ratio replacing $\alpha_L$;
-- a dimensionless phase grid whose positions vary with horizon mass after transforming to $x=\hbar\omega/(k_B T_H)$.
+**Falsification conditions on this branch:** Within an independently validated Definition Q.0.7u transfer branch, register the admitted label domain, peak tolerance, and measurement-uncertainty protocol before comparison. Statistically resolved rejection requires:
+- no assignment of admitted labels for which the reduced phase positions lie within the registered tolerance of $[N\ln2]_{2\pi}$ after instrumental and greybody-model phase uncertainty is included;
+- a phase-step model whose predictions on that finite label domain are incompatible with the registered $\ln2$ grid at that tolerance and uncertainty; finite-precision data alone do not establish an exact rational phase-step ratio;
+- a cross-horizon comparison of the same registered labels whose reduced phases violate the $2\varepsilon_{\mathrm{peak}}$ circular-distance bound after measurement uncertainty is included.
 
 **Status:** This is a conditional transfer-branch prediction. It does not replace ordinary greybody-factor calculations and does not assert universal amplitudes, widths, or envelopes.
 
@@ -1353,7 +1364,7 @@ X\in\{A,B\},
 \qquad
 0<\delta_B<\delta_A,
 $$
-with $\alpha,\beta>0$, $\alpha^2+\beta^2=1$, visibility $V\in[0,1]$, and
+with $\sigma_p>0$, $\alpha,\beta>0$, $\alpha^2+\beta^2=1$, visibility $V\in[0,1]$, and
 $$
 O:=\exp\left[-\frac{(\delta_A-\delta_B)^2}{8\sigma_p^2}\right],
 \qquad
@@ -1364,7 +1375,7 @@ $$
 
 1. $\lambda\in\{A,B\}$, $P(\lambda=A)=\alpha^2$, $P(\lambda=B)=\beta^2$, and $p=\delta_\lambda+\xi$;
 2. $P(a=1\mid\lambda,\xi,r)=P(a=1\mid r)$;
-3. $\mathbb E[\xi\mid\lambda,a=1]=0$ for both values of $\lambda$.
+3. $\mathbb E[\xi\mid\lambda,a=1]=0$ for every $\lambda$ with $P(\lambda,a=1)>0$, with finite conditional first moment on each such event. For a branch with $P(\lambda,a=1)=0$, assign its conditional mean and variance the value zero in the weighted conditional-moment formulas of this subsection; its weight is zero.
 
 Momentum-dependent acceptance or record-conditioned backaction lies outside this class when it violates item 2 or makes $\mathbb E[\xi\mid\lambda,a=1]\ne0$ in violation of item 3; such alternatives require separate hypotheses.
 
@@ -1480,7 +1491,7 @@ V>V_{\mathrm{crit}}
 \frac{\alpha^2\delta_A+\beta^2\delta_B}
 {\alpha\beta O(\delta_A+\delta_B)}.
 $$
-The negative branch is attainable exactly when $V_{\mathrm{crit}}<1$. At $V=1$ and $O\to1$,
+The negative branch is attainable exactly when $V_{\mathrm{crit}}<1$. At $V=1$, with $\alpha\ne\beta$ and $\alpha,\beta,\delta_A,\delta_B$ held constant, the limit $O\to1$ gives
 $$
 \langle p\rangle_{\mathrm{ps}}
 \longrightarrow
@@ -1523,7 +1534,7 @@ $$
 $$
 Thus $1-V_{\mathrm{crit}}=\varepsilon D/[\alpha\beta(\delta_A+\delta_B)]$, while $|\delta_{\mathrm{eff}}|=D/\varepsilon$; multiplication proves the identity. As $\varepsilon\to0^+$ subject to $\alpha^2+\beta^2=1$, $\alpha,\beta\to1/\sqrt2$, and substitution gives the displayed limit. ∎
 
-**Proposition 13.8.5f (Asymptotic Standard-Error Budget).** For independent accepted events with finite variance, the Gaussian large-sample design condition for a $5$-standard-error sign resolution is
+**Proposition 13.8.5f (Asymptotic Standard-Error Budget).** Assume independent identically distributed raw trials with constant acceptance probability $P_{\mathrm{ps}}>0$, whose accepted momentum law has finite variance and nonzero mean $\langle p\rangle_{\mathrm{ps}}$. For the acceptance indicators $A_i$, $N_{\mathrm{ps}}=\sum_{i=1}^{N_{\mathrm{tot}}}A_i$ has $\mathbb E[N_{\mathrm{ps}}/N_{\mathrm{tot}}]=P_{\mathrm{ps}}$ and $\operatorname{Var}(N_{\mathrm{ps}}/N_{\mathrm{tot}})=P_{\mathrm{ps}}(1-P_{\mathrm{ps}})/N_{\mathrm{tot}}$. Chebyshev's inequality therefore gives $N_{\mathrm{ps}}=P_{\mathrm{ps}}N_{\mathrm{tot}}+o_p(N_{\mathrm{tot}})$. Under this sampling contract, the Gaussian large-sample design condition for a $5$-standard-error sign resolution is
 $$
 N_{\mathrm{ps}}
 \ge
@@ -1534,7 +1545,7 @@ N_{\mathrm{tot}}
 25\frac{\operatorname{Var}_{\mathrm{ps}}}
 {P_{\mathrm{ps}}\langle p\rangle_{\mathrm{ps}}^2}.
 $$
-In the joint limit $V=1$, $O\to1$ with nonzero $\varepsilon$,
+At $V=1$, with $\alpha,\beta,\delta_A,\delta_B$ held constant, $\varepsilon=\beta-\alpha\ne0$, and $D:=\alpha\delta_A-\beta\delta_B\ne0$, the limit $O\to1$ gives
 $$
 N_{\mathrm{tot}}
 \sim
@@ -1544,7 +1555,7 @@ This is an asymptotic design scaling, not an exact finite-sample lower bound or 
 
 *Proof.* The standard error of the accepted-sample mean is $\sqrt{\operatorname{Var}_{\mathrm{ps}}/N_{\mathrm{ps}}}$. Requiring $|\langle p\rangle_{\mathrm{ps}}|$ to be at least five times this quantity gives the first inequality. Asymptotically $N_{\mathrm{ps}}=P_{\mathrm{ps}}N_{\mathrm{tot}}+o_p(N_{\mathrm{tot}})$, which gives the second design condition. Put $D=\alpha\delta_A-\beta\delta_B$. In the strong-overlap limit, $P_{\mathrm{ps}}\to\varepsilon^2/2$, $\langle p\rangle_{\mathrm{ps}}\to-D/\varepsilon$, and $\operatorname{Var}_{\mathrm{ps}}\sim\sigma_p^2$. Hence $P_{\mathrm{ps}}\langle p\rangle_{\mathrm{ps}}^2\to D^2/2$, yielding the stated scaling. ∎
 
-**Proposition 13.8.5g (Variance Scope).** Every channel in $\mathfrak G_{\mathrm{cl}}$ with finite accepted second moments obeys
+**Proposition 13.8.5g (Variance Scope).** Every channel in $\mathfrak G_{\mathrm{cl}}$ with $P(a=1)>0$ and finite accepted second moments obeys
 $$
 \operatorname{Var}_{\mathrm{ps}}^{\mathrm{cl}}
 =
@@ -1702,12 +1713,7 @@ The ratio of these reported operation counts is greater than $833$. For an odd-d
 
 **Evidence 3: Practical Deployment in Classical Communication**
 
-The classical Golay code's exceptional performance is validated by real-world deployment in high-reliability communication systems:
-
-- **Voyager 1 & 2 spacecraft** (1979–1981): The Golay code replaced the Reed-Muller code for color image transmission from Jupiter and Saturn, enabling higher data rates within constrained bandwidth (Curtis 2016).
-- **MIL-STD-188**: U.S. military standard for automatic link establishment in HF radio systems employs Golay-based error correction (Johnson 1991).
-
-*Note:* These classical deployments demonstrate the code's practical superiority but do not directly test the quantum substrate alignment hypothesis.
+Classical Golay-based error correction was used in the Voyager spacecraft telecommunications system (Curtis 2016, Section 3.3; NASA/JPL, Sections 6.1–6.2). This documented deployment establishes practical use in that system. It does not establish comparative superiority over other codes or test the quantum substrate alignment hypothesis.
 
 **Evidence 4: Structural Properties**
 
@@ -1715,7 +1721,7 @@ The extended binary Golay code possesses exceptional structural properties:
 
 - Self-duality of the parent code
 - Mathieu group $M_{24}$ symmetry
-- Connection to the Leech lattice $\Lambda_{24}$ via the gluing construction (Conway & Sloane 1999)
+- Connection to the Leech lattice $\Lambda_{24}$ through its code-based construction (Conway 1969b, §§1–2; Appendix R, Theorem R.4.9). Self-duality and $M_{24}$ permutation symmetry are mathematical code properties, not physical-substrate evidence.
 
 These mathematical properties suggest the code occupies a special position in the space of possible error-correcting structures.
 
@@ -1795,11 +1801,11 @@ To distinguish the PU explanation from standard coding theory, we propose target
 1. Implement the $[[23, 1, 7]]$ quantum Golay code on high-connectivity hardware (trapped ions, neutral atoms)
 2. Implement alternative CSS codes with comparable $[[n, k, d]]$ parameters (e.g., randomly constructed $[[23, 1, \leq 7]]$ stabilizer codes)
 3. Measure logical error rates under identical physical noise conditions
-4. Compare observed performance ratios against theoretical predictions from distance alone
+4. Compare observed performance ratios against prospective predictions from the registered code, decoder, hardware, and physical noise model
 
 *Substrate-alignment hypothesis:* Hypothesis 54.1 must supply a prospective positive margin and uncertainty interval before comparison. The Golay selection and classification theorems alone predict no excess hardware performance beyond the registered code, decoder, and noise model.
 
-*Null Hypothesis:* Performance differences are fully explained by mathematical distance bounds.
+*Null Hypothesis:* Performance differences follow the registered code, decoder, hardware, and physical noise model without an additional substrate-alignment response.
 
 **Protocol 4.2: Rate Optimality Test**
 
@@ -1864,13 +1870,13 @@ $$
 The predicted first non-correctable shell consists of $1771$ syndrome classes, each containing exactly six tetrads.
 7. Repeat after interface-basis changes and across hardware platforms to distinguish a fixed Golay-frame signal from device-specific correlations.
 
-*PU Prediction on the substrate-aligned residual branch:* The observed octad excess obeys
+*PU Prediction on the substrate-aligned residual branch with an exchangeable device/null law on weight-8 residuals (Theorem Z.13b.3):* The observed octad excess obeys
 $$
 \mathcal R_8=1+968\eta_8,
 $$
 with $\eta_8>0$ when a substrate octad component is present. The conditional octad incidence statistics obey the exact $S(5,8,24)$ ratios. The controlled weight-4 decoder-boundary subtest obeys the sextet law of Corollary Z.13b.5: $1771$ syndrome classes, six tetrads per class.
 
-*Null Hypothesis:* After conditioning on weight and subtracting device-local noise, residual weight-8 patterns are exchangeable or hardware-specific rather than Golay-octad-supported; therefore $\mathcal R_8\approx1$ and the $253:77:21:5:1$ incidence sequence is absent. Under a generic rate-$\tfrac12$ code or unmarked hardware frame, weight-4 syndrome fibers need not form $M_{24}$-transitive six-tetrad sextets.
+*Null Hypothesis:* For an exchangeable weight-8 device/null law with no substrate component, $\mathcal R_8=1$ at the population level and is estimated with uncertainty. Conditioning this null on $\mathcal O_8$ makes it uniform on the octads, so it also has the $253:77:21:5:1$ incidence ratios; those ratios alone do not distinguish a substrate signal. A hardware-specific null requires its own registered octad probability $g_8=\mathbb P_{\mathrm{dev}}(e\in\mathcal O_8\mid |e|=8)$ and has null value $\mathcal R_8=g_8/f_8$, where $f_8=759/\binom{24}{8}=1/969$. On the corresponding mixture branch, $\mathcal R_8=(1-\eta_8)g_8/f_8+\eta_8/f_8$; the displayed $1+968\eta_8$ law follows when $g_8=f_8$. Under a generic rate-$\tfrac12$ code or unmarked hardware frame, weight-4 syndrome fibers need not form $M_{24}$-transitive six-tetrad sextets.
 
 **Protocol 4.5: Octad-Hessian Stiffness Spectroscopy**
 
@@ -1913,11 +1919,11 @@ Equivalently, after dividing by the fitted scalar stiffness $\kappa$, the nonzer
 
 *Implementation Status.* Protocol 4.5 admits two distinct realization gates that should not be conflated:
 - **Emulator gate (numerical):** the centered octad quadratic form $Q_{\mathrm{oct}}$ is evaluated on a classical simulator over a registered 24-coordinate frame using the explicit list of $759$ octads of $S(5,8,24)$. This is a numerical confirmation of Corollary Z.13b.1a's exact arithmetic; it does not test physical instantiation.
-- **Physical gate (experimental):** an actual $759$-term eight-body interaction Hamiltonian on a 24-mode device. This is a substantially heavier ask than 24-qubit syndrome decoding (Protocol 4.4) and is not implementable on near-term high-connectivity hardware without architecture-level extensions.
+- **Physical gate (experimental):** a 24-mode device realizing the calibrated quadratic response $Q_{\mathrm{oct}}(u)=\frac{22\kappa}{3}\sum_{i<j}(u_i-u_j)^2$. This is algebraically equivalent to the centered octad sum and contains only pairwise quadratic terms in the declared coordinates. Physical realization and calibration require an architecture-specific certificate.
 
 The branch-prediction status (◐) of Protocol 4.5 in the experimental ledger refers to the emulator gate; the physical gate is flagged separately as untested (○) and architecture-pending.
 
-**Feasibility Assessment:** Protocol 4.4 is experimentally implementable in principle with current high-connectivity quantum-computing platforms. Protocol 4.5 is currently closed at the classical-emulator audit level; its physical gate remains architecture-pending because a native or compiled $759$-term octad-coupling quadratic response is not a standard near-term primitive. High-connectivity platforms (trapped ions, neutral atoms, superconducting circuits with all-to-all connectivity) can implement 24-qubit logical blocks relevant to Protocol 4.4. The main experimental challenges are:
+**Feasibility Assessment:** Protocol 4.4 is experimentally implementable in principle with current high-connectivity quantum-computing platforms. Protocol 4.5 is currently closed at the classical-emulator audit level; its physical gate remains architecture-pending until a device realization and calibration of the equivalent pairwise quadratic response are supplied. High-connectivity platforms (trapped ions, neutral atoms, superconducting circuits with all-to-all connectivity) can implement 24-qubit logical blocks relevant to Protocol 4.4. The main experimental challenges are:
 
 - Achieving sufficient syndrome extraction fidelity to distinguish PCE-alignment effects from implementation noise
 - Controlling for noise model dependencies across different code families
@@ -1937,7 +1943,7 @@ must be entered with a prospective interval before comparison. The conditional c
 
 **Hypothesis 4.2 (Rate-Optimality Test):** A claim that rate $R=1/2$ minimizes logical error per physical qubit for $n=24$ requires a separately registered hardware response and noise-model certificate. The predictive-recovery dimension penalty selects $k=12$ on its coding branch but does not determine a hardware logical-error optimum across noise models.
 
-**Prediction 4.3 (Golay Residual Syndrome Spectrum):** On the substrate-aligned residual branch, after a closed device-noise budget, the residual correlated event law satisfies
+**Prediction 4.3 (Golay Residual Syndrome Spectrum):** On the substrate-aligned residual branch with a positive substrate fraction among observed weight-8 events and the exchangeable device/null weight-8 law of Theorem Z.13b.3, after a closed device-noise budget, the residual correlated event law satisfies
 $$
 \mathcal R_8
 =
@@ -1984,11 +1990,11 @@ containing the candidate code classes, decoder, finite noise-family grid, primar
 2. superiority, by the registered margin, of a non-$24$ block length at rate $1/2$ over the complete registered noise grid; or
 3. superiority, by the registered margin, of a rate $R\ne1/2$ at block length $24$ over that grid;
 4. The observed threshold ratio lies outside the prospective interval supplied by the substrate-response certificate of Hypothesis 54.1, with the registered measurement uncertainty included
-5. On an independently substrate-aligned 24-mode interface with a closed device-noise budget, the residual weight-8 spectrum remains exchangeable with $\mathcal R_8=1$ within uncertainty
-6. The residual weight-8 spectrum shows a stable structured excess not supported on the 759 Golay octads
-7. Octad-conditioned residual events fail the Steiner incidence sequence $253:77:21:5:1$
+5. On an independently substrate-aligned 24-mode interface with a closed device-noise budget, the exchangeable device/null gate of Theorem Z.13b.3, and a prospectively registered lower bound $\eta_8\ge\eta_{8,\min}>0$, the upper endpoint of the simultaneous uncertainty interval for $\mathcal R_8$ is below $1+968\eta_{8,\min}$ under the registered decision rule and sensitivity
+6. Under Theorem Z.13b.3's exchangeable device/null gate, the residual weight-8 law shows a stable structured excess not supported on the 759 Golay octads; the same support test applies to an independently isolated substrate contribution after calibrated device-noise removal
+7. Under Theorem Z.13b.3's exchangeable device/null gate, octad-conditioned residual events fail the Steiner incidence sequence $253:77:21:5:1$; alternatively, this test applies to an independently isolated substrate contribution after calibrated device-noise removal
 8. Controlled weight-4 decoder-boundary probes fail the $1771$-class, six-tetrad sextet law
-9. A stable $M_{24}$-invariant native residual shell appears at weight $1\le w\le7$
+9. A stable $M_{24}$-invariant native substrate shell appears at weight $1\le w\le7$, with the events independently attributed to the substrate component; invariance of the total device-plus-substrate residual law alone does not supply that attribution
 10. On a registered Golay-Steiner octad stiffness implementation, the uniform mode is not the unique zero mode or the centered stiffness eigenvalues split beyond the certified anisotropy and calibration error
 
 ### 13.9.9 Implications for Quantum Computing Engineering
@@ -2031,7 +2037,7 @@ On the minimal $M=24$ interface branch, the predictive-recovery rate gate gives 
 | Golay enables gigaquop-scale computation (>$10^9$ T gates) | Ibe et al. (2025) | Recent | External engineering benchmark; nondiscriminating for PU |
 | Golay achieves $p^4$ scaling (as expected for $d=7$) | Ibe et al. (2025) | Recent | Standard distance behavior; nondiscriminating for PU |
 | Golay deployed in critical classical systems | Voyager, MIL-STD-188 | Established | External deployment evidence; nondiscriminating for PU |
-| Unique mathematical properties (self-duality, $M_{24}$, $\Lambda_{24}$) | Conway & Sloane (1999) | Established | Exact structural facts; no physical-substrate implication by themselves |
+| Golay self-duality, $M_{24}$ permutation symmetry and code-based Leech construction | MacWilliams–Sloane (1977), Ch. 20 §6; Conway (1969b), §§1–2; Appendix R, Theorem R.4.9 | Mathematical structural facts | Their physical-substrate interpretation requires independent realization evidence |
 
 These comparisons establish mathematical structure and engineering performance of Golay-based constructions in their recorded architectures. They neither prove PCE optimality nor validate substrate alignment. Protocol 4 becomes a PU-discriminating test only after $\mathfrak T_{\mathrm{Golay}}$ and the independent substrate-response certificate are frozen and the tested residual structure differs from standard coding and device-noise expectations.
 
@@ -2172,12 +2178,12 @@ $$
 $$
 \alpha^{-1}_{\mathrm{exp}} = 137.035999177(21) \quad \text{(Mohr et al. 2025; NIST 2024)}.
 $$
-The accepted branch value satisfies
+The diagnostic candidate value satisfies
 $$
 \alpha^{-1}_{YR\perp}-137.035999177
 =5.3022969595\times10^{-10}.
 $$
-This comparison is certificate-retrodictive for already published values unless the same registry entry is made before a fresh measurement. The residual-free same-branch theorem is separately obstructed by Corollary Z.27.11e.1, because the exact sinc-core value alone differs from the recorded comparison value by $0.00009287822863\ldots$, about $0.678$ ppm. A measured value outside the certified residual interval for the accepted branch refutes the Appendix Z normalization branch by Corollary Z.26c.
+This comparison is diagnostic while the operator-realization certificate is open. Upon acceptance of a closed strict certificate, comparison with already published values is certificate-retrodictive; forward evidence additionally requires the same accepted record to be entered before a fresh measurement. The residual-free same-branch theorem is separately obstructed by Corollary Z.27.11e.1, because the exact sinc-core value alone differs from the recorded comparison value by $0.00009287822863\ldots$, about $0.678$ ppm. A measured value outside the certified residual interval for the accepted branch refutes the Appendix Z normalization branch by Corollary Z.26c.
 
 **Consistency Check:** Standard QED running from the accepted Thomson-limit branch value yields $\alpha^{-1}(M_Z)$ in the electroweak comparison ledger; the branch must use the same locked normalization, residual value, and overlap audit when entered into Definition 13.0d.
 
@@ -2185,18 +2191,18 @@ This comparison is certificate-retrodictive for already published values unless 
 
 ### 13.10.3 Generation Number
 
-**Prediction:** On the connected regular source branch with $Z_x[J]\ne0$, uniform nonzero family charges, nontrivial CP capability, and cancellation of every admitted global/torsion anomaly, the smallest locally anomaly-free family pattern has $N_{\min}=3$. Exact selection of $N_g=3$ additionally requires the additive-monotone family objective of Proposition R.3.5.1a.
+**Prediction:** On the connected regular source branch with $Z_x[J]\ne0$, uniform charges within each family and a nontrivial family-charge pattern, nontrivial CP capability, and cancellation of every admitted global/torsion anomaly, the smallest locally anomaly-free family pattern has $N_{\min}=3$. Exact selection of $N_g=3$ additionally requires the additive-monotone family objective of Proposition R.3.5.1a.
 
 **Derivation Summary:** Within the stated family of candidates, the smallest pattern that supports the required charge balance and mixing has three generations. Choosing exactly that smallest pattern also depends on a separate cost rule.
 
 **Technical ledger.**
 
-Effective Theorem R.3.4 reduces the local family-anomaly ledger to $\sum_gF_g=\sum_gF_g^3=0$ under its regular descent hypotheses and gives $\{a,-a,0\}$, $a\ne0$, as the smallest CP-capable pattern in that class. Effective Proposition R.3.5.1a assumes $L_{\mathrm{fam}}(N)=L_0+NL_{\mathrm{block}}+L_{\mathrm{mix}}(N)$ with $L_{\mathrm{block}}>0$ and nondecreasing $L_{\mathrm{mix}}$, and therefore selects the smallest admissible count $N=3$. Corollary P.6.1b.8 separately quotients response-null labels. The $D_4$ triality orbit, $M=24=8\times3$, and Leech/$E_8$ constructions are compatibility records rather than family-count proofs.
+On the regular-descent SM15 branch, Effective Theorem R.3.4 reduces the local family-anomaly ledger to $\sum_gF_g=\sum_gF_g^3=0$ and gives $\{a,-a,0\}$, $a\ne0$, as the smallest nontrivial CP-capable pattern. On its SM16 branch, the local condition is only $\sum_gF_g=0$; the primitive $\{1,-1,0\}$ pattern additionally uses the integer normalization and strict charge-norm minimization specified in that theorem. Effective Proposition R.3.5.1a assumes $L_{\mathrm{fam}}(N)=L_0+NL_{\mathrm{block}}+L_{\mathrm{mix}}(N)$ with $L_{\mathrm{block}}>0$ and nondecreasing $L_{\mathrm{mix}}$, and therefore selects the smallest admissible count $N=3$. Corollary P.6.1b.8 separately quotients response-null labels. The $D_4$ triality orbit, $M=24=8\times3$, and Leech/$E_8$ constructions are compatibility records rather than family-count proofs.
 
 **Falsification Conditions:**
 - Discovery of fourth-generation quarks or leptons at colliders
 - Discovery of extra light active neutrino species
-- Cosmological evidence for fourth light neutrino species ($N_\nu > 3.2$ at 95% CL)
+- Cosmological evidence requiring a fourth light active neutrino species under a registered thermal-history and radiation-content model that identifies each such species with a family; a bound $N_{\mathrm{eff}}>3.2$ at $95\%$ confidence alone is insufficient
 - Z-pole width measurement inconsistent with three light neutrino families
 
 **Experimental handle:** The clean collider observable is the effective number of light active neutrino species coupled to the $Z$. The historical combined LEP result is
@@ -2231,7 +2237,7 @@ is uniquely selected inside the determinant-compatible block-frame/interface fam
 
 **Technical ledger.**
 
-The PU gauge-search space is the determinant-compatible block-frame/interface family acting faithfully on a direct-sum inactive-sector certificate $\mathcal B\cong\mathbb C^6$ induced by the $b=6$ Landauer partition, with response-null exact global phases quotiented and determinant-compatible anomaly-admissibility imposed. Within this finite block-frame search space, the sharp generator bound is $n_G\le12$ (Theorem G.8.2e). In the positive-marginal regime of Equation (G.8.5), every admissible non-null block-frame generator below the bound lowers finite-protocol regret, so the PCE optimum saturates $n_G=12$ whenever attainable. The exhaustive block-partition analysis has a unique saturating row, $(3,2,1)$, and hence the gauge algebra is
+The PU gauge-search space is the determinant-compatible block-frame/interface family acting faithfully on a direct-sum inactive-sector certificate $\mathcal B\cong\mathbb C^6$ on the joint minimal-carrier and sharp-record/capacity/no-surplus branch of Appendix G.8.4 ($b=6$), with response-null exact global phases quotiented and determinant-compatible anomaly-admissibility imposed. Within this finite block-frame search space, the sharp generator bound is $n_G\le12$ (Theorem G.8.2e). In the positive-marginal regime of Equation (G.8.5), every admissible non-null block-frame generator below the bound lowers finite-protocol regret, so the PCE optimum saturates $n_G=12$ whenever attainable. The exhaustive block-partition analysis has a unique saturating row, $(3,2,1)$, and hence the gauge algebra is
 $$
 \mathfrak g=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)_Y,
 \qquad
@@ -2275,20 +2281,20 @@ Equation R.17 records the geometric candidate $\mathcal{R}=d^2_{31}/d^2_{32}$ wh
 
 **Current Status (Charged Leptons):**
 
-Using the displayed Particle Data Group 2024 central ratios,
+Using the Particle Data Group 2024 central masses $m_e=0.51099895000\,\mathrm{MeV}$, $m_\mu=105.6583755\,\mathrm{MeV}$, and $m_\tau=1776.93\,\mathrm{MeV}$,
 $$
 \mathcal R_\ell^{\mathrm{exp}}
 =
 \frac{\ln(m_\tau/m_e)}{\ln(m_\tau/m_\mu)}
 =
-\frac{\ln(3477.2)}{\ln(16.82)}
+\frac{\ln(1776.93/0.51099895000)}{\ln(1776.93/105.6583755)}
 =
-2.88885\ldots.
+2.889009\ldots.
 $$
 The closest listed discrete value is $\mathcal R=3$, corresponding to $(d^2_{31},d^2_{32})=(6,2)$, and the relative central-value discrepancy is
 $$
 \frac{3-\mathcal R_\ell^{\mathrm{exp}}}{3}
-=0.03705\ldots.
+=0.03699695\ldots.
 $$
 No theory-consistency interval follows from these central values alone. A comparison claiming compatibility must first specify the mass renormalization scheme and scale, threshold map, covariance of the three mass inputs, higher-order remainder bound, and a nonzero prediction interval before examining the held-out masses.
 
@@ -2362,7 +2368,7 @@ $$
 \Delta\mathcal T_R=0
 \tag{13.10.6b}
 $$
-for the retained entropic-clock coordinate, unless an independently registered non-entropic clock record is present in the retained presheaf. When the clock is read as a stationary current with nonzero registered current mean, the registered quotient must also satisfy
+for the retained entropic-clock coordinate. An independently registered non-entropic clock record may distinguish event ordering during the same interval without changing this entropic-coordinate identity. When the clock estimator has the calibrated form $\widehat{\Delta\mathcal T_R}=\gamma_TJ_T$, $\gamma_T>0$, of Corollary O.3g, the record independently satisfies Definition D.8.7e, and $\langle J_T\rangle\ne0$, the registered quotient must also satisfy
 $$
 \frac{\operatorname{Var}(\widehat{\Delta\mathcal T_R})}
 {\langle\widehat{\Delta\mathcal T_R}\rangle^2}
@@ -2379,36 +2385,37 @@ A positive result must show the clock-flow slope, the stall/null condition, and 
 | Prediction | Framework Value | Experimental Value | Derivation | Status |
 |:-----------|:----------------|:-------------------|:-----------|:------:|
 | Euclidean response-carrier dimension $D$ and its spacetime promotion | $D=4$ on the faithful tangent-shell branch; $3+1$ interpretation requires the separate continuum/Lorentzian promotion certificates | $3+1$ observed spacetime | Definition Z.9a; Theorems Z.10-Z.11; Corollary P.8.3 | ◐ carrier theorem exact on branch; spacetime promotion certificate-gated |
-| Fine-structure constant $\alpha^{-1}$ | $\alpha^{-1}_{0}=137.03609205522863\ldots$ and diagnostic-only branch $\alpha^{-1}_{\mathrm{cand}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$; passive-complement downgrade interval $[137.03599917502362\ldots,137.03599917878353\ldots]$ | $137.035999177(21)$ | Theorem Z.26; Definition Z.27.11a; Theorem Z.27.11j.1; Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21; Corollary Z.27.11k.21.1 | ◐ open operator-realization gate; current published comparison certificate-retrodictive |
+| Fine-structure constant $\alpha^{-1}$ | $\alpha^{-1}_{0}=137.03609205522863\ldots$ and diagnostic-only branch $\alpha^{-1}_{\mathrm{cand}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$; passive-complement downgrade interval $[137.03599917502362\ldots,137.03599917878353\ldots]$ | $137.035999177(21)$ | Theorem Z.26; Definition Z.27.11a; Theorem Z.27.11j.1; Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21; Corollary Z.27.11k.21.1 | ◐ open operator-realization gate; current published comparison diagnostic |
 | Light active neutrino count $N_{\nu}$ | 3 on the pre-flavor family-redundancy branch of Proposition R.3.5.1a, provided each realized light family contributes exactly one active neutrino species with $m_\nu<M_Z/2$ and no additional such species | $2.9963\pm0.0074$ (Janot--Jadach collider extraction; PDG 2026 recommended value) | Proposition R.3.5.1a + stated active-neutrino identification + collider $Z$-width extraction | indirect, branch-conditional |
 | Gauge algebra / connected-cover notation on the finite-response block-frame positive-marginal capacity branch | $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak u(1)$; connected cover $SU(3) \times SU(2) \times U(1)$ | Standard Model gauge algebra; global form fixed by determinant interface | Theorem G.8.4b; Corollary G.8.4c | ◐ finite-response block-frame branch theorem |
+
 | Lepton hierarchy diagnostic $\mathcal{R}_\ell$ | 3 on the preregistered $(d_{31}^2,d_{32}^2)=(6,2)$ leading-response branch with one common coefficient and controlled remainders | 2.889 (3.7% retrospective residual) | Equation R.17; effective Appendix-T flavor ledger | ◐ conditional model diagnostic; physical labels, scale scheme, and remainder interval required |
-| Chronometric curvature phase/dephasing | $\hbar\lvert\dot\Theta\rvert/\lvert\Delta E\rvert=\lvert\Delta\Phi\rvert/c^2$; on saturated ND-RID branch $\hbar\Gamma_{\mathrm{res}}/\lvert\Delta E\rvert=\lvert\Delta\Phi\rvert/c^2$ | dedicated clock-interferometer test required | Theorem 47c; Theorem S.7.3a | ◐ branch prediction; ○ untested |
-| Retained entropic clock-flow | On accepted $\mathfrak C_{\mathrm{ECF}}^{(R,q)}$, $\Delta\mathcal T_R=\Delta\Sigma_R^{\mathrm{ECF}}/\ln2$; zero retained entropy/update flow gives $\Delta\mathcal T_R=0$; record-current estimates with nonzero registered mean obey $\operatorname{Var}(\widehat{\Delta\mathcal T_R})\Sigma_T/\langle\widehat{\Delta\mathcal T_R}\rangle^2\ge2$ | Barontini-type cold-atom bright/dark-sector analogue clocks, reservoir-swap quantum simulators, photonic/ion-trap retained-record clocks, and stochastic record-current tests with null-exchange windows | Definition O.3f; Theorem O.3f; Corollary O.3g; Barontini [2026] as analogue only | ◐ certificate-gated finite-record theorem; ○ protocol-specific tests pending |
-| Actualization threshold under engineered leakage | On branches with accepted $\mathfrak C_{\mathrm{act}}$, commit onset occurs when the retained link ledger reaches the certified $C_{\max}$; on the residual-budget minimal branch $C_{\max}^*=2\ln2$ nats per link-cycle and $\Gamma_{\mathrm{Evolve}}=\dot I/C_{\max}$ | controlled-leakage interferometry with a locked ledger-to-laboratory bridge required | Definition E.2a.4; Proposition E.2a.5; Definition E.2a.6; Corollary M.6.14b.1 | ◐ certificate-gated branch prediction; ○ untested |
+| Chronometric curvature phase/dephasing | At leading weak-field order, $\hbar\lvert\dot\Theta\rvert/\lvert\Delta E\rvert=\lvert\Delta\Phi\rvert/c^2$; on the saturated ND-RID branch, $\hbar\Gamma_{\mathrm{res}}/\lvert\Delta E\rvert=\lvert\Delta\Phi\rvert/c^2$ at the same order; both absolute comparisons retain the $O((\Phi_0^2+\Phi_1^2)/c^4)$ remainder | dedicated clock-interferometer test required | Theorem 47c; Theorem S.7.3a | ◐ branch prediction; ○ untested |
+| Retained entropic clock-flow | On accepted $\mathfrak C_{\mathrm{ECF}}^{(R,q)}$, $\Delta\mathcal T_R=\Delta\Sigma_R^{\mathrm{ECF}}/\ln2$; zero retained entropy/update flow gives $\Delta\mathcal T_R=0$; record-current estimates satisfying Corollary O.3g, including its calibrated-current representation, independent Definition D.8.7e record, and nonzero-mean condition, obey $\operatorname{Var}(\widehat{\Delta\mathcal T_R})\Sigma_T/\langle\widehat{\Delta\mathcal T_R}\rangle^2\ge2$ | Barontini-type cold-atom bright/dark-sector analogue clocks, reservoir-swap quantum simulators, photonic/ion-trap retained-record clocks, and stochastic record-current tests with null-exchange windows | Definition O.3f; Theorem O.3f; Corollary O.3g; Barontini [2026] as analogue only | ◐ certificate-gated finite-record theorem; ○ protocol-specific tests pending |
+| Actualization threshold under engineered leakage | On branches with accepted $\mathfrak C_{\mathrm{act}}$, commit onset occurs when the retained link ledger reaches the certified $C_{\max}$; on the residual-budget minimal branch $C_{\max}^*=2\ln2$ nats per link-cycle and, under stationary flux, $\Gamma_{\mathrm{Evolve}}=\dot I/C_{\max}$ | controlled-leakage interferometry with a locked ledger-to-laboratory bridge required | Definition E.2a.4; Proposition E.2a.5; Definition E.2a.6; Corollary M.6.14b.1 | ◐ certificate-gated branch prediction; ○ untested |
 | Landauer-ledger constellation | The same structural $\varepsilon_0=\ln2$ must appear through independent locked maps: metered actualization, retained entropic clock-flow, conditional horizon tolerance grid $\operatorname{dist}_{2\pi}(x,N\ln2)\le\varepsilon_{\mathrm{peak}}$ around exact central labels, and finite record-current TUR; no platform-specific refitting of the unit is allowed, and physical reset rows retain the separate Definition 28/Theorem 31 gate | multi-platform finite-register, horizon-analogue, and stochastic-current protocols entered as Definition 13.0i witnesses | Proposition 5; Theorem J.1; Theorem 31 for registered reset rows; Definition 13.0i; Corollary 13.0k; Definition O.3f; Proposition Q.0.19; Theorem D.8.7f; Corollary D.8.7g | ◐ multi-lock evidence standard; ○ protocol constellation pending |
 | Cone-saturation residual floor | With accepted $\mathfrak C_{\mathrm{cone}}$, retained sector front-speed splitting in vacuum is represented by a pre-locked misalignment functional satisfying $\xi_{\mathrm{cone}}\le\xi_{\mathrm{res}}$; no universal no-birefringence theorem is asserted without that certificate | multi-messenger timing, polarization, and in-vacuo dispersion tests constrain the future certificate | Definition O.7.2.5; Corollary 46a; Theorem F.0 Condition 4 | ◐ certificate-gated structural test; ○ existing bounds constrain certificate choices |
-| Predictive GSL / null-slack tomography | With accepted $\mathfrak C_{\mathrm{PGSL}}$, retained generalized entropy satisfies $\Delta S_{\mathrm{out}}+\Delta\mathcal A/(4G)\ge0$ on covered horizon cuts; with accepted $\mathfrak C_{\mathrm{NC}}$, the QNEC/null-slack ledger is nonnegative and zero slack selects the reversible Einstein branch | local horizon analogues, modular-flow tomography, and Clausius-defect null-tomography protocols constrain the finite cut records | Definition 12.5.3l; Theorem 12.5.3m; Definition 12.5.3n; Proposition 12.5.3o; Theorem 12.1g | ◐ certificate-gated branch prediction; ○ protocol-specific tests pending |
+| Predictive GSL / null-slack tomography | With accepted $\mathfrak C_{\mathrm{PGSL}}$, retained generalized entropy satisfies $\Delta S_{\mathrm{out}}+\eta_\partial\Delta\mathcal A\ge0$ on covered horizon cuts; on the Bekenstein-Hawking calibration branch $\eta_\partial=1/(4G)$ in units $\hbar=c=k_B=1$. With accepted $\mathfrak C_{\mathrm{NC}}$, the QNEC/null-slack ledger is nonnegative; zero slack gives the reversible Einstein branch under the geometric-identification hypotheses of Theorem 12.5.3h | local horizon analogues, modular-flow tomography, and Clausius-defect null-tomography protocols constrain the finite cut records | Definition 12.5.3l; Theorem 12.5.3m; Definition 12.5.3n; Proposition 12.5.3o; Theorem 12.1g | ◐ certificate-gated branch prediction; ○ protocol-specific tests pending |
 | Self/world predictive complementarity | With accepted $\mathfrak C_{\mathrm{SW}}$, external task capacity obeys $C_{\mathrm{world}}\le B_C-C_{\mathrm{sh}}-c_{\mathrm{SPAP}}\log(1/\delta_{\mathrm{self}})/\delta_{\mathrm{self}}^2$ for certified SPAP-near self-model tasks | AI metacognition/world-task scaling, cognitive-load, and neuroscience bandwidth protocols with a locked task split | Definition 14.1d; Proposition 14.1e; Remark 14.1f | ◐ certificate-gated allocation test; ○ protocol-specific tests pending |
 | Predictive free-energy envelope | On accepted $\mathfrak C_{\mathrm{Pred2}}$ branches, $d\mathbb E[-V]/dt\ge0$ on the Lyapunov window and the running viable envelope $\widehat F_{\max}(t)$ is nondecreasing | learning-curve, evolutionary-lineage, or structure-growth tests with inheritance/archive ledger fixed before comparison | Definition D.6.5c; Proposition D.6.5d; Theorem D.6.5a | ◐ certificate-gated envelope law; ○ domain ledgers pending |
 | Marginal predictability / criticality | Criticality claims require $\mathfrak C_{\mathrm{crit}}$ and report $d_{\mathrm{crit}}\le\epsilon_{\mathrm{crit}}$; exponents inherit the universality-class entry and are not fixed by PCE alone | finite-size scaling, avalanche, $1/f$, or cosmological-spectrum tests with a pre-registered critical manifold | Definition P.8.9a.12.0c; Proposition P.8.9a.12.0d | ◐ certificate-gated criticality claim; ○ not a core theorem |
 | Reflexive-charge loop ledger | Closed retained predictive loops satisfy $N\ln2+\Delta=2\pi k$ with $k\in\mathbb Z$; nonzero exact sectors require positive structural phase-defect overhead in the Q.0.7f--g ledger | closed-loop interference and finite phase-grid audits; a thermodynamic reading additionally requires the eventwise reset calibration (Q.0.7e.0) | Definition Q.0.7e with Equation (Q.0.7e.0); Definition Q.0.7g.1; Proposition Q.0.7g.2; Proposition Q.0.7f; Corollary Q.0.7g | ✓ fixed-loop structural theorem; ◐ physical bridge pending |
 | Predictive-equivalence ledger | With accepted $\mathfrak C_{\mathrm{PEq}}$, definiteness, temporal access, action phase, finite speed, and curvature readings are projections of the same retained update-cost record through their existing unit bridges | Wigner-friend-style perspective tests, certificate-relative model-access asymmetry protocols under Theorem M.10.5's hypotheses, and unit-bridge consistency audits | Definition M.6.6a; Proposition M.6.6b; Corollary O.4.3; Theorem Q.0.1 | ◐ certificate-gated compression test; ○ protocol-specific tests pending |
 | Report-induced expectation CC | On the expectation-mediated branch, seen false reports can produce a report-content-aligned later outcome shift $\delta_{\mathrm{false}}\ne0$ while unseen and delayed-report controls remain null; CTB subbranch requires target-vector alignment and vanishing orthogonal residual | dedicated blinded true/false/unseen/delayed QRNG or finite-POVM expectation protocol required | Theorem 51; Definition 34; Corollary 37a; Protocol 1a | ◐ branch prediction; ○ untested |
-| Golay noise spectroscopy | $\mathcal R_8=1+968\eta_8$ with $\eta_8>0$ on the aligned residual branch; incidence $253:77:21:5:1$; controlled weight-4 fibers form $1771$ six-tetrad sextets | dedicated 24-mode residual-noise and decoder-boundary tests required | Theorem Z.13b.3; Corollary Z.13b.5; Protocol 4.4 | ◐ branch prediction; ○ untested |
+| Golay noise spectroscopy | $\mathcal R_8=1+968\eta_8$ with $\eta_8>0$ on the aligned residual branch with an exchangeable device/null law on weight-8 residuals; incidence $253:77:21:5:1$; controlled weight-4 fibers form $1771$ six-tetrad sextets | dedicated 24-mode residual-noise and decoder-boundary tests required | Theorem Z.13b.3; Corollary Z.13b.5; Protocol 4.4 | ◐ branch prediction; ○ untested |
 | Golay-QEC bootstrap | On accepted $\mathfrak C_{\mathrm{GQEC}}$ branches, the punctured Golay witness supplies a $[[23,1,7]]$ CSS code inside a finite physical syndrome/recovery/threshold ledger; direct Golay statistics alone do not certify protected computation | 23/24-mode syndrome extraction, logical-error scaling, leakage/correlation audits, and non-transversal resource-injection tests | Definition A.0.1q.1; Theorem A.0.2a; Corollary A.0.2b; Proposition Z.13b.7 | ◐ certificate-gated foundation test; ○ architecture-pending |
 | Golay-Steiner octad stiffness | normalized Hessian spectrum $0^{(1)}\oplus352^{(23)}$ on the exact octad stiffness branch | classical-emulator audit available now; physical 24-mode quadratic-response spectroscopy with $759$-term octad coupling is architecture-pending | Corollary Z.13b.1a; Definition T.10a; Lemma T.2; Protocol 4.5 | ◐ branch prediction (emulator gate); ○ untested (physical gate) |
 | Cosmological acceleration lock | $g_0=c^2\sqrt{\Lambda}/8$; $\Sigma_\dagger=c^2\sqrt{\Lambda}/(16\pi G)$ | $g_0\sim1.2\times10^{-10}\,\mathrm{m/s^2}$; surface-density tests pending | Cor H.1, Cor H.1a, Cor I.3a | ◐ bridge-law branch; ○ redshift/lensing tests pending |
 | Primordial complexity product | $A_s r=\frac{A_Qe^{-22}}{4\pi^2}[1+O((\log N_e)/N_e)]$; leading $A_Q=1$ gives $7.07\times10^{-12}$ | tensor measurement pending; finite-$N_e$ remainder must be certified | Corollary U.65a; Section 13.10.6 | ◐ leading branch prediction; ○ untested |
 | Conditional $A_2$ internal absolute-scale projection | $\Sigma_\nu=30.519194260\,\mathrm{meV}$, $m_\beta=4.62339623\,\mathrm{meV}$; cited oscillation splittings are not matched | conditional cosmology and beta-endpoint comparison | Corollary T.24.16a | ◐ internal branch; ✗ oscillation closure |
-| Oscillation-anchored $A_2$ calibration | $\Sigma_\nu=58.565457244\,\mathrm{meV}$, $m_\beta=8.87216457\,\mathrm{meV}$ | empirical calibration comparison, not an internal-branch prediction | Corollary T.24.16a | ◐ calibration row; ○ prospective comparison |
+| Oscillation-anchored $A_2$ calibration | $\Sigma_\nu=59.503221432\,\mathrm{meV}$, $m_\beta=9.01422780\,\mathrm{meV}$ | empirical calibration comparison, not an internal-branch prediction | Corollary T.24.16a | ◐ calibration row; ○ prospective comparison |
 | Proper-acceleration entropy drag | $\mathcal Q_a=q_{\mathrm{act}}$ | dedicated acceleration calorimetry required | Cor N.12b | ◐ active-refresh, detector-response, and same-rate reversible-limit branch; ○ untested |
-| Predictive record-current TUR | $\operatorname{Var}(J_T)\Sigma_T/\langle J_T\rangle^2\ge2$ on every Blackwell-PCE classical record quotient with $\langle J_T\rangle\ne0$ | stochastic record-current and entropy-production tests | Thm D.8.7f; Cor D.8.7g | ✓ finite record theorem; ○ protocol-specific tests |
-| Scalar-channel hyperon spin filter | short-range $\Lambda\bar\Lambda$ nonzero; long-range, same-sign, spin-zero controls vanish | collider correlation tests | Cor Z.8k.1a | ◐ scalar-channel branch |
+| Predictive record-current TUR | $\operatorname{Var}(J_T)\Sigma_T/\langle J_T\rangle^2\ge2$ on Blackwell-PCE classical record quotients independently satisfying Definition D.8.7e with $\langle J_T\rangle\ne0$ | stochastic record-current and entropy-production tests | Thm D.8.7f; Cor D.8.7g | ✓ finite record theorem; ○ protocol-specific tests |
+| Scalar-channel hyperon spin filter | short-range $\Lambda\bar\Lambda$ scalar contribution equals $\eta^{\rm PU}_{0^{++}\rightarrow\Lambda\bar{\Lambda}}/3$ and is positive exactly when the transfer coefficient is positive; the long-range null requires the registered Haar-twirl, no-invariant-component, linear-readout, and source-exhaustion hypotheses; same-sign scalar contributions and spin-zero control slopes vanish | collider correlation tests | Cor Z.8k.1a | ◐ scalar-channel branch |
 | Postselected momentum-sign witness | $\langle p\rangle_{\mathrm{ps}}\in[\delta_B,\delta_A]$ for $\mathfrak G_{\mathrm{cl}}$; the calibrated coherent Gaussian realization has $\langle p\rangle_{\mathrm{ps}}<0$ iff $V>V_{\mathrm{crit}}$ | dedicated protocol pending | Theorems 13.8.5b and 13.8.5d | ◐ conditional sign witness; ○ untested |
 
 
-The displayed rows are status-resolved rather than uniformly consistent: in particular, the conditional $A_2$ internal absolute-scale projection fails its oscillation-closure comparison as marked, rejecting that physical identification without rejecting the upstream $A_2$ geometry. A theorem-level row falling outside its stated uncertainty bound would falsify the corresponding theorem stack; a branch-level or model-level row falling outside its stated uncertainty bound would falsify the named branch, bridge law, threshold input, or model layer carried by that row. The Thomson $\alpha^{-1}$ row is not residual-free: Corollary Z.27.11e.1 obstructs a same-branch $R_\alpha=0$ theorem at the recorded CODATA comparison value. It is open pending the independent diagnostic-only hypercharge-recoil (operator realization open) branch by Corollary Z.27.11k.21.1; off that branch, or after downgrading the passive complement, the corresponding residual-gated or interval status is retained. For the predictive record-current TUR row, the relevant test available only after certification is a closed finite record quotient with measured stationary current satisfying $\langle J_T\rangle\ne0$, variance, and entropy production satisfying
+The displayed rows are status-resolved rather than uniformly consistent: in particular, the conditional $A_2$ internal absolute-scale projection fails its oscillation-closure comparison as marked, rejecting that physical identification without rejecting the upstream $A_2$ geometry. A theorem-level row falling outside its stated uncertainty bound would falsify the corresponding theorem stack; a branch-level or model-level row falling outside its stated uncertainty bound would falsify the named branch, bridge law, threshold input, or model layer carried by that row. The Thomson $\alpha^{-1}$ row is not residual-free: Corollary Z.27.11e.1 obstructs a same-branch $R_\alpha=0$ theorem at the recorded CODATA comparison value. It is open pending the independent diagnostic-only hypercharge-recoil (operator realization open) branch by Corollary Z.27.11k.21.1; off that branch, or after downgrading the passive complement, the corresponding residual-gated or interval status is retained. For the predictive record-current TUR row, the relevant test available only after certification is a finite record quotient independently certified under Definition D.8.7e, with its registered antisymmetric jump current satisfying $\langle J_T\rangle\ne0$, variance, and entropy production satisfying
 $$
 \frac{\operatorname{Var}(J_T)}{\langle J_T\rangle^2}\Sigma_T<2
 $$
@@ -2422,7 +2429,7 @@ Each numerical row records mathematical status separately from empirical use. A 
 
 | Family | Registered inputs and comparison obligations |
 |---|---|
-| Weak mixing | Threshold tuple, scale and running; the validation tuple $(15.14,20.94,18.41)$ retains its calibration history |
+| Weak mixing | Threshold tuple, scale and running; $(15.14,20.94,18.41)$ is an external comparison input retaining its calibration history and is outside the image of the candidate map $\Delta=T_0F$ on the literal-spectrum, active-gauge-trivial branch of Remark T.17a.3 |
 | Higgs mass | External RG inputs, matching and the $\mathfrak M_\lambda$ operator record |
 | Charged-lepton ratios | Root triads, transport, effective dimensions, packet terms and joint residuals |
 | Lepton hierarchy statistic | Distance menu, selection rule and dependence on the mass data |
@@ -2434,12 +2441,12 @@ Each numerical row records mathematical status separately from empirical use. A 
 
 The complete numerical rows remain at their owning formulas and comparison tables. Their error budgets and falsification criteria apply to calibrated models as well as prospective models. Numerical agreements such as the charged-lepton logarithm, $\sin15^\circ\cos30^\circ$, and $\sqrt{2/3}e^{-3}$ enter with their full discrete-choice and selection history. A chance probability requires the corresponding null model and candidate menu. Effective-coupling extractions are compared at a common definition and scale with their covariance.
 
-**Fixed neutrino branch and common-scale development.** Corollary T.24.16a's absolute-mass outputs retain the oscillation mismatch in their joint comparison. Section T.24.16's detailed values are
+**Internal neutrino branch and common-scale development.** Corollary T.24.16a's absolute-mass outputs retain the oscillation mismatch in their joint comparison. Section T.24.16's detailed values for the recorded comparison indices are
 $$
 \Delta m_{21}^2=2.083089782\times10^{-5},\qquad
-\Delta m_{31}^2=6.661324627\times10^{-4}\quad\mathrm{eV}^2.
+\Delta m_{32}^2=6.453015649\times10^{-4}\quad\mathrm{eV}^2.
 $$
-The cited data are $(7.53\pm0.18)\times10^{-5}$ and $(2.453\pm0.033)\times10^{-3}\,\mathrm{eV}^2$. These comparisons reject the stated fixed scale within those quoted observational errors; the conditional arithmetic remains in the model record.
+The Particle Data Group (2022) data for those indices are $(7.53\pm0.18)\times10^{-5}$ and $(2.453\pm0.033)\times10^{-3}\,\mathrm{eV}^2$, respectively, with normal ordering for $\Delta m_{32}^2$. These comparisons reject the stated internal scale within those quoted observational errors; the conditional arithmetic remains in the model record.
 
 A common-scale extension sets $m_i'=\lambda m_i$. Then $\Delta m_{ij}'^2=\lambda^2\Delta m_{ij}^2$, while the splitting ratio is unchanged. Calibrating the solar splitting fixes $\lambda$ and leaves the atmospheric splitting as a shape test. At fixed mixing and Majorana phases, $\Sigma_\nu$, $m_\beta$ and $|m_{\beta\beta}|$ all scale by $\lambda$. This extension introduces one scale input and retains the original failed fixed-scale comparison.
 
@@ -2450,7 +2457,7 @@ The phase candidate $232.5^\circ$ is treated by the full registration in V.0.2, 
 | Prediction | Dominant Uncertainty Source | Estimated Magnitude |
 |:-----------|:---------------------------|:--------------------|
 | $\alpha^{-1}$ | exact sinc-core arithmetic plus diagnostic-only finite Ward hypercharge-recoil (operator realization open) residual; no residual contribution is shared with the bulk, interface, electromagnetic-projection, curvature, sinc-transport, or future residual ledgers | candidate branch: degenerate residual interval $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ and $\alpha^{-1}_{\mathrm{cand}}=137.03599917753023\ldots$; passive-complement downgrade interval width $3.759913047\times10^{-9}$; $\pm0.000060$ remains only a diagnostic budget |
-| $\mathcal{R}$ | QED radiative corrections ($\sim 1\%$), threshold effects ($\sim 1\%$), higher-order ($\times 2$) | $\sim 5\%$ |
+| $\mathcal{R}$ | Registered mass scheme and scale, threshold map, joint input covariance, and higher-order remainder certificate | No numerical theory interval before that certificate is accepted |
 | $N_g$ | Minimal admissible count $3$ on the connected regular uniform-charge anomaly/CP branch with global/torsion cancellation; exact selected count $3$ only under the additive-monotone objective of Proposition R.3.5.1a; $D_4$ triality and $E_8$/Leech are compatibility checks | branch-discrete |
 | $D$ | Exact in the Appendix Z Bures tangent-cell mode-channel contract | branch-discrete |
 
@@ -2463,13 +2470,13 @@ P_{\mathrm{excess}}
 =
 q_{\mathrm{act}}\frac{c}{2\pi}m_S|a|.
 $$
-The dimensionless collapse variable is
+For $m_S>0$ and $|a|>0$, the dimensionless collapse variable is
 $$
 \mathcal Q_a
 =
 \frac{2\pi P_{\mathrm{excess}}}{c\,m_S|a|}.
 $$
-The branch predicts $\mathcal Q_a=q_{\mathrm{act}}$ and no proper-acceleration UCT contribution for ideal geodesic free fall. A positive signal must scale linearly with inertial mass and proper acceleration; a signal scaling with coordinate acceleration, gravitational potential, or support force without proper acceleration falsifies the proper-acceleration reading of the branch. A null result constrains the joint signal-realization and reversible-limit branch; it bounds $q_{\mathrm{act}}$ only when the remaining detector-response, subtraction, and equality certificates are independently accepted for the tested material system and acceleration range.
+The branch predicts $\mathcal Q_a=q_{\mathrm{act}}$ and no proper-acceleration UCT contribution for ideal geodesic free fall. For comparisons with an independently registered common value of $q_{\mathrm{act}}>0$, the signal scales linearly with inertial mass and proper acceleration. In general, the registered dependence $q_{\mathrm{act}}(S;|a|)$ must be propagated through the power law; a signal scaling with coordinate acceleration, gravitational potential, or support force without proper acceleration falsifies the proper-acceleration reading of the branch. A null result constrains the joint signal-realization and reversible-limit branch; it bounds $q_{\mathrm{act}}$ only when the remaining detector-response, subtraction, and equality certificates are independently accepted for the tested material system and acceleration range.
 
 **Conditional $A_2$ Absolute-Scale Projection.** The internally normalized seesaw branch gives
 $$
@@ -2526,7 +2533,7 @@ This value is theorem-level only after an accepted $\mathfrak C_B$, $\mathfrak C
 **Falsification Criterion:** A future value outside an accepted forward interval would falsify that accepted baryogenesis certificate. No numerical falsification interval exists on the current certificate-pending branch.
 
 **Correlated Branch Prediction (Theorem Y.11):** On the same accepted
-square-root branch, consider an infinitesimal deformation that holds
+square-root branch with $\eta_B\ne0$, consider an infinitesimal deformation that holds
 $A_{EW}$, $M_{Pl}$, $\mathcal C_{\mathrm{eff}}$, $\mathcal F_{CP}$,
 $f_{\mathrm{wash}}$, the transport window, and every other certificate entry
 fixed. Then
@@ -2556,7 +2563,7 @@ $$
 $$
 $m=10^{-14}\,\mathrm{kg}$, $d=\Delta x=250\,\mu\mathrm m$, and $\tau=10\,\mathrm s$ give $0.741479\ldots$ rad. This is not a universal phase; a full prediction uses all branch distances and nuisance channels.
 
-**Reset-support calorimetry.** For certified reset entropy decreases $\Delta H_j$ thermalized into a bath at $T$,
+**Reset-support calorimetry.** For certified reset entropy decreases $\Delta H_j$ on the thermal reset branch of Definition 28, thermalized into a bath at $T$, let $Q_{\mathrm{bath}}$ denote the ensemble mean of the total heat delivered to that bath. Then
 $$
 Q_{\mathrm{bath}}\ge k_BT\sum_{j=1}^{N_{\mathrm{reset}}}\Delta H_j.
 $$
@@ -2601,7 +2608,7 @@ whereas $0.166172\ldots$ is only the first-order estimate $2\,\delta H/H$.
 
 The input state, witness, channel parameters, electromagnetic and mechanical nuisance channels, metric-covariance contribution, decision threshold, and stopping rule must be fixed before unblinding. Witness support above the certified separable cap rejects $H_{\mathrm{sep}}$ for the tested input and apparatus class. A null rejects $H_{\mathrm{phase}}$ only when the accepted sensitivity and decoherence ledger would have detected the specified phase channel. These two benchmarks do not exhaust the admissible source rules, so neither outcome selects a unique gravitational completion.
 
-**Exploratory benchmark: reset-support calorimetry.** Let $N_{\mathrm{reset}}$ count physical binary reset-support events for which an accepted implementation record shows that the discarded logical information is thermalized into an instrumented bath at temperature $T$. Under those conditions Landauer accounting gives
+**Exploratory benchmark: reset-support calorimetry.** Let $N_{\mathrm{reset}}$ count physical binary reset-support events on the thermal reset branch of Definition 28. For each event $j$, require an accepted implementation record certifying $H_{q_j}(P_j\mid R_j)=\ln2$, where $R_j$ contains every classical record retained and unchanged through that reset, and showing that the discarded logical information is thermalized into an instrumented bath at temperature $T$. Here $Q_{\mathrm{bath}}$ denotes the ensemble mean of the total heat delivered to that bath. Under those conditions Landauer accounting gives
 $$
 Q_{\mathrm{bath}}
 \ge

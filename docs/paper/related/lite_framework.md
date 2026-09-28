@@ -40,7 +40,7 @@ The sections below give the construction, prove totality and computability, and 
 
 LITE uses classical **Peano Arithmetic (PA)** together with an acceptable effective numbering of programs and a fixed effective encoding of PA syntax and proofs. Its language contains symbols for zero, successor, addition, multiplication, and the usual first-order logical apparatus. Through Gödel coding, finite formulas and proofs are represented by natural numbers:
 
-**Definition 1 (Gödel Coding):** Fix an effective one-to-one coding $\langle\cdot\rangle:\Sigma^*\to\mathbb N$ of finite syntactic expressions in the language of PA. We use $\ulcorner\psi\urcorner$ for the code of a formula $\psi$.
+**Definition 1 (Gödel Coding):** Fix a standard one-to-one coding \(\langle\cdot\rangle:\Sigma^*\to\mathbb N\) of finite PA syntax and proof strings for which code recognition, decoding, well-formedness, numeral formation, substitution, negation, and PA proof checking are primitive recursive (using a fixed rejection value on invalid codes). We use \(\ulcorner\psi\urcorner\) for the code of a formula \(\psi\). This syntax coding is distinct from the acceptable program numbering used in Theorem 1.
 
 **Definition 2 (Proof Predicate):** The primitive-recursive relation $Prf(p,c)$ holds exactly when $p$ codes a valid PA proof whose concluding formula has code $c$ [2, 3]. We write $Prf(p,\ulcorner\psi\urcorner)$ when the target is a particular formula $\psi$.
 
@@ -57,7 +57,7 @@ Prf_{\le g(n)}(\ulcorner\psi\urcorner)
 \tag{1}
 $$
 
-For fixed $n$ and $c$, this is a finite decision procedure: test $Prf(p,c)$ for $p=0,\ldots,g(n)$. Thus $(n,c)\mapsto Prf_{\le g(n)}(c)$ is computable, and it is primitive recursive when $g$ is primitive recursive. The numerical-code convention above can equivalently be replaced by a declared proof-word length bound; resource estimates must specify which convention and encoding they use.
+For fixed $n$ and $c$, this is a finite decision procedure: test $Prf(p,c)$ for $p=0,\ldots,g(n)$. Thus $(n,c)\mapsto Prf_{\le g(n)}(c)$ is computable, and it is primitive recursive when $g$ is primitive recursive. The numerical-code convention above can equivalently be replaced by a declared proof-word length bound; resource estimates must specify which convention and encoding they use. For a general total computable \(g\), (1) is metanotation for first evaluating \(g(n)\), then performing the finite search. An object-language PA formula uses a representing computation-graph formula \(G_g(n,m)\): \(\exists m\,[G_g(n,m)\land\exists p\le m\,Prf(p,c)]\). No PA term for \(g\), or PA proof of its uniform totality, is assumed.
 
 ### 2.3. The Recursion Theorem
 

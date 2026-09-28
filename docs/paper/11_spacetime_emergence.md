@@ -14,7 +14,7 @@ The foundational substrate, according to Hypothesis 1, is a dynamic network $\ma
 
 **11.2 Metric Distance from ND-RID Propagation Costs**
 
-Definition 27 nominates ND-RID (`Evolve`) as an interaction/update law. On a cycle that separately implements a registered reset, Theorem 31 gives $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; a positive floor requires $H_q(P\mid R)\ge h_{\min}>0$, and Proposition E.2a's completed reset-support deficit belongs to the same reset ledger. On a refresh/minorization branch Lemma E.1 additionally gives strict contraction $f_{RID}<1$. Definition 27 alone implies neither thermodynamic irreversibility, a positive reset cost, nor strict contraction; propagation costs may use these entries only on their accepted branches.
+Definition 27 nominates ND-RID (`Evolve`) as an interaction/update law. On a cycle that separately implements a registered reset, Theorem 31 gives $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; a positive floor inferred from this entropy bound requires $H_q(P\mid R)\ge h_{\min}>0$, and Proposition E.2a's completed reset-support deficit belongs to the same reset ledger. On a refresh/minorization branch Lemma E.1 additionally gives strict contraction $f_{RID}<1$. Definition 27 alone implies neither thermodynamic irreversibility, a positive reset cost, nor strict contraction; propagation costs may use these entries only on their accepted branches.
 
 **11.2.1 Definition 35 (Def 35): Propagation Cost Metric $d_{\mathcal{N}}$**
 
@@ -52,7 +52,7 @@ The infimum is over finite paths. Connectedness makes it finite. Symmetry is imm
 
 
 
-**Definition 35a (Latency--Capacity--Dissipation Edge Ledger).** A retained directed MPU edge $e$ carries the vector datum
+**Definition 35a (Latency--Capacity--Dissipation Edge Ledger).** On a finite retained directed MPU graph, each edge $e$ carries the vector datum
 $$
 (\ell_e,u_e,\varepsilon_e),
 \qquad
@@ -63,7 +63,7 @@ u_e\ge0,
 \varepsilon_e\ge0,
 \tag{64a}
 $$
-where $\ell_e$ is a certified minimum intervention-to-retained-response signaling delay including registered node processing, $u_e$ is a composable reliable-rate upper bound measured in completed retained-update symbols per unit time in one fixed alphabet, and $\varepsilon_e$ is a registered dimensionless lower bound on entropy exported per completed retained update on that edge. For the entropy coordinate, the certificate must partition physical reset resources into nonoverlapping edge ledgers, or allocate every shared reset cost to exactly one edge; otherwise only the corresponding non-double-counted aggregate bound is admissible. A realized $f_e$ uses the same alphabet and has units of completed updates per unit time; write $\dot\Sigma_{flow}:=k_B^{-1}dS_{env}/dt$. For vertices $s,t$, define
+where $\ell_e$ is a certified minimum intervention-to-retained-response signaling delay including registered node processing, $u_e$ is a composable reliable-rate upper bound measured in completed retained-update symbols per unit time in one declared alphabet, and $\varepsilon_e$ is a registered dimensionless lower bound on entropy exported per completed retained update on that edge. For the entropy coordinate, the certificate must partition physical reset resources into nonoverlapping edge ledgers, or allocate every shared reset cost to exactly one edge; otherwise only the corresponding non-double-counted aggregate bound is admissible. A realized $f_e$ uses the same alphabet and has units of completed updates per unit time; write $\dot\Sigma_{flow}:=k_B^{-1}dS_{env}/dt$. For distinct vertices $s,t$, define
 $$
 L_{st}
 =\min_{P:s\leadsto t}\sum_{e\in P}\ell_e,
@@ -100,7 +100,7 @@ $$
 \tag{64e}
 $$
 on the max-flow/min-cut routing branch;
-5. for any realized edge flow $f_e\ge0$ on the certified non-double-counting entropy ledger, the entropy production satisfies
+5. for any realized edge flow $f_e\ge0$ on the certified non-double-counting entropy ledger, the entropy export rate satisfies
 $$
 \dot\Sigma_{flow}\ge\sum_e\varepsilon_e f_e.
 \tag{64f}
@@ -349,13 +349,13 @@ Assuming Theorem 43, the operational-continuum branch is packaged in Theorem 43.
 
 **11.4.1 Theorem 44 (Gromov-Hausdorff Limit)**
 
-On the operational-continuum branch of Theorem 43.5, consider a sequence of pointed, rescaled MPU network metric spaces
+On the operational-continuum branch of Theorem 43.5, use the common macroscopic metric normalization supplied by its continuum certificate. The propagation-cost metric already includes the microscopic length in Definition 35. Consider the pointed network spaces
 $$
-\{(X_n,o_n)\}=\{(\mathcal{V}_n,\delta_{eff,n}^{-1}d_{\mathcal N_n},o_n)\},
+\{(X_n,o_n)\}=\{(\mathcal V_n,d_{\mathcal N_n},o_n)\},
 \qquad
-\delta_{eff,n}\to 0,
+\delta_{eff,n}\to0,
 $$
-equipped with normalized counting measures $\mu_n$ such that $\mu_n(B_1(o_n))=1$ after rescaling. Then the family is pre-compact in the pointed measured Gromov–Hausdorff topology. Consequently, a subsequence converges in the measured sense to a limit pointed metric-measure space
+equipped with the certificate's scaled counting measures $\mu_n$ and length-space interpolations whose pointed measured-Gromov--Hausdorff discrepancy from the vertex models tends to zero on bounded sets. Retain the declared measure calibration $\mu_\infty=\mathcal H^4$ on the strict-noncollapse branch; an auxiliary unit-ball normalization used for compactness must be converted back before that identification is asserted. Then the family is precompact in pointed measured Gromov--Hausdorff topology. Consequently, a subsequence converges in the measured sense to a limit pointed metric-measure space
 $$
 (M,d_\infty,\mu_\infty,o_\infty).
 $$
@@ -494,13 +494,13 @@ $$
 
 **Theorem 45a (Relabeling–Covariance Closure).** Under Hypotheses 11.5.3.1–11.5.3.3:
 
-(a) *Scalar density form.* There exists a scalar local Lagrangian $\mathcal L$ — a function of the $k$-jet of $\Psi$ transforming as a scalar under diffeomorphisms — such that
+(a) *Scalar density form.* There exists a scalar local Lagrangian $\mathcal L$ — a function of the $k$-jet of $\Psi$ transforming as a scalar under orientation-preserving diffeomorphisms — such that
 $$
 S_U[\Psi] \;=\; \int_U \sqrt{|g|}\,\mathcal L(j^k\Psi)\,d^4 x,\tag{67c}
 $$
 equivalently the density $L=\sqrt{|g|}\,\mathcal L$ is a scalar density of weight one.
 
-(b) *Diffeomorphism covariance of the global action.* For every compactly supported diffeomorphism $\varphi$ of $M_{\mathrm{reg}}$,
+(b) *Diffeomorphism covariance of the global action.* For every compactly supported orientation-preserving diffeomorphism $\varphi$ of $M_{\mathrm{reg}}$,
 $$
 S[\varphi^*\Psi,\varphi^*g]\;=\;S[\Psi,g].\tag{67d}
 $$
@@ -511,9 +511,9 @@ Continuum diffeomorphism invariance is therefore a consequence of the conjunctio
 $$
 \int_{\phi(U)} L\bigl(x,j^k\Psi(x)\bigr)\,d^4x \;=\; \int_{\phi(U)} L'\bigl(\chi(x),j^k(\chi_*\Psi)(\chi(x))\bigr)\,|\det D\chi(x)|\,d^4x.
 $$
-Since the equality holds for arbitrary $U$ and arbitrary local field data, the integrands satisfy the pointwise density transformation law $L'(x',\,\cdot\,)=L(x,\,\cdot\,)\,|\det D\chi^{-1}(x')|$. This is exactly the weight-one scalar-density transformation. The metric determinant $\sqrt{|g|}$ transforms by the same Jacobian factor under coordinate changes (Wald 1984, §2.4), so the ratio $\mathcal L:=L/\sqrt{|g|}$ is a scalar, giving (67c).
+Since the equality holds for arbitrary $U$ and arbitrary local field data, the integrands satisfy the pointwise density transformation law $L'(x',\,\cdot\,)=L(x,\,\cdot\,)\,|\det D\chi^{-1}(x')|$. This is exactly the weight-one scalar-density transformation. The metric determinant $\sqrt{|g|}$ transforms by the same Jacobian factor under coordinate changes (Nakahara 2003, §7.9.1), so the ratio $\mathcal L:=L/\sqrt{|g|}$ is a scalar, giving (67c).
 
-(b) Under a compactly supported active diffeomorphism, every geometric field is pulled back: $(\Psi,g)\mapsto(\varphi^*\Psi,\varphi^*g)$. The Lagrangian is a scalar and the metric volume form obeys $d\operatorname{vol}_{\varphi^*g}=\varphi^*(d\operatorname{vol}_g)$. Therefore the change-of-variables formula gives
+(b) Under a compactly supported orientation-preserving active diffeomorphism, every geometric field is pulled back: $(\Psi,g)\mapsto(\varphi^*\Psi,\varphi^*g)$. The Lagrangian is a scalar on this branch and the metric volume form obeys $d\operatorname{vol}_{\varphi^*g}=\varphi^*(d\operatorname{vol}_g)$. Therefore the change-of-variables formula gives
 $$
 S[\varphi^*\Psi,\varphi^*g]
 =
@@ -588,7 +588,7 @@ $$
 $$
 Since $\xi$ is arbitrary, $\nabla_\mu T^{\mu\nu}=0$. ∎
 
-Premise (A4) of §12 is therefore a derived consequence of Theorem 45a together with the matter equations of motion.
+Input (T4) of §12 is therefore a derived consequence of Theorem 45a together with the matter equations of motion.
 
 **11.6 Finite Operational Causal Speed and Lorentzian Signature (Conditional on Thm 43, Thm 45)**
 
@@ -596,7 +596,7 @@ The ND-RID substrate supplies the emergent metric with a uniform operational cau
 
 **11.6.1 Theorem 46 (Finite Operational Causal-Speed Bound)**
 
-Assume a nonzero link scale $\delta$, successive edge-by-edge serialized propagation in the propagation-cost metric, a registered lower time $\tau_{\min}>0$ for each edge update, and uniformly bounded positive weights $0<w_{xy}\le w_{\max}<\infty$. Then every retained causal path obeys the uniform upper bound
+Assume a positive link scale $\delta$, successive edge-by-edge serialized propagation in the propagation-cost metric, a registered lower time $\tau_{\min}>0$ for each edge update, and uniformly bounded positive weights $0<w_{xy}\le w_{\max}<\infty$. Then every nonempty retained causal path obeys the uniform upper bound
 $$
 \frac{d_{\mathcal N}(u,v)}{t(\gamma)}
 \le c_*:=\frac{\delta w_{\max}}{\tau_{\min}}<\infty.
@@ -615,7 +615,7 @@ d_{\mathcal N}(u,v)
 $$
 Division yields the displayed uniform bound. The hypotheses give no lower bound on an attained speed and no equality case. Equality on the normalized uniform-weight branch is an additional one-link attainment hypothesis. The Lorentzian conclusion is not used in this proof. ∎
 
-**Corollary 46a (Lorentzian Signature and Local Lorentz Kinematics from Theorem 46 and Appendix O).** The uniform operational causal-speed bound of Theorem 46, together with a separately accepted attained operational frontier and the positive-definite spatial $\Gamma$-limit of §O.7.1, the entropy-selected time coordinate of Hypothesis O.7.2.2, the second-order continuum principal symbol supplied directly by Hypothesis O.7.2.3 or, for covered sectors, by an accepted second-order positivity certificate $\mathfrak C_2$ (Definition O.7.2.3a), and either the cone-coincidence/nondegeneracy clause of Hypothesis O.7.2.4 or an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ supplying that clause for the covered retained sectors (Definition O.7.2.5), supplies the four hypotheses of Theorem O.7a. When the latter two inputs are supplied by finite sector certificates, the well-posedness/signature audit is recorded by $\mathfrak C_{\mathrm{sig}}$ (Definition 46a.1). By Theorems O.7a and O.7b and Corollary O.7b.1 of Appendix O, this package forces a Lorentzian principal symbol on the emergent manifold and derives local Lorentz invariance with structure group $SO^+(1,3)$. Premise (A5) of §12 is therefore a theorem on precisely this branch or certificate package. The Lorentzian factor $\mathrm{Spin}(1,3)$ in the principal bundle $G=\mathrm{Spin}(1,3)\times U(d_0)$ of Theorem 48 is structurally forced only on the spin-admissible branch $w_2(M_{\mathrm{reg}})=0$ or on a strict-spin tangential-structure certificate $\mathfrak C_{\mathrm{tan}}$ (Definition 48b.2). Charged or twisted fermionic sectors may instead require a $\mathrm{Spin}^c$ or gauge-twisted tangential structure, in which case Theorem 48 must be read with the corresponding replacement bundle rather than as the global product $\mathrm{Spin}(1,3)\times U(d_0)$. The $D_4$ continuum gluing certificate supplies local regular-continuum data used by the branch, but it does not by itself assert global frame triviality, remove the spin obstruction, or discharge the second-order, cone-coincidence, and signature gates for uncovered sectors.
+**Corollary 46a (Lorentzian Signature and Local Lorentz Kinematics from Theorem 46 and Appendix O).** The uniform operational causal-speed bound of Theorem 46, together with a separately accepted attained operational frontier and the positive-definite spatial $\Gamma$-limit of §O.7.1, the entropy-selected time coordinate of Hypothesis O.7.2.2, the second-order continuum principal symbol supplied directly by Hypothesis O.7.2.3 or, for covered sectors, by an accepted second-order positivity certificate $\mathfrak C_2$ (Definition O.7.2.3a), and either the cone-coincidence/nondegeneracy clause of Hypothesis O.7.2.4 or an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ supplying that clause for the covered retained sectors (Definition O.7.2.5), supplies the four hypotheses of Theorem O.7a. When the latter two inputs are supplied by finite sector certificates, the well-posedness/signature audit is recorded by $\mathfrak C_{\mathrm{sig}}$ (Definition 46a.1). By Theorems O.7a and O.7b of Appendix O, this package forces a Lorentzian principal symbol on the emergent manifold. With the additional registered global orientation of $S=\ker dt$, Corollary O.7b.1 derives local Lorentz invariance with structure group $SO^+(1,3)$. The tangent-frame Lorentz-kinematics component of input (T5) of §12 follows on this branch with the registered global spatial orientation; full matter-dynamical covariance and metric universality retain the additional records stated in (T5). The Lorentzian factor $\mathrm{Spin}(1,3)$ in the principal bundle $G=\mathrm{Spin}(1,3)\times U(d_0)$ of Theorem 48 is structurally forced only on the spin-admissible branch $w_2(M_{\mathrm{reg}})=0$ or on a strict-spin tangential-structure certificate $\mathfrak C_{\mathrm{tan}}$ (Definition 48b.2). Charged or twisted fermionic sectors may instead require a $\mathrm{Spin}^c$ or gauge-twisted tangential structure, in which case Theorem 48 must be read with the corresponding replacement bundle rather than as the global product $\mathrm{Spin}(1,3)\times U(d_0)$. The $D_4$ continuum gluing certificate supplies local regular-continuum data used by the branch, but it does not by itself assert global frame triviality, remove the spin obstruction, or discharge the second-order, cone-coincidence, and signature gates for uncovered sectors.
 
 *Proof.* Direct application of Theorems O.7a (signature forcing), O.7b (speed normalization), and Corollary O.7b.1 (tangent-frame Lorentz group and local kinematics) to the separately accepted attained frontier, the upper-bound output of Theorem 46, and §O.7.1, with the second-order input supplied either by Hypothesis O.7.2.3 or by $\mathfrak C_2$, and with the fourth cone input supplied either by Hypothesis O.7.2.4 or by $\mathfrak C_{\mathrm{cone}}$ as stated. When the finite certificate route is used, $\mathfrak C_{\mathrm{sig}}$ records the well-posedness exclusion of non-Lorentzian representatives. Definition Z.9a and Theorem Z.11 supply only the four-dimensional Euclidean response carrier. The rank-three spatial subspace follows only after the rank-four continuum realization and the nonvanishing time covector of Hypotheses O.7.2.1–O.7.2.2 are accepted. The global spin-bundle clause is then exactly the obstruction statement of Theorem 48b and Corollary 48b.1, optionally discharged by $\mathfrak C_{\mathrm{tan}}$ on the strict-spin branch. Full matter-dynamical Lorentz covariance additionally requires common-cone and covariant interaction certificates. ∎
 
@@ -676,7 +676,7 @@ V_{\mathrm{cap}}(D)
 $$
 be the finite predictive capacity valuation of $D$, equal to the supremal reliable nats stored or transmitted by $\mathfrak A(D)$ at the stated resolution.
 
-**Theorem 46b (Causal-Diamond Reconstruction of the Emergent Metric Branch).** Let $(M,g,V_{\mathrm{cap}})$ and $(M',g',V'_{\mathrm{cap}})$ be connected, time-oriented, past-and-future distinguishing, globally hyperbolic regular Lorentzian branches. Suppose there is a bijection
+**Theorem 46b (Causal-Diamond Reconstruction of the Emergent Metric Branch).** Let $(M,g,V_{\mathrm{cap}})$ and $(M',g',V'_{\mathrm{cap}})$ be connected smooth four-dimensional manifolds with smooth Lorentzian metrics, chosen time orientations, past-and-future distinguishing causal structures, and global hyperbolicity. Smooth metric regularity is an additional branch premise beyond the measurable or $C^{1,\alpha}$ tensor conclusions of Theorem 45. Suppose there is a bijection
 $$
 \Phi:\mathcal D_{\mathrm{op}}(M)\to\mathcal D_{\mathrm{op}}(M')
 $$
@@ -687,7 +687,7 @@ $$
 for every operational diamond. Assume additionally:
 
 1. the basis-order isomorphism extends to an isomorphism of the generated topological frames, equivalently it maps the completely prime filters representing manifold points to such point filters, and its induced point map $F$ satisfies $\Phi(D)=F(D)$;
-2. $\Phi$ preserves the future/past orientation of diamond tips, or equivalently the induced map $F$ preserves the chosen time orientation.
+2. each completed operational family contains every relatively compact chronological diamond $I^+(p)\cap I^-(q)$ with $p\ll q$, and $F$ sends its ordered past/future tip pair $(p,q)$ to the ordered tip pair of $\Phi(I^+(p)\cap I^-(q))$.
 
 Then:
 
@@ -695,10 +695,10 @@ Then:
 2. $F$ preserves the directed causal order;
 3. $F$ determines the conformal Lorentzian metric,
 $$
-F^*[g']=\Omega^2[g],
+F^*g'=\Omega^2g,
 $$
 for a positive function $\Omega$ on the regular set;
-4. if both branches use one capacity-density normalization
+4. if both branches use one positive capacity-density normalization with $\sigma_{\mathrm{cap}}>0$,
 $$
 V_{\mathrm{cap}}(D)=\sigma_{\mathrm{cap}}\operatorname{Vol}_g(D),
 \qquad
@@ -706,17 +706,17 @@ V'_{\mathrm{cap}}(D')=\sigma_{\mathrm{cap}}\operatorname{Vol}_{g'}(D')
 $$
 on sufficiently small diamonds, then $\Omega=1$ almost everywhere on the regular set.
 
-Without hypothesis 2, the inclusion and capacity data determine the causal structure only up to a global time reversal.
+If the same completed-diamond and point-map data satisfy ordered-tip compatibility after one global reversal of the chosen time orientation, the metric conclusion is unchanged and the reconstructed directed order is reversed. No causal reconstruction is asserted from the frame-extension premise alone.
 
-*Proof.* The set of relatively compact causal diamonds is a basis for the manifold topology on a globally hyperbolic distinguishing Lorentzian manifold. Since $\Phi$ preserves and reflects inclusion, it preserves the basis order. For each point $p\in M$, the family of diamonds containing $p$ is a completely prime filter in the inclusion poset. Inclusion preservation sends this filter to a completely prime filter in $\mathcal D_{\mathrm{op}}(M')$, which is the family of diamonds containing a unique point $F(p)\in M'$. This defines a bijection $F:M\to M'$. Because basic neighborhoods are diamonds and $\Phi$ preserves their inclusion relations, $F$ and $F^{-1}$ pull back basic neighborhoods to basic neighborhoods, so $F$ is a homeomorphism.
+*Proof.* Hypothesis 1 supplies the topological-frame isomorphism and its bijection of point filters. Let $F$ be the induced point map. Its compatibility $F(D)=\Phi(D)$ gives $F^{-1}(\Phi(D))=D$ for every basis diamond. The inverse frame isomorphism gives the same statement in the other direction. Since these diamonds form bases, $F$ and $F^{-1}$ are continuous.
 
-Causal order is recoverable from diamonds: $p\le q$ if and only if every diamond containing $q$ whose past face is sufficiently small has a predecessor diamond containing $p$, equivalently if the Alexandrov neighborhoods ordered between $p$ and $q$ are nonempty in the diamond poset. Since $\Phi$ preserves the diamond order, $F$ preserves and reflects this causal order.
+If $p\ll q$, global hyperbolicity makes $I^+(p)\cap I^-(q)$ relatively compact. Hypothesis 2 and the ordered tips of its image give $F(p)\ll F(q)$. Applying the same argument to the inverse bijection proves reflection of chronology. On a globally hyperbolic spacetime, $J^+$ is closed and equals the closure of $I^+$ in the product topology: every causal pair is approximated by moving its second endpoint a short distance to its timelike future, and closedness gives the reverse inclusion. The homeomorphism $F\times F$ therefore preserves and reflects $J^+$.
 
-On a past-and-future distinguishing Lorentzian manifold, the causal order determines the conformal class of the Lorentzian metric on the regular set. Hence
+The causal/conformal reconstruction theorem for the declared smooth four-dimensional, past-and-future distinguishing Lorentzian class [Hawking, King & McCarthy 1976; Malament 1977] then makes $F$ a conformal diffeomorphism, so
 $$
-F^*[g']=\Omega^2[g]
+F^*g'=\Omega^2g
 $$
-for some positive $\Omega$.
+for a positive function $\Omega$.
 
 For the scale, take sufficiently small diamonds $D_\epsilon(p)$ shrinking regularly to $p$. In four dimensions,
 $$
@@ -736,36 +736,41 @@ $$
 $$
 Letting $\epsilon\to0$ gives $\Omega(p)=1$ for almost every regular point. Thus the causal-diamond inclusion order fixes the conformal geometry, and the predictive capacity valuation fixes the conformal scale. ∎
 
-**Corollary 46c (Spacetime as the Regular Representation of Predictive Inclusion).** Assume the complete branch package of Theorem 46b: connected, time-oriented, past- and future-distinguishing globally hyperbolic Lorentzian representatives; inclusion-faithful operational diamond algebras; an inclusion-preserving diamond bijection extending to the generated topological frame and point map; preservation of time orientation, unless equivalence up to global time reversal is intended; and one common positive small-diamond capacity-density normalization. On that class, the data
+**Corollary 46c (Spacetime as the Regular Representation of Predictive Inclusion).** Assume the complete branch package of Theorem 46b, including smooth-metric regularity: connected, time-oriented, past- and future-distinguishing globally hyperbolic Lorentzian representatives; inclusion-faithful operational diamond algebras; a completed family containing every relatively compact chronological diamond; an inclusion-preserving diamond bijection extending to the generated topological frame and point map; ordered-tip compatibility, possibly after one declared global time-orientation reversal; and one common positive small-diamond capacity-density normalization. On that class, the data
 $$
 (\mathcal D_{\mathrm{op}},\subseteq,V_{\mathrm{cap}})
 $$
-determine the Lorentzian metric-measure structure up to the declared operational equivalence and the explicitly fixed capacity normalization.
+determine the Lorentzian metric-measure structure up to the declared operational equivalence and capacity normalization.
 
-*Proof.* The inclusion and extension hypotheses invoke Theorem 46b's causal reconstruction and fix the conformal class. The common small-diamond capacity density fixes the conformal scale. Orientation preservation fixes the time orientation; omitting it leaves the stated global time-reversal ambiguity. ∎
+*Proof.* The complete frame-extension and ordered-tip hypotheses invoke Theorem 46b's causal reconstruction and determine the conformal class. The common positive small-diamond capacity density determines the conformal scale. Ordered-tip compatibility determines the chosen time orientation; allowing one declared global reversal reverses the directed order while preserving the metric conclusion. ∎
 
-**Corollary 46d (Landauer-Count Form of Causal-Diamond Reconstruction).** Suppose each operational causal diamond $D$ on each of two connected, time-oriented, past-and-future distinguishing, globally hyperbolic regular Lorentzian branches carries an effective Landauer update-cell count
+**Corollary 46d (Landauer-Count Form of Causal-Diamond Reconstruction).** Suppose each completed operational causal diamond $D$ on each of two connected, time-oriented, past-and-future distinguishing, globally hyperbolic regular Lorentzian branches has a registered refinement sequence of finite update-cell counts
 $$
-N_L(D)\in\mathbb N
+N_{L,n}(D)\in\mathbb N_0
 $$
-and the same specified cell valuation $\nu_L>0$ such that
+and common positive cell valuations $\nu_{L,n}\to0$ such that
 $$
-V_{\mathrm{cap}}(D)=\nu_L N_L(D).
+V_{\mathrm{cap}}(D)=\lim_{n\to\infty}\nu_{L,n}N_{L,n}(D),
+\qquad
+V'_{\mathrm{cap}}(D')=\lim_{n\to\infty}\nu_{L,n}N'_{L,n}(D').
 \tag{46d.1}
 $$
-Assume a bijection $\Phi$ of the operational diamonds preserves and reflects inclusion, extends to an isomorphism of the generated topological frames with induced point map, and preserves the future/past orientation of diamond tips. Assume also the common small-diamond capacity-density normalization of Theorem 46b. If
+Both limits must exist and be finite for every completed diamond. Assume all hypotheses of Theorem 46b, including smooth-metric regularity, completed-diamond availability, frame-extension, ordered-tip compatibility, and positive common small-diamond capacity density. If its diamond bijection $\Phi$ also satisfies
 $$
-N_L(D)=N_L'(\Phi(D))
+N_{L,n}(D)=N'_{L,n}(\Phi(D))
 $$
-for every operational diamond, then the two branches determine the same emergent metric-measure structure up to the operational equivalence of Theorem 46b.
+for every $D$ and every refinement level $n$, then the two branches determine the same emergent metric-measure structure up to the operational equivalence of Theorem 46b. Each physical count is integral; the completed capacity valuation is its certified refinement limit.
 
-*Proof.* Equation (46d.1) converts equality of Landauer counts into equality of predictive capacity valuations:
+*Proof.* The common cell valuations and matched counts give
 $$
-V_{\mathrm{cap}}(D)=\nu_LN_L(D)=\nu_LN_L'(\Phi(D))=V'_{\mathrm{cap}}(\Phi(D)).
+V_{\mathrm{cap}}(D)
+=\lim_{n\to\infty}\nu_{L,n}N_{L,n}(D)
+=\lim_{n\to\infty}\nu_{L,n}N'_{L,n}(\Phi(D))
+=V'_{\mathrm{cap}}(\Phi(D)).
 $$
-The hypotheses of Theorem 46b are therefore satisfied. The inclusion order fixes the conformal Lorentzian metric and the common valuation fixes the conformal scale. ∎
+The remaining hypotheses are precisely the registered hypotheses of Theorem 46b, so that theorem supplies the metric-measure conclusion. ∎
 
-**Corollary 46e (Boundary-Sufficiency Metric Universality).** Work on a regular Lorentzian branch satisfying Definition 46b and the finite Markov-boundary hypotheses of Definition F.10.6a. For each retained matter species $s$, let $\mathcal R_s(D)$ be the finite protocol-response functor generated by $s$-sector instruments localized in an operational diamond $D$, and let $\subseteq_s$ and $V_s$ be the inclusion relation and capacity valuation reconstructed from $\mathcal R_s$ by the same operational test used in Definition 46b. Assume:
+**Corollary 46e (Boundary-Sufficiency Metric Universality).** Work on a regular Lorentzian branch satisfying Definition 46b and the finite Markov-boundary hypotheses of Definition F.10.6a. For each retained matter species $s$, let $\mathcal R_s(D)$ be the finite protocol-response functor generated by $s$-sector instruments localized in an operational diamond $D$, and let $\subseteq_s$ and $V_s$ be the inclusion relation and capacity valuation reconstructed from $\mathcal R_s$ by the same operational test used in Definition 46b. Assume that each species reconstruction and its comparison with the common branch satisfy the complete smooth-metric regularity, connectedness, distinguishing, global-hyperbolicity, topological-frame, ordered-tip, and positive capacity-density hypotheses of Theorem 46b. Assume additionally:
 
 1. for every sufficiently small operational diamond $D$, the same finite boundary syndrome or boundary algebra $B_D$ is PCE-minimal and Markov-sufficient for every retained species,
 $$
@@ -774,7 +779,7 @@ I_s(\mathfrak A_s(D):\mathfrak A_s(\bar D)\mid B_D)_\rho=0,
 $$
 or, on the classical branch, $X_D^{(s)}\perp E_{\bar D}^{(s)}\mid B_D$;
 
-2. the branch is specieswise separating: for every retained species $s$, if two diamond assignments produce the same $s$-sector responses and the same boundary syndrome responses, then they are equal in the PPI quotient;
+2. the branch is specieswise separating and inclusion-reflecting: equal $s$-sector and common boundary responses identify equal PPI objects, and every registered species inclusion $D_1\subseteq_s D_2$ certifies the full operational inclusion $D_1\subseteq D_2$;
 
 3. the boundary capacity normalization is common,
 $$
@@ -793,7 +798,7 @@ V_s=V_{\mathrm{cap}},
 $$
 and the common capacity normalization fixes $g_s=g$ almost everywhere on the regular set. A species-dependent metric that changes no finite protocol response is PPI-null; a species-dependent metric that changes a retained response is a different finite-response branch and must carry its own certificate.
 
-*Proof.* By Theorem F.10.6b, condition (46e.1) is equivalent to exact recovery of every exterior $s$-sector response from the same boundary datum $B_D$. By Corollary F.10.6c, any additional species label at the boundary that changes no exterior response is PCE-degenerate and removed from the quotient. Fix a retained species $s$. The inclusion test on $s$-sector protocols can differ from the full operational inclusion test only if two diamond assignments have the same $s$-sector and boundary responses but represent different PPI objects. Condition 2 excludes exactly that possibility. Hence $\subseteq_s=\subseteq$. Since $s$ was arbitrary, this equality holds for every retained species.
+*Proof.* By Theorem F.10.6b, condition (46e.1) gives exact recovery of every exterior $s$-sector response from the common boundary datum $B_D$. Corollary F.10.6c removes an additional boundary label only when it changes no retained exterior response. For a retained species $s$, restriction of a full operational protocol inclusion preserves that inclusion in the $s$-sector, giving $D_1\subseteq D_2\Rightarrow D_1\subseteq_s D_2$. The explicit inclusion-reflection entry of condition 2 gives the reverse implication. Thus $\subseteq_s=\subseteq$ for every retained species. Object separation identifies the corresponding diamond objects in the common PPI quotient.
 
 Equation (46e.2) gives equality of the species capacity valuation with the common predictive capacity valuation. Theorem 46b applied to the identity bijection of the common diamond poset then fixes the conformal metric reconstructed by each species, and the shared valuation fixes the conformal scale. Thus every retained species sees the same metric tensor on the regular branch. If a proposed $g_s$ differs while preserving all finite responses, it is precisely a response-null relabeling in the protocol-response presheaf. If it changes a finite response, it violates the same-branch hypotheses and is a separate branch. ∎
 
@@ -874,7 +879,7 @@ The completed causal-diamond basis $\mathcal D_{\mathrm{op}}$ belongs to the eff
 An accepted certificate $\mathfrak C_{\mathrm{TB}}^\Omega$ contains, on one forward-locked branch:
 
 1. a continuum record discharging Theorem 43.5;
-2. the connectedness, time orientation, distinguishing, global-hyperbolicity, inclusion-faithfulness, and common capacity-density hypotheses of Theorem 46b;
+2. the complete hypotheses of Theorem 46b, including smooth-metric regularity, connectedness, time orientation, distinguishing, global hyperbolicity, inclusion faithfulness, completed-diamond availability, topological-frame extension, ordered-tip compatibility, and a positive common capacity-density normalization;
 3. compatible cone, second-order, and signature records;
 4. a complete AQFT bridge for Theorem F.0 on the retained diamonds—$\mathfrak C_{\mathrm{gen}}$ is sufficient only together with every other F.0 compatibility hypothesis;
 5. an injective sampling map $\mathcal A_\Omega:PW_\Omega\to\mathbb C^N$; and
@@ -915,7 +920,7 @@ $$
 \mathcal R:U\to\mathbb R^m
 \tag{46h.1}
 $$
-collect only the continuously differentiable causal-diamond capacity, proper-time, volume, and finite-band response coordinates used by that envelope. At $\theta_*$ the certificate records
+collect only the continuously differentiable causal-diamond capacity, proper-time, volume, and finite-band response coordinates used by that envelope. Assume $m\ge p$ and $D\mathcal R(\theta_*)$ has full column rank. At $\theta_*$ the certificate records
 $$
 \sigma_*
 :=\sigma_{min}(D\mathcal R(\theta_*))>0,
@@ -1009,12 +1014,12 @@ F_{\mu\nu}(A^{\mathrm{int}})
 [A_\mu^{\mathrm{int}},A_\nu^{\mathrm{int}}].
 $$
 
-2. Let an infinitesimal oriented parallelogram based at $x$ have independent side vectors $a^\mu$ and $b^\nu$. The unitary component of closed-system predictive transport around its boundary satisfies
+2. Assume the local connection coefficients are $C^2$ on the chart. Let an infinitesimal parallelogram based at $x$ have independent side vectors $a^\mu$ and $b^\nu$, and traverse its boundary in the order $a,b,-a,-b$. Define parallel transport by $\dot U=-\dot\gamma^\mu A_\mu^{\mathrm{pred}}U$, consistently with $D^{\mathrm{pred}}=\partial+A^{\mathrm{pred}}$. Its transport operator satisfies
 $$
 U_{\square(a,b)}^{\mathrm{pred}}
 =
 \mathbb I
-+
+-
 \mathcal F_{\mu\nu}^{\mathrm{pred}}(x)a^\mu b^\nu
 +
 O\!\left((|a|+|b|)^3\right).
@@ -1065,40 +1070,38 @@ $$
 $$
 which proves the factorization.
 
-For the loop statement, write the infinitesimal transport along the $\mu$ side as
+For the loop statement, put $A=a^\mu A_\mu^{\mathrm{pred}}(x)$, $B=b^\mu A_\mu^{\mathrm{pred}}(x)$, and $\partial_a=a^\mu\partial_\mu$, $\partial_b=b^\mu\partial_\mu$. The transport equation gives
 $$
-U_\mu=\mathbb I+A_\mu^{\mathrm{pred}}(x)\Delta x^\mu+O(|\Delta x|^2),
+U_a(x)=I-A+\frac12(A^2-\partial_aA)+O(3),
+\qquad
+U_b(x)=I-B+\frac12(B^2-\partial_bB)+O(3),
 $$
-and the $\nu$ side from the displaced point as
+where $O(3)$ is bounded in operator norm by a constant times $(|a|+|b|)^3$ on the chosen chart. Taylor expansion at the displaced starting points gives the corresponding $U_b(x+a)$ and $U_a(x+b)$. The positively oriented boundary transport is
 $$
-U_\nu'=\mathbb I+\bigl(A_\nu^{\mathrm{pred}}(x)+(\partial_\mu A_\nu^{\mathrm{pred}})\Delta x^\mu\bigr)\Delta x^\nu+O(|\Delta x|^2),
+U_{\square(a,b)}^{\mathrm{pred}}
+=U_b(x)^{-1}U_a(x+b)^{-1}U_b(x+a)U_a(x).
 $$
-with analogous inverse expansions. The ordered product
+Multiplication cancels the first-order and pure $a^2,b^2$ terms and gives
 $$
-U_{\square_{\mu\nu}}^{\mathrm{pred}}=U_\nu' U_\mu U_\nu^{-1}U_\mu^{-1}
+U_{\square(a,b)}^{\mathrm{pred}}
+=I-\partial_aB+\partial_bA-[A,B]+O(3)
+=I-\mathcal F_{\mu\nu}^{\mathrm{pred}}(x)a^\mu b^\nu+O(3),
 $$
-has all first-order terms cancel. The remaining second-order terms are exactly
-$$
-\bigl(\partial_\mu A_\nu^{\mathrm{pred}}
--\partial_\nu A_\mu^{\mathrm{pred}}
-+
-[A_\mu^{\mathrm{pred}},A_\nu^{\mathrm{pred}}]\bigr)\Delta x^\mu\Delta x^\nu,
-$$
-giving the stated holonomy expansion. Finally, on the spin branch the standard spin representation of the Levi-Civita curvature is $R_{\mu\nu}(\Omega)=\frac14R_{\mu\nu ab}\gamma^{ab}$, and the tetrad identifies $R_{\mu\nu ab}$ with $R^\rho{}_{\sigma\mu\nu}$. The internal term is exactly the gauge curvature by Definition G.4.1 and Theorem G.4b. If $\mathcal F_{\mu\nu}^{\mathrm{pred}}=0$ on a simply connected neighborhood, Corollary G.4a.1 and its product-bundle form give a frame in which the connection is pure gauge; conversely a pure-gauge connection has zero curvature by direct substitution. ∎
+giving the stated holonomy expansion. Finally, on the spin branch the standard spin representation of the Levi-Civita curvature is $R_{\mu\nu}(\Omega)=\frac14R_{\mu\nu ab}\gamma^{ab}$, and the tetrad identifies $R_{\mu\nu ab}$ with $R^\rho{}_{\sigma\mu\nu}$. The internal term is exactly the gauge curvature by Definition G.4.1 and Theorem G.4b. For a smooth $U(1)$ connection on a simply connected neighborhood, Corollary G.4a.1 gives the equivalence between vanishing curvature and a pure-gauge connection. For the full spin--internal product connection, the implication from $\mathcal F_{\mu\nu}^{\mathrm{pred}}=0$ to a pure-gauge frame requires a separate flat-connection trivialization result for a smooth connection on a connected, simply connected neighborhood. Corollary G.4a.1 does not establish that non-Abelian implication. A pure-gauge product connection has zero curvature by direct substitution. ∎
 
 ## 11.7.2 Dissipative Companion to Predictive Holonomy
 
-Theorem 47 identifies $\mathcal F_{\mu\nu}^{\mathrm{pred}}$ as the closed-system curvature of predictive-frame transport in the continuum limit, with Riemann curvature and internal gauge field strength obtained by projection. When ND-RID holds, transport between neighboring "contexts" is generically *open* at the reduced-state level because the retained subsystem is only part of the closed predictive ledger. The completed reset branch supplies the finite transfer and entropy ledger of Proposition E.2a; refresh/minorization branches additionally supply strict trace-distance contraction (Appendix E, Lemma E.1). The appropriate reduced object is therefore a completely positive, trace-preserving (CPTP) transport map on reduced states, not a pure unitary parallel transport.
+Theorem 47 identifies $\mathcal F_{\mu\nu}^{\mathrm{pred}}$ as the curvature of product-connection transport, with Riemann curvature and internal gauge field strength obtained by projection. Its finite Lorentz-spin factor is not generally unitary for a positive Hermitian fibre metric. A quantum-state transport interpretation therefore requires the additional Hermitian compatibility and unitary closed-transport certificate of Theorem 48c on the admitted curves. On that branch, a retained subsystem may have open dynamics because it is part of a larger closed predictive ledger. A completed reset supplies the finite transfer and entropy ledger of Proposition E.2a; a refresh/minorization branch additionally supplies strict trace-distance contraction (Appendix E, Lemma E.1). The reduced-state transport is then described by a CPTP map under its separately registered open-system hypotheses.
 
 **Infinitesimal Transport Structure.**
-Let $\mathcal{E}_{\Delta\tau}$ denote the CPTP transport channel associated with proper time displacement $\Delta\tau$ along a timelike worldline in emergent coordinates. In the Markovian regime, its generator admits the standard GKSL decomposition [Gorini, Kossakowski & Sudarshan 1976; Lindblad 1976]:
+Let $\mathcal{E}_{\Delta\tau}$ denote the CPTP transport channel associated with proper time displacement $\Delta\tau$ along a timelike worldline in emergent coordinates. On a finite-dimensional reduced fibre, assume that after a fixed unitary identification of the fibres these channels form a strongly continuous one-parameter CPTP semigroup for $\Delta\tau\ge0$. Its bounded generator then admits the standard GKSL decomposition [Gorini, Kossakowski & Sudarshan 1976; Lindblad 1976]:
 $$
 \mathcal{E}_{\Delta\tau}(\rho) = \rho + \Delta\tau \, \mathcal{L}(\rho) + O(\Delta\tau^2),
 $$
 $$
 \mathcal{L}(\rho) = -i[H, \rho] + \sum_a \left( L_a \rho L_a^\dagger - \frac{1}{2}\{L_a^\dagger L_a, \rho\} \right),
 $$
-with $H$ the unitary (Hamiltonian/connection) component and the $\{L_a\}$ encoding dissipation/decoherence.
+Here $H$ is a self-adjoint frequency generator, equal to the physical Hamiltonian divided by $\hbar$, and the $\{L_a\}$ encode dissipation and decoherence with the units required for $\mathcal L$ to have inverse-time dimension.
 
 For transport along a smooth oriented curve $\gamma:[0,1]\to M$, assume the branch supplies a measurable family $\mathcal L_{\gamma,s}$ such that $\mathcal L_{\gamma,s}$ is a GKSL generator for almost every $s$ and its coefficients satisfy the boundedness conditions required for the evolution equation. Define
 $$
@@ -1109,19 +1112,19 @@ $$
 $$
 Then the propagator is CPTP. A representation $\mathcal L_{\gamma,s}=\dot\gamma^\mu(s)\mathcal L_\mu$ is admissible only when this contracted generator has GKSL form along the selected orientation; directionwise GKSL form of the individual $\mathcal L_\mu$ does not imply that condition.
 
-* The **unitary part** $H_\mu$ matches the connection structure identified in Theorem 47: its holonomy yields the emergent curvature.
-* The **dissipative part** $\{L_{\mu,a}\}$ is the operational signature of ND-RID: it captures the loss of distinguishability under transport required by irreversibility (Appendix E), and it is naturally represented in the Schwinger–Keldysh/CTP effective action formalism (Section X.5) as the stochastic/noise sector accompanying the retarded response sector.
+* The **Hamiltonian part** describes unitary dynamics on the declared positive-Hermitian reduced-state carrier. Its identification with the product connection of Theorem 47 requires the unitary-compatibility and Hamiltonian-matching certificate of Theorem 48c.
+* The **dissipative part** $\{L_{\mu,a}\}$ describes the registered open-system loss of coherence or distinguishability. Strict trace-distance contraction requires its separate channel certificate; it does not follow from the ND-RID label alone. On the corresponding effective-action branch, Section X.5 supplies the Schwinger--Keldysh/CTP noise and response description.
 
 **Chronometric Phase and Curvature-Dephasing.**
-A concrete gravitational example appears in Appendix S, where differential proper-time accumulation induces phase gradients. For an internal clock transition $i\leftrightarrow j$ with energy splitting
+A concrete gravitational example appears in Appendix S, where differential proper-time accumulation induces phase gradients. For an internal clock transition $i\leftrightarrow j$ with constant nonzero energy splitting
 $$
-\Delta E_{ij}:=E_i-E_j,
+\Delta E_{ij}:=E_i-E_j\ne0,
 $$
 and for two branches with proper times $\tau_0(t)$ and $\tau_1(t)$ relative to the same external bookkeeping parameter $t$, define the chronometric phase difference
 $$
 \Theta_{ij}(t):=-\frac{\Delta E_{ij}}{\hbar}\bigl(\tau_1(t)-\tau_0(t)\bigr).
 $$
-In a static weak field with $|\Phi|/c^2\ll1$,
+For branches at rest in the chosen static coordinates, in a weak field with $|\Phi|/c^2\ll1$,
 $$
 \frac{d\tau}{dt}
 =
@@ -1152,7 +1155,7 @@ O\!\left(\frac{\Phi_0^2+\Phi_1^2}{c^4}\right).
 $$
 This statement is a coherent phase-rate statement. A deterministic, fully tracked $\Theta_{ij}$ is a unitary phase rotation and does not by itself suppress coherence.
 
-**Theorem 47c (Chronometric Curvature-Dephasing Principle).** Work in Fermi normal coordinates $(t,x^m)$ about a freely falling reference worldline on the regular Lorentzian branch, and let $x_0^m,x_1^m$ be two branch locations inside the Fermi patch. Suppose the saturated chronometric ND-RID branch is selected: unresolved proper-time phase slip is represented by the minimal two-level pure-dephasing GKSL generator
+**Theorem 47c (Chronometric Curvature-Dephasing Principle).** Work in Fermi normal coordinates $(t,x^m)$ about a freely falling reference worldline on the regular Lorentzian branch, using $x^0=ct$ for the dimensionless metric coefficient $g_{00}$. Assume the metric coefficients are $C^3$ with bounded spatial derivatives through order three on the retained patch. Let the two branch worldlines be timelike and remain at the coordinate locations $x_0^m,x_1^m$ inside that patch, and use the constant nonzero clock gap declared above. Suppose the saturated chronometric ND-RID branch is selected: unresolved proper-time phase slip is represented by the minimal two-level pure-dephasing GKSL generator
 $$
 \mathcal L_{\mathrm{ch}}^{(ij)}(\rho)
 =
@@ -1242,7 +1245,7 @@ $$
 $$
 Thus the coherence envelope satisfies
 $$
-|\rho_{ij}(t)|=|\rho_{ij}(0)|e^{-\Gamma_{\mathrm{ch}}^{(ij)}t}.
+|\rho_{ij}(t)|=|\rho_{ij}(0)|\exp\!\left[-\int_0^t\Gamma_{\mathrm{ch}}^{(ij)}(s)\,ds\right].
 $$
 The branch identification $\Gamma_{\mathrm{ch}}^{(ij)}=|\dot\Theta_{ij}|$ gives the displayed dephasing formula.
 
@@ -1270,7 +1273,7 @@ $$
 =
 \frac12R_{0m0n}(t,0)(x_1^m x_1^n-x_0^m x_0^n)+O(|x_0|^3+|x_1|^3).
 $$
-Setting $(x_0,x_1)=(0,L_q)$ gives the reference-anchored formula. Setting $(x_0,x_1)=(X-\frac12L_q,X+\frac12L_q)$ gives
+Setting $(x_0,x_1)=(0,L_q)$ gives the reference-anchored formula. For the centered pair, the $C^3$ Taylor remainder $r(x)$ satisfies $|\nabla r(x)|\le C|x|^2$ on the retained patch. Integrating its derivative along the segment from $X-\frac12L_q$ to $X+\frac12L_q$ bounds the remainder difference by $C'|L_q|(|X|+|L_q|)^2$, which has the order stated in the theorem. The quadratic part satisfies
 $$
 x_1^m x_1^n-x_0^m x_0^n
 =
@@ -1304,13 +1307,13 @@ $$
 \left(L_a\rho L_b-\frac12\{L_bL_a,\rho\}\right).
 \tag{47e.2}
 $$
-Then (47e.2) is a globally defined covariant GKSL generator. In a common local eigenframe,
+Then (47e.2) is a globally defined covariant GKSL generator. At each specified fibre choose any simultaneous orthonormal eigenbasis,
 $$
 H|i\rangle=E_i|i\rangle,
 \qquad
-L_a|i\rangle=\ell_{a i}|i\rangle,
+L_a|i\rangle=\ell_{a i}|i\rangle.
 $$
-its exact solution is
+For the autonomous evolution with this fibre generator held constant in time, its exact solution is
 $$
 \rho_{ij}(t)
 =
@@ -1326,10 +1329,10 @@ Hence a signed branch exchange that reverses $E_i-E_j$ and $\ell_i-\ell_j$ makes
 $$
 \sum_s\gamma_s\left(M_s\rho M_s-\frac12\{M_s^2,\rho\}\right),
 $$
-which is GKSL. Conjugation covariance of every $H,L_a$ makes the complete superoperator agree on overlaps. Equation (47e.1) gives a simultaneous eigenframe locally. Direct evaluation of (47e.2) on the matrix unit $|i\rangle\langle j|$ yields the exponent in (47e.3). The parity statement follows because the Hamiltonian term is linear in the signed differences while the dissipative term is quadratic. The final equivalence follows by reading the sign of each realized exponent; it is explicitly weaker than positivity of $C$ when those difference vectors do not test every direction. ∎
+which is GKSL. Conjugation covariance of every $H,L_a$ makes the complete superoperator agree on overlaps. At each fibre, diagonalize $H$ and then diagonalize the commuting Hermitian $L_a$ successively inside the invariant eigenspaces. This gives a simultaneous orthonormal eigenbasis at that fibre without asserting a smooth eigenbasis across degeneracies. Direct evaluation on $|i\rangle\langle j|$ gives the scalar generator eigenvalue $-i(E_i-E_j)/\hbar-\tfrac12(\ell_i-\ell_j)^{\mathsf T}C(\ell_i-\ell_j)$. The autonomous scalar differential equation gives (47e.3). The parity statement follows because the Hamiltonian term is linear in the signed differences while the dissipative term is quadratic. The final equivalence follows by the sign of each realized decay rate; positivity on those difference vectors alone need not imply positivity of $C$. ∎
 
 **Testable PU discriminator against self-gravity collapse models.**
-The deterministic chronometric phase-rate invariant and the saturated chronometric ND-RID dephasing branch both scale linearly with the internal energy splitting $\Delta E_{ij}$ at fixed geometry. For two-branch interferometers engineered so that the branches have the same mass-density distribution but differ by internal clock splitting, the PU chronometric branch predicts
+The deterministic chronometric phase-rate invariant and the saturated chronometric ND-RID dephasing branch scale linearly with the magnitude of the internal energy splitting at the same geometry. For two-branch interferometers engineered so that the branches have the same mass-density distribution but differ by internal clock splitting, the PU chronometric branch predicts the following ratio whenever the reference rate $\Gamma_{\mathrm{ch}}^{(kl)}$ is nonzero:
 $$
 \frac{\Gamma_{\mathrm{ch}}^{(ij)}}{\Gamma_{\mathrm{ch}}^{(kl)}}
 =
@@ -1337,7 +1340,7 @@ $$
 $$
 for transitions measured in the same geometry. Penrose-Diósi-type self-gravity collapse rates depend primarily on branch mass-density difference and therefore do not produce this energy-gap ratio when the mass-density difference is held fixed. Conversely, because the PU branch is curvature-controlled, the reference-anchored tidal contribution vanishes at this order when $R_{0m0n}=0$ and is invariant under removal of pure uniform acceleration in a freely falling Fermi frame.
 
-This identifies a precise sense in which curvature, clock phase, and ND-RID dephasing belong to the same operational transport structure: the holonomy component defines the emergent geometry (Theorem 47), the chronometric phase measures proper-time mismatch along that geometry, and the saturated open-system companion quantifies the irreducible loss of predictive distinguishability when that mismatch is not resolved by the retained finite-resolution state (Lemma E.1; Appendix S, Section S.7).
+This identifies a precise sense in which curvature, clock phase, and ND-RID dephasing belong to the same operational transport structure: the holonomy component defines the emergent geometry (Theorem 47), the chronometric phase measures proper-time mismatch along that geometry, and the saturated chronometric companion describes coherence loss under the pure-dephasing branch postulated in Theorem 47c and Appendix S, Section S.7.
 
 **11.8 Fibre Bundle Structure**
 
@@ -1359,7 +1362,7 @@ where $\rho_*$ denotes the corresponding Lie algebra representation. This ensure
 $$
 P := P_{\mathrm{Spin}}(M) \times_M P_U(E)
 $$
-is a principal $\text{Spin}(1,3)\times U(d_0)$ bundle whose fibre over $x$ consists exactly of the pairs $(\mathcal{F}_x,\mathcal{P}_x)$ described above. The right action is free and transitive because each factor action is free and transitive. For any representation $\rho$ of the product group, the standard associated-bundle construction gives $E_\rho=P\times_\rho V_\rho$. A principal connection on the product bundle is equivalently a pair $(\omega_\mu,A_\mu^{\mathrm{int}})$, so the covariant derivative has the displayed direct-sum form, and the curvature splits because the Lie algebra is the direct sum $\mathfrak{spin}(1,3)\oplus\mathfrak{u}(d_0)$. These are the standard bundle constructions of gauge theory and general relativity, now applied with the hypotheses verified in the present setting [Nakahara 2003; Wald 1984]. QED
+is a principal $\text{Spin}(1,3)\times U(d_0)$ bundle whose fibre over $x$ consists exactly of the pairs $(\mathcal{F}_x,\mathcal{P}_x)$ described above. The right action is free and transitive because each factor action is free and transitive. For any representation $\rho$ of the product group, the standard associated-bundle construction gives $E_\rho=P\times_\rho V_\rho$. A principal connection on the product bundle is equivalently a pair $(\omega_\mu,A_\mu^{\mathrm{int}})$, so the covariant derivative has the displayed direct-sum form, and the curvature splits because the Lie algebra is the direct sum $\mathfrak{spin}(1,3)\oplus\mathfrak{u}(d_0)$. These are the standard bundle constructions of gauge theory and general relativity, now applied with the hypotheses verified in the present setting [Nakahara 2003, §§9.4, 10.1–10.4]. QED
 
 **11.8.2 Theorem 48b (Global Product-Bundle Gluing).** Let $M_{\mathrm{reg}}$ be the connected, oriented, time-oriented regular Lorentzian branch, $F_{SO^+(1,3)}\to M_{\mathrm{reg}}$ its orthonormal frame bundle, and $E\to M_{\mathrm{reg}}$ the rank-$d_0$ Hermitian predictive bundle determined by local predictive fibers and their unitary transition maps. Assume
 $$
@@ -1461,39 +1464,43 @@ The same row-reduction pass that decides existence therefore classifies and coun
 
 *Proof.* Fix one solution $b_*$. Every other solution has the form $b_*+z$ with $z\in\ker\delta_1$, and every such $z$ gives a solution. Gauge changes identify $z$ and $z+\delta_0c$, so the quotient is the affine space modeled on (48b.5.3). A vector space of dimension $\beta_1(K)$ over $\mathbb F_2$ has $2^{\beta_1(K)}$ elements. Gaussian elimination computes both dimensions and supplies representatives. ∎
 
-**11.8.3 Theorem 48c (Conditional Global CPTP Transport Closure).** Let $P(M_{\mathrm{reg}},\mathrm{Spin}(1,3)\times U(d_0))$ be the principal bundle of Theorem 48 (globally exact under Theorem 48b), and let $\mathcal W=S\otimes E$ be the associated spin-internal bundle (Theorem G.4b). Assume:
+**11.8.3 Theorem 48c (Conditional Global CPTP Transport Closure).** Let $P(M_{\mathrm{reg}},\mathrm{Spin}(1,3)\times U(d_0))$ be the principal bundle of Theorem 48, globally exact under Theorem 48b, and let $\mathcal W=S\otimes E$ be its associated spin-internal bundle. Assume:
 
-(i) *Bundle-respecting Stinespring dilation.* The local CPTP transport maps $\Phi_\gamma$ admit Stinespring dilations whose system-side unitary factor lifts the parallel transport of the product connection on $\mathcal W=S\otimes E$ (Theorem G.4b); equivalently, the dilation environment is chosen so that the system-side unitary $U_\gamma|_{\mathcal W}$ commutes with the bundle gauge action and reduces to the product-connection holonomy in the closed-system limit $\mathcal H_{\mathrm{env}}\to\mathbb C$.
+(i) *Hermitian-compatible transport and Hamiltonian certificate.* A declared positive Hermitian metric on $\mathcal W$ is preserved by the product-connection transport $T_\gamma:\mathcal W_x\to\mathcal W_y$ along the admitted curves. Use unitary local frames for this metric. The record identifies the closed-system channel as $\operatorname{Ad}_{T_\gamma}$ and separately supplies a selected GKSL representation whose Hamiltonian frequency operator is the infinitesimal generator of that declared transport. Any retained environmental Hamiltonian correction must be included in the declared connection or certified absent from that generator. These are additional compatibility premises; a general finite Lorentz-spin connection need not satisfy them.
 
-(ii) *Markovian semigroup limit.* On bounded local time windows, the family $\{\Phi_\gamma\}$ admits a strongly continuous Markovian semigroup limit on $\mathrm{End}(\mathcal W_x)$.
+(ii) *Markovian semigroup limit.* On each registered bounded time window, after the declared unitary identification of successive fibres, the local CPTP evolution has a strongly continuous semigroup limit on the finite-dimensional system endomorphism algebra.
 
-(iii) *Overlap covariance of the open-system channel.* If $g_{ij}$ is a transition function of $\mathcal W$ on $U_i\cap U_j$, the local channel representatives satisfy
+(iii) *Endpoint covariance.* For unitary frame transitions $g_{ij}$, the local transport representatives satisfy
 $$
 \Phi_\gamma^{(j)}
-=
-\operatorname{Ad}_{g_{ij}(y)}\circ
-\Phi_\gamma^{(i)}\circ
-\operatorname{Ad}_{g_{ij}(x)^{-1}},
+=\operatorname{Ad}_{g_{ij}(y)}\circ\Phi_\gamma^{(i)}\circ\operatorname{Ad}_{g_{ij}(x)^{-1}},
 $$
-and the corresponding generator superoperators satisfy the infinitesimal intertwining relation. Equivalently, the Hamiltonian and dissipative terms together define a global endomorphism-superoperator section.
+where $\operatorname{Ad}_U(\rho)=U\rho U^*$. The record supplies the corresponding infinitesimal relation on overlaps, including the derivative of a frame transition along a moving endpoint.
 
-Then every local CPTP transport map along a curve $\gamma$,
+Then each local CPTP transport map admits a finite-dimensional Stinespring realization
 $$
-\Phi_\gamma:\mathrm{End}(\mathcal W_x)\to\mathrm{End}(\mathcal W_y),
+\Phi_\gamma(\rho)
+=\operatorname{Tr}_{\mathrm{env}}\!\left(U_\gamma(\rho\otimes|0\rangle\langle0|)U_\gamma^*\right),
 $$
-admits a Stinespring dilation
-$$
-\Phi_\gamma(\rho) \;=\; \mathrm{Tr}_{\mathrm{env}}\!\bigl(U_\gamma(\rho\otimes|0\rangle\langle 0|)U_\gamma^\dagger\bigr),
-$$
-with $U_\gamma$ unitary on $\mathcal W\otimes\mathcal H_{\mathrm{env}}$. Moreover, by hypothesis (i) the system-side unitary part $U_\gamma|_{\mathcal W}$ is generated by the product connection on $S\otimes E$ (Theorem G.4b), and by (ii) the Markovian generator takes the globally covariant GKSL form
-$$
-\mathcal L(\rho) \;=\; -i[H_D,\rho] + \sum_a\Bigl(L_a\rho L_a^\dagger - \tfrac12\{L_a^\dagger L_a,\rho\}\Bigr),
-$$
-where $H_D$ uses the spin-plus-internal covariant derivative of Definition G.4.1 and Theorem G.4b.
+where $U_\gamma$ is a unitary map from $\mathcal W_x\otimes\mathcal H_{\mathrm{env}}$ to $\mathcal W_y\otimes\mathcal H_{\mathrm{env}}$ after any required finite enlargement. The full dilation unitary has no asserted restriction to the system factor. On the separately certified closed-system branch, the transport is the unitary $T_\gamma$.
 
-*Proof.* Stinespring's dilation theorem (Stinespring 1955) applies to each finite-dimensional CPTP transport map and gives an isometric dilation, extendable to a unitary after enlarging the environment if necessary. Hypothesis (i) selects a realization whose closed-system restriction is the product-connection transport on $S\otimes E$. Tracing over the environment recovers $\Phi_\gamma$.
+In a registered unitary identification, the semigroup generator has GKSL form
+$$
+\mathcal L(\rho)
+=-i[H_D,\rho]
++\sum_a\left(L_a\rho L_a^*-\tfrac12\{L_a^*L_a,\rho\}\right),
+$$
+with $H_D$ self-adjoint and measured in inverse time; its physical Hamiltonian is $\hbar H_D$. Identification of this Hamiltonian term with the declared product connection uses the independent matching entry of hypothesis (i). The endpoint relations make the resulting evolution globally compatible.
 
-Hypothesis (ii) gives a strongly continuous completely positive trace-preserving semigroup on each finite-dimensional endomorphism algebra. The Gorini–Kossakowski–Sudarshan–Lindblad classification (Gorini, Kossakowski & Sudarshan 1976; Lindblad 1976) therefore gives the displayed local GKSL form. Finally, differentiate the channel overlap relation of hypothesis (iii) at semigroup parameter zero. The resulting generator relation intertwines the full superoperator, not only its Hamiltonian commutator. Hence the local generators define a global covariant generator; local Lindblad families on overlaps may differ by the standard representation mixing without changing that superoperator. ∎
+*Proof.* Finite-dimensional Stinespring dilation [Stinespring 1955] gives an isometry $V_\gamma:{\mathcal W}_x\to{\mathcal W}_y\otimes\mathcal H_{\mathrm{env}}$ with $\Phi_\gamma(\rho)=\operatorname{Tr}_{\mathrm{env}}(V_\gamma\rho V_\gamma^*)$. After enlarging the finite environment as necessary, identify $V_\gamma$ with the prescribed action on $\mathcal W_x\otimes|0\rangle$ and complete orthonormal bases to extend it to the displayed unitary $U_\gamma$. This construction does not identify a system-only restriction. Hypothesis (i) supplies the separate closed-system transport and Hamiltonian match.
+
+Hypothesis (ii) satisfies the finite-dimensional Gorini--Kossakowski--Sudarshan--Lindblad classification hypotheses [Gorini, Kossakowski & Sudarshan 1976; Lindblad 1976], giving the displayed generator. For a moving endpoint $y(t)$, put $\mathcal G_t=\operatorname{Ad}_{g_{ij}(y(t))}$. Differentiating the endpoint relation gives
+$$
+\mathcal L_t^{(j)}
+=\dot{\mathcal G}_t\mathcal G_t^{-1}
++\mathcal G_t\mathcal L_t^{(i)}\mathcal G_t^{-1}.
+$$
+Because $g_{ij}$ is unitary, $\dot g_{ij}g_{ij}^{-1}$ is anti-Hermitian, and the first term is its commutator action, hence a Hamiltonian generator. Unitary conjugation preserves the GKSL form of the remaining term. Thus the local evolutions agree on overlaps, including time-dependent frame changes. Hypothesis (i), rather than dilation or the semigroup theorem, supplies their declared connection interpretation. ∎
 
 Theorem 48c closes the gap between Theorem 47 (predictive holonomy as curvature) and Theorem 48 (fibre-bundle representation): under the stated open-system hypotheses, the CPTP transport law is a completion of the same underlying bundle transport.
 
@@ -1505,13 +1512,13 @@ Theorem 48c closes the gap between Theorem 47 (predictive holonomy as curvature)
 | `TV-CONT-02` | The two-point admissible class of Proposition 43a with one regular point, one irregular point, and the displayed decomposed potential. | Equality preserves the regular/irregular labels and both potential components. Budget: both points and the sole candidate regular comparator. | Bare-PCE regular-minimum selection is `negative-refutation`. | Evaluate both total costs and the strict-comparator inequality (11.43.1). A strict regular comparator in this class falsifies the artifact. The displayed two-point class proves nonvacuity. | Source-internal finite optimization countermodel. Consumers: Theorem 43 and the regular-global-core gate. |
 | `TV-CONT-03` | The refinement family $X_n=\{a_n,b_n\}$ with the two defects in (43.5b.1); premises retain only separate existential-vanishing sequences. | Witnesses are equivalent only when one selected refinement sequence carries both defect records. Budget: two candidates per level over the symbolic countable family. | Separate componentwise convergence forcing a common sequence is `negative-refutation`. | Evaluate both constant witness sequences and exhaust the two choices at each level. A sequence on which both defects vanish falsifies the artifact. The two supplied sequences prove nonvacuity. | Source-internal finite-per-level convergence countermodel. Consumers: Theorem 43.5 and the joint continuum certificate. |
 | `TV-CONT-04` | The permutation-invariant finite functional (67f) together with its scalar/metric-volume and fixed-chart/density continuum dictionaries. | Finite arrays are equivalent under simultaneous vertex relabeling; continuum outputs are compared under their declared field type and measure. Budget: every submitted finite array plus the two symbolic Riemann-limit dictionaries. | Finite relabeling entailing a unique diffeomorphism-covariant continuum law is `nonentailment`. | Check permutation invariance and the Jacobian under a non-unit coordinate change. If both dictionaries acquire the same transformation law without extra typing data, the artifact is falsified. A nonconstant-Jacobian chart proves nonvacuity. | Source-internal finite-to-continuum countermodel. Consumers: Hypotheses 11.5.3.1--11.5.3.3 and the continuum action. |
-| `TV-CONT-05` | Four-dimensional cotangent space with the nondegenerate symbols $q_L$, $q_U$, and $q_L^2$ of Proposition 46a.2. | Symbols are compared by characteristic set, inertia, and polynomial order; sharing a cone does not identify different inertia or degree. Budget: the three displayed exact symbols. | Cone-only signature index and differential-order selection are `negative-refutation`. | Compute both inertia pairs and verify $q_L^2=0\iff q_L=0$. Forced Lorentzian inertia or second order from those common zeros falsifies the artifact. The three symbols prove nonvacuity. | Source-internal exact quadratic-form algebra. Consumers: Definition 46a, the one-time Cauchy gate, and `RT-T8`. |
+| `TV-CONT-05` | Four-dimensional cotangent space with the nondegenerate symbols $q_L$, $q_U$, and $q_L^2$ of Proposition 46a.2. | Symbols are compared by characteristic set, inertia, and polynomial order; sharing a cone does not identify different inertia or degree. Budget: the three displayed exact symbols. | Cone-only signature index and differential-order selection are `negative-refutation`. | Compute both inertia pairs and verify $q_L^2=0\iff q_L=0$. Forced Lorentzian inertia or second order from those common zeros falsifies the artifact. The three symbols prove nonvacuity. | Source-internal exact quadratic-form algebra. Consumers: Definition 46a.1, the one-time Cauchy gate, and `RT-T8`. |
 | `TV-CONT-06` | Two connected globally hyperbolic static four-manifolds locally isometric on the common causally convex diamond $U$ but with the nonhomeomorphic Cauchy surfaces of Corollary 46g.1. | Records are equivalent when every retained subdiamond has the same inclusion, tip orientation, local volume, and fixed-density capacity valuation; global spaces remain distinguished by homeomorphism type. Budget: any finite subdiamond family inside $U$ and the two explicit completions. | Global injectivity of an arbitrary finite diamond subrecord is `negative-refutation`. | Verify the local isometry, causal convexity, and fundamental groups $0$ and $\mathbb Z$. A differing retained local record or homeomorphic Cauchy surfaces falsifies the witness. The two products prove nonvacuity. | Source-internal Lorentzian/topological countermodel. Consumers: Theorems 46b and 46g and $\mathfrak C_{\mathrm{TB}}^\Omega$. |
 | `TV-CONT-07` | One finite-dimensional tangent response space, its supplied $g^{sp}$-orthogonal intertwiner group $\mathcal G$, and positive $g^{sp}$-self-adjoint comparisons $B$. | Comparisons are equivalent under the declared $\mathcal G$ action; budget is the complete finite matrix commutant. | The exact commutant test for scalarization is `positive-discharge`, with anisotropic positive witnesses when the self-adjoint commutant is larger than $\mathbb RI$. | Solve (45e.1), take the self-adjoint commutant, and shift a nonscalar member by $cI$ when needed. A nonscalar positive natural comparison with self-adjoint commutant $\mathbb RI$, or failure to construct one in the larger case, falsifies the artifact. Scalar and reducible representations prove nonvacuity. | Source-internal finite representation theory. Consumers: (45b.3), Fisher/propagation naturality, and the scale certificate. |
 | `TV-CONT-08` | A supplied finite good-cover nerve with integer and $\mathbb F_2$ coboundary matrices, cocycles $w_1,w_2$, and, where applicable, an integral lift or supplied twist $\alpha$. | Cocycles are equivalent modulo the stated coboundaries; budget is every finite cochain entry and the three finite systems (48b.4.1)--(48b.4.3). | Exact strict-spin, $\mathrm{Spin}^c$, and supplied-twist existence decisions are `positive-discharge`. | Run Gaussian elimination and Smith normal form with mod-two reduction. A solver answer disagreeing with the represented cohomology class falsifies the artifact. Zero and nonzero finite cocycles prove nonvacuity. | Source-internal finite cohomology. Consumers: $\mathfrak C_{\mathrm{tan}}$, Theorem 48b, and matter gluing. |
-| `TV-CONT-09` | The saturated chronometric branch of Theorem 47c under the registered geometry exchange, together with Theorem S.7.3a's same-geometry gap comparison. | Runs are equivalent after preserving branch labels, gap labels, orientation, and the common geometry ledger. Budget: two exchanged geometries and every submitted finite transition pair. | Odd coherent phase, even saturated dephasing, and the owner theorem's multi-gap ratio are `positive-discharge` on this branch. | Reverse the branches in (47d.1) and evaluate the same-geometry rate ratio. An even signed phase, odd saturated rate, or failed owner ratio falsifies the artifact. Any nonzero proper-time difference and two nonzero gaps prove nonvacuity. | Source-internal conditional chronometric algebra consuming owner Theorem S.7.3a. Consumers: CPTP transport and the reversal/multi-gap protocol. |
+| `TV-CONT-09` | The saturated chronometric branch of Theorem 47c under the registered geometry exchange, together with Theorem S.7.3a's same-geometry gap comparison. | Runs are equivalent after preserving branch labels, gap labels, orientation, and the common geometry ledger. Budget: two exchanged geometries and every submitted finite transition pair. | Odd coherent phase, even saturated dephasing, and the owner theorem's multi-gap ratio are `positive-discharge` on this branch. | Reverse the branches in (47d.1) and evaluate the same-geometry rate ratio. An even signed phase, odd saturated rate, or failed owner ratio falsifies the artifact. A nonzero proper-time rate difference and two nonzero gaps prove nonvacuity. | Source-internal conditional chronometric algebra consuming owner Theorem S.7.3a. Consumers: CPTP transport and the reversal/multi-gap protocol. |
 | `TV-CONT-10` | Definition 46e.1's iid flat-uniform Alexandrov-interval sample conditioned on $N$ at $D=4$, and Definition 46h's finite metric chart with $\sigma_*>0$, radius, derivative-Lipschitz, and metric-chart bounds. | Samples are equivalent by their causal comparability record; chart candidates are compared in the certificate-fixed response and tensor norms. Budget: all $\binom N2$ pair indicators and the complete finite Jacobian/chart record inside (46i.1). | The exact mean $1/10$, concentration bound, and conditional inverse-stability estimate are `positive-discharge`. | Recompute (46e.1.2)--(46e.1.4) and the singular-value/Taylor bounds (46i.1)--(46i.3). Wrong expectation, tail, or inverse bound falsifies the artifact. The flat $D=4$ model and any full-column-rank chart prove nonvacuity. | Source-internal probability and finite-dimensional analysis. Consumers: the dimension cross-certificate, metric conditioning, and the forward-locked sampling test. |
 
 **11.9 Role of MPU Stress-Energy Tensor**
 
-Theorem 47 and the connection dynamics of Theorem 48 identify non-frame-removable inhomogeneity of predictive transport with curvature of the predictive connection. A macroscopic MPU stress-energy source $T_{\mu\nu}^{(MPU)}$ is available on the separate Appendix B branch carrying admissible bounded-variation coarse-graining, a paired or unique continuum limit, the momentum-flux and Belinfante derivative certificates, variational first-variation consistency, local equilibrium, and the global horizon-flux consistency and quadrature record of Theorem B.8d. On the operational-continuum, local-horizon, area-law, KMS/Clausius, and finite Einstein-closure branch of Section 12, that same certified tensor is the source on the right-hand side of the emergent field equation. Theorem 46 supplies only a uniform operational causal-speed upper bound. The identification $c=\delta/\tau_{\min}$ additionally requires the separately accepted normalized uniform-weight one-link-attainment branch of Appendix E, Theorem E.10.2; only on that branch is the attained value tied to the registered costs and timing of information propagation. Its promotion to a Lorentzian light cone is the Appendix O branch imported by Corollary 46a, and the exact values of $\delta$ and $\tau_{\min}$ inherit the Appendix Q discretization branches.
+Theorem 47 and the connection decomposition of Theorem 48 identify non-frame-removable inhomogeneity of predictive transport with curvature of the predictive connection. A macroscopic MPU stress-energy source $T_{\mu\nu}^{(MPU)}$ is available on the separate Appendix B branch carrying admissible bounded-variation coarse-graining, a paired or unique continuum limit, the momentum-flux and Belinfante derivative certificates, variational first-variation consistency, local equilibrium, and the global horizon-flux consistency and quadrature record of Theorem B.8d. On the operational-continuum, local-horizon, area-law, KMS/Clausius, and finite Einstein-closure branch of Section 12, that same certified tensor is the source on the right-hand side of the emergent field equation. Theorem 46 supplies only a uniform operational causal-speed upper bound. The identification $c=\delta/\tau_{\min}$ additionally requires the separately accepted normalized uniform-weight one-link-attainment branch of Appendix E, Theorem E.10.2; only on that branch is the attained value tied to the registered costs and timing of information propagation. Its promotion to a Lorentzian light cone is the Appendix O branch imported by Corollary 46a, and the exact values of $\delta$ and $\tau_{\min}$ inherit the Appendix Q discretization branches.

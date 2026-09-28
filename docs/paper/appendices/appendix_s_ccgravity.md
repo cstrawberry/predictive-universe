@@ -4,7 +4,7 @@ On the global quadratic-cost, retained-source, weak-field, dephasing, and cohere
 
 ## S.1 Resource Cost of the Context State
 
-Let $\text{CC}(S)$ denote the operational bias capability of system $S$ (Definition 30). The framework's CC scaling law (Definition 32) is:
+Let $\text{CC}(S)$ denote the operational bias capability of system $S$ (Definition 30). On the rational scaling branch of Definition 32 with $0<\alpha_\infty=\alpha_{CC,max}<1/2$, $C_{scale}>0$, and $C_{agg}\ge C_{op}$, the model is:
 $$
 \text{CC}(S) = \alpha_{CC,max} \frac{C_{agg} - C_{op}}{C_{scale} + (C_{agg} - C_{op})}
 \tag{S.1}
@@ -58,7 +58,7 @@ $$
 $$
 On this global quadratic branch, $P_{context}$ diverges as $\mathrm{CC}\uparrow\alpha_{CC,max}$. If S.3 is retained only as a local Taylor expansion, S.4–S.5 are valid only for $C_{context}$ inside the certified Taylor neighborhood and no endpoint divergence follows from that expansion.
 
-**Connection to Appendix L:** This power $P_{context}$ is a component of the total aggregate power $P_{agg}$ analyzed in Appendix L (Theorem L.6). For systems implementing CC through electromagnetic field generation, $P_{context}$ contributes to both the radiated power $P_{EM}$ and internal operational costs $P_{other}$, with the complete energy accounting given by $P_{agg} = P_{EM} + P_{other}$ (Equation L.36).
+**Connection to Appendix L:** This power $P_{context}$ is a component of the total aggregate power $P_{agg}$ analyzed in Appendix L (Theorem L.6). Equation L.36 gives $P_{agg}=\frac{d}{dt}(E_{\mathrm{matter}}^{\mathcal V}+E_{\mathrm{EM}}^{\mathcal V})+P_{\mathrm{EM}}^{\mathrm{out}}+P_{\mathrm{heat}}^{\mathrm{out}}+P_{\mathrm{mech}}^{\mathrm{out}}$ on the complete control-volume ledger. The shorthand $P_{agg}=P_{EM}+P_{other}$ uses $P_{EM}:=P_{\mathrm{EM}}^{\mathrm{out}}$ and $P_{other}:=\frac{d}{dt}(E_{\mathrm{matter}}^{\mathcal V}+E_{\mathrm{EM}}^{\mathcal V})+P_{\mathrm{heat}}^{\mathrm{out}}+P_{\mathrm{mech}}^{\mathrm{out}}$, with mutually exclusive channel ownership.
 
 ## S.2 The CC-Context Stress-Energy Tensor $\Delta T_{\mu\nu}^{(CC)}$
 
@@ -81,7 +81,7 @@ p_{\mathrm{context}}=w_cu_{\mathrm{context}}.
 $$
 The ideal fully retained branch sets $\eta_{\mathrm{ret}}=1$. Cumulative work is not a local gravitational source unless the corresponding energy remains localized in the source region.
 
-In the rest frame of system $S$, the perfect-fluid stress-energy tensor (Landau & Lifshitz, 1975; Weinberg, 1972) is:
+In a local orthonormal rest frame of $S$, the assumed isotropic perfect-fluid contribution has energy density $u_{\mathrm{context}}$, equal spatial normal stresses $p_{\mathrm{context}}$, and zero momentum flux. Hence its covariant stress-energy tensor is:
 $$
 \Delta T_{\mu\nu}^{(CC)} = \operatorname{diag}(u_{context}, p_{context}, p_{context}, p_{context})
 \tag{S.7}
@@ -101,105 +101,96 @@ $$
 
 where $T_{\mu\nu}^{(baseline)}$ represents the minimal operational state stress-energy ($C_{agg} = C_{op}$), $\Delta T_{\mu\nu}^{(CC)}$ is the additional matter contribution from maintaining high-complexity context, and $T_{\mu\nu}^{(EM)}$ accounts for any electromagnetic field generation (Theorem L.2).
 
-**Result (Self-limiting CC bound under resource ceiling).** Suppose $u_{\mathrm{context}}\le u_{\max}$ and
+**Result (Self-limiting CC bound under resource ceiling).** Let $V_S,\tau_c,C_{\mathrm{scale}}>0$, $0<\eta_{\mathrm{ret}}\le1$, and $0\le u_{\max}<\infty$. Register an independent coefficient $\varepsilon_{\mathrm{context}}>0$ with units of energy per unit context complexity. On the certified operating domain, assume
 $$
-P_{\mathrm{context}}\ge\frac{\Gamma_0 C_{\mathrm{context}}}{\tau_c}.
+P_{\mathrm{context}}
+\ge\frac{\varepsilon_{\mathrm{context}}C_{\mathrm{context}}}{\tau_c},
+\qquad
+u_{\mathrm{context}}\le u_{\max}.
 $$
-Since
+This energy-cost floor is an additional hypothesis; the power-conversion factor $\Gamma_0$ of Definition 20 does not supply it.
+
+The retained-energy law gives
 $$
 u_{\mathrm{context}}
-=\frac{\eta_{\mathrm{ret}}P_{\mathrm{context}}\tau_c}{V_S},
-$$
-one has
-$$
-u_{\mathrm{context}}
-\ge
-\eta_{\mathrm{ret}}\frac{\Gamma_0}{V_S}C_{\mathrm{context}}
+=\frac{\eta_{\mathrm{ret}}P_{\mathrm{context}}\tau_c}{V_S}
+\ge\eta_{\mathrm{ret}}\frac{\varepsilon_{\mathrm{context}}}{V_S}
+C_{\mathrm{context}}
 =\eta_{\mathrm{ret}}\kappa_*C_{\mathrm{context}},
 \qquad
-\kappa_*:=\frac{\Gamma_0}{V_S}.
+\kappa_*:=\frac{\varepsilon_{\mathrm{context}}}{V_S}>0.
 $$
-Combining this with
-$$
-\mathrm{CC}
-=\alpha_{CC,\max}
-\frac{C_{\mathrm{context}}}
-{C_{\mathrm{context}}+C_{\mathrm{scale}}}
-$$
-gives
+Thus $C_{\mathrm{context}}\le u_{\max}/(\eta_{\mathrm{ret}}\kappa_*)$. Substituting this bound into the increasing rational scaling law gives
 $$
 \boxed{
 \mathrm{CC}
-\le
-\alpha_{CC,\max}
+\le\alpha_{CC,\max}
 \frac{u_{\max}}
 {u_{\max}+\eta_{\mathrm{ret}}\kappa_*C_{\mathrm{scale}}}
 }.
 \tag{S.10}
 $$
+Both terms in the denominator have units of energy density. The floor must be certified on the operating domain in addition to any adopted quadratic cost law.
 
 Higher available energy density raises the operational cap. Independently, the bounded-bias branch declares $\text{CC}<\alpha_{CC,max}<0.5$; Theorem 39 supplies its endpoint-complete consequence, while exact causal compliance requires Theorem 39c.
 
 **Theorem S.1 (Local CPTP CC Branch: No-Signaling and Gravitational Bound).**
 
-Let a bipartite system $AB$ be prepared in state $\rho_{AB}$. Let the local CC device on subsystem $A$ be described by a one-parameter family of completely positive, trace-preserving (CPTP) maps (Nielsen & Chuang, 2010; Watrous, 2018) $\{\Phi_A^{(\epsilon)}\}_{\epsilon}$ with $\|\Phi_A^{(\epsilon)} - \mathcal{E}_A\|_{\diamond} \le \alpha < 1/2$, where $\mathcal{E}_A$ is the baseline (zero-CC) channel and $\|\cdot\|_{\diamond}$ is the diamond norm — the appropriate channel norm for bipartite stability under tensoring with identity, since the induced trace norm $\|\cdot\|_{1 \to 1}$ does not in general bound $\|(\Phi - \mathcal{E}) \otimes \mathrm{id}\|_{1 \to 1}$ on entangled inputs (Watrous, 2018, §3.3).
-
-This theorem applies on the local CPTP CC branch — under which CC is implemented as a strictly local CPTP perturbation of subsystem $A$. Such perturbations cannot realize Bob-side marginal shifts: they only modify joint correlations detectable after classical comparison of measurement records. The local CPTP CC branch is therefore a separate scope from any main-text claim of statistical Bob-marginal influence; reconciling those would require a different (non-CPTP, or non-local) mechanism rather than the model of this theorem. Let this map act before a product measurement $\{E_i \otimes F_j\}$. Then the marginal on $B$ is unchanged for all $\epsilon$:
+Let $\rho_{AB}$ be a bipartite state, let $\mathcal E_A$ be a baseline CPTP channel, and let $\{\Phi_A^{(\epsilon)}\}_\epsilon$ be local CPTP channels satisfying
 $$
-\sum_i \text{tr}\!\left[(\Phi_A^{(\epsilon)} \otimes \text{id}_B)(\rho_{AB}) (E_i \otimes F_j)\right] = \text{tr}\!\left[\rho_B F_j\right]
+\|\Phi_A^{(\epsilon)}-\mathcal E_A\|_\diamond\le\alpha<1/2.
+$$
+For every product POVM $\{E_i\otimes F_j\}$, Bob's marginal is unchanged:
+$$
+\sum_i\operatorname{tr}\!\left[
+(\Phi_A^{(\epsilon)}\otimes\mathrm{id}_B)(\rho_{AB})(E_i\otimes F_j)
+\right]
+=\operatorname{tr}(\rho_BF_j).
 \tag{S.11}
 $$
+Alice's marginal and the joint probabilities may change; the remote marginal cannot. A claimed Bob-marginal influence therefore requires a mechanism outside this local CPTP branch.
 
-Moreover, assume a weak-field geometric bound
+For the additional gravitational bound, assume that the same channel has the calibrated composition
+$$
+\Phi_A^{(\epsilon)}=\mathcal D_{\Delta\Phi}\circ\mathcal E_A,
+$$
+where $\mathcal D_{\Delta\Phi}$ is CPTP, and that, throughout the registered regime,
 $$
 \frac{|\Delta\Phi|}{c^2}
-\le
-C_{\mathrm{geom}}\frac{Gu_{\mathrm{context}}L^2}{c^4}
-$$
-and a calibrated local response channel $\mathcal D_{\Delta\Phi}$ satisfying
-$$
+\le C_{\mathrm{geom}}\frac{Gu_{\mathrm{context}}L^2}{c^4},
+\qquad
 \|\mathcal D_{\Delta\Phi}-\mathrm{id}\|_\diamond
-\le
-s_D\frac{|\Delta\Phi|}{c^2}
+\le s_D\frac{|\Delta\Phi|}{c^2},
+\qquad C_{\mathrm{geom}},s_D\ge0.
 $$
-throughout the stated operating regime. Then
+For one POVM event $0\le M\le I$, let $\Delta P$ compare the outputs of $\Phi_A^{(\epsilon)}$ and $\mathcal E_A$ on the same input and measurement. Then
 $$
 |\Delta P|
-\le
-\min\left\{
-\alpha,\,
-C_{\mathrm{geom}}s_D
-\frac{Gu_{\mathrm{context}}L^2}{c^4}
+\le\min\left\{\alpha,\,
+C_{\mathrm{geom}}s_D\frac{Gu_{\mathrm{context}}L^2}{c^4}
 \right\}.
 \tag{S.12}
 $$
 
-*Proof.* Trace preservation of the local channel implies
+*Proof.* Trace preservation gives
 $$
 \operatorname{tr}_A[(\Phi_A^{(\epsilon)}\otimes\mathrm{id}_B)(\rho_{AB})]
-=
-\rho_B,
+=\rho_B,
 $$
-so Bob's marginal probabilities are unchanged, proving (S.11). For any POVM effect $0\le M\le I$,
+which proves (S.11). The event bound and the definition of diamond norm give
 $$
 |\Delta P|
-\le
-\|((\Phi_A^{(\epsilon)}-\mathcal E_A)\otimes\mathrm{id})(\rho_{AB})\|_1
-\le
+\le\|((\Phi_A^{(\epsilon)}-\mathcal E_A)\otimes\mathrm{id}_B)(\rho_{AB})\|_1
+\le\|\Phi_A^{(\epsilon)}-\mathcal E_A\|_\diamond\le\alpha.
+$$
+On the composition branch, submultiplicativity and $\|\mathcal E_A\|_\diamond=1$ give
+$$
 \|\Phi_A^{(\epsilon)}-\mathcal E_A\|_\diamond
-\le\alpha.
+=\|(\mathcal D_{\Delta\Phi}-\mathrm{id})\circ\mathcal E_A\|_\diamond
+\le\|\mathcal D_{\Delta\Phi}-\mathrm{id}\|_\diamond
+\le C_{\mathrm{geom}}s_D\frac{Gu_{\mathrm{context}}L^2}{c^4}.
 $$
-The calibrated gravitational response gives independently
-$$
-|\Delta P|
-\le
-\|\mathcal D_{\Delta\Phi}-\mathrm{id}\|_\diamond
-\le
-s_D\frac{|\Delta\Phi|}{c^2}
-\le
-C_{\mathrm{geom}}s_D\frac{Gu_{\mathrm{context}}L^2}{c^4}.
-$$
-Taking the smaller of the two bounds proves (S.12). A microscopic phase or dephasing model is part of the response calibration encoded by $s_D$. ∎
+Both bounds therefore apply to the same event difference. Their minimum proves (S.12). The composition and response calibration are additional physical hypotheses; bounds for an unrelated channel do not constrain $\Delta P$. ∎
 
 ## S.3 Gravitational Self-Disruption
 
@@ -216,33 +207,36 @@ $$
 \tag{S.14}
 $$
 
-For a uniform spherical distribution of radius $R_S$, the radial gravitational field strength at interior radius $r < R_S$ is:
+For the uniform spherical source of radius $R_S$, the interior radial field strength is
 $$
-g_{CC}(r) = \frac{4\pi G}{3} \rho_{source} r = \frac{4\pi G}{3} (1 + 3w_c) \frac{u_{context}}{c^2} r
+g_{CC}(r)=\frac{4\pi G}{3}\rho_{\mathrm{source}}r
+=\frac{4\pi G}{3}(1+3w_c)\frac{u_{\mathrm{context}}}{c^2}r.
 \tag{S.15}
 $$
-
-A target quantum system with linear spatial extent $L_q$ positioned at radius $r$ experiences a gravitational potential difference across its extent:
+Choose two stationary sampling locations on one radius, at $r$ and $r+L_q$, with $0<r<r+L_q<R_S$. Integrating the interior field gives, in the Newtonian potential model,
 $$
-\Delta\Phi_{diff} \approx g_{CC}(r) L_q = \frac{4\pi G}{3} (1 + 3w_c) \frac{u_{context}}{c^2} r L_q
+\Delta\Phi_{\mathrm{diff}}
+=\frac{4\pi G}{3}(1+3w_c)\frac{u_{\mathrm{context}}}{c^2}
+\left(rL_q+\frac{L_q^2}{2}\right)
+=g_{CC}(r)L_q\left(1+\frac{L_q}{2r}\right).
 \tag{S.16}
 $$
+The linear-gradient branch retains $g_{CC}(r)L_q$ under $L_q/r\ll1$; the omitted term divided by the retained linear term is $L_q/(2r)$. Other orientations require the corresponding directional potential difference. In particular, a radial interval starting at the centre has a nonzero quadratic contribution and is outside this linear-gradient branch.
 
-Over the context coherence time $\tau_c$, this potential difference produces the weak-field differential proper-time accumulation
+For a quasi-static source over $\tau_c>0$, the leading weak-field proper-time difference is $\Delta\tau_{\mathrm{diff}}=\tau_c\Delta\Phi_{\mathrm{diff}}/c^2$, with separate higher-order metric corrections. Denote its retained linear-gradient value by $\Delta\tau_d$. The retained-energy law gives
 $$
 \Delta\tau_d
-=\frac{\Delta\Phi_{diff}}{c^2}\tau_c
 =\frac{4\pi G}{3c^4}(1+3w_c)
-\frac{\eta_{\mathrm{ret}}P_{context}\tau_c}{V_S}
+\frac{\eta_{\mathrm{ret}}P_{\mathrm{context}}\tau_c}{V_S}
 rL_q\tau_c.
 \tag{S.17}
 $$
-Thus
+Thus, on this declared approximation branch,
 $$
-\boxed{\Delta\tau_d=K P_{context}(\mathrm{CC})}
+\boxed{\Delta\tau_d=KP_{\mathrm{context}}(\mathrm{CC})},
 \tag{S.18}
 $$
-with
+where
 $$
 K:=\frac{4\pi G}{3c^4}(1+3w_c)
 \frac{\eta_{\mathrm{ret}}rL_q\tau_c^2}{V_S},
@@ -250,12 +244,12 @@ K:=\frac{4\pi G}{3c^4}(1+3w_c)
 $$
 and
 $$
-K_{eff}:=\frac K{\tau_c}
+K_{\mathrm{eff}}:=\frac K{\tau_c}
 =\frac{4\pi G}{3c^4}(1+3w_c)
 \frac{\eta_{\mathrm{ret}}rL_q\tau_c}{V_S}.
 \tag{S.20}
 $$
-The specialization $\eta_{\mathrm{ret}}=1$ is the fully retained estimate. For $w_c=1/3$, the prefactor is $8\pi G/(3c^4)$ times the displayed retention and geometry factors.
+The fully retained specialization has $\eta_{\mathrm{ret}}=1$. For $w_c=1/3$, the prefactor is $8\pi G/(3c^4)$. A finite-separation or physical timing certificate must also carry the spatial truncation and metric errors.
 
 ## S.4 PCE Optimization and Self-Limiting $\text{CC}^*$
 
@@ -287,21 +281,34 @@ B_{net}(\mathrm{CC})
 :=k_b\mathrm{CC}_{eff}-k_cP_{context}.
 \tag{S.22}
 $$
-Assume $\mathrm{CC}\ll\alpha$ and $K_{eff}P_{context}\ll1$, so that $P_{context}=(A/\alpha^2)\mathrm{CC}^2$ and $\mathrm{CC}_{eff}=\mathrm{CC}(1-K_{eff}P_{context})$ are retained to the displayed order. Then
+Define a polynomial utility surrogate using the quadratic power model
 $$
-B_{net}(\mathrm{CC})
+P_{\mathrm{quad}}(\mathrm{CC}):=\frac A{\alpha^2}\mathrm{CC}^2
+$$
+and the linear attenuation model $\mathrm{CC}_{\mathrm{eff}}=\mathrm{CC}(1-K_{\mathrm{eff}}P_{\mathrm{quad}})$. Their utility is
+$$
+B_{\mathrm{net}}(\mathrm{CC})
 =k_b\mathrm{CC}
--\frac A{\alpha^2}\left(k_bK_{eff}\mathrm{CC}^3+k_c\mathrm{CC}^2\right).
+-\frac A{\alpha^2}\left(k_bK_{\mathrm{eff}}\mathrm{CC}^3+k_c\mathrm{CC}^2\right).
 \tag{S.23}
 $$
-The stationarity equation is
+This is a declared surrogate, not the complete cubic Taylor expansion of the S.5 cost law. In fact,
 $$
-k_b-\frac A{\alpha^2}\left(3k_bK_{eff}\mathrm{CC}^2+2k_c\mathrm{CC}\right)=0,
+P_{\mathrm{context}}
+=\frac A{\alpha^2}\mathrm{CC}^2+\frac{2A}{\alpha^3}\mathrm{CC}^3
++O(\mathrm{CC}^4),
+$$
+so the cubic Taylor utility also contains $-2Ak_c\mathrm{CC}^3/\alpha^3$. Applying the surrogate to a physical response requires separate approximation control for both cost and attenuation.
+
+The surrogate stationarity equation is
+$$
+k_b-\frac A{\alpha^2}
+\left(3k_bK_{\mathrm{eff}}\mathrm{CC}^2+2k_c\mathrm{CC}\right)=0,
 \tag{S.24}
 $$
-equivalently
+or
 $$
-\frac{3Ak_bK_{eff}}{\alpha^2}(\mathrm{CC}^*)^2
+\frac{3Ak_bK_{\mathrm{eff}}}{\alpha^2}(\mathrm{CC}^*)^2
 +\frac{2Ak_c}{\alpha^2}\mathrm{CC}^*-k_b=0.
 \tag{S.26}
 $$
@@ -309,22 +316,23 @@ Its positive root is
 $$
 \boxed{
 \mathrm{CC}^*
-=\frac{-k_c+\sqrt{k_c^2+3K_{eff}\alpha^2k_b^2/A}}
-{3k_bK_{eff}}.
+=\frac{-k_c+\sqrt{k_c^2+3K_{\mathrm{eff}}\alpha^2k_b^2/A}}
+{3k_bK_{\mathrm{eff}}}.
 }
 \tag{S.27}
 $$
-Moreover,
+For $\mathrm{CC}\ge0$,
 $$
-B_{net}''(\mathrm{CC})
-=-\frac A{\alpha^2}(6k_bK_{eff}\mathrm{CC}+2k_c)<0
+B_{\mathrm{net}}''(\mathrm{CC})
+=-\frac A{\alpha^2}(6k_bK_{\mathrm{eff}}\mathrm{CC}+2k_c)<0.
 $$
-for $\mathrm{CC}\ge0$, so this root is the unique maximizer of the truncated utility when it lies inside the two assumed validity regimes. A stochastic concentration claim additionally requires $-B_{net}$ to be a declared component of the Appendix-D potential and requires the low-noise detailed-balance hypotheses of Theorem D.5.
+The root is therefore the unique maximizer of this polynomial on $[0,\infty)$. Its use on the CC branch requires $\mathrm{CC}^*<\alpha$, an interior operating point, and accepted approximation errors; the small-response reading additionally requires $\mathrm{CC}^*/\alpha\ll1$ and $K_{\mathrm{eff}}P_{\mathrm{quad}}(\mathrm{CC}^*)\ll1$. Stochastic concentration further requires identifying $-B_{\mathrm{net}}$ with a declared Appendix-D potential and satisfying the low-noise detailed-balance hypotheses of Theorem D.5.
 
-**Limiting behavior:**
-- **Low resource cost** ($k_c \ll k_b K_{eff}$): $\text{CC}^* \propto \alpha/\sqrt{A K_{eff}}$, limited primarily by gravitational feedback
-- **High resource cost** ($k_c \gg k_b K_{eff}$): $\text{CC}^* \propto k_b/k_c$, limited primarily by direct resource constraints
-- **Balanced regime**: Both effects comparable, yielding intermediate optimal CC
+**Formal limiting behavior.** Put $k_*:=k_b\alpha\sqrt{3K_{\mathrm{eff}}/A}$.
+
+- If $k_c/k_*\to0$, then $\mathrm{CC}^*\sim\alpha/\sqrt{3AK_{\mathrm{eff}}}$. Consequently $K_{\mathrm{eff}}P_{\mathrm{quad}}(\mathrm{CC}^*)\to1/3$, so this limit does not give a parametrically weak-response optimum.
+- If $k_c/k_*\to\infty$, then $\mathrm{CC}^*\sim k_b\alpha^2/(2Ak_c)$.
+- When $k_c/k_*$ is of order one, the displayed root retains both terms. Each application must check its operating domain and approximation certificate.
 
 ## S.5 Schwarzschild Interpretation of the CC Endpoint-Bias Bound
 
@@ -357,7 +365,7 @@ r_s = \frac{2G \eta_{\mathrm{ret}} \tau_c}{c^4} A \left[\frac{\text{CC}}{\alpha 
 \tag{S.30}
 $$
 
-**Physical viability condition:** For the system to remain a viable physical object rather than collapsing into a black hole, we require:
+**Conditional spherical compactness cutoff:** On the spherical branch of Theorem S.2, impose the following cutoff for the retained context-energy contribution. Its use below as “collapse avoidance” or a “collapse ceiling” refers to this imposed proxy unless an independent source-and-geometry certificate identifies $R_S$ with the areal radius and $E_{\mathrm{grav}}^{\mathrm{inst}}/c^2$ with the complete mass of the matched Schwarzschild exterior. That certificate must account for the baseline, electromagnetic, confinement, and gravitational contributions; S.9 does not identify its context term alone with the total mass. The volume expression after (S.31) supplies the Euclidean spherical radius in the weak-field model. The cutoff by itself proves neither dynamical stability nor future avoidance of a black hole:
 $$
 r_s < R_S
 \tag{S.31}
@@ -493,66 +501,64 @@ $$
 \tag{S.34}
 $$
 
-**Alice's action:** Alice creates a high-CC context state (Section 9, Definition L.1) that generates a local gravitational potential $\Phi_A$ in her spatial region. From Section S.3, this potential induces differential proper time accumulation between the ground state $|0\rangle_A$ and the excited state $|1\rangle_A$ (energy difference $\Delta E_A$). The relative quantum phase evolution for Alice's particle in this gravitational field acquires an additional contribution:
+**Alice's action and phase reference:** Alice creates a retained, quasi-static context source on the uniform spherical branch. Register a phase-reference clock at the sphere centre and an Alice subsystem at radius $r_A<R_S$, together with the signal-transfer and baseline-phase calibrations needed to compare their clocks. Let $\Phi_A:=\Phi(r_A)-\Phi(0)$ denote the context-induced potential difference in this comparison. A potential value without a clock-reference protocol does not define an observable phase.
+
+For a two-level subsystem with $\Delta E_A=E_1-E_0$, the additional phase of $|1\rangle_A$ relative to $|0\rangle_A$, using evolution $e^{-iE\tau/\hbar}$, is at retained weak-field order
 $$
-\delta\phi_A = \frac{\Delta E_A \Phi_A t}{\hbar c^2}
+\delta\phi_A=-\frac{\Delta E_A\Phi_A t}{\hbar c^2}.
 \tag{S.35}
 $$
-
-where $\Delta E_A$ is the energy splitting of Alice's quantum system and $t$ is the interaction time.
-
-**Modified entangled state:** After time $t$, only the excited component of Alice's particle has evolved a relative phase in the gravitational potential:
+After removal of the registered baseline phases, the ideal local phase channel gives
 $$
-|\psi(t)\rangle_{AB} = \frac{1}{\sqrt{2}}\left(|0\rangle_A|0\rangle_B + e^{i\delta\phi_A}|1\rangle_A|1\rangle_B\right)
+|\psi(t)\rangle_{AB}
+=\frac1{\sqrt2}\left(|0\rangle_A|0\rangle_B
++e^{i\delta\phi_A}|1\rangle_A|1\rangle_B\right).
 \tag{S.36}
 $$
-
-**Bob's marginal statistics:** Computing Bob's reduced density operator:
+Bob's reduced state remains
 $$
-\rho_B = \text{tr}_A|\psi(t)\rangle\langle\psi(t)| = \frac{1}{2}(|0\rangle\langle 0| + |1\rangle\langle 1|)
+\rho_B=\operatorname{tr}_A|\psi(t)\rangle\langle\psi(t)|
+=\frac12(|0\rangle\langle0|+|1\rangle\langle1|).
 \tag{S.37}
 $$
-
-This is unchanged from the initial state, confirming no-signaling: Bob cannot detect Alice's action through his local measurements alone.
-
-**Joint measurement statistics:** However, joint measurements in the transverse basis ${|+\rangle, |-\rangle}$ (where $|\pm\rangle = \frac{1}{\sqrt{2}}(|0\rangle \pm |1\rangle)$) reveal correlation changes. For the outcome $|++\rangle$:
+Thus Bob cannot detect the phase through local measurements alone. For transverse-basis joint measurements, with $|\pm\rangle=(|0\rangle\pm|1\rangle)/\sqrt2$,
 $$
-\begin{aligned}
-P(++|t) &= |\langle ++|\psi(t)\rangle|^2 = \left|\frac{1}{2\sqrt{2}}(1 + e^{i\delta\phi_A})\right|^2 \\
-&= \frac{1}{4}[1 + \cos(\delta\phi_A)]
-\end{aligned}
+P(++|t)=\left|\frac{1+e^{i\delta\phi_A}}{2\sqrt2}\right|^2
+=\frac14[1+\cos(\delta\phi_A)].
 \tag{S.38}
 $$
-
-Comparing to the initial correlations where $\delta\phi_A = 0$, $P(++|0) = 1/2$. The modification is:
+Since $P(++|0)=1/2$,
 $$
-\Delta P(++) = P(++|t) - P(++|0) = \frac{1}{4}[\cos(\delta\phi_A) - 1]
+\Delta P(++)=\frac14[\cos(\delta\phi_A)-1].
 \tag{S.39}
 $$
-
-For small gravitational phase $\delta\phi_A \ll 1$ (weak-field regime):
+Under the additional small-phase condition $|\delta\phi_A|\ll1$,
 $$
-\Delta P(++) \approx -\frac{\delta\phi_A^2}{8} \approx -\frac{1}{8}\left(\frac{\Delta E_A \Phi_A t}{\hbar c^2}\right)^2
+\Delta P(++)=-\frac{\delta\phi_A^2}{8}+O(\delta\phi_A^4)
+=-\frac18\left(\frac{\Delta E_A\Phi_A t}{\hbar c^2}\right)^2
++O(\delta\phi_A^4).
 \tag{S.40}
 $$
+Weak field alone does not imply small accumulated phase.
 
-Substituting the retained gravitational source from Equations S.13–S.16 gives
+Integrating (S.15) from the reference centre to $r_A$ gives the retained potential model
 $$
-\Phi_A
-\sim\frac{2\pi G}{3}(1+3w_c)
-\frac{\eta_{\mathrm{ret}}P_{context}\tau_c}{V_Sc^2}r^2.
+\Phi_A=\int_0^{r_A}g_{CC}(r)\,dr
+=\frac{2\pi G}{3}(1+3w_c)
+\frac{\eta_{\mathrm{ret}}P_{\mathrm{context}}\tau_c}{V_Sc^2}r_A^2.
 \tag{S.41}
 $$
-Therefore, on the weak-phase branch,
+The potential offset cancels between the two registered worldlines. The selected probability therefore satisfies, within this leading weak-field phase model,
 $$
 |\Delta P(++)|
-\sim\left(\frac{\Delta E_At}{\hbar c^2}\right)^2
+=\frac18\left(\frac{\Delta E_At}{\hbar c^2}\right)^2
 \left[\frac{2\pi G}{3}(1+3w_c)
-\frac{\eta_{\mathrm{ret}}r^2}{V_Sc^2}\right]^2
-(P_{context}\tau_c)^2
-\propto\eta_{\mathrm{ret}}^2P_{context}^2.
+\frac{\eta_{\mathrm{ret}}r_A^2}{V_Sc^2}\right]^2
+(P_{\mathrm{context}}\tau_c)^2
++O(\delta\phi_A^4).
 \tag{S.42}
 $$
+The quartic remainder concerns the cosine expansion; higher-order metric, clock-transfer and source-model errors require their own certificate.
 
 **Interpretation:** This is the *joint-correlation modulation* mechanism — local control of entangled joint statistics under no-signaling:
 
@@ -577,7 +583,7 @@ P_{context}=a_P\,\text{CC}^2+o(\text{CC}^2),
 \qquad C:=B a_P^2.
 \tag{S.43}
 $$
-Here $a_P$ has units of power and $B$ has units of inverse power squared, so $C$ is dimensionless. For independent Bernoulli trials with null probability $p_0$, a two-sided normal-approximation design with type-I error $\alpha$ and power $1-\beta$ requires at leading order
+Here $a_P$ has units of power and $B$ has units of inverse power squared, so $C$ is dimensionless. Assume $C>0$ and independent Bernoulli trials with a calibrated interior null probability $0<p_0<1$. For two-sided type-I error $\alpha\in(0,1/2)$ and power $1-\beta$ with $\beta\in(0,1/2)$, the large-sample normal-approximation planning formula gives, at leading order as $\mathrm{CC}\downarrow0$,
 $$
 N_{samples}
 \gtrsim
@@ -593,37 +599,39 @@ For $\text{CC}=0.1$, the power-law factor is $\text{CC}^{-8}=10^8$. The absolute
 
 **Conditional carrier comparison.** A gravitational carrier couples through a certified stress-energy and metric response, while an electromagnetic carrier couples through a certified current, field, and target susceptibility. Universal stress-energy coupling does not prove that the nominated gravitational phase channel is realizable, dominant, or uniquely attributable. The result below assumes a two-level energy gap, a retained source, and a local CPTP phase response; it does not apply automatically to every quantum system. Distinguishing carriers requires preregistered response surfaces, matched geometry and retention data, and nuisance-controlled likelihood comparison.
 
-**Theorem S.3 (Conditional Gravitational Joint-Correlation Estimate).** Assume the uniform spherical perfect-fluid source model of S.3, the retained-energy law with $0<\eta_{\mathrm{ret}}\le1$, the global quadratic cost branch S.5, and a two-level subsystem $A$ with energy gap $\Delta E_A$. Assume that the gravitational interaction is represented by a local CPTP phase channel on $A$, that the chosen joint measurement has the response S.40, and that both the weak-field and weak-phase conditions hold. Define
+**Theorem S.3 (Conditional Gravitational Joint-Correlation Estimate).** Assume the uniform spherical perfect-fluid source model, the retained-energy law with $0<\eta_{\mathrm{ret}}\le1$, and the global quadratic cost branch S.5. Register the centre-clock comparison and baseline/transfer calibration of S.35–S.41, with a two-level subsystem $A$ at $0\le r_A<R_S$, constant energy gap $\Delta E_A$, and interaction time $t$. Within the retained quasi-static weak-field model, assume the ideal local phase channel and selected joint measurement of S.36–S.38. Put
 $$
 K_A:=\frac{2\pi G}{3}(1+3w_c)
-\frac{\eta_{\mathrm{ret}}\tau_cr_A^2}{V_Sc^2}.
+\frac{\eta_{\mathrm{ret}}\tau_cr_A^2}{V_Sc^2},
+\qquad \Phi_A:=\Phi(r_A)-\Phi(0)=K_AP_{\mathrm{context}}.
 $$
-Then Bob's marginal is unchanged, while the selected joint probability obeys the leading-order relation
+On the additional small-phase branch, Bob's marginal is unchanged and
 $$
 |\Delta P(++)|
 =\frac18\left(\frac{\Delta E_At}{\hbar c^2}\right)^2
 K_A^2A^2
-\left[\frac{\mathrm{CC}(S_A)}{\alpha_{CC,max}-\mathrm{CC}(S_A)}\right]^4
+\left[\frac{\mathrm{CC}(S_A)}
+{\alpha_{CC,\max}-\mathrm{CC}(S_A)}\right]^4
 +O(\delta\phi_A^4).
 \tag{S.45}
 $$
+This remainder controls the phase-response expansion within the retained metric model. Physical comparison additionally requires the source, metric and clock-transfer error budget.
 
-*Proof.* Equation S.41 and the definition of $K_A$ give $\Phi_A=K_AP_{context}$ to the retained weak-field order. Hence
+*Proof.* The registered clock comparison gives
 $$
-\delta\phi_A
-=\frac{\Delta E_At}{\hbar c^2}K_AP_{context}.
+\delta\phi_A=-\frac{\Delta E_At}{\hbar c^2}K_AP_{\mathrm{context}}.
 $$
-The assumed joint-measurement response S.40 gives
+Equations S.38–S.40 imply
 $$
 |\Delta P(++)|=\frac18\delta\phi_A^2+O(\delta\phi_A^4).
 $$
-Finally, S.5 gives
+The cost law gives
 $$
-P_{context}^2
+P_{\mathrm{context}}^2
 =A^2\left[\frac{\mathrm{CC}(S_A)}
-{\alpha_{CC,max}-\mathrm{CC}(S_A)}\right]^4.
+{\alpha_{CC,\max}-\mathrm{CC}(S_A)}\right]^4.
 $$
-Substitution proves S.45. Trace preservation of the local channel gives the unchanged Bob marginal by Theorem S.1. ∎
+Substitution proves S.45. The local unitary is CPTP, so Theorem S.1 gives the unchanged Bob marginal. ∎
 
 **Conditional carrier-discrimination protocol.** Preregister the electromagnetic and gravitational carrier response functions, nuisance controls, uncertainty model, and identifiability criterion. Vary radiated power and total retained power independently over a domain on which the two predicted response surfaces are distinguishable. Attribute support to one carrier branch only if the matched likelihood rejects the competing registered surface at the declared uncertainty level while ordinary electromagnetic, thermal, mechanical, and instrumental channels are controlled. Appendix L/S does not prove that the two carrier families are exhaustive or that correlation with raw power alone identifies either mechanism.
 
@@ -737,16 +745,22 @@ $$
 \tag{S.6.1d.1}
 $$
 
-(ii) If the probe sector is admissible, then for every probe-blind acceptance set with a measurable induced accepted density $\tilde p\ge0$ satisfying $\int_{\Lambda_{\mathrm{acc}}}\tilde p\,d\mu=1$,
+(ii) Suppose the probe sector is admissible and the acceptance rule is probe-blind. Let $\tilde p\ge0$ be a measurable accepted density with $\int_{\Lambda_{\mathrm{acc}}}\tilde p\,d\mu=1$. Assume the per-configuration impulse is measurable and integrable with respect to $\tilde p\,d\mu$. Then
 $$
 \langle\Delta p_x\rangle_{\mathrm{sel}}
-:=
-\int_{\Lambda_{\mathrm{acc}}}\tilde p(\lambda)
-\Bigl(\langle\hat p_x\rangle_{\psi_t^\lambda}-\langle\hat p_x\rangle_{\psi_0^\lambda}\Bigr)d\mu(\lambda)
+:=\int_{\Lambda_{\mathrm{acc}}}\tilde p(\lambda)
+\left(\langle\hat p_x\rangle_{\psi_t^\lambda}
+-\langle\hat p_x\rangle_{\psi_0^\lambda}\right)d\mu(\lambda)
 \le0,
 \tag{S.6.1d.2}
 $$
-with strict inequality whenever $\nu_\lambda\neq0$ on a set of positive $\tilde p\,d\mu$ measure.
+with strict inequality when $\nu_\lambda\ne0$ on a set of positive accepted measure. The bound
+$$
+\left|\langle\hat p_x\rangle_{\psi_t^\lambda}
+-\langle\hat p_x\rangle_{\psi_0^\lambda}\right|
+\le\frac{Gmt}{\Delta^2}\nu_\lambda(\mathbb R^3)
+$$
+shows that a finite accepted mean source mass is a sufficient integrability condition.
 
 *Proof.* (i) Complete positivity gives $\mathcal E_A^\lambda(\rho_A)\ge0$ and $\mathcal E_B^\lambda(\rho_B)\ge0$, so each integrand in (S.6.1c.1) is a nonnegative multiple of a product state. The accepted integral is therefore an unnormalized separable operator, and division by its positive trace preserves separability; continuous mixtures are included because the accepted integral is a trace-norm limit of finite separable sums and the separable states form a trace-norm closed convex set in finite dimension. For a separable state $\sigma=\sum_r q_r\,\sigma_A^{(r)}\otimes\sigma_B^{(r)}$ with $q_r\ge0$, the partial transpose $\sigma^{T_B}=\sum_r q_r\,\sigma_A^{(r)}\otimes(\sigma_B^{(r)})^{T}$ is a sum of positive operators, hence positive with unit trace, so $\lVert\sigma^{T_B}\rVert_1=\operatorname{tr}\sigma^{T_B}=1$ and $\mathcal N(\sigma)=(\lVert\sigma^{T_B}\rVert_1-1)/2=0$ in the negativity convention of Proposition S.6.1b. Only the product form of the maps per configuration is used, so classical communication or feedforward folded into $\lambda$ leaves the conclusion unchanged.
 
@@ -771,11 +785,11 @@ $$
 $$
 after subtraction of the certified statistical and systematic error budget. Then every implementation in $\mathfrak K_{\mathrm{cl}}$ with admissible probe sector is excluded by Lemma S.6.1d(ii).
 
-Either record excludes $\mathfrak K_{\mathrm{cl}}$ for the registered protocol. Neither record selects a particular nonclassical completion, and neither asserts any unconditioned or marginal anomaly.
+Either record excludes $\mathfrak K_{\mathrm{cl}}$ for the registered protocol. This exclusion does not select a nonclassical completion or establish that an arbitrary implementation outside the class produces either witness. A selective-subensemble record alone supplies no unconditional or remote-marginal conclusion.
 
-*Proof.* Each part is a direct contradiction between the certified strict inequality and the corresponding bound of Lemma S.6.1d, quantified over all class members carrying the stated entries. The final statement holds because exclusion of $\mathfrak K_{\mathrm{cl}}$ is purely negative: any implementation outside the class, in particular any implementation whose mediator response is conditioned coherently on nonorthogonal source amplitudes, is compatible with both records, and both records are selective, so no unconditioned or marginal statement follows from them. ∎
+*Proof.* Each part contradicts the corresponding bound of Lemma S.6.1d for class members carrying the stated entries. In part (b), reproduction of the certified finite conditional mean includes the measurability and integrability conditions of that lemma. The resulting class exclusion is necessary for the witness, not sufficient to realize it. Implementations outside the class require their own response calculation. ∎
 
-**Remark S.6.1 (Selective Records and the Trace-Preserving Branch).** A record of the form (S.6.1e.1) is produced by a normalized selective operation and lies outside the trace-preserving channel hypotheses of Theorem S.1 and Theorem S.3; no marginal statement is asserted for it, consistent with the separation stated at the opening of Section S.6. Within $\mathfrak K_{\mathrm{cl}}$ the unconditioned ensemble mean obeys the nonpositive bound of Lemma S.6.1d(ii) with $\Lambda_{\mathrm{acc}}=\Lambda$. When $\Lambda_{\mathrm{acc}}\subsetneq\Lambda$, witness (b) is a proper selective-subensemble record and does not by itself assert an unconditional marginal effect. When $\Lambda_{\mathrm{acc}}=\Lambda$, it is a full-ensemble record and must separately satisfy the applicable marginal and no-signaling constraints. A spatially superposed source with probe-blind postselection in a nonorthogonal source basis is a candidate realization of (S.6.1e.1) on the coherent-mediator branch (Saldanha, Marletto and Vedral 2026); such an implementation lies outside $\mathfrak K_{\mathrm{cl}}$ precisely because its mediator response is not of the configuration-diagonal product form (S.6.1c.1).
+**Remark S.6.1 (Selective Records and the Trace-Preserving Branch).** A record conditioned on acceptance with probability strictly between zero and one is a selective-subensemble record. Its normalized selective formula alone supplies no local CPTP certificate for Theorems S.1 and S.3. Within $\mathfrak K_{\mathrm{cl}}$, the full-ensemble mean obeys Lemma S.6.1d(ii) when its measurability and integrability conditions hold. If all outcomes are accepted, the record is a full-ensemble record and must separately satisfy the applicable marginal and no-signaling constraints; normalization alone does not place it outside the trace-preserving branch. A spatially superposed source with probe-blind postselection in a nonorthogonal source basis is a proposed realization of (S.6.1e.1) on a coherent-mediator branch (Saldanha, Marletto and Vedral 2026). Its exclusion from $\mathfrak K_{\mathrm{cl}}$ requires a response that cannot be represented in the configuration-diagonal product form (S.6.1c.1), and its positive impulse requires a separate response certificate.
 
 ## S.7 Conditional Gravitational Phase and Dephasing Mechanisms
 
@@ -852,17 +866,14 @@ $$
 
 A deterministic, fully known gravitational phase shift $|\Delta\phi_{ij}^{(grav)}| \sim 1$ is a unitary phase rotation of the superposition $|i\rangle + |j\rangle$ and does not by itself suppress coherence: the off-diagonal density matrix elements rotate but do not decay. Genuine dephasing occurs only when the retained finite-resolution state does not resolve the relative chronometric phase. This happens on branches with an additional ingredient — either (a) the gravitational potential $\Phi$ (or equivalently $\Delta\tau_d$) fluctuates with variance $\mathrm{Var}(\Delta\phi)$ across unresolved degrees of freedom, (b) the spatial wavepacket components experience different gravitational potentials and become entangled with position degrees of freedom that are then traced out, (c) the gravitational substrate couples to environmental degrees of freedom whose state is traced out per Zurek-style decoherence (Zurek, 1991, 2003), or (d) the saturated chronometric ND-RID branch identifies unresolved proper-time phase slip with the minimal Markovian dephasing contraction rate.
 
-On the phase-uncertainty / environmental-tracing branch where one of (a)–(c) supplies a phase variance $\mathrm{Var}(\Delta\phi_{ij})$ over the coherence interval $\tau_c$, the off-diagonal coherence is suppressed by the factor $\exp(-\mathrm{Var}(\Delta\phi_{ij})/2)$, defining the variance dephasing rate:
+For a phase-averaging representation of branches (a)–(c), let $X_{ij}(t)$ be the unresolved real relative phase. The coherence multiplier is its characteristic function $\mathbb E[e^{-iX_{ij}(t)}]$. If $X_{ij}(\tau_c)$ is Gaussian with variance $v_{ij}(\tau_c)$ and $\tau_c>0$, its magnitude is $e^{-v_{ij}(\tau_c)/2}$, regardless of its mean. The effective attenuation rate over that interval is
 $$
-\Gamma_{\mathrm{var}}^{(ij)}
-=
-\frac{1}{\tau_{\mathrm{deph}}}
-=
-\frac{\mathrm{Var}(\Delta\phi_{ij}^{(grav)})}{2\tau_c}
-\quad
-\text{on the Gaussian phase-noise branch.}
+\Gamma_{\mathrm{var}}^{(ij)}(\tau_c)
+:=-\frac1{\tau_c}\log\left|\mathbb E[e^{-iX_{ij}(\tau_c)}]\right|
+=\frac{v_{ij}(\tau_c)}{2\tau_c}.
 \tag{S.56}
 $$
+This is not automatically a constant dephasing rate. An exponential envelope $e^{-\Gamma t}$ requires the additional law $v_{ij}(t)=2\Gamma t$ on the operating window. For $\Gamma>0$, its coherence time is $\tau_{\mathrm{deph}}=1/\Gamma$; for $\Gamma=0$, this branch has no attenuation. A Markovian channel interpretation also requires its channel-composition certificate. General non-Gaussian phase distributions and general environment traces are not determined by phase variance alone.
 
 On the saturated chronometric ND-RID branch (d), define the chronometric phase-slip rate by
 $$
@@ -887,27 +898,40 @@ $$
 $$
 where the last equality uses $\Delta\tau_d/\tau_c=\Delta\Phi/c^2=K_{\mathrm{eff}}P_{\mathrm{context}}$ from Equations S.18-S.21. The deterministic tracked-phase branch has $\Gamma_{\mathrm{grav}}^{(ij)}=0$; the variance branch has $\Gamma_{\mathrm{grav}}^{(ij)}=\Gamma_{\mathrm{var}}^{(ij)}$; the saturated chronometric ND-RID branch has $\Gamma_{\mathrm{grav}}^{(ij)}=\Gamma_{\mathrm{ch}}^{(ij)}$.
 
-**Theorem S.7.3a (Chronometric Dephasing Branch and Clock-Gap Scaling).** On the saturated chronometric ND-RID branch, the residual gravitational dephasing rate for an internal transition $i\leftrightarrow j$ satisfies
+**Theorem S.7.3a (Chronometric Dephasing Branch and Clock-Gap Scaling).** On the saturated chronometric ND-RID branch, register one stationary proper-time geometry over $\tau_c>0$ and constant transition gaps. Define its dimensionless mismatch
 $$
-\frac{\hbar\Gamma_{\mathrm{ch}}^{(ij)}}{|\Delta E_{ij}|}
-=
-\frac{|\Delta\Phi|}{c^2}.
+q_\tau:=\frac{|\Delta\tau_{\mathrm{diff}}|}{\tau_c}\ge0.
 $$
-Therefore two transitions measured in the same geometry obey
+The chronometric identification gives
+$$
+\Gamma_{\mathrm{ch}}^{(ij)}
+=\frac{|\Delta E_{ij}|}{\hbar}q_\tau.
+$$
+For $|\Delta E_{ij}|>0$,
+$$
+\frac{\hbar\Gamma_{\mathrm{ch}}^{(ij)}}{|\Delta E_{ij}|}=q_\tau.
+$$
+In the static weak-field comparison,
+$$
+q_\tau=\frac{|\Delta\Phi|}{c^2}
++O\!\left(\frac{\Phi_0^2+\Phi_1^2}{c^4}\right).
+$$
+The leading potential identity is exact only within the retained weak-field model.
+
+If two transitions share this geometry, both gaps are nonzero, and $q_\tau>0$, then
 $$
 \frac{\Gamma_{\mathrm{ch}}^{(ij)}}{\Gamma_{\mathrm{ch}}^{(kl)}}
-=
-\frac{|\Delta E_{ij}|}{|\Delta E_{kl}|}.
+=\frac{|\Delta E_{ij}|}{|\Delta E_{kl}|}.
 $$
-If the same branch pair is engineered so that the mass-density difference is held fixed while the internal energy splitting is changed, this linear clock-gap law is a PU chronometric signature distinct from any model whose rate depends only on branch mass-density difference.
+If $q_\tau=0$, all these rates vanish and the rate ratio is undefined. A zero-gap transition also has zero rate and cannot be used in a normalized denominator.
 
-*Proof.* Equation S.54 gives
+*Proof.* The coherent phase difference is
 $$
-|\Delta\phi_{ij}^{(grav)}|
-=
-\frac{|\Delta E_{ij}|}{\hbar}\frac{|\Delta\Phi|}{c^2}\tau_c.
+\Delta\phi_{ij}=-\frac{\Delta E_{ij}}{\hbar}\Delta\tau_{\mathrm{diff}}.
 $$
-Dividing by $\tau_c$ and applying the saturated chronometric branch identification $\Gamma_{\mathrm{ch}}^{(ij)}=|\Delta\phi_{ij}^{(grav)}|/\tau_c$ gives the first formula. For two transitions in the same geometry, the common factor $|\Delta\Phi|/c^2$ cancels, giving the ratio formula. ∎
+Dividing its magnitude by $\tau_c$ and imposing the saturated branch law gives $\Gamma_{\mathrm{ch}}^{(ij)}=|\Delta E_{ij}|q_\tau/\hbar$. Dividing by a nonzero gap gives the normalized invariant. The weak-field clock expansion gives the displayed potential comparison. On the positive-mismatch, nonzero-gap branch, the common factor $q_\tau/\hbar$ cancels exactly between two rates. ∎
+
+If a protocol changes the internal gap while retaining the same nonzero proper-time geometry and branch mass-density difference, this conditional linear gap law differs from a model whose rate depends only on that mass-density difference. Those common-geometry and source conditions require independent experimental control.
 
 Assume the baseline and gravitational decoherence channels are independent Markovian channels with exponential coherence factors
 $$
@@ -975,7 +999,7 @@ $$
 \frac{\tau_{\mathrm{eff}}}{\tau_c}.
 \tag{S.62}
 $$
-When $\tau_{\mathrm{coh}}^{\mathrm{eff}}<\tau_c$, Equations (S.59)–(S.60) then give
+When $\tau_{\mathrm{coh}}^0=\tau_c$ and $\tau_{\mathrm{coh}}^{\mathrm{eff}}<\tau_c$, Equations (S.58), (S.60), and (S.62) give
 $$
 \boxed{
 \mathrm{CC}_{\mathrm{eff}}
@@ -1040,10 +1064,10 @@ This appendix analyzes gravitational feedback effects that limit CC efficacy. Fo
    - Distributional covariant conservation $\nabla^\mu T_{\mu\nu}^{(MPU)}=0$ on the regular local-equilibrium branch of Theorem B.5; pointwise conservation on its smooth on-shell variational branch
    - Horizon thermodynamics consistency on the hypotheses of Theorem L.7
 
-4. **Universal requirements**
-   - Implementation-independent constraints (Theorem L.9)
-   - Threshold behavior: $C_{agg} \le C_{op} \implies \text{CC} = 0$
-   - POP/PCE optimization conditions (Lemma L.1, Theorem L.1)
+4. **Implementation and mapping-class requirements**
+   - Implementation-independent constraints (Theorem L.9(i)–(iii))
+   - Threshold behavior on the threshold-scaling branch: $C_{agg} \le C_{op} \implies \text{CC} = 0$
+   - POP/PCE optimization on the nonempty compact continuous mapping class of Theorem L.1, with the Lipschitz and boundedness hypotheses of Lemma L.1 and contractivity when a feedback loop is included
 
 5. **Experimental protocols**
    - Protocol L.1: registered electromagnetic source/field/target transfer test; its displayed integration time is branch-parameter arithmetic, not a feasibility certificate
@@ -1064,7 +1088,7 @@ This appendix analyzes gravitational feedback effects that limit CC efficacy. Fo
 
 3. **Theoretical bounds and interpretations**
    - Unified causality-gravity constraint (Theorem S.2)
-   - Physical viability limits (Corollary S.2.1)
+   - Conditional compactness cutoff and weak-field validity limits (Corollary S.2.1)
    - Self-limitation prevents arbitrary CC enhancement
 
 ### S.8.2 Conditional Branch Composition
@@ -1115,16 +1139,17 @@ The experimental programs in Appendix L and this appendix address different aspe
 **Appendix L protocols test:**
 - Whether CC influence exists and operates primarily through EM channel
 - Energy conservation in CC processes (calorimetry)
-- Whether gravitational channel is negligible (expects null result)
-- Detection timescales: seconds to hours
+- Whether a registered gravitational response is distinguishable from the competing carrier model under the common source, geometry, retention, and uncertainty certificate
+- Detection timescales determined by the registered target-response likelihood, effect interval, trial rate, and statistical power
 
-**This appendix's implications test:**
-- Self-limiting feedback loop existence (measure CC vs. $P_{context}$, should saturate)
-- Entanglement non-local mechanism (Section S.6, requires spacelike-separated correlated measurements)
-- Schwarzschild bound approach (attempt maximal CC, should fail before $r_s \to R_S$)
-- Decoherence mechanism (measure $\tau_{coh}$ vs. local gravitational potential)
+**This appendix's conditional tests address:**
 
-Both programs are necessary for complete framework validation. Appendix L establishes how CC works; this appendix establishes why CC is bounded and self-limiting.
+- Whether the registered cost and coherence-response laws describe CC as retained context power changes.
+- Whether the local phase protocol of Section S.6 produces its predicted joint-correlation change with unchanged Bob marginal.
+- Whether the source and geometry certificate supports interpreting the imposed compactness cutoff physically.
+- Whether the registered unresolved-noise or chronometric branch describes coherence times and clock-gap scaling.
+
+Appendices L and S supply carrier, resource and response models on their stated hypotheses. Testing these models requires their common source, geometry, timing, calibration and uncertainty records; neither appendix by itself establishes that a nominated CC implementation exists or realizes the proposed self-limitation mechanism.
 
 ### S.8.4a Experimental Discrimination of Registered Carrier Models
 

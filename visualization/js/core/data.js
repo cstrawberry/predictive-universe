@@ -195,7 +195,15 @@
     return [v[0] * s2 * scale, v[1] * s2 * scale, v[2] * s2 * scale];
   }
 
+  // Constant tangential speed: angular speed decreases as 1/r.
+  function darkRotationMarker(index, t) {
+    var radius = 42 + (index / 64) * 76;
+    var angle = (index / 64) * Math.PI * 2 + t * 41 / radius;
+    return [Math.cos(angle) * radius, 18, Math.sin(angle) * radius];
+  }
+
   PU.data = {
+    darkRotationMarker: darkRotationMarker,
     network: network,
     becoming: becoming,
     horizon: horizon,

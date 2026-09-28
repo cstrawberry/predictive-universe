@@ -39,11 +39,9 @@
 
       /* Flat rotation markers: the empirical tension being addressed. */
       for (var k = 0; k < 64; k++) {
-        var ka = (k / 64) * Math.PI * 2 + t * 0.5;
-        var kr = 42 + (k / 64) * 76;
-        var kp = [Math.cos(ka) * kr, 18 + Math.sin(ka * 2) * 4, Math.sin(ka) * kr];
+        var kp = data.darkRotationMarker(k, t);
         g.point(out, kp, [0, 0.9, 1, 0.52], 4.2);
-        g.line(out, kp, [Math.cos(ka + 0.12) * kr, 18, Math.sin(ka + 0.12) * kr], [0, 0.9, 1, 0.08]);
+        g.line(out, kp, data.darkRotationMarker(k, t + 0.2), [0, 0.9, 1, 0.08]);
       }
     }
   });

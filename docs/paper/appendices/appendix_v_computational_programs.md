@@ -17,13 +17,13 @@ This appendix is intended to be mechanically reproducible from the displayed equ
 1. **Input ledger.** Fixed finite inputs for the displayed arithmetic are $K_0=3$, $N_{\mathrm{vis}}^{\min}=8$, $d_0=8$, $\varepsilon_0=\ln2$, $a=2$, $b=6$, and $M=24$ on their declared branches. Appendix U independently registers $(N_U,r_U)=(24,12)$ and hence the real tangent count $288$. The equality $S_{\mathrm{inst}}=2\kappa_{\mathrm{idx}}$ is not a fixed backbone input: it additionally requires the carrier/Hessian marking and Proposition U.14's exact exponent-calibration certificate $\mathfrak C_{U,\mathrm{act}}$.
 2. **$\Lambda$ forward evaluation + inversion check.** Using Equation (V.2) with the registered reference-branch inputs $(\kappa,A_{\text{eff}})$ to compute the corresponding $\Lambda L_P^2$ value, and using Equations (V.4)–(V.5) together with Equation (V.3) to infer either $A_{\text{eff}}^{(\text{obs})}$ (holding $\kappa$ fixed) or an effective $\kappa$ (holding $A_{\text{eff}}$ fixed) from observational inputs $(H_0,\Omega_\Lambda,c,L_P)$.
 3. **$\alpha_{\mathrm{em}}$ forward program.** Using Equation (V.8) to compute $u^*$ from $(M,\lambda,d_0)$ and Equation (V.10) to compute $\alpha^{-1}$ from $(u^*,K_0)$ including the explicit interface corrections.
-4. **Uncertainty accounting.** Reported $1\sigma$ uncertainties separate (i) observational inputs, (ii) controlled truncation terms, and (iii) PU-to-physics mapping/systematic terms; when combined, they are combined in quadrature unless otherwise stated.
+4. **Uncertainty accounting.** Statistical standard uncertainties, rigorous truncation bounds, and PU-to-physics mapping or systematic allowances are recorded separately. Statistical propagation uses the registered covariance; quadrature is valid only when the required covariance terms vanish. Deterministic bounds are propagated as bounds, and a diagnostic comparison budget is not assigned a $1\sigma$ interpretation without a probability model.
 
 Numerical conventions: $\ln$ and $\exp$ denote the natural logarithm and exponential. Intermediate computations should retain at least 20 significant digits before final rounding; dimensionless combinations such as $\Lambda L_P^2$ should be formed exactly as written to avoid unit-conversion errors.
 
 **Table V.0 — Consolidated numerical outputs and uncertainty budgets**
 
-| Quantity | PU program | Central value | $1\sigma$ budget | Dominant contributions |
+| Quantity | PU program | Central value | Uncertainty or diagnostic budget | Dominant contributions |
 |:--|:--|:--|:--|:--|
 | $\alpha^{-1}$ (Thomson limit) | Eqs. (V.8)–(V.10) with $K_0=3$, $d_0=8$, $M=24$, $u^*=8^{1/24}-1$; certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ | $\alpha^{-1}_{0}=137.03609205522863\ldots$ | branch comparison budget $\pm0.000060$ before residual closure | exact sinc-core arithmetic plus Section Z.27.9 comparison budget; theorem-level interval requires the residual gate of Definition Z.27.11a and Theorem Z.27.11j.1 |
 | $\Lambda L_P^2$ (vacuum sector) | five-mode reference conversion and observational inversions; four-mode route $m_4\to\kappa_{\mathrm{idx}}\to S_{\mathrm{inst}}\to w_4\to\Lambda_4L_P^2$ | five-mode reference $(2.88\times10^{-122})$ | $\pm0.03\times10^{-122}$ reference budget | U.13b proves only sampled-Hessian nullity; $\mathfrak C_{U,\mathrm{mark}}$, Proposition U.14, $\mathfrak F_U^{(4)}$, and $\mathfrak R_\Lambda^{(4)}$ remain successive gates. Equation (V.5) gives the observational input and the displayed prefactor values are inversions, not forward evaluations |
@@ -184,7 +184,7 @@ For the selected state $\rho_0=I_a/a\oplus0_b$ with $(d_0,a,b)=(8,2,6)$ and the 
 
 ### V.2.3 Capacity Saturation Condition
 
-On the cap-active PCE-Attractor branch, the operational alphabet capacity saturates at $\ln d_0$ (Theorem Z.7). The predictive information gain equals the operational alphabet capacity:
+On the cap-active LAN/QFI-surrogate branch of Theorem Z.7, adopt $\mathcal I(u):=M\ln(1+\lambda u)$ as the branch capacity coordinate, impose $\mathcal I(u)\le\ln d_0$, and assume the unconstrained rate minimizer lies strictly above the cap. The constrained minimum then saturates the declared surrogate boundary:
 
 $$
 \mathcal{I}(u^*) = M \ln(1 + \lambda u^*) = \ln d_0
@@ -563,13 +563,7 @@ $$
 \dim_{\mathbb C}\widetilde X=23.
 $$
 
-The Clifford generator count used by the RHG construction is
-
-$$
-\rho(24)=8,
-$$
-
-so the real Clifford block has eight anticommuting generators. The finite Peter-Weyl audit may verify the generator algebra, the flag-manifold dimension, the $C_2\le100$ dominant-weight enumeration, and the analytic $P=24$ tail integral.
+The RHG compatibility operator uses the six Clifford generators of Definition Z.3a and Definition T.78.6, with $E_\alpha=i\gamma_\alpha\in\mathfrak{su}(8)$ for $\alpha=1,\ldots,6$. The separate Radon–Hurwitz arithmetic identity $\rho(24)=8$ is not the number of generators in that construction. The finite Peter-Weyl audit may verify this six-generator algebra, the flag-manifold dimension, the $C_2\le100$ dominant-weight enumeration, and the analytic $P=24$ tail integral.
 
 These checks do not by themselves verify Algorithm T.78.6a. The present text still lacks the explicit RHG block matrices
 
@@ -589,48 +583,76 @@ $$
 
 and the heat-kernel/zeta finite parts and tail constants required to certify intervals for $F_s^{\mathrm{RHG}}$.
 
-Consequently no certified interval triplet
+Consequently no certified physical interval triplet
 
 $$
 (\Delta_1,\Delta_2,\Delta_3)^{\mathrm{RHG}}
 $$
 
-is obtained. The validation tuple remains a comparison target only.
-
-If the validation tuple is inverted only for diagnostic comparison,
+is obtained. The literal hypercharge spectrum in Remark G.8.4e.3 gives zero hypercharge on the two-dimensional active subspace and the one-dimensional inactive complement. On the branch where the active subspace is also trivial under $SU(3)$ and $SU(2)$, Remark T.17a.3 gives the finite index matrix
 
 $$
-\Delta^{\mathrm{val}}=(15.14,20.94,18.41)
-$$
-
-under the fixed threshold map
-
-$$
-\Delta=TF,
-\qquad
-T=
+T_0=
 \begin{pmatrix}
-2/5&3/5&8/15\\
+2/5&3/5&0\\
 0&1&0\\
 1&0&0
-\end{pmatrix}
+\end{pmatrix}.
 $$
 
-gives
+The representation indices alone do not identify the physical threshold map for the full sector determinants. Conditional on the candidate matching rule $\Delta=T_0F$, with $F=(F_C,F_W,F_Y)^T$, the second and third rows give $\Delta_2=F_W$ and $\Delta_3=F_C$, while the first gives
 
 $$
-F_C=18.41,
+\Delta_1=\frac25\Delta_3+\frac35\Delta_2,
 \qquad
-F_W=20.94,
-\qquad
-F_Y=-8.9775.
+5\Delta_1-3\Delta_2-2\Delta_3=0.
 $$
 
-This diagnostic inversion is not a derivation and may not be used to select any entry of $\mathfrak C_{\mathrm{RHG}}$.
+The first two columns are independent because their last two entries are $(0,1)^T$ and $(1,0)^T$; the third column is zero. Consequently
+
+$$
+\operatorname{rank}T_0=2,
+\qquad
+\ker T_0=\operatorname{span}\{(0,0,1)^T\},
+\qquad
+(5,-3,-2)T_0=0.
+$$
+
+Conversely, every $\Delta$ satisfying the displayed linear relation is obtained by setting $F_C=\Delta_3$ and $F_W=\Delta_2$, with arbitrary $F_Y$. Thus that relation characterizes the image exactly.
+
+For the comparison input
+
+$$
+\Delta^{\mathrm{val}}=(15.14,20.94,18.41),
+$$
+
+the weak and color entries would require
+
+$$
+\Delta_1=\frac25(18.41)+\frac35(20.94)=19.928,
+\qquad
+19.928-15.14=4.788.
+$$
+
+Equivalently,
+
+$$
+5\Delta_1^{\mathrm{val}}-3\Delta_2^{\mathrm{val}}-2\Delta_3^{\mathrm{val}}
+=-23.94\ne0.
+$$
+
+Allowing independent rounding errors $|\epsilon_i|\le0.005$ does not restore compatibility: the change in $\frac25\Delta_3+\frac35\Delta_2-\Delta_1$ is bounded by
+
+$$
+\frac25|\epsilon_3|+\frac35|\epsilon_2|+|\epsilon_1|
+\le0.010,
+$$
+
+so its magnitude is at least $4.788-0.010=4.778>0$. No choice of $F_Y$, local finite part, or global spectral data can produce this tuple under the candidate map on the stated representation branch. This incompatibility neither supplies the missing physical normalization map nor selects another representation. The comparison tuple may not be used to choose any entry of $\mathfrak C_{\mathrm{RHG}}$.
 
 ### V.3.7 Audit Conclusion
 
-The finite checks confirm the arithmetic that can be evaluated from the present data. The spectral audit remains open because its block, minimization, finite-part, and tail records are absent. Separate finite cardinality and arithmetic checks remain closed at their own audit level.
+The finite checks confirm the arithmetic that can be evaluated from the present data. The calculation in Section V.3.6 excludes the comparison tuple from the candidate map $\Delta=T_0F$ on the literal-spectrum, active-gauge-trivial branch; this obstruction is independent of spectral approximation. The physical spectral audit remains open because its representation-compatible normalization map, block, minimization, finite-part, and tail records are absent. Separate finite cardinality and arithmetic checks remain closed at their own audit level.
 
 #### Technical audit ledger
 
@@ -646,7 +668,7 @@ $$
 r:\mathcal S_{\mathrm{vis}}\to\{0,1\}^3
 $$
 
-has $|r(\mathcal S_{\mathrm{vis}})|\le N<8$, hence cannot be surjective. Therefore a claimed $N<8$ SPAP realization can be rejected before transition-table details are considered, by Corollary 5.2.2b. This audit is closed by exact finite cardinality.
+has $|r(\mathcal S_{\mathrm{vis}})|\le N<8$, hence cannot be surjective. Therefore a claimed SPAP realization required to satisfy the full-context hypothesis (FC) can be rejected when $N<8$, before transition-table details are considered, by Corollary 5.2.2b. This finite-cardinality audit does not reject realization classes without (FC).
 
 ### V.3.9 Page-Purity-Before-Entropy Audit
 
@@ -940,7 +962,7 @@ $$
 $$
 Integrating, applying (V.3.11c.2.3), multiplying by $|s_B|$, and then using $\|d\|\le\|c'-c\|/\gamma$ gives (V.3.11c.2.4). ∎
 
-**Corollary V.3.11c.3 (Calibration Condition-Number Gate).** A final-calibrated numerical interval must propagate the registered moment uncertainty through (V.3.11c.2.4). If the covariance floor $\gamma$ approaches zero, the inverse moment problem is ill-conditioned and the coefficient remains certificate-pending unless a different identifiable chart supplies a positive floor. The no-double-counting conclusion concerns KL increments under exact nesting on one fixed atom set and reference measure; it does not assert statistical independence or erase correlated physical or certificate uncertainties.
+**Corollary V.3.11c.3 (Calibration Condition-Number Gate).** A final-calibrated numerical interval must propagate the registered moment uncertainty through an accepted sensitivity bound, such as (V.3.11c.2.4). As the certified floor $\gamma$ decreases, this bound can deteriorate; that fact alone does not establish actual ill-conditioning or nonidentifiability. Acceptance of a coefficient interval requires a sufficient bound for its registered uncertainty, or another certificate determining that coefficient. The no-double-counting conclusion concerns KL increments under exact nesting on one specified atom set and reference measure; it does not assert statistical independence or erase correlated physical or certificate uncertainties.
 
 **Corollary V.3.11d (Exponential Form on Independent Moment Branches).** If the active moment functions are independent after applying $\mathcal Q_{\mathrm{ind}}$, then the calibrated state has the form
 $$
@@ -1092,7 +1114,7 @@ $$
 \right).
 $$
 
-The Appendix Z residual gate can be promoted by USCP only if a symbol $\sigma_{R_\alpha}$ is included in $\mathfrak S_*$ before comparison, in which case
+An accepted Appendix Z residual certificate may be encoded by USCP only when its local parent record is listed in $\mathcal O_*$ and its certified physical residual descends to the pre-comparison symbol $\sigma_{R_\alpha}$ through the accepted response-preserving projection of Definition V.3.11a. On the branch with unit normalization bridge $s_{R_\alpha}=1$ and a certificate proving the exact residual value, the encoding is
 
 $$
 R_\alpha
@@ -1100,7 +1122,7 @@ R_\alpha
 \langle\sigma_{R_\alpha}\rangle_{\omega_*}.
 $$
 
-Without such a symbol, the residual keeps its certificate-pending status.
+An interval-valued residual must retain its certified interval and propagated uncertainty. A standalone symbol or moment constraint does not replace the physical realization, source-exhaustion, overlap and provenance requirements of Definitions Z.27.11a, Z.27.11g and Z.27.11j; without an accepted parent record, the residual remains certificate-pending.
 
 For the Higgs convention $V(H)=-\mu^2H^\dagger H+\lambda(H^\dagger H)^2$,
 
@@ -1209,7 +1231,7 @@ $$
 
 If $z_\theta\ne0$, then $e^{i\theta_*}=z_\theta/|z_\theta|$ and $\theta_*=\arg z_\theta$. If $z_\theta=0$, no unique response-active angle is final-calibrated.
 
-**Theorem V.3.11f (No Free Continuous Moduli after Final Spectral Calibration).** On a final-calibrated branch carrying an accepted $\mathfrak S_*$, every response-active coefficient multiplying an invariant operator in the accepted effective action is unique at the calibration scale and along the accepted comparison route. A coefficient whose local parent certificate is absent is not calibrated by $\mathfrak S_*$.
+**Theorem V.3.11f (No Free Continuous Moduli after Final Spectral Calibration).** On a final-calibrated branch carrying an accepted $\mathfrak S_*$, every response-active spectral-moment coefficient is unique at the calibration scale and along its accepted comparison route. A derived coefficient is unique when these inputs lie in the domain of its declared map; in particular, the circular prescription requires $z_\theta\ne0$, or an independently supplied real-representative convention as in Definition V.3.11e. A coefficient whose local parent certificate is absent, or whose defining map is undefined at the calibrated inputs, is not calibrated by $\mathfrak S_*$.
 
 *Proof.* Let $I_B\in\mathcal I_*$ be response-active. By Definition V.3.11a, the parent local certificate for $I_B$ is listed in $\mathcal O_*$, the finite operator $\widehat O_B$, symbol $\sigma_B$, unit bridge $s_B$, and comparison route $\mathcal R^*_{\mu\leftarrow\mu_*}$ are fixed before comparison, and the response-null and independent-constraint quotients have already been applied. By Theorem V.3.11c, the KL projection $\omega_*$ on $\mathcal C_*$ is unique. Hence
 $$
@@ -1257,13 +1279,13 @@ $$
 
 retain the local status of their sector certificates, branches, thresholds, validation ledgers, reference conventions, or model layers. After $\mathfrak S_*$ is supplied and accepted, the response-active coefficients among them are branch-scaled finite spectral moments of $\omega_*$, and algebraic observables built from those coefficients are fixed by the same datum. No sector-by-sector fit remains.
 
-*Proof.* Each listed basic coefficient is either the coefficient of an invariant operator or an entry of a coefficient matrix in the accepted effective action. Definition V.3.11e fixes every such response-active coefficient as a branch-scaled spectral moment of $\omega_*$. Quantities such as $\alpha$, $G$, $\Lambda$, masses, CKM data, PMNS data, and topological phases are algebraic or circular functions of those coefficients together with accepted branch conventions and RG maps. Algebraic and circular functions of fixed inputs are fixed, except for basis rotations inside exact degeneracies; those rotations are response-null by Definition V.3.11e and do not define additional physical moduli. Before $\mathfrak S_*$ is accepted, at least one required input in Definition V.3.11a or Definition V.3.11e is absent, so the previous local status labels remain in force. ∎
+*Proof.* Each listed basic spectral-moment coefficient is unique by Theorem V.3.11f. Derived quantities such as $\alpha$, $G$, $\Lambda$, masses, CKM data, PMNS data, and topological phases use the declared algebraic or circular maps, branch conventions and RG routes. Their uniqueness holds on the domains of those maps. A denominator must be nonzero wherever division is used, and the normalized circular moment requires $z_\theta\ne0$ unless a separate real-representative convention is supplied. A zero circular moment determines no angle under that prescription. Basis rotations inside exact degeneracies are response-null on the branch of Definition V.3.11e. Thus the assertion about derived observables retains these domain conditions; an undefined observable acquires no value from uniqueness of $\omega_*$. Before $\mathfrak S_*$ is accepted, the local sector status remains in force. ∎
 
 **Corollary V.3.11h (Golay-Uniform Reference State Gate).** Suppose a final spectral calibration datum $\mathfrak S_*$ is on the predictive-recovery MacWilliams Golay branch and its atom algebra is the codeword carrier
 $$
 \Omega_*=\mathcal G_{24}.
 $$
-If the accepted response-preserving automorphism group of the carrier contains the regular translation action of the additive code $\mathcal G_{24}$, or equivalently if the primitive codeword atoms have equal trace rank in Definition V.3.11a, then
+If $\nu_*$ is invariant under an accepted response-preserving automorphism group containing the regular translation action of the additive code $\mathcal G_{24}$, or if the reference measure is the normalized trace measure of Definition V.3.11a and the primitive codeword atoms have equal trace rank, then
 $$
 \nu_{*,\alpha}=\frac1{4096}
 \qquad
@@ -1302,7 +1324,7 @@ $$
 \mathbb C[\mathcal G_{24}\times F]
 \tag{V.3.11i.1}
 $$
-where $F$ is the finite flag set selected by the accepted branch markings, including the active/passive split, the $3+2+1$ block frame, and any accepted orientation or hypercharge sign convention. Let $\Gamma_{\mathrm{PU}}$ be the finite group of response-preserving automorphisms of this marked carrier. Assume additionally that the response-null quotient identifies operators related by inner conjugation with every unitary of the commutant $\mathcal E_{\mathrm{PU}}$; equivalently, scalar calibration observables must be invariant under all multiplicity-basis changes inside the Wedderburn blocks of $\mathcal E_{\mathrm{PU}}$. Define
+where $F$ is the finite flag set selected by the accepted branch markings, including the active/passive split, the $3+2+1$ block frame, and any accepted orientation or hypercharge sign convention. Let $\Gamma_{\mathrm{PU}}$ be the finite group of response-preserving automorphisms of this marked carrier. Assume additionally that the response-null quotient identifies operators related by inner conjugation with every unitary of the commutant $\mathcal E_{\mathrm{PU}}$; equivalently, scalar calibration observables must be invariant under all multiplicity-basis changes inside the Wedderburn blocks of $\mathcal E_{\mathrm{PU}}$. Assume also that a finite family of retained central calibration observables distinguishes every pair of primitive central blocks defined below, and choose the normalized trace as the reference state. For every admitted coefficient operator, require the composite $E_ZE_\Gamma$ below to preserve all registered protocol responses, as required by Definition V.3.11a; invariance under conjugation alone is not a substitute for this response-preservation certificate. Define
 $$
 \mathcal E_{\mathrm{PU}}
 =
@@ -1350,7 +1372,14 @@ Z(\mathcal E_{\mathrm{PU}})_{\mathrm{sa}}
 $$
 for pairwise orthogonal primitive central projections $P_\alpha$ summing to $I_{\mathrm{cal}}$.
 
-A response-natural calibration observable must be invariant under every response-preserving automorphism of the marked carrier; otherwise two automorphism-equivalent finite protocols would assign different calibration values. Hence it must lie in $\mathcal E_{\mathrm{PU}}$ after averaging by the unique trace-preserving group twirl (V.3.11i.6). Scalar coefficient data cannot depend on noncentral matrix coordinates inside an irreducible multiplicity block, because those coordinates are changed by basis choices that leave every central protocol-response stratum fixed. Therefore the scalar calibration algebra is the center of the commutant, namely (V.3.11i.3).
+A response-natural calibration observable must be invariant under every response-preserving automorphism of the marked carrier; otherwise two automorphism-equivalent finite protocols would assign different calibration values. Hence it must lie in $\mathcal E_{\mathrm{PU}}$ after averaging by the unique trace-preserving group twirl (V.3.11i.6). Scalar coefficient data cannot depend on noncentral matrix coordinates inside an irreducible multiplicity block, because those coordinates are changed by basis choices that leave every central protocol-response stratum unchanged. These invariances place the retained scalar calibration algebra inside the center of the commutant. The additional separation hypothesis makes the inclusion an equality. For a central block $\alpha$ and each $\beta\ne\alpha$, choose a retained central observable $f_{\alpha,\beta}$ with $f_{\alpha,\beta}(\alpha)\ne f_{\alpha,\beta}(\beta)$. Then the generated unital real algebra contains
+$$
+\prod_{\beta\ne\alpha}
+\frac{f_{\alpha,\beta}-f_{\alpha,\beta}(\beta)I_{\mathrm{cal}}}
+{f_{\alpha,\beta}(\alpha)-f_{\alpha,\beta}(\beta)}
+=P_\alpha.
+$$
+The product equals one on block $\alpha$ and zero on every other block. For a single central block the empty product is $I_{\mathrm{cal}}=P_\alpha$. Hence the retained algebra contains every primitive central projection and equals (V.3.11i.3).
 
 The finite-dimensional Wedderburn decomposition gives
 $$
@@ -1364,7 +1393,7 @@ E_Z\left(\bigoplus_\alpha A_\alpha\otimes I_{r_\alpha}\right)
 =
 \bigoplus_\alpha \frac{\operatorname{tr}(A_\alpha)}{m_\alpha}I_{m_\alpha}\otimes I_{r_\alpha}
 $$
-is the unique trace-preserving conditional expectation from $\mathcal E_{\mathrm{PU}}$ to its center. Composing it with $E_\Gamma$ gives a trace-preserving response-preserving conditional expectation from all finite response operators to $\mathcal A_{\mathrm{Gol}}$. Formula (V.3.11i.5) is then exactly the symbol rule of Definition V.3.11a. The normalized trace state in (V.3.11i.4) is Definition V.3.11a applied to these primitive central projections. The final sentence follows because Definition V.3.11a requires moment values, symbols, units, routes, and residual entries in addition to the atom algebra. ∎
+is the unique trace-preserving conditional expectation from $\mathcal E_{\mathrm{PU}}$ to its center. Composing it with $E_\Gamma$ gives a complex trace-preserving conditional expectation from $\operatorname{End}(\mathcal H_{\mathrm{cal}})$ onto $Z(\mathcal E_{\mathrm{PU}})$. Its restriction to self-adjoint operators has range $\mathcal A_{\mathrm{Gol}}$. The additional protocol-response certificate supplies response preservation on the admitted self-adjoint coefficient operators. Formula (V.3.11i.5) is then exactly the symbol rule of Definition V.3.11a. The normalized-trace branch chosen in the hypotheses gives (V.3.11i.4) by Definition V.3.11a. The final sentence follows because Definition V.3.11a requires moment values, symbols, units, routes, and residual entries in addition to the atom algebra. ∎
 
 **Definition V.3.11j (Global Final-Calibration Source).** A global final-calibration source is a finite record
 $$
@@ -1377,7 +1406,7 @@ where $\mathcal A_*$ is the finite calibration algebra, $\Omega_*$ its finite at
 
 The record may project accepted local certificates from a common spectral source. It cannot replace a missing local certificate, supply an unrecorded finite part, alter a projector, change a tail bound, change a grading, change a normalization, import a comparison value as a moment, or infer a sector symbol from validation data.
 
-**Theorem V.3.11k (Global Calibration Non-Replacement and Full-Vector Classification).** A numerical row is final-calibrated by $\mathfrak S_*^{\mathrm{glob}}$ only if its local parent certificate is accepted or explicitly registered as branch input, and its symbol, unit bridge, finite-part convention, tail bound, circular-angle convention when relevant, determinant orientation, normalization, and overlap map are entries of (V.3.11j.1). The current PU ledger contains no single accepted $\mathfrak S_*^{\mathrm{glob}}$ covering simultaneously the Thomson residual, electroweak threshold, flavor, the four-mode Hessian/carrier, action, Fredholm-weight, and vacuum-to-Einstein realization records, the primordial determinant, baryogenesis, horizon transfer, AQFT/Einstein, and dark-response sectors. Therefore a claim that all such rows are final calibrated is certificate-pending unless it supplies $\mathfrak S_*^{\mathrm{glob}}$ and the cross-sector record $\mathfrak N_{\mathrm{PU}}$ of Definition X.9.6g.7.
+**Theorem V.3.11k (Global Calibration Non-Replacement and Full-Vector Classification).** A numerical row is final-calibrated by $\mathfrak S_*^{\mathrm{glob}}$ only if its local parent certificate is accepted and its symbol, unit bridge, finite-part convention, tail bound, circular-angle convention when relevant, determinant orientation, normalization, and overlap map are entries of (V.3.11j.1). An explicitly registered but unaccepted parent remains conditional branch data and does not supply final-calibrated status. The current PU ledger contains no single accepted $\mathfrak S_*^{\mathrm{glob}}$ covering simultaneously the Thomson residual, electroweak threshold, flavor, the four-mode Hessian/carrier, action, Fredholm-weight, and vacuum-to-Einstein realization records, the primordial determinant, baryogenesis, horizon transfer, AQFT/Einstein, and dark-response sectors. Therefore a claim that all such rows are final calibrated is certificate-pending unless it supplies $\mathfrak S_*^{\mathrm{glob}}$ and the cross-sector record $\mathfrak N_{\mathrm{PU}}$ of Definition X.9.6g.7.
 
 *Proof.* Definition V.3.11a fixes one calibrated expectation only after the algebra, atom set, reference measure, constraints, symbols, units, routes, circular conventions, overlap maps, and residuals are fixed. The sectors named here also have determinant, zero-mode, boundary, transport, covariance, or tail entries in their local certificates. Changing any such entry after another dependent row is fixed changes the finite branch by Definition P.14.1m and Theorem P.14.1f. Thus the global record compresses accepted local certificates only by projection; it does not promote absent certificates. ∎
 

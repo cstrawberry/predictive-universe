@@ -10,7 +10,7 @@ N_{\mathrm{eff}}
 =
 \frac{\chi}{\eta\delta^2}\mathcal A+o(\mathcal A)
 \]
-effective independent boundary channels when the density certificate of Appendix E is supplied. If the declared ND--RID channel has classical capacity \(C(\mathcal E_N)\), its reliable boundary response entropy obeys
+effective independent boundary channels when the density certificate of Appendix E is supplied. With the independent-channel or aggregate-converse certificate of Section 6 and a fixed use normalization, if the declared ND--RID channel has unassisted regularized classical capacity \(C(\mathcal E_N)\), its asymptotically recoverable boundary response information, expressed in entropy units, obeys
 \[
 S_{\mathrm{rel}}(\mathcal A)
 \le
@@ -103,7 +103,7 @@ H_q(P\mid R)+\varepsilon_{\mathrm{diss}},
 \varepsilon_{\mathrm{diss}}\ge0.
 \tag{2.4}
 \]
-The memory entropy change is \(-k_BH_q(P\mid R)\), the bath entropy change is \(k_B\varepsilon_{\mathrm{reset}}\), and the total entropy production is \(k_B\varepsilon_{\mathrm{diss}}\).
+The memory entropy change is \(-k_BH_q(P\mid R)\). In the ideal isothermal-reservoir ledger, the bath entropy change is \(k_B\varepsilon_{\mathrm{reset}}\), so the total coarse-grained entropy production is \(k_B\varepsilon_{\mathrm{diss}}\). For a finite bath initially in the Gibbs state \(\tau_B\), its actual entropy change instead satisfies \(\Delta S_B/k_B=\langle Q_{\mathrm{bath}}\rangle/(k_BT)-D(\rho'_B\Vert\tau_B)\); bath departure from equilibrium and final correlations must remain in the excess-cost ledger [Reeb & Wolf 2014].
 
 If an overlap map identifies \(P\) with the conditionally uniform binary response in (2.1), and no unchanged retained record resolves its value, then
 \[
@@ -191,7 +191,7 @@ The operational count does not assume a higher-dimensional von Neumann entanglem
 
 ### 5.1 General ND--RID capacity
 
-For a declared ND--RID channel \(\mathcal E_N\), write \(C(\mathcal E_N)\) for its regularized classical capacity. The reliable response entropy per independent use obeys
+For a declared memoryless ND--RID channel \(\mathcal E_N\), write \(C(\mathcal E_N)\) for its unassisted regularized classical capacity in nats per use. Here \(S_{\mathrm{channel}}^{\mathrm{rel}}/k_B\) denotes an asymptotic rate of reliably recoverable classical response information on that coding branch, not arbitrary channel-output entropy or the entropy of a finite single-shot record. That rate obeys
 \[
 S_{\mathrm{channel}}^{\mathrm{rel}}
 \le
@@ -277,7 +277,7 @@ and (2.4) is recovered only at an exact ready-state endpoint or through a certif
 
 ## 6. Operational boundary area law
 
-Combining the effective channel count (4.3) with the per-channel bound (5.1) gives
+Assume that the effective-channel certificate realizes independent memoryless copies of the same \(\mathcal E_N\), or supplies an explicit aggregate converse \(C_{\partial}\le N_{\mathrm{eff}}C(\mathcal E_N)+o(\mathcal A)\) for the admitted coding operations. Fix the channel-use normalization and operational resolution \(\delta\) along the macroscopic family \(\mathcal A/\delta^2\to\infty\). On this branch, combining the effective channel count (4.3) with the reliably recoverable rate bound (5.1), and the same-ledger information-to-entropy bridge when \(S_{\mathrm{rel}}\) is read thermodynamically, gives
 \[
 S_{\mathrm{rel}}(\mathcal A)
 \le

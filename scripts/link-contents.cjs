@@ -28,6 +28,11 @@ const source = fs.readFileSync(contentsPath, 'utf8');
 const unresolved = [];
 let links = 0;
 const updated = source.replace(/\[([^\]\n]+)\]\(([^)\n]+\.md)(?:#([^)]*))?\)/g, (original, label, file, fragment) => {
+  // Companion verification documents open directly, outside the 51-section reader.
+  if (file.startsWith('related/pure_s_universality/')) {
+    assert(fs.existsSync(path.join(docs, file)), 'Missing companion document: ' + file);
+    return original;
+  }
   const anchors = indexFor(file);
   const key = normalize(label);
   let matches = anchors.filter(anchor => clean(anchor.label) === clean(label));

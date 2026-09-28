@@ -12,15 +12,15 @@ Finite predictive transfer is bounded on two independent channel branches. A reg
 
 ### 6.0.1 Capacity Manifestations Across Domains
 
-**Theorem 6.0.1 (Conditional Capacity-Bound Propagation).** *Finite predictive-transfer capacity supplies the following bounds and, on the saturated Clausius-calibration branch, the following gravitational relation:*
+**Theorem 6.0.1 (Conditional Capacity-Bound Propagation).** *Assume the stated completed-reset or refresh channel branch. For the boundary-entropy conclusions, assume that the ledger counts only reliably distinguishable transmitted classical response labels as in Corollary E.2, and impose the geometric density certificate of Theorem E.3. For the operational coupling, additionally impose the capacity-achieving, entropy-saturating, additive-ledger hypotheses and positive saturated coefficient of Theorem E.6. Then:*
 
 | Domain | Capacity Role | Derived Relation | Reference |
 |:-------|:--------------|:-----------------|:----------|
 | Information channels | Upper bound on reliable transmission | $C_{\max}\le\ln d_0-\ln r$ on the completed reset-support branch (specializing to $\ln d_0-\ln2$ for $r=2$); $C_{\max}(f_{RID})<\ln d_0$ on the refresh/minorization branch | Proposition E.2a; Theorem E.2 |
-| Horizon entropy | Entropy upper bound per boundary channel | $S_{channel}^{max}\le k_BC_{\max}$ | Corollary E.2 |
-| Gravitational calibration | Inverse proportionality on the capacity-saturated area-law branch | $G=\frac{\eta\delta^2c^3}{4\hbar\chi C_{\max}}$ | Equation E.9 |
+| Reliable boundary response entropy | Asymptotic response-entropy bound per channel use | $S_{\mathrm{channel}}^{\mathrm{rel}}\le k_BC_{\max}$ | Corollary E.2 |
+| Operational gravitational calibration | Inverse proportionality on the saturated area-law branch | $G_{\mathrm{op}}=\frac{\eta\delta^2c^3}{4\hbar\chi C_{\max}}$ | Equation E.9 |
 
-*Here $\delta$ is the effective MPU spacing, $\eta$ is the geometric packing factor, and $\chi$ is the correlation factor defined in Theorem E.3. The equality in the gravitational row additionally assumes that boundary channels attain the registered capacity and that the Clausius normalization is imposed.*
+*Here $\delta$ is the effective MPU spacing, $\eta$ and $\chi$ are the geometric inefficiency and independence factors of Theorem E.3, and $C_{\max}=C(\mathcal E_N)$. Equation E.9 defines $G_{\mathrm{op}}$ using the Bekenstein--Hawking normalization. Identifying the response entropy with physical horizon entropy and setting $G_{\mathrm{op}}=G$ require the separate bridges of Remark E.6.3.1.*
 
 *Proof.*
 
@@ -48,33 +48,33 @@ $$
 \chi_n\le\mathbb E[k]\ln d_0
 =n(1-p)\ln d_0.
 $$
-Discarding the flag cannot increase accessible classical information. Dividing by $n$ and taking the regularized supremum therefore yields
+By data processing, discarding the flag cannot increase the Holevo information of any encoded ensemble. Dividing by $n$ and taking the regularized supremum therefore yields
 $$
 C(\mathcal E_N)\le(1-p)\ln d_0<\ln d_0.
 $$
 
-**Part B (Horizon Entropy).** Corollary E.2 gives the per-channel upper bound
+**Part B (Reliable Boundary Response Entropy).** On the declared response-label ledger, Corollary E.2 gives the asymptotic bound per channel use
 $$
-S_{channel}^{max}\le k_BC_{\max}.
+S_{\mathrm{channel}}^{\mathrm{rel}}\le k_BC_{\max}.
 $$
-With $N_{eff}=\sigma_{link}\mathcal A$ and $\sigma_{link}=\chi/(\eta\delta^2)$ from Theorem E.3,
+With $N_{eff}=\sigma_{link}\mathcal A+o(\mathcal A)$ and $\sigma_{link}=\chi/(\eta\delta^2)$ from Theorem E.3, the boundary sum gives
 $$
-S_{boundary}
-\le\sigma_{link}\mathcal A\,k_BC_{\max}.
+S_{\mathrm{rel}}(\mathcal A)
+\le\sigma_{link}\mathcal A\,k_BC_{\max}+o(\mathcal A).
 $$
-Equality requires an achievable capacity-saturating boundary ensemble and saturation by every counted effective channel.
+Theorem E.6 gives equality to leading order on its capacity-achieving, entropy-saturating, additive-ledger branch.
 
-**Part C (Gravitational Constant).** On that saturation branch, impose the local-horizon Clausius normalization used in Equation E.9. The equality of area coefficients then gives
+**Part C (Operational Gravitational Coupling).** On that saturation branch with positive coefficient, Equation E.9 defines
 $$
-G=\frac{\eta\delta^2c^3}
+G_{\mathrm{op}}=\frac{\eta\delta^2c^3}
 {4\hbar\chi C_{\max}(f_{RID})}.
 $$
-This expression is dimensionally consistent because $[\delta^2c^3/\hbar]=L^3M^{-1}T^{-2}=[G]$. On the additional residual-budget branch with $d_0=8$ and $\varepsilon_0=\ln2$,
+This expression is dimensionally consistent because $[\delta^2c^3/\hbar]=L^3M^{-1}T^{-2}=[G_{\mathrm{op}}]$. On the additional residual-budget branch with $d_0=8$ and $\varepsilon_0=\ln2$,
 $$
 C_{\max}^*=\ln d_0-\varepsilon_0
 =\ln8-\ln2=2\ln2.
 $$
-Substitution gives the corresponding conditional calibration of $G$ in terms of the microscopic parameters. ∎
+Substitution gives the corresponding conditional calibration of $G_{\mathrm{op}}$ in terms of the microscopic parameters. The measured coupling equals this coefficient only when the separate calibration $G_{\mathrm{op}}=G$ is supplied. ∎
 
 **Principle 6.0 (Capacity Constraint Propagation).** *Finite predictive-transfer capacity is branch-constrained by the reset-support deficit $C(\mathcal E_N)\le\ln d_0-\ln r$ on a registered completed reset and, independently, by $C_{\max}<\ln d_0$ on a refresh/minorization branch. Gravitational or thermodynamic conclusions require their additional density, saturation, calibration, and implementation hypotheses.*
 
@@ -297,7 +297,7 @@ The adaptation process involves changing the system's complexity $C(t)\to C(t+1)
 $$
 \varepsilon_{\mathrm{reset}}\ge H_q(P\mid R).
 $$
-A positive implementation-independent floor additionally requires a registered bound $H_q(P\mid R)\ge h_{\min}>0$. A complexity transformation alone does not imply logical erasure, cyclic reset, or positive conditional entropy; reversible and reset-free implementations are therefore not shown to be thermodynamically irreversible by Theorem 31.
+A positive implementation-independent floor inferred from this entropy bound additionally requires a registered bound $H_q(P\mid R)\ge h_{\min}>0$. A complexity transformation alone does not imply logical erasure, cyclic reset, or positive conditional entropy; reversible and reset-free implementations are therefore not shown to be thermodynamically irreversible by Theorem 31.
 
 **6.2.5 Definition 19 (Def 19): Complexity-Performance Scaling Principles**
 
@@ -769,7 +769,7 @@ $$
 \Delta R_I=\frac{r_I}{\ln 2}\ln\!\bigl(C_2/C_1\bigr).
 \tag{5a}
 $$
-A prescribed just-noticeable internal increment $\Delta R_I=\delta_R$ is equivalent to
+Assume $r_I(T_{\mathrm{eff}})>0$ and compare both stimulus levels at this same effective temperature. A prescribed just-noticeable internal increment $\Delta R_I=\delta_R$ is then equivalent to
 $$
 \frac{C_2}{C_1}=e^a,
 \qquad
@@ -798,11 +798,11 @@ $$
 $$
 so $dR_I=(r_I/\ln 2)(dC/C)$ and fixed $dR_I$ is equivalent to fixed $dC/C$. ∎
 
-This is the Weber-Fechner relation [Weber 1834; Fechner 1860]: the minimum discriminable stimulus increment is proportional to the stimulus magnitude, with logarithmic compression of perceived intensity. Within PU, the logarithmic form is the representative reflexive-information cost (5) already used by the framework. The identification of an operational internal signal with expended $R_I$ is an explicit psychophysical bridge assumption, not a claim that every stimulus code is exhausted by reflexive-information cost. For self-model-engaging perception, the relevant internal-cost interpretation is the perspectival profile and self-model cost functional of Appendix M §M.6.10, especially Definition M.10.1 and Proposition M.10.9. The logarithmic gain is $r_I/\ln 2$, while the Weber fraction is fixed by the chosen just-noticeable internal threshold $\delta_R$ through $\Delta C/C\approx \delta_R\ln 2/r_I$ in the small-increment limit.
+This is a conditional Weber–Fechner-form model relation: if $C$ is calibrated to external stimulus magnitude, the operational internal signal is identified with expended $R_I$, and $\delta_R$ is an empirically fixed just-noticeable internal threshold, then perceived intensity is logarithmic in $C$ and the model's exact just-noticeable fractional increment is $e^a-1$. The label records the mathematical form only; no claim about the exact content of Weber's 1834 or Fechner's 1860 publications, or universal empirical validity, is made here. Within PU, the logarithmic form is the representative reflexive-information cost (5). The signal identification remains an explicit psychophysical bridge assumption, not a claim that every stimulus code is exhausted by reflexive-information cost. For self-model-engaging perception, the relevant internal-cost interpretation is the perspectival profile and self-model cost functional of Appendix M §M.6.10, especially Definition M.10.1 and Proposition M.10.9. The logarithmic gain is $r_I/\ln 2$, while the model's fractional threshold is fixed by $\delta_R$ through $\Delta C/C=e^{\delta_R\ln 2/r_I}-1\approx\delta_R\ln 2/r_I$ for small increments.
 
 **6.4 Adaptation Dynamics Driven by PCE**
 
-The Principle of Compression Efficiency (PCE, Definition 15) mandates that systems dynamically adjust their configuration to minimize a global effective potential, balancing predictive benefits against comprehensive resource costs. The adaptation of complexity $C(t)$ is driven by the local gradient of this potential.
+The Principle of Compression Efficiency (PCE, Definition 15) specifies the net-benefit objective on a declared admissible class. On the stochastic gradient-flow branch of Appendix D, Equation D.8 specifies the adaptation dynamics, and the complexity component below is driven by the registered local gradient. Attainment of a global minimum and convergence to it require the separate hypotheses of the applicable optimization and dynamical theorems.
 
 **6.4.1 Definition 20 (Def 20): PCE Potential and Adaptation Driving Force $\Psi(t)$**
 The adaptation dynamics are governed by the **Principle of Compression Efficiency (PCE) Potential $V(x)$**, which quantifies the net cost rate for a given MPU network configuration $x$. As detailed in Appendix D (Definition D.1), its core components are:
@@ -834,13 +834,13 @@ $$
     R_I'(C(t)) = \frac{r_I}{C(t) \ln 2} \quad (\text{for } C(t) > K_0) \quad \text{(26)}
     $$
 
-*Interpretation:* The driving force $\Psi(t)$ quantifies the net marginal incentive for complexity changes: $\Psi > 0$ favors increasing $C$, $\Psi < 0$ favors decreasing $C$. Equilibrium, corresponding to the optimal complexity allocation (Definition 14), occurs when $\Psi = 0$, precisely where the gradient of the effective potential with respect to complexity vanishes.
+*Interpretation:* The driving force $\Psi(t)$ quantifies the local marginal incentive for complexity changes: $\Psi>0$ favors increasing $C$, and $\Psi<0$ favors decreasing $C$. For the unconstrained scalar adaptation law with task scale held constant, an interior equilibrium satisfies $\Psi=0$. This is the stationarity condition of Definition 14; local maximality, attraction and uniqueness require the additional curvature and dynamical hypotheses of the applicable stability theorem. Boundary optima obey the corresponding one-sided condition.
 
 **Theorem 20 (Conditional Calibration Relations for $\Gamma_0$)**
 
 Let $\Gamma_0>0$ be the system-level conversion factor appearing in the PCE potential.
 
-1. On a branch with completed-cycle rate $\nu$, one execution of each listed registered reset per cycle, and the Landauer hypotheses of Theorem 31, the reset power satisfies
+1. On a branch with completed-cycle rate $\nu$, one execution of each listed registered reset per cycle, a common bath temperature $T>0$, and the Landauer hypotheses of Theorem 31, define the reset bath-heat power by $P_{\mathrm{reset}}:=\nu\sum_{j=1}^{n_{\mathrm{reset}}}\langle Q_{\mathrm{bath},j}\rangle$. It satisfies
    $$
    P_{\mathrm{reset}}\ge k_BT\nu
    \sum_{j=1}^{n_{\mathrm{reset}}}H_{q_j}(P_j\mid R_j).
@@ -868,7 +868,7 @@ Let $\Gamma_0>0$ be the system-level conversion factor appearing in the PCE pote
    $$
    Determination and uniqueness of $C^*$ require the existence and strict-concavity hypotheses of Theorem 22.
 
-*Proof.* The first relation is the sum of the registered per-cycle reset-work bounds multiplied by the cycle rate. The second follows by dividing the declared budget inequality by $\Delta PP_{\max}>0$. At an interior equilibrium, $\Psi(C^*)=0$; substituting Equation (24) and dividing by the positive performance derivative yields Equation (29). ∎
+*Proof.* The first relation is the sum of the registered per-cycle bath-heat bounds multiplied by the cycle rate. Identifying this bath-heat power with supplied work power requires a separate energy-balance condition accounting for all non-bath and interaction-energy changes. The second relation follows by dividing the declared budget inequality by $\Delta PP_{\max}>0$. At an interior equilibrium, $\Psi(C^*)=0$; substituting Equation (24) and dividing by the positive performance derivative yields Equation (29). ∎
 
 **Proposition 20a (Complete Dimensional Modulus for $\Gamma_0$).** Let $P_{ref}>0$ be any independently registered power scale and let $z$ be the complete vector of dimensionless branch data. Every positive dimensionally admissible benefit--power conversion has the form
 $$
@@ -968,7 +968,7 @@ $$
 $$
 The positivity assumptions make both displayed reciprocal complexity factors well defined. ∎
 
-*Interpretation:* Complexity $C(t)$ evolves over time, driven by the imbalance $\Psi(t)$ between marginal benefits and costs, towards the locally optimal value $C^*(t)$ where $\Psi(t)$ approaches zero. This equilibrium $C^*(t)$ represents an efficient operating point satisfying the PCE principle (Definition 14, Equation 18). The dynamics depend explicitly on the current state ($C, \hat{C}_{target}$), the system's energy valuation ($\Gamma_0$), resource scarcity ($\lambda$), intrinsic performance efficiency ($\kappa_{\mathrm{eff}}$), informational overhead ($r_I$), and the marginal physical cost $R'$.
+*Interpretation:* Equation (30) specifies the local response of complexity $C(t)$ to the marginal imbalance $\Psi(t)$. Convergence to a unique interior optimum follows on the autonomous scalar branch satisfying Theorem 22; a changing task scale requires the separate joint-stability or tracking hypotheses appropriate to the coupled dynamics. The condition $\Psi=0$ alone asserts stationarity, not attraction or maximality. The dynamics depend explicitly on the current state $(C,\hat C_{target})$, the benefit scale $\Gamma_0$, resource scarcity $\lambda$, performance parameter $\kappa_{\mathrm{eff}}$, informational overhead $r_I$, and marginal physical cost $R'$.
 
 **Remark 4 (Interpretation of $\kappa_{\mathrm{eff}}$).**
 The dimensionless performance-efficiency parameter $\kappa_{\mathrm{eff}}$, introduced in the Law of Prediction (Equation 22), can be expressed in terms of equilibrium quantities. At equilibrium the Adaptation Driving Force vanishes, $\Psi=0$ (Equation 18), and by definition (Equation 24):
@@ -1022,7 +1022,7 @@ $$\frac{\partial \Psi}{\partial C} = \Gamma_0 \frac{\partial^2 PP}{\partial C^2}
 
 Using Equation (25): $\frac{\partial^2 PP}{\partial C^2} = \frac{\partial}{\partial C} \left( \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} (\beta - PP) \right) = - \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} \frac{\partial PP}{\partial C} < 0$.
 
-Using Equation (26): $R_I''(C) = \frac{d}{dC} \left( \frac{r_I}{C \ln 2} \right) = -\frac{r_I}{C^2 \ln 2} < 0$.
+Using Equation (26), for the nonnegative overhead coefficient $r_I$ one has $R_I''(C)=-r_I/(C^2\ln2)\le0$, with strict inequality when $r_I>0$.
 
 Substituting into Equation (34):
 
@@ -1090,7 +1090,7 @@ $$
 $$
 Hence $W(t)\le e^{-2\eta_{adapt}\mu t}W(0)$, and taking square roots proves the asserted bound. ∎
 
-**Theorem 22b (Exact Finite PCE Quotient, Gap and Descent Test).** Let $\mathcal X$ be a nonempty finite registered implementation census. Let $\sim$ identify exactly the implementations with the same retained response table and the same source-exhausted cost ledger, and assume the commensurate PCE potential $V:\mathcal X/\!\sim\ \to\mathbb R$ takes exact values with decidable comparison. Then exhaustive enumeration returns
+**Theorem 22b (Exact Finite PCE Quotient, Gap and Descent Test).** Let $\mathcal X$ be a nonempty finite registered implementation census. Let $\sim$ identify exactly the implementations with the same retained response table and the same source-exhausted cost ledger. Assume that the submitted response and cost records admit terminating exact equality tests, so that $\sim$ and its finite quotient can be computed, and that the commensurate PCE potential $V:\mathcal X/\!\sim\ \to\mathbb R$ takes exact values with decidable comparison. Then exhaustive enumeration returns
 $$
 \mathcal E_*
 =
@@ -1225,9 +1225,9 @@ $$
 $$
 the density of $\mathcal N(0,H^{-1})$. Taking $\varphi(\xi)$ to depend on one coordinate proves the projection statement. ∎
 
-**Remark 22.1 (Explanatory Scope).** Corollary 22.1 identifies the empirical ubiquity of Gaussian statistics for small perturbations around stable operating points as the local quadratic normal form of the PCE potential near a non-degenerate attractor. The result is local and low-noise: it does not claim that all stationary PU fluctuations are Gaussian, only that the rescaled fluctuations near a unique non-degenerate PCE minimum have Gaussian leading order.
+**Remark 22.1 (Explanatory Scope).** On the Gibbs-family and compact-domain hypotheses of Corollary 22.1, rescaled low-temperature fluctuations about the unique nondegenerate minimum have the stated Gaussian leading law. Applying this conclusion to measured fluctuations requires a separate identification of their stationary law with that Gibbs family. The corollary does not classify arbitrary stationary fluctuations near a PCE operating point.
 
-**Remark 22.2 (Non-Gaussian Regimes).** Corollary 22.1 concerns the strictly local fluctuation regime near a non-degenerate PCE minimum. At degenerate or marginal minima where $H$ has zero eigenvalues, the leading cost is higher order and the local stationary distribution is non-Gaussian. Far from a minimum, or in the presence of multiplicative rather than additive fluctuations, heavier-tailed distributions can arise, including the conditional Pareto regime analyzed in Appendix P.8.9a.11 under multiplicative PCE adaptation.
+**Remark 22.2 (Non-Gaussian Regimes).** Corollary 22.1 concerns the strictly local fluctuation regime near a non-degenerate PCE minimum. At degenerate or marginal minima, zero Hessian eigenvalues remove the positive-definite quadratic bound used by Corollary 22.1. The appropriate rescaling and limiting law require additional control of the potential in those directions; the stated $C^2$ regularity alone does not determine them. Far from a minimum, or in the presence of multiplicative rather than additive fluctuations, heavier-tailed distributions can arise, including the conditional Pareto regime analyzed in Appendix P.8.9a.11 under multiplicative PCE adaptation.
 
 **6.5.3 Definition 21 (Def 21): Dynamics of $\hat{C}_{target}(t)$**
 
@@ -1478,7 +1478,7 @@ K_{viab}
 \{z:\alpha\le p(z)\le\beta\}
 \tag{40a}
 $$
-intersected with any registered compact bounds on $C$ and $T$. Assume this intersection is closed and uniformly prox-regular, and that the active constraint gradients satisfy a constraint qualification so its contingent tangent cone is exactly the intersection of the active face half-spaces. Let $F(z)$ be the locally Lipschitz controlled drift and let the disturbance multifunction $\mathcal D(z)$ have nonempty compact convex values and be locally Lipschitz in Hausdorff distance, so $\dot z\in F(z)+\mathcal D(z)$ has the standard strong-solution property. Assume $\nabla p\ne0$ on the two performance faces. Then $K_{viab}$ is robustly forward invariant for every inclusion trajectory if and only if
+intersected with any registered compact bounds on $C$ and $T$. Assume this intersection is closed and uniformly prox-regular, and that at every boundary point its Clarke tangent cone is exactly the intersection of the active face half-spaces, including at corners; this cone identity is a required certificate for the registered constraint qualification. For a global-in-time conclusion, assume every solution starting in $K_{viab}$ is forward complete; without forward completeness, the invariance conclusion applies only on each solution's maximal existence interval. Let $F(z)$ be the locally Lipschitz controlled drift and let the disturbance multifunction $\mathcal D(z)$ have nonempty compact convex values and be locally Lipschitz in Hausdorff distance, so $\dot z\in F(z)+\mathcal D(z)$ has the standard strong-solution property. Assume $\nabla p\ne0$ on the two performance faces. Then $K_{viab}$ is robustly forward invariant for every inclusion trajectory if and only if
 $$
 \inf_{d\in\mathcal D(z)}\nabla p(z)\cdot(F(z)+d)\ge0
 \quad\text{when }p(z)=\alpha,
@@ -1497,14 +1497,14 @@ $$
 |\nabla p\cdot e|<m_p.
 \tag{40d}
 $$
-If the same uniform performance margin $m_p$ holds throughout the corresponding exterior buffer regions inside an invariant $C,T$ domain, every trajectory in that domain enters $K_{viab}$. From $p_0<\alpha$ the entry time is at most $(\alpha-p_0)/m_p$, and from $p_0>\beta$ it is at most $(p_0-\beta)/m_p$. Boundary inequalities alone prove invariance, not finite-time capture.
+For some $\delta_{\mathrm{out}}>0$, suppose that inside a forward-complete, forward-invariant $C,T$ domain the uniform inequalities $\dot p\ge m_p>0$ on $\alpha-\delta_{\mathrm{out}}\le p<\alpha$ and $\dot p\le-m_p$ on $\beta<p\le\beta+\delta_{\mathrm{out}}$ hold for every admitted velocity. Then every trajectory beginning in either of these exterior buffers enters $K_{viab}$: monotonicity keeps its performance in the same buffer until entry. From $\alpha-\delta_{\mathrm{out}}\le p_0<\alpha$ the entry time is at most $(\alpha-p_0)/m_p$, and from $\beta<p_0\le\beta+\delta_{\mathrm{out}}$ it is at most $(p_0-\beta)/m_p$. Capture from other initial states requires a corresponding drift or entry certificate there. Boundary inequalities alone prove invariance, not finite-time capture.
 
-*Proof.* Put $G(z):=F(z)+\mathcal D(z)$. The compact-convex value, Hausdorff-Lipschitz, and strong-solution hypotheses in the theorem are the regularity assumptions used by the strong-invariance form of Nagumo's tangent theorem for differential inclusions (Aubin and Cellina, 1984): a closed uniformly prox-regular set is strongly invariant exactly when
+*Proof.* Put $G(z):=F(z)+\mathcal D(z)$. The locally Lipschitz drift and Hausdorff-Lipschitz compact-convex disturbance map give a locally Lipschitz, nonempty compact-convex velocity multifunction; local boundedness and upper semicontinuity follow. The strong-invariance equivalence for such differential inclusions (Usevitch, Garg & Panagou 2020, Theorem 1) states that $K_{viab}$ is strongly invariant exactly when $G(z)$ is contained in its Clarke tangent cone for every $z\in K_{viab}$. The condition is automatic at interior points. At boundary points the cone identity assumed above makes it
 $$
-G(z)\subseteq T_{K_{viab}}(z)
-\qquad(z\in\partial K_{viab}).
+G(z)\subseteq T^{\mathrm C}_{K_{viab}}(z)
+\qquad(z\in\partial K_{viab}),
 $$
-The constraint qualification makes the tangent cone the intersection of the active face half-spaces. On $p=\alpha$, membership of every $F(z)+d$ in the tangent cone is equivalent to
+equivalently the intersection of the active face half-spaces. The conclusion holds over each maximal solution interval and for all future time when the stated forward-completeness condition is met. On $p=\alpha$, membership of every $F(z)+d$ in the tangent cone is equivalent to
 $$
 \nabla p(z)\cdot(F(z)+d)\ge0
 \qquad\text{for every }d\in\mathcal D(z),
@@ -1534,7 +1534,7 @@ The complex adaptation dynamics governing $C(t)$ and $\hat{C}_{target}(t)$ (Equa
 
 
 *   **Control Actions:** Adjusting $\hat{C}_{target}$ by Equation (38) supplies homeostatic task-scale control; interpreting it as an estimator of external difficulty requires a separate innovation record. Adjusting $C$ via $\Psi$ (Equation 30) modifies capability based on perceived difficulty and costs. Viability enforcement (Equation 39) acts as boundary control.
-*   **Goal:** The coupled dynamics function as a feedback control loop, continuously adjusting internal complexity $C$ and the registered task-scale coordinate $\hat{C}_{target}$ to minimize prediction error (maximize $PP$) efficiently (PCE) while staying within the operational boundaries $(\alpha, \beta)$. It implicitly manages uncertainty and the irreducible stochasticity of ND-RID interactions ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$), enabling sustained viable prediction.
+*   **Goal:** The coupled dynamics function as a feedback control loop, continuously adjusting internal complexity $C$ and the registered task-scale coordinate $\hat{C}_{target}$ to minimize prediction error (maximize $PP$) efficiently (PCE) while staying within the operational boundaries $(\alpha, \beta)$. It implicitly manages uncertainty and the irreducible stochasticity of ND-RID interactions ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive entropy-derived floor requires }H_q(P\mid R)\ge h_{\min}>0)$), enabling sustained viable prediction.
 
 **6.9 Task- and Branch-Dependent Viability Bounds $\alpha$ and $\beta$**
 
@@ -1637,7 +1637,7 @@ accepts the endpoint "mean log-distortion at most $\tau$" with coverage at least
 $$
 \Pr\!\left[
 \mu_L-\overline L
-\ge
+>
 L_{max}\sqrt{\frac{\log(1/\delta)}{2N}}
 \right]\le\delta,
 $$

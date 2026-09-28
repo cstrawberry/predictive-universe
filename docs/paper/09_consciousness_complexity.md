@@ -20,7 +20,11 @@ On the separately supplied stochastic ND-RID branch, let the normalized kernels 
 
 Given context-dependent ND-RID probabilities (Assumption 1), and that the aggregate's internal state $\rho_{agg}$ (or its effective description) provides the primary local context for constituent MPUs within complex aggregates ($C_{agg} > C_{op}$), the framework's optimization principles select non-Born biasing exactly when a reachable non-Born context has strictly lower PCE potential than every Born-realizing minimizer in the reduced context class. If no such strict-improvement context exists, PCE may select the Born reference context and no nonzero CC follows. Theorem 34 records this strict-improvement condition.
 
-**Remark (Strict-Improvement Branch Discipline).** The strict-improvement antecedent is a branch condition, not a consequence of complexity alone. On differentiable admissible mapping classes where the context map has nonzero predictive sensitivity to the retained outcome statistics and the predictive-benefit gradient is not cancelled by the resource-cost gradient at the null/Born-realizing map, the null map is not a local PCE optimum and a nonzero context map is selected. If the sensitivity vanishes, if the resource cost dominates the reachable benefit, or if the relevant side-information has already been absorbed into the state-preparation ledger, the strict-improvement inequality can fail and PCE selects the Born/null equivalence class. The empirical content of Theorem 34 is therefore conditional: a complex aggregate coupled to a measurement channel exhibits nonzero CC on the strict-improvement branch, while the named edge cases remain zero-CC branches rather than contradictions of the theorem.
+**Remark (Strict-Improvement Branch Discipline).** The strict-improvement antecedent is a branch condition, not a consequence of complexity alone. A sufficient local test at the null/Born-realizing map $u_0$ is an admissible differentiable curve $\gamma:[0,\delta)\to\mathcal U$ with $\gamma(0)=u_0$ and
+$$
+\left.\frac{d}{dt}V(\gamma(t))\right|_{t=0^+}<0.
+$$
+Then $V(\gamma(t))<V(u_0)$ for all sufficiently small positive $t$. Under Theorem 34's lower bound on every Born-realizing context, these nearby contexts are non-Born. Selection of a nonzero operational map additionally uses that theorem's attainment and representability hypotheses. Nonzero predictive sensitivity or a nonzero uncancelled ambient gradient alone does not supply an admissible descent direction when constraints are present. If strict improvement is absent, a Born/null context can remain a PCE minimizer; failure of this local test does not exclude improvement elsewhere in the reachable class. The empirical prediction of nonzero CC therefore remains conditional on the complete strict-improvement branch.
 
 **9.2.1 Theorem 34 (POP/PCE Selects Biasing on the Strict-Improvement Branch)**
 
@@ -129,7 +133,7 @@ Taking the supremum over density operators and using Definition 30 proves the id
 
 **9.3.2 Definition 31 (Def 31): Physical Constraints on CC Scaling**
 
-As an emergent property expected to arise from aggregate complexity $C_{agg}$, the function CC($C_{agg}$) must adhere to general physical and developmental constraints:
+As an additional response-model assumption, extend the attainable complexity values to a real variable $C_{agg}$ and choose a nonnegative response function through their assigned CC values, twice differentiable for $C_{agg}>C_{op}$. Express $C_{agg}$, $C_{op}$, and $C_{scale}$ in the same registered complexity units. The derivative constraints below concern this extension; they do not give derivatives to the discrete prefix-length invariant $C_P$ itself. The response model is required to satisfy:
 1.  **Threshold Behavior:** CC(S) emerges only in sufficiently complex systems. Since CC derives from exploiting context-dependence (Theorem 34), requiring $C_{agg} > C_{op}$ for non-trivial internal states, we expect CC($C_{agg}$) = 0 for $C_{agg} \le C_{op}$.
 2.  **Declared Bounded-Bias Branch:** This CC model restricts its admissible family by $\alpha_{CC,max}<1/2$. Theorem 39 proves that this premise is sufficient to exclude endpoint-complete binary forcing and that endpoint-complete forcing would require $\alpha_{CC,max}\ge1/2$; it does not prove the converse implication from mere absence of endpoint forcing. Theorem 39a gives only a finite-window zero-error bound, while exact causal compliance is marginal invariance under Theorem 39c. Thus $\mathrm{CC}(C_{agg})\le\alpha_{CC,max}<1/2$ here by the declared bounded-bias branch contract.
 3.  **Monotonicity:** Plausibly, capability increases with resources available for complex state modulation, so we assume $d\text{CC}/dC_{agg} \ge 0$ for $C_{agg} > C_{op}$.
@@ -137,35 +141,47 @@ As an emergent property expected to arise from aggregate complexity $C_{agg}$, t
 
 **9.3.3 Theorem 35 (General CC Scaling Form)**
 
-Any function CC($C_{agg}$) satisfying Definition 31 and right-continuous at $C_{op}$ can be written as
+Any function $\mathrm{CC}(C_{agg})$ satisfying Definition 31 and right-continuous at $C_{op}$ can be written as
 $$
-\text{CC}(C_{agg}) = \alpha_{\infty}\, \mathcal{G}\!\left(\frac{C_{agg}-C_{op}}{C_{scale}}\right)\, \Theta(C_{agg}-C_{op}) \quad \text{(55)}
+\mathrm{CC}(C_{agg})=
+\begin{cases}
+0,&C_{agg}\le C_{op},\\
+\alpha_\infty\,\mathcal G\!\left((C_{agg}-C_{op})/C_{scale}\right),&C_{agg}>C_{op}.
+\end{cases}
+\tag{55}
 $$
-where:
+Here $0\le\alpha_\infty\le\alpha_{CC,max}<1/2$ is the asymptotic CC value, $C_{scale}>0$ is a characteristic complexity scale in the same units as $C_{agg}$, and $C_{op}$ is the operational threshold of Definition 13. The dimensionless function $\mathcal G:[0,\infty)\to[0,1]$ is right-continuous at $0$ and satisfies
+$$
+\mathcal G(0)=0,\qquad
+\lim_{x\to\infty}\mathcal G(x)=1,\qquad
+\mathcal G'(x)\ge0,\quad
+\mathcal G''(x)\le0\quad(x>0).
+$$
+If the asymptotic value is not attained at finite positive $x$, then $\mathcal G(x)<1$ for every finite $x$.
 
-*   $0 \le \alpha_\infty \le \alpha_{CC,max} < 0.5$ is the asymptotic CC value achievable as $C_{agg}$ grows,
-*   $\mathcal{G}: [0, \infty) \to [0, 1]$ is a dimensionless function satisfying $\mathcal{G}(0)=0$, $\lim_{x\to\infty}\mathcal{G}(x)=1$, $\mathcal{G}'(x) \ge 0$ (monotonicity), and $\mathcal{G}''(x) \le 0$ (diminishing returns). If the asymptotic value is not reached at finite $x$, then $\mathcal G(x)<1$ for every finite $x$,
-*   $C_{scale} > 0$ is a characteristic complexity scale,
-*   $C_{op}$ is the operational threshold (Definition 13),
-*   $\Theta$ is the Heaviside step function.
-
-*Proof.* For $C_{agg}\le C_{op}$, Definition 31 gives $\text{CC}(C_{agg})=0$, as represented by $\Theta(C_{agg}-C_{op})$. For $C_{agg}>C_{op}$, set $x=(C_{agg}-C_{op})/C_{scale}$ and define
+*Proof.* The first branch of (55) is Definition 31's threshold condition. For the second branch, let
 $$
-\alpha_\infty:=\lim_{C_{agg}\to\infty}\text{CC}(C_{agg}).
+\alpha_\infty:=\lim_{C_{agg}\to\infty}\mathrm{CC}(C_{agg}),
 $$
-The limit exists because CC is nondecreasing and bounded above. If $\alpha_\infty=0$, nonnegativity and monotonicity imply $\text{CC}(C_{agg})=0$ for every $C_{agg}$; choose, for example, $\mathcal G(x)=x/(1+x)$, which satisfies all of the stated shape conditions and yields $\alpha_\infty\mathcal G(x)=0$. If $\alpha_\infty>0$, define
+which exists by nonnegativity, monotonicity and boundedness. If $\alpha_\infty=0$, the response is identically zero; choose $\mathcal G(x)=x/(1+x)$. If $\alpha_\infty>0$, set
 $$
-\mathcal G(x):=\frac{\text{CC}(C_{op}+C_{scale}x)}{\alpha_\infty}.
+\mathcal G(x):=\frac{\mathrm{CC}(C_{op}+C_{scale}x)}{\alpha_\infty}
+\qquad(x\ge0).
 $$
-Then $0\le\mathcal G(x)\le1$, $\mathcal G(0)=0$, $\lim_{x\to\infty}\mathcal G(x)=1$, and the derivative signs are inherited under the positive affine rescaling. A finite plateau gives $\mathcal G=1$ on that plateau; otherwise $\mathcal G(x)<1$ at every finite $x$. Substitution gives Equation (55). ∎
+The threshold condition and right continuity give $\mathcal G(0)=0$ and right continuity at $0$. The range, asymptotic limit, and derivative signs for $x>0$ follow by positive rescaling. If a nondecreasing function reaches its asymptotic upper bound, it remains at that bound; otherwise it stays strictly below it at every finite argument. Substitution proves (55). ∎
 
 **9.3.4 Definition 32 (Def 32): Specific CC Scaling Model Example**
 
-A simple concave, monotone scaling function meeting the constraints is $\mathcal{G}(x) = x/(1+x)$. Then
+A simple concave, monotone shape on $[0,\infty)$ is $\mathcal G(x)=x/(1+x)$. Its threshold response is
 $$
-\text{CC}(C_{agg}) = \alpha_{\infty}\, \frac{C_{agg}-C_{op}}{C_{scale} + (C_{agg}-C_{op})}\, \Theta(C_{agg}-C_{op}) \quad \text{(56)}
+\mathrm{CC}(C_{agg})=
+\begin{cases}
+0,&C_{agg}\le C_{op},\\
+\displaystyle\alpha_\infty\frac{C_{agg}-C_{op}}{C_{scale}+C_{agg}-C_{op}},&C_{agg}>C_{op},
+\end{cases}
+\tag{56}
 $$
-with parameters $\alpha_\infty \le \alpha_{CC,max} < 0.5$, $C_{op}$ (Definition 13), and $C_{scale} > 0$.
+with $0\le\alpha_\infty\le\alpha_{CC,max}<1/2$, operational threshold $C_{op}$, and $C_{scale}>0$.
 
 **9.3.4a Definition 32a (Backbone Representative for CC Scaling).** On any bounded-bias branch whose endpoint ceiling satisfies $3/8\le\alpha_{CC,max}<1/2$, the backbone representative is the admissible model representative of Theorem 35 with
 $$
@@ -216,11 +232,11 @@ and $99\%$ saturation occurs at
 $$
 C_{agg}-C_{op}=K_0\varepsilon_0\log_2(100)\approx13.8
 $$
-nats.
+in the same registered complexity-coordinate units as $C_{scale}$. Interpreting these values as nats requires a separate calibration of that coordinate.
 
 *Proof.* Half saturation means $1-2^{-y}=1/2$, hence $y=1$. The $99\%$ point means $1-2^{-y}=0.99$, hence $y=\log_2(100)$. Substituting $y=(C_{agg}-C_{op})/(K_0\varepsilon_0)$ gives the two displayed values. ∎
 
-**9.3.4d Remark 35a.2 (Status of the Backbone Representative).** Definition 31 and Theorem 35 permit many monotone-concave scaling functions. Definition 32 remains a rational example, while Definition 32a supplies a binary-saturating benchmark representative. The condition $3/8\le\alpha_{CC,max}<1/2$ is an additional branch restriction: Theorem 39 proves that its strict upper inequality excludes endpoint-complete binary forcing and proves the converse only for endpoint-complete branches. It does not derive a universal CC ceiling from endpoint avoidance. The representative therefore applies only to branches on which this restriction is independently registered. The asymptotic value $3/8$ is the same ratio as the sub-threshold Van Vleck effective dimension $D_{\mathrm{eff}}=t/d_{\min}=3/8$ of Theorem T.42.5 on the Golay assignment branch; the scale $K_0\varepsilon_0=3\ln2$ matches the structural binary quantum used in the capacity-floor analysis of Theorem E.6 and Equation E.9. These are cross-sector resonance choices, not a derivation of a unique CC response law. The value $3/8$ and scale $3\ln2$ remain model choices unless a forward-locked response certificate derives them.
+**9.3.4d Remark 35a.2 (Status of the Backbone Representative).** Definition 31 and Theorem 35 permit many monotone-concave scaling functions. Definition 32 remains a rational example, while Definition 32a supplies a binary-saturating benchmark representative. The condition $3/8\le\alpha_{CC,max}<1/2$ is an additional branch restriction: Theorem 39 proves that its strict upper inequality excludes endpoint-complete binary forcing and proves the converse only for endpoint-complete branches. It does not derive a universal CC ceiling from endpoint avoidance. The representative therefore applies only to branches on which this restriction is independently registered. The asymptotic value $3/8$ is the same ratio as the sub-threshold Van Vleck effective dimension $D_{\mathrm{eff}}=t/d_{\min}=3/8$ of Theorem T.42.5 on the Golay assignment branch; the scale $K_0\varepsilon_0=3\ln2$ equals $\ln d_0$ on the $d_0=8$ carrier. Theorem E.6 and Equation (E.9) separately use the actual channel capacity $C(\mathcal E_N)$ in the thermodynamic boundary and coupling relations. These are cross-sector resonance choices, not a derivation of a unique CC response law. The value $3/8$ and scale $3\ln2$ remain model choices unless a forward-locked response certificate derives them.
 
 **Interface-Fraction Response Hypothesis.** The interface count of Section Z.7 gives $\varphi(a,d)=2a(d-a)/d^2$. Register a physical response map that identifies the asymptotic coefficient with $\varphi(a,8)$ and specifies the admissible active-rank set $\mathcal A$. The endpoint ceiling is then
 $$
@@ -270,7 +286,7 @@ $$
 \le\frac{\epsilon_{\mathrm{base}}+\epsilon_{\mathrm{tilt}}}{C_{\max}^*}.
 \tag{56f}
 $$
-The value $1/2$ requires $\epsilon_{\mathrm{tilt}}=0$, $\epsilon_{\mathrm{base}}=\ln2$, and $C_{\max}^*=2\ln2$; equality does not meet a strict $<1/2$ condition.
+The right-hand side equals $1/2$ exactly when $\epsilon_{\mathrm{base}}+\epsilon_{\mathrm{tilt}}=C_{\max}^*/2$. The specialization $(\epsilon_{\mathrm{base}},\epsilon_{\mathrm{tilt}},C_{\max}^*)=(\ln2,0,2\ln2)$ is one such choice. A bound of $1/2$ does not establish the strict condition $\operatorname{TV}(p,q)<1/2$.
 
 *Proof.* Definition 35b gives
 $$
@@ -296,7 +312,7 @@ Having defined Consciousness Complexity operationally in Definition 30 and prove
 
 Hypothesis 3 proposes that the operational Consciousness Complexity $\mathrm{CC}(S)$ of an MPU aggregate $S$ modulates parameters of a registered stochastic `Evolve`/ND-RID instrument branch for constituent MPUs. The target outcome law, stochasticity, carrier, instrument, and single-outcome rule are independent entries of that branch; Definition 27 does not make the mechanism universal. Subject to those entries, the proposed influence uses the context dependence of Assumption 1 without replacing the registered update law. The pathway is:
 
-1.  **Internal State as Context ($\mathrm{context}_S$):** The aggregate's internal state providing context is formally the **context state $\mathrm{context}_S(t)$** (defined via the minimal sufficient statistic construction in Appendix L, Definition L.1). Operationally, it represents the coarse-grained, predictively sufficient slice of the aggregate state $\rho_{agg}(t)$ relevant to influencing local ND-RID within available resources.
+1.  **Internal State as Context ($\mathrm{context}_S$):** The aggregate's internal state providing context is formally the **context state $\mathrm{context}_S(t)$** (the selected finite operationally sufficient expectation vector of Definition L.1 in Appendix L, with minimal sufficiency requiring that definition's separate deletion and addition tests). Operationally, it represents the coarse-grained, predictively sufficient slice of the aggregate state $\rho_{agg}(t)$ relevant to influencing local ND-RID within available resources.
 2.  **Physical Manifestation of Context:** $\mathrm{context}_S(t)$ manifests physically through properties like the reduced density operator, entanglement structure, patterns in the coarse-grained MPU Stress-Energy Tensor ($T_{\mu\nu}^{(MPU)}$, Appendix B), or emergent curvature patterns.
 3.  **Modulation Pathway:** These collective physical patterns ($\mathrm{context}_S$) are hypothesized to act as structured boundary conditions or effective fields influencing the local parameters ($V_{prob}, T_{prob}$, or effective Lindblad parameters $\gamma_k$ as in Appendix L Equations (L.88) and (L.90)) of the underlying 'Evolve'/ND-RID process. A candidate controlled AC-Stark pathway uses context-conditioned classical fields to shift MPU level splittings and thereby alter effective jump rates. This candidate requires a specified control Hamiltonian, source geometry, target polarizability and detuning, coherence window, noise model, and likelihood map from the induced dynamics to the retained outcome probabilities. The mapping $\mathcal M:\mathcal C_{ctx}\to\mathcal P_{control}$ must belong to the admissible class of Theorem L.1 and satisfy its declared continuity, compactness, stability, and cost-benefit hypotheses. Appendix L supplies this conditional optimization framework; it does not determine a universal electromagnetic-to-gravitational channel ratio. Appendix S supplies a self-limitation model only on its registered power-law, retained-energy, weak-field, and calibrated-response branches. On branches satisfying both the strict-improvement antecedent of Theorem 34 and the relevant implementation certificates, the selected non-null map can represent controlled bias of the retained 'Evolve' outcomes.
 4.  **Candidate Locus of Observable Effect:** On a branch carrying a response-active aggregate-to-control map and a normalized target instrument, the nominated mechanism may change a registered outcome law subject to $|\Delta P|\le\mathrm{CC}(S)$. Hypothesis 3 and Definition 30 alone prove neither existence, sign, nor a nonzero effect interval, and they do not make 'Evolve' a universal physical actualization mechanism.
@@ -381,7 +397,7 @@ Two operational implementations are possible:
     $$
     exactly throughout that interval. Positivity on $\ker(E_i)$ is a necessary first-order test but is not by itself a sufficient positivity certificate when kernel-to-support cross terms are present.
 
-**Theorem (Heisenberg–Schrödinger identity for CPTP semigroups).** Let $\Lambda_\xi=e^{\xi\mathcal L}$ be a CPTP quantum Markov semigroup on $\mathcal B(\mathcal H)$ [Lindblad 1976; Gorini–Kossakowski–Sudarshan 1976; Nielsen & Chuang 2010] and let $\{E_i\}_i$ be any POVM on $\mathcal H$. Define the Heisenberg‑picture effects
+**Theorem (Heisenberg–Schrödinger identity for CPTP semigroups).** Let $\Lambda_\xi=e^{\xi\mathcal L}$, $\xi\ge0$, be a norm-continuous CPTP semigroup on the trace-class operators $\mathcal T_1(\mathcal H)$, with bounded generator $\mathcal L$. Its Banach adjoint $\Lambda_\xi^*$ acts normally on $\mathcal B(\mathcal H)$. Let $\{E_i\}_i$ be a finite or countable POVM, with countable sums taken ultraweakly. Define the Heisenberg-picture effects
 $$
 E_{i,\xi}:=\Lambda_\xi^{*}(E_i).
 $$
@@ -455,7 +471,7 @@ $$
 \quad
 \forall i.
 $$
-Equivalently, the Fisher-Rao distance is bounded by the derived operational envelope
+Consequently, the Fisher-Rao distance is bounded by the derived operational envelope
 $$
 d_{\mathrm{FR}}(p,q)
 \le
@@ -663,11 +679,15 @@ The operator $I-E$ is an effect, so the preceding upper bound applied to $I-E$ g
 
 **9.5.3 Definition 34 (Def 34): Context-Targeted Bias (CTB) Model**
 
-Let $\mathrm{context}_S$ define a target quantum state $\sigma_S$. Define the linear modification map $L_S$ on the retained operator space by
+Let $\mathrm{context}_S$ define a target quantum state $\sigma_S$ and put $r(\sigma):=1-\lambda_{\min}(\sigma)$. On the convex CTB domain $0\le\mathrm{CC}(S)\le r(\sigma_S)$, define the linear modification map on the retained operator space by
 $$
-L_S(X):=\alpha_S\big(\mathrm{tr}(X)\sigma_S-X\big),\qquad
-\alpha_S:=\frac{\mathrm{CC}(S)}{r(\sigma_S)},\qquad
-r(\sigma):=1-\lambda_{\min}(\sigma),
+L_S(X):=\alpha_S\big(\mathrm{tr}(X)\sigma_S-X\big),
+\qquad
+\alpha_S:=
+\begin{cases}
+\mathrm{CC}(S)/r(\sigma_S),&r(\sigma_S)>0,\\
+0,&r(\sigma_S)=0.
+\end{cases}
 $$
 with $\lambda_{\min}(\sigma)$ the minimal eigenvalue of $\sigma$. By Lemma 9.1a,
 $$
@@ -790,7 +810,7 @@ $$
 \mathrm{CC}(S).
 $$
 
-*Proof.* By Lemma 9.1a,
+*Proof.* If $r(\sigma_S)=0$, the CTB domain gives $\mathrm{CC}(S)=0$, and Definition 34 gives $\alpha_S=0$ and $L_S=0$, proving the asserted equality. Assume henceforth that $r(\sigma_S)>0$. By Lemma 9.1a,
 $$
 \sup_{\rho,E}
 \left|
@@ -817,29 +837,34 @@ $$
 $$
 This is exactly the operational norm in Definition 30. ∎
 
-**Remark 5: Information-theoretic measure of CC bias.** The effect of CC bias from $P_{\mathrm{Born}} = \{p_i\}$ to $P_{\mathrm{obs}} = \{P_{\mathrm{obs}}(i)\}$ (Equation 59) can be quantified by the KL divergence
+**Remark 5: Information-theoretic measure of CC bias.** Write $p_i=P_{\mathrm{Born}}(i)$, $q_i=P_{\mathrm{obs}}(i)$, and $\delta_i=q_i-p_i$. Let $I_+:=\{i:p_i>0\}$ and assume $q_i=0$ for $i\notin I_+$. The KL divergence is
 $$
-D_{KL}(P_{\mathrm{obs}}\Vert P_{\mathrm{Born}})=\sum_i P_{\mathrm{obs}}(i)\ln\frac{P_{\mathrm{obs}}(i)}{P_{\mathrm{Born}}(i)} \quad \text{(60)}
+D_{\mathrm{KL}}(q\Vert p)=\sum_{i\in I_+}q_i\ln\frac{q_i}{p_i},
+\tag{60}
 $$
-provided $P_{\mathrm{Born}}(i)>0$ whenever $\Delta P(i):=P_{\mathrm{obs}}(i)-P_{\mathrm{Born}}(i)\neq0$. Writing $P_{\mathrm{obs}}(i)=p_i+\Delta P(i)$ with $\sum_i\Delta P(i)=0$ and $|\Delta P(i)|\ll p_i$, Taylor expansion of $\ln(1+x)$ gives
+with $0\ln(0/p_i):=0$. If $\delta_i=0$ for every $i$, this divergence is zero. For the local expansion, assume
 $$
-D_{KL}(P_{\mathrm{obs}}\Vert P_{\mathrm{Born}})
-=
-\sum_i \frac{(\Delta P(i))^2}{2\,p_i}
-+
-O\!\left(\sum_i \frac{|\Delta P(i)|^3}{p_i^2}\right).
+\eta:=\max_{i\in I_+}\frac{|\delta_i|}{p_i}<1.
 $$
-In particular, if
+Taylor's theorem applied to $f(x)=(1+x)\ln(1+x)$, with $f'''(x)=-(1+x)^{-2}$, gives
 $$
-p_{\min}:=\min_{i:\,\Delta P(i)\neq0} p_i>0,
+D_{\mathrm{KL}}(q\Vert p)
+=\frac12\sum_{i\in I_+}\frac{\delta_i^2}{p_i}+\mathcal R,
+\qquad
+|\mathcal R|
+\le\frac{1}{6(1-\eta)^2}
+\sum_{i\in I_+}\frac{|\delta_i|^3}{p_i^2}.
 $$
-then
+The linear term vanishes because $\sum_i\delta_i=0$. If at least one $\delta_i$ is nonzero, put $p_{\min}:=\min_{i:\delta_i\ne0}p_i>0$. Then
 $$
-D_{KL}(P_{\mathrm{obs}}\Vert P_{\mathrm{Born}})
-=
-\sum_i \frac{(\Delta P(i))^2}{2\,p_i}
-+
-O\!\left(\frac{\|\Delta P\|_1^3}{p_{\min}^2}\right).
+|\mathcal R|
+\le\frac{\|\delta\|_1^3}{6(1-\eta)^2p_{\min}^2}.
+$$
+In particular, on any regime with $\eta\le\eta_0<1$, this is the uniform expansion
+$$
+D_{\mathrm{KL}}(q\Vert p)
+=\frac12\sum_{i\in I_+}\frac{\delta_i^2}{p_i}
++O\!\left(\frac{\|\delta\|_1^3}{p_{\min}^2}\right).
 $$
 
 **9.6 Theoretical Implications of Emergent CC**
@@ -1051,7 +1076,7 @@ Thus, on every branch with a declared nonempty high-CC subrange, fresh acquisiti
 | `TV-CC-01` | Finite model-level existence, attainment, strict gap, attraction, and nonzero response are `positive-discharge`; physical realization is open. | Evaluate (9.7a.1)--(9.7a.2), both displayed potential values, and the two-state transition graph; loss of the strict gap or zero norm falsifies it. | Theorem 34 and every nonzero-CC branch. |
 | `TV-CC-02` | Endpoint/concavity rigidity is `nonentailment`; exponential rigidity on (9.7b.2) is `positive-discharge`. | Differentiate (9.7b.1) and check the complement law; a nonexponential continuous solution falsifies rigidity. | Definitions 31--35b and response ceilings. |
 | `TV-CC-03` | A physical source/control carrier from the abstract CC tuple is `nonentailment`. | Type-check the two extensions (9.7c.1); an existing equation that fixes the source map invalidates the scoped independence proof. | Hypothesis 3, Appendices L/S and experimental likelihoods. |
-| `TV-CC-04` | The exact CP interval and covariance class of the algebraic replacement line containing the CTB branch are `positive-discharge`; Definition 34 retains $0\le\alpha\le1$ and the unrestricted perturbation class remains open. | Diagonalize (9.7d.4) or apply the rank-one criterion; any negative Choi eigenvalue inside, or positive one outside, falsifies the interval. | Definitions 33--34, Theorem 37 and bipartite consistency. |
+| `TV-CC-04` | The exact CP interval and covariance class of the algebraic replacement line containing the CTB branch are `positive-discharge`; Definition 34 retains $0\le\alpha\le1$. Theorem 9.7g and Resolution TV-CC-04-R2 give `positive-discharge` of the unrestricted finite-dimensional perturbation, covariance, and bipartite marginal-consistency classifications on their stated domains; physical realization remains a separate record. | Diagonalize (9.7d.4) or apply the rank-one criterion; a negative Choi eigenvalue inside, or a positive semidefinite Choi matrix outside, falsifies the interval. | Definitions 33--34, Theorem 37 and bipartite consistency. |
 | `TV-CC-05` | A CC--mutual-information relation from current definitions is `nonentailment`. | Compute the product/Bell invariants and attached map norms; failure to preserve the stipulated retained map or state invalidates a witness. | Proposition 14 and integration/coherence experiments. |
 | `TV-CC-06` | On every branch with a declared nonempty high-CC subrange, fresh acquisition plus a CC value in that subrange forcing context displacement is `nonentailment`. | Check the chosen map norm, fresh conditional entropy, and (9.7f.1); a rule identifying every retained bit with the response context lies outside the frozen class. | Propositions 15--16 and introspection dynamics. |
 

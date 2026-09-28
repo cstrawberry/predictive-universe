@@ -101,6 +101,11 @@ function renderMarkdown(src, options = {}){
 
   // Extract display math $$...$$ (can span multiple lines)
   const mathBlocks = [];
+  // The manuscript also uses a single dollar on its own line for display math.
+  src = src.replace(/^[ \t]*\$[ \t]*\n([\s\S]*?)\n[ \t]*\$[ \t]*(?=\n|$)/gm, (_,tex)=>{
+    mathBlocks.push(renderLatex(tex.trim(), true));
+    return '\x00MB'+(mathBlocks.length-1)+'\x00';
+  });
   src = src.replace(/(?<!\\)\$\$([\s\S]*?)(?<!\\)\$\$/g, (_,tex)=>{
     mathBlocks.push(renderLatex(tex.trim(), true));
     return '\x00MB'+(mathBlocks.length-1)+'\x00';
@@ -158,6 +163,16 @@ function renderMarkdown(src, options = {}){
   src = src.replace(/^[ \t]*\\(?:Needspace\{\d+\\baselineskip\}|begingroup(?:\\(?:raggedright|small))?|par\\endgroup|endgroup|useOriginalUrlSetting|def\\UrlFont\{\\ttfamily\\addfontfeatures\{Scale=1\}\\fontsize\{\d+\}\{\d+\}\\selectfont\}|linespread\{[\d.]+\}\\selectfont|interlinepenalty=\d+)[ \t]*$/gm, '');
 
   // ATX headings interrupt paragraphs even without surrounding blank lines.
+  // Tables may interrupt prose, and manuscript table rows may be spaced apart.
+  src = src.replace(/^(\|[^\n]+\|)[ \t]*\n(?:[ \t]*\n)+(?=\|)/gm, '$1\n');
+  const tableLines = src.split('\n');
+  src = tableLines.map((line, i) => {
+    const next = tableLines[i + 1] || '';
+    return line.includes('|') && next.includes('|') && /^[ \t|:-]+$/.test(next) && /---/.test(next)
+      ? '\n\n' + line : line;
+  }).join('\n');
+  // TeX spacing between already protected inline equations is just prose space.
+  src = src.replace(/\\qquad\b/g, '\u2003\u2003').replace(/\\quad\b/g, '\u2003');
   src = src.replace(/^ {0,3}#{1,6}\s+[^\n]+$/gm, line => '\n\n' + line + '\n\n');
   // Split into blocks by blank lines
   const blocks = src.split(/\n{2,}/);

@@ -6,7 +6,7 @@ Having established the logical limits on prediction (SPAP, Theorem 10; Theorem 1
 
 **Definition 13 (Def 13): Operational Threshold ($C_{op}$)**
 
-Let $\mathcal{S}_{phys}$ denote the set of physically realizable system microstates consistent with the physical law set $\mathcal{L}_{phys}$. Let $\mathcal{S}_{phys}^{loop}\subseteq\mathcal{S}_{phys}$ denote the physically realizable microstates whose implemented dynamics instantiate the three phases of the full adaptive Fundamental Predictive Loop (Definition 4), including the integrated capabilities $b_m,b_p,b_v$ of Definition 5. Membership in this set is stipulated by the loop dynamics; it is not inferred from above-chance accuracy or from a functional-support test. For a microstate $\mu\in\mathcal{S}_{phys}^{loop}$, let $C_P(\mu)$ be its Predictive Physical Complexity (Equation 1), and let $f_\mu$ denote the predictive function implemented by $\mu$. Fix a relevant set of environmental variables $\mathcal{E}$ and a well‑defined accuracy functional $A(\cdot)$ (e.g., $1-\mathrm{PE}$, information gain). Let $f_{random}$ denote a baseline random‑chance predictor matched to the task. For a chosen, strictly positive accuracy margin $\epsilon_{acc}>0$,
+Let $\mathcal{S}_{phys}$ denote the set of physically realizable system microstates consistent with the physical law set $\mathcal{L}_{phys}$. Let $\mathcal{S}_{phys}^{loop}\subseteq\mathcal{S}_{phys}$ denote the physically realizable microstates that lie in the finite full-constraint-realizability domain of $C_P$ in Section 2.4.1 and whose implemented dynamics instantiate the three phases of the full adaptive Fundamental Predictive Loop (Definition 4), including the integrated capabilities $b_m,b_p,b_v$ of Definition 5. Membership requires both that complexity-domain condition and the stated loop dynamics; it is not inferred from above-chance accuracy or from a functional-support test. For a microstate $\mu\in\mathcal{S}_{phys}^{loop}$, let $C_P(\mu)$ be its Predictive Physical Complexity (Equation 1), and let $f_\mu$ denote the predictive function implemented by $\mu$. Fix a relevant set of environmental variables $\mathcal{E}$ and a well‑defined accuracy functional $A(\cdot)$ (e.g., $1-\mathrm{PE}$, information gain). Let $f_{random}$ denote a baseline random‑chance predictor matched to the task. For a chosen, strictly positive accuracy margin $\epsilon_{acc}>0$,
 
 $$
 \boxed{
@@ -15,7 +15,7 @@ $$
 \quad \text{(15)}
 $$
 
-If the set in (15) is empty, define $C_{op}:=\infty$. Otherwise, since $C_P(\mu)\ge0$ for physically realizable $\mu$ and the set is bounded below, the infimum exists in $[0,\infty)$. For independent trial scores $Z_1,\ldots,Z_T\in[0,1]$, let
+If the set in (15) is empty, define $C_{op}:=\infty$. Otherwise choose a qualifying state $\mu_0$. The domain condition gives a finite value $C_P(\mu_0)$, and nonnegativity gives $0\le C_{op}\le C_P(\mu_0)<\infty$. Thus the infimum exists in $[0,\infty)$. For independent trial scores $Z_1,\ldots,Z_T\in[0,1]$, let
 $$
 \bar\mu_0:=\frac1T\sum_{t=1}^T\mathbb E_0[Z_t]
 $$
@@ -41,7 +41,7 @@ $$
 \quad \text{(16)}
 $$
 
-A concrete baseline arises from Landauer‑type considerations for logically irreversible steps within the MPU cycle (cf. **Theorem 29** and Appendix J):
+A concrete baseline arises from Landauer‑type considerations for logically irreversible steps within the MPU cycle (cf. **Theorem 31** and Appendix J):
 
 * Example: a minimal $K_0=3$‑bit (or 3‑qubit) system operating at $C_{op}=K_0$ at $T\approx 300$ K and completing one logically irreversible operation per $\tau_{cyc}\approx 10^{-9}$ s has
 
@@ -75,7 +75,7 @@ Any system instantiating the adaptive Fundamental Predictive Loop of Definition 
 
 *Proof.* Definition 4 requires model maintenance, prediction generation, verification, and adaptation. Model maintenance is not operationally defined unless at least two relevant internal alternatives can be distinguished; this is $b_m$. Prediction generation requires a forecast representation to exist before the corresponding outcome; this is $b_p$. Verification and adaptation require joint access to the stored forecast and realized outcome, followed by an outcome-conditioned transition; this is $b_v$. If any one of these capabilities is absent, the corresponding required stage of Definition 4 is absent, so the system does not instantiate that adaptive loop. Therefore every realization of the loop has all three capabilities. ∎
 
-**Principle 5b (Response-Independent Full-Context Closure).** A fundamental full-context MPU carries a joint registered readout
+**Principle 5b (Response-Independent Full-Context Closure).** A fundamental full-context MPU carries a nonempty visited state set $\mathcal S_{\mathrm{vis}}$ and a joint registered readout
 $$
 r=(r_m,r_p,r_v):\mathcal S_{\mathrm{vis}}\to\{0,1\}^3
 $$
@@ -293,6 +293,35 @@ for Boolean maps $k,h:\{0,1\}\to\{0,1\}$.
 2. Exactly $4$ of those $16$ pairs have a single eight-element orbit and hence satisfy (FC).
 3. When verification is evaluated at the Commit Snapshot states $c_{phase}=1$, every two- or four-element orbit has constant match/mismatch outcome, whereas each of the eight six-element orbits contains both outcomes. Thus informative verification does not imply (FC).
 
+*Proof of the enumeration.* Each of $W,U$ has four binary input entries, so there are $2^4\cdot2^4=256$ pairs. On the phase-zero slice, the first output coordinate is $\phi$; injectivity is therefore equivalent to $W(\phi,0)\ne W(\phi,1)$ for each $\phi$, giving $W(\phi,p)=p\oplus k(\phi)$. On the phase-one slice, the first output is $1-p$; injectivity is equivalent to $U(0,p)\ne U(1,p)$ for each $p$, giving $U(\phi,p)=\phi\oplus h(p)$. The two image slices are disjoint. Consequently these conditions are necessary and sufficient, and the four choices for each of $k,h$ give exactly sixteen injective maps.
+
+For the return map $F=T^2$ on phase zero, set $q=p\oplus k(\phi)$. Then
+$$
+F(\phi,p)=(1-q,\phi\oplus h(q)).
+$$
+The intervening Commit Snapshot is $(\phi,q,1)$, with match indicator $\mathbf1_{\{\phi=q\}}$. A cycle of $F$ of length $r$ gives a cycle of $T$ of length $2r$. The complete table lists the four images of $F$ in the order $00,01,10,11$. Cycles start at their smallest unlisted two-bit state and follow $F$; the match strings follow this same order, with semicolons separating cycles.
+
+| $k(0)k(1)$ | $h(0)h(1)$ | $F(00),F(01),F(10),F(11)$ | $T$-cycle lengths | Commit match strings |
+|:--:|:--:|:--|:--|:--|
+| 00 | 00 | 10,00,11,01 | 8 | 1010 |
+| 00 | 01 | 10,01,11,00 | 6+2 | 101; 0 |
+| 00 | 10 | 11,00,10,01 | 6+2 | 110; 0 |
+| 00 | 11 | 11,01,10,00 | 4+2+2 | 11; 0; 0 |
+| 01 | 00 | 10,00,01,11 | 6+2 | 110; 0 |
+| 01 | 01 | 10,01,00,11 | 4+2+2 | 11; 0; 0 |
+| 01 | 10 | 11,00,01,10 | 8 | 1010 |
+| 01 | 11 | 11,01,00,10 | 6+2 | 101; 0 |
+| 10 | 00 | 00,10,11,01 | 2+6 | 0; 101 |
+| 10 | 01 | 01,10,11,00 | 8 | 0101 |
+| 10 | 10 | 00,11,10,01 | 2+4+2 | 0; 11; 0 |
+| 10 | 11 | 01,11,10,00 | 6+2 | 011; 0 |
+| 11 | 00 | 00,10,01,11 | 2+4+2 | 0; 11; 0 |
+| 11 | 01 | 01,10,00,11 | 6+2 | 011; 0 |
+| 11 | 10 | 00,11,01,10 | 2+6 | 0; 101 |
+| 11 | 11 | 01,11,00,10 | 8 | 0101 |
+
+Four rows contain one cycle of length eight. Eight rows contain one six-cycle and one two-cycle; every displayed three-bit match string for a six-cycle contains both outcomes. The remaining four rows contain a four-cycle and two two-cycles. Every four-cycle has match string $11$ and every two-cycle has match string $0$. These exhaust the sixteen maps and establish all three claims. ∎
+
 For example, $k(0)=k(1)=0$, $h(0)=0$, and $h(1)=1$ gives the informative orbit
 $$
 (0,0,0)\to(0,0,1)\to(1,0,0)\to(1,0,1)\to(1,1,0)\to(1,1,1)\to(0,0,0).
@@ -421,7 +450,7 @@ c_{op}=K_0=3
 3\in S.
 \tag{17e}
 $$
-Every displayed image is nonvacuous at this numerical-projection level: take $\mathcal Q_S=S$ and $c(s)=s$. In particular, the singleton models $S=\{3\}$ and $S=\{4\}$ have identical retained response/capacity entries and give equality and strict inequality, respectively. This projection classification makes no claim that an arbitrary $S$, or either singleton, is the complexity image of a microstate class under the fixed universal machine and full admissible hierarchy of Definition 2.4.1.
+Every displayed image is nonvacuous at this numerical-projection level: take $\mathcal Q_S=S$ and $c(s)=s$. In particular, the singleton models $S=\{3\}$ and $S=\{4\}$ have identical retained response/capacity entries and give equality and strict inequality, respectively. This projection classification makes no claim that an arbitrary $S$, or either singleton, is the complexity image of a microstate class under the specified universal machine and full admissible hierarchy of Section 2.4.1.
 
 *Proof.* Equation (17c) makes $S=c(\mathcal Q)$ a nonempty subset of $\{3,4,\ldots\}$, so well-ordering supplies the minimum in (17d). Conversely, the displayed identity model realizes every such $S$ in the numerical language. Since every member of $S$ is at least $3$, its minimum is $3$ exactly when $3$ belongs to $S$, proving (17e). The two singleton choices prove nonentailment of equality and of strict inequality from the retained numerical projection. ∎
 

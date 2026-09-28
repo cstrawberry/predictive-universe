@@ -13,9 +13,9 @@ Within the Predictive-Universe (PU) framework, this appendix develops the dark-s
 The emergence of gravity in the PU framework is a multi-step process (Sections 11, 12):
 
 *   **MPU network and ND-RID:** The fundamental substrate is an adaptive network of Minimal Predictive Units (MPUs) coupled by Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition A.2.2).
-*   **Information limits:** On a registered reset branch, Theorem 31 gives $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$; a positive floor requires a separate bound $H_q(P\mid R)\ge h_{\min}>0$, while $\varepsilon_0=\ln2$ is the structural binary reference and becomes a physical reset floor only for a conditionally uniform binary record. A completed binary reset-support event gives $C_{\max}\le\ln d_0-\ln2$ (Proposition E.2a in Appendix E). Separately, on refresh/minorization branches, a nonzero input-independent full-state refresh component gives strict trace-distance contraction $f_{\mathrm{RID}}<1$ (Lemma E.1) and the refresh-branch capacity bound $C_{\max}(f_{\mathrm{RID}})<\ln d_0$ (Theorem E.2).
+*   **Information limits:** On a registered reset branch, Theorem 31 gives $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$; a positive uniform floor inferred from this entropy bound requires a separate bound $H_q(P\mid R)\ge h_{\min}>0$, while $\varepsilon_0=\ln2$ is the structural binary reference and gives an entropy-derived physical reset floor for a conditionally uniform binary record. A completed binary reset-support event gives $C_{\max}\le\ln d_0-\ln2$ (Proposition E.2a in Appendix E). Separately, on refresh/minorization branches, a nonzero input-independent full-state refresh component gives strict trace-distance contraction $f_{\mathrm{RID}}<1$ (Lemma E.1) and the refresh-branch capacity bound $C_{\max}(f_{\mathrm{RID}})<\ln d_0$ (Theorem E.2).
 *   **Emergent geometry:** On Theorem 43's registered strict-comparator/global-minimum branch, irregular configurations cannot be global minimizers. A continuum manifold requires the independent noncollapse, interpolation, curvature-transfer, Mosco, and rigidity entries of Theorem 43.5 and Theorems 44–45; Lorentzian promotion additionally requires Corollary 46a and Appendix O.
-*   **Area law:** Geometric regularity and Lemma E.5.1 give an area-scaling entropy upper bound. The sharper density coefficient requires Theorem E.3's density certificate, and equality $S=k_B\mathcal A/(4L_{P,\mathrm{op}}^2)$ requires the capacity-achieving, entropy-saturating, additive-ledger branch of Theorem E.6.
+*   **Area law:** Geometric regularity and Lemma E.5.1 give an area-scaling entropy upper bound. The sharper density coefficient requires Theorem E.3's density certificate, and the asymptotic relation $S_{\mathrm{rel}}(\mathcal A)=k_B\mathcal A/(4L_{P,\mathrm{op}}^2)+o(\mathcal A)$ requires the capacity-achieving, entropy-saturating, additive-ledger branch of Theorem E.6.
 *   **Operational gravitational scale:** On that positive saturated branch, define $L_{P,\mathrm{op}}^2=G_{\mathrm{op}}\hbar/c^3$ by
     $$
     G_{\mathrm{op}}(\delta,C,\chi)
@@ -30,13 +30,13 @@ The emergence of gravity in the PU framework is a multi-step process (Sections 1
 
 The MPU network's adaptation is driven by balancing predictive gain against resource cost according to the Principle of Compression Efficiency (PCE, Definition 15). The effective aggregate complexity $\bar C_{\mathrm{agg}}(R)$ in a region of scale $R$ adapts under PCE for a registered task-scale coordinate $\hat C_{\mathrm{target}}(R)$, achieving Predictive Performance $PP(C,\hat C_{target})$ under Equation (22). Equation (38) regulates that internal scale; matching it to external environmental difficulty requires a separate innovation certificate.
 
- The optimal complexity $C^*$ for a given $\hat C_{\mathrm{target}}$ is determined by the condition where the marginal predictive benefit equals the marginal resource cost (Definition 14, Equation 18):
+ At an interior local maximizer $C^*$ for a given $\hat C_{\mathrm{target}}$, the necessary stationarity condition equates marginal predictive benefit and marginal resource cost (Definition 14, Equation 18):
 $$
 \Gamma_0\,\frac{\partial PP}{\partial C}\bigg|_{C^*} = \lambda\,R'(\bar C_{\mathrm{agg}}^*)
      + R'_I(\bar C_{\mathrm{agg}}^*).
 \tag{I.2}
 $$
-As complexity $\bar C_{\mathrm{agg}}$ increases, the marginal predictive gain $\partial PP/\partial C$ decreases (diminishing returns, $\partial^2 PP/\partial C^2 < 0$), while the marginal resource costs ($R', R_I'$) generally increase or remain non-negative ($R'' \ge 0$, $R_I'' \propto -1/C^2 < 0$ for $C>K_0$, but total marginal cost typically non-decreasing). This creates a balance point.
+As complexity $\bar C_{\mathrm{agg}}$ increases on the diminishing-returns branch, the marginal predictive gain decreases. For the logarithmic representative of Definition 3b at a common environmental temperature, $R_I''(C)=-r_I/(C^2\ln2)\le0$ when $r_I\ge0$, with strict inequality only when $r_I>0$. Thus nonnegative marginal costs do not by themselves make the total marginal cost $M(C)=\lambda R'(C)+R_I'(C)$ nondecreasing. Proposition I.2 separately assumes that monotonicity and a positive tail bound, and states the boundary and interior alternatives.
 
 **Proposition I.2 (Finite Saturation of Aggregate Complexity).**
 Let $J(C)$ be the PCE objective on $[K_0,\infty)$ and suppose
@@ -55,13 +55,13 @@ for $C\ge C_2$. Hence $J$ decreases on $[C_2,\infty)$, so its supremum on $[K_0,
 
 Because $B$ is strictly decreasing and $M$ is nondecreasing, $B-M$ is strictly decreasing. If $B(K_0)\le M(K_0)$, then $J'(C)<0$ for every $C>K_0$, and the maximizer is $K_0$. If $B(K_0)>M(K_0)$, continuity and the negative tail give a zero $C^*>K_0$ of $B-M$ by the intermediate value theorem. Strict decrease makes this zero unique; $J'>0$ before $C^*$ and $J'<0$ after $C^*$, so $C^*$ is the unique global maximizer and satisfies (I.2). ∎
 
-**Theorem I.2a (Finite Microscopic PCE Census and Parametric Optimizer).** Let $X$ be a finite set of microscopic realizations, let $x\sim x'$ mean equality of every retained protocol response, and assume the recorded coefficients and capacity below are constant on each response class. Let
+**Theorem I.2a (Finite Microscopic PCE Census and Parametric Optimizer).** Let $X$ be a nonempty explicitly listed finite set of microscopic realizations, let $x\sim x'$ mean equality of every retained protocol response, and assume the recorded coefficients and capacity below are constant on each response class. Let
 $$
 J_t(x)=a_x+t b_x,
 \qquad t\in[t_-,t_+],
 \tag{I.2a.1}
 $$
-be an exactly specified PCE score, with a recorded capacity $c_x$. Exhaustive evaluation on the finite quotient $X/\!\sim$ terminates and returns the complete optimizer set. At a fixed $t$, the optimizer is unique up to response equivalence exactly when the winning quotient class has strict gap
+be an exactly specified PCE score, with a recorded capacity $c_x$. For the terminating census, assume that response equivalence is decidable on $X$ and that the supplied numerical representation has terminating exact arithmetic and order comparison for coefficients, interval endpoints, queried parameter values and the crossing values below. Exhaustive evaluation on the resulting explicit finite quotient $X/\!\sim$ then terminates and returns the complete optimizer set. At a supplied $t$, the optimizer is unique up to response equivalence exactly when the winning quotient class has strict gap
 $$
 \Delta_t
 =
@@ -81,7 +81,7 @@ $$
 \bigcap_y\{t:(a_x-a_y)+t(b_x-b_y)\ge0\}.
 \tag{I.2a.3}
 $$
-Consequently the optimizer class and its capacity are piecewise constant, with possible changes only at the finitely many in-range crossings
+Consequently the set of maximizing response classes and its associated set of recorded capacities are piecewise constant, with possible changes only at the finitely many in-range crossings
 $$
 t_{xy}=\frac{a_y-a_x}{b_x-b_y}
 \qquad(b_x\ne b_y).
@@ -89,7 +89,7 @@ t_{xy}=\frac{a_y-a_x}{b_x-b_y}
 $$
 This is a complete optimizer, uniqueness, comparative-statics, and capacity census for a supplied finite microscopic potential. It does not populate $X$, the response relation, or the coefficients in (I.2a.1).
 
-*Proof.* A real function on a finite quotient attains its maximum, and direct enumeration terminates. Exactly one maximizing response class is equivalent to the strict-gap condition. Pairwise comparison with every $y$ gives (I.2a.3). Between consecutive crossing values, every pairwise score ordering is fixed, so the optimizer set and every class-dependent quantity, including $c_x$, are constant. Evaluating the finitely many crossings and open intervals gives the complete census. ∎
+*Proof.* A real function on a nonempty finite quotient attains its maximum. The supplied equivalence and numerical procedures make each of its finitely many comparisons terminate. Exactly one maximizing response class is equivalent to the strict-gap condition. Pairwise comparison with every $y$ gives (I.2a.3). Between consecutive crossing values, every pairwise score ordering is unchanged, so the optimizer set and its associated capacity set are constant. Exact comparison sorts the finitely many crossings; a representative point of each nonempty open interval and each crossing gives the complete census. Without the effective-data premises, the displayed winning regions remain mathematical characterizations and do not assert a uniform terminating algorithm. ∎
 
 **I.4 Predictive-Information Saturation in Sparse Regimes**
 
@@ -124,12 +124,12 @@ If $B(K_0;\theta_1)\le M(K_0)$, Proposition I.2 gives $C^*(\theta_1)=K_0<C^*(\th
 
 **I.5 Conditional Parameter-Relaxation Mechanism after Early Saturation**
 
-Assume a registered optimizer map $(\theta\mapsto\delta^*(\theta),p^*(\theta))$ for the complete PCE potential, with $\delta^*$ nonincreasing and $p^*$ nonincreasing in target scale, and assume the selected channel family has actual capacity $C(\mathcal E_p)$ nonincreasing in $p$ on the admitted interval. These are branch data to be proved for a concrete microscopic model; Theorem E.2 supplies an upper bound, not monotonicity of the actual capacity or of the optimizer. Under these assumptions, the lower sparse-region target of Corollary I.2 gives larger $\delta^*$, larger $p^*$, and lower $C(\mathcal E_{p^*})$. A small-spacing cost may, for example, scale as $1/\delta^2$ or $\ln(\delta_{\mathrm{ref}}/\delta)$ on a declared interval; $\ln\delta$ alone has the opposite monotonicity.
+Assume a registered optimizer map $(\theta\mapsto\delta^*(\theta),p^*(\theta))$ for the complete PCE potential, with $\delta^*$ nonincreasing and $p^*$ nonincreasing in target scale, and assume the selected channel family has actual capacity $C(\mathcal E_p)$ nonincreasing in $p$ on the admitted interval. These are branch data to be proved for a concrete microscopic model; Theorem E.2 supplies an upper bound, not monotonicity of the actual capacity or of the optimizer. Under these assumptions, the lower sparse-region target of Corollary I.2 gives $\delta^*$ and $p^*$ no smaller, and $C(\mathcal E_{p^*})$ no larger. A small-spacing cost may, for example, scale as $1/\delta^2$ or $\ln(\delta_{\mathrm{ref}}/\delta)$ on a declared interval; $\ln\delta$ alone has the opposite monotonicity.
 
-*   **Effective spacing:** $\delta^*$ increases on the assumed monotone optimizer branch.
-*   **Effective channel capacity:** $C(\mathcal E_{p^*})$ decreases only under the assumed capacity monotonicity.
+*   **Effective spacing:** $\delta^*$ is nondecreasing as the target scale decreases on the assumed monotone optimizer branch.
+*   **Effective channel capacity:** $C(\mathcal E_{p^*})$ is nonincreasing as the target scale decreases under the assumed capacity monotonicity.
 
-On this branch, the two variations raise $\eta(\delta^*)^2/C(\mathcal E_{p^*})$ in Equation (I.1).
+When the compared capacities are positive and the packing factor $\eta$ has the same positive value in both environments, these weak inequalities make $\eta(\delta^*)^2/C(\mathcal E_{p^*})$ in Equation (I.1) no smaller at the lower target scale. Strict change requires an additional strict optimizer or capacity inequality.
 
 **I.5.1 Crossover Scale from Information Resolution Limits**
 
@@ -224,7 +224,7 @@ The quantity $\chi_b=|\nabla\Phi_b|/g_\Lambda$ is the canonical direct dimension
 
 **Remark I.1.** The functional form $a_0 \propto c^2\sqrt{\Lambda}$ follows from equating two well-established temperatures (Unruh and de Sitter). The additional factor $\eta' = 3/(8\sqrt{3})$ is not obtained from that temperature equality alone; it is the conditional consequence of the QFI linear-response bridge law adopted in Appendix H, Definition H.0. Once that bridge-law normalization is fixed, no continuously adjustable parameter remains in the galactic-scale prediction; the scale is locked to $\Lambda$ by Corollary I.3a.
 
-**Definition I.3b (Predictive Focusing and Susceptibility Datum).** In this subsection use $c=\hbar=k_B=1$, take $\lambda$ to have length dimension, and measure entropy in nats. On a regular emergent metric/channel-capacity thermodynamic branch, let $k^\mu=dx^\mu/d\lambda$ be an affine null generator, let $a(\lambda)$ be the transverse area of one retained horizon pencil, and let $S_{\mathrm{pred}}(\lambda)$ be the retained predictive entropy assigned to that same pencil. Define
+**Definition I.3b (Predictive Focusing and Susceptibility Datum).** In this subsection use $c=\hbar=k_B=1$, take $\lambda$ to have length dimension, and measure entropy in nats. On a regular emergent metric/channel-capacity thermodynamic branch, register $G_{\mathrm{op}}>0$ as constant along the affine pencil used below, and let $k^\mu=dx^\mu/d\lambda$ be an affine null generator, let $a(\lambda)$ be the transverse area of one retained horizon pencil, and let $S_{\mathrm{pred}}(\lambda)$ be the retained predictive entropy assigned to that same pencil. Define
 $$
 \Theta_{\mathrm{PU}}(\lambda)
 =
@@ -271,7 +271,7 @@ $$
 \tag{I.3c.3}
 $$
 
-If, in addition, $\chi_g(\omega,\mathbf k)$ is causal and passive for each retained $\mathbf k$, is analytic in the upper half $\omega$-plane, obeys $\chi_g(-\omega,\mathbf k)=\overline{\chi_g(\omega,\mathbf k)}$ for real $\omega$, has finite limits at zero and infinity, and has the falloff required for the unsubtracted dispersion relation, then
+For each retained $\mathbf k$, the following explicit sufficient analytic gate implies the dispersion sum rule. Let $h(z)=\chi_g(z,\mathbf k)-\chi_\infty(\mathbf k)$, with $\chi_\infty(\mathbf k)\in\mathbb R$. Assume $h$ is holomorphic in the upper half-plane, continuous on its closure, extends holomorphically to a neighborhood of $0$, satisfies $h(-x)=\overline{h(x)}$ on the real axis, and obeys $|h(z)|\le C|z|^{-\epsilon}$ for all sufficiently large $|z|$ in the closed upper half-plane, with $C<\infty$ and $\epsilon>0$. These conditions imply finite static and high-frequency limits and absolute convergence of the imaginary-part sum rule below. Causality and passivity are separate physical admissibility requirements; they alone do not imply this uniform decay gate. Under this analytic gate,
 $$
 \boxed{
 \chi_g(0,\mathbf k)-\chi_g(\infty,\mathbf k)
@@ -298,15 +298,15 @@ $$
 
 On a calibrated branch one may set $G_{\mathrm{op}}=G$; the focusing inequality itself does not perform that calibration.
 
-For the susceptibility, apply the unsubtracted Kramers--Kronig relation to $\chi_g-\chi_g(\infty)$:
+For the susceptibility, integrate $h(z)/z$ around the upper half-annulus $r<|z|<R$, indenting clockwise around $0$. There are no enclosed poles. Continuity on the boundary permits taking the boundary contour as a limit of contours in the holomorphic region. The large semicircle contributes at most $\pi C R^{-\epsilon}\to0$, and the small clockwise semicircle tends to $-i\pi h(0)$. Thus
 $$
-\operatorname{Re}\chi_g(0,\mathbf k)-\chi_g(\infty,\mathbf k)
-=
-\frac{2}{\pi}
-\int_0^\infty
-\frac{\operatorname{Im}\chi_g(\omega,\mathbf k)}{\omega}\,d\omega.
+\operatorname{PV}\int_{-\infty}^{\infty}\frac{h(x)}x\,dx=i\pi h(0).
 $$
-The reality condition makes both the static limit and the infinite-frequency limit real. Therefore $\operatorname{Re}\chi_g(0,\mathbf k)=\chi_g(0,\mathbf k)$, which proves (I.3c.4). ∎
+Reality gives $h(0)\in\mathbb R$ and $h(x)-h(-x)=2i\operatorname{Im}h(x)$, so pairing the positive and negative real segments yields
+$$
+2i\int_0^\infty\frac{\operatorname{Im}h(x)}x\,dx=i\pi h(0).
+$$
+The integral converges absolutely: holomorphy near $0$ and real $h(0)$ give $\operatorname{Im}h(x)=O(x)$, while uniform decay bounds the tail by $C x^{-1-\epsilon}$. Divide by $i\pi$, use $h(0)=\chi_g(0,\mathbf k)-\chi_\infty(\mathbf k)$ and $\operatorname{Im}h=\operatorname{Im}\chi_g$, and obtain (I.3c.4). This supplies an explicit sufficient branch; response functions failing its decay or boundary conditions require their own subtracted or distributional formulation. ∎
 
 **Corollary I.3d (No Replacement of the H-Bridge by the Sum Rule Alone).** The sum rule (I.3c.4) is a consistency and spectral-reconstruction gate for any dark-sector susceptibility model. It does not by itself fix the numerical factor $\eta'=3/(8\sqrt3)$ in Corollary I.3a. That factor remains fixed by Appendix H, Definition H.0 and Equation H.4b unless a separate PU-internal theorem derives the same static normalization from the spectral density $\operatorname{Im}\chi_g$.
 
@@ -505,7 +505,7 @@ Applying the source-control certificate (I.3h.2) proves (I.3i.1). ∎
 *Proof.* Theorem I.3i requires its entire branch package to derive (I.3i.1). Independently, the proof of Theorem I.3f derives (I.3f.1) from the definition of $\mathcal Q_D^{\mathrm{PU}}$ and the spectral-gap inequality; it derives (I.3f.2) only after applying (I.3e.2). Therefore the local bound has exactly the scope stated here, and the predictive-stress bound additionally requires elliptic source control. ∎
 
 
-**Theorem I.3j.1 (Exact Finite Graph Elliptic Source and Covariance).** Let $L$ be the symmetric weighted Laplacian of a finite connected graph, let $\mathbf1^\perp$ be the mean-zero subspace, and let $s\in\mathbf1^\perp$. The mean-zero equation
+**Theorem I.3j.1 (Exact Finite Graph Elliptic Source and Covariance).** Let $L$ be the symmetric Laplacian of a finite connected graph with at least two vertices and positive weights on its retained edges, let $\mathbf1^\perp$ be the mean-zero subspace, and let $s\in\mathbf1^\perp$. The mean-zero equation
 $$
 L\phi=s,
 \qquad \phi\perp\mathbf1,
@@ -518,7 +518,7 @@ $$
 \|\phi\|_2\le\frac{\|s\|_2}{\lambda_2(L)}.
 \tag{I.3j.1.2}
 $$
-If $s$ is a mean-zero random source with covariance $\Sigma_s$, then
+If $s$ is a random source taking values in $\mathbf1^\perp$ with finite second moment and covariance $\Sigma_s$, then
 $$
 \operatorname{Cov}(\phi)=L^+\Sigma_sL^+,
 \qquad
@@ -527,7 +527,7 @@ $$
 \frac{\operatorname{tr}\Sigma_s}{\lambda_2(L)^2}.
 \tag{I.3j.1.3}
 $$
-Thus a supplied finite RCD approximant has a completely computable elliptic source-control and fluctuation record. Passing these quantities uniformly to an RCD limit still requires the convergence and source-identification entries of Definition I.3h.
+These identities give the elliptic source-control and fluctuation record for the supplied finite graph. Rational $L$, $s$ and $\Sigma_s$ admit exact linear algebra and an exact algebraic representation of the positive eigenvalue $\lambda_2(L)$; another numerical representation requires its own terminating arithmetic and comparison procedures. Passing these quantities uniformly to an RCD limit still requires the convergence and source-identification entries of Definition I.3h.
 
 *Proof.* Connectedness gives $\ker L=\operatorname{span}\{\mathbf1\}$ and makes $L$ positive definite on $\mathbf1^\perp$. Spectral inversion there gives $L^+$, uniqueness, the energy identity, and $\|L^+\|_{\mathbf1^\perp}=1/\lambda_2(L)$. Linearity gives the covariance identity. Diagonalizing $L$ on $\mathbf1^\perp$ and using $0\preceq(L^+)^2\preceq\lambda_2(L)^{-2}I$ proves the trace bound. ∎
 
@@ -686,9 +686,9 @@ $$
 \tag{I.7}
 $$
 
-Here $K$ is a normalized spatial response kernel, $\int K\,d^3x=1$, $\Phi_b$ is the background-subtracted baryonic potential, $g_\ast$ is a characteristic acceleration, and $q$ is a nonlinearity exponent. Calling this equal-time kernel causal requires an additional construction as the quasistatic reduction of a retarded spacetime susceptibility. For fixed kernel and parameters the model can be tested against cluster lensing and baryonic maps; offsets in merging clusters are outputs to be calculated, not consequences of nonlocality alone.
+Here $K\ge0$ is a normalized spatial response kernel in $L^1(\mathbb R^3)$, $\int K\,d^3x=1$, $\Phi_b$ is the background-subtracted baryonic potential, $g_\ast>0$ is a characteristic acceleration, and $q$ is a nonlinearity exponent. For the finite-mass branch, assume $A_{\rm PM}\ge0$, $\rho_b\ge0$, $0<M_b:=\int\rho_b\,d^3x<\infty$, and that $w(r')=(|\nabla\Phi_b(r')|/g_\ast)^q$ is defined almost everywhere with respect to baryonic mass and satisfies $\int\rho_b w\,d^3x<\infty$. Use $w=1$ when $q=0$; for $q<0$, require $|\nabla\Phi_b|>0$ almost everywhere with respect to baryonic mass. Calling this equal-time kernel causal requires an additional construction as the quasistatic reduction of a retarded spacetime susceptibility. For the registered kernel and parameters the model can be tested against cluster lensing and baryonic maps; offsets in merging clusters are outputs to be calculated, not consequences of nonlocality alone.
 
-The integrated predictive-matter mass is
+Tonelli's theorem and kernel normalization give the finite integrated predictive-matter mass
 $$
 M_{\rm PM}
 =A_{\rm PM}\int\rho_b(r')\left(\frac{|\nabla\Phi_b(r')|}{g_\ast}\right)^q d^3r'
@@ -699,7 +699,7 @@ Thus cluster baryon budgets constrain the displayed combination rather than $A_{
 **Anisotropic stress.** The lensing–dynamics identity (I.8) assumes a metric theory with minimal coupling and negligible anisotropic stress so that both probes are sensitive to the same potential; departures from this condition are separately testable.
 
 **Theorem I.5 (Conditional lensing–dynamics identity).**
-Consider an axisymmetric lens with kinematic scale $r_\sigma$ and Einstein radius $b_E$. Assume that the theory is metric with minimal coupling, anisotropic stress is negligible, the same enclosed baryonic normalization $M_b$ is used for both probes, and the calibrated response maps factorize as
+Consider an axisymmetric lens with $r_\sigma>0$, $b_E>0$, $L_0>0$, $G_0>0$, baryonic normalization $M_b>0$ and dynamical calibration $C_{\rm dyn}\ne0$. Assume that the theory is metric with minimal coupling, anisotropic stress is negligible, the same enclosed baryonic normalization $M_b$ is used for both probes, and the calibrated response maps factorize as
 $$
 M_{\rm dyn}=C_{\rm dyn}\frac{G_{\rm eff}(r_\sigma)}{G_0}M_b,
 \qquad
@@ -761,7 +761,7 @@ $$
 
 The parameters $(G_0, L_0, A_G, m)$ in Equation (I.4) must align with astronomical observations.
 
-*   **Galaxy dynamics:** Observed rotation curves and galaxy scaling relations (e.g., baryonic Tully-Fisher Relation [McGaugh 2012], Radial Acceleration Relation [McGaugh et al. 2016]) indicate that the effective gravitational field requires an enhancement over Newtonian gravity by factors of $2$ to $10$ on scales $R \sim 1$–$100\,\mathrm{kpc}$. For $R\gg L_0$, the local coupling satisfies $G(R)\to G_0(1+A_G)$, while for a bounded baryonic system the asymptotic field enhancement is $1+\langle\varepsilon_G\rangle_b \le 1 + A_G$, where $\langle\varepsilon_G\rangle_b$ is the baryon‑mass‑weighted average of $\varepsilon_G(R)$. This requires $A_G = 1$ to $9$, consistent with $A_G = \mathcal O(1)$.
+*   **Galaxy dynamics:** Rotation curves and galaxy scaling relations (e.g., baryonic Tully-Fisher Relation [McGaugh 2012], Radial Acceleration Relation [McGaugh et al. 2016]) are comparators for Equation I.4, but the present source record does not establish a universal field-enhancement factor of $2$ to $10$ over $R \sim 1$–$100\,\mathrm{kpc}$. On the spherical branch of Equation I.6, the complete effective source obeys $4\pi R^2(\rho_b+\rho_{\mathrm{DM,eff}})=G_0^{-1}\,d[G(R)M_b(R)]/dR$. With the central normalization $\lim_{R\downarrow0}[R^2g(R)-G(R)M_b(R)]=0$, the radial field is $g(R)=G(R)M_b(R)/R^2$. For bounded baryonic mass $M_b(R)\to M>0$, Equation I.4 therefore gives an asymptotic field enhancement $g(R)/(G_0M/R^2)\to1+A_G$. An independently fitted asymptotic enhancement $f$ would imply $A_G=f-1$ on this model; no numerical interval for $A_G$ follows without a specified sample, baryonic model, likelihood, and uncertainties. Finite-window fits require the full Equation I.6 source.
 *   **Transition scale:** Choosing $L_0$ of order a few kiloparsecs is an empirical fit or prior for Equation I.4 off the Definition I.13c.1 branch, not a consequence of the acceleration candidate in Appendix H alone. Acceleration and length have different dimensions; the Proposition I.13c.2 map $L_0=\sqrt{GM_b/(\beta_\chi g_\Lambda)}$ is the system-dependent conversion on its branch, and the bridge remains open off it.
 *   **Steepness:** The sharpness of the transition in the Radial Acceleration Relation suggests $m \gtrsim 2$.
 *   **Cosmological variation:** If the fundamental parameters $(\delta, C_{\max})$ that determine $(L_0, A_G, m)$ evolve on cosmological timescales (e.g., Hubble time), current bounds on temporal variation of $G$ (e.g., $|\dot G/G|\!\lesssim\!10^{-12}\,\mathrm{yr}^{-1}$ from cosmology and solar system) can still be met, provided the cosmological evolution is slow (Section I.14, [Uzan 2011]).
@@ -779,8 +779,8 @@ $$
 g_\Lambda=\frac{c^2\sqrt{\Lambda}}8.
 $$
 After the acceleration normalization and capacity-elastic response law are certified, galaxy acceleration data test collapse against $\chi_b$ without an independent MOND acceleration. Equation I.4 instead depends on $R/L_0$; the Definition I.13c.1 branch supplies the dimensionally valid $L_0\leftrightarrow g_\Lambda$ map of Proposition I.13c.2, and off that branch no such map follows from either formula.
-3.  **Parameter-universality test:** The phenomenological parameter set $(L_0,A_G,m)$ may be tested for approximate universality across a preregistered galaxy class. On the Definition I.13c.1 branch, $m=3$ is fixed and $L_0$ inherits the acceleration-lock status through the map $L_0=\mathcal L(g_\Lambda,M_b)$ with per-system datum $M_b$, so universality of $L_0$ is universality of the registered $\beta_\chi$; $A_G$ awaits the Proposition I.13c.3 menu adjudication or hierarchical inference.
-4.  **Surface-density lock:** Thin-disk transition data should be consistent with
+3.  **Parameter-universality test:** The phenomenological parameter set $(L_0,A_G,m)$ may be tested for approximate universality across a preregistered galaxy class off the Definition I.13c.1 branch. On that branch, $m=3$ and $L_0=\sqrt{GM_b/(\beta_\chi g_\Lambda)}$ carries the per-system mass datum. A common $\beta_\chi$ therefore predicts a common $L_0/\sqrt{M_b}$ at common $G$ and $g_\Lambda$; the universality test uses $\beta_\chi$ or that mass-normalized length, with mass uncertainty propagated. $A_G$ awaits the Proposition I.13c.3 menu adjudication or hierarchical inference.
+4.  **Surface-density lock:** On the infinite planar-sheet branch of Corollary H.1a, the transition surface-density scale is
 $$
 \Sigma_\dagger
 =
@@ -799,11 +799,11 @@ $$
 $$
 6.  **Particle-DM comparison test:** Equation I.4 and the capacity-elastic branch are candidate gravity-only fits; writing them without a particle-DM term neither proves that they explain the anomalies nor that particle dark matter is absent. A direct-detection null is an independent empirical outcome. Exclusion of a particle-DM competitor requires a common likelihood, nuisance and covariance model, calibrated gravity-only forward map, and a declared model-selection rule.
 7.  **Cosmological signatures:** The scale dependence of gravity could influence structure growth and cosmological observables. Deviations from $\Lambda$CDM predictions might be observable in cosmic microwave background (CMB) or large-scale structure surveys if $G$ varies with local density or cosmic time.
-8.  **Transient stresses:** The dynamics of complexity adaptation and parameter relaxation may lead to transient effects, such as $\rho_\Pi$ in Equation I.7, in highly dynamic events like galaxy cluster mergers. These effects would be tested through discrepancies between baryonic matter distribution and gravitational lensing maps under the same kernel and conservation assumptions.
+8.  **Transient stresses:** On an accepted covariant dark-susceptibility branch of Definition I.13d, the certified dynamical response, conserved stress tensor, and cluster/merger projection determine the transient-stress and lensing-offset predictions within the certified residual interval. Equation I.7 specifies the quasistatic predictive-matter density $\rho_{\rm PM}$; merger predictions require the additional time-dependent response and projection certificates. These predictions are tested against baryonic matter distributions and gravitational lensing maps on that same branch.
 
 **I.11 Prospective Rotation-Curve Analysis**
 
-A direct test of the scale-dependent $G(R)$ model is to fit it to observed galaxy rotation curves. The SPARC database [Lelli et al. 2016], providing high-quality rotation curves and detailed baryonic mass models for 152 disk galaxies, offers an ideal dataset. A full comparison requires:
+A direct test of the scale-dependent $G(R)$ model is to fit it to observed galaxy rotation curves. The SPARC database [Lelli et al. 2016], providing high-quality rotation curves and detailed baryonic mass models for 175 disk galaxies, offers an ideal dataset. A full comparison requires:
 
 *   Accurate baryonic mass models for each galaxy, requiring estimates of stellar mass-to-light ratios $\Upsilon_\ast$.
 
@@ -846,7 +846,7 @@ $$
 \tag{I.5a.6}
 $$
 
-**Proposition I.5b (Euler-Lagrange Form of Capacity Elasticity).** Critical points of (I.5a.4) satisfy
+**Proposition I.5b (Euler-Lagrange Form of Capacity Elasticity).** Assume $\rho_b\in L^1_{\mathrm{loc}}(\Omega)$ and let $\Phi\in C^1(\Omega)$ have finite energy (I.5a.4). If its first variation vanishes for every $\eta\in C_c^\infty(\Omega)$, then it satisfies, distributionally,
 $$
 \nabla\cdot
 \left[
@@ -867,7 +867,7 @@ $$
 +
 \int_\Omega\rho_b\eta\,d^3x.
 $$
-Since
+For $\xi\ne0$,
 $$
 \nabla_\xi\mathcal F(\xi)
 =
@@ -879,7 +879,7 @@ g_\Lambda^2F'\left(\frac{|\xi|}{g_\Lambda}\right)
 \mu(x)\xi,
 \qquad x=\frac{|\xi|}{g_\Lambda},
 $$
-the first variation is
+At $\xi=0$, radial symmetry and differentiability give $\nabla_\xi\mathcal F(0)=0$, agreeing with the continuous extension of $\mu(|\xi|/g_\Lambda)\xi$. On the compact support of $\eta$, the gradients of $\Phi+\epsilon\eta$ remain in a compact set, so continuity of $\nabla_\xi\mathcal F$ justifies differentiation under the integral. Thus the first variation is
 $$
 \frac{1}{4\pi G}
 \int_\Omega
@@ -1008,44 +1008,46 @@ v_{\rm circ}^4(r)\sim GMa_0.
 $$
 This is the baryonic Tully–Fisher scaling. ∎
 
-**Corollary I.7a (Capacity-Elastic Dark-Response Law).** On the capacity-elastic branch of Definition I.5a, the high-acceleration limit gives the ordinary Poisson law
+**Corollary I.7a (Capacity-Elastic Dark-Response Law).** On the capacity-elastic branch of Definition I.5a, the high-acceleration constitutive flux obeys
 $$
-\nabla^2\Phi=4\pi G\rho_b
-\qquad
-(|\nabla\Phi|\gg g_\Lambda),
+\frac{\left|\mu(|\xi|/g_\Lambda)\xi-\xi\right|}{|\xi|}
+=
+\left|\mu(|\xi|/g_\Lambda)-1\right|
+\longrightarrow0
+\qquad(|\xi|/g_\Lambda\to\infty).
+$$
+On a region where the response is exactly $\mu=1$, Equation (I.5b.1) is the ordinary Poisson law
+$$
+\nabla^2\Phi=4\pi G\rho_b.
 \tag{I.7a.1}
 $$
-while the low-acceleration limit gives
+Passage to that equation along a family of high-acceleration fields additionally requires a convergence certificate for their flux divergences; the constitutive limit alone is insufficient.
+
+For an isolated point source with $M>0$, assume the spherical outward-flux normalization and decaying branch of Theorem I.7. The low-acceleration limit then gives
 $$
 g^2\sim g_\Lambda g_N,
 \qquad
 g_N=\frac{GM}{r^2},
 \tag{I.7a.2}
 $$
-for an isolated point source. Hence
+and hence
 $$
 v_{\mathrm{circ}}^4\sim GMg_\Lambda.
 \tag{I.7a.3}
 $$
-The dark response is therefore the elastic constitutive law of unsaturated channel capacity, with the transition scale fixed by $g_\Lambda=c^2\sqrt{\Lambda}/8$ on the Appendix H/I bridge branch.
+The dark response on this branch is the declared elastic constitutive law of unsaturated channel capacity, with transition scale $g_\Lambda=c^2\sqrt{\Lambda}/8$ on the Appendix H/I bridge branch.
 
-*Proof.* If $|\nabla\Phi|\gg g_\Lambda$, then $x=|\nabla\Phi|/g_\Lambda\to\infty$ and (I.5a.5) makes (I.5b.1) reduce to the ordinary Poisson equation, proving (I.7a.1). If $|\nabla\Phi|\ll g_\Lambda$, then (I.5a.6) gives
+*Proof.* The first identity follows by factoring the scalar $\mu(|\xi|/g_\Lambda)-1$ from the flux difference, and (I.5a.5) gives its limit. If $\mu=1$ throughout the region, (I.5b.1) gives (I.7a.1) distributionally. For the low-acceleration branch, (I.5a.6) gives
 $$
-\mu\left(\frac{g}{g_\Lambda}\right)\sim \frac{g}{g_\Lambda}.
+\mu\left(\frac{g}{g_\Lambda}\right)\sim\frac{g}{g_\Lambda}.
 $$
-The spherical reduction used in Theorem I.7 gives
+The normalized spherical flux is
 $$
-r^2\mu\left(\frac{g}{g_\Lambda}\right)g=GM,
+r^2\mu\left(\frac{g}{g_\Lambda}\right)g=GM.
 $$
-so
-$$
-r^2\frac{g^2}{g_\Lambda}\sim GM,
-\qquad
-g^2\sim\frac{GMg_\Lambda}{r^2}=g_\Lambda g_N.
-$$
-Multiplying $g$ by $r$ gives $v_{\mathrm{circ}}^2=rg\sim\sqrt{GMg_\Lambda}$ and hence (I.7a.3). ∎
+Since $g(r)\to0$, substitution yields $r^2g^2/g_\Lambda\sim GM$ and proves (I.7a.2). The circular-speed identity $v_{\mathrm{circ}}^2=rg$ then proves (I.7a.3). ∎
 
-*   A joint Bayesian inference analysis (e.g., using nested sampling [Feroz & Hobson 2008; Feroz et al. 2009, 2019]) to determine the universal parameter set $(L_0,A_G,m)$ and the per-galaxy $\Upsilon_\ast$ values by comparing predicted and observed rotation curves. When inferring $A_G$ from rotation curves, the effective far‑field enhancement reflects the baryon‑mass‑weighted $\langle\varepsilon_G\rangle_b$ rather than $A_G$ itself; the numerical fits naturally absorb this via the $\rho_{\mathrm{DM,eff}}(R)=\varepsilon_G(R)\,\rho_b(R)$ source.
+*   A joint Bayesian inference analysis (e.g., using nested sampling [Feroz & Hobson 2008; Feroz et al. 2009, 2019]) to determine the universal parameter set $(L_0,A_G,m)$ and the per-galaxy $\Upsilon_\ast$ values by comparing predicted and observed rotation curves. On the spherical branch of Equation I.6, the source used in those fits is $\rho_{\mathrm{DM,eff}}(R)=\varepsilon_G(R)\rho_b(R)+G'(R)M_b(R)/(4\pi G_0R^2)$, where $\varepsilon_G(R)=G(R)/G_0-1$. With the central normalization $\lim_{R\downarrow0}[R^2g(R)-G(R)M_b(R)]=0$, this gives $g(R)=G(R)M_b(R)/R^2$ and, for bounded positive baryonic mass, the asymptotic enhancement $1+A_G$. A source containing only $\varepsilon_G(R)\rho_b(R)$ defines a different forward model when the derivative term is nonzero.
 
 **I.12 Robustness and Systematics**
 
@@ -1064,7 +1066,7 @@ $$
 \mu(y)\longrightarrow1\quad(y\to\infty),
 \tag{I.12a.0.1}
 $$
-and suppose $\mu_0\in\mathcal M$ obeys $\mu_0'(y)>0$ on a nonempty open interval $U$ disjoint from a finite list of registered value and derivative locks. If $\mu_0$ stays a positive distance from $0$ and $1$ on some compact $K\subset U$, then there are infinitely many distinct $\mu\in\mathcal M$ obeying all locks exactly and sharing both asymptotics.
+and suppose $\mu_0\in\mathcal M$ obeys $\mu_0'(y)>0$ on a nonempty open interval $U$ disjoint from a finite list of registered value and derivative locks. If $\mu_0$ stays a positive distance from $0$ and $1$ on some nondegenerate compact interval $K\subset U$, then there are infinitely many distinct $\mu\in\mathcal M$ obeying all locks exactly and sharing both asymptotics.
 
 More precisely, for every nonzero $b\in C_c^\infty(K)$ and all sufficiently small real $\epsilon$,
 $$
@@ -1075,7 +1077,7 @@ is admissible, agrees with $\mu_0$ outside $K$, and hence preserves every regist
 
 *Proof.* Compactness gives positive lower bounds for $\mu_0$, $1-\mu_0$, and $\mu_0'$ on a smaller compact support for $b$. Taking $|\epsilon|$ below the corresponding bounds divided by $\|b\|_\infty$ and $\|b'\|_\infty$ preserves the range and monotonicity. Because $b$ is supported away from every lock and both endpoints, all registered data remain unchanged. The vector space $C_c^\infty(K)$ is infinite-dimensional, giving infinitely many distinct admissible perturbations. Since joint uniqueness would imply kernel uniqueness, the joint kernel-and-length conclusion follows. ∎
 
-**Definition I.12a.1 (Matched Residual Experiment).** A matched dark-sector comparison consists of a data vector $y$, covariance matrix $C>0$, shared nuisance parameter vector $\nu$, shared nuisance domain $\mathcal N$, and two model families
+**Definition I.12a.1 (Matched Residual Experiment).** A matched dark-sector comparison consists of a data vector $y$, covariance matrix $C>0$, shared nuisance parameter vector $\nu$, shared nuisance domain $\mathcal N$, and two nonempty admissible parameter/nuisance families whose response vectors are finite at every admitted point. Let their model maps be
 $$
 y_{PU}(\theta_{PU},\nu),\qquad y_{NFW}(\theta_{NFW},\nu),
 $$
@@ -1101,7 +1103,13 @@ For a sample of systems $s=1,\dots,N$, the universality residual for the galaxy-
 $$
 \mathcal U_G=\sum_{s=1}^N\left(\Theta_{G,s}-\bar\Theta_G\right)^T\Sigma_{G,s}^{-1}\left(\Theta_{G,s}-\bar\Theta_G\right),
 $$
-where $\Theta_{G,s}$ and $\Sigma_{G,s}$ are the system-level posterior mean and covariance under the same inference convention, and $\bar\Theta_G$ is the pooled inverse-covariance weighted mean.
+where the sample is nonempty, $\Theta_{G,s}$ and $\Sigma_{G,s}$ are the system-level posterior mean and positive-definite covariance under the same inference convention, and
+$$
+\bar\Theta_G=
+\left(\sum_{s=1}^N\Sigma_{G,s}^{-1}\right)^{-1}
+\sum_{s=1}^N\Sigma_{G,s}^{-1}\Theta_{G,s}.
+$$
+This statistic tests a common raw $(L_0,A_G,m)$ only on a branch asserting that common triple. On Definition I.13c.1's branch, use the registered common coordinates, such as $(\beta_\chi,A_G)$ with $m=3$, and their propagated positive-definite covariance on the admitted parameter subspace; $L_0$ then follows from each system's $M_b$. A singular covariance requires a separately declared lower-dimensional test and its calibration.
 
 **Proposition I.12a.3 (Nuisance-Matched Likelihood Separation).** Under Gaussian observational errors with one shared covariance $C$ and one shared nuisance domain $\mathcal N$,
 $$
@@ -1130,14 +1138,14 @@ $$
 $$
 Subtracting the two identities cancels $K_C$ and proves the proposition with no attainment assumption. No prior appears. A MAP or marginal-likelihood discriminator would require adding or integrating the prior explicitly. ∎
 
-**Corollary I.12a.4 (Dark-Sector Failure Criteria).** The galaxy-scale PU branch fails on a matched sample if any one of the following holds under Definition I.12a.1:
+**Corollary I.12a.4 (Dark-Sector Failure Criteria).** Under Definition I.12a.1, apply the following preregistered rejection rules to the particular branch whose claims are being tested:
 
-1. $\mathcal D_{PU/NFW}<0$ by a preregistered significance threshold on the primary sample.
-2. The pooled universality statistic $\mathcal U_G$ rejects one common $(L_0,A_G,m)$ at the preregistered level after baryonic nuisance propagation.
-3. The parameter triple that fits galaxies violates the early-universe, local-gravity, or lensing-safety constraints stated elsewhere in Appendix I.
-4. The same universal parameters cannot be transported to the cluster-lensing comparison without adding a new unconstrained response function.
+1. The matched-residual comparison rejects that branch when $\mathcal D_{PU/NFW}<-d_{\rm crit}$ on the primary sample, where $d_{\rm crit}\ge0$ is its preregistered, calibrated rejection threshold.
+2. If the branch asserts common parameters, its universality claim is rejected when $\mathcal U_G$, evaluated in the branch's registered common coordinates and calibrated after nuisance propagation, rejects at the preregistered level.
+3. A parameter record proposed as a common fit is inadmissible if it violates the early-universe, local-gravity or lensing-safety constraints of the same branch.
+4. If the branch asserts a common response record with a specified galaxy-to-cluster projection, that transport claim is rejected when the registered parameters and projection fail the cluster comparison within its residual budget. A separately registered cluster kernel is tested with its own declared parameters and common-certificate constraints.
 
-*Proof.* The first condition says the matched likelihood favors NFW on the primary observable. The second says the claimed universal galaxy-scale triple does not exist within the propagated uncertainties. The third says the successful galaxy fit is incompatible with independent sectors of the same theory. The fourth says the cross-scale branch requires a new free function rather than a transported universal law. Each condition contradicts a distinct necessary component of the Appendix I scaled-gravity claim. ∎
+*Proof.* The first two conclusions are the stated statistical rejection decisions and retain their calibration and error rates; they do not prove literal nonexistence of a physical model or common parameter. The third is failure of an explicit admissibility condition for the proposed record. The fourth is failure of the additional transported-response claim when that claim is part of the tested branch. The mass-dependent spatial-clock branch tests common $\beta_\chi$ or the corresponding mass-normalized length, and the separate cluster branch retains its declared $(K,q,A_{\rm PM})$ inputs. Thus each rule is applied only to the claim its branch actually makes. ∎
 
 ### I.12b Adjudicated Multifractal PCE Cascade for Dark-Sector Response
 
@@ -1228,7 +1236,7 @@ $$
 \nabla^\mu T_{\mu\nu}^{\mathrm{mf}}=0
 \tag{I.12b.7}
 $$
-on shell, and the response remains CMB-safe whenever the package support condition suppresses $\Gamma_{\mathrm{mf}}$ on the early homogeneous branch.
+on shell. If the package support condition sets the multifractal response to zero on the early homogeneous branch, no homogeneous response shift is induced. CMB-era safety additionally requires the perturbative projection $\Pi_{\mathrm{CMB}}$ and its certified residual interval for the same response, as specified in Definition I.13d.
 
 *Proof.* The partition sums determine $\tau_{\mathrm{PU}}(q)$ on the registered operational scaling window. The sign convention $Z_q(\ell)\sim\ell^{\tau(q)}$ gives the Legendre-Fenchel envelope
 $$
@@ -1246,7 +1254,7 @@ $$
 $$
 after imposing the Euler-Lagrange equations for the retained variables $\chi$. If the package support condition sets the multifractal response to zero on the early homogeneous branch, then no universal early-time shift of $G$ is induced. The result is an emergent metric/channel-capacity thermodynamic response law, not a microscopic gravitational Hilbert sector. ∎
 
-**Theorem I.12b.2a (Finite Homogeneous Cascade Classification and Identifiability).** Let a homogeneous $b$-ary cascade have positive branch weights $p_1,\ldots,p_b$ with $\sum_ip_i=1$. At depth $n$ and scale $\ell_n=b^{-n}$, its exact partition function and mass exponent are
+**Theorem I.12b.2a (Finite Homogeneous Cascade Classification and Identifiability).** Let $b\ge2$ be an integer, and let a homogeneous $b$-ary cascade have positive branch weights $p_1,\ldots,p_b$ with $\sum_ip_i=1$. At depth $n$ and scale $\ell_n=b^{-n}$, its exact partition function and mass exponent are
 $$
 Z_n(q)=\left(\sum_{i=1}^bp_i^q\right)^n,
 \qquad
@@ -1273,7 +1281,7 @@ L_0\sim1\!-\!10\,\mathrm{kpc},\qquad
 A_G\sim1\!-\!9,\qquad
 m\simeq2\!-\!4.
 $$
-These ranges will be constrained by the forthcoming rotation-curve fits. Note that the range for $A_G$ is widened here compared to Section I.9 to accommodate the full range of needed enhancements (2-10 times). No theorem-level value of $A_G$ is derived in the present appendix.
+These ranges will be constrained by the forthcoming rotation-curve fits. The range for $A_G$ agrees with Section I.9's phenomenological interval for enhancements of 2–10 times. No theorem-level value of $A_G$ is derived in the present appendix.
 
 **Definition I.13a (Backbone-Channel-Recruitment Benchmark Branch).** The backbone-channel-recruitment benchmark branch is the subbranch of the galaxy-scale relaxation kernel (I.4) on which the discrete backbone is used to choose the preregistered test pair
 $$
@@ -1410,7 +1418,7 @@ The certificate is accepted only when (I.13d.3) holds, the local high-accelerati
 
 If $\mathfrak X_{\mathrm{DS}}$ is absent, the acceleration-scale identity $g_\Lambda=c^2\sqrt\Lambda/8$ remains available only on an independently accepted Definition H.0 bridge-law branch; it is not thereby identified with a realized observable. The remaining galaxy, cluster, lensing, homogeneous, and backreaction data remain phenomenological or branch-classification data.
 
-*Proof.* Items 2 and 3 supply a generally covariant action or retarded susceptibility with a conserved stress tensor. Items 5--10 are the finite projection maps to galaxy dynamics, lensing, clusters, local tests, CMB-era behavior, and homogeneous late-time evolution. Item 11 supplies the RCD-Buchert-Cheeger and elliptic scale bridge, while item 12 gives a finite admissible ansatz family with a strict PCE gap modulo response equivalence. Theorem D.8.9b fixes $\Theta_{\mathrm{DS}}^*$ uniquely in the retained quotient, and the projection maps then produce the stated kernels and stress-energy components with residuals $\mathcal R_{\mathrm{DS}}$. Without the certificate, at least one of the covariant source, kernel, projection maps, minimizer, conservation proof, or residual ledger is not fixed; Theorem P.14.1f therefore blocks theorem-level promotion beyond the acceleration bridge. ∎
+*Proof.* Items 2 and 3 supply a generally covariant action or retarded susceptibility with a conserved stress tensor. Items 5--10 are the finite projection maps to galaxy dynamics, lensing, clusters, local tests, CMB-era behavior, and homogeneous late-time evolution. Item 11 supplies the RCD-Buchert-Cheeger and elliptic scale bridge, while item 12 supplies the assumed unique minimizing response class $\Theta_{\mathrm{DS}}^*$ and strict PCE gap. Evaluating the registered projection maps on that selected response class gives the stated kernels and stress-energy components with residuals $\mathcal R_{\mathrm{DS}}$. Without an accepted $\mathfrak X_{\mathrm{DS}}$, this conditional theorem supplies no dark-sector determinacy conclusion. Theorem P.14.1f proves non-identifiability when two admissible completions satisfying all prior constraints give inequivalent outputs. ∎
 
 **Theorem I.13f (Harmonic Recoverability Realization of the Dark-Susceptibility Kernel).** Let $\mathcal D_B$ be a finite causal-diamond complex on a regular emergent metric branch, and choose a reference orientation set $E_+$ containing exactly one orientation of each retained unoriented inclusion edge. For $e:D_-\to D_+$ in $E_+$, let
 $$
@@ -1565,7 +1573,7 @@ o_y=Bx_y=Ry,
 R:=BK^{-1}B^*\succeq0.
 \tag{I.13h.2}
 $$
-Conversely, every symmetric positive-semidefinite response $R:Y\to Y$ has such a realization, for example $X=Y$, $K=I$, and $B=R^{1/2}$. Hence a collection of finite galaxy, cluster, lensing, homogeneous, and thin-sheet/source projections is generated without retuning by one convex quadratic action exactly when its assembled static response matrix is symmetric positive semidefinite. Its blocks necessarily obey reciprocity and
+Conversely, every symmetric positive-semidefinite response $R:Y\to Y$ has such a realization, for example $X=Y$, $K=I$, and $B=R^{1/2}$. Hence, when the finite galaxy, cluster, lensing, homogeneous and thin-sheet/source responses are registered in common conjugate source/output coordinates with the same inner product, they are generated without retuning by one convex quadratic action of (I.13h.1) exactly when the assembled static response matrix is symmetric positive semidefinite. Independently projected or differently normalized observational outputs require their specified projection maps and are not covered by this matrix criterion alone. Its blocks necessarily obey reciprocity and
 $$
 |\langle u,Rv\rangle|^2
 \le
@@ -1591,7 +1599,7 @@ $$
 $$
 and an exact rational basis and Hodge projector are obtained by Gaussian elimination. A current is simultaneously closed and coclosed exactly when it equals its harmonic projection.
 
-If a rational self-adjoint operator $\Lambda_h$ is supplied on $\mathcal H^1$, the compressed static kernel $\Lambda_h^{-1}$ exists and is positive exactly when every leading principal minor of the quadratic-form matrix $[\langle e_i,\Lambda_he_j\rangle]$ in any fixed rational basis is positive. These rank and minor tests terminate and, together with the nine-vector quotient tomography and trace datum of Theorem I.13f, decide the entire finite algebraic harmonic-recoverability subcertificate. They do not create the covariant, causal, or physical projection entries of Definition I.13d.
+If a rational self-adjoint operator $\Lambda_h$ is supplied on $\mathcal H^1$, the compressed static kernel $\Lambda_h^{-1}$ exists and is positive exactly when every leading principal minor of the quadratic-form matrix $[\langle e_i,\Lambda_he_j\rangle]$ in any declared rational basis is positive. These rank and minor tests terminate. For a complete terminating algebraic test, additionally supply the current, harmonic-to-null-response map, nine normalized null-response values, normalized trace datum and normalization constants as exact rational data in the registered bases, or supply terminating exact arithmetic and equality/order comparison for their declared number representation. Under that effective-data contract, elimination also checks harmonic stationarity and the nine-vector quotient tomography with its trace datum, deciding the finite algebraic subcertificate. The real-data identities remain valid without a claim of a uniform decision procedure. They do not create the covariant, causal, or physical projection entries of Definition I.13d.
 
 *Proof.* Finite Hodge decomposition gives $C^1=\operatorname{im}d_0\oplus\mathcal H^1\oplus\operatorname{im}\delta_1$ orthogonally. Rank-nullity and $\operatorname{im}d_0\subseteq\ker d_1$ give (I.13i.2). All matrices are rational, so exact elimination constructs the kernels, their intersection, and the orthogonal projector. The stationary equations are precisely $d_1J=0=\delta_0J$. Sylvester's criterion gives the final positive-definiteness equivalence and is a finite rational computation. ∎
 

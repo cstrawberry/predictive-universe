@@ -14,14 +14,14 @@ Within the declared awareness-first interpretation, POP and PCE organize finite 
 
 ## **The Core Informational Comparison**
 
-Appendix O, Theorem O.2 supplies a synchronized processing rhythm on its coherent-medium branch. Choose an energy origin for $\hat H_{\text{eff}}$ and assume $0<\langle\hat H_{\text{eff}}\rangle<\infty$. On this branch define
+Appendix O, Theorem O.2 identifies synchronized phase-sector minimizers and, under its low-noise detailed-balance hypotheses, stationary concentration near that set. Select a synchronized configuration on this branch and independently register its processing rhythm. Choose an energy origin for $\hat H_{\text{eff}}$ and assume $0<\langle\hat H_{\text{eff}}\rangle<\infty$. On this branch define
 $$
 \tau_{\text{medium}}
 :=
 \frac{\hbar}{\langle\hat H_{\text{eff}}\rangle}.
 \tag{L.0}
 $$
-This is an operational convention relative to the chosen energy origin, not an invariant energy-time equality. Appendix O calls a modulation of the registered rhythm a temporal wave.
+This is an operational convention relative to the chosen energy origin, not an invariant energy-time equality. A propagating modulation of the registered rhythm is a temporal wave in the sense of Appendix O, Definition O.1 only after its evolution equation, initial/boundary data, and causal-response law are specified.
 
 A temporal modulation has an electromagnetic interpretation only after an accepted Maxwell-carrier record supplies a conserved current, gauge field, source geometry, and nonzero radiating multipole. It has a gravitational interpretation only after an accepted metric branch supplies a complete conserved stress tensor, continuum limit, and Einstein-response map. Fourier frequency alone identifies neither channel and does not prove that they are one mechanism.
 
@@ -69,7 +69,7 @@ PCE may optimize over mappings satisfying these conditions. Minimization of an u
 
 ## **Lemma L.1 (Consequences of Registered Mapping Bounds)**
 
-Let $\mathcal C_{\mathrm{ctx}}$ be a complete metric space and let $\mathcal P_{\mathrm{control}}$ be finite-dimensional. Assume an admissible mapping $\mathcal M:\mathcal C_{\mathrm{ctx}}\to\mathcal P_{\mathrm{control}}$ satisfies
+Let $\mathcal C_{\mathrm{ctx}}\subseteq\mathbb R^{|\mathcal I|}$ be nonempty and complete for its registered norm metric, and let $\mathcal P_{\mathrm{control}}$ be finite-dimensional. Assume an admissible mapping $\mathcal M:\mathcal C_{\mathrm{ctx}}\to\mathcal P_{\mathrm{control}}$ satisfies
 $$ \|\mathcal M(c_1)-\mathcal M(c_2)\|_{\mathcal P}\le L_{\mathcal M}\|c_1-c_2\|_{\mathcal C}, $$
 $$ \|\mathcal M(c)\|_{\mathcal P}\le P_{\max}, $$
 and assume the feedback map has the form $c_{n+1}=F(\mathcal M(c_n))$, maps $\mathcal C_{\mathrm{ctx}}$ into itself, and has Lipschitz constant $L_F$ with $L_FL_{\mathcal M}<1$. Assume also that the physical cost is bounded on the closed control ball of radius $P_{\max}$.
@@ -126,7 +126,7 @@ This theorem exhausts finite operational sufficiency and its minimizers once the
 
 ### **Theorem L.2 (Electromagnetic Field on a Registered Coherent-Dipole Branch)**
 
-Assume that the context-to-control map is realized by a conserved classical current $J^\mu$ supported in a source of diameter $a$, that its electric dipole moment has a nonzero harmonic component at angular frequency $\omega$, that $a\ll c/\omega$, and that the observation point lies in the radiation zone. Assume Maxwell's equations for this current. Then the retarded solution has a nonzero radiation field whenever the transverse component of the dipole acceleration is nonzero. Its electromagnetic stress-energy tensor is
+Assume that the context-to-control map is realized by a conserved classical current $J^\mu$ supported in a source of diameter $a$, that its electric dipole moment has a nonzero harmonic component at angular frequency $\omega$, that $a\ll c/\omega$, and that the observation point lies in the radiation zone. Assume Maxwell's equations for this current. At leading electric-dipole order, the retarded radiation field is nonzero whenever the transverse component of the dipole acceleration is nonzero. Its electromagnetic stress-energy tensor is
 
 $$ T_{\mu\nu}^{(\text{EM})} = \frac{1}{\mu_0}\left(F_{\mu\alpha}F_{\nu}{}^{\alpha} - \frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right), \tag{L.4} $$
 
@@ -140,25 +140,31 @@ The PCE-optimized mapping determines control parameters:
 
 $$ \mathcal{M}(\text{context}_S) \to \{\omega_{\text{rad}}(t), E_0(t), \phi_{\text{rad}}(t), \vec{\epsilon}_{\text{rad}}(t)\} \tag{L.5} $$
 
-Coherence Mechanism: Within aggregate $S$ (Definition 29), constituent MPUs share information through network coupling (Definition 5). On branches satisfying the strict-improvement antecedent of Theorem 34, high-CC aggregates develop the capability to bias local 'Evolve' outcomes through POP/PCE optimization. For electromagnetic field generation, this requires coordinating $N_{\text{osc}}$ oscillating charge distributions to achieve phase coherence.
+Coherence Mechanism: Within aggregate $S$ (Definition 29), constituent MPUs acquire outcome information through registered network couplings, using the verification-and-update capability $b_v$ of Definition 5. On branches satisfying the strict-improvement antecedent of Theorem 34, high-CC aggregates develop the capability to bias local 'Evolve' outcomes through POP/PCE optimization. For electromagnetic field generation, this requires coordinating $N_{\text{osc}}$ oscillating charge distributions to achieve phase coherence.
 
-Assume $N_{\text{osc}}$ equal dipoles of peak amplitude $d_{\text{dip}}$ have a common polarization $\vec\epsilon$, a common frequency $\omega$, and propagation phases already included in $\phi_j$. Assume the source is electrically small, the coefficient $\Gamma_0\partial PP/\partial E_0$ is positive over the relevant range, and $R_{\text{osc}}$ is independent of $\{\phi_j\}$. Their complex dipole amplitude is
-$$ \vec{D}_{\text{total}} = d_{\text{dip}}\vec\epsilon\sum_{j=1}^{N_{\text{osc}}}e^{i\phi_j}. \tag{L.6} $$
-For independent uniform phases,
+Assume $N_{\mathrm{osc}}\ge1$ equal dipoles with peak amplitude $d_{\mathrm{dip}}>0$, common unit polarization $\vec\epsilon$, frequency $\omega$, and propagation phases included in $\phi_j$. Their complex amplitude is
 $$
-\mathbb E\left|\sum_j e^{i\phi_j}\right|^2
-=\sum_j1+\sum_{j\ne k}\mathbb E e^{i(\phi_j-\phi_k)}
-=N_{\text{osc}}.
+\vec D_{\mathrm{total}}
+=d_{\mathrm{dip}}\vec\epsilon\sum_{j=1}^{N_{\mathrm{osc}}}e^{i\phi_j}.
+\tag{L.6}
 $$
-For deterministic phases, the triangle inequality gives
+On the electrically small carrier branch, register a positive phase-independent transfer factor $A$ such that $E_0=A|\sum_j e^{i\phi_j}|$. Let $b>0$ be a constant linearized predictive-benefit coefficient on this phase family, for example the registered reference value of $\Gamma_0\partial PP/\partial E_0$, and let $R_{\mathrm{osc}}$ be phase-independent. The objective is
 $$
-\left|\sum_j e^{i\phi_j}\right|\le\sum_j|e^{i\phi_j}|=N_{\text{osc}},
+\mathcal F[\{\phi_j\}]
+=bE_0(\{\phi_j\})-\lambda R_{\mathrm{osc}}(N_{\mathrm{osc}}).
+\tag{L.7}
 $$
-with equality exactly when all phases agree modulo $2\pi$. Under the stated sign and phase-independence hypotheses, maximizing
-$$ \mathcal{F}[\{\phi_j\}] = \Gamma_0 \frac{\partial PP}{\partial E_0}E_0(\{\phi_j\}) - \lambda R_{\text{osc}}(N_{\text{osc}}) \tag{L.7} $$
-is therefore equivalent to maximizing the coherent sum, and every maximizer satisfies
-$$ \phi_j = \phi_{\text{rad}} \pmod{2\pi} \quad \text{for all }j. \tag{L.8} $$
-The standard time-averaged dipole formula then gives
+For independent uniform phases the cross terms have zero expectation, giving $\mathbb E|\sum_j e^{i\phi_j}|^2=N_{\mathrm{osc}}$. For deterministic phases,
+$$
+\left|\sum_j e^{i\phi_j}\right|\le N_{\mathrm{osc}},
+$$
+with equality precisely when all unit complex summands have the same phase. Since $bA>0$, maximizing this objective is equivalent to maximizing that modulus, so every maximizer satisfies
+$$
+\phi_j=\phi_{\mathrm{rad}}\pmod{2\pi}\quad\text{for all }j.
+\tag{L.8}
+$$
+If the coefficient in (L.7) is allowed to vary with $E_0$, its positivity alone is insufficient: the product of that coefficient with $E_0$ must itself be increasing on the admitted range.
+At leading electric-dipole order, the standard time-averaged radiated power is
 $$ P_{\text{rad}} = \frac{N_{\text{osc}}^2 d_{\text{dip}}^2 \omega^4}{12\pi\epsilon_{\text{vac}} c^3}. \tag{L.9} $$
 If any stated hypothesis fails, (L.7) does not by itself establish phase alignment or the $N_{\text{osc}}^2$ law.
 
@@ -340,7 +346,7 @@ Thus their generators and rates add, giving the displayed formula. The barrier s
 **Application to Candidate Substrates (illustrative):**
 
 **(A) Microtubule Networks (Penrose-Hameroff Substrate)**
-Following the Orchestrated Objective Reduction framework (Penrose, 1989, 1996; Hameroff & Penrose, 2014):
+For comparison with the proposed Orchestrated Objective Reduction framework (Penrose, 1996; Hameroff & Penrose, 2014), take the following illustrative microtubule inputs; their physical applicability is not assumed:
 - Structure: Cylindrical lattices, 25 nm diameter, 13 protofilaments
 - Model input: $\Gamma_0=k_BT/h=6.46\times10^{12}\,\mathrm{s}^{-1}$ at $T=310\,\mathrm K$
 - Assumed barrier: $\Delta E_{\text{shield}}=0.2\,\mathrm{eV}$
@@ -486,20 +492,20 @@ This solves the nonlinear gain, bandwidth, noise, and stability region for the d
 *The following section addresses reported anomalous phenomena requiring independent replication. Their inclusion demonstrates how the framework would accommodate such effects if validated, not endorsement of their current evidential status.*
 
 **Random Number Generator Studies**
-Meta-analyses report small deviations correlated with operator intention (Radin & Nelson, 1989; Cardeña, 2018; Bösch et al., 2006; Nelson et al., 2002):
-- Reported effect size: $|\Delta P| \sim 10^{-4}$ to $10^{-3}$
-- Required conditions per PU: Target must be at criticality (tunneling barrier fine-tuned)
-- Mechanism: Proposition L.4.6 with $\mathcal{A}_{\text{crit}} \sim 10^{37}$
+The cited literature includes intention experiments, reviews, and observational event-correlation studies (Radin & Nelson, 1989; Cardeña, 2018; Bösch et al., 2006; Nelson et al., 2002):
+- Statistical scope: Bösch et al. (2006) report very small, heterogeneous pooled effects and identify publication bias as a possible explanation. Nelson et al. (2002) analyze network-variance statistics around major world events, rather than an operator-intention protocol. These different statistics do not define a common probability shift $|\Delta P|$ without a study-specific conversion and uncertainty model.
+- Candidate condition: a registered phase-to-probability transfer may include a calibrated susceptibility near a specified target instability
+- Candidate mechanism: Proposition L.4.6 supplies gain composition only under its separately assumed linear-response and non-overlap conditions; $\mathcal A_{\mathrm{crit}}\sim10^{37}$ is an illustrative gain input
 
 **Double-Slit Interference Studies**
 Claims of consciousness-correlated pattern changes (Radin et al., 2013):
-- Reported visibility change: $\sim 0.1$%
-- PU interpretation: Would require photon-radical pair coupling at criticality
+- Reported statistic: in the first experiment's 50 test sessions, the composite spectral-magnitude/phase effect size was $es=z/\sqrt{N}=-0.73\pm0.14$ (standard error) at a 3 s lag; the 100 control sessions gave $0.04\pm0.10$. These standardized statistics are not a percentage change in fringe visibility.
+- Candidate PU interpretation: a photon-radical-pair model would require an independently registered carrier, target response, and operating regime; the reported statistics establish none of these entries
 
 **Critical Assessment:**
-These effects, if real, require:
-1. Extraordinary target criticality (beyond typical quantum systems)
-2. Precise tuning of experimental parameters
+Attribution to a CC mechanism requires:
+1. A registered carrier and phase-to-probability response within its validity domain
+2. Calibrated experimental parameters and an independent replication
 3. Isolation from conventional electromagnetic interference
 
 If the conditional response model of Proposition L.4.6 applies, a large measured susceptibility near a specified target instability could be tested as one possible gain mechanism. The model does not establish that criticality is necessary, that a stable target must give a null result, or that any reported deviation has this origin. Those conclusions require a registered carrier, a phase-to-probability transfer function, controls for conventional interference, and independent replication.
@@ -512,7 +518,7 @@ Likewise, an observer-state comparison can test whether a measured coherence tim
 
 ### **Theorem L.6 (First-Law Ledger and Non-Overlapping Stress-Energy Partition)**
 
-Let $\mathcal V$ be a specified control volume enclosing the aggregate, with outward-oriented boundary $\mathcal S$. Let $E_{\text{matter}}^{\mathcal V}$ and $E_{\text{EM}}^{\mathcal V}$ be the matter and electromagnetic energies stored inside $\mathcal V$, and define outward electromagnetic, heat, and mechanical powers through disjoint registered boundary channels. Then the first-law ledger is
+Let $\mathcal V$ be a stationary control volume for a registered time and energy-current convention, with outward boundary $\mathcal S$. Supply its local energy-balance certificate, with stored energies and all boundary powers measured in that same convention. An inertial laboratory balance or a stationary Killing-energy balance is an admissible branch. In a nonstationary geometry, any additional geometric-work term must be included in the registered input/work ledger before the displayed equality is used; covariant stress-energy conservation alone does not remove that term. Let $E_{\mathrm{matter}}^{\mathcal V}$ and $E_{\mathrm{EM}}^{\mathcal V}$ be the stored contributions, and assign external input and electromagnetic, heat and mechanical output to disjoint exhaustive channels. Then that energy-balance certificate gives
 $$
 P_{\text{agg}}
 =\frac{d}{dt}\left(E_{\text{matter}}^{\mathcal V}+E_{\text{EM}}^{\mathcal V}\right)
@@ -523,7 +529,7 @@ $$ T_{\mu\nu}^{(\text{MPU})}=T_{\mu\nu}^{(\text{matter})}+T_{\mu\nu}^{(\text{EM}
 If all external sources are included in this total tensor, its field equations imply
 $$ \nabla^\mu T_{\mu\nu}^{(\text{MPU})}=0. \tag{L.38} $$
 
-*Proof.* Integrate the local energy balance over $\mathcal V$ and apply the divergence theorem. The volume term is the time derivative of stored matter-plus-field energy, while the boundary terms are the outward powers. Thus
+*Proof.* Integrate the registered local energy-current balance over $\mathcal V$ using its time parameter and measure, and apply its boundary divergence theorem. By the certificate, the volume derivative is the stored matter-plus-field energy, the input term contains every admitted external or geometric work contribution, and the disjoint output terms are the declared boundary powers. Thus
 $$
 P_{\text{agg}}
 =\dot E_{\text{stored}}^{\mathcal V}
@@ -536,13 +542,14 @@ $$
 \dot E_{\text{matter}\to\text{EM}}
 +\dot E_{\text{EM}\leftarrow\text{matter}}=0. \tag{L.40}
 $$
-The outward electromagnetic power is
+On the inertial SI Maxwell branch, the exact outward electromagnetic power through the control boundary uses the complete fields:
 $$
-P_{\text{EM}}^{\text{out}}
+P_{\mathrm{EM}}^{\mathrm{out}}
 =\int_{\mathcal S}\vec S\cdot d\vec A
-=\int_{\mathcal S}\frac{1}{\mu_0}
-(\vec E_{\text{rad}}\times\vec B_{\text{rad}})\cdot d\vec A. \tag{L.41}
+=\int_{\mathcal S}\frac1{\mu_0}(\vec E\times\vec B)\cdot d\vec A.
+\tag{L.41}
 $$
+Replacing these fields by their radiation parts requires a separately controlled radiation-zone and, when used, time-averaging approximation. In another registered energy-current convention, the flux is the corresponding electromagnetic contribution to that current.
 The partition is non-overlapping by the stated definitions of stored energy and disjoint boundary channels. In steady state $\dot E_{\text{stored}}^{\mathcal V}=0$; only on that branch does input power equal the sum of outward powers. ∎
 
 Stress-Energy Accounting: On the SI Maxwell branch, the electromagnetic tensor is
@@ -559,7 +566,7 @@ The Lorentz-force exchange terms cancel between the two divergences. If no omitt
 $$ \nabla^\mu T_{\mu\nu}^{(\text{MPU})}=0. \tag{L.45} $$
 On the Einstein-equation branch of Theorem 50, the resulting source obeys
 $$ R_{\mu\nu}-\frac{1}{2}Rg_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G}{c^4}T_{\mu\nu}^{(\text{MPU})}. \tag{L.46} $$
-Internal transfers alter $T^{(\text{matter})}$ and $T^{(\text{EM})}$ but not their sum. Non-double-counting is therefore a property of the declared sector assignment and boundary ledger, not a consequence of labeling input power as radiated or retained.
+Internal matter-field exchange terms cancel in the divergence of the complete tensor; this does not make its pointwise value invariant under internal evolution. Energy density and spatial stress may redistribute while the total source remains covariantly conserved. Non-double-counting is a property of the declared sector assignment and boundary ledger, not a consequence of labeling input power as radiated or retained.
 
 **Theorem L.6a (Canonical Five-Sector Source Audit and Unique Ownership).** Fix an oriented spacetime slab and let $X$ be the real vector space of covariant slab records
 $$
@@ -615,11 +622,11 @@ The construction supplies one common audit and an exact no-double-counting test.
 
 ### **Theorem L.7 (Conditional Horizon-Thermodynamic Consistency of the Aggregate Source)**
 
-Assume the local-equilibrium horizon hypotheses of Theorems 48a.0 and 48a, the Area Law $S=\Sigma_I\mathcal A$ of Theorem 49, the Unruh temperature, and covariant conservation of the complete aggregate stress-energy tensor. Then the local Clausius relation implies the Einstein equation with that complete tensor as source, up to a cosmological constant. This is a consistency derivation for an independently specified source tensor; it does not derive an electromagnetic carrier, retained aggregate energy, or either channel's microscopic origin.
+Assume the local-equilibrium horizon hypotheses of Theorems 48a.0 and 48a, the saturated and calibrated area-law branch of Theorem 49 together with its uniform first-variation convergence hypothesis, the Unruh temperature, and covariant conservation of the complete aggregate stress-energy tensor. Work with the limiting horizon-entropy first variation after that refinement limit. Require the joint shrinking-patch, normalized boost-error and uniform optical-data conditions stated below for each base point and null direction, and the smoothness needed for the final Bianchi/conservation argument. Then the local Clausius relation implies the Einstein equation with that complete tensor as source, up to a cosmological constant. This is a consistency derivation for an independently specified source tensor; it does not derive an electromagnetic carrier, retained aggregate energy, or either channel's microscopic origin.
 
 Proof.
 
-From Appendix E (Theorem 49), the entropy of a causal horizon with area $\mathcal{A}$ is:
+Theorem 49 (Section 12), using Theorem E.6, gives the saturated area law and its conditional first-variation limit. Let $S$ be a potential for the limiting first variation $\delta S=\Sigma_I\delta\mathcal A$, with its additive constant chosen so that:
 
 $$ S = \frac{k_B c^3}{4G\hbar}\mathcal{A} = \Sigma_I \mathcal{A} \tag{L.47} $$
 
@@ -629,67 +636,82 @@ $$ \Sigma_I = k_B\sigma_{\text{link}} C_{\text{max}} = \frac{k_B\chi}{\eta\delta
 
 with channel surface density $\sigma_{\text{link}} = \chi/(\eta\delta^2)$ (Theorem E.3), MPU spacing $\delta$, geometric factor $\eta$, correlation factor $\chi$, and dimensionless Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6) channel capacity $C_{\text{max}}$ measured in nats. The factor $k_B$ in Equation (L.48) converts nats per unit area to thermodynamic entropy per unit area. Theorem E.2 gives $C_{\max}<\ln d_0$ on the refresh/minorization branch, and Proposition E.2a gives $C_{\max}\le\ln d_0-\ln2$ on the completed binary reset-support branch. The registered physical reset ledger $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$ is a separate result of Theorem 31.
 
-For a local causal horizon, let $k^\mu=dx^\mu/d\ell$ be tangent to hypersurface-orthogonal null generators, where the affine length $\ell\in[0,\ell_0]$ vanishes on the bifurcation two-surface. Choose the orientation
+At a base point $p$ and a null direction $k_0$, use a family of hypersurface-orthogonal horizon patches with affine length $0\le\ell\le h$, initial area $A_h>0$ and transverse diameter tending to zero. Parallel transport the generators for comparison with $k_0$. Require uniform convergence of the contractions $T_{\mu\nu}k^\mu k^\nu$ and $R_{\mu\nu}k^\mu k^\nu$ to their values at $(p,k_0)$. The optical certificate supplies initial expansion $\sup|\theta(0)|=o(h)$ and shear $\sup_{0\le\ell\le h}|\sigma|=o(1)$, together with uniformly bounded curvature and regular solutions over the patch. These are uniform shrinking-patch conditions, not consequences of continuity at one point with a transverse region of nonzero limiting size.
+
+Choose a positive boost scale $\kappa$ independent of $h$, with boost and surface orientation
 $$
-\chi^\mu=-\frac{\kappa\ell}{c^2}k^\mu,
+\chi^\mu=-\frac{\kappa\ell}{c^2}k^\mu+r_h^\mu,
 \qquad
-d\Sigma^\nu=k^\nu\,d\ell\,d\mathcal A.
+d\Sigma^\nu=k^\nu\,d\ell\,dA_\ell,
+\qquad
+\sup|r_h|=o(\kappa h/c^2).
 $$
-The approximate boost Killing field $\chi^\mu$ therefore vanishes at $\ell=0$. If $T_{\mu\nu}^{(\text{MPU})}$ is continuous at the base point, its heat flux is
+The bounded complete source and this remainder certificate give
 $$
 \delta Q
-=\int T_{\mu\nu}^{(\text{MPU})}\chi^\mu d\Sigma^\nu
-=-\frac{\kappa}{c^2}\int_0^{\ell_0}\!\int_{\mathcal A}
-\ell\,T_{\mu\nu}^{(\text{MPU})}k^\mu k^\nu\,d\mathcal A\,d\ell
-=-\frac{\kappa\mathcal A\ell_0^2}{2c^2}T_{\mu\nu}^{(\text{MPU})}k^\mu k^\nu+o(\ell_0^2). \tag{L.49}
+=-\frac{\kappa A_hh^2}{2c^2}
+T_{\mu\nu}(p)k_0^\mu k_0^\nu+o(A_hh^2).
+\tag{L.49}
 $$
-For the additional aggregate contribution, linearity gives
+Indeed, uniform convergence replaces the contraction by its base-point value in the weighted integral, $\int_0^h\ell\,d\ell=h^2/2$, and the boost-error integral is $o(A_hh^2)$. The optical estimate below gives $dA_\ell=(1+o(1))dA_0$. Every additional source contribution enters linearly; in particular,
 $$
-\delta Q_{\text{agg}}
-=-\frac{\kappa}{c^2}\int_0^{\ell_0}\!\int_{\mathcal A}\ell
-\left(T_{\mu\nu}^{(\text{EM})}+\Delta T_{\mu\nu}^{(\text{matter})}\right)
-k^\mu k^\nu\,d\mathcal A\,d\ell. \tag{L.50}
+\delta Q_{\mathrm{agg}}
+=-\frac{\kappa}{c^2}\int_0^h\!\int
+\ell\left(T_{\mu\nu}^{(\mathrm{EM})}
++\Delta T_{\mu\nu}^{(\mathrm{matter})}\right)
+k^\mu k^\nu\,dA_\ell\,d\ell+o(A_hh^2).
+\tag{L.50}
+$$
+On the independently certified thermal branch,
+$$
+T=\frac{\hbar\kappa}{2\pi k_Bc},
+\tag{L.51}
+$$
+and require the normalized local Clausius identity
+$$
+\delta Q-T\delta S=o(A_hh^2).
+\tag{L.52}
+$$
+The limiting entropy first variation gives
+$$
+T\delta S=\frac{\hbar\kappa}{2\pi k_Bc}\Sigma_I\delta A.
+\tag{L.53}
 $$
 
-The Unruh temperature associated with acceleration $\kappa$ is
-$$ T = \frac{\hbar\kappa}{2\pi k_B c}. \tag{L.51} $$
-On the local-equilibrium branch of Theorems 48a.0 and 48a, impose
-$$ \delta Q = T\delta S. \tag{L.52} $$
-Since $S=\Sigma_I\mathcal A$, the entropy side is
-$$ T\delta S=\frac{\hbar\kappa}{2\pi k_B c}\Sigma_I\delta\mathcal A. \tag{L.53} $$
-
-For a four-dimensional null congruence, the Raychaudhuri equation is
+The four-dimensional Raychaudhuri equation is
 $$
 \frac{d\theta}{d\ell}
-=-\frac{1}{2}\theta^2-\sigma_{ab}\sigma^{ab}+\omega_{ab}\omega^{ab}
--R_{\mu\nu}k^\mu k^\nu. \tag{L.54}
+=-\frac12\theta^2-\sigma_{ab}\sigma^{ab}
++\omega_{ab}\omega^{ab}-R_{\mu\nu}k^\mu k^\nu.
+\tag{L.54}
 $$
-Hypersurface orthogonality gives $\omega_{ab}=0$. Choose the local-equilibrium cross-section so that $\theta(0)=0$ and $\sigma_{ab}(0)=0$, and assume the curvature is continuous. Then $\theta^2$ and $\sigma_{ab}\sigma^{ab}$ contribute only beyond first order, so
-$$ \theta(\ell)=-\ell R_{\mu\nu}k^\mu k^\nu+O(\ell^2). \tag{L.55} $$
-Using $d\mathcal A/d\ell=\theta\mathcal A$ and integrating from $0$ to $\ell_0$ gives
+Hypersurface orthogonality sets $\omega_{ab}=0$. The uniform initial, shear and curvature bounds first give $\theta=O(h)+o(h)$ on the interval; integrating the equation and using uniform convergence then gives
 $$
-\delta\mathcal A
-=-\frac{\mathcal A\ell_0^2}{2}R_{\mu\nu}k^\mu k^\nu+o(\ell_0^2). \tag{L.56}
+\theta(\ell)=-\ell R_{\mu\nu}(p)k_0^\mu k_0^\nu+o(h)
+\tag{L.55}
 $$
-Substitution of (L.49), (L.53), and (L.56) into (L.52), followed by cancellation of the common factor $-\kappa\mathcal A\ell_0^2/2$, yields
+uniformly for $0\le\ell\le h$. Thus $dA_\ell/d\ell=\theta\,dA_\ell$ gives
 $$
-T_{\mu\nu}^{(\text{MPU})}k^\mu k^\nu
-=\frac{\hbar c\Sigma_I}{2\pi k_B}R_{\rho\sigma}k^\rho k^\sigma. \tag{L.57}
+\delta A=-\frac{A_hh^2}{2}R_{\mu\nu}(p)k_0^\mu k_0^\nu
++o(A_hh^2).
+\tag{L.56}
 $$
-Equation (L.47) gives $\Sigma_I=k_Bc^3/(4G\hbar)$, and hence
+Dividing (L.52) by $A_hh^2$ and taking the limit yields
 $$
-R_{\mu\nu}k^\mu k^\nu
-=\frac{8\pi G}{c^4}T_{\mu\nu}^{(\text{MPU})}k^\mu k^\nu
+T_{\mu\nu}(p)k_0^\mu k_0^\nu
+=\frac{\hbar c\Sigma_I}{2\pi k_B}
+R_{\mu\nu}(p)k_0^\mu k_0^\nu.
+\tag{L.57}
 $$
-for every null vector $k^\mu$. Therefore
-$R_{\mu\nu}-(8\pi G/c^4)T_{\mu\nu}^{(\text{MPU})}=f g_{\mu\nu}$ for a scalar $f$. Covariant conservation of $T_{\mu\nu}^{(\text{MPU})}$ and the contracted Bianchi identity give
-$$
-\nabla_\nu f=\frac12\nabla_\nu R,
-$$
-so $f=R/2-\Lambda$ on each connected component. Thus
-$$ R_{\mu\nu} - \frac{1}{2}R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}^{(\text{MPU})}. \tag{L.58} $$
+The calibrated value $\Sigma_I=k_Bc^3/(4G\hbar)$ therefore gives $S_{\mu\nu}k^\mu k^\nu=0$ for all null $k$, where $S_{\mu\nu}=R_{\mu\nu}-(8\pi G/c^4)T_{\mu\nu}$.
 
-This calculation applies only on the stated local-equilibrium horizon branch. The aggregate contribution enters through $T_{\mu\nu}^{(\text{MPU})}$ as defined in Equation (L.37) and Definition B.8. ∎
+For completeness, in an orthonormal frame of signature $-+++$ take $k=(1,\mathbf n)$ for every unit spatial $\mathbf n$. Comparing $\mathbf n$ with $-\mathbf n$ gives $S_{0i}=0$. Taking coordinate axes gives $S_{ii}=-S_{00}$, and taking $(e_i+e_j)/\sqrt2$ gives $S_{ij}=0$ for $i\ne j$. Hence $S_{\mu\nu}=f g_{\mu\nu}$. On the stipulated smooth conserved-source branch, the contracted Bianchi identity implies $\nabla_\nu f=\frac12\nabla_\nu R$, so $f=R/2-\Lambda$ with constant $\Lambda$ on each connected component. Therefore
+$$
+R_{\mu\nu}-\frac12Rg_{\mu\nu}+\Lambda g_{\mu\nu}
+=\frac{8\pi G}{c^4}T_{\mu\nu}^{(\mathrm{MPU})}.
+\tag{L.58}
+$$
+The source, thermal and normalized shrinking-patch certificates are independent hypotheses of this compatibility derivation. It constructs neither an aggregate carrier nor those certificates. ∎
 
 ### **Remark L.7.1 (Consistency Check vs. Independent Derivation)**
 
@@ -735,7 +757,7 @@ Proof.
 
 ### **Step 1: Phase Mismatch Generation**
 
-Write $\tau_0:=\tau_{\text{medium}}$ and assume $|\delta\tau(x,t)|\le q\tau_0$ for some $0<q<1$. The exact identity
+Write $\tau_0:=\tau_{\text{medium}}$ and assume $|\delta\tau(x,t)|\le q\tau_0$ for some $0<q<1$, with the supremum taken over the interval joining $0$ and $t$. The exact identity
 $$
 \frac{1}{\tau_0+z}=\frac{1}{\tau_0}-\frac{z}{\tau_0^2}
 +\frac{z^2}{\tau_0^2(\tau_0+z)}
@@ -744,7 +766,7 @@ gives a remainder bounded by $|z|^2/[\tau_0^3(1-q)]$. Hence
 $$
 \phi_i(t)=\frac{t}{\tau_0}-\frac{1}{\tau_0^2}\int_0^t\delta\tau(x_i,t')\,dt'+R_i(t),
 \qquad
-|R_i(t)|\le\frac{t\|\delta\tau\|_\infty^2}{\tau_0^3(1-q)}.
+|R_i(t)|\le\frac{|t|\|\delta\tau\|_\infty^2}{\tau_0^3(1-q)}.
 $$
 For $\delta\tau(x,t)=\delta\tau_0(x)\cos(\omega t)$ with $\omega\ne0$,
 $$
@@ -755,35 +777,40 @@ $$
 \Delta\phi_{ij}(t)
 =-\frac{\nabla\delta\tau_0(x_j)\cdot(x_i-x_j)}{\omega\tau_0^2}\sin(\omega t)
 +O\!\left(\frac{\|D^2\delta\tau_0\|_\infty|x_i-x_j|^2}{|\omega|\tau_0^2}
-+\frac{t\|\delta\tau\|_\infty^2}{\tau_0^3(1-q)}\right). \tag{L.60a}
++\frac{|t|\|\delta\tau\|_\infty^2}{\tau_0^3(1-q)}\right). \tag{L.60a}
 $$
 
 A rapid spatially varying modulation therefore produces an oscillatory phase mismatch proportional to the modulation amplitude and its spatial gradient. This is the input required for the coherence-restoring gauge response discussed below.
 
 ### **Step 2: Reformulation via Cycle-Rate Perturbation**
 
-Define the cycle-rate perturbation exactly by
+Define the cycle-rate perturbation by
 $$
-\delta\nu(x,t):=\frac{1}{\tau(x,t)}-\frac{1}{\tau_0},
+\delta\nu(x,t):=\frac{1}{\tau(x,t)}-\frac{1}{\tau_0}.
+$$
+A separate harmonic-rate branch assumes
+$$
+\delta\nu(x,t)=\delta\nu_0(x)\cos(\omega t),
 \qquad
-\delta\nu(x,t)=\delta\nu_0(x)\cos(\omega t).
+|\delta\nu_0(x)|<\tau_0^{-1},
+\qquad \omega\ne0.
 $$
-Then, for $\omega\ne0$,
+Its positive period is $\tau(x,t)=[\tau_0^{-1}+\delta\nu_0(x)\cos(\omega t)]^{-1}$. Integrating the rate with $\phi_i(0)=0$ gives exactly
 $$
-\phi_i(t)=\frac{t}{\tau_0}+\frac{\delta\nu_0(x_i)}{\omega}\sin(\omega t)
+\phi_i(t)=\frac{t}{\tau_0}+\frac{\delta\nu_0(x_i)}{\omega}\sin(\omega t),
 $$
-exactly. The exact link difference is
+and hence
 $$
 \Delta\phi_{ij}(t)
 =\frac{\delta\nu_0(x_i)-\delta\nu_0(x_j)}{\omega}\sin(\omega t). \tag{L.60b}
 $$
-Consequently the specified phase cost is exactly
+The specified link cost is therefore
 $$
 V_{\text{prop}}^{(\text{phase})}
 =\frac{\kappa_{\text{phase}}\sin^2(\omega t)}{\omega^2}
 \sum_{\langle ij\rangle}|\delta\nu_0(x_i)-\delta\nu_0(x_j)|^2. \tag{L.61}
 $$
-The change from $\delta\tau$ to $\delta\nu$ is only a change of variable; it does not derive a radiating current or alter the $1/\omega$ phase factor. Radiation requires the independent carrier transfer introduced in Step 3.
+The reciprocal change of variables is exact, but a sinusoidal period perturbation generally produces a rate with a constant shift and higher harmonics. Equations (L.60b)–(L.61) apply to the harmonic-rate ansatz; the sinusoidal-period ansatz in Step 1 has its stated perturbative error. Neither ansatz supplies the independent radiating-current transfer required in Step 3.
 
 ### **Step 3: Gauge Field Compensation**
 
@@ -792,32 +819,34 @@ $$
 A_\mu\to A_\mu-g_{\text{em}}^{-1}\partial_\mu\phi.
 \tag{L.62}
 $$
-Since $\partial_t\phi_i=\delta\nu_0(x_i)\cos(\omega t)$, the local scalar-potential response is
+The oscillatory phase $\phi_i^{\mathrm{osc}}:=\phi_i-t/\tau_0$ satisfies $\partial_t\phi_i^{\mathrm{osc}}=\delta\nu_0(x_i)\cos(\omega t)$; the full derivative is $\partial_t\phi_i=\tau_0^{-1}+\delta\nu_0(x_i)\cos(\omega t)$. Consequently the modulation of the time-component compensation potential obeys
 $$
-A_0(x,t)\propto \frac{1}{g_{\text{em}}}\delta\nu_0(x)\cos(\omega t).
+\delta A_0(x,t)\propto \frac{1}{g_{\text{em}}}\delta\nu_0(x)\cos(\omega t),
 $$
+with the proportionality and sign determined by (L.62) and the registered time-coordinate normalization.
 The phase-compensation potential alone has zero field strength. On an additional coherent-charge carrier branch, assume a calibrated linear transfer
 $$p_0=K_\nu\delta\nu_0,$$
-where $K_\nu$ has units of dipole moment times time. For $p(t)=p_0\cos(\omega t)$, the radiation-zone electric field is
+where $K_\nu$ has units of dipole moment times time. On the leading electric-dipole branch, for $\mathbf p(t)=\mathbf p_0\cos(\omega t)$,
 $$
-\vec E_{\text{rad}}(\mathbf r,t)
+\mathbf E_{\mathrm{dip}}(\mathbf r,t)
 =\frac{\omega^2}{4\pi\epsilon_{\mathrm{vac}}c^2r}
-\widehat{\mathbf r}\times(\widehat{\mathbf r}\times\mathbf p_0)
-\cos[\omega(t-r/c)]+O(r^{-2}), \tag{L.63}
+\widehat{\mathbf r}\times(\mathbf p_0\times\widehat{\mathbf r})
+\cos[\omega(t-r/c)], \tag{L.63}
 $$
-and $\vec B_{\text{rad}}=c^{-1}\widehat{\mathbf r}\times\vec E_{\text{rad}}+O(r^{-2})$. Therefore the cycle-averaged far-zone energy density satisfies
+with $\mathbf B_{\mathrm{dip}}=c^{-1}\widehat{\mathbf r}\times\mathbf E_{\mathrm{dip}}$. Thus
 $$
-\langle u_{\text{EM}}\rangle
-=\epsilon_{\mathrm{vac}}\langle|\vec E_{\text{rad}}|^2\rangle
+\langle u_{\mathrm{dip}}\rangle
+=\epsilon_{\mathrm{vac}}\langle|\mathbf E_{\mathrm{dip}}|^2\rangle
 \propto\frac{\omega^4K_\nu^2\delta\nu_0^2}{r^2}. \tag{L.64}
 $$
-The exact change of variables is
+For a finite source, its higher-multipole far-field correction can also scale as $r^{-1}$; it is not included in an $O(r^{-2})$ near-field remainder. Theorem L.8.2c gives an explicit amplitude-error certificate for transferring the dipole prediction to the complete Maxwell field.
+
+The exact reciprocal identity is
 $$
-\delta\nu
-=-\frac{\delta\tau}{\tau_0^2}
-+\frac{\delta\tau^2}{\tau_0^2(\tau_0+\delta\tau)},
+\delta\nu=-\frac{\delta\tau}{\tau_0^2}
++\frac{\delta\tau^2}{\tau_0^2(\tau_0+\delta\tau)}.
 $$
-so the leading amplitude relation is $\delta\nu_0=-\delta\tau_0/\tau_0^2$ with a remainder of order $\delta\tau_0^2/\tau_0^3$. The radiation law remains conditional on the calibrated transfer and nonzero dipole source.
+For a small sinusoidal period perturbation, its leading harmonic amplitude is $\delta\nu_0=-\delta\tau_0/\tau_0^2$, with rate error $O(\delta\tau_0^2/\tau_0^3)$ including other harmonics. The radiation statement requires the calibrated carrier transfer and the declared dipole approximation or complete-field error certificate.
 
 (b) Low-Frequency Regime ($\omega\tau_0\ll1$) → Conditional Gravitational Response
 
@@ -833,14 +862,25 @@ $$
 
 ### **Step 2: Retained Energy Density**
 
-Let $\eta_{\text{ret}}\in[0,1]$ be the fraction of energy supplied during $\tau_c$ that remains localized in the source volume $V_S$ at the measurement time. Then
-$$ \langle\delta u\rangle=\frac{\eta_{\text{ret}}\langle\delta P\rangle\tau_c}{V_S}=\frac{\eta_{\text{ret}}P_{\text{agg}}\tau_c}{V_S}. \tag{L.66} $$
+Let $\eta_{\mathrm{ret}}\in[0,1]$ denote the fraction of the registered input energy $P_{\mathrm{agg}}\tau_c$ assigned to an additional localized matter sector at measurement time. The energy-current ledger must identify this as an increment relative to the baseline and exclude energy already counted in the electromagnetic sector or other stored terms. For constant mean input over $\tau_c>0$ and source volume $V_S>0$,
+$$
+\delta E_{\mathrm{ret}}=\eta_{\mathrm{ret}}P_{\mathrm{agg}}\tau_c,
+\qquad
+\langle\delta u\rangle=\frac{\delta E_{\mathrm{ret}}}{V_S}.
+\tag{L.66}
+$$
+This is a volume average; a local uniform-density model is an additional assumption.
 
 ### **Step 3: Stress-Energy Sourcing**
 
-In a local orthonormal rest frame, the matter energy density is
-$$ T_{\hat0\hat0}^{(\text{matter})}=\epsilon_{\text{baseline}}+\delta u
-=\epsilon_{\text{baseline}}+\frac{\eta_{\text{ret}}P_{\text{agg}}\tau_c}{V_S}. \tag{L.67} $$
+On that uniform matter-increment branch, in a local orthonormal rest frame,
+$$
+T_{\hat0\hat0}^{(\mathrm{matter})}
+=\epsilon_{\mathrm{baseline}}+\delta u
+=\epsilon_{\mathrm{baseline}}+
+\frac{\eta_{\mathrm{ret}}P_{\mathrm{agg}}\tau_c}{V_S}.
+\tag{L.67}
+$$
 
 ### **Step 4: Geometric Response**
 
@@ -862,8 +902,13 @@ r,&0\le r\le R_S,\\
 R_S^3/r^2,&r\ge R_S.
 \end{cases}
 $$
-For a radial target with $L_q$ small relative to the field-variation scale,
-$$ \Delta\Phi=|\nabla\delta\Phi(r)|L_q+O(L_q^2\sup|\nabla^2\delta\Phi|). \tag{L.71} $$
+For a radial target segment of length $L_q>0$ on which $\delta\Phi$ is twice continuously differentiable, Taylor's theorem gives, with $\Delta\Phi$ denoting the magnitude of its endpoint difference,
+$$
+\Delta\Phi=|\nabla\delta\Phi(r)|L_q+
+O\!\left(L_q^2\sup_{\text{segment}}\|D^2\delta\Phi\|\right).
+\tag{L.71}
+$$
+The Hessian bound controls variation along the segment; the Laplacian alone does not supply that bound.
 The exterior branch $r>R_S$ is exactly the retained-energy formula of Theorem L.3. Finally,
 $$ \Delta\tau_d=\frac{\Delta\Phi}{c^2}\tau_c+O\!\left(\tau_c\frac{\Phi\Delta\Phi}{c^4},\tau_c\frac{(\Delta\Phi)^2}{c^4}\right). \tag{L.72} $$
 
@@ -900,7 +945,7 @@ $$
 \widetilde{\delta\nu}_\Sigma(\sigma,\omega)\,dA.
 \tag{L.8.2b.1}
 $$
-An accepted $\mathfrak C_{\mathrm{cav}}$ certifies localization, small amplitude, the Theorem L.8 and G.3 carrier hypotheses, a Maxwell radiation branch, a non-overlapping nonnegative power ledger, and either a positive-weight line with $\mathbf p_\omega\ne0$ or
+An accepted $\mathfrak C_{\mathrm{cav}}$ certifies localization, small amplitude, the carrier hypotheses of Theorem L.8 and the phase-frame and connection hypotheses of Section G.3, and the retarded Maxwell branch. It also supplies the complete-field amplitude-error bound and spectral power identity specified in Theorem L.8.2c, a non-overlapping nonnegative power ledger, and either a positive-weight line with $\omega\ne0$ and $\mathbf p_\omega\ne0$ or
 $$
 0<\int_{\mathcal B_{\mathrm{ret}}}
 \omega^4|\mathbf p_\omega|^2\,d\mu_{\mathrm{spec}}(\omega)<\infty.
@@ -910,55 +955,74 @@ The record also fixes spectral normalization and residuals. Detectability claims
 
 ### **Theorem L.8.2c (Dipole Radiation on the Certified Branch)**
 
-For $\mathbf p(t)=\operatorname{Re}(\mathbf p_\omega e^{-i\omega t})$ and a localized source satisfying the radiation-zone hypotheses in Definition L.8.2b,
+Consider a harmonic conserved current with angular frequency $\omega\ne0$, supported in $|\mathbf x|\le a$, with sufficient regularity and finite moments for the uniform retarded far-field expansion. Write $\mathbf p(t)=\operatorname{Re}(\mathbf p_\omega e^{-i\omega t})$, $k=\omega/c$ and $P_{\mathbf n}=I-\mathbf n\mathbf n^\top$. Its exact outgoing transverse amplitude and dipole part are
+$$
+\mathcal A_\omega(\mathbf n)
+=\frac{i\mu_0\omega}{4\pi}P_{\mathbf n}
+\int\mathbf J_\omega(\mathbf x)e^{-ik\mathbf n\cdot\mathbf x}\,d^3x,
+\qquad
+D_\omega(\mathbf n)
+=\frac{\omega^2}{4\pi\epsilon_{\mathrm{vac}}c^2}P_{\mathbf n}\mathbf p_\omega.
+$$
+Thus $\mathbf E_\omega=e^{ikr}\mathcal A_\omega/r+O(r^{-2})$. With $\mathcal R_\omega=\mathcal A_\omega-D_\omega$,
 $$
 \langle u_{\mathrm{EM}}\rangle
-=\frac{\omega^4}{32\pi^2\epsilon_{\mathrm{vac}}c^4r^2}
-\left|\widehat{\mathbf r}\times
-(\widehat{\mathbf r}\times\mathbf p_\omega)\right|^2+O(r^{-3}),
+=\frac{\epsilon_{\mathrm{vac}}}{2r^2}
+|D_\omega(\widehat{\mathbf r})+\mathcal R_\omega(\widehat{\mathbf r})|^2
++O(r^{-3}).
 \tag{L.8.2c.1}
 $$
-and
+The leading electric-dipole power is
 $$
-\langle P_{\mathrm{EM}}(\omega)\rangle
+P_{\mathrm{dip}}(\omega)
 =\frac{\omega^4|\mathbf p_\omega|^2}
 {12\pi\epsilon_{\mathrm{vac}}c^3}.
 \tag{L.8.2c.2}
 $$
+A complete-field certificate with $0\le\eta<1$ and
+$\|\mathcal R_\omega\|_{L^2(S^2)}
+\le\eta\|D_\omega\|_{L^2(S^2)}$
+gives
+$$
+(1-\eta)^2P_{\mathrm{dip}}(\omega)
+\le P_{\mathrm{EM}}(\omega)
+\le(1+\eta)^2P_{\mathrm{dip}}(\omega).
+$$
+A nonzero dipole coefficient alone is a statement about the leading dipole model; the complete field uses this error certificate.
 
-*Proof.* In Lorenz gauge, the retarded solution of $\Box A^\mu=\mu_0J^\mu$ is
+*Proof.* On the stated retarded branch, the spatial vector potential is
 $$
-A^\mu(t,\mathbf r)=\frac{\mu_0}{4\pi}\int
-\frac{J^\mu(t-|\mathbf r-\mathbf x|/c,\mathbf x)}{|\mathbf r-\mathbf x|}\,d^3x.
+\mathbf A(t,\mathbf r)=\frac{\mu_0}{4\pi}
+\int\frac{\mathbf J(t-|\mathbf r-\mathbf x|/c,\mathbf x)}
+{|\mathbf r-\mathbf x|}\,d^3x.
 $$
-For a source of diameter $a\ll r$, expand the denominator and retarded time to leading order in $a/r$. Charge conservation gives
+Expanding in $a/r$ retains the finite-source phase $e^{-ik\mathbf n\cdot\mathbf x}$ in its $r^{-1}$ coefficient. Taking the transverse electric field $-\partial_t\mathbf A_\perp$ gives $\mathcal A_\omega$ above; the outgoing magnetic amplitude is $\mathbf n\times\mathbf E_\omega/c+O(r^{-2})$. Current conservation and the vanishing boundary term give
 $$
-\int\mathbf J(t,\mathbf x)\,d^3x
-=\frac{d}{dt}\int\mathbf x\rho(t,\mathbf x)\,d^3x
-=\dot{\mathbf p}(t),
+\int\mathbf J_\omega\,d^3x=-i\omega\mathbf p_\omega.
 $$
-where the boundary term vanishes because the source is localized. Hence the transverse radiation field has leading complex amplitudes
+Replacing the finite-source phase by $1$ therefore gives $D_\omega$. More precisely, $|e^{-is}-1|\le|s|$ yields the explicit absolute bound
 $$
-\mathbf E_\omega(\mathbf r)
-=\frac{\omega^2e^{i\omega r/c}}{4\pi\epsilon_{\mathrm{vac}}c^2r}
-\widehat{\mathbf r}\times(\mathbf p_\omega\times\widehat{\mathbf r})+O(r^{-2}),
+|\mathcal R_\omega(\mathbf n)|
+\le\frac{\mu_0|\omega|}{4\pi}|k|a
+\int|\mathbf J_\omega(\mathbf x)|\,d^3x.
+$$
+This correction is another $r^{-1}$ far-field amplitude. Small $|k|a$ supplies an absolute bound but needs comparison with $D_\omega$ to establish the relative certificate.
+
+For real harmonic fields the mean squared field is half the squared complex amplitude. Since $1/(\mu_0c^2)=\epsilon_{\mathrm{vac}}$, the electric and magnetic contributions give (L.8.2c.1) and
+$P_{\mathrm{EM}}=\epsilon_{\mathrm{vac}}c\|\mathcal A_\omega\|_2^2/2$.
+For a possibly complex dipole vector,
+$$
+|P_{\mathbf n}\mathbf p_\omega|^2
+=|\mathbf p_\omega|^2-|\mathbf n\cdot\mathbf p_\omega|^2,
 \qquad
-\mathbf B_\omega=\frac{1}{c}\widehat{\mathbf r}\times\mathbf E_\omega+O(r^{-2}).
+\int_{S^2}n_i n_j\,d\Omega=\frac{4\pi}{3}\delta_{ij}.
 $$
-The certificate supplies localization, harmonic source data, and the Maxwell radiation branch, so these hypotheses hold. For a real harmonic field, $\langle|\mathbf E|^2\rangle=|\mathbf E_\omega|^2/2$ and similarly for $\mathbf B$. Since $1/(\mu_0c^2)=\epsilon_{\mathrm{vac}}$ and the leading fields are transverse,
-$$
-\langle u_{\mathrm{EM}}\rangle
-=\frac{\epsilon_{\mathrm{vac}}}{4}|\mathbf E_\omega|^2
-+\frac{1}{4\mu_0}|\mathbf B_\omega|^2
-=\frac{\epsilon_{\mathrm{vac}}}{2}|\mathbf E_\omega|^2,
-$$
-which gives (L.8.2c.1). Choose the polar axis along $\mathbf p_\omega$. Then
-$$
-\int_{S^2}|\widehat{\mathbf r}\times(\widehat{\mathbf r}\times\mathbf p_\omega)|^2d\Omega
-=2\pi|\mathbf p_\omega|^2\int_0^\pi\sin^3\theta\,d\theta
-=\frac{8\pi}{3}|\mathbf p_\omega|^2.
-$$
-The outward power is $c r^2\int\langle u_{\mathrm{EM}}\rangle d\Omega$, which yields (L.8.2c.2). The certified positive finite spectral integral gives $P_{\mathrm{EM}}>0$ and finiteness; the separately certified non-overlapping channel ledger gives $P_{\mathrm{EM}}\le P_{\mathrm{agg}}$. Detector response is not used in either conclusion. ∎
+The latter identity follows from rotation symmetry and its trace $\int_{S^2}|\mathbf n|^2d\Omega=4\pi$. Consequently
+$\int_{S^2}|P_{\mathbf n}\mathbf p_\omega|^2d\Omega
+=8\pi|\mathbf p_\omega|^2/3$,
+which gives (L.8.2c.2) without requiring a real polarization axis. The triangle and reverse triangle inequalities applied to $D_\omega+\mathcal R_\omega$ prove the two power bounds.
+
+For a spectrum, the certificate additionally identifies its registered averaged power with the integral of these mode powers against $\mu_{\mathrm{spec}}$, with a common $\eta<1$. This includes the time-window normalization and elimination of cross terms required by that identity. The positive finite integral in (L.8.2b.2) then gives $0<P_{\mathrm{EM}}<\infty$. The independent non-overlapping channel ledger supplies $P_{\mathrm{EM}}\le P_{\mathrm{agg}}$. No detector response or general source realization follows from these conditional estimates. ∎
 
 ### **Remark L.8.2d (Scope)**
 
@@ -1044,7 +1108,7 @@ Significance Test: Apply χ² test for deviation significance.
 
 ### **Statistical Requirements:**
 
-Let $\Delta p$ denote a preregistered probability difference for a specified endpoint. Let $p_1=p_0+\Delta p\in(0,1)$ be the preregistered positive alternative. For a one-sided asymptotic $z$-test of size $\alpha$ and target power $1-\beta$, use
+For independent identically distributed Bernoulli trials with a known baseline $p_0\in(0,1)$, let $\Delta p>0$ and $p_1=p_0+\Delta p\in(0,1)$ be the preregistered alternative. Write $z_q$ for the standard-normal $q$-quantile. For a one-sided asymptotic $z$-test with $0<\alpha,\beta<1/2$, size $\alpha$ and target power $1-\beta$, the normal approximation gives
 $$
 N_{\mathrm{trials}}
 \approx
@@ -1104,14 +1168,14 @@ Mechanical Work: $P_{mech}$ measured at the control-volume boundary.
 
 Stored Energy: $E_{stored}$ includes thermal, electromagnetic, chemical, and mechanical storage inside the control volume. In an isothermal lumped model its thermal term is $C_VT$, so $dE_{thermal}/dt=C_VdT/dt$ only when $C_V$ is constant.
 
-Energy Closure Test:
+Energy Closure Test: for $P_{\mathrm{agg}}>0$, use
 $$
-\epsilon_{closure}
-=\frac{\left|P_{agg}-P_{EM}-P_{heat,out}-P_{mech}-dE_{stored}/dt\right|}
-{P_{agg}}.
+\epsilon_{\mathrm{closure}}
+=\frac{\left|P_{\mathrm{agg}}-P_{\mathrm{EM}}-P_{\mathrm{heat,out}}-P_{\mathrm{mech}}-dE_{\mathrm{stored}}/dt\right|}
+{P_{\mathrm{agg}}}.
 \tag{L.74}
 $$
-A numerical acceptance threshold must be preregistered from propagated calibration and model uncertainties; conservation alone does not select 5%.
+For $P_{\mathrm{agg}}=0$, use the absolute power residual in the numerator, with a threshold in power units, or divide it by a separately registered positive reference power. Acceptance thresholds must follow from propagated calibration and model uncertainties; conservation alone does not select a percentage.
 
 ### **Protocol L.3 (Gravitational Channel Test)**
 
@@ -1177,18 +1241,20 @@ $$ \delta(r) \propto \frac{E_0^2(r)}{\Delta} \propto \frac{1}{r^2} \tag{L.79} $$
 
 ### **Prediction L.4 (Conditional Coherence-Time Window)**
 
-For a phase-accumulation protocol resolving a nonzero Stark angular-frequency shift $|\delta_{Stark}|$, a necessary parametric window is
+For a protocol that requires an order-one Stark phase within each coherent interrogation, the nonzero angular-frequency shift $|\delta_{\mathrm{Stark}}|$ gives the parametric design window
 $$
-\frac{1}{|\delta_{Stark}|}
+\frac{1}{|\delta_{\mathrm{Stark}}|}
 \lesssim\tau_m
 \lesssim
 \min\left\{
 \frac{1}{\gamma_\phi+\Gamma},
-\frac{1}{\Gamma_{context}}
+\frac{1}{\Gamma_{\mathrm{context}}}
 \right\}.
 \tag{L.80}
 $$
-Here $\gamma_\phi$ is the target dephasing rate, $\Gamma$ is the natural linewidth, and $\Gamma_{context}$ is the aggregate context-variation rate. The window exists only if the lower scale does not exceed either upper scale; protocol-specific estimation constants must be supplied separately.
+The nonnegative rates describe target dephasing, natural linewidth and context variation; a zero rate contributes no finite upper limit. This window exists only if its lower scale does not exceed either upper scale. It is not a necessary condition for statistical detection over repeated trials.
+
+For example, the ideal Bernoulli Ramsey law $p(\delta)=[1+\sin(\delta\tau_m)]/2$ has local Fisher information $\tau_m^2$ per trial at $\delta=0$: $(p')^2/[p(1-p)]=\tau_m^2$. Thus $N$ independent trials can have local signal-to-noise scale $|\delta|\tau_m\sqrt N$ even when $|\delta|\tau_m\ll1$. A realizable sensitivity requires a registered likelihood, noise, repetition and resource budget; neither that budget nor an experimental detection claim follows from this ideal example.
 
 ## **L.8.4 Framework-Specific Differential Observables**
 
@@ -1208,7 +1274,7 @@ PU metric-branch prediction: every physical energy contribution enters the compl
 
 Observable 4: Coherence-Time Dependence
 
-PU conditional prediction: the effect is resolvable only when the nonempty window in Equation (L.80) exists. A quantitative law relating efficacy or pattern error to $\tau_c$ requires a specified likelihood and decoherence model.
+PU conditional prediction: Equation (L.80) describes the branch requiring an order-one phase per coherent interrogation. Statistical resolvability across repeated trials requires the registered likelihood, noise, repetition and resource model; absence of that window alone does not exclude detection. A quantitative law relating efficacy or pattern error to $\tau_c$ also requires that model.
 
 Observable 5: Spatial Decay
 
@@ -1236,14 +1302,14 @@ Stable under feedback if $\text{context}_S$ is influenced by past CC effects
 
 Satisfying the cost-benefit constraint (Equation L.3)
 
-(v) Threshold and strict-improvement emergence: Let $\mathfrak N_0$ be the null/Born-realizing equivalence class inside the compact admissible class $\mathfrak A$, and define
+(v) Threshold and strict-improvement emergence: assume $\mathcal F$ is continuous on the nonempty compact admissible class $\mathfrak A$, and that its null/Born-realizing class $\mathfrak N_0$ is nonempty and closed in $\mathfrak A$. Define the following class values, using $\sup\varnothing=-\infty$ for an empty non-null complement:
 $$
 F_0^*:=\max_{\mathcal M\in\mathfrak N_0}\mathcal F[\mathcal M],
 \qquad
 F_+^*:=\sup_{\mathcal M\in\mathfrak A\setminus\mathfrak N_0}
 \mathcal F[\mathcal M].
 $$
-For $C_{\mathrm{agg}}(S)>C_{op}$, every PCE maximizer is non-null if $F_+^*>F_0^*$, while every PCE maximizer is null if $F_+^*<F_0^*$. If $F_+^*=F_0^*$, the objective alone does not resolve the degeneracy. For $C_{\mathrm{agg}}(S)\leq C_{op}$, Definition 30 gives $\mathrm{CC}(S)=0$ regardless of available power.
+For $C_{\mathrm{agg}}(S)>C_{op}$, every PCE maximizer is non-null if $F_+^*>F_0^*$, while every maximizer is null if $F_+^*<F_0^*$. If $F_+^*=F_0^*$, a null maximizer exists; a non-null maximizer exists exactly when the complement attains its supremum. Thus equality of the class values need not give selection degeneracy. On the threshold-scaling branch of Definition 31, $C_{\mathrm{agg}}(S)\le C_{op}$ gives $\mathrm{CC}(S)=0$ regardless of available power.
 
 Proof of Necessity.
 
@@ -1259,7 +1325,7 @@ Thus $\mathrm{CC}(S)<1/2$ excludes endpoint-complete deterministic forcing. Theo
 
 (iv) POP/PCE mapping class: Theorem L.1 assumes a nonempty compact admissible class on which $\Delta PP$ and $R_{\mathcal M}$ are continuous. Lipschitz control, bounded output, and feedback stability are sufficient regularity conditions used to define one such class. Feedback stability is required only when the context dynamics contain the corresponding feedback loop. These conditions permit application of Weierstrass' theorem and, on the separate low-noise detailed-balance branch, Theorem D.5; PCE does not prove that every physically realizable mapping must be Lipschitz.
 
-(v) Threshold and strict-improvement emergence: Theorem L.1 gives a global maximizer of $\mathcal F$ on the compact admissible class. For $C_{\mathrm{agg}}>C_{op}$, partition that class into the null class $\mathfrak N_0$ and its complement. If $F_+^*>F_0^*$, no null map attains the global value, so every maximizer is non-null and Theorem 34 supplies a nonzero operational map on its strict-improvement branch. If $F_+^*<F_0^*$, no non-null map attains the global value, so every maximizer is null. If $F_+^*=F_0^*$, both classes may contain maximizers and the objective supplies no unique selection. For $C_{\mathrm{agg}}\leq C_{op}$, Definition 30 gives $\mathrm{CC}(S)=0$. These cases exhaust the order relation between the two class optima. ∎
+(v) Threshold and strict-improvement emergence: continuity and compactness give a global maximizer, and the nonempty closed null class attains $F_0^*$. If $F_+^*>F_0^*$, the definition of supremum supplies a non-null map with value exceeding every null value; hence a global maximizer cannot be null. Theorem 34 gives a nonzero operational map only under its additional strict-improvement branch hypotheses. If $F_+^*<F_0^*$, every non-null value is below an attained null value, so all maximizers are null; this includes an empty complement. If the class values are equal, each null-class maximizer is global, and a non-null global maximizer exists if and only if the complement attains that common value. Without such attainment, every global maximizer is null. On the threshold-scaling branch of Definition 31, $C_{\mathrm{agg}}\le C_{op}$ gives $\mathrm{CC}(S)=0$. These cases exhaust the class-value comparison. ∎
 
 ### **Corollary L.9.1 (Implementation Non-Uniqueness)**
 
@@ -1269,13 +1335,13 @@ If two or more physical implementations independently satisfy conditions (i)--(v
 
 Let $F_0^*$ and $F_+^*$ be the class optima in Theorem L.9.
 
-(a) If $C_{\mathrm{agg}}\leq C_{op}$, then $\mathrm{CC}(S)=0$. Hence the CC-attributable detectable influence region in Definition L.9.3 is empty.
+(a) On the threshold-scaling branch of Definition 31, $C_{\mathrm{agg}}\le C_{op}$ implies $\mathrm{CC}(S)=0$. Hence the CC-attributable detectable influence region in Definition L.9.3 is empty.
 
-(b) If $C_{\mathrm{agg}}>C_{op}$ and $F_+^*>F_0^*$, every PCE maximizer is non-null on the strict-improvement branch. This gives $\mathrm{CC}(S)>0$, but $R_{eff}>0$ follows only on a declared spatial carrier branch for which $|\Delta P_S(O;x,t)|\geq\epsilon_{detect}$ at some point.
+(b) If $C_{\mathrm{agg}}>C_{op}$ and $F_+^*>F_0^*$, every PCE maximizer is non-null. Under the separate strict-improvement operational-map hypotheses this gives $\mathrm{CC}(S)>0$. To conclude $R_{\mathrm{eff}}>0$, the declared spatial carrier must cross the positive detection threshold at the reference time for a registered observable and a point at positive distance from $\mathbf x_S$.
 
-(c) If $C_{\mathrm{agg}}>C_{op}$ and $F_+^*<F_0^*$, every maximizer is null, so $\mathrm{CC}(S)=0$ and the CC-attributable detectable region is empty. If $F_+^*=F_0^*$, the objective does not determine whether a null or non-null maximizer is selected.
+(c) If $C_{\mathrm{agg}}>C_{op}$ and $F_+^*<F_0^*$, every maximizer is null, so $\mathrm{CC}(S)=0$ and the CC-attributable detectable region is empty. If the class values are equal, null maximizers exist, and non-null maximizers exist exactly when the complement attains that common value. Equality without complement attainment therefore selects only null maximizers.
 
-*Proof.* Parts (a) and (c) follow from Definition 30 and the trichotomy proved in Theorem L.9. In part (b), strict class-level improvement excludes null maximizers. Definition L.9.3 defines $R_{eff}$ through a positive threshold, so nonzero operational norm alone is insufficient; a threshold-crossing spatial carrier supplies the additional implication. ∎
+*Proof.* Part (a) uses the stated Definition 31 branch. Part (c) follows from the attained-value comparison in Theorem L.9. For (b), strict improvement excludes null maximizers, but a nonzero operational norm alone supplies neither a threshold crossing nor positive spatial radius. A registered threshold-crossing point at the reference time and positive distance belongs to the defining slice of Definition L.9.3, so its positive distance is a lower bound on the supremum. ∎
 
 ### **Remark L.9.1 (External Field Dominance Independence)**
 
@@ -1298,72 +1364,78 @@ $\Delta P_S(O;x,t')$ is achievable bias on observable $O$ at spacetime point $(x
 
 $\epsilon_{\text{detect}}$ is detection threshold (typically $\epsilon_{\text{detect}} \sim \sqrt{\epsilon_{\text{noise}}^2 + \epsilon_{\text{stat}}^2}$ combining environmental noise and statistical uncertainty)
 
-$\tau_c(S)$ is context coherence time (Definition L.1)
+$\tau_c(S)$ is the registered context coherence time; Proposition L.9.4 identifies it as $\Gamma_{\mathrm{context}}^{-1}$ on the exponential-autocorrelation branch.
 
-The spatial extent is $R_{\text{eff}}(S,t) = \sup{|x-x_S| : (x,t) \in \mathcal{I}(S,t)}$ where $x_S$ is aggregate center-of-mass.
+Use a positive detection threshold and the registered observable/protocol family. The spatial extent at the reference time is
+$$
+R_{\mathrm{eff}}(S,t)
+=\sup\{|\mathbf x-\mathbf x_S|:(\mathbf x,t)\in\mathcal I(S,t)\}.
+$$
+Assign $R_{\mathrm{eff}}=0$ when this slice is empty; otherwise take the supremum in $[0,\infty]$. The definition permits infinite extent and does not itself provide a decay or causality bound.
 
 Note: Relationship to Standard Causal Structure
 
-$\mathcal{I}(S,t)$ is contained in the causal domain generated by finite-speed ND-RID propagation. When the continuum AQFT limit of Appendix F applies, this is represented by the past and future lightcone of $S$ at time $t$. This is not deterministic superluminal signaling but statistical bias constrained by causal structure.
+Causal containment requires an independent response certificate. On a retarded branch, let $\mathcal W_S$ be the registered source history that can affect the admitted target protocols, and require $\Delta P_S=0$ outside its future causal domain $J^+(\mathcal W_S)$. Then a positive detection threshold gives $\mathcal I(S,t)\subseteq J^+(\mathcal W_S)$. A continuum lightcone interpretation additionally requires the metric and propagation identification in Appendix F and the exact operational-causality hypotheses of Theorem 39c. An instantaneous source event $(\mathbf x_S,t)$ is not a substitute for the source history: a signal emitted earlier can already be detectable at positive distance on the reference-time slice.
 
 ### **Proposition L.9.3 (Conditional Far-Field Spatial Extent)**
 
-Assume a specified carrier, target, and likelihood for which the CC-attributable probability response in a far-field interval is
+Assume a registered endpoint and radial carrier family obey
 $$
-|\Delta P(r)|=K_{impl}\frac{P_{agg}}{r^2},
-\qquad K_{impl}>0,
+|\Delta P(r)|=K_{\mathrm{impl}}\frac{P_{\mathrm{agg}}}{r^2}
 $$
-where $K_{impl}$ has units $[\mathrm{length}]^2/[\mathrm{power}]$. Assume also that this response is monotone on that interval. The threshold-defined radius is then
+on a specified far-field interval of positive radii, with $K_{\mathrm{impl}}>0$, $P_{\mathrm{agg}}>0$ and $\epsilon_{\mathrm{detect}}>0$. Here $K_{\mathrm{impl}}$ has units $[\mathrm{length}]^2/[\mathrm{power}]$. Its branch threshold radius is
 $$
-R_{eff}
-=\sqrt{\frac{K_{impl}P_{agg}}{\epsilon_{detect}}},
+R_*=\sqrt{\frac{K_{\mathrm{impl}}P_{\mathrm{agg}}}
+{\epsilon_{\mathrm{detect}}}},
+\qquad
+P_{\mathrm{agg}}=\frac{\epsilon_{\mathrm{detect}}}{K_{\mathrm{impl}}}R_*^2,
 $$
-provided this radius lies in the far-field interval and inside the causal domain. Equivalently,
-$$
-P_{agg}=\frac{\epsilon_{detect}}{K_{impl}}R_{eff}^2.
-$$
+provided $R_*$ lies in the response interval and is realized within the admitted causal domain at the reference time.
 
-*Proof.* At the boundary of the detectable region,
-$$
-\epsilon_{detect}=K_{impl}\frac{P_{agg}}{R_{eff}^2}.
-$$
-Solving this equality gives both displayed formulas. Equation (L.24) supplies a separate gravitational phase scaling and cannot determine $K_{impl}$ for an observed probability endpoint without a likelihood map. ∎
+*Proof.* The positive $r^{-2}$ response is strictly decreasing. Solving its threshold equality gives $R_*$; within the stated interval the endpoint is detectable exactly on its portion with $r\le R_*$. This proves a branch threshold statement. To identify $R_*=R_{\mathrm{eff}}$ from Definition L.9.3, an additional exhaustion certificate must exclude threshold crossings at every larger radius for every registered observable and direction, including regions outside that far-field interval. With that exclusion and the crossing at $R_*$, the defining supremum equals $R_*$. Without it, a second endpoint or a response outside the interval can give a larger, even unbounded, extent. Equation (L.24) does not determine $K_{\mathrm{impl}}$ for a probability endpoint without a likelihood map. ∎
 
 ### **Proposition L.9.4 (Conditional Temporal Extent)**
 
-If the registered context autocorrelation decays exponentially as
+Suppose, for elapsed time $t\ge0$, the registered context autocorrelation satisfies
 $$
-|G_{context}(t)|=|G_{context}(0)|e^{-\Gamma_{context}t},
+|G_{\mathrm{context}}(t)|
+=|G_{\mathrm{context}}(0)|e^{-\Gamma_{\mathrm{context}}t},
+\qquad
+|G_{\mathrm{context}}(0)|>0,\quad
+\Gamma_{\mathrm{context}}>0.
 $$
-then its $e^{-1}$ coherence time is
+Its unique finite $e^{-1}$ coherence time is
 $$
-\tau_c(S)=\frac1{\Gamma_{context}}.
+\tau_c(S)=\frac1{\Gamma_{\mathrm{context}}}.
 $$
-If a separate ledger supplies available sustaining energy $E_{avail}$ and a positive sustaining power $P_{hold}$ throughout the interval, then
-$$
-P_{hold}\tau_c\leq E_{avail}
-\quad\Longrightarrow\quad
-\tau_c\leq\frac{E_{avail}}{P_{hold}}.
-$$
-No bound involving $C_{agg}-C_{op}$ follows from Definition 3 without an explicit map from complexity to available energy.
+For $\Gamma_{\mathrm{context}}=0$ and positive initial amplitude there is no finite $e^{-1}$ time; if the initial amplitude is zero, this relative-decay convention is undefined.
 
-*Proof.* The first formula is the definition of the $e^{-1}$ decay time for the stated exponential law. The second follows by integrating the constant lower power over the interval: $E_{used}\geq P_{hold}\tau_c$, while feasibility requires $E_{used}\leq E_{avail}$. ∎
+If a separate ledger supplies available sustaining energy $E_{\mathrm{avail}}\ge0$ and a constant positive lower bound $P_{\mathrm{hold}}$ on sustaining power over an interval of length $\tau_c$, feasibility requires
+$$
+P_{\mathrm{hold}}\tau_c\le E_{\mathrm{avail}},
+\qquad
+\tau_c\le\frac{E_{\mathrm{avail}}}{P_{\mathrm{hold}}}.
+$$
+No bound involving $C_{\mathrm{agg}}-C_{op}$ follows without an explicit map from complexity to available energy.
+
+*Proof.* Divide the exponential law by its positive initial amplitude and solve $e^{-\Gamma_{\mathrm{context}}t}=e^{-1}$. Strict decrease gives uniqueness; a zero rate never reaches that fraction. For the energy bound, integration gives $E_{\mathrm{used}}\ge P_{\mathrm{hold}}\tau_c$, while the independent feasibility ledger gives $E_{\mathrm{used}}\le E_{\mathrm{avail}}$. ∎
 
 ### **Proposition L.9.5 (Conditional Energy-Range-Time Trade-off)**
 
-Under the stationary far-field response law of Proposition L.9.3, maintaining detectability at radius $R_{eff}$ throughout an interval of duration $\tau_c$ requires
+Under the stationary endpoint response law of Proposition L.9.3, let $R>0$ be a registered test radius inside its validity and causal domain throughout an interval of duration $\tau_c>0$. Maintaining that endpoint above the positive detection threshold requires
 $$
-P_{agg}(t)\geq
-P_{min}:=\frac{\epsilon_{detect}}{K_{impl}}R_{eff}^2
-\qquad(0\leq t\leq\tau_c).
+P_{\mathrm{agg}}(t)\ge
+P_{\min}:=\frac{\epsilon_{\mathrm{detect}}}{K_{\mathrm{impl}}}R^2
+\qquad(0\le t\le\tau_c).
 $$
-Consequently, the supplied energy satisfies
+For measurable supplied power, the energy therefore satisfies
 $$
-E_{agg}=\int_0^{\tau_c}P_{agg}(t)\,dt
-\geq\frac{\epsilon_{detect}}{K_{impl}}R_{eff}^2\tau_c.
+E_{\mathrm{agg}}=\int_0^{\tau_c}P_{\mathrm{agg}}(t)\,dt
+\ge\frac{\epsilon_{\mathrm{detect}}}{K_{\mathrm{impl}}}R^2\tau_c.
 $$
+Using a global influence radius in place of $R$ additionally requires the exhaustion and threshold-realization conditions of Proposition L.9.3 at the relevant times.
 
-*Proof.* Proposition L.9.3 applied at every time in the interval gives the pointwise power lower bound. Integrating it over $[0,\tau_c]$ gives the energy lower bound. ∎
+*Proof.* Rearrange $K_{\mathrm{impl}}P_{\mathrm{agg}}(t)/R^2\ge\epsilon_{\mathrm{detect}}$ at each time. Integrating this nonnegative lower bound gives the energy inequality; no global spatial conclusion is used. ∎
 
 **Theorem L.9.6 (Exact Exponential Range–Time–Energy Frontier).** Consider the explicit implementation class with nonnegative range $R$, retention time $t$, source energy $E$, positive attenuation coefficients $\mu$ and $\tau^{-1}$, response-per-energy coefficient $\zeta>0$ with units of inverse energy, and dimensionless locked threshold $q>0$, whose dimensionless response is
 $$
@@ -1377,55 +1449,59 @@ $$
 \ E=\frac q\zeta e^{\mu R+t/\tau}\right\}.
 \tag{L.9.6.2}
 $$
-No triple is a strict optimum for all three objectives. For fixed positive scalarization weights $\alpha,\beta,\gamma$, minimizing
+On the full class, no triple is a strict optimum for all three objectives. For positive scalarization weights $\alpha,\beta,\gamma$, consider
 $$
-J=\gamma E-\alpha R-\beta t
+J=\gamma E-\alpha R-\beta t.
 \tag{L.9.6.3}
 $$
-over a compact registered box reduces exactly to minimizing
+Register a nonempty compact rectangle in the nonnegative $(R,t)$ plane. At each point of that rectangle, allow every $E\ge(q/\zeta)e^{\mu R+t/\tau}$, with no additional energy floor or ceiling. Minimizing $J$ then reduces exactly to minimizing
 $$
 \frac{\gamma q}{\zeta}e^{\mu R+t/\tau}-\alpha R-\beta t
 \tag{L.9.6.4}
 $$
-on that box; every interior minimizer satisfies
+on that rectangle. Every interior minimizer satisfies
 $$
 \gamma\mu E=\alpha,
 \qquad
 \frac{\gamma E}{\tau}=\beta.
 \tag{L.9.6.5}
 $$
-Unless $\alpha/\mu=\beta\tau$, no interior scalar optimum exists and the optimum lies on a declared boundary.
+Unless $\alpha/\mu=\beta\tau$, no interior scalar optimum exists and a minimum lies on the rectangle's boundary. Additional energy bounds require their own constrained feasible set and are not absorbed into this substitution.
 
-*Proof.* If $E>(q/\zeta)e^{\mu R+t/\tau}$, lowering $E$ preserves feasibility and dominates the triple, so every frontier point satisfies equality. On the equality surface, increasing either $R$ or $t$ forces an energy increase, and lowering energy forces a decrease of at least one of them; hence every such point is nondominated. Arbitrarily increasing $R$ or $t$ precludes a joint strict optimum. Substitution gives (L.9.6.4), and differentiation gives (L.9.6.5). Compactness gives boundary attainment in all remaining cases. ∎
+*Proof.* In the full class, any $E>(q/\zeta)e^{\mu R+t/\tau}$ can be reduced at unchanged $R,t$, so it is dominated. On the equality surface, weakly increasing $R,t$ with at least one strict increase strictly raises the required energy; decreasing energy forces at least one of them to decrease. Thus every equality point is nondominated. Unbounded admissible $R,t$ preclude a joint strict optimum. For the scalarized branch, $\gamma>0$ makes the least feasible energy optimal at each registered $(R,t)$, proving the substitution. The reduced objective is continuous on the compact rectangle and hence attains a minimum. Its two interior derivatives give (L.9.6.5); incompatibility of those equations forces boundary attainment. ∎
 
 The theorem reports the complete frontier for the declared attenuation class. Exhausting all implementations satisfying Theorem L.9 requires a separate proof that their response laws reduce to (L.9.6.1), or a larger frontier census.
 
-**Remark L.9.5a (Conditional Appendix-S Self-Limitation Gate).** Appendix S does not by itself bound $R_{\mathrm{eff}}$. Suppose an overlap certificate identifies $P_{\mathrm{context}}=\chi P_{\mathrm{agg}}$ with $\chi>0$, supplies the applicable Appendix-S coefficient $K_{\mathrm{eff}}>0$, and verifies that context retention over $\tau_c$ requires
+**Remark L.9.5a (Conditional Appendix-S Self-Limitation Gate).** Appendix S alone does not bound a spatial influence radius. On a stationary overlap branch, suppose $P_{\mathrm{context}}=\chi P_{\mathrm{agg}}$ with $\chi>0$, $K_{\mathrm{eff}}>0$, $|\Delta E|>0$ and $\tau_c>0$, and let $0\le\Lambda_{\max}<\infty$. Require a certificate that retention over $\tau_c$ imposes
 $$
 \Gamma_{\mathrm{deco}}\tau_c
 =\frac{|\Delta E|}{\hbar}K_{\mathrm{eff}}\chi P_{\mathrm{agg}}\tau_c
 \le\Lambda_{\max}.
 $$
-Combining this upper power bound with Proposition L.9.5 gives the independently checkable range bound
+For a registered test radius $R>0$ under Proposition L.9.5, with $K_{\mathrm{impl}}>0$ and $\epsilon_{\mathrm{detect}}>0$, the two power inequalities give
 $$
-R_{\mathrm{eff}}^2
-\le
+\frac{\epsilon_{\mathrm{detect}}}{K_{\mathrm{impl}}}R^2
+\le P_{\mathrm{agg}}
+\le\frac{\Lambda_{\max}\hbar}
+{|\Delta E|K_{\mathrm{eff}}\chi\tau_c},
+\qquad
+R^2\le
 \frac{K_{\mathrm{impl}}\Lambda_{\max}\hbar}
 {\epsilon_{\mathrm{detect}}|\Delta E|K_{\mathrm{eff}}\chi\tau_c}.
 $$
-Without the power-identification, decoherence, retention-threshold, and no-double-counting records, Appendix S supplies compatibility only and no self-limitation theorem.
+Identifying this tested radius with $R_{\mathrm{eff}}$ requires the global exhaustion and threshold-realization certificate of Proposition L.9.3. If $|\Delta E|=0$, the displayed decoherence term supplies no finite power ceiling. Without the power-identification, rate, retention-threshold and non-overlap records, the Appendix-S relation remains a conditional compatibility formula.
 
 ## **L.10 Internal Consistency and Theoretical Validation**
 
 ### **Theorem L.10 (Conditional Compatibility Checklist for the Dual-Channel Framework)**
 
-Assume one nonempty branch simultaneously satisfies the hypotheses of Theorems L.3 and L.6--L.8, Theorem B.5, Theorems 39, 39a, and 39c at their distinct scopes, and Propositions L.9.3--L.9.5, with common units, source ownership, and overlap maps. Then the supplied electromagnetic and gravitational mechanisms satisfy the following compatibility checklist:
+Assume one nonempty branch simultaneously satisfies the hypotheses of Corollary L.2.1, Theorems L.3 and L.6--L.8, Theorem B.5, Theorems 39, 39a, and 39c at their distinct scopes, and Propositions L.9.3--L.9.5, with common units, source ownership, and overlap maps. Then the supplied electromagnetic and gravitational mechanisms satisfy the following compatibility checklist:
 
 (a) GR Compatibility: Gravitational time dilation (Theorem L.3) follows from weak-field Einstein equations with standard stress-energy source $T_{\mu\nu}^{(\text{MPU})}$ (Definition B.8).
 
 (b) QED Compatibility: AC Stark shift (Corollary L.2.1) follows from standard time-dependent perturbation theory applied to dipole coupling Hamiltonian.
 
-(c) Energy Conservation: Power decomposition $P_{\text{agg}} = P_{\text{EM}} + P_{\text{other}}$ (Theorem L.6) with each component contributing exactly once to total stress-energy $T_{\mu\nu}^{(\text{MPU})}$ (Definition B.8). Covariant conservation $\nabla^\mu T_{\mu\nu}^{(\text{MPU})} = 0$ (Theorem B.5) ensures local energy conservation.
+(c) Energy Conservation: Theorem L.6 gives $P_{\text{agg}}=\dot E_{\text{stored}}^{\mathcal V}+P_{\text{EM}}^{\text{out}}+P_{\text{heat}}^{\text{out}}+P_{\text{mech}}^{\text{out}}$ for the registered control volume and disjoint boundary channels, with each physical component contributing exactly once to the complete stress-energy tensor $T_{\mu\nu}^{(\text{MPU})}$ (Definition B.8). Covariant conservation $\nabla^\mu T_{\mu\nu}^{(\text{MPU})}=0$ follows on the regular branch of Theorem B.5, distributionally and, on its smooth on-shell subbranch, pointwise.
 
 (d) Conditional thermodynamic compatibility: Given independently specified carrier stress-energy, the local-equilibrium horizon hypotheses, the saturated/calibrated area-law branch, the Unruh temperature, the Clausius relation, and covariant source conservation, Theorem L.7 reproduces the Einstein equation with the aggregate tensor as source. It does not derive either carrier.
 
@@ -1433,7 +1509,7 @@ Assume one nonempty branch simultaneously satisfies the hypotheses of Theorems L
 
 (f) Endpoint, zero-error, and causal scope: On the branch independently satisfying $\alpha_{CC,\max}<0.5$, Theorem 39 excludes endpoint-complete forcing of both outcomes of every binary coarse-graining. Finite-window zero-error exclusion additionally requires the regularity hypotheses of Theorem 39a. Exact operational causality is supplied only on the pre-lightcone context-independence branch of Theorem 39c.
 
-(g) Spatiotemporal Bounds: Influence regions satisfy finite extent (Propositions L.9.3-L.9.5), with energy-range-time trade-offs emerging from resource constraints.
+(g) Spatiotemporal Bounds: Propositions L.9.3–L.9.5 give threshold, duration and energy-range-time bounds on their registered response branches. A finite global spatial extent additionally requires exhaustion of all admitted endpoints and regions beyond the branch threshold; the inverse-rate duration requires a positive decay rate and nonzero initial correlation. These conditions do not follow from the influence-region definition alone.
 
 *Proof.* Fix a branch on which the hypotheses of Theorems L.3, L.6-L.8, B.5, 39, 39a, 39c, and Propositions L.9.3-L.9.5 are simultaneously satisfied. Clauses (a)-(e) then follow by direct substitution of the common stress-energy, perturbative, and thermodynamic data into the cited conclusions. Clause (f) has the three distinct scopes stated above. Clause (g) follows only with the registered response, energy, and duration ledgers of Propositions L.9.3-L.9.5. Hence (a)-(g) form a conditionally compatible checklist on the common branch. The cited results alone do not prove that this branch is nonempty; existence of a joint realization remains an additional hypothesis. ∎
 
@@ -1455,7 +1531,7 @@ where $\delta$ is MPU spacing, $\eta$ is geometric packing factor, $\chi$ is cha
 
 The gravitational fine structure constant for mass $m$ is:
 
-$$ \alpha_{\text{grav}} = \frac{Gm^2}{\hbar c} = \frac{\eta\delta^2 m^2}{4\hbar^2\chi C_{\text{max}}} \tag{L.83} $$
+$$ \alpha_{\text{grav}} = \frac{Gm^2}{\hbar c} = \frac{\eta\delta^2 m^2c^2}{4\hbar^2\chi C_{\text{max}}} \tag{L.83} $$
 
 For electron mass $m_e$:
 
@@ -1471,7 +1547,7 @@ The dimensionless electron-scale ratio does not by itself determine an aggregate
 $$
 \frac{\alpha_{em}}{\alpha_{grav}^{(m)}}
 =\alpha_{em}\frac{4\hbar^2\chi C_{max}}
-{\eta\delta^2m^2}.
+{\eta\delta^2m^2c^2}.
 $$
 For $m=m_e$ and the numerical values displayed above, this is approximately $4.1\times10^{42}$. An aggregate ratio has the conditional form
 $$
@@ -1488,27 +1564,26 @@ This section provides detailed implementation of the AC Stark mechanism introduc
 
 Assume a registered electromagnetic-source branch on which $\mathcal M(\text{context}_S(t))$ controls a conserved current $J^\mu$ with a nonzero time-dependent radiating multipole. Solving Maxwell's equations with the stated geometry and boundary conditions then defines $\vec E_{\text{rad}}(t)$ and its frequency, amplitude, phase, and polarization. The existence and normalization of this current are implementation data, not consequences of Theorem L.1.
 
-On the separately registered interaction-clock branch, assume $\tau_{\mathrm{int}}\ge\tau_{\min}>0$. In a suitable interaction picture the dispersive dipole coupling is
+On the registered interaction-clock branch, assume $\tau_{\mathrm{int}}\ge\tau_{\min}>0$. The dispersive dipole approximation in a suitable interaction picture is
 $$
-H_{\text{int}}(t)
-\approx
-\frac{\hbar}{2}\delta_{\text{Stark}}(t)\sigma_z.
+H_{\mathrm{int}}(t)\approx
+\frac{\hbar}{2}\delta_{\mathrm{Stark}}(t)\sigma_z.
 \tag{L.86}
 $$
-For $|\Delta|\gg\max(\Omega_R,\Gamma)$ on the two-level perturbative branch, the transition-frequency shift is
+For frozen parameters on the two-level rotating-wave branch, the signed transition-frequency shift is
 $$
-\delta_{\text{Stark}}(t)
-=
-\frac{\Omega_R^2(t)}{2\Delta(t)}
-+O\left(\frac{\Omega_R^4(t)}{\Delta^3(t)}\right),
+\delta_{\mathrm{Stark}}
+=\frac{|\Omega_R|^2}{2\Delta}
++O\!\left(\frac{|\Omega_R|^4}{|\Delta|^3}\right),
 \qquad
-\Omega_R(t)
-=
-\frac{|\vec d_{\text{TLS}}\cdot\vec\epsilon_{\text{rad}}(t)|E_0(t)}{\hbar},
+\Omega_R=\frac{|\mathbf d_{\mathrm{TLS}}\cdot\boldsymbol\epsilon_{\mathrm{rad}}|E_0}{\hbar},
 \qquad
-\Delta(t)=\omega_{\text{TLS}}-\omega_{\text{rad}}(t).
+\Delta=\omega_{\mathrm{TLS}}-\omega_{\mathrm{rad}}.
 \tag{L.87}
 $$
+Indeed, the rotating-frame eigenvalue separation is $\sqrt{\Delta^2+|\Omega_R|^2}$; its expansion about nonzero $\Delta$, with the detuning sign retained, gives (L.87).
+
+The instantaneous spectral expansion remains uniform for varying parameters when $|\Delta|\ge\Delta_{\min}>0$ and $|\Omega_R/\Delta|$ is uniformly small. Using it as the dynamical Hamiltonian (L.86) additionally requires a rotating-wave and adiabatic-elimination certificate over the complete interaction interval. That certificate must control the time-dependent dressed-basis term $-i\hbar W^\dagger\dot W$, including any omitted geometric phase, and other discarded terms. For example, a registered effective-frame Hermitian remainder $R(t)$ with $\int_0^{\tau_{\mathrm{int}}}\|R(t)\|\,dt/\hbar\le\varepsilon_{\mathrm{dyn}}$ bounds the propagator error by $\varepsilon_{\mathrm{dyn}}$ through Duhamel's formula and unitary norm preservation. The inequality $|\Delta|\gg\max\{|\Omega_R|,\Gamma\}$ alone does not control these time-variation errors.
 The operator
 $$
 \sigma_z=|e\rangle\langle e|-|g\rangle\langle g|
@@ -1521,13 +1596,15 @@ The 'Evolve' process for the target MPU is described by a master equation for it
 
 $$ \dot{\rho} = -\frac{i}{\hbar}[H_{\text{TLS}} + H_{\text{int}}(t),\rho] + \sum_k \gamma_k^{(0)}\mathcal{L}_k[\rho] \tag{L.88} $$
 
-where $H_{\text{TLS}}$ is the MPU's intrinsic TLS Hamiltonian (part of $\hat{H}$ from Theorem 29), and $\mathcal{L}_k$ are baseline Lindblad superoperators (rates $\gamma_k^{(0)}$) for the ND-RID process. The interaction $H_{\text{int}}(t)$ induces a time-dependent AC Stark shift $\pm \hbar \delta_{\text{Stark}}(t)$ in the TLS energy levels. If the Lindblad rates $\gamma_k^{(0)}$ depend on energy level spacings or couplings affected by these shifts (e.g., via density of states in Fermi's Golden Rule), the effective rates $\gamma_k$ become modulated by $E_0(t)$.
+Here $H_{\mathrm{TLS}}$ is the intrinsic TLS Hamiltonian and $\mathcal L_k$ are the baseline Lindblad superoperators with rates $\gamma_k^{(0)}$. Equation (L.86) gives energy-level shifts $\pm\hbar\delta_{\mathrm{Stark}}(t)/2$, so their separation changes by $\hbar\delta_{\mathrm{Stark}}(t)$. A measured bath or jump-operator response may convert that spacing change into modulated effective rates. Such a response requires its own generator certificate; changing the Hamiltonian in (L.88) while keeping every rate and jump operator constant does not itself modulate those dissipative terms.
 
-Defining a dimensionless control field magnitude:
-
-$$ \Phi_S(t)=\frac{E_0(t)^2}{E_{\text{max}}^2}, \quad 0\le\Phi_S(t)\le1 \tag{L.89} $$
-
-where $E_{\text{max}}$ is the maximum field amplitude achievable by $S$. The effective rates can be modeled as:
+For a registered finite positive reference amplitude $0<E_{\mathrm{max}}<\infty$ with $|E_0(t)|\le E_{\mathrm{max}}$ throughout the control window, define
+$$
+\Phi_S(t)=\frac{E_0(t)^2}{E_{\mathrm{max}}^2},
+\qquad 0\le\Phi_S(t)\le1.
+\tag{L.89}
+$$
+If the attainable field amplitude is identically zero, its absolute amplitude may be used directly; the quotient with a zero reference amplitude is undefined. On the positive-reference branch, the effective rates can be modeled as:
 
 $$ \gamma_k(t) \approx \gamma_k^{(0)}\bigl[1+\chi_k(\omega_{\text{rad}}(t), \Delta(t))\Phi_S(t) + O(\Phi_S^2(t))\bigr] \tag{L.90} $$
 
@@ -1570,15 +1647,14 @@ $$
 =-\tau\gamma'(\omega_{\mathrm{TLS}}+\delta_c)p_c.
 \tag{L.11.2a.3}
 $$
-If $|\gamma'|\le L_\gamma$, $0\le\gamma\le\gamma_{\max}$, the shift errors obey $|\widehat\delta_c-\delta_c|\le e_c$, and the timing error is at most $e_\tau$, then
+For the nuisance comparison, assume the entire frequency segment joining $\omega_{\mathrm{TLS}}+\delta_c$ to $\omega_{\mathrm{TLS}}+\widehat\delta_c$ lies in the certified bath interval for each $c$. On those segments require $|\gamma'|\le L_\gamma$ and $0\le\gamma\le\gamma_{\max}$. Let $|\widehat\delta_c-\delta_c|\le e_c$ and compare nonnegative durations $\tau$ and $\widehat\tau_c$ with $|\widehat\tau_c-\tau|\le e_\tau$. Define $\widehat p_c=\exp[-\gamma(\omega_{\mathrm{TLS}}+\widehat\delta_c)\widehat\tau_c]$ and $\widehat{\mathcal A}_{\mathrm{AD}}=\widehat p_1-\widehat p_0$. Then
 $$
 |\widehat{\mathcal A}_{\mathrm{AD}}-\mathcal A_{\mathrm{AD}}|
-\le
-\tau L_\gamma(e_0+e_1)+2\gamma_{\max}e_\tau.
+\le\tau L_\gamma(e_0+e_1)+2\gamma_{\max}e_\tau.
 \tag{L.11.2a.4}
 $$
 
-*Proof.* The Hamiltonian Stark term commutes with $E_e$, while amplitude damping gives $\dot p_c=-\gamma(\omega_{\mathrm{TLS}}+\delta_c)p_c$ and $p_c(0)=1$, proving (L.11.2a.1). Differentiation gives (L.11.2a.3). The mean-value theorem, $0<p_c\le1$, and the two endpoint and timing errors give (L.11.2a.4). ∎
+*Proof.* The Stark Hamiltonian commutes with $E_e$, while amplitude damping gives $\dot p_c=-\gamma(\omega_{\mathrm{TLS}}+\delta_c)p_c$, $p_c(0)=1$. Solving yields (L.11.2a.1), and differentiation gives (L.11.2a.3). Compare each perturbed endpoint first at the original duration $\tau$. The frequency derivative has magnitude at most $\tau L_\gamma$ throughout the certified segment. Next vary duration at the perturbed frequency; its derivative has magnitude $\gamma e^{-\gamma t}\le\gamma_{\max}$ for all intervening nonnegative times. Thus $|\widehat p_c-p_c|\le\tau L_\gamma e_c+\gamma_{\max}e_\tau$. The triangle inequality for the two endpoints gives (L.11.2a.4). ∎
 
 This theorem supplies a dimensionless endpoint, sign, susceptibility, nuisance variables, and a rigorous uncertainty functional once the frozen Maxwell shifts and bath law are populated. It does not derive those physical inputs from context alone.
 
@@ -1613,7 +1689,7 @@ If a CC implementation has a measured nonzero power ledger, its localized energy
 - Given $P_{\text{context}} \to$ energy density $u_{\text{context}} \to$ gravitational potential
 - Gravitational potential → time dilation gradient $\Delta\tau_d$ across target (Section S.3)
 - Time dilation → phase decoherence → reduced effective CC (Section S.7)
-- Shows PCE optimization drives to equilibrium balancing utility vs. self-disruption (Section S.4)
+- Identifies an optimum of the truncated utility in its declared validity regime (Section S.4); stationary concentration additionally requires the potential identification and low-noise detailed-balance hypotheses of Theorem D.5
 - Provides feedback analysis: gravity → limits CC
 
 ### **Complementary Nature:**
@@ -1647,26 +1723,26 @@ u_{\text{context}}
 =
 \frac{\eta_{\text{ret}}P_{\text{context}}\tau_c}{V_S}.
 $$
-For a uniform spherical source and a target point inside the sphere, the linearized interior-field estimate gives
+For a uniform spherical source of radius $R_S=(3V_S/4\pi)^{1/3}$, register two clocks on the same outward radial segment from $r$ to $r+L_q$, with $r\ge0$, $L_q>0$ and $r+L_q\le R_S$. Require the retained density $\eta_{\mathrm{ret}}P_{\mathrm{context}}\tau_c/V_S$ to be stationary throughout a clock-comparison interval of coordinate duration $\tau_c$. This is a prepared or steady retention branch; an input accumulating from zero needs its time-dependent density integrated explicitly. On the stated weak-field, isotropic active-density branch, put
 $$
-\Delta\Phi_{\text{diff}}
-=
-\frac{4\pi G}{3c^2}(1+3w_c)
-\frac{\eta_{\text{ret}}P_{\text{context}}\tau_c}{V_S}
-rL_q,
+B:=\frac{4\pi G}{3c^2}(1+3w_c)
+\frac{\eta_{\mathrm{ret}}P_{\mathrm{context}}\tau_c}{V_S}.
 $$
-and hence
+The interior potential gradient is $\Phi'(x)=Bx$, so its signed endpoint difference is
 $$
-\Delta\tau_d
-=
-K_{\text{ret}}P_{\text{context}},
+\Delta\Phi_{\mathrm{diff}}
+=\int_r^{r+L_q}Bx\,dx
+=B\left(rL_q+\frac{L_q^2}{2}\right).
+$$
+At first order in the weak gravitational potential, integration over the common coordinate duration $\tau_c$ gives
+$$
+\Delta\tau_d=K_{\mathrm{ret}}P_{\mathrm{context}},
 \qquad
-K_{\text{ret}}
-:=
-\eta_{\text{ret}}
-\frac{4\pi G}{3c^4}(1+3w_c)
-\frac{rL_q}{V_S}\tau_c^2.
+K_{\mathrm{ret}}:=
+\eta_{\mathrm{ret}}\frac{4\pi G}{3c^4}(1+3w_c)
+\frac{rL_q+L_q^2/2}{V_S}\tau_c^2.
 $$
+For $r>0$ and $L_q/r\ll1$, dropping the $L_q^2/2$ term gives the local-gradient approximation with relative geometric error $L_q/(2r)$. At $r=0$ that approximation loses the leading nonzero quadratic term. Other clock orientations, source-boundary crossings or finite-potential corrections require the corresponding geometric response certificate.
 
 For the ideal-retention value $\eta_{\text{ret}}=1$, choose $r=0.05\,\mathrm m$, which lies inside the sphere of volume $10^{-3}\,\mathrm m^3$. With $\tau_c=0.1\,\mathrm s$, $w_c=1/3$, and $L_q=10^{-9}\,\mathrm m$,
 $$
@@ -1737,7 +1813,7 @@ $$
 $$
 collect the target parameters and its time-indexed state relevant to the registered control interval. Relative to the aggregate's information, assign a prior probability law $\pi$ on a specified measurable parameter space $\Theta_T$. Prior independence between $\theta_T$ and $\text{context}_S$ is an additional causal-separation hypothesis; it does not follow from absence of direct contact when common causes or initial correlations are present.
 
-Information about $\theta_T$ may enter the context through causal ND-RID records or common-cause records admitted by the causal model. Every finite-dimensional channel use transfers at most $\ln d_0$ nats. Theorem E.2 sharpens this to $C_{\max}(f_{RID})<\ln d_0$ on the refresh/minorization branch, while Proposition E.2a gives $C_{\max}\le\ln d_0-\ln2$ on the completed binary reset-support branch; Equation (E.15) gives equality at $2\ln2$ only on the minimal $d_0=8$ PCE residual-budget saturation branch. If an information-resolving step also performs a registered reset satisfying Definition 28, Theorem 31 gives $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$, with a positive floor only under $H_q(P\mid R)\ge h_{\min}>0$. If the analysis uses $\text{context}_S(t)$ as a minimal sufficient statistic for $\theta_T$, that sufficiency and minimality are branch assumptions to be verified for the chosen joint law and likelihood.
+Information about $\theta_T$ may enter the context through causal ND-RID records or common-cause records admitted by the causal model. For ordinary unassisted classical communication through a channel with output dimension $d_0$, the Holevo bound limits a use to $\ln d_0$ nats. Applying this bound to an acquisition history requires the same protocol class, with all decoder side information and conditional increments accounted for; preshared entanglement or an extra side channel is not included. Theorem E.2 sharpens this to $C_{\max}(f_{RID})<\ln d_0$ on the refresh/minorization branch, while Proposition E.2a gives $C_{\max}\le\ln d_0-\ln2$ on the completed binary reset-support branch; Equation (E.15) gives equality at $2\ln2$ only on the minimal $d_0=8$ PCE residual-budget saturation branch. If an information-resolving step also performs a registered reset satisfying Definition 28, Theorem 31 gives $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$, with a positive uniform floor inferred from this entropy bound only under $H_q(P\mid R)\ge h_{\min}>0$. If the analysis uses $\text{context}_S(t)$ as a minimal sufficient statistic for $\theta_T$, that sufficiency and minimality are branch assumptions to be verified for the chosen joint law and likelihood.
 
 #### **L.12.2.2 The Causal Interaction Ensemble**
 
@@ -1769,11 +1845,15 @@ Assume that $\text{context}_S$ and $\theta_T$ are outputs of local channels appl
 $$
 \mathcal I(S\to T,t)\leq I(S:T)_t\leq I(S:E)_t=\mathcal I_{rel}(S)_t.
 $$
-If, in addition, the initial relevant records are independent, all target information reaches the retained context solely through at most $K$ channels of capacity $C_{max}$, and retention is lossless for that information, then
+For an acquisition bound, register one target variable $\Theta$ and a classical retained history $H_k=(H_0,Y_1,\ldots,Y_k)$ with $I(\Theta;H_0)=0$. Assume at most $K$ uses, that every receiver side record is included in this history, and that each conditional encoding/measurement is in the unassisted classical protocol class with certified increment
+$I(\Theta;Y_k\mid H_{k-1})\le C_{\max}$.
+If the retained context is obtained from that history without an additional target-correlated input, then chain rule and data processing give
 $$
-\mathcal I(S\to T,t)\leq KC_{max}.
+\mathcal I(S\to T,t)\le I(\Theta;H_K)
+=\sum_{k=1}^K I(\Theta;Y_k\mid H_{k-1})
+\le KC_{\max}.
 $$
-Without these acquisition hypotheses, pre-existing or common-cause mutual information is not bounded by the number of direct interactions. In every case, $\mathcal I(S\to T,t)>0$ exactly when the two variables fail to be independent under $\mathcal P_{causal}$.
+The record may pad unused slots by constant symbols. A capacity belonging to a different assistance or memory model cannot supply the conditional-increment bound. Pre-existing or common-cause mutual information must be charged to the initial history rather than inferred from the number of direct interactions. For every normalized joint law, $\mathcal I(S\to T,t)>0$ exactly when its two variables are not independent.
 
 *Conditional connection to target mass:* The inequality $I(S:T)_t\le\mathcal I_{rel}(T)_t$ is branch independent. Only when all compared targets share $\mathfrak B_{mass}$ and one universal mass-per-information coefficient may Theorem N.5 rewrite that upper scale in terms of $m_T$. Off that branch, no monotone heavier-target conclusion follows; actual causal information remains limited by causal history and channel capacity.
 
@@ -1801,23 +1881,13 @@ Without the two separation hypotheses, an empty direct interaction history does 
 
 Let $(\mathcal F_t)_{t\ge0}$ be the filtration generated by ND-RID records available by time $t$. Assume the context process is adapted, so $\text{context}_S(t)$ is $\mathcal F_t$-measurable. The path-ratio branch of Theorem O.3 supplies a statistical time asymmetry when its common-measure and entropy-production hypotheses hold; it does not establish adaptedness.
 
-**Corollary L.12.2 (Past-Record Dependence and Lossless-Refinement Monotonicity).** Under the adaptedness hypothesis, $\mathcal I(S\to T,t)$ depends only on records in $\mathcal F_t$. If, for $t_2\ge t_1$, there is a measurable map $g$ such that
+**Corollary L.12.2 (Past-Record Dependence and Lossless-Refinement Monotonicity).** The adapted context at time $t$ uses only records in $\mathcal F_t$. For the information comparison, register the same target random variable $\Theta$ and one joint law of $(\Theta,C_1,C_2)$, where $C_j=\mathrm{context}_S(t_j)$ and $t_2\ge t_1$. If $C_1=g(C_2)$ almost surely for a measurable map $g$, then
 $$
-\text{context}_S(t_1)=g(\text{context}_S(t_2)),
+I(\Theta;C_1)\le I(\Theta;C_2).
 $$
-then
-$$
-\mathcal I(S\to T,t_1)
-\leq
-\mathcal I(S\to T,t_2).
-$$
-Without recoverability, retained mutual information may decrease under compression, forgetting, or overwrite.
+This is the comparison of $\mathcal I(S\to T,t_j)$ only when both occurrences refer to that common target variable and joint law. Replacing the target by its evolving state at each time is a different comparison and requires an additional dynamical information certificate. Without recoverability, retained information may also decrease under compression, forgetting or overwrite.
 
-*Proof.* Adaptedness gives the past-record statement by definition. Let $C_j=\text{context}_S(t_j)$ and $\Theta=\theta_T$. The recoverability relation gives the Markov chain $\Theta\to C_2\to C_1$. The data-processing inequality therefore yields
-$$
-I(\Theta;C_1)\leq I(\Theta;C_2).
-$$
-No monotonicity follows for an arbitrary lossy update. ∎
+*Proof.* Adaptedness gives the past-record statement. The deterministic relation gives the Markov chain $\Theta\to C_2\to C_1$ and hence the displayed data-processing inequality. No relation between $I(C_1;\Theta_{t_1})$ and $I(C_2;\Theta_{t_2})$ follows from this argument when the two target variables differ. ∎
 
 -----
 
@@ -1840,29 +1910,42 @@ Here $\tau_{\text{medium}}=\hbar/\langle\hat H_{\text{eff}}\rangle$ and $\delta\
 
 Causal information governs a decision-theoretic target-conditioned advantage only under the joint-law and causal-separation hypotheses of Definition L.12.1 and Lemma L.12.1. Positive mutual information permits posterior-conditioned control; it does not by itself establish a carrier field or a nonzero target response.
 
-**Proposition L.12.0 (Conditional Temporal-Engineering Precision Bound).** In the EM/AC-Stark channel, assume a carrier-response certificate establishes
+**Proposition L.12.0 (Conditional Temporal-Engineering Precision Bound).** Let $\omega_{\mathrm{TLS}}>0$. In the EM/AC-Stark branch, require a clock-response certificate identifying the normalized cycle perturbation with the normalized TLS period change:
 $$
-|\delta_{Stark}^{real}(x_T,t)|
-\leq\eta_{res}(S,T)\delta_{Stark}^{max},
-\qquad0\leq\eta_{res}\leq1.
+1+\delta\tau_{\mathrm{CC}}
+=\frac{\tau(x_T,t)}{\tau_{\mathrm{medium}}}
+=\frac{T_{\mathrm{TLS}}(\omega_{\mathrm{TLS}}+\delta_{\mathrm{Stark}}^{\mathrm{real}})}
+{T_{\mathrm{TLS}}(\omega_{\mathrm{TLS}})},
+\qquad T_{\mathrm{TLS}}(\omega)=\frac{2\pi}{\omega}.
 $$
-For $|\delta_{Stark}^{real}|\ll\omega_{TLS}$, the magnitude of the fractional cycle-time perturbation satisfies
+This identification is additional to the convention $\tau_{\mathrm{medium}}=\hbar/\langle H_{\mathrm{eff}}\rangle$. Assume a carrier certificate gives
 $$
-|\delta\tau_{CC}(x_T,t)|
-\leq\eta_{res}(S,T)
-\frac{\delta_{Stark}^{max}}{\omega_{TLS}}
-+O\!\left(\frac{(\delta_{Stark}^{max})^2}{\omega_{TLS}^2}\right).
+|\delta_{\mathrm{Stark}}^{\mathrm{real}}|
+\le\eta_{\mathrm{res}}\delta_{\mathrm{Stark}}^{\max},
+\qquad0\le\eta_{\mathrm{res}}\le1,
+\qquad0\le\delta_{\mathrm{Stark}}^{\max}\le q\omega_{\mathrm{TLS}},
+\quad0<q<1.
+$$
+Then
+$$
+|\delta\tau_{\mathrm{CC}}|
+\le\eta_{\mathrm{res}}
+\frac{\delta_{\mathrm{Stark}}^{\max}}{\omega_{\mathrm{TLS}}}
++\frac{\eta_{\mathrm{res}}^2}{1-q}
+\frac{(\delta_{\mathrm{Stark}}^{\max})^2}{\omega_{\mathrm{TLS}}^2}.
 \tag{L.95}
 $$
-Refinement of a context cannot reduce the optimal decision reward by Proposition L.12.1. A larger scalar mutual information without a refinement relation, or a larger $\mathrm{CC}(S)$ without nested feasible policy sets, does not by itself imply a larger $\eta_{res}$ or cycle-rate modulation.
+The second term explicitly bounds the quadratic remainder. Context refinement orders the optimal decision reward only under Proposition L.12.1's policy-inclusion premise; neither scalar mutual information nor complexity alone orders this clock response.
 
-*Proof.* For cycle period $T=2\pi/\omega$, Taylor expansion gives
+*Proof.* The positive-frequency certificate gives
+$\delta\tau_{\mathrm{CC}}=-d/(\omega_{\mathrm{TLS}}+d)$
+with $d=\delta_{\mathrm{Stark}}^{\mathrm{real}}$. The exact identity
 $$
-\frac{T(\omega+\delta\omega)-T(\omega)}{T(\omega)}
-=-\frac{\delta\omega}{\omega}
-+O\!\left(\frac{\delta\omega^2}{\omega^2}\right).
+-\frac{d}{\omega_{\mathrm{TLS}}+d}
+=-\frac d{\omega_{\mathrm{TLS}}}
++\frac{d^2}{\omega_{\mathrm{TLS}}(\omega_{\mathrm{TLS}}+d)}
 $$
-Apply the carrier-response certificate with $\delta\omega=\delta_{Stark}^{real}$ and take absolute values. ∎
+and $\omega_{\mathrm{TLS}}+d\ge(1-q)\omega_{\mathrm{TLS}}>0$ yield (L.95). No identification of an energy-origin-dependent MPU rhythm with a TLS clock follows without the supplied clock-response certificate. ∎
 
 #### **L.12.3.2 Connection to the Perspective Transition Kernel**
 
@@ -1873,7 +1956,7 @@ V_k(s')
 \frac{\lambda_{\text{drift}}}{2}d_\Sigma^2(s',s_k).
 \tag{L.96}
 $$
-The map from $N(t)$ and the context record to $\lambda_{\text{drift}}$ is an implementation-specific constitutive law. Its information-free value may be a nonzero baseline $\lambda_{\text{drift}}^{\text{prior}}$. Convergence toward a projective kernel requires a separately stated large-drift limit and normalization theorem; it does not follow from mutual information alone. On the interrogative-efficiency branch of Appendix M.3.3.2, Definition M.3.3f and Proposition M.3.3h supply a derived form of this constitutive law: the drift target is the registered minimizer of the interrogative-efficiency potential and $\lambda_{\text{drift}}$ is its isotropic Hessian scale there, with Theorem M.3.3e bounding the attainable benefit entering that potential and Corollary M.3.3i recovering the isotropic information-free baseline when the registered benefit landscape is flat.
+The map from $N(t)$ and the context record to $\lambda_{\text{drift}}$ is an implementation-specific constitutive law. Its information-free value may be a nonzero baseline $\lambda_{\text{drift}}^{\text{prior}}$. Convergence toward a projective kernel requires a separately stated large-drift limit and normalization theorem; it does not follow from mutual information alone. On the smooth interrogative-efficiency subbranch of Appendix M.3.3.2 with a unique nondegenerate global minimizer and positive isotropic Hessian, Definition M.3.3f and Proposition M.3.3h identify the drift target with that minimizer and $\lambda_{\text{drift}}$ with its isotropic Hessian scale. Equation (L.96) is then the local second-order normal form, and Theorem M.3.3e bounds the attainable benefit entering the potential. On the separate branch where the registered benefit, execution-cost, and self-cost profiles are all constant on $\Sigma$, Corollary M.3.3i gives the isotropic information-free baseline.
 
 **Corollary L.12.3 (Conditional Perspective-Drift Response).** Assume a perspective-kernel response certificate supplies constants $\lambda_{drift}^{prior}\geq0$ and $\lambda_{drift}^{span}\geq0$ such that
 $$
@@ -1882,9 +1965,11 @@ $$
 \bigl(\eta_{res}(S,T)-\eta_{prior}\bigr)_+.
 \tag{L.97}
 $$
-Then refinement of the context cannot reduce the maximal certified drift advantage whenever Proposition L.12.1's nested-policy hypothesis applies. Zero causal information yields no advantage over $\lambda_{drift}^{prior}$; it yields zero drift only when a separate isotropic-baseline condition sets $\lambda_{drift}^{prior}=0$. Full target identification permits, but does not force, saturation of the upper bound.
+Context refinement under Proposition L.12.1's policy-inclusion hypothesis cannot reduce the certified upper envelope
+$\lambda_{\mathrm{drift}}^{\mathrm{span}}(\eta_{\mathrm{res}}-\eta_{\mathrm{prior}})_+$.
+It does not thereby order the maximum physically attainable drift advantage; that conclusion additionally requires nested drift-feasible sets or an attained response law identifying that maximum with the envelope. Zero causal information gives $\eta_{\mathrm{res}}=\eta_{\mathrm{prior}}$ on the common decision model and hence no drift advantage under (L.97). It gives zero total drift only if $\lambda_{\mathrm{drift}}^{\mathrm{prior}}=0$ is separately supplied. Target identification and an admissible matching action permit, but do not force, saturation.
 
-*Proof.* The displayed inequality is the registered kernel-response certificate. Proposition L.12.1 gives non-decrease of the optimal resonance reward under context refinement. Monotonicity of $x\mapsto(x-\eta_{prior})_+$ transfers that ordering to the certified upper envelope. No equality claim follows without a saturation hypothesis. ∎
+*Proof.* Policy inclusion makes $\eta_{\mathrm{res}}$ nondecreasing, and $x\mapsto(x-\eta_{\mathrm{prior}})_+$ is nondecreasing. This orders the right side of (L.97) only. An upper bound can increase while an admissible drift value decreases; no lower comparison between such values follows from (L.97). At zero information the right side vanishes, so both sides of the nonnegative advantage bound coincide at zero. ∎
 
 #### **L.12.3.3 Conditional Acceleration–Refresh Bound on Causal Information Acquisition**
 
@@ -1908,16 +1993,17 @@ $$
 =\left.\frac{d\mathcal I(S\to T)}{dt}\right|_{\max}^{(0)}.
 \tag{L.99}
 $$
-On the additional local-linear subbranch $F(C)=\kappa C$ and for $R'(C_0)>0$,
+On the additional local-linear branch $F(C)=\kappa C$, require $\kappa>0$, $C_0>0$, $\tau_{\mathrm{cycle}}>0$ and a $C^1$ resource law near $C_0$ with $R'(C_0)>0$. The local solution branch of (L.98) through $(a,C_a)=(0,C_0)$ then satisfies
 $$
-\frac{\left.d\mathcal I/dt\right|_{\max}^{(a)}}
-{\left.d\mathcal I/dt\right|_{\max}^{(0)}}
-=
-\frac{C_a}{C_0}
-=
-1-\frac{\lambda_{PM}a}{\tau_{cycle}R'(C_0)}+o(a).
+\frac{F(C_a)}{F(C_0)}
+=\frac{C_a}{C_0}
+=1-\frac{\lambda_{\mathrm{PM}}a}
+{\tau_{\mathrm{cycle}}R'(C_0)}+o(a)
+\qquad(a\downarrow0).
 $$
-Thus Equation (L.99) is conditional on both the Appendix N response/refresh branch and $\mathfrak B_{\mathrm{CC-UCT}}$. Theorem N.UCT alone does not establish an MPU detector response, a universal acquisition-rate law, or CC-reach contraction; inertial motion with $a=0$ has no Unruh increment in this model.
+Indeed, the derivative with respect to $C$ of the defining equation at $(0,C_0)$ is $R'(C_0)>0$, so the implicit-function theorem gives a unique local $C^1$ branch. Differentiating gives
+$R'(C_0)C'_0+\lambda_{\mathrm{PM}}C_0/\tau_{\mathrm{cycle}}=0$,
+which proves the expansion after division by positive $C_0$. If $\kappa C_0=0$, the acquisition-rate ratio is undefined and only the unnormalized inequality (L.99) applies. The detector/refresh and CC-to-UCT allocation certificates remain independent; inertial motion has no Unruh increment in this model.
 
 -----
 
@@ -1928,7 +2014,7 @@ Thus Equation (L.99) is conditional on both the Appendix N response/refresh bran
 The AC Stark shift:
 
 $$
-\delta_{\text{Stark}}(t) \simeq \frac{\Omega_R^2(t)}{4\Delta(t)}, \qquad \Omega_R(t) = \frac{|\vec{d}_{\text{TLS}} \cdot \vec{\epsilon}_{\text{rad}}(t)|\, E_0(t)}{\hbar} \tag{L.100}
+\delta_{\text{Stark}}(t) \simeq \frac{\Omega_R^2(t)}{2\Delta(t)}, \qquad \Omega_R(t) = \frac{|\vec{d}_{\text{TLS}} \cdot \vec{\epsilon}_{\text{rad}}(t)|\, E_0(t)}{\hbar} \tag{L.100}
 $$
 
 depends on the aggregate's knowledge of $\hat{d}_{\text{TLS}}$ and $\omega_{\text{TLS}}$ through the choices of $\vec{\epsilon}_{\text{rad}}$ and $\omega_{\text{rad}}$, set by $\mathcal{M}(\text{context}_S)$ (Definition L.2, Theorem L.1). The **model–target resonance factor** is defined as the optimal expected target alignment under context-dependent control:
@@ -1937,7 +2023,7 @@ $$
 \eta_{\text{res}}(S, T) := \sup_{\hat{\mathbf{d}}(\cdot), \hat{\omega}(\cdot)} \mathbb{E}_{\mathcal{P}_{\text{causal}}}\!\left[ \left|\hat{\mathbf{d}}(\text{context}_S) \cdot \hat{\mathbf{d}}_{\text{TLS}}\right|^2 \cdot \frac{\Delta_{\text{opt}}^2}{\Delta_{\text{opt}}^2 + (\omega_{\text{TLS}} - \hat{\omega}(\text{context}_S))^2} \right] \in [0,1] \tag{L.101}
 $$
 
-where $\Delta_{opt}>0$ is the design scale and $\hat\omega$ is an estimate of the target transition frequency. The physical drive retains a nonzero detuning satisfying $|\Delta_{drive}|\gg\max\{\Omega_R,\Gamma\}$. The reward equals $1$ only when the context identifies the relevant dipole direction and transition frequency exactly and the matching action is admissible. Information equality $\mathcal I(S\to T)=\mathcal I_{max}$ implies this only if $\theta_T$ is almost surely a measurable function of $\text{context}_S$, equivalently if the posterior law is almost surely a point mass at the realized target parameter.
+Here $\Delta_{\mathrm{opt}}>0$ is the design scale, and the dipole vectors are real unit vectors. The physical drive retains a nonzero detuning satisfying $|\Delta_{\mathrm{drive}}|\gg\max\{\Omega_R,\Gamma\}$. For an admissible policy that attains the supremum, $\eta_{\mathrm{res}}=1$ holds exactly when its chosen dipole axis agrees almost surely with the target axis up to sign and its frequency estimate equals $\omega_{\mathrm{TLS}}$ almost surely. Indeed, both factors in (L.101) lie in $[0,1]$; expectation one forces each factor to equal one almost surely, and the two equality conditions follow. Conversely those conditions give reward one. This identifies the response-relevant pair $([\hat{\mathbf d}_{\mathrm{TLS}}],\omega_{\mathrm{TLS}})$, where $[\hat{\mathbf d}]=\{\hat{\mathbf d},-\hat{\mathbf d}\}$, without requiring a point-mass posterior for other components of $\theta_T$. A supremum of one need not be attained without an attainment certificate. For example, an exactly known target axis and frequency $\omega_0$ with allowed frequency actions $\omega_0+1/n$, $n\ge1$, have supremum reward one and no maximizing action. Exact identification of all of $\theta_T$ is sufficient when the matching action is admissible; a scalar mutual-information equality alone supplies neither identification nor attainment.
 Zero causal information restricts performance to the optimal information-free baseline $\eta_{prior}\geq0$.
 
 **Proposition L.12.1 (Resonance Reward Is Monotone under Context Refinement).** Let $C_1,C_2$ be two context variables on the same target experiment and assume $C_1=g(C_2)$ for a measurable deterministic coarse-graining $g$. If every $C_1$-policy composed with $g$ is admissible as a $C_2$-policy, then
@@ -2011,28 +2097,31 @@ This is a complete policy, rate, precision, drift, and DPI solution for the decl
 
 ### **L.12.5 Resource Cost of Causal Information Acquisition**
 
-**Theorem L.12.2 (Conditional Reset Cost of Causal Information).** Let $n_{\mathrm{int}}$ interactions acquire nonnegative increments $\Delta I_k$ with $\sum_k\Delta I_k=I_0>0$. Assume that every interaction uses a channel whose classical capacity is bounded by the same finite $C_{\max}>0$. Then
+**Theorem L.12.2 (Conditional Reset Cost of Causal Information).** Let a registered protocol use a finite deterministic number $n_{\mathrm{int}}$ of interactions. On one common target law, write its complete classical decoding histories as $H_k=(H_{k-1},Y_k)$ and define $\Delta I_k:=I(\theta_T;Y_k\mid H_{k-1})$. Suppose $0<I_0:=\sum_k\Delta I_k<\infty$ and an operational certificate for the actual protocol, including all decoder side information, gives $0\le\Delta I_k\le C_{\max}<\infty$ with $C_{\max}>0$. An unassisted classical-capacity bound is used only on that communication branch, without uncharged entanglement assistance or side channels. Then
 $$
 n_{\mathrm{int}}
 \ge
 \left\lceil\frac{I_0}{C_{\max}}\right\rceil.
 \tag{L.103}
 $$
-If interaction $k$ additionally contains a registered reset satisfying the hypotheses of Theorem E.1, with pre-reset law $q_k(P_k,R_k)$, then its bath-heat ledger obeys
+For the reset bound, require every counted interaction to contain a distinct registered reset with classical pre-reset law $q_k(P_k,R_k)$, satisfying the full hypotheses of Definition 28 and Theorem E.1. All reset baths have the same $T>0$; the required bath independence, auxiliary closure and finite-resource or justified-limit conditions hold for each event. Define the acquisition bath heat as the sum of these event mean heats, with no duplicated bath contribution and no conditioning on a subset selected by its realized heat:
 $$
+\langle Q_{\mathrm{bath}}^{\mathrm{acq}}\rangle
+:=\sum_{k=1}^{n_{\mathrm{int}}}\langle Q_{\mathrm{bath},k}\rangle,
+\qquad
 \frac{\langle Q_{\mathrm{bath}}^{\mathrm{acq}}\rangle}{k_BT}
 \ge
 \sum_{k=1}^{n_{\mathrm{int}}}H_{q_k}(P_k\mid R_k).
 \tag{L.103a}
 $$
-If the branch supplies the further uniform floor $H_{q_k}(P_k\mid R_k)\ge h_{\min}>0$, then
+If this same collection supplies the additional uniform floor $H_{q_k}(P_k\mid R_k)\ge h_{\min}>0$ for every $k$, then
 $$
 \frac{\langle Q_{\mathrm{bath}}^{\mathrm{acq}}\rangle}{k_BT}
 \ge
 h_{\min}\left\lceil\frac{I_0}{C_{\max}}\right\rceil.
 \tag{L.103b}
 $$
-On the separate registered information-disturbance branch of Theorem 33, if every counted interaction has $\Delta I_k>0$ and satisfies $\Delta I_k(\Delta S_k/k_B)\ge\kappa_r$, then
+On the separate registered-reset branch of Theorem 33, define the bath entropy export $\Delta S_k:=\langle Q_{\mathrm{bath},k}\rangle/T=k_B\varepsilon_{\mathrm{reset},k}$ and $\Delta S_{\mathrm{acq}}:=\sum_k\Delta S_k$. If every counted interaction satisfies $\Delta I_k\ge\Delta I_{\min}>0$ and $H_{q_k}(P_k\mid R_k)\ge h_{\min}>0$, set $\kappa_r:=\Delta I_{\min}h_{\min}$. Then Theorem 33 gives $\Delta I_k(\Delta S_k/k_B)\ge\kappa_r$, and
 $$
 I_0\frac{\Delta S_{\mathrm{acq}}}{k_B}
 \ge
@@ -2051,24 +2140,25 @@ $$
 $$
 and summing the eventwise trade-offs proves (L.104). ∎
 
-**Corollary L.12.5 (Conditional PCE Acquisition-Rate Cost).** Suppose the acquisition in Theorem L.12.2 occurs during a registered duration $\tau_{acq}>0$ at temperature $T$, and let $n$ be the number of charged interactions. Then its mean thermodynamic power obeys
+**Corollary L.12.5 (Conditional PCE Acquisition-Rate Cost).** Assume the complete acquisition and reset hypotheses of Theorem L.12.2, including its uniform floor $h_{\min}>0$, and let $\tau_{\mathrm{acq}}>0$ be the registered duration. Put $n=n_{\mathrm{int}}$ and define the charged mean bath-heat power by $R_{\mathrm{acq}}:=\langle Q_{\mathrm{bath}}^{\mathrm{acq}}\rangle/\tau_{\mathrm{acq}}$. Then
 $$
-R_{acq}
-\geq\frac{k_BT}{\tau_{acq}}
+R_{\mathrm{acq}}
+\ge\frac{k_BT}{\tau_{\mathrm{acq}}}
 \sum_{k=1}^{n}H_{q_k}(P_k\mid R_k)
-\geq\frac{k_BT}{\tau_{acq}}h_{min}
-\left\lceil\frac{I_0}{C_{max}}\right\rceil.
+\ge\frac{k_BT}{\tau_{\mathrm{acq}}}h_{\min}
+\left\lceil\frac{I_0}{C_{\max}}\right\rceil.
 $$
-Accordingly, the acquisition-window contribution to Equation (L.1) satisfies
+To insert this heat ledger into Equation (L.1), additionally require $\lambda_{\mathrm{ctrl}}\ge0$ and an acquisition-window accounting certificate with $R_{\mathrm{cost}}\ge R_{\mathrm{acq}}$. In particular, identifying a work or total-resource cost with this bath-heat power requires the corresponding energy, storage and payer balance. If the remaining terms in that window are the displayed representation cost and utility $U_{\mathrm{bias}}(I_0)$, then
 $$
 V_{\mathcal I}
-\geq\lambda_{rep}C_P(\text{context}_S)
-+\lambda_{ctrl}\frac{k_BT}{\tau_{acq}}
-h_{min}\left\lceil\frac{I_0}{C_{max}}\right\rceil
--\Gamma_{utility}U_{bias}(I_0).
+\ge\lambda_{\mathrm{rep}}C_P(\text{context}_S)
++\lambda_{\mathrm{ctrl}}\frac{k_BT}{\tau_{\mathrm{acq}}}
+h_{\min}\left\lceil\frac{I_0}{C_{\max}}\right\rceil
+-\Gamma_{\mathrm{utility}}U_{\mathrm{bias}}(I_0).
 \tag{L.105}
 $$
-This bounds registered-reset acquisition power on the registered window. A continuing maintenance cost requires a separate refresh-rate ledger, and the information-disturbance term of Theorem 33 belongs to its separately registered branch.
+The first inequality follows by dividing (L.103a) by the positive duration; the second uses its uniform-floor branch. Multiplication by the nonnegative control coefficient and substitution of the declared resource-cost bound give (L.105).
+This bounds registered-reset acquisition power on the registered window. A continuing maintenance cost requires a separate refresh-rate ledger, and the information–reset-cost product of Theorem 33 belongs to its separately registered branch.
 
 -----
 
@@ -2092,24 +2182,26 @@ r(d,\nu;\hat d,\omega)
 \frac{\Delta_{opt}^2}{\Delta_{opt}^2+(\omega-\nu)^2},
 \qquad\|d\|=\|\hat d\|=1.
 $$
-Assume the action set is compact. Then a posterior-optimal policy is any measurable selection
+Assume $C$ and the target pair take values in standard Borel spaces, and register a regular conditional target law $\pi_c$. Let the common action set $A\subset S^2\times\mathbb R$ be nonempty and compact, with all measurable $A$-valued policies admissible. Define
 $$
-(d^*(c),\nu^*(c))
-\in\operatorname*{arg\,max}_{\|d\|=1,\nu}
-\mathbb E[r(d,\nu;\hat d_{TLS},\omega_{TLS})\mid C=c],
+f(c,a):=\int r(a;\hat d,\omega)\,\pi_c(d\hat d\,d\omega),
+\qquad
+v(c):=\max_{a\in A}f(c,a).
 $$
-and
+Require a measurable maximizing selection $a^*(c)\in\operatorname*{arg\,max}_{a\in A}f(c,a)$ as part of the posterior-policy certificate. Compactness supplies pointwise maximizers; using them as a policy requires this selection property. Then
 $$
-\eta_{res}^{EM}(S,T)
+\eta_{\mathrm{res}}^{EM}(S,T)
+=\mathbb E[v(C)]
 =\mathbb E\!\left[
-\max_{\|d\|=1,\nu}
-\mathbb E[r(d,\nu;\hat d_{TLS},\omega_{TLS})\mid C]
+\max_{a\in A}\mathbb E[r(a;\hat d_{\mathrm{TLS}},\omega_{\mathrm{TLS}})\mid C]
 \right].
 \tag{L.107}
 $$
-If the posterior identifies $(\hat d_{TLS},\omega_{TLS})$ exactly and the matching action is admissible, the reward is $1$. Under zero mutual information, (L.107) reduces to the optimal prior-only reward $\eta_{prior}$. The principal-eigenvector rule is exact for the polarization-only factor; the conditional mean is exact for squared frequency loss, not generally for the Lorentzian reward above.
+An attained value of one has the dipole-axis and frequency equality conditions stated after (L.101). Exact posterior identification of that response-relevant pair, with an admissible measurable matching policy, is sufficient. Under zero mutual information between $C$ and the target pair, the value reduces to the optimal prior-only reward.
 
-*Proof.* Conditional on $C=c$, the optimal decision is the action maximizing the posterior expected reward. Compactness and continuity give existence, and the measurable-selection hypothesis gives a policy. Taking the expectation over $C$ proves (L.107). Exact posterior identification turns the conditional reward into $r(\hat d_{TLS},\omega_{TLS};\hat d_{TLS},\omega_{TLS})=1$. Independence of $C$ and the target makes the conditional law equal to the prior, yielding the prior-only optimum. ∎
+*Proof.* The reward is bounded and jointly measurable, and is continuous in the action because $\Delta_{\mathrm{opt}}>0$. Integration against the registered probability kernel makes $f$ jointly measurable; dominated convergence makes $f(c,\cdot)$ continuous. Compactness gives its maximum. A countable dense subset of $A$ computes the same supremum, so $v$ is measurable. Every admissible policy has conditional reward at most $v(C)$; the supplied measurable selection attains it. Taking expectations proves (L.107). Independence makes $\pi_c$ equal to the prior almost surely, and a constant maximizing action attains the prior value. The reward-one conclusion follows from the nonnegative-defect argument after (L.101).
+
+For the polarization factor alone, if every unit direction is admissible, write $M_c=\mathbb E[\hat d_{\mathrm{TLS}}\hat d_{\mathrm{TLS}}^T\mid C=c]$. Its expected reward is $d^TM_cd$; diagonalizing the positive matrix shows that any unit eigenvector for its largest eigenvalue maximizes it. For squared frequency loss with finite conditional second moment, the identity $\mathbb E[(\omega-\nu)^2\mid C]=\operatorname{Var}(\omega\mid C)+(\nu-\mathbb E[\omega\mid C])^2$ gives the conditional mean when admissible. That loss identity does not apply to the Lorentzian reward. ∎
 
 -----
 
@@ -2378,7 +2470,7 @@ q(s_j,c,m,r_C,r_M,r)
 $$
 In particular, this specifies the ensemble to which the reset entropy refers; $S$ and $R_{\mathrm{ext}}$ are retained side information rather than erased registers.
 
-All of $C,M,R_C,R_M$ have zero Hamiltonian. Register four serial isothermal bit resets at temperature $T$, a controller $K_{\mathrm{reset}}$ that is cyclic and returns to its initial Hamiltonian, a reset-work store $\mathsf W_{\mathrm{reset}}$, and a bath $\Theta_T$. For a bit $X\in\{C,M,R_C,R_M\}$ define the CPTP ready-state map, canonically inserted in the $X$ tensor position, by
+All of $C,M,R_C,R_M$ have zero Hamiltonian. Register four serial isothermal bit resets at temperature $T$, each satisfying every thermodynamic hypothesis of Definition 28, with controller $K_{\mathrm{reset}}$, reset-work store $\mathsf W_{\mathrm{reset}}$, and bath $\Theta_T$. This includes the complete auxiliary-resource return and any required entropy and mean-heat limits. For a bit $X\in\{C,M,R_C,R_M\}$ define the logical CPTP ready-state map, canonically inserted in the $X$ tensor position, by
 $$
 \mathscr R_X(Y):=|0\rangle_X\!\langle0|\otimes\operatorname{tr}_X Y.
 $$
@@ -2402,7 +2494,7 @@ H_q(X_i\mid X_{>i},S,R_{\mathrm{ext}})\\
 \end{aligned}
 \tag{L.12.8b.11}
 $$
-The registered controller is cyclic, every register and controller Hamiltonian returns to its initial value, and each reset is isothermal, so these are precisely Definition 28 reset premises. The store $\mathsf W_{\mathrm{reset}}$ is the sole reset-work owner and $\Theta_T$ the sole reset-heat owner, receiving $Q_{\mathrm{reset}}$; neither is the actuation battery $B$.
+Each serial reset carries the complete Definition 28 implementation contract, including an initially independent Gibbs bath, full auxiliary-resource closure, and finite entropy accounting or justified entropy and mean-heat limits. The CPTP maps in (L.12.8b.10) specify the logical resets; a thermodynamic realization requires that separate contract. The store $\mathsf W_{\mathrm{reset}}$ is the sole reset-work owner and $\Theta_T$ the sole reset-heat owner, receiving $Q_{\mathrm{reset}}$; neither is the actuation battery $B$.
 
 Choose bounded world tubes in the strict causal order
 $$
@@ -2436,7 +2528,7 @@ $$
 whereas $|0,g\rangle$ is fixed. The memory unitary copies the orthogonal target energy label. Each outcome map has the single Kraus operator $P_m$ and is CP, while
 $\operatorname{tr}\sum_mP_mXP_m=\operatorname{tr}X$; this proves instrument normalization and Equation (L.12.8b.6). Differences of trace-preserving Hermiticity-preserving maps are trace-annihilating and Hermiticity preserving, proving the Definition 30 binding, and excitation conservation proves (L.12.8b.7). The swaps in (L.12.8b.8) restore the only two reachable $C=1$ outcome branches; the $C=0$ branch is already ready. Summing (L.12.8b.9) over $c,m,r_C,r_M,j,r$ gives one. Each map in (L.12.8b.10) is CPTP, their composition resets exactly the four declared bits, and applying the binary Definition-28 bound in the displayed serial order gives the four conditional entropies in (L.12.8b.11); their sum is the joint conditional entropy by the chain rule. Finally, trace preservation gives $\Lambda_A^*(I_A)=I_A$, proving (L.12.8b.13) for every remote observable and hence equality of remote marginals. Direct substitution proves phase invariance. ∎
 
-**Resolution TV-L-07-R1 (Metadata).** Exact domain: the two-cell Definition L.1 aggregate-context quotient represented by the orthogonal, degenerate, retained source register $S$; every finite classical source law $q_{jr}$ in (L.12.8b.9); the finite binary control, carrier, target, actuation-battery, readout and logging registers of Theorem L.12.8b; both context values and both outcome branches. Premises: $E\ge\hbar\omega$, $0<g\tau_{\mathrm{int}}<\pi$, positive durations for every displayed operation, the strict bounded-support order (L.12.8b.12), identity extension on spacelike factors, and the registered degenerate-register, cyclic-controller, isothermal-bath premises of Definition 28 for each serial bit reset. Equivalence: implementations are identified only when their typed source and retained-source convention, controlled-$X$ encoder, target channels, CP outcome maps, actual joint law, intervention response, energy-owner projections, serial reset maps and thermodynamic owners, timings and causal supports agree. Budget: both source basis states, every basis state in each displayed swap, both context interventions, both readout outcome maps, every atom of the registered joint law, all four serial resets and every nonselective locality stage. Verifier: check source orthogonality and retention, $U_{\mathrm{ctx}}|s_j,0\rangle=|s_j,j\rangle$, all finite-matrix unitarity and energy commutators, complete positivity of each $\mathcal I_m$, trace preservation of $\sum_m\mathcal I_m$, normalization of (L.12.8b.9), CPTP and trace-annihilation identities, exact response evaluation, branchwise energy return, Definition-28 premises, the four-bit chain-rule bound, disjoint actuation/reset work/reset heat ownership, inclusion of $W_{\mathrm{log}}$, and Equation (L.12.8b.13) for each nonselective stage. Falsifier: nonorthogonal or consumed source labels; failure of the encoder or an energy commutator; a non-CP outcome map or non-TP instrument sum; an unnormalized joint law or zero response; failure of trace annihilation; an unreturned carrier, target or actuation-battery branch; a reset lacking the actual-law, degenerate-register, cyclic-controller or isothermal-bath premise; overlapping energy owners; a missing positive duration or logging support; or any violation of nonselective spacelike marginal invariance. Provenance class: source-internal finite physical construction. Downstream consumers: Hypothesis 3, Definition 30, `TV-M-07`, the experimental handoff and `TV-L-07`. Equations (L.12.8b.1)--(L.12.8b.13) give `positive-discharge` of exactly the registered finite G9CC realization proposition: a typed retained aggregate-context source, an energy-conserving context-to-control encoder, a causal carrier and Hamiltonian, a normalized CP outcome instrument, a nonzero trace-annihilating attribution functional, branchwise energy return, a populated cyclic reset ledger with unique work/heat owners, complete timing, local identity extensions, nonselective remote-marginal invariance and phase invariance. Biological admission to this engineered class and modulation of the Appendix M perspective instrument remain independent consumers rather than components of `TV-L-07`.
+**Resolution TV-L-07-R1 (Metadata).** Exact domain: the two-cell Definition L.1 aggregate-context quotient represented by the orthogonal, degenerate, retained source register $S$; every finite classical source law $q_{jr}$ in (L.12.8b.9); the finite binary control, carrier, target, actuation-battery, readout and logging registers of Theorem L.12.8b; both context values and both outcome branches. Premises: $E\ge\hbar\omega$, $0<g\tau_{\mathrm{int}}<\pi$, positive durations for every displayed operation, the strict bounded-support order (L.12.8b.12), identity extension on spacelike factors, and the registered degenerate-register, cyclic-controller, isothermal-bath premises of Definition 28 for each serial bit reset. Equivalence: implementations are identified only when their typed source and retained-source convention, controlled-$X$ encoder, target channels, CP outcome maps, actual joint law, intervention response, energy-owner projections, serial reset maps and thermodynamic owners, timings and causal supports agree. Budget: both source basis states, every basis state in each displayed swap, both context interventions, both readout outcome maps, every atom of the registered joint law, all four serial resets and every nonselective locality stage. Verifier: check source orthogonality and retention, $U_{\mathrm{ctx}}|s_j,0\rangle=|s_j,j\rangle$, all finite-matrix unitarity and energy commutators, complete positivity of each $\mathcal I_m$, trace preservation of $\sum_m\mathcal I_m$, normalization of (L.12.8b.9), CPTP and trace-annihilation identities, exact response evaluation, branchwise energy return, Definition-28 premises, the four-bit chain-rule bound, disjoint actuation/reset work/reset heat ownership, inclusion of $W_{\mathrm{log}}$, and Equation (L.12.8b.13) for each nonselective stage. Falsifier: nonorthogonal or consumed source labels; failure of the encoder or an energy commutator; a non-CP outcome map or non-TP instrument sum; an unnormalized joint law or zero response; failure of trace annihilation; an unreturned carrier, target or actuation-battery branch; a reset lacking the actual-law, degenerate-register, cyclic-controller or isothermal-bath premise; overlapping energy owners; a missing positive duration or logging support; or any violation of nonselective spacelike marginal invariance. Provenance class: source-internal finite circuit construction; the thermodynamic part is conditional on a separate reset implementation satisfying every hypothesis of Definition 28, including any required entropy and mean-heat limits. Downstream consumers: Hypothesis 3, Definition 30, `TV-M-07`, the experimental handoff and `TV-L-07`. Equations (L.12.8b.1)--(L.12.8b.13) give `positive-discharge` of exactly the registered finite G9CC realization proposition: a typed retained aggregate-context source, an energy-conserving context-to-control encoder, a causal carrier and Hamiltonian, a normalized CP outcome instrument, a nonzero trace-annihilating attribution functional, branchwise energy return, a populated cyclic reset ledger with unique work/heat owners, complete timing, local identity extensions, nonselective remote-marginal invariance and phase invariance. Biological admission to this engineered class and modulation of the Appendix M perspective instrument remain independent consumers rather than components of `TV-L-07`.
 
 **Remark L.12.5 (Entanglement Channel Temporal Engineering).** In the temporal-ontological description (Section L.12.3), the entanglement channel corresponds to modulating the perspective transition kernel $G_{\text{persp}}$ in region $\mathcal{O}_A$ in a way correlated with the operator-basis record $\mathcal{B}_{AB}$ for the joint state on $\mathcal{O}_A\cup\mathcal{O}_B$. On the local-CPTP branch, this modulation may alter joint correlators while Equation (L.111) preserves the $\mathcal O_B$ marginal.
 
@@ -2450,14 +2542,14 @@ Target-specific performance requires usable information from a shared causal his
 
 The AC-Stark construction is a conditional implementation class. Under the causal-separation hypotheses, performance strictly above the optimal information-free baseline requires a causal or common-cause record carrying information about the target. This statement does not require direct participation in target preparation and does not turn an abstract model record into a physical carrier. The key results are:
 
-- **Summary of Definition L.12.1 and Equations L.92–L.93:** Causal information $\mathcal{I}(S \to T,t)$ is defined as mutual information under $\mathcal{P}_{\text{causal}}$, satisfying the inequality chain $\mathcal{I}(S \to T) \leq I(S:T) \leq \mathcal{I}_{\text{rel}}(S)$ by data processing and subadditivity respectively. On a common $\mathfrak B_{mass}$ branch only, Theorem N.5 converts the relational-information upper scale into a target-mass upper scale; the information inequality itself is branch independent.
+- **Summary of Definition L.12.1 and Equations L.92–L.93:** Causal information $\mathcal{I}(S \to T,t)$ is defined as mutual information under $\mathcal{P}_{\text{causal}}$, satisfying the inequality chain $\mathcal{I}(S \to T) \leq I(S:T) \leq \mathcal{I}_{\text{rel}}(S)$ by data processing under the local-channel and subsystem hypotheses of Definition L.12.1. On a common $\mathfrak B_{mass}$ branch only, Theorem N.5 converts the relational-information upper scale into a target-mass upper scale; the information inequality is independent of that mass-calibration branch.
 
 
-- **Summary of Corollary L.12.2:** On the declared arrow-of-time branch, only records in the causal past can contribute. The accessible interaction history is cumulative. The retained quantity $\mathcal I(S\to T,t)=I(\text{context}_S(t);\theta_T)$ is monotonically non-decreasing only on the lossless-refinement branch; it may decrease under compression, forgetting, or finite-memory overwrite.
+- **Summary of Corollary L.12.2:** Under the declared adaptedness hypothesis, only records available by the registered time can contribute. The accessible interaction history is cumulative. The retained quantity $\mathcal I(S\to T,t)=I(\text{context}_S(t);\theta_T)$ is monotonically non-decreasing only on the lossless-refinement branch for the same target random variable and one common joint law; it may decrease under compression, forgetting, or finite-memory overwrite.
 - **Section L.12.3 (Temporal Engineering):** CC influence is modeled as modulation of $\tau(x_T,t)$ via the declared temporal-wave channels. Causal information governs modulation precision (Equation L.95) and perspective drift strength (Corollary L.12.3). On the Appendix N response/refresh branch plus the explicit $\mathfrak B_{\mathrm{CC-UCT}}$ allocation bridge, Equation (L.99) transfers the conditional reduction $C_a\le C_0$ to a non-increasing causal-information acquisition rate; acceleration alone does not imply that transfer.
 - **Summary of Proposition L.12.1 and Equations L.101–L.102:** Resonance factor $\eta_{\text{res}}$ improves under refinement of causal information, proved via the coarse-graining/policy-set inclusion argument. Corollary L.12.4 establishes that any target-conditioned advantage beyond an information-free baseline requires $\mathcal{I}(S \to T) > 0$.
-- **Summary of Theorem L.12.2 and Equations L.103–L.105:** A finite per-use capacity bounds the number of interactions needed to acquire $I_0$. Registered reset laws bound bath heat by $\sum_k H_{q_k}(P_k\mid R_k)$, with a positive linear floor only when $H_{q_k}(P_k\mid R_k)\ge h_{\min}>0$. Equation (L.105) converts the registered acquisition heat to mean power only after a duration is supplied, and the information-disturbance term of Theorem 33 enters only on its separately registered branch. These conditional bounds constrain a specified PCE objective but do not establish existence or uniqueness of an equilibrium $I_0^*$.
-- **Summary of Corollary L.12.7 and Equation L.107:** The EM resonance reward is the posterior Bayes optimum jointly over polarization and frequency. The principal-eigenvector rule is exact only for the polarization-only factor, and the conditional mean is exact for squared frequency loss rather than the Lorentzian reward. Zero mutual information gives the optimal prior-only reward; reward one requires exact target identification and an admissible matching action.
+- **Summary of Theorem L.12.2 and Equations L.103–L.105:** A certificate bounding the actual protocol's conditional information increments, with all decoder resources accounted for, bounds the number of interactions needed to acquire $I_0$. Every counted interaction must supply a distinct complete registered reset at the common positive temperature for the additive bath-heat bound; a positive linear floor further requires $H_{q_k}(P_k\mid R_k)\ge h_{\min}>0$ for every reset. Equation (L.105) requires a positive duration, a nonnegative control coefficient and an acquisition-window resource-cost ledger that bounds this bath-heat rate. The information–reset-cost product of Theorem 33 enters only on its separately registered branch. These conditional bounds constrain a specified PCE objective but do not establish existence or uniqueness of an equilibrium $I_0^*$.
+- **Summary of Corollary L.12.7 and Equation L.107:** Under its posterior and measurable-policy certificate, the EM resonance reward is the posterior Bayes optimum jointly over polarization and frequency. The principal-eigenvector rule is exact for the polarization-only factor, and the conditional mean is exact for squared frequency loss rather than the Lorentzian reward. Zero mutual information gives the optimal prior-only reward. An attained reward of one identifies the dipole axis up to sign and the transition frequency almost surely, with an admissible matching action; it need not identify other components of the target parameter.
 - **Summary of Theorem L.12 (Conditional Locality):** Target-conditioned advantage is confined to a shared causal history when the causal-Markov, adaptedness, and exact-cone hypotheses hold. In the Appendix F continuum branch, the cone is identified with the geometric lightcone only under its bridge assumptions. Thermodynamic range cost supplies an optimization penalty and the arrow-of-time branch supplies directionality; neither alone proves exact locality.
 - **Summary of Proposition L.12.2, Theorem L.12.8, and Corollary L.12.8a:** A strict target-conditioned joint-correlation advantage requires positive entanglement causal information under the causal-separation hypotheses; a generic local channel can change joint correlators without such information. Equation (L.110) is the trace-distance pairwise correlator bound with its stated factor, and Equation (L.111) preserves the remote marginal exactly on the local-CPTP branch. No Section 10 capacity bound follows without an additional channel model.
 
@@ -2497,7 +2589,7 @@ This appendix supplies conditional implementation theorems and accounting guardr
 
 (9) **Implementation guardrails (Theorem L.9).** Threshold, energy, stress-energy, endpoint, causality, and optimization statements apply only at the status and under the physical records declared in their clauses.
 
-(10) Conditional Spatiotemporal Estimates (Propositions L.9.3–L.9.5): If $|\Delta P(r)|=K_{\text{impl}}P_{\text{agg}}/r^2$ on a monotone far-field interval, then $R_{\text{eff}}=\sqrt{K_{\text{impl}}P_{\text{agg}}/\epsilon_{\text{detect}}}$ within that interval and the causal domain. If context correlations decay exponentially, $\tau_c=1/\Gamma_{\text{context}}$. Maintaining threshold response throughout that interval requires $E_{\text{agg}}\ge(\epsilon_{\text{detect}}/K_{\text{impl}})R_{\text{eff}}^2\tau_c$.
+(10) **Conditional spatiotemporal estimates (Propositions L.9.3–L.9.5).** For a registered radial endpoint with $|\Delta P(r)|=K_{\mathrm{impl}}P_{\mathrm{agg}}/r^2$ and positive $K_{\mathrm{impl}},P_{\mathrm{agg}},\epsilon_{\mathrm{detect}}$, the branch threshold is $R_*=\sqrt{K_{\mathrm{impl}}P_{\mathrm{agg}}/\epsilon_{\mathrm{detect}}}$ when realized inside its validity interval and causal domain. Identifying it with the global $R_{\mathrm{eff}}$ additionally requires exclusion of all threshold crossings at larger radii for every admitted endpoint and direction, including regions outside that interval. A correlation law with nonzero initial amplitude and positive exponential decay rate gives $\tau_c=1/\Gamma_{\mathrm{context}}$. At a registered test radius $R$ where the stationary endpoint law holds throughout an interval of duration $\tau_c$, maintaining threshold response requires $E_{\mathrm{agg}}\ge(\epsilon_{\mathrm{detect}}/K_{\mathrm{impl}})R^2\tau_c$. Using a global radius in this last inequality requires the same exhaustion and threshold-realization certificate.
 
 ## **Biological Connections:**
 
@@ -2515,7 +2607,7 @@ This appendix supplies conditional implementation theorems and accounting guardr
 
     Energy accounting (Protocol L.2)
 
-    Dominance validation (Protocol L.3)
+    Gravitational-channel sensitivity audit (Protocol L.3)
 
     Evidence adjudication for Protocols L.1-L.3 uses the preregistered Section 13.0a triage: support, null, and failure are assigned only by the fixed endpoint, artifact, sign, stopping-rule, and replication criteria stated there.
 
@@ -2541,7 +2633,7 @@ No integration-time forecast follows until a signal amplitude, noise model, endp
 
 The dual-channel analysis gives a common accounting framework for separately certified electromagnetic and gravitational responses of an MPU aggregate. It establishes compatibility and no-double-counting conditions; it does not derive the two carriers, identify them as one mechanism, or complete the structure of physical law from awareness or PCE alone.
 
-Propositions L.9.3-L.9.5 give finite spatiotemporal estimates only with a calibrated carrier response, declared coherence law, causal domain, and sustaining-energy ledger. Theorem L.11 gives the electron-scale dimensionless ratio near $4.1\times10^{42}$ only on its displayed branch. Neither result fixes an aggregate electromagnetic-to-gravitational response ratio.
+Propositions L.9.3–L.9.5 give branch threshold and duration estimates under their calibrated carrier and correlation laws. A finite global spatial extent additionally requires their exhaustion certificate over all admitted endpoints, directions and exterior regions; the inverse-rate duration requires nonzero initial correlation and positive decay rate. The sustaining-energy bound applies to a test radius throughout its certified response interval. Theorem L.11 gives the electron-scale dimensionless ratio near $4.1\times10^{42}$ only on its displayed branch. Neither result determines an aggregate electromagnetic-to-gravitational response ratio.
 
 The biological proposals of Section L.4.1 are empirical hypotheses. A result bears on a CC carrier only through the preregistered source, target, artifact, energy, sign, interval, and replication criteria; bioelectric organization or calorimetric closure alone does not identify CC influence.
 

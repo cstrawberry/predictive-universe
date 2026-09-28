@@ -17,7 +17,7 @@ This appendix develops branch-conditional results for these three problems. Unde
 
 ## O.2 The MPU Cycle as a Quantum of Causal Process
 
-The fundamental unit of action in the PU framework is the MPU's Fundamental Predictive Loop (Definition 4), consisting of the logically ordered sequence of Internal Prediction ($P_{int}$), Verification ($V$), and Update ($D_{cyc}$). This P-V-U sequence represents an indivisible unit of causal process.
+The MPU's Fundamental Predictive Loop (Definition 4) consists of the logically ordered sequence of Internal Prediction ($P_{int}$), Verification ($V$), and Update ($D_{cyc}$). This P-V-U sequence specifies the logical order of the full predictive cycle.
 
 On a branch registering a local-patch state $\rho_{\mathrm{eff}}$, a self-adjoint generator $\hat H_{\mathrm{eff}}$ with lower spectral bound $E_0$, and a positive clock scale, set
 $$
@@ -32,19 +32,22 @@ Theorem 29 licenses a power--energy calibration only after a cycle rate is regis
 
 ## O.3 The PCE Cost of Temporal Desynchronization
 
-For the MPU network to function as a coherent predictive system capable of supporting complex structures and consistent laws, the local causal rhythms of its interacting constituents must align. We demonstrate that temporal desynchronization is an inefficient and predictively suboptimal state, incurring a significant penalty in the global PCE Potential $V(x)$ (Definition D.1).
+The local phase dependence of the PCE potential $V(x)$ (Definition D.1) is modeled through predictive loss, propagation cost, and operational compensation cost. Theorem O.1 identifies a local desynchronization penalty on its statistical and cost-ledger branch.
 
-Consider two interacting MPU ensembles, *i* and *j*, whose collective cycles are misaligned by a phase lag $\Delta\phi_{ij} \in [0, 2\pi)$. Any residual misalignment introduces irreducible prediction error and compensatory resource costs. Theorem O.1 formalizes this: temporal desynchronization increases the global PCE potential $V(x)$ through reduced predictive benefit and increased operational and/or propagation costs.
+Consider two interacting MPU ensembles, *i* and *j*, whose collective cycles have a phase lag $\Delta\phi_{ij}\in[0,2\pi)$. Under Theorem O.1's hypotheses, a sufficiently small nonzero principal lag either decreases predictive benefit or incurs a strictly positive compensation cost, increasing the local PCE potential. Network-wide synchronization requires the additional hypotheses of Theorem O.2.
 
-**Theorem O.1 (Local PCE Penalty for Desynchronization).** Fix an interacting edge $(i,j)$. Assume log-loss; a finite outcome alphabet and a family $p_j(y|t)$ such that every $p_j(y|t)>0$ and each coordinate is twice continuously differentiable near the comparison time; finite, positive temporal Fisher information
+**Theorem O.1 (Local PCE Penalty for Desynchronization).** Choose an interacting edge $(i,j)$. Assume log-loss; a finite outcome alphabet and a family $p_j(y|t)$ with positive probabilities and twice continuously differentiable coordinates near the comparison time; and finite positive temporal Fisher information
 $$
-I_j(t)=\sum_y\frac{(\partial_tp_j(y|t))^2}{p_j(y|t)}>0;
+I_j(t)=\sum_y\frac{(\partial_tp_j(y|t))^2}{p_j(y|t)}>0.
 $$
-and a small principal phase lag
+For a small principal phase lag put
 $$
-\delta t_{ij}=\frac{\tau_{\mathrm{medium}}}{2\pi}\Delta\phi_{ij}.
+\delta t_{ij}=\frac{\tau_{\mathrm{medium}}}{2\pi}\Delta\phi_{ij},
+\qquad \tau_{\mathrm{medium}}>0.
 $$
-Assume also that the PCE cost ledger assigns nonnegative propagation cost to added timing jitter and strictly positive operational cost to any compensating control that restores the synchronized prediction. Then a nonzero sufficiently small lag either produces a strict predictive-benefit loss or a strict compensation cost, and the local PCE potential exceeds its synchronized value. Without compensation,
+Compare the synchronized configuration with the lagged configuration on one registered Definition-D.1 ledger. Require that every admitted compensation leaves a nonnegative excess prediction loss, that a positive residual loss strictly decreases the power-equivalent benefit $V_{\mathrm{benefit}}$, and that all operational, propagation and penalty changes are nonnegative. If a compensation removes the loss, require a strictly positive operational-cost change. The benefit condition includes a positive conversion coefficient and a strictly increasing benefit map on the compared performance range. All other contributions to the total potential are held constant.
+
+Then every sufficiently small nonzero lag has a strictly greater local PCE potential, either through residual loss or through the cost of compensation. Without compensation,
 $$
 \Delta PE_{ij}(t)
 =
@@ -55,22 +58,22 @@ $$
 \tag{O.2}
 $$
 
-*Proof.* Under log-loss, using $p_j(\cdot|t)$ when the outcome law is $p_j(\cdot|t+\delta t)$ incurs the excess
+*Proof.* Under log-loss, using $p_j(\cdot|t)$ when the outcome law is $p_j(\cdot|t+h)$ incurs the excess
 $$
-D_{\mathrm{KL}}\!\left(p_j(\cdot|t+\delta t)\,\middle\|\,p_j(\cdot|t)\right).
+D_{\mathrm{KL}}\!\left(p_j(\cdot|t+h)\,\middle\|\,p_j(\cdot|t)\right).
 $$
-Write $p_y=p_y(t)$ and $h=\delta t$. Coordinatewise Taylor expansion and $\log(1+x)=x-x^2/2+o(x^2)$ give
+Write $p_y=p_j(y|t)$. Taylor expansion gives
 $$
 p_y(t+h)\log\frac{p_y(t+h)}{p_y(t)}
-=h\dot p_y+\frac{h^2}{2}\ddot p_y+\frac{h^2}{2}\frac{\dot p_y^2}{p_y}+o(h^2).
+=h\dot p_y+\frac{h^2}{2}\ddot p_y
++\frac{h^2}{2}\frac{\dot p_y^2}{p_y}+o(h^2).
 $$
-The alphabet is finite and every $p_y$ is positive, so the remainders may be summed. Differentiating $\sum_yp_y(t)=1$ twice gives $\sum_y\dot p_y=\sum_y\ddot p_y=0$. Hence
+The alphabet is finite and all $p_y$ are positive, so the remainders may be summed. Differentiating $\sum_yp_y(t)=1$ twice cancels the first two sums and yields
 $$
 D_{\mathrm{KL}}(p(t+h)\|p(t))
-=\frac{h^2}{2}\sum_y\frac{\dot p_y^2}{p_y}+o(h^2)
 =\frac12I_j(t)h^2+o(h^2).
 $$
-Since $I_j(t)>0$, the divergence is strictly positive for every sufficiently small nonzero $\delta t$. Definition 7 makes predictive performance strictly decrease with this excess loss, hence increases $V_{\mathrm{PCE}}$ through $-V_{\mathrm{benefit}}$. If the loss is removed by compensation, the declared cost-ledger hypothesis gives a strict increase of $V_{\mathrm{op}}$, while the jitter contribution to $V_{\mathrm{prop}}$ is nonnegative. Substituting the phase-to-time relation proves (O.2). ∎
+This is positive for sufficiently small nonzero $h$. Substitution of $h=\delta t_{ij}$ proves (O.2). For an admitted comparison with positive residual loss, the benefit hypothesis gives $\Delta(-V_{\mathrm{benefit}})>0$; for a comparison with zero residual loss, the compensation hypothesis gives $\Delta V_{\mathrm{op}}>0$. Every other component change is nonnegative. Summing the components of (D.1), or using its strictly positive dual certificate, gives $\Delta V>0$ in either case. ∎
 
 ## O.4 Conditional Low-Noise Concentration Near Synchronization
 
@@ -118,7 +121,7 @@ $$
 \dot\phi=-\nabla V_{G,\theta}(\phi)=-L\phi+BW\theta
 \tag{O.2a.4}
 $$
-converges to (O.2a.2), and its component orthogonal to $\ker L$ contracts at rate at least the smallest positive eigenvalue of $L$.
+converges to (O.2a.2). If $L$ has a positive eigenvalue, its component orthogonal to $\ker L$ contracts at least exponentially at the smallest positive eigenvalue of $L$. If $L=0$, then $B=0$ and $BW\theta=0$, so every trajectory is constant and already belongs to the minimizer set.
 
 Even an unfrustrated connected graph need not synchronize. On the directed triangle with unit weights and offsets
 $$
@@ -153,16 +156,13 @@ $$
 
 **Theorem O.3c0 (Strict Autonomous Arrow and Fluctuation Identity).** Under Principle O.3c0, the unique stationary cycle current and affinity are
 $$
-J
-=
+J=
 \frac{abc-\bar a\bar b\bar c}
 {ab+a\bar b+ac+\bar a\bar b+\bar ac+\bar a\bar c+bc+b\bar c+\bar b\bar c},
 \tag{O.3c0.2}
 $$
 $$
-\mathcal A
-=
-\ln\frac{abc}{\bar a\bar b\bar c}>0.
+\mathcal A=\ln\frac{abc}{\bar a\bar b\bar c}>0.
 \tag{O.3c0.3}
 $$
 The stationary entropy-production rate is
@@ -170,37 +170,38 @@ $$
 \dot\sigma=J\mathcal A>0.
 \tag{O.3c0.4}
 $$
-Let $\pi$ be the stationary distribution. For every finite stationary trajectory
-$$
-\gamma=(x_0\to x_1\to\cdots\to x_N),
-$$
-recorded together with its holding times, and its time reverse $\gamma^\dagger$, define the total entropy production
+Choose a deterministic observation duration $0<T<\infty$ and start the chain in its stationary distribution $\pi$. A path $\gamma$ on $[0,T]$ records its finite random number $N$ of jumps, the visited states and every holding interval, including the initial and terminal intervals. Let $\gamma^\dagger$ reverse that complete record. For the common path-density reference measure, define
 $$
 \Sigma_{\mathrm{tot}}[\gamma]
-:=
+=
 \ln\frac{\pi(x_0)}{\pi(x_N)}
 +
-\sum_{j=1}^{N}
-\ln\frac{k_{x_{j-1}x_j}}{k_{x_jx_{j-1}}}.
+\sum_{j=1}^{N}\ln\frac{k_{x_{j-1}x_j}}{k_{x_jx_{j-1}}}.
 $$
 Then
 $$
-\ln\frac{\mathbb P_{\pi}[\gamma]}{\mathbb P_{\pi}[\gamma^\dagger]}
-=
-\Sigma_{\mathrm{tot}}[\gamma],
+\ln\frac{\mathbb P_\pi[\gamma]}{\mathbb P_\pi[\gamma^\dagger]}
+=\Sigma_{\mathrm{tot}}[\gamma],
 \qquad
-\left\langle e^{-\Sigma_{\mathrm{tot}}}\right\rangle_{\pi}=1.
+\left\langle e^{-\Sigma_{\mathrm{tot}}}\right\rangle_\pi=1.
 \tag{O.3c0.5}
 $$
-For a closed cycle $x_N=x_0$, the stationary endpoint term vanishes.
-Hence forward-oriented histories are exponentially favored on positive-production trajectories. A bound by $\ln2$ per completed cycle follows only if the separate registered affinity bound $\mathcal A\ge\ln2$ is verified.
+Here the bracketed path probabilities denote densities, and the expectation includes summation over jump counts and state sequences and integration over jump times. For a closed path $x_N=x_0$, the stationary endpoint term vanishes. A positive-production trajectory has the displayed forward/reverse likelihood advantage; a lower bound $\ln2$ for one forward-oriented circuit requires the independent affinity bound $\mathcal A\ge\ln2$.
 
-*Proof.* Solving the stationary master equations with normalization gives the common oriented edge current (O.3c0.2); its denominator is a sum of positive two-rate monomials. Equation (O.3c0.1) therefore gives $J>0$ and (O.3c0.3). Schnakenberg's cycle decomposition gives $\dot\sigma=J\mathcal A$. In the ratio of stationary path densities, the holding-time exponentials cancel because the reversed trajectory visits the same states for the same durations. The initial-density ratio contributes $\ln[\pi(x_0)/\pi(x_N)]$, and each jump contributes the logarithm of its forward/reverse rate ratio. Their sum is $\Sigma_{\mathrm{tot}}[\gamma]$. Hence
+*Proof.* The stationary weights before normalization are
 $$
-\mathbb P_{\pi}[\gamma]e^{-\Sigma_{\mathrm{tot}}[\gamma]}
-=\mathbb P_{\pi}[\gamma^\dagger].
+w_P=\bar ac+bc+\bar a\bar b,\qquad
+w_V=a\bar b+\bar b\bar c+ac,\qquad
+w_D=b\bar c+ab+\bar a\bar c.
 $$
-Time reversal is a bijection on the finite path space, so summation proves the integral fluctuation identity. ∎
+Substitution into the three master equations verifies stationarity. Their sum is the denominator in (O.3c0.2), and $\pi_Pa-\pi_V\bar a$ equals its numerator divided by that sum. Conservation gives the same oriented current on the other two edges. The stationary entropy-production rate is the sum of each oriented current times $\log(\pi_i k_{ij}/(\pi_j k_{ji}))$; the stationary weights telescope around the cycle, leaving $J\mathcal A$.
+
+Finite-state finite rates make the process nonexplosive on $[0,T]$. The reversed path visits each state for the same total duration, so holding-time factors cancel in the path-density ratio. The initial-density and jump-rate factors give the displayed expression for $\Sigma_{\mathrm{tot}}$. Thus
+$$
+\mathbb P_\pi[\gamma]e^{-\Sigma_{\mathrm{tot}}[\gamma]}
+=\mathbb P_\pi[\gamma^\dagger].
+$$
+Reversal is a measure-preserving bijection of this complete finite-window path space. Integration and summation over that space give the normalized expectation one. ∎
 
 **Theorem O.3 (Conditional Pathwise Arrow Bound).** Suppose a coherent macroscopic step consists of $N$ update cycles with forward and reversed path measures on the same event algebra and
 $$
@@ -316,21 +317,29 @@ K_O,
 $$
 where $\beta_O$ is the physical-time normalization on the KMS branch and $\chi_{\mathrm{mod}}$ records that the algebra, state, and normalization are fixed before using macroscopic clock data.
 
-**Theorem O.3a.3 (Thermal Time as Modular Prediction Time).** On a local equilibrium branch carrying Definition O.3a.2 and satisfying the KMS hypothesis of Theorem F.10.4b.2,
+**Theorem O.3a.3 (Thermal Time as Modular Prediction Time).** On a finite faithful local equilibrium branch carrying Definition O.3a.2, take $\beta_O>0$ in inverse-energy units and the physical Heisenberg convention
 $$
-\sigma_t^{\omega_O}
-=
-\alpha_{\beta_O t},
+\alpha_\tau(A)=e^{i\tau H_O/\hbar}Ae^{-i\tau H_O/\hbar}.
+$$
+Under the upper-strip KMS hypothesis of Theorem F.10.4b.2,
+$$
+\sigma_t^{\omega_O}=\alpha_{-\beta_O\hbar t},
 \tag{O.3a.3.1}
 $$
-so local prediction time is the modular parameter scaled by the KMS inverse temperature:
+so the dimensionless modular parameter and physical prediction time obey
 $$
-\tau=\beta_O t.
+\tau=-\beta_O\hbar t.
 \tag{O.3a.3.2}
 $$
-If histories parametrized by this modular clock also carry the independent pathwise certificate of Theorem O.3, that theorem selects the orientation in which cumulative certified entropy production increases.
+If the histories also carry the independent pathwise certificate of Theorem O.3, that certificate selects the orientation in which cumulative certified entropy production increases.
 
-*Proof.* The identity (O.3a.3.1) is Theorem F.10.4b.2 applied to the local state $\omega_O$. Equation (O.3a.3.2) is the same equality written in the physical prediction-time parameter. These identities supply the modular clock but no orientation. Under the additional pathwise certificate $\sigma_k\ge h_{\min}>0$ on every selected cycle, Theorem O.3 gives $P_R/P_F\le e^{-Nh_{\min}}$ and therefore selects the forward orientation. ∎
+*Proof.* The finite Gibbs conclusion of Theorem F.10.4b.2 gives
+$$
+\rho_O^{it}A\rho_O^{-it}
+=e^{-i\beta_OtH_O}Ae^{i\beta_OtH_O}
+=\alpha_{-\beta_O\hbar t}(A).
+$$
+Normalization constants and central block weights cancel in conjugation. This proves the clock relation with the stated physical-time convention. The relation alone supplies no stochastic arrow. On histories satisfying $\sigma_k\ge h_{\min}>0$ for every selected cycle, Theorem O.3 independently gives $P_R/P_F\le e^{-Nh_{\min}}$. ∎
 
 **Definition O.3b (Three-Term Predictive Entropy Resolution).** Let $\gamma=(x_0\to\cdots\to x_T)$ be a finite coarse-grained predictive path with reversed path $\gamma^\dagger$. A three-term predictive entropy resolution is a branch datum
 $$
@@ -349,7 +358,7 @@ N_{\mathrm{SPAP}}(\gamma)\ln2
 $$
 Here $Q(\gamma)$ is heat delivered to the environment at inverse temperature $\beta$, $N_{\mathrm{SPAP}}(\gamma)\in\mathbb N$ is the number of SPAP-forced merge events on the path, and $\Phi_{\mathrm{PCE}}$ is a branch-fixed PCE boundary potential. The resolution is admissible only when $Q$ and $N_{\mathrm{SPAP}}$ are additive under path concatenation and the PCE term is a genuine endpoint coboundary.
 
-**Theorem O.3b (Three-Term Predictive Fluctuation Decomposition).** On any finite path branch with a three-term predictive entropy resolution and forward/reversed path measures satisfying
+**Theorem O.3b (Three-Term Predictive Fluctuation Decomposition).** Let $\Omega$ be a finite path alphabet, let $\gamma\mapsto\gamma^\dagger$ be a bijection onto its registered reversed alphabet, and let $P_F$ and $P_R$ be normalized strictly positive laws on those alphabets. On a branch with a finite-valued three-term predictive entropy resolution satisfying
 $$
 \frac{P_F(\gamma)}{P_R(\gamma^\dagger)}
 =
@@ -412,7 +421,7 @@ e^{-NI_-(s)}.
 \tag{O.3b.10}
 $$
 
-5. In a stationary resolved branch observed for time $\tau$, the dimensionless mean entropy-production rate is
+5. In a stationary resolved branch observed for physical time $\tau$, the mean rate of dimensionless entropy production, with units of inverse time, is
 $$
 \dot\Sigma_{\mathrm{PU}}
 :=
@@ -475,7 +484,7 @@ e^{-\lambda Ns}
 N\big(\Lambda_{\Sigma,1}(\lambda)-\lambda s\big)
 \right].
 $$
-Taking the infimum over $\lambda<0$ gives (O.3b.10). Equation (O.3b.11) is (O.3b.6) applied per unit time and multiplied by $k_BT$ to convert entropy production into the corresponding environmental energy bookkeeping rate. ∎
+Taking the infimum over $\lambda<0$ gives (O.3b.10). Equation (O.3b.11) is (O.3b.6) applied per unit observation time when the displayed limit exists. On the constant-temperature branch where the rates of $N_{\mathrm{SPAP}}\ln2$ and $\Delta\Phi_{\mathrm{PCE}}$ vanish, (O.3b.1) gives $\dot Q=k_BT\dot\Sigma_{\mathrm{PU}}$. An energy interpretation of any nonzero non-heat contribution requires its separate bridge. ∎
 
 **Definition O.3c (Retained-Algebra Conditioning Certificate $\mathfrak C_{\mathrm{ret}}$).** Fix an observer hierarchy level $q$ in the sense of §P.5.8.3. A retained-algebra conditioning certificate is a finite record
 $$
@@ -485,20 +494,24 @@ $$
 $$
 where $\mathcal A_{\mathrm{ret}}^{(q)}(t)$ is the PPI-retained response algebra generated by verified records available at level $q$ up to time $t$, $\iota_{s,t}:\mathcal A_{\mathrm{ret}}^{(q)}(s)\hookrightarrow\mathcal A_{\mathrm{ret}}^{(q)}(t)$ are inclusion maps for $s<t$, $S_{\mathrm{ret}}^{(q)}$ is the entropy functional restricted to that retained algebra, and $\mathcal L_{\mathrm{anc}}$ is a finite ledger-ancestry verifier for record chains. The certificate is level-relative: it does not assert an observer-independent entropy for response-null degrees of freedom.
 
-**Proposition O.3d (Retained-Algebra Boundary Reading).** On a branch carrying $\mathfrak C_{\mathrm{ret}}^{(q)}$, the retained algebras form a monotone filtration,
+**Proposition O.3d (Retained-Algebra Boundary Reading).** On a branch carrying $\mathfrak C_{\mathrm{ret}}^{(q)}$, the registered inclusion maps give a monotone filtration,
 $$
-\mathcal A_{\mathrm{ret}}^{(q)}(s)\subseteq \mathcal A_{\mathrm{ret}}^{(q)}(t),
-\qquad s<t,
+\mathcal A_{\mathrm{ret}}^{(q)}(s)\subseteq\mathcal A_{\mathrm{ret}}^{(q)}(t),
+\qquad s<t.
 $$
-and at the first operational retained-record time $t_0$,
+For the entropy claim, require a finite-dimensional unital retained algebra
+$$
+\mathcal A_{\mathrm{ret}}^{(q)}(t_0)\cong\bigoplus_\alpha M_{d_\alpha}(\mathbb C)
+$$
+and let $S_{\mathrm{ret}}^{(q)}$ be the intrinsic von Neumann entropy in nats of its normalized state, using the sum of the ordinary matrix traces. Then
 $$
 S_{\mathrm{ret}}^{(q)}(t_0)
-\le
-\ln\dim\mathcal A_{\mathrm{ret}}^{(q)}(t_0).
+\le\ln\!\left(\sum_\alpha d_\alpha\right)
+\le\ln\dim_{\mathbb C}\mathcal A_{\mathrm{ret}}^{(q)}(t_0).
 $$
-If $\dim\mathcal A_{\mathrm{ret}}^{(q)}(t_0)$ is minimal in the certified filtration, the low-retained-entropy boundary is a consequence of retained-record smallness at that level, not an additional absolute microscopic boundary condition. Record-shaped configurations lacking accepted ledger ancestry are outside this retained-conditioning class only when $\mathcal L_{\mathrm{anc}}$ distinguishes them by a finite response protocol.
+If the initial algebra has minimal dimension within the certified filtration, this gives a minimal dimension-based entropy upper bound. It does not prove that the actual initial entropy is minimal, or quantitatively small without a corresponding dimension bound. Record-shaped configurations lacking accepted ledger ancestry are excluded from this retained-conditioning class only when $\mathcal L_{\mathrm{anc}}$ distinguishes them by a finite response protocol.
 
-*Proof.* Each accepted record appends a verified finite response after the relevant update cycle. By the certificate's forward-lock and no-deletion/retention entries, later algebras contain the earlier retained records, giving the inclusion maps. Entropy on a finite retained algebra is bounded by the logarithm of its dimension. The ancestry clause is a PPI statement: exclusion applies to the retained conditioning class exactly when a finite protocol distinguishes ancestry-bearing records from record-shaped states without such ancestry. No positive thermodynamic cost is needed for these conclusions; Theorem 31 supplies only the distribution-dependent reset ledger when its separate reset hypotheses hold. ∎
+*Proof.* The certificate's forward-lock and no-deletion/retention entries preserve earlier records under the injective inclusion maps. For the entropy claim, write the intrinsic density matrix blockwise and list its eigenvalues, including zeros. They form a probability vector with $\sum_\alpha d_\alpha$ entries, whose Shannon entropy is at most $\ln(\sum_\alpha d_\alpha)$. Since each $d_\alpha\ge1$, one has $\sum_\alpha d_\alpha\le\sum_\alpha d_\alpha^2=\dim_{\mathbb C}\mathcal A_{\mathrm{ret}}^{(q)}(t_0)$. These upper bounds do not compare the actual states at different times. The ancestry exclusion is only the declared finite-response distinction. No positive thermodynamic cost follows; reset heat retains every separate hypothesis of Theorem 31. ∎
 
 **Remark O.3e (Non-Redundancy with the Arrow Theorem).** Theorems O.3, O.3a, and O.3b derive directionality and fluctuation suppression. Proposition O.3d does not rederive that arrow. It supplies the separate retained-algebra reading of low-boundary and conditioning claims, and is therefore used only where the text discusses the Past Hypothesis or record-selection ambiguity.
 
@@ -515,7 +528,11 @@ $$
 $$
 where $\mathcal E_R$ is the finite retained event alphabet, $\sigma_R^{\mathrm{ECF}}:\mathcal E_R\to[0,\infty)$ is the branch-fixed retained entropy-production increment, $\mathcal G_R\subseteq\mathcal E_R$ is the locked guarantee-level retained-update subset, $\varepsilon_0=\ln2$ is the binary structural log-cardinality supplied by Definition 28, Definition J.1, and Theorem J.1, $\mathcal N_R$ is the null-exchange and label-swap control ledger, $\tau_R^{\mathrm{cyc}}$ is either a fixed physical cycle-time calibration or the symbol $\bot$ when only dimensionless clock count is claimed, and $\chi_{\mathrm{ECF}}$ records that the event alphabet, retained entropy-increment estimator, guarantee-level subset, null controls, and calibration were fixed before the clock-flow comparison.
 
-For $e\in\mathcal G_R$, the certificate independently records both that $e$ is the retained projection of a nontrivial update cycle and that its matched forward and reversed path weights satisfy Equation (O.3a.1) with $h_{\min}\ge\varepsilon_0=\ln2$. Hence
+For $e\in\mathcal G_R$, the certificate records that $e$ is the retained projection of a nontrivial update cycle and identifies its retained increment with the matched log-likelihood ratio,
+$$
+\sigma_R^{\mathrm{ECF}}(e)=\log\frac{P_F(e)}{P_R(e^\dagger)}.
+$$
+The matched weights are positive and satisfy Equation (O.3a.1) with $h_{\min}\ge\varepsilon_0=\ln2$. Hence
 $$
 \sigma_R^{\mathrm{ECF}}(e)\ge\varepsilon_0=\ln2.
 \tag{O.3f.2}
@@ -627,7 +644,7 @@ This is a source-exhaustive, no-double-counted decomposition because each realiz
 
 ### O.5.1 The Perspectival Arrow: Complexity-Relative Temporal Asymmetry
 
-Theorem O.3 gives $P_R/P_F\le e^{-Nh_{\min}}$ only on the branch carrying common forward/reverse path measures and the pathwise certificate $\sigma_k\ge h_{\min}>0$. The observer hierarchy of §P.5.8.3 shows that this global asymmetry acquires additional internal structure once some systems possess Effective Operational Property R and an operational self-model. The relevant mechanism is the conjunction of measurement asymmetry (Theorem M.10.5) with the SPAP-dependent integration cost of self-referential patterns (Definition M.10.3; Theorem M.10.3). A more complex system can externally model the self-referential burden of a less complex one, but it cannot thereby impose an exact temporal reversal on the less complex system from within that system's own perspective.
+Theorem O.3 gives $P_R/P_F\le e^{-Nh_{\min}}$ only on the branch carrying common forward/reverse path measures and the pathwise certificate $\sigma_k\ge h_{\min}>0$. The observer hierarchy of §P.5.8.3 specifies which receiver-pattern descriptors are available when Effective Operational Property R and the registered self-model data are present. External evaluation requires the effective model-access and decision certificates of Theorem M.10.5; a sender-side self-model invariance claim additionally requires its insulation certificate. Definition M.10.3 defines SPAP proximity, and Theorem M.10.3 supplies an asymptotic integration-cost lower bound only on its pattern-specific reduction branch. Aggregate-complexity ordering alone supplies neither conclusion. State recurrence and persistence of a retained history are distinguished by Theorem O.4.
 
 **Theorem O.4 (Registered-History Separation from State Recurrence).** Let $B$ carry a retained-algebra conditioning certificate $\mathfrak C_{\mathrm{ret}}^{(q)}$ from Definition O.3c on a certified interval. Suppose an update record is retained at $t_1$ and the certificate supplies the injective inclusion $\iota_{t_1,t_2}:\mathcal A_{\mathrm{ret}}^{(q)}(t_1)\hookrightarrow\mathcal A_{\mathrm{ret}}^{(q)}(t_2)$ for $t_2>t_1$. If later processing returns the accessible state, a reduced state, or a declared response profile to its earlier value, that equality is a state or response recurrence; it does not delete the registered event from the forward-locked retained algebra. A directional path-probability conclusion additionally requires Theorem O.3a, and a reset-heat conclusion additionally requires a registered reset satisfying Theorem 31.
 
@@ -639,7 +656,7 @@ Theorem O.3 gives $P_R/P_F\le e^{-Nh_{\min}}$ only on the branch carrying common
 
 Theorem O.4 is compatible with global unitarity (Theorem E.9.5): it concerns persistence of a certified retained event, not a general impossibility of state, reduced-state, or response-profile recurrence.
 
-**Remark O.4.2 (Locus of Irreversibility).** Theorem O.4 locates its conclusion in the retained history ledger. A positive stochastic arrow requires Theorem O.3a's pathwise certificate, and positive reset heat requires a registered reset with positive $H_q(P\mid R)$. Processing self-referential content may carry the conditional complexity bounds of Appendix M, but self-reference alone supplies neither positive entropy production nor impossibility of state recurrence.
+**Remark O.4.2 (Locus of Irreversibility).** Theorem O.4 locates its conclusion in the retained history ledger. A positive stochastic arrow requires Theorem O.3a's pathwise certificate, and Theorem 31 gives positive reset heat when a registered reset has positive $H_q(P\mid R)$. Positive dissipation can also give positive reset heat when $H_q(P\mid R)=0$. Processing self-referential content may carry the conditional complexity bounds of Appendix M, but self-reference alone supplies neither positive entropy production nor impossibility of state recurrence.
 
 **Remark O.4.3 (Certificate-Relative External Evaluation; cf. Theorem M.10.5).** Theorem M.10.5 permits an external system $A$ to evaluate a specified pair $(B,E)$ only when $A$ holds the effective model-access and decision certificates stated there; sender-side SPAP-flatness additionally requires its insulation certificate. The inequality $C_{agg}(A)>C_{agg}(B)$ is neither necessary nor sufficient. Corollary M.10.5.1 excludes a universal internal evaluator only on its explicit reduction branch. These facts establish no strict hierarchy of temporal access and no universal obstruction to restoring a selected prior state.
 
@@ -718,7 +735,7 @@ H_{\mathrm{Sh}}(W)
 \le \ln\Omega_W,
 \tag{O.5.2.3}
 $$
-with equality exactly when $p$ is uniform on its support. Consider the explicit symmetric-memory branch on which: the logical macrostates are local-equilibrium states with equal mean energy, equal internal entropy, and equal free energy; the memory Hamiltonian is restored at the endpoint; the declared joint state includes every correlation involving $W$; the bath begins thermal and acts as an ideal reservoir at temperature $T_{\mathrm{bath}}>0$; every auxiliary non-bath degree of freedom other than the target register $W$ is restored to its initial joint state, except for an ideal work source whose entropy and correlations remain unchanged and whose declared energy change is pure work; and no other declared or undeclared entropy, information, or nonequilibrium sink is available. Taking $Q_{\mathrm{env}}$ as signed heat, positive when delivered to the environment, if no side information about $W$ is retained, resetting $W$ to a fixed logical state obeys
+with equality exactly when $p$ is uniform on its support. Consider the explicit symmetric-memory branch on which: the logical macrostates are local-equilibrium states with equal mean energy, equal internal entropy, and equal free energy; the memory Hamiltonian is restored at the endpoint; the declared joint state includes every correlation involving $W$; the bath begins in a Gibbs state at temperature $T_{\mathrm{bath}}>0$, independent of all non-bath degrees of freedom; the complete process has a joint unitary description including every entropy-bearing resource; all entropy terms in the finite-resource balance are finite, and any ideal-reservoir or exact-erasure limit has justified convergence of the entropy difference and mean heat; every auxiliary non-bath degree of freedom other than the target register $W$ is restored to its initial joint state, except for an ideal work source whose entropy and correlations remain unchanged and whose declared energy change is pure work; and no other declared or undeclared entropy, information, or nonequilibrium sink is available. Taking $Q_{\mathrm{env}}:=\mathbb E[Q_{\mathrm{bath}}]$ as mean signed heat, positive when delivered to the environment, if no side information about $W$ is retained, resetting $W$ to a fixed logical state obeys
 $$
 Q_{\mathrm{env}}
 \ge k_B T_{\mathrm{bath}}H_{\mathrm{Sh}}(W).
@@ -740,7 +757,7 @@ D_{\mathrm{KL}}(p\Vert u)
 =\ln\Omega_W-H_{\mathrm{Sh}}(W)
 \ge0,
 $$
-with equality exactly for $p=u$. This proves (O.5.2.3). Under the stated symmetric-memory, cyclic, isothermal reset conditions, the decrease of logical entropy must be exported to the environment; the ordinary and side-information forms of Landauer's bound give (O.5.2.4) and its conditional version [Landauer 1961; Bennett 1973; Sagawa & Ueda 2009].
+with equality exactly for $p=u$. This proves (O.5.2.3). On the stated symmetric-memory branch with an initially thermal, uncorrelated bath and complete auxiliary-resource closure, the unconditional heat bound is Reeb and Wolf (2014, Theorem 3), and the retained-classical-information bound is their Section 5.1, Equation (59). The entropy decrease is $H_{\mathrm{Sh}}(W)$ or $H_{\mathrm{Sh}}(W\mid C)$ in nats, yielding (O.5.2.4) and its conditional version. An ideal complete reset uses justified entropy and mean-heat limits; an imperfect reset retains its output conditional entropy in the difference.
 
 To separate counting from computation explicitly, fix any polynomial $q$ and define
 $$
@@ -777,14 +794,15 @@ Q_{\mathrm{env}}^{(h)}
 \ge k_BT_{\mathrm{bath}}I_{\mathrm{req}}(h).
 \tag{O.5.2.6}
 $$
-For a sequence of declared reset events $j=1,\ldots,L(n)$, let $W_j$ be the register actually erased and let $C_j$ contain all side information accessible at that reset. If the individual protocols satisfy the same cyclic assumptions, then the heat attributable to those resets satisfies
+For a deterministic finite sequence of declared reset events $j=1,\ldots,L(n)$, let $W_j$ be the register erased and let $C_j$ include every accessible side-information record and the admitted prior event history. Require the complete conditional reset contract of Lemma O.5.2b at each event, a prescribed nonrandom temperature $T_j>0$, finite mean heat and entropy terms, and an additive bath-heat ledger. Taking conditional expectations and then using the tower property gives
 $$
 Q_{\mathrm{reset}}(n)
+:=\mathbb E\!\left[\sum_{j=1}^{L(n)}Q_{\mathrm{bath},j}\right]
 \ge
 k_B\sum_{j=1}^{L(n)}T_jH_{\mathrm{Sh}}(W_j\mid C_j).
 \tag{O.5.2.7}
 $$
-Consequently, if $T_j\ge T_{\min}>0$ and $H_{\mathrm{Sh}}(W_j\mid C_j)\ge h_{\min}^{\mathrm{erase}}>0$ for every declared reset, with $T_{\min}$ and $h_{\min}^{\mathrm{erase}}$ independent of $n$, then $Q_{\mathrm{reset}}(n)\ge k_BT_{\min}h_{\min}^{\mathrm{erase}}L(n)$. This uniform per-reset-floor route yields an exponential lower bound if an independent theorem proves exponentially many such resets. Candidate cardinality alone supplies no such theorem; other routes to exponential heat, such as separately established growth of temperature, erased entropy, or another energetic term, are outside this bound.
+Consequently, if $T_j\ge T_{\min}>0$ and $H_{\mathrm{Sh}}(W_j\mid C_j)\ge h_{\min}^{\mathrm{erase}}>0$ for every declared reset, with both floors independent of $n$, then $Q_{\mathrm{reset}}(n)\ge k_BT_{\min}h_{\min}^{\mathrm{erase}}L(n)$. An exponential lower bound by this route requires an independent theorem establishing exponentially many such resets. A random or stopping-dependent reset count requires a separate valid conditional-summation certificate. These are mean-heat bounds, not pathwise heat guarantees; candidate cardinality alone gives no reset-count bound.
 
 *Proof.* Since $Y_h$ has at most $d_h$ values, $H_{\mathrm{Sh}}(Y_h\mid C_h)\le\ln d_h$. Also $H_{\mathrm{Sh}}(Y_h\mid C_h)\ge I(Z_h;Y_h\mid C_h)$. Conditional data processing for $\widehat Z_h=g_h(Y_h,C_h)$ and conditional Fano inequality give
 $$
@@ -1218,18 +1236,20 @@ $$
 $$
 Nonrelativizing routes not covered by Theorem O.5.3c remain unclassified, not ruled out. Other proof barriers apply only after their separate hypotheses and their applicability to a proposed proof method are established; they are not promoted here to properties of a candidate function. The open mathematical problem is unchanged.
 
-**Theorem O.5.3j (Exact Uniform Reversible Compilation of PPT Inverters).** Let $\mathcal I$ be any fixed uniform probabilistic Turing machine which, on inputs $(1^n,y)$ and $r(n)$ independent fair random bits, halts within $T(n)$ steps and uses at most $S(n)$ tape cells, where $T,S,r$ are polynomials. There is a log-space-uniform family of reversible Boolean circuits $R_n$, over NOT, CNOT and Toffoli gates, with polynomial size and polynomially many clean ancillas, such that
+**Theorem O.5.3j (Exact Uniform Reversible Compilation of PPT Inverters).** Let $\mathcal I$ be a specified uniform probabilistic Turing machine on inputs $(1^n,y)$ with $y\in\{0,1\}^n$ and $r(n)$ independent fair random bits. Assume explicit integer-valued polynomial bounds $T(n),S(n),r(n)$ for its running time, tape space and coin count. Use a length-tagged, zero-padded binary encoding in a polynomial-width output register, with a distinguished failure flag; the output in the following display denotes that encoding. There is a log-space-uniform family of reversible Boolean circuits over NOT, CNOT and Toffoli gates, with polynomial size and polynomially many clean ancillas, such that
 $$
 R_n:\ |1^n,y,r,0,0\rangle
 \longmapsto
 |1^n,y,r,\mathcal I(1^n,y;r),0\rangle.
 \tag{O.5.3j.1}
 $$
-The last zero denotes all work ancillas after uncomputation. Sampling $r\leftarrow U_{r(n)}$, applying $R_n$, and reading the output register reproduces the classical output law of $\mathcal I$ exactly, with total-variation error zero. The encoder $(1^n,y)\mapsto|1^n,y,0,0,0\rangle$, random-bit register, computational-basis decoder, gate count, workspace and uniform circuit generator are therefore an explicit polynomial-overhead abstract compiler packet.
+The last zero denotes all work ancillas. Sampling the declared fair coins and decoding the output reproduces the classical output law exactly, with total-variation error zero.
 
-This theorem does not populate $\mathfrak C_{\mathrm{PPT}\to\mathrm{PU}}$: that certificate additionally requires a response-faithful PU carrier realizing the gates and scalable fair coins, together with a proof that the complete implementing microstate has polynomial $C_P$ and preserves the any-preimage success probability after physical errors.
+This abstract compiler does not populate $\mathfrak C_{\mathrm{PPT}\to\mathrm{PU}}$. That certificate also requires a response-faithful PU carrier for the gates and scalable fair coins, polynomial $C_P$ for the complete implementing microstate, and the physical error/success guarantee.
 
-*Proof.* Unroll the time-$T(n)$ deterministic computation of $\mathcal I$ with its random tape fixed to $r$ into a uniform polynomial-size Boolean circuit. Replace each Boolean gate by a reversible NOT/CNOT/Toffoli gadget with fresh ancillas, compute the output, copy it into a clean output register with CNOT gates, and apply all gadgets in reverse order. This restores every work ancilla while retaining the input, coins and copied output, proving (O.5.3j.1). The construction is uniform because the machine and polynomial clock are fixed. For each fixed $r$, the decoded output is identical to the Turing-machine output; averaging over the same uniform coin law gives exact equality of distributions. ∎
+*Proof.* Freeze the random tape as the input string $r$ and pad a halted computation by an identity transition through time $T(n)$. Represent its configurations by polynomially many bits for the tapes, head positions, machine state and output encoding. The transition rule of the specified machine gives a polynomial-size Boolean circuit for each time step. A log-space generator enumerates time, tape-cell, bit and gate indices with $O(\log n)$-bit counters; the local transition rule determines predecessor-wire indices from those counters and the constant machine description. Input/coin access, output copying and the padding rule use the same indexed construction. Thus the full tableau circuit has polynomial size and a log-space gate generator.
+
+Replace each Boolean gate by a constant-size reversible NOT/CNOT/Toffoli gadget using fresh ancillas. Compute the encoded output, copy it to a clean output register by CNOTs, and enumerate the compute gadgets in reverse order. Each gadget's wire indices and its reverse index are computable with the same logarithmic workspace. Uncomputation restores every work ancilla while retaining the original input, coins and copied output. The resulting decoded output agrees with $\mathcal I$ for every input and coin string. Averaging over the identical fair-coin law proves equality of output distributions. ∎
 
 **Resolution TV-O-05-R1 (Metadata).** Exact domain: every fixed uniform PPT classical inverter with an explicit polynomial clock, space bound and fair-coin count. Premises: the standard reversible Boolean gate set and exact abstract fair bits. Equivalence: circuits are identified by their decoded input/coin/output relation and polynomial resource bounds. Budget: every input, challenge and random string at every length. Verifier: gate-table reversibility, compute-copy-uncompute simulation and uniformity/resource accounting. Falsifier: one input/coin string with a different decoded output, a dirty terminal ancilla, or superpolynomial generated size. Provenance class: source-internal exact compiler construction. Downstream consumers: Definition O.5.3h and `TV-O-05`. This gives `positive-discharge` of the uniform abstract encoder/decoder/reversible-simulation and exact-randomness-transport subcomponent. The PU gate/coin carrier, polynomial-$C_P$ realization and physical error/success bridge remain open, so the target is not closed.
 
@@ -1254,7 +1274,7 @@ A *temporal wave* is a propagating solution for a registered local cycle-rate or
 
 **(c) Energy-accounting boundary.** The Einstein equation uses the certified total nongravitational stress-energy source on its branch. General relativity has no unique generally covariant local stress-energy tensor for the gravitational field itself; an Isaacson-type wave tensor requires its separate high-frequency averaging hypotheses. Consequently, implementation energy may contribute to the Einstein source only after its carrier stress-energy and non-overlap ledger are specified, and no independent `energy of consciousness` term is introduced.
 
-**Theorem O.6a (Exact Bounded Temporal-Wave to Qubit-Response Intertwiner).** Fix Minkowski spacetime with speed $c$, a baseline cycle rate $\nu_0>0$, and a real scalar cycle-rate perturbation $\phi\in C^2$ satisfying
+**Theorem O.6a (Exact Bounded Temporal-Wave to Qubit-Response Intertwiner).** Choose Minkowski spacetime with $c>0$, $x^0=ct$ and $\eta=\operatorname{diag}(-1,1,1,1)$, a baseline cycle rate $\nu_0>0$, and a real constant $\kappa\ne0$ with inverse units of the real scalar cycle-rate perturbation $\phi$. Let $\phi\in C^2$ satisfy
 $$
 \nu=\nu_0+\phi>0,
 \qquad
@@ -1319,7 +1339,7 @@ T_{\mu\nu}^{(\phi)}
 $$
 The owner tags `scalar-source/work` and `qubit-preparation/control` are disjoint and recombine only by addition; no qubit control work is counted as scalar-wave energy. Pointwise preparation depends only on $\phi(x)$, so the response adds no propagation edge outside the cone already fixed by (O.6a.1). The class is nonempty: any plane wave of sufficiently small amplitude with $J=0$ and $\nu_0>\|\phi\|_\infty$ supplies a nonconstant witness.
 
-*Proof.* The eigenvalues of $\rho_\phi$ are $(1\pm\kappa\phi)/2$, which lie in $(0,1)$ by (O.6a.1), proving positivity and normalization. Direct trace evaluation gives (O.6a.2), and $\kappa\ne0$ gives the inverse and wave equation in (O.6a.3). Direct multiplication verifies the two Kraus identities after (O.6a.4a), so $\Phi_\phi$ is CPTP. Equation (O.6a.4) is therefore a difference of trace-preserving Hermiticity-preserving linear maps and is trace-annihilating and Hermiticity preserving. The trace-norm variational formula gives (O.6a.4b). Varying (O.6a.5) gives (O.6a.1), and direct differentiation gives (O.6a.6). Local dependence and the hyperbolic domain-of-dependence theorem preserve the characteristic cone. ∎
+*Proof.* The eigenvalues of $\rho_\phi$ are $(1\pm\kappa\phi)/2$, which lie in $(0,1)$ by (O.6a.1), proving positivity and normalization. Direct trace evaluation gives (O.6a.2), and $\kappa\ne0$ gives the inverse and wave equation in (O.6a.3). Direct multiplication verifies the two Kraus identities after (O.6a.4a), so $\Phi_\phi$ is CPTP. Equation (O.6a.4) is therefore a difference of trace-preserving Hermiticity-preserving linear maps and is trace-annihilating and Hermiticity preserving. The trace-norm variational formula gives (O.6a.4b). Varying (O.6a.5) gives (O.6a.1), and direct differentiation gives (O.6a.6). For the cone claim, compare two admissible $C^2$ solutions whose $\phi$ and $\partial_t\phi$ data agree on $B_R(x_0)$ at $t=0$ and whose sources $J$ agree throughout $K=\{0\le t<R/c,\ |x-x_0|\le R-ct\}$; assume $K$ lies in the declared domain with no incoming boundary data. Their difference $u$ satisfies $u_{tt}-c^2\Delta u=0$ on $K$. For $E(t)=\frac12\int_{B_{R-ct}(x_0)}(u_t^2+c^2|\nabla u|^2)\,dx$, the local wave-energy identity gives $E′(t)=\int_{\partial B_{R-ct}}[c^2u_t\partial_nu-\frac c2(u_t^2+c^2|\nabla u|^2)]\,dS\le0$, since $2c|u_t\partial_nu|\le u_t^2+c^2|\nabla u|^2$. As $E(0)=0$, the matching initial values imply $u=0$ in $K$. The response in (O.6a.2) depends pointwise on $\phi$, so it adds no propagation outside this cone. ∎
 
 **Resolution TV-O-06-R1 (Metadata).** Exact domain: every bounded $C^2$ scalar temporal-wave solution satisfying (O.6a.1), its pointwise qubit replacement channel and the fixed two-outcome instrument. Premises: the Minkowski cone, $\kappa\ne0$, the strict positivity margin and the disjoint scalar-source/qubit-control ownership ledger. Equivalence: scalar solutions are identified only when their normalized retained response fields agree; the scalar gauge quotient is trivial. Budget: every spacetime point and every solution in the bounded class; there is no mode truncation or sampled grid. Verifier: state eigenvalues, CPTP replacement-channel form, operational norm, trace-annihilation, the explicit inverse, the wave equation, stress divergence and owner-tag recomposition. Falsifier: a nonpositive state, nonnormalized instrument, two distinct $\phi$ fields with the same response, a cone-changing response equation, source-owner overlap, or failure of (O.6a.6). Provenance class: source-internal exact formal field/channel construction. Downstream consumers: Definition O.1, Remark O.4, Definition 30 and `TV-O-06`. Equations (O.6a.1)--(O.6a.6) give `positive-discharge` of the registered CC alternative: an injective cycle-rate-field to normalized response map with equation, trivial-gauge, characteristic-cone, source and energy-owner controls. This resolves `TV-O-06` on its explicit CC branch. It does not supply the simultaneous arrow--CC--gravity coexistence certificate of `TV-O-10`, whose common-carrier, history and gravity-source predicates remain independent.
 
@@ -1345,7 +1365,7 @@ $$
 \mathfrak A_{\mathrm{G9CC}}=\sin^2(g\tau_{\mathrm{int}})>0.
 \tag{O.6.3.3}
 $$
-On a third factor take Minkowski spacetime with $x^0=ct$ and a spatial three-torus. Independently choose a nonzero torus Fourier covector $k$ and an energy-density amplitude $\rho_0\ne0$, and register the static conserved source perturbation
+On a third factor take flat spacetime with $c>0$, $x^0=ct$, metric $\eta=\operatorname{diag}(-1,1,1,1)$ and periodic spatial coordinates on a three-torus. Independently choose a nonzero torus Fourier covector $k$ and an energy-density amplitude $\rho_0\ne0$, and register the static conserved source perturbation
 $$
 T^{\mathrm{src}}_{00}=\rho_0\cos(k\cdot x),
 \qquad
@@ -1385,21 +1405,21 @@ Consider a sequence of locally-finite graphs $(G_n)$ with vertex sets $V(G_n)$ a
 $$
 F_n(u_n)=\sum_{(x,y)\in E(G_n)} w_{xy}\,\Phi_{link}\!\left(\frac{u_n(y)-u_n(x)}{h_n}\right)+\sum_{x\in V(G_n)} h_n^D\,\mathcal{V}(u_n(x)),
 $$
-where $\Phi_{link}$ is convex and encodes the spatial propagation cost density consistent with $V_{prop}$ (Definition D.1), and $\mathcal{V}$ is the induced local term. Under the equicoercivity, locality/consistency, and area-law hypotheses used for the PU $\Gamma$-convergence result (Appendix D, Theorem D.6), these functionals $\Gamma$-converge to a continuum functional of the form
+where $\Phi_{link}$ is convex and encodes the spatial propagation cost density consistent with $V_{prop}$ (Definition D.1), and $\mathcal{V}$ is the induced local term. Assume separate sequential $\Gamma$-liminf and recovery certificates identify the continuum functional as
 $$
 F(u)=\int_M f(x,\nabla u)\,d^Dx+\int_M \mathcal{V}(u)\,d^Dx,
 \qquad
 f(x,\xi)=\xi^T A(x)\xi+o(|\xi|^2),
 $$
-where $A(x)$ is symmetric positive definite. The quadratic form $A(x)$ therefore defines the inverse spatial metric on the slice (up to the conventional density factor):
+with an independently certified symmetric positive-definite coefficient $A(x)$. Under equicoercivity and the remaining hypotheses of Appendix D, Theorem D.6, minimum values converge and cluster points of almost minimizers minimize $F$. The integral representation and positivity of $A$ are additional branch data. Register the spatial metric-density identification
 $$
 A(x)\propto \sqrt{\det g_{ij}(x)}\,g^{ij}(x).
 $$
-Thus, the spatial geometry emerges as the effective continuum limit of the PU network's propagation sector.
+On this identified positive-quadratic branch, the spatial geometry is represented by the effective continuum limit of the PU network's propagation sector.
 
 ### O.7.2 Hyperbolic Signature Closure and Operational Speed
 
-The Appendix O signature closure is a four-input branch theorem: a rank-four positive-definite continuum tensor, a nonvanishing time covector oriented by Theorem 31 and Appendix J, a second-order continuum principal symbol, and a separately accepted nondegenerate characteristic cone coinciding with an attained operational frontier. Proposition F.1 supplies its stated discrete propagation cone and Theorem 46 supplies a uniform operational causal-speed upper bound; neither establishes frontier attainment or continuum cone coincidence. The fourth input may be supplied directly as Hypothesis O.7.2.4 or, for the retained sector family covered by a finite record, by an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ (Definition O.7.2.5) that explicitly includes attainment. On a branch combining Theorem Z.11's four-dimensional Euclidean carrier with a rank-four continuum realization and a separately accepted nonvanishing temporal covector, rank-nullity supplies the three-dimensional spatial kernel. These inputs then force the Lorentzian signature and normalize the characteristic speed to the separately accepted frontier.
+The Appendix O signature closure is a four-input branch theorem: a rank-four positive-definite continuum tensor, a nonvanishing time covector whose orientation is supplied by Theorem O.3's pathwise certificate and Hypothesis O.7.2.2, a second-order continuum principal symbol, and a separately accepted nondegenerate characteristic cone coinciding with an attained operational frontier. Proposition F.1 supplies its stated discrete propagation cone and Theorem 46 supplies a uniform operational causal-speed upper bound; neither establishes frontier attainment or continuum cone coincidence. The fourth input may be supplied directly as Hypothesis O.7.2.4 or, for the retained sector family covered by a finite record, by an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ (Definition O.7.2.5) that explicitly includes attainment. On a branch combining Theorem Z.11's four-dimensional Euclidean carrier with a rank-four continuum realization and a separately accepted nonvanishing temporal covector, rank-nullity supplies the three-dimensional spatial kernel. These inputs then force the Lorentzian signature and normalize the characteristic speed to the separately accepted frontier.
 
 **Remark O.7.2.0 (Second-Order Closure versus Signature Selection).** When the second-order and cone-coincidence inputs are supplied by finite certificates rather than by the direct hypotheses, the covered-sector signature reading is audited by the predictive well-posedness signature certificate $\mathfrak C_{\mathrm{sig}}$ of Definition 46a.1. The certificate excludes elliptic, ultrahyperbolic, constrained, higher-derivative, or nonlocal representatives that reproduce only a coarse finite-frontier behavior. Thus the finite-certificate implication used for covered sectors is
 $$
@@ -1430,7 +1450,7 @@ Write this registered coefficient as $A^{ij}$ in Hypotheses O.7.2.3--O.7.2.4. A 
 $$
 p_x(\xi) \;=\; G^{\mu\nu}(x)\,\xi_\mu\xi_\nu \;=\; a(x)\,\xi_0^2 + 2\,b^i(x)\,\xi_0\xi_i + A^{ij}(x)\,\xi_i\xi_j,
 $$
-with $\xi_0,\xi_i$ the cotangent components in the chart of Hypothesis O.7.2.2. This is the same second-order continuum premise used in §11.3 and §11.4.
+with $\xi_0,\xi_i$ the cotangent components in the chart of Hypothesis O.7.2.2. This second-order continuum premise is imported by Corollary 46a in §11.6.
 
 **Definition O.7.2.3a (Second-Order Positivity Certificate $\mathfrak C_2$).** A second-order positivity certificate for a retained continuum sector is a finite record
 $$
@@ -1440,9 +1460,9 @@ $$
 $$
 where $\mathcal K_{\mathrm{CG}}$ is the coarse-grained CP influence kernel, $\mathcal M_{\mathrm{Markov}}$ records the Markov diffusion reduction on the diagonal probability sector, $\mathcal R_{\mathrm{KM}}$ records the Kramers-Moyal expansion with finite second moments and locality/tightness bounds, $\mathcal R_{\mathrm{GKSL}}$ records the quantum CP-to-GKSL or quantum-Fokker-Planck reduction used for off-diagonal sectors, $\mathcal N_{\mathrm{jump}}$ certifies that retained jump, nonlocal, fractional, or infinite-order pseudodifferential sectors are absent from the claimed local field, and $\mathcal R_\delta$ certifies that all discarded higher-order response data are below the operational resolution and PPI-null.
 
-**Proposition O.7.2.3b (Certificate Discharge of Second-Order Closure).** For any sector covered by an accepted $\mathfrak C_2$, Hypothesis O.7.2.3 is discharged for that sector. Complete positivity alone does not discharge the hypothesis, Pawula-type positivity applies only after the recorded Markov/Kramers-Moyal reduction, and finite resolution removes the infinite-order branch only when $\mathcal R_\delta$ proves the residual higher-order response is PPI-null.
+**Proposition O.7.2.3b (Certificate Discharge of Second-Order Closure).** An accepted $\mathfrak C_2$ supplies differential order at most two only on its recorded reduced sectors and operational quotient. To discharge Hypothesis O.7.2.3 for a scalar propagating sector, additionally require a real local scalar differential representative with a nonzero quadratic principal part and an explicit identification of its spatial principal coefficient with $A^{ij}$ from Hypothesis O.7.2.2. Complete positivity alone supplies none of these identifications. Hyperbolicity and the two-root cone condition remain the separate Hypothesis O.7.2.4.
 
-*Proof.* On the recorded Markov diffusion branch, positivity of the diagonal probability kernel and the Kramers-Moyal hypotheses invoke the Pawula alternative: a positivity-preserving finite truncation is of order at most two unless the full infinite series is retained. The GKSL/Fokker-Planck record supplies the corresponding complete-positivity constraint for the quantum sector. The no-jump and no-nonlocal entries remove retained Lévy, jump, fractional, or pseudodifferential alternatives. Finally, $\mathcal R_\delta$ shows that any remaining all-orders terms carry no retained finite response at the operational resolution. Nondegeneracy then leaves the second-order principal symbol displayed in Hypothesis O.7.2.3 for propagating covered sectors. ∎
+*Proof.* On the recorded Markov/Kramers-Moyal branch, the applicable positivity theorem restricts an admitted finite truncation to order at most two unless the full infinite series is retained. The quantum reduction has only the order and domain supplied by its separate GKSL/Fokker-Planck record. The no-jump and no-nonlocal entries exclude those retained alternatives, and $\mathcal R_\delta$ identifies discarded response terms only modulo its declared operational quotient. With the additional real scalar representative and nonzero quadratic part, symmetrizing its quadratic coefficient gives a principal symbol $G^{\mu\nu}\xi_\mu\xi_\nu$. The supplied spatial-coefficient identification then writes it in the form of Hypothesis O.7.2.3. This argument does not establish the sign, nondegeneracy or attained frontier of that symbol; those remain separate branch premises. ∎
 
 **Definition O.7.2.3c (Mixing Gaussian-Scaling Audit).** Augment an accepted second-order certificate by a centered stationary increment process, diffusive rescaling, the moment and strong-mixing summability required by named CLT/Berry-Esseen results, and constants $c_2>0$, $C_m<\infty$ satisfying
 $$
@@ -1485,31 +1505,38 @@ $$
 $$
 where the last inequality uses $m\ge3$ and $|k|\le L_{\mathrm{obs}}^{-1}$. No probability limit follows from these symbol inequalities alone. ∎
 
-**Theorem O.7.2.3e (Lévy-Class Trichotomy and Quantitative Diffusive Residual).** Let a retained translation-invariant scaling limit be stochastically continuous with independent increments. Its characteristic exponent has the unique Lévy--Khintchine form
+**Theorem O.7.2.3e (Lévy-Class Trichotomy and Quantitative Diffusive Residual).** Let the retained limit be a conservative Lévy process $X_t$ on $\mathbb R^d$, $d\ge1$, with $X_0=0$, stochastic continuity and stationary independent increments. Its time-homogeneous spatial convolution semigroup has
 $$
+\mathbb E e^{ik\cdot X_t}=e^{t\Psi(k)},
+\qquad
 \Psi(k)
 =i b\cdot k-\frac12 k^TAk
 +\int_{\mathbb R^d\setminus\{0\}}
 \left(e^{ik\cdot z}-1-ik\cdot z\,\mathbf1_{|z|\le1}\right)\nu(dz),
 \tag{O.7.2.3e.1}
 $$
-where $A\succeq0$ and $\int(1\wedge|z|^2)\nu(dz)<\infty$. The limit is a local diffusion exactly when $\nu=0$; it retains a jump or nonlocal part exactly when $\nu\ne0$. The isotropic symmetric fractional branch of index $0<\alpha<2$ is the special case $A=0$ and $\nu(dz)=c_{d,\alpha}|z|^{-d-\alpha}dz$, for which $\Psi(k)=-C_{d,\alpha}|k|^\alpha$. In particular, the generator of a conservative positivity-preserving translation-invariant Markov semigroup, if it is a finite-order local differential operator, has order at most two: a polynomial exponent from (O.7.2.3e.1) has degree at most two.
+where $A\succeq0$ and $\int(1\wedge|z|^2)\nu(dz)<\infty$. For the displayed truncation convention the triplet is unique. The process has continuous Gaussian-plus-drift paths exactly when $\nu=0$; $\nu\ne0$ retains a jump or nonlocal part. The isotropic symmetric fractional branch has $b=0$, $A=0$ and
+$$
+\nu(dz)=c_{d,\alpha}|z|^{-d-\alpha}\,dz,\qquad
+c_{d,\alpha}>0,\quad 0<\alpha<2,
+$$
+giving $\Psi(k)=-C_{d,\alpha}|k|^\alpha$ with $C_{d,\alpha}>0$. A conservative translation-invariant Markov generator on this class, if it is a finite-order local differential operator, has order at most two.
 
-For a quantitative local branch, let $Y_1,Y_2,\ldots$ be independent identically distributed centered increments with covariance $\Sigma\succ0$ and $\mathbb E|Y_1|^{2+\delta}=M_{2+\delta}<\infty$ for some $0<\delta\le1$, and put
+For the quantitative diffusive subclass, let $Y_j$ be iid centered increments with covariance $\Sigma\succ0$ and $\mathbb E|Y_1|^{2+\delta}=M_{2+\delta}<\infty$ for $0<\delta\le1$. For integers $n\ge1$ put
 $$
 X_n(t):=n^{-1/2}\sum_{j=1}^{\lfloor nt\rfloor}Y_j.
 $$
-Then $X_n$ converges in the Skorokhod space $D([0,T],\mathbb R^d)$ to Brownian motion with covariance $\Sigma$. Its Lindeberg tail has the explicit bound
+For every finite $T>0$, $X_n$ converges in $D([0,T],\mathbb R^d)$ to Brownian motion with covariance $\Sigma$. For every $\epsilon>0$,
 $$
 n\,\mathbb E\!\left[
 \left|\frac{Y_1}{\sqrt n}\right|^2
 \mathbf1_{|Y_1|>\epsilon\sqrt n}
 \right]
 \le
-\frac{M_{2+\delta}}{\epsilon^\delta n^{\delta/2}},
+\frac{M_{2+\delta}}{\epsilon^\delta n^{\delta/2}}.
 \tag{O.7.2.3e.2}
 $$
-and the increment sequence's strong-mixing coefficients vanish at every positive lag. If $\mathbb E|Y_1|^3<\infty$, every unit projection $u\cdot X_n(1)$ satisfies the Berry--Esseen estimate
+Its increment sequence has zero strong-mixing coefficients at positive lags. If $\mathbb E|Y_1|^3<\infty$, every unit projection obeys
 $$
 \sup_x\left|
 \Pr\{u\cdot X_n(1)\le x\}
@@ -1520,11 +1547,18 @@ $$
 {(u^T\Sigma u)^{3/2}\sqrt n}.
 \tag{O.7.2.3e.3}
 $$
-Whenever cumulants through order $m$ exist, the order-$m$ cumulant of $X_n(1)$ is $n^{1-m/2}\kappa_m(Y_1)$ and therefore vanishes for every $m\ge3$. Thus (O.7.2.3e.2)--(O.7.2.3e.3) populate the tail, mixing and Gaussian-residual fields for this finite-moment independent-increment class; a retained $\nu\ne0$ instead certifies the jump or fractional alternatives rather than a second-order closure.
+Whenever cumulants through order $m$ exist, $\kappa_m(X_n(1))=n^{1-m/2}\kappa_m(Y_1)$, which vanishes for $m\ge3$.
 
-*Proof.* The Lévy--Khintchine theorem gives (O.7.2.3e.1) and uniqueness of $(b,A,\nu)$. The integral term is absent exactly for continuous Gaussian-plus-drift paths and is nonlocal when $\nu\ne0$; the stated stable Lévy measure has Fourier symbol proportional to $-|k|^\alpha$. If a local generator has finite differential order, its exponent is polynomial. The unique representation then forces $\nu=0$, leaving only the affine and quadratic terms. For (O.7.2.3e.2), on $|Y_1|>\epsilon\sqrt n$ one has $|Y_1|^2\le |Y_1|^{2+\delta}/(\epsilon\sqrt n)^\delta$; substitution gives the bound. Independence makes every positive-lag mixing coefficient zero. The functional central-limit theorem and the one-dimensional Berry--Esseen theorem applied to $u\cdot Y_j$ give the remaining convergence statements. Additivity and homogeneity of cumulants under independent summation give $\kappa_m(X_n(1))=n(n^{-1/2})^m\kappa_m(Y_1)$. ∎
+*Proof.* The Lévy--Khintchine theorem applies to the stated Lévy process and gives the exponent and triplet uniqueness. If $\nu\ne0$, choose a nonnegative smooth compactly supported function $f$ that vanishes near zero and satisfies $\int f(z)\nu(dz)>0$. Such a function exists because a nonzero Lévy measure has positive finite mass on some compact set away from zero. Its jump-generator contribution at zero is positive, whereas all derivatives and the value of $f$ vanish there. Thus this generator is not a local differential operator. If $\nu=0$, only the first- and second-order drift and Gaussian terms remain. For the symmetric stable measure, the imaginary integral vanishes; rotation and scaling give
+$$
+-\Psi(k)=|k|^\alpha
+\int_{\mathbb R^d}(1-\cos z_1)c_{d,\alpha}|z|^{-d-\alpha}\,dz.
+$$
+The integral is finite and positive for $0<\alpha<2$.
 
-**Resolution TV-O-07-P1 (Metadata).** Exact domain: stochastically continuous independent-increment limits and the finite-moment iid diffusive subclass displayed in Theorem O.7.2.3e. Premises: the stated Lévy and moment hypotheses. Equivalence: equality of Lévy triplets, and equality in the iid subclass up to increment law. Budget: every Lévy-triplet component, every $0<\alpha<2$, every unit projection and every finite cumulant that exists. Verifier: Lévy-integrability, covariance positivity, (O.7.2.3e.2), the Berry--Esseen hypotheses and cumulant scaling. Falsifier: a conservative positivity-preserving translation-invariant Markov generator that is local finite-order above degree two, a nonzero retained Lévy measure classified as local diffusion, or failure of any displayed quantitative bound. Provenance class: standard probability-theory classification specialized to the retained continuum ledger. Downstream consumers: $\mathfrak C_2$, Hypothesis O.7.2.3 and `TV-O-07`. The theorem gives `positive-discharge` for the independent-increment classification and finite-moment iid Gaussian-residual subclass. Dependent, long-range, state-dependent and quantum off-diagonal sectors remain within `TV-O-07`'s broader coverage requirement.
+On the tail event in (O.7.2.3e.2), $|Y_1|^2\le |Y_1|^{2+\delta}/(\epsilon\sqrt n)^\delta$, proving the bound. The stated iid finite-variance hypotheses permit the functional central-limit theorem; the finite third moment permits the one-dimensional Berry--Esseen theorem for each projection. Independence makes positive-lag mixing coefficients zero. Additivity and homogeneity of cumulants give $n(n^{-1/2})^m\kappa_m(Y_1)$, proving the final formula. ∎
+
+**Resolution TV-O-07-P1 (Metadata).** Exact domain: conservative Lévy processes with stationary independent increments and the displayed finite-moment iid diffusive subclass. Premises: stochastic continuity, the stated triplet and moment domains, and the applicable Lévy--Khintchine, functional central-limit and Berry--Esseen theorems. Equivalence: equality of triplets in the declared truncation convention; the iid subclass also retains its increment law. Budget: all triplet components, $0<\alpha<2$, unit projections and existing finite cumulants. Verifier: Lévy integrability, covariance positivity, the locality test, tail bound and cumulant scaling. Falsifier: a nonzero Lévy measure classified as a local differential generator or a failure of the displayed quantitative bounds. Provenance class: standard probability classification applied on its explicit hypotheses. Downstream consumers: $\mathfrak C_2$, Hypothesis O.7.2.3 and `TV-O-07`. This gives `positive-discharge` of the Lévy classification and Gaussian-residual statements on these explicit subclasses. Nonstationary-increment, dependent, long-range, state-dependent and quantum off-diagonal sectors retain their separate proof duties, so the broader target remains open.
 
 **Hypothesis O.7.2.4 (Nondegenerate causal cone).** Assume a separately established attained operational frontier whose speed obeys the uniform upper bound of Theorem 46 and whose discrete propagation compatibility is recorded by Proposition F.1. This frontier is nondegenerate at every point of $M_{\mathrm{reg}}$ and coincides with the characteristic cone of $p_x$: for every nonzero spatial covector $k_i$, the polynomial
 $$
@@ -1587,14 +1621,14 @@ $$
 \;\Longrightarrow\;
 \mathrm{LorentzianSignature}\ (-,+,+,+),
 $$
-with the four antecedents supplied by the rank-four continuum branch of Theorem 45, Theorem 31 plus §O.4 and Hypothesis O.7.2.2 (entropy-selected time and its rank-three spatial kernel), Hypothesis O.7.2.3 (second-order continuum closure), and Hypothesis O.7.2.4, whose operational-speed upper-bound input is supplied by Theorem 46 plus Theorem P.8.4, while its attained-frontier, nondegeneracy, and cone-coincidence inputs remain branch clauses of the characteristic principal symbol. The signature conclusion is conditional theorem-level on this branch; neither the Euclidean carrier dimension nor entropy-time selection alone forces the Lorentzian signature without the other structural inputs.
+with the four antecedents supplied by the rank-four continuum branch of Theorem 45, Theorem O.3's pathwise certificate together with Hypothesis O.7.2.2 (entropy-selected time, its rank-three spatial kernel, and the registered propagation-tensor identification), Hypothesis O.7.2.3 (second-order continuum closure), and Hypothesis O.7.2.4, whose operational-speed upper-bound input is supplied by Theorem 46 plus Theorem P.8.4, while its attained-frontier, nondegeneracy, and cone-coincidence inputs remain branch clauses of the characteristic principal symbol. The signature conclusion is conditional theorem-level on this branch; neither the Euclidean carrier dimension nor entropy-time selection alone forces the Lorentzian signature without the other structural inputs.
 
 *Proof of (a).* Fix $x$ and consider the characteristic polynomial in $\omega$ with $k\in S_x^*\setminus\{0\}$. Hypotheses O.7.2.1–O.7.2.2 and rank-nullity give $\dim S_x^*=3$, so the orthogonal complement $\{k:b^ik_i=0\}\subset S_x^*$ is at least two-dimensional and contains nonzero $k$. For any such $k$, the polynomial simplifies to $p_x(\omega,k)=a(x)\omega^2+A^{ij}(x)k_i k_j$ with discriminant
 $$
 \Delta(k) \;=\; -4\,a(x)\,A^{ij}(x)\,k_i k_j.
 $$
 
-By Hypothesis O.7.2.1, $A^{ij}k_ik_j>0$; by Hypothesis O.7.2.4, $\Delta(k)>0$. Hence $a(x)<0$.
+By Hypotheses O.7.2.1–O.7.2.2, $A^{ij}k_ik_j>0$; by Hypothesis O.7.2.4, $\Delta(k)>0$. Hence $a(x)<0$.
 
 *Proof of (b).* For $t\in\mathbb R$ and $x\in\mathbb R^3$, the quadratic form of $G$ is
 $$
@@ -1674,24 +1708,24 @@ R^\top\widetilde A R=I_3;
 $$
 for example, take the positive-definite square root and, if necessary, an orientation-preserving orthogonal factor. Extending $R$ trivially in the time coordinate gives a positive-determinant four-dimensional change of coordinates and the displayed normal form. No step proves invariance of a designated cone under the coordinate change; that restriction is imposed separately by Hypothesis O.7.2.2. ∎
 
-**Theorem O.7b (Operational Speed Normalization).** Assume the hypotheses of Corollary O.7a.1, a nondegenerate characteristic cone satisfying Hypothesis O.7.2.4, and a separately established attained local operational frontier with speed $c(x)>0$. Then in entropy-orthogonal, spatially orthonormal coordinates,
+**Theorem O.7b (Operational Speed Normalization).** Assume Corollary O.7a.1, Hypothesis O.7.2.4 and a separately attained local operational frontier. Register its clock and spatial ruler calibration in the entropy-orthogonal, spatially orthonormal coordinates used below, transporting that calibration through the shear and spatial coordinate change. Let $c(x)>0$ denote the frontier speed in those same coordinates. Then
 $$
 p_x(\xi)=-\frac{\xi_0^2}{c(x)^2}+\delta^{ij}\xi_i\xi_j.
 $$
-Theorem 46 supplies only
+The numerical bound of Theorem 46 transfers only when its time and spatial-distance calibration has been identified with this registered frame; on that branch,
 $$
-0<c(x)\le\frac{\delta w_{\max}}{\tau_{\min}}
+0<c(x)\le\frac{\delta w_{\max}}{\tau_{\min}}.
 $$
-on such an attained-frontier branch; it supplies no uniform positive lower bound for $c(x)$. On the separately accepted normalized uniform-weight branch with an attained one-link frontier, $c(x)\equiv c=\delta/\tau_{\min}$.
+No uniform positive lower bound follows. On the additional normalized uniform-weight branch with an attained one-link frontier in the same calibration, $c(x)\equiv c=\delta/\tau_{\min}$.
 
-*Proof.* Corollary O.7a.1 gives $p_x(\xi)=-\alpha(x)\xi_0^2+|\xi|^2$ with $\alpha(x)>0$. Its null relation has characteristic speed $1/\sqrt{\alpha(x)}$. Cone coincidence with the separately established attained frontier therefore gives $\alpha(x)=1/c(x)^2$. Theorem 46 gives the displayed upper bound. The normalized equality uses the additional uniform-weight and one-link-attainment hypotheses. A lower edge weight together with a lower traversal-time bound does not imply a positive lower speed. ∎
+*Proof.* Corollary O.7a.1 gives $p_x=-\alpha(x)\xi_0^2+|\xi|^2$ with $\alpha>0$. Its dispersion relation has speed $1/\sqrt{\alpha(x)}$ in the declared clock and spatial norm. Cone coincidence with the operational frontier measured in that same convention gives $\alpha(x)=1/c(x)^2$. The stated calibration identification then permits the numerical upper bound of Theorem 46. The uniform-weight equality uses its additional one-link-attainment premise. A coordinate change by itself supplies neither this calibration identification nor frontier attainment. ∎
 
-**Corollary O.7b.1 (Derived Tangent-Frame Lorentz Group and Local Lorentz Kinematics).** As a consequence of Theorems O.7a and O.7b:
+**Corollary O.7b.1 (Derived Tangent-Frame Lorentz Group and Local Lorentz Kinematics).** Assume the hypotheses of Theorems O.7a and O.7b and, in addition, that the spatial bundle $S=\ker dt$ admits a registered global orientation. Then:
 
 (a) After the rescaling $\xi_0':=\xi_0/c(x)$, the principal symbol takes the standard Minkowski form $p_x(\xi)=\eta^{\mu\nu}\xi_\mu\xi_\nu=-\xi_0^2+\delta^{ij}\xi_i\xi_j$. Its linear isometry group is $O(1,3)$.
 
 
-(b) Requiring preservation of spatial orientation (from the oriented spatial $\Gamma$-limit of §O.7.1) and of the entropy-selected future cone (Hypothesis O.7.2.2) restricts $O(1,3)$ to the proper orthochronous Lorentz group $SO^+(1,3)$.
+(b) Requiring preservation of the registered spatial orientation and of the entropy-selected future cone (Hypothesis O.7.2.2) restricts $O(1,3)$ to the proper orthochronous Lorentz group $SO^+(1,3)$.
 
 (c) The orthonormal frame bundle of the emergent metric obtained by duality from $p_x$ has structure group $SO^+(1,3)$.
 
@@ -1710,11 +1744,11 @@ p_x(\xi)=-(\xi_0')^2+\delta^{ij}\xi_i\xi_j.
 $$
 The linear transformations preserving this quadratic form are, by definition, the elements of $O(1,3)$.
 
-(b) For $\Lambda\in O(1,3)$, the sign of $\det\Lambda$ records four-dimensional orientation, while the sign of $\Lambda^0{}_0$ distinguishes preservation from reversal of the chosen time cone. After the future time orientation is fixed by $\Lambda^0{}_0>0$, the condition $\det\Lambda=1$ is equivalent to preservation of the induced spatial orientation. The orientation chosen in §O.7.1 imposes $\det\Lambda=1$, and Hypothesis O.7.2.2 imposes $\Lambda^0{}_0>0$. Their intersection is the identity component $SO^+(1,3)$.
+(b) For $\Lambda\in O(1,3)$, the sign of $\det\Lambda$ records four-dimensional orientation, while the sign of $\Lambda^0{}_0$ distinguishes preservation from reversal of the chosen time cone. After the future time orientation is fixed by $\Lambda^0{}_0>0$, the condition $\det\Lambda=1$ is equivalent to preservation of the induced spatial orientation. The registered spatial orientation imposes $\det\Lambda=1$, and Hypothesis O.7.2.2 imposes $\Lambda^0{}_0>0$. Their intersection is the identity component $SO^+(1,3)$.
 
 (c) An orthonormal frame at $x$ is an ordered basis whose Gram matrix is $\operatorname{diag}(-1,1,1,1)$. Two such frames differ by an element of $O(1,3)$. Restricting to frames with the chosen spatial orientation and future time orientation restricts every transition function to $SO^+(1,3)$; hence the oriented, time-oriented orthonormal frame bundle has that structure group.
 
-(d) The spin-obstruction theorem [Milnor & Stasheff 1974] applies to the oriented frame bundle from (c): its hypotheses are an oriented tangent bundle and the second Stiefel--Whitney class $w_2(M_{\mathrm{reg}})$. It states that a lift through the connected double cover exists exactly when $w_2(M_{\mathrm{reg}})=0$, and that the isomorphism classes of lifts, when nonempty, form a torsor for $H^1(M_{\mathrm{reg}};\mathbb Z/2)$. The connected double cover of $SO^+(1,3)$ is $\operatorname{Spin}(1,3)\cong SL(2,\mathbb C)$. Thus every lift has this structure group, whereas the global lift is unique only when the stated torsor has one element. ∎
+(d) On the branch with the selected time line and oriented rank-three spatial bundle $S=\ker dt$, the tangent bundle splits as $TM_{\mathrm{reg}}\cong\mathbf 1\oplus S$. The Whitney product formula gives $w_2(TM_{\mathrm{reg}})=w_2(S)$. Milnor (1963b, p. 200) states that an oriented $SO(3)$ bundle has a spin lift exactly when $w_2=0$; his cohomological description and exact sequence make the nonempty set of lifts an $H^1(M_{\mathrm{reg}};\mathbb Z/2)$-torsor. The inclusion $SO(3)\hookrightarrow SO^+(1,3)$ is a homotopy equivalence by the rotation–boost decomposition, so extension of this lift supplies the corresponding Lorentzian spin frame lift. The connected double cover is $\operatorname{Spin}^+(1,3)\cong SL(2,\mathbb C)$. Thus every lift has this structure group, whereas the global lift is unique only when the stated torsor has one element. ∎
 
 **Corollary O.7b.2 (No Riemannian Replacement of the Causal Cone).** Under Hypotheses O.7.2.1–O.7.2.4, a positive-definite four-dimensional principal symbol cannot represent the separately accepted nondegenerate characteristic cone and attained operational frontier. If $H^{\mu\nu}$ is positive-definite, then
 $$
@@ -1724,7 +1758,7 @@ for every nonzero covector $\xi$, so the characteristic set $H^{\mu\nu}\xi_\mu\x
 
 *Proof.* The first claim is the definition of positive-definiteness applied to the quadratic symbol. A nondegenerate operational causal frontier requires nonzero characteristic covectors separating future and past propagation directions. A positive-definite symbol has no such nonzero null covectors, so it cannot satisfy Hypothesis O.7.2.4. Theorems O.7a and O.7b then leave only the Lorentzian signature branch under the stated hypotheses. ∎
 
-Premise (A5) of §12 is therefore theorem-level only on the emergent-spacetime branch satisfying Hypotheses O.7.2.1–O.7.2.4, or on the retained-sector subbranch where an accepted $\mathfrak C_{\mathrm{cone}}$ supplies the cone-coincidence/nondegeneracy entry at the stated resolution.
+The tangent-frame Lorentz-kinematics component of premise (T5) of §12 follows on the branch of Corollary O.7b.1, including Hypotheses O.7.2.1–O.7.2.4 and the registered spatial orientation. For covered retained sectors, an accepted $\mathfrak C_{\mathrm{cone}}$ may supply Hypothesis O.7.2.4 without discharging the other branch premises. Full matter-dynamical Lorentz covariance and metric universality retain the additional common-cone, interaction, representation, and boundary-sufficiency records stated in (T5).
 
 
 ## O.8 Conclusion

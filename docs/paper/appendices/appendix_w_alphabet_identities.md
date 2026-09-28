@@ -30,7 +30,7 @@ This appendix derives general, robust identities and bounds relating emergent ga
 * **Capacity inequality (Jensen):**
 
   $$
-  \sum_{i=1}^{M}\ln(1+\lambda_i u)\ \le\ M\ln(1+xu),\quad\text{equality iff }\lambda_i=x\ \forall i.
+  \sum_{i=1}^{M}\ln(1+\lambda_i u)\ \le\ M\ln(1+xu),\quad\text{equality iff }u=0\ \text{or }\lambda_i=x\ \forall i.
   \tag{W.0.3}
   $$
 * **Cap constant:**
@@ -53,7 +53,7 @@ $$
 g_1=\sqrt{\tfrac{5}{3}}\,g_Y\quad\text{(equivalently }g_Y=\sqrt{\tfrac{3}{5}}\,g_1\text{)}.
 $$
 
-**QFI–capacity surrogate.** Let the supported tangent model satisfy the SLD-existence hypotheses of Theorem W.18, and let $\{\lambda_i\}_{i=1}^{M}$ be the nonnegative eigenvalues of its chosen finite-dimensional SLD-QFI quadratic form. As an additional modeling assumption, define the rate term used in (W.0.1) by
+**QFI–capacity surrogate.** Let the finite-dimensional tangent model satisfy the SLD-existence hypotheses of Theorem W.18, and let $\{\lambda_i\}_{i=1}^{M}$ be the nonnegative eigenvalues of its chosen finite-dimensional SLD-QFI quadratic form. As an additional modeling assumption, define the rate term used in (W.0.1) by
 
 $$
 g_{\rm true}(u):=\sum_{i=1}^{M}\ln(1+\lambda_i u),\qquad
@@ -65,7 +65,7 @@ where $x=S_1/M$. This logarithmic rate formula is not implied by $C^1$ regularit
 **Standing assumptions.** Throughout this appendix:
 
 $$
-\lambda_i\ge 0,\quad A_{\rm PCE}>0,\quad M\ge 1,\quad d_0\ge 2,\quad x=\tfrac{S_1}{M}>0.
+\lambda_i\ge 0,\quad A_{\rm PCE}>0,\quad \Gamma_0>0,\quad M\ge 1,\quad d_0\ge 2,\quad x=\tfrac{S_1}{M}>0.
 $$
 
 Unless stated otherwise, the **cap-active branch** at $\mu^*$ is considered: the unconstrained minimizer $u_0\ge 0$ of $\phi$ solving $\phi'(u_0)=0$ satisfies
@@ -246,7 +246,7 @@ Apply (W.2.3) to obtain the bound with factor $1/F_{\lambda,e}=S_2/(M x^2)$ (for
 
 **PCE motivation for the identity point.**
  *Relation to the PCE-Attractor.*
- Clause 3 of Definition 15a supplies the flat-spectrum attractor condition, and Proposition W.3a.2 evaluates it on the interface state. Theorem W.3a.3 transfers the flat metric to a generator basis only when that basis is orthonormal with respect to the inherited QFI metric. Clause 4 of Definition 15a places the constrained rate minimum on the declared upper capacity boundary; on the one-dimensional cap-active branch, the unconstrained minimizer lies above that boundary. Equality in (W.2.6) additionally requires the declared boundary to coincide with the Jensen surrogate boundary, so that $u_0=u_{\mathrm J}^*$. On a true-cap branch where that identification fails, Theorem W.5 gives only $u_{\mathrm T}^*\ge u_{\mathrm J}^*$ and the inequality (W.2.5) remains the applicable statement.
+ Clause 3 of Definition 15a supplies the flat-spectrum attractor condition, and Proposition W.3a.2 evaluates it on the interface state. Theorem W.3a.3 transfers the flat metric to a generator basis only when that basis is orthonormal with respect to the inherited QFI metric. Clause 4 of Definition 15a places the constrained rate minimum on the declared upper capacity boundary; on the one-dimensional cap-active branch, the unconstrained minimizer lies above that boundary. Equality in (W.2.6) requires a flat spectrum and the branch-boundary condition $u_0=u_{\mathrm J}^*$ of Theorem W.10. Coincidence of the declared and Jensen capacity boundaries alone does not impose this stationarity condition, and the inequality is strict on the cap-active branch. When both caps are active, Theorem W.5 gives $u_{\mathrm T}^*\ge u_{\mathrm J}^*$; Equation (W.2.5) bounds the product evaluated at the Jensen-cap–saturated optimum and supplies no upper bound on its true-capacity value from this ordering alone.
 
 **Sensitivity note (alphabet constant and variance).**
 For $d_0=8$, $K_{\mathrm{alph}}(8,M)$ decreases slowly with $M$:
@@ -260,7 +260,7 @@ Variance enters only through $F_\lambda$: the multiplicative penalty is $1/F_\la
 ## W.3 Weak sector relation (Weinberg angle)
 
 **Assumption W.3.A (Alignment hypothesis).**
-At the $\mathrm{MPU}$ operational point, PCE sets both $U(1)_Y$ and $SU(2)$ sectors to be **simultaneously cap‑active and Jensen‑cap–saturated**. A sufficient rationale is **spectral similarity** (comparable $M_s$ and $x_s$ across sectors) so that both unconstrained optima exceed the common alphabet cap at $\mu^*$. The assumption can fail if sector spectra differ markedly (e.g., large variance or $M_s$ mismatch) causing one sector to be interior while the other is cap‑active.
+At the $\mathrm{MPU}$ operational point, assume that PCE places both $U(1)_Y$ and $SU(2)$ sectors on the **cap-active, Jensen-cap-saturated branch**. For each sector $s\in\{Y,2\}$, this requires $g_{J,s}(u_{0,s})>\ln d_0$, where $u_{0,s}$ is its unconstrained minimizer. Comparable $M_s$ and $x_s$ alone do not imply these inequalities: the cost-to-rate ratio and the full spectrum also enter the stationarity equation. The assumption can fail with either both sectors interior or one interior and the other cap-active.
 
 **Theorem W.11 (Weinberg angle from sector invariants; cap‑active branch).**
 Under Assumption W.3.A, let $u_s^*$ denote the Jensen‑cap–saturated optimum for sector $s\in\{Y,2\}$. Then
@@ -404,7 +404,7 @@ Choose a $B_{\mathbf c}$-orthonormal ordered basis $(e_1,\ldots,e_{12})$ and a $
 | Catalog binding and outcome | `TV-W-03`: `negative-refutation` of flat-QFI forcing of common stiffness and complete classification of the invariant-form/bare-linear-isotropic-embedding component; typed response, update, and observable intertwiner classification remains `M`-open, followed by its `C+R` population and realization gates. `TV-G-11`: `nonentailment` of a canonical unmarked metric-linear injection; its marked code, Lie-bracket, update, polarization, and response equivariance gates remain open |
 | Exact domain | Positive invariant forms on the labeled compact reductive algebra $\mathfrak g_{\mathrm{SM}}$ and injective linear metric maps into the exact flat $24$-dimensional interface, with the optional stated Lagrangian condition |
 | Premises | Fixed trace normalization $b_i$, Proposition W.3a.2's flat metric, and the canonical interface symplectic form; no physical gauge-response map is presumed |
-| Equivalence relation | Factor-preserving gauge-algebra automorphisms and target $U(12)$ transformations for Lagrangian frames, or $O(24)$ for metric-only frames; the three stiffness coefficients remain labeled invariants |
+| Equivalence relation | Factor-preserving gauge-algebra automorphisms that preserve the specified trace forms $b_3,b_2,b_1$, and target $U(12)$ transformations for Lagrangian frames, or $O(24)$ for metric-only frames; the three stiffness coefficients remain labeled invariants |
 | Budget and verifier | Closed-form all-coefficient and all-frame classification; verify invariance identities, positivity, pullback Gram matrices, isotropy, and the two homogeneous-space stabilizers exactly |
 | Falsifier | A positive invariant form with a cross term or non-scalar simple-ideal restriction, a coefficient triple with no displayed injection, or a canonical injection fixed by the full unmarked target-frame action |
 | Provenance class | Target-independent compact-Lie-algebra and finite-dimensional metric/symplectic linear algebra |
@@ -417,7 +417,7 @@ Choose a $B_{\mathbf c}$-orthonormal ordered basis $(e_1,\ldots,e_{12})$ and a $
 
 $$\frac{M_2}{M_Y} = \frac{3}{1} = 3$$
 
-At the PU fixed point $\mathfrak{A}_{PU}$ and its matching to the SM at scale $\mu_G$ (Appendix T, Section T.13), the gauge-kinetic normalization fixes the PU-normalized tree-level value $\sin^2\theta_W^{(0)}=3/8$ (Appendix T, Theorem T.14). Standard-model renormalization group evolution to $M_Z$ then yields the observed Z-pole range on the validation run if the lifted-threshold tuple is $(\Delta_1,\Delta_2,\Delta_3)=(15.14,20.94,18.41)$, equivalently $Z_i=1+\Delta_i/24$. This Z-pole statement remains validation-level in the canonical minimal ledger; Theorem T.78.5 proves that the current framework supplies no PU-internal spectral branch package deriving that tuple, and Remark T.17a.4 together with Proposition T.17a.5 shows that sector-independent affine local truncations do not realize it.
+At the PU specified point $\mathfrak{A}_{PU}$ and its matching to the SM at scale $\mu_G$ (Appendix T, Section T.13), the gauge-kinetic normalization fixes the PU-normalized tree-level value $\sin^2\theta_W^{(0)}=3/8$ (Appendix T, Theorem T.14). Standard-model renormalization group evolution to $M_Z$ gives the displayed one-loop diagnostic of Theorems T.16 and T.18 on the comparison run with external threshold input $(\Delta_1,\Delta_2,\Delta_3)=(15.14,20.94,18.41)$, equivalently $Z_i=1+\Delta_i/24$. On the literal-spectrum, active-gauge-trivial branch of Remark T.17a.3, the candidate map $\Delta=T_0F$ requires $5\Delta_1-3\Delta_2-2\Delta_3=0$; the displayed tuple violates this relation and is excluded for every sector vector $F$ (Proposition T.17a.5). Theorem T.78.5 separately records the absence of an accepted PU-internal spectral branch package. A physical Z-pole prediction requires both a represented spectrum and its normalized physical matching map.
 
 ## W.4 Hypercharge from anomalies and Yukawa invariance
 
@@ -556,7 +556,7 @@ For family $f$, direct substitution gives cubic contribution
 $$
 -6h^2(N_cq_f+\ell_f),
 $$
-so the total cubic anomaly vanishes exactly on the same linear equation. The mixed gravitational contribution is
+so the same linear equation makes the total cubic anomaly vanish. When $h=0$, the cubic anomaly vanishes for every $(q_f,\ell_f)$; the independent $SU(2)^2U(1)$ condition still imposes the displayed linear equation. The mixed gravitational contribution is
 $$
 N_c(2q_f-Y_{u_f}-Y_{d_f})
 +2\ell_f-Y_{e_f}-Y_{\nu_f}=0
@@ -602,10 +602,10 @@ Holding $M$, $x$, $\tilde A_{\rm PCE}$, and $D$ constant, increasing spectral va
 
 **Inputs at $g=0$** for each sector $s\in\{e,Y,2\}$:
 
-0. **Probe specification:** a $C^1$ family of CPTP maps $E_g^{(s)}$ and a stationary state $\rho_0^{(s)}$ with $E^{(s)}_0(\rho_0^{(s)})=\rho_0^{(s)}$. Let $P_0^{(s)}$ be the support projector of $\rho_0^{(s)}$ and assume $\rho_0^{(s)}$ is full rank on $\operatorname{Ran}(P_0^{(s)})$. The SLD‑QFI is computed for the state family $\rho_g^{(s)}:=E_g^{(s)}(\rho_0^{(s)})$ at $g=0$, with the finiteness condition $P_0^{(s)}\,\dot\rho^{(s)}\,P_0^{(s)}=\dot\rho^{(s)}$ for $\dot\rho^{(s)}:=\left.\partial_g\rho_g^{(s)}\right|_{g=0}$.
+0. **Probe specification:** a $C^1$ family of CPTP maps $E_g^{(s)}$ and a stationary state $\rho_0^{(s)}$ with $E^{(s)}_0(\rho_0^{(s)})=\rho_0^{(s)}$. Let $P_0^{(s)}$ be the support projector of $\rho_0^{(s)}$ and assume $\rho_0^{(s)}$ is full rank on $\operatorname{Ran}(P_0^{(s)})$. The SLD‑QFI is computed for the state family $\rho_g^{(s)}:=E_g^{(s)}(\rho_0^{(s)})$ at $g=0$, with the kernel-block condition $Q_0^{(s)}\,\dot\rho^{(s)}\,Q_0^{(s)}=0$, where $Q_0^{(s)}=I-P_0^{(s)}$ and $\dot\rho^{(s)}:=\left.\partial_g\rho_g^{(s)}\right|_{g=0}$.
    *Alternative:* if a channel‑QFI convention is adopted, specify the input/state optimization rule and ancilla dimension; note that multi‑parameter QCRB attainability may require **SLD‑compatibility** (commutativity) for joint POVMs.
 1. **Spectral data:** $\{\lambda_i^{(s)}\}_{i=1}^{M_s}$ (SLD‑QFI eigenvalues at $g=0$); compute $M_s$, $S_1^{(s)}$, $S_2^{(s)}$, $x_s=S_1^{(s)}/M_s$, $\sigma_s^2$, $F_{\lambda,s}$.
-2. **Global constants:** $\Gamma_0$; alphabet size $d_0$.
+2. **Cost coefficients and global constants:** $A_{\rm PCE}^{(s)}>0$ for each sector $s$; $\Gamma_0>0$; alphabet size $d_0$.
 3. **Branch classification:** Solve the unconstrained stationarity
 
    $$
@@ -616,48 +616,49 @@ Holding $M$, $x$, $\tilde A_{\rm PCE}$, and $D$ constant, increasing spectral va
    – If $g_J(u_0)=M_s\ln(1+x_s u_0)< \ln d_0$: **interior** $(u_s^*=u_0)$.
    – If $g_J(u_0)= \ln d_0$: **branch boundary** $(u_s^*=u_0=u_{\mathrm J}^*)$.
    – If $g_J(u_0)> \ln d_0$: **cap‑active** $\bigl(u_s^*=u_{\mathrm J}^*=(a_{\mathrm{cap}}-1)\,M_s/S_1^{(s)}\bigr)$, with $a_{\mathrm{cap}}=d_0^{1/M_s}$.
-4. **Invariants:** $C_{\mathrm{cap}}^{(s)}=\Gamma_0\,S_1^{(s)}$, $C_{\mathrm{cyc}}^{(s)}=\Gamma_0\,[\,2\tilde A_{\mathrm{PCE}}^{(s)}+S_2^{(s)}\,]$.
+4. **Invariants:** $C_{\mathrm{cap}}^{(s)}=\Gamma_0\,S_1^{(s)}$,\quad $C_{\mathrm{cyc}}^{(s)}=\Gamma_0\,[\,2\tilde A_{\mathrm{PCE}}^{(s)}+S_2^{(s)}\,]$.
 5. **U(1)/EM product:** for scales **below** EWSB, $\alpha_{\mathrm{em}}(\mu^*)=u_e^*/(4\pi)$. Compute $\alpha_{\mathrm{em}}(\mu^*)\,(C_{\mathrm{cyc}}/C_{\mathrm{cap}})_{e}$ and compare to $K_{\mathrm{alph}}(d_0,M_e)/F_{\lambda,e}$; the identity (W.2.6) applies only at the branch boundary with $\sigma_e^2=0$. For scales **above** EWSB, replace with hypercharge/weak couplings as in (W.3.1).
-6. **Weinberg angle:** evaluate (W.3.1); if using GUT normalization, use (W.3.3) with $g_1=\sqrt{\tfrac{5}{3}}\,g_Y$.
-7. **Reporting:** publish $\{M_s,S_1^{(s)},S_2^{(s)}\}$, $\Gamma_0$, $d_0$, probe specification, and code.
+6. **Weinberg angle:** compute $\sin^2\theta_W=u_Y^*/(u_Y^*+u_2^*)$ from the classified optima in canonical hypercharge normalization. The spectral-ratio expression in (W.3.1) applies under Assumption W.3.A. If using GUT-normalized inputs, convert with $g_Y=\sqrt{\tfrac{3}{5}}\,g_1$. Equation (W.3.3) applies when the full-block common-stiffness hypotheses of Proposition W.13 hold.
+7. **Reporting:** publish $\{M_s,S_1^{(s)},S_2^{(s)},A_{\rm PCE}^{(s)}\}$, $\Gamma_0$, $d_0$, probe specification, and code.
 
 ---
 
 ## W.7 Fisher‑operator (SLD) existence: finite‑dimensional setting
 
 **Theorem W.18 (SLD existence and QFI quadratic form).**
-Let $\{E_g\}_{g\in\mathbb{R}}$ be a $C^1$ family of CPTP maps on a finite‑dimensional Hilbert space, and let $\rho_0$ be stationary at $g=0$ $(E_0(\rho_0)=\rho_0)$. Let $P$ be the support projector of $\rho_0$ and assume $\rho_0$ is full rank on $\mathrm{Ran}(P)$. Suppose the tangent $\dot\rho:=\left.\partial_g\rho_g\right|_{g=0}$ satisfies the finiteness condition $P\dot\rho P=\dot\rho$ (no first‑order leakage into $\ker\rho_0$). Then the Symmetric Logarithmic Derivative (SLD) exists at $g=0$ as a Hermitian operator supported on $\mathrm{Ran}(P)$, the quantum Fisher information (QFI) is finite, and the SLD‑based QFI defines a positive semidefinite quadratic form on the supported tangent space at $\rho_0$. In finite dimension, this quadratic form admits a Riesz representation with respect to $\rho_0|_{\mathrm{Ran}(P)}$.
+Let $\{E_g\}_{g\in\mathbb{R}}$ be a $C^1$ family of CPTP maps on a finite-dimensional Hilbert space, let $\rho_0$ be a state with $E_0(\rho_0)=\rho_0$, and set $\rho_g=E_g(\rho_0)$. Let $P$ be the support projector of $\rho_0$, $Q=I-P$, and $\dot\rho=\left.\partial_g\rho_g\right|_{g=0}$. Suppose $Q\dot\rho Q=0$. Then the Symmetric Logarithmic Derivative (SLD) exists at $g=0$ and has a unique Hermitian representative satisfying $QLQ=0$. The SLD-based QFI is finite and defines a positive semidefinite quadratic form on any chosen finite-dimensional parameter tangent model. It admits a finite-dimensional Riesz representation on the admitted Hermitian state-tangent space, equipped with the positive inner product $\langle X,Y\rangle_{\rho_0}=\tfrac12\mathrm{Tr}(\rho_0(XY+YX))$.
 
-*Proof.* Restrict to Hermitian operators supported on $\mathrm{Ran}(P)$: $X=X^\dagger$ with $X=PXP$. On this space, the Jordan map
+*Proof.* Choose an eigenbasis $\rho_0=\sum_{i=1}^{n}p_i|i\rangle\langle i|$, with $p_i>0$ for $1\le i\le r$ and $p_i=0$ for $i>r$. On the real space $\mathcal D=\{X=X^\dagger:QXQ=0\}$, the Jordan map
 $$
-\mathcal{J}_{\rho_0}:\;X\mapsto \tfrac12\,(\rho_0 X+X\rho_0)
+\mathcal J_{\rho_0}(X)=\tfrac12(\rho_0X+X\rho_0)
 $$
-is positive definite because $\rho_0|_{\mathrm{Ran}(P)}$ is strictly positive, hence $\mathcal{J}_{\rho_0}$ is invertible on the supported subspace. Since $\dot\rho$ is supported by assumption, define
+acts on each allowed matrix entry by the strictly positive factor $(p_i+p_j)/2$. It preserves $\mathcal D$ and is invertible there. The hypothesis places $\dot\rho$ in $\mathcal D$, so
 $$
-L:=\mathcal{J}_{\rho_0}^{-1}(\dot\rho),
+L_{ij}=
+\begin{cases}
+\dfrac{2\dot\rho_{ij}}{p_i+p_j},&p_i+p_j>0,\\
+0,&p_i=p_j=0
+\end{cases}
 $$
-and extend $L$ by $0$ on $\ker\rho_0$. Then $L$ is Hermitian and satisfies the Sylvester equation
-$$
-\dot\rho=\tfrac12\,(L\rho_0+\rho_0 L),
-$$
-so the SLD exists (and is unique on $\mathrm{Ran}(P)$).
+defines a Hermitian solution of $\dot\rho=(L\rho_0+\rho_0L)/2$ with $QLQ=0$. All entries outside the kernel block are determined by that equation, while its kernel block is zero on both sides. Thus every other Hermitian solution differs only by an arbitrary Hermitian kernel block, which contributes nothing to $\mathrm{Tr}(\rho_0L^2)$.
 
-Equivalently, choose an eigenbasis $\rho_0=\sum_{i=1}^{r} p_i |i\rangle\langle i|$ on $\mathrm{Ran}(P)$ with $p_i>0$ and $r=\mathrm{rank}(\rho_0)$. The supported solution is
+Since $\dot\rho$ is Hermitian, exchanging $i$ and $j$ in the finite sum gives
 $$
-\langle i|L|j\rangle=\frac{2\,\langle i|\dot\rho|j\rangle}{p_i+p_j}\qquad (1\le i,j\le r),
+\begin{aligned}
+F_Q\big|_{g=0}
+&=\mathrm{Tr}(\rho_0L^2)
+=\sum_{p_i+p_j>0}\frac{4p_i|\dot\rho_{ij}|^2}{(p_i+p_j)^2}\\
+&=\sum_{p_i+p_j>0}\frac{2|\dot\rho_{ij}|^2}{p_i+p_j}\ge0.
+\end{aligned}
 $$
-and $\langle i|L|j\rangle=0$ whenever $i>r$ or $j>r$. Since $p_i+p_j\ge 2\min_{1\le k\le r}p_k>0$, the quadratic form is finite:
-$$
-F_Q(\rho_g)=\mathrm{Tr}(\rho_0 L^2)=\sum_{i,j=1}^{r}\frac{2\,|\langle i|\dot\rho|j\rangle|^2}{p_i+p_j}\ \ge\ 0.
-$$
-$\square$
+Every denominator in this finite sum is at least $\min_{1\le i\le r}p_i>0$, proving finiteness. Polarizing the sum gives a symmetric positive quadratic form on admitted Hermitian tangents. Its pullback along a linear parameter-to-state derivative is positive semidefinite. Moreover, $\langle X,X\rangle_{\rho_0}=\mathrm{Tr}(\rho_0X^2)>0$ for every nonzero $X\in\mathcal D$: any nonzero allowed entry has at least one positive-eigenvalue index. Restrict this inner product to the state-tangent space, choose an orthonormal basis, and represent the polarized QFI form by its symmetric matrix in that basis. This supplies the claimed Riesz representation. The construction is pointwise and makes no continuity assertion across rank changes. $\square$
 
 ---
 
 ## W.8 Emergent GR: assumptions and controlled deviations
 
 **Theorem W.19 (Einstein dynamics under the local-horizon hypotheses of Theorem 12.1).**
-Let $(M,g)$ be the Lorentzian branch of Section 11, and let $T_{\mu\nu}^{(MPU)}$ be symmetric and covariantly conserved. Assume that every point and every null vector admit the local Rindler construction used in Theorem 12.1; that the horizon entropy has the constant first-variation density $\delta S=\eta\,\delta\mathcal A+O(\lambda^2)$ with $\eta=1/(4G)$; that the heat flux is $\delta Q=\int T_{\mu\nu}^{(MPU)}\xi^\mu d\Sigma^\nu$; that the null congruence obeys the linearized Raychaudhuri equation with $\theta(0)=\sigma_{\mu\nu}(0)=0$; and that the local KMS/Clausius bridge of Theorem 48a supplies $T=\kappa/(2\pi)$ and $\delta Q=T\delta S+O(\lambda^2)$ for every such null generator. Then
+Let $(M,g)$ be the Lorentzian branch of Section 11 and assume all hypotheses (a)–(e) of Theorem 12.1, including its accepted symmetric, covariantly conserved source $T_{\mu\nu}^{(MPU)}$ and its local Rindler construction at every point for every null vector. Write $G:=G_{\mathrm{op}}$ for the operational coefficient and take the constant horizon-entropy density $\eta=1/(4G)$, the heat flux $\delta Q=\int T_{\mu\nu}^{(MPU)}\xi^\mu d\Sigma^\nu$, and the linearized Raychaudhuri equation with $\theta(0)=\sigma_{\mu\nu}(0)=0$. The local KMS/Clausius bridge has $T=\kappa/(2\pi)$. For the transverse patches $P_\varepsilon$ of Theorem 12.1(d), with area $A_\varepsilon>0$, affine length $h_\varepsilon\to0$, and $\operatorname{diam}(P_\varepsilon)=o(h_\varepsilon)$, require $\delta S=\eta\,\delta\mathcal A+o(A_\varepsilon h_\varepsilon^2)$ and $\delta Q=T\delta S+o(A_\varepsilon h_\varepsilon^2)$ uniformly over the retained null directions. Identification of this operational $G$ with the measured Newton constant requires a separate calibration. Then
 $$
 R_{\mu\nu}-\tfrac12Rg_{\mu\nu}+\Lambda g_{\mu\nu}
 =8\pi G\,T_{\mu\nu}^{(MPU)}
@@ -667,7 +668,7 @@ in natural units, where $\Lambda$ is constant on each connected component.
 *Proof.* The stated hypotheses are hypotheses (a)–(d) of Theorem 12.1 together with its conserved-stress hypothesis and its universal quantifier over null generators. Theorem 12.1 therefore gives the displayed equation. Its divergence, the contracted Bianchi identity, and $\nabla^\mu T_{\mu\nu}^{(MPU)}=0$ imply $\nabla_\nu\Lambda=0$, so $\Lambda$ is constant on each connected component. ∎
 
 **Proposition W.20 (Conditional local four-derivative action basis).**
-Assume that the gravitational response is described by a local, parity-even, diffeomorphism-invariant, metric-only effective action in four spacetime dimensions and admits a derivative expansion through four derivatives. Modulo boundary terms and the four-dimensional Euler density, its gravitational part can be written
+Assume that the gravitational response is described by a local, parity-even, diffeomorphism-invariant, metric-only effective action in four spacetime dimensions. Here the derivative expansion through four derivatives means that the scalar Lagrangian through that order is a finite real linear combination, with spacetime-constant coefficients, of complete contractions of products of the Riemann tensor and its covariant derivatives using the metric and its inverse. Assign weight $k+2$ to $\nabla^k{\rm Riem}$ and weight zero to the metric; retain weights zero, two and four, with the remainder of weight at least six. Assume also that the two-derivative term has coefficient $1/(16\pi G)$ for a specified $G>0$, and write the zero-derivative coefficient as $-\Lambda/(8\pi G)$. Modulo boundary terms and a constant multiple of the four-dimensional Euler density, its gravitational part can be written
 
 $$
 S_{\rm grav,eff}=\int d^4x \sqrt{-g}\,\Big[\tfrac{1}{16\pi G}(R-2\Lambda)+c_1 R^2+c_2 R_{\mu\nu}R^{\mu\nu}+O(\partial^6)\Big].
@@ -676,11 +677,19 @@ $$
 
 In natural units, $c_1$ and $c_2$ are dimensionless matching coefficients. Their dependence on entropy non-saturation or non-equilibrium data requires a separately specified microscopic matching map.
 
-*Proof.* At zero and two derivatives, the metric scalars are a constant and $R$. At four derivatives, integrations by parts reduce the parity-even metric scalars to $R^2$, $R_{\mu\nu}R^{\mu\nu}$, $R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}$, and a boundary term proportional to $\Box R$. In four dimensions the Euler density
+*Proof.* Work with the specified contraction class. A weight-zero scalar is constant, and a weight-two scalar is a multiple of the double trace $R$ of one Riemann tensor. At weight four, each monomial contains either two Riemann tensors or one factor $\nabla_a\nabla_b{\rm Riem}$. In a contraction of two Riemann tensors, the number of internal index pairs is the same in each factor. Two pairs in each factor yield $R^2$, one pair in each yields $R_{\mu\nu}R^{\mu\nu}$, and traces of antisymmetric pairs vanish. With no internal traces, all indices are paired between the factors. Antisymmetry within each curvature pair and symmetry under exchange of the pairs reduce the permutations, up to sign, to $I=R_{abcd}R^{abcd}$, $J=R_{abcd}R^{acbd}$ and $K=R_{abcd}R^{adbc}$. The algebraic Bianchi identity gives $I-J+K=0$, while relabeling $c,d$ gives $K=-J$. Hence $J=I/2$ and $K=-I/2$. Every complete contraction of $\nabla_a\nabla_b{\rm Riem}$ is a covariant divergence: remove the outer derivative to obtain a vector $V^a$ linear in $\nabla{\rm Riem}$, and use $\nabla g=0$ to recover $\nabla_aV^a$. Thus its density is $\sqrt{-g}\nabla_aV^a=\partial_a(\sqrt{-g}V^a)$ and vanishes in the declared quotient by boundary terms. No interchange of covariant derivatives is needed.
+
+Consequently the bulk scalar through weight four is represented by
 $$
-E_4=R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}-4R_{\mu\nu}R^{\mu\nu}+R^2
+a_0+a_1R+b_1R^2+b_2R_{\mu\nu}R^{\mu\nu}
++b_3R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}.
 $$
-has a topological integral up to boundary contributions, so $R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}$ can be eliminated from the local bulk basis. This yields (W.8.1). The basis classification alone supplies no values for $c_1$ and $c_2$. ∎
+The four-dimensional algebraic identity
+$$
+E_4=R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}
+-4R_{\mu\nu}R^{\mu\nu}+R^2
+$$
+gives $c_1=b_1-b_3$ and $c_2=b_2+4b_3$ in the explicitly declared quotient by a constant multiple of $E_4$. With the assumed $a_1=1/(16\pi G)>0$ and $a_0=-\Lambda/(8\pi G)$, this is (W.8.1). The argument classifies bulk representatives; it does not identify actions including boundary contributions or compare distinct topological sectors. It supplies no values for $c_1$ and $c_2$. ∎
 
 ---
 

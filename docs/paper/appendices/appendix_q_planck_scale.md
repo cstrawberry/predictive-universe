@@ -88,7 +88,7 @@ $$
 \qquad
 \varepsilon_{\mathrm{diss}}\ge0.
 $$
-A positive heat floor requires an independent lower bound on $H_q(P\mid R)$; structural log-cardinality alone implies neither heat nor mechanical action.
+A positive uniform heat floor inferred from this entropy bound requires an independent positive lower bound on $H_q(P\mid R)$; structural log-cardinality alone implies neither heat nor mechanical action.
 
 **Definition Q.0.1 (Dimensionless Discrete Predictive Ledger).** For a trajectory with finitely many registered steps, let
 $$
@@ -109,7 +109,7 @@ This is an alphabet-counting identity, not a universal physical-action, heat, or
 
 ### Q.0.3 The Continuum Limit via Γ-Convergence
 
-The discrete predictive cost functional converges to a continuum action in the limit of fine network resolution. This convergence is developed within the Γ-convergence framework (Theorem D.6, Appendix D; Section O.7, Appendix O).
+A continuum action can be assigned to the discrete predictive ledger on a branch with an independently established Γ-limit and action-scale calibration. Theorem D.6 of Appendix D gives convergence of minima and minimizing subsequences under its liminf, recovery, equicoercivity, and properness hypotheses; Section O.7.1 of Appendix O treats the spatial sector under its additional continuum-identification hypotheses.
 
 **Theorem Q.0.1 (Calibrated Continuum-Action Limit).** Let $\kappa_A>0$ be an independently supplied action scale. Assume the declared topology, equicoercivity, liminf inequality, and recovery sequences establish
 $$
@@ -200,9 +200,9 @@ $$
 
 *Proof.* Apply the path-space large-deviation lower bound to the tube interior and the upper bound to its closure. The three-way infimum hypothesis makes the two exponential bounds equal to $-\mathcal I_{A\to B}$, proving (Q.0.1b.2). Multiplication of the minimizing rate functional by the accepted action scale $\kappa_A$ proves (Q.0.1b.3). ∎
 
-**Corollary Q.0.1c (Conditional Branch-Action Reconstruction).** Let a retained branch satisfy Definition Q.0.1a, and suppose an accepted reconstruction identifies the branch's dimensionless action $\mathcal S_{\mathrm{br}}/\kappa_A$ historywise with $I_{\mathrm{PU}}$ on the same admissible transition class and boundary data. Then a stationary or minimizing branch exponent is an instance of Theorem Q.0.1b. In particular, an Appendix-U or Appendix-Y exponent belongs to this common large-deviation ledger only when that reconstruction is certified for its retained paths.
+**Corollary Q.0.1c (Conditional Branch-Action Reconstruction).** Let a retained branch satisfy Definition Q.0.1a, and suppose an accepted reconstruction identifies the branch's dimensionless action $\mathcal S_{\mathrm{br}}/\kappa_A$ historywise with $I_{\mathrm{PU}}$ on the same admissible transition class and boundary data. Their global infima then agree. If a transition tube also satisfies the interior-and-closure infimum condition of Theorem Q.0.1b, its probability exponent equals that common infimum with a minus sign. In particular, an Appendix-U or Appendix-Y transition exponent belongs to this common large-deviation ledger only when both the reconstruction and the transition-tube condition are certified for its retained paths. Stationarity alone does not identify a dominant transition exponent.
 
-*Proof.* Definition Q.0.1a supplies the path-space large-deviation principle. The reconstruction hypothesis identifies the cited branch action with the same rate functional on the matching boundary class, so Theorem Q.0.1b identifies its finite-time transition exponent with the corresponding infimum of $I_{\mathrm{PU}}$. Without the historywise reconstruction, two action functionals need not be the same rate functional and no consolidation follows. ∎
+*Proof.* Definition Q.0.1a supplies the path-space large-deviation principle. Historywise equality on the same admissible class gives equality of the global infima. The transition-tube hypothesis then supplies the matching lower and upper bounds in Theorem Q.0.1b. A stationary history that does not attain the global infimum is not selected by that conclusion. Without the historywise reconstruction, two action functionals need not be the same rate functional and no consolidation follows. ∎
 
 **Theorem Q.0.1d (Uniformly Elliptic ND--RID Diffusion Rate and Reconstruction Residual).** Let the retained state space be the flat torus $\mathbb T^d$, let $b:\mathbb T^d\to\mathbb R^d$ be Lipschitz, and let $\sigma$ be an invertible constant matrix with $a=\sigma\sigma^T$. Fix $x_0\in\mathbb T^d$. For $\eta>0$, define the retained stochastic dynamics
 $$
@@ -256,19 +256,49 @@ $$
 \sup_p\{p\cdot v-H(x,p)\}
 =\frac14(v-b(x))^Ta^{-1}(v-b(x)),
 $$
-because the maximizer is $p=\tfrac12a^{-1}(v-b)$. The Freidlin--Wentzell theorem applies on the compact torus under Lipschitz drift and uniform ellipticity and gives the good path-space rate (Q.0.1d.3). Integrating the pointwise residual bound proves (Q.0.1d.5), and a vanishing pointwise residual makes the two integrands, hence the two path functionals, equal. Taking infima preserves the same uniform error. ∎
+because the maximizer is $p=\tfrac12a^{-1}(v-b)$. To justify the path-law claim, periodically lift $b$ to $\mathbb R^d$ and choose one lift of $x_0$. The lifted drift is bounded and globally Lipschitz; the constant matrix $\sqrt2\,\sigma$ is Lipschitz and uniformly nondegenerate. Chiarini and Fischer (2014, Theorem 2 and Example 1, doi:10.1239/aap/1418396246) give a good finite-time path LDP for the Euclidean lifted SDE with speed $1/\eta$ and controlled rate $\tfrac12\int_0^T|u(t)|^2dt$ under $\dot\phi=b(\phi)+\sqrt2\,\sigma u$. Invertibility of $\sigma$ gives $u=(\sqrt2\,\sigma)^{-1}(\dot\phi-b(\phi))$ and the $1/4$ factor in (Q.0.1d.3). Projection of Euclidean paths to $C([0,T],\mathbb T^d)$ is continuous in the uniform topology, so the contraction principle gives a good torus-path LDP. Every torus path beginning at $x_0$ has a unique continuous lift beginning at the chosen Euclidean lift, making the contracted rate exactly (Q.0.1d.3), with $+\infty$ off the absolutely continuous class. Integrating the pointwise residual bound proves (Q.0.1d.5); a vanishing pointwise residual makes the two path functionals equal. Taking infima preserves the same uniform error. ∎
 
-**Resolution TV-Q-02-P1 (Metadata).** Exact domain: the uniformly elliptic torus diffusions (Q.0.1d.1) and bounded-speed reconstruction domain $K_V$. Premises: Lipschitz $b$, constant invertible $\sigma$, continuous $L_{\mathrm{br}}$, and fixed $T,V$. Equivalence: equality of the retained generator coefficients and boundary class. Budget: every absolutely continuous retained path with $|\dot\gamma|\le V$. Verifier: the nonlinear-generator limit, Legendre transform, Freidlin--Wentzell hypotheses and residual norm. Falsifier: a path-law exponent or reconstruction error violating (Q.0.1d.3) or (Q.0.1d.5). Provenance class: standard diffusion large-deviation theorem with a source-internal reconstruction bound. Downstream consumers: Definition Q.0.1a, Corollary Q.0.1c and `TV-Q-02`. This is `positive-discharge` for the displayed diffusion-generator class; jump generators, degenerate noise and the separate Appendix-U/Y sector maps remain outside this partial scope.
+**Resolution TV-Q-02-P1 (Metadata).** Exact domain: the uniformly elliptic torus diffusions (Q.0.1d.1) and bounded-speed reconstruction domain $K_V$. Premises: Lipschitz $b$, constant invertible $\sigma$, continuous $L_{\mathrm{br}}$, and fixed $T,V$. Equivalence: equality of the retained generator coefficients and boundary class. Budget: every absolutely continuous retained path with $|\dot\gamma|\le V$. Verifier: the nonlinear-generator limit, Legendre transform, the Chiarini--Fischer (2014, Theorem 2 and Example 1) Euclidean path-LDP hypotheses, continuous torus projection, rate normalization and residual norm. Falsifier: a path-law exponent or reconstruction error violating (Q.0.1d.3) or (Q.0.1d.5). Provenance class: standard diffusion large-deviation theorem with a source-internal reconstruction bound. Downstream consumers: Definition Q.0.1a, Corollary Q.0.1c and `TV-Q-02`. This is `positive-discharge` for the displayed diffusion-generator class; jump generators, degenerate noise and the separate Appendix-U/Y sector maps remain outside this partial scope.
 
-**Remark Q.0.1c.1 (Conditional Reset-Power Viability Inequality).** Let $r_j$ be registered reset-event rates with a common bath-temperature ledger, and let
+**Remark Q.0.1c.1 (Conditional Reset-Power Viability Inequality).** Choose a finite window of duration $\tau>0$ and one bath temperature $T>0$. For each of finitely many reset classes $j$, prescribe a deterministic count $n_j\in\mathbb Z_{\ge0}$ of completed resets and require the complete Definition 28 contract on every admitted reset history, finite mean heats, and an additive conditional-expectation ledger. For reset $l$ in class $j$, put
 $$
-\nu:=\sum_jr_j,\qquad\overline{H_q(P\mid R)}:=\nu^{-1}\sum_jr_jH_{q_j}(P_j\mid R_j)
+h_{jl}:=\mathbb E\!\left[H_{q_{jl}}(P_{jl}\mid R_{jl})\right],
+\qquad
+r_j:=\frac{n_j}{\tau},
+\qquad
+H_j:=\frac1{n_j}\sum_{l=1}^{n_j}h_{jl}
 $$
-when $\nu>0$. Sequential conditional Landauer gives
+when $n_j>0$, and set $H_j=0$ when $n_j=0$. The expectation averages the actual conditional reset laws over their registered histories. Define
 $$
-R_{\mathrm{in}}\ge\dot{\mathcal L}_{\mathrm{reset}}+R_{\mathrm{loss}},\qquad\dot{\mathcal L}_{\mathrm{reset}}\ge\nu\,\overline{H_q(P\mid R)}.
+\nu:=\sum_jr_j,\qquad
+\overline{H_q(P\mid R)}:=\nu^{-1}\sum_jr_jH_j
 $$
-For $\nu=0$, set $\dot{\mathcal L}_{\mathrm{reset}}=0$. The specialization $\nu\ln2$ requires every registered binary record to be conditionally uniform. The structural value $\varepsilon_0=\ln2$ alone determines no maintenance power.
+when $\nu>0$, and define the normalized mean bath-heat rate by
+$$
+\dot{\mathcal L}_{\mathrm{reset}}
+:=\frac1{k_BT\tau}\sum_j\sum_{l=1}^{n_j}\mathbb E Q_{\mathrm{bath},jl}.
+$$
+All entropies are in nats. Sequential conditional Landauer gives
+$$
+\dot{\mathcal L}_{\mathrm{reset}}\ge\sum_jr_jH_j
+=\nu\,\overline{H_q(P\mid R)}
+$$
+for $\nu>0$. For the input-power comparison, independently require a complete, nonoverlapping mean-energy balance on the same window,
+$$
+E_{\mathrm{in}}
+=\sum_{j,l}\mathbb E Q_{\mathrm{bath},jl}
++E_{\mathrm{loss}}+\Delta E_{\mathrm{store}},
+\qquad E_{\mathrm{loss}}\ge0,\quad\Delta E_{\mathrm{store}}\ge0,
+$$
+where $E_{\mathrm{loss}}$ counts the other exports and $\Delta E_{\mathrm{store}}$ is the retained energy change, excluding energy already assigned to the bath or other exports. Set $R_{\mathrm{in}}:=E_{\mathrm{in}}/(k_BT\tau)$ and $R_{\mathrm{loss}}:=E_{\mathrm{loss}}/(k_BT\tau)$. These rates have units of inverse time, and
+$$
+R_{\mathrm{in}}\ge\dot{\mathcal L}_{\mathrm{reset}}+R_{\mathrm{loss}}.
+$$
+This comparison uses the additional no-drawdown energy premise; it does not follow from conditional Landauer alone.
+
+*Proof.* Conditional Landauer and the tower property give $\mathbb E Q_{\mathrm{bath},jl}\ge k_BT h_{jl}$. Finite summation and division by $k_BT\tau>0$ prove the reset-rate bound. Dividing the separate energy balance by the same factor and using $\Delta E_{\mathrm{store}}\ge0$ proves the input-rate inequality. If $\nu=0$, every $n_j=0$ and the completed-reset sum is empty, so $\dot{\mathcal L}_{\mathrm{reset}}=0$; apparatus overhead still belongs to its own energy entry. Any limiting rate statement additionally requires convergence of these window averages and preservation of their heat and energy balances. ∎
+
+The specialization $\nu\ln2$ requires every registered binary record to be conditionally uniform on its admitted histories. The structural value $\varepsilon_0=\ln2$ alone determines no maintenance power.
 
 This is a necessary finite-resource viability condition for code-maintaining aggregates, not a complete biological classification theorem. A biological classification would require additional operational conditions such as boundary maintenance, metabolism, self-maintenance, reproduction or lineage persistence, and environmental coupling.
 
@@ -314,9 +344,9 @@ $$
 \tag{Q.0.2e.3}
 $$
 
-In particular, after (Q.0.2e.3), the registered event value $\ell=N\ln2$ has relative phase $e^{iN\ln2}$ for every $N\in\mathbb Z$. For a registered closed adiabatic/semiclassical path on which the following data are defined, the total phase separates as
+In particular, after (Q.0.2e.3), the registered event value $\ell=N\ln2$ has relative phase $e^{iN\ln2}$ for every $N\in\mathbb Z$. For a registered closed scalar transport branch at leading adiabatic and semiclassical order, assume that the phase factors are $e^{i\mathcal S/\hbar}$, $e^{i\gamma_{\mathrm B}}$, $e^{-i\pi\mu/2}$ and $e^{i\Theta_{\partial}}$, with a common gauge and endpoint convention and each contribution counted once. Their product has leading transport phase
 $$
-\Theta
+\Theta_{\mathrm{sc}}
 =\frac{\mathcal S}{\hbar}
 +\gamma_{\mathrm B}
 -\frac\pi2\mu
@@ -324,11 +354,11 @@ $$
 \pmod{2\pi},
 \tag{Q.0.2e.4}
 $$
-where $\gamma_{\mathrm B}$ is the Berry holonomy, $\mu\in\mathbb Z$ is the Maslov index on a semiclassical branch, and $\Theta_{\partial}$ is a registered boundary/spin phase. On variations of $\ell$ that fix the eigenline loop, caustic class and boundary data, the last three terms are constant, so they do not alter the calibration (Q.0.2e.3). A change in any of those data is classified by its own summand in (Q.0.2e.4), rather than being absorbed into $\kappa_A$.
+where $\gamma_{\mathrm B}\in\mathbb R/(2\pi\mathbb Z)$ is the Berry phase of a smooth isolated nondegenerate eigenline, with holonomy $e^{i\gamma_{\mathrm B}}$, $\mu\in\mathbb Z$ is the oriented Maslov index in the $e^{i\mathcal S/\hbar}$ convention, and $\Theta_{\partial}$ is the registered scalar boundary/spin phase on the same branch. On variations of $\ell$ that preserve the eigenline loop and connection, caustic class and boundary/spin data, the last three leading terms are constant. This does not establish constancy or vanishing of omitted finite-speed or higher semiclassical phase corrections; any claim about the exact transported phase requires a separate bound or a certificate that those corrections vanish. The exact calibration (Q.0.2e.3) follows from the independent coherent-channel equality, without using this approximation.
 
-*Proof.* Direct Born-rule evaluation gives (Q.0.2e.1a); its two centered probabilities are $(\cos\ell,\sin\ell)$ and therefore recover the reference phase modulo $2\pi$. Both unitaries fix $|0\rangle$ and hence cannot differ by a nontrivial global phase. Equality gives $e^{i\ell}=e^{i(\kappa_A/\hbar)\ell}$ on an open interval. Differentiation at $\ell=0$ gives $1=\kappa_A/\hbar$. Conversely, (Q.0.2e.3) makes (Q.0.2e.1)--(Q.0.2e.2) identical. The adiabatic phase theorem gives the Berry holonomy, the semiclassical caustic contribution is $-\pi\mu/2$, and independent boundary or spin transport contributes $\Theta_\partial$. Holding their defining data fixed makes those terms locally constant in the calibration coordinate, so the action-phase slope remains $\kappa_A/\hbar$. ∎
+*Proof.* Direct Born-rule evaluation gives (Q.0.2e.1a); its two centered probabilities are $(\cos\ell,\sin\ell)$ and therefore recover the reference phase modulo $2\pi$. Both unitaries fix $|0\rangle$ and hence cannot differ by a nontrivial global phase. Equality gives $e^{i\ell}=e^{i(\kappa_A/\hbar)\ell}$ on an open interval. Differentiation at $\ell=0$ gives $1=\kappa_A/\hbar$. Conversely, (Q.0.2e.3) makes (Q.0.2e.1)--(Q.0.2e.2) identical. On the stated adiabatic eigenline branch, the Berry holonomy is $e^{i\gamma_{\mathrm B}}$ (Berry1984; Simon1983). For the scalar semiclassical convention, passage through a caustic of oriented multiplicity $m$ multiplies the leading amplitude by $e^{-i\pi m/2}$; reversing the crossing reverses $m$ (Keller1958, *Annals of Physics* 4, 180–188, equations 14–15, DOI:10.1016/0003-4916(58)90032-0). Multiplication of the registered scalar factors yields (Q.0.2e.4) modulo $2\pi$. Preserving their defining data makes the three nonaction terms locally constant at that order. This scalar product identity supplies no estimate for the omitted phase corrections. ∎
 
-**Resolution TV-Q-03-P1 (Metadata).** Exact domain: the real-parameter two-level coherent family, preparation and normalized $x/y$ readouts in (Q.0.2e.1)--(Q.0.2e.2), and closed adiabatic eigenline/semiclassical paths carrying the data in (Q.0.2e.4). Premises: the explicit reference control coordinate, the ledger identification $\mathcal L(\ell)=\ell$, exact equality of the PU and reference coherent channels on an open interval, $\kappa_A>0$, and fixed geometric/caustic/boundary data for the local slope comparison. Equivalence: equality of the complete normalized coherent response pair, with phases taken modulo $2\pi$. Budget: every real $\ell$, every integer event count $N$, both readout bases, and every registered phase summand. Verifier: normalization and (Q.0.2e.1a), channel equality on an open neighborhood of zero, the phase derivative at zero, the event-character substitution, and separate typing of Berry holonomy, integer Maslov index and boundary ledger. Falsifier: unequal response or phase slopes, a geometric or boundary contribution absorbed into $\kappa_A$, or failure of channel equality after (Q.0.2e.3). Provenance class: source-internal finite coherent preparation/control/readout construction conditional on the channel-identification bridge. Downstream consumers: Convention Q.0.2x, Definition Q.0.7e and `TV-Q-03`. Theorem Q.0.2e gives `positive-discharge` of the conditional coherent-channel calibration: once the two channels are identified, their response equality forces $\kappa_A=\hbar$. Constructing the common physical implementation that proves that identification, and populating the Berry--Maslov path data rather than merely separating their types, remain outside this partial scope.
+**Resolution TV-Q-03-P1 (Metadata).** Exact domain: the real-parameter two-level coherent family, preparation and normalized $x/y$ readouts in (Q.0.2e.1)--(Q.0.2e.2); the phase ledger (Q.0.2e.4) concerns registered closed scalar transport branches at leading adiabatic and semiclassical order. Premises: the explicit reference control coordinate, the ledger identification $\mathcal L(\ell)=\ell$, exact equality of the PU and reference coherent channels on an open interval, $\kappa_A>0$, and, for the leading phase ledger, the stated scalar factorization with common gauge/endpoint conventions and no repeated contribution. The local leading-slope comparison preserves the eigenline loop and connection, caustic class and boundary/spin data. Equivalence: exact equality of the complete normalized coherent response pair; equality of the registered leading transport phases modulo $2\pi$. Budget: every real $\ell$, every integer event count $N$, both readout bases, and every registered leading phase summand. Verifier: normalization and (Q.0.2e.1a), channel equality on an open neighborhood of zero, the exact phase derivative at zero, the event-character substitution, and the stated scalar product and separate typing of Berry holonomy, oriented Maslov index and boundary/spin ledger. Falsifier: unequal coherent-response or phase slopes, double counting in the leading phase factorization, a geometric or boundary contribution absorbed into $\kappa_A$, or failure of channel equality after (Q.0.2e.3). Provenance class: source-internal finite coherent preparation/control/readout construction conditional on the channel-identification bridge, together with a separately conditional leading transport ledger. Downstream consumers: Convention Q.0.2x, Definition Q.0.7e and `TV-Q-03`. Theorem Q.0.2e gives `positive-discharge` of the conditional coherent-channel calibration: once the two channels are identified, their response equality forces $\kappa_A=\hbar$. Constructing the common physical implementation that proves that identification, populating the Berry--Maslov path data and scalar factorization, and bounding finite-speed or higher semiclassical phase corrections remain outside this partial scope.
 
 ### Q.0.5 Conditional Stationarity Transfer
 
@@ -342,7 +372,7 @@ $$
 $$
 This equivalence is a scalar-rescaling identity; it neither selects $\kappa_A$ nor proves the existence of a continuum action. ∎
 
-**Physical Interpretation:** Principle Q.0.3a and Theorem Q.0.3a make the continuum Euler–Lagrange equation the stationarity condition of the $\Gamma$-limit of the finite predictive ledger on the declared fixed-boundary and fixed-holonomy class. The conclusion is constructive: discrete PCE minimizers converge, their limit minimizes the continuum ledger, and differentiability then gives $\delta\mathcal S=0$. The independent constant $\kappa_A$ calibrates ledger units to action units. Nonminimizing saddles remain governed by the separately stated first-variation gate.
+**Physical Interpretation:** Principle Q.0.3a and Theorem Q.0.3a make the continuum Euler–Lagrange equation the stationarity condition of the $\Gamma$-limit of the finite predictive ledger on the declared prescribed-boundary and prescribed-holonomy class. Every sequence of discrete PCE minimizers has a convergent subsequence, every cluster point minimizes the continuum ledger, and differentiability on the admissible tangent domain then gives $\delta\mathcal S=0$. The independent constant $\kappa_A$ calibrates ledger units to action units. Nonminimizing saddles remain governed by the separately stated first-variation gate.
 
 ### Q.0.6 Connection to the Path Integral
 
@@ -596,7 +626,7 @@ $$
 $$
 extending $\rho_L$. Every continuous $G_L$-invariant response functional is $\overline\rho(U(1))$-invariant. The same statement holds cellwise for a finite product cover. If a continuous $U(1)$ action is registered from the outset, the invariance conclusion follows directly from density and continuity, with no metric or isometry hypothesis.
 
-If, in addition, $Y$ is smooth, $h:Z_1(Y)\to U(1)$ is a homomorphism, and a closed two-form $\Omega$ satisfies
+If, in addition, $Y$ is a smooth manifold, $Z_1(Y)$ denotes its group of smooth singular integral $1$-cycles, $h:Z_1(Y)\to U(1)$ is a homomorphism, and a closed real two-form $\Omega$ satisfies, for every smooth singular integral $2$-chain $C$,
 $$
 \left[\frac{\Omega}{2\pi}\right]
 \in
@@ -747,7 +777,7 @@ These are arithmetic mismatch functionals. Neither is a topological invariant wi
 
 ### Q.0.7.6 Exact-Closure Overhead Principle
 
-**Proposition Q.0.7f (Registered Exact-Phase-Closure Identity).** Let $\gamma$ be a nonempty registered forward loop satisfying Definition Q.0.7e and the exact closure condition
+**Proposition Q.0.7f (Registered Exact-Phase-Closure Identity).** Let $\gamma$ be a nonempty finite registered forward loop on the nonnegative-overhead branch of Definition Q.0.7e, with $N[\gamma]\ge1$ and $\varepsilon_i=\ln2+\delta\varepsilon_i$, $\delta\varepsilon_i\ge0$, for every event. Assume the exact closure condition
 $$
 U_{\mathrm{evt}}(\gamma)=1.
 $$
@@ -895,15 +925,60 @@ and let $p_n/q_n$ be its convergents. Then:
    $$
    then $p/q$ is a convergent.
 
-*Proof.* Irrationality of $\alpha_L$ gives an infinite simple continued fraction. Items 1 and 3 are the standard first-kind, second-kind, and Legendre theorems. For item 2, the complete-quotient identity gives
+*Proof.* Write $\alpha=\alpha_L$. Lemma Q.0.7b gives irrationality and an infinite simple continued fraction. The classical approximation criteria are Khinchin (1964, Theorems 16, 17, and 19); the following argument establishes the required inequalities with the present denominator conventions. Since $0<\alpha<1/2$, its simple continued fraction has $a_0=0$ and $a_1\ge2$. Use
 $$
-\left|\alpha_L-\frac{p_n}{q_n}\right|
-=
-\frac1{q_n(q_n\alpha_{n+1}+q_{n-1})}
-<
-\frac1{q_nq_{n+1}}.
+p_{-1}=1,\quad p_0=0,\qquad q_{-1}=0,\quad q_0=1,
+\qquad
+p_{n+1}=a_{n+1}p_n+p_{n-1},\quad
+q_{n+1}=a_{n+1}q_n+q_{n-1}.
 $$
-Multiplication by $2\pi q_n$ proves the phase-mismatch bound. ∎
+The positive partial quotients imply $q_{n+1}>q_n\ge1$ and $q_n\to\infty$. The determinant changes sign at each recurrence step, starting from $p_0q_{-1}-p_{-1}q_0=-1$, so
+$$
+p_nq_{n-1}-p_{n-1}q_n=(-1)^{n-1}.
+$$
+For the complete quotient $\alpha_{n+1}=[a_{n+1};a_{n+2},\ldots]>a_{n+1}$, start from $\alpha=1/\alpha_1$. Substituting $\alpha_{n+1}=a_{n+1}+1/\alpha_{n+2}$ and collecting numerator and denominator coefficients proves by induction that
+$$
+\alpha=\frac{p_n\alpha_{n+1}+p_{n-1}}{q_n\alpha_{n+1}+q_{n-1}},
+\qquad
+e_n:=q_n\alpha-p_n=\frac{(-1)^n}{q_n\alpha_{n+1}+q_{n-1}}.
+$$
+Thus consecutive errors have opposite signs. Writing $\delta_n=|e_n|$, the denominator identity gives
+$$
+0<\delta_n<\frac1{q_{n+1}},
+\qquad
+\left|\alpha-\frac{p_n}{q_n}\right|
+=\frac{\delta_n}{q_n}
+<\frac1{q_nq_{n+1}}\le\frac1{q_n^2}.
+$$
+Multiplication by $2\pi q_n$ proves item 2.
+
+For item 1, fix $p\in\mathbb Z$ and $1\le q<q_{n+1}$. The determinant identity makes the two integer vectors $(p_n,q_n)$ and $(p_{n+1},q_{n+1})$ a basis of $\mathbb Z^2$, so write
+$$
+(p,q)=u(p_n,q_n)+v(p_{n+1},q_{n+1}),\qquad u,v\in\mathbb Z.
+$$
+If $v=0$, then $u\ge1$ and $|q\alpha-p|=u\delta_n\ge\delta_n$. If $v>0$, the upper bound on $q$ forces $u<0$; if $v<0$, positivity of $q$ forces $u>0$. In either nonzero-$v$ case, $ue_n$ and $ve_{n+1}$ have the same sign, and hence
+$$
+|q\alpha-p|=|u|\delta_n+|v|\delta_{n+1}>\delta_n.
+$$
+This proves the second-kind inequality, with equality only at $(p,q)=(p_n,q_n)$. If $q\le q_n$, division additionally gives
+$$
+\left|\alpha-\frac pq\right|
+=\frac{|q\alpha-p|}{q}
+\ge\frac{\delta_n}{q}
+\ge\frac{\delta_n}{q_n}
+=\left|\alpha-\frac{p_n}{q_n}\right|,
+$$
+which proves the first-kind inequality.
+
+For item 3, take the positive denominator $q$ of the reduced fraction $p/q$ and choose $n$ with $q_n\le q<q_{n+1}$. Put $\delta=|q\alpha-p|<1/(2q)$. The second-kind inequality gives $\delta_n\le\delta$. If $p/q\ne p_n/q_n$, the nonzero integer $pq_n-qp_n$ would satisfy
+$$
+1\le|pq_n-qp_n|
+\le q_n|p-q\alpha|+q|q_n\alpha-p_n|
+=q_n\delta+q\delta_n
+\le(q_n+q)\delta
+\le2q\delta<1,
+$$
+a contradiction. Therefore $p/q=p_n/q_n$; the determinant identity makes $p_n/q_n$ reduced, and the assumed reduction identifies the numerator and positive denominator. This proves the Legendre criterion. ∎
 
 **Corollary Q.0.7k′ (Legendre Criterion for a Small Phase Mismatch).** Let $k,N\ge1$, put $d=\gcd(k,N)$, and set $(p,q)=(k/d,N/d)$. If
 $$
@@ -946,7 +1021,7 @@ Then:
    $$
 3. If $N\ge1$, $\gcd(k,N)=1$, and $\delta_L(N,k)<\pi/N$, then $k/N$ is a convergent.
 
-*Proof.* Item 1 is direct algebra. Item 2 is the second-kind approximation theorem. Item 3 is Corollary Q.0.7k′. These statements classify integer pairs; physical loop realization is an independent premise. ∎
+*Proof.* Item 1 is direct algebra. Item 2 is the second-kind approximation theorem. Item 3 is the Legendre criterion in Theorem Q.0.7k. These statements classify integer pairs; physical loop realization is an independent premise. ∎
 
 ---
 
@@ -974,12 +1049,12 @@ p_n=a_np_{n-1}+p_{n-2},
 \qquad
 q_n=a_nq_{n-1}+q_{n-2},
 $$
-with $(p_{-1},p_0)=(1,0)$ and $(q_{-1},q_0)=(0,1)$. The first absolute mismatches are
+with $(p_{-1},p_0)=(1,0)$ and $(q_{-1},q_0)=(0,1)$. The first absolute mismatches, rounded to the displayed digits, are
 $$
-0.0448606821\ldots,\quad
-0.0202369485\ldots,\quad
-0.00438678522\ldots,\quad
-0.00268980757\ldots.
+0.0448606821,\quad
+0.0202369485,\quad
+0.00438678522,\quad
+0.00268980757.
 $$
 
 ---
@@ -1080,9 +1155,9 @@ This is an exact supported-law example. It becomes a dephasing prediction only a
 **Remark Q.0.7q: The Modular Itinerary Canonically Induced by $\alpha_L$.** The continued fraction of $\alpha_L$ canonically produces a sequence of matrices in $GL_2(\mathbb{Z})$ via convergents:
 $$M_n := \begin{pmatrix} p_n & p_{n-1} \\ q_n & q_{n-1} \end{pmatrix}, \qquad \det(M_n) = (-1)^{n-1}, \qquad M_n(\infty) = \frac{p_n}{q_n}$$
 
-Equivalently, the digit string $[0; 9, 15, 2, 4, 1, 1, 1, 1, 2, 2, 3, \ldots]$ defines a word in the generators $S: \tau \mapsto -1/\tau$ and $T: \tau \mapsto \tau + 1$, giving a canonical coding of a geodesic on the modular surface $\mathcal{H}/PSL_2(\mathbb{Z})$ by continued fractions [Series 1985].
+The digit string $[0; 9, 15, 2, 4, 1, 1, 1, 1, 2, 2, 3, \ldots]$ supplies one-sided continued-fraction data for Farey cutting sequences on the modular surface $\mathcal{H}/PSL_2(\mathbb{Z})$ [Series 1985]. To specify a complete oriented geodesic, one must also supply a backward endpoint or equivalent initial geometric data; to encode its cuts as a word in the generators $S: \tau \mapsto -1/\tau$ and $T: \tau \mapsto \tau + 1$, one must declare the initial cut and orientation convention. In particular, the matrices $M_n$ with determinant $-1$ are not themselves elements of $PSL_2(\mathbb Z)$.
 
-This gives a rigorous $PSL_2(\mathbb Z)$-structured itinerary for the chosen irrational number $\alpha_L=\ln2/(2\pi)$. The arithmetic construction alone supplies no bridge to $M=24$, the Leech lattice, $V^\natural$, the Monster, or a physical modular symmetry.
+With these additional choices, the continued-fraction data yield a $PSL_2(\mathbb Z)$-structured itinerary for the chosen irrational number $\alpha_L=\ln2/(2\pi)$. The arithmetic construction alone supplies no bridge to $M=24$, the Leech lattice, $V^\natural$, the Monster, or a physical modular symmetry.
 
 *Note:* The Klein $j$-invariant is defined on the upper half-plane $\mathcal{H} = \{\tau \in \mathbb{C} : \mathrm{Im}(\tau) > 0\}$; the real axis $\mathbb{R}$ lies on the boundary of $\mathcal{H}$, so expressions like $j(\alpha_L)$ are not defined as holomorphic values. The modular itinerary construction avoids this issue entirely. Further development of this connection is deferred to future work.
 
@@ -1124,7 +1199,7 @@ on a nontrivial bundle the transition functions are part of the holonomy. For ex
 
 **Corollary Q.0.7t (SU(2) Case: Torus Density Plus Non-Normalizer Implies Density).** *Let $G = SU(2)$ and let $T \subset SU(2)$ be a maximal torus. Suppose $\Gamma$ contains an element $t \in T$ whose rotation angle is an irrational multiple of $\pi$ (so $\overline{\langle t\rangle} = T$). If $\Gamma$ also contains an element $g \notin N_{SU(2)}(T)$ (equivalently, $gTg^{-1} \ne T$), then $\overline{\Gamma} = SU(2)$.*
 
-*Consequently, once dense $SU(2)$ holds, the Solovay–Kitaev theorem [Kitaev, Shen & Vyalyi 2002] implies efficient approximation of arbitrary $SU(2)$ elements by words in the generators, matching the universality requirement in Appendix A.*
+*For a finite inverse-closed gate set generating this dense $SU(2)$ subgroup, the Solovay–Kitaev theorem [Kitaev, Shen & Vyalyi 2002] gives polylogarithmic word length in the inverse approximation tolerance for single-carrier $SU(2)$ gates. The universal protected computation of Appendix A additionally requires its full gate-realization, error-correction, working-memory, and execution-resource hypotheses.*
 
 *Justification.* Since $\overline{\langle t\rangle} = T$, the closure $\overline{\Gamma}$ contains $T$. The only proper closed subgroups of $SU(2)$ containing a maximal torus are $T$ itself and its normalizer $N_{SU(2)}(T)=T\sqcup jT\cong\operatorname{Pin}(2)$, where $j^2=-I$. Moreover $N_{SU(2)}(T)/T\cong\mathbb Z_2$ and $N_{SU(2)}(T)/\{\pm I\}\cong O(2)$. If $g\notin N_{SU(2)}(T)$, the closed subgroup generated by $T$ and $g$ is therefore all of $SU(2)$.
 
@@ -1157,9 +1232,9 @@ U_{\mathrm{ctrl}}
 +|z\rangle\!\langle z|\otimes U_z.
 \tag{Q.0.7t.2.1}
 $$
-This is unitary. In the anti-Hermitian convention, each block is the holonomy of the constant $\mathfrak{su}(2)$ connection $i\alpha\sigma_x\,ds$ or $i\beta\sigma_z\,ds$ around a unit parameter loop, and finite control words realize exactly the subgroup generated by $U_x,U_z$. Parallel logarithms instead generate one torus, while adjoining only a torus-normalizer element gives the proper closed normalizer described in Remark Q.0.7t.1; either failure is a finite falsifier of density.
+This is unitary. For forward parallel transport with $D=d+\mathcal A$, use the constant anti-Hermitian connection forms $\mathcal A_x=-i\alpha\sigma_x\,ds$ and $\mathcal A_z=-i\beta\sigma_z\,ds$ on a unit parameter loop. The equation $\dot U=-\mathcal A_sU$, $U(0)=I$, gives holonomies $U_x$ and $U_z$, and finite forward control words realize the positive-word monoid generated by $U_x,U_z$. Exact realization of the full subgroup additionally requires realization of the inverse gates. Parallel logarithms instead generate one torus, while adjoining only a torus-normalizer element gives the proper closed normalizer described in Remark Q.0.7t.1; either failure is a finite falsifier of density.
 
-*Proof.* The Lie-bracket calculation and Theorem Q.0.7s prove density. Every cyclic subgroup is abelian, and closure preserves commutation, whereas $SU(2)$ is nonabelian, proving minimality. Orthogonal control projections make (Q.0.7t.2.1) a block-diagonal unitary. The path-ordered exponential of a constant connection is its ordinary exponential, proving the holonomy statement. The proper-closure alternatives follow from the one-dimensional Lie algebra and Corollary Q.0.7t. ∎
+*Proof.* The Lie-bracket calculation and Theorem Q.0.7s prove density. Every cyclic subgroup is abelian, and closure preserves commutation, whereas $SU(2)$ is nonabelian, proving minimality. Orthogonal control projections make (Q.0.7t.2.1) a block-diagonal unitary. For the stated forward transport convention, the solution is $U(1)=\mathcal P\exp(-\int_0^1\mathcal A_s\,ds)$. Constancy of $\mathcal A_s$ removes path ordering and gives $U_x$ or $U_z$ from the displayed negative connection forms, proving the holonomy statement. The proper-closure alternatives follow from the one-dimensional Lie algebra and Corollary Q.0.7t. ∎
 
 **Resolution TV-Q-05-P1 (Metadata).** Exact domain: the two-level $SU(2)$ carrier and sufficiently small nonzero $(\alpha,\beta)$. Premises: the logarithm neighborhood of Theorem Q.0.7s and orthogonal control states. Equivalence: simultaneous $SU(2)$ conjugacy and control-label exchange. Budget: both generators and every finite control word. Verifier: logarithms, Lie closure, controlled-unitary normalization and holonomy products. Falsifier: parallel logarithms, a generator in the torus normalizer without a non-normalizer, or any proper closure subgroup. Provenance class: source-internal finite non-Abelian construction. Downstream consumers: Theorem Q.0.7s, Appendix-A universality and `TV-Q-05`. This is `positive-discharge` of the minimal-generator and controlled-holonomy problem for $SU(2)$; other non-Abelian groups retain their group-specific minimal-generator classification.
 
@@ -1181,7 +1256,7 @@ This section has established:
 
 4. **Exact-Closure Overhead:** On the registered calibrated branch, every nonzero exact-closure lift has $\Delta>0$; a topological interpretation additionally requires the differential-character identification (Corollary Q.0.7g)
 
-5. **Continued-Fraction Spectrum and Arithmetic Index:** Best-approximation integer pairs $(k,N)$ are convergents of $\alpha_L$; physical loop realization remains a separate certificate (Theorem Q.0.7k, Theorem Q.0.7k.1, Corollary Q.0.7l)
+5. **Continued-Fraction Spectrum and Arithmetic Index:** Convergent pairs $(k,N)$ of $\alpha_L$ satisfy the stated first- and second-kind best-approximation bounds; reduced pairs meeting the strict Legendre threshold are convergents. Physical loop realization remains a separate certificate (Theorem Q.0.7k, Theorem Q.0.7k.1, Corollary Q.0.7l)
 
 6. **Three-Gap Arithmetic:** Finite arithmetic phase sets partition the circle into at most three arc lengths; accessibility requires realized phase-calibrated histories (Proposition Q.0.7n)
 
@@ -1455,18 +1530,18 @@ The Unruh temperature is
 $$
 T_U(a)=\frac{\hbar a}{2\pi k_Bc}.
 $$
-A conditionally uniform binary reset has quasistatic Landauer infimum $Q_{\mathrm{bath}}\ge k_BT_U\ln2$. Neither statement fixes a cycle duration. Introduce, as a separate calibration hypothesis, a protocol action-duration ledger
+On a registered uniformly accelerated reset branch with constant acceleration magnitude $a>0$ and a reservoir at the displayed Unruh temperature, impose the complete Definition 28 contract at $T_U(a)$. A conditionally uniform binary record then satisfies the ensemble-mean Landauer bound $\langle Q_{\mathrm{bath}}\rangle\ge k_BT_U\ln2$. This is not a heat floor for every individual realization and supplies no cycle duration. Introduce, as a separate calibration hypothesis with $\kappa_A>0$, a protocol action-duration ledger
 $$
 E\tau=\kappa_A\ln2.
 $$
 
 #### Q.0.9.2 The Conditional Timescale
 
-**Theorem Q.0.10 (Conditional Rindler--Landauer Timescale).** Assume a conditionally uniform binary reset into an Unruh bath, exact Landauer heat saturation, cyclic energy balance $E=Q_{\mathrm{bath}}$, and the independent action-duration equality $E\tau=\kappa_A\ln2$. Then
+**Theorem Q.0.10 (Conditional Rindler--Landauer Timescale).** Assume the complete registered reset branch just stated, exact ensemble-mean Landauer heat saturation, a separately certified cyclic mean-energy balance $E=\langle Q_{\mathrm{bath}}\rangle$, and the independent action-duration equality $E\tau=\kappa_A\ln2$. Then
 $$
 \tau_U(a)=\frac{\kappa_A}{\hbar}\frac{2\pi c}{a}.
 $$
-On the separately calibrated branch $\kappa_A=\hbar$, this becomes $\tau_U=2\pi c/a$. The equality is conditional and is not a thermodynamic speed limit; exact quasistatic saturation is ordinarily an asymptotic ideal. ∎
+Indeed, substitution of $E=k_BT_U(a)\ln2$ and $T_U(a)=\hbar a/(2\pi k_Bc)$ into the action-duration equality gives the formula. On the separately calibrated branch $\kappa_A=\hbar$, this becomes $\tau_U=2\pi c/a$. The equality is conditional and is not a thermodynamic speed limit; exact quasistatic saturation is ordinarily an asymptotic ideal. ∎
 
 **Remark Q.0.10a (No Energy--Time Monotonicity without a Protocol Law).** Increasing dissipated energy does not by itself imply a shorter duration. The relation $\tau=\kappa_A\ln2/E$ holds only while the independent action-duration equality remains valid for the changed protocol.
 
@@ -1474,7 +1549,7 @@ On the separately calibrated branch $\kappa_A=\hbar$, this becomes $\tau_U=2\pi 
 
 **Corollary Q.0.10b (Conditional Geometric Comparison).** On the full hypotheses of Theorem Q.0.10 with $\kappa_A=\hbar$, the numerical timescale $2\pi c/a$ equals $2\pi$ times the light-crossing time to the Rindler horizon. The KMS period $2\pi c/a$ is an imaginary-time periodicity; it does not by itself establish a real reset-cycle duration. ∎
 
-**Corollary Q.0.10c (Conditional Rate).** If a real protocol independently realizes the duration in Theorem Q.0.10, its event rate is $a/(2\pi c)$. No rate follows from the Unruh temperature alone. ∎
+**Corollary Q.0.10c (Conditional Rate).** On the calibrated branch $\kappa_A=\hbar$, if a real protocol independently realizes the duration in Theorem Q.0.10, its event rate is $a/(2\pi c)$. No rate follows from the Unruh temperature alone. ∎
 
 **Remark Q.0.10d (No Universal Speed or Efficiency Law).** Extra energy need not shorten a protocol. Any energy--duration relation requires a separate speed-limit or control theorem.
 
@@ -1495,14 +1570,23 @@ where:
 6. $\mathcal O_\perp$ proves that the counted events are realized by orthogonalizing two-level geodesic components using the energy recorded in $E$, with no response-relevant idle sector included in the numerator.
 7. $\chi_{\mathrm{ML}}=1$ records that the state, Hamiltonian, event coordinate, energy normalization, and comparison window were fixed before any rate comparison.
 
-**Theorem Q.0.10d.2 (Conditional Margolus-Levitin Rate Equality).** On every finite-response branch satisfying the hypotheses of the Margolus-Levitin bound, the counted orthogonalization rate obeys
+**Theorem Q.0.10d.2 (Conditional Margolus-Levitin Rate Equality).** Let a registered comparison window have duration $T>0$, a finite count $N_\perp$ of distinct realized orthogonalization events, and registered mean-energy budget $E\ge0$. Define the window-averaged rate $\dot C_\perp:=N_\perp/T$. For every counted event $j$, require an autonomous time-independent retained Hamiltonian and state satisfying the complete Margolus--Levitin hypotheses, an event duration $\tau_j>0$, and finite mean energy $E_j$ above that Hamiltonian's ground energy. In addition, require a common-window energy-ownership certificate proving
+$$
+\sum_{j=1}^{N_\perp}E_j\tau_j\le ET,
+$$
+with each counted event and energy contribution assigned once. This certificate must justify any sequential or parallel composition used in the count. Then
 $$
 \dot C_\perp\le \frac{2E}{\pi\hbar}.
 \tag{Q.0.10d.2}
 $$
-Equality may be asserted only on a branch carrying an accepted certificate $\mathfrak Q_{\mathrm{ML}}$ whose entry $\mathcal O_\perp$ proves saturation for the counted events. PCE no-surplus selection alone does not imply equality in (Q.0.10d.2), does not imply autonomous positive complexity drift from $E>0$, and does not identify the Action-Entropy Identity with any Complexity=Action dictionary without an additional finite-response reconstruction map.
+For a positive event count, equality requires an accepted certificate $\mathfrak Q_{\mathrm{ML}}$ whose entry $\mathcal O_\perp$ proves saturation for every counted event and equality in the common-window energy budget. PCE no-surplus selection alone does not imply these equalities, autonomous positive complexity drift from $E>0$, or an identification of the Action-Entropy Identity with any Complexity=Action dictionary without an additional finite-response reconstruction map.
 
-*Proof.* The Margolus-Levitin quantum speed limit gives the minimum time $\tau\ge\pi\hbar/(2E)$ for an orthogonalizing event at mean energy $E$ above the ground state, hence the counted event rate is at most $2E/(\pi\hbar)$. Equality requires the known equality conditions of the speed-limit problem to hold for the retained branch; these are exactly what $\mathcal O_\perp$ and $\chi_{\mathrm{ML}}$ record. PCE quotienting removes response-null surplus labels, but it is not a proof that all available energy is arranged in saturating orthogonalizing geodesics. ∎
+*Proof.* For each counted event, Margolus--Levitin gives $E_j\tau_j\ge\pi\hbar/2$. Finite summation and the energy-ownership premise give
+$$
+N_\perp\frac{\pi\hbar}{2}
+\le\sum_jE_j\tau_j\le ET.
+$$
+Division by $T>0$ proves the window-averaged rate bound. For $N_\perp>0$, equality holds only if each nonnegative eventwise deficit vanishes and the energy budget is exhausted; these are the required certificate entries. If $E=0$, the same inequality forces $N_\perp=0$. A single-event duration bound alone supplies neither a count of distinct events nor their common energy/time allocation, and no instantaneous event-rate bound is asserted. ∎
 
 **Theorem Q.0.10d.3 (No Common-Cycle Rindler-Action and Margolus--Levitin Saturation).** Let the same finite cycle use the same mean energy $E>0$ and duration $\tau>0$ in both the action-duration ledger
 $$
@@ -1544,7 +1628,7 @@ The cancellation is algebraic. It does not show that Unruh thermality, Landauer 
 
 #### Q.0.9.5 Limiting Cases
 
-| Acceleration | Conditional $\tau_U$ | Conditional rate (if realized) | Comparison regime |
+| Acceleration on the $\kappa_A=\hbar$ branch | Conditional $\tau_U$ | Conditional rate (if realized) | Comparison regime |
 |:-------------|:--------------------|:---------------------|:----------------|
 | $a \to 0$ | $\tau_U \to \infty$ | $\dot{N}_U \to 0$ | Inertial limit: Unruh bath vanishes |
 | $a = c^2/L_P$ | $\tau_U = 2\pi t_P$ | $\dot{N}_U = 1/(2\pi t_P)$ | Planck acceleration |
@@ -1556,7 +1640,7 @@ The cancellation is algebraic. It does not show that Unruh thermality, Landauer 
 
 $$T_U = \frac{\hbar g}{2\pi k_B c} \approx 4.0 \times 10^{-20} \text{ K}$$
 
-On the full branch of Theorem Q.0.10 the same acceleration gives $\tau_U=2\pi c/g\approx1.92\times10^{8}$ s, the value tabulated in Section Q.0.9.5. The Unruh temperature alone fixes neither a real cycle duration nor a computation rate.
+On the full branch of Theorem Q.0.10 with $\kappa_A=\hbar$, the same acceleration gives $\tau_U=2\pi c/g\approx1.92\times10^{8}$ s, the value tabulated in Section Q.0.9.5. The Unruh temperature alone fixes neither a real cycle duration nor a computation rate.
 
 ---
 
@@ -1617,7 +1701,7 @@ The branch-conditional Rindler–Landauer timescale $\tau_U=2\pi c/a$ shares for
 
 *Proof.* The Jacobson derivation (Theorem 12.1) combines:
 1. Unruh temperature: $T = \hbar\kappa/(2\pi k_B c)$ (Definition 40)
-2. Area-law entropy: $\delta S = (1/4G) \delta\mathcal{A}$ (Theorem 49)
+2. Area-law entropy: on Theorem 49's saturated and derivative-controlled continuum branch, $\delta S = [k_Bc^3/(4G\hbar)]\delta\mathcal{A}$, with $G=G_{\mathrm{op}}$ and a separate calibration to measured Newton $G$
 3. Clausius relation: $\delta Q = T \, \delta S$
 
 The Rindler-Landauer derivation (Theorem Q.0.10) combines:
@@ -1725,7 +1809,7 @@ These are algebraic re-expressions, not an independent derivation or measurement
 
 *Proof.* Theorem Q.0.12 assumes the Schwarzschild surface-gravity relation and yields $\tau_{BH}=8\pi GM/c^3$; solving gives the first expression. The area law already contains $G$ through $S_{BH}/A=c^3/(4G\hbar)$; solving gives the second. ∎
 
-**Corollary Q.0.14a (Consistency with Equation E.9).** Substituting Appendix E's independently calibrated entropy-density identity
+**Corollary Q.0.14a (Consistency with Equation E.9).** On Appendix E's capacity-achieving, entropy-saturating, additive-ledger branch, assume the same-family equality $C(\mathcal E_N)=C_{\max}$ and the independent calibration $G_{\mathrm{op}}=G$. Identifying the limiting dimensionless horizon entropy density with $S_{BH}/A$ gives
 $$
 \frac{S_{BH}}A=\frac{\chi C_{\max}}{\eta\delta^2}
 $$
@@ -1740,16 +1824,16 @@ which is Equation (E.9). This is a consistency substitution, not an independent 
 
 #### Q.0.9.8.5 Joint Gravity--Computation Consistency Ledger
 
-**Theorem Q.0.15 (Joint Gravity--Computation Consistency Ledger).** Assume simultaneously: (a) the local Rindler/KMS and Clausius hypotheses of Theorem 12.1; (b) the horizon-saturation, density-certificate, and area-law calibration hypotheses of Theorems E.5--E.6; (c) the MPU stress-energy source construction of Appendix B; and (d) the complete protocol hypotheses of Theorem Q.0.10 with $\kappa_A=\hbar$, a real protocol realizing the conditional duration, and the local identification $a=\kappa$. Then the following statements hold on that joint branch:
+**Theorem Q.0.15 (Joint Gravity--Computation Consistency Ledger).** Assume simultaneously: (a) the local Rindler/KMS and Clausius hypotheses of Theorem 12.1; (b) the density-certificate hypotheses of Theorem E.3 and the capacity-achieving, entropy-saturating, additive-ledger hypotheses of Theorem E.6, together with the same-family equality $C(\mathcal E_N)=C_{\max}$ and the independent horizon-entropy and $G_{\mathrm{op}}=G$ calibrations; (c) the MPU stress-energy source construction of Appendix B; and (d) the complete protocol hypotheses of Theorem Q.0.10 with $\kappa_A=\hbar$, a real protocol realizing the conditional duration, and the local identification $a=\kappa$. Then the following statements hold on that joint branch:
 
 1. the Jacobson construction gives the Einstein equations (Theorem 12.1);
-2. the calibrated horizon entropy obeys the Bekenstein--Hawking area law (Theorems E.5--E.6);
+2. the calibrated horizon entropy obeys the Bekenstein--Hawking area law in the continuum limit (Theorem E.6 on Theorem E.3's density branch);
 3. the calibration gives $G=\eta\delta^2c^3/(4\hbar\chi C_{\max})$ (Equation (E.9)); and
 4. the independently realized conditional protocol has rate $\dot N=\kappa/(2\pi c)$ (Theorem Q.0.10 and Corollary Q.0.10c).
 
 These are compatible projections of the stated joint hypothesis package. No implication among items 1--4 is asserted after removing the hypotheses used to establish the target item.
 
-*Proof.* Items 1 and 2 follow from the local-Rindler, Clausius, horizon-saturation, density-certificate, and stress-energy hypotheses by Theorem 12.1 and Theorems E.5--E.6. Substitution of the calibrated entropy density into Equation (E.6c) gives item 3 algebraically. Under the independent reset, saturation, energy-balance, action-duration, real-protocol, and $a=\kappa$ hypotheses, Theorem Q.0.10 and Corollary Q.0.10c give item 4. Each conclusion therefore follows from the union of the hypotheses declared in the theorem, without using any conclusion to prove one of its own antecedents. $\square$
+*Proof.* Items 1 and 2 follow from the local-Rindler, Clausius, horizon-saturation, density-certificate, and stress-energy hypotheses by Theorem 12.1 and Theorems E.3 and E.6. Equation (E.6c), the same-family capacity equality, and $G_{\mathrm{op}}=G$ give item 3 algebraically. Under the independent reset, saturation, energy-balance, action-duration, real-protocol, and $a=\kappa$ hypotheses, Theorem Q.0.10 and Corollary Q.0.10c give item 4. Each conclusion therefore follows from the union of the hypotheses declared in the theorem, without using any conclusion to prove one of its own antecedents. $\square$
 
 **Corollary Q.0.15a (No Closed Implication Loop).** On the hypotheses of Theorem Q.0.15, the gravity, area-law, coupling-calibration, and computational-rate ledgers are mutually consistent. The computational-rate identity alone implies neither the horizon entropy density nor the Einstein equations. $\square$
 
@@ -1900,7 +1984,7 @@ when the branch uses the standard Rindler-Hawking normalization.
 9. $\mathcal P_{\mathrm{peak}}$ is the peak-identification protocol and $\varepsilon_{\mathrm{peak}}$ is the certified phase tolerance. These entries concern phase positions only; amplitudes, widths, greybody factors, and nonresonant envelopes are separate scattering observables.
 10. $\chi_T$ records that the loop map, tolerance, and mode domain are fixed before spectral comparison.
 
-Without an accepted $\mathfrak T_{\mathrm{hor}}$, the retained horizon algebra and Page/scrambling certificates do not imply the closed-loop transfer map.
+The horizon closed-loop transfer branch is accepted only after the additional finite entries of $\mathfrak T_{\mathrm{hor}}$ are supplied and verified.
 
 **Lemma Q.0.7v (Thermal Phase Identity).** For any horizon with Hawking temperature $k_B T_H=\hbar\kappa/(2\pi c)$ and Rindler-Landauer cycle time $\tau_H=2\pi c/\kappa$,
 $$
@@ -1924,37 +2008,36 @@ U_{\omega,N}
 =e^{i(\omega\tau_H-N\ln2)},
 \tag{Q.0.7v.1.2}
 $$
-so exact constructive interference occurs exactly when
+so the complete loop multiplier equals one exactly when
 $$
 \omega\tau_H-N\ln2\in2\pi\mathbb Z.
 \tag{Q.0.7v.1.3}
 $$
-Choose $\mathcal D_{\mathrm{loop}}=\Omega\times\{1,\ldots,N_{\max}\}$, let $\mathcal P_{\mathrm{peak}}$ accept modes with $\operatorname{dist}_{2\pi}(\omega\tau_H,N\ln2)\le\varepsilon_{\mathrm{peak}}$, and forward-lock $(\Omega,N_{\max},\varepsilon_{\mathrm{peak}})$. This populates every transfer-map, same-loop, phase-position and tolerance entry of Definition Q.0.7u for the finite lossless fiber. The retained horizon channel and its KMS/metric descent remain imported premises rather than consequences of this one-mode construction.
+Choose $\mathcal D_{\mathrm{loop}}=\Omega\times\{1,\ldots,N_{\max}\}$, and register the phase-acceptance predicate $\operatorname{dist}_{2\pi}(\omega\tau_H,N\ln2)\le\varepsilon_{\mathrm{peak}}$ on that domain before spectral comparison. This supplies a finite lossless abstract phase map and a tolerance predicate. On the one-dimensional fiber, $U_{\omega,N}\rho U_{\omega,N}^{\dagger}=\rho$ for every phase, so trivial loop holonomy alone is not an observable constructive-interference or resonance-peak condition. An operational $\mathcal P_{\mathrm{peak}}$ additionally requires a registered coherent reference and interference/readout certificate relating its measured response to that predicate, with the stated resolution and uncertainty. The retained horizon channel and its KMS/metric descent are also imported premises.
 
-*Proof.* The scattering multiplier is unitary and its argument is the first expression in (Q.0.7v.1.1); Lemma Q.0.7v gives the thermal-coordinate equality. Serial phases on the same one-dimensional fiber multiply, proving (Q.0.7v.1.2). A unit complex number equals one exactly when its phase is in $2\pi\mathbb Z$, proving (Q.0.7v.1.3). The displayed finite domain and decision rule are normalized and fixed independently of any spectral data. ∎
+*Proof.* The scattering multiplier is unitary and its argument is the first expression in (Q.0.7v.1.1); Lemma Q.0.7v gives the thermal-coordinate equality. Serial phases on the same one-dimensional fiber multiply, proving (Q.0.7v.1.2). A unit complex number equals one exactly when its phase is in $2\pi\mathbb Z$, proving (Q.0.7v.1.3). Scalar phases cancel in the density-matrix channel, which proves the stated readout limitation. The displayed finite domain and predicate are specified independently of spectral data; they do not construct the additional interference instrument. ∎
 
-**Resolution TV-Q-09-P1 (Metadata).** Exact domain: finite lossless one-mode fibers over an accepted $\mathfrak H_n^{\mathrm{ret}}$ and finite $(\Omega,N)$ domain. Premises: the accepted horizon channel, Rindler--Hawking $(T_H,\tau_H)$ and independently registered structural phase. Equivalence: unitary rephasing that preserves the complete loop multiplier. Budget: every $(\omega,N)$ in $\mathcal D_{\mathrm{loop}}$. Verifier: unitarity, the thermal identity, serial same-fiber multiplication and the locked tolerance rule. Falsifier: unequal dynamical and thermal phase coordinates, phases acting on different loop fibers, or a peak outside the locked tolerance. Provenance class: source-internal finite scattering construction conditional on the accepted horizon channel. Downstream consumers: Definition Q.0.7u, Proposition Q.0.19 and `TV-Q-09`. The proposition gives `positive-discharge` for the finite lossless transfer-map subclass. Derivation of the imported retained horizon/KMS channel and nontrivial greybody amplitudes remains outside this partial scope.
+**Resolution TV-Q-09-P1 (Metadata).** Exact domain: finite lossless one-mode fibers over an accepted $\mathfrak H_n^{\mathrm{ret}}$ and finite $(\Omega,N)$ domain. Premises: the accepted horizon channel, Rindler--Hawking $(T_H,\tau_H)$ and independently registered structural phase. Equivalence: unitary rephasing that preserves the complete loop multiplier. Budget: every $(\omega,N)$ in $\mathcal D_{\mathrm{loop}}$. Verifier: unitarity, the thermal identity, serial same-fiber multiplication and the registered tolerance predicate. Falsifier: unequal dynamical and thermal phase coordinates or failure of the declared same-loop phase map. Provenance class: source-internal finite phase-map construction conditional on the accepted horizon channel. Downstream consumers: Definition Q.0.7u, Proposition Q.0.19 and `TV-Q-09`. The proposition gives `positive-discharge` for this abstract finite lossless phase-map subclass. Physical acceptance of the transfer record additionally requires its coherent reference, interference/readout implementation and uncertainty certificate. Derivation of the imported retained horizon/KMS channel and nontrivial greybody amplitudes remains outside this partial scope.
 
-**Proposition Q.0.19 (Conditional Landauer Phase-Grid Signature).** On an accepted horizon closed-loop transfer record $\mathfrak T_{\mathrm{hor}}$, resonant phase-matching points in the thermal variable $x=\hbar\omega/(k_BT_H)$ obey
+**Proposition Q.0.19 (Conditional Landauer Phase-Grid Signature).** On an accepted horizon closed-loop transfer record $\mathfrak T_{\mathrm{hor}}$, every peak accepted by its certified interference/readout protocol at an admitted pair $(\omega,N)\in\mathcal D_{\mathrm{loop}}$ obeys
 $$
 \operatorname{dist}_{2\pi}(x,N\ln2)
 :=
 \min_{k\in\mathbb Z}|x-N\ln2-2\pi k|
 \le\varepsilon_{\mathrm{peak}},
-\qquad
-N\in\mathbb Z_{\ge1}.
+\qquad x=\frac{\hbar\omega}{k_BT_H},\quad N\ge1.
 \tag{Q.0.19.1}
 $$
-Exact congruence is the special branch $\varepsilon_{\mathrm{peak}}=0$. Equivalently, after rescaling $x\mapsto x/(2\pi)$, the phase-position grid is the irrational rotation orbit
+Exact congruence is the subbranch $\varepsilon_{\mathrm{peak}}=0$. Independently of which labels and modes are realized, the nominal arithmetic grid obtained by extending the label to all positive integers is
 $$
 \{N\alpha_L\bmod1:N\in\mathbb Z_{\ge1}\},
 \qquad
 \alpha_L=\frac{\ln2}{2\pi}.
 \tag{Q.0.19.2}
 $$
-The orbit is dense and equidistributed in $[0,1)$, and every finite truncation partitions the circle into at most three distinct gap lengths. This proposition fixes only phase-grid positions; it does not fix amplitudes, widths, greybody factors, or nonresonant envelopes.
+This nominal infinite orbit is dense and equidistributed in $[0,1)$, and its first $N_{\max}$ labels have at most three adjacent circular gap lengths. A finite transfer record claims physical peaks only on its admitted domain; it does not realize the entire infinite orbit or every finite initial label block. At nonzero tolerance, accepted measured phases lie near their nominal labels and need not retain exact gap equalities. Even at zero tolerance, an arbitrary admitted subset is not necessarily an initial label block. Amplitudes, widths, greybody factors and nonresonant envelopes remain separate outputs.
 
-*Proof.* Definition Q.0.7u supplies the circular-distance bound (Q.0.19.1) between the dynamical loop phase $x$ and the MPU-cycle phase $N\ln2$ on the certified transfer domain. Dividing by $2\pi$ gives the rotation by $\alpha_L$ on $\mathbb R/\mathbb Z$. Lemma Q.0.7b gives transcendence, hence irrationality, of $\alpha_L$. Irrational rotations are dense and equidistributed by Weyl equidistribution. The finite-truncation gap statement is Proposition Q.0.7n applied to the same orbit. $\square$
+*Proof.* The accepted transfer record and its interference/readout certificate give (Q.0.19.1) on the admitted domain. The nominal label phases divided by $2\pi$ form the displayed irrational rotation orbit. Lemma Q.0.7b gives irrationality, so Weyl equidistribution supplies the infinite-orbit statement. Proposition Q.0.7n gives the gap bound for the first $N_{\max}$ nominal labels. Neither theorem enlarges the physical transfer domain or removes its nonzero phase tolerance. $\square$
 
 **Corollary Q.0.19a (Beatty Staircase of Lower Phase Approximants).** For each $k\ge1$, define
 $$
@@ -2002,11 +2085,13 @@ $$
 $$
 \operatorname{dist}_{2\pi}\!\left(\Pi(\omega_N^{(1)},H_1),\,\Pi(\omega_N^{(2)},H_2)\right)\le2\varepsilon_{\mathrm{peak}},
 $$
-*and on the exact-closure subbranch $\varepsilon_{\mathrm{peak}}=0$ both reduced phases equal $[N\ln2]_{2\pi}$. If a common lift $m\in\mathbb Z_{\ge0}$ is chosen so that*
+*and on the exact-closure subbranch $\varepsilon_{\mathrm{peak}}=0$ both reduced phases equal $[N\ln2]_{2\pi}$. For an unwrapped frequency comparison, additionally require a common lift $m\in\mathbb Z_{\ge0}$ for the two actual registered frequencies such that*
 $$
-x_{N,m}:=N\ln2+2\pi m,
+x_{N,m}:=N\ln2+2\pi m,\qquad
+\left|\frac{\hbar\omega_{N,m}^{(r)}}{k_BT_{H,r}}-x_{N,m}\right|
+\le\varepsilon_{\mathrm{peak}}\quad(r=1,2).
 $$
-*and $\varepsilon_{\mathrm{peak}}<x_{N,m}$, then the corresponding physical frequencies obey*
+*If $\varepsilon_{\mathrm{peak}}<x_{N,m}$, then these frequencies obey*
 $$
 \left|\frac{\omega_{N,m}^{(1)}}{\omega_{N,m}^{(2)}}-\frac{T_{H,1}}{T_{H,2}}\right|
 \le
@@ -2043,15 +2128,15 @@ $$
 $$
 |\mathcal G_{N_{\max}}|\le3.
 $$
-*Consequently, on the horizon closed-loop transfer branch, the phase positions of any peak set that realizes the first $N_{\max}$ Landauer labels have a three-gap finite-budget fingerprint after transforming frequencies to $x=\hbar\omega/(k_B T_H)$.*
+*Consequently, on the exact phase-matching subbranch $\varepsilon_{\mathrm{peak}}=0$, a peak set realizing the first $N_{\max}$ Landauer labels has at most three adjacent circular gap lengths after transforming frequencies to $x=\hbar\omega/(k_B T_H)$. At nonzero tolerance, the exact three-gap statement concerns the nominal grid $\mathcal P_{N_{\max}}$; measured phases satisfy the circular-distance bound of Proposition Q.0.19.*
 
-*Proof.* Divide the phase points by $2\pi$. The set becomes
+*Proof.* Divide the nominal phase points by $2\pi$. The set becomes
 $$
 \{N\alpha_L\bmod1:1\le N\le N_{\max}\},
 \qquad
 \alpha_L=\frac{\ln2}{2\pi}.
 $$
-By Lemma Q.0.7b, $\alpha_L$ is irrational. Proposition Q.0.7n applies to this finite irrational-rotation orbit and says that the adjacent circular gaps in $[0,1)$ have at most three lengths. Multiplication by $2\pi$ preserves the number of distinct gap lengths, proving the claim for $\mathcal P_{N_{\max}}$. The final sentence is Proposition Q.0.19 translated to measured thermal frequency phases. $\square$
+By Lemma Q.0.7b, $\alpha_L$ is irrational. The index range $1,\ldots,N_{\max}$ is a common circle translation of the range $0,\ldots,N_{\max}-1$ in Proposition Q.0.7n, so it has the same gap lengths. Multiplication by $2\pi$ preserves their number. Proposition Q.0.19 identifies measured phases with the nominal grid on the zero-tolerance subbranch; at nonzero tolerance it supplies a proximity bound and does not preserve exact equality of gaps. $\square$
 
 **Proposition Q.0.20b.1 (Certified Landauer Phase-Grid Ledger).** On the horizon closed-loop transfer branch of Definition Q.0.7u, set
 $$
@@ -2113,7 +2198,7 @@ D_{1000}^*=0.00294366579284,
 D_{18628}^*=5.36815450825\times10^{-5}.
 $$
 
-5. **Two-gap and three-gap rows.** At $N=q_k$, direct cyclic sorting gives exactly two gaps:
+5. **Two-gap and three-gap rows.** The singleton grid at $N=q_0=1$ has one circular gap of length $1$. For $k\ge1$, at $N=q_k$, direct cyclic sorting gives exactly two gaps:
 $$
 \ell_1=\|q_{k-1}\alpha_L\|,
 \qquad
@@ -2137,11 +2222,11 @@ For generic finite budgets the three-distance theorem gives at most three gaps; 
 | 1000 | 3 | $0.00069818\times719$, $0.00112627\times21$, $0.00182445\times260$ |
 | 4111 | 3 | $0.00015801\times1310$, $0.00027008\times2570$, $0.00042810\times231$ |
 
-The insertion order of the grid is the Sturmian word
+The winding increments of the grid are encoded by the Sturmian word
 $$
-s_N=\lfloor(N+1)\alpha_L\rfloor-\lfloor N\alpha_L\rfloor\in\{0,1\},
+s_N=\lfloor(N+1)\alpha_L\rfloor-\lfloor N\alpha_L\rfloor\in\{0,1\}.
 $$
-so the Beatty/convergent/three-gap ledger is completely determined by the finite continued-fraction record above.
+The finite Beatty/convergent/three-gap data displayed here are certified by the continued-fraction record together with the remaining components of $\mathfrak C_{\mathrm{grid}}$.
 
 *Proof.* The certificate enclosures for the two transcendental inputs can be checked using convergent series. The identity
 $$
@@ -2155,7 +2240,7 @@ Machin's identity
 $$
 \pi=16\arctan(1/5)-4\arctan(1/239)
 $$
-is verified by the tangent addition formula and the fact that both sides lie in $(3,4)$; each arctangent is enclosed by its alternating series, whose error is smaller than the first omitted term. Rational interval division then encloses $\alpha_L=\ln2/(2\pi)$ and verifies the printed prefix in item 1 by unique decimal rounding.
+is verified by the tangent addition formula and the fact that both sides lie in $(3,4)$; each arctangent is enclosed by its alternating series, whose error is smaller than the first omitted term. Rational interval division then encloses $\alpha_L=\ln2/(2\pi)$ and verifies the printed prefix in item 1 by containment in its decimal-prefix interval.
 
 For item 2, begin with the certified interval for $y_0=\alpha_L$. At stage $j$, the certificate verifies that $y_j$ lies strictly inside one unit interval $(a_j,a_j+1)$ and forms an outward enclosure for
 $$
@@ -2189,7 +2274,7 @@ D_N^*
 $$
 The supplied permutations and interval comparisons prove the three displayed finite values by this formula. An arbitrary circular arc is a difference of at most two anchored intervals, so its counting error is at most $2ND_N^*$.
 
-For item 5, the three-gap theorem for irrational rotations (Sós 1958; Świerczkowski 1958) applies to $\alpha_L$. Its convergent-denominator specialization (Slater 1967) gives the two lengths
+For item 5, the three-gap theorem for irrational rotations (Sós 1958; Świerczkowski 1958) applies to $\alpha_L$. At $N=q_k$, the Farey-neighbor gap-count formula (Taha 2018, Theorem 2), applied to the adjacent convergents $p_{k-1}/q_{k-1}$ and $p_k/q_k$, gives the two lengths
 $$
 \lVert q_{k-1}\alpha_L\rVert,
 \qquad
@@ -2199,33 +2284,33 @@ with multiplicities $q_k-q_{k-1}$ and $q_{k-1}$; these sum to $q_k$. For every o
 $$
 \lfloor(N+1)\alpha_L\rfloor-\lfloor N\alpha_L\rfloor\in\{0,1\},
 $$
-which proves the Sturmian insertion formula. No statement about amplitudes, widths, greybody factors, or nonresonant envelopes enters the certificate. $\square$
+which proves the binary winding-increment formula. No statement about amplitudes, widths, greybody factors, or nonresonant envelopes enters the certificate. $\square$
 
 **Remark Q.0.20b.2 (Status Split for the Horizon Transfer Branch).** Proposition Q.0.20b.1 closes only the phase-grid arithmetic after an accepted transfer record $\mathfrak T_{\mathrm{hor}}$ is present. It fixes the positions, recurrence hierarchy, finite gap statistics, and window-counting bounds of the Landauer grid. It does not by itself derive the transfer map from retained horizon channel data, and it does not fix amplitudes, widths, greybody factors, nonresonant envelopes, or peak-identification tolerances.
 
-**Theorem Q.0.20b.3 (Transfer-Map Separation Theorem).** The retained horizon channel $\mathfrak H_n^{\mathrm{ret}}$, deterministic exterior recovery certificate $\mathfrak S_{\mathrm{hor},n}$, and Page/design scrambling certificates prove retained conservation, exterior recovery, or Page-type entropy statements according to their own norms. They do not imply the tolerance-certified transfer law
+**Theorem Q.0.20b.3 (Conditional Transfer-Map Separation).** Fix the retained horizon channel $\mathfrak H_n^{\mathrm{ret}}$, deterministic exterior recovery certificate $\mathfrak S_{\mathrm{hor},n}$, and Page/design scrambling certificates. Assume two finite scattering completions satisfy every prior constraint and agree on these records but give inequivalent retained phase-position outputs. Then those records do not determine the phase-position output. If one such completion violates
 $$
 \operatorname{dist}_{2\pi}(x,N\ln2)\le\varepsilon_{\mathrm{peak}}
 $$
-unless an accepted horizon transfer record $\mathfrak T_{\mathrm{hor}}$ supplies the scattering map, loop time, MPU-cycle phase, domain, and phase tolerance of Definition Q.0.7u. Thus the closed-loop transfer map is a separate branch hypothesis until derived from finite horizon scattering data.
+on the same registered domain and tolerance, the records do not imply that transfer law. An accepted horizon transfer record $\mathfrak T_{\mathrm{hor}}$ supplies the additional scattering map, loop time, MPU-cycle phase, domain, and phase tolerance of Definition Q.0.7u.
 
-*Proof.* The records $\mathfrak H_n^{\mathrm{ret}}$, $\mathfrak S_{\mathrm{hor},n}$, and the Appendix K design certificates are maps between retained algebras, exterior coarse records, moment operators, and trace/entropy norms. None of their entries contains a near-horizon scattering phase map, a loop-time identification, or a peak-position tolerance. Two finite horizon branches can therefore agree on retained conservation, recovery, and Page data while differing on scattering phase positions. By Theorem P.14.1f, the phase transfer law is non-identifiable from those records alone. Definition Q.0.7u lists the additional finite entries that make the phase-grid branch theorem-level. ∎
-**Corollary Q.0.20c (Landauer Horizon Spectroscopy Null Conditions).** *Within an independently validated Definition Q.0.7u transfer branch, the following observations falsify the Landauer phase-grid component of that branch:*
+*Proof.* The assumed completions have the same prior datum and inequivalent retained outputs, so they satisfy the non-identifiability criterion of Theorem P.14.1f. If an admissible completion violates the displayed inequality, that inequality cannot be a consequence of the shared prior constraints. The existence and admissibility of the two completions are separate hypotheses; they do not follow solely from the absence of an explicit scattering-map entry. Definition Q.0.7u specifies the additional record on which the phase-grid conclusions are conditional. ∎
+**Corollary Q.0.20c (Landauer Horizon Spectroscopy Null Conditions).** *Within an independently validated Definition Q.0.7u transfer branch, fix the admitted label domain, peak tolerance, and measurement-uncertainty protocol before comparison. The following statistically resolved observations falsify the Landauer phase-grid component of that branch:*
 
-1. *a statistically resolved resonance phase set whose reduced positions cannot be matched to*
+1. *a resonance phase set whose reduced positions cannot be assigned admitted labels satisfying*
 $$
-[N\ln2]_{2\pi}
+\operatorname{dist}_{2\pi}(\Pi(\omega_N,H),N\ln2)\le\varepsilon_{\mathrm{peak}}
 $$
-*within the stated instrumental and greybody-model phase uncertainty;*
+*after accounting for the registered instrumental and greybody-model phase uncertainty;*
 
-2. *a cross-horizon comparison in which matched labels fail the temperature-normalized collapse*
+2. *a cross-horizon comparison of the same registered labels whose reduced phases violate*
 $$
-\Pi(\omega_N,H)=[N\ln2]_{2\pi};
+\operatorname{dist}_{2\pi}(\Pi(\omega_N^{(1)},H_1),\Pi(\omega_N^{(2)},H_2))\le2\varepsilon_{\mathrm{peak}};
 $$
 
-3. *a finite-budget resolved label block whose adjacent reduced-phase gaps violate the three-gap bound.*
+3. *on the exact phase-matching subbranch $\varepsilon_{\mathrm{peak}}=0$, a resolved block of the first $N_{\max}$ labels whose adjacent reduced-phase gaps are incompatible with the three-gap bound after measurement uncertainty is included.*
 
-*Proof.* Item 1 contradicts Proposition Q.0.19. Item 2 contradicts Corollary Q.0.20a. Item 3 contradicts Corollary Q.0.20b. Each contradiction is conditional on the prior validation of Definition Q.0.7u; absent that branch, the null result rejects the transfer bridge rather than the SPAP/Landauer cost theorem itself. $\square$
+*Proof.* Item 1 contradicts Proposition Q.0.19 on its registered domain and tolerance. Item 2 contradicts the circular-distance inequality of Corollary Q.0.20a. Item 3 contradicts the zero-tolerance observed-grid consequence of Corollary Q.0.20b. Nonzero phase tolerance does not preserve the exact number of distinct measured gap lengths. Each contradiction is conditional on prior validation of Definition Q.0.7u; absent that branch, the null result rejects the transfer bridge rather than the SPAP/Landauer cost theorem itself. $\square$
 
 **Remark Q.0.19.1 (Numerical Phase Locations).** Substituting $\ln2\approx0.6931472$ and $2\pi\approx6.2831853$, the first nine phase-grid locations are
 $$
@@ -2239,7 +2324,7 @@ The next point is $10\ln2\bmod2\pi\approx0.6483$. In sector $k=1$, the positive-
 
 ## Q.1 Foundational Relation and the Optimization Goal
 
-This appendix relates the emergent Planck length $L_P$ to the MPU spacing $\delta$ on the Appendix-E area-law branch and then evaluates the relation on a specified intersection of channel branches. Equation E.9 gives
+This appendix relates the emergent Planck length $L_P$ to the MPU spacing $\delta$ on the capacity-achieving, entropy-saturating, additive-ledger branch of Theorem E.6 and then evaluates the relation on a specified intersection of channel branches. Adopt the same-family saturation $C(\mathcal E_N)=C_{\max}$ and the independent calibration $G_{\mathrm{op}}=G$, so that $L_P^2=G\hbar/c^3$. Under these identifications, Equation E.9 gives
 $$
 G=\frac{\eta\delta^2c^3}{4\hbar\chi C_{\max}}.
 \tag{Q.1}
@@ -2272,7 +2357,7 @@ $$
 This is a conditional allocation identity, not a consequence of SPAP or of physical reset heat. Alternative resource-partition rules give different $C_{\max}^*$ and therefore different values of $\delta/L_P$ in Sections Q.2.4 and Q.5.
 
 
-**Remark Q.10.1 (Bit-Budget Characterization).** Since $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$ and the minimal complex Hilbert carrier saturates $d_0=N_{\mathrm{vis}}^{\min}$ on the minimal branch, while the PCE reference uses structural $\varepsilon_0=\ln2$, the capacity-cost ratio has the structural form
+**Remark Q.10.1 (Bit-Budget Characterization).** Since $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$ and the minimal complex Hilbert carrier saturates $d_0=N_{\mathrm{vis}}^{\min}$ on the minimal branch, while the PCE reference uses structural $\varepsilon_0=\ln2$, the capacity-cost ratio, evaluated at $\varepsilon=\varepsilon_0$, has the structural form
 $$
 \frac{C_{\max}^*}{\varepsilon} = \frac{\ln(d_0)-\varepsilon}{\varepsilon} = K_0 - 1.
 $$
@@ -2280,7 +2365,7 @@ At $K_0=3$ this gives $C_{\max}^*/\varepsilon=2$: under the residual-budget rule
 
 ### Q.2.2 Correlation Factor: $\chi^* = 1$
 
-**Lemma Q.2.2 (Channel Independence on the Throughput-Saturated Branch).** Hold $(\delta,\eta,C_{\max})$ constant, assume the accepted objective is strictly increasing in the saturated ND-RID throughput, and assume $\chi=1$ is feasible. Then
+**Lemma Q.2.2 (Channel Independence on the Throughput-Saturated Branch).** Hold $(\delta,\eta,C_{\max})$ constant, assume the accepted optimization maximizes a utility strictly increasing in the saturated ND-RID throughput, and assume $\chi=1$ is feasible. Then
 $$
 \boxed{\chi^*=1.}
 \tag{Q.11}
@@ -2290,7 +2375,7 @@ $$
 
 ### Q.2.3 Packing Factor: $\eta^* = 1$
 
-**Lemma Q.2.3 (Ideal Packing on the Throughput-Saturated Branch).** Hold $(\delta,\chi,C_{\max})$ constant, assume the accepted objective is strictly increasing in the saturated ND-RID throughput, and assume $\eta=1$ is feasible. Then
+**Lemma Q.2.3 (Ideal Packing on the Throughput-Saturated Branch).** Hold $(\delta,\chi,C_{\max})$ constant, assume the accepted optimization maximizes a utility strictly increasing in the saturated ND-RID throughput, and assume $\eta=1$ is feasible. Then
 $$
 \boxed{\eta^*=1.}
 \tag{Q.12}
@@ -2428,30 +2513,30 @@ $$
 $$
 Cross multiplication gives the displayed ratio. Theorem 29 does not supply assumption 1, Theorem 46 does not supply assumption 3, and Lorentzian promotion remains governed by Corollary 46a and Appendix O. ∎
 
-**Proposition Q.6.1a (One-Link Clock-Rate Modulus).** Fix two cells at spacing $\delta>0$ and, for every rate $r>0$, let their continuous-time one-link dynamics have generator
+**Proposition Q.6.1a (One-Link Response-Clock Modulus).** Let two cells have spacing $\delta>0$ and, for every rate $r>0$, let their continuous-time one-link Markov dynamics have generator
 $$
 L_r
-=r\begin{pmatrix}-1&1\\[2pt]1&-1\end{pmatrix}.
+:=r\begin{pmatrix}-1&1\\[2pt]1&-1\end{pmatrix}.
 \tag{Q.6.1a.1}
 $$
-All members have the same adjacency, normalized uniform link weights, serialization class and spatial spacing. Starting in cell $0$, the probability of occupying cell $1$ at time $t$ is
+All members have the same adjacency, normalized uniform link weights, one-link jump ordering and spatial spacing. Starting in cell $0$, the probability of occupying cell $1$ at time $t$ is
 $$
 p_{01}^{(r)}(t)=\frac{1-e^{-2rt}}2.
 \tag{Q.6.1a.2}
 $$
-For any forward-locked threshold $0<\theta<1/2$, the attained passage time and associated speed are
+For a threshold $0<\theta<1/2$ registered before comparison, the time at which this ensemble occupancy response first reaches $\theta$ and its associated distance/time ratio are
 $$
 \tau_\theta(r)
-=-\frac{\ln(1-2\theta)}{2r},
+:=-\frac{\ln(1-2\theta)}{2r},
 \qquad
-v_\theta(r)=\frac{\delta}{\tau_\theta(r)}.
+v_\theta(r):=\frac{\delta}{\tau_\theta(r)}.
 \tag{Q.6.1a.3}
 $$
-Hence $r\mapsto\lambda r$ leaves every registered dimensionless graph and weight record unchanged while sending $\tau_\theta\mapsto\tau_\theta/\lambda$ and $v_\theta\mapsto\lambda v_\theta$. A dimensionful rate or clock calibration is therefore necessary to derive an attained frontier time from those structural records.
+These are response-threshold quantities. The random first jump time $T_{\mathrm{jump}}$ has $\Pr(T_{\mathrm{jump}}>t)=e^{-rt}$ and mean $1/r$, with no positive lower bound on individual waiting times. Thus $v_\theta$ is not an attained pathwise frontier speed, and this Markov family does not supply Proposition Q.6.1's positive minimum edge-update duration. Rescaling $r\mapsto\lambda r$ for $\lambda>0$ preserves the displayed spatial and dimensionless graph records but sends $\tau_\theta\mapsto\tau_\theta/\lambda$ and $v_\theta\mapsto\lambda v_\theta$. A dimensionful rate or clock calibration is necessary even to identify this response-threshold time from those structural records.
 
-*Proof.* Exponentiating (Q.6.1a.1), or diagonalizing it into eigenvalues $0$ and $-2r$, gives (Q.6.1a.2). Solving $p_{01}^{(r)}(t)=\theta$ gives (Q.6.1a.3), and the rescaling identities are immediate. ∎
+*Proof.* The generator eigenvalues are $0$ and $-2r$, giving (Q.6.1a.2). This occupancy probability is strictly increasing from $0$ to $1/2$, so solving $p_{01}^{(r)}(t)=\theta$ gives its unique threshold time (Q.6.1a.3). Before the first jump, the exit rate from cell $0$ is $r$, hence the survival law is $e^{-rt}$; it gives positive probability of a jump before every $t>0$. The rescaling identities follow by substitution. ∎
 
-**Resolution TV-Q-11-N1 (Metadata).** Exact domain: the two-cell uniform one-link carrier (Q.6.1a.1), all $r>0$, and every fixed $0<\theta<1/2$. Premises: spacing, adjacency, normalized weights and serialization are registered, but no dimensionful rate is. Equivalence: equality of those dimensionless structural records and of $\delta$. Budget: every $r,\theta$ in the displayed domain. Verifier: generator normalization, the matrix exponential and the passage-time rescaling. Falsifier: a clock functional of the registered dimensionless records that distinguishes $L_r$ from $L_{\lambda r}$. Provenance class: source-internal finite Markov countermodel. Downstream consumers: Proposition Q.6.1, Theorem 46 and `TV-Q-11`. The rate family gives `nonentailment` of the attained clock and frontier speed from spacing, adjacency and normalized weights alone. Deriving the rate and uniform frontier from the same retained microdynamics remains open.
+**Resolution TV-Q-11-N1 (Metadata).** Exact domain: the two-cell uniform one-link Markov carrier (Q.6.1a.1), all $r>0$, and every registered $0<\theta<1/2$. Premises: spacing, adjacency and normalized weights are registered, but no dimensionful rate is. Equivalence: equality of those dimensionless structural records and of $\delta$. Budget: every $r,\theta$ in the displayed domain. Verifier: generator normalization, its matrix exponential, the occupancy-threshold time and the first-jump survival law. Falsifier: a clock functional of the registered structural records that equals $\tau_\theta(r)$ for every rate. Provenance class: source-internal finite Markov countermodel. Downstream consumers: Proposition Q.6.1, Theorem 46 and `TV-Q-11`. The rate family gives `nonentailment` of this response clock from spacing, adjacency and normalized weights alone. A positive pathwise minimum duration and an attained propagation frontier require additional dynamics and clock certificates.
 
 ### Q.6.2 Temporal Scale on the Calibrated Branch
 
@@ -2483,7 +2568,7 @@ Off the serialized-frontier calibration branch, Equation Q.18 fixes only the spa
 
 - **Factor $d_0 = 8$:** Theorem 15 gives the finite operational-context floor $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$; Theorem 23 gives the Hilbert-carrier lower bound $d_0\ge N_{\mathrm{vis}}^{\min}$; and the minimal PCE branch used in the Appendix Z backbone selects $d_0 = 8$ (Theorem Z.2). This encodes the logical structure required for self-referential prediction.
 
-- **Factor $\varepsilon_0=\ln2$:** Definition 28 and Definition J.1 register the binary quotient, and Theorem J.1 supplies its structural log-cardinality. Lemma J.1 separately proves reset noninjectivity on its fixed-ready-state branch. Theorem 31 governs physical reset heat and is not used to define this factor.
+- **Factor $\varepsilon_0=\ln2$:** Definition 28 and Definition J.1 register the binary quotient, and Theorem J.1 supplies its structural log-cardinality. Lemma J.1 separately proves reset noninjectivity when its constant-ready-state architecture has a reachable pre-reset domain $A$ with $|A|>2$. Theorem 31 governs physical reset heat and is not used to define this factor.
 
 The dimensionless value $\sqrt{d_0\varepsilon_0}=\sqrt{8\ln2}$ combines the selected carrier dimension with the structural binary reference on the stated saturation branch; it is not a universal thermodynamic cost of self-reference.
 
@@ -2518,7 +2603,7 @@ The mutual consistency constraint relates the minimal-branch values $d_0 = 8$ an
 
 ### Q.6.4 Experimental Predictions
 
-**Prediction Q.6.1 (No Leading Lorentz-Violating MDR at the PCE Attractor).** Modified dispersion relations (MDRs) provide a generic phenomenological signature of theories with fundamental discretization scales [Amelino-Camelia 2013, Mattingly 2005]. On the joint branch consisting of the serialized-frontier calibration of Proposition Q.6.1, the full Corollary 46a/Appendix O Lorentzian-promotion package, and cone sharing by the retained propagation sector with no appended preferred-frame operator, leading-order Lorentz-violating MDR terms written separately in powers of $E$ and $p$ are absent:
+**Prediction Q.6.1 (No Leading Lorentz-Violating MDR at the PCE Attractor).** Modified dispersion relations (MDRs) are a widely studied candidate signature in quantum-spacetime phenomenology; their presence and form depend on the propagation model and are not implied by a fundamental discretization scale alone [Amelino-Camelia 2013, Sections 2.2.1 and 3.1–3.2; Mattingly 2005, Sections 2–3]. On the joint branch consisting of the serialized-frontier calibration of Proposition Q.6.1, the full Corollary 46a/Appendix O Lorentzian-promotion package, and cone sharing by the retained propagation sector with no appended preferred-frame operator, leading-order Lorentz-violating MDR terms written separately in powers of $E$ and $p$ are absent:
 $$
 E^2-p^2c^2=m^2c^4+\text{Lorentz-invariant corrections}.
 $$
@@ -2539,40 +2624,46 @@ $$
 \frac{\Delta v}{c}=\xi_n\left(\frac{E}{\Lambda_{\mathrm{MPU}}}\right)^n+O\!\left(\left(\frac{E}{\Lambda_{\mathrm{MPU}}}\right)^{n+1}\right),
 \qquad n\in\{1,2\},
 $$
-then, in this convention, the corresponding effective quantum-gravity scale is
+then, for $\xi_n\ne0$, the energy scale in the photon-dispersion convention of Vasileiou et al. (2013) and LHAASO Collaboration (2024), whose leading speed term is $\Delta v/c=-s(n+1)(E/E_{\mathrm{QG},n})^n/2$ with $s=-\operatorname{sgn}\xi_n$, is
 $$
-E_{\mathrm{QG},n}=\Lambda_{\mathrm{MPU}}\,|\xi_n|^{-1/n}.
+E_{\mathrm{QG},n}=\Lambda_{\mathrm{MPU}}\left(\frac{n+1}{2|\xi_n|}\right)^{1/n}.
 $$
-Thus an observational lower bound $E_{\mathrm{QG},n}>B_n$ constrains the non-attractor branch coefficient by
+Thus an observational lower bound $E_{\mathrm{QG},n}>B_n$ in that convention and for the corresponding sign constrains the non-attractor branch coefficient by
 $$
-|\xi_n|<\left(\frac{\Lambda_{\mathrm{MPU}}}{B_n}\right)^n.
+|\xi_n|<\frac{n+1}{2}\left(\frac{\Lambda_{\mathrm{MPU}}}{B_n}\right)^n.
 $$
-Published photon time-of-flight limits therefore constrain only appended LIV branches, not the Lorentz-invariant attractor branch. In particular, an order-one linear branch with $E_{\mathrm{QG},1}=\Lambda_{\mathrm{MPU}}\approx0.42466E_P$ is incompatible with bounds above $E_P$ such as Vasileiou et al. (2013) and LHAASO Collaboration (2024). An order-one quadratic branch at $\Lambda_{\mathrm{MPU}}$ is not excluded by those quoted quadratic limits, because their published lower bounds are far below $0.42466E_P$.
+Within the deterministic photon-dispersion and source-emission models of the cited timing analyses, these bounds constrain the appended LIV branch. For $|\xi_1|=1$, the scale $E_{\mathrm{QG},1}=\Lambda_{\mathrm{MPU}}\approx0.42466E_P$ is below their quoted linear lower limits above $E_P$. For $|\xi_2|=1$, the corresponding scale is $E_{\mathrm{QG},2}=\sqrt{3/2}\,\Lambda_{\mathrm{MPU}}\approx0.52010E_P$, which is above their quoted quadratic lower limits and is not excluded by those limits. This comparison retains each analysis's sign, confidence level and source-systematic assumptions.
 
-*Derivation.* The first formula defines the appended branch coefficient $\xi_n$. Rewriting $|\xi_n|(E/\Lambda_{\mathrm{MPU}})^n$ as $(E/E_{\mathrm{QG},n})^n$ gives $E_{\mathrm{QG},n}=\Lambda_{\mathrm{MPU}}|\xi_n|^{-1/n}$. The observational inequality follows by monotonicity. Since the PCE-attractor branch has no leading Lorentz-violating coefficient in Prediction Q.6.1, setting $\xi_n=0$ makes $E_{\mathrm{QG},n}=\infty$ in this parametrization and evades finite lower-bound exclusions. $\square$
+*Derivation.* Equating the magnitudes of the leading speed coefficients gives $|\xi_n|/\Lambda_{\mathrm{MPU}}^n=(n+1)/(2E_{\mathrm{QG},n}^n)$, which yields the scale and coefficient bound. The sign identity follows from the same coefficient comparison. If $\xi_n=0$, the order-$n$ scale is $E_{\mathrm{QG},n}=\infty$ by convention; any higher-order coefficients remain separate. The Lorentz-invariant attractor branch of Prediction Q.6.1 has no such leading LIV coefficient and is not excluded by finite lower limits on an appended branch's scale. $\square$
 
-**Theorem Q.6.2a (Finite Rotational MDR Class and Coefficient Nonentailment).** Fix $J\ge2$. A real, translation-invariant, spatially rotation- and parity-invariant scalar quadratic propagation equation with a canonically normalized local time-kinetic term, no mixed time--space derivatives, and a polynomial spatial symbol of order at most $2J$ has Fourier dispersion
+**Theorem Q.6.2a (Finite Rotational MDR Class and Coefficient Nonentailment).** Let $J\ge2$ be an integer. Consider a real, translation-invariant, spatially rotation- and parity-invariant scalar quadratic propagation equation whose only time-derivative term is the canonically normalized $\partial_t^2$, with no mixed time--space derivatives and a polynomial spatial symbol of order at most $2J$. Register the constant coefficient $\mu^2\ge0$, a positive quadratic coefficient $c^2$, and a scale $\delta>0$. Its Fourier dispersion has the form
 $$
 \omega^2(k)
-=\mu^2+c^2|k|^2
+:=\mu^2+c^2|k|^2
 +c^2\sum_{j=2}^{J}b_j\delta^{2j-2}|k|^{2j},
 \tag{Q.6.2a.1}
 $$
-after registering the low-energy coefficients $\mu^2$ and $c^2$. Conversely, every real coefficient vector $(b_2,\ldots,b_J)$ for which the right-hand side is nonnegative on the retained momentum window defines such a stable quadratic equation on that window. Neither the cutoff length $\delta$ nor the listed symmetries fixes any $b_j$.
+with real $b_j$. Conversely, every such coefficient vector for which the right-hand side is nonnegative on the retained momentum window defines a second-order equation with no exponentially growing Fourier mode on that window. A zero-frequency mode can still have a solution $A+Bt$, so nonnegativity alone is not boundedness of all solutions. Neither the cutoff length $\delta$ nor these symmetries determines any $b_j$.
 
-On the massless branch, if $b_j$ is the first nonzero coefficient and $|b_j|(\delta|k|)^{2j-2}\ll1$, then
+On the massless branch, take one registered coefficient vector and let $b_j$ be its first nonzero entry. As $x:=\delta|k|\to0$ along the positive-frequency branch with $|k|>0$,
 $$
 \frac{v_g(k)}c
-=1+\frac{2j-1}{2}b_j(\delta|k|)^{2j-2}
+:=1+\frac{2j-1}{2}b_j(\delta|k|)^{2j-2}
 +O\!\left((\delta|k|)^{2j}\right)
 +O\!\left(b_j^2(\delta|k|)^{4j-4}\right).
 \tag{Q.6.2a.2}
 $$
-Thus the Lorentz-invariant choice $b_2=\cdots=b_J=0$ and, for example, any sufficiently small $b_2>0$ are response-distinct stable completions with the same cutoff and structural symmetries.
+The remainder constants and the neighborhood where this expansion applies may depend on the full coefficient vector. Smallness of the first displayed correction alone does not control arbitrarily large higher coefficients. If every $b_j=0$, the massless positive-frequency branch has $v_g=c$. The choices $b_2=\cdots=b_J=0$ and $b_2>0$, $b_3=\cdots=b_J=0$, give distinct Fourier symbols with the same cutoff and structural symmetries and no exponentially growing modes. Their responses differ on any retained window containing nonzero momenta.
 
-*Proof.* Translation invariance diagonalizes the operator in Fourier space. Rotation and parity invariance make its spatial polynomial symbol a real polynomial in $|k|^2$; the normalized local time-kinetic premise contributes exactly $-\omega^2$, and the no-mixed-derivative premise excludes momentum-dependent coefficients of that term. Registering the constant and quadratic terms leaves exactly (Q.6.2a.1), and nonnegativity is the modewise stability condition. Expanding the positive square root of (Q.6.2a.1) and differentiating with respect to $|k|$ gives (Q.6.2a.2). The two displayed coefficient choices prove nonuniqueness. ∎
+*Proof.* Translation invariance diagonalizes the operator in Fourier space. Rotation and parity invariance make the real spatial polynomial a polynomial in $|k|^2$. The exact time-derivative premise contributes only $-\omega^2$, giving (Q.6.2a.1) after registering the constant and quadratic terms. For a retained Fourier mode, the equation is $\ddot f+\omega^2(k)f=0$: positive $\omega^2$ gives oscillations, zero gives $A+Bt$, and negative $\omega^2$ gives exponential solutions. This proves the stated modal scope.
 
-**Resolution TV-Q-12-N1 (Metadata).** Exact domain: real translation-, rotation-, parity- and time-reversal-invariant scalar quadratic operators with a canonically normalized local time-kinetic term, no mixed time--space derivatives and spatial order at most $2J$, on a fixed retained momentum window. Premises: registered $(\delta,c,\mu,J)$ and no microscopic coefficient map. Equivalence: equality of the Fourier response on that window. Budget: every stable real coefficient vector and every retained momentum. Verifier: polynomial-symbol classification, positivity and the group-velocity expansion. Falsifier: a symmetry or cutoff identity that forces the same $(b_2,\ldots,b_J)$ in the zero and nonzero completions. Provenance class: source-internal effective-operator classification and countermodel. Downstream consumers: Predictions Q.6.1--Q.6.2, Theorem Q.6.2b and `TV-Q-12`. The theorem classifies the finite rotational polynomial propagation class and leaves its MDR coefficients free. Theorem Q.6.2b separately proves that a smooth $\Gamma^+$-invariant scalar symbol has no anisotropic Taylor component below degree six. An astrophysical bound additionally specifies the scalar-to-polarization observable map, nuisance model and uncertainty record.
+For $\mu=0$, put $F(x)=1+\sum_{\ell=2}^Jb_\ell x^{2\ell-2}$. For the registered finite vector, $F(x)>0$ sufficiently near zero and $\omega=c|k|\sqrt{F(x)}$. Therefore
+$$
+\frac{v_g}c=\sqrt{F(x)}+\frac{xF'(x)}{2\sqrt{F(x)}}.
+$$
+Taylor expansion at $F(0)=1$ gives (Q.6.2a.2), with constants depending on the full polynomial. The zero and positive-$b_2$ examples prove coefficient nonuniqueness. ∎
+
+**Resolution TV-Q-12-N1 (Metadata).** Exact domain: real translation-, rotation-, parity- and time-reversal-invariant scalar quadratic operators with exactly the time term $\partial_t^2$, no other time or mixed derivatives, and spatial order at most $2J$, on a registered retained momentum window. Premises: registered $(\delta,c,\mu,J)$ with $\delta,c>0$, $\mu^2\ge0$, and no microscopic coefficient map. Equivalence: equality of the Fourier response on that window. Budget: every real coefficient vector with nonnegative $\omega^2$ there and every retained momentum; the low-momentum expansion concerns one registered full vector. Verifier: polynomial-symbol classification, the modal equation and the group-velocity expansion. Falsifier: a symmetry or cutoff identity forcing identical symbols for the zero and positive-$b_2$ completions. Provenance class: source-internal effective-operator classification and countermodel. Downstream consumers: Predictions Q.6.1--Q.6.2, Theorem Q.6.2b and `TV-Q-12`. The theorem classifies this exact second-order-time class and leaves its isotropic MDR coefficients free; zero-frequency linear drift is not excluded. Theorem Q.6.2b separately constrains the anisotropic Taylor components on its $\Gamma^+$-invariant branch. An astrophysical bound additionally specifies the scalar-to-polarization observable map, nuisance model and uncertainty record.
 
 **Theorem Q.6.2b (Rank-Six Anisotropy Floor for Shell-Symmetric Symbols).** Fix $J\ge1$. Let $\ell$ be a real polynomial of order at most $2J$ on the retained momentum window in $\mathbb R^4$ that is invariant under the group $\Gamma^{+}$ of Proposition C.6h; this polynomial premise holds for a registered Taylor truncation of the symbol of a real translation-invariant operator on the $D_4$ lattice whose coupling function is constant on $\Gamma^{+}$-orbits, in particular for equal-weight root-shell couplings, with finite support, or sufficient absolute moment bounds, and a controlled truncation remainder on the registered window as in Theorem Q.6.2a. Then every homogeneous component of $\ell$ of degree at most $5$ is a real multiple of a power of $|k|^2$, and the degree-$6$ component lies in the span of $|k|^6$ and $T_6(k)$ of (C.6h.1). In the normalization of (Q.6.2a.1), in which the degree-$2j$ stratum carries the prefactor $\delta^{2j-2}$ relative to the quadratic term, no coefficient choice within this class produces a rotation-noninvariant term at relative order $(\delta|k|)^0$ or $(\delta|k|)^2$: the lowest-order rotation-noninvariant contribution enters at relative order $(\delta|k|)^4$, is proportional to the single anisotropic pattern of $T_6$, and its two displayed equal-weight shell moments are the Lemma C.6f defects $-1/d_0$ and $+1/M$. Along every fixed direction $\hat k$ the restriction $\ell(|k|\hat k)$ is a polynomial in $|k|^2$ whose coefficients through $|k|^4$ are direction independent, with direction dependence first possible in the $|k|^6$ coefficient. On the joint branch of Prediction Q.6.1 extended by the registered premise that the retained propagation symbol is $\Gamma^{+}$-invariant, rotation-noninvariant dispersion terms at relative orders $(\delta|k|)^0$ and $(\delta|k|)^2$ are therefore absent, the first admissible one is the $T_6$ stratum at relative order $(\delta|k|)^4$. A propagation experiment tests this exclusion after its Lorentzian, polarization, and observable maps identify the measured coefficient with this scalar symbol. This supplies the anisotropic sector of the microscopic coefficient map of Resolution TV-Q-12-N1 on this branch: below rank six the anisotropic coefficients are not free parameters but vanish identically, while the isotropic coefficients remain nonentailed exactly as in Theorem Q.6.2a.
 

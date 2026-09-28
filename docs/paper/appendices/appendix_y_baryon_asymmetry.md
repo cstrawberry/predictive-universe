@@ -11,7 +11,8 @@ registered discrete, electroweak, binary-support, family, and Y.8 packages are
 independent inputs. Here $\mathfrak B_{\mathrm{disc}}$ is the conjunction of
 Theorem 15, Theorem 23, Theorem Z.2, Theorem Z.1, and Theorem Z.5 used for
 the displayed discrete tuple; $\mathfrak B_{EW}$ is the
-Definition-T.13/Theorem-T.5 Steiner-action branch;
+Definition-T.13/Theorem-T.5 Steiner-action branch with an accepted
+Principle-T.13a electroweak action-transport certificate;
 $\mathfrak B_{\mathrm{bin}}$ is the registered binary-support branch of
 Definition 28, Definition J.1, and Theorem J.1;
 $\mathfrak B_g$ is Proposition R.3.5.1a's exact family-realization branch;
@@ -50,9 +51,9 @@ PU output.
 
 ### Y.2.1 The NOT Operation and Binary Duality
 
-**Recall from Theorem 10 (SPAP).** Any non-trivial predictive system $\mathcal{P}$ attempting to predict its own future state $\phi_{t+1}$ while the prediction $p$ is stored internally generates a logical contradiction resolved by the update rule
+**Recall from Theorem 10 (SPAP).** On the finite operational property class satisfying Theorem 10's diagonal-closure hypotheses, a uniformly perfect self-predictor $\mathcal P$ is excluded by the admissible diagonal system whose update is
 $$\phi_{t+1} = \text{NOT}(p_{\text{stored}}).$$
-This binary contradiction is the source of the duality structure used below.
+This binary diagonal obstruction supplies the logical duality used below on that branch.
 
 The NOT operation on binary states generates two complementary branches:
 - Branch $\mathcal{A}$: prediction was 0 → outcome is 1
@@ -69,7 +70,7 @@ This proposition establishes a correspondence principle between logical and phys
 | $\mathbb{Z}_2$ symmetry | Discrete exchange symmetry in the chosen sector |
 | 2-to-1 merge | Effective annihilation / branch-selection analogue |
 
-*Proof.* The SPAP update rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$ acts on the binary set $\{0,1\}$, and NOT is the unique non-trivial involution on that set. Therefore the predictive state space carries a canonical $\mathbb{Z}_2$ action. By the Principle of Physical Instantiation (Definition P.6.2), any concrete realization of this two-branch structure must choose a physical involution exchanging the two branches. In a relativistic particle-antiparticle sector, a natural choice is charge conjugation $\mathsf{C}$. The CPT theorem [Pauli 1955; Lüders 1954] guarantees that such a charge-conjugation operator fits consistently into the usual discrete-symmetry structure of local relativistic QFT, but it does not by itself prove that every predictive $\mathbb{Z}_2$ involution must equal $\mathsf{C}$. After adopting this modeling identification, one may choose a basis $|0\rangle,|1\rangle$ with
+*Proof.* The SPAP update rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$ acts on the binary set $\{0,1\}$, and NOT is the unique non-trivial involution on that set. Therefore the predictive state space carries a canonical $\mathbb{Z}_2$ action. By the Principle of Physical Instantiation (Definition P.6.2), any concrete realization of this two-branch structure must choose a physical involution exchanging the two branches. In a relativistic particle-antiparticle sector, a natural choice is charge conjugation $\mathsf{C}$. On the Wightman/Jost branch of Theorem F.4, a CPT antiunitary acts on charge-conjugate fields under its stated hypotheses. That combined CPT action does not supply a standalone $\mathsf{C}$ involution on the selected binary sector or identify predictive NOT with $\mathsf{C}$; these are separate physical modeling and realization assumptions. After adopting this modeling identification, one may choose a basis $|0\rangle,|1\rangle$ with
 $$
 \mathsf{C}|0\rangle = |1\rangle, \qquad \mathsf{C}|1\rangle = |0\rangle.
 $$
@@ -79,7 +80,7 @@ The proposition therefore establishes the predictive-involution–charge-conjuga
 
 **Recall from Definition 28, Theorem J.1, and Theorem 31.** Definition 28 registers the reachable binary verification quotient, and Theorem J.1 gives its structural log-cardinality $\varepsilon_0=\ln2$. Theorem 31 gives the separate registered-reset bound $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; a physical $\ln2$ lower bound additionally requires a conditionally uniform binary record with no retained copy.
 
-**Corollary Y.1.1** (Irreversible Branch Selection). Suppose a nontrivial SPAP cycle carries the independently registered single-outcome branch and subsequently executes a reachable noninjective binary record reset satisfying Definition 28, Lemma J.1, and Theorem 31. The actualization retains one verification branch, while the reset merges the two record alternatives; it exports at least $\ln2$ nats of bath entropy only when the discarded binary label is conditionally uniform and no usable copy is retained as side information. Let $\mathcal E_\Omega$ be a finite set of baryon-relevant update events in a finite spacetime region $\Omega$, equipped with the model-level charge-conjugation pairing $e\mapsto\bar e$ from Proposition Y.1 and an orientation character
+**Corollary Y.1.1** (Irreversible Branch Selection). Suppose a nontrivial SPAP cycle carries the independently registered single-outcome branch and subsequently executes a reachable noninjective binary record reset satisfying Definition 28, Lemma J.1, and Theorem 31. The actualization retains one verification branch, while the reset merges the two record alternatives; its conditional Landauer lower bound is $H_q(P\mid R)$ nats, which equals $\ln2$ exactly when the discarded binary label is uniform conditional on all retained side information $R$. The actual bath entropy can reach or exceed $\ln2$ at smaller conditional entropy through excess dissipation. Let $\mathcal E_\Omega$ be a finite set of baryon-relevant update events in a finite spacetime region $\Omega$, equipped with the model-level charge-conjugation pairing $e\mapsto\bar e$ from Proposition Y.1 and an orientation character
 $$
 \chi(e)\in\{+1,-1\},
 \qquad
@@ -138,13 +139,13 @@ with the preparation, labels, units, transformation conventions, residual interv
 
 ### Y.3.1 Baryon Number Non-Conservation
 
-The gauge structure $\mathfrak{g} = \mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ emerges as PCE-preserving automorphisms of predictive frames (Theorem G.8.4b). On this branch the gauge anomaly classes vanish by the predictive-descent requirement of Theorem X.8d and Section G.8.2.3. The current $B+L$ is not a gauge/frame redundancy; it is a global current. Its electroweak anomaly is therefore an admissible physical update channel rather than a failure of predictive descent. On the retained $SU(2)_L$ topological-transition branch, assume that the integrated hypercharge and gravitational Pontryagin contributions to the $B+L$ Ward identity vanish. The remaining $SU(2)_L$ contribution is
+On the full-block capacity branch of Corollary G.8.4c, the selected gauge algebra is $\mathfrak g=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$. Assume, independently, the accepted Standard-Model chiral electroweak matter representation and a vanishing total gauge-anomaly certificate. On its connected regular nonvanishing-source branch, Theorem X.8d supplies the descent criterion in the declared local-functional groupoid cohomology. Corollary X.8d.1 requires a completeness comparison with the physical anomaly data and a separate audit of any uncovered global or bordism obstruction; this cohomology is not asserted to be torsion-free. The current $B+L$ is not a gauge/frame redundancy; it is a global current. Its electroweak anomaly is therefore an admissible physical update channel. For the local Ward identity on the retained $SU(2)_L$ topological-transition branch, assume that the hypercharge and gravitational Pontryagin terms vanish pointwise. The remaining $SU(2)_L$ contribution is
 
 $$\partial_\mu J_{B+L}^\mu = \frac{N_g g^2}{16\pi^2} W^a_{\mu\nu}\tilde{W}^{a\mu\nu}. \tag{Y.1}$$
 
 where $N_g$ is the number of generations. Theorem R.3.4 gives the minimal admissible count $N_{\min}=3$ in the anomaly-plus-CP family-charge class, and Proposition R.3.5.1a gives the exact realized value $N_g=3$ on the pre-flavor family-redundancy PPI branch used here. The tensor $W^a_{\mu\nu}$ is the $SU(2)_L$ field strength, and $\tilde{W}^{a\mu\nu} = \frac{1}{2}\epsilon^{\mu\nu\rho\sigma}W^a_{\rho\sigma}$ is its dual.
 
-*Derivation.* Use the Adler–Bell–Jackiw chiral-anomaly theorem (Adler, 1969; Bell and Jackiw, 1969) with $SU(2)$ generators normalized in the fundamental representation by $\operatorname{tr}(T^aT^b)=\frac12\delta^{ab}$. A unit global charge carried by one left-handed $SU(2)_L$ doublet then has
+*Derivation.* Adler (1969) and Bell and Jackiw (1969) establish the historical axial-anomaly mechanism. For the non-Abelian group-trace formula used here, use Fujikawa (1979), Eqs. (14) and (18). A left-handed Weyl doublet contributes one half of the corresponding Dirac axial coefficient, with the sign fixed by the convention of Equation (Y.1). With $SU(2)$ generators normalized in the fundamental representation by $\operatorname{tr}(T^aT^b)=\frac12\delta^{ab}$, a unit global charge carried by one left-handed $SU(2)_L$ doublet then has
 $$
 \partial_\mu j^\mu
 =\frac{g^2}{32\pi^2}
@@ -195,7 +196,7 @@ nondegeneracy, response, and rephasing certificate.
 On a registered physical-reset branch, Theorem 31 gives $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; strict positivity requires an additional positive conditional-entropy floor. The cosmological arrow of time and nonzero predictive-update cost do not by themselves prove that the retained electroweak state departs from KMS stationarity. In the PU baryogenesis mechanism, active sphalerons produce a net yield only when an accepted $\dot\theta_{\mathrm{PU}}$, boundary/inflow, nonstationary preparation, or freeze-out record discharges Theorem Y.6.1i; $e^{-\kappa_B}$ is only a multiplicative branch weight.
 
 *Proof of Theorem Y.2.*  
-(1) On the SM-gauge branch of Theorem G.8.4b, Equation (Y.1) gives $\partial_\mu J^\mu_{B+L}\ne0$ whenever an active transition has nonzero integrated topological density $W\widetilde W$. Hypotheses (i) and (iii) therefore supply baryon-number violation.  
+(1) On the gauge, matter, and anomaly branch of Section Y.3.1, Equation (Y.1) gives $\partial_\mu J^\mu_{B+L}\ne0$ somewhere whenever an active transition has nonzero integrated topological density $W\widetilde W$. Hypotheses (i) and (iii) therefore supply baryon-number violation.  
 (2) Hypothesis (ii) supplies two independently checked response contrasts. The accepted chiral charged-current record gives $\Delta_C\ne0$, and the accepted CP record gives $\Delta_{CP}\ne0$. On a flavor specialization, Convention T.54 supplies only the assigned base phase, Theorem T.54b gates its geometric reading, and the exact Theorem-T.53 subrecord inside $\mathfrak C_{\mathrm{fl}}$ gates its physical CP reading. Neither nonzero CP phase nor a Jarlskog invariant implies the separate $C$ contrast; Equation (Y.2.0) verifies it directly.  
 (3) Hypothesis (iii), through Theorems Y.6.1i--Y.6.1j and Corollary Y.6.1k, supplies the response-active nonstationary transport, boundary/inflow, preparation, or freeze-out record. This is the required departure from thermal equilibrium. The reset-heat bound of Theorem 31 and the macroscopic arrow of Appendix O do not replace this baryogenesis-specific hypothesis, and $e^{-\kappa_B}$ is only a branch weight. Hence baryon-number violation, $C$ violation, CP violation, and departure from equilibrium hold exactly under hypotheses (i)--(iii), with no unconditional claim from the bare PU axioms. ∎
 
@@ -206,7 +207,7 @@ On a registered physical-reset branch, Theorem 31 gives $\varepsilon_{\mathrm{re
 
 ### Y.4.1 Chern-Simons Number and Vacuum Structure
 
-**Definition Y.3** (Chern-Simons Functional). *Let $T_a$ be Hermitian fundamental generators with $\operatorname{tr}(T_aT_b)=\frac12\delta_{ab}$, and let $\mathcal A=-igW^aT_a$ be the dimensionless anti-Hermitian $SU(2)$ connection on a spatial hypersurface $\Sigma$. With $F=d\mathcal A+\mathcal A\wedge\mathcal A$, define*
+**Definition Y.3** (Chern-Simons Functional). *Let $T_a$ be Hermitian fundamental generators with $\operatorname{tr}(T_aT_b)=\frac12\delta_{ab}$, and let $\mathcal A=-igW^aT_a$ be the dimensionless anti-Hermitian $SU(2)$ connection on a closed oriented spatial hypersurface $\Sigma$, or on a spatial hypersurface whose specified compactification and falloff conditions extend the connection to such a closed hypersurface. With $F=d\mathcal A+\mathcal A\wedge\mathcal A$, define*
 
 $$
 N_{CS}(\Sigma)
@@ -245,7 +246,7 @@ Q_W=N_{CS}(\Sigma_f)-N_{CS}(\Sigma_i).
 $$
 Therefore $\Delta(B+L)=2N_gQ_W=2N_g\Delta N_{CS}$. ∎
 
-**Corollary Y.4a (Electroweak Anomaly as an Admissible Predictive Update Channel).** On the SM-gauge branch of Theorem G.8.4b, the electroweak relation in Theorem Y.4 is compatible with Predictive Anomaly Descent. The gauge anomaly class vanishes, while the $B+L$ anomaly is a global-current update channel:
+**Corollary Y.4a (Electroweak Anomaly as an Admissible Predictive Update Channel).** On the gauge, matter, and anomaly branch of Section Y.3.1, the electroweak relation in Theorem Y.4 is compatible with Predictive Anomaly Descent. The total gauge anomaly class vanishes by the accepted anomaly certificate, while the $B+L$ anomaly is a global-current update channel:
 $$
 [\mathcal A_{\mathrm{gauge}}^{\mathrm{tot}}]=0,
 \qquad
@@ -255,7 +256,7 @@ $$
 $$
 Thus baryon-plus-lepton number changes are physical transitions between topological sectors, not inconsistencies of the gauge quotient.
 
-*Proof.* Gauge transformations belong to the redundancy groupoid $\mathcal R$ of Theorem X.8d, so their anomaly class must vanish for the branch to be admissible. This is precisely the anomaly-free SM-gauge hypothesis propagated through Theorem G.8.4b. The $B+L$ transformation is not part of the gauge quotient on this branch; it labels a global current. By Corollary X.8d.1, a nonzero Ward identity for such a current is a physical update channel rather than a descent obstruction. Integrating that Ward identity over $\mathcal V$ gives Theorem Y.4, so the topological transition changes $B+L$ while preserving gauge consistency. ∎
+*Proof.* Gauge transformations belong to the redundancy groupoid $\mathcal R$ of Theorem X.8d. On the regular nonvanishing-source branch, that theorem requires local/free anomaly descent. The accepted total anomaly certificate in Section Y.3.1 also discharges the independent global/torsion criterion of Corollary X.8d.1. The $B+L$ transformation is not part of the gauge quotient on this branch; it labels a global current. By Corollary X.8d.1, a nonzero Ward identity for such a current is a physical update channel rather than a descent obstruction. Integrating that Ward identity over $\mathcal V$ gives Theorem Y.4, so the topological transition changes $B+L$ while preserving gauge consistency. ∎
 
 ### Y.4.2 Sphaleron Transitions
 
@@ -263,7 +264,7 @@ At temperatures $T \gtrsim 100$ GeV, thermal fluctuations can excite the gauge-H
 
 $$\frac{\Gamma_{\text{sph}}}{V} = \kappa_{\text{sph}} \alpha_W^5 T^4 \tag{Y.4}$$
 
-with $\kappa_{\text{sph}} \approx 18 \pm 3$ from lattice simulations and $\alpha_W = g^2/(4\pi) \approx 1/30$.
+with $\kappa_{\text{sph}} \approx 18 \pm 3$ from the cited lattice simulation and $\alpha_W:=g^2/(4\pi)$. The illustrative value $\alpha_W\approx1/30$ used below is arithmetic from explicitly chosen inputs, not a measured value established by this citation.
 
 **Definition Y.4.1 (Registered CP Transport Affinity).** Let $A_{CP}(t)$ be the dimensionless signed affinity obtained from a specified nonequilibrium transport calculation.
 
@@ -286,16 +287,22 @@ The lattice sphaleron rate does not supply $A_{CP}$, and no universal factor $1/
 $$
 D_{X,\mathbf2}^+:\Gamma(S^+\otimes E_{\mathbf2})\longrightarrow\Gamma(S^-\otimes E_{\mathbf2})
 $$
-carry Atiyah-Patodi-Singer boundary conditions. Define
+carry spectral boundary conditions in the collar convention whose tangential operators are $D_{\Sigma_f}$ at the final boundary and $-D_{\Sigma_i}$ at the initial boundary:
+$$
+P_{\ge0}(D_{\Sigma_f})\psi|_{\Sigma_f}=0,
+\qquad
+P_{>0}(-D_{\Sigma_i})\psi|_{\Sigma_i}=0.
+$$
+Here $P_{\ge0}(A)$ and $P_{>0}(A)$ are the spectral projections onto the indicated eigenvalues of the self-adjoint operator $A$. Thus final zero modes are excluded and initial zero modes are allowed. The adjoint uses the complementary boundary domain determined by Green's formula. This endpoint convention is part of the retained operator data. Define
 $$
 \operatorname{Ind}_{\mathrm{upd}}(D_X)
-:=dim\ker D_{X,\mathbf2}^+-\dim\ker(D_{X,\mathbf2}^+)^*.
+:=\dim\ker D_{X,\mathbf2}^+-\dim\ker(D_{X,\mathbf2}^+)^*.
 \tag{Y.12a}
 $$
 
 Assume that the degree-four gravitational contribution to $\widehat A(TX)\operatorname{ch}(E_{\mathbf2})$ vanishes and that the finite-action gauge history has pure-gauge endpoints whose boundary Dirac operators are unitarily equivalent. Then the eta and kernel differences of those endpoints vanish and
 $$
-Q_W=\Delta N_{mathrm{CS}}.
+Q_W=\Delta N_{\mathrm{CS}}.
 $$
 
 **Theorem Y.4.3b (Predictive Index Theorem for Baryon Update).** Under the hypotheses of Definition Y.4.3a,
@@ -321,7 +328,21 @@ $$
 \tag{Y.12c}
 $$
 
-*Proof.* The Atiyah-Patodi-Singer index theorem (Atiyah, Patodi, and Singer, 1975) applies because $X$ is compact, spin, and product near its boundary and because the APS realization is Fredholm. It gives (Y.12b), with the opposite orientations of $\Sigma_f$ and $\Sigma_i$ producing the displayed eta/kernel difference. For the fundamental representation, $2T(\mathbf2)=1$, so the gauge part of the degree-four Chern character integrates to $Q_W$. The gravitational contribution vanishes by hypothesis, and unitary equivalence of the pure-gauge endpoint operators gives $\eta(D_{\Sigma_f})=\eta(D_{\Sigma_i})$ and $h_f=h_i$. Thus (Y.12b) reduces to $\operatorname{Ind}_{\mathrm{upd}}(D_X)=Q_W$. Chern-Weil transgression for the normalized connection gives $Q_W=\Delta N_{CS}$. Finally, in each generation the three quark doublets have total baryon charge $3(1/3)=1$ and the lepton doublet has lepton charge $1$, so weighting the one-doublet index gives $\Delta(B+L)=2N_gQ_W$. ∎
+*Proof.* The Atiyah-Patodi-Singer index theorem (Atiyah, Patodi, and Singer, 1975) applies because $X$ is compact, spin, and product near its boundary. For the ordinary APS domain $\mathcal D_0$, which excludes nonnegative eigenmodes on both oriented boundary components, it gives
+$$
+\operatorname{ind}D_0
+=
+\int_X\widehat A(TX)\operatorname{ch}(E_{\mathbf2})\big|_4
+-\frac{\eta(D_{\Sigma_f})-\eta(D_{\Sigma_i})+h_f+h_i}{2}.
+$$
+The sign reversal of the initial tangential operator changes its eta invariant and preserves its kernel dimension. The domain $\mathcal D_1$ in Definition Y.4.3a allows precisely the initial zero modes, so the boundary trace and a collar extension identify $\mathcal D_1/\mathcal D_0$ with $\ker D_{\Sigma_i}$. For the two Fredholm realizations of the same differential operator, the exact sequence
+$$
+0\longrightarrow\ker D_0\longrightarrow\ker D_1
+\longrightarrow\mathcal D_1/\mathcal D_0
+\longrightarrow\operatorname{coker}D_0
+\longrightarrow\operatorname{coker}D_1\longrightarrow0
+$$
+gives $\operatorname{ind}D_1-\operatorname{ind}D_0=h_i$. Adding $h_i$ to the ordinary APS formula proves (Y.12b) for the stated endpoint convention. For the fundamental representation, $2T(\mathbf2)=1$, so the gauge part of the degree-four Chern character integrates to $Q_W$. The gravitational contribution vanishes by hypothesis, and unitary equivalence of the pure-gauge endpoint operators gives $\eta(D_{\Sigma_f})=\eta(D_{\Sigma_i})$ and $h_f=h_i$. Thus (Y.12b) reduces to $\operatorname{Ind}_{\mathrm{upd}}(D_X)=Q_W$. Chern-Weil transgression for the normalized connection gives $Q_W=\Delta N_{CS}$. Finally, in each generation the three quark doublets have total baryon charge $3(1/3)=1$ and the lepton doublet has lepton charge $1$, so weighting the one-doublet index gives $\Delta(B+L)=2N_gQ_W$. ∎
 
 **Corollary Y.4.3c (Primitive APS Index, Conditional Spectral Flow, and Charge-Weighted Update).** Under the hypotheses of Definition Y.4.3a, set
 $$
@@ -342,7 +363,7 @@ $$
 \qquad
 \Delta(B+L)=2N_g I_{\mathrm{upd}}.
 $$
-If, in addition, $X$ carries a registered product-cobordism identification and a gap-continuous $C^1$ family $\{D_{\Sigma,t}\}_{t_i\le t\le t_f}$ of self-adjoint Fredholm boundary Dirac operators with common Sobolev domain, the same endpoint zero-mode convention as Definition Y.4.3a, and a unitary identification of the APS realization of $D_{X,\mathbf2}^+$ with the suspension $\partial_t+D_{\Sigma,t}$, then
+If, in addition, $X$ carries a registered product-cobordism identification and a family $\{D_{\Sigma,t}\}_{t_i\le t\le t_f}$ on $H=L^2(\Sigma,S\otimes E_{\mathbf2})$ with a common dense Sobolev domain $W$, compact inclusion $W\hookrightarrow H$, and norm-continuous map $t\mapsto D_{\Sigma,t}$ in $\mathcal B(W,H)$ when $W$ has the graph norm of $D_{\Sigma,t_i}$, suppose each $D_{\Sigma,t}$ is self-adjoint on $W$. Require a unitary identification of the APS realization of $D_{X,\mathbf2}^+$ with the closure of $\partial_t+D_{\Sigma,t}$ on $L^2([t_i,t_f],H)$ whose initial endpoint values lie in $H_{<0}(D_{\Sigma,t_i})$ and final endpoint values lie in $H_{\ge0}(D_{\Sigma,t_f})$. Use the spectral-flow convention paired with these projectors, including endpoint zero modes. Only on this registered branch do we have
 $$
 \operatorname{SF}\{D_{\Sigma,t}\}
 =
@@ -350,7 +371,7 @@ I_{\mathrm{upd}}.
 $$
 Thus the Chern-Simons change and, on the registered suspension branch, chiral spectral flow share the primitive integer $I_{\mathrm{upd}}$, whereas the baryon and lepton updates are its charge- and family-weighted images. These transition-level identities do not determine an ensemble-averaged baryon asymmetry, its sign, its rate, or its washout survival.
 
-*Proof.* The first display is Theorem Y.4.3b. The anomaly charge count in Section Y.3.1 assigns total baryon weight one to the three colored quark doublets and total lepton weight one to the lepton doublet in each generation, giving the second display by linearity. Under the additional suspension data, the APS spectral-flow theorem gives the third display with the registered endpoint convention. The final distinction follows because multiplying an index by charge and family weights is not equality of the resulting observables, and a transition index contains no ensemble transport or washout data. ∎
+*Proof.* The first display is Theorem Y.4.3b. The anomaly charge count in Section Y.3.1 assigns total baryon weight one to the three colored quark doublets and total lepton weight one to the lepton doublet in each generation, giving the second display by linearity. Under the additional product-cobordism, common-domain, compact-inclusion, norm-continuity, and endpoint-projector assumptions above, van den Dungen and Ronge (2021, Theorem 4.9, doi:10.7153/oam-2021-15-87) gives $\operatorname{Ind}_{\mathrm{APS}}(\partial_t+D_{\Sigma,t})=\operatorname{SF}\{D_{\Sigma,t}\}$, including noninvertible endpoints with the stated projector convention. The stipulated unitary identification and $I_{\mathrm{upd}}=\operatorname{Ind}_{\mathrm{APS}}(D_{X,\mathbf2}^+)$ give the third display. The final distinction follows because multiplying an index by charge and family weights is not equality of the resulting observables, and a transition index contains no ensemble transport or washout data. ∎
 
 ## Y.5 CP-Odd Berry Datum and Driven Baryon Transport
 
@@ -435,7 +456,7 @@ $\mathcal F_+$.*
 $c_{EW}(\widetilde\Sigma)$, then
 $\delta_{\mathrm{hol}}\mapsto-\delta_{\mathrm{hol}}$ modulo $2\pi$.  This
 CP-odd datum can enter a baryon source only through an accepted
-Berry-to-electroweak matching and operator certificate of Theorems
+Berry-to-electroweak matching and operator certificate in statements
 Y.6.1--Y.6.1h together with the response-active nonequilibrium gate of
 Theorems Y.6.1i--Y.6.1j.*
 
@@ -451,7 +472,7 @@ $$
 =-\int_{\widetilde\Sigma}\mathcal F_{EW},
 $$
 which proves CP oddness of the geometric datum.  The matching/operator gates
-are Theorems Y.6.1--Y.6.1h, and the independent response-active source gate is
+are statements Y.6.1--Y.6.1h, and the independent response-active source gate is
 Theorem Y.6.1i. ∎
 
 For the flavor-changing loop $\gamma:u_3\to d_3\to d_2\to u_2\to u_3$, Convention T.54 assigns the conventional base-phase parameter
@@ -553,18 +574,17 @@ The final limit follows because $e^{2\mathcal S\sin\delta}\to\infty$. ∎
 
 ### Y.5.4 Comparison with Spontaneous Baryogenesis
 
-The PU mechanism has structural similarities to spontaneous baryogenesis [Cohen & Kaplan 1987, 1988]. 
+The PU mechanism has a structural analogy to spontaneous baryogenesis [Cohen, Kaplan & Nelson 1993, §4.3]. The equations below refer to the authors' adiabatic thick-wall model, not to a universal baryogenesis yield.
 
-**Spontaneous Baryogenesis (Cohen-Kaplan):**
+**Spontaneous Baryogenesis (Cohen–Kaplan mechanism):**
 
-A time-dependent scalar field $\phi(t)$ couples to the baryon current:
-$$\mathcal{L}_{int} = \frac{\partial_\mu \phi}{M} J_B^\mu$$
+A changing dimensionless phase $\theta(t)$ can induce a derivative-current interaction $\partial_\mu\theta J_X^\mu$. Chemical-equilibrium constraints then give a model-dependent baryon charge potential $\mu_B=N\dot\theta$, where $N$ depends on the chosen current and plasma reactions.
 
-This induces an effective chemical potential:
-$$\mu_B = \frac{\dot{\phi}}{M}$$
-
-The baryon asymmetry generated is:
-$$\eta_B^{CK} \propto \frac{\dot{\phi}}{M T} \cdot \frac{\Gamma_{sph}}{H}$$
+In the authors' adiabatic thick-wall model the generated baryon density is
+$$
+n_B=-\frac{9N}{T}\int_{-\infty}^{t_{co}}dt\,\dot\theta(t)\,\Gamma_a(\phi(t)).
+$$
+Here $\Gamma_a$ is the anomalous transition rate per unit volume, and its time profile and shutoff are model data [Cohen, Kaplan & Nelson 1993, arXiv:hep-ph/9302210v1, Eqs. (4.7)–(4.9)]. A baryon-to-entropy ratio requires division by $s$ and a survival/washout history. A factor $\Gamma_B/H$ can arise in a separately specified slow-relaxation approximation with a susceptibility-normalized rate $\Gamma_B$, but no universal product $(\dot\phi/MT)(\Gamma_{sph}/H)$ follows.
 
 **PU Baryogenesis:**
 
@@ -578,7 +598,7 @@ $$
 $$
 where $f$ is odd and $2\pi$-periodic and $\chi_{CP}$ is determined by an accepted matching certificate. The phase is
 $$
-\delta_{\mathrm{hol}}\equiv\oint_\gamma\mathcal A\pmod{2\pi}.
+\delta_{\mathrm{hol}}\equiv\oint_{\widetilde\gamma}\mathcal A_{EW}\pmod{2\pi}.
 $$
 
 $$
@@ -597,15 +617,15 @@ Static factors such as $\tanh(\mathcal S\sin\delta)$ and $e^{-\kappa_B}$ may occ
 | Scalar field $\phi$ | Berry phase $\gamma$ | CP-odd datum; $\dot\theta_{\mathrm{PU}}$ or boundary inflow is the source |
 | $\dot{\phi}/M$ | $\dot\theta_{\mathrm{PU}}$ or accepted boundary/inflow | response-active source; $\sin\delta$ is a CP-odd weight |
 | Driven $\dot\theta_{\mathrm{PU}}$, boundary inflow, or freeze-out | accepted APS-Kubo source and $f_{\mathrm{neq}}$ | response-active departure from equilibrium |
-| $\Gamma_{sph}/H$ | certified $\Gamma_{CS}/H$ and transport kernel | transition activity relative to expansion; the separate factor $\tanh(\mathcal S\sin\delta)$ is a CP-odd rate bias |
+| $\Gamma_a$ integrated over the source-active interval (CK adiabatic model) | certified susceptibility-normalized $\Gamma_B$ and transport kernel, with expansion/freeze-out separately registered | rate history and normalization determine the yield; bare $\Gamma_{CS}/H$ retains inverse-volume units, and $\tanh(\mathcal S\sin\delta)$ is a separate CP-odd rate bias |
 
 **Key Differences:**
 
-1. **Origin of the CP-odd datum:** Cohen-Kaplan takes the scalar field and its current coupling as model data. The PU branch instead uses the canonical determinant line over $\operatorname{Gr}(2,8)$, but its pullback to electroweak configuration space requires the registered map $\Gamma_{\mathrm{fl}}^{\mathrm{conf}}$. A CP-odd holonomy additionally requires the retained loop, the CP involution with $c_{EW}^*\mathcal F_{EW}=-\mathcal F_{EW}$, and the associated orientation data. Its promotion to a baryogenesis source further requires the Berry-to-electroweak matching, operator, and response-active transport certificates of Theorems Y.6.1--Y.6.1j. The generation-manifold geometry alone does not derive a physical CP source.
+1. **Origin of the CP-odd datum:** Cohen-Kaplan takes the scalar field and its current coupling as model data. The PU branch uses the canonical determinant line over $\operatorname{Gr}(2,8)$, but its pullback to electroweak configuration space requires the registered map $\Gamma_{\mathrm{fl}}^{\mathrm{conf}}$. A CP-odd holonomy additionally requires the retained loop, the CP involution with $c_{EW}^*\mathcal F_{EW}=-\mathcal F_{EW}$, and the associated orientation data. Its promotion to a baryogenesis source further requires the Berry-to-electroweak matching, operator, and response-active transport certificates in statements Y.6.1--Y.6.1j. The generation-manifold geometry alone does not derive a physical CP source.
 
-2. **Time dependence:** Cohen-Kaplan requires explicit $\dot{\phi}(t)$ during a phase transition. PU requires time dependence to appear explicitly in the certified $\dot\theta_{\mathrm{PU}}$, boundary/inflow, nonstationary preparation, or freeze-out entry.
+2. **Time dependence:** The reviewed adiabatic mechanism requires an explicit varying phase $\dot\theta(t)$ during the source-active interval. PU requires time dependence to appear explicitly in the certified $\dot\theta_{\mathrm{PU}}$, boundary/inflow, nonstationary preparation, or freeze-out entry.
 
-3. **Suppression mechanism:** Cohen-Kaplan uses the expansion rate $H$ for departure from equilibrium. PU uses a certified driven or boundary/freeze-out record for departure from equilibrium; $\kappa_B$ supplies only a branch weight.
+3. **Production and survival:** In the reviewed model, baryon-violating kinetics enter the integrated production rate and their later shutoff prevents washout; expansion enters through the thermal history, not as a universal $\Gamma_a/H$ yield factor. PU requires a certified driven or boundary/freeze-out record; $\kappa_B$ supplies only a branch weight.
 
 4. **Bounded-response limit:** On Proposition Y.7's separately certified two-rate, single-harmonic branch, $\mathcal F_{CP}=\tanh x$ with $x=\mathcal S\sin\delta$. Hence $|\mathcal F_{CP}|<1$ for every finite $x$, while $\mathcal F_{CP}\to\pm1$ only as $x\to\pm\infty$. This is a limit of the registered response profile; it does not by itself establish nonperturbative dynamics, a nonequilibrium source, or a baryon yield.
 
@@ -658,7 +678,7 @@ another.
 
 ### Y.6.2 Derivation of Baryogenesis Complexity
 
-**Theorem Y.8** (Exact Factorized Baryogenesis Exponent Ledger). Assume that Lemma Y.8.1 supplies a nonzero complement-equivariant midpoint readout and Lemma Y.8.2 supplies three parallel $S_3$-related family saddles sharing one binary verification budget. Require, in addition, an accepted same-normalization factorization certificate proving
+**Theorem Y.8** (Exact Factorized Baryogenesis Exponent Ledger). Assume an accepted electroweak action-transport certificate of Principle T.13a and that Lemma Y.8.1 supplies a nonzero complement-equivariant midpoint readout and Lemma Y.8.2 supplies three parallel $S_3$-related family saddles sharing one binary verification budget. Require, in addition, an accepted same-normalization factorization certificate proving
 $$
 W_B=A_Be^{-\kappa_{CP}}e^{-\kappa_{\mathrm{gen}}},
 \qquad 0<|A_B|<\infty,
@@ -677,14 +697,14 @@ $$
 
 *Proof.*
 
-**Step 1: Electroweak Base Complexity.** Definition T.13 and Theorem T.5 give the unique registered unit-update path $x_*(t)=te_{p_A}$ and
+**Step 1: Electroweak Base Complexity.** Definition T.13 and Theorem T.5 give the unique registered unit-update path $x_*(t)=te_{p_A}$ and the native action $\kappa_{\mathrm{St}}=77/2$. The accepted action-transport certificate of Principle T.13a gives
 $$
-\kappa_{EW}=\frac{77}{2}.
+\kappa_{EW}=\kappa_{\mathrm{St}}=\frac{77}{2}.
 $$
 
 **Step 2: CP-Odd Half-Path Complexity.**
 
-**Lemma Y.8.1 (CP-Odd Complexity from the Complement-Equivariant Half-Path).** Let $x_*(t)=te_{p_A}$ be the unique path of Theorem T.5 and define
+**Lemma Y.8.1 (CP-Odd Complexity from the Complement-Equivariant Half-Path).** Let $x_*(t)=te_{p_A}$ be the unique path of Theorem T.5, assume an accepted electroweak action-transport certificate of Principle T.13a, and define
 $$
 \mathsf C_{p_A}(x)=e_{p_A}-x.
 $$
@@ -759,7 +779,7 @@ $$
 \qquad
 \kappa_B=19.25+\frac{\ln2}{4}=19.423286\ldots,
 $$
-*and the Harvey--Turner conversion with one Higgs doublet is*
+*and, within the ideal unbroken-phase linearized equilibrium model of Proposition Y.9.1 with one Higgs doublet, the conversion is*
 $$
 c_{\mathrm{sph}}=\frac{8(4)+4}{22(4)+13}=\frac{36}{101}=0.356435\ldots.
 $$
@@ -777,6 +797,7 @@ On the fixed-total-budget, parallel, three-family-symmetric, noncancelling branc
 |:----------|:-----:|:----------------|
 | $\kappa_{EW}/2$ | 19.25 | CP-odd complexity of the complement-equivariant half-path (Lemma Y.8.1) |
 | $\varepsilon_0/N_g$ | $\ln2/3$ | Common action on the fixed-budget, parallel, $S_3$-symmetric, noncancelling family-saddle branch |
+
 | $\kappa_B$ | 19.48 | Total baryogenesis complexity |
 
 ---
@@ -854,7 +875,7 @@ where:
 
 7. $\Delta N_{CS}\in\mathbb Z\setminus\{0\}$ is the oriented Chern-Simons change of the nontrivial sphaleron interpolation in the gauge normalization recorded by $\mathfrak R_{\mathrm{EW}}$. A zero-transition branch does not define the normalized ratios $I_{CP}$ and $I_{tr}$ and must be recorded without those quotients.
 
-8. $\eta_{\partial W}=\eta(D_{\Sigma_f})-\eta(D_{\Sigma_i})$ and $h_{\partial W}=\dim\ker D_{\Sigma_f}-\dim\ker D_{\Sigma_i}$ are the oriented APS boundary eta and kernel corrections, computed with the same finite-part convention as $D_W$.
+8. In the collar convention with tangential operators $D_{\Sigma_f}$ and $-D_{\Sigma_i}$, the certificate uses $P_{\ge0}(D_{\Sigma_f})\psi_f=0$ and $P_{>0}(-D_{\Sigma_i})\psi_i=0$, with the adjoint domain determined by Green's formula, as in Definition Y.4.3a. Set $\eta_{\partial W}=\eta(D_{\Sigma_f})-\eta(D_{\Sigma_i})$ and $h_{\partial W}=\dim\ker D_{\Sigma_f}-\dim\ker D_{\Sigma_i}$. These are the eta term and the zero-mode correction for this recorded endpoint domain, with the same finite-part convention as $D_W$. For ordinary APS projections on both oriented components, the kernel correction is $\dim\ker D_{\Sigma_f}+\dim\ker D_{\Sigma_i}$ ; that choice defines a different endpoint-domain branch.
 
 9. $\mathfrak o_{\mathrm{KMS}}\in\{+1,-1\}$ is the PCE/KMS time orientation of the determinant line.
 
@@ -924,7 +945,7 @@ I_{tr}=1,
 $$
 Without the matching identity, $I_{CP}$ and $I_{tr}$ are normalized topological data but do not determine $\chi_{CP}$ or $\chi_{tr}$. If no accepted $\mathfrak A_\eta$ exists, the Berry-to-density coefficient, determinant-line sign, and baryon-number spectral-flow normalization are irreducible branch data.
 
-*Proof.* Items 1--8 of Definition Y.6.1a give a Fredholm APS boundary problem. The Atiyah-Patodi-Singer index theorem computes the bulk Chern-character term minus the eta/kernel boundary correction, hence the numerator in (Y.6.1a.2). The spectral-flow theorem computes the normalized transport datum in (Y.6.1a.3). By the additional matching identity, these two normalized data are respectively the local CP coefficient and baryon transport coefficient, which proves (Y.6.1b.1). If their values are one and the three recorded orientations have positive product, substitution gives the unit-response branch in (Y.6.1b.2). No converse from the index theorem alone is used. ∎
+*Proof.* Items 1--8 of Definition Y.6.1a give a Fredholm APS boundary problem. The Atiyah-Patodi-Singer index theorem, together with the initial zero-mode domain enlargement in Theorem Y.4.3b, computes the bulk Chern-character term minus the eta/kernel boundary correction, hence the numerator in (Y.6.1a.2). Item 13 separately defines the $B_{\mathrm{ret}}$-weighted crossing sum and its normalized transport datum in (Y.6.1a.3); the ordinary APS index--spectral-flow theorem does not by itself compute this weighted sum. The accepted certificate must establish the crossing sum and normalization, and the additional matching identity must identify the two normalized data with the local CP and baryon transport coefficients. Under precisely those premises, (Y.6.1b.1) follows. If their values are one and the three recorded orientations have positive product, substitution gives the unit-response branch in (Y.6.1b.2). No converse from the index theorem alone is used. ∎
 
 **Corollary Y.6.1b.2 (Direct Spectral-Flow Normalization Branch).** Suppose an accepted $\mathfrak A_\eta$ records the matching identity required by Theorem Y.6.1b and one mapping-torus family whose APS index, spectral flow, eta/kernel boundary correction, orientation, Chern-Simons increment, and normalization satisfy
 $$
@@ -954,7 +975,7 @@ I_{CP}
 $$
 Then $\chi_{CP}=\sigma_{CP}$. Unit spectral flow without the matching identity, denominator, APS boundary correction, normalization, and orientation is insufficient.
 
-*Proof.* The APS spectral-flow theorem gives the middle equality under the mapping-torus hypotheses. The displayed normalization gives $I_{CP}=\sigma_{CP}$, and the certified matching identity gives $\chi_{CP}=I_{CP}$. ∎
+*Proof.* The displayed index--spectral-flow equality is an explicit obligation of the accepted certificate. It can be supplied by the Riemannian APS index--spectral-flow theorem only after a cut and product-cobordism identification produces an interval family with a common compactly embedded graph-norm domain, norm continuity into $\mathcal B(W,H)$, and the source theorem's endpoint spectral projections and sign convention; the mapping-torus label alone does not supply these data. Given the certified middle equality, the displayed normalization gives $I_{CP}=\sigma_{CP}$, and the certified matching identity gives $\chi_{CP}=I_{CP}$. ∎
 
 **Definition Y.6.1c (APS-Kubo Baryon Transport Certificate).** An APS-Kubo baryon transport certificate is a finite record
 $$
@@ -1018,7 +1039,7 @@ and a certified tail interval whose limit is the accepted $\Gamma_{CS}(t)$. The 
 
 7. $s(t)>0$ is the entropy density convention, $\mathcal N_\gamma(t_f)=s(t_f)/n_\gamma(t_f)$ is the photon-normalization factor, and $\mathcal N_B$ is the coefficient normalization inherited from $\mathcal N_{\mathrm{APS}}$.
 
-8. $[t_i,t_f]$ is a finite transport window and $Y_B(t_i)$ is the initial baryon-to-entropy vector or scalar specified by the branch.
+8. $[t_i,t_f]$ is a finite transport window and $Y_B(t_i)$ is the initial scalar net-baryon-to-entropy ratio. If obtained from a multicomponent state, the declared baryon readout must satisfy the closed scalar equation (Y.6.1c.4) with the stated source and washout profile.
 
 9. The profiles are measurable and satisfy
 $$
@@ -1159,28 +1180,21 @@ Y_B(t_i)e^{-\int_{t_i}^{t_f}\Gamma_{\mathrm{wash}}(u)\,du}
 $$
 Thus the Appendix Y CP source is not an independent scalar insertion on an accepted transport branch. It is the finite predictive transport image of APS boundary phase plus Berry curvature, pushed through the same sphaleron, washout, entropy, photon, and residual ledgers.
 
-*Proof.* By Definition Y.6.1f, the accepted real lift gives an integer $m$ that is constant on the connected transport window such that
+*Proof.* Let $H(t):=\theta_{\mathrm{PU}}(t)-\Theta_\eta(t)$ be the accepted real holonomy lift. For a sufficiently small $h$, Stokes' theorem on the oriented cylinder strip $[t,t+h]\times S^1$ gives
 $$
-\theta_{\mathrm{PU}}(t)
-=
-\Theta_\eta(t)+\oint_{S^1}\Gamma^*\mathcal A_{\mathrm{Berry}}(\partial_s)\,ds+2\pi m.
+H(t+h)-H(t)
+\equiv
+\int_{[t,t+h]\times S^1}\Gamma^*\mathcal F_{\mathrm{Berry}}
+\pmod{2\pi}.
 $$
-Differentiating the loop integral gives
+The pulled-back line is trivial over this strip, which retracts to $S^1$, so a unitary trivialization gives the displayed holonomy relation. Both sides tend to zero as $h\to0$; their difference is an integer multiple of $2\pi$ and hence is zero for sufficiently small $h$. Since $\Gamma$ is $C^1$ and the curvature is smooth, the pulled-back curvature density is continuous. Dividing by $h$ and taking the limit yields
 $$
-\frac{d}{dt}\oint_{S^1}\Gamma^*\mathcal A_{\mathrm{Berry}}(\partial_s)\,ds
+\dot H(t)
 =
 \int_{S^1}\Gamma^*\mathcal F_{\mathrm{Berry}}(\partial_t,\partial_s)\,ds.
 \tag{Y.6.1g.3}
 $$
-Indeed, in any accepted local gauge for the pulled-back Berry line,
-$$
-\partial_t\big(\Gamma^*\mathcal A_{\mathrm{Berry}}(\partial_s)\big)
-=
-\Gamma^*\mathcal F_{\mathrm{Berry}}(\partial_t,\partial_s)
-+
-\partial_s\big(\Gamma^*\mathcal A_{\mathrm{Berry}}(\partial_t)\big),
-$$
-and the total $s$-derivative integrates to zero on the closed loop $S^1$. On overlaps, a gauge change adds a closed-loop integral of a total derivative and, for a nontrivial transition winding, an integer multiple of $2\pi$ that is constant on the connected lift interval. Its derivative is therefore zero. Hence the derivative of the accepted real holonomy lift is the curvature flux. Therefore
+This argument requires no mixed second derivative of $\Gamma$. Consequently
 $$
 \dot\theta_{\mathrm{PU}}(t)
 =
@@ -1275,7 +1289,7 @@ The three prefactors are outputs of that same certificate; the factorization ass
 
 ### Y.7.2 Conditional Sphaleron Conversion Coefficient
 
-**Proposition Y.9.1 (Conditional Transport Coefficient).** Let an accepted transport certificate reduce the finite yield to Theorem Y.9's product form. Then $\mathcal C_{\mathrm{eff}}$ is the coefficient obtained from that reduction. Assume the Harvey--Turner chemical-equilibrium regime [Harvey and Turner 1990]: all retained species are relativistic, gauge interactions make multiplet chemical potentials equal, the relevant Yukawa reactions and electroweak sphalerons are in equilibrium, chemical potentials are generation-independent, the plasma is hypercharge neutral, and there are $N_g$ fermion generations and $n_H$ Higgs doublets. Then
+**Proposition Y.9.1 (Conditional Transport Coefficient).** Let an accepted transport certificate reduce the finite yield to Theorem Y.9's product form. Then $\mathcal C_{\mathrm{eff}}$ is the coefficient obtained from that reduction. Assume the unbroken-electroweak-phase chemical-equilibrium model of Harvey and Turner (1990): the retained matter content consists of $N_g\ge1$ Standard-Model chiral generations and $n_H\ge1$ Higgs doublets with a common $\mu_H$, with no additional equilibrium sector carrying hypercharge, $B$ or $L$. Use the ideal ultrarelativistic susceptibilities linearized at $\mu_i=0$: $\Delta n_i=g_iT^2\mu_i/6$ for fermions and $\Delta n_i=g_iT^2\mu_i/3$ for bosons on the noncondensed branch, with $|\mu_i|/T\ll1$. Gauge interactions make multiplet chemical potentials equal, the relevant Yukawa reactions and electroweak sphalerons are in equilibrium, chemical potentials are generation-independent, and the plasma is hypercharge neutral. The formula below is exact within this linearized model. For the ratio below assume $B-L\ne0$. Then
 $$
 c_{\mathrm{sph}}
 =\frac{B}{B-L}
@@ -1340,54 +1354,25 @@ Then $0\le f_{\mathrm{wash}}\le1$, with $f_{\mathrm{wash}}>0$ exactly when $G_{\
 
 *Proof.* If $G_{\mathrm{wash}}<\infty$, then $-G_{\mathrm{wash}}\le0$ and the exponential is in $(0,1]$. If $G_{\mathrm{wash}}=\infty$, the declared convention gives $f_{\mathrm{wash}}=0$. These two exhaustive cases prove both the bound and the equivalence. ∎
 
-### Y.7.4 Validation-Run Electroweak Coupling
+### Y.7.4 Illustrative Same-Scale Electroweak Coupling
 
-**Lemma Y.9.3** (Validation-Run Electroweak Coupling). *The SU(2)$_L$ coupling $\alpha_W$ at the sphaleron temperature $T_{sph} \approx 160$ GeV is evaluated from:*
-$$\alpha_W = \frac{\alpha_{em}}{\sin^2\theta_W}$$
+**Lemma Y.9.3** (Same-Scale Electroweak Coupling Relation). *For electromagnetic and weak couplings defined in one convention at one common scale,*
 
-*Proof.*
-
-**Step 1 (Fine structure constant).** On the conditional sinc-core branch of Appendix Z, Theorem Z.26 gives
 $$
-\alpha^{-1}_{0}=137.03609205522863\ldots.
-$$
-The Thomson comparison quantity is the residual-gated row
-$$
-\alpha_{em}^{-1}(\text{Thomson})
-=
-\alpha^{-1}_{0}+R_\alpha
-$$
-of Corollary Z.26b. Theorem Z.26 does not fix $R_\alpha$. The scales in Section Z.27.9 are comparison-budget diagnostics and become a certified interval only through an accepted pre-comparison residual gate.
-
-**Step 2 (Electromagnetic input at the sphaleron scale).** This validation row adopts
-$$
-\alpha_{em}^{-1}(160\,\mathrm{GeV})=127.5
-$$
-as an external scheme-dependent running-coupling input. A derivation within the manuscript would require a specified renormalization scheme, charged-particle thresholds, matching conditions, and beta functions.
-
-**Step 3 (Weak-angle input at the sphaleron scale).** Appendix T supplies the conditional tree-level normalization $\sin^2\theta_W^{(0)}=3/8$ and the validation tuple described there, but it does not supply a closed RG certificate to $160\,\mathrm{GeV}$. This validation row therefore adopts
-$$
-\sin^2\theta_W(160\,\mathrm{GeV})=0.234
-$$
-as a second external input in the same coupling convention.
-
-**Step 4 (Combination).** At a common scale and in a common scheme, $e=g\sin\theta_W$ implies
-$$
-\alpha_{em}=\alpha_W\sin^2\theta_W.
-$$
-Hence
-$$
-\alpha_W^{-1}
-=\alpha_{em}^{-1}\sin^2\theta_W
-=127.5\times0.234
-=29.835,
-$$
-or
-$$
-\alpha_W=0.0335177\ldots\approx\frac1{29.8}\approx\frac1{30}.
+\alpha_W=\frac{\alpha_{em}}{\sin^2\theta_W}.
 $$
 
-This is conditional arithmetic from two adopted running inputs, not a manuscript-internal RG derivation. A theorem-level value requires an accepted global spectral/RG branch extension registered before comparison and evaluated forward. ∎
+*Proof.* The defining relation $e=g\sin\theta_W$, together with $\alpha_{em}=e^2/(4\pi)$ and $\alpha_W=g^2/(4\pi)$, gives the displayed identity.
+
+For an arithmetic illustration only, choose dimensionless parameters $r_{em}=127.5$ and $s_W^2=0.234$, standing respectively for a hypothetical same-scheme value of $\alpha_{em}^{-1}$ and $\sin^2\theta_W$ at a common scale. Then
+
+$$
+\alpha_W^{-1}=r_{em}s_W^2=127.5\times0.234=29.835,
+\qquad
+\alpha_W=0.0335177\ldots\approx\frac1{30}.
+$$
+
+These chosen numbers are not an externally verified running-coupling determination at $160\,\mathrm{GeV}$. To promote them to physical inputs requires a named renormalization scheme and scale, charged-particle thresholds and matching conditions, and a source or independent RG computation for both values in the same convention. The conditional sinc-core value of Theorem Z.26 and the tree-level $\sin^2\theta_W^{(0)}=3/8$ of Appendix T do not provide that running certificate. ∎
 
 ### Y.7.5 Illustrative Factor-Product Arithmetic
 
@@ -1423,7 +1408,7 @@ but this is an illustrative factor product, not a prediction or validation inter
 
 #### Y.7.5a Uncertainty Status
 
-No uncertainty for $\eta_B$ is defined until the source, transport, washout, threshold, normalization, residual, and covariance records are fixed. The factor $c_{\mathrm{sph}}=28/79$ is a chemical-equilibrium conversion under its field-content assumptions; it is not a lattice quantity with a $3\%$ uncertainty.
+No uncertainty for $\eta_B$ is defined until the source, transport, washout, threshold, normalization, residual, and covariance records are fixed. The factor $c_{\mathrm{sph}}=28/79$ is exact within the ideal unbroken-phase linearized equilibrium model of Proposition Y.9.1; it is not a lattice quantity with a $3\%$ uncertainty. Physical use outside that model requires a separate correction and uncertainty record.
 
 ## Y.8 Comparison with Observation
 
@@ -1452,7 +1437,7 @@ e^{-\int_{t_i}^{t_f}W_B(u)du}\mathcal U_B(t_f,t_i)Y_B(t_i)
 +\int_{t_i}^{t_f}\mathcal U_B(t_f,t)S_{CP}(t)e^{-\int_t^{t_f}W_B(u)du}dt
 \right)
 $$
-and the certified interval $\mathcal I_B:=c_B+\mathcal R_B^{\mathrm{tr}}$. Then matter dominance is certified if $\inf\mathcal I_B>0$, antimatter dominance if $\sup\mathcal I_B<0$, and the sign is unresolved if $0\in\mathcal I_B$. Only when $\mathcal R_B^{\mathrm{tr}}=\{0\}$, or more generally when the certificate fixes a singleton interval, may one write $\operatorname{sign}(\eta_B)=\operatorname{sign}(c_B)$.
+and the certified interval $\mathcal I_B:=c_B+\mathcal R_B^{\mathrm{tr}}$. Then matter dominance is certified if $\inf\mathcal I_B>0$, antimatter dominance if $\sup\mathcal I_B<0$, and the sign is unresolved if $0\in\mathcal I_B$. When $\mathcal R_B^{\mathrm{tr}}=\{0\}$, one has $\operatorname{sign}(\eta_B)=\operatorname{sign}(c_B)$. More generally, a singleton residual $\mathcal R_B^{\mathrm{tr}}=\{r_0\}$ gives $\operatorname{sign}(\eta_B)=\operatorname{sign}(c_B+r_0)$.
 
 *Proof.* Definition Y.11.7e gives the homogeneous-plus-sourced Duhamel solution with scalar washout applied to both terms, and Theorem Y.11.7f maps it through the real readout, photon conversion, and residual interval. A real interval has a certified positive or negative sign exactly when it lies strictly in the corresponding open half-line. The boundary condition on $N_{CS}$ fixes neither the initial baryon state, the signed source, nor the residual interval, so it supplies no additional sign conclusion. ∎
 
@@ -1580,11 +1565,11 @@ A reduced-washout PU branch would require an accepted $\Gamma_{\mathrm{wash}}(t)
 
 $$\boxed{\eta_B = \mathcal{P}_{\mathrm{eff}}\sqrt{\frac{v}{M_{Pl}}}}$$
 
-*Equivalently:*
+*Consequently:*
 
 $$\boxed{\eta_B^2 = \mathcal{P}_{\mathrm{eff}}^2\frac{v}{M_{Pl}}}$$
 
-*Proof.* Theorem T.6 gives
+*Proof.* On its leading central specialization, Theorem T.6 gives
 $$
 \frac{v}{M_{Pl}}=A_{EW}e^{-\kappa_{EW}}.
 $$
@@ -1748,7 +1733,7 @@ V\cong\mathbb R^{r_0}\oplus(\mathbb R^2_{2\pi/3})^{\oplus r_1},
 $$
 where $R$ is the identity on the first summand and a $120^\circ$ rotation on every two-plane. The invariant-point subspace is exactly $V^R\cong\mathbb R^{r_0}$, and complexification contains $r_0$ trivial characters together with $r_1$ copies each of $\chi$ and $\bar\chi$.
 
-If an isotropic fluctuation on $V$ has covariance $C=(\sigma_{\mathrm{tot}}^2/n)I$ with $n=r_0+2r_1$, the RMS fractions retained by the fixed real subspace and the full nontrivial real isotypic subspace are
+For $n=r_0+2r_1>0$, if a centered isotropic fluctuation on $V$ has covariance $C=(\sigma_{\mathrm{tot}}^2/n)I$ with $\sigma_{\mathrm{tot}}>0$, the RMS fractions retained by the invariant real subspace and the full nontrivial real isotypic subspace are
 $$
 \sqrt{\frac{r_0}{n}},
 \qquad
@@ -1851,7 +1836,7 @@ $$
 }
 \tag{Y.11.4b}
 $$
-Equivalently,
+When $\mathcal C_{\mathrm{eff}}\mathcal F_{CP}f_{\mathrm{wash}}\ne0$, equivalently,
 $$
 \boxed{
 \frac{\eta_B}
@@ -1899,7 +1884,7 @@ and substitution into the master formula proves the result. ∎
 
 ### Y.10.3.5 Experimental Consequences
 
-**Prediction Y.1** (Constant-Prefactor Square-Root Sensitivity). *On the complete branch of Corollary Y.11.4b, consider an infinitesimal deformation for which $A_{EW}$, $M_{Pl}$, $\mathcal C_{\mathrm{eff}}$, $\mathcal F_{CP}$, and $f_{\mathrm{wash}}$ are held constant. Then, to first order,*
+**Prediction Y.1** (Constant-Prefactor Square-Root Sensitivity). *On the complete branch of Corollary Y.11.4b with $\eta_B\ne0$, consider an infinitesimal deformation for which $A_{EW}$, $M_{Pl}$, $\mathcal C_{\mathrm{eff}}$, $\mathcal F_{CP}$, and $f_{\mathrm{wash}}$ are held constant. Then, to first order,*
 
 $$\frac{\delta\eta_B}{\eta_B} = \frac{1}{2}\frac{\delta v}{v}+o(\delta v/v).$$
 
@@ -1911,7 +1896,7 @@ $$\frac{\delta\eta_B}{\eta_B} = \frac{1}{2}\frac{\delta v}{v}. $$
 
 ∎
 
-**Corollary Y.11.5** (Constant-Prefactor Sensitivity). *Assume the complete branch hypotheses of Corollary Y.11.4b and hold $A_{EW}$, $M_{Pl}$, $\mathcal C_{\mathrm{eff}}$, $\mathcal F_{CP}$, and $f_{\mathrm{wash}}$ constant. For infinitesimal variations,*
+**Corollary Y.11.5** (Constant-Prefactor Sensitivity). *Assume the complete branch hypotheses of Corollary Y.11.4b with $\eta_B\ne0$ and hold $A_{EW}$, $M_{Pl}$, $\mathcal C_{\mathrm{eff}}$, $\mathcal F_{CP}$, and $f_{\mathrm{wash}}$ constant. For infinitesimal variations,*
 $$
 \frac{\delta\eta_B}{\eta_B}=\frac12\frac{\delta v}{v}.
 $$
@@ -1929,7 +1914,7 @@ On the combined hypotheses of Theorems Y.11, Y.11.2, and Y.11.4, the conditional
 
 3. **CP half-step.** The factor $1/2$ follows only when the action ledger is additive on two CP-complementary half-histories, an action-, measure-, boundary-, orientation-, and normalization-preserving bijection relates them, and a finite nonzero forward-locked CP-odd midpoint readout retains one oriented half-history. The order of $\mathbb Z_2$ alone does not determine the power law.
 
-4. **Constant-prefactor correlation.** Within the same certified baryogenesis regime, with the transport, thermal, CP-response, generation, and determinant prefactors held constant, $\delta\eta_B/\eta_B=(1/2)\delta v/v$ at leading order. A BSM deformation that changes those entries does not obey this one-variable differential relation without an additional calculation.
+4. **Constant-prefactor correlation.** Within the same certified baryogenesis regime with $\eta_B\ne0$, with the transport, thermal, CP-response, generation, and determinant prefactors held constant, $\delta\eta_B/\eta_B=(1/2)\delta v/v$ at leading order. A BSM deformation that changes those entries does not obey this one-variable differential relation without an additional calculation.
 
 **Theorem Y.11.6 (Generation-Locked Baryogenesis in the Appendix Y Channel).** Work on the pre-flavor family-redundancy PPI branch of Proposition R.3.5.1a and on a certified CP-active Berry-loop branch. Within the PU electroweak baryogenesis mechanism of this appendix, the same family and CP data required for flavor CP violation enter the baryogenesis formula. In particular:
 
@@ -1939,7 +1924,7 @@ nonzero-sine value requires an accepted Theorem-T.54b area interval disjoint
 from $\pi\mathbb Z$ modulo $2\pi$; a physical CKM phase additionally requires
 Theorem T.53's accepted flavor-realization and response certificate, and
 $66.7°$ uses Theorem T.56's nonlinear response map.
-3. Theorem Y.2 uses the family count and nonzero CP datum only for the family/CP part of its conditional branch. Those two inputs do not by themselves realize the Sakharov conditions: the electroweak anomaly, an active baryon-number-changing transition, and a response-active nonequilibrium record remain independent required inputs.
+3. Theorem Y.2 uses the family count and nonzero CP datum only for the family/CP part of its conditional branch. Those two inputs do not by themselves realize the Sakharov conditions: a separately certified nonzero $C$-response contrast, the electroweak anomaly, an active baryon-number-changing transition, and a response-active nonequilibrium record remain independent required inputs.
 4. On the separate hypotheses of Theorems Y.8 and Y.9, the family count and CP datum enter the reduced formula through
 $$
 \kappa_B=\frac{\kappa_{EW}}{2}+\frac{\varepsilon_0}{N_g},
@@ -1957,8 +1942,8 @@ area-and-lift gate and proves a nonzero-sine geometric phase only when its
 interval is disjoint from $\pi\mathbb Z$ modulo $2\pi$; Theorem T.53 supplies
 the separate full-matrix, response-map, and rephasing bridge to a physical CKM
 phase; and Theorem T.56 supplies the optional nonlinear numerical response.
-Theorem Y.2 still requires the independent anomaly, transition, and
-nonequilibrium records, while Theorems Y.8--Y.9 insert the family count and the
+Theorem Y.2 still requires the independent nonzero $C$-response contrast,
+anomaly, transition, and nonequilibrium records, while Theorems Y.8--Y.9 insert the family count and the
 selected certified CP response. If the modeled family count is below three or
 the selected response phase lies in $\pi\mathbb Z$, this single-harmonic
 channel has no CP-odd source. ∎
@@ -2093,7 +2078,7 @@ $$
 $$
 The numerical value of $\eta_B$ is model-layer for every completion whose response-active entries are not fully certified.
 
-*Proof.* Definition Y.11.7a fixes the threshold, physical $C/CP$, anomaly, sphaleron, initial-state, transport, washout, late photon/entropy, coefficient-normalization, covariance/residual, overlap, and forward-lock entries before comparison. Therefore the finite composition in (Y.11.7b.1) is single-valued up to $\mathcal R_B$. The overlap audit proves source exhaustion and prevents assigning the same contribution twice. If a response-active entry of (Y.11.7a.1) is absent and is not proved output-null, admissible completions may agree on every accepted row while differing in that entry and hence in $\eta_B$; Theorem P.14.1f then gives non-identifiability. The full label (Y.11.7b.2), rather than its earlier proper subtuple, distinguishes those completions. ∎
+*Proof.* Definition Y.11.7a fixes the threshold, physical $C/CP$, anomaly, sphaleron, initial-state, transport, washout, late photon/entropy, coefficient-normalization, covariance/residual, overlap, and forward-lock entries before comparison. Therefore the finite composition in (Y.11.7b.1) is single-valued up to $\mathcal R_B$. The overlap audit proves source exhaustion and prevents assigning the same contribution twice. An absent response-active entry leaves this certificate incomplete unless the entry is proved output-null. If two admissible completions agree on every accepted constraint but differ in that entry and give inequivalent $\eta_B$ outputs, Theorem P.14.1f proves non-identifiability relative to those constraints. The existence of such a pair requires its own witness. The full label (Y.11.7b.2) records the additional entries needed to distinguish any such completions. ∎
 
 **Corollary Y.11.7c (No Baryogenesis Back-Fitting).** Changing the initial state, sphaleron coefficient, washout integral, CP profile, threshold input, transport map, late entropy/photon conversion, coefficient normalization, covariance or residual interval, source-exhaustion audit, or no-double-counting audit after comparison with $\eta_B$ defines a new transport branch and cannot confirm the original Appendix Y numerical branch.
 
@@ -2202,7 +2187,7 @@ If no record in (Y.11.7h.1) is accepted, Appendix Y supplies no certified numeri
 $$
 \dot Y_B(t)=\bigl(\mathcal L_B(t)-W_B(t)I\bigr)Y_B(t)+S_{CP}(t)
 $$
-with scalar $W_B$ gives the two survival-weighted terms in (Y.11.7h.2). Applying the fixed linear readout and normalization, then adding the propagated residual interval, gives the displayed certified output. The APS-Kubo route is single-valued up to its own certified residual after the same external audits. If a listed response-active entry is absent and is not proved output-null, admissible completions can agree on all accepted upstream data while differing in that initial, source, transport, washout, normalization, or residual datum and hence in $\eta_B$; Theorem P.14.1f then blocks theorem-level promotion. The refinement and overlap audits prove that an embedded coarse transport entry and its explicit refinement have one output and prevent double counting with electroweak thresholds, flavor determinants, hypercharge and side-boundary currents, APS boundary terms, sphaleron negative modes, thermal finite parts, primordial determinants, vacuum determinant entries, or final spectral calibration symbols. ∎
+with scalar $W_B$ gives the two survival-weighted terms in (Y.11.7h.2). Applying the declared linear readout and normalization, then adding the propagated residual interval, gives the displayed certified output. The APS-Kubo route is single-valued up to its own certified residual after the same external audits. An absent listed response-active entry leaves this certificate incomplete unless it is proved output-null. If two admissible completions satisfy all accepted upstream constraints and yield inequivalent $\eta_B$ outputs through different initial, source, transport, washout, normalization, or residual data, Theorem P.14.1f proves non-identifiability relative to those constraints; the pair must be exhibited independently of the missing entry. The refinement and overlap audits prove that an embedded coarse transport entry and its explicit refinement have one output and prevent double counting with electroweak thresholds, flavor determinants, hypercharge and side-boundary currents, APS boundary terms, sphaleron negative modes, thermal finite parts, primordial determinants, vacuum determinant entries, or final spectral calibration symbols. ∎
 
 ## Y.11 Baryogenesis Branch-Intersection Summary
 
@@ -2249,9 +2234,10 @@ $$
 \end{aligned}
 $$
 Here $\mathfrak B_{EW}$ is the Definition-T.13/Theorem-T.5
-Steiner-action branch, $\mathfrak B_g$ is Proposition R.3.5.1a's exact
+Steiner-action branch with an accepted Principle-T.13a electroweak
+action-transport certificate, $\mathfrak B_g$ is Proposition R.3.5.1a's exact
 family-realization branch, and $\mathfrak B_{Y8}$ contains Theorem Y.8's
-midpoint and parallel-family premises.
+midpoint, parallel-family, and same-normalization factorization premises.
 
 One optional flavor CP record supplies the convention-level diagnostics
 $$
@@ -2270,12 +2256,11 @@ reading, and Theorem T.53 plus the accepted forward-locked
 $\mathfrak C_{\mathrm{fl}}$ gates its physical CKM reading. Appendix Y may
 instead use an independently accepted flavor-free CP certificate.
 
-The driven APS--Kubo record is another independent input and may contain
+The driven APS--Kubo record is another independent input. On the parameterized-surface branch of Definition Y.6.1f, Equation (Y.6.1g.4) gives
 $$
 \dot\theta_{\mathrm{PU}}
 =\dot\Theta_\eta
-+\int_{S^1}(\Gamma_{\mathrm{fl}}^W)^*
-\mathcal F_{\mathrm{Berry}}(\partial_t,\partial_s)\,ds.
++\int_{S^1}\Gamma^*\mathcal F_{\mathrm{Berry}}(\partial_t,\partial_s)\,ds.
 $$
 Only an accepted $\mathfrak C_B$, $\mathfrak C_B^{\mathrm{tr}}$, or
 $\mathfrak C_B^{\mathrm{APSK}}$ can prove that one such CP source, the
@@ -2302,7 +2287,7 @@ is a model-conditioned inference, not a direct count of baryons and photons. Its
 
 ### Y.12.2 CKM Phase Measurements
 
-The CP phase $\delta$ is measured at B-factories and LHCb. Current world average [Particle Data Group 2024]:
+The Particle Data Group 2024 Standard-Model unitary CKM global fit gives the phase in the standard three-angle parameterization as $\delta=1.147\pm0.026$ radians, equivalently
 $$\delta_{\mathrm{CKM}}=65.72^\circ\pm1.49^\circ$$
 
 **Convention-level response value:** $\delta_{\mathrm{CKM}}^{\mathrm{conv}}=66.6753023737\ldots^\circ$ on Theorem T.56's independently registered nonlinear response ansatz. The input $\delta_0^{\mathrm{conv}}=70.5287793655\ldots^\circ$ is assigned by Convention T.54, becomes geometric only if Theorem T.54b certifies it, and becomes a physical CKM response only if Theorem T.53's full-matrix and rephasing gate is accepted.
@@ -2332,11 +2317,11 @@ On a physical branch that independently satisfies the hypotheses of the CPT theo
 
 ### Y.12.5 Electric Dipole Moments
 
-CP violation beyond the CKM mechanism would manifest in electric dipole moments (EDMs). Representative current bounds are:
+Electric dipole moments constrain CP-odd interactions that contribute to the measured observables. Representative published bounds are:
 
 | System | $90\%$ CL bound | Primary source |
 |:-------|:-----------------|:---------------|
-| Electron | $\lvert d_e\rvert < 4.1 \times 10^{-30}$ e·cm | Roussy et al. (2023) |
+| Electron, assuming vanishing scalar-pseudoscalar electron-nucleon coupling $C_S$ | $\lvert d_e\rvert < 4.1 \times 10^{-30}$ e·cm | Roussy et al. (2023) |
 | Neutron | $\lvert d_n\rvert < 1.8 \times 10^{-26}$ e·cm | Abel et al. (2020) |
 
 **Conditional prediction:** On a branch carrying an accepted effective-action certificate that excludes every CP-odd operator beyond the Standard-Model CKM source, EDMs equal the corresponding Standard-Model predictions within the certificate's residual interval. Appendix Y does not itself supply that operator-exclusion certificate. A quantitative Standard-Model benchmark requires a specified operator calculation and uncertainty convention.
@@ -2347,7 +2332,7 @@ CP violation beyond the CKM mechanism would manifest in electric dipole moments 
 
 ### Y.13.1 Identified Sources
 
-No numerical uncertainty interval for $\eta_B$ is defined by the current archive. A valid uncertainty ledger must be produced by the same accepted transport certificate and must include the CP source, transport kernel, washout and freeze-out histories, electroweak thresholds, photon normalization, residual interval, covariance, and forward-lock record. The factor $c_{\mathrm{sph}}=28/79$ is an exact chemical-equilibrium conversion under the stated Standard-Model field-content assumptions, not a lattice quantity with a $3\%$ error. The illustrative values $0.282$, $0.9997$, and $0.63$ cannot be assigned a quadrature uncertainty before their joint source and covariance are supplied.
+No numerical uncertainty interval for $\eta_B$ is defined by the current archive. A valid uncertainty ledger must be produced by the same accepted transport certificate and must include the CP source, transport kernel, washout and freeze-out histories, electroweak thresholds, photon normalization, residual interval, covariance, and forward-lock record. The factor $c_{\mathrm{sph}}=28/79$ is exact within the ideal unbroken-phase linearized equilibrium model of Proposition Y.9.1, not a lattice quantity with a $3\%$ error. Physical use outside that model requires a separate correction and uncertainty record. The illustrative values $0.282$, $0.9997$, and $0.63$ cannot be assigned a quadrature uncertainty before their joint source and covariance are supplied.
 
 ### Y.13.2 CP-Response Sensitivity Status
 
@@ -2396,7 +2381,7 @@ Appendix Y therefore supplies certificate conditions for determining the sign an
 
 ### Y.A.1 Conditional Evaluation of $\kappa_{EW}=38.5$
 
-**Sources:** Theorem T.5; Definition T.13 (Appendix T)
+**Sources:** Theorem T.5; Definition T.13; Principle T.13a (Appendix T)
 
 Let $B$ be the octad-by-pair incidence matrix and $p_A$ the registered active pair of Definition T.13. Theorem T.5 gives
 $$
@@ -2404,14 +2389,14 @@ e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}
 =\lambda_2(S(5,8,24))
 =77.
 $$
-The fixed-time quadratic response action therefore has the unique minimizer $x_*(t)=te_{p_A}$ and
+The prescribed-duration quadratic response action therefore has the unique minimizer $x_*(t)=te_{p_A}$ and native action
 $$
-\kappa_{EW}
+\kappa_{\mathrm{St}}
 =\frac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}
 =\frac{77}{2}
 =38.5.
 $$
-Principle T.13a is the explicit action-to-suppression premise. Gaussian determinants and zero-mode volumes belong to the prefactor rather than to this exponent.
+An accepted Principle-T.13a action-transport certificate identifies $\kappa_{EW}=\kappa_{\mathrm{St}}$. Physical scale suppression additionally requires the branch gates of Theorem T.6. Gaussian determinants and zero-mode volumes belong to the prefactor rather than to this exponent.
 ∎
 
 ### Y.A.2 Convention-Level Phase-Response Evaluation
@@ -2463,11 +2448,12 @@ $$
 ansatz to Convention T.54's assigned base value gives
 $\delta_{\mathrm{CKM}}^{\mathrm{conv}}
 =66.6753023736826\ldots^\circ$, hence $66.7^\circ$ to one decimal place. This
-is a convention-level model evaluation. It becomes the exact geometric value
-only if Theorem T.54b proves the exact lift equality, and it becomes the exact
-physical CKM phase only if the T.53 exact-identity subrecord occurs inside one
-accepted forward-locked $\mathfrak C_{\mathrm{fl}}$. On T.53's interval
-branch only the certified physical circular interval follows. ∎
+is a convention-level model evaluation. It becomes the exact Theorem-T.56
+response to the geometric base holonomy only if Theorem T.54b proves the
+exact lift equality, and it becomes the exact physical CKM phase only if
+the T.53 exact-identity subrecord occurs inside one accepted forward-locked
+$\mathfrak C_{\mathrm{fl}}$. On T.53's interval branch only the certified
+physical circular interval follows. ∎
 
 ### Y.A.3 Conditional Selection of $N_g=3$
 
@@ -2476,7 +2462,7 @@ branch only the certified physical circular interval follows. ∎
 
 The minimal admissible count and exact branch realization are separate statements.
 
-**Constraint 1 (Anomaly cancellation):** On the family-redundancy branch, family charges $\{F_g\}$ satisfy
+**Constraint 1 (Anomaly cancellation):** On the SM15 family-redundancy branch of Theorem R.3.4, family charges $\{F_g\}$ satisfy
 $$\sum_g F_g = 0, \quad \sum_g F_g^3 = 0.$$
 
 **Constraint 2 (CP activity):** The Jarlskog invariant requires
@@ -2484,7 +2470,7 @@ $$J_{CP} = c_{12}s_{12}c_{23}s_{23}c_{13}^2s_{13}\sin\delta \neq 0.$$
 
 For two generations every CKM phase is removable. Theorem R.3.4 therefore gives the minimal admissible anomaly-descending CP-capable pattern $\{a,-a,0\}$ and the minimal count $N_{\min}=3$; it does not exclude larger anomaly-free patterns.
 
-**Branch realization:** Proposition R.3.5.1a removes response-null supernumerary family copies on the pre-flavor family-redundancy PPI branch and gives
+**Branch realization:** On the pre-flavor branch of Proposition R.3.5.1a, the PPI objective is $\mathcal L_{\mathrm{bg}}(N)=\mathcal L_0+N\mathcal L_{\mathrm{block}}+\mathcal L_{\mathrm{mix}}(N)$ with $\mathcal L_{\mathrm{block}}>0$ and $\mathcal L_{\mathrm{mix}}$ nondecreasing for $N\ge3$. Its minimum over the CP-capable class is therefore attained uniquely at
 $$N_g=3.$$
 Theorem R.8.5b supplies the separate PCE minimal-selection audit within its declared integer family-charge class.
 

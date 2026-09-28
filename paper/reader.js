@@ -204,6 +204,19 @@
       publication ? new URL('docs/paper/' + publication.file, rootURL).href : null;
   }
   function prepareArticle(section) {
+    if (section.file === '00_abstract.md') {
+      const title = article.querySelector('h1');
+      const abstract = article.querySelector('h2#abstract');
+      if (title && abstract) {
+        // Keep both manuscript anchors while showing one browser heading.
+        const titleAnchor = document.createElement('span');
+        titleAnchor.id = title.id;
+        title.id = abstract.id;
+        title.textContent = abstract.textContent;
+        title.prepend(titleAnchor);
+        abstract.remove();
+      }
+    }
     article.querySelectorAll('a[href]').forEach(link => {
       const href = link.getAttribute('href');
       if (/^(?:javascript|data|vbscript):/i.test(href.replace(/[\u0000-\u0020]/g, ''))) { link.removeAttribute('href'); return; }

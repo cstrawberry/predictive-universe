@@ -1,8 +1,12 @@
 # The Predictive Universe
 
+**[Read the paper and explore the visualizations online](https://cstrawberry.github.io/predictive-universe/)** — open the interactive reader directly in your browser.
+
 The Predictive Universe (PU) explores how quantum behavior, spacetime, and thermodynamics may arise from finite predictive systems constrained by self-reference and resources. It is part of Universe 00110000, an artistic world-building project.
 
-Download and extract this repository, keep its folders together, and open [index.html](index.html) in any modern browser. Read the paper in the **Paper** tab or explore its concepts in **Visualizations**. Both work offline with no dependencies.
+To explore locally, download and extract this repository, keep its folders together, and open [index.html](index.html) in any modern browser. The paper and visualizations both work offline with no dependencies.
+
+Online or locally, read the paper in the **Paper** tab or explore its concepts in **Visualizations**.
 
 Use **Contents** or **Search** to navigate the paper. In the visualizations, select a scene and click **Explain** to read about it.
 

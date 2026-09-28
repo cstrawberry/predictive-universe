@@ -149,7 +149,7 @@ The Steiner system parameters are:
 | $t$ (design strength) | — | 5 |
 | $b$ (blocks) | $\binom{v}{t}/\binom{k_{\text{block}}}{t}$ | 759 |
 | $r$ (blocks per point) | $bk_{\text{block}}/v$ | 253 |
-| $\lambda$ (pairs per block) | $r(k_{\text{block}}-1)/(v-1)$ | 77 |
+| $\lambda$ (blocks per pair) | $r(k_{\text{block}}-1)/(v-1)$ | 77 |
 
 **Corollary U.2a (Pair Multiplicity).** For the Steiner system $S(5,8,24)$, every pair of points lies in exactly
 $$
@@ -245,7 +245,7 @@ $$
 
 ### U.5.1 Quadratic Potential
 
-For a fluctuation $u \in \mathbb{R}^{24}$ on the interface modes, define the **centered octad potential**:
+For a fluctuation $u \in \mathbb{R}^{24}$ on the native code coordinates, define the **centered octad potential**:
 
 $$Q(u) = \sum_{O \in \mathcal{O}} \left( \sum_{i \in O} (u_i - \bar{u}) \right)^2$$
 
@@ -402,25 +402,23 @@ Consider a Euclidean O(4)-invariant action functional $S_{\text{cont}}[\phi]$ on
 
 **Definition U.3 (Bounce Solution).** An **O(4)-symmetric bounce** $\phi^*$ is a non-trivial finite-action solution depending only on $|x|$.
 
-**Theorem U.8 (Translation Zero Modes).** Let $S_{\text{cont}}$ be translation invariant on a translation-stable field domain, and let $\phi^*$ be a critical point. Then the translated fields
+**Theorem U.8 (Translation Zero Modes).** Let $X$ be a real Banach space of admissible field variations and let $\mathcal D$ be an open field domain modeled on $X$. Assume $S_{\mathrm{cont}}\in C^2(\mathcal D;\mathbb R)$, that translations $T_a\phi(x)=\phi(x-a)$ preserve $\mathcal D$ and act by bounded linear isomorphisms on $X$, and that $S_{\mathrm{cont}}(T_a\phi)=S_{\mathrm{cont}}(\phi)$. Let $\phi^*\in\mathcal D$ be critical and require the orbit $a\mapsto T_a\phi^*$ to be $C^1$ in the $X$ topology, with tangents $t_\mu=-\partial_\mu\phi^*\in X$. Then every $\phi_a^*=T_a\phi^*$ is critical and
 $$
-\phi^*_a(x)=\phi^*(x-a),\qquad a\in\mathbb R^4,
+D^2S_{\mathrm{cont}}(\phi^*)[t_\mu,\eta]=0
+\qquad(\eta\in X).
 $$
-are critical points, and each tangent $t_\mu=-\partial_\mu\phi^*$ lies in the Hessian kernel:
-$$
-D^2S_{\text{cont}}(\phi^*)[t_\mu,\eta]=0
-\qquad\text{for every admissible test direction }\eta.
-$$
+This is a kernel statement for the Hessian bilinear form. An operator-kernel interpretation additionally uses its declared closed-form realization and operator domain. For a nonconstant $C^1$ radial profile, the four translation tangents are linearly independent.
 
-*Proof.* Let $E(\phi)=\delta S_{\text{cont}}/\delta\phi$ be the Euler-Lagrange map. Translation invariance implies equivariance, $E(T_a\phi)=T_aE(\phi)$, where $(T_a\phi)(x)=\phi(x-a)$. Since $E(\phi^*)=0$, one has $E(\phi_a^*)=0$ for every $a$. Differentiating this vector equation with respect to $a_\mu$ at $a=0$ gives
+*Proof.* Differentiating the action identity in the field direction gives
 $$
-DE(\phi^*)[-\partial_\mu\phi^*]=0.
+DS_{\mathrm{cont}}(T_a\phi^*)[T_a\eta]
+=DS_{\mathrm{cont}}(\phi^*)[\eta]=0.
 $$
-The linearized Euler-Lagrange map $DE(\phi^*)$ is the Hessian operator. Pairing the last identity with an arbitrary admissible $\eta$ yields the displayed bilinear kernel identity. ∎
+Since $T_a:X\to X$ is onto, $\phi_a^*$ is critical against every admissible variation. For any $\eta\in X$, differentiate $DS_{\mathrm{cont}}(\phi_a^*)[\eta]=0$ at $a=0$; the $C^2$ action and $C^1$ orbit give the displayed Hessian identity. If $\phi^*(x)=\varphi(r)$ and $\sum_\mu c_\mu t_\mu=0$, then $\varphi'(r)c\cdot\omega=0$ for all $\omega\in S^3$. A nonconstant $C^1$ profile has some $r>0$ with $\varphi'(r)\ne0$, so $c=0$. ∎
 
 ### U.7.2 Scale Invariance at the PCE Attractor
 
-**Theorem U.8a (Virial Stationarity under Dilations).** Let $S_{\text{cont}}$ be the flat Euclidean action of Definition U.4 and let $\phi^*$ be an $O(4)$-symmetric critical point. For the rescaled family $\phi^*_\rho(x) = \phi^*(\rho x)$,
+**Theorem U.8a (Virial Stationarity under Dilations).** Let $S_{\mathrm{cont}}$ be the flat Euclidean action of Definition U.4, realized as a $C^2$ functional on an open field domain modeled on a Banach variation space $X$. Let $\phi^*$ be an $O(4)$-symmetric critical point with separately finite kinetic and subtracted-potential integrals. Require $\tau\mapsto\phi^*_{e^\tau}$, where $\phi^*_\rho(x)=\phi^*(\rho x)$, to be a $C^2$ curve in that field domain near $\tau=0$, with $s=x^\mu\partial_\mu\phi^*\in X$. Then
 $$\frac{d}{d\rho} S_{\text{cont}}[\phi^*_\rho]\bigg|_{\rho=1} = 0.$$
 
 *Proof.*
@@ -436,36 +434,50 @@ $$\frac{d}{d\rho} S_{\text{cont}}[\phi^*_\rho]\bigg|_{\rho=1} = (2-D)S_{\text{ki
 $$\frac{d}{d\rho} S_{\text{cont}}[\phi^*_\rho]\bigg|_{\rho=1}=0.$$
 For $D=4$ this yields the virial identity $S_{\text{kin}}(1)=-2S_{\text{pot}}(1)$. $\square$
 
-**Remark U.8b (What the virial identity does and does not prove).** The conclusion of Theorem U.8a is a first-variation statement. By itself it does **not** imply that the Hessian has a null vector along dilations. A dilatation zero mode requires a stronger hypothesis: a genuine smooth family of exact critical points generated by scaling.
+**Remark U.8b (What the virial identity does and does not prove).** The conclusion of Theorem U.8a is a first-variation statement. It does not by itself imply a Hessian null vector along dilations. Theorem U.9 supplies a sufficient condition through a differentiable family of exact critical points; Hessian-kernel membership alone does not establish such a family.
 
-**Theorem U.8c (Pure-Dilatation Kernel Obstruction).** Let $S_{\text{cont}}$ be the continuum action of Definition U.4 and let $\phi^*$ be a non-trivial finite-action critical point. Then the pure-coordinate dilatation tangent
-$$s(x):=x^\mu \partial_\mu \phi^*(x)$$
-satisfies
-$$D^2 S_{\text{cont}}(\phi^*)[s,s] = -4S_{\text{kin}}(1) < 0,$$
-where $S_{\text{kin}}(1)$ is the kinetic contribution appearing in Theorem U.8a. In particular, $s \notin \ker D^2 S_{\text{cont}}(\phi^*)$.
+**Theorem U.8c (Pure-Dilatation Kernel Obstruction).** Retain the action, common variational domain and admissible $C^2$ dilation curve of Theorem U.8a. Assume that the critical profile is nonconstant and that its kinetic contribution $T:=S_{\mathrm{kin}}(1)$ satisfies $0<T<\infty$. For
+$$
+s(x):=x^\mu\partial_\mu\phi^*(x),
+$$
+one has
+$$
+D^2S_{\mathrm{cont}}(\phi^*)[s,s]=-4T<0.
+$$
+Thus $s$ is not in the Hessian-form kernel.
 
-*Proof.* Define $F(\tau):=S_{\text{cont}}[\phi^*_{e^\tau}]$. By the scaling formulas used in Theorem U.8a at $D=4$,
-$$F(\tau)=e^{-2\tau}S_{\text{kin}}(1)+e^{-4\tau}S_{\text{pot}}(1),$$
-so
-$$F'(0)=-2S_{\text{kin}}(1)-4S_{\text{pot}}(1)=0$$
-and therefore
-$$S_{\text{pot}}(1)=-\frac12 S_{\text{kin}}(1).$$
-Differentiating again gives
-$$F''(0)=4S_{\text{kin}}(1)+16S_{\text{pot}}(1)=-4S_{\text{kin}}(1).$$
-The tangent to the curve $\tau \mapsto \phi^*_{e^\tau}$ at $\tau=0$ is exactly $s=x^\mu \partial_\mu \phi^*$. Since $\phi^*$ is critical, the second derivative of $F$ at $0$ equals the Hessian on this tangent, so
-$$D^2 S_{\text{cont}}(\phi^*)[s,s]=F''(0)=-4S_{\text{kin}}(1).$$
-For a non-trivial finite-action bounce, $S_{\text{kin}}(1)>0$; otherwise $\nabla \phi^*=0$ almost everywhere and $\phi^*$ is constant. Hence
-$$D^2 S_{\text{cont}}(\phi^*)[s,s]<0,$$
-so $s$ cannot lie in the Hessian kernel. $\square$
+*Proof.* Put $V:=S_{\mathrm{pot}}(1)$ and $F(\tau):=S_{\mathrm{cont}}[\phi^*_{e^\tau}]$. The four-dimensional change of variables gives
+$$
+F(\tau)=e^{-2\tau}T+e^{-4\tau}V.
+$$
+The admissible curve and criticality imply $F'(0)=-2T-4V=0$, hence $V=-T/2$. Therefore
+$$
+F''(0)=4T+16V=-4T.
+$$
+The second-order chain rule on the common field domain gives
+$$
+F''(0)
+=D^2S_{\mathrm{cont}}(\phi^*)[s,s]
++DS_{\mathrm{cont}}(\phi^*)\!\left[
+\left.\frac{d^2}{d\tau^2}\phi^*_{e^\tau}\right|_{\tau=0}
+\right]
+=D^2S_{\mathrm{cont}}(\phi^*)[s,s].
+$$
+Positivity of $T$ proves strict negativity. A Hessian-kernel vector has zero pairing with every admissible variation, in particular with itself, so $s$ cannot be one. ∎
 
-**Theorem U.9 (Conditional Dilatation Zero Mode).** Assume, in addition, that there exists a smooth one-parameter family $\rho \mapsto \phi_\rho$ of exact critical points of $S_{\text{cont}}$ with $\phi_1=\phi^*$ and tangent
-$$\frac{\partial \phi_\rho}{\partial (\ln \rho)}\bigg|_{\rho=1} = x^\mu \partial_\mu \phi^*.$$
-Then the Hessian annihilates the dilatation tangent vector:
-$$D^2 S_{\text{cont}}(\phi^*)\!\left[x^\mu \partial_\mu \phi^*, \eta\right] = 0 \qquad \text{for all test directions }\eta.$$
+**Theorem U.9 (Conditional Dilatation Zero Mode).** Let $S_{\mathrm{cont}}\in C^2(\mathcal D;\mathbb R)$ on an open field domain modeled on a real Banach variation space $X$. Suppose $\rho\mapsto\phi_\rho\in\mathcal D$ is a $C^1$ curve of exact critical points near $\rho=1$, with $\phi_1=\phi^*$ and nonzero tangent
+$$
+\left.\frac{\partial\phi_\rho}{\partial(\ln\rho)}\right|_{\rho=1}
+=s:=x^\mu\partial_\mu\phi^*\in X.
+$$
+Then
+$$
+D^2S_{\mathrm{cont}}(\phi^*)[s,\eta]=0
+\qquad(\eta\in X).
+$$
+This conditional branch is incompatible with Theorem U.8c when that theorem's positive-kinetic and dilation-domain hypotheses hold for the same action and tangent.
 
-*Proof.* Let $E(\phi):=\delta S_{\text{cont}}/\delta\phi$. Since each $\phi_\rho$ is a critical point, $E(\phi_\rho)=0$ for all $\rho$. Differentiating at $\rho=1$ gives
-$$DE(\phi^*)\!\left[\frac{\partial \phi_\rho}{\partial (\ln \rho)}\bigg|_{\rho=1}\right]=0.$$
-The linearization $DE(\phi^*)$ is the Hessian operator, so the displayed tangent vector lies in the Hessian kernel. $\square$
+*Proof.* For every $\eta\in X$, criticality gives $DS_{\mathrm{cont}}(\phi_\rho)[\eta]=0$. Differentiating this scalar identity with respect to $\ln\rho$ at $\rho=1$ yields the displayed bilinear identity by the chain rule. Under an independently supplied closed-form operator realization, it gives the corresponding operator-kernel statement. The same tangent cannot also have the strictly negative self-pairing of Theorem U.8c. ∎
 
 **Corollary U.9.1 (Virial Stationarity Is Not Enough).** The first-variation virial identity
 $$
@@ -482,14 +494,14 @@ and even vanishing of this quadratic form is strictly weaker than kernel members
 **Remark U.9.2 (Exact-Scale-Family Dichotomy).** Theorem U.9, Corollary U.9.1, and Theorem U.8d together isolate the logical alternatives for a fifth zero mode:
 
 1. *Exact-scale-family branch.* If a smooth one-parameter family of exact critical points exists with dilatation tangent $\eta_D=x^\mu\partial_\mu\phi^*$, then Theorem U.9 gives $H\eta_D=0$ and one is on the $\nu=1$ side of Theorem U.16a.
-2. *Negative-direction branch near a reference action.* If the pure-dilatation quadratic form is strictly negative at a chosen reference action, then Theorem U.8d shows that this negativity persists under sufficiently small $C^1$ perturbations of that action.
+2. *Negative-direction branch near a reference action.* Theorem U.8d preserves a strictly negative pure-dilatation quadratic form when the critical-point tangents and Hessian forms vary continuously in the respective form norms on a common form domain.
 3. *Virial non-implication.* Corollary U.9.1 shows that first-variation virial stationarity does not by itself imply a zero mode.
 
-Thus $\nu=1$ requires an exact-scale-family construction of the type stated in Theorem U.9; it is not obtained merely from virial stationarity.
+Thus virial stationarity alone supplies no fifth-mode certificate. The accepted $\nu=1$ branch of Theorem U.16a requires either the exact critical family of Theorem U.9 or the independently verified compact fifth-mode certificate of Definition U.16b; the latter need not be a pure-coordinate dilatation.
 
 ### U.7.3 Total Zero Mode Count
 
-**Corollary U.10 (Collective Coordinates).** The continuum bounce $\phi^*$ has four translational zero modes by Theorem U.8. It has a fifth dilatation zero mode only under the additional exact-scale-family hypothesis of Theorem U.9; Theorem U.8c shows that this hypothesis is not realized by the pure-coordinate scaling direction of the current Definition U.4 continuum action. If, in addition, the pure-dilatation quadratic form is negative at a chosen reference action, Theorem U.8d shows that this negativity persists under sufficiently small $C^1$ perturbations of that action. In the remainder of Appendix U, the value $m=5$ is therefore used only as the Appendix U leading-order reference-counting convention for the vacuum sector.
+**Corollary U.10 (Collective Coordinates).** Under Theorem U.8's variational and translation-orbit hypotheses, a nonconstant $C^1$ radial critical profile supplies four linearly independent translation vectors in the Hessian-form kernel. This does not exhaust the full kernel. Theorem U.9 is a sufficient condition for an additional dilatation kernel vector, while Definition U.16b describes a separately certified compact fifth direction. On the positive-kinetic branch and admissible dilation domain of Theorem U.8c, the pure-coordinate dilatation tangent has negative quadratic form and supplies no fifth kernel vector. If the pure-dilatation quadratic form is negative at a reference action and the critical-point tangents and Hessian forms vary continuously in the respective form norms on a common form domain, Theorem U.8d preserves this negativity in a neighborhood of the reference parameter. In the remainder of Appendix U, the value $m=5$ is therefore used only as the Appendix U leading-order reference-counting convention for the vacuum sector.
 
 **Theorem U.8d (Persistence of a negative pure-dilatation direction).** Let $\eta\mapsto S_\eta$ be a family of twice Fréchet-differentiable Euclidean actions on a common Hessian form domain $\mathcal Q$. Let $\phi_\eta^*$ be critical points such that
 $$
@@ -587,7 +599,7 @@ which has degree at most two, while the angular gradient of the constant factor 
 
 ### U.8.5 Zero Mode Preservation
 
-**Theorem U.13 (Design-Exact Evaluation on the Collective-Coordinate Subspace).** Let $X \subset S^3$ be the 24-cell (a spherical 5-design, identified with interface modes by Theorem U.7). Let $\phi^*(x)=\varphi(|x|)$ be a non-trivial finite-action $O(4)$-symmetric critical point of $S_{\text{cont}}$ (Definition U.4), let $u^*$ be its sample on $X$, and define the sampled directions
+**Theorem U.13 (Design-Exact Evaluation on the Collective-Coordinate Subspace).** Let $X \subset S^3$ be the 24-cell (a spherical 5-design by Theorem U.7, with any identification with QFI-mode labels requiring the independent certificate of Theorem U.7b). Let $\phi^*(x)=\varphi(|x|)$ be a non-trivial finite-action $O(4)$-symmetric critical point of $S_{\text{cont}}$ (Definition U.4), let $u^*$ be its sample on $X$, and define the sampled directions
 $$
 t_\mu(r,i):=-\partial_\mu \phi^*(r x_i) = -\varphi'(r)(x_i)_\mu, \qquad
 d(r,i):=(r x_i)^\nu \partial_\nu \phi^*(r x_i)=r\varphi'(r).
@@ -596,7 +608,7 @@ Let
 $$
 \mathcal C_{\mathrm{samp}}:=\mathrm{span}\{t_1,t_2,t_3,t_4,d\}.
 $$
-Let $S_{\text{disc}}$ be the discrete action of Definition U.6, and assume the chosen self-adjoint discrete angular quadratic form has the same Hessian matrix elements as the continuum angular term on $\mathcal C_{\mathrm{samp}}$. Then the restriction of $D^2 S_{\text{disc}}(u^*)$ to $\mathcal C_{\mathrm{samp}}$ agrees exactly with the corresponding restriction of $D^2 S_{\text{cont}}(\phi^*)$ to the continuum span of $\{-\partial_\mu \phi^*\}_{\mu=1}^4$ and $x^\nu \partial_\nu \phi^*$. Consequently:
+Require the nonconstant $C^1$ radial profile, positive finite kinetic contribution and common continuum variational-domain hypotheses of Theorems U.8 and U.8c, including the admissible translation and dilation curves. Let $S_{\mathrm{disc}}$ be the discrete action of Definition U.6 and require all displayed sampled directions to lie in its Hessian-form domain with finite radial matrix elements. Assume the chosen self-adjoint discrete angular quadratic form has the same Hessian matrix elements as the continuum angular term on $\mathcal C_{\mathrm{samp}}$. Then the restriction of $D^2S_{\mathrm{disc}}(u^*)$ to $\mathcal C_{\mathrm{samp}}$ agrees exactly with the corresponding restriction of $D^2S_{\mathrm{cont}}(\phi^*)$ to the continuum span of $\{-\partial_\mu\phi^*\}_{\mu=1}^4$ and $x^\nu\partial_\nu\phi^*$. Consequently:
 1. the four sampled translation directions are null directions of the restricted quadratic form $D^2 S_{\text{disc}}(u^*)|_{\mathcal C_{\mathrm{samp}}}$;
 2. the sampled pure-coordinate dilatation direction satisfies
 $$
@@ -979,7 +991,7 @@ The vacuum fluctuation amplitude is computed via a path integral:
 
 $$Z = \int \mathcal{D}u \, e^{-\lambda S_{\text{disc}}(u)}$$
 
-where $\lambda = C_{\max}/\varepsilon_0 = 2$ is the structural PCE capacity ratio.
+where $\lambda=C_{\max}/\varepsilon_0=2$ is the structural capacity ratio on the independently assumed residual-budget branch of Equation Q.10.
 
 ### U.9.2 Standard Laplace Asymptotics
 
@@ -1173,7 +1185,7 @@ This remains cross-model arithmetic without $\mathfrak C_{U,\mathrm{mark}}$. An 
 
 No accepted $\mathfrak C_{U,\mathrm{mark}}$ or $\mathfrak C_{U,\mathrm{act}}$ is present.
 
-**Theorem U.15 (Leading-Order Complexity Deficit from Zero Modes).** Assume the Appendix U leading-order reference-counting convention of Corollary U.10, namely that the relevant collective-coordinate manifold has real dimension $m = 5$ (four translations and one dilatation mode). Under the leading-order Morse-Bott counting pattern of Section U.9.3 and Convention U.14a, these collective coordinates contribute the deficit
+**Theorem U.15 (Leading-Order Complexity Deficit from Zero Modes).** Adopt the five-mode arithmetic comparison convention discussed in Corollary U.10 and Theorem U.16, with $m=5$ representing four translations and one hypothetical additional dilatation mode. In the reference counting pattern of Section U.9.3, these five real directions contribute the deficit
 $$
 \delta = \frac{m}{2} = \frac{5}{2} = 2.5
 $$
@@ -1185,9 +1197,9 @@ to the exponent-counting parameter used in the vacuum weight.
 $$
 \lambda^{-(N_{\mathbb{R}}-m)/2}
 $$
-with $\lambda = C_{\max}/\varepsilon_0 = 2$ (Appendix Q), $N_{\mathbb{R}} = 288$ the real dimension of the integration domain (Remark U.3a), and $m = 5$ the assumed real dimension of the collective-coordinate manifold. At the manuscript's fixed $\lambda$, this is used as a leading-order counting pattern rather than as a controlled exact asymptotic evaluation.
+with $\lambda=C_{\max}/\varepsilon_0=2$ on Appendix Q's residual-budget branch, $N_{\mathbb R}=288$ the independent Grassmannian real tangent count of Remark U.3a, and $m=5$ the stipulated comparison count. These reference numbers do not identify the sampled-field integration domain with the Grassmannian tangent space. At $\lambda=2$, the expression supplies a counting pattern; a controlled saddle evaluation requires the separate carrier, action, moduli, determinant, and remainder records.
 
-**Step 2 (Convention-based exponent parameter).** The base complexity $\kappa_0 = 144$ counts the complex dimension of $\text{Gr}_{\mathbb{C}}(12,24)$ (Theorem U.3), with $N_{\mathbb{R}} = 2\kappa_0$. By Convention U.14a, the leading-order exponent-counting parameter is
+**Step 2 (Convention-based exponent parameter).** The base complexity $\kappa_0=144$ counts the complex dimension of $\text{Gr}_{\mathbb C}(12,24)$ (Theorem U.3), with $N_{\mathbb R}=2\kappa_0$. The five-mode arithmetic convention of Theorem U.16 defines
 $$
 \kappa_{\mathrm{ref}} := \frac{N_{\mathbb{R}} - m}{2} = \frac{288 - 5}{2} = 141.5,
 $$
@@ -1481,9 +1493,9 @@ $$
 
 6. $\mathcal B_{\mathrm{BL}}$ is the Bismut-Lebeau Bott-Chern anomaly term of the triangle;
 
-7. $\mathfrak o_{\det}$ orients the three determinant lines compatibly with the PU anomaly-inflow orientation of Theorem X.8d.
+7. $\mathfrak o_{\det}$ independently orients the three determinant lines compatibly. Any interpretation through a predictive redundancy also requires the descent and inflow conditions of Theorem X.8d.
 
-The datum is accepted when the anomaly-inflow condition gives
+No applicable Bismut--Lebeau (1991) metric-comparison theorem has been established for these unspecified complexes; their title does not supply one. Acceptance additionally requires a same-convention Quillen-metric comparison theorem with all geometric, domain, regularization, and metric hypotheses verified for these complexes. The record must verify that its complete logarithmic norm-comparison term is the displayed $\mathcal B_{\mathrm{BL}}$, that all other comparison contributions vanish, and that the norm-to-prefactor conversions give the factors in (U.15h.2). It must then independently establish
 $$
 \mathcal B_{\mathrm{BL}}=0
 \tag{U.15g.3}
@@ -1513,7 +1525,7 @@ $$
 \cong
 \det\mathcal C_T\otimes\det\mathcal C_\perp.
 $$
-For Quillen norms, the Bismut-Lebeau comparison formula multiplies the right-hand side by the Bott-Chern anomaly factor $e^{\mathcal B_{\mathrm{BL}}}$. The accepted datum imposes $\mathcal B_{\mathrm{BL}}=0$ by PU anomaly inflow, so the Quillen norm is multiplicative, proving (U.15h.1). Appendix T defines the electroweak determinant contribution so that its inverse appears in the vacuum transfer convention, while $\mathcal C_\perp$ supplies the missing transverse determinant. This gives (U.15h.2). ∎
+No concrete Bismut--Lebeau application is established here. The conclusion below is conditional on the independently supplied metric identity and conversions, not a result obtained from that publication. The independently verified metric-comparison entry of Definition U.15g supplies the logarithmic norm defect $\mathcal B_{\mathrm{BL}}$ for this determinant-line isomorphism in the common finite-part convention. Its accepted value $0$ makes the norm multiplicative and proves (U.15h.1). The separately verified norm-to-prefactor conversions in that record identify the electroweak factor as $A_{EW}^{-1}$ and the residual factor as $A_\perp$, giving (U.15h.2). Exactness of the triangle and cancellation of a predictive anomaly phase alone supply neither the metric comparison nor these scalar conversions. ∎
 
 **Corollary U.15i (One-Loop Status after Determinant Transfer).** On a branch carrying both $\mathfrak F_U$ and an accepted Bismut--Lebeau transfer datum, the direct and transferred computations must give the same oriented relative-determinant factor,
 $$
@@ -1524,7 +1536,7 @@ This is a forward one-loop decay-magnitude output, not a complete saddle weight 
 
 *Proof.* Both records evaluate the same oriented relative determinant with one regulator and finite-part convention. Equality is therefore their acceptance test. The higher-loop and real-stress gates are absent from that identity. ∎
 
-**Theorem U.15i.2 (Relative Quillen--Fredholm One-Loop Identity).** On a branch carrying $\mathfrak F_U$, define
+**Theorem U.15i.2 (Relative Quillen--Fredholm One-Loop Identity).** Retain an accepted $\mathfrak F_U$ and register determinant complexes and a determinant-line identification realizing
 $$
 \operatorname{Det}_{\mathrm{rel},U}
 :=
@@ -1533,12 +1545,24 @@ $$
 \left(\det{}''\mathcal H_{\mathrm{bounce}}\right)^{-1}.
 \tag{U.15i.2.1}
 $$
-The false-vacuum factor is unprimed because translations act trivially on the constant false vacuum and $V_{\mathrm{eff}}''(0)>0$; an independently certified gauge kernel may be removed only by naming its projector. If $s_{\mathrm{rel},U}$ is the oriented section fixed by the common regulator and finite-part convention, then
+An additional relative-Quillen conversion record must specify the nonzero oriented section, its magnitude normalization, the complex metrics and the comparison formula. At each registered finite spectral regulator $R$, let $H_{0,R}$ and $H_{+,R}$ be the positive false-vacuum and retained bounce matrices, with the declared omitted-mode projectors and unit conventions. Require the independently verified comparison formula
 $$
-\|s_{\mathrm{rel},U}\|_Q=\mathcal D_{\mathrm{rel}}.
+\|s_{\mathrm{rel},R}\|_{Q,R}^{\,2}
+=e^{c_R}\frac{\det H_{0,R}}{\det H_{+,R}},
+$$
+where $c_R$ is precisely the logarithmic counterterm of the common relative-determinant finite part, including any section or complex-metric contribution. The record must verify that these regulated sections and norms converge to $s_{\mathrm{rel},U}$ and its Quillen norm, and that
+$$
+c_R+\log\det H_{0,R}-\log\det H_{+,R}
+\longrightarrow 2\log\mathcal D_{\mathrm{rel}}
+$$
+with the same limit and error control as Definition U.15d. These are additional conversion and convergence tests; $\mathfrak F_U$ or orientation alone does not supply them. The false-vacuum factor is unprimed unless an independent gauge kernel and its removed projector are certified.
+
+On this branch,
+$$
+\|s_{\mathrm{rel},U}\|_Q=\mathcal D_{\mathrm{rel}},
 \tag{U.15i.2.2}
 $$
-Consequently
+and
 $$
 A_{\mathrm{eff}}^{\mathrm{Fred},1}
 =
@@ -1550,11 +1574,19 @@ A_{\mathrm{eff}}^{\mathrm{Fred},1}
 \|s_{\mathrm{rel},U}\|_Q.
 \tag{U.15i.2.3}
 $$
-No determinant or tail factor may be appended outside this product without defining a new branch.
+No determinant or tail factor is counted a second time in this product.
 
-*Proof.* The common-regulator limit in Definition U.15d defines both sides of (U.15i.2.2) from the same relative heat trace and finite part. Substitution in (U.15d.3) gives (U.15i.2.3). ∎
+*Proof.* Positivity of the regulated matrices gives
+$$
+\log\|s_{\mathrm{rel},R}\|_{Q,R}
+=\frac12\left(
+c_R+\sum_j\log\lambda_j(H_{0,R})
+-\sum_k\log\lambda_k(H_{+,R})
+\right).
+$$
+The declared comparison and convergence tests make its limit $\log\mathcal D_{\mathrm{rel}}$ and identify that limit with $\log\|s_{\mathrm{rel},U}\|_Q$. Exponentiation proves (U.15i.2.2), and substitution in (U.15d.3) proves (U.15i.2.3). This proves the consequence of the conversion record without asserting its existence for an arbitrary Fredholm operator or determinant complex. ∎
 
-**Definition U.15i.3 (Common Relative Quillen Convention Ledger).** For every listed sector $s$, the ledger fixes an oriented relative determinant section $s_{\mathrm{rel},s}$, omitted-mode rule, finite-part scheme and scale, unit map, transport $T_s$ into one comparison convention, and the sector factors $\mathcal J_s$, $\mathcal A_{\mathrm{neg},s}$, $\mathcal A_{\mathrm{ghost},s}$, $\mathcal A_{\mathrm{fv},s}$, and $\mathcal A_{\mathrm{meas},s}$.
+**Definition U.15i.3 (Common Relative Quillen Convention Ledger).** For every listed sector $s$, the ledger supplies an accepted relative-Quillen realization and scalar-conversion record of the type in Theorem U.15i.2. It specifies a nonzero oriented section $s_{\mathrm{rel},s}$ with its magnitude normalization, omitted-mode rule, finite-part scheme and scale, unit map, and a verified determinant-line transport $T_s$ into one comparison convention, including its norm conversion. It also registers the sector factors $\mathcal J_s$, $\mathcal A_{\mathrm{neg},s}$, $\mathcal A_{\mathrm{ghost},s}$, $\mathcal A_{\mathrm{fv},s}$, and $\mathcal A_{\mathrm{meas},s}$.
 
 **Proposition U.15i.4 (Sector Restriction of One Convention Ledger).** On an accepted ledger,
 $$
@@ -1609,7 +1641,11 @@ and the Appendix T determinant-model value
 $$
 A_{EW}=1.084\pm0.005,
 $$
-the branch-required values are
+the following branch-required values use first-order propagation with zero covariance between $a=A_{EW}$ and $b=A_{\mathrm{eff}}^{(\mathrm{obs},\kappa)}$. For a registered covariance, the product $\Xi_\perp=ab$ has
+$$
+\sigma_{\Xi}^2\simeq b^2\sigma_a^2+a^2\sigma_b^2+2ab\operatorname{Cov}(a,b).
+$$
+The table is the zero-covariance illustration. Both action-placement rows use the same primitive data, so their errors are correlated; their ratio is exactly $e$ on that common-data convention.
 
 | Stipulated action placement | $\kappa=S/2$ | $A_{\mathrm{eff}}^{(\mathrm{obs},\kappa)}$ | required $\Xi_{\perp}^{(\mathrm{obs},\kappa)}$ |
 |---|---:|---:|---:|
@@ -1632,7 +1668,7 @@ $$
 \tag{U.15j.6}
 $$
 Its uncertainty cannot be obtained by diagonal propagation of the marginal errors of $A_{EW}$ and $A_{\mathrm{eff}}$, because the transferred working $A_{\mathrm{eff}}$ already contains $A_{EW}^{-1}$. Until the primitive transfer, bounce/extensivity, and allowance covariance ledger is supplied, $\sigma(\Xi_{\perp}^{(\mathrm{work})})$ remains uncertified; the former $0.0128$ diagonal value is not an accepted transfer-branch uncertainty.
-Thus, if $\Xi_{\perp}^{(\mathrm{work})}$ were promoted to a forward determinant output, it would agree with the five-mode reference requirement and miss the four-mode requirement by the factor $e$. But that promotion is not licensed by the current Appendix U data: no residual transverse complex $\mathcal C_{\perp}$, exact determinant triangle, Bott-Chern anomaly evaluation, or residual determinant computation is supplied. Therefore the current determinant-transfer ledger neither determines an action placement nor supplies a theorem-level preference between the two stipulated placements; in particular, it does not discharge $\mathfrak C_{U,\mathrm{mark}}$ or the exact exponent-calibration certificate $\mathfrak C_{U,\mathrm{act}}$ of Proposition U.14.
+If $\Xi_{\perp}^{(\mathrm{work})}$ were promoted to a forward determinant output, its central value would be close to the five-mode reference requirement. The exact factor $e$ relates the two branch-required values in (U.15j.5), not the working product to either required value. But that promotion is not licensed by the current Appendix U data: no residual transverse complex $\mathcal C_{\perp}$, exact determinant triangle, Bott-Chern anomaly evaluation, or residual determinant computation is supplied. Therefore the current determinant-transfer ledger neither determines an action placement nor supplies a theorem-level preference between the two stipulated placements; in particular, it does not discharge $\mathfrak C_{U,\mathrm{mark}}$ or the exact exponent-calibration certificate $\mathfrak C_{U,\mathrm{act}}$ of Proposition U.14.
 
 Consequently, an accepted determinant-transfer certificate with $\Xi_{\perp}$ in the first interval would reproduce the observational value under the five-mode reference convention, while a value in the second interval would reproduce it under the independently stipulated four-mode action $S=284$; a value outside both intervals would reject observational matching under both stipulated placements on the same transfer convention. This diagnostic proves neither action placement and discharges none of $\mathfrak C_{U,\mathrm{mark}}$, the exact exponent-calibration certificate $\mathfrak C_{U,\mathrm{act}}$ of Proposition U.14, $\mathfrak F_U^{(4)}$, or $\mathfrak R_\Lambda^{(4)}$. Until $\Xi_{\perp}$ is computed on the same finite-part convention, the five-mode proximity remains a working-convention check and the four-mode mismatch remains a same-prefactor comparison, not a theorem-level action decision.
 
@@ -1646,9 +1682,11 @@ which proves (U.15j.5). Equation (U.15j.6) is the same multiplication applied to
 
 *Proof.* Theorem U.13b fixes only the four-dimensional sampled-angular Hessian kernel under its spectral hypotheses, while Theorem U.8c excludes the pure-coordinate dilatation direction as a fifth zero mode; the carrier marking and action remain the independent records stipulated in the corollary. A five-mode prefactor uses a collective-coordinate ledger that is not present on this route. An electroweak prefactor uses a different determinant problem. Corollary U.15f states that no prefactor is promoted without a direct Fredholm audit, while Corollary U.15j states that determinant transfer has no theorem-level value until the residual transverse determinant is computed. Therefore transfer is allowed only when the four-mode audit or the accepted transfer datum derives the same value from the four-mode determinant line. ∎
 
-**Theorem U.15l (Four-Mode Decay and Real-Stress Non-Identifiability without the Complete Gates).** Theorem U.13b supplies neither the independent carrier marking nor the exponent. Even after accepted $\mathfrak C_{U,\mathrm{mark}}$ and exact $\mathfrak C_{U,\mathrm{act}}$ give $\kappa_{\mathrm{idx}}=142$ and $B_U=284$, omission of any operator, relative-determinant, exact-moduli, contour, ghost, volume, measure, regulator-tail, or higher-loop entry permits two completions with different $w_4^{\mathrm{dec}}$. Even a complete decay record does not determine $w_4^{\mathrm{real}}$ or $\Lambda_4L_P^2$ without $\mathfrak R_\Lambda^{(4)}$.
+**Theorem U.15l (Four-Mode Certification and Conditional Non-Identifiability).** Theorem U.13b supplies neither the independent carrier marking nor the exponent. Even after accepted $\mathfrak C_{U,\mathrm{mark}}$ and exact $\mathfrak C_{U,\mathrm{act}}$ give $\kappa_{\mathrm{idx}}=142$ and $B_U=284$, certification of $w_4^{\mathrm{dec}}$ by this ledger requires all declared operator, relative-determinant, exact-moduli, contour, ghost, volume, measure, regulator-tail and higher-loop entries. A complete decay record does not by itself discharge the separate real-stress record $\mathfrak R_\Lambda^{(4)}$.
 
-*Proof.* Each missing positive magnitude factor can be varied while holding the upstream kernel and exponent fixed. Independently, the imaginary decay-contour contribution does not determine a real local Lorentzian metric variation. These two variations prove the two non-identifiability statements. ∎
+For either output, non-identifiability from accepted data is established if two admissible completions agree on those data and give different values of that output. A missing certificate alone does not establish the existence of such completions or freedom to vary a factor independently.
+
+*Proof.* Certification by the declared ledger requires each of its entries, including the independent real-stress entry when that output is requested. This is a statement about the sufficiency of the submitted record. For the conditional non-identifiability claim, suppose completions $c_1,c_2$ have the same accepted data $d$ but output values $w(c_1)\ne w(c_2)$. Any rule depending only on $d$ has the same value on both completions and therefore cannot recover both outputs. Conversely, failure to supply an entry gives no such pair: other admissibility conditions may determine its value, or may admit no completion. The decay magnitude and real Lorentzian metric response must consequently be certified according to their respective records. ∎
 
 **Remark U.15d.0 (Anchor to the Canonical Cosmological Ledger).** Definitions U.15d and U.15f.1 are equivalent to the corresponding slots of $\mathfrak F_U^{(4)}$ only when the same branch also supplies the exact-moduli record $\mathfrak M_4$, common regulator and convergence record $\mathcal G_4$, single relative determinant $\mathcal D_4$, and remainder record $\mathcal R_{\ge2}$. A spectral tail verifies $\mathcal D_4$ exactly once. The physical row remains outside that record and requires $\mathfrak R_\Lambda^{(4)}$.
 
@@ -1673,9 +1711,9 @@ $$
 
 K-theory, Steiner/Golay/Leech data, anomaly language, and determinant transfer may construct entries only by supplying these operator and convergence tests. They do not replace them.
 
-**Theorem U.15m.1 (No One-Loop Promotion without the Gate).** Definition U.15m closes only a same-branch one-loop decay magnitude. Missing one entry leaves that magnitude empty. Even a complete one-loop record does not supply the higher-loop/saddle remainder, the carrier or exponent calibration, or the real vacuum-stress realization.
+**Theorem U.15m.1 (No One-Loop Promotion without the Gate).** Definition U.15m certifies a same-branch one-loop decay magnitude only when every declared entry is supplied and accepted. A missing entry leaves that magnitude uncertified by this record; it does not assert a zero magnitude or the absence of an admissible completion. A complete one-loop record alone supplies neither the higher-loop/saddle remainder, the carrier or exponent calibration, nor the real vacuum-stress realization.
 
-*Proof.* Varying any missing factor while preserving all supplied entries changes (U.15m.1). The remaining gates concern different mathematical objects and therefore cannot follow from the determinant product. ∎
+*Proof.* The one-loop product uses exactly the operator, quotient, measure and limit data listed in Definition U.15m. Without an accepted entry, the submitted record does not certify that product. The additional calibration, remainder and real-stress records are separate hypotheses of the corresponding output claims and are not entries of the one-loop product. Mathematical non-identifiability requires the paired admissible completions specified in Theorem U.15l; no independent variation of a missing factor is assumed here. ∎
 
 **PPI mapping chain (vacuum weight).** The five-mode expression
 $$
@@ -1806,7 +1844,7 @@ The common counts $(24,12)$ are arithmetic compatibility data. Neither structure
 | $m_4$ | Theorem U.13b radially continuous, sampled-angular Hessian | $4$ |
 | $\kappa_{\mathrm{idx}}=(288-4)/2$ | requires $\mathfrak C_{U,\mathrm{mark}}$ | $142$ |
 | $S_{\mathrm{inst}}$ | additionally requires the exact exponent-calibration certificate $\mathfrak C_{U,\mathrm{act}}$ of Proposition U.14 | $284$ |
-| $w_4$ | additionally requires the same-branch Fredholm record | $\varnothing_{\mathrm{cert}}$ |
+| $w_4^{(1),\mathrm{dec}}$ | additionally requires the same-branch one-loop Fredholm record | $\varnothing_{\mathrm{cert}}$ |
 | $\Lambda_4L_P^2$ | additionally requires $\mathfrak R_\Lambda^{(4)}$ | $\varnothing_{\mathrm{cert}}$ |
 
 ### U.12.3 Comparison with Observation
@@ -1822,9 +1860,10 @@ The common counts $(24,12)$ are arithmetic compatibility data. Neither structure
 | five-mode index | $141.5$ | arithmetic reference index |
 | four-mode index | $142$ | requires $\mathfrak C_{U,\mathrm{mark}}$ in addition to U.13b |
 | four-mode action | $284$ | additionally requires the exact exponent-calibration certificate $\mathfrak C_{U,\mathrm{act}}$ of Proposition U.14 |
-| $A_{\mathrm{eff}}^{\mathrm{Fred},4}$ | determinant/Jacobian factor | requires the complete same-branch Fredholm record |
-| $w_4$ | $A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$ | current value $\varnothing_{\mathrm{cert}}$ |
-| $\Lambda_4L_P^2$ | $8\pi w_4$ | additionally requires $\mathfrak R_\Lambda^{(4)}$; current value $\varnothing_{\mathrm{cert}}$ |
+| $A_{\mathrm{eff}}^{\mathrm{Fred},1}$ | one-loop determinant/Jacobian factor of (U.15d.3) | requires the complete same-branch one-loop Fredholm record |
+| $w_4^{(1),\mathrm{dec}}$ | $A_{\mathrm{eff}}^{\mathrm{Fred},1}e^{-284}$ on the certified action branch | current value $\varnothing_{\mathrm{cert}}$; U.15f.2 supplies its interval form |
+| $w_4^{\mathrm{dec}}$ | completed decay magnitude | additionally requires the higher-loop and competing-saddle remainder record |
+| $\Lambda_4L_P^2$ | $8\pi w_4^{\mathrm{real}}$ | requires $\mathfrak R_\Lambda^{(4)}$ for the real Lorentzian stress coefficient; current value $\varnothing_{\mathrm{cert}}$ |
 | five-mode and four-mode observational inversions | $0.917\pm0.016$ and $2.49\pm0.04$ | empirical inversions under their declared conventions, not forward factors |
 | primordial index | $\kappa_Q=11$ | independent projective reference index; physical outputs require $\mathfrak P_{\mathrm{prim}}$ |
 
@@ -1846,8 +1885,8 @@ This is a conditional same-record diagnostic. It does not apply to the current D
 
 For general emergent dimension $D'$:
 
-- Translational sampled-Hessian count: $m_{\mathrm{trans}}=D'$; for $D'=4$, Theorem U.13b proves four-mode nullity for the declared radially continuous, sampled-angular operator under its explicit spectral hypotheses. Other dimensions require their own angular discretization and radial spectral proof.
-- A further dilatation mode would require an additional exact-scale-family hypothesis of the type isolated in Theorem U.9
+- Translational tangents: for a translation-invariant $C^2$ action and a nonconstant $C^1$ radial critical profile in $\mathbb R^{D'}$, assume the translation orbit is differentiable in its admitted variational domain and its tangents belong to the Hessian form domain, as in Theorem U.8. Translation invariance then gives $D'$ independent continuum form-kernel vectors: a relation $a\cdot\nabla\phi=0$ would force $a\cdot n=0$ for every direction $n$ at a radius where the radial derivative is nonzero, hence $a=0$. For $D'=4$, Theorem U.13b gives four-mode nullity for its declared radially continuous, sampled-angular operator under its additional spectral hypotheses. Other dimensions require their own angular discretization and radial spectral proof.
+- An admissible differentiable family of exact critical points with nonzero dilation tangent is a sufficient source of a dilation kernel vector, as in Theorem U.9. A dilation kernel vector established by another argument requires its own certificate; an exact scale family is not asserted to be necessary.
 - Deficit: $\delta = m/2$
 - Requires a faithful response-label injection $M\le K(D')$ with strict least-feasible support cost (Definition Z.9a; Theorem Z.10) and an independently accepted spherical-design quadrature record
 
@@ -1936,7 +1975,7 @@ $$
 
 The rate theorem supplies the number $12$ only. A binary-code, QFI, or physical primordial interpretation requires an explicit carrier/observable realization; no such map follows from projectivization.
 
-For a registered reference plane of complex dimension $r$, the same construction gives $\mathbb{CP}^{r-1}$. The downstream value $\kappa_Q=11$ therefore inherits the independent reference-plane choice $r_U=12$ and Convention U.14a, not a binary-code dimension, Golay distance, or a physical-vacuum theorem.
+For a registered reference plane of complex dimension $r$, the same construction gives $\mathbb{CP}^{r-1}$. The downstream value $\kappa_Q=11$ therefore inherits the independent reference-plane choice $r_U=12$ and Identification U.20's projective-dimension convention, not a binary-code dimension, Golay distance, or a physical-vacuum theorem.
 
 *Remark.* The Appendix-U reference configuration family is $\operatorname{Gr}_{\mathbb C}(12,24)$, while $\mathbb{CP}^{11}$ is the ray space of the fixed reference plane $S_U$. Interpreting the former as a vacuum configuration space and the latter as physical perturbations requires the independent action, background solution, linearization, gauge quotient, and observable-realization package.
 
@@ -1967,7 +2006,7 @@ $$\frac{\dim_\mathbb{C}(\text{Gr}_\mathbb{C}(12,24))}{\dim_\mathbb{C}(\mathbb{CP
 
 ### U.16.2 Complexity Exponent
 
-**Identification U.20 (Primordial Complexity on the Registered 12-Plane Reference Branch).** On Definition U.18's reference plane and Convention U.14a's independent exponent-counting branch, define the primordial reference complexity by
+**Identification U.20 (Primordial Complexity on the Registered 12-Plane Reference Branch).** On Definition U.18's reference plane, adopt the independent projective-dimension counting convention and define the primordial reference complexity by
 
 $$
 \boxed{\kappa_Q:=\dim_{\mathbb C}(\mathbb{CP}^{11})=11.}
@@ -1975,9 +2014,9 @@ $$
 
 This is an identification, not a determinant result. A physical suppression exponent additionally requires the primordial action, saddle, Hessian, zero-mode, measure, regularization, and prefactor certificate.
 
-A unit shift $k \to k - 1$ off the balanced branch would give $\kappa_Q = k - 1 \to k - 2$, rescaling $Q \sim e^{-\kappa_Q}$ by a factor of $e \approx 2.7$.
+If the independently registered primordial carrier dimension changes from $r$ to $r-1$, and both branches certify the same projective-index rule with no extra continuous modes, their indices are $r-1$ and $r-2$. With the same variance-to-field map and prefactor, $Q\propto e^{-\kappa_Q}$ then changes by the factor $e$. A change of the code parameter $k$ alone does not establish this carrier change or either physical identification.
 
-*Justification.* By Convention U.14a, the instanton complexity parameter counts the effective number of complex normal directions contributing to the exponential suppression. For the primordial sector on $\mathbb{CP}^{11}$, we identify $\kappa_Q$ with the complex dimension $11$. We assume no additional continuous zero modes beyond gauge redundancies; if collective modes analogous to translations or dilatations were present, they would reduce $\kappa_Q$ as in the five-mode vacuum reference sector ($\kappa_{\Lambda,\mathrm{ref}} = 144 - 2.5$). This identification is consistent with the framework but constitutes an assumption requiring future verification. It is not a consequence of the vacuum four-mode count and cannot be promoted by analogy with $\mathrm{Gr}_{\mathbb C}(12,24)$ without a separate primordial determinant and zero-mode certificate. $\square$
+*Justification.* Theorem U.19 gives complex dimension $11$ for the independently registered $\mathbb{CP}^{11}$ reference space. This branch stipulates that dimension as the index $\kappa_Q$. It assumes no additional retained zero or collective directions beyond redundancies already removed in forming the projective space; Definition U.26b separately tests this index-consistency condition. The vacuum Feshbach record of Convention U.14a supplies neither the primordial index nor its exponential suppression. A primordial action realization, variance law, determinant, and observable map require the independent certificate of Definition U.69a. $\square$
 
 **Corollary U.20a (Complexity Ratio).**
 
@@ -2092,7 +2131,7 @@ $$
 \operatorname{Re}(s)>\frac{n}{2}.
 $$
 
-By the complex-powers theorem of Seeley (1967), $\zeta_\Delta$ has a meromorphic continuation to $\mathbb C$ that is regular at $s=0$. The zeta-regularized determinant with the zero eigenspace omitted is
+Let $P_0$ be the orthogonal projection onto $\ker\Delta$. The invertible elliptic operator $A=\Delta+P_0$ satisfies $\zeta_\Delta(s)=\operatorname{Tr}(A^{-s})-\dim\ker\Delta$ initially for $\operatorname{Re}(s)>n/2$. Seeley's complex-powers construction (Seeley 1968, pp. 96–98) continues the trace meromorphically and regularly at $s=0$; the same follows for $\zeta_\Delta$ by subtracting the finite constant. The zeta-regularized determinant with the zero eigenspace omitted is
 
 $$
 \det'(\Delta):=e^{-\zeta'_\Delta(0)}.
@@ -2165,7 +2204,7 @@ $$
 \mathcal O_Q=-\Delta_{FS}+m_Q^2
 \tag{U.26b.2}
 $$
-is self-adjoint on the stated domain and has compact resolvent.
+is self-adjoint on the stated domain and has compact resolvent. Here $\Delta_{FS}:=\operatorname{div}_{FS}\nabla_{FS}$ is nonpositive, so $-\Delta_{FS}$ is the nonnegative scalar Laplacian of Theorem U.25a.
 2. $P_Q$ is a finite-rank orthogonal projection commuting with $\mathcal O_Q$ and naming exactly the gauge, collective, or zero directions removed from the Gaussian determinant. Write $q_\ell=\operatorname{rank}(P_Q|_{E_\ell})$ and $r_Q^{\mathrm{extra}}:=\operatorname{rank}P_Q$ after excluding redundancies already removed in forming $\mathbb{CP}^{11}$.
 3. The retained operator is strictly positive:
 $$
@@ -2201,7 +2240,7 @@ A_Q^{\mathrm{det}}
 $$
 with its interval obtained from $\mathcal T_Q$.
 
-**Theorem U.26c (Determinant Closure of the Primordial Prefactor).** If a branch carries an accepted primordial determinant certificate $\mathfrak D_Q$, then
+**Theorem U.26c (Determinant Closure of the Primordial Prefactor).** Assume Corollary U.24's independent variance law, circular Gaussianity, and unit real-part projection, together with an accepted primordial determinant certificate $\mathfrak D_Q$ and its index-consistency rule. On the same primordial action and measure branch,
 $$
 A_Q=A_Q^{\mathrm{det}}
 \tag{U.26c.1}
@@ -2213,21 +2252,24 @@ Q^2
 \frac12 A_Q^{\mathrm{det}}e^{-2\kappa_Q}.
 \tag{U.26c.2}
 $$
-The leading branch $A_Q=1$ is theorem-level only if the certified determinant satisfies $A_Q^{\mathrm{det}}=1$ within the stated branch tolerance.
+The exact leading identity $A_Q=1$ follows only if the certified determinant satisfies $A_Q^{\mathrm{det}}=1$. An enclosure within a nonzero tolerance of $1$ supplies an approximation with that tolerance and its propagated amplitude interval.
 
-*Proof.* By Definition U.25, the zeta-regularized determinant of the positive nonconstant fluctuation operator is
+*Proof.* Definition U.26b supplies the strictly positive retained operator
 $$
-\det{}'_\zeta(\mathcal O_Q)=e^{-\zeta_Q'(0)}.
+\mathcal O_{Q,\mathrm{ret}}
+:=\mathcal O_Q|_{(I-P_Q)\mathcal H}
 $$
-A Gaussian one-loop integration over real retained fluctuations contributes the inverse square-root determinant factor
+and its projected zeta function $\zeta_Q$. The zeta-determinant definition gives
 $$
-\left(\det{}'_\zeta(\mathcal O_Q)\right)^{-1/2}
-=
-\exp\!\left[\frac12\zeta_Q'(0)\right],
+\det_\zeta\mathcal O_{Q,\mathrm{ret}}
+=e^{-\zeta_Q'(0)},
+\qquad
+(\det_\zeta\mathcal O_{Q,\mathrm{ret}})^{-1/2}
+=\exp\!\left[\frac12\zeta_Q'(0)\right].
 $$
-while the finite quotient, gauge-zero-mode, and measure factors contribute $\mathcal J_Q$. This gives (U.26b.5). Corollary U.24 already isolates the real-projection factor as the explicit $1/2$ multiplying $A_Qe^{-2\kappa_Q}$, so no additional real-projection factor is included in $A_Q^{\mathrm{det}}$. Substitution gives (U.26c.2). ∎
+Multiplication by the registered Jacobian and measure factor $\mathcal J_Q$ gives (U.26b.6). The projection removes exactly the modes listed in $P_Q$; a positive retained constant mode remains in the determinant. Corollary U.24, on the stated variance and real-projection premises, then gives (U.26c.2) with the index accepted by Definition U.26b. ∎
 
-**Remark U.26a (Error Propagation).** On the leading branch, the uncertainty $\delta A_Q / A_Q \sim 9\%$ propagates to $Q$ as $\delta Q / Q \sim 4.5\%$. For inflationary observables, this induces $\delta A_s / A_s \sim 9\%$, which is comparable to or exceeds current Planck precision on $\ln(10^{10}A_s)$. On a determinant-certified branch, this uncertainty is replaced by the uncertainty of $\mathfrak D_Q$ and the finite-part convention $\mu_Q$.
+**Remark U.26a (Conditional Error Propagation).** The illustrative $9\%$ prefactor scale requires the applicability and constant bounds $\kappa_*\le11$ and $C\le1$ in Assumption U.26. Near $A_Q=1$, differentiating $Q\propto\sqrt{A_Q}$ gives $\delta Q/Q\simeq\tfrac12\delta A_Q/A_Q$, yielding the illustrative $4.5\%$ scale. These are conditional theoretical error scales, not measured standard deviations. A registered map $A_s\propto Q^2$ with its other inputs held common gives $\delta A_s/A_s\simeq2\delta Q/Q$; observational comparisons require that map and its covariance record. A determinant-certified branch uses the certified interval or uncertainty of $\mathfrak D_Q$ and the declared finite-part convention $\mu_Q$.
 
 ### U.17.4 Primordial Scale Parameter
 
@@ -2632,15 +2674,11 @@ $$
 =\{\pm e_i\}
 \cup\left\{\frac12(\pm e_1\pm e_2\pm e_3\pm e_4)\right\},
 $$
-which is exactly $V_{24}$. Reflections in $F_4$ roots preserve root length, so $W(F_4)$ preserves $V_{24}$ and acts faithfully on it. The root-polytope symmetry theorem of Coxeter (1973), applied to the irreducible $F_4$ short-root polytope, states that its full orthogonal symmetry group is the Weyl group because the $F_4$ Dynkin diagram has no nontrivial diagram automorphism. Thus $\operatorname{Aut}(V_{24})=W(F_4)$.
-
-The exponents of $F_4$ are $1,5,7,11$. The Weyl-group order formula of Coxeter (1973) gives
+which is exactly $V_{24}$. Reflections in $F_4$ roots preserve root length, so $W(F_4)$ acts faithfully on $V_{24}$ and is a subgroup of its full orthogonal symmetry group $G:=\operatorname{Aut}(V_{24})$. We can count both groups directly. An element of $G$ fixing $e_1$ permutes the eight vertices with inner product $1/2$ with $e_1$; their projections to $e_1^\perp$ are the eight vertices of a cube. Thus the stabilizer $G_{e_1}$ embeds in the cube's orthogonal symmetry group, of order $2^3 3!=48$. Conversely, signed permutations of $e_2,e_3,e_4$ fix $e_1$, preserve $V_{24}$, and give all 48 such symmetries, so $|G_{e_1}|=48$. These 48 transformations lie in $W(F_4)$: sign flips are reflections in the short roots $e_i$, and coordinate swaps are reflections in the long roots $e_i-e_j$. Signed permutations move $e_1$ through the eight axial vertices. Reflection in the short root $\alpha=(e_1-e_2-e_3-e_4)/2$ sends $e_1$ to $(e_1+e_2+e_3+e_4)/2$, and subsequent sign changes reach every half-coordinate vertex. Therefore the $W(F_4)$ orbit of $e_1$ is all 24 vertices. Orbit–stabilizer gives $|W(F_4)|\geq24\cdot48=1152$, while $|G|\leq24\cdot48=1152$. Since $W(F_4)\subseteq G$, both bounds are equalities:
 $$
-|W(F_4)|
-=\prod_{m\in\{1,5,7,11\}}(m+1)
-=2\cdot6\cdot8\cdot12
-=1152
-=2^7\cdot3^2.
+\operatorname{Aut}(V_{24})=W(F_4),
+\qquad
+|W(F_4)|=24\cdot48=1152=2^7\cdot3^2.
 $$
 ∎
 
@@ -2685,13 +2723,16 @@ $$\mu_\ell := \frac{1}{24} \sum_{v \in V_{24}} Y_\ell(v) \in \mathbb{R}^{N(\ell)
 
 where $Y_\ell : S^3 \to \mathbb{R}^{N(\ell)}$ collects the $N(\ell) = (\ell+1)^2$ spherical harmonics of degree $\ell$.
 
-**Lemma U.40 (Rotational Constraint).** For each degree $\ell \leq t = 5$, the $SO(4)$-invariance of the design implies:
+**Lemma U.40 (Rotational Constraint).** For the spherical $5$-design of Theorem U.30,
+$$
+\mu_\ell=0,
+\qquad
+\|\mu_\ell\|^2=0
+\quad\text{for }\ell=1,\ldots,5.
+$$
+Each squared-norm equation is an equivalent scalar expression of its vector moment's vanishing. It supplies no independent-rank count for the line-amplitude response maps of Definition U.41a.
 
-$$\|\mu_\ell\|^2 = 0 \quad \text{for } \ell = 1, \ldots, 5$$
-
-This yields one scalar constraint per degree $\ell$, as the only $SO(4)$-invariant function of $\mu_\ell$ is its squared norm.
-
-*Proof.* By definition of a $t$-design (Theorem U.30), $\mu_\ell = 0$ for $\ell \leq t$. The squared norm $\|\mu_\ell\|^2$ is the unique $SO(4)$-invariant Hermitian form on $\mathbb{R}^{N(\ell)}$. $\square$
+*Proof.* Every positive-degree spherical harmonic has zero spherical average. Theorem U.30 makes its vertex average equal that average for degrees at most $5$, so each component of $\mu_\ell$ vanishes. Positive definiteness of the Euclidean norm makes $\|\mu_\ell\|^2=0$ equivalent to $\mu_\ell=0$. This uses exact low-degree moments, not invariance of the finite vertex set under every rotation. $\square$
 
 **Assumption U.41 (Line-Amplitude Constraint Budget).** The leading reference count is
 $$
@@ -2807,7 +2848,7 @@ The diagonal embedding $\Delta_5^{\mathbb F}$ is injective on the $12$-dimension
 - **Falsifier.** A well-typed shared-carrier record satisfying the stated factorization and having $\operatorname{rank}_{\mathbb F}\mathcal M_{\mathrm{HM}}^{\mathrm{sh},\mathbb F}>12$ falsifies this resolution artifact. A map with an enlarged source domain is assigned to its separately typed candidate class.
 - **Provenance class.** `proved-lemma` from Definitions U.32 and U.41a by target-independent exact linear algebra; cosmological comparison values and their proxies are absent from the inputs.
 - **Nonvacuity.** The class is nonempty: the normalized coordinate indicators give an orthonormal basis of $\mathcal S_{\mathrm{line}}$, and for each $\ell=1,\ldots,5$ a normalized restriction of $\operatorname{Re}(x_1+ix_2)^\ell$ is a nonzero real spherical harmonic supplying an admissible $\mathcal M_\ell$.
-- **Downstream consumers.** Definition U.56a, Result U.60 and Theorems U.61--U.68 retain their assumption/certificate-gated statuses; Definition U.69a, Theorem U.69b, `RT-T6`, and `TV-U-05` record the shared-route refutation while leaving the degree-tagged carrier, positive rank certificate, e-fold conversion, and remaining primordial records open.
+- **Downstream consumers.** Definition U.56a, Result U.60 and results U.61--U.68 retain their assumption/certificate-gated statuses; Definition U.69a, Theorem U.69b, `RT-T6`, and `TV-U-05` record the shared-route refutation while leaving the degree-tagged carrier, positive rank certificate, e-fold conversion, and remaining primordial records open.
 
 ---
 
@@ -2841,68 +2882,68 @@ $$L|_{\mathcal{S}_{-4}} = (D - A)|_{\mathcal{S}_{-4}} = (8I - (-4)I)|_{\mathcal{
 
 *Proof.* The eigenvalue of $A$ on $\mathcal{S}_{-4}$ is $-4$ (Lemma U.34). The degree matrix is $D = 8I$. Thus $L|_{\mathcal{S}_{-4}} = 8I - (-4I) = 12I$. $\square$
 
-**Identification U.44a (Effective Field Theory Kinetic Term).** The graph Laplacian eigenvalue $\lambda^2 = 12$ is identified with the kinetic coefficient in the effective single-field Lagrangian:
-
-$$\mathcal{L}_{\text{kin}} = \frac{\lambda^2 \bar{M}_{Pl}^2}{2} (\partial d_{FS})^2, \qquad \lambda^2 = 12$$
-
-where $d_{FS}$ is the Fubini-Study distance on $\mathbb{CP}^1_{\text{inv}} = \mathbb{P}(\mathcal{S}_{-4})$.
-
-*Justification.* This identification assumes that the discrete graph Dirichlet energy induces, in the continuum limit, a sigma-model kinetic term with the Fubini-Study target metric. The Hopf-Rayleigh gate below supplies the exact no-rescaling condition.
-
-**Definition U.44b (Hopf-Rayleigh Kinetic Datum).** A Hopf-Rayleigh kinetic datum consists of:
-
-1. the invariant eigenspace $\mathcal S_{-4}\cong\mathbb C^2$ with graph Laplacian
+**Identification U.44a (Effective Field Theory Kinetic Term).** On the Hopf-Rayleigh branch of Definition U.44b, the positive target kinetic metric is $\lambda^2\bar M_{Pl}^2\,ds_{FS}^2$, with $\lambda^2=12$. On its unit-speed single-field geodesic chart $d=d_{FS}$ and with Lorentzian signature $(-+++)$, the kinetic density is
 $$
-L|_{\mathcal S_{-4}}=12I;
+\mathcal L_{\mathrm{kin}}
+=-\frac{\lambda^2\bar M_{Pl}^2}{2}
+ g^{\mu\nu}\partial_\mu d\,\partial_\nu d,
+\qquad \lambda^2=12.
+$$
+The positive Euclidean kinetic form has the opposite overall sign convention. The continuum response normalization and the restriction to this chart are entries of Definition U.44b; they do not follow from the graph eigenvalue alone.
+
+**Definition U.44b (Hopf-Rayleigh Kinetic Datum).** A Hopf-Rayleigh kinetic datum consists of the following entries, on one branch with $\bar M_{Pl}>0$:
+
+1. The invariant complex plane $\mathcal S_{-4}$ carries the inherited line inner product
+$$
+h(v,w)=\frac1{12}\sum_{\ell=1}^{12}\overline{v_\ell}w_\ell,
+\qquad L|_{\mathcal S_{-4}}=12I.
 \tag{U.44b.1}
 $$
-
-2. the projectivization map
+Its unit sphere $S_h^3$ and projectivization
 $$
-\pi:S^3\subset\mathcal S_{-4}\to\mathbb{CP}^1_{\mathrm{inv}};
+\pi:S_h^3\longrightarrow\mathbb{CP}^1_{\mathrm{inv}}
 \tag{U.44b.2}
 $$
+use this same inner product. The target Fubini-Study metric has the normalization of Proposition U.45.
 
-3. the Fubini-Study metric on $\mathbb{CP}^1_{\mathrm{inv}}$ normalized as in Proposition U.45;
-
-4. the horizontal-lift condition that every retained field path $\bar\psi(x)$ in $\mathbb{CP}^1_{\mathrm{inv}}$ is represented by a lift $\psi(x)\in S^3$ satisfying
+2. A continuum response certificate identifies the positive kinetic quadratic form on retained tangent vectors with
 $$
-\psi(x)^\dagger\partial_\mu\psi(x)=0.
+K(v)=\frac{\bar M_{Pl}^2}{2}h(v,Lv)
+     =\frac{\bar M_{Pl}^2}{12}E[v],
+\qquad E[v]=\frac12v^\dagger Lv.
+$$
+This equality is an independent normalization premise relating the continuum response to Definition U.42. It excludes an unrecorded multiplicative response factor.
+
+3. The single-field branch is a unit-speed minimizing geodesic chart $\gamma:I\to\mathbb{CP}^1_{\mathrm{inv}}$, where $I$ is an interval of length at most $\pi/2$. Its coordinate $d\in I$ is oriented geodesic arclength. Each retained field is $\bar\psi(x)=\gamma(d(x))$ with differentiable $d(x)$ and an admitted horizontal lift $\psi(x)\in S_h^3$ satisfying
+$$
+h(\psi,\partial_\mu\psi)=0.
 \tag{U.44b.3}
 $$
+The normalization, continuum response and geodesic restriction are all required; a general projective field is not declared to have a single distance coordinate.
 
-**Theorem U.44c (Hopf-Rayleigh Kinetic Normalization).** On a branch carrying the Hopf-Rayleigh kinetic datum,
+**Theorem U.44c (Hopf-Rayleigh Kinetic Normalization).** On a branch carrying Definition U.44b, the pullback of the positive target kinetic metric to its single-field chart is
 $$
-\lambda^2=12
+12\bar M_{Pl}^2\,dd^2,
+\qquad \lambda^2=12.
 \tag{U.44c.1}
 $$
-is fixed by the graph Rayleigh quotient and the Hopf Riemannian submersion. No additional $O(1)$ rescaling of $d_{FS}$ is compatible with the datum.
+Together with the Lorentzian contraction in Identification U.44a this gives the stated single-field kinetic density.
 
-*Proof.* For a retained horizontal lift $\psi(x)$ of a projective path $\bar\psi(x)$, the graph Dirichlet kinetic energy is
+*Proof.* The coordinate definition of $h$ gives $E[v]=6h(v,Lv)$, so item 2 supplies precisely the displayed normalization. For $v\in\mathcal S_{-4}$,
 $$
-\frac12\langle\partial_\mu\psi,L\partial^\mu\psi\rangle.
+K(v)=\frac{12\bar M_{Pl}^2}{2}h(v,v).
 $$
-Using $L|_{\mathcal S_{-4}}=12I$ gives
+For a unit lift, the differential of projectivization removes its vertical component along $i\psi$. The Fubini-Study squared length is
 $$
-\frac12\langle\partial_\mu\psi,L\partial^\mu\psi\rangle
-=
-\frac{12}{2}\|\partial_\mu\psi\|^2.
+\|d\pi(v)\|_{FS}^2=h(v,v)-|h(\psi,v)|^2.
 $$
-By the horizontal-lift condition, $\partial_\mu\psi$ is orthogonal to the $U(1)$ Hopf fiber. The Hopf projection is a Riemannian submersion for the normalized Fubini-Study metric, so horizontal lengths are preserved:
+Thus horizontal tangent lengths are preserved. Polarization gives the corresponding real bilinear identity, and item 3 gives
 $$
-\|\partial_\mu\psi\|^2
-=
-\|\partial_\mu\bar\psi\|_{FS}^2.
+\operatorname{Re}h(\partial_\mu\psi,\partial_\nu\psi)
+=g_{FS}(\partial_\mu\bar\psi,\partial_\nu\bar\psi)
+=\partial_\mu d\,\partial_\nu d.
 $$
-Along the geodesic coordinate used in the single-field reduction,
-$$
-\|\partial_\mu\bar\psi\|_{FS}^2=(\partial_\mu d_{FS})^2.
-$$
-Therefore the induced kinetic term is
-$$
-\frac{12}{2}(\partial d_{FS})^2.
-$$
-Restoring $\bar M_{Pl}^2$ gives the Lagrangian in Identification U.44a with $\lambda^2=12$. Any extra rescaling $d_{FS}\mapsto c\,d_{FS}$ would multiply horizontal lengths by $c$ and contradict the Riemannian-submersion normalization, unless $c=1$. ∎
+Substitution into the certified kinetic form proves (U.44c.1) and its Lorentzian contraction. A coordinate change $q=cd$, $c\ne0$, represents the same metric with coefficient $12/c^2$; it preserves the unit-speed normalization only when $|c|=1$. The value $12$ therefore follows from the complete datum, not from the graph eigenvalue without its response normalization. ∎
 
 ### U.21.3 Target Space Metric
 
@@ -2943,15 +2984,22 @@ ds^2_{FS}
 $$
 The round metric of radius $R$ is $R^2(d\theta^2+\sin^2\theta\,d\varphi^2)$, so $R=1/2$. Antipodal points are separated by $\pi R=\pi/2$, which is the diameter. ∎
 
-**Definition U.46 (Canonical Inflaton Field).** The canonically normalized inflaton field is:
+**Definition U.46 (Canonical Inflaton Field).** On the single-field chart certified by Definition U.44b, choose an origin $d_0$ and define
+$$
+\phi=\sqrt{12}\,\bar M_{Pl}(d-d_0).
+$$
+Then Identification U.44a has kinetic density $-\tfrac12g^{\mu\nu}\partial_\mu\phi\,\partial_\nu\phi$.
 
-$$\phi := \sqrt{\lambda^2} \, \bar{M}_{Pl} \cdot d_{FS} = \sqrt{12} \, \bar{M}_{Pl} \cdot d_{FS}$$
+**Corollary U.47 (Canonical Endpoint Span on the Geodesic Chart).** On this branch,
+$$
+|\phi(d_2)-\phi(d_1)|
+\le\sqrt{12}\,\bar M_{Pl}\frac\pi2
+=\sqrt3\pi\,\bar M_{Pl}
+\approx5.44\,\bar M_{Pl}.
+$$
+Equality requires an admitted chart containing a minimizing segment of length $\pi/2$ and both of its endpoints.
 
-**Corollary U.47 (Field Range).** The maximum inflaton field excursion is:
-
-$$\Delta\phi_{\max} = \sqrt{12} \, \bar{M}_{Pl} \cdot \frac{\pi}{2} = \sqrt{3}\pi \, \bar{M}_{Pl} \approx 5.44 \, \bar{M}_{Pl}$$
-
-*Verification.* $\sqrt{3}\pi = 1.732 \times 3.1416 = 5.441$. $\checkmark$
+*Proof.* The chart in Definition U.44b is parametrized by unit geodesic arclength and has interval length at most the target diameter $\pi/2$ from Proposition U.45. Therefore $|d_2-d_1|\le\pi/2$; multiplication by the canonical factor proves the bound and the equality condition. This endpoint-span bound does not bound the accumulated length of a trajectory that reverses direction or winds around the compact target. ∎
 
 ---
 
@@ -3016,12 +3064,12 @@ I_{c_2}=\{0\},
 \qquad
 I_{c_W}=\{0\},
 \qquad
-0\notin I_{c_1}.
+\inf I_{c_1}>0.
 \tag{U.48b.1}
 $$
 Absent such a ledger, $c_2=0$ and $c_W=0$ are irreducible truncation-branch data. The Gauss-Bonnet identity alone cannot set $c_2$ to zero because it removes only one topological linear combination of curvature-squared terms and does not eliminate the independent scalar-sector response kernel recorded by $\mathcal K_2$.
 
-*Proof.* In four dimensions the Gauss-Bonnet density changes the basis of curvature-squared invariants but leaves two non-topological quadratic curvature directions. The record $\mathfrak L_{\mathrm{LE}}$ is exactly the finite projection and coefficient ledger needed to show that the retained scalar branch has no $R_{\mu\nu}R^{\mu\nu}$ or Weyl-squared response. If (U.48b.1) holds, the action reduces to the Starobinsky branch with fixed $c_1$. If either zero interval is absent, a different scalar/tensor quadratic-curvature branch remains admissible and changes the downstream slow-roll and trans-horizon map. ∎
+*Proof.* In four dimensions the Gauss-Bonnet density changes the basis of curvature-squared invariants but leaves two non-topological quadratic curvature directions. The record $\mathfrak L_{\mathrm{LE}}$ is exactly the finite projection and coefficient ledger needed to show that the retained scalar branch has no $R_{\mu\nu}R^{\mu\nu}$ or Weyl-squared response. If (U.48b.1) holds, the action reduces to the Starobinsky branch with positive $c_1$ in its certified interval. If either required zero-response interval is absent, this record does not certify the Starobinsky reduction. A claim that another branch is admissible and predicts different observables requires an explicit compatible branch and a separate evaluation. ∎
 
 
 **Definition U.48c (Finite Equal-Capability Entropy-Minimum Certificate).** Fix a finite exhaustive candidate family $\mathcal X$, an equal-capability relation, a typed entropy $S_{\mathrm{cosmo}}$, and $x_*\in\mathcal X$. The record certifies
@@ -3073,7 +3121,7 @@ $$
 \qquad
 g^E_{\mu\nu}:=\Phi g_{\mu\nu}.
 $$
-The four-dimensional Weyl-curvature identity used by Starobinsky (1980) and Mukhanov (2005) gives, after integrating its total divergence,
+For $\Phi>0$, the four-dimensional conformal-curvature relation is $R=\Phi[R_E+3\Box_E\log\Phi-\tfrac32(\nabla_E\log\Phi)^2]$ [De Felice & Tsujikawa 2010, §2.3, equations (2.25)–(2.33)]. Since $\sqrt{-g}=\Phi^{-2}\sqrt{-g_E}$, the following equality holds under the action integral after removing the total divergence; that removal requires vanishing boundary flux or the corresponding retained boundary term:
 $$
 \sqrt{-g}\,\Phi R
 =\sqrt{-g_E}
@@ -3105,7 +3153,7 @@ $$
 $$
 which proves the stated potential on the $\Phi>0$ branch. ∎
 
-We identify the canonically normalized Einstein-frame scalar $\chi$ with the canonical field $\phi$ defined in Definition U.46, i.e. $\chi = \phi$. If $\chi = \alpha \phi$ with $\alpha = O(1)$, then $x$ and the geometric e-fold bound rescale accordingly.
+The identification $\chi=\phi$ is a branch hypothesis matching the canonical kinetic metric, orientation and potential origin of the Einstein-frame scalar to Definition U.46. More generally, a $C^1$ change $\chi=f(\phi)$ on a connected regular chart transforms the kinetic density to $-\tfrac12[f'(\phi)]^2g^{\mu\nu}\partial_\mu\phi\,\partial_\nu\phi$. Both coordinates are canonical with the same metric only if $[f'(\phi)]^2=1$; continuity of the derivative then gives $\chi=\pm\phi+\chi_0$. In particular, $\chi=\alpha\phi$ preserves both canonical normalizations only for $|\alpha|=1$. Any other nonzero $\alpha$ requires its kinetic coefficient, potential map and field-range conversion to be carried explicitly before evaluating $x$ or an e-fold bound.
 
 ### U.22.3 Mass Scale Identification
 
@@ -3149,7 +3197,7 @@ $$
 $$
 with $f_s$ fixed by the branch record before trans-horizon observables are evaluated.
 
-**Corollary U.52 (Scalaron mass on the linear-map, leading-determinant branch).** If the scalaron-mass map record satisfies (U.51a.2) and the primordial determinant branch has $A_Q=1$, then
+**Corollary U.52 (Scalaron mass on the linear-map, leading-determinant branch).** Assume all hypotheses of Theorem U.27, including $r_Q^{\mathrm{extra}}=0$, and the scalaron-mass map (U.51a.2). On the leading determinant convention $A_Q=1$, one then has
 $$
 m_s=Q\bar M_{Pl}
 =\frac{e^{-11}}{\sqrt2}(2.435\times10^{18}\,\mathrm{GeV})
@@ -3200,35 +3248,30 @@ This is a branch rule unless it is supplied by the finite e-fold ledger below.
 **Definition U.56a (E-Fold Registration Ledger).** An e-fold registration ledger is a finite record
 $$
 \mathfrak E_N
-=
-\left(
-\mathfrak H_{24},
-\rho_N,
-\mathcal Q_{\mathrm{tr}},
-\phi_0,
-\phi_{\mathrm{end}},
-I_N,
-\chi_N
-\right),
+=\left(
+\mathfrak H_{24},\rho_N,\mathcal Q_{\mathrm{tr}},
+\phi_0,\phi_{\mathrm{end}},I_{\mathrm{info}},I_N,\chi_N
+\right).
 \tag{U.56a.1}
 $$
-where $\mathfrak H_{24}$ is the typed harmonic-rank record of Definition U.41a, $\rho_N$ is the fixed rule converting independent harmonic-moment registrations to e-folds, $\mathcal Q_{\mathrm{tr}}$ is the trans-horizon quotient and pivot-registration convention, $\phi_0$ and $\phi_{\mathrm{end}}$ are the finite initial-field and end-of-inflation branch entries, $I_N$ is the certified interval for $N_e$, and $\chi_N=1$ records that none of these entries is selected from the observed values of $n_s$, $r$, $A_s$, $n_t$, running, or local non-Gaussianity.
+Here $\mathfrak H_{24}$ is the typed harmonic-rank record of Definition U.41a, $\rho_N$ is the registered rule converting available independent registrations to an e-fold budget, and $\mathcal Q_{\mathrm{tr}}$ specifies the trans-horizon quotient and pivot-registration convention. The finite entries $\phi_0,\phi_{\mathrm{end}}$ specify the initial and terminal field branches. The interval $I_{\mathrm{info}}$ encloses the information budget $N_e^{(\mathrm{info})}$; $I_N$ encloses the realized count $N_e$. The ledger verifies the counting implication $N_e\le N_e^{(\mathrm{info})}$ on its admitted histories and separately evaluates $I_N$ from those histories or a certified evolution and endpoint calculation. Rank alone supplies neither implication. The flag $\chi_N=1$ records that the entries and decision rules precede comparison with $n_s,r,A_s,n_t$, running and local non-Gaussianity.
 
-The rule (U.56.1) is theorem-level exactly when an accepted ledger satisfies
+The value in (U.56.1) is a certified budget, without an attainment claim, when an accepted ledger verifies
 $$
-\mathfrak H_{24}\text{ is accepted on its degree-tagged branch},
+\mathfrak H_{24}\text{ on its degree-tagged branch},
 \qquad
 \operatorname{rank}_{\mathbb F}\mathcal M_{\mathrm{HM}}^{\oplus,\mathbb F}
-=
-\operatorname{rank}_{\mathbb F}\mathcal R_{Q,\mathrm{HM}}^{\mathbb F}
+=\operatorname{rank}_{\mathbb F}\mathcal R_{Q,\mathrm{HM}}^{\mathbb F}
 =60,
 \qquad
 \rho_N(j)=j,
 \qquad
-I_N=\{60\}
+I_{\mathrm{info}}=\{60\}.
 \tag{U.56a.2}
 $$
-before the fiducial field value and trans-horizon quotient are used. If $\rho_N$ counts real scalar registrations, the ledger also supplies the $\mathbb F=\mathbb R$ form required by Definition U.41a. On the Definition-U.32 shared-carrier route, Theorem U.41b gives $\operatorname{rank}_{\mathbb F}\mathcal M_{\mathrm{HM}}^{\mathrm{sh},\mathbb F}\le12$, so that route fails the degree-tagged rank antecedent in (U.56a.2). The rank upper bound has matrix-rank type; an e-fold value still requires the independent entries $\rho_N$ and $I_N$. Otherwise $N_e$ is branch data and the observables derived in Theorems U.62-U.63, Lemma U.64, Theorem U.65, Corollaries U.65a-U.65b, and Theorems U.66-U.68 are functions of the interval $I_N$ rather than closed scalar predictions.
+These conditions do not set $I_N=\{60\}$. That singleton requires an independent realized-count certificate. If $\rho_N$ counts real scalar registrations, the record includes Definition U.41a's $\mathbb F=\mathbb R$ form. On the shared-carrier route, Theorem U.41b gives $\operatorname{rank}_{\mathbb F}\mathcal M_{\mathrm{HM}}^{\mathrm{sh},\mathbb F}\le12$, so it fails the displayed degree-tagged rank antecedent.
+
+A potential slow-roll calculation supplies an approximate count $N_{\mathrm{SR}}$; promoting it to an interval $I_N$ for the physical count requires the registered slow-roll, endpoint and transfer error bounds. A budget and an initial-field trajectory must be compatible. In particular, the potential slow-roll comparison of Result U.60 can have budget $60$ and count about $59.4$. The observable formulas in Theorems U.62-U.63, Lemma U.64, Theorem U.65, Corollaries U.65a-U.65b and Theorems U.66-U.68 use $I_N$, together with their own approximation and transfer records.
 
 ### U.23.2 Geometric Bound
 
@@ -3266,7 +3309,7 @@ The equation $\epsilon_V(x_{\mathrm{end}})=1$ is equivalent to
 $$
 e^{x_{\mathrm{end}}}-1=\frac2{\sqrt3},
 $$
-which gives the stated end point. The potential slow-roll e-fold integral of Mukhanov (2005) is
+Within the potential slow-roll approximation, define $N_e$ by the following integral. The slow-roll equations $3H\dot\chi\simeq-V'$ and $3\bar M_{Pl}^2H^2\simeq V$ give $Hdt\simeq-V\,d\chi/(\bar M_{Pl}^2V')$, with the limits reversed because $\chi$ decreases. Thus this is the approximate physical e-fold count, not an exact count for arbitrary evolution [Baumann 2009, equation (82)]:
 $$
 N_e(\chi)
 =\frac1{\bar M_{Pl}^2}
@@ -3286,7 +3329,7 @@ N_e
 $$
 which is the displayed expression. ∎
 
-**Corollary U.59 (Geometric E-Fold Count).** The maximum field excursion $\Delta\phi_{\max} = \sqrt{3}\pi \bar{M}_{Pl}$ (Corollary U.47) corresponds to:
+**Corollary U.59 (Geometric E-Fold Count).** On a branch carrying Definition U.44b, assume that the full minimizing segment of length $\pi/2$ is admitted and that its lower endpoint matches $\chi=\phi=0$ under the canonical-potential identification following Theorem U.50. Corollary U.47 then gives the upper endpoint $\phi_{\max}=\sqrt3\pi\bar M_{Pl}$. Within the potential slow-roll approximation of Theorem U.58, that endpoint corresponds to:
 
 $$x_{\max} = \sqrt{\frac{2}{3}} \cdot \sqrt{3}\pi = \sqrt{2}\pi \approx 4.443$$
 
@@ -3302,17 +3345,37 @@ $$N_{\text{geo}} = \frac{3}{4}\left[(e^{x_{\max}} - x_{\max}) - (e^{x_{\text{end
 
 $$\boxed{N_{\text{geo}} = 59.4}$$
 
-**Result U.60 (E-Fold Determination).** Given the preceding assumptions and identifications, and assuming inflation begins at maximum field excursion $\phi_{\max}$, the realized e-fold count is:
+**Result U.60 (E-Fold Determination).** Retain the canonical-potential identification and admitted field segment of Corollary U.59. For an initial value $\phi_0=\chi_0$ with $\chi_{\mathrm{end}}\le\chi_0\le\phi_{\max}$, define the potential slow-roll count
+$$
+N_{\mathrm{SR}}(\chi_0)
+=\frac34\left[
+e^{x_0}-x_0-e^{x_{\mathrm{end}}}+x_{\mathrm{end}}
+\right],
+\qquad
+x_0=\sqrt{\frac23}\frac{\chi_0}{\bar M_{Pl}}.
+$$
+Evolution along that specified slow-roll trajectory to $\epsilon_V=1$ gives this count. Its information-budget compatibility condition is $N_{\mathrm{SR}}(\chi_0)\le N_e^{(\mathrm{info})}$ at the same approximation order. For $\chi_0=\phi_{\max}$ and budget $60$,
+$$
+N_{\mathrm{SR}}(\phi_{\max})
+=N_{\mathrm{geo}}
+=59.3923226\ldots<60.
+$$
+Thus $59.4$ is the rounded endpoint comparison value.
 
-$$N_e = \min(N_e^{(\text{info})}, N_{\text{geo}}) = \min(60, 59.4) = 59.4$$
+*Proof.* Theorem U.58 evaluates the trajectory integral. Its derivative is
+$$
+\frac{dN_{\mathrm{SR}}}{dx_0}=\frac34(e^{x_0}-1)>0
+\qquad(x_0\ge x_{\mathrm{end}}>0).
+$$
+Therefore the largest admitted initial point gives $N_{\mathrm{geo}}$, and smaller points down to $\chi_{\mathrm{end}}$ give smaller nonnegative counts. The budget limits admissibility of this trajectory; it does not supply a second evolution equation. In particular, two upper bounds imply only $N_e\le\min(N_e^{(\mathrm{info})},N_{\mathrm{geo}})$ when both bounds are certified for that same count. They do not prove equality. If the budget is smaller than the computed trajectory count, a different initial state, end condition or registered evolution is required; truncating the count by a minimum does not establish such a branch. ∎
 
-The geometric bound is tighter and determines the e-fold count. If inflation begins at $\phi_0 < \phi_{\max}$, then $N_e$ becomes a function of the initial condition $\phi_0 \in (0, \phi_{\max}]$, and derived observables ($n_s$, $r$, $A_s$) shift accordingly via the standard Starobinsky relations.
+For a physical realized count, the accepted evolution, endpoint and transfer remainder bounds must be propagated into $I_N$ of Definition U.56a, and the information inequality must hold for the same branch. The numerical specialization above supplies no physical remainder interval. Initial points below $\chi_{\mathrm{end}}$ do not belong to this positive-duration inflationary segment.
 
 ---
 
 ## U.24 Inflationary Observables
 
-Every symbolic relation in this section is conditional on the single-field Starobinsky slow-roll branch. Every displayed numerical specialization using $N_e=59.4$, $Q=e^{-11}/\sqrt2$, or $m_s/\bar M_{Pl}=Q$ is further conditional on the leading primordial branch consisting of the $A_Q=1$ determinant choice of Assumption U.26, the constraint and e-fold registrations of Assumptions U.41 and U.56 (or accepted certificates $\mathfrak H_{24}$ and $\mathfrak E_N$ with the same singleton outputs), the Starobinsky truncation of Assumption U.48 (or an accepted $\mathfrak L_{\mathrm{LE}}$), the linear scalaron map of Identification U.51 (or an accepted $\mathfrak M_s$), the initial condition $\phi_0=\phi_{\max}$, and the trans-horizon quotient used in Result U.60. Absent that branch package, Theorems U.61--U.68 remain formulas in the corresponding certified input intervals rather than closed numerical predictions.
+Every symbolic relation in this section is conditional on the single-field Starobinsky slow-roll branch. Every displayed numerical specialization using $N_e=59.4$, $Q=e^{-11}/\sqrt2$, or $m_s/\bar M_{Pl}=Q$ is further conditional on the leading primordial branch consisting of the separately declared $A_Q=1$ reference-prefactor convention of Theorem U.27, the constraint registration of Assumption U.41 and the information budget $N_e^{(\mathrm{info})}=60$ of Assumption U.56 (or accepted certificates $\mathfrak H_{24}$ and $\mathfrak E_N$ with that rank and budget), together with Result U.60's endpoint trajectory count, the Starobinsky truncation of Assumption U.48 (or an accepted $\mathfrak L_{\mathrm{LE}}$), the linear scalaron map of Identification U.51 (or an accepted $\mathfrak M_s$), the initial condition $\phi_0=\phi_{\max}$, and the trans-horizon quotient used in Result U.60. Absent that branch package, results U.61--U.68 remain formulas in the corresponding certified input intervals rather than closed numerical predictions.
 
 ### U.24.1 Slow-Roll Parameters
 
@@ -3322,7 +3385,9 @@ $$
 \qquad
 \eta_V:=\bar M_{Pl}^2\frac{V''}V.
 $$
-As $N_e\to\infty$ along the slow-roll branch of Theorem U.58,
+For the formal mathematical continuation of this potential to unbounded positive $\chi$, use the slow-roll coordinate $N_e(\chi)$ of Theorem U.58 and take $N_e\to\infty$. This continuation defines the following asymptotic expansions; it is not a limit inside the finite admitted geodesic chart of Definition U.44b and Corollary U.59. At a finite admitted value, the leading terms are comparison formulas. A quantitative physical error interval requires the approximation and transfer bounds in Definition U.69a.
+
+As $N_e\to\infty$ on that formal continuation,
 $$
 \epsilon_V
 =\frac{3}{4N_e^2}
@@ -3462,7 +3527,7 @@ A_s
 \left[1+O\left(\frac{\log N_e}{N_e}\right)\right].
 $$
 
-*Proof.* The leading scalar-spectrum formula for a canonical slow-roll field in the Bunch–Davies state is, as derived in Mukhanov (2005),
+*Proof.* On the stated canonical single-field, adiabatic Bunch--Davies and slow-roll branch, the leading scalar-spectrum formula is [Baumann 2009, §13 and summary §14, pp.59–65]
 $$
 A_s
 =\frac{V}{24\pi^2\bar M_{Pl}^4\epsilon_V}
@@ -3805,9 +3870,9 @@ For this diagnostic table, take $N_e=59.4$ with an illustrative independent Gaus
 | $dn_s/d\ln k$ | $-(5.7 \pm 0.4)\times10^{-4}$ | -0.0045 ±0.0067 | consistent |
 
 **Sources:**
-- $n_s$, $A_s$, $dn_s/d\ln k$: Planck Collaboration (2020a), Table 2
+- $n_s$, $A_s$: Planck Collaboration (2020a), Table 2, TT,TE,EE+lowE+lensing; $dn_s/d\ln k$: Equation (40a) of that paper, in the one-parameter running extension.
 - $r$: BICEP/Keck Collaboration (2021), combined with Planck
-- $f_{NL}^{\text{local}}$: Planck Collaboration (2020b), Table 7
+- $f_{NL}^{\text{local}}$: Planck Collaboration (2020b), Table 6, SMICA T+E, lensing-bias-subtracted KSW estimate.
 
 ### U.25.2 Falsification Criteria
 
@@ -3874,10 +3939,10 @@ Its entries are:
 $$
 \mathbb E|Z|^2=A_Qe^{-2\kappa_Q},
 $$
-together with circular Gaussianity or a stated replacement law, the real-projection map, and its unit normalization. This is the independent action-weight-to-variance bridge of Corollaries U.22--U.24.
+together with circular Gaussianity or a stated replacement law, the real-projection map, and its unit normalization. This is the independent action-weight-to-variance bridge of Corollaries U.22 and U.24 and Lemma U.23.
 4. $\mathfrak D_Q$ is the entire determinant/index-consistency record of Definition U.26b, including $\operatorname{Dom}\mathcal O_Q$, $P_Q$, every $q_\ell$, $r_Q^{\mathrm{extra}}$, strict positivity, $\mathcal J_Q$, $\mu_Q$, the tail interval, and the forward lock. A reference choice $A_Q=1$ is recorded separately unless the determinant proves it.
 5. $\mathfrak H_{24}$ is Definition U.41a's typed harmonic-rank record, including its field, all markings used in its entries, and its overlap with $\mathfrak C_{Q,\mathrm{car}}$. Its positive rank-$60$ branch contains the exact block-rank witness, the retained degree-tagged physical carrier, $J_{\mathrm{HM}}^{\mathbb F}$, and the response-intertwining equation (U.41a.5); a claim of $60$ real scalar constraints also contains the registered real form. A shared-carrier classification branch instead records $\mathcal M_{\mathrm{HM}}^{\mathrm{sh},\mathbb F}$ and its exact rank, which Theorem U.41b bounds by $12$, and propagates that status through $\mathfrak E_N$.
-6. $\mathfrak K_{\mathrm{HR}}$ is the Hopf--Rayleigh kinetic datum of Definition U.44b, including the scalar geodesic normalization and Theorem U.44c's no-rescaling test.
+6. $\mathfrak K_{\mathrm{HR}}$ is the complete Hopf-Rayleigh kinetic datum of Definition U.44b: the normalized line inner product, certified continuum response $K(v)=(\bar M_{Pl}^2/2)h(v,Lv)$, admitted unit-speed minimizing geodesic chart and horizontal lifts. Coordinate changes carry the kinetic coefficient and potential-origin map specified by Theorem U.44c and the canonical-field identification.
 7. $\mathfrak M_s$ is the scalaron-mass map of Definition U.51a; $\mathfrak L_{\mathrm{LE}}$ is Definition U.48a's local-equilibrium truncation ledger, including $c_2$ and $c_W$; and $\mathfrak E_N$ is Definition U.56a's e-fold registration ledger.
 8. $\phi_0$ fixes the initial-field branch. The curvature-observable record $\mathfrak C_{\mathcal R}$ fixes the gauge-invariant curvature perturbation, pivot, horizon-crossing and trans-horizon transfer, scalar/tensor normalizations, units, and the likelihood/covariance map into each reported observable.
 9. $\mathcal R_{\mathrm{prim}}$ is the outward-rounded joint interval/covariance object for $Q,A_s,n_s,r,n_t,dn_s/d\ln k$, and $f_{NL}^{\mathrm{local}}$, obtained by propagating every preceding determinant, index, marking, kinetic, action, variance, scalaron, truncation, e-fold, initial-field, transfer, and remainder entry without double counting.
@@ -3894,7 +3959,7 @@ $$
 $$
 The values in (U.69.2) remain a leading reference comparison tuple on the explicitly declared $A_Q=1$, $\kappa_Q=11$, Starobinsky, e-fold, initial-field, and transfer conventions; they are not closed physical outputs.
 
-*Proof.* Definitions U.26b, U.32, U.41a, U.44b, U.48a, U.51a, and U.56a exhibit mutually independent data that affect the forward map. Corollaries U.22--U.24 show that an action weight does not determine a variance without $\mathfrak C_{Q,\mathrm{var}}$. Two records can agree on the former short scalar tuple while differing in $P_Q$ or a carrier/observable map and hence in the determinant or observable output. Thus only the full record classifies the branch. Since no complete accepted instance is present, Theorem P.14.1f forbids numerical promotion and the certified interval vector is empty. ∎
+*Proof.* Definitions U.26b, U.32, U.41a, U.44b, U.48a, U.51a, and U.56a exhibit mutually independent data that affect the forward map. Corollaries U.22 and U.24 and Lemma U.23 show that an action weight does not determine a variance without $\mathfrak C_{Q,\mathrm{var}}$. Two records can agree on the former short scalar tuple while differing in $P_Q$ or a carrier/observable map and hence in the determinant or observable output. Thus only the full record classifies the branch. Since no complete accepted instance is present, Corollary P.14.1g's finite-evaluation gate forbids numerical promotion and the certified interval vector is empty. ∎
 
 
 ---
@@ -3909,7 +3974,7 @@ The vacuum and primordial sectors use independently registered carriers and supp
 
 | Sector | Independently registered model | Index status | Physical-output status |
 |:-------|:-------------------------------|:-------------|:-----------------------|
-| Vacuum | $\operatorname{Gr}_{\mathbb C}(12,24)$, real tangent count $288$ | five-mode $141.5$ is a comparison convention; four-mode arithmetic index $(288-4)/2=142$ becomes a saddle exponent only with $\mathfrak C_{U,\mathrm{mark}}$ and the exact exponent-calibration certificate $\mathfrak C_{U,\mathrm{act}}$ of Proposition U.14 | Fredholm record gives only $w_4$; $\Lambda L_P^2$ additionally requires $\mathfrak R_\Lambda^{(4)}$ |
+| Vacuum | $\operatorname{Gr}_{\mathbb C}(12,24)$, real tangent count $288$ | five-mode $141.5$ is a comparison convention; four-mode arithmetic index $(288-4)/2=142$ becomes a saddle exponent only with $\mathfrak C_{U,\mathrm{mark}}$ and the exact exponent-calibration certificate $\mathfrak C_{U,\mathrm{act}}$ of Proposition U.14 | The accepted one-loop Fredholm entries give $w_4^{(1),\mathrm{dec}}$; the complete $\mathcal R_{\ge2}$ record additionally gives $w_4^{\mathrm{dec}}$. A real coefficient and $\Lambda L_P^2$ require $\mathfrak R_\Lambda^{(4)}$. |
 | Primordial | independently registered $S_U\cong\mathbb C^{12}$ and $\mathbb P(S_U)\cong\mathbb{CP}^{11}$ | $\kappa_Q=11$ is a reference index; extra modes require (U.26b.4) | $Q$ and CMB observables require the complete $\mathfrak P_{\mathrm{prim}}$ |
 
 The ratios $141.5/11$ and $142/11$ are arithmetic summaries of reference ledgers. They neither explain a hierarchy nor identify the two carriers.
@@ -4007,7 +4072,7 @@ using $361-284=77=2\kappa_{EW}$. This is the displayed electroweak ratio, and th
 
 **Proposition U.73 (Conditional Weighted-Conformal Zero Mode on the Definition U.4 Branch).** Work in $D=4$ with the continuum action of Definition U.4. Assume:
 
-1. $\phi^*(x)=\varphi(|x|)$ is a non-trivial finite-action $O(4)$-symmetric critical point of $S_{\mathrm{cont}}$;
+1. $\phi^*(x)=\varphi(|x|)$ is a nonconstant $C^1$ radial critical point of $S_{\mathrm{cont}}$, with separately finite kinetic and subtracted-potential integrals and $0<S_{\mathrm{kin}}[\phi^*]<\infty$;
 2. the effective potential is quartic-homogeneous on the relevant branch,
 $$
 V_{\mathrm{eff}}(\lambda\phi)=\lambda^4V_{\mathrm{eff}}(\phi)
@@ -4017,7 +4082,8 @@ so that the weighted dilations
 $$
 (T_\rho\phi)(x):=\rho^{-1}\phi(x/\rho)
 $$
-preserve the Definition U.4 action.
+preserve the Definition U.4 action;
+3. the action is twice differentiable on a declared translation- and dilation-invariant field domain, the translated and scaled critical families are differentiable there, and their tangents belong to the domain of the declared self-adjoint Hessian. Differentiation of the critical-point equation is valid in the corresponding dual space. In particular, the translation and weighted-conformal tangents have finite norm in the chosen fluctuation Hilbert space.
 
 Then:
 
@@ -4130,32 +4196,45 @@ The domain is the same radially continuous, sampled-angular Hessian, boundary co
 
 This record closes the current false-vacuum branch only. `TV-U-01` retains its wider classification of other critical scale families and admissible conformal actions, including an explicitly massless or otherwise altered action, and no carrier, action, determinant, or cosmological realization follows from this obstruction.
 
-**Theorem U.73b.2 (Canonical Homogeneous Scale-Invariance Classification).** Let $D>2$ and, after collecting equal powers, consider a canonical scalar action
+**Theorem U.73b.2 (Canonical Homogeneous Scale-Invariance Classification).** Let $D>2$, let the finitely many distinct exponents satisfy $p_j>0$, and let $\lambda_j\ne0$ after equal powers have been collected. Consider
 $$
 S[\phi]
 =\int_{\mathbb R^D}
-\left(\frac12|\nabla\phi|^2+\sum_{j=1}^m\lambda_j|\phi|^{p_j}\right)d^Dx,
-\qquad \lambda_j\ne0,
+\left(\frac12|\nabla\phi|^2+\sum_{j=1}^m\lambda_j|\phi|^{p_j}\right)d^Dx.
 \tag{U.73b.2.1}
 $$
-on a domain preserved by the weighted dilation
+Require separate finiteness of these integrals on the field domain. The domain is preserved by
 $$
-(T_\rho\phi)(x)=\rho^{-\alpha}\phi(x/\rho).
+(T_\rho\phi)(x)=\rho^{-\alpha}\phi(x/\rho),
+\qquad \rho>0,
 $$
-The action is invariant for every $\rho>0$ exactly when
+and contains every $\phi_{a,L}(x)=a\psi(x/L)$ for $a,L>0$, where $\psi$ is one specified nonnegative, nonconstant smooth compactly supported profile. In particular,
+$$
+K_\psi:=\frac12\int|\nabla\psi|^2>0,
+\qquad
+P_j:=\int|\psi|^{p_j}>0
+$$
+are finite. The action is invariant on this domain for every $\rho>0$ exactly when
 $$
 \alpha=\frac{D-2}{2},
 \qquad
 p_j=\frac{2D}{D-2}\quad\text{for every }j.
 \tag{U.73b.2.2}
 $$
-On this branch, every nontrivial critical point generates an exact critical scale family and its dilation tangent lies in the Hessian kernel. In $D=4$, every nonzero potential term must therefore be quartic; a mass term or any other nonquartic homogeneous term excludes this canonical scale-zero-mode mechanism.
+On this branch, a nontrivial critical point generates an exact critical scale family when the dilation action preserves the differentiable field domain. Its dilation tangent is a formal linearized solution; it belongs to the self-adjoint Hessian kernel only when the family is differentiable in the declared fluctuation domain, the tangent has finite Hilbert norm and belongs to the Hessian domain, and differentiation of the critical-point equation is valid there. In $D=4$, every nonzero potential term must therefore be quartic; a mass term or any other nonquartic homogeneous term excludes this canonical scale-symmetry mechanism.
 
-*Proof.* Under $T_\rho$, the kinetic term scales by
+*Proof.* A change of variables gives
 $$
-\rho^{D-2-2\alpha},
+S[T_\rho\phi]
+=\rho^{D-2-2\alpha}K[\phi]
++\sum_{j=1}^m\lambda_j\rho^{D-\alpha p_j}P_j[\phi],
 $$
-so its nonzero coefficient forces $D-2-2\alpha=0$. The $j$th potential term scales by $\rho^{D-\alpha p_j}$, and invariance for all field amplitudes and all $\rho$ forces $D-\alpha p_j=0$ for each distinct nonzero term. Solving these equations gives (U.73b.2.2), and substitution proves sufficiency. An invertible symmetry maps critical points to critical points; differentiating that exact family at $\rho=1$ places its tangent in the Hessian kernel. Setting $D=4$ gives $\alpha=1$ and $p_j=4$. ∎
+where $K[\phi]=\frac12\int|\nabla\phi|^2$ and $P_j[\phi]=\int|\phi|^{p_j}$. For an admitted $\phi_{a,L}$, invariance therefore implies
+$$
+0=a^2L^{D-2}K_\psi(\rho^{D-2-2\alpha}-1)
++L^D\sum_j\lambda_j a^{p_j}P_j(\rho^{D-\alpha p_j}-1)
+$$
+for every $a,L,\rho>0$. Divide by $L^{D-2}$ and vary $L$. The constant and $L^2$ coefficients must separately vanish. Since $a^2K_\psi>0$, the first coefficient gives $D-2-2\alpha=0$. For each $\rho$, the second gives a finite linear combination of the distinct functions $a^{p_j}$ that vanishes for all $a>0$. These functions are independent: order the exponents, divide by the largest power, let $a\to\infty$ to remove its coefficient, and repeat. Since $\lambda_jP_j\ne0$, each $\rho^{D-\alpha p_j}-1$ vanishes for every $\rho>0$. Thus $D-\alpha p_j=0$. Solving gives (U.73b.2.2). Conversely, those exponents make every displayed scaling factor one for every field with the stated finite integrals, proving invariance. An invertible differentiable symmetry of the field domain maps critical points to critical points. Differentiating that family gives the linearized equation; the declared fluctuation-domain and tangent-normalizability conditions place its solution in the self-adjoint Hessian kernel. Setting $D=4$ gives $\alpha=1$ and $p_j=4$. ∎
 
 The theorem exhausts canonical kinetic actions with finite sums of homogeneous local potential terms. Higher-derivative conformal actions, nonlocal actions, boundary-anomalous domains, and a PU carrier realization are outside this classified action family.
 
@@ -4176,7 +4255,7 @@ This orthogonality is not a fifth-mode closure theorem. Proposition U.13a gives 
 
 **Remark U.73c (Logical Boundary of the False-Vacuum Branch).** Theorem U.73a closes the quartic-homogeneity route negatively for the bounce branch used in the Hessian-nullity calculation. It does not exclude a different, explicitly massless continuum action with an asymptotically quartic ultraviolet regime; it shows only that such a regime is not established for the current Appendix U branch. Theorem K.10.7 supplies RG/fixed-point language but not an exact scale-invariant fixed-point theorem at the bounce scale; Theorem U.3 fixes the Gaussian base count $144$ but does not determine the homogeneity degree of $V_{\mathrm{eff}}$; and Proposition R.4.2a constrains the lattice sector rather than the local false-vacuum mass term.
 
-**Remark U.73d.** Corollary U.15b gives
+**Remark U.73d.** Corollary U.15b gives the five-mode observational inversion, and Corollary U.15j supplies the four-mode value:
 $$
 A_{\mathrm{eff}}^{(\mathrm{obs})}=0.917\pm0.016
 $$

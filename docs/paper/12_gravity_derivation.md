@@ -29,11 +29,11 @@ with the antecedents supplied by (T1)–(T5) below together with the Appendix B 
 
 The macroscopic emergent metric/channel-capacity dynamics derive from the following branch-theorem and certificate inputs on the operational-continuum branch:
 
-*   (T1) **Local Thermodynamic Equilibrium at Causal Horizons:** Theorem 48a.0 derives local LTE from the local KMS/Clausius theorem stack on the Appendix F/G operational-continuum branch. Theorem 48a gives the local Rindler-wedge KMS condition at inverse temperature $\beta=2\pi/\kappa$ and the first-order Clausius relation $\delta S=\delta Q/T_U+O(\lambda^2)$. The finite channel min-cut realization of local horizon entropy is supplied by Corollary E.8.4g, with the finite KMS-descent certificate of Definition F.10.12a available when that certificate is accepted. On a branch additionally carrying the Predictive Generalized Second Law certificate $\mathfrak C_{\mathrm{PGSL}}$ (Definition 12.5.3l), the exterior generalized entropy is monotone along the retained horizon-cut family. On a branch carrying the null-convexity certificate $\mathfrak C_{\mathrm{NC}}$ (Definition 12.5.3n), the second-variation sign needed for the predictive null-energy/QNEC step is supplied as finite response data. On the accepted finite modular-Clausius Hodge datum, Theorem F.10.12f identifies the closed retained KMS/Clausius obstruction with its harmonic representative; after the zero-defect stationarity gate, or the zero-curvature subcase of Proposition 12.5.3o, the reversible Einstein branch is the harmonic-zero branch.
+*   (T1) **Local Thermodynamic Equilibrium at Causal Horizons:** Theorem 48a.0 derives local LTE from the local KMS/Clausius theorem stack on the Appendix F/G operational-continuum branch. Theorem 48a gives the local Rindler-wedge KMS condition at inverse temperature $\beta=2\pi/\kappa$ and the first-order Clausius relation $\delta S=\delta Q/T_U+O(\lambda^2)$. The finite channel min-cut realization of local horizon entropy is supplied by Corollary E.8.4g, with the finite KMS-descent certificate of Definition F.10.12a available when that certificate is accepted. On a branch additionally carrying the Predictive Generalized Second Law certificate $\mathfrak C_{\mathrm{PGSL}}$ (Definition 12.5.3l), the exterior generalized entropy is monotone along the retained horizon-cut family. On a branch carrying the null-convexity certificate $\mathfrak C_{\mathrm{NC}}$ (Definition 12.5.3n), the second-variation sign needed for the predictive null-energy/QNEC step is supplied as finite response data. On an accepted finite modular-Clausius Hodge datum, Theorem F.10.12f identifies the closed retained KMS/Clausius obstruction class with its harmonic representative. If its stationarity equations hold exactly, vanishing harmonic representatives give vanishing obstruction; for asymptotic stationarity, the theorem also requires its uniform Hodge coercivity bound. Proposition 12.5.3o supplies the zero-QNEC-slack Einstein conclusion on its separate zero-slack and geometric-identification branch.
 *   (T2) **Horizon Thermodynamics:** Local horizons possess an Unruh temperature $T=\kappa/(2\pi)$ (Equation 69) and an entropy density given by the Appendix E area-law branch. Corollary E.8.4g supplies the local finite min-cut entropy, while Theorem E.8.4m identifies the same entropy as the least sufficient predictive update-current entropy on the capacity-tight PCE-no-surplus horizon branch. The modular/KMS input is theorem-level via Theorems F.10.1–F.10.4 and is certificate-complete on the branch of Theorem F.10.12c.
 *   (T3) **Geometric Regularity and operational-continuum closure:** Theorem 43.5 is a conditional package for the $M=24$, $D=4$ operational-continuum branch. Lemma C.6d and Theorem C.6e provide fixed-trace $D_4$ shell-tensor isotropy, and Lemma C.6f supplies the exact fourth-moment isotropy of the equal-weight $D_4$ shell. Geometric noncollapse, interpolation/recovery, compactness, curvature transfer, and the generator-core/$\Gamma_2$ passage are independent certificate entries; with them, Theorems D.6e, C.6c, and 44a give the stated Mosco--Cheeger, $\mathrm{RCD}^*(K,4)$, and regular-manifold conclusions. Strict noncollapse additionally requires $\mu=\mathcal H^4$.
 *   (T4) **Conserved Energy-Momentum Source:** Corollary 45a.1 derives covariant conservation $\nabla_\mu T^{(MPU){\mu\nu}}=0$ from diffeomorphism invariance of the matter action and the matter equations of motion (Appendix B).
-*   (T5) **Tangent-Frame Lorentz Kinematics and Universality:** Corollary 46a derives the local tangent-frame group $SO^+(1,3)$ from Theorem 46 together with the full Appendix O signature package used by Theorems O.7a, O.7b, and Corollary O.7b.1, with the cone-coincidence entry supplied either by Hypothesis O.7.2.4 or by an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ (Definition O.7.2.5) for the retained sectors under discussion. Full dynamical Lorentz covariance additionally requires a common cone, covariant lower-order and interaction terms, and compatible tensor or spinor representations for every response-active sector used below. Corollary 46e derives metric universality from common PCE-minimal boundary sufficiency: retained species sharing the same Markov boundary syndrome reconstruct the same causal-diamond poset, capacity valuation, and Lorentzian metric. The Clausius step below uses one local horizon cone only for stress-energy sectors covered by these inputs; sectors not covered by the Lorentzian/cone-coincidence package remain outside the theorem-level Einstein-branch derivation. The Lorentzian factor $\mathrm{Spin}(1,3)$ in the principal bundle of Theorem 48 is structurally forced conditional on the spin obstruction $w_2(M_{\mathrm{reg}})=0$. On the F.10.12 branch, the same input is recorded as vanishing finite KMS-descent defect on refining covers.
+*   (T5) **Tangent-Frame Lorentz Kinematics and Universality:** Corollary 46a derives the local tangent-frame group $SO^+(1,3)$ from Theorem 46 together with the full Appendix O signature package used by Theorems O.7a, O.7b, and Corollary O.7b.1, with the cone-coincidence entry supplied either by Hypothesis O.7.2.4 or by an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ (Definition O.7.2.5) for the retained sectors under discussion. Full dynamical Lorentz covariance additionally requires a common cone, covariant lower-order and interaction terms, and compatible tensor or spinor representations for every response-active sector used below. Corollary 46e derives metric universality on its common PCE-minimal boundary-sufficiency, specieswise-separation, and common-capacity-normalization branch: retained species sharing the same Markov boundary syndrome reconstruct the same causal-diamond poset, capacity valuation, and Lorentzian metric. The Clausius step below uses one local horizon cone only for stress-energy sectors covered by these inputs; sectors not covered by the Lorentzian/cone-coincidence package remain outside the theorem-level Einstein-branch derivation. The Lorentzian factor $\mathrm{Spin}(1,3)$ in the principal bundle of Theorem 48 is structurally forced conditional on the spin obstruction $w_2(M_{\mathrm{reg}})=0$. On the F.10.12 branch, the same input is recorded as vanishing finite KMS-descent defect on refining covers.
 
 From these branch-theorem and certificate inputs, applying the Clausius relation $\delta Q=T\,\delta S$ to local Rindler horizons, with heat flux $\delta Q>0$ defined as energy flow into the causal diamond, and combining it with the Raychaudhuri equation, yields the Einstein-equation branch (**Theorem 50**). The Predictive Generalized Second Law of Theorem 12.5.3m supplies the monotone exterior entropy ledger; it does not by itself replace the local second-variation or zero-slack entries. On the finite KMS-descent branch the same route is certificate-complete in the sense of Corollary 12.1b when the null-convexity/saturation records of §12.5.4 and the finite Einstein-branch closure record $\mathfrak C_{\mathrm{EH}}$ are accepted on the same cover. The metric-fluctuation sector is closed on the same branch, conditional on the smooth-envelope record, the nondegenerate Hessian on the retained tangent subspace, the certified linearization radius $r_{\mathrm{grav},n}$, and the PCE fluctuation scale $\tau_{\mathrm{PCE},n}$ of Definition 12.1d, by Theorems 12.1c and 12.1e together with Definition 12.1d.4: the linearized emergent metric response and its finite covariance $\Sigma_n$ are deterministic projections of the finite KMS-descent certificate, with no independent microscopic graviton Hilbert sector required by Corollary 12.1e.1.
 
@@ -298,7 +298,7 @@ R_{\mu\nu}-\tfrac12 R g_{\mu\nu}+\Lambda g_{\mu\nu}
 =
 8\pi G_{\mathrm{op}}\,T^{(MPU)}_{\mu\nu}.
 $$
-Here $\Lambda$ is the undetermined integration constant of the local Clausius derivation. Identifying it with an Appendix-U vacuum output requires an accepted vacuum-weight-to-Einstein realization record, including common units, metric variation, and source exhaustion. Setting $G_{\mathrm{op}}=G$ and restoring SI units are separate empirical/unit calibrations.
+Here $\Lambda$ is constant on each connected component and is undetermined by the local Clausius derivation. Identifying it with an Appendix-U vacuum output requires an accepted vacuum-weight-to-Einstein realization record, including common units, metric variation, and source exhaustion. Setting $G_{\mathrm{op}}=G$ and restoring SI units are separate empirical/unit calibrations.
 
 *Proof.* Fix $p\in M$ and a future-directed null vector $k^\mu$ at $p$, and consider the associated local Rindler horizon $\mathcal H$ generated by the congruence tangent to $k^\mu$. Let $\lambda$ be an affine parameter along generators with $\lambda=0$ at $p$, and let $d\Sigma^\nu=k^\nu\,d\lambda\,dA$.
 
@@ -405,7 +405,7 @@ Taking the divergence and using $\nabla^\mu T_{\mu\nu}^{(MPU)}=0$ together with 
 $$
 \nabla_\nu\!\left(\Phi+\frac12 R\right)=0,
 $$
-so $\Phi=-\tfrac12 R+\Lambda$ for some constant $\Lambda$. Therefore
+so $\Phi=-\tfrac12 R+\Lambda$, where $\Lambda$ is constant on each connected component of $M$. Therefore
 $$
 R_{\mu\nu}-\tfrac12 R g_{\mu\nu}+\Lambda g_{\mu\nu}
 =
@@ -445,17 +445,17 @@ $$
 (Equations (E.7)–(E.9)). Substituting this calibration and restoring SI units converts the natural-units result of Theorem 12.1 into Equation (76). Thus Section 12 uses the area law and the coefficient $G$ already obtained in Appendix E; it does not re-derive them from the Clausius argument alone. QED
 
 **Lemma 12.1 (Uniqueness of Einstein Tensor).**
-In four dimensions, let $\mathcal E_{\mu\nu}$ be the metric Euler–Lagrange tensor of a local diffeomorphism-invariant metric action. Assume that $\mathcal E_{\mu\nu}$ is symmetric, divergence-free, and depends on $g_{\mu\nu}$ and its derivatives through at most second differential order, and require consistency with the emergent Bekenstein-Hawking entropy density supplied by the Appendix E branch. Then, up to the normalization set by that entropy density, $\mathcal E_{\mu\nu}$ is the Einstein tensor plus a cosmological term:
+In four dimensions, let $\mathcal E_{\mu\nu}$ be the metric Euler–Lagrange tensor of a local diffeomorphism-invariant metric action. Assume that $\mathcal E_{\mu\nu}$ is symmetric, divergence-free, and depends on $g_{\mu\nu}$ and its derivatives through at most second differential order. Retain all action-classification and entropy-representative hypotheses of Theorem 12.1a and one of its complete entropy-density/topological prescriptions, with the emergent Bekenstein-Hawking entropy density supplied by the Appendix E branch. Then the entropy-normalized tensor $\widehat{\mathcal E}_{\mu\nu}$ is the Einstein tensor plus a cosmological term:
 $$
-\mathcal E_{\mu\nu}=G_{\mu\nu}+\Lambda g_{\mu\nu}
+\widehat{\mathcal E}_{\mu\nu}=G_{\mu\nu}+\Lambda g_{\mu\nu}
 =
 R_{\mu\nu}-\tfrac12 Rg_{\mu\nu}+\Lambda g_{\mu\nu}.
 $$
-*Proof.* Lovelock's classification theorem [Lovelock 1971] states that in $D=4$ every local diffeomorphism-invariant metric action whose Euler–Lagrange equations are symmetric, divergence-free, and involve at most second derivatives yields field equations of the form
+*Proof.* Lovelock's classification theorem [Lovelock 1971], applied in the declared four-dimensional comparison class, gives constants $c_1,c_0$ such that
 $$
 \mathcal E_{\mu\nu}=c_1G_{\mu\nu}+c_0g_{\mu\nu},
 $$
-because the only additional Lovelock density, the Gauss–Bonnet term, is topological in four dimensions and contributes no local bulk field equations. Hence no independent second-order covariant rank-2 Euler–Lagrange tensor beyond $G_{\mu\nu}$ and $g_{\mu\nu}$ is available under the stated hypotheses. Appendix E supplies the horizon entropy density $1/(4G)$, which calibrates the Einstein–Hilbert normalization and sets $c_1=1$ in the units used in Equation (76). Writing $c_0=\Lambda$ gives the stated tensor. Higher-curvature terms whose metric equations have differential order greater than two lie outside the hypotheses; the four-dimensional Gauss–Bonnet density is already included as a topological exception. QED
+because the Gauss–Bonnet density is topological in four dimensions and contributes no local bulk field equations. Theorem 12.1a derives a nonzero Einstein–Hilbert coefficient by jointly separating the constant and intrinsic-curvature entropy densities under its exact-density prescription, or by matching the remaining area coefficient after its declared Euler-term quotient. With that entropy calibration, set $\widehat{\mathcal E}_{\mu\nu}:=\mathcal E_{\mu\nu}/c_1$ and $\Lambda:=c_0/c_1$. Division gives the stated normalized tensor. The entropy density alone, without the applicable comparison and normalization prescription, does not justify this coefficient identification. Higher-curvature terms whose metric equations have differential order greater than two lie outside the hypotheses; the four-dimensional Gauss–Bonnet density is already included as a topological exception. QED
 
 This subsection gives an action-level closure of the preceding thermodynamic derivation on the accepted local metric-action branch. It should not be read as replacing the MPU/channel-capacity derivation of the entropy density; rather, it shows that once the area-law density has been fixed by the MPU channel count and the finite KMS-descent/Clausius gate has supplied local equilibrium, the corresponding local metric equation is the Einstein equation. PCE supplies the entropy-density and channel-capacity input; Lovelock/Jacobson/Wald-style locality, diffeomorphism invariance, second-order field equations, and Wald-density matching supply the metric-action uniqueness gate. PCE alone is not used as a substitute for the local metric-action hypotheses. The finite max-flow/min-cut statements of Appendix E.8.4 supply the entropy bottleneck and its first variation; they do not replace the local Clausius, Raychaudhuri, KMS/generator-convergence, and Lovelock/Wald gates by a KKT or convex-duality derivation of the metric field equations.
 
@@ -463,16 +463,16 @@ This subsection gives an action-level closure of the preceding thermodynamic der
 $$
 S_{\mathrm{grav}}[g]=\int_M\sqrt{-g}\,\mathcal L(g,\partial g,\partial^2g)\,d^4x
 $$
-be a local diffeomorphism-invariant metric-only action whose Euler–Lagrange equations contain at most second derivatives of $g_{\mu\nu}$. Assume that the accepted family of compact, closed bifurcation cross-sections separates the Gauss–Bonnet Wald density in the explicit sense that
+be a local diffeomorphism-invariant metric-only action whose Euler–Lagrange equations contain at most second derivatives of $g_{\mu\nu}$. Assume a nonempty accepted family of compact, closed bifurcation cross-sections. For the exact-density prescription below, require the constant and intrinsic-curvature densities to be linearly independent on that family: for real constants $u,v$,
 $$
-\bigl[c\,\widetilde R_\Sigma(x)=0
+\bigl[u+v\,\widetilde R_\Sigma(x)=0
 \text{ for every accepted }(\Sigma,x)\bigr]
-\Longrightarrow c=0.
+\Longrightarrow u=v=0.
 $$
 Choose exactly one topological prescription:
 
 1. **Exact-density prescription:** the full local Wald entropy density on every surface in that family equals $1/(4G)$ in natural units; or
-2. **Fixed-topology quotient:** the branch fixes the topology of every compact, closed cross-section and declares the constant Euler-characteristic entropy contribution response-null, so actions and entropy records are compared modulo that specified topological term.
+2. **Constant-topology quotient:** the branch fixes the topology of every compact, closed cross-section and declares the constant Euler-characteristic entropy contribution response-null, so actions and entropy records are compared modulo that specified topological term; after taking this quotient, the remaining area-entropy coefficient equals $1/(4G)$ in natural units.
 
 Under the exact-density prescription,
 $$
@@ -480,7 +480,7 @@ S_{\mathrm{grav}}[g]
 =
 \frac{c^3}{16\pi G}\int_M(R-2\Lambda)\sqrt{-g}\,d^4x
 $$
-up to a total divergence. Under the fixed-topology quotient, the same statement holds modulo an arbitrary four-dimensional Gauss–Bonnet term. If the accepted Appendix B record identifies $T_{\mu\nu}^{(\mathrm{MPU})}$ with the metric-variational matter source and an accepted unit-restoration map supplies the SI factors, both prescriptions give the unique local bulk equation
+up to a total divergence. Under the constant-topology quotient, the same statement holds modulo an arbitrary four-dimensional Gauss–Bonnet term. If the accepted Appendix B record identifies $T_{\mu\nu}^{(\mathrm{MPU})}$ with the metric-variational matter source and an accepted unit-restoration map supplies the SI factors, both prescriptions give the unique local bulk equation
 $$
 G_{\mu\nu}+\Lambda g_{\mu\nu}
 =
@@ -488,7 +488,7 @@ G_{\mu\nu}+\Lambda g_{\mu\nu}
 \tag{76a}
 $$
 
-*Proof.* The fixed parity-even Lovelock comparison class gives, in natural units and up to a total divergence,
+*Proof.* The declared parity-even Lovelock comparison class gives, in natural units and up to a total divergence,
 $$
 \sqrt{-g}\,(a_0+a_1R+a_2\mathcal G),
 \qquad
@@ -497,11 +497,11 @@ $$
 R^2-4R_{\mu\nu}R^{\mu\nu}
 +R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}.
 $$
-The Einstein–Hilbert contribution to the Wald entropy is $4\pi a_1A$, so matching the area coefficient gives $a_1=1/(16\pi G)$. The cosmological term contributes no Wald entropy, and $a_0=-2a_1\Lambda$. Although $\mathcal G$ contributes no local bulk equation in four dimensions, its Wald term is proportional to
+For the accepted entropy representative on a bifurcation cross-section, the Einstein–Hilbert and Gauss–Bonnet contributions give
 $$
-a_2\int_\Sigma \widetilde R_\Sigma\,dA,
+S_{\mathrm{Wald}}(\Sigma)=4\pi a_1A(\Sigma)+8\pi a_2\int_\Sigma\widetilde R_\Sigma\,dA.
 $$
-and hence to the Euler characteristic for a closed bifurcation surface. Under the exact-density prescription, separation of intrinsic-curvature densities forces $a_2=0$. Under the fixed-topology quotient, that contribution is removed by the declared equivalence and $a_2$ remains bulk-EOM-null. Variation then gives the displayed natural-unit Einstein equation with the accepted metric-variational matter source; the registered unit map supplies the factors $c^3$ in the action and $c^{-4}$ in (76a). ∎
+The cosmological term contributes no Wald entropy. Under the exact-density prescription, pointwise matching gives $(4\pi a_1-1/(4G))+8\pi a_2\widetilde R_\Sigma(x)=0$ on every accepted cross-section. Joint linear independence therefore gives $a_1=1/(16\pi G)$ and $a_2=0$. Under the constant-topology quotient, the curvature integral is $4\pi\chi(\Sigma)$ and its entropy contribution is removed by the declared equivalence; matching the remaining area coefficient gives the same $a_1$, while $a_2$ remains bulk-EOM-null. Define $\Lambda=-a_0/(2a_1)$. Variation then gives the displayed natural-unit Einstein equation with the accepted metric-variational matter source; the registered unit map supplies the factors $c^3$ in the action and $c^{-4}$ in (76a). ∎
 
 **Corollary 12.1b (Certificate-Complete Emergent Metric Branch).** If the finite Einstein-branch closure record $\mathfrak C_{\mathrm{EH}}$ of Definition 12.5.3k is accepted on one retained cover and its $\mathfrak Q_{\mathrm{null}}$ entry is the zero-slack ledger, then Theorem 12.5.3k.1 gives the retained Einstein equation (76ai) in natural units. For the action and SI form (76a), require on the same branch: all action-classification and entropy/topological hypotheses of Theorem 12.1a, with one of its two prescriptions; identification of the $\mathfrak T_{\mathrm{MPU}}$ tensor with the metric-variational matter source; and an accepted natural-to-SI unit-restoration map. Under the exact-density prescription the bulk action is Einstein–Hilbert up to a total divergence; under the fixed-topology quotient it is Einstein–Hilbert up to a total divergence and the declared quotient-null Gauss–Bonnet term. Equation (76a) then follows. This is a sufficient closure criterion; it does not assert that the manuscript supplies one accepted common record. No independent microscopic gravitational Hilbert sector is introduced.
 
@@ -560,7 +560,7 @@ C^0_{\mu\nu}=0.
 \tag{12.1g.4}
 $$
 Its conserved completion is $C_{\mu\nu}=\varphi g_{\mu\nu}$ with $\varphi$ constant on each connected component. This term is absorbed into $\Lambda$; after that absorption, or after imposing the representative convention $\psi=0$, one may write $C_{\mu\nu}=0$.
-If $|\widehat\chi_p(k)|\le\epsilon_B$ on all retained directions and the injective evaluation map has inverse-on-range norm $\kappa_B$, then
+Equip $\operatorname{ran}E_B$ with the norm inherited from $\ell^\infty(\mathbb R^m)$ and the trace-free tensor space with $\|\cdot\|_B^*$. If $|\widehat\chi_p(k)|\le\epsilon_B$ on every retained direction and $\kappa_B:=\|E_B^{-1}\|_{\ell^\infty\to\|\cdot\|_B^*}$ denotes the inverse-on-range norm, then
 $$
 \lVert J^0(p)\rVert_B^*\le\kappa_B\epsilon_B,
 \qquad
@@ -791,7 +791,7 @@ H_{\mathrm{grav},n}
 \left.\nabla^2\widetilde V_{\mathrm{grav},n}\right|_{q=q_{\mathrm{grav},n}^*}
 \tag{12.1d.3}
 $$
-is positive definite on $\mathcal T_{\mathrm{grav},n}$. Positive definiteness on $\mathcal T_{\mathrm{grav},n}$ is an explicit certificate entry; it is supplied by the strict-convexity entry of Theorem D.8.9b's certificate or by another accepted certificate that evaluates this Hessian on the same retained tangent space. Theorem 31 supplies a conditional reset-cost inequality and does not establish Hessian positivity.
+is positive definite on $\mathcal T_{\mathrm{grav},n}$. Positive definiteness on $\mathcal T_{\mathrm{grav},n}$ is an explicit certificate entry evaluated on the same retained tangent space. Theorem D.8.9b supplies uniqueness and strict-gap stability on the operational quotient; it contains no strict-convexity or positive-Hessian conclusion. Theorem 31 supplies a conditional reset-cost inequality and does not establish Hessian positivity.
 
 7. $\Gamma_n:E_n\supset B(q_{\mathrm{grav},n}^*,r_{\mathrm{grav},n})\to\mathrm{Lor}(M_n)$ is twice differentiable on a certified radius $r_{\mathrm{grav},n}>0$ and sends each retained profile to the symmetric covariant 2-tensor reconstructed from the Appendix B flux functional and the Appendix E channel-capacity area law.
 
@@ -815,13 +815,13 @@ G(\Gamma_n(q))+\Lambda\Gamma_n(q)-8\pi G T_{\mathrm{MPU},n}(q)
 $$
 vanishes on the accepted KMS-descent branch at $q_{\mathrm{grav},n}^*$ and is differentiable in the certified radius, then admissible perturbations satisfying $D\mathcal E_n(q_{\mathrm{grav},n}^*)[\Delta q]=0$ obey the linearized Einstein-response equation on $M_n$.
 
-*Proof.* The perturbation $\Delta q$ lies in the retained tangent subspace $\mathcal T_{\mathrm{grav},n}$, so by Definition 12.1d it changes a retained finite response and is not response-null surplus. The radius condition $\|\Delta q\|<r_{\mathrm{grav},n}$ keeps the perturbation inside the same certified finite-response branch. Since $\Gamma_n$ is twice differentiable on this radius, the first-order term of the Taylor expansion at $q_{\mathrm{grav},n}^*$ is the bounded linear image $D\Gamma_n(q_{\mathrm{grav},n}^*)[\Delta q]$, which proves (12.1c.1). Symmetry and covariance are inherited from the codomain of $\Gamma_n$.
+*Proof.* For every nonzero $\Delta q\in\mathcal T_{\mathrm{grav},n}$, the response-null tangent definition gives at least one retained smooth response extension with nonzero first-order variation in that direction. This statement concerns the derivative; finite envelope points represent physical alternatives only when the certificate supplies their retained responses. The radius condition restricts the admitted use of the local model. Differentiability of $\Gamma_n$ gives the linear first-order term $D\Gamma_n(q_{\mathrm{grav},n}^*)[\Delta q]$, proving (12.1c.1), including zero displacement. Its values are symmetric tensor fields and obey the corresponding tensor coordinate transformation law. Equivariance under an additional branch-symmetry action on profiles follows only when the accepted reconstruction extension $\Gamma_n$ intertwines that action with the action on metric fields.
 
 The finite Einstein-response residual $\mathcal E_n$ vanishes at $q_{\mathrm{grav},n}^*$ by the accepted KMS-descent branch and Theorem 12.1. Differentiability gives
 $$
 \mathcal E_n(q_{\mathrm{grav},n}^*+\Delta q)
 =
-D\mathcal E_n(q_{\mathrm{grav},n}^*)[\Delta q]+O(\|\Delta q\|^2).
+D\mathcal E_n(q_{\mathrm{grav},n}^*)[\Delta q]+o(\|\Delta q\|).
 $$
 For admissible perturbations satisfying $D\mathcal E_n(q_{\mathrm{grav},n}^*)[\Delta q]=0$, the first-order residual vanishes. This is exactly the linearized Einstein-response equation around the emergent metric $\Gamma_n(q_{\mathrm{grav},n}^*)$. Uniqueness of the first-order response follows because $D\Gamma_n(q_{\mathrm{grav},n}^*)$ is a fixed linear map on the retained tangent subspace. ∎
 
@@ -848,7 +848,11 @@ $$
 \tau_{\mathrm{PCE},n}H_{\mathrm{grav},n}^{-1}.
 \tag{12.1e.0}
 $$
-Then the finite-response covariance of the linearized emergent metric is
+Define the linear random tensor field on the whole tangent space by
+$$
+\delta g_n:=D\Gamma_n(q_{\mathrm{grav},n}^*)[\Delta q].
+$$
+This is the linear extension of the response in Theorem 12.1c. Its use as an approximation to the nonlinear reconstructed metric is restricted to perturbations accepted within the certified radius. The full Gaussian is a stipulated tangent-model law; in positive tangent dimension it has nonzero mass outside every finite radius. Its linear covariance is
 $$
 \langle\delta g_n(x)_{\mu\nu}\,\delta g_n(y)_{\rho\sigma}\rangle_{\mathrm{PCE}}
 =
@@ -857,7 +861,7 @@ $$
 $$
 This covariance is the unique symmetric bilinear functional obtained by pushforward of the PCE Gaussian on the retained tangent subspace along $D\Gamma_n(q_{\mathrm{grav},n}^*)$.
 
-*Proof.* Positive definiteness of $H_{\mathrm{grav},n}$ on $\mathcal T_{\mathrm{grav},n}$ is an explicit entry of Definition 12.1d, so the inverse $H_{\mathrm{grav},n}^{-1}$ exists on the retained tangent subspace. The PCE fluctuation law is the centered Gaussian on $\mathcal T_{\mathrm{grav},n}$ with covariance $\tau_{\mathrm{PCE},n}H_{\mathrm{grav},n}^{-1}$ by (12.1e.0). By Theorem 12.1c the linearized metric is the linear pushforward
+*Proof.* Positive definiteness of $H_{\mathrm{grav},n}$ on $\mathcal T_{\mathrm{grav},n}$ is an explicit entry of Definition 12.1d, so the inverse $H_{\mathrm{grav},n}^{-1}$ exists on the retained tangent subspace. The PCE fluctuation law is the centered Gaussian on $\mathcal T_{\mathrm{grav},n}$ with covariance $\tau_{\mathrm{PCE},n}H_{\mathrm{grav},n}^{-1}$ by (12.1e.0). The linear extension agrees with the first-order response of Theorem 12.1c on its admitted perturbations and is defined for the full Gaussian by
 $$
 \delta g_n=D\Gamma_n(q_{\mathrm{grav},n}^*)[\Delta q].
 $$
@@ -872,7 +876,7 @@ H_{\mathrm{grav},n}^{-1}D\Gamma_n(q_{\mathrm{grav},n}^*)^*\psi
 \right\rangle.
 \tag{12.1e.2}
 $$
-Writing this bilinear form in distribution kernel notation gives (12.1e.1) with $\Sigma_n$ as defined in (12.1d.4). Uniqueness follows because a centered Gaussian is determined by its covariance and the pushforward map is fixed by the accepted certificate. ∎
+Writing this bilinear form in distribution kernel notation gives (12.1e.1) with $\Sigma_n$ as defined in (12.1d.4). Uniqueness follows because a centered Gaussian is determined by its covariance and the pushforward map is specified by the accepted certificate. In positive tangent dimension the Gaussian assigns positive probability outside every finite radius. Conditioning it to stay inside the certified ball changes its covariance in general, so the displayed formula makes no unconditional claim about the nonlinear metric response or a radius-conditioned law. ∎
 
 **Corollary 12.1e.0a (Cramér-Rao Status of Metric Fluctuations).**
 Assume the finite gravitational channel ensemble $\mathfrak G_n$ of Definition 12.1d is represented on the identifiable quotient of $\mathcal T_{\mathrm{grav},n}$ by a regular finite-dimensional likelihood family with parameter-independent support, a square-integrable zero-mean score, differentiability under the expectation, and positive-definite classical Fisher matrix $F_{\mathrm{grav},n}$. Let $\widehat{\Delta q}$ be an unbiased estimator with finite covariance from $N$ independent samples. Then
@@ -909,7 +913,7 @@ $$
 H_{\mathrm{grav},n}=F_{\mathrm{grav},n},
 \tag{12.1e.5}
 $$
-and where $\tau_{\mathrm{PCE},n}=1/N$, Equation (12.1e.4) is exactly the covariance kernel $\Sigma_n$ of Theorem 12.1e. Thus the Cramér-Rao structure controls the finite metric-fluctuation and estimation sector under the stated regularity conditions. The Einstein equation itself remains the Clausius-area-law equation of state derived in Theorem 12.1.
+and where $\tau_{\mathrm{PCE},n}=1/N$, the right-hand side of Equation (12.1e.4) is exactly the covariance kernel $\Sigma_n$ of Theorem 12.1e. Thus the Cramér-Rao structure controls the finite metric-fluctuation and estimation sector under the stated regularity conditions. The Einstein equation itself remains the Clausius-area-law equation of state derived in Theorem 12.1.
 
 *Proof.* The first inequality is the finite-dimensional Cramér-Rao inequality applied on the locally identifiable quotient of $\mathcal T_{\mathrm{grav},n}$. The reconstructed metric estimator is the linear image
 $$
@@ -925,11 +929,11 @@ Applying this positive linear pushforward to the Cramér-Rao lower bound gives (
 
 **Corollary 12.1e.1 (No Independent Graviton Hilbert Sector).** No microscopic gravitational carrier need be added to the PU framework to obtain $\delta g_n$ or $\Sigma_n$. The linearized metric response and its fluctuation covariance are deterministic images of the finite KMS-descent certificate together with the PCE functional already present on the operational-continuum branch.
 
-*Proof.* Definitions 12.1d and 12.1d.4 use only entries of the finite KMS-descent certificate $\mathfrak C^{\mathrm{KMS}}_n$, the Appendix B stress-energy flux functional, and the Appendix E channel-capacity area law. Theorems 12.1c and 12.1e then derive $\delta g_n$ and $\Sigma_n$ from those entries by linearization and Gaussian pushforward. No new Hilbert sector or carrier appears at any step. By Corollary P.6.1b.8, any additional fundamental gravitational carrier with the same finite protocol responses is response-null surplus and is removed by the PPI quotient. Any additional carrier that changes the finite responses is a different finite branch, evaluated by its own status ledger by Convention P.14.1l. ∎
+*Proof.* Definitions 12.1d and 12.1d.4 use only entries of the finite KMS-descent certificate $\mathfrak C^{\mathrm{KMS}}_n$, the Appendix B stress-energy flux functional, and the Appendix E channel-capacity area law. Theorems 12.1c and 12.1e then derive $\delta g_n$ and $\Sigma_n$ from those entries by linearization and Gaussian pushforward. No new Hilbert sector or carrier appears at any step. By Corollary P.6.1b.8, on a separating protocol-complete PPI branch, any additional fundamental gravitational carrier that changes no finite protocol response and lowers no already-defined PPI cost is response-null surplus and is removed by the PPI/PCE quotient. Any additional carrier that changes the finite responses is a different finite branch, evaluated by its own status ledger by Convention P.14.1l. ∎
 
 **Corollary 12.1e.2 (Status Boundary of the Metric-Fluctuation Sector).** The metric-fluctuation sector of Convention P.14.1k is closed at the level of $\delta g_n$ and $\Sigma_n$ for every accepted nondegenerate finite-response gravitational channel ensemble $\mathfrak G_n$ of Definition 12.1d. It remains certificate-pending until the finite KMS-descent certificate, the smooth-envelope record, the positive Hessian entry, the reconstruction derivative, and the fluctuation scale $\tau_{\mathrm{PCE},n}$ are fixed before validation comparison. A fluctuation-dissipation relation, when supplied on a KMS linear-response branch, is an additional consistency identity among accepted finite-response entries, not a substitute for the missing scale, Hessian, reconstruction derivative, or normalization records. Under acceptance, the residual interval on $\Sigma_n$ is only the propagated finite certificate interval inherited from these entries.
 
-*Proof.* Theorem 12.1c derives $\delta g_n$ from $D\Gamma_n(q_{\mathrm{grav},n}^*)$ on $\mathcal T_{\mathrm{grav},n}$. Theorem 12.1e derives $\Sigma_n$ from the same derivative, the positive Hessian, and the finite fluctuation scale. If the entries of Definition 12.1d are accepted, every ingredient is fixed by a finite record before comparison; Theorem D.8.9b gives local closure. If any entry is missing, Theorem P.14.1f gives non-identifiability, so the row remains certificate-pending. ∎
+*Proof.* Theorem 12.1c derives $\delta g_n$ from $D\Gamma_n(q_{\mathrm{grav},n}^*)$ on $\mathcal T_{\mathrm{grav},n}$. Theorem 12.1e derives $\Sigma_n$ from the same derivative, the positive Hessian, and the finite fluctuation scale. If the entries of Definition 12.1d are accepted, every ingredient is fixed by a finite record before comparison; Theorem D.8.9b gives local closure. If an entry required by Theorems 12.1c or 12.1e is absent, their stated certificate-conditioned conclusion is not established by that invocation. Theorem P.14.1f gives non-identifiability when two admissible completions satisfy all parent constraints and produce inequivalent retained outputs. ∎
 
 **Proposition 12.1e.3 (Static-Record Nonidentifiability of the Metric-Fluctuation Scale).** Fix a nonzero reconstruction derivative $A_n=D\Gamma_n(q^*_{\mathrm{grav},n})$, a positive Hessian $H_n$, and a certified linearization radius. For every $\tau>0$, the deterministic linear response and all of these static entries are unchanged, while Definition 12.1d.4 gives
 $$
@@ -948,7 +952,7 @@ H_n=H_{\mathrm{grav},n}\succ0,
 \qquad
 A_n=D\Gamma_n(q^*_{\mathrm{grav},n}),
 $$
-and equip $V_n$ and $\operatorname{ran}A_n$ with the certificate-fixed positive-definite finite-dimensional Hilbert inner products used by the retained tangent and tensor-test ledgers. Every adjoint, Moore--Penrose inverse, operator norm, and eigenvalue below is taken with respect to these inner products. For $h\in\operatorname{ran}A_n$, define the least microscopic PCE cost producing $h$ by
+and equip $V_n$ and $\operatorname{ran}A_n$ with the certificate-supplied positive-definite finite-dimensional Hilbert inner products used by the retained tangent and tensor-test ledgers. Every adjoint, Moore--Penrose inverse, operator norm, and eigenvalue below is taken with respect to these inner products. For $h\in\operatorname{ran}A_n$, define the least quadratic tangent-model cost producing $h$ by
 $$
 I_n(h)=\frac12\min_{v\in V_n:\,A_nv=h}\langle v,H_nv\rangle.
 \tag{12.1e.a.1}
@@ -972,11 +976,11 @@ I_n(h)
 \frac{\lambda_{\min}(H_n)}{2\lVert A_n\rVert^2}\lVert h\rVert^2.
 \tag{12.1e.a.4}
 $$
-Thus every nonzero retained metric perturbation has strictly positive PCE cost, while every $h\notin\operatorname{ran}A_n$ is unattainable in the certified linearized branch rather than a zero-cost fluctuation.
+Thus every nonzero $h\in\operatorname{ran}A_n$ has strictly positive cost in this quadratic model, while $h\notin\operatorname{ran}A_n$ is unattainable by the linear reconstruction. Identifying this quadratic form with the leading change of the nonlinear PCE cost additionally requires vanishing first variation on $\mathcal T_{\mathrm{grav},n}$ and the corresponding Taylor control. A strict minimum on the finite quotient alone does not supply that stationarity condition.
 
 *Proof.* Put $z=H_n^{1/2}v$ and $B=A_nH_n^{-1/2}$. Equation (12.1e.a.1) becomes the minimum Euclidean-norm problem $Bz=h$. Its unique minimum-norm solution is $z=B^+h$, which yields (12.1e.a.2) and the first equality in (12.1e.a.3). Definition 12.1d.4 gives $\Sigma_n=\tau_{\mathrm{PCE},n}A_nH_n^{-1}A_n^*$; on its range, $\Sigma_n^+=\tau_{\mathrm{PCE},n}^{-1}(A_nH_n^{-1}A_n^*)^+$, proving the second equality. Finally, every feasible $v$ obeys $\lVert h\rVert\le\lVert A_n\rVert\lVert v\rVert$ and $\langle v,H_nv\rangle\ge\lambda_{\min}(H_n)\lVert v\rVert^2$, which gives (12.1e.a.4). ∎
 
-**Corollary 12.1e.a.1 (No Fundamental Carrier Introduced by the Linearized Contraction).** Equation (12.1e.a.3) is a contraction principle: both the metric covariance and its dual fluctuation cost are deterministic images of the retained PCE Hessian and reconstruction derivative. It introduces neither a graviton field nor a metric path integral. Beyond the certified linearization radius, the theorem supplies no Gaussian or quadratic claim; the nonlinear PCE functional must be evaluated directly.
+**Corollary 12.1e.a.1 (No Fundamental Carrier Introduced by the Linearized Contraction).** Equation (12.1e.a.3) is a contraction principle: both the metric covariance and its dual fluctuation cost are deterministic images of the retained PCE Hessian and reconstruction derivative. It introduces neither a graviton field nor a metric path integral. The formulas are defined on the full linear tangent model. Their interpretation as finite physical metric perturbations or nonlinear PCE cost changes requires certificate-admissible perturbations within the certified radius and the appropriate approximation control.
 
 *Proof.* Definition 12.1d.4 gives
 $$
@@ -986,7 +990,7 @@ and Theorem 12.1e.a gives
 $$
 I_n(h)=\frac{\tau_{\mathrm{PCE},n}}2\langle h,\Sigma_n^+h\rangle.
 $$
-Thus both objects are obtained solely by applying linear maps, inversion on the retained tangent quotient, and Moore–Penrose inversion on the retained metric-response range to the certificate entries $H_n$, $A_n$, and $\tau_{\mathrm{PCE},n}$. No additional state space or path-integration measure occurs in either construction. Theorem 12.1c defines $A_n$ only as the derivative of $\Gamma_n$ within the certified radius, so these formulas make no claim outside that radius. ∎
+Thus both objects are obtained solely by applying linear maps, inversion on the retained tangent quotient, and Moore–Penrose inversion on the retained metric-response range to the certificate entries $H_n$, $A_n$, and $\tau_{\mathrm{PCE},n}$. No additional state space or path-integration measure occurs in either construction. The derivative $A_n$ at the reference point is a linear map on the entire tangent space, so its Gaussian pushforward and quadratic contraction are algebraically defined there. Theorem 12.1c identifies it with the first-order local reconstruction only on its admitted branch. In particular, an optimizer $v_h$ is physically usable only when it is an admissible perturbation within the certified radius; no nonlinear reconstruction or cost estimate outside that domain follows. ∎
 
 **External AQFT comparison.** Dorau and Much study coherent scalar-field excitations on bifurcate Killing horizons in algebraic quantum field theory. In their setting, modular relative entropy equals the corresponding horizon energy flux. Their semiclassical Einstein equation with the standard $8\pi$ normalization follows only after adjoining the entropy--area identification $S_{\mathrm{rel}}=\delta A/4$. This provides a standard-AQFT comparison for the relative-entropy/flux step used here. It neither derives the PU channel-capacity area law nor supplies any missing entry of $\mathfrak C_{\mathrm{EAQFT}}$, and it is not load-bearing for the present derivation.
 
@@ -1014,9 +1018,9 @@ $$
 where:
 
 1. $\mathfrak Z_{\mathrm{cont}}$ is the accepted operational-continuum and zero-defect gluing certificate.
-2. $\mathfrak C_{\mathrm{gen}}$ is the local generator convergence record on bounded diamonds, unless the branch has already supplied the accepted projective single-clock certificate $\mathfrak P_{\mathrm{AQFT}}$ or Mosco-Bochner certificate $\mathfrak B_{\mathrm{AQFT}}$ discharging that slot.
+2. $\mathfrak C_{\mathrm{gen}}$ is the local generator convergence record on bounded diamonds, unless the branch has already supplied the accepted projective single-clock certificate $\mathfrak P_{\mathrm{AQFT}}$ together with the bounded-diamond closability, strongly continuous contraction-semigroup generation, and Trotter--Kato range hypotheses of Theorem F.0f, or the accepted Mosco-Bochner certificate $\mathfrak B_{\mathrm{AQFT}}$ carrying the generator-convergence entry of Definition F.0c.
 3. $\mathfrak C_{\mathrm{AQFT}}$ is the stable local-net certificate: it supplies uniform locality, compatible embeddings, cone identification or cone-saturation, time-slice core generation, covariance, and state convergence.
-4. $\mathfrak C^{\mathrm{KMS}}$ is the accepted finite KMS-descent sequence of Definition F.10.12a with $\delta_n\to0$.
+4. $\mathfrak C^{\mathrm{KMS}}$ is an accepted finite KMS-descent sequence of Definition F.10.12a with $\delta_n\to0$ and all additional coherent-refinement, limiting-state, Connes-coboundary, and accumulated typed-defect hypotheses of Theorem F.10.12c.
 5. $\mathfrak C_{\mathrm{Had}}$ is the Hadamard-PCE finite-cost record for the retained local states.
 6. $\mathfrak C_{\mathrm{split}}$ is the split/nuclearity certificate or the accepted strictly weaker replacement sufficient for the claimed local net.
 7. $\mathfrak C_{\mathrm{Wig}}$ records faithful wedge states, boost/modular convergence, spectrum condition, Jost analyticity, and local field realization when a Wightman realization is claimed.
@@ -1037,9 +1041,9 @@ where:
 6. the linearized metric response, metric fluctuation covariance, and metric covariance under accepted branch symmetries;
 7. the reversible Einstein branch exactly when $\mathfrak C_{\mathrm{NC}}$ contains the zero-slack ledger.
 
-If any slot of $\mathfrak C_{\mathrm{EAQFT}}$ is absent, the missing slots form the minimal finite no-hidden-physics hypothesis list for the corresponding claim; the accepted subclaims remain valid but are not promoted to the absent output.
+If a slot required by an invoked theorem is absent, that theorem does not establish its corresponding output. Accepted subclaims retain their stated hypotheses and conclusions. Minimality of the certificate list requires a separate necessity argument for each slot.
 
-*Proof.* The operational-continuum, generator-convergence, and AQFT slots invoke Theorem F.0 or its projective/Mosco discharge branches and give the stable local net. The KMS slot invokes Theorem F.10.12c and supplies modular thermodynamics and the Clausius relation. The Hadamard, split/nuclearity, and Wightman slots supply exactly the field-realization regularity listed in item 3. The area-law, stress-flux, and KMS entries give Theorem 12.1 and Corollary 12.1b; $\mathfrak G$ gives Theorems 12.1c and 12.1e; $\mathfrak C_{\mathrm{PGSL}}$ gives Theorem 12.5.3m; and $\mathfrak C_{\mathrm{NC}}$ gives Proposition 12.5.3o, with zero slack required for the reversible Einstein saturation. The overlap audit ensures that all slots use the same response quotient, units, metric reconstruction, and horizon orientation. If a slot is missing, Theorem P.14.1f permits distinct finite completions agreeing on the accepted slots but differing on the absent output, so the listed missing entries are precisely the irreducible branch hypotheses for that claim. ∎
+*Proof.* The operational-continuum, generator-convergence, and AQFT slots invoke Theorem F.0 or its projective/Mosco discharge branches and give the stable local net. The KMS slot invokes Theorem F.10.12c and supplies modular thermodynamics and the Clausius relation. The Hadamard, split/nuclearity, and Wightman slots supply exactly the field-realization regularity listed in item 3. The area-law, stress-flux, and KMS entries give Theorem 12.1 and Corollary 12.1b; $\mathfrak G$ gives Theorems 12.1c and 12.1e; $\mathfrak C_{\mathrm{PGSL}}$ gives Theorem 12.5.3m; and $\mathfrak C_{\mathrm{NC}}$ gives Proposition 12.5.3o, with zero slack required for the reversible Einstein saturation. The overlap audit ensures that all slots use the same response quotient, units, metric reconstruction, and horizon orientation. Theorem P.14.1f establishes non-identifiability only after two admissible completions agreeing on all parent constraints and giving inequivalent outputs have been exhibited. It does not construct those completions from the absence of a slot and does not establish irreducibility of this certificate list. ∎
 
 **Proposition 12.1f.2 (Componentwise and Pairwise Records Do Not Imply a Joint Einstein Record).** Nonempty certificate slots, and even pairwise-compatible slot constraints, do not imply that $\mathfrak C_{\mathrm{EAQFT}}$ or $\mathfrak C_{\mathrm{EH}}$ has a common witness. Let three shared binary branch labels be $x_1,x_2,x_3\in\{0,1\}$ and let three nonempty overlap records impose
 $$
@@ -1081,6 +1085,8 @@ The derivation of Einstein's equations (Theorem 12.1) applies the Clausius relat
 | Scale | Equilibration Process | Physical Result | Reference |
 |:------|:----------------------|:----------------|:----------|
 | Microscopic (MPU) | Modular KMS representation; physical equilibrium only with an independent selector | Born weights have trace form on Theorem G.1.7's certified domain; time-stationarity requires an independent invariant-state/dynamics certificate | Theorem G.1.7; Theorems G.1.9.3c and G.1.9.5 |
+
+
 | Macroscopic (Rindler) | Clausius relation on local horizons | Einstein field equations | Theorem 12.1 |
 | Cosmological (de Sitter) | Reference semiclassical false-vacuum model; carrier/action, Fredholm-weight, and Einstein-realization gates open | Euclidean weight candidate; no certified physical cosmological constant | Appendix U |
 
@@ -1330,12 +1336,11 @@ a\hbar\,\delta\sum_i\varepsilon_i.
 $$
 Therefore the first variation of the worldline action vanishes if and only if the first variation of the additive ledger vanishes. ∎
 
-**Corollary 12.3b.2 (Affine $\Gamma$-Limit Transfer for Additive History Ledgers).** Let $\mathcal L_n$ be proper additive finite-history ledgers on a metrizable curve topology with one uniform lower bound $\mathcal L_n\ge-B$, and assume that $\mathcal L_n$ $\Gamma$-converges to $\mathcal L$ and is equicoercive. Let
+**Corollary 12.3b.2 (Affine $\Gamma$-Limit Transfer for Additive History Ledgers).** Let $\mathcal L_n$ be proper additive finite-history ledgers on a metrizable curve space, with one uniform lower bound $\mathcal L_n\ge-B$. Assume that the sequence is equicoercive and $\Gamma$-converges to a proper functional $\mathcal L$. Let
 $$
-\mathcal A_n=C_n+a_n\hbar\mathcal L_n,
-\qquad
-C_n\to C,
-\qquad
+\mathcal A_n=C_n+a_n\hbar\mathcal L_n,\qquad
+C_n\to C,\qquad
+a_n>0\ \text{for every }n,\qquad
 a_n\to a>0.
 \tag{76e.1}
 $$
@@ -1344,19 +1349,18 @@ $$
 \mathcal A=C+a\hbar\mathcal L,
 \tag{76e.2}
 $$
-is equicoercive, its minimum values converge, and every cluster point of approximate minimizers minimizes $\mathcal A$. If the calibrated limit identity is
+the sequence is equicoercive, its infimum values converge to the attained minimum of $\mathcal A$, and every cluster point of approximate minimizers minimizes $\mathcal A$. If the calibrated limit identity is
 $$
 \mathcal A[\gamma]=-mc^2\int_\gamma d\tau,
 \tag{76e.3}
 $$
-then the limiting stationary law is the metric geodesic law by Theorem 12.3b, and Corollary 12.3b.1 gives equality of the first-variation zero sets whenever the affine coefficient is nonzero. Positive $a$ is necessary for a general minimizer-preserving affine rule: $a<0$ exchanges minima with maxima, while $a=0$ erases all path dependence.
+then any limiting minimizer that admits all sufficiently small prescribed-endpoint timelike variations and has the regularity required by Theorem 12.3b obeys the metric geodesic law. A minimum on an arbitrarily restricted curve class does not establish this variational premise. The affine limit identity gives the first-variation equivalence of Corollary 12.3b.1 wherever those variations are defined; $\Gamma$-convergence alone does not assert convergence of arbitrary stationary points. Positive $a$ is required for a general minimizer-preserving affine rule: negative $a$ reverses the optimization order, while $a=0$ removes path dependence.
 
-*Proof.* Consider a subsequence realizing the finite liminf of $\mathcal A_n(\gamma_n)$. The uniform lower bound and $a_n\to a>0$ make $\mathcal L_n(\gamma_n)$ bounded above on that subsequence, so $(a_n-a)\mathcal L_n(\gamma_n)\to0$. Convergence of $C_n,a_n$ and the $\Gamma$-liminf inequality therefore give
+*Proof.* Since every $a_n>0$ and $a_n\to a>0$, there are constants $0<c_-\le a_n\le c_+<\infty$. The constants $C_n$ are bounded. For a convergent sequence of curves, take a subsequence realizing a finite liminf of $\mathcal A_n$. The common lower bound and the positive coefficient bounds make $\mathcal L_n$ bounded on this subsequence, so $(a_n-a)\mathcal L_n\to0$. The $\Gamma$-liminf inequality gives
 $$
-\liminf_n\mathcal A_n(\gamma_n)
-\ge C+a\hbar\mathcal L(\gamma).
+\liminf_n\mathcal A_n(\gamma_n)\ge C+a\hbar\mathcal L(\gamma).
 $$
-Evaluating (76e.1) on a recovery sequence for $\mathcal L$ gives the matching limsup inequality. A bounded $\mathcal A_n$ sublevel is a bounded $\mathcal L_n$ sublevel for all large $n$ because $a_n$ is bounded away from zero; hence equicoercivity transfers. The fundamental theorem of $\Gamma$-convergence gives convergence of minima and the cluster-point conclusion. Equations (76e.2)--(76e.3) and Theorem 12.3b give the geodesic law, while differentiation of an affine identity gives the first-variation equivalence. The constant-functional and sign-reversal cases prove the final necessity statements. ∎
+The infinite-liminf case is immediate. A recovery sequence at a finite value of $\mathcal L$ gives the matching limsup; when $\mathcal L(\gamma)=+\infty$, the limsup condition is vacuous. Every common $\mathcal A_n$ sublevel is contained in a common $\mathcal L_n$ sublevel, so equicoercivity transfers. Properness of the limit and its recovery sequence give a finite upper bound on approximate-minimizer values. Equicoercivity, the liminf inequality and recovery then give limit attainment, convergence of infima, and the cluster-point conclusion; no finite-stage attainment is required. Under the stated full-variation premise, a limiting minimizer is stationary for (76e.3), so Theorem 12.3b gives the geodesic law. Differentiating the affine identity gives the first-variation equivalence. Constant and sign-reversed affine maps establish the final distinctions. ∎
 
 **Resolution TV-GRAV-08-R1.** The positive affine class (76e.1), including unit conversion, $\Gamma$-limit transfer, minimizer convergence, and first-variation compatibility, is `positive-discharge`. A microscopic realization must still supply the common recovery sequence and calibrated identity (76e.3); neither follows from affine bookkeeping alone.
 
@@ -1404,7 +1408,7 @@ a_0+a_1n,
 $$
 where $a_0+a_1n$ is the identity/affine modular counterterm, whose second finite difference vanishes. The PCE/KMS reference subtraction fixes $\langle T_{\mu\nu}k^\mu k^\nu\rangle_{\omega,n}=0$ on the local patch when the reference branch has zero renormalized null flux.
 
-**Theorem 12.5.3a.2 (Finite-Response Null Modular Identity).** On a finite null-boost ledger,
+**Theorem 12.5.3a.2 (Finite-Response Null Modular Identity).** Let the finite null-boost ledger have $N\ge2$, spacing $h>0$, and area $A>0$. For every integer $0\le n\le N-2$,
 $$
 \frac{
 \Delta\langle K_n^{(h)}\rangle
@@ -1610,7 +1614,7 @@ $$
 $$
 for every admissible $f$. Thus this term is precisely the nonnegative predictive slack already used in Theorem 12.5.3b. Relative-entropy data-processing monotonicity alone supplies the first-difference P-GSL of Theorem 12.5.3m, not this shape-second-variation sign.
 
-For a shrinking transverse cell, $f_{\mathrm{cell}}$ is constant on the cell and zero outside it. Dividing (76m) by $A_{\mathrm{cell}}$ and taking the regular localized-cell limit removes the off-diagonal contribution by hypothesis and evaluates the continuous diagonal integrand at $y_0$. Rearranging gives (76n). The Clausius-saturated case is the equality branch of Theorem F.10.4 and Theorem 12.1, so the relative-entropy slack term is zero there. ∎
+For a shrinking transverse cell, $f_{\mathrm{cell}}$ is constant on the cell and zero outside it. Dividing (76m) by $A_{\mathrm{cell}}$ and taking the regular localized-cell limit removes the off-diagonal contribution by hypothesis and evaluates the continuous diagonal integrand at $y_0$. Rearranging gives (76n). On the zero-slack branch of Definition 12.5.3n, the local relative-entropy second variation vanishes. With the area-law/Raychaudhuri identification required by Theorem 12.5.3f, this is the reversible Clausius branch used in Theorem 12.1. The first-variation identity of Theorem F.10.4 alone does not imply this second-variation statement. ∎
 
 **Theorem 12.5.3f (QNEC-Slack Form of Metric Thermodynamics).** On the null-cut branch of Theorem 12.5.3b, with fiducial transverse area $A>0$, define the predictive QNEC slack density by
 $$
@@ -1822,7 +1826,7 @@ $$
 \frac{d^2}{d\lambda^2}\mathcal R_\lambda(\rho)=0,
 \tag{76ac}
 $$
-then the retained non-equilibrium slack tensor vanishes and Theorem 12.5.3h reduces to the reversible semiclassical Einstein branch.
+then the retained slack has zero null projections. Under the all-null or injective-tomography hypotheses of Theorem 12.5.3h, any symmetric conserved tensor completion is a constant multiple of the metric on each connected component and can be absorbed into $\Lambda$, after which Theorem 12.5.3h gives the reversible semiclassical Einstein branch.
 
 If the null recoverability curvature is nonzero but is represented by a conserved retained slack tensor $T_{\mu\nu}^{(\mathrm{rec})}$ with
 $$
@@ -1860,8 +1864,8 @@ $$
 with the following entries.
 
 1. $\mathfrak Z_{\mathrm{cont}}$ is an accepted operational-continuum gluing certificate of Corollary 43.5a.
-2. $\mathfrak P_{\mathrm{AQFT}}$ is an accepted projective single-clock AQFT certificate of Definition F.0e, or the pair $(\mathfrak B_{\mathrm{AQFT}},\mathfrak C_{\mathrm{gen}})$ is accepted on the same cover.
-3. $\mathfrak C^{\mathrm{KMS}}$ is an accepted finite KMS-descent certificate of Definition F.10.12a with vanishing Connes-cocycle and Clausius defects on the retained local Rindler cover.
+2. $\mathfrak P_{\mathrm{AQFT}}$ is an accepted projective single-clock AQFT certificate of Definition F.0e, and every bounded diamond satisfies the uniform interaction bounds, physical Lieb--Robinson estimates on the retained time domain, causal-cone containment, closability, contraction-semigroup generation, and Trotter--Kato range hypotheses of Theorem F.0f; or an accepted $\mathfrak B_{\mathrm{AQFT}}$ of Definition F.0c carries its $\mathfrak C_{\mathrm{gen}}$ entry and the additional uniform-locality, state-convergence, and time-slice hypotheses of Theorem F.0d on the same cover.
+3. $\mathfrak C^{\mathrm{KMS}}$ is an accepted finite KMS-descent sequence of Definition F.10.12a satisfying all four additional hypotheses of Theorem F.10.12c: coherent refinement and weak-* precompactness, uniqueness of limiting restrictions on a norm-dense test algebra, compatible limiting Connes coboundaries, and vanishing accumulated typed defects. Its Connes-cocycle and Clausius defects vanish on the retained local Rindler cover.
 4. $\mathfrak A_{\partial}$ is the Appendix E saturated channel-area record fixing the local entropy-variation coefficient $\eta_{\partial}$ and $\delta S=\eta_{\partial}\delta A$.
 5. $\mathfrak T_{\mathrm{MPU}}$ is the Appendix B stress-energy flux record fixing $T_{\mu\nu}^{(\mathrm{MPU})}$ and its conservation law on the same retained diamond cover.
 6. $\mathfrak Q_{\mathrm{null}}$ fixes one of the following alternatives on every retained $D=4$ cell. The all-null alternative records $\mathcal Q(k)=0$ for every null tangent $k$. The finite-tomography alternative fixes an orthonormal tetrad $(e_0,e_1,e_2,e_3)$ and the nine null directions
@@ -1961,7 +1965,7 @@ $$
 \qquad
 \omega_{\lambda_2}=\Phi_{\lambda_2\lambda_1,*}(\omega_{\lambda_1}).
 $$
-Uhlmann monotonicity of quantum relative entropy therefore gives
+Uhlmann monotonicity of quantum relative entropy [Uhlmann 1977, Proposition 18] therefore gives
 $$
 D(\rho_{\lambda_2}\Vert\omega_{\lambda_2})
 =
@@ -2237,6 +2241,6 @@ An invertible hydrodynamic-frame change acts on the response matrix by the corre
 $$
 e^{-tK}(I-P_0)=\sum_ae^{-\lambda_at}|e_a\rangle\langle e_a|,
 $$
-which proves (12.5.5c.1). Termwise integration gives (12.5.5c.2) and (12.5.5c.4). The operator norm of $e^{-tK}(I-P_0)$ is $e^{-\lambda_*t}$, so Cauchy--Schwarz gives (12.5.5c.3). Equation (12.5.5c.5) is the weighted-mean bound for $1/\lambda_a$. Invertible changes of observable coordinates multiply the matrix response but do not alter the denominators in (12.5.5c.2). Positive rescaling preserves self-adjointness, positivity, the kernel, and the stationary state, while the displayed formulas give the final scaling laws. ∎
+which proves (12.5.5c.1). Termwise integration gives (12.5.5c.2) and (12.5.5c.4). The operator norm of $e^{-tK}(I-P_0)$ is at most $e^{-\lambda_*t}$, so Cauchy--Schwarz gives (12.5.5c.3). Equation (12.5.5c.5) is the weighted-mean bound for $1/\lambda_a$. Invertible changes of observable coordinates multiply the matrix response but do not alter the denominators in (12.5.5c.2). Positive rescaling preserves self-adjointness, positivity, the kernel, and the stationary state, while the displayed formulas give the final scaling laws. ∎
 
 The theorem exhausts finite GNS-self-adjoint detailed-balance generators. Nonnormal generators, continuous spectra, nonlinear response, the physical source/observable map, and the numerical contact and frame records require separate certificates.

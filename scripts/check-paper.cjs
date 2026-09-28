@@ -77,6 +77,10 @@ const contents = fs.readFileSync(path.join(root, 'docs/paper/contents.md'), 'utf
 assert(contents.includes('](' + pureS.file + ')'), 'The table of contents opens the separate PDF');
 let contentsLinks = 0;
 for (const [, label, file, anchor] of contents.matchAll(/\[([^\]\n]+)\]\(([^)\n]+\.md)(?:#([^)]*))?\)/g)) {
+  if (file.startsWith('related/pure_s_universality/')) {
+    assert(fs.existsSync(path.join(root, 'docs/paper', file)), label + ' opens an existing companion document');
+    continue;
+  }
   assert(anchor && anchorsByFile.get(file)?.has(anchor), label + ' links to a specific rendered destination');
   contentsLinks++;
 }
@@ -84,6 +88,11 @@ const headingCases = context.renderMarkdown('Intro\n## Math $C^*$\n**Theorem 1 (
 assert(headingCases.includes('id="math-c"') && headingCases.includes('id="theorem-1-x2"'), 'Heading IDs use source math, independent of equation order');
 assert(headingCases.includes('</table><p id="theorem-2">'), 'Text immediately after a table gets its own destination');
 const codeAnchor = context.renderMarkdown('```python\n# Verification 1\nassert True\n```');
+const spacedTable = context.renderMarkdown('Prose\n| A | B |\n|---|---|\n\n| 1 | 2 |\n\n| 3 | 4 |\n\n---');
+assert.equal((spacedTable.match(/<td /g) || []).length, 4, 'Spaced table rows stay together; a following rule cannot split the last row');
+assert(spacedTable.includes('</table><hr>'), 'Table followed by a horizontal rule closes correctly');
+const singleDisplay = context.renderMarkdown('Given\n$\nx=y\\tag{test.1}\n$\nthen $z=2$,\\quad $w=3$.');
+assert(singleDisplay.includes('math-number">(test.1)') && !singleDisplay.includes('\\quad'), 'Standalone single-dollar displays and prose math spacing render');
 assert(codeAnchor.includes('<span id="verification-1"># Verification 1</span>') && !codeAnchor.includes('<h1'), 'Code destinations preserve code formatting');
 const sample = '[MPU](07_minimal_predictive_unit.md) and [Appendix](appendices/appendix_a_core_logic.md#test)';
 const linked = context.renderMarkdown(sample);

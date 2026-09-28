@@ -221,7 +221,7 @@ d_{\mathsf P_I}\!\left(I,I^{r\leftarrow0}\right).
 $$
 Hence support membership is transported by $\tau$; the inverse hypotheses give equality rather than one-sided inclusion. Score invariance transports qualification of the original and every null-replaced implementation, which proves preservation of irreducibility. ∎
 
-**Theorem 5a.2 (Complete Finite Response-Table Support Audit).** Fix the finite protocols, outcome alphabets, score datum and three typed-null contracts of Definition 5a. For a submitted finite implementation $I$, form the exact table
+**Theorem 5a.2 (Complete Finite Response-Table Support Audit).** Fix the finite protocols, outcome alphabets, score datum and three typed-null contracts of Definition 5a. Assume the submitted representations provide terminating exact procedures for comparing response-law entries and for evaluating the score on the original and three null response tables and comparing these values with $A_0+\epsilon$. For a submitted finite implementation $I$, form the exact table
 $$
 \mathsf T(I)
 =
@@ -240,9 +240,9 @@ Exact finite comparison of this table returns all of the following without inspe
 3. two implementations with the same table, up to the typed protocol, outcome and role bijections of Corollary 5a.1, have the same support cardinality and the same irreducibility status; and
 4. no response-equivalent implementation preserving the entire intervention table can have a smaller protocol-relative support.
 
-*Proof.* Item 1 is Proposition 5a(1), applied to each of the three finite rows. Item 2 is the definition of functional irreducibility, and all inequalities are exact finite comparisons. Corollary 5a.1 proves item 3. If a table-preserving implementation had smaller support, item 3 would give equal support cardinalities, a contradiction; this proves item 4. The audit terminates because the protocol, outcome and role sets are finite. ∎
+*Proof.* Item 1 is Proposition 5a(1), applied to each of the three finite rows. Item 2 is the definition of functional irreducibility, and all inequalities are exact finite comparisons. Corollary 5a.1 proves item 3. If a table-preserving implementation had smaller support, item 3 would give equal support cardinalities, a contradiction; this proves item 4. The audit uses finitely many calls to the assumed terminating evaluation and comparison procedures, because the protocol, outcome and role sets are finite. ∎
 
-**Resolution TV-BEC-01-R1 (Metadata).** Exact domain: the finite typed protocol/outcome/role tables of Definition 5a. Premises: exact response laws, the registered score datum and all three typed-null rows. Equivalence: Corollary 5a.1's typed protocol, outcome and role bijections. Budget: every submitted original and null table cell. Verifier: exact table equality and score comparison. Falsifier: equal complete tables with different support, or an audit result disagreeing with a registered score inequality. Provenance class: source-internal finite classification. Downstream consumers: Definition 5a's support/irreducibility claims and `TV-BEC-01`. Nonvacuity: a one-protocol binary table with baseline null rows and an original row above the margin. This is `positive-discharge` of the mathematical response-table component.
+**Resolution TV-BEC-01-R1 (Metadata).** Exact domain: the finite typed protocol/outcome/role tables of Definition 5a. Premises: exact response laws, the registered score datum and all three typed-null rows, with the terminating evaluation and comparison procedures specified in Theorem 5a.2. Equivalence: Corollary 5a.1's typed protocol, outcome and role bijections. Budget: every submitted original and null table cell. Verifier: exact table equality and score comparison. Falsifier: equal complete tables with different support, or an audit result disagreeing with a registered score inequality. Provenance class: source-internal finite classification. Downstream consumers: Definition 5a's support/irreducibility claims and `TV-BEC-01`. Nonvacuity: a one-protocol binary table with baseline null rows and an original row above the margin. This is `positive-discharge` of the mathematical response-table component.
 
 **Theorem 5a.3 (Finite Typed-Null Full Loop and Exact Response Transport).** Let the memory, prediction, task-outcome and verification registers all be $\{0,1\}$. Freeze one protocol with initial current-state datum $1$ and task outcome $y=1$. Realize the three Definition-5 roles by the typed maps
 $$
@@ -281,7 +281,7 @@ $$
 $$
 Use $\mathcal E_f$ for each map in (5a.3.1)--(5a.3.2), tensor computational-basis carriers for the inputs of $M_v$, and read the verification register in its computational basis. Diagonal preparation and basis readout are inverse response maps and intertwine every original and null channel, so the complete table (5a.3.3), its score, support and irreducibility transport exactly.
 
-*Proof.* On the original loop, $m=p=y=1$, so $M_v$ returns response $1$ and next memory $1$. Replacing $M_m$ or $M_p$ makes $mp=0$; replacing $M_v$ sets its first output to zero. This proves (5a.3.3). The score inequalities are $1>1/2$ for the original and $0\le1/2$ for every null row, so Theorem 5a.2 gives support $\{b_m,b_p,b_v\}$ and irreducibility. Each map in (5a.3.4) is completely positive and trace preserving, sends diagonal point states according to $f$, and returns the corresponding classical law under basis measurement. Therefore all original and null diagrams required by Corollary 5a.1 commute. ∎
+*Proof.* On the original loop, $m=p=y=1$, so $M_v$ returns response $1$ and next memory $1$. Replacing $M_m$ or $M_p$ makes $mp=0$; replacing $M_v$ sets its first output to zero. This proves (5a.3.3). The score inequalities are $1>1/2$ for the original and $0\le1/2$ for every null row, so Theorem 5a.2 gives support $\{b_m,b_p,b_v\}$ and irreducibility. For (5a.3.4), put $K_x=|f(x)\rangle\langle x|$. Then $\mathcal E_f(\rho)=\sum_xK_x\rho K_x^\dagger$ and $\sum_xK_x^\dagger K_x=\sum_x|x\rangle\langle x|=I_X$. For every finite auxiliary dimension $d$ and every positive operator $B$, $(\mathcal E_f\otimes\mathrm{id}_d)(B)=\sum_x(K_x\otimes I_d)B(K_x^\dagger\otimes I_d)\ge0$, proving complete positivity. Trace cyclicity gives $\operatorname{Tr}\mathcal E_f(\rho)=\operatorname{Tr}(\rho\sum_xK_x^\dagger K_x)=\operatorname{Tr}\rho$. For a diagonal input $\rho=\sum_xp_x|x\rangle\langle x|$, the output is $\sum_xp_x|f(x)\rangle\langle f(x)|$, whose basis readout is the classical pushforward, including when $f$ is not injective. Therefore all original and null diagrams required by Corollary 5a.1 commute. ∎
 
 **Resolution TV-BEC-01-R2 (Metadata).** Exact domain: the one-protocol binary full loop (5a.3.1)--(5a.3.3) and its complete diagonal-channel transport (5a.3.4). Premises: the frozen initial state and outcome, the displayed typed modules and nulls, and the registered score datum. Equivalence: the typed protocol, outcome and role bijections of Corollary 5a.1. Budget: three role maps, three isolated null maps and both finite carrier presentations. Verifier: exact evaluation of all four response rows, CPTP normalization and the classical--diagonal intertwining identities. Falsifier: any ill-typed null, changed non-target module, noncommuting response square or score/support mismatch. Provenance class: source-internal finite construction. Downstream consumers: Definition 5, Definition/Proposition 5a, Corollary 5a.1 and `TV-BEC-01`. Together with Theorem 5a.2, Theorem 5a.3 gives `positive-discharge` of `TV-BEC-01`.
 
@@ -321,15 +321,15 @@ $$
 PP(t) = \frac{1}{1 + k_{PP} \cdot PE(t)} \quad \text{(8)}
 $$
 
-**Definition (Predictive Error $PE$).** Let $\hat{y}(t)$ denote the system's predictive object (a point prediction or a predictive distribution) and $y(t)$ the realized outcome. Fix a proper scoring rule $S(\cdot,\cdot)$ (e.g., Brier score or log‑loss). Define $PE(t) = S(\hat{y}(t), y(t)) \geq 0$. When $S$ is log‑loss, $PE$ has units of nats (base $e$) or bits (base 2); otherwise $PE$ is made dimensionless by a specified normalization protocol.
+**Definition (Predictive Error $PE$).** Let $\hat{y}(t)$ denote the system's predictive object (a point prediction or a predictive distribution) and $y(t)$ the realized outcome. Fix a proper scoring rule $S(\cdot,\cdot)$ whose loss is finite and nonnegative on every registered prediction/outcome pair (e.g., Brier score, or log‑loss with positive predictive probability for every admitted outcome). Define $PE(t) = S(\hat{y}(t), y(t)) \geq 0$. When $S$ is log‑loss, $PE$ has units of nats (base $e$) or bits (base 2); otherwise $PE$ is made dimensionless by a specified normalization protocol.
 
-**Definition (Scale $k_{PP}$).** The constant $k_{PP} > 0$ rescales $PE$ in Equation (8) so that a designated operating point $PE_*$ maps to a specified $PP_* \in (0, 1)$, typically chosen within the viability band $(\alpha, \beta)$ defined below. Concretely, $k_{PP} = (1/PP_* - 1)/PE_*$. When $PE$ carries units (nats/bits), $k_{PP}$ has the corresponding reciprocal units so that $k_{PP} \cdot PE$ is dimensionless; if $PE$ is dimensionless, so is $k_{PP}$.
+**Definition (Scale $k_{PP}$).** The constant $k_{PP} > 0$ rescales $PE$ in Equation (8) so that a designated operating point $0<PE_*<\infty$ maps to a specified $PP_* \in (0, 1)$, typically chosen within the viability band $(\alpha, \beta)$ defined below. Concretely, $k_{PP} = (1/PP_* - 1)/PE_*$. When $PE$ carries units (nats/bits), $k_{PP}$ has the corresponding reciprocal units so that $k_{PP} \cdot PE$ is dimensionless; if $PE$ is dimensionless, so is $k_{PP}$.
 
 This definition ensures $PP(t) \in (0, 1]$, with $PP = 1$ corresponding to perfect prediction ($PE = 0$) and $PP \to 0$ as $PE \to \infty$. Higher $PP$ corresponds to higher predictive quality $Q$. The specific choice of $k_{PP}$ anchors $PP$ to the task's typical error scale and does not alter the ordering of predictive quality across models or time.
 
 #### 3.3.2 Theorem 8 (Expected Lower Performance Bound $\alpha > 0$)
 
-Fix an evaluation window $W$ and the proper scoring rule $S$ of Definition 7. Define the system's expected error and its corresponding window performance by
+Fix an evaluation window $W$, a registered probability law for evaluating the system and the matched random-chance predictor on that window, and the proper scoring rule $S$ of Definition 7. The conditional notation $\mathbb E[\cdot\mid t\in W]$ below denotes expectation under this registered window law. If this law is obtained by conditioning an ambient sampling law, assume $\Pr(t\in W)>0$. Define the system's expected error and its corresponding window performance by
 $$
 \overline{PE}_W:=\mathbb E\!\left[S(\hat y(t),y(t))\mid t\in W\right],
 \qquad
@@ -410,7 +410,7 @@ P_{\max}(\mathcal A_1)\le P_{\max}(\mathcal A_2),
 P_{\min}(\mathcal A_1)\ge P_{\min}(\mathcal A_2).
 \tag{9a.3}
 $$
-No ordering between two interior numerical endpoints is invariant under independently chosen score calibrations. Replacing $P$ by any strictly increasing bijection $h:(0,1]\to(0,1]$ preserves each within-branch ordering while moving every interior endpoint; two independently chosen such maps can reverse an interior cross-branch comparison. The universal endpoint $P=1$ is fixed.
+No ordering between two interior numerical endpoints is invariant under independently chosen score calibrations. Replacing $P$ by any strictly increasing bijection $h:(0,1]\to(0,1]$ preserves each within-branch ordering and leaves the universal endpoint $P=1$ unchanged. For any nominated interior endpoint and any nominated interior image, there exists such a bijection sending the former to the latter; two independently chosen maps can therefore reverse an interior cross-branch comparison.
 
 *Proof.* A real function on a nonempty finite set attains its minimum and maximum. The map $r\mapsto(1+k_{PP}r)^{-1}$ is strictly decreasing, giving (9a.2). Set inclusion can only decrease the minimum risk and increase the maximum risk, which gives (9a.3) after applying the decreasing map. Strictly increasing recalibrations preserve order inside each branch, fix $1$, and can send any nominated interior value to any nominated interior value; choosing the two images in reverse order proves the final interior statement. ∎
 
@@ -509,23 +509,26 @@ This is the framework's operational-viability axiom. Theorem 8 verifies its lowe
 
 #### 3.3.7 Proposition 1 (Regulation Requirement under Uniform Uncontrolled Exit Risk)
 
-Let $(PP_n,\mathcal F_n)_{n\ge0}$ be the performance process sampled once per predictive cycle, and define
+Let $(\mathcal F_n)_{n\ge0}$ be a filtration and $(PP_n)_{n\ge0}$ an adapted performance process sampled once per predictive cycle, and define
 $$
 \tau:=\inf\{n\ge0:PP_n\notin(\alpha,\beta)\}.
 $$
-Assume that, without a regulatory or protective response, there exist an integer $m\ge1$ and $p_{exit}>0$ such that for every $k\ge0$,
+Assume that, without a regulatory or protective response, there exist an integer $m\ge1$ and $p_{exit}\in(0,1]$ such that for every $k\ge0$,
 $$
-\Pr(\tau\le(k+1)m\mid\mathcal F_{km},\tau>km)\ge p_{exit}
+\Pr(\tau\le(k+1)m\mid\mathcal F_{km})\ge p_{exit}
+\quad\text{almost surely on }\{\tau>km\}.
 $$
-almost surely. Then $\Pr(\tau<\infty)=1$. Consequently, a system required by Axiom 3 to remain in $(\alpha,\beta)$ for all cycles almost surely must contain a regulatory or protective mechanism that invalidates this uncontrolled exit-risk condition.
+Then $\Pr(\tau<\infty)=1$. Consequently, a system required by Axiom 3 to remain in $(\alpha,\beta)$ for all cycles almost surely must contain a regulatory or protective mechanism that invalidates this uncontrolled exit-risk condition.
 
-*Proof.* The conditional hypothesis gives
+*Proof.* Adaptedness makes $\tau$ a stopping time. The conditional hypothesis and $\{\tau>(k+1)m\}\subseteq\{\tau>km\}$ give
 $$
-\Pr(\tau>(k+1)m\mid\mathcal F_{km},\tau>km)\le1-p_{exit}.
+\Pr(\tau>(k+1)m\mid\mathcal F_{km})
+\le(1-p_{exit})\mathbf 1_{\{\tau>km\}}.
 $$
-Multiplying by $\mathbf 1_{\{\tau>km\}}$, taking expectations, and iterating yields
+Taking expectations and iterating from $\Pr(\tau>0)\le1$ yields
 $$
-\Pr(\tau>km)\le(1-p_{exit})^k.
+\Pr(\tau>km)\le(1-p_{exit})^k
+\qquad(k\ge1).
 $$
 The right-hand side tends to zero, so continuity from above gives
 $$
@@ -542,9 +545,9 @@ W_{n+1}:=
 \operatorname{supp}P(\cdot\mid x,a)\subseteq W_n\right\}.
 \tag{1a.1}
 $$
-The descending sequence stabilizes after at most $|V|$ strict deletions at a greatest fixed point $W_*$. A controller keeps the process in $V$ almost surely from $x$ for every cycle if and only if $x\in W_*$. When $x\in W_*$, one deterministic stationary controller is obtained by choosing at each state a witnessing action in (1a.1). If $W_*\ne\varnothing$, the deterministic stationary selectors whose transition supports stay in $W_*$ form a nonempty finite safe-controller census. When that census carries an exact cost $J(\pi)$, its minimum is attained; it is strict exactly when one controller has cost smaller than every other controller modulo the declared response equivalence.
+The descending sequence stabilizes after at most $|V|$ strict deletions at the greatest subset $W_*\subseteq V$ for which every state has an admissible action whose transition support stays in $W_*$. A controller keeps the process in $V$ almost surely from $x$ for every cycle if and only if $x\in W_*$. When $x\in W_*$, one deterministic stationary controller is obtained by choosing at each state a witnessing action in (1a.1). If $W_*\ne\varnothing$, the deterministic stationary selectors whose transition supports stay in $W_*$ form a nonempty finite safe-controller census. When that census carries an exact cost $J(\pi)$, its minimum is attained; it is strict exactly when one controller has cost smaller than every other controller modulo the declared response equivalence.
 
-*Proof.* Finiteness makes the decreasing sequence stabilize. At a fixed point, choose a witnessing action at every $x\in W_*$. Its transition support stays in $W_*$, so induction gives almost-sure safety for all times. Conversely, if $x\notin W_*$, let $n$ be the first deletion stage. Every admissible action at $x$ has positive probability of entering $X\setminus W_{n-1}$; backward induction on deletion rank shows that no policy can guarantee perpetual membership in $V$. A real-valued function on the nonempty finite safe-controller set attains its minimum, and the strictness criterion is the definition of a unique minimizing equivalence class. ∎
+*Proof.* Finiteness makes the decreasing sequence stabilize. Any $U\subseteq V$ for which every state has an admissible action with transition support in $U$ lies in every $W_n$ by induction, so $U\subseteq W_*$. At $W_*$, choose a witnessing action at every state. Its transition support stays in $W_*$, so induction and the countable union of zero-probability exit events give almost-sure safety for all cycles. If $x\notin V$, safety fails at time zero. For $x\in W_{n-1}\setminus W_n$, every admissible action has positive probability of entering $X\setminus W_{n-1}$. Inductively, each state in this complement has a positive lower bound on its probability of failing safety within $n-1$ further cycles, uniformly over all policies and histories. The complement and each action set are finite, so the minimum of these bounds and of the positive escape probabilities is positive. Their product bounds the probability of failure within $n$ cycles from $x$, including under randomized or history-dependent choices. Induction starts with the time-zero case and excludes every deleted state. A real-valued function on the nonempty finite safe-controller set attains its minimum, and the strictness criterion is the definition of a unique minimizing equivalence class. ∎
 
 **Resolution TV-BEC-03-R1 (Metadata).** Exact domain: finite registered controlled Markov kernels with a finite viable set and response-preserving action sets. Premises: exact transition supports and nonempty admissible actions; $W_*\ne\varnothing$ for the minimum-controller clause. Equivalence: equality of retained task responses, with controller uniqueness taken modulo that declared response equivalence. Budget: at most $|V|$ strict kernel deletions plus exhaustive comparison of the finite deterministic-stationary safe-controller census. Verifier: fixed-point iteration (1a.1), support checks and exact cost comparison. Falsifier: a selected action leaving $W_*$ or an almost-sure safe policy from a deleted state. Provenance class: source-internal finite control classification. Downstream consumers: Proposition 1, Axiom 3 and `TV-BEC-03`. Nonvacuity: a one-state viable self-loop system. The theorem is `positive-discharge` of the finite mathematical controller component.
 

@@ -63,7 +63,7 @@ $$
 All curvature and Wasserstein quantities in Sections C.3.1-C.3.3 refer to $d_G$ unless a weighted metric is explicitly declared.
 
 ### C.3.1 Properties of the Effective Cost-Rate Function $I(c)$
-The effective cost-rate function $I(c)$, reflecting the local contribution to the global PCE Potential $V(x)$ (main text Definition D.1) due to complexity $c=C_P$, is shaped by the interplay of predictive performance benefits and resource costs. Based on the properties of $PP(c)$ (concave, main text Definition 19), $R(c)$ (convex, main text Definition 3), and $R_I(c)$ (concave, main text Definition 3b), it is assumed that for PCE-optimal configurations, $I(c)$ is both $m$-strongly convex (i.e., $I''(c) \ge m > 0$, ensuring it has a well-defined minimum and certain growth properties facilitating stable optimization) and $M$-smooth (i.e., $|I''(c)| \le M < \infty$) over the relevant range of complexities $c \in [C_{op}, C_{\max,\mathrm{phys}}]$ (where $C_{\max,\mathrm{phys}}$ is the maximum physically sustainable complexity). The $M$-smoothness implies its derivative $I'(c) = \partial_{C_P}I(c)$ is $M$-Lipschitz continuous:
+The effective cost-rate function $I(c)$, reflecting the local contribution to the global PCE Potential $V(x)$ (Appendix D, Definition D.1) due to complexity $c=C_P$, is shaped by the interplay of predictive performance benefits and resource costs. Based on the properties of $PP(c)$ (concave, main text Definition 19), $R(c)$ (convex, main text Definition 3), and $R_I(c)$ (concave, main text Definition 3b), it is assumed that for PCE-optimal configurations, $I(c)$ is both $m$-strongly convex (i.e., $I''(c) \ge m > 0$, ensuring it has a well-defined minimum and certain growth properties facilitating stable optimization) and $M$-smooth (i.e., $|I''(c)| \le M < \infty$) over the relevant range of complexities $c \in [C_{op}, C_{\max,\mathrm{phys}}]$ (where $C_{\max,\mathrm{phys}}$ is the maximum physically sustainable complexity). The $M$-smoothness implies its derivative $I'(c) = \partial_{C_P}I(c)$ is $M$-Lipschitz continuous:
 $$
 |I'(C_P(v))-I'(C_P(u))| \;\le\; M\,|C_P(v)-C_P(u)|.
 \tag{C.4}
@@ -249,7 +249,7 @@ Averaging (C.10a) with the shell weights and substituting the previous display g
 
 ## C.4 Penalization of Anomalous Network Dimension
 
-We first demonstrate that anomalous dimension (Definition C.1 violated) leads to violations of global coherence (R2) and resource efficiency (R3).
+We derive conditional global-coherence (GC) and resource-efficiency (RE) penalties for network families with super-linear chemical-distance scaling under the hypotheses of Theorems C.1–C.2.
 
 **Theorem C.1 (Cost-Distance Scaling under Quasi-Isometry and Uniform Edge-Cost Comparability).**
 Let $\mathcal N=(\mathcal V,\mathcal E)$ be embedded in Euclidean space. Write $c_e>0$ for the cost length of edge $e$ in $d_{\mathcal N}$ and assume that constants $0<c_-\leq c_+<\infty$, independent of system size, satisfy
@@ -257,7 +257,7 @@ $$
 c_-\leq c_e\leq c_+\qquad(e\in\mathcal E).
 $$
 
-* (a) If the unweighted graph metric is quasi-isometric to the embedding,
+* (a) For the network family, assume common constants $\lambda\geq1$ and $C\geq0$, independent of system size and of the vertex pair, such that the unweighted graph metric and the embedding satisfy
 $$
 \lambda^{-1}\|u-v\|_{\mathrm{Euc}}-C
 \leq d_{\mathrm{graph}}(u,v)
@@ -357,7 +357,7 @@ V_{prop}(L)
 \geq r_{min}M(L)bL^\beta
 \geq abr_{min}L^{D+\beta}.
 $$
-If the admissible resource budget is extensive,
+If the admissible resource budget is positive and extensive,
 $$
 V_{max}(L)\leq CL^D,
 $$
@@ -439,7 +439,7 @@ where the curvature features $\kappa_t\in\mathbb R^p$ and interventions $u_t$ ar
    L=[\ell_1\ \cdots\ \ell_N].
    \tag{C.14b}
    $$
-2. With the registered inputs subtracted, the controller state is observable from $y_0,\ldots,y_{n-1}$ exactly when
+2. Assume the forced sequence $B\ell_t+Gu_t$ over the observation window is known, for example because $\ell_t$ is directly registered or $T$ has been identified from the data in part 1. After subtracting its contributions to the outputs, the controller state is observable from $y_0,\ldots,y_{n-1}$ exactly when
    $$
    \operatorname{rank}
    \begin{bmatrix}
@@ -470,7 +470,17 @@ where the curvature features $\kappa_t\in\mathbb R^p$ and interventions $u_t$ ar
 
 
 
-* **(i) Excess Operational Cost (conditional RE penalty):** Assume that a registered adaptation/tracking estimate supplies a quantitative lower bound $\operatorname{Var}(C_v)\geq s_C^2$ for the configuration under study. The curvature-load coupling and Equation (30) alone do not supply this variance-transfer bound. Let $f(C_v) = \langle \lambda \hat{R}(C_v) + \hat{R}_I(C_v) \rangle_{\rho^{(v)}}$ represent the local expected operational cost rate associated with complexity $C_v$. The physical cost function $R(C)$ is strictly convex ($\gamma_p>1$), while $R_I(C)$ is concave (Definition 3). For the total cost $f(C)$ to be convex ($f''(C) > 0$), we require $\lambda R''(C) > |R_I''(C)|$. This condition is satisfied if the **Dominance of Stabilizing Costs (DSC)** condition (introduced in the statement of Theorem 22, Section 6.5.2) holds, ensuring $f''(C) \ge f''_{min} > 0$. In addition, since $f$ is increasing, any locally forced increase in $C$ (needed to match local targets under curvature fluctuations) raises $V_{op}$ pointwise; combined with convexity this yields the quantitative variance penalty $\Delta V_{op}\ge \frac{N}{2}f''_{min}\,\text{Var}(C_v)$ (Equation C.15). This convexity reflects that fundamental costs increase super-linearly with complexity. The total operational cost across the network is $V_{op} = \sum_{v=1}^N f(C_v)$. By Jensen's inequality for convex functions, $\frac{1}{N}\sum f(C_v) \ge f(\frac{1}{N}\sum C_v)$, or $V_{op} \ge N f(\bar{C})$, where $\bar{C}$ is the average complexity. Assume that every $C_v$ lies in an interval on which $f\in C^2$ and $f''(C)\geq f''_{min}>0$. Taylor's theorem with integral remainder gives, for $x=C_v-\bar C$,
+* **(i) Excess Operational Cost (conditional RE penalty):** Assume that a registered adaptation/tracking estimate supplies a quantitative lower bound $\operatorname{Var}(C_v)\geq s_C^2$ for the configuration under study. The curvature-load coupling and Equation (30) alone do not supply this variance-transfer bound. On a common operating interval $J$ containing every $C_v$, assume a single scalar function $f\in C^2(J)$ represents the expected local operational costs at all vertices:
+$$
+f(C_v)=\langle\lambda\hat R(C_v)+\hat R_I(C_v)\rangle_{\rho^{(v)}},
+\qquad
+V_{op}=\sum_{v=1}^N f(C_v).
+$$
+This common cost-law representation is a separate certificate. The identification $C_v=\langle\hat C_v\rangle_{\rho^{(v)}}$ alone does not identify an operator-cost expectation with a function of that mean, as explained after Theorem 3. Assume $f$ is nondecreasing on $J$ and
+$$
+f''(C)\geq f''_{min}>0\qquad(C\in J).
+$$
+Monotonicity gives the pointwise cost comparison, while the uniform second-derivative bound supplies the variance penalty. On the additional exact scalar branch $f(C)=\lambda R(C)+R_I(C)$, with common temperature and parameters, the condition $f''(C)>0$ is equivalent to $\lambda R''(C)>-R_I''(C)$ when $R_I''(C)\leq0$; a uniform positive lower bound must still be supplied. The DSC discussion in the note on Corollary 3 concerns the net benefit, and Theorem 22 in Section 6.5.2 assumes concavity of that net benefit; neither supplies this cost-law certificate or strong convexity of $f$ alone. Put $\bar C=N^{-1}\sum_v C_v$. Jensen's inequality gives $V_{op}\geq Nf(\bar C)$. The quantity $Nf(\bar C)$ is the equal-mean cost benchmark; its use does not assert that a uniform physical configuration is realizable. Taylor's theorem with integral remainder gives, for $x=C_v-\bar C$,
 $$
 f(\bar C+x)
 =f(\bar C)+f'(\bar C)x
@@ -536,29 +546,39 @@ which is Equation (C.16). Thus both penalties follow exactly on the declared tra
 
 ## C.6 Synthesized Necessity Argument
 
-We now combine the results to demonstrate formally that geometric regularity is necessary for viability.
+We combine the registered penalty estimates into the quantitative non-viability criterion of Theorem C.5.
 
-**Definition C.4 (Viability Functional).** Let $\mathcal{C} = (\mathcal{N}, \{C_v\}, \rho_{agg})$ represent a complete configuration of the MPU network. We define the Viability Functional $\mathcal{V}[\mathcal{C}] \in [0, \infty)$ which quantifies the degree to which configuration $\mathcal{C}$ simultaneously satisfies the core requirements (LV), (GC), and (RE). A configuration is viable only if all requirements are met. We define $\mathcal{V}[\mathcal{C}]$ such that $\mathcal{V}[\mathcal{C}] \ge 1$ indicates viability, using normalized measures for each requirement:
- $$
-    \mathcal{V}[\mathcal{C}] = \min\left\{ Q_{\mathrm{LV}}[\mathcal{C}], Q_{\mathrm{GC}}[\mathcal{C}], Q_{\mathrm{RE}}[\mathcal{C}] \right\}
-    \tag{C.17}
-    $$
-where:
-*   **$Q_{\mathrm{LV}}[\mathcal{C}]$ (Local Viability):** A measure reflecting the stability of local adaptation dynamics. $Q_{\mathrm{LV}}[\mathcal{C}] = P_{stability}[\mathcal{C}] / P_{min}$, where $P_{stability}$ is the probability the network remains viable (Equation C.16) and $P_{min}$ is the minimum required stability level. Requires $Q_{\mathrm{LV}} \ge 1$.
-*   **$Q_{\mathrm{GC}}[\mathcal{C}]$ (Global Coherence):** A measure reflecting the maintenance of predictive coherence across the network. $Q_{\mathrm{GC}}[\mathcal{C}] = MP_{Global}[\mathcal{C}] / MP_{min}$, where $MP_{min}$ is the minimum required coherence level. Requires $Q_{\mathrm{GC}} \ge 1$.
-*   **$Q_{\mathrm{RE}}[\mathcal{C}]$ (Resource Efficiency):** A measure reflecting cost efficiency. $Q_{\mathrm{RE}}[\mathcal{C}] = V_{max} / V_{total}[\mathcal{C}]$, where $V_{total}[\mathcal{C}]$ is the total effective cost rate (e.g., from PCE Potential $V(x)$ components related to operation and propagation) and $V_{max}$ is the maximum sustainable rate based on available resources. Requires $Q_{\mathrm{RE}} \ge 1$.
+**Definition C.4 (Viability Functional).** Let $\mathcal C=(\mathcal N,\{C_v\},\rho_{agg})$ be a complete network configuration with the following registered requirement data. The stability threshold satisfies $0<P_{min}\leq1$, and $P_{stability}\in[0,1]$ is the probability in Equation (C.16). The resource budget satisfies $0<V_{max}<\infty$, and $V_{total}\in[0,\infty)$ is the nonnegative operational and propagation cost ledger, including every charged contribution. In particular, $V_{total}\geq V_{prop}$ on the routing branch; a signed net-benefit potential is not used as this denominator.
 
-**Definition C.5 (Viable Configuration).** A configuration $\mathcal{C}$ is viable if and only if it satisfies all core requirements simultaneously, represented by the condition $\mathcal{V}[\mathcal{C}] \ge 1$.
-
-**Theorem C.5 (Quantitative Non-Viability on the Registered Penalty Branches).** Let $\mathcal C$ be an MPU-network configuration. It is non-viable, $\mathcal V[\mathcal C]<1$, if at least one of the following certified conditions holds:
-
-1. The super-linear chemical-distance hypotheses of Theorem C.2 hold and the branch-specific coherence bound gives $MP_{Global}<MP_{min}$.
-2. The effective-average routing and extensive-budget hypotheses of Theorem C.2(ii) hold and give $V_{prop}>V_{max}$.
-3. The curvature-load coupling, external innovation certificate, and DSC hypotheses hold, $s_C^2:=\operatorname{Var}(C_v)$ is certified, and
+The global-coherence task declares an encoded-distinction requirement, a synchronization requirement, or both. For a distinction requirement, take finite $MP_{Global}\geq0$ and $MP_{min}>0$ and put $Q_{dist}=MP_{Global}/MP_{min}$. For a synchronization requirement, take a finite deadline $\tau_{sync}>0$ and finite task latency $\tau_{max}\geq0$ and put $Q_{sync}=\tau_{sync}/\tau_{max}$ when $\tau_{max}>0$, with $Q_{sync}=+\infty$ when $\tau_{max}=0$. Define $Q_{\mathrm{GC}}$ as the minimum of the ratios for the declared global-coherence requirements. Set
 $$
-V_{base}+\frac{N}{2}f''_{min}s_C^2>V_{max},
+Q_{\mathrm{LV}}=\frac{P_{stability}}{P_{min}},
+\qquad
+Q_{\mathrm{RE}}=
+\begin{cases}
+V_{max}/V_{total},&V_{total}>0,\\
++\infty,&V_{total}=0,
+\end{cases}
 $$
-where $V_{base}$ contains all non-variance contributions to $V_{total}$.
+and
+$$
+\mathcal V[\mathcal C]
+=\min\{Q_{\mathrm{LV}},Q_{\mathrm{GC}},Q_{\mathrm{RE}}\}.
+\tag{C.17}
+$$
+The minimum is finite and nonnegative because $Q_{\mathrm{LV}}\leq1/P_{min}<\infty$.
+
+**Definition C.5 (Viable Configuration).** A configuration is viable for the registered requirements if and only if $\mathcal V[\mathcal C]\geq1$. Equivalently, its stability probability meets the threshold, every declared distinction or synchronization requirement is met, and its nonnegative cost ledger does not exceed the budget.
+
+**Theorem C.5 (Quantitative Non-Viability on the Registered Penalty Branches).** Let $\mathcal C$ satisfy the domain and ledger premises of Definition C.4. It is non-viable, $\mathcal V[\mathcal C]<1$, if at least one of the following certified conditions holds:
+
+1. The super-linear chemical-distance hypotheses of Theorem C.2 give either $MP_{Global}<MP_{min}$ for a declared distinction requirement or $\tau_{max}>\tau_{sync}$ for a declared synchronization requirement.
+2. The effective-average routing and extensive-budget hypotheses of Theorem C.2(ii) give $V_{prop}>V_{max}$.
+3. The common scalar cost-law and strong-convexity premises of Theorem C.4(i) hold, $s_C^2:=\operatorname{Var}(C_v)$ is certified, and the registered cost decomposition gives
+$$
+V_{total}\geq V_{base}+\frac N2f''_{min}s_C^2>V_{max},
+$$
+where $V_{base}$ includes the equal-mean operational benchmark and all other non-variance contributions. A deduction of this variance bound from curvature additionally requires the curvature-load and adaptation/tracking certificates of Theorem C.4; DSC alone does not supply it.
 4. On the independent-failure branch, the certified mean failure probability $\bar p$ satisfies
 $$
 P_{stability}\leq e^{-N\bar p}<P_{min}.
@@ -566,19 +586,7 @@ $$
 
 Failure of Definition C.1 or C.2 without one of these quantitative branch certificates does not by itself imply non-viability.
 
-*Proof.* In case 1,
-$$
-Q_{\mathrm{GC}}=\frac{MP_{Global}}{MP_{min}}<1.
-$$
-In case 2, $V_{total}\geq V_{prop}>V_{max}$, so
-$$
-Q_{\mathrm{RE}}=\frac{V_{max}}{V_{total}}<1.
-$$
-In case 3, Equation (C.15) gives $V_{total}\geq V_{base}+Nf''_{min}s_C^2/2>V_{max}$, and again $Q_{\mathrm{RE}}<1$. In case 4,
-$$
-Q_{\mathrm{LV}}=\frac{P_{stability}}{P_{min}}<1.
-$$
-In every case at least one entry in the minimum defining $\mathcal V$ is strictly below $1$; hence $\mathcal V[\mathcal C]<1$. ∎
+*Proof.* In case 1, the applicable ratio $Q_{dist}$ or $Q_{sync}$ is strictly below $1$, so $Q_{\mathrm{GC}}<1$. In case 2, $V_{total}\geq V_{prop}>V_{max}>0$ gives $Q_{\mathrm{RE}}<1$. In case 3 the displayed lower bound gives the same conclusion. In case 4, $Q_{\mathrm{LV}}=P_{stability}/P_{min}<1$. In every case at least one entry of the minimum defining $\mathcal V$ is strictly below $1$, proving non-viability. ∎
 
 **Corollary C.1 (Branch-Conditional Asymptotic Non-Viability).** On any branch satisfying one of the quantitative hypotheses of Theorem C.5, the corresponding strict inequality defines a finite non-viability threshold whenever its penalty is monotone and unbounded in the declared scale parameter. No universal threshold follows from geometric irregularity alone.
 
@@ -613,7 +621,7 @@ Thus no size-independent strict GC/RE/LV exclusion gap follows from density-norm
 
 **Theorem C.6 (Conditional coarse-grained doubling and $(1,2)$-Poincaré bounds).**
 
-Let $(\mathcal N,d_{\mathcal N},\mu)$ be a locally finite predictive network with counting measure, maximum degree $\Delta_{max}<\infty$, and coarse-graining resolution $\delta$. For a finite induced subgraph $U$, define
+Let $(\mathcal N,d_{\mathcal N},\mu)$ be a locally finite predictive network with counting measure, maximum degree $\Delta_{max}<\infty$, and coarse-graining resolution $\delta>0$. Assume every ball $U=B(x,4r)$ used below, with $r\geq10\delta$, is finite. Assume the certificate parameters satisfy $D\geq1$, $0\leq\varepsilon_C<1$, $0<\Delta_{min}\leq\Delta_{max}<\infty$, $0<\eta^\downarrow\leq\eta^\uparrow<\infty$, $0<\chi<\infty$ and $0<\rho^\downarrow(r)\leq\rho^\uparrow(r)<\infty$ at every admitted radius. These domains make the displayed constants finite with $D_\star\geq1$ and $H(r)>0$. If $U$ has one vertex, the asserted Poincaré inequality holds with both sides zero. For a finite induced subgraph $U$ with at least two vertices, define
 $$
 h(U):=\min_{\substack{\varnothing\neq A\subset U\\
 \mu(A)\leq\mu(U)/2}}
@@ -621,7 +629,7 @@ h(U):=\min_{\substack{\varnothing\neq A\subset U\\
 \qquad
 |\nabla f|^2(v):=\frac12\sum_{u\sim v,\,u\in U}|f(u)-f(v)|^2.
 $$
-Assume that the registered packing/isoperimetric certificate gives, for every $x$ and $r\geq10\delta$,
+Assume that the registered packing/isoperimetric certificate gives, for every $x$ and $r\geq10\delta$ with $|B(x,4r)|\geq2$,
 $$
 \mu(B(x,2s))\leq D_\star\mu(B(x,s))
 \quad(s=r,2r),
@@ -669,10 +677,23 @@ $$
 \leq2\left(\frac{\mu(U)}{\mu(B)}
 \fint_U|f-f_U|^2\,d\mu\right)^{1/2}.
 $$
-Applying the doubling certificate at $s=r$ and $s=2r$ yields $\mu(U)/\mu(B)\leq D_\star^2$. For the unnormalized graph Laplacian on the finite induced graph $U$, the discrete Cheeger inequality [Chung 1997] gives
+Applying the doubling certificate at $s=r$ and $s=2r$ yields $\mu(U)/\mu(B)\leq D_\star^2$. For the unnormalized Laplacian on the finite induced graph $U$, the needed counting-measure Cheeger estimate is
 $$
 \lambda_1(U)\geq\frac{h(U)^2}{2\Delta_{max}}.
 $$
+Here is a direct proof of the convention and constant. For a nonconstant real function $g$ on $U$, choose a median $m$ and set $p=(g-m)_+$ and $n=(m-g)_+$. Each support has at most $\mu(U)/2$ vertices. For either $a=p$ or $a=n$, layer-cake summation of $a^2$ and the definition of $h(U)$ give
+$$
+\sum_{\{u,v\}\in E(U)}|a(u)^2-a(v)^2|\geq h(U)\sum_{v\in U}a(v)^2.
+$$
+Cauchy–Schwarz and the maximum-degree bound give
+$$
+\left(\sum_{E(U)}|a(u)^2-a(v)^2|\right)^2
+\leq\left(\sum_{E(U)}(a(u)-a(v))^2\right)
+\left(\sum_{E(U)}(a(u)+a(v))^2\right)
+\leq 2\Delta_{max}\left(\sum_{E(U)}(a(u)-a(v))^2\right)
+\left(\sum_U a(v)^2\right).
+$$
+Thus the edge energy of each nonzero part is at least $h(U)^2/(2\Delta_{max})$ times its squared norm. The edge energy of $g$ is at least the sum of the energies of $p$ and $n$, while $\sum_U(g-m)^2\geq\min_b\sum_U(g-b)^2$. Taking the Rayleigh infimum proves the displayed estimate. This counting-measure proof uses the same coarea mechanism as the degree-weighted normalized-Laplacian inequality in [Chung 1997](https://fanchung.ucsd.edu/wp/cheeger.pdf), but does not identify the two conventions.
 The Rayleigh-quotient definition of $\lambda_1(U)$ and the declared gradient normalization give
 $$
 \fint_U|f-f_U|^2\,d\mu
@@ -713,7 +734,7 @@ Because $\delta_{eff,n}\to 0$, any fixed $\rho$ eventually lies below this thres
 
 Theorem C.6 is a coarse-grained single-network statement: it assumes $r\ge 10\delta$ and yields constants $D_\star$ and $C_{\mathrm{PI}}(r)$ depending on the coarse-graining/distortion data. The present theorem stack contains no theorem showing that these data can be chosen uniformly across the rescaled family on every bounded radius range. Therefore Theorem C.6 does not by itself furnish the family-uniform fixed-radius doubling/Poincaré package required for a non-collapsed limit theory.
 
-Lemma D.6a then gives pointed measured Gromov–Hausdorff precompactness for bounded-action families once its separate bounded-geometry hypotheses are imposed, while Theorem D.6 concerns only convergence of the discrete action functional to the Einstein-Hilbert plus MPU action. It does not prove Mosco convergence of the rescaled Dirichlet forms, quadraticity of the limit Cheeger energy, or Euclidean tangent cones.
+Lemma D.6a gives pointed measured Gromov–Hausdorff precompactness for bounded-action families once its separate bounded-geometry hypotheses are imposed. Theorem D.6 gives Gamma-convergence and convergence of almost minimizers under its liminf, recovery, equicoercivity, and lower-bound hypotheses. Identification of its limit with an Einstein–Hilbert plus MPU action requires separate liminf and recovery proofs. These results do not prove Mosco convergence of the rescaled Dirichlet forms, quadraticity of the limit Cheeger energy, or Euclidean tangent cones.
 
 Finally, Definition C.2 provides a discrete curvature bound, but the present Appendix C/D theorem stack contains no theorem transferring it to a measured-Gromov–Hausdorff-stable synthetic curvature class such as the one invoked in Theorem 44. These four missing ingredients are exactly the additional inputs isolated in Section 11.4. Therefore the Euclidean-tangent conclusion of Theorem 44 is not derivable from Theorem 43 together with the current Appendix D bridge alone. ∎
 
@@ -736,7 +757,7 @@ Without all four, Theorem 44 remains genuinely conditional.
 
 Then $(X,d,\mu)$ is $\mathrm{RCD}^*(K,4)$. If, after a declared normalization, $\mu=\mathcal H^4$, the limit is noncollapsed.
 
-*Proof.* Fix an admissible nonnegative test function and an admissible generator-domain function on $X$. Assumption 3 provides approximating tests and functions on $X_n$ for which every term in the integrated $\mathrm{BE}(K_n,4)$ inequality converges to the corresponding term on $X$. Passing to the limit and using $K_n\to K$ yields $\mathrm{BE}(K,4)$ on $X$. Assumption 1 supplies quadraticity, Sobolev-to-Lipschitz, completeness, full support, and the required integrability. The Bakry-Émery characterization of Riemannian curvature-dimension spaces therefore implies that $X$ is $\mathrm{RCD}^*(K,4)$ [Ambrosio, Gigli & Savaré 2015]. By definition, an $\mathrm{RCD}^*(K,4)$ space whose reference measure is the normalized four-dimensional Hausdorff measure is noncollapsed. ∎
+*Proof.* Fix an admissible nonnegative test function and an admissible generator-domain function on $X$. Assumption 3 provides approximating tests and functions on $X_n$ for which every term in the integrated $\mathrm{BE}(K_n,4)$ inequality converges to the corresponding term on $X$. Passing to the limit and using $K_n\to K$ yields $\mathrm{BE}(K,4)$ on $X$. Assumption 1 supplies quadraticity, Sobolev-to-Lipschitz, completeness, full support, and the required integrability. The finite-dimensional Bakry-Émery characterization, with the length, full-support, quadratic-energy, Sobolev-to-Lipschitz and integrability hypotheses retained above, therefore implies that $X$ is $\mathrm{RCD}^*(K,4)$ [Erbar, Kuwada & Sturm, arXiv:1303.4382v2, Theorem 7 and Assumption 4.2](https://arxiv.org/abs/1303.4382v2). By definition, an $\mathrm{RCD}^*(K,4)$ space whose reference measure is the normalized four-dimensional Hausdorff measure is noncollapsed. ∎
 
 A radius-2 polynomial-core estimate, local Ahlfors estimates, or vanishing finite defects does not supply Assumption 3; a separate stability certificate remains necessary.
 
@@ -856,7 +877,7 @@ T_6(x):=\sum_{\xi\in\Xi_{D_4}}(\xi\cdot x)^6=60\,|x|^2\sum_{i=1}^4x_i^4-48\sum_{
 $$
 and $T_6$ is not a multiple of $|x|^6$.
 
-Consequently the minimal degree of a $\Gamma^{+}$-invariant polynomial that is not a polynomial in $|x|^2$ is exactly six. Moreover $\frac1MT_6$ is the full contraction of the equal-weight sixth-moment tensor of Lemma C.6f with $x^{\otimes6}$, so the two displayed anisotropic moment components of the degree-six stratum on the equal-weight shell are the Lemma C.6f defects $-1/d_0$ and $+1/M$. Modulo the radial sextic, the invariant anisotropy is one-dimensional; the two displayed moments are components of that single pattern. Theorem C.6g shows that this degree-six anisotropy cannot be cancelled by reweighting the shell; the present proposition shows that no $\Gamma^{+}$-invariant structure can carry anisotropy below degree six.
+Consequently the minimal degree of a $\Gamma^{+}$-invariant polynomial that is not a polynomial in $|x|^2$ is exactly six. Moreover $\frac1MT_6$ is the full contraction of the equal-weight sixth-moment tensor of Lemma C.6f with $x^{\otimes6}$, so the two displayed anisotropic moment components of the degree-six stratum on the equal-weight shell are the Lemma C.6f defects $-1/d_0$ and $+1/M$. Modulo the radial sextic, the invariant anisotropy is one-dimensional; the two displayed moments are components of that single pattern. Theorem C.6g shows that this degree-six anisotropy cannot be cancelled by reweighting the shell; the present proposition excludes nonradial $\Gamma^{+}$-invariant homogeneous polynomials of degree below six.
 
 *Proof.* Item 1. Coordinate permutations and sign changes preserve both sets. Since $|v|=1$, $r_v(x)=x-\left(x_1+x_2+x_3+x_4\right)v$, so each coordinate of $r_v(x)$ equals $x_i-\frac{S}{2}$ with $S:=x_1+x_2+x_3+x_4$. If $x$ lies in the $D_4$ lattice then $S$ is even, so $r_v(x)$ has integer coordinates, and its coordinate sum equals $S-4\cdot\frac{S}{2}=-S$, which is even; hence $r_v(x)$ lies in the lattice. An integer vector of squared norm $2$ has exactly two coordinates equal to $\pm1$ and the rest zero, so its coordinate sum is $0$ or $\pm2$ and it lies in the lattice; thus the vectors of squared norm $2$ in the lattice are exactly $\Xi_{D_4}$, and the isometry $r_v$ preserves this set.
 

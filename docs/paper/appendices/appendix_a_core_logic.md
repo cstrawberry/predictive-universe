@@ -27,7 +27,7 @@ Foundation I supplies the logical model-class route without using the later MPU 
 A formal model class $\mathcal{M}$, used by predictive systems $S$, possesses Property R relative to a consistent formal logical system $\mathcal{F}$ (e.g., Peano Arithmetic) if models $M \in \mathcal{M}$ and the associated formalism provide the machinery to:
 1.  **Represent:** Encode system states $s$, models $M$ (e.g., via Gödel numbering $\ulcorner M \urcorner$), predictions $\hat{s}$, and computational processes as objects manipulable within $\mathcal{F}$.
 2.  **Simulate/Reason:** Simulate the execution of any model $M \in \mathcal{M}$ applied to a state $s$, or formally reason about this process within $\mathcal{F}$, subject to fundamental computational limits.
-3.  **Evaluate Predicates:** Represent and evaluate logical formulas within $\mathcal{F}$ concerning the behavior, output, or predictive accuracy of models in $\mathcal{M}$, including self-referential predicates.
+3.  **Evaluate Predicates:** Represent formulas within $\mathcal F$ concerning the behavior, output, or predictive accuracy of models in $\mathcal M$, including self-referential formulas, and evaluate decidable predicates of registered finite computations. Bounded proof search additionally requires a computable finite bound and decidable proof verification. Representability alone supplies no total decision procedure for unrestricted theoremhood or semantic truth.
 
 **Summary of Definition 23 (MPU):** A Minimal Predictive Unit is the least costly system that completes the full cycle of prediction, checking, and update within the chosen class. Stronger claims about its memory and state capacity require the additional implementation conditions listed below.
 
@@ -94,7 +94,7 @@ These hypotheses characterize the computationally rich predictive class used by 
 
 The set $\{\mathrm{NOT},\mathrm{AND},\mathrm{OR}\}$ is functionally complete. Given the Logical-Structural Assumptions of composition closure, logical memory, and uniform specification, the resulting predictive model class can simulate every finite-time computation of a Turing machine by an explicitly constructed Boolean circuit family. Thus the theorem uses a direct simulation construction, not the Church-Turing thesis as a proof step.
 
-*Proof.* Functional completeness is standard: every Boolean function
+*Proof.* For each integer $n\ge1$, every Boolean function
 $$
 f:\{0,1\}^n\to\{0,1\}
 $$
@@ -113,7 +113,7 @@ x_j,&a_j=1,\\
 \neg x_j,&a_j=0.
 \end{cases}
 $$
-Hence every Boolean function is implemented using only NOT, AND, and OR.
+The constant functions zero and one are implemented by $x_1\wedge\neg x_1$ and $x_1\vee\neg x_1$, respectively, so the empty-disjunction case also has a circuit in the named basis. Thus every positive-arity Boolean function is implemented using only NOT, AND, and OR. A computation with no data input can be represented using one ignored dummy input; a literal zero-input circuit additionally requires a declared constant wire. The finite configuration map below has positive input length and needs no such nullary primitive.
 
 Let $M$ be a Turing machine with finite state set $Q$, tape alphabet $\Gamma$, and transition function
 $$
@@ -131,7 +131,7 @@ such that
 $$
 c_{t+1}=F_{M,T}(c_t)
 $$
-for every valid bounded configuration. Because $F_{M,T}$ is a Boolean function, the first paragraph gives a finite NOT/AND/OR circuit $C_{M,T}$ computing it.
+for every encoded configuration reachable at a time $0\le t<T$ from the declared initial configuration, using the tape interval of radius $T$ about its initial head position. Define $F_{M,T}$ arbitrarily on all remaining bit strings. A reachable pre-$T$ transition stays inside this interval, so the required next-state values are representable. Because this total extension is a Boolean function, the first paragraph gives a finite NOT/AND/OR circuit $C_{M,T}$ computing it.
 
 Composition closure permits iteration of the same uniformly specified next-step circuit. Logical memory stores $c_t$ and the intermediate gate outputs. Uniform specification supplies the finite rule by which $C_{M,T}$ is generated from the transition table of $M$ and the time bound $T$. Therefore the predictive model class contains, for every $M$ and $T$, a finite circuit computing the first $T$ steps of $M$. Allowing the resource parameter $T$ to vary gives a uniform finite-time simulation family.
 
@@ -163,13 +163,13 @@ For an unbounded partial computation, each finite search stage is represented by
 6. Uniform specification is not an independent hypothesis on this bounded machine-simulation route. Given effective coding and a fixed functionally complete finite basis closed under unrestricted finite composition, exhaustive synthesis derives a uniform compiler $(\ulcorner M\urcorner,T)\mapsto\ulcorner C_{M,T}\urcorner$.
 7. Effective coding/decoding and a fixed functionally complete finite gate basis with unrestricted finite composition form an irredundant sufficient package for the uniform bounded-simulation route. Unrestricted finite composition is the single scalable condition: it permits arbitrarily large finite circuits and has no uniform depth bound. Working memory is an additional implementation requirement exactly when the circuit is executed sequentially rather than supplied as an unrolled acyclic object.
 
-*Proof.* A class with at most $N$ distinguishable description states cannot inject the words of every length over an alphabet of size at least two. A coding map without an effective decoder fails the representation clause of Definition 10 because the represented machine, input, and history cannot be uniformly recovered inside $\mathcal F$. Moreover, if a finite basis has maximum fan-in $k$ and circuit size is bounded by $s$, an output can depend on at most $ks$ input occurrences; parity on more than $ks$ inputs therefore cannot be represented. This proves item 1. At depth zero an output depends on one input, and a fan-in-$k$ gate applied to depth-$(d-1)$ outputs can depend on at most $k^d$ inputs. Induction therefore proves item 2 and gives the required bounded-depth counterfamily. NAND realizes $\neg x=x\mathbin{\mathrm{NAND}}x$ and
+*Proof.* A class with at most $N$ distinguishable description states cannot inject the words of every length over an alphabet of size at least two. A coding map without an effective decoder fails the representation clause of Definition 10 because the represented machine, input, and history cannot be uniformly recovered inside $\mathcal F$. Moreover, if a finite basis has maximum fan-in $k$ and circuit size is bounded by $s$, an output can depend on at most $\max\{1,ks\}$ input coordinates; a zero-gate projection uses one coordinate, while a circuit with at least one gate has at most $ks$ gate-input occurrences. Parity on more than $\max\{1,ks\}$ inputs therefore cannot be represented. This proves item 1. At depth zero an output depends on one input, and a fan-in-$k$ gate applied to depth-$(d-1)$ outputs can depend on at most $k^d$ inputs. Induction therefore proves item 2 and gives the required bounded-depth counterfamily. NAND realizes $\neg x=x\mathbin{\mathrm{NAND}}x$ and
 $$
 x\wedge y=\neg(x\mathbin{\mathrm{NAND}}y),
 $$
 so it realizes the basis of Proposition A.0.2 and proves item 3. Without composition, a primitive two-input gate has no path of length two and hence cannot depend essentially on three inputs; three-input parity supplies the claimed explicit missing transition function and proves item 4. For item 5, take $T$ disjoint copies of the next-configuration circuit and wire the output of layer $t$ to the input of layer $t+1$; the resulting finite directed acyclic circuit has no state retained across execution cycles. A sequential evaluator of the same graph must retain the current configuration and intermediate gates, giving the stated boundary.
 
-For item 6, compute from $(\ulcorner M\urcorner,T)$ the finite truth table of the bounded transition simulation, enumerate composed circuits over the fixed basis by increasing size and lexicographic code, and compare their finite truth tables. Functional completeness guarantees a match, so the search halts and returns a uniform compiler. Conversely, effective coding/decoding, a universal finite gate basis, and unrestricted finite composition reproduce every step of Theorem A.0.1 and Corollary A.0.1. Removing coding destroys representation; replacing unrestricted composition by a uniform size or depth cap excludes the parity family by the $ks$ or $k^d$ bound, and removing composition altogether already excludes three-input parity; removing gate universality excludes at least one finite Boolean transition function. Each of the three package members is therefore indispensable, proving item 7 and the asserted irredundancy for this route. ∎
+For item 6, compute from $(\ulcorner M\urcorner,T)$ the finite truth table of the bounded transition simulation, enumerate composed circuits over the declared basis by increasing size and lexicographic code, and compare their finite truth tables. Functional completeness guarantees a match, so the search halts and returns a uniform compiler. Conversely, effective coding/decoding, a universal finite gate basis, and unrestricted finite composition reproduce every step of Theorem A.0.1 and Corollary A.0.1. Removing coding destroys representation; replacing unrestricted composition by a uniform size or depth cap excludes the parity family by the $\max\{1,ks\}$ or $k^d$ bound, and removing composition altogether already excludes three-input parity; removing gate universality excludes at least one finite Boolean transition function. Each of the three package members is therefore indispensable, proving item 7 and the asserted irredundancy for this route. ∎
 
 **Remark A.0.1b (Selected-Rewrite Route to the Interpreter Component).** Corollaries 2a--2b realize Proposition 2(ii) using the fixed root-restarted controller and exact source-output interfaces of the Pure-S universality theorem. Corollary 2a uses an intermediate source-trace map; Corollary 2b constructs bounded trace answers through terminating output queries. The selected-computation and persistent-history constructions are developed below, with their separate observation and resource bounds. Coding, finite composition, Boolean closure, arithmetic representation, logical memory and diagonal closure supply the remaining Property-R capabilities on their declared model class. A physical predictive-cycle realization supplies the response, resource and reliability maps for those operations.
 
@@ -218,7 +218,7 @@ $$
 \frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}
 \ge H_q(P\mid R).
 $$
-If $R$ includes the retained term and every unchanged side record needed to reconstruct Definition 28's registered binary record $P$ deterministically, then $H_q(P\mid R)=0$; $P$ may be a declared binary quotient of navigation, history, or controller data. A positive uniform floor requires an independent bound $H_q(P\mid R)\ge h_{\min}>0$; equality with $k_BT\ln2$ requires $P$ to be conditionally uniform binary given the complete retained side record $R$ and requires zero excess dissipation.
+If $R$ includes the retained term and every unchanged side record needed to reconstruct Definition 28's registered binary record $P$ deterministically, then $H_q(P\mid R)=0$; $P$ may be a declared binary quotient of navigation, history, or controller data. A positive uniform floor inferred from this entropy bound requires an independent bound $H_q(P\mid R)\ge h_{\min}>0$; Landauer saturation at $k_BT\ln2$ requires $P$ to be conditionally uniform binary given the complete retained side record $R$ and requires zero excess dissipation.
 
 #### Selected Computation and Persistent Certificate Enumeration
 
@@ -423,9 +423,9 @@ This is not a primitive-axiom derivation of QEC compatibility and does not asser
 
 *Proof.* Proposition Z.13b.7 supplies a dual-containing Golay CSS code witness. The local-noise, syndrome, recovery, gate, overhead, threshold, and PCE-benefit entries of $\mathfrak C_{\mathrm{GQEC}}$ are exactly the entries required by Definition A.0.1q. Mapping them into the slots of $\mathfrak C_{\mathrm{QEC}}$ gives the certificate. The fixed-point display records dependency order: the Golay witness is derived downstream of the finite MPU/Golay branch, while the reliability claim is promoted only after the physical recovery and threshold records are added. ∎
 
-**Corollary A.0.2b (Transversal-Gate Guardrail).** On any finite-dimensional quantum error-correcting code realization used by $\mathfrak C_{\mathrm{GQEC}}$ that corrects a nontrivial set of local errors, transversal product-form encoded gates do not constitute a universal logical gate set by themselves. A universal protected-computation ledger must include a non-transversal, injected, distilled, adaptive, or otherwise certified completion inside $\mathcal I_{\mathrm{FT}}$. The corresponding overhead is compatible with the strict optimizer floor $p_{\mathrm{err}}^*>0$ of Theorem A.0.5.
+**Corollary A.0.2b (Transversal-Gate Guardrail).** On any realization used by $\mathfrak C_{\mathrm{GQEC}}$ whose finite-dimensional code encodes a logical space of dimension greater than one and detects every error acting on any single physical subsystem, unitary encoded gates transversal with respect to one specified partition do not constitute a universal logical gate set by themselves. A universal protected-computation ledger must include a non-transversal, injected, distilled, adaptive, or otherwise certified completion inside $\mathcal I_{\mathrm{FT}}$. The corresponding overhead is compatible with the strict optimizer floor $p_{\mathrm{err}}^*>0$ of Theorem A.0.5.
 
-*Proof.* The Eastin–Knill theorem (Eastin & Knill 2009) applies because the registered code is finite-dimensional, encodes a nontrivial logical subsystem, corrects a nontrivial local-error set, and the gates under consideration act transversally as products across physical subsystems. The theorem excludes universality of that transversal logical-gate family. Therefore a ledger claiming universal protected computation must record a gate resource outside that family. Theorem A.0.5 places every admitted optimizer in $(0,p_{\mathrm{err},0}]$, so $p_{\mathrm{err}}^*>0$; recording a positive implementation overhead does not contradict that conclusion. ∎
+*Proof.* The Eastin–Knill theorem and its transversal corollary (Eastin & Knill 2009, Theorem 1 and Corollary 1) apply on the stated arbitrary-single-subsystem-error-detection branch, with finite physical factors, a nontrivial logical space, unitary encoded gates and a specified transversal partition. They exclude universality of that transversal logical-gate family. Correction of merely a restricted nontrivial local-error set does not supply these hypotheses. Therefore a ledger claiming universal protected computation on this branch must record a gate resource outside that family. Theorem A.0.5 places every admitted optimizer in $(0,p_{\mathrm{err},0}]$, so $p_{\mathrm{err}}^*>0$; recording a positive implementation overhead does not contradict that conclusion. ∎
 
 **Theorem A.0.2 (Conditional Effective Property R at a Certified PCE Optimum)**
 Assume the refresh-branch implementation condition of Lemma A.0.1, an accepted QEC compatibility certificate $\mathfrak C_{\mathrm{QEC}}$ supplied directly or through an accepted Golay-QEC bootstrap record $\mathfrak C_{\mathrm{GQEC}}$, the hypotheses of Theorem A.0.5, and Dominant Cost Convexity. Let $p_{\mathrm{err}}^*$ be a minimizer supplied by Theorem A.0.5. Assume further that a robustness certificate proves $p_{\mathrm{err}}^*<1/2$ on the declared protected-computation window and that the network supplies the working-memory, QEC-overhead, protected-gate, and circuit-execution resources required by Theorem A.0.6. Then:
@@ -761,7 +761,7 @@ $$
 V_{\mathrm{tot}}(p)>V_{\mathrm{tot}}(p_{\mathrm{err},0})
 \quad\text{for }0<p\le\epsilon.
 $$
-Continuity makes $V_{\mathrm{tot}}$ continuous on the compact interval $[\epsilon,p_{\mathrm{err},0}]$. The extreme-value theorem as stated by Berge (1963) applies because the domain is nonempty and compact and the function is real-valued and continuous; it supplies a minimizer on that interval. The displayed strict inequality excludes every point in $(0,\epsilon]$ from being a global minimizer, so this is a minimizer on $(0,p_{\mathrm{err},0}]$.
+Continuity makes $V_{\mathrm{tot}}$ continuous on the compact interval $[\epsilon,p_{\mathrm{err},0}]$. To see that it attains a minimum there, choose a minimizing sequence; compactness gives a convergent subsequence and continuity makes its limit attain the infimum. The displayed strict inequality excludes every point in $(0,\epsilon]$ from being a global minimizer, so this is a minimizer on $(0,p_{\mathrm{err},0}]$.
 
 If two distinct minimizers $p_1,p_2$ existed under strict convexity, then
 $$
@@ -840,7 +840,7 @@ Hence $\ln L_T=O(\ln\ln T)$. Dividing (A.0.11a) by $\ln T$ therefore gives $L_T/
 $$
 \frac{p_T}{K(\ln T)^a/T}=\left(\frac{L_T}{\ln T}\right)^a\longrightarrow1.
 $$
-The right-hand side tends to zero because $(\ln T)^a/T\to0$, proving the final assertion. This corollary applies to the reduced equation (A.0.11); deriving that equation from the full $V_{\mathrm{tot}}'(p)=0$ condition requires a separate uniform approximation bound for $(1-p)^T$ and $PP'(C_{\mathrm{eff}}(p))$. ∎
+The ratio in the preceding display tends to one, while its denominator $K(\ln T)^a/T$ tends to zero. Therefore $p_T\to0$ and, in particular, $p_T<1/2$ for all sufficiently large $T$, proving the final assertion. This corollary applies to the reduced equation (A.0.11); deriving that equation from the full $V_{\mathrm{tot}}'(p)=0$ condition requires a separate uniform approximation bound for $(1-p)^T$ and $PP'(C_{\mathrm{eff}}(p))$. ∎
 
 **Epistemic Status:** The derivation relies on:
 1.  **QEC Compatibility Certificate $\mathfrak C_{\mathrm{QEC}}$ or Golay-QEC Bootstrap Record $\mathfrak C_{\mathrm{GQEC}}$:** The former QEC-compatibility assumption is a finite certificate gate. It must record the retained noise model, locality window, implementable code and recovery instruments, threshold inequality, and PCE benefit gap before the SPAP/RUD reliability claim is promoted. The Golay witness of Proposition Z.13b.7 supplies the code-theoretic part only when embedded in the physical syndrome/recovery/threshold record of Definition A.0.1q.1. It is not supplied by the existence of finite ND-RID links or by the abstract Golay code alone.
@@ -873,31 +873,25 @@ This exponential growth provides finite representation capacity. A fixed network
 
 **Theorem A.0.6 (Conditional Network Universality with Explicit Overhead Scope)**
 A network of $n$ MPUs, operating with error rate $p_{\text{err}}^*$ satisfying robustness conditions and with sufficient additional resources for working memory, error-correction overhead, and circuit execution, can realize full Property R. More precisely:
-1.  **Representation:** For a deterministic Turing machine with $k\ge2$ states and $m\ge2$ tape symbols, a direct uniform-length encoding of its $km$ transition entries uses
+1.  **Representation:** Use a declared machine format with $k\ge2$ ordered states, $m\ge2$ ordered tape symbols, and specified start, halting, blank-symbol, and movement conventions. Encode each positive integer $r\in\{k,m\}$ by $\lfloor\log_2r\rfloor$ zero bits followed by its ordinary binary numeral. These two self-delimiting dimension headers precede the $km$ uniformly sized transition entries. The resulting description length is
     $$
     L_{TM}
     =
-    km\bigl(\lceil\log_2k\rceil+\lceil\log_2m\rceil+1\bigr)
-    =
-    \Theta(km\log(km))
-    $$
-    bits, up to a constant-size format header. The number of 3-bit MPU carriers required by this encoding is
-    $$
-    n_{\mathrm{desc}}
-    =
-    \left\lceil\frac{L_{TM}}3\right\rceil
+    2\lfloor\log_2k\rfloor+2\lfloor\log_2m\rfloor+2
+    +km\bigl(\lceil\log_2k\rceil+\lceil\log_2m\rceil+1\bigr)
     =
     \Theta(km\log(km)).
+    $$
+    The number of 3-bit MPU carriers required by this encoding is
+    $$
+    n_{\mathrm{desc}}=\left\lceil\frac{L_{TM}}3\right\rceil
+    =\Theta(km\log(km)).
     $$
     This count concerns description storage only; it is neither the total simulation resource nor a lower bound against all compressed descriptions.
 2.  **Simulation/Reason:** By the Solovay–Kitaev theorem [Kitaev 1997; Dawson & Nielsen 2006] and the accepted $\mathfrak C_{\mathrm{QEC}}$ for the retained noise model and code family, or an accepted $\mathfrak C_{\mathrm{GQEC}}$ discharging it on the protected window, the network can implement the protected finite gate approximations required by the target computation with the certified overhead. Since quantum computers efficiently simulate classical computation, the network can simulate any Turing machine once the required working-memory, code-overhead, and execution resources are available.
 3.  **Evaluate Predicates:** Fault-tolerance ($p_{\text{err},0} < p_{\text{th}}$ inside $\mathfrak C_{\mathrm{QEC}}$, or inside $\mathfrak C_{\mathrm{GQEC}}$ when it discharges that certificate) ensures logical error rates can be suppressed to the certified target values with the recorded overhead, enabling reliable execution of the finite-depth predicate-evaluation circuits used in the noise-robust SPAP/RUD windows.
 
-*Proof.* Item 1 gives the direct transition-table length
-$$
-L_{TM}=km\bigl(\lceil\log_2k\rceil+\lceil\log_2m\rceil+1\bigr)
-$$
-and hence the description-carrier count $n_{\mathrm{desc}}=\lceil L_{TM}/3\rceil$. The theorem separately assumes sufficient working memory and execution resources, so this description count is not used as a bound on the total network size.
+*Proof.* In a dimension header, count the initial zero bits until the leading binary one and then read that many further bits. This recovers $r$, so the consecutive headers determine $k,m$ and all transition-entry widths. Their lengths are $2\lfloor\log_2k\rfloor+1$ and $2\lfloor\log_2m\rfloor+1$. Each of the $km$ entries then uses $\lceil\log_2k\rceil$ next-state bits, $\lceil\log_2m\rceil$ written-symbol bits, and one movement bit, giving the displayed $L_{TM}$. The header is $O(\log k+\log m)$ and the payload is $\Theta(km\log(km))$, so the total has the stated asymptotic order. Packing the description into three-bit carriers gives $n_{\mathrm{desc}}=\lceil L_{TM}/3\rceil$. The theorem separately assumes sufficient working memory and execution resources, so this description count is not used as a bound on the total network size.
 
 For item 2, the accepted protected-gate ledger supplies a finite gate set $G\subset SU(d)$ that generates a dense subgroup, is closed under inverses, and is implementable on the protected code space. Let $U\in SU(d)$ be any target gate appearing in the finite simulation circuit and let $0<\epsilon<1$ be its recorded approximation tolerance. The Solovay–Kitaev theorem (Kitaev, 1997; Dawson and Nielsen, 2006) applies to $(G,U,\epsilon)$ and gives a word in $G$ whose operator-norm error is at most $\epsilon$, with polylogarithmic word length in $1/\epsilon$. Applying this construction to each gate of the finite reversible classical simulation circuit gives the protected finite gate approximation asserted in item 2. The working-memory hypothesis supplies the tape segment used during that finite computation.
 
@@ -970,17 +964,17 @@ For an MPU network satisfying the optimizer, robustness, QEC, protected-executio
 
 ### A.0.8 Conceptual Non-Redundancy of the Core Constraints
 
-The framework's four core constraints — finite channel capacity (Theorem E.2), irreversible thermodynamic cost ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31), self-referential limitation (SPAP, Theorems 10–11), and operational accessibility (Definition K.10.1) — address distinct obstructions to physical prediction. None is derivable from the others without additional physical assumptions. To establish this, we exhibit for each constraint a conceptual scenario satisfying the remaining three while violating the targeted one:
+The framework's four core constraints — finite channel capacity (Theorem E.2), irreversible thermodynamic cost ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive uniform floor inferred from this entropy bound requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31), self-referential limitation (SPAP, Theorems 10–11), and operational accessibility (Definition K.10.1) — address distinct obstructions to physical prediction. The following thought experiments describe their intended roles; they do not supply formal models proving that any constraint is independent of the others:
 
-(i) *Finite capacity violated, others satisfied.* Consider a hypothetical physics in which channels have unbounded capacity per use, but every use includes a stipulated unbiased binary reset incurring $\Delta S\ge k_B\ln2$ (irreversible cost holds), self-referential prediction remains limited by diagonalization (SPAP holds), and physical content still requires operational distinguishability (accessibility holds). Such a scenario permits infinite information density while preserving irreversibility, self-referential limitation, and operationality. Finite capacity is not entailed by the other three.
+(i) *Capacity role.* A thought experiment can stipulate unbounded channel capacity per use while also stipulating an unbiased binary reset with $\Delta S\ge k_B\ln2$, the diagonal-closure hypotheses of SPAP, and operational distinguishability. This describes the intended capacity distinction; it does not construct a consistent formal physical model satisfying all of these stipulations.
 
-(ii) *Irreversible cost violated, others satisfied.* Consider a hypothetical physics with finite channel capacity, self-referential limitation, and operational accessibility, but in which logically irreversible operations can be performed at zero thermodynamic cost — the scenario in which Landauer's principle fails. Irreversible cost is not entailed by the other three.
+(ii) *Reset-cost role.* A thought experiment can stipulate finite capacity, self-referential limitation, and operational accessibility while denying a thermodynamic cost for logically irreversible operations. Establishing a model of that combination would require a specified thermodynamic theory and consistency argument.
 
-(iii) *Self-referential limitation violated, others satisfied.* Consider a hypothetical physics with finite capacity, irreversible cost, and operational accessibility, but in which a finite system can compute a complete, robust prediction of its own future state under self-reference — i.e., the SPAP diagonalization is evaded. Such a scenario must fail at least one finite diagonal ingredient used in the diagonal construction of Theorem A.1.1: retained self-coding, simulation of the nominated predictor on the retained coded input, evaluation of the relevant binary or threshold predicate, or finite composition of that simulation with the counter-predictive update. Self-referential limitation is not entailed by finite capacity, irreversible cost, and operational accessibility alone.
+(iii) *Diagonal-closure role.* A hypothetical system that makes complete exact predictions without encountering the SPAP contradiction must fall outside at least one hypothesis of the applicable diagonal theorem. The missing ingredient can be retained self-coding, simulation of the nominated predictor on the retained input, decidable evaluation of the binary or threshold predicate, or admitted composition with the counter-predictive update. Omitting an antecedent describes the theorem's application boundary; it does not refute its conditional conclusion.
 
-(iv) *Operational accessibility violated, others satisfied.* Consider a hypothetical physics with finite capacity, irreversible cost, and self-referential limitation, but in which structures are granted physical content even when no finite protocol can distinguish their presence from their absence — a physics in which formally defined but operationally inaccessible entities (such as exact curvature values at putative singularities) are treated as physically real. Operational accessibility is not entailed by the other three.
+(iv) *Accessibility role.* A thought experiment can assign physical status to structures with no finite distinguishing protocol while retaining stipulated capacity, reset-cost, and self-reference conditions. This contrasts interpretations of physical content without supplying a formal independence model.
 
-These four scenarios demonstrate that the core constraints are conceptually independent: each addresses a distinct aspect of the relationship between mathematical formalism and physical prediction that is not captured by the others.
+These examples illustrate distinct intended roles for the four constraints. A proof of logical independence would require a common formal background and consistent models satisfying the retained constraints while failing the targeted one; no such model construction is established here.
 
 ## A.1 Self-Referential Paradox of Accurate Prediction (SPAP)
 
@@ -1081,7 +1075,11 @@ If $p>1/2$, Equation (A.3) makes the right-hand side $0$, contradicting $p>1/2$.
 
 ### A.1.5 Theorem A.1.4 (Noise Robustness - Probabilistic SPAP)
 
-Let the conditions of Theorem A.1.3 hold. Consider a system $S'_{noisy}$ implementable within $\mathcal{M}$ that *attempts* to set its actual outcome probability $P_{actual}(p_t)$ according to the rule (Equation A.3), based on an external probabilistic predictor $P_f$'s output $p_t = P_f(\phi=1 | \text{state}_t)$. However, due to operational noise, the *true* probability realized by the system $P_{true}(p_t)$ differs from the intended $P_{actual}(p_t)$ via a noisy channel, e.g., $P_{true}(p_t) = (1-p_{noise})P_{actual}(p_t) + p_{noise}(1-P_{actual}(p_t))$ for some constant noise level $0 \le p_{noise} < 1/2$. No probabilistic predictor $P_f$ can guarantee that its output $p_t$ perfectly matches the true probability $P_{true}(p_t)$ for all cycles $t$.
+Let the conditions of Theorem A.1.3 hold. Consider a system $S'_{noisy}$ implementable within $\mathcal{M}$ that sets its intended outcome probability $P_{actual}(p_t)$ by Equation A.3 from the nominated predictor's output $p_t=P_f(\phi=1\mid\text{state}_t)$. Assume the implemented noise is a binary symmetric channel with constant flip probability $0\le p_{noise}<1/2$, so its true conditional output probability is
+$$
+P_{true}(p_t)=(1-p_{noise})P_{actual}(p_t)+p_{noise}(1-P_{actual}(p_t)).
+$$
+On this noise branch, no probabilistic predictor $P_f$ can make $p_t=P_{true}(p_t)$ in any cycle.
 
 *Proof:* Perfect matching requires the condition $p_t = P_{true}(p_t)$ to hold. Substituting the noise model gives:
 $$
@@ -1095,20 +1093,19 @@ Since neither case allows the condition $p_t = P_{true}(p_t)$ to be satisfied fo
 
 ### A.1.6 Theorem A.1.5 (Existence of Dynamic Self-Reference Operators - DSRO = Definition 11 Justified)
 
-Within a sufficiently rich formal system $\mathcal{F}$ capable of representing computation (like Peano Arithmetic or equivalent systems realizable via Effective Operational Property R), for any total computable function $G$ and any set of computable functions representing bounded proof searches $\text{ProofSearch}_{\le g_i(n)}$ for formulas $\phi_i$ that may contain a free variable representing a Gödel index, there exists a total computable function $f$ whose Gödel index $e = \ulcorner f \urcorner$ satisfies the fixed-point equation (structural form identical to Equation 9):
+Let $\mathcal F$ represent finite computation and use an effective formula coding with computable substitution and decidable proof verification. Choose a finite family indexed by $i=1,\ldots,r$, total computable bounds $g_i:\mathbb N\to\mathbb N$, and formula templates $\phi_i$ with computable substitution of an input and a program index. Let $\text{ProofSearch}_{\le g_i(n)}$ test proof codes $p\le g_i(n)$ in this declared coding, and let $G:\mathbb N^{r+1}\to\mathbb N$ be total computable. In the acceptable program numbering of Theorem A.4.1a, there exists a total computable function $f=\varphi_e$ satisfying the self-index equation
 $$
-f(n) = G(n, \dots, \text{ProofSearch}_{\le g_i(n)}[\phi_i(\dots, e, \dots)], \dots)
-\quad (\text{Appendix A.1.6, Theorem A.1.5; cf.\ main-text Equation~(9)})
+f(n)=G\bigl(n,\text{ProofSearch}_{\le g_1(n)}[\phi_1(\ldots,e,\ldots)],\ldots,\text{ProofSearch}_{\le g_r(n)}[\phi_r(\ldots,e,\ldots)]\bigr)
+\quad(\text{Appendix A.1.6, Theorem A.1.5; cf. main-text Equation (9)}).
 $$
 
-*Proof:* Define the operator
+*Proof:* Define
 $$
-\Psi(\alpha,n):=
-G\bigl(n,\dots,\text{ProofSearch}_{\le g_i(n)}[\phi_i(\dots,\alpha,\dots)],\dots\bigr).
+\Psi(\alpha,n)=G\bigl(n,\text{ProofSearch}_{\le g_1(n)}[\phi_1(\ldots,\alpha,\ldots)],\ldots,\text{ProofSearch}_{\le g_r(n)}[\phi_r(\ldots,\alpha,\ldots)]\bigr).
 $$
-Each bounded proof search is total computable: for fixed $n$, the bound $g_i(n)$ is computable, only finitely many candidate proof codes of length at most $g_i(n)$ must be checked, and proof verification in the underlying formal system is decidable. The substitution map inserting the parameter $\alpha$ into the Gödel-coded formula $\phi_i$ is computable. Because $G$ is total computable and only finitely many bounded proof-search terms appear, the operator $\Psi$ is total computable.
+Each bound $g_i(n)$ is computable. Testing the finitely many codes $0\le p\le g_i(n)$ terminates by decidable proof verification, and substitution of $(\alpha,n)$ into each template is computable. The finite family and total computability of $G$ therefore make $\Psi$ total computable.
 
-By Kleene's Second Recursion Theorem (Theorem A.4.1a; Kleene 1952), there exists an index $\beta$ such that
+By Kleene's Second Recursion Theorem (Theorem A.4.1a; Kleene 1938, §2, p. 153), there exists an index $\beta$ such that
 $$
 \varphi_\beta(n)=\Psi(\beta,n)\qquad\text{for all }n\in\mathbb{N}.
 $$
@@ -1305,9 +1302,9 @@ The Predictive Universe (PU) framework posits that systems capable of sophistica
 The LITE construction leverages standard tools from mathematical logic:
 
 *   **Gödel Coding:** A bijection $⟨·⟩: \Sigma^* \to \mathbb{N}$ assigns unique natural number codes to syntactic expressions in PA, denoted $⌈\psi⌉$ for a formula $\psi$.
-*   **Provability Predicate:** The primitive recursive relation $Prf(p, c)$ asserts that $p$ is the Gödel code of a PA proof for the formula with Gödel code $c$ [Mendelson 2015; Kleene 1952].
+*   **Provability Predicate:** The primitive recursive relation $Prf(p, c)$ asserts that $p$ is the Gödel code of a PA proof for the formula with Gödel code $c$ [Gödel 1931, definitions 44–45; fixed PA coding specified below].
 *   **Bounded Proof Search Predicate:** For a total computable function $g: \mathbb{N} \to \mathbb{N}$ and a formula $\psi$, $Prf_{\le g(n)}(⌈\psi⌉) \equiv \exists p \le g(n) \, Prf(p, ⌈\psi⌉)$ asserts a proof of $\psi$ exists with code $p \le g(n)$. This predicate is decidable for fixed $n, ⌈\psi⌉$.
-*   **Kleene's Second Recursion Theorem:** For any total computable operator $\Psi: \mathbb{N} \times \mathbb{N} \to \mathbb{N}$, there exists an index $\beta \in \mathbb{N}$ such that the partial computable function $φ_β$ satisfies $φ_β(n) = \Psi(\beta, n)$ for all $n \in \mathbb{N}$ [Kleene 1952]. This allows a function to consistently refer to its own Gödel code. A full proof appears as Theorem A.4.1a below.
+*   **Kleene's Second Recursion Theorem:** For any total computable operator $\Psi: \mathbb{N} \times \mathbb{N} \to \mathbb{N}$, there exists an index $\beta \in \mathbb{N}$ such that the partial computable function $φ_β$ satisfies $φ_β(n) = \Psi(\beta, n)$ for all $n \in \mathbb{N}$ [Kleene 1938, §2, p. 153]. This allows a function to consistently refer to its own Gödel code. A full proof appears as Theorem A.4.1a below.
 
 ### A.4.2 The LITE Function Construction
 
@@ -1326,7 +1323,7 @@ $$
 $$
 g(a,n):=\Psi(φ_a(a),n).
 $$
-Universality of the accepted effective numbering makes $(a,n)\mapsto φ_a(a)$ partial computable, and composition with the partial computable $\Psi$ makes $g$ partial computable uniformly in $(a,n)$. The parameter theorem, also called the $s$-$m$-$n$ theorem (Kleene, 1952), therefore applies to this accepted numbering: there exists a total computable function $s:\mathbb N\to\mathbb N$ such that for all $a,n$,
+Universality of the accepted effective numbering makes $(a,n)\mapsto φ_a(a)$ partial computable, and composition with the partial computable $\Psi$ makes $g$ partial computable uniformly in $(a,n)$. The parameter theorem, also called the $s$-$m$-$n$ theorem (Kleene 1938, §2, p. 153), therefore applies to this accepted numbering: there exists a total computable function $s:\mathbb N\to\mathbb N$ such that for all $a,n$,
 $$
 φ_{s(a)}(n)=g(a,n)=\Psi(φ_a(a),n).
 $$
@@ -1359,7 +1356,7 @@ n + 1, & \text{otherwise}.
 $$
 Because $g,H_1,H_2$ are total computable, the values $g(n),H_1(n),H_2(n)$ are computable for every $n$. The maps $\alpha\mapsto⌈ϕ_{\alpha}(n)⌉$ and $\alpha\mapsto⌈¬ϕ_{\alpha}(n)⌉$ are computable by the usual primitive-recursive substitution operations on Gödel codes. Each bounded proof predicate $Prf_{\le g(n)}(\cdot)$ is decidable by finite search, because only finitely many candidate proofs of size at most $g(n)$ must be tested and proof verification is computable. Hence $\Psi$ is a total computable operator.
 
-By Theorem A.4.1a (Kleene's Second Recursion Theorem; Kleene 1952), there exists an index $\beta$ such that
+By Theorem A.4.1a (Kleene's Second Recursion Theorem; Kleene 1938, §2, p. 153), there exists an index $\beta$ such that
 $$
 \phi_\beta(n)=\Psi(\beta,n)\qquad\text{for all }n\in\mathbb{N}.
 $$
@@ -1377,20 +1374,23 @@ This is an existence theorem for fixed-point presentations. It does not prove mi
 
 *Proof.* Apply Theorem A.4.1a to the total computable operator $\mathsf V$. The fixed-point index $\beta$ gives (A.4.1b). The remaining statements are scope restrictions: the recursion theorem supplies self-reference of a presentation, not an optimality theorem, an invariance theorem, or a physical branch certificate. ∎
 
-**Theorem A.4.1c (Finite LITE Verifier Circuit and Explicit Resource Envelope).** Fix a binary proof encoding for which syntactic proof verification of a word of length at most $G$ is performed by a uniform Boolean circuit of size $q(G,L)$ and workspace $s(G,L)$, where $L$ is the length of the target-formula code and $q,s$ are explicit polynomials for the chosen encoding. For input $n$, put $G=g(n)$ and let $L_n$ be the maximum length of the two substituted formula codes in (A.4.1). Let $q_{\mathrm{prep}}(n)$ and $s_{\mathrm{prep}}(n)$ be the finite circuit size and workspace used by the chosen implementations to compute $G$, the two substituted codes, and $H_1(n),H_2(n)$. Then the two bounded proof predicates and the prioritized three-way branch in (A.4.1) are computed by a uniform finite circuit with
+**Theorem A.4.1c (Finite LITE Verifier Circuit and Explicit Resource Envelope).** Use canonical binary numerals for the nonnegative integer proof codes in (A.4.1), with zero represented by one zero bit. Assume a uniform circuit of size $q(G,L)$ and workspace $s(G,L)$ verifies a proof numeral of length at most $G$ against a target code of length at most $L$; $q,s$ are explicit polynomial upper bounds for this encoding. Put $B_n=g(n)$ and
 $$
-\operatorname{size}
-\le q_{\mathrm{prep}}(n)+2(2^{G+1}-1)q(G,L_n)+O(2^GG+L_n),
+G=\max\{1,\lceil\log_2(B_n+1)\rceil\}.
+$$
+Let $L_n$ be the maximum length of the two substituted formula codes, and let $W_n\ge1$ be the maximum binary length of $n+H_1(n)$, $n+H_2(n)$, and $n+1$. Let $q_{\mathrm{prep}}(n)$ and $s_{\mathrm{prep}}(n)$ record the circuit size and workspace of the declared preparation, including $B_n,G$, both formula codes, all three candidate sums, and their arithmetic intermediate values. Then the two bounded proof predicates and the prioritized branch in (A.4.1) have a uniform finite circuit with
+$$
+\operatorname{size}\le q_{\mathrm{prep}}(n)+2(2^{G+1}-1)q(G,L_n)+O(2^GG+L_n+W_n),
 \tag{A.4.1c.1}
 $$
-and by a sequential implementation with workspace
+and a sequential implementation with workspace
 $$
-O\bigl(s_{\mathrm{prep}}(n)+G+L_n+s(G,L_n)\bigr).
+O\bigl(s_{\mathrm{prep}}(n)+G+L_n+s(G,L_n)+W_n\bigr).
 \tag{A.4.1c.2}
 $$
-The circuit returns exactly one of $n+H_1(n)$, $n+H_2(n)$, and $n+1$ for every $n$; the self-index $\beta$ is the fixed constant supplied by Theorem A.4.1a.
+The circuit returns exactly one of the three candidate sums; the self-index $\beta$ is the specified constant supplied by Theorem A.4.1a.
 
-*Proof.* Total computability makes the recorded preparation costs finite for every $n$. There are $2^{G+1}-1$ binary words of length at most $G$. For each of the two target formulas, run the verifier circuit on every candidate and OR the acceptance bits. This gives the proof-search term in (A.4.1c.1); preparation contributes $q_{\mathrm{prep}}(n)$, while enumeration, comparison, OR trees, and the prioritized multiplexer contribute the displayed lower-order term. A sequential counter reuses one verifier workspace, giving (A.4.1c.2). The first branch is selected when its proof-search bit is one, the second only when the first is zero and the negated-formula search bit is one, and the third otherwise, so totality is circuit-level and does not rely on consistency. The recursion theorem makes $\beta$ a constant in this uniform family. ∎
+*Proof.* Every code $0\le p\le B_n$ has a canonical numeral of length at most $G$. Enumerate the $2^{G+1}-1$ binary words of length at most $G$, rejecting the empty word, noncanonical numerals, and every decoded value $p>B_n$. For each target formula, verify the remaining candidates and OR their acceptance bits. This computes exactly the numeric-cutoff proof predicate of (A.4.1). The two sets of verifier circuits cost at most $2(2^{G+1}-1)q(G,L_n)$; canonicality and cutoff tests, enumeration, and OR trees cost $O(2^GG+L_n)$. Preparation includes the arithmetic for the candidate sums, and their prioritized multiplexer costs $O(W_n)$, giving (A.4.1c.1). Sequential enumeration reuses the verifier workspace and retains only counters, formula codes, candidate sums, and acceptance bits, giving (A.4.1c.2). The first branch is selected when its search bit is one, the second when only the negated-formula search bit is one, and the third when both are zero. This establishes the stated total computation without a consistency assumption. ∎
 
 On a branch already carrying the protected universal-gate, memory, execution, and QEC certificate of Theorem A.0.6, standard reversible compilation maps each such finite Boolean circuit into the protected response system with the certificate's recorded overhead. Equations (A.4.1c.1)--(A.4.1c.2) do not themselves populate that physical certificate.
 
@@ -1445,9 +1445,9 @@ We first separate three notions that must not be conflated:
 2. existence of a PA proof-object for that sentence;
 3. reachability of that proof-object by a particular predictor as a content-integrating act.
 
-Gödelian incompleteness concerns the second notion: for suitable recursively axiomatized theories extending enough arithmetic, there are sentences not provable in the theory, and under the corresponding soundness assumptions those sentences are true in the intended model [Gödel 1931]. The third notion is processing-event-relative: the proof object may exist in PA while reachability or unreachability for a specified predictor remains undecided until a concrete model-change map and finite-cost or cost-divergence certificate are supplied. Gödel's original 1931 paper is the reference point for the formal-system-relative result, while the representability and fixed-point tools used below are standard arithmetical machinery [Kleene 1952; Mendelson 2015].
+Gödelian incompleteness concerns the second notion: for suitable recursively axiomatized theories extending enough arithmetic, there are sentences not provable in the theory, and under the corresponding soundness assumptions those sentences are true in the intended model [Gödel 1931]. The third notion is processing-event-relative: the proof object may exist in PA while reachability or unreachability for a specified predictor remains undecided until a concrete model-change map and finite-cost or cost-divergence certificate are supplied. Gödel's original 1931 paper is the reference point for the formal-system-relative result, while the representability and fixed-point tools used below are standard arithmetical machinery [Gödel 1931, definitions 44–45 and Theorem V; Kleene 1938, §2; Marks 2024, Theorem 11.7].
 
-Fix once and for all an acceptable Gödel coding of finite strings, formulas, proofs, machines, machine inputs, and finite computation traces. For a machine/program code $e$, input code $x$, finite trace code $\tau$, and output $y\in\{0,1\}$, let
+Fix once and for all a primitive-recursive Gödel coding of finite strings, formulas, proofs, machines, machine inputs, and finite computation traces, with primitive-recursive parsing, substitution, PA proof checking, and finite transition checking. For a machine/program code $e$, input code $x$, finite trace code $\tau$, and output $y\in\{0,1\}$, let
 
 
 $$
@@ -1510,7 +1510,7 @@ Any processing conclusion for $G_S$ requires its own model-change map and finite
 
 We work with predictive systems possessing Effective Operational Property R (Definition A.0.1; Definition A.0.6), each carrying an operational self-model $\mathcal M_S$ (Definition M.10.1). By Property R (Definition 10), such a system's relevant model class can represent coded descriptions, simulate nominated predictors on those descriptions, and evaluate the relevant predicates about predicted outputs. This is the subcapacity required by SPAP (Theorems 10–11).
 
-Let $S$ be such a system. Let $n_S$ be the number of Fisher-orthogonal addressable deterministic SPAP registers retained in $S$'s self-model. For the $j$-th retained register, let $\eta_{S,j}>0$ denote the Fisher distance between its two operationally distinguishable binary code states, as in Theorem M.10.4, and define
+Let $S$ be such a system. Let $n_S$ be the number of Fisher-orthogonal addressable deterministic SPAP registers retained in $S$'s self-model. Assume that each retained register's two operationally distinguishable binary code states are represented by distinct parameter values at positive Fisher distance. Register the parameter chart and metric-evaluation points used by the discrepancy in Equation M.18. For each retained register $j$, let $\eta_{S,j}>0$ be a certified lower bound on the Fisher tangent norm of either nonzero binary code-state displacement at every metric-evaluation point used in the individual and joint boundary diagonal challenges, as required by Theorem M.10.4, and define
 
 $$
 D_1(S):=\min_{1\le j\le n_S}\eta_{S,j}>0.
@@ -1580,7 +1580,7 @@ Let $S$ be a predictive system with Effective Operational Property R satisfying 
 
 *Proof.* For each $j\le N^*(S)$, Theorem A.1.1 constructs the diagonal component $S_{\mathrm{diag}}^{(j)}$, and Theorem M.10.4 supplies the independent-register amplification. The hypothesis $n_S\ge N^*(S)$ supplies the required addressable Fisher-orthogonal registers.
 
-The coding, substitution, and bounded transition-checking operations of §A.4 are primitive recursive. A candidate trace has finite length, so $\mathrm{Trace}(e,x,\tau,y)$ is the finite conjunction asserting the initial configuration, each legal successor configuration, and the terminal output. It is therefore a primitive-recursive relation. Kleene's representability theorem (Kleene 1952) applies because PA represents primitive-recursive relations and all four arguments below are numerals. Each specified computation has a finite standard trace $\tau_j(S)$ with output $y_j(S)$; hence the true closed instance
+The coding, substitution, and bounded transition-checking operations of §A.4 are primitive recursive. A candidate trace has finite length, so $\mathrm{Trace}(e,x,\tau,y)$ is the finite conjunction asserting the initial configuration, each legal successor configuration, and the terminal output. It is therefore a primitive-recursive relation. Define the PA formula $\mathrm{Trace}(e,x,\tau,y)$ as the represented equation $\chi_{\mathrm{Trace}}(e,x,\tau,y)=1$ for its total primitive-recursive characteristic function. Marks (2024, Theorem 11.7) supplies numeralwise representation of every computable function already in $\mathrm{PA}^{-}$; PA extends that arithmetic and all four arguments below are numerals. Each specified computation has a finite standard trace $\tau_j(S)$ with output $y_j(S)$; hence the true closed instance
 $$
 \mathrm{Trace}\left(\overline{e_j(S)},\overline{x_j(S)},\overline{\tau_j(S)},\overline{y_j(S)}\right)
 $$
@@ -1615,7 +1615,7 @@ are object-level representations of $S$'s registers, not aliases of any of $A$'s
 
 4. processing the represented transcript $T_S$, or a PA proof-object for $G_S$, induces no retained update to $A$'s own self-model coordinates beyond the external-model update $\Delta M_A^{(\mathrm{ext})}$.
 
-Condition 4 is the external-hosting branch of Theorem M.10.5(i) stated explicitly as part of externally insulated model access. If $A$ additionally chooses to process a different statement such as “$A$ has now verified $G_S$,” that is a separate self-referential content item about $A$. It is not required for the object-level verification of $G_S$.
+Condition 4 is the external-hosting branch of item 3 of Theorem M.10.5 stated explicitly as part of externally insulated model access. If $A$ additionally chooses to process a different statement such as “$A$ has now verified $G_S$,” that is a separate self-referential content item about $A$. It is not required for the object-level verification of $G_S$.
 
 **Definition A.5.5 (Above-Threshold Predictor).**
 For a target predictor $S$, a predictor $A$ is **above-threshold for $S$** if
@@ -1855,11 +1855,7 @@ P_B(t,e_{B,t})\ne1.
 \tag{A.5.6a.3}
 $$
 
-*Proof.* The trace-certified predicate $\operatorname{Pred}_B(\bar t,x)$ is an arithmetic formula with the single free code variable $x$, and the arithmetic $\mathcal F$ represents the primitive-recursive coding and substitution operations of §A.4. The diagonal lemma of Gödel (1931) therefore applies to
-$$
-\varphi(x):=\neg\operatorname{Pred}_B(\bar t,x)
-$$
-and supplies a sentence $E_{B,t}$ with code $e_{B,t}$ such that
+*Proof.* Set $\varphi(x):=\neg\operatorname{Pred}_B(\bar t,x)$. Let $d(n)$ be the primitive-recursive function that substitutes the numeral $\bar n$ for the free variable in the formula coded by $n$. By the coding hypothesis of Definition A.5.6a.1 and §A.4, its graph has an arithmetical representation $D(u,v)$ with the needed numeral-instance correctness and functionality in $\mathcal F$. Define $\vartheta(u):=\exists v\,[D(u,v)\wedge\varphi(v)]$, let $n=\ulcorner\vartheta\urcorner$, and put $E_{B,t}:=\vartheta(\bar n)$ and $e_{B,t}:=d(n)=\ulcorner E_{B,t}\urcorner$. The represented substitution calculation at the concrete numeral $\bar n$ gives $\mathcal F\vdash D(\bar n,\overline{e_{B,t}})$ and $\mathcal F\vdash D(\bar n,v)\rightarrow v=\overline{e_{B,t}}$. Hence
 $$
 \mathcal F\vdash E_{B,t}\leftrightarrow
 \neg\operatorname{Pred}_B(\bar t,\overline{e_{B,t}}),
@@ -1972,7 +1968,7 @@ $$
 
 *Proof.* The admissible no-op has expected gain zero, so the supremum in (A.5.6a.10) equals zero. By clause (ii), no negative-gain update minimizes the PCE potential. By clause (i), every zero-gain minimizer is either in the no-op predictive equivalence class or is strictly cost-dominated. Hence every retained PCE minimizer lies in $[M_t]_Q$, proving (A.5.6a.11). ∎
 
-**Theorem A.5.6a.6 (Verification-Gated Reachability).** Let
+**Theorem A.5.6a.6 (Verification-Gated Reachability).** Assume the admissible no-op and both no-op dominance conditions of Lemma A.5.6a.5. Let
 $$
 M_{t+1}:=\mathcal U_{\mathrm{PCE}}(M_t,R_T).
 $$
@@ -2317,7 +2313,7 @@ Every representative of $[S]$ has cost at least $L_S$, while the certificate sup
 
 At fixed $B$, only finitely many words over a finite alphabet have length at most the code-length bound. Enumerate them, discard ill-formed and unstable codes with the assumed decider, compute the finite response-equivalence relation pairwise, and retain one normal form per class. Exact cost comparison on this finite quotient terminates. Definition A.6.7 records the resulting exhaustive table, and Proposition A.6.8 proves the stated conditional uniqueness. ∎
 
-Thus unrestricted axiom-stabilizer uniqueness receives `negative-refutation` on every scalable language. The mathematically complete successor is the budget-indexed finite certificate of Definition A.6.7; mechanisms outside one frozen budget are different comparison domains rather than omitted members of that certificate.
+Thus a single finite manifest receives `negative-refutation` as an exhaustive all-budget comparison on every language satisfying the scalability hypothesis of Theorem A.6.8a. This does not refute existence or uniqueness of a global least-cost class: infinitely many distinct classes can have costs $0,1,2,\ldots$ and a unique minimum. Definition A.6.7 supplies the budget-indexed finite comparison certificate; mechanisms outside that budget belong to a different comparison domain. Any global uniqueness conclusion requires additional information comparing the unlisted classes.
 
 ### A.6.3 Response-free domain exclusion
 

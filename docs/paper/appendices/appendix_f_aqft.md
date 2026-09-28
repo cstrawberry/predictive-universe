@@ -29,7 +29,7 @@ Let $\mathcal N_n$ be an MPU network, and suppose its strongly continuous Heisen
 $$
 \mathcal L_n^*=\sum_Z\mathcal L_{n,Z}^*.
 $$
-Assume constants $r_0,J,z_*,\nu<\infty$, independent of $n$, such that $\operatorname{diam}(Z)\le r_0$, $\|\mathcal L_{n,Z}^*\|_{\infty\to\infty}\le J$, every network has degree at most $z_*$, and at most $\nu$ generator terms meet each site. For bounded operators
+Assume each $\mathcal L_{n,Z}^*$ is a Heisenberg-picture Lindblad generator supported on $Z$, and let $\alpha_t^{(n)}=e^{t\mathcal L_n^*}$ for $t\ge0$. Assume constants $r_0,J,z_*,\nu<\infty$, independent of $n$, such that $\operatorname{diam}(Z)\le r_0$, $\|\mathcal L_{n,Z}^*\|_{\infty\to\infty}\le J$, every network has degree at most $z_*$, and at most $\nu$ generator terms meet each site. For bounded operators
 
 $$
 A\in\mathfrak{A}_n(X),\quad B\in\mathfrak{A}_n(Y),
@@ -60,43 +60,43 @@ $$
 \sup_x\sum_{Z\ni x}|Z|\,\|\mathcal L_Z^*\|_{\infty\to\infty}
 e^{\mu\operatorname{diam}(Z)}.
 $$
-Finite interaction range, uniformly bounded degree, a uniform bound on the number of generator terms meeting each site, and $\|\mathcal L_Z^*\|_{\infty\to\infty}\le J$ imply $\|\mathcal L\|_\mu<\infty$ for every finite $\mu>0$. The open-system Lieb–Robinson theorem of Poulin (2010) and Barthel and Kliesch (2012) therefore applies and gives constants $C_\mu<\infty$ and $v_\mu<\infty$, determined by this interaction norm and the graph convolution constant, such that
+Finite interaction range, uniformly bounded degree, a uniform bound on the number of generator terms meeting each site, and $\|\mathcal L_Z^*\|_{\infty\to\infty}\le J$ imply $\|\mathcal L\|_\mu<\infty$ for every finite $\mu>0$. Each local summand is a Lindblad generator, so removing any collection of interaction terms leaves a unital completely positive contraction semigroup for nonnegative time. The finite interaction-path estimate in Theorem 1 of Barthel and Kliesch (2012), and its autonomous counterpart in Poulin (2010), therefore gives constants $C_\mu<\infty$ and $v_\mu<\infty$, controlled by the local norm, range, degree, and incidence bounds, such that for $t\ge0$
 $$
 \|[A(t),B]\|_\infty
 \le
 C_\mu |X|\,\|A\|_\infty\|B\|_\infty
-e^{-\mu(d(X,Y)-v_\mu|t|)}.
+e^{-\mu(d(X,Y)-v_\mu t)}.
 $$
 This proves (F.1). No formula depending only on $(J,r_0,z_{\max},D,\tau)$ follows unless the incidence convention for the local terms and the walk-counting constant are also specified.
 
-For a depth-$D$ circuit in which every layer consists of non-overlapping gates of graph radius at most $r_0$, support propagation is elementary: after $m$ cycles, a support can expand by at most $mDr_0$ graph steps. Hence
+For a depth-$D$ circuit, suppose every layer consists of gates with disjoint supports and every gate support has graph diameter at most $r_0$. A gate disjoint from the support of an observable leaves it unchanged. A gate meeting that support can add only vertices at graph distance at most $r_0$ from it. Thus one layer enlarges support by at most $r_0$, and $m$ depth-$D$ cycles enlarge it by at most $mDr_0$. Hence, for $m\in\mathbb N_0$,
 $$
 [\alpha_{m\tau}^{(n)}(A),B]=0
 \qquad\text{if}\qquad
-d(X,Y)>mDr_0,
+d(X,Y)>mDr_0.
 $$
-so the exact circuit support speed is at most $Dr_0/\tau$. ∎
+For $\tau>0$, the circuit support speed is at most $Dr_0/\tau$. A bound by $r_0$ on the radius of a ball containing each gate support gives the diameter bound $2r_0$ and the corresponding speed bound $2Dr_0/\tau$. ∎
 
-**Corollary F.1a (Lightcone Normalization on the Strict Single-Clock Branch).** On the strict finite-range single-clock ND-RID branch, let one update layer have support radius $r_0$ in graph distance and minimal cycle time $\tau_{\min}$. Let the physical edge scale in the rescaled geometry be $\delta_{\mathrm{eff},n}$ and define
+**Corollary F.1a (Lightcone Normalization on the Strict Single-Clock Branch).** On a strict finite-range single-clock ND-RID branch, assume one update layer consists of gates with disjoint supports of graph diameter at most $r_0$, with cycle time $\tau_{\min}>0$. Let $\delta_{\mathrm{eff},n}>0$ be the physical edge scale and define
 $$
 c_n:=\frac{r_0\delta_{\mathrm{eff},n}}{\tau_{\min}}.
 $$
-For integer update times $t=m\tau_{\min}$, the exact support cone of the microscopic update satisfies
+At $t=m\tau_{\min}$, $m\in\mathbb N_0$, the update satisfies
 $$
 [\alpha_t^{(n)}(A),B]=0
-\qquad\text{whenever}\qquad
+\quad\text{if}\quad
 d_{\mathrm{graph}}(\operatorname{supp}A,\operatorname{supp}B)>mr_0.
 $$
-Equivalently, the physical support-cone speed is at most $c_n$. If the geometric causal cone of Theorem 46 is normalized using the same update radius, edge scale, and clock, and $c_n\to c$, then the strict ND-RID support cone is no wider than the emergent geometric causal cone; if the selected branch saturates one-step propagation, the two cone slopes coincide. For Hamiltonian or Lindbladian Lieb-Robinson tails outside this strict branch, equality of the limiting Lieb-Robinson cone and the geometric cone requires a separately supplied lightcone-identification hypothesis.
+The physical support-cone speed is therefore at most $c_n$. If the geometric causal cone of Theorem 46 uses this same one-layer support-growth bound, edge scale and clock, and $c_n\to c$, the microscopic support cone is no wider than that geometric cone. Equality of the two slopes requires attainment of the one-step propagation bound. A Hamiltonian or Lindbladian Lieb--Robinson bound with tails requires its separate causal-cone certificate.
 
-*Proof.* In a strict finite-range single-clock ND-RID circuit, after $m$ update layers the support of a local observable can expand by at most $mr_0$ graph steps. The elapsed time is $m\tau_{\min}$ and the physical radius is at most $mr_0\delta_{\mathrm{eff},n}$. Therefore the physical support speed is bounded by
+*Proof.* The layer argument gives the support inclusion in the $mr_0$-neighborhood. At $m=0$, disjoint tensor factors commute. At $m\ge1$, the ratio of the maximal physical support displacement to elapsed time is
 $$
 \frac{mr_0\delta_{\mathrm{eff},n}}{m\tau_{\min}}=c_n.
 $$
-The same update-clock and support-radius data define the causal propagation cone used in Theorem 46 on this strict branch. Passing to the limit gives the stated cone normalization. ∎
+Taking the limit proves containment; attainment supplies equality when assumed. ∎
 
 **Corollary F.1 (Emergence of Einstein Causality).**
-Let $a_n$ be the physical length represented by one graph edge. Assume the sequence $\{\mathcal N_n\}$ converges geometrically to a Lorentzian spacetime $(M,g_{\mu\nu})$ with invariant speed $c$ on the complete Corollary 46a/Appendix O promotion branch. Suppose the graph-metric Lieb–Robinson bounds hold with decay rates $\mu_n\ge\mu_0>0$, uniformly bounded operator norms, $\log |X_n|=o(a_n^{-1})$, and
+Let $a_n>0$ be the physical length represented by one graph edge, with $a_n\to0$. Assume the sequence $\{\mathcal N_n\}$ converges geometrically to a Lorentzian spacetime $(M,g_{\mu\nu})$ with invariant speed $c$ on the complete Corollary 46a/Appendix O promotion branch. Retain only times $t\ge0$ for a completely positive semigroup; a negative time is admitted only with a separately certified reversible evolution and convergence at that time. Suppose the graph-metric Lieb--Robinson bounds hold with decay rates $\mu_n\ge\mu_0>0$, uniformly bounded operator norms, $\log |X_n|=o(a_n^{-1})$, and
 $$
 a_n v_{\rm LR}^{(n)}\longrightarrow c.
 $$
@@ -130,7 +130,7 @@ $$
 
 **F.3 Continuum Limit and Emergent AQFT Net**
 
-The transition from the discrete MPU network to continuum physics is formalized as the convergence of the sequence of discrete nets of algebras $\{\mathfrak{A}_n(\mathcal{O})\}$. The general sufficient-condition route is Theorem F.0. The Mosco-Bochner route closes the bridge when the finite certificate $\mathfrak B_{\mathrm{AQFT}}$ of Definition F.0c is accepted. The strict projective single-clock route closes the same bridge when the finite record $\mathfrak P_{\mathrm{AQFT}}$ of Definition F.0e is accepted; in that branch, local generator convergence is exact on the retained core rather than an additional open bridge condition.
+The transition from the discrete MPU network to continuum physics is formalized as the convergence of the sequence of discrete nets of algebras $\{\mathfrak{A}_n(\mathcal{O})\}$. The general sufficient-condition route is Theorem F.0. The Mosco-Bochner route closes the stable local-$C^*$-net bridge under the accepted certificate $\mathfrak B_{\mathrm{AQFT}}$ of Definition F.0c and all additional hypotheses of Theorem F.0d. The strict projective single-clock route closes that bridge under the accepted record $\mathfrak P_{\mathrm{AQFT}}$ of Definition F.0e and all additional hypotheses of Theorem F.0f; in that branch, generator compatibility is exact on the retained core, while the semigroup and locality conditions remain part of the bridge.
 
 **Theorem F.0 (Conditional Convergence to a Stable, Local AQFT Net).** Assume the discrete MPU dynamics on the operational-continuum branch satisfy the following sufficient conditions:
 
@@ -149,36 +149,34 @@ The transition from the discrete MPU network to continuum physics is formalized 
    \sup_n\sup_x\sum_{Z\ni x}\|\mathcal D_{n,Z}^*\|_{\infty\to\infty}<\infty.
    $$
 
-2. **Uniform Lieb-Robinson control in physical units.** Let $a_n$ be the physical mesh. There are constants $C<\infty$ and $\mu_0>0$, decay rates $\mu_n\ge\mu_0$, and graph velocities $v_{\rm LR}^{(n)}$ such that for local $A,B$,
+2. **Uniform Lieb--Robinson control in physical units.** Let $a_n>0$ be the physical mesh, with $a_n\to0$. There are constants $C<\infty$ and $\mu_0>0$, decay rates $\mu_n\ge\mu_0$, and graph velocities $v_{\rm LR}^{(n)}$ such that for local $A,B$ and every retained time,
    $$
    \|[\alpha_t^{(n)}(A),B]\|
    \le
    C\|A\|\|B\|
    e^{-\mu_n(d_n(\operatorname{supp}A,\operatorname{supp}B)-v_{\rm LR}^{(n)}|t|)},
+   \qquad
+   a_nv_{\rm LR}^{(n)}\to c.
    $$
-   with
-   $$
-   a_n v_{\rm LR}^{(n)}\to c.
-   $$
-   Equivalently, one may state the bound in the physical metric $a_nd_n$, with a decay coefficient rescaled by $a_n^{-1}$ and a physical velocity converging to $c$.
+   The retained time domain is $t\ge0$ for a dissipative evolution. Negative times require the reversible certificate specified in Condition 3. The graph velocities may depend on $n$; the physical velocities $a_nv_{\rm LR}^{(n)}$ converge to $c$. This condition is the stated uniform bound for the local representatives entering the net and is stronger than a bound with an unrestricted support-dependent prefactor.
 
-3. **Compatible embeddings and local generator convergence.** The coarse-graining maps $j_n^m:\mathfrak A_n\to\mathfrak A_m$ are isometric $*$-monomorphisms agreeing on overlaps. For every bounded region $\mathcal O$ and every element $A$ in the local algebraic core,
+3. **Compatible regional embeddings and local generator convergence.** The maps $j_n^m:\mathfrak A_n\to\mathfrak A_m$, $m\ge n$, are coherent unital isometric $*$-monomorphisms: $j_m^k j_n^m=j_n^k$. They agree on overlaps, preserve region inclusions, and send $\mathfrak A_n(O)$ into $\mathfrak A_m(O)$. Their continuum embeddings satisfy $\iota_mj_n^m=\iota_n$. For each bounded region $O$, a common algebraic core $\mathfrak C_O$ lies in $\bigcup_n\iota_n\mathfrak A_n(O)$, and its norm closure is $\mathfrak A(O)$. For $A\in\mathfrak C_O$, choose an initial stage containing $A$ and its cofinally consistent representatives $A_n$, so that $\iota_nA_n=A$ and $A_m=j_n^mA_n$. Require
    $$
-   \lim_{n,m\to\infty}
+   \lim_{\substack{m\ge n\\n\to\infty}}
    \left\|
-   j_n^m(\mathcal L_{n,\mathcal O}^*A)
+   j_n^m(\mathcal L_{n,O}^*A_n)
    -
-   \mathcal L_{m,\mathcal O}^*(j_n^mA)
-   \right\|
-   =
-   0.
+   \mathcal L_{m,O}^*(A_m)
+   \right\|=0.
    \tag{F.0.1}
    $$
-   This local generator convergence is supplemented by the following semigroup-stability hypothesis. On every bounded region, the common algebraic core is a graph core for a closable dissipative operator $\mathcal L_{\mathrm{cont}}^*$, the closure generates a strongly continuous contraction semigroup, and for some $\lambda>0$ the ranges of $\lambda-\mathcal L_{n,\mathcal O}^*$ converge densely to the range of $\lambda-\mathcal L_{\mathrm{cont},\mathcal O}^*$ under the embeddings. Equivalently, the branch may supply strong resolvent convergence or a Mosco-convergence theorem that implies these Trotter–Kato hypotheses. These conditions must be checked branch-by-branch.
+   The embedded generator values converge to $\mathcal L_{\mathrm{cont},O}^*A$. This operator is closable and $\mathfrak C_O$ is a graph core for its closure. The convergence certificate must specify its applicable theorem. For the common-space route, require strongly continuous contraction semigroups $T_{n,O},T_O$ on one Banach space $X_O$, with generators $A_{n,O},A_O=\overline{\mathcal L_{\mathrm{cont},O}^*}$, and, for some $\lambda>0$, $R(\lambda,A_{n,O})x\to R(\lambda,A_O)x$ on a norm-dense test set. The contraction bound $\|R(\lambda,A_{n,O})\|,\|R(\lambda,A_O)\|\le1/\lambda$ extends this convergence to every $x\in X_O$. Engel and Nagel (2000), Theorem III.4.8(c)$\Rightarrow$(d), then gives $T_{n,O}(t)x\to T_O(t)x$ uniformly on compact positive-time intervals. The certificate identifies these evolutions with the embedded local evolutions on their retained domains. A varying-space or Mosco route must instead supply its own proved comparison and identification theorem; algebra embeddings alone do not supply common-space semigroups. Regional restrictions agree on common cores. These domain and convergence requirements are separate branch premises.
+
+   A $*$-automorphism group is claimed only on an additional reversible branch: every finite evolution is a $*$-automorphism group and the embedded evolutions converge for both signs of time, uniformly on compact time intervals on a common norm-dense core. The two limits are required to retain the composition law. They then obey $\alpha_t\alpha_{-t}=\alpha_{-t}\alpha_t=\mathrm{id}$; multiplicativity, adjoints and unitality pass to the norm limits, yielding the automorphism group.
 
    A uniform lower bound on finite-volume excitation energies is not, by itself, Condition 3. Such a gap can be used only as part of a local convergence certificate when it also supplies quasi-local spectral-flow or coarse-graining maps compatible with $j_n^m$, uniform Lieb-Robinson constants, a common local algebraic core, and a Trotter-Kato or Mosco convergence estimate implying (F.0.1). The structural SPAP/Landauer floor $\varepsilon_0=\ln2$ is dimensionless entropy cost unless a branch also fixes the physical clock, energy units, and generator normalization; it is therefore not automatically a Hamiltonian or Lindbladian spectral gap.
 
-4. **Causal-cone containment.** The limiting Lieb-Robinson support cone is contained in the geometric causal cone for every retained sector entering the local net. On the strict finite-range single-clock ND-RID branch, Corollary F.1a identifies the two cones when the same update radius, edge scale, and clock are used. Outside that strict branch, equality and one universal limiting speed require an explicit saturation/attainment bridge or an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ (Definition O.7.2.5); containment alone is sufficient for Einstein causality.
+4. **Causal-cone containment.** The limiting Lieb-Robinson support cone is contained in the geometric causal cone for every retained sector entering the local net. On the strict finite-range single-clock ND-RID branch, Corollary F.1a gives containment when the same update radius, edge scale, and clock are used, and identifies the two cones only under its additional one-step attainment hypothesis. Outside that strict branch, equality and one universal limiting speed require an explicit saturation/attainment bridge or an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ (Definition O.7.2.5); containment alone is sufficient for Einstein causality.
 
 5. **State convergence.** The microscopic states $\omega_n$ are locally normal and compatible with the embeddings:
    $$
@@ -186,7 +184,9 @@ The transition from the discrete MPU network to continuum physics is formalized 
    $$
    on the same local algebraic core.
 
-6. **Time-slice core generation.** For every relatively compact globally hyperbolic region $\mathcal O$ and every Cauchy time-slice $\Sigma\subset\mathcal O$, the local algebra generated by the evolved slice core is norm-dense in $\mathfrak A(\mathcal O)$. In the Nachtergaele-Sims uniformly-local lattice setting this property is typically derived from Lieb-Robinson bounds together with generator regularity; it is stated here as an explicit hypothesis because its derivation depends on the selected PU branch data.
+6. **Time-slice core generation.** For every relatively compact globally hyperbolic region $O$ and every Cauchy time-slice $\Sigma\subset O$, the algebra generated by the evolved slice core is norm-dense in $\mathfrak A(O)$. This is an explicit branch hypothesis.
+
+7. **Regional additivity and represented symmetries.** For every retained cover $O=\bigcup_iO_i$, the regional algebraic core for $O$ lies in the norm closure of the $*$-algebra generated by the cores for the $O_i$. For a represented topological group $G$ of geometric symmetries, specify microscopic unital $*$-automorphisms $\beta_{g,n}$ with $\beta_{gh,n}=\beta_{g,n}\beta_{h,n}$ and $\beta_{e,n}=\mathrm{id}$, compatible with the refinement maps. They transport regional cores in both directions according to $O\mapsto gO$, preserve the selected dynamics, and induce maps on the common core for which $g\mapsto\beta_g(A)$ is norm-continuous for every core element $A$. No continuity or covariance claim is made for geometric maps lacking this record.
 
 Then the inductive-limit net $\mathcal O\mapsto\mathfrak A(\mathcal O)$ exists on the Lorentzian manifold $(M,g_{\mu\nu})$ supplied jointly by Theorem 43.5 and the Appendix O hyperbolic-promotion branch, and carries a strongly continuous local evolution generated on the common core by a closable full operator $\mathcal L_{\mathrm{cont}}^*$. If the branch additionally fixes compatible regional microscopic GKLS decompositions and separate domain-preserving convergence certificates for their coherent and completely positive dissipative parts, then the limiting generator has the certified decomposition
 $$
@@ -210,21 +210,21 @@ The dual maps generated by $\mathcal L_{\mathrm{cont}}^*$ give the continuum sta
 
 This conclusion is a local $C^*$-net with a strongly continuous contraction evolution. Promotion to a standard relativistic Haag--Kastler or Wightman theory additionally requires, as applicable, reversible automorphisms or a unitary Poincare representation, an invariant cyclic vacuum, and the spectrum condition; a dissipative completely positive semigroup does not supply those properties by itself.
 
-*Proof.* Let $(\Lambda_n)_{n\in\mathbb N}$ be an increasing family of finite interaction graphs with mesh $a_n\downarrow 0$ that coarse-grain bounded regions $O\subset\mathbb R^d$ to finite vertex sets $\Lambda_n(O)\subset\Lambda_n$, with bounded local degree and uniform geometric regularity as assumed in F.0. For each $n$, let $\mathfrak A_n(\Lambda_n)$ be the quasi-local $C^*$-algebra generated by local matrix algebras $\mathfrak A_n(X):=\bigotimes_{x\in X}\mathcal B(\mathcal H_x)$ for finite $X\subset\Lambda_n$, with the natural inclusions $X\subset Y\Rightarrow\mathfrak A_n(X)\hookrightarrow\mathfrak A_n(Y)$. Set $\mathfrak A_n(O):=\overline{\bigcup_{X\subset\Lambda_n(O)}\mathfrak A_n(X)}^{\|\cdot\|}$.
+*Proof.* Let $\Lambda_n$ denote the vertex set of the finite graph at stage $n$, with regional vertex sets $\Lambda_n(O)$ and their local matrix algebras $\mathfrak A_n(O)$ as in Definitions F.1--F.2. Use the coherent unital regional embeddings of Condition 3. The physical meshes tend to zero by Condition 2. The Lorentzian geometry and the comparison of its spacelike regions with the microscopic support cones are the complete geometric-promotion and containment premises of Condition 4. No nesting of the vertex sets beyond the specified algebra embeddings is needed.
 
 Define the inductive-limit net. Let $\mathcal A$ be the global quasi-local algebra $\mathcal A:=\overline{\bigcup_{n}\iota_n\big(\mathfrak A_n(\Lambda_n)\big)}^{\|\cdot\|}$, where $\iota_n$ are the canonical embeddings. The local algebra for region $O$ is defined as $\mathcal A(O):=\overline{\bigcup_{n}\iota_n\big(\mathfrak A_n(O)\big)}^{\|\cdot\|}$ inside $\mathcal A$.
 **Principle of Compatible Embeddings.** The maps $\iota_n$ are the injective unital $*$-homomorphisms supplied by the accepted embedding record, compatible with the transition maps $j_n^m$ and equal on overlaps. Conditional expectations, when separately supplied, point from a larger algebra to a retained subalgebra and are not used as these inclusions. The accepted embeddings make the inductive limit well defined, and $\mathcal A(O_1)\subset\mathcal A(O_2)$ for $O_1\subset O_2$ follows from their locality compatibility.
 
 
-Let
+Let $\mathcal L_n^*=i[H_n,\cdot]+\mathcal D_n^*$ be the finite Heisenberg generators. On the retained time domain, Condition 2 gives
 $$
-\mathcal L_n^*=i[H_n,\cdot]+\mathcal D_n^*
+\|[\alpha_t^{(n)}(A),B]\|
+\le C\|A\|\|B\|
+e^{-\mu_n(d_n(X,Y)-v_{\rm LR}^{(n)}|t|)},
+\qquad
+\mu_n\ge\mu_0>0,\quad a_nv_{\rm LR}^{(n)}\to c.
 $$
-be the uniformly local Heisenberg generator on $\mathfrak A_n(\Lambda_n)$, with reversible dynamics $\tau_t^{(n)}$ on the Hamiltonian subbranch and completely positive contraction dynamics $\alpha_t^{(n)}$ when the dissipative ND-RID part is retained. Assume the uniform Lieb-Robinson bound: there exist $C,\mu,v_{\rm LR}>0$ independent of $n$ such that for all $A\in\mathfrak A_n(X)$ and $B\in\mathfrak A_n(Y)$,
-$$
-\big\|[\alpha_t^{(n)}(A),B]\big\|\le C\,\|A\|\,\|B\|\,e^{-\mu\big(d_n(X,Y)-v_{\rm LR}|t|\big)}.
-$$
-For each bounded $O$, the reversible maps $\tau_t^{(n)}$ have the stated quasi-local restriction for $t\in\mathbb R$, while the dissipative maps $\alpha_t^{(n)}$ have it for $t\ge0$, in each case up to the exponentially small tails controlled by the bound. The generator convergence condition (F.0.1) makes the local full generators Cauchy on the algebraic core. Since the core is dense and the generators are uniformly dissipative on observables, the limit generator is closable. The Trotter--Kato theorem gives a strongly continuous limiting evolution on $\mathcal A$: a $*$-automorphism group on the reversible Hamiltonian subbranch and a completely positive contraction semigroup when the dissipative ND-RID part is retained.
+These are graph-metric velocities; their independence of $n$ is not assumed. The regional core, closability and stability certificate of Condition 3 gives a strongly continuous limiting contraction evolution for $t\ge0$. Unitality and complete positivity pass to the point-norm limit: apply positivity to every finite matrix amplification, whose positive cone is norm-closed. For two observables, their embedded product also converges, so multiplicativity passes to a limit of finite automorphisms when that branch is used. Surjectivity requires the additional negative-time convergence and composition certificate of Condition 3; on that branch $\alpha_{-t}$ is the inverse of $\alpha_t$. Without it the conclusion is the certified forward semigroup.
 
 (Locality / LR-causality.) Let $O_1$ and $O_2$ have a strictly positive spacelike margin at time $t$. Under the lightcone-identification hypothesis, there is $\varepsilon>0$ such that
 $$
@@ -249,15 +249,20 @@ $$
 [\iota_n(\alpha_t^{(n)}(A_n)),\iota_n(B_n)]
 =0.
 $$
-Because $a_nv_{\rm LR}^{(n)}\to c$, this limiting propagation cone is the geometric causal cone. Hence
+Condition 4 places the limiting Lieb-Robinson support cone inside the geometric causal cone. Equality of the cones additionally requires the registered attainment or saturation bridge. Hence
 $$
 [\mathcal A(O_1),\mathcal A(O_2)]=\{0\}
 \qquad\text{for }O_1\subset O_2'.
 $$
 
-(Covariance and additivity.) Any microscopic geometric symmetry $\chi_n$ that preserves the selected branch, commutes with the local microscopic dynamics, and converges to an isometry $\chi$ of the limiting geometry acts by $*$-automorphisms $\alpha_{\chi_n}^{(n)}$ compatible with the embeddings. These descend to a strongly continuous representation $\chi\mapsto\alpha_\chi$ on $\mathcal A$ with $\alpha_\chi(\mathcal A(O))=\mathcal A(\chi O)$. Additivity holds since $\mathcal A(\cup_i O_i)=C^*(\cup_i \mathcal A(O_i))$ by construction.
+(Covariance and additivity.) Condition 7 defines $\beta_g$ on the common embedded core, independently of the refinement stage. Its microscopic group law and compatibility give $\beta_g\beta_h=\beta_{gh}$ and $\beta_{g^{-1}}=\beta_g^{-1}$. Isometry extends each map to a $*$-automorphism of $\mathcal A$. The regional transport record gives $\beta_g(\mathcal A(O))=\mathcal A(gO)$. For $A\in\mathcal A$ and a core approximant $A_0$,
+$$
+\|\beta_g(A)-\beta_{g_0}(A)\|
+\le2\|A-A_0\|+\|\beta_g(A_0)-\beta_{g_0}(A_0)\|.
+$$
+Dense-core continuity therefore gives point-norm continuity on $\mathcal A$. For $O=\bigcup_iO_i$, isotony gives $C^*(\bigcup_i\mathcal A(O_i))\subseteq\mathcal A(O)$, and the regional core-generation premise gives the reverse inclusion. Thus additivity and covariance hold for precisely the covers and symmetry group supplied in Condition 7.
 
-Thus $\{\mathcal A(O)\}_{O}$ with the limiting evolution generated by $\mathcal L_{\mathrm{cont}}^*$ satisfies isotony, additivity, covariance for the represented emergent isometry subgroup, the time-slice property under the time-slice core-generation assumption, and locality once the lightcone-identification hypothesis is imposed. The Hamiltonian term is retained as the local limit of the coherent microscopic generators; it is not discarded by a smallness argument. This is the content of the conditional continuum bridge stated in Theorem F.0. [Bratteli & Robinson 1997; Nachtergaele & Sims 2010] ∎
+Thus $\{\mathcal A(O)\}_{O}$ with the limiting evolution generated by $\mathcal L_{\mathrm{cont}}^*$ satisfies isotony, additivity, covariance for the represented emergent isometry subgroup, the time-slice property under the time-slice core-generation assumption, and locality once the lightcone-identification hypothesis is imposed. A separate coherent-convergence certificate identifies a retained Hamiltonian term as the local limit of the coherent microscopic generators. Without that certificate, the conclusion concerns only the full generator $\mathcal L_{\mathrm{cont}}^*$. This is the content of the conditional continuum bridge stated in Theorem F.0. [Bratteli & Robinson 1997; Nachtergaele & Sims 2010] ∎
 
 **Definition F.0a (Local Generator Convergence Certificate).** A finite AQFT-continuum branch supplies a local generator convergence certificate
 $$
@@ -270,22 +275,29 @@ when, for every bounded diamond $O$, the following finite data are fixed before 
 1. compatible embeddings $j_n^m:\mathfrak A_n(O)\to\mathfrak A_m(O)$ and $j_n:\mathfrak A_n(O)\to\mathcal A(O)$ satisfying $j_m\circ j_n^m=j_n$ on the retained local algebra;
 2. a common local algebraic core $\mathfrak C_O\subset\bigcup_n j_n\mathfrak A_n(O)$ dense in the graph norm of $\mathcal L_{\mathrm{cont}}^*$;
 3. finite-volume generators $\mathcal L_n^*$ on $\mathfrak A_n(O)$ with uniform locality constants compatible with the Lieb-Robinson bounds used in Proposition F.1;
-4. for each $A\in\mathfrak C_O$, representatives $A_n\in\mathfrak A_n(O)$ such that $j_n(A_n)\to A$ and
+4. for every $A\in\mathfrak C_O$, choose a stage $n_A$ and cofinally consistent representatives $A_n\in\mathfrak A_n(O)$ for $n\ge n_A$, with $j_n(A_n)=A$ and $A_m=j_n^m(A_n)$ for $m\ge n\ge n_A$, such that
 $$
 \left\|j_n\mathcal L_n^*(A_n)-\mathcal L_{\mathrm{cont}}^*(A)\right\|
-\le
-\varepsilon_{O,n}(A),
+\le\varepsilon_{O,n}(A),
 \qquad
 \varepsilon_{O,n}(A)\to0;
 \tag{F.0a.1}
 $$
-5. a Trotter-Kato or Mosco-type convergence ledger $\tau_O$ proving that (F.0a.1) extends from the core to the local semigroups on $\mathcal A(O)$.
+5. a Trotter--Kato or equivalent stability record $\tau_O$ specifying the domains, closability, graph-core property and contraction-semigroup generation required in Theorem F.0(3), and proving convergence of the embedded finite semigroups uniformly on compact intervals of nonnegative time. The regional embeddings and restrictions obey the coherence and locality requirements of that condition. A reversible group requires its additional two-sided convergence and composition certificate.
 
 A uniform lower bound on finite-volume excitation energies is not by itself a local generator convergence certificate. Such a bound may enter $\mathfrak C_{\mathrm{gen}}$ only when it supplies the compatible embeddings, local core, quasi-local comparison maps, uniform locality constants, and convergence estimates listed above. The structural SPAP/Landauer floor $\varepsilon_0=\ln2$ is a dimensionless entropy cost unless a branch also fixes the physical clock, energy units, and generator normalization.
 
 **Theorem F.0b (Certificate Implies Theorem F.0 Condition 3).** If $\mathfrak C_{\mathrm{gen}}$ is accepted for every bounded diamond in the branch and the compatibility hypotheses of Theorem F.0 hold, then Condition 3 of Theorem F.0 is satisfied.
 
-*Proof.* Fix a bounded diamond $O$ and $A\in\mathfrak C_O$. Definition F.0a supplies representatives $A_n$ with $j_n(A_n)\to A$ and (F.0a.1). Hence the finite generators converge to $\mathcal L_{\mathrm{cont}}^*$ on a graph-core dense subset. The ledger $\tau_O$ is precisely the Trotter-Kato or Mosco extension from core convergence to semigroup convergence on $\mathcal A(O)$. Compatibility of the embeddings gives the same limiting action for cofinal finite refinements. Therefore the local generator convergence demanded in Condition 3 of Theorem F.0 holds on $O$. Since $O$ was arbitrary, the condition holds throughout the local net. ∎
+*Proof.* Let $O$ be a bounded diamond and $A\in\mathfrak C_O$. For $m\ge n\ge n_A$, the consistent representatives satisfy $A_m=j_n^mA_n$. The isometry of $j_m$ and $j_mj_n^m=j_n$ give
+$$
+\begin{aligned}
+&\|j_n^m(\mathcal L_n^*A_n)-\mathcal L_m^*(A_m)\|\\
+&=\|j_n\mathcal L_n^*A_n-j_m\mathcal L_m^*A_m\|\\
+&\le\varepsilon_{O,n}(A)+\varepsilon_{O,m}(A)\longrightarrow0.
+\end{aligned}
+$$
+This is precisely (F.0.1) on the regional core. The record $\tau_O$ supplies closability, the graph-core and generation properties, and the stated forward semigroup convergence. Its regional compatibility and the theorem's embedding hypotheses give the remaining parts of Condition 3. A group conclusion uses the additional reversible certificate. ∎
 
 **Definition F.0c (Mosco-Bochner AQFT Bridge Certificate).** A Mosco-Bochner AQFT bridge certificate for a selected operational-continuum branch is a finite record
 $$
@@ -314,7 +326,7 @@ such that:
 
 2. the finite propagation-cost Dirichlet forms $\mathcal E_n$ Mosco-converge to the quadratic Cheeger energy of the noncollapsed $\mathrm{RCD}^*(K,4)$ limit supplied by Theorem C.6c;
 
-3. the finite generators $L_n$ are the self-adjoint or dissipative generator representatives associated with $\mathcal E_n$ on the retained local algebraic cores;
+3. on their specified Hilbert spaces and form domains, $L_n$ are the nonnegative self-adjoint operators associated with the closed symmetric Markovian forms $\mathcal E_n$. The associated contraction semigroups are $e^{-tL_n}$, whose dissipative generators are $-L_n$. Their form-domain and interpolation data belong to the Mosco certificate. The full Heisenberg generators on the observable algebras are governed separately by $\mathfrak C_{\mathrm{gen}}$; Hilbert-space form convergence alone does not identify those generators;
 
 4. the local finite observable algebras $\mathfrak A_n(O)$ form an inductive compatible system under the embeddings $j_n^m$ and the continuum injections $\iota_n$;
 
@@ -329,16 +341,18 @@ and the decay rates and support prefactors satisfy the uniform hypotheses of Cor
 
 7. the positive-energy spectral ledger $\mathfrak S_+$ fixes a common lower bound for the limiting reversible generator after the vacuum energy convention of the branch is applied.
 
-**Theorem F.0d (Mosco-Bochner Certificate and Locality Side Conditions Give a Stable Local Envelope).** Suppose a selected branch carries an accepted certificate $\mathfrak B_{\mathrm{AQFT}}$. Assume additionally the uniform interaction/locality bounds of Theorem F.0(1), the state-convergence condition of Theorem F.0(5), and the time-slice core-generation condition of Theorem F.0(6). Then the finite MPU local algebras converge to the stable local $C^*$-net and contraction-semigroup envelope stated in Theorem F.0. A Haag--Kastler or Wightman promotion requires the additional reversible-representation and spectrum package of Definition F.0h. Moreover, for every bounded diamond $O$ and every $t\ge0$,
+**Theorem F.0d (Mosco-Bochner Certificate and Locality Side Conditions Give a Stable Local Envelope).** Suppose a branch carries an accepted certificate $\mathfrak B_{\mathrm{AQFT}}$ and the complete geometric-promotion branch used in Theorem F.0. Assume additionally the uniform interaction bounds, physical Lieb--Robinson estimates, causal-cone containment, state convergence, time-slice generation and regional/symmetry compatibility of Theorem F.0(1), (2), (4), (5), (6) and (7). The embeddings and cores in the certificate satisfy the regional requirements of Theorem F.0(3). Then the finite MPU local algebras have the stable local $C^*$-net and contraction-semigroup envelope stated there. A Haag--Kastler or Wightman promotion requires the additional package of Definition F.0h. For the symmetric Hilbert-space form operators, also supply a Mosco-to-semigroup comparison certificate identifying its source theorem and verifying the theorem's form-domain, density, weak/strong convergence and interpolation hypotheses. Under that certificate, for every $t\ge0$,
 $$
 e^{-tL_n}\to e^{-tL}
 \tag{F.0d.1}
 $$
-strongly after applying the interpolation maps in the Mosco certificate, where $L$ is the generator of the limiting Dirichlet form.
+strongly after the specified Hilbert-space interpolation maps are applied, where $L\ge0$ is the self-adjoint operator associated with the limiting closed symmetric Dirichlet form and $-L$ is its dissipative semigroup generator.
 
-*Proof.* Item (1) and Theorem D.6e give $\mathfrak D_n\to0$ and Mosco convergence of the rescaled propagation-cost forms. Item (2) identifies the Mosco limit with the quadratic Cheeger energy on the noncollapsed $\mathrm{RCD}^*(K,4)$ branch of Theorem C.6c. Therefore the limiting spatial envelope has a strongly local regular Dirichlet form with the infinitesimally Hilbertian structure required by Theorem 43.5.
+*Proof.* Item (1) supplies $\mathfrak D_n\to0$. Item (2) supplies Mosco convergence of the rescaled propagation-cost forms and identifies the limit with the quadratic Cheeger energy on the noncollapsed $\mathrm{RCD}^*(K,4)$ branch of Theorem C.6c. Therefore the limiting spatial envelope has a strongly local regular Dirichlet form with the infinitesimally Hilbertian structure required by Theorem 43.5.
 
-For closed Markovian forms, Mosco convergence gives strong convergence of the associated contraction semigroups after applying the interpolation maps in the certificate, which proves (F.0d.1). Item 5 and Theorem F.0b supply generator convergence. Item 4 supplies the algebraic inductive-system compatibility. The separate uniform-interaction hypothesis of Theorem F.0d supplies Theorem F.0(1), and item 6, interpreted with the physical scaling (F.0c.2), supplies Theorem F.0(2) and the lightcone identification. The additional state and time-slice hypotheses supply Theorem F.0(5)–(6). Theorem F.0 therefore applies. ∎
+The Mosco-to-semigroup comparison certificate identifies an applicable source by author, year and theorem number, states its closed symmetric form and density assumptions, and verifies its weak/strong convergence structures and Hilbert-space interpolation maps for the selected sequence. Applying that particular theorem gives (F.0d.1). Mosco [1969] names the form-convergence framework; that citation alone does not identify or verify a varying-Hilbert-space semigroup theorem. The source theorem and its application are separate entries of the branch certificate.
+
+For the observable net, item 5 and Theorem F.0b supply generator convergence; item 4 and the additional regional hypotheses supply coherent algebra embeddings. The separately stated assumptions give Theorem F.0(1), (2), (4), (5), (6) and (7), so that theorem applies on the complete geometric-promotion branch. The slope limit in item 6 alone proves neither causal-cone attainment nor the stronger uniform Lieb--Robinson estimate nor an identification of the form generator with the full Heisenberg generator. ∎
 
 **Definition F.0e (Projective Single-Clock AQFT Certificate).** A projective single-clock AQFT certificate for a selected operational-continuum branch is a finite record
 $$
@@ -366,13 +380,13 @@ $$
 7. The time-slice indicator $\chi_{\mathrm{slice}}=1$ records that the evolved slice core is norm dense in every relatively compact globally hyperbolic diamond.
 8. The positive-energy spectral ledger $\mathfrak S_+$ fixes the lower-energy convention for the limiting reversible generator.
 
-**Theorem F.0f (Projective Single-Clock Certificate with Semigroup Stability Gives the Local-Net Bridge).** Suppose a selected branch carries an accepted $\mathfrak P_{\mathrm{AQFT}}$. Assume on each bounded diamond that the projective core operator is closable, its closure generates a strongly continuous contraction semigroup, and the finite semigroups satisfy the Trotter--Kato range condition of Theorem F.0(3). Then the stable local-$C^*$-net conclusions of Theorem F.0 hold and the projective data plus this stability record supply $\mathfrak C_{\mathrm{gen}}$. A Haag--Kastler or Wightman promotion is not implied by a dissipative contraction semigroup and remains conditional on Definition F.0h.
+**Theorem F.0f (Projective Single-Clock Certificate with Semigroup Stability Gives the Local-Net Bridge).** Suppose a selected branch carries an accepted $\mathfrak P_{\mathrm{AQFT}}$ and the complete geometric-promotion branch of Theorem F.0. Assume on every bounded diamond the uniform interaction bounds, physical Lieb--Robinson estimates, causal-cone containment and regional/symmetry conditions of Theorem F.0(1), (2), (4) and (7). The projective embeddings are unital, coherent and region-preserving, and the common cores and regional restrictions satisfy Theorem F.0(3). Assume also that each projective core operator is closable, its closure generates a strongly continuous contraction semigroup, and an accepted stability record gives convergence of the finite semigroups on compact nonnegative time intervals. Then the stable local-$C^*$-net conclusions of Theorem F.0 hold, and these records supply $\mathfrak C_{\mathrm{gen}}$. A reversible group requires the additional two-sided certificate in Theorem F.0(3); a Haag--Kastler or Wightman promotion remains conditional on Definition F.0h.
 
-*Proof.* Item 1 gives the operational-continuum envelope by Corollary 43.5a and Theorem 43.5. Items 2 and 3 give the compatible inductive system and common local algebraic core required in Theorem F.0. Item 4 gives uniform locality, a uniform strict support cone, and the lightcone normalization of Corollary F.1a. Item 5 makes the generator-convergence difference in (F.0.1) identically zero on the core for every $m\ge n$, so Definition F.0a is satisfied with zero core-convergence defect. Item 6 gives state convergence. Item 7 gives the time-slice core-generation hypothesis. Item 8 gives the positive-energy input in the reversible subbranch. Therefore all hypotheses of Theorem F.0 are satisfied, and the resulting inductive-limit net has isotony, additivity, covariance for the represented emergent isometry subgroup, locality, the time-slice property, and the stated limiting dynamics. ∎
+*Proof.* Item 1 supplies the operational-continuum envelope on its accepted branch. Items 2 and 3, with the regional hypotheses, give a coherent inductive system and norm-dense common cores. Item 4 bounds one-tick support growth; the separate Theorem F.0(1), (2) and (4) premises supply interaction bounds, physical Lieb--Robinson control and cone containment. Equality of cone slopes requires attainment. For a common core element, use its cofinally consistent representatives. Item 5 makes the generator-convergence difference in (F.0.1) zero at every cofinal pair of stages, so the embedded generator values agree and define the projective core operator. Its closability, graph-core and semigroup-generation/convergence records give Definition F.0a. Item 6 gives state convergence, item 7 gives time-slice generation, and the additional Theorem F.0(7) premise gives additivity and the represented continuous symmetry action. Thus every hypothesis of Theorem F.0 holds. Item 8 retains the lower-energy convention when the reversible subbranch is supplied, but does not establish reversibility. ∎
 
-**Corollary F.0g (Local-Net Ledger Closure on the Stable Projective Branch).** The operational-continuum and stable local-$C^*$-net rows are closed on a branch carrying $\mathfrak Z_{\mathrm{cont}}$, an accepted $\mathfrak P_{\mathrm{AQFT}}$, and the semigroup-stability record required by Theorem F.0f: closability of each projective core operator, generation of a strongly continuous contraction semigroup by its closure, and the Trotter--Kato range condition on every bounded diamond. A standard relativistic AQFT or Wightman row remains open until the reversible representation, invariant state, spectrum, covariance, and field-domain entries of Definition F.0h are supplied.
+**Corollary F.0g (Local-Net Ledger Closure on the Stable Projective Branch).** The operational-continuum and stable local-$C^*$-net rows are closed on a branch carrying $\mathfrak Z_{\mathrm{cont}}$, an accepted $\mathfrak P_{\mathrm{AQFT}}$, and all geometric-promotion, regional-embedding, locality, causal-cone, symmetry and semigroup-stability premises of Theorem F.0f. A standard relativistic AQFT or Wightman row remains open until the additional reversible representation, invariant state, spectrum, covariance and field-domain entries of Definition F.0h are supplied.
 
-*Proof.* Corollary 43.5a discharges the continuum competitor condition. The projective record plus the three stability entries are precisely the antecedent of Theorem F.0f, which supplies the stable local-net and generator-convergence conclusions on each bounded diamond. Omitting any stability entry prevents that invocation. Definition F.0h lists the additional data not contained in the contraction-semigroup certificate, so no stronger promotion follows from the projective record alone. ∎
+*Proof.* Corollary 43.5a supplies the continuum competitor condition on its branch, and the complete antecedent of Theorem F.0f gives the local-net and generator-convergence conclusions on every bounded diamond. The additional entries of Definition F.0h are required for its stronger promotion. ∎
 
 **Definition F.0h (Complete Local-QFT/Metric Branch Package).** A complete local-QFT/metric branch package is a finite record
 $$
@@ -383,11 +397,11 @@ $$
 $$
 with the following entries fixed on each bounded-diamond family before any continuum or metric comparison: an accepted zero-defect operational-continuum, projective single-clock, Mosco-Bochner, or explicit local generator convergence record; finite generators, common cores, embeddings, locality bounds, and defect bounds; finite KMS descent with $\delta_n\to0$; Hadamard-PCE finite-cost admissibility; split/nuclearity or a weaker finite phase-space compactness certificate sufficient for the claimed local net; faithful wedge states; boost/modular convergence; spectrum condition; modular covariance; finite Reeh-Schlieder replacement; Jost analyticity and Wightman reconstruction domain; local field realization; local-horizon thermodynamics and finite retained GSL; null-convexity or accepted second-variation substitute with zero retained modular/QNEC slack on reversible Einstein branches; the metric-action certificate; the nondegenerate finite-response gravitational-channel ensemble with smooth-envelope record, positive Hessian, linearization radius, and metric covariance; the overlap audit with the stress-energy, area-law, orientation, scrambling, Theorem 48a, and registry entries; and $\chi_{\mathrm{loc}}=1$.
 
-**Theorem F.0i (Local-QFT/Einstein Closure or Minimal No-Hidden-Physics List).** If $\mathfrak C_{\mathrm{loc\mbox{-}grav}}$ is accepted, then the branch derives a stable local AQFT net, Wightman realization, emergent Einstein equation, local horizon thermodynamics, metric response, and metric covariance from finite records, with residuals only in the intervals named by the tuple.
+**Theorem F.0i (Local-QFT/Einstein Closure and Outstanding Certificate Inputs).** If $\mathfrak C_{\mathrm{loc\mbox{-}grav}}$ is accepted, then the branch derives a stable local AQFT net, Wightman realization, emergent Einstein equation, local horizon thermodynamics, metric response, and metric covariance from finite records, with residuals only in the intervals named by the tuple.
 
-If $\mathfrak C_{\mathrm{loc\mbox{-}grav}}$ is absent, the minimal finite no-hidden-physics hypothesis list is exactly the missing entries of Definition F.0h. In particular, the structural theorems do not by themselves supply all of: local generator convergence outside accepted projective or Mosco-Bochner discharge branches, finite KMS descent with $\delta_n\to0$, Hadamard-PCE finite-cost admissibility, split/nuclearity or weaker phase-space compactness, faithful wedge states, boost/modular convergence, spectrum condition, Jost analyticity, local field realization, finite retained GSL, null-convexity or second-variation substitute, zero modular/QNEC slack on a reversible Einstein branch, nondegenerate gravitational response ensemble, smooth envelope, positive Hessian, linearization radius, and metric covariance.
+If $\mathfrak C_{\mathrm{loc\mbox{-}grav}}$ is absent, the unfilled entries of Definition F.0h are the outstanding hypotheses of this sufficient closure package. In particular, the structural theorems do not by themselves supply all of: local generator convergence outside accepted projective or Mosco-Bochner discharge branches, finite KMS descent with $\delta_n\to0$, Hadamard-PCE finite-cost admissibility, split/nuclearity or weaker phase-space compactness, faithful wedge states, boost/modular convergence, spectrum condition, Jost analyticity, local field realization, finite retained GSL, null-convexity or second-variation substitute, zero modular/QNEC slack on a reversible Einstein branch, nondegenerate gravitational response ensemble, smooth envelope, positive Hessian, linearization radius, and metric covariance.
 
-*Proof.* Theorem F.0 gives the stable local-net conclusion from locality, Lieb-Robinson, tightness, state convergence, and compatibility hypotheses. Definitions F.0a, F.0c, and F.0e give finite discharge routes for generator and operational-continuum data. Definition F.10.12a and Theorem F.10.12c give the KMS descent and emergent-metric closure only when their finite records are accepted. The Wightman realization additionally requires wedge, spectrum, Jost, locality, and local field domain data. The Einstein and thermodynamic conclusions require entropy, null-variation, metric-action, and gravitational-channel data. With the overlap audit, the component theorems compose. If any response-active entry is absent, admissible completions can preserve the prior structural branch but differ in local-net, Wightman, thermodynamic, or metric response, so Theorem P.14.1f prevents the stronger claim. ∎
+*Proof.* Theorem F.0 gives the stable local-net conclusion from locality, Lieb-Robinson, tightness, state convergence, and compatibility hypotheses. Definitions F.0a, F.0c, and F.0e give finite discharge routes for generator and operational-continuum data. Definition F.10.12a and Theorem F.10.12c give the KMS descent and emergent-metric closure only when their finite records are accepted. The Wightman realization additionally requires wedge, spectrum, Jost, locality, and local field domain data. The Einstein and thermodynamic conclusions require entropy, null-variation, metric-action, and gravitational-channel data. With the overlap audit, the component theorems compose. If two admissible completions preserve every registered prior constraint but give inequivalent retained local-net, Wightman, thermodynamic, or metric outputs, Theorem P.14.1f proves non-identifiability for that output. An unfilled entry alone establishes that this closure package is incomplete; it does not establish the existence of such a pair or the logical necessity of each entry. ∎
 
 **Theorem F.0j (Finite Reversibility Gate for Local Completely Positive Dynamics).** Let $\mathcal A$ be a finite-dimensional $C^*$-algebra and let $\Phi:\mathcal A\to\mathcal A$ be unital and completely positive. If $\Phi$ has a unital completely positive inverse, then $\Phi$ is a $*$-automorphism. Consequently, every strongly continuous one-parameter group $(\Phi_t)_{t\in\mathbb R}$ of such maps fixes the center componentwise and, on each matrix factor in the identity component, has the form
 $$
@@ -419,9 +433,9 @@ This theorem completely separates the reversible finite-carrier branch from genu
 
 AQFT allows for a rigorous, state-dependent definition of the macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}$ as an operator-valued distribution, capturing the energy and momentum content of the emergent fields derived from the MPU network activity.
 
-*   **Definition F.4 (Macroscopic $T_{\mu\nu}^{(MPU)}$ in AQFT):** Within the emergent AQFT framework (conditional on Definition F.3), the macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}(x)$ is defined rigorously in two consistent ways:
+*   **Definition F.4 (Macroscopic $T_{\mu\nu}^{(MPU)}$ in AQFT):** Within the emergent AQFT framework of Definition F.3, assume that the branch supplies the renormalized stress-energy distribution, the effective-action hypotheses of Theorem X.5a, and the variational-identification hypotheses of Theorem B.8c, and absolute continuity $\mathbf T\ll dV_g$ of its limiting stress measure. On this branch the macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}(x)$ has two consistent representations:
     1.  **As Expectation Value:** As the expectation value of a symmetric, operator-valued distribution $\hat{\Theta}_{\mu\nu}(x)$ affiliated with the algebra $\mathfrak{A}$. This distribution $\hat{\Theta}_{\mu\nu}(x)$ represents the continuum limit of the microscopic symmetric tensor operator $\hat{\Theta}_{\mu\nu}^{(MPU)}(v)$ (defined in Theorem B.4, Appendix B). This requires a process of regularization and renormalization in the continuum limit. $T_{\mu\nu}^{(\mathrm{MPU})}(x) = \omega(\hat{\Theta}_{\mu\nu}(x))$, where $\omega$ is the physical state (Section F.4). This definition connects the macroscopic tensor to the underlying MPU activity and costs.
-    2.  **Via Variation of the Derived Effective Action:** On the regular branch, Theorem X.5a constructs a generally covariant coarse-grained effective action $S_{eff}[\omega,g]$. The stress-energy tensor is therefore variationally defined, with the sign convention matching Equations (B.15a), (B.21), and (67e), by
+    2.  **Via Variation of the Derived Effective Action:** Under its seven stated hypotheses on the regular Lorentzian branch, Theorem X.5a constructs a generally covariant coarse-grained effective action $S_{eff}[\omega,g]$. The stress-energy tensor is therefore variationally defined, with the sign convention matching Equations (B.15a), (B.21), and (67e), by
         $$
         T^{\mu\nu}_{(\mathrm{MPU})}(x)
         :=
@@ -440,8 +454,8 @@ AQFT allows for a rigorous, state-dependent definition of the macroscopic MPU st
         =
         -g^{\alpha\mu}g^{\beta\nu}\delta g_{\mu\nu}.
         $$
-        Theorem B.8c (Variational Identification) identifies this variational tensor with the coarse-grained expectation-value tensor of Appendix B.
-    Consistency of the framework is therefore an on-shell theorem rather than an additional assumption.
+        Under hypotheses (H B.8c.1)–(H B.8c.3) and the additional absolute-continuity premise $\mathbf T\ll dV_g$, Theorem B.8c (Variational Identification) identifies this variational tensor with the coarse-grained expectation-value tensor of Appendix B.
+    Agreement of the two representations follows on this variational-identification branch. On-shell covariant conservation additionally follows under the hypotheses of Theorem F.1.
 
 *   **Theorem F.1 (Covariant Conservation of $T_{\mu\nu}^{(MPU)}$ in AQFT).** Assuming the effective action $S_{eff}[\omega, g]$ is generally covariant (invariant under diffeomorphisms of $M$), the variationally defined stress-energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}(x)$ (Equation F.3) is covariantly conserved ($\nabla^{\mu} T_{\mu\nu}^{(\mathrm{MPU})} = 0$) when the emergent dynamical equations for the state $\omega$ (derived from $\delta S_{eff} / \delta \omega = 0$) and the geometry $g_{\mu\nu}$ (if it is also dynamical) are satisfied (on-shell).
 
@@ -508,9 +522,13 @@ $$
 T_0+\operatorname{im}V.
 \tag{F.1b.4}
 $$
-An additional linear normalization map $N$ on the stress space selects a unique stress exactly when $N$ is injective on $\operatorname{im}V$; otherwise two counterterms preserve every normalization and change the stress.
+For a prescribed normalization value $b$, require the affine constraint set
+$$
+\{T\in T_0+\operatorname{im}V:N(T)=b\}
+$$
+to be nonempty. It then contains exactly one stress if and only if the linear normalization map $N$ is injective on $\operatorname{im}V$. Without the nonemptiness premise, injectivity gives at most one stress.
 
-*Proof.* Differentiate $\Gamma(g,\rho(g))$. Because $\partial_a\rho(g)$ is an admissible tangent, its chain-rule term vanishes by stationarity, giving (F.1b.2). Differentiating symmetry invariance in $\xi$ gives (F.1b.3). Counterterms add their gradients linearly, proving (F.1b.4). Linearity of $N$ makes two points in that affine fiber have the same normalization exactly when their difference lies in $\ker N\cap\operatorname{im}V$, which is zero exactly under the stated injectivity condition. ∎
+*Proof.* The chain rule for $\Gamma(g,\rho(g))$ has a state-variation term $D_\rho\Gamma[\partial_a\rho]$, which vanishes because $\partial_a\rho$ is an admissible tangent and the state is stationary. This gives (F.1b.2), with $\partial_a\mathcal R$ denoting the explicit parameter derivative with the state held constant. Differentiating symmetry invariance gives (F.1b.3), and linear counterterm gradients give (F.1b.4). Choose an admissible normalized stress $T_*$ in the nonempty constraint set. Every other such stress differs from $T_*$ by an element of $\ker N\cap\operatorname{im}V$, and every such difference gives another admissible stress. Thus the constraint set is the affine space $T_*+(\ker N\cap\operatorname{im}V)$, a singleton exactly when that intersection is zero. This is equivalent to injectivity of $N$ on $\operatorname{im}V$. ∎
 
 The theorem is exact at a fixed finite regulator. Operator-valued-distribution convergence, local covariance, and removal of the regulator remain the independent continuum requirements in Definition F.0h.
 
@@ -550,7 +568,7 @@ $$
 so Alice’s local choice cannot alter Bob’s marginal on the local CPTP branch. Different contexts may correspond to different shared-past global state preparations $\omega_{C_A}$, or to Bob-marginal-preserving joint/conditional deformations, or—on the stronger branch-(iii) hypothesis—to a statistical marginal anomaly. The following constraints bound endpoint forcing and finite-window reliability, but Theorem 39c makes exact marginal invariance the separate condition for operational causality:
    *   CC Endpoint-Complete Bound: the bounded-bias branch declares $\text{CC}\le\alpha_{CC,max}<0.5$, and Theorem 39 proves that this excludes a single protocol from forcing both binary endpoints. It does not forbid forcing one endpoint when the baseline lies sufficiently close to it, so operational causality still requires Theorem 39c's exact marginal invariance.
    *   Zero-Error Statistical-FTL Gate: Theorem 39a shows that, on the regular finite-window branch (Definition 10.2a), a branch-(iii) marginal shift can have positive statistical information while still having zero finite-window zero-error capacity.
-   *   ND-RID Information Limits: Registered ND-RID interactions carry the following limits only on their stated reset, refresh/minorization, and support-deficit branches: ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31), the completed reset-support capacity deficit ($C_{\max}\le\ln d_0-\ln2$, Proposition E.2a), and, on refresh/minorization branches, strict contractivity ($f_{RID}<1$, Lemma E.1) with strict finite channel capacity ($C_{\max}<\ln d_0$, Theorem E.2). These ledgers bound cost, rate, or contraction on their stated branches; by themselves they do not exclude a positive-capacity signaling channel. The finite-window zero-error conclusion instead uses Definition 10.2a and Theorems 39a and 42, while any freely selectable nonzero pre-lightcone marginal channel remains signaling by Theorem 39c.
+   *   ND-RID Information Limits: Registered ND-RID interactions carry the following limits only on their stated reset, refresh/minorization, and support-deficit branches: ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive uniform floor inferred from this entropy bound requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31), the completed reset-support capacity deficit ($C_{\max}\le\ln d_0-\ln2$, Proposition E.2a), and, on refresh/minorization branches, strict contractivity ($f_{RID}<1$, Lemma E.1) with strict finite channel capacity ($C_{\max}<\ln d_0$, Theorem E.2). These ledgers bound cost, rate, or contraction on their stated branches; by themselves they do not exclude a positive-capacity signaling channel. The finite-window zero-error conclusion instead uses Definition 10.2a and Theorems 39a and 42, while any freely selectable nonzero pre-lightcone marginal channel remains signaling by Theorem 39c.
 
 AQFT formalizes how operator locality for observables, when the continuum bridge applies, coexists with constrained state-mediated statistical non-locality for expectations and outcome probabilities. The influence is in the preparation of the global state ensemble, not in the local interaction rule.
 
@@ -560,7 +578,7 @@ AQFT formalizes how operator locality for observables, when the continuum bridge
 
 Lorentz/AQFT compatibility is maintained on the exact marginal-invariant and shared-past branches. A freely selectable branch-(iii) pre-lightcone marginal shift is not covered by that compatibility claim, because Theorem 39c makes it a positive-capacity superluminal channel:
 1.  **State Dependence:** The statistical influence (Equation F.4) depends on the global state $\omega_{C_A}$. Lorentz transformations act consistently on both the operators $B \in \mathfrak{A}(\mathcal{O}_B)$ and the description of the state $\omega$.
-2.  **No Preferred Frame Signaling:** Theorems 39a and 42 exclude only zero-error finite-window decoding. If the late context changes Bob's pre-lightcone marginal, Theorem 39c gives a signaling channel, so no preferred-frame or Lorentz-compatibility conclusion follows for that branch. The influence may be statistically detectable, but it does not constitute the deterministic operational communication required for Lorentz-paradox construction.
+2.  **No Preferred Frame Signaling:** Theorems 39a and 42 exclude only zero-error finite-window decoding. If the late context changes Bob's pre-lightcone marginal, Theorem 39c gives a signaling channel, so no preferred-frame or Lorentz-compatibility conclusion follows for that branch. On the regular finite-window branch, the influence cannot supply the zero-error decoding step in the contradiction protocol covered by Theorem 42.
 3.  **Lorentz Covariance of Dynamics:** The underlying effective action $S_{eff}$ (Section F.5) and dynamics generator $\mathcal{L}^*$ (Section F.4) are assumed to be Lorentz or generally covariant in the emergent spacetime. The process of state preparation $\omega_{C_A}$ and the resulting statistical correlations transform consistently under Lorentz boosts.
 4.  **Analogy with Entanglement:** This is analogous in causal role, though not identical in marginal structure, to the non-locality of standard quantum entanglement: the relevant compatibility condition is exact absence of a freely selectable pre-lightcone marginal channel, as stated by Theorem 39c. Only the Bob-marginal-invariant or shared-past CC branches fall into this causal category; branch (iii) does not.
 
@@ -577,7 +595,7 @@ AQFT provides a robust mathematical framework for analyzing the properties of th
 *   A clear formulation of the framework's stance on locality, allowing for hypothesized state-mediated statistical influence (Equation F.4, Postulate 3) on the Bob-marginal-preserving branch, while distinguishing the stronger branch-(iii) marginal anomaly analyzed in Section 10 on the regular finite-window branch (Definition 10.2a).
 *   Separation of exact operational causality (Theorem 39c) from the weaker endpoint, finite-window zero-error, sample-complexity, and information-rate bounds of Theorems 39–42.
 
-The full AQFT bridge is status-split. On the strict projective single-clock branch, Definition F.0e and Theorem F.0f supply the local generator convergence, lightcone identification, state convergence, and time-slice records as a finite certificate. On the Mosco-Bochner branch, Definition F.0c and Theorem F.0d supply the corresponding Dirichlet-form and generator-convergence data. Outside those branch-discharge records, the remaining items are exactly the still-open bridge tasks: weighted-shell/local-isotropy transfer strong enough for scalar curvature, uniform discrete curvature-dimension or radius-2 Bochner control, Mosco convergence or an equivalent quadratic-Cheeger theorem, Euclidean rigidity on the selected measured limit, and a controlled coarse-graining theorem retaining the coherent Hamiltonian limit region-wise. Thus the AQFT row is closed on $\mathfrak P_{\mathrm{AQFT}}$ or $\mathfrak B_{\mathrm{AQFT}}$ and remains certificate-pending otherwise.
+The full AQFT bridge is status-split. On the strict projective single-clock branch, Definition F.0e supplies exact core compatibility, while Theorem F.0f requires its additional locality, causal-cone, and semigroup-stability hypotheses for the stable local-$C^*$-net conclusion. On the Mosco-Bochner branch, Definition F.0c and all side conditions of Theorem F.0d supply the corresponding Dirichlet-form and local-net conclusions. The separate coherent Hamiltonian limit requires an accepted coherent-convergence record. A standard relativistic AQFT or Wightman realization additionally requires the representation, state, spectrum, covariance, and field-domain data of Definition F.0h. Missing entries remain bridge obligations on the selected branch.
 
 
 ## F.9 Spin-Statistics Connection and CPT Theorem
@@ -619,7 +637,7 @@ Assume the local net has been promoted through Definition F.0h to a relativistic
 1. a unitary representation of the cover of the proper orthochronous Lorentz group acting covariantly on fields,
 2. a unique invariant vacuum $\Omega$,
 3. the spectrum condition, and
-4. local commutativity at spacelike separation.
+4. spacelike commutativity of the observable net and, for each retained nonzero Wightman field multiplet and its adjoint, a definite Bose-or-Fermi spacelike exchange alternative whose sign is not fixed in advance by the observable-net axiom.
 
 Then fields transforming under integer-spin representations of the Lorentz group satisfy Bose-Einstein statistics, while fields transforming under half-integer-spin representations satisfy Fermi-Dirac statistics.
 
@@ -633,7 +651,7 @@ $$
 \tag{F.9.1}
 $$
 
-*Proof.* A Wightman realization supplies tempered operator-valued distributions on a common invariant domain, Hilbert-space positivity, a cyclic invariant vacuum, Poincaré covariance, and the spectrum condition. Hypotheses 1–4 supply Lorentz-cover covariance, vacuum uniqueness, forward-cone spectrum, and weak local commutativity at Jost points. These are precisely the hypotheses of the Wightman spin–statistics theorem as proved by Lüders and Zumino (1958) and formulated by Streater and Wightman (1964). Applied to each irreducible field multiplet and its adjoint, that theorem identifies the exchange sign with the action of the central $2\pi$ rotation, namely $(-1)^{2(j_1+j_2)}$. The nonzero-field hypothesis excludes the theorem’s trivial-field alternative. Hence the integer-parity multiplets obey Bose locality and the half-integer-parity multiplets obey Fermi locality. ∎
+*Proof.* On this conditional Wightman branch, assume a positive-metric Hilbert space, a cyclic invariant vacuum, the forward-cone spectrum, finite-component Lorentz-cover covariance, a common invariant field domain, and the Bose/Fermi spacelike exchange alternative in item 4. Let $P\in\{0,1\}$ encode the assumed Bose/Fermi sign of a field and its adjoint, and let $J$ denote its rotation-spin parity. Fewster (2016, §3.1, Eqs. (16)–(22)) gives the Wightman/Burgoyne analytic-continuation identity $\|\phi^\dagger(f)\Omega\|^2=(-1)^{P+2J}\|\phi(Rf)\Omega\|^2$. Positivity and the nontrivial-field condition exclude the wrong sign, so $P=2J\pmod 2$. All rotation spins in the Lorentz multiplet $(j_1,j_2)$ have parity $2J=2(j_1+j_2)\pmod 2$, yielding (F.9.1) with the Bose sign for integer parity and the Fermi sign for half-integer parity. This conclusion is conditional on a Wightman field realization; spacelike commutativity of the observable net alone supplies neither that realization nor the field-level Bose/Fermi alternative. ∎
 
 ---
 
@@ -703,29 +721,19 @@ The same identity holds after every retained update and composition because thos
 
 ### F.9.4 The CPT Theorem
 
-**Theorem F.4 (CPT Invariance).**
-Assume the emergent AQFT $(\mathfrak{A}, \mathcal{H}, U(\Lambda))$ admits a Wightman/Jost realization with Poincaré covariance, a unique invariant vacuum, the spectrum condition, locality, and the analyticity properties of Wightman functions. Then there exists an antiunitary operator $\Theta$ implementing CPT such that for any local field $\phi(x)$:
+**Theorem F.4 (Conditional Wightman CPT invariance).**
+Assume the emergent AQFT admits a four-dimensional, positive-metric Wightman field realization: the fields are tempered operator-valued distributions on a common invariant domain; the vacuum is invariant and cyclic for the field algebra; the proper orthochronous Poincaré group acts covariantly; each field multiplet carries a finite-dimensional Lorentz representation; the translation spectrum lies in the closed forward cone; spacelike-separated fields obey the appropriate Bose/Fermi graded locality relations; and the field family contains the adjoint of each field. Then an antiunitary operator $\Theta_{CPT}$ on the vacuum Hilbert space fixes the vacuum and implements CPT on this field family. For a single scalar field (with its adjoint in the family), a choice of phase convention gives
 
 $$
-\Theta \phi(x) \Theta^{-1} = \eta_\phi \phi^\dagger(-x)
+\Theta_{CPT}\phi(x)\Theta_{CPT}^{-1}=\eta_\phi\phi^\dagger(-x),\qquad |\eta_\phi|=1.
 \tag{F.9.2}
 $$
 
-where $|\eta_\phi|=1$ and $\phi^\dagger$ denotes the charge-conjugate field. For a field multiplet, $\eta_\phi$ is replaced by a unitary matrix on the multiplet indices.
+Here $\phi^\dagger$ is the Hilbert-space adjoint field. For spinor or tensor multiplets the transformation includes the representation-dependent finite-dimensional intertwiner between the multiplet and its conjugate; a universal scalar phase is not asserted.
 
-*Proof.* Under the stated hypotheses, CPT invariance is the Jost/Wightman CPT theorem (Jost 1957; Streater & Wightman 1964; Haag 1996).
+*Proof.* Let $W_n$ denote every vacuum $n$-point distribution of fields from the adjoint-closed family. Forward-cone spectral support gives analytic continuation in the primitive forward tube of the difference variables. Finite-dimensional Lorentz covariance then permits the Bargmann–Hall–Wightman continuation to the extended tube; the spectrum condition alone does not give that larger domain. Its real points are the Jost configurations. At these points graded locality gives the required weak local commutativity, including the field-order signs. Complex Lorentz inversion and analytic continuation extend the resulting reversed-order, conjugate-field relation to the Wightman distributions, with the finite-dimensional spin/tensor intertwiners retained (Jost 1957; Hall & Wightman 1957; Wightman 2000, pp. 210–211; Borchers 1999, §4, pp. 47–48).
 
-Let
-$$
-W_n(x_1,\dots,x_n)=\langle\Omega|\,\phi(x_1)\cdots\phi(x_n)\,|\Omega\rangle
-$$
-denote vacuum $n$‑point functions. The spectrum condition implies that $W_n$ extends analytically to the extended tube domain in complexified Minkowski space. Local commutativity implies weak local commutativity at Jost points, which yields invariance of the boundary values under the strong-reflection map $(x_1,\dots,x_n)\mapsto(-x_n,\dots,-x_1)$ up to complex conjugation and the appropriate spinorial phases.
-
-By the reconstruction theorem, this strong-reflection symmetry is implemented on the Hilbert space by an antiunitary operator $\Theta_{CPT}$ leaving $\Omega$ invariant and acting on fields by
-$$
-\Theta_{CPT}\,\phi(x)\,\Theta_{CPT}^{-1}=\eta\,\phi^\dagger(-x),
-$$
-with $\eta$ fixed by the Lorentz representation. Therefore all Wightman functions, and hence all local observable predictions, are invariant under the combined CPT transformation. ∎
+On the dense span of field-polynomial states $A\Omega$, define the conjugate-linear CPT map using that reversed-order relation. Equality of all Wightman inner products makes it an anti-linear isometry; cyclicity and closure of the adjoint field family make its extension antiunitary and yield the stated field transformation. The conclusion is conditional on the Wightman realization and its listed hypotheses; it does not construct that realization from the AQFT net or discharge the independent effective-action CPT gate C4-F011. ∎
 
 ---
 
@@ -733,7 +741,7 @@ with $\eta$ fixed by the Lorentz representation. Therefore all Wightman function
 
 There is no contradiction between CPT symmetry and a separately selected thermodynamic orientation. Theorem 31 constrains the heat of a registered irreversible reset; it does not by itself choose a history measure, boundary condition, or time orientation. The two levels are therefore:
 
-1. **Dynamical level (field equations):** The emergent effective action $S_{eff}$ (Section F.5) and the field equations it generates are CPT-symmetric. This is what the CPT theorem establishes.
+1. **Dynamical level (field equations):** Theorem F.4 establishes CPT symmetry on its Wightman/Jost realization branch. The effective action $S_{eff}$ of Section F.5 and its field equations have this symmetry when their identification with that realization includes a CPT-covariant action representation.
 
 2. **Thermodynamic ensemble level:** On a branch carrying independent low-boundary data, a trajectory measure, and an orientation rule, the selected ensemble may privilege entropy-increasing histories. A registered reset inequality then constrains those histories. Neither `Evolve` nor the reset bound alone breaks CPT or selects which allowed histories are realized.
 
@@ -745,38 +753,25 @@ There is no contradiction between CPT symmetry and a separately selected thermod
 
 **Remark F.CPT.1 (Orientation Interpretation).** A choice of boundary data may distinguish histories only after a separate trajectory measure and orientation rule are supplied; this is not a consequence of spectral CPT invariance alone.
 
-**Theorem F.5a (Modular Spin-Statistics-CPT Descent Gate).** On a regular AQFT branch, assume a compatible positive-energy representation of the Lorentz cover acts covariantly on the wedge and DHR sector data, and assume every retained DHR sector has finite statistics and a conjugate. Suppose the local diamond and wedge net also satisfies:
+**Theorem F.5a (Conditional Modular Spin–Statistics–CPT Descent Gate).** On a four-dimensional regular AQFT branch, assume an irreducible local observable net of von Neumann algebras, an invariant vacuum vector $\Omega$ cyclic for the algebras of spacelike cones, and the following sector and descent data:
 
-1. Haag duality and the split property for the retained local observable algebras;
+1. Haag duality and the split property on the retained local net (additional branch gates, not hypotheses needed for the source theorem below);
+2. each retained sector $\rho$ is an irreducible, localized, transportable, Poincaré-covariant DHR morphism with finite statistics and a conjugate;
+3. $\Omega$ is cyclic and separating for every retained wedge algebra; a faithful finite PCE/KMS regulator state alone does not supply this vacuum modular datum;
+4. for every wedge $W$, the modular group of $(\mathfrak A(W),\Omega)$ acts on all local algebras as the correctly normalized pure Lorentz boosts preserving $W$ (modular covariance);
+5. the corresponding wedge modular conjugations implement the wedge reflections on the observable net;
+6. the separately defined modular cocycle obstruction of Theorem F.10.11b vanishes on the wedge/diamond cover used for branch descent.
 
-2. finite PPI sectors are localized and transportable in the DHR sense on the retained net;
-
-3. the PCE/KMS state is faithful, cyclic, and separating on every retained wedge algebra;
-
-4. the modular flow of each retained wedge algebra agrees with the corresponding local Lorentz boost flow after the normalization of Theorem F.10.3;
-
-5. the modular conjugation of each retained wedge algebra implements the associated wedge reflection on the local net;
-
-6. the modular cocycle obstruction class of Theorem F.10.11b vanishes on the wedge/diamond cover used for sector transport.
-
-Then the Wightman/Jost realization hypotheses used in Theorem F.2 and Theorem F.4 may be replaced on this branch by the modular descent package above. For every irreducible retained sector $\rho$, the modular spin-statistics relation fixes the statistics sign $\kappa_\rho$, while finite DHR statistics retains the statistical dimension $d_{\mathrm{stat}}(\rho)$:
+Then for every such irreducible sector $\rho$, the modular spin–statistics relation gives
 $$
-\kappa_\rho
-=
-(-1)^{2s_\rho},
+\kappa_\rho=U_\rho(2\pi)=(-1)^{2s_\rho},
 \qquad
-\lambda_\rho
-=
-\frac{\kappa_\rho}{d_{\mathrm{stat}}(\rho)},
+\lambda_\rho=\frac{\kappa_\rho}{d_{\mathrm{stat}}(\rho)}.
 \tag{F.9.5a.1}
 $$
-where $\lambda_\rho$ is the DHR statistics parameter. Thus integer-spin sectors have positive Bose/parabose statistics sign and half-integer-spin sectors have negative Fermi/parafermi statistics sign; the $2\pi$ rotation does not determine $d_{\mathrm{stat}}(\rho)$. After Doplicher--Roberts field reconstruction, the charged field multiplets obey ordinary Bose or Fermi commutation according to $\kappa_\rho$, with retained multiplicity encoded by $d_{\mathrm{stat}}(\rho)$. The same modular reflection data implement the antiunitary CPT operator of Theorem F.4 on the retained field algebra.
+Thus the $2\pi$ rotation fixes the statistics sign, not the statistical dimension. Under the Doplicher–Roberts reconstruction hypotheses, the charged-field net has ordinary Bose/Fermi graded commutation, with the gauge representation carrying multiplicity. The modular reflection gives an antiunitary CPT action on the observable net and maps sector classes to conjugate classes. A CPT action on charged fields additionally requires the reconstructed field net and the compatible modular extension described in Guido and Longo (1995, §§2–3). These modular conclusions may replace an appeal to Wightman/Jost for the stated spin–statistics and CPT claims; they do not establish a Wightman field realization.
 
-If the modular cocycle obstruction class is nonzero, the branch fails the modular descent gate and cannot be promoted to a core regular spin-statistics-CPT branch.
-
-*Proof.* Assumptions 1 and 2 give the finite retained DHR tensor category of localized, transportable sectors. Assumptions 3--5 give the Bisognano--Wichmann modular geometry on the retained wedge net: modular automorphisms act as boosts and modular conjugations act as wedge reflections. The modular spin-statistics theorem identifies the sector univalence with the DHR statistics sign, so $\kappa_\rho=(-1)^{2s_\rho}$. For an irreducible finite-statistics DHR sector with conjugate, the statistics parameter satisfies $|\lambda_\rho|=d_{\mathrm{stat}}(\rho)^{-1}$ and $\operatorname{sgn}(\lambda_\rho)=\kappa_\rho$, proving (F.9.5a.1). Hence the rotation fixes the sign but not the statistical dimension. Doplicher--Roberts reconstruction converts the corresponding para-Bose or para-Fermi sector into an ordinary Bose or Fermi charged-field multiplet carrying the gauge multiplicity. This is the precise modular replacement for the spin-statistics conclusion of Theorem F.2.
-
-The modular conjugations implement wedge reflections. Products of the wedge reflection with the internal charge conjugation on the corresponding conjugate DHR sector give the antiunitary strong-reflection action on local fields, hence the CPT operator of Theorem F.4 on the retained algebra. Assumption 6 guarantees that these local modular implementations glue consistently across the wedge/diamond cover. If the obstruction class is nonzero, Theorem F.10.11b says the modular flows do not glue to a single descent automorphism group; then the sector-transport argument above is not globally defined, so the branch is rejected by the gate. ∎
+*Proof.* Guido and Longo (1995, Theorems 3.2 and 3.3) prove observable-net CPT and $U_\rho(2\pi)=\operatorname{sgn}(\lambda_\rho)$ for an irreducible local modular-covariant net and an irreducible covariant localized morphism of finite statistics. Their §3 uses Doplicher–Roberts field reconstruction to identify $d_{\mathrm{stat}}(\rho)=|\lambda_\rho|^{-1}$ and the gauge-multiplicity space; combining this with the sign equality gives (F.9.5a.1). Their §2 states the additional field-net locality and modular-covariance assumptions used for field CPT. Conditions 1 and 6 are separate branch/descent requirements and are not inferred from the Guido–Longo theorem. If the obstruction in condition 6 is nonzero, the local modular data fail the manuscript's global descent gate, independently of the source spin–statistics theorem. ∎
 
 **Proposition F.5a.1 (Fusion and Dimension Data Do Not Fix Exchange Sign).** The symmetric unitary tensor categories $\operatorname{Rep}(\mathbb Z_2)$ and $\mathrm{sVec}$ have the same simple-object census
 $$
@@ -800,7 +795,7 @@ Therefore fusion rules, conjugates, and statistical dimensions alone cannot deri
 
 *Proof.* Both categories have the two displayed simples and fusion table. In the ordinary representation category the symmetric flip acts as $+1$ on the tensor square of the nontrivial one-dimensional representation. In super-vector spaces the graded flip contributes $(-1)^{1\cdot1}=-1$ on the odd line. Hence every datum in (F.9.5a.1.1) agrees while (F.9.5a.1.2) differs. ∎
 
-**Definition F.5b (Finite DHR-Tannaka Response Datum).** On a regular AQFT branch satisfying the Mosco-Bochner bridge of Definition F.0c and Theorem F.0d, a finite DHR-Tannaka response datum is a tuple
+**Definition F.5b (Finitely Generated DHR-Tannaka Response Datum).** On a regular AQFT branch satisfying the Mosco-Bochner bridge of Definition F.0c and Theorem F.0d, distinguish a finite list of generating sectors from its full tensor closure, which may have infinitely many inequivalent simple sectors. A finitely generated DHR-Tannaka response datum is a tuple
 $$
 \mathfrak T_{\mathrm{DHR}}
 =
@@ -818,9 +813,9 @@ where:
 
 1. $\mathfrak A_{\mathrm{obs}}$ is the PPI-observable Haag-Kastler net on the retained regular branch;
 
-2. $\mathcal C_{\mathrm{resp}}$ is the finite rigid symmetric $C^*$ tensor category of transportable localized endomorphisms of $\mathfrak A_{\mathrm{obs}}$ with simple tensor unit;
+2. $\mathcal C_{\mathrm{resp}}$ is the replete rigid symmetric $C^*$ tensor category generated by the retained transportable localized finite-statistics endomorphisms under tensor products, conjugates, direct sums and subobjects, with simple tensor unit. Its objects have finite statistical dimension, but the category need not have finitely many simple objects;
 
-3. $\omega_{\mathrm{fib}}:\mathcal C_{\mathrm{resp}}\to\mathrm{Hilb}_{\mathrm{fin}}$ is a faithful symmetric tensor fiber functor;
+3. $\omega_{\mathrm{fib}}:\mathcal C_{\mathrm{resp}}\to\mathrm{sHilb}_{\mathrm{fin}}$ is a faithful symmetric $*$-preserving tensor fiber functor to finite-dimensional super Hilbert spaces with the graded flip. Ordinary Hilbert spaces apply only to the all-even specialization;
 
 4. $\mathcal E_{\mathrm{loc}}$ records localization diamonds and charge-transport intertwiners;
 
@@ -841,7 +836,7 @@ the compact group of unitary monoidal natural automorphisms of the fiber functor
 $$
 \mathfrak s=(\mathcal O_p,\lambda_{\mathrm{Wig}},\rho_{\mathrm{int}},\chi),
 $$
-where $\mathcal O_p$ is a positive-energy Poincaré momentum orbit, $\lambda_{\mathrm{Wig}}$ is the Wigner little-group label $(m,s)$ for $m>0$ or $(0,h)$ for $m=0$, $\rho_{\mathrm{int}}$ is a simple object of the retained finite DHR response category, and $\chi$ records chirality data when the Lorentz representation is Weyl. On branches where retained multiplicities arise, the label is enriched to
+where $\mathcal O_p$ is a positive-energy Poincaré momentum orbit, $\lambda_{\mathrm{Wig}}$ is the Wigner little-group label $(m,s)$ for $m>0$ or $(0,h)$ for $m=0$, $\rho_{\mathrm{int}}$ is a simple object of the retained finitely generated DHR response category, and $\chi$ records chirality data when the Lorentz representation is Weyl. On branches where retained multiplicities arise, the label is enriched to
 $$
 \mathfrak s_{\mathrm{mult}}=(\mathcal O_p,\lambda_{\mathrm{Wig}},\rho_{\mathrm{int}},\chi,\iota_{\mathrm{mult}}),
 $$
@@ -888,55 +883,58 @@ This is branch-relative. It does not exclude every mathematical Poincaré repres
 
 **Remark F.5b.3 (CPT Is Not a Three-Label Shortcut).** CPT closure is not obtained by merely naming abstract $C$, $P$, and $T$ involutions. It requires either the Wightman/Jost package of Theorem F.4 or the antiunitary modular reflection plus DHR conjugate-sector implementation of Theorem F.5a, with vanishing modular cocycle obstruction. The thermodynamic arrow remains the entropy-increasing realization branch and is compatible with CPT symmetry of the retained field algebra.
 
-**Theorem F.5c (Observable-Net Reconstruction of Field Algebra and Gauge Group).** If a branch carries an accepted finite DHR-Tannaka response datum $\mathfrak T_{\mathrm{DHR}}$, then:
-
-1. the category $\mathcal C_{\mathrm{resp}}$ is equivalent, as a rigid symmetric $C^*$ tensor category with fiber functor, to a finite full tensor subcategory of $\operatorname{Rep}(G_{\mathrm{resp}})$;
-
-2. there is a reconstructed field net $\mathfrak F_{\mathrm{PU}}$ carrying a faithful action of $G_{\mathrm{resp}}$ such that
+**Theorem F.5c (Categorical Gauge Reconstruction and Conditional Field-Net Reconstruction).** Suppose a branch supplies the finitely generated datum $\mathfrak T_{\mathrm{DHR}}$ of Definition F.5b, including its full tensor closure and a faithful symmetric $*$-preserving fiber functor $\omega_{\mathrm{fib}}$ to finite-dimensional super Hilbert spaces with the graded flip. Then
 $$
-\mathfrak A_{\mathrm{obs}}(O)
-=
-\mathfrak F_{\mathrm{PU}}(O)^{G_{\mathrm{resp}}}
+G_{\mathrm{resp}}=\operatorname{Aut}^{\otimes}(\omega_{\mathrm{fib}})
+$$
+is compact and $\mathcal C_{\mathrm{resp}}\simeq\operatorname{Rep}_{\mathrm{fin}}(G_{\mathrm{resp}},k)$ as symmetric tensor $C^*$ categories with super fiber functor, where the central involution $k$ implements Bose/Fermi parity. The ordinary Hilbert-space specialization requires $k=1$ on every sector. If $\mathcal C_{\mathrm{resp}}$ has only finitely many inequivalent simple objects, $G_{\mathrm{resp}}$ is finite; a continuous compact gauge group requires an infinite representation-category closure even when finitely generated.
+
+A field net $\mathfrak F_{\mathrm{PU}}$ with a faithful $G_{\mathrm{resp}}$ action and
+$$
+\mathfrak A_{\mathrm{obs}}(O)=\mathfrak F_{\mathrm{PU}}(O)^{G_{\mathrm{resp}}}
 \tag{F.9.5c.1}
 $$
-for every retained local region $O$;
+may be asserted by Doplicher–Roberts reconstruction only on a further certified branch: $\mathfrak A_{\mathrm{obs}}$ has the requisite vacuum net, duality and property-B structure, and $\mathcal C_{\mathrm{resp}}$ is equivalent to the **complete** finite-statistics DHR category of that net, rather than just a selected retained subcategory. The resulting normal field system contains all those sectors. If only a selected response subcategory is supplied, the first categorical conclusion holds but (F.9.5c.1) and completeness of the charged-field net are not established by the source theorem.
 
-3. every nontrivial compact gauge label on the branch appears as a nontrivial localized superselection sector in $\mathcal C_{\mathrm{resp}}$;
+Each nontrivial irreducible representation of $G_{\mathrm{resp}}$ occurs as an object in the reconstructed tensor category. An extra factor acting trivially on every object of this complete response category is absent from $\operatorname{Aut}^{\otimes}(\omega_{\mathrm{fib}})$; its removal from the physical description is a separate PPI/PCE response-equivalence step, not a consequence of the Doplicher–Roberts theorem alone.
 
-4. any proposed additional gauge factor whose representations do not occur in $\mathcal C_{\mathrm{resp}}$ changes no finite observable protocol response and is removed by PPI/PCE as response-null surplus.
-
-If the finite capacity derivation of Appendix G gives the same representation category,
+If Appendix G supplies a symmetric tensor **and fiber-functor** equivalence
 $$
-\mathcal C_{\mathrm{resp}}
-\simeq
-\operatorname{Rep}(G_{\mathrm{SM}}/Z)
+\mathcal C_{\mathrm{resp}}\simeq\operatorname{Rep}_{\mathrm{fin}}(G_{\mathrm{SM}}/Z,k_{\mathrm{SM}})
 \tag{F.9.5c.2}
 $$
-on the retained matter branch, then the gauge sector is closed from both directions: capacity partition selects the gauge algebra, and observable superselection reconstructs the same compact response group.
+for the full tensor closures, preserving the parity involutions, Tannaka reconstruction identifies $G_{\mathrm{resp}}$ with the represented compact quotient. Agreement of a finite matter roster, fusion table or gauge algebra alone does not establish (F.9.5c.2) or fix the global compact group. For a category generated by retained representations $\mathcal S$ of $G$, the effective group is $G/N_{\mathcal S}$ with $N_{\mathcal S}=\bigcap_{\rho\in\mathcal S}\ker\rho$; this closed normal subgroup need not be central.
 
-*Proof.* Since $\mathcal C_{\mathrm{resp}}$ is a finite rigid symmetric $C^*$ tensor category with simple unit and faithful symmetric tensor fiber functor, finite Tannaka reconstruction applies. The group of unitary monoidal natural automorphisms of $\omega_{\mathrm{fib}}$ is compact, and the fiber functor identifies every object of $\mathcal C_{\mathrm{resp}}$ with a finite-dimensional unitary representation of $G_{\mathrm{resp}}$. This proves item 1.
+*Proof.* Apply super Tannaka reconstruction (Müger, Appendix B, Theorem B.18 in Halvorson 2006); the ordinary even case is Theorem B.6. An ordinary symmetric Hilbert-space fiber functor would force all sectors to be even (Proposition B.10). A compact group with only finitely many irreducible representation classes is finite by Peter–Weyl, proving the finite-roster consequence. Doplicher–Roberts reconstruction, under the additional vacuum-net, duality, property-B and category-completeness hypotheses, constructs the complete normal field system with gauge-fixed observable net (Doplicher & Roberts 1990; Halvorson 2006, §10). These hypotheses are not supplied by a selected subcategory. The remaining response-equivalence and Appendix G identification statements follow only under their explicitly stated independent certificates. ∎
 
-The DHR field-algebra reconstruction applied to the localized transportable sectors gives a field net $\mathfrak F_{\mathrm{PU}}$ generated by the observable net together with charged field operators implementing the sectors in $\mathcal C_{\mathrm{resp}}$. Gauge-invariant elements are exactly the observable intertwiners, hence (F.9.5c.1). This proves item 2.
-
-If a compact gauge label is physical, then some finite local protocol distinguishes its charge transport or fusion behavior. Such a distinguishable label defines a localized transportable sector, hence an object of $\mathcal C_{\mathrm{resp}}$. This proves item 3. Conversely, if an additional gauge factor has no representation in $\mathcal C_{\mathrm{resp}}$, it acts trivially on all reconstructed localized sectors and on all observables in $\mathfrak A_{\mathrm{obs}}$. It therefore changes no protocol-response presheaf. By PPI it is the same physical description, and by PCE the surplus label is removed. This proves item 4.
-
-Finally, if (F.9.5c.2) holds, then the internally selected Appendix G capacity group and the externally reconstructed DHR-Tannaka response group have equivalent finite representation categories on the retained branch. A compact response group acting faithfully on the reconstructed sectors is then fixed up to the usual quotient by the common center invisible to all retained representations. ∎
-
-**Theorem F.5d (Finite-Group Fiber-Functor Reconstruction and Response Kernel).** Let $G$ be a finite group and let $\omega:\operatorname{Rep}(G)\to\mathrm{Hilb}_{\mathrm{fin}}$ be the forgetful symmetric tensor functor. Evaluation of a group element in every representation gives an isomorphism
+**Theorem F.5d (Finite-Group Fiber-Functor Reconstruction and Response Kernel).** Let $G$ be a finite group and let $\omega:\operatorname{Rep}(G)\to\mathrm{Hilb}_{\mathrm{fin}}$ be the forgetful symmetric tensor functor. Evaluation on every representation gives
 $$
 G\cong\operatorname{Aut}^{\otimes}(\omega).
 \tag{F.9.5d.1}
 $$
-If only the full tensor subcategory generated by retained representations $\mathcal S$ is supplied, the reconstructed group is
+If the supplied category is the full subcategory generated by retained representations $\mathcal S$ under tensor products, conjugates, finite direct sums and subrepresentations, its reconstructed group is
 $$
 G/N_{\mathcal S},
-\qquad
-N_{\mathcal S}:=\bigcap_{\rho\in\mathcal S}\ker\rho.
+\qquad N_{\mathcal S}:=\bigcap_{\rho\in\mathcal S}\ker\rho.
 \tag{F.9.5d.2}
 $$
-Thus the precise residual ambiguity is the normal subgroup invisible to every retained sector, and the finite response group is unique exactly when the retained representations are jointly faithful.
+Thus the retained action is faithful exactly when $N_{\mathcal S}=\{e\}$.
 
-*Proof.* Each $g\in G$ defines the natural monoidal family $(\rho(g))_\rho$. Conversely, a unitary monoidal natural automorphism acts on the regular representation compatibly with every intertwiner and tensor product. Naturality with the left-regular intertwiners identifies it with right translation by one unique $g$, yielding (F.9.5d.1). On the retained subcategory, two elements induce the same natural transformation exactly when $\rho(g^{-1}h)=I$ for every $\rho\in\mathcal S$, equivalently $g^{-1}h\in N_{\mathcal S}$. This proves (F.9.5d.2). ∎
+*Proof.* Every $g\in G$ gives the unitary monoidal natural family $(\rho(g))_\rho$. Conversely, let $T$ be such a natural family. On $\mathbb C(G)$ use the left regular action $(L_gf)(x)=f(g^{-1}x)$. Pointwise multiplication and the constant unit are intertwiners. Naturality and the tensor rule therefore make $T_{\mathbb C(G)}$ a unital algebra automorphism, which permutes the primitive idempotents $\delta_x$. The right translations $(R_hf)(x)=f(xh)$ are intertwiners, so this permutation commutes with all $R_h$. If it sends $\delta_e$ to $\delta_g$, it sends $\delta_x=R_{x^{-1}}\delta_e$ to $\delta_{gx}$; hence $T_{\mathbb C(G)}=L_g$, with $g$ unique.
+
+For any representation $\rho$ on $H_\rho$, give the multiplicity space $H_\rho$ the trivial action and define the injective intertwiner
+$$
+J_\rho:H_\rho\longrightarrow\mathbb C(G)\otimes H_{\rho,\mathrm{triv}},
+\qquad
+(J_\rho v)(x)=\rho(x^{-1})v.
+$$
+Naturality with maps from the tensor unit makes $T$ the identity on every trivial multiplicity space. Thus
+$$
+J_\rho T_\rho=(L_g\otimes I)J_\rho=J_\rho\rho(g),
+$$
+and injectivity gives $T_\rho=\rho(g)$. The faithful regular representation makes evaluation injective, proving (F.9.5d.1).
+
+Because $G$ is finite, a finite subfamily of $\mathcal S$ already has common kernel $N_{\mathcal S}$. Its direct sum is a faithful representation of $G/N_{\mathcal S}$. Its matrix coefficients and their complex conjugates separate the points of this finite quotient. The unital algebra they generate is all functions on the quotient: for each point, finite products of functions separating it from every other point construct its indicator function. Products and conjugates of matrix coefficients are coefficients of tensor products and conjugate representations. For any tensor word $\rho$ and linear functional $\ell$, the map $v\mapsto[x\mapsto\ell(\rho(x^{-1})v)]$ is an intertwiner into the left regular function representation. The coefficient-span identity therefore gives an equivariant surjection from a finite direct sum of such words onto $\mathbb C(G/N_{\mathcal S})$. An invariant orthogonal complement to its kernel splits this surjection because the representations are unitary. Thus the regular quotient representation belongs to the generated category. The map $J_\rho$ above embeds every quotient representation into a finite sum of regular representations, so closure under finite direct sums and subrepresentations includes every quotient representation. The generated category is therefore $\operatorname{Rep}(G/N_{\mathcal S})$. Applying the result just proved yields (F.9.5d.2). ∎
 
 This exact finite reconstruction does not itself construct localized transportable endomorphisms or a continuum field net; those remain the premises of Definition F.5b and Theorem F.5c.
 
@@ -948,7 +946,7 @@ Spin-statistics and CPT follow only after the continuum theory also satisfies th
 
 **Technical ledger.**
 
-The spin-statistics connection and CPT theorem are available in the PU manuscript only after imposing the conditional continuum bridge together with the additional Wightman/Jost realization hypotheses used in Theorems F.2 and F.4.
+The spin-statistics connection and CPT theorem are available on the conditional continuum branch with either the Wightman/Jost realization hypotheses of Theorems F.2 and F.4 or the complete alternative modular spin/CPT gate of Theorem F.5a.
 
 **Table F.2: AQFT structural theorems and their prerequisites as used in Appendix F.**
 | Theorem | Prerequisites as used here | Status |
@@ -956,82 +954,96 @@ The spin-statistics connection and CPT theorem are available in the PU manuscrip
 | **Spin-Statistics** (F.2) | Local Lorentz covariance on the complete Corollary 46a/Appendix O branch, microcausality in the Theorem F.0 continuum limit (Corollary F.1), the independent Wightman/AQFT joint spectrum condition and invariant vacuum, the local field algebra (Theorem F.0), and the remaining Wightman realization hypotheses stated in Theorem F.2; neither Theorem 46 nor Theorem 29 alone supplies these inputs | Conditional theorem |
 | **CPT Invariance** (F.4) | The AQFT/Wightman/Jost analyticity, locality, and spectrum-condition hypotheses stated in Theorem F.4, together with the spin-statistics input of Theorem F.2 | Conditional theorem |
 | **Modular Spin-Statistics-CPT Descent** (F.5a) | Haag duality, split property, DHR transportability, local PCE/KMS modular boost action, modular reflection, and vanishing modular cocycle obstruction | Conditional modular-gate theorem |
-| **DHR-Tannaka Response Reconstruction** (F.5b-F.5c) | finite rigid symmetric localized sector category, faithful tensor fiber functor, fixed statistical dimensions, and forward-locked localization data | Conditional observable-net reconstruction theorem |
+| **DHR-Tannaka Response Reconstruction** (F.5b-F.5c) | finite sector generators, full rigid symmetric tensor closure, faithful super fiber functor and fixed localization/statistics data; complete DHR category and net hypotheses for full field reconstruction | Conditional categorical reconstruction; additional field-net gate |
 
 Proposition F.2 records the exact dimension reductions of the symmetric and antisymmetric $N$-particle sectors relative to the labeled tensor product. Theorem F.3 permits PCE removal of a permutation multiplicity only when that factor is response-null for every retained observable, update, charge transporter, fusion intertwiner, and protocol. These results do not exclude parastatistics whose multiplicity participates in retained localization, fusion, transport, or gauge data. The Bose/Fermi spin assignment follows independently from Theorem F.2 on its Wightman/AQFT branch. Within that branch, CPT invariance of the dynamics is compatible with a separately certified thermodynamic arrow of time.
 
 ## F.10 Discrete Net-Convergence and Local KMS Closure
 
-**Theorem F.10.1 (Discrete Net-Convergence under Coherent Comparison Maps).** Let $M_{\mathrm{reg}}$ be the regular Lorentzian branch from Theorem 44a. For each relatively compact causal diamond $\mathcal O\subset M_{\mathrm{reg}}$, let $\mathfrak A_n(\mathcal O)$ be the finite local algebra of a cell approximation. Assume:
+**Theorem F.10.1 (Discrete Net-Convergence under Coherent Comparison Maps).** Let $M_{\mathrm{reg}}$ be the regular Lorentzian branch from Theorem 44a. For each relatively compact causal diamond $O$, let $\mathfrak A_n(O)$ be finite unital local algebras approximating it. Assume the cell unions converge in measure and causal thickness, and let $j_n^m:\mathfrak A_n(O)\to\mathfrak A_m(O)$, $m\ge n$, be UCP maps. Their multiplicativity and coherence defects tend to zero uniformly on every norm-bounded family of local elements used below, as $m\ge n\to\infty$ and $k\ge m\ge n\to\infty$, respectively. Assume also asymptotic isometry on those families. The local dynamics are compatible with these maps on bounded time windows, with boundary errors tending to zero in norm.
 
-(i) the cell unions converge to $\mathcal O$ in measure and causal thickness;
-
-(ii) for $m\ge n$ there are UCP maps $j_n^m$ that are asymptotically isometric, multiplicative, and $*$-preserving on bounded local test sets;
-
-(iii) the maps are asymptotically coherent:
+A bounded family $(A_n)$ is compatible when
 $$
-\|j_m^k j_n^m(A)-j_n^k(A)\|\to0
+q(A):=\lim_{n\to\infty}\sup_{m\ge n}
+\|A_m-j_n^mA_n\|=0,
 $$
-uniformly on each bounded local test set as $k\ge m\ge n\to\infty$;
+where the displayed limit means that the nonnegative expression tends to zero. Quotient compatible families by the ideal of norm-null families. They form a $C^*$-algebra $\mathfrak A(O)$ with norm $\limsup_n\|A_n\|$. For two admissible approximations, assume cofinal UCP comparison maps in both directions preserve compatibility, are asymptotically multiplicative and isometric, and have composites asymptotic to the identity. They induce mutually inverse isometric $*$-isomorphisms, canonical relative to these comparison data.
 
-(iv) the local dynamics are compatible with these maps uniformly on bounded time windows, and boundary corrections vanish in norm;
-
-(v) any two admissible cell approximations possess cofinal comparison maps satisfying (ii)–(iv) in both directions, with both composites asymptotic to the corresponding identity maps.
-
-Then the bounded compatible families define a $C^*$-algebra $\mathfrak A(\mathcal O)$, and condition (v) gives a canonical isometric $*$-isomorphism between the algebras obtained from any two admissible approximations.
-
-*Proof.* Form the $C^*$-product and its closed null ideal
+*Proof.* Put $\mathcal P=\prod_n\mathfrak A_n(O)$ and $\mathcal I_0=\{A:\|A_n\|\to0\}$. UCP maps are contractions, so changing a bounded family by a norm-null family does not change the compatibility condition. Sums and adjoints of compatible families are compatible. For compatible bounded $A,B$, expand
 $$
-\mathcal P=\prod_n\mathfrak A_n(\mathcal O),
-\qquad
-\mathcal I_0=\{(A_n):\|A_n\|\to0\}.
+\begin{aligned}
+A_mB_m-j_n^m(A_nB_n)
+={}&(A_m-j_n^mA_n)B_m\\
+&+j_n^mA_n(B_m-j_n^mB_n)\\
+&+j_n^mA_n\,j_n^mB_n-j_n^m(A_nB_n).
+\end{aligned}
 $$
-In the quotient $\mathcal P/\mathcal I_0$, conditions (ii) and (iii) make the compatibility relation independent of the chosen comparison stage and stable under products and adjoints. Its solution set is closed, hence is a $C^*$-subalgebra; call it $\mathfrak A(\mathcal O)$. Its norm is $\limsup_n\|A_n\|$, because this is the quotient norm modulo $\mathcal I_0$.
+The first two terms tend uniformly to zero by compatibility and boundedness, and the last by the multiplicativity premise. Thus products are compatible; the constant unit family is compatible by unitality.
 
-For two approximation systems, the cofinal comparison maps of (v) send compatible families to compatible families. Asymptotic multiplicativity makes the induced maps $*$-homomorphisms, asymptotic isometry makes them isometric, and the two composite conditions make them mutual inverses in the quotient. Thus the isomorphism is canonical relative to the stated comparison data. ∎
+To prove closedness in $\mathcal P/\mathcal I_0$, suppose compatible classes $[A^{(r)}]$ converge to $[A]$. For every $r$,
+$$
+\limsup_{n\to\infty}\sup_{m\ge n}\|A_m-j_n^mA_n\|
+\le 2\limsup_n\|A_n-A_n^{(r)}\|.
+$$
+The right side is $2\|[A]-[A^{(r)}]\|$, which tends to zero. Hence $[A]$ is compatible. The quotient norm equals $\limsup_n\|A_n\|$: deleting finitely many entries proves the upper bound, and addition of a norm-null family cannot decrease that limsup. The compatible classes are therefore a closed unital $*$-subalgebra.
 
-**Theorem F.10.2 (Emergent Haag–Kastler Net under Net-Compatibility Hypotheses).** Assume Theorem F.10.1 for every relatively compact causal diamond. Assume additionally:
+Compatibility and asymptotic isometry also make $\|A_n\|$ a Cauchy sequence, so every cofinal subsequence has the same limiting norm. For the two-system comparison, the assumed compatibility preservation makes each induced map well-defined on these classes. Asymptotic multiplicativity and exact adjoint preservation make it a $*$-homomorphism; asymptotic isometry preserves the quotient norm. The two composite errors are null families, so the induced maps are mutual inverses. ∎
 
-1. the comparison maps commute with region inclusions and induce injective maps $\mathfrak A(\mathcal O_1)\hookrightarrow\mathfrak A(\mathcal O_2)$ for $\mathcal O_1\subset\mathcal O_2$;
-2. the algebra of a finite union is generated by the algebras of its members;
+**Theorem F.10.2 (Emergent Haag--Kastler Net under Net-Compatibility Hypotheses).** Assume Theorem F.10.1 for every relatively compact causal diamond. Assume additionally:
+
+1. comparison maps commute with the finite region inclusions, which induce injective maps $\mathfrak A(O_1)\hookrightarrow\mathfrak A(O_2)$ for $O_1\subset O_2$;
+2. the algebra of each retained union is generated by the algebras of its members;
 3. the evolved algebraic core of every Cauchy-surface neighborhood is dense in the algebra of its causal development;
-4. every retained continuum isometry or admissible embedding has a compatible microscopic action inducing a covariant $*$-homomorphism;
-5. with physical mesh $a_n$, the Lieb–Robinson data satisfy the decay and support-growth hypotheses of Corollary F.1 and $a_nv_{\mathrm{LR}}^{(n)}\to c$.
+4. each retained geometric map has a compatible microscopic action inducing a covariant $*$-homomorphism, and these assignments preserve identity maps and composition. The action of an invertible geometric map and its inverse are mutual inverses;
+5. the physical meshes satisfy $a_n\to0$. On norm-dense regional cores, every pair of elements has bounded compatible representatives in a common larger regional algebra, with the norm and support-growth bounds of Corollary F.1. The same representatives satisfy its positive spacelike-margin and Lieb--Robinson inequalities for each spacelike pair of regions. All time-dependent statements use the certified evolution's time domain.
 
-Then $\mathcal O\mapsto\mathfrak A(\mathcal O)$ satisfies isotony, additivity, the time-slice property, covariance for the represented geometric maps, and Einstein locality.
+Then the quotient algebras satisfy isotony, additivity, the time-slice property, covariance for the represented maps, and Einstein locality.
 
-*Proof.* Item 1 gives isotony. Item 2 is the additivity axiom. Item 3 is the time-slice axiom. Item 4 induces the stated covariant action and its functorial composition law. For spacelike-separated regions, item 5 and Corollary F.1 make the norm of every commutator of norm-convergent local representatives tend to zero; continuity of the limit embeddings gives Einstein locality. These are the asserted Haag–Kastler properties. ∎
-
-**Theorem F.10.3 (Conditional Local Rindler KMS Limit).** Let $p\in M_{\mathrm{reg}}$ and let $W_\ell(p)$ be a local Rindler wedge. Assume:
-
-1. the faithful states $\omega_{n,\ell}$ converge weak-* on a norm-dense local analytic $*$-algebra to a state $\widehat\omega_{W_\ell}$;
-2. the discrete boost automorphisms converge in norm on that algebra, uniformly for real time in compact intervals;
-3. for every analytic $A,B$, the functions
+*Proof.* Items 1--3 are the respective inclusion, generation and time-slice assertions. Item 4 supplies the geometric composition law and covariance, including inverse maps where applicable. For a pair of spacelike regional core elements, use the common larger regional quotient of item 5. Corollary F.1's exponential estimate gives
 $$
-F_n(z)=\omega_{n,\ell}\!\left(A_n\sigma_z^{(n,\ell)}(B_n)\right)
+\|[A_n,B_n]\|\longrightarrow0
 $$
-are analytic on the common strip $0<\operatorname{Im}z<\beta_U$, continuous on its closure, locally uniformly bounded there, and converge on the two boundary lines;
-4. after vacuum normalization, $K_{\mathrm{PCE}}^{(n,\ell)}$ converges to a central element;
-5. the limiting boost normalization is the one used in the geometric acceleration $\kappa(p)$.
+for their compatible representatives. Products in the quotient are represented componentwise, so
+$$
+\|[[A_n],[B_n]]\|
+=\limsup_n\|[A_n,B_n]\|=0.
+$$
+Thus the core elements commute; norm continuity of the commutator extends the equality to their regional completions. This proof uses the quotient norm and does not require isometric embeddings of each finite algebra into that quotient. The stated properties follow on these supplied net and geometric branches. ∎
 
-Then $\widehat\omega_{W_\ell}$ is KMS for the limiting boost flow. In natural units its inverse-temperature parameter is $\beta_U=2\pi/\kappa(p)$. In SI units,
+**Theorem F.10.3 (Conditional Local Rindler KMS Limit).** Let $p\in M_{\mathrm{reg}}$, let $\kappa(p)>0$ be the certified proper acceleration, and let $W_\ell(p)$ be a local Rindler wedge. Assume a strongly continuous limiting boost automorphism group $\sigma_t$, with $t$ measured in the observer's proper time. Supply an independent geometric/state normalization certificate identifying the thermal imaginary proper-time period as
 $$
-\frac{1}{k_BT_U}
-=
-\frac{2\pi c}{\hbar\kappa(p)},
+\tau_U=\frac{2\pi c}{\kappa(p)}.
+$$
+For a norm-dense $\sigma$-invariant analytic $*$-algebra, assume:
+
+1. compatible representatives $A_n,B_n$ converge in norm to $A,B$; the states $\omega_{n,\ell}$ converge to $\widehat\omega_{W_\ell}$ on that algebra, and the real-time boost automorphisms converge there in norm uniformly on compact time intervals;
+2. the finite states are KMS for the finite boost groups with the same imaginary-time period $\tau_U$. Their bounded strip functions satisfy
+$$
+F_n(t)=\omega_{n,\ell}(A_n\sigma_t^{(n,\ell)}(B_n)),
 \qquad
-T_U
-=
-\frac{\hbar\kappa(p)}{2\pi c k_B}.
+F_n(t+i\tau_U)=\omega_{n,\ell}(\sigma_t^{(n,\ell)}(B_n)A_n);
 $$
+3. these functions are analytic for $0<\operatorname{Im}z<\tau_U$, continuous on the closed strip, bounded there by $\|A_n\|\|B_n\|$, and converge uniformly on every compact subset of the closed strip;
+4. any vacuum-normalized contribution of $K_{\mathrm{PCE}}^{(n,\ell)}$ retained in the limiting boost generator is central.
 
-*Proof.* Local uniform boundedness and boundary convergence imply, by the Vitali convergence theorem, convergence of $F_n$ to an analytic function $F$ throughout the strip. The finite KMS boundary relation passes to the two boundary limits, giving
+Then $\widehat\omega_{W_\ell}$ is KMS for $\sigma_t$ with imaginary proper-time period $\tau_U$. The inverse energy-temperature parameter and temperature are
+$$
+\beta_{\mathrm{energy}}
+=\frac{\tau_U}{\hbar}
+=\frac{2\pi c}{\hbar\kappa(p)}
+=\frac1{k_BT_U},
+\qquad
+T_U=\frac{\hbar\kappa(p)}{2\pi c k_B}.
+$$
+In natural units the corresponding parameter is $\beta_U=2\pi/\kappa(p)$.
+
+*Proof.* Compact uniform convergence gives a holomorphic limit $F$ in the open strip and a continuous extension to its boundary. The global finite-KMS bound gives $|F(z)|\le\|A\|\|B\|$. State convergence and real-time norm convergence identify the two boundary values as
 $$
 F(t)=\widehat\omega_{W_\ell}(A\sigma_t(B)),
 \qquad
-F(t+i\beta_U)=\widehat\omega_{W_\ell}(\sigma_t(B)A).
+F(t+i\tau_U)=\widehat\omega_{W_\ell}(\sigma_t(B)A).
 $$
-This is the KMS condition on the dense analytic algebra and hence, by norm continuity, on the limiting wedge algebra. A central additive term cancels from conjugation and does not alter the flow. The SI relation follows by equating the dimensionless Euclidean boost period with $\beta_{\mathrm{energy}}\hbar\kappa/c=2\pi$. ∎
+Thus the bounded-strip KMS condition holds on the dense analytic algebra. Bilinearity and the strip norm bound extend it by norm approximation to the completed wedge algebra. A central additive generator contribution cancels from conjugation; it does not establish the KMS boundary relation. Finally the dimensionless boost period is $\kappa\tau_U/c=2\pi$, and $\tau_U=\hbar\beta_{\mathrm{energy}}$, giving the displayed units and coefficient. The independent period/state certificate supplies this normalization; convergence alone does not select it. ∎
 
 **Theorem F.10.4 (Finite-Regulator Entanglement First Law and Conditional Horizon Flux).** Let $\sigma$ be a faithful density matrix on a finite-dimensional cutoff algebra, set $K_\sigma=-\log\sigma$, and let $\rho(\epsilon)$ be a trace-norm differentiable family of density matrices with $\rho(0)=\sigma$. Then
 $$
@@ -1049,11 +1061,11 @@ S_{\mathrm{th}}:=k_BS_{vN}.
 $$
 For type-III local algebras the finite entropy is replaced by the Araki relative-entropy/modular formulation. ∎
 
-**Corollary F.10.4.1 (Conditional Wedge-AQFT Discharge of A1 and A2).** On a branch satisfying Theorem F.10.2 and all state-convergence, analytic-strip, modular/boost-identification, and normalization hypotheses of Theorem F.10.3, the wedge restriction of the limiting state is KMS for the local boost flow at the Unruh temperature. On that branch, Premise (A1) of §12 and Premise (A2) of §12 are discharged by the accepted wedge-KMS certificate. A Lieb–Robinson bound supplies locality but does not supply this thermodynamic certificate. ∎
+**Corollary F.10.4.1 (Conditional Wedge-AQFT KMS Input for T1 and T2).** On a branch satisfying Theorem F.10.2 and all state-convergence, analytic-strip, modular/boost-identification, and normalization hypotheses of Theorem F.10.3, the wedge restriction of the limiting state is KMS for the local boost flow at the Unruh temperature. This supplies the wedge-KMS and temperature components of inputs (T1) and (T2) of §12. Their first-law, flux, and area-entropy components require the separate certificates stated there. A Lieb–Robinson bound supplies locality but does not supply this thermodynamic certificate. ∎
 
 ### F.10.4a Predictive Spectral Triple
 
-**Definition F.10.4a.1 (Finite Predictive Spectral Triple).** Let $\mathcal G=(V,E)$ be a connected finite MPU carrier graph on a regular finite-resolution branch. Assign each undirected edge $e=\{v,w\}$ a positive propagation-cost length $\ell_e>0$. Define
+**Definition F.10.4a.1 (Finite Predictive Spectral Triple).** Let $\mathcal G=(V,E)$ be a connected finite undirected MPU carrier graph with $|V|\ge2$ on a regular finite-resolution branch. Assign each edge $e=\{v,w\}$ a positive propagation-cost length $\ell_e>0$. Define
 $$
 \mathfrak A_{\mathrm{PU}}=C(V),
 \qquad
@@ -1208,7 +1220,7 @@ $$
 
 **Theorem F.10.4a.4.1 (Ginsparg-Wilson Chirality Gate).** On the regular finite-regulator branch:
 
-1. the naive regulator conditions in Definition F.10.4a.4 are jointly infeasible on a local translation-covariant finite lattice approximation with the correct continuum symbol;
+1. the naive regulator conditions are jointly infeasible on the branch carrying the complete Nielsen--Ninomiya no-go hypotheses: an infinite periodic lattice or its uniformly local thermodynamic family, a continuous periodic momentum symbol on the full compact Brillouin torus with the smoothness required for its index argument, the stipulated Hermiticity and chiral symmetry, isolated regular continuum zeros with the target nonzero net chirality, and the theorem's finite-band and locality requirements. A finite matrix sampled at finitely many momenta alone is not this branch;
 
 2. every $D_{\mathrm{GW}}$ of (F.10.4a.4.2) satisfies the finite chiral relation
 $$
@@ -1243,11 +1255,11 @@ n_+(0)-n_-(0)\in\mathbb Z,
 $$
 where $n_\pm(0)$ are the dimensions of the zero-mode subspaces with $\Gamma_5$-chirality $\pm1$;
 
-5. on an anomaly-free gauge-descended branch, the sum of the finite chiral index characters over all retained fermion representations vanishes on gauge redundancies. If that sum does not vanish for a declared gauge redundancy, the branch fails predictive anomaly descent in the sense of Theorem X.8d and Theorem X.9.5b.
+5. on an anomaly-free gauge-descended branch, the total anomaly class represented by the finite chiral index characters, including the permitted counterterm and inflow data, vanishes on gauge redundancies. If that total class is nonzero for a declared gauge redundancy, the branch fails predictive anomaly descent in the sense of Theorem X.8d and Theorem X.9.5b.
 
-Thus finite PU chirality is not represented by naive exact anticommutation. It is represented by the Ginsparg-Wilson finite-index ledger, whose continuum limit supplies the same chiral index data used in Appendix R and Appendix Y.
+The Ginsparg--Wilson construction therefore supplies an exact finite chiral identity and integer index under the stated algebraic hypotheses. Its use as a local chiral regulator requires separate locality, spectrum and anomaly-descent certificates. Agreement with the continuum chiral index data of Appendices R and Y additionally requires a specified limiting elliptic operator, compatible bundles and boundary conditions, and an index-matching theorem controlling the regulator limit; the finite trace formula alone does not establish that agreement.
 
-*Proof.* Item 1 is the Nielsen-Ninomiya obstruction applied to the regular translation-covariant finite-regulator subbranch: locality, exact naive chiral anticommutation, correct single Dirac continuum behavior, and absence of doublers cannot hold simultaneously. Hence a finite PU regulator for a chiral branch must give up naive anticommutation or give up one of the physical requirements.
+*Proof.* Item 1 invokes Nielsen and Ninomiya [1981, *Absence of neutrinos on a lattice: I. Proof by homotopy theory*] only on the complete periodic-symbol branch specified there. Its topological zero-counting obstruction excludes a nonzero unmatched chirality when all of those locality, Hermiticity, regularity and periodicity hypotheses hold. The full Brillouin symbol and its zero data belong to this independent source-application certificate; finite matrix size or a list of sampled momenta does not establish them. A regulator on that branch must relax at least one premise of the no-go theorem. The following finite-dimensional identities apply to any unitary $V$ with $\Gamma_5V\Gamma_5=V^*$ and do not, by themselves, prove locality, absence of doublers, or a continuum limit.
 
 For item 2, use (F.10.4a.4.2) and (F.10.4a.4.3). Since $V$ is unitary and $\Gamma_5V\Gamma_5=V^*$,
 $$
@@ -1332,33 +1344,42 @@ $$
 n_+(0)-n_-(0)\in\mathbb Z.
 $$
 
-For item 5, a gauge redundancy is admissible only when its anomaly class descends to the quotient. The finite chiral Jacobian is exactly the sum of the finite index characters (F.10.4a.5.3) over retained chiral representations. If that sum vanishes, the finite regulator has no residual gauge-redundancy anomaly. If it does not vanish, Theorem X.8d and Theorem X.9.5b say that the transformation cannot be declared a redundancy at finite PCE cost. The continuum APS and Atiyah-Singer index statements used in Appendix R and Appendix Y are therefore read as the regular-limit image of this finite Ginsparg-Wilson index ledger. ∎
+For item 5, distinguish the finite axial measure factor from the full gauge-anomaly certificate. For independent Grassmann variables $\psi,\bar\psi$ with the conventional Berezin measure, integrate the displayed axial transformation as
+$$
+\psi'=e^{i\theta\widehat\Gamma_5}\psi,
+\qquad
+\bar\psi'=\bar\psi e^{i\theta\Gamma_5}.
+$$
+The top-degree Grassmann coefficient transforms by the determinant, so the integration measure transforms by its inverse. At a specified regulator background its Jacobian is therefore
+$$
+J_{\mathrm{axial}}(\theta)
+=\det(e^{i\theta\widehat\Gamma_5})^{-1}
+ \det(e^{i\theta\Gamma_5})^{-1}
+=\exp\!\left[-i\theta\operatorname{Tr}(\widehat\Gamma_5+\Gamma_5)\right]
+=\exp\!\left[-2i\theta\,\operatorname{ind}_{\mathrm{PU}}D_{\mathrm{GW}}\right].
+$$
+Independent fermion blocks multiply these factors. This axial identity does not, by itself, determine a gauge-anomaly class. The branch must separately specify the gauge action, fermion representations and measure, and certify how their full gauge variation, permitted counterterms and inflow define the total anomaly class. Its vanishing is the gauge-descent condition of item 5; a nonzero total class obstructs the declared redundancy under Theorems X.8d and X.9.5b.
 
-**Definition F.10.4a.4.2 (Operational Paley-Wiener Sector).** Let $L_{\mathrm{PU}}$ be the positive graph Laplacian on $C(V)$ induced by the propagation-cost quadratic form
+Identification with the continuum Atiyah--Singer or Atiyah--Patodi--Singer index data of Appendices R and Y additionally requires an index-matching certificate for the limiting elliptic operator, its bundles and domain, and any boundary spectral correction. That certificate must establish the relation to the finite Ginsparg--Wilson index; neither the finite trace formula nor anomaly descent alone establishes it. ∎
+
+**Definition F.10.4a.4.2 (Operational Paley--Wiener Sector).** Equip $C(V)$ with the counting-measure inner product $\langle f,g\rangle=\sum_{v\in V}f(v)\overline{g(v)}$, linear in its first argument. Let $L_{\mathrm{PU}}\ge0$ be the self-adjoint graph operator associated with the quadratic form
 $$
 \mathcal E_{\mathrm{PU}}(f)
-=
-\frac12
-\sum_{\{v,w\}\in E}
+=\frac12\sum_{\{v,w\}\in E}
 \frac{|f(v)-f(w)|^2}{\ell_{\{v,w\}}^2}.
 \tag{F.10.4a.6.1}
 $$
-For $\Omega\ge0$, define the finite operational Paley-Wiener sector
+For $\Omega\ge0$, define
 $$
 PW_\Omega(L_{\mathrm{PU}})
-=
-\operatorname{Ran}\mathbf 1_{[0,\Omega]}(L_{\mathrm{PU}}).
+=\operatorname{Ran}\mathbf1_{[0,\Omega]}(L_{\mathrm{PU}}).
 \tag{F.10.4a.6.2}
 $$
-For a finite sampling cover $\mathcal C=\{C_i\}_{i=1}^N$ of $V$, let
+Let $\mathcal C=\{C_i\}_{i=1}^N$ be a finite cover of $V$ by nonempty subsets. Then $\|1_{C_i}\|=\sqrt{|C_i|}>0$, and the normalized cell vectors and linear sampling map are
 $$
-\phi_i
-=
-\frac{1_{C_i}}{\lVert1_{C_i}\rVert},
+\phi_i=\frac{1_{C_i}}{\|1_{C_i}\|},
 \qquad
-\mathcal A_\Omega f
-=
-(\langle f,\phi_i\rangle)_{i=1}^N.
+\mathcal A_\Omega f=(\langle f,\phi_i\rangle)_{i=1}^N.
 \tag{F.10.4a.6.3}
 $$
 
@@ -1433,7 +1454,7 @@ so the finite lower frame bound is at least
 $$
 \left(\sqrt{A_{\Omega,\mathrm{cont}}}-\varepsilon_h\right)^2>0.
 $$
-The same frame-operator argument therefore gives stable reconstruction on the certified continuum branch. Theorem K.10.4 removes super-bandwidth distinctions from the operational domain but is not used to infer the sampling certificate. ∎
+The same frame-operator argument therefore gives stable reconstruction on the certified continuum branch. On its separately certified lattice/bandlimit, dispersion, regulator, and matching branch, Theorem K.10.4 permits the corresponding effective-cutoff interpretation; it supplies neither that branch nor the sampling certificate from spacing alone. ∎
 
 ### F.10.4b Modular Prediction Time
 
@@ -1519,100 +1540,98 @@ $$
 $$
 proving (F.10.4b.1b.1). The commutant of the left representation consists of right multiplications. Since $J_\omega(X)=X^*$ exchanges left and right multiplication, (F.10.4b.1b.2) follows. The final statement is immediate from the polar decomposition and the uniqueness of the modular objects. ∎
 
-**Theorem F.10.4b.2 (Prediction Time as Modular Time on a Local Equilibrium Branch).** Suppose a finite local PU branch has a prediction-time automorphism group
+**Theorem F.10.4b.2 (Prediction Time as Modular Time on a Local Equilibrium Branch).** Let $H=H^\dagger$ on a finite factor, let $\beta>0$ have units of inverse energy, and use the physical Heisenberg flow
 $$
-\alpha_\tau(A)=e^{-i\tau H}Ae^{i\tau H}
+\alpha_\tau(A)=e^{i\tau H/\hbar}Ae^{-i\tau H/\hbar}.
 $$
-and a faithful PCE equilibrium state $\omega(A)=\operatorname{Tr}(\rho A)$ that is KMS at inverse temperature $\beta$ for $\alpha_\tau$. Then
+Suppose the faithful state $\omega(A)=\operatorname{Tr}(\rho A)$ satisfies the upper-strip KMS condition with imaginary-time period $\beta\hbar$. Then
 $$
-\rho=\frac{e^{-\beta H}}{\operatorname{Tr}(e^{-\beta H})}
-$$
-on each finite factor, and
-$$
-\sigma_t^\omega=\alpha_{\beta t}.
+\rho=\frac{e^{-\beta H}}{\operatorname{Tr}(e^{-\beta H})},
+\qquad
+\sigma_t^\omega=\alpha_{-\beta\hbar t}.
 \tag{F.10.4b.2}
 $$
-Hence the local physical prediction time $\tau$ and modular parameter $t$ are related by
+Thus the dimensionless modular parameter and physical prediction time obey
 $$
-\tau=\beta t.
+\tau=-\beta\hbar t.
 \tag{F.10.4b.3}
 $$
+On a direct sum of factors, the faithful state has arbitrary strictly positive central weights summing to one and the normalized Gibbs state within each factor; the flow identity holds blockwise.
 
-*Proof.* In a finite factor, the KMS condition for $\alpha_\tau$ says
+*Proof.* Every matrix is entire analytic for the finite flow. The KMS boundary identity is
 $$
-\omega(A\alpha_{-i\beta}(B))=\omega(BA)
+\omega(A\alpha_{i\beta\hbar}(B))=\omega(BA).
 $$
-for all matrix units $A,B$. Diagonalizing $H$ and applying this identity to matrix units gives
+Choose an energy eigenbasis and write $A=E_{ab}$, $B=E_{cd}$. Since $\operatorname{Tr}(\rho E_{ad})=\rho_{da}$, this gives
 $$
-\rho_i e^{-\beta(E_j-E_i)}=\rho_j
+\delta_{bc}e^{-\beta(E_c-E_d)}\rho_{da}
+=\delta_{da}\rho_{bc}.
 $$
-for all energy labels $i,j$. Hence $\rho_i=Ze^{-\beta E_i}$ for one normalization constant $Z^{-1}$, so
+Taking $b=c$ and $a\ne d$ makes every off-diagonal entry $\rho_{da}$ vanish, including within a degenerate energy eigenspace. Taking $b=c$ and $d=a$ then gives
 $$
-\rho=\frac{e^{-\beta H}}{\operatorname{Tr}(e^{-\beta H})}.
+\rho_{aa}e^{-\beta(E_b-E_a)}=\rho_{bb}.
 $$
-Then
+Normalization yields the displayed Gibbs state. The finite modular formula of Theorem F.10.4b.1b gives
 $$
 \rho^{it}A\rho^{-it}
-=
-e^{-i\beta tH}Ae^{i\beta tH}
-=
-\alpha_{\beta t}(A),
+=e^{-i\beta tH}Ae^{i\beta tH}
+=\alpha_{-\beta\hbar t}(A).
 $$
-because the scalar normalization cancels. Direct sums of finite factors satisfy the same identity factorwise. ∎
+A central block weight and its partition function cancel in conjugation, proving the direct-sum statement. ∎
 
-**Corollary F.10.4b.3 (Unruh/KMS Time as Modular Prediction Time).** In the local Rindler branch of Theorem F.10.3, the boost time seen by the accelerated observer is the modular flow parameter of the local PCE equilibrium state, scaled by $\beta_U=2\pi/\kappa$.
-
-*Proof.* Apply Theorem F.10.4b.2 to the KMS state of Theorem F.10.3, whose inverse temperature is $\beta_U=2\pi/\kappa$. ∎
-
-**Definition F.10.4b.4 (Thermally Regularized Predictive OTOC).** On a finite faithful KMS branch with density matrix $\rho_*$ and inverse temperature $\beta$, set $y=\rho_*^{1/4}$. Let $A$ and $B$ be bounded Hermitian observables with norms at most one. Define
+**Corollary F.10.4b.3 (Unruh/KMS Time as Modular Prediction Time).** On a finite faithful local Rindler regulator satisfying Theorem F.10.4b.2, retain the physical Heisenberg orientation and the accepted wedge-state, observer and proper-time certificate of Theorem F.10.3. With proper acceleration $\kappa>0$, the imaginary proper-time period is $\tau_U=2\pi c/\kappa$, the energy inverse temperature is $\beta_U=\tau_U/\hbar$, and
 $$
-F_{AB}(t)
-=
-\frac{
-\operatorname{Tr}\!\left(yA(t)yB\,yA(t)yB\right)
-}{
-F_{\mathrm{disc}}(t)
-},
+\sigma_t^\omega=\alpha_{-\tau_U t},
+\qquad \tau=-\tau_U t.
+$$
+In units $c=\hbar=1$, this is $\tau=-\beta_U t$ with $\beta_U=2\pi/\kappa$. A statement for the limiting wedge algebra requires a compatible limiting modular-flow identification.
+
+*Proof.* The finite-factor, faithfulness, physical-flow and upper-strip KMS hypotheses allow Theorem F.10.4b.2 to be applied with $\beta=\tau_U/\hbar$. Its flow identity gives the displayed relation. Theorem F.10.3 supplies the continuum thermal certificate but does not identify the limiting wedge algebra with a finite factor. ∎
+
+**Definition F.10.4b.4 (Thermally Regularized Predictive OTOC).** On a finite faithful KMS branch with density matrix $\rho_*$ and energy inverse temperature $\beta>0$, set $y=\rho_*^{1/4}$. For Hermitian contractions $A,B$, define
+$$
+F_{AB}(t)=
+\frac{\operatorname{Tr}(yA(t)yB\,yA(t)yB)}
+{F_{\mathrm{disc}}(t)}.
 \tag{F.10.4b.4}
 $$
-where the nonzero disconnected normalization $F_{\mathrm{disc}}(t)$ and the time window on which it is bounded away from zero are part of the OTOC certificate. The certificate must also verify the analytic-strip and disk-bound hypotheses of Theorem F.10.4b.5. A branch has an exponential scrambling window when
+The nonzero disconnected normalization, its lower bound on the retained window, and the analytic and disk bounds below are separate certificate data. An exponential-window claim must include derivative control: writing
 $$
-1-\operatorname{Re}F_{AB}(t)
-=
-c_{AB}e^{\lambda_L t}+o(e^{\lambda_L t}),
-\qquad
-c_{AB}>0.
+1-F_{AB}(t)=c_{AB}e^{\lambda_Lt}(1+r(t)),
+\quad c_{AB}>0,\quad 1+r(t)>0,
 \tag{F.10.4b.5}
 $$
+requires $r$ to be differentiable and $r'(t)/(1+r(t))\to0$ in the declared window limit. A value asymptotic alone does not supply this derivative conclusion.
 
-**Theorem F.10.4b.5 (Conditional Modular Chaos Bound).** Let $F(z)$ be the thermally regularized normalized OTOC used in the Maldacena–Shenker–Stanford argument. Assume that it is analytic in $0<\operatorname{Im}z<\beta\hbar/2$, continuous on the closure, mapped into the unit disk after the stated normalization, real on the relevant real-time boundary, and satisfies
+**Theorem F.10.4b.5 (Conditional Modular Chaos Bound).** Put $a=2\pi/(\beta\hbar)$. Suppose a normalized OTOC $F$ is holomorphic in the half-strip
 $$
-0<1-F(t)\ll1.
+\{z:\operatorname{Re}z>0,\ |\operatorname{Im}z|<\beta\hbar/4\},
 $$
-Assume also that every factorization and finite-size error is $o(1-F(t))$ throughout the proposed exponential window. If
+has $|F(z)|\le1$, and is real with $-1<F(t)<1$ at the positive real times under consideration. Then
 $$
-1-F(t)=c_{AB}e^{\lambda_Lt}+o(e^{\lambda_Lt}),
-\qquad c_{AB}>0,
+\left|\frac{d}{dt}\log(1-F(t))\right|
+\le \frac a2(1+F(t))\coth(at)
+\le a\coth(at).
 $$
-then
+A window limit with $t\to\infty$ and $\frac{d}{dt}\log(1-F(t))\to\lambda_L$ therefore satisfies
 $$
 \lambda_L\le\frac{2\pi}{\beta\hbar}.
 \tag{F.10.4b.6}
 $$
+The window limit may run through a certified family of finite systems; it need not be an infinite-time exponential law on one finite carrier. Any factorization or finite-size errors used to infer the logarithmic derivative must be controlled in both value and derivative on that window.
 
-*Proof.* The Schwarz–Pick theorem, after conformally mapping the strip of width $\beta\hbar/2$ to the unit disk, gives the boundary differential estimate
+*Proof.* The map $w=\sinh(az)$ maps the half-strip conformally onto the right half-plane, and $\zeta=(w-1)/(w+1)$ maps that half-plane onto the disk. Schwarz--Pick, pulled back to the real line, yields
 $$
-\frac{d}{dt}(1-F(t))
-\le
-\frac{2\pi}{\beta\hbar}
-\bigl(1-F(t)\bigr)
-+o(1-F(t))
+\frac{|F'(t)|}{1-|F(t)|^2}
+\le \frac{|w'(t)|}{2\operatorname{Re}w(t)}
+=\frac a2\coth(at).
 $$
-in the small-deviation regime; this is the analytic lemma of Maldacena, Shenker, and Stanford (2016). Divide by the positive quantity $1-F(t)$. The exponential ansatz gives
+Divide by $1-F(t)>0$ and use $1-F(t)^2=(1-F(t))(1+F(t))$. Since $\coth(at)\to1$, the derivative limit gives the claimed rate bound. For Definition F.10.4b.4,
 $$
-\frac{d}{dt}\log(1-F(t))=\lambda_L+o(1),
+\frac{d}{dt}\log(1-F(t))
+=\lambda_L+\frac{r'(t)}{1+r(t)},
 $$
-while the right-hand side tends to $2\pi/(\beta\hbar)$. Taking the window limit proves (F.10.4b.6). ∎
+which identifies the limit under its derivative certificate. The real line lies inside this half-strip; no boundary version of Schwarz--Pick is being assumed. These are conditional analytic hypotheses for the Maldacena--Shenker--Stanford application, not a derivation of an OTOC certificate from finite dimensionality. ∎
 
 **Definition F.10.4b.6a (Scrambling-Saturation Certificate $\mathfrak C_{\mathrm{scr}}$).** A scrambling-saturation certificate is a finite record
 $$
@@ -1622,35 +1641,30 @@ $$
 $$
 where $\mathfrak C_{\mathrm{KMS/OTOC}}$ supplies the analyticity and boundedness hypotheses of Theorem F.10.4b.5, $\mathcal G_{\mathrm{mix}}$ is the retained boundary channel or interaction graph, $\Delta_{\mathrm{mix}}$ is a certified expander/spectral-gap or frame-potential contraction datum, $\mathcal F_{\mathrm{design}}$ records the approximate-design quality when a Page or Haar comparison is used, $N_{\mathrm{eff}}$ is the finite effective number of retained boundary degrees of freedom, and $r_{\mathrm{scr}}\in[0,1)$ is a pre-locked dimensionless saturation residual. Capacity saturation alone is not a scrambling-saturation certificate.
 
-**Proposition F.10.4b.7a (Fast Scrambling Requires $\mathfrak C_{\mathrm{scr}}$).** The chaos bound
+**Proposition F.10.4b.7a (Fast Scrambling Requires $\mathfrak C_{\mathrm{scr}}$).** The chaos bound $\lambda_L\le2\pi/(\beta\hbar)$ holds on the complete branch of Theorem F.10.4b.5. For a fast-scrambling conclusion, assume $\mathfrak C_{\mathrm{scr}}$ additionally supplies $\beta>0$, $N_{\mathrm{eff}}>0$, constants $c_0,q_*>0$, and a nonnegative disturbance $g(t)$ with
 $$
-\lambda_L\le\frac{2\pi}{\beta\hbar}
+g(0)\ge c_0/N_{\mathrm{eff}},\qquad
+g(t)\ge g(0)e^{\lambda_Lt}\quad(0\le t<t_*),
 $$
-is supplied by Theorem F.10.4b.5 on every branch satisfying its KMS/OTOC hypotheses. A fast-scrambling conclusion is theorem-level only on branches carrying $\mathfrak C_{\mathrm{scr}}$. Assume its mixing record supplies constants $c_0,q_*>0$ independent of $N_{\mathrm{eff}}$ and a disturbance function $g(t)$ such that
+where $t_*=\inf\{t\ge0:g(t)\ge q_*\}$, with $\inf\varnothing=\infty$. Suppose
 $$
-g(0)\ge\frac{c_0}{N_{\mathrm{eff}}},
-\qquad
-g(t)\ge g(0)e^{\lambda_Lt}
+\lambda_L\ge\frac{2\pi}{\beta\hbar}(1-r_{\mathrm{scr}}),
+\qquad 0\le r_{\mathrm{scr}}<1.
 $$
-until $g(t)$ reaches $q_*$. If
+Then, writing $[x]_+=\max\{x,0\}$,
 $$
-\lambda_L\ge \frac{2\pi}{\beta\hbar}(1-r_{\mathrm{scr}}),
-\qquad
-0\le r_{\mathrm{scr}}<1,
-$$
-then the first threshold time satisfies
-$$
-t_*
-\le
+t_*\le
 \frac{\beta\hbar}{2\pi(1-r_{\mathrm{scr}})}
-\left(\ln N_{\mathrm{eff}}+\ln\frac{q_*}{c_0}\right).
+\left[\ln\frac{N_{\mathrm{eff}}q_*}{c_0}\right]_+.
 $$
 
-*Proof.* At
+*Proof.* If $g(0)\ge q_*$, then $t_*=0$ and the bound holds. Otherwise $\ln(q_*/g(0))>0$. If $t_*>\lambda_L^{-1}\ln(q_*/g(0))$, a time strictly between these two values would be below $t_*$ but would have $g(t)>q_*$ by the growth bound, a contradiction. Thus
 $$
-t=\lambda_L^{-1}\ln\frac{q_*}{g(0)},
+t_*\le\lambda_L^{-1}\ln(q_*/g(0))
+\le\frac{\beta\hbar}{2\pi(1-r_{\mathrm{scr}})}
+\ln\frac{N_{\mathrm{eff}}q_*}{c_0}.
 $$
-the lower growth estimate reaches $q_*$, so the first threshold time is no larger. Use $g(0)\ge c_0/N_{\mathrm{eff}}$ and the lower bound on $\lambda_L$ to obtain the displayed inequality. A horizon-area interpretation of $N_{\mathrm{eff}}$ and any Page-entropy conclusion require their separate capacity and entropy-continuity certificates. ∎
+The logarithm in this second case is positive. This proves the positive-part formula in both cases. An area interpretation of $N_{\mathrm{eff}}$ and a Page-entropy conclusion retain their separate certificates. ∎
 
 **Theorem F.10.4b.7b (No Exact Exponential OTOC Window on a Finite Closed Carrier).** Let $\mathcal H$ be finite-dimensional, let $H=H^*$, and let $A,B$ and a faithful density matrix $\rho$ be fixed with $[H,\rho]=0$. Every correlation function obtained by taking a finite product of the matrix entries of
 $$
@@ -1680,65 +1694,53 @@ Theorem F.10.4b.7b is a scoped negative resolution artifact for the exact-satura
 
 ### F.10.4c Reflection-Positivity Gate for Lorentzian Reconstruction
 
-**Definition F.10.4c.1 (Finite PU Reflection Positivity).** Let $\mathfrak A_E$ be a finite Euclidean predictive history algebra with an antilinear reflection involution $\Theta$ and positive-time subalgebra $\mathfrak A_+$. A normalized Euclidean functional $\Omega_E:\mathfrak A_E\to\mathbb C$ is reflection positive when
+**Definition F.10.4c.1 (Finite PU Reflection Positivity).** Let $\mathfrak A_E$ be a finite Euclidean history algebra, $\Theta$ an antilinear reflection involution, and $\mathfrak A_+$ its positive-time subalgebra. A normalized linear functional $\Omega_E$ is reflection positive when
 $$
-\Omega_E(\Theta(F)F)\ge0
+\Omega_E(\Theta(F)F)\ge0\qquad(F\in\mathfrak A_+).
 \tag{F.10.4c.1}
 $$
-for every $F\in\mathfrak A_+$.
 
-**Theorem F.10.4c.2 (Finite Reflection-Positivity Reconstruction Gate).** A finite Euclidean PU branch with time-translation transfer operator $T_E$ admits a Hilbert-space Lorentzian reconstruction with positive Hamiltonian and unitary time evolution if the following hold:
+**Theorem F.10.4c.2 (Finite Reflection-Positivity Reconstruction Gate).** Assume Definition F.10.4c.1, $\Theta(1)=1$, and a Euclidean time step $a>0$. Suppose the linear transfer map $T_E$ preserves $\mathfrak A_+$ and the null space of the form $\langle F,G\rangle_{\mathrm{OS}}=\Omega_E(\Theta(F)G)$, and its induced quotient operator is a positive contraction with spectrum in $(0,1]$. Then the quotient is a finite Hilbert space with a unit vector $[1]$, a nonnegative Hamiltonian
+$$
+H_{\mathrm{OS}}=-\frac{\hbar}{a}\log T_{\mathrm{OS}},
+$$
+and unitary evolution $U(t)=e^{-itH_{\mathrm{OS}}/\hbar}$. These data alone do not construct an observable representation, a cyclic vacuum or a local QFT. Those conclusions require a representation and correlation-identification certificate; a vacuum also requires $T_E1-1$ to be null.
 
-1. $\Omega_E(1)=1$;
-2. $\Omega_E$ is reflection positive;
-3. $T_E$ preserves $\mathfrak A_+$, is reflection symmetric, and preserves the Osterwalder–Schrader null space
+Conversely, suppose a Euclidean history realization of a finite Hilbert-space branch supplies a linear map $V:\mathfrak A_+\to\mathcal H$, a unit vector $V1$, and $H\ge0$, with
 $$
-\mathcal N_{\mathrm{OS}}
-=
-\{F\in\mathfrak A_+:\Omega_E(\Theta(F)F)=0\};
+\Omega_E(\Theta(F)G)=\langle VF,VG\rangle,\qquad
+VT_E=e^{-aH/\hbar}V.
 $$
-4. the quotient operator $[F]\mapsto[T_EF]$ is a positive contraction with spectrum contained in $(0,1]$.
+If the finite subspace $\operatorname{ran}V$ is invariant under $e^{-aH/\hbar}$, these data satisfy the positivity and transfer hypotheses above. The converse concerns this correlation-preserving realization.
 
-Conversely, every finite Lorentzian Hilbert-space branch with positive Hamiltonian produces Euclidean correlators satisfying these four properties.
+*Proof.* Positivity of the diagonal of the sesquilinear form gives Hermitian symmetry by polarization. Applying positivity to $F+zG$ gives Cauchy--Schwarz. Thus every null vector is orthogonal to every vector, so the quotient by the null space is a Hilbert space. Normalization gives $\|[1]\|^2=1$. Null-space preservation makes $T_{\mathrm{OS}}$ well defined. The finite spectral theorem applied to its eigenvalues $0<q\le1$ gives Hamiltonian eigenvalues $-(\hbar/a)\log q\ge0$ and unitary $U(t)$. If $T_{\mathrm{OS}}[1]=[1]$, then $H_{\mathrm{OS}}[1]=0$. No representation or cyclicity assertion follows from a vector-space quotient alone.
 
-*Proof.* Assume (1)–(4). Define a sesquilinear form on $\mathfrak A_+$ by
-$$
-\langle F,G\rangle_{\mathrm{OS}}
-=
-\Omega_E(\Theta(F)G).
-$$
-Reflection positivity makes this form positive semidefinite. Quotienting by its null space and completing gives a finite Hilbert space $\mathcal H_{\mathrm{OS}}$ with cyclic vector $[1]$. The transfer operator induced by Euclidean time translation is well-defined because $T_E$ preserves $\mathfrak A_+$ and respects the null space. By assumption (4), the induced operator $T_{\mathrm{OS}}$ is positive with spectrum in $(0,1]$. Since the space is finite-dimensional, functional calculus defines
-$$
-H_{\mathrm{OS}}=-\log T_{\mathrm{OS}}
-$$
-on the support of $T_{\mathrm{OS}}$, with zero modes treated by restriction to the non-null physical support. Positivity of $T_{\mathrm{OS}}$ gives $H_{\mathrm{OS}}\ge0$ when the transfer spectrum lies in $(0,1]$, and Lorentzian time evolution is
-$$
-U(t)=e^{-itH_{\mathrm{OS}}},
-$$
-which is unitary.
+For the converse, the displayed Gram identity proves reflection positivity and identifies the null space with $\ker V$. The intertwining relation preserves that kernel and identifies the quotient transfer with the restriction of $e^{-aH/\hbar}$ to $\operatorname{ran}V$. An invariant subspace of this finite self-adjoint operator is reducing; its restricted eigenvalues lie in $(0,1]$. This proves all the stated finite reconstruction claims. ∎
 
-Conversely, suppose a finite Lorentzian branch has Hilbert space $\mathcal H$, vacuum vector $\Omega$, and positive Hamiltonian $H\ge0$. Its Euclidean transfer operator is $T_E=e^{-aH}$ for step $a>0$, hence positive. For every positive-time polynomial $F$,
-$$
-\Omega_E(\Theta(F)F)
-=
-\langle F\Omega,F\Omega\rangle_{\mathcal H}
-\ge0.
-$$
-Normalization, reflection symmetry, and transfer positivity are immediate. ∎
+**Corollary F.10.4c.3 (Reflection Positivity as a Correlation-Preserving Gate).** A Euclidean history functional violating (F.10.4c.1) has no positive-norm Hilbert-space realization with $\Omega_E(\Theta(F)G)=\langle VF,VG\rangle$ for all retained positive-time histories.
 
-**Corollary F.10.4c.3 (No Unitary Lorentzian Branch Without Reflection Positivity).** A finite predictive statistical branch that violates (F.10.4c.1) cannot be reconstructed as a unitary Lorentzian QFT branch with positive Hilbert-space norm.
+*Proof.* Such a realization would give $\Omega_E(\Theta(F)F)=\|VF\|^2\ge0$, contradicting the assumed violation. ∎
 
-*Proof.* The converse direction of Theorem F.10.4c.2 shows that every such Lorentzian reconstruction necessarily satisfies reflection positivity. Violation of (F.10.4c.1) contradicts that necessary condition. ∎
+**Corollary F.10.4c.4 (Källén--Lehmann Spectral Gate for PPI-Observable Two-Point Functions).** Assume a scalar Wightman branch with a positive Hilbert metric, a unique normalized invariant vacuum $\Omega$, a strongly continuous translation representation $U(a)=e^{iP\cdot a}$, and forward-cone spectrum. Use signature $(+---)$ in the spectral formulas below. Let $O=O^\dagger$ be a local scalar operator-valued tempered distribution on a common invariant domain containing $\Omega$, with its vacuum expectation subtracted. For a non-Hermitian field use the adjoint-paired two-point function. Retain the scalar Källén--Lehmann theorem and its time-ordered distributional extension on this branch, including an admissible subtraction/contact prescription.
 
-**Corollary F.10.4c.4 (Källén--Lehmann Spectral Gate for PPI-Observable Two-Point Functions).** Assume, in addition to Theorem F.10.4c.2, a Poincaré-covariant scalar branch with an invariant vacuum $\Omega$, a strongly continuous unitary translation representation $U(a)=e^{iP\cdot a}$, and the joint spectrum condition $\operatorname{sp}(P)\subset\overline V_+$. Let $O$ be a scalar local operator whose vacuum two-point distribution is tempered. Then its two-point spectral measure is positive, supported on invariant masses $s=P^2\ge0$, and polynomially bounded. For a spacelike subtraction point $p_0^2<0$ and an integer $N$ exceeding that polynomial growth order, its time-ordered response has the subtracted representation
+The positive mass measure $\rho_O$ is supported on $s\ge0$. Choose a spacelike point $p_0^2<0$ and an integer $N\ge0$ with
 $$
-G_O^F(p^2)=P_{N-1}(p^2)+(p^2-p_0^2)^N\int_0^\infty\frac{\rho_O(ds)}{(s-p_0^2)^N(p^2-s+i0)},
-\qquad \rho_O\ge0.
+\int_0^\infty (1+s)^{-N-1}\rho_O(ds)<\infty.
+$$
+With the convention that the free scalar response is $(p^2-s+i0)^{-1}$, the subtracted response is
+$$
+G_O^F(p^2)=P_{N-1}(p^2)
++(p^2-p_0^2)^N\int_0^\infty
+\frac{\rho_O(ds)}{(s-p_0^2)^N(p^2-s+i0)}.
 \tag{F.10.4c.4.1}
 $$
-Here $P_{N-1}$ is a contact/subtraction polynomial; when no subtraction is needed take $N=0$ and $P_{-1}=0$. An isolated atom at $s=m^2$ gives a positive-residue pole and, on the accepted particle-sector branch, a stable one-particle contribution. Absence from one chosen $O$ is not an exclusion criterion; a label is PPI-null only after a completeness record shows that it changes no retained observable or protocol response.
+The polynomial $P_{N-1}$ belongs to the declared contact prescription; for an unsubtracted branch use $N=0$, $P_{-1}=0$. An isolated positive mass atom gives a positive-residue pole and, with the particle-sector certificate, a stable one-particle contribution. A missing pole in one field is not a completeness or PPI-nullity test.
 
-*Proof.* The joint spectral theorem gives $d\rho_O(P)=\lVert dE(P)O\Omega\rVert^2\ge0$. The forward-cone condition gives $P^2\ge0$, and scalar Poincaré covariance decomposes this measure into positive mass-shell measures $\rho_O(ds)$. Temperedness gives a finite subtraction order and the displayed dispersion representation. The atom statement follows from the spectral projection at an isolated mass. ∎
+*Proof.* Smearing is essential: for every test function $f$, the spectral theorem supplies the positive measure
+$$
+\mu_f(B)=\langle O(f)\Omega,E(B)O(f)\Omega\rangle\ge0.
+$$
+These measures are supported in the forward cone. The scalar Källén--Lehmann theorem identifies their common covariant two-point distribution by a positive mass-shell measure. Vacuum subtraction removes the separate zero-momentum vacuum contribution. The retained time-ordering and subtraction theorem supplies the dispersion representation; positivity and temperedness alone do not specify its contact extension. For nonreal $p^2$, the stated integrability condition controls the subtracted large-$s$ kernel, which is of order $s^{-N-1}$; the real-axis expression is its distributional boundary value. A mass atom contributes its coefficient times $(p^2-m^2+i0)^{-1}$, proving the residue statement. The existence and hypotheses of the spectral/dispersion import remain part of the QFT branch certificate, beyond the finite Hilbert-space construction of Theorem F.10.4c.2. ∎
 
 ### F.10.4d Minimal Gauge Split-Factorization
 
@@ -1779,7 +1781,7 @@ B(\mathcal H_R^\alpha)\otimes I_{\bar R}^\alpha,
 I_R^\alpha\otimes B(\mathcal H_{\bar R}^\alpha).
 \tag{F.10.4d.2}
 $$
-The only boundary labels required for gluing local predictions are the central syndrome labels $\alpha\in\operatorname{Spec}Z_{\partial R}$.
+The central syndrome labels $\alpha\in\operatorname{Spec}Z_{\partial R}$ index the common blocks needed to assemble the two local observable algebras. They do not determine a joint state from its two local marginals; joint correlations within each tensor-product block remain additional state data.
 
 *Proof.* Since $Z_{\partial R}$ is a finite-dimensional commutative $C^*$-algebra, it has a unique decomposition into minimal central projections:
 $$
@@ -1818,9 +1820,9 @@ $$
 $$
 Taking the direct sum over $\alpha$ proves (F.10.4d.1) and (F.10.4d.2). ∎
 
-**Corollary F.10.4d.3 (PCE-Minimal Edge Data in Gauge Theory).** In a finite constrained gauge system, assume that every proper refinement of $Z_{\partial R}$ which leaves all locally glueable predictions unchanged has strictly positive incremental description cost. Then PCE selects the center $Z_{\partial R}$ and no larger response-equivalent boundary label algebra.
+**Corollary F.10.4d.3 (PCE-Minimal Edge Data in Gauge Theory).** In a locally complete finite gauge-split datum, compare the center $Z_{\partial R}$ only with its proper refinements that leave every retained prediction unchanged. Assume the complete PCE potential strictly increases under each such refinement. One sufficient certificate is a strictly positive coefficient multiplying the increased description cost, with every other contribution to that potential unchanged. Then no proper refinement in this comparison class minimizes the potential; the center is its unique minimizing response representative. This claim does not exclude a sufficient coarsening for a particular state and protocol class.
 
-*Proof.* Theorem F.10.4d.2 proves that $Z_{\partial R}$ is sufficient to glue the two local prediction algebras. By hypothesis, every proper response-equivalent refinement has identical predictive benefit and strictly larger description cost, so it cannot minimize the PCE objective. Therefore the center is the unique minimum-cost representative within this refinement class. ∎
+*Proof.* Theorem F.10.4d.2 supplies the common-block decomposition of the observable algebras. For every proper refinement in the stated comparison class, the complete potential is strictly larger than at $Z_{\partial R}$ by hypothesis. Hence the center has lower potential than every other member of that class. In the sufficient additive certificate, the positive cost increment times its positive coefficient is exactly the potential difference because all other terms cancel. No comparison with coarsenings or with state correlations is implied. ∎
 
 ### F.10.4e De Finetti Field Emergence
 
@@ -1844,7 +1846,7 @@ $$
 $$
 The extremal exchangeable components are exactly the product families $\sigma^{\otimes k}$, and the measure $\mu$ is the branch-level field-mixture measure.
 
-*Proof.* The carrier algebra is the finite-dimensional matrix algebra $B(\mathcal K)$. The ensemble is consistent under partial trace and invariant under every finite permutation. These are precisely the hypotheses of the quantum de Finetti representation theorem for infinite exchangeable states (Størmer 1969; Hudson and Moody 1976). That theorem supplies a unique Borel probability measure $\mu$ on the compact state space $\mathcal S(\mathcal K)$ and gives
+*Proof.* The carrier algebra is the finite-dimensional complex matrix algebra $B(\mathcal K)$. Consistency under partial trace defines a state on its countable tensor-product algebra, and finite-permutation invariance makes that state symmetric. Theorem 7 of Ligthart, Gachechiladze, and Gross (2023) gives a unique probability measure on the single-site state space and its product-state representation; for a matrix algebra the minimal and maximal finite tensor-product norms coincide. Consequently there is a unique Borel probability measure $\mu$ on the compact state space $\mathcal S(\mathcal K)$, and
 $$
 \rho_k=\int_{\mathcal S(\mathcal K)}\sigma^{\otimes k}\,d\mu(\sigma)
 $$
@@ -1886,32 +1888,23 @@ $$
 $$
 where $\rho_{N,k}$ is the $k$-carrier marginal.
 
-*Proof.* Apply the finite quantum de Finetti theorem of Christandl, König, Mitchison, and Renner (2007) to the permutation-invariant state $\rho_N$ on $(\mathbb C^d)^{\otimes N}$, where $d=\dim\mathcal K$. Its trace-norm estimate gives a convex mixture of product states whose $k$-body error is at most $2d^2k/N$ in the stated normalization. Therefore the weaker displayed bound
+*Proof.* Apply Theorem II.7 in the author manuscript of Christandl, König, Mitchison, and Renner (2007), arXiv:quant-ph/0602130v4, to the permutation-invariant state $\rho_N$ on $(\mathbb C^d)^{\otimes N}$, where $d=\dim\mathcal K$. The source uses the trace distance $D(\rho,\sigma)=\tfrac12\|\rho-\sigma\|_1$ and bounds the $k$-body distance to a convex mixture of product states by $2d^2k/N$. Multiplying by $2$ gives the displayed ordinary trace-norm bound
 $$
-\frac{4d^2k}{N}
+\frac{4d^2k}{N}.
 $$
-also holds. If the displayed quantity exceeds the maximal trace distance $2$, the assertion is automatic. ∎
+If this bound exceeds the maximal ordinary trace-norm distance $2$ between states, the assertion is automatic. ∎
 
-**Corollary F.10.4e.4 (Regular Field Branch).** Suppose the de Finetti measure $\mu$ is supported on a regular finite-dimensional family $\{\sigma_\phi\}_{\phi\in\mathcal F_{\mathrm{reg}}}$ whose correlation functions vary continuously with $\phi$. Then every $k$-point predictive correlator is a mixture of extremal field correlators:
+**Corollary F.10.4e.4 (Regular Field Branch).** Let the de Finetti measure $\mu$ be supported on the image of a Borel parametrization $\phi\mapsto\sigma_\phi$ of a regular finite-dimensional family. Assume a Borel probability measure $\nu$ on $\mathcal F_{\mathrm{reg}}$ has been supplied with pushforward $\sigma_*\nu=\mu$. For bounded one-site observables,
 $$
 \langle O_1\cdots O_k\rangle
-=
-\int_{\mathcal F_{\mathrm{reg}}}
-\operatorname{Tr}\!\left(
-\sigma_\phi^{\otimes k}O_1\otimes\cdots\otimes O_k
-\right)
-d\mu(\phi).
+=\int_{\mathcal F_{\mathrm{reg}}}
+\operatorname{Tr}\!\left(\sigma_\phi^{\otimes k}
+O_1\otimes\cdots\otimes O_k\right)\nu(d\phi).
 \tag{F.10.4e.3}
 $$
-Thus the effective field is the regular extremal coordinate of an exchangeable predictive ensemble, not a primitive continuum carrier.
+Thus a regular field coordinate parametrizes the retained extremal states. A redundant parametrization need not give a unique parameter measure; the state-space de Finetti measure remains the intrinsic object.
 
-*Proof.* Substitute (F.10.4e.1) into
-$$
-\langle O_1\cdots O_k\rangle
-=
-\operatorname{Tr}\!\left(\rho_k\,O_1\otimes\cdots\otimes O_k\right)
-$$
-and use linearity and continuity of the trace pairing. ∎
+*Proof.* Theorem F.10.4e.2 gives the mixture on the state space. Boundedness permits its trace pairing with $O_1\otimes\cdots\otimes O_k$. The pushforward identity then changes that integral to the displayed parameter integral. If the parametrization is a Borel isomorphism onto its image, $\nu=(\sigma^{-1})_*\mu$ is the unique lift. Without such an identification, existence and any uniqueness of a lift are separate data. ∎
 
 **Definition F.10.4e.5 (Quantum LAN Field Certificate).** Let $\{\sigma_\phi\}_{\phi\in\mathcal F_{\mathrm{reg}}}$ be a faithful finite-dimensional regular family supporting an extremal component of Theorem F.10.4e.2, let $\phi_0\in\mathcal F_{\mathrm{reg}}$, and write local coordinates as
 $$
@@ -1938,17 +1931,15 @@ $$
 $$
 such that:
 
-1. $\mathcal G_{\phi_0}(K)=\{G_u:u\in K\}$ is a finite-rank Gaussian quantum experiment with Fisher matrix $\mathcal I_{\phi_0}\ge0$ on the identifiable tangent quotient and antisymmetric symplectic form $\Omega_{\phi_0}$ on the noncommuting tangent directions;
+1. $\mathcal G_{\phi_0}(K)=\{G_u:u\in K\}$ is a Gaussian experiment with finitely many canonical modes and identifiable tangent coordinates. It may have classical and quantum parts; finite mode count does not assert finite Hilbert-space rank. The matrix $\mathcal I_{\phi_0}\ge0$ acts on the identifiable tangent quotient, and $\Omega_{\phi_0}$ specifies the commutators of the quantum canonical coordinates.
 
-2. its Gaussian overlap normalization is
+2. Use root fidelity $F$ and require the overlap normalization
 $$
-F(G_u,G_v)
-=
-\exp\!\left[
--\frac18 (u-v)^T\mathcal I_{\phi_0}(u-v)
-\right];
+F(G_u,G_v)=
+\exp\!\left[-\frac18(u-v)^T\mathcal I_{\phi_0}(u-v)\right].
 \tag{F.10.4e.7}
 $$
+For a classical--quantum experiment, the state norms below are predual norms and the channels act on normal states; on matrix or trace-class states this is the ordinary trace norm.
 
 3. $\Theta_N$ and $\Xi_N$ are CPTP channels satisfying the two-sided deficiency bounds
 $$
@@ -1969,46 +1960,41 @@ $$
 $$
 with $\epsilon_N\to0$;
 
-4. any retained polynomial probe variables used beyond bounded finite-cylinder probes are uniformly integrable under both experiments on compact $u$-sets.
+4. For every unbounded polynomial moment retained in the comparison, the certificate supplies finite-experiment and Gaussian probe identifications, bounded cutoffs transported by $\Theta_N^*$, and uniform tail bounds on compact $u$-sets. For each cutoff the bounded-probe comparison error tends to zero; the expectation errors from removing the cutoffs tend uniformly to zero in both experiments. Quantum canonical moments use Weyl, equivalently symmetric, ordering. These conditions are required moment by moment to the prescribed finite order; bounded two-sided deficiency alone does not imply them.
 
 The branch is called a PU-LAN field branch when every retained extremal component admits such a certificate on each compact coordinate patch.
 
-**Theorem F.10.4e.6 (Gaussian Normal Form of Certified MPU Fields).** On a PU-LAN field branch, every finite operational probe of the local extremal MPU ensemble has the same limiting statistics as the Gaussian experiment $\mathcal G_{\phi_0}$. In particular:
+**Theorem F.10.4e.6 (Gaussian Normal Form of Certified MPU Fields).** On a PU-LAN field branch, write $\rho_{N,u}=\sigma_{\phi_N(u)}^{\otimes N}$. The following statements hold uniformly for $u$ in a retained compact coordinate set.
 
-1. bounded finite-cylinder probe expectations converge uniformly on compact $u$-sets to their Gaussian values;
-
-2. connected cumulants of order $r\ge3$ vanish for the canonical linear coordinates of the Gaussian shift experiment; nonlinear bounded cylinder functionals need not have vanishing higher cumulants;
-
-3. the Hessian of local distinguishability is the Fisher matrix $\mathcal I_{\phi_0}$ on the identifiable tangent quotient. The covariance matrix of the Gaussian experiment is the covariance specified by $\mathcal G_{\phi_0}$ and equals $\mathcal I_{\phi_0}^{-1}$ only on a commuting statistically efficient submodel for which that equality is separately certified;
-
-4. the noncommuting tangent response is encoded by $\Omega_{\phi_0}$;
-
-5. bounded finite-cylinder probe variables are used for the cumulant statements below, and polynomial probe variables require the additional uniform-integrability bound supplied by the certificate;
-
-6. the local predictive distinguishability kernel is fixed by
+1. Every Gaussian bounded probe $B$ is simulated on the finite experiment by $\Theta_N^*B$, and every finite bounded probe $A_N$ is simulated on the Gaussian experiment by $\Xi_N^*A_N$, with expectation error at most $\epsilon_N$ for unit-norm probes. A common limiting probe requires the corresponding probe identification.
+2. The Gaussian experiment has vanishing connected cumulants of order at least three for its canonical linear coordinates, with Weyl ordering in the quantum part. Finite-experiment moments and cumulants of a prescribed finite order converge to these values when clause 4 of the certificate holds for all moments involved. Nonlinear functions of Gaussian coordinates need not be Gaussian.
+3. The overlap determines
 $$
--\log F(G_u,G_v)
-=
-\frac18 (u-v)^T\mathcal I_{\phi_0}(u-v).
+-\log F(G_u,G_v)=\frac18(u-v)^T\mathcal I_{\phi_0}(u-v),
+\qquad
+\left.\nabla_v^2[-\log F(G_u,G_v)]\right|_{v=u}
+=\frac14\mathcal I_{\phi_0}.
 \tag{F.10.4e.10}
 $$
+Equivalently, the Hessian of $-4\log F$ is $\mathcal I_{\phi_0}$. The Gaussian covariance equals $\mathcal I_{\phi_0}^{-1}$ only on an independently certified efficient commuting submodel with nonsingular information matrix; the noncommuting response retains its separate form $\Omega_{\phi_0}$.
 
-*Proof.* Let $f$ be any bounded finite-cylinder functional with $\|f\|_\infty\le1$. Contractivity of trace distance under the probe channel and (F.10.4e.8) give
+*Proof.* Duality and (F.10.4e.8) give
 $$
-\left|
-\mathbb E_{\sigma_{\phi_N(u)}^{\otimes N}}[f]
--
-\mathbb E_{G_u}[f]
-\right|
-\le\epsilon_N
+|\operatorname{Tr}(\rho_{N,u}\Theta_N^*B)-\operatorname{Tr}(G_uB)|
+\le\|B\|\,\epsilon_N.
 $$
-uniformly for $u\in K$, proving item 1.
+Likewise, (F.10.4e.9) gives
+$$
+|\operatorname{Tr}(\rho_{N,u}A_N)-\operatorname{Tr}(G_u\Xi_N^*A_N)|
+\le\|A_N\|\,\epsilon_N.
+$$
+For a classical--quantum experiment these are the corresponding state/observable dual pairings. They prove the bounded operational comparison and do not identify observables on different spaces without the channels.
 
-For a finite family of canonical linear Gaussian coordinates, every joint moment of a prescribed finite order is a polynomially bounded probe. Clause 4 of the certificate supplies uniform integrability, so convergence in distribution together with uniform integrability gives convergence of those moments. Wick's theorem then makes every connected cumulant of order $r\ge3$ vanish, proving item 2 in its stated linear-coordinate scope. Item 3 is the distinguishability-Hessian identity encoded by (F.10.4e.7); a covariance identity requires the additional efficient commuting-submodel clause stated there. Item 4 is part of the certificate, and item 6 follows directly from (F.10.4e.7). ∎
+For each polynomial moment in clause 4, insert its bounded cutoff. The two tail errors vanish uniformly, and the intervening bounded-probe error tends to zero by the channel comparison; taking these limits proves convergence of that moment. For Gaussian canonical coordinates the Weyl characteristic function has the form $\exp(i\ell^Tm-\ell^TV\ell/2)$. Its logarithm is quadratic, so all Weyl-ordered connected cumulants of order at least three vanish. A cumulant of any prescribed finite order is a finite polynomial in moments up to that order, which proves its convergence under the same certificates. Differentiating the overlap quadratic gives $\mathcal I_{\phi_0}/4$ for $-\log F$, and $\mathcal I_{\phi_0}$ for $-4\log F$. Neither this calculation nor the channel bounds identify the covariance with the inverse Fisher matrix outside the separately certified commuting submodel. ∎
 
-**Corollary F.10.4e.7 (Gaussian Overlap Gate for Flavor and Field Profiles).** Any use of a Gaussian local overlap kernel in the retained field, flavor, or packet-profile sectors is theorem-level only when its Hessian equals the Fisher matrix $\mathcal I_{\phi_0}$ of a PU-LAN field certificate on that branch. Otherwise the Gaussian kernel remains a branch input.
+**Corollary F.10.4e.7 (Gaussian Overlap Gate for Flavor and Field Profiles).** A Gaussian overlap kernel imported from a PU-LAN certificate must use its root-fidelity normalization: the Hessian of $-\log F$ is $\mathcal I_{\phi_0}/4$, or equivalently the Hessian of $-4\log F$ is $\mathcal I_{\phi_0}$. Use in a field, flavor or packet-profile sector also requires an identification with the certified tangent coordinates and probes. Equality of a Hessian by itself is not a LAN certificate.
 
-*Proof.* Theorem F.10.4e.6 proves that the Gaussian overlap and its Hessian are forced by the LAN certificate. If no such certificate is supplied, the Hessian is not fixed by Theorem F.10.4e.2 or Corollary F.10.4e.4 alone, because de Finetti gives an exchangeable mixture of extremal components but does not determine the local quadratic normal form. ∎
+*Proof.* Theorem F.10.4e.6 gives the normalized quadratic and the channel-mediated probe comparisons. De Finetti supplies a mixture of extremal states but neither these local comparison channels nor their Gaussian overlap normalization. Thus a sector lacking the LAN and identification certificates retains the Gaussian kernel as an additional branch input. ∎
 
 ### F.10.4f Predictive Nuclearity Species Bound
 
@@ -2060,154 +2046,89 @@ $$
 \tag{F.10.4f.4}
 $$
 
-*Proof.* The uniform bound (F.10.4f.5) places the transported decompositions in the unit ball of the projective tensor product
+*Proof.* Let $T_h$ denote the transported representing tensor of the certified finite decomposition. Contractivity of the comparison maps gives
 $$
-\mathfrak A(O)^*\widehat\otimes_\pi\mathcal H.
+\|T_h\|_\pi\le
+\sum_r\|\varphi_{h,r}\|\,\|\xi_{h,r}\|
+\le e^{C_{\mathrm{PU}}(O,\beta)}.
 $$
-By the assumed weak compactness/convergence clause of the certificate, a subnet converges to a tensor representing $\Theta_{\beta,O}$. Lower semicontinuity of the projective norm gives
+By the assumed weak convergence of a subnet, its limit $T$ represents $\Theta_{\beta,O}$. The closed ball of a Banach space is weakly closed, so
 $$
-\|\Theta_{\beta,O}\|_1
-\le
-\liminf_h\|\Theta_{\beta,O}^{(h)}\|_1
-\le
-\exp(C_{\mathrm{PU}}(O,\beta)).
+\|\Theta_{\beta,O}\|_1\le\|T\|_\pi
+\le e^{C_{\mathrm{PU}}(O,\beta)}.
 $$
-Thus the continuum nuclearity bound follows from a uniform nuclear-decomposition certificate. Rank and operator norm alone do not supply this certificate. ∎
+No inequality involving the limit inferior of the minimal finite nuclear norms is inferred from arbitrary chosen representations.
 
-**Definition F.10.4f.3 (Split-Nuclear MPU Realization Certificate).** Let a retained AQFT branch satisfy the nuclearity bound (F.10.4f.4), the Hadamard-PCE state gate, the reflection-positivity gate, the split property on nested regions, and the PU-LAN field certificate of Definition F.10.4e.5 on the local fluctuation sector. A split-nuclear MPU realization certificate for a relatively compact region $O$ and tolerance $\delta>0$ is a finite record
+For completeness, finite rank and the Hilbert target do provide the required finite nuclear bound. Use the Hilbert inner product linear in its second slot. Choose an orthonormal basis $(e_r)_{r=1}^{R_h}$ of the range and put $\varphi_{h,r}(A)=\langle e_r,\Theta_{\beta,O}^{(h)}A\rangle$. Then
+$$
+\Theta_{\beta,O}^{(h)}A=\sum_{r=1}^{R_h}\varphi_{h,r}(A)e_r,\qquad
+\sum_r\|\varphi_{h,r}\|\le R_h\|\Theta_{\beta,O}^{(h)}\|
+\le e^{C_{\mathrm{PU}}(O,\beta)}.
+$$
+These finite estimates do not imply weak compactness of the transported projective-tensor ball or identify its limiting map; those continuum hypotheses remain independent. ∎
+
+**Definition F.10.4f.3 (Split-Nuclear MPU Realization Certificate).** Let a retained AQFT branch satisfy the nuclearity bound (F.10.4f.4), Hadamard-PCE and reflection-positivity gates, the split property, and the local PU-LAN certificate. For a relatively compact region $O$ and $0<\delta<1$, a realization certificate records
 $$
 \mathfrak R_{\delta,O}
-=
-\left(
-O_-\Subset O\Subset O_+,\,
-\mathcal N_O,\,
-\mathcal B_{\delta,O},\,
-\pi_{\delta,O},\,
-\iota_{\delta,O},\,
-\omega_{\delta,O},\,
-C_{\delta,O}
-\right)
+=(O_-\Subset O\Subset O_+,\mathcal N_O,\mathcal B_{\delta,O},
+\pi_{\delta,O},\iota_{\delta,O},\omega_{\delta,O},C_{\delta,O}).
 \tag{F.10.4f.6}
 $$
-such that:
-
-1. $\mathfrak A(O_-)\subset\mathcal N_O\subset\mathfrak A(O_+)$ is a split inclusion with $\mathcal N_O$ a type-I factor;
-
-2. $\mathcal B_{\delta,O}$ is a finite-dimensional $C^*$-algebra;
-
-3. $\pi_{\delta,O}:\mathfrak A(O)\to\mathcal B_{\delta,O}$ and $\iota_{\delta,O}:\mathcal B_{\delta,O}\to\mathfrak A(O_+)$ are unital completely positive maps;
-
-4. for every retained local test observable $A$ in the branch test core $\mathcal T_O\subset\mathfrak A(O)$,
+Its requirements are:
+1. $\mathfrak A(O_-)\subset\mathcal N_O\subset\mathfrak A(O_+)$ is a split inclusion with a type-I intermediate factor.
+2. $\mathcal B_{\delta,O}$ is a finite-dimensional $C^*$-algebra with state $\omega_{\delta,O}$.
+3. The interfaces $\pi_{\delta,O}:\mathfrak A(O)\to\mathcal B_{\delta,O}$ and $\iota_{\delta,O}:\mathcal B_{\delta,O}\to\mathfrak A(O_+)$ are UCP.
+4. Choose error allocations $\delta_0,\delta_{\mathrm{impl}}\ge0$ with $\delta_0+\delta_{\mathrm{impl}}\le\delta$. On the retained test core $\mathcal T_O$,
 $$
-\left|
-\omega(A)-\omega_{\delta,O}(\pi_{\delta,O}(A))
-\right|
-\le
-\delta\|A\|;
+|\omega(A)-\omega_{\delta,O}(\pi_{\delta,O}A)|
+\le\delta_0\|A\|.
 \tag{F.10.4f.7}
 $$
-
-5. the finite reconstructed observable is locally accurate in the GNS seminorm of $\omega$:
+5. On the same core,
 $$
-\left\|
-A-\iota_{\delta,O}\pi_{\delta,O}(A)
-\right\|_{\omega}
-\le
-\delta\|A\|,
-\qquad
-A\in\mathcal T_O;
+\|A-\iota_{\delta,O}\pi_{\delta,O}A\|_\omega
+\le\delta_0\|A\|.
 \tag{F.10.4f.8}
 $$
-
-6. the finite phase-space map induced by $(\mathcal B_{\delta,O},\omega_{\delta,O})$ approximates $\Theta_{\beta,O}$ on $\mathcal T_O$ to tolerance $\delta$ for every retained $\beta$ in the certificate window;
-
-7. the finite realization cost obeys
+6. The induced finite phase-space map approximates $\Theta_{\beta,O}$ to error $\delta_0$ in the declared test norm for every $\beta$ in the retained window.
+7. All carrier, ancilla and interface costs obey
 $$
-C_{\delta,O}
-\le
-C_0|\partial O|\,\operatorname{polylog}(1/\delta)
-+
-C_1\operatorname{Vol}_{\mathrm{active}}(O)
-+
-C_2C_{\mathrm{PU}}(O,\beta),
+C_{\delta,O}\le C_0|\partial O|\,P(\log(1/\delta))
++C_1\operatorname{Vol}_{\mathrm{active}}(O)
++C_2C_{\mathrm{PU}}(O,\beta),
 \tag{F.10.4f.9}
 $$
-with constants specified by the branch certificate, not by comparison with validation data;
+where the nonnegative polynomial $P$ and all constants are branch data.
+8. The record supplies a code-corner embedding into $(\mathbb C^8)^{\otimes N}$ and finite circuits for the retained interfaces. The ideal code algebra is invariant. All circuit and leakage errors in the state, GNS and phase-space comparisons of items 4--6 are separately bounded by $\delta_{\mathrm{impl}}$ in their respective norms. A leakage probability alone is not identified with any of these norm errors. All implementation costs are included in $C_{\delta,O}$.
 
-8. the record contains an invariant code-corner embedding of $\mathcal B_{\delta,O}$ into $(\mathbb C^8)^{\otimes N}$, finite Stinespring circuits implementing $\pi_{\delta,O}$ and $\iota_{\delta,O}$ on the retained test core, a leakage bound no larger than $\delta$, and all code-carrier and ancilla costs inside $C_{\delta,O}$.
-
-**Theorem F.10.4f.4 (Finite-PCE Realization from a Split-Nuclear Certificate).** If a retained AQFT branch admits a split-nuclear MPU realization certificate $\mathfrak R_{\delta,O}$ for every relatively compact $O$ and every $\delta>0$, then the branch admits finite MPU realizations with uniformly bounded PCE cost on every retained local test core. More precisely, for each $(\delta,O)$ there exists a finite MPU network $\mathcal N_{\delta,O}^{\mathrm{MPU}}$ such that
+**Theorem F.10.4f.4 (Finite-PCE Realization from a Split-Nuclear Certificate).** If these certificates exist for every retained $O$ and $0<\delta<1$, each pair admits a finite MPU realization with
 $$
-\left|
-\omega(A)-\omega_{\mathcal N_{\delta,O}^{\mathrm{MPU}}}(A)
-\right|
-\le
-\delta\|A\|
-\qquad
-(A\in\mathcal T_O),
+|\omega(A)-\omega_{\mathcal N_{\delta,O}^{\mathrm{MPU}}}(A)|
+\le\delta\|A\|\qquad(A\in\mathcal T_O),
 \tag{F.10.4f.10}
 $$
 and
 $$
-C_{\mathrm{PCE}}\!\left(\mathcal N_{\delta,O}^{\mathrm{MPU}}\right)
-\le
-C_{\delta,O}.
+C_{\mathrm{PCE}}(\mathcal N_{\delta,O}^{\mathrm{MPU}})\le C_{\delta,O}.
 \tag{F.10.4f.11}
 $$
+The cost is finite at each positive tolerance; this assertion supplies no uniform cost bound as $\delta\downarrow0$.
 
-*Proof.* Since $\mathcal B_{\delta,O}$ is finite-dimensional, it decomposes as
-$$
-\mathcal B_{\delta,O}
-\cong
-\bigoplus_{\alpha=1}^{r}M_{n_\alpha}(\mathbb C).
-$$
-Let
-$$
-m_{\delta,O}=\sum_{\alpha=1}^{r}n_\alpha.
-$$
-Choose $N$ with $8^N\ge m_{\delta,O}$ and an isometry
-$$
-V:\mathbb C^{m_{\delta,O}}\hookrightarrow(\mathbb C^8)^{\otimes N}.
-$$
-The corner map
-$$
-j_0(B)=VBV^*
-$$
-is a faithful, generally nonunital $*$-monomorphism into the code corner $VV^*B((\mathbb C^8)^{\otimes N})VV^*$. Assume the MPU realization certificate includes an invariant code-subspace constraint and finite Stinespring circuits for $\pi_{\delta,O}$ and $\iota_{\delta,O}$, with their ancilla and carrier costs included in $C_{\delta,O}$. Then the represented algebra and state remain in the code corner, and no unital extension to the unused complement is required.
-
-For every $A\in\mathcal T_O$, condition (F.10.4f.7) gives (F.10.4f.10), while (F.10.4f.8) gives the stated GNS-seminorm reconstruction error. Condition 6 controls the energy-damped phase-space map. The Stinespring clause supplies an actual finite MPU implementation of the UCP interfaces, and the invariant-corner clause prevents leakage into the unused carrier complement.
-
-Finally, condition (F.10.4f.9) is exactly the certified PCE cost budget for this finite realization. Because the complement of $VV^*$ is filled only by the fixed state $\tau$, it carries no retained test observable in the certificate; any carrier overhead is included in the certified cost $C_{\delta,O}$. Therefore
-$$
-C_{\mathrm{PCE}}\!\left(\mathcal N_{\delta,O}^{\mathrm{MPU}}\right)
-\le
-C_{\delta,O}.
-$$
-∎
+*Proof.* Write $\mathcal B_{\delta,O}=\bigoplus_\alpha M_{n_\alpha}$ and $m=\sum_\alpha n_\alpha$. Choose $N$ with $8^N\ge m$ and an isometry $V:\mathbb C^m\to(\mathbb C^8)^{\otimes N}$. The map $j_0(B)=VBV^*$ faithfully represents the algebra in the corner with identity $VV^*$. A finite state with density $D$ becomes $VDV^*$; no extension of the algebra to the unused complement is required. Item 8 supplies the physical interfaces and their errors, which are not consequences of this dimension count. The triangle inequality combines the abstract error $\delta_0$ and implementation error $\delta_{\mathrm{impl}}$ to prove (F.10.4f.10), and gives the analogous GNS and phase-space bounds. Items 7--8 charge every implementation resource to $C_{\delta,O}$, proving the cost inequality. The polynomial in $\log(1/\delta)$ may diverge as the tolerance decreases, so no tolerance-uniform bound follows. ∎
 
 ### F.10.4g Fractal Heat-Kernel and Trapped-Set Audit
 
-**Definition F.10.4g.1 (Uniform Recursive Heat-Kernel Audit).** Let $\{L_h\}_{h\downarrow0}$ be finite local MPU generators on a bounded physical region $O$, with heat kernels $p_t^{(h)}(x,y)$ for the symmetric propagation-cost sector. A uniform recursive heat-kernel audit on $O$ consists of constants
-$$
-C,c>0,
-\qquad
-d_w>1,
-\qquad
-\beta_{\mathrm{FUP}}>0,
-$$
-a macroscopic spectral dimension certificate $d_s=4$ on the operational-continuum scale window, and a core $\mathcal C_O$ of finite local test functions such that:
+**Definition F.10.4g.1 (Uniform Recursive Heat-Kernel Audit).** Let $\{L_h\}_{h\downarrow0}$ be finite local generators on a bounded region $O$, with symmetric-sector heat kernels $p_t^{(h)}(x,y)$ relative to declared reference measures. The audit records constants $C,c>0$, $d_w>1$, $q>0$, $\beta_{\mathrm{FUP}}>0$, an explicit macroscopic space-time window $\mathcal W_h$, and a test core $\mathcal C_O$. A spectral-dimension certificate $d_s=4$ is a separate part of the audit.
 
-1. the sub-Gaussian estimate
+1. On every $(t,x,y)\in\mathcal W_h$,
 $$
-p_t^{(h)}(x,y)
-\le
-C\,t^{-4/d_w}
-\exp\left[
--c\left(\frac{d_h(x,y)^{d_w}}{t}\right)^{1/(d_w-1)}
-\right]
+p_t^{(h)}(x,y)\le
+C\,t^{-q}\exp\!\left[
+-c\left(\frac{d_h(x,y)^{d_w}}t\right)^{1/(d_w-1)}
+\right].
 \tag{F.10.4g.1}
 $$
-holds uniformly for $0<t<t_O$ and all sufficiently small $h$ on the audited macroscopic window;
+The window specifies its cutoff relative to the mesh and its upper time bound; no estimate outside that window is asserted. A two-sided on-diagonal scaling $p_t(x,x)\asymp t^{-q}$ gives spectral dimension $d_s=2q$ under the retained scaling definition. A volume/walk-dimension normalization gives $q=d_v/d_w$ only with its separate volume and kernel certificate. Thus $t^{-4/d_w}$ uses $d_v=4$, whereas $d_s=4$ uses $q=2$ on that two-sided scaling branch. A one-sided upper bound alone establishes neither dimension identity.
 
 2. the finite forms are uniformly Markovian, conservative, tight on the local $L^2$ realization, and local on the audited window. They converge on the core in the Mosco-core sense: for canonical finite reconstructions $f_h,g_h$ of $f,g\in\mathcal C_O$,
 $$
@@ -2231,34 +2152,42 @@ $$
 
 The exponent $\beta_{\mathrm{FUP}}$ is part of the audit certificate. It must either be derived from stated branch regularity data, such as doubling, porosity, or Frostman-type bounds for the trapped sets, or recorded as branch-supplied data under Convention P.14.1e.
 
-**Theorem F.10.4g.2 (Heat-Kernel Audit for Local Generator Tightness).** On a bounded regular region $O$, a uniform recursive heat-kernel audit supplies the diffusion part of the local generator precompactness required by Theorem F.0. Assume the coherent operators are self-adjoint on compatible local Hilbert spaces, converge in strong resolvent sense, preserve a common algebraic core, and satisfy
+**Theorem F.10.4g.2 (Heat-Kernel Audit for Local Generator Tightness).** Retain Definition F.10.4g.1 with a complete varying-space Mosco liminf/recovery and limiting-form identification certificate. To use its scalar $L^2$ diffusion in Theorem F.0, additionally supply the identification with the observable generators $\mathcal D_h^*$ on the declared common local Banach realization; scalar heat-kernel convergence alone is not this operator-norm identification.
+
+Assume the $\mathcal D_h^*$ are closed densely defined generators on that realization, with the stated common graph cores, and the coherent derivations $B_hA=i[H_h,A]$ extend from those cores in the graph norm to all of $D(\mathcal D_h^*)$, where they obey
 $$
-\|[H_h,A]\|
-\le
-a\|\mathcal D_h^*A\|+b\|A\|,
-\qquad
-a<1,
+\|B_hA\|\le a\|\mathcal D_h^*A\|+b\|A\|,
+\qquad 0\le a<1,
 $$
-uniformly on that core. Assume also that the common core is a graph core for $\mathcal D_h^*$, that $i[H_h,\cdot]$ extends to a $\mathcal D_h^*$-bounded perturbation with relative bound uniformly below $1$, and that the closures
-$$
-\mathcal L_h^*:=\overline{\mathcal D_h^*+i[H_h,\cdot]}
-$$
-are maximally dissipative. Finally, require a local Trotter--Kato certificate: under the declared common local embeddings, for one $\lambda>0$ the resolvents $(\lambda-\mathcal L_h^*)^{-1}$ converge strongly on a dense test set to the resolvent of the maximally dissipative closure of $\mathcal D_{\mathrm{cont}}^*+i[H_{\mathrm{cont}},\cdot]$, with the uniform Hille--Yosida bound. Then the relative-bounded perturbation theorem [Kato 1966] makes the sums closed on their graph domains, and Trotter--Kato convergence identifies every subsequential local limit as
+uniformly, with $b\ge0$. Retain compatible self-adjoint Hamiltonians, their strong-resolvent and core-commutator convergence, and the corresponding limiting domain conditions. Assume the full sums and limiting sum are maximally dissipative. Require a Trotter--Kato certificate on the same Banach realization: convergence at some $\lambda>0$ of the full resolvents on a dense set, the uniform contraction-resolvent bound, and identification of the limiting resolvent with that of $\overline{\mathcal D_{\mathrm{cont}}^*+i[H_{\mathrm{cont}},\cdot]}$. Then the applicable relative-bounded perturbation and Trotter--Kato theorems give strong semigroup convergence on bounded positive-time intervals to the generator
 $$
 \mathcal L_{\mathrm{cont}}^*
-=
-i[H_{\mathrm{cont}},\cdot]+\mathcal D_{\mathrm{cont}}^*.
+=\overline{\mathcal D_{\mathrm{cont}}^*+i[H_{\mathrm{cont}},\cdot]}.
 \tag{F.10.4g.4}
 $$
-If the trapped-set audit (F.10.4g.3) holds, no retained state lying simultaneously in the two trapped projections can remain exactly non-decaying in the $h\downarrow0$ limit.
+The exact source theorem and its varying-space or common-space hypotheses remain part of the convergence certificate.
 
-*Proof.* The heat-kernel and Mosco-core hypotheses give the closed limiting Dirichlet form $\mathcal E_O$ and its dissipative generator $\mathcal D_{\mathrm{cont}}^*$. The uniform relative bound below $1$ makes each coherent perturbation closed on the graph domain, while maximal dissipativity supplies the retained contraction semigroup. The registered resolvent convergence and uniform Hille--Yosida bound then invoke the Trotter--Kato theorem, so the semigroups converge strongly on bounded time intervals and their generator limit is the maximally dissipative closure of
+For the trapped-set conclusion, require $\mathcal F_h$ to be unitary and the two indicated $\Pi$ to be orthogonal projections. Put $P_h=\Pi_{\mathcal T_x(h)}$, $Q_h=\mathcal F_h^{-1}\Pi_{\mathcal T_p(h)}\mathcal F_h$, and $\varepsilon_h=Ch^{\beta_{\mathrm{FUP}}}$. Every unit vector satisfies
 $$
-\mathcal D_{\mathrm{cont}}^*+i[H_{\mathrm{cont}},\cdot],
+\|(I-P_h)\psi\|+\|(I-Q_h)\psi\|\ge1-\varepsilon_h.
 $$
-which is (F.10.4g.4). Core commutator convergence alone would not prove this generator convergence.
+Thus no normalized family becomes asymptotically supported in both trapped projections. This is a localization obstruction; decay, leakage and removal by PCE require their own dynamical or response certificate.
 
-For the trapped sector, (F.10.4g.3) bounds the norm of the operator that simultaneously localizes a state on the trapped configuration set and on the trapped update-frequency set. If a nonzero retained state were exactly trapped and invisible to leakage protocols in the continuum limit, this norm would have a subsequential lower bound $1$ on that state. The estimate $C h^{\beta_{\mathrm{FUP}}}\to0$ forbids such a state. Thus any retained trapped sector must either leak through finite protocols, be removed by PCE as non-observable, or fail the audit. This theorem supplies a local generator and anti-remnant audit component; it does not by itself derive wedge KMS, Wightman analyticity, or the positive-energy representation. ∎
+*Proof.* For $A=\mathcal D_h^*$ and $B=B_h$, the relative estimate implies
+$$
+(1-a)\|Ax\|\le\|(A+B)x\|+b\|x\|,
+\quad
+\|(A+B)x\|\le(1+a)\|Ax\|+b\|x\|.
+$$
+Hence the two graph norms are equivalent, so completeness of the graph norm of $A$ makes $A+B$ closed on $D(A)$. This does not say that $B$ alone is closed on that domain. Maximal dissipativity supplies the contraction semigroups. The declared full-resolvent convergence, uniformly bounded at $\lambda$, extends from its dense test set to the common space; the applicable Trotter--Kato theorem then supplies semigroup convergence. Its continuum applicability is an imported certificate, not a consequence of the finite commutator estimate.
+
+For localization,
+$$
+\|\psi-P_hQ_h\psi\|
+\le\|(I-P_h)\psi\|+\|P_h(I-Q_h)\psi\|
+\le\|(I-P_h)\psi\|+\|(I-Q_h)\psi\|.
+$$
+Since $\|P_hQ_h\|\le\varepsilon_h$, the triangle inequality gives the claimed lower bound. In particular, an exact common unit vector is impossible once $\varepsilon_h<1$. No evolution operator occurs in this argument, so it establishes no decay or leakage rate. ∎
 
 **Definition F.10.4g.3 (Local Bochner-Mosco Certificate).** A local Bochner-Mosco certificate on a bounded operational region $O$ is a finite record
 
@@ -2276,12 +2205,12 @@ such that:
 4. The radius-2 Bakry-Émery defect $\mathfrak B_h$ of Theorem D.6e tends to zero on the cover of $O$ with limiting parameters $K_h\to K$ and $N_h\to4$.
 5. The finite-core and recovery defects $\mathfrak C_h$ and $\mathfrak R_h$ of Theorem D.6e tend to zero on the same retained core.
 6. The local Euclidean-rigidity defect $\mathfrak H_h$ is recorded when the regular-manifold upgrade is invoked; otherwise the output is only the retained metric-measure RCD branch.
-7. The noncollapse, local doubling, and local $(1,2)$-Poincaré inputs required by Theorem C.6c are supplied on $O$.
-8. The heat-kernel audit has spectral dimension $d_s=4+o(1)$ on the same macroscopic window, and the noncollapse bounds in item 7 fix the limit on the noncollapsed four-dimensional branch.
+7. On the declared local realization and varying-space identifications, all hypotheses of Theorem C.6c are supplied: complete full-support length metric-measure spaces with quadratic Cheeger energy, Sobolev-to-Lipschitz and integrability properties; global generator-domain $\mathrm{BE}(K_h,4)$ inequalities; and Mosco, heat-flow, and carré-du-champ test convergence sufficient to pass those inequalities to the limit. The candidate-form identification and both Mosco inequalities required by Theorem D.6e are included.
+8. The heat-kernel audit has spectral dimension $d_s=4+o(1)$ on the same macroscopic window. The declared normalization satisfies $\mu=\mathcal H^4$ on the limiting local realization, as required for strict noncollapse in Theorem C.6c.
 
 **Corollary F.10.4g.4 (Local RCD Gate from the Bochner-Mosco Certificate).** If $\mathfrak B^{BM}_{O}$ is accepted on a bounded regular region $O$, then every selected Mosco/measured-GH subsequential limit on $O$ satisfies the retained operational version of noncollapsed $\mathrm{RCD}^*(K,4)$, and the limiting Cheeger energy is quadratic. A response-active non-quadratic or Finsler limit fails this gate unless the non-quadratic directions are response-null.
 
-*Proof.* Items 3-5 give the Mosco-core, curvature-transfer, finite-core, and recovery-map hypotheses of Theorem D.6e on $O$. Item 7 supplies the noncollapse and compactness hypotheses of Theorem C.6c. Item 8 fixes the branch dimension at four together with noncollapse, so dimension drop is not permitted on the retained branch. The conclusion is therefore the local restriction of the D.6e/C.6c closure. A response-active non-quadratic direction would violate the quadratic Cheeger-energy conclusion; if the direction is response-null, it is removed by the PPI quotient rather than retained as a distinct continuum energy. ∎
+*Proof.* Items 3-5 supply the declared finite-core defects. Item 7 supplies both Mosco inequalities and the candidate Cheeger-form identification used by Theorem D.6e, together with the ambient, generator-domain, and convergence hypotheses of Theorem C.6c. That theorem gives the local $\mathrm{RCD}^*(K,4)$ conclusion, and item 8 supplies its Hausdorff-measure normalization for strict noncollapse. A response-active non-quadratic direction would violate the quadratic Cheeger-energy conclusion; if the direction is response-null, it is removed by the PPI quotient rather than retained as a distinct continuum energy. ∎
 
 **Theorem F.10.4g.4a (Response-Active Finsler Mosco Countermodel).** Let $\mathbb T^4=(\mathbb R/\mathbb Z)^4$, let $h=n^{-1}$, let $V_h=(h\mathbb Z/\mathbb Z)^4$, and set
 $$
@@ -2300,51 +2229,53 @@ $$
 \left(\sum_{j=1}^4|D_{j,h}u(x)|\right)^2.
 \tag{F.10.4g.4a.1}
 $$
-Extend $\mathcal E_h$ by $+\infty$ off $\mathcal X_h$. Under the piecewise-affine embeddings into $L^2(\mathbb T^4)$, the functionals $\mathcal E_h$ Mosco-converge to
+Embed a configuration as the function $J_hu$ constant with value $u(x)$ on the periodic cube $x+[0,h)^4$. Extend $\mathcal E_h$ by $+\infty$ to all other elements of $L^2(\mathbb T^4)$. In this common space, the weak-liminf and strong-recovery Mosco conditions hold for
 $$
-\mathcal E(u)
-=
+\mathcal E(u)=
 \begin{cases}
-\displaystyle\frac12\int_{\mathbb T^4}
-\left(\sum_{j=1}^4|\partial_ju(x)|\right)^2dx,
-&u\in W^{1,2}(\mathbb T^4),\\[6pt]
-+\infty,&u\notin W^{1,2}(\mathbb T^4).
+\frac12\displaystyle\int_{\mathbb T^4}
+\left(\sum_{j=1}^4|\partial_ju|\right)^2dx,
+&u\in W^{1,2}(\mathbb T^4),\\
++\infty,&\text{otherwise}.
 \end{cases}
 \tag{F.10.4g.4a.2}
 $$
-This is the Cheeger energy of the flat Finsler torus whose tangent norm is $\ell^\infty$ and whose cotangent norm is $\ell^1$. It is not quadratic. Indeed, for
-$$
-f(x)=\sin(2\pi x_1),
-\qquad
-g(x)=\sin(2\pi x_2),
-$$
-one has
+This is the Cheeger energy of the flat torus with tangent norm $\ell^\infty$ and cotangent norm $\ell^1$. For $f(x)=\sin(2\pi x_1)$ and $g(x)=\sin(2\pi x_2)$,
 $$
 \mathcal E(f+g)+\mathcal E(f-g)-2\mathcal E(f)-2\mathcal E(g)
-=
-2\int_{\mathbb T^4}|\partial_1f\,\partial_2g|\,dx
->0.
+=2\int|\partial_1f\,\partial_2g|\,dx=32.
 \tag{F.10.4g.4a.3}
 $$
-For pairs $(u,v)$ for which $u,v,u+v,u-v\in\mathcal X_h$, the finite response map
+For every pair with $u,v,u+v,u-v\in\mathcal X_h$, retain the finite response
 $$
-\mathfrak r_h(u,v)
-=
+\mathfrak r_h(u,v)=
 \bigl(\mathcal E_h(u),\mathcal E_h(v),
-\mathcal E_h(u+v)+\mathcal E_h(u-v)-2\mathcal E_h(u)-2\mathcal E_h(v)\bigr)
+\mathcal E_h(u+v)+\mathcal E_h(u-v)-2\mathcal E_h(u)-2\mathcal E_h(v)\bigr).
 \tag{F.10.4g.4a.4}
 $$
-is a sum of radius-one terms and is target-independent. On the finite carrier Hilbert space with basis $|u,v\rangle$, each coordinate of $\mathfrak r_h$ is realized by the diagonal self-adjoint observable having that coordinate as its eigenvalue; the basis readout is a normalized finite PVM. Quantizing the samples of $f$ and $g$ to $h^2\mathbb Z$ makes the third coordinate converge to the strictly positive value in (F.10.4g.4a.3), whereas every quadratic Dirichlet or RCD Cheeger energy gives zero. The nonquadratic directions therefore survive the registered response quotient.
+It is a sum of radius-one terms. On the finite Hilbert space with basis indexed by these pairs, its coordinates are diagonal self-adjoint observables and the basis readout is a normalized PVM. The response distinguishes this nonquadratic energy from every quadratic energy.
 
-*Proof.* Boundedness of $\mathcal E_h(u_h)$ bounds every coordinate difference in discrete $L^2$. If the piecewise-affine embeddings converge weakly in $L^2$, discrete compactness and the periodic Poincaré inequality give, after removal of the mean, a weakly convergent $W^{1,2}$ subsequence. Its discrete gradients converge weakly to the distributional gradient of the limit. The integrand
+*Proof.* Suppose $J_hu_h\rightharpoonup u$ in $L^2$ and the liminf of the energies is finite. Pass to a subsequence attaining that liminf with bounded energies. Let $G_{j,h}$ be constant on each cube with value $D_{j,h}u_h(x)$. Since
 $$
-\Phi(\xi)=\frac12\left(\sum_{j=1}^4|\xi_j|\right)^2
+\mathcal E_h(u_h)=\int\Phi(G_h)\,dx,\qquad
+\Phi(\xi)=\tfrac12\|\xi\|_1^2\ge\tfrac12\|\xi\|_2^2,
 $$
-is convex and continuous, so weak lower semicontinuity gives the Mosco liminf inequality. For bounded smooth $u$, sample on $V_h$ and round every value to the nearest multiple of $h^2$. The rounding changes each forward difference by at most $2h$, while the amplitude cutoff is inactive for all sufficiently small $h$; uniform finite-difference convergence therefore gives $\mathcal E_h(u_h)\to\mathcal E(u)$. Smooth density in $W^{1,2}(\mathbb T^4)$ and a diagonal choice give a quantized recovery sequence for every finite-energy $u$. This proves Mosco convergence for the finite configuration carriers. Equation (F.10.4g.4a.3) follows pointwise from
+the four gradients have a weakly convergent $L^2$ subsequence. For a smooth periodic test function $\varphi$, discrete summation by parts gives
 $$
-(|a|+|b|)^2+(|a|+|-b|)^2-2a^2-2b^2=4|ab|
+\int G_{j,h}\varphi\,dx
+=-h^4\sum_xu_h(x)
+\frac{\bar\varphi_h(x)-\bar\varphi_h(x-he_j)}h,
 $$
-and the factor $1/2$ in (F.10.4g.4a.2). Finite-difference convergence then proves the response claim. ∎
+where $\bar\varphi_h(x)$ is the average of $\varphi$ on the cube at $x$. The piecewise-constant difference of these averages converges uniformly to $\partial_j\varphi$. Weak convergence and boundedness of $J_hu_h$ identify the gradient limit as $\partial_ju$. Thus $u\in W^{1,2}$, and weak lower semicontinuity of the integral of the convex continuous function $\Phi$ gives the liminf bound.
+
+For smooth periodic $u$, round its grid samples to $h^2\mathbb Z$. Each value error is at most $h^2/2$, hence each forward-difference error is at most $h$. The amplitude cutoff is inactive for sufficiently small $h$. Uniform convergence of the differences gives energy convergence and $J_hu_h\to u$ strongly. Smooth approximation in $W^{1,2}$ and a diagonal choice give recovery for every finite-energy $u$; for an infinite-energy $L^2$ function, smooth $L^2$ approximation supplies a strong configuration approximation and the upper bound is automatic. The continuity estimate
+$$
+|\Phi(\xi)-\Phi(\eta)|
+\le C(\|\xi\|_2+\|\eta\|_2)\|\xi-\eta\|_2
+$$
+justifies the energy convergence under the smooth $W^{1,2}$ approximation.
+
+For the Cheeger identification, the local metric slope of a smooth function is the dual norm $\|\nabla u\|_1$. Mollification and convexity give smooth recovery, while the preceding weak lower-semicontinuity argument gives the relaxation lower bound; hence its relaxed squared-slope energy is $\mathcal E$. Finally, $\int_0^1|2\pi\cos(2\pi x)|\,dx=4$, so the displayed gap is $2\cdot4^2=32$. Quantized samples of $f,g$ and their sums and differences satisfy the amplitude constraint for small $h$, and their energies converge by the same difference estimate. Their finite response therefore tends to the nonzero gap, proving response activity. ∎
 
 Theorem F.10.4g.4a is the response-active Finsler/nonquadratic alternative registered by `TV-F-15`. It resolves that target negatively with respect to unconditional quadratic-RCD rigidity; Corollary F.10.4g.4 remains valid on branches carrying its stronger Bochner-Mosco certificate.
 
@@ -2376,7 +2307,7 @@ $$
 
 If neither witness is supplied, the coherent Hamiltonian part of the AQFT bridge remains open on $O$.
 
-**Corollary F.10.4g.6 (Closure of the Coherent-Hamiltonian Handling Gate).** If $\mathfrak C_{\mathrm{coh}}(O)$ is accepted on each bounded operational region of the retained cover, then the coherent Hamiltonian condition in Theorem F.10.4g.2 is supplied region-wise. On the retention branch,
+**Corollary F.10.4g.6 (Closure of the Coherent-Hamiltonian Handling Gate).** Assume $\mathfrak C_{\mathrm{coh}}(O)$ is accepted on each bounded operational region of the retained cover and that the heat-kernel/Mosco, closed-generator, maximal-dissipativity, and full-generator resolvent/Trotter--Kato hypotheses of Theorem F.10.4g.2 hold on the same regions. The coherent certificate supplies the separate Hamiltonian-handling entries of that theorem. On the retention branch,
 
 $$
 \mathcal L_{\mathrm{cont}}^*
@@ -2394,7 +2325,7 @@ $$
 
 No coherent term is silently discarded: it is either transported by an accepted convergence witness, removed by an accepted response-null or defect-filling witness, or left as an open bridge condition.
 
-*Proof.* The retention witness supplies self-adjoint strong-resolvent convergence, the common graph core, the uniform relative bound with constant $a<1$, and convergence of the commutators on every convergent core sequence. These are exactly the coherent hypotheses of Theorem F.10.4g.2; the Kato perturbation theorem therefore makes the summed generator closable and passes the commutator part to the local limit together with the dissipative generator. The cancellation witness removes the response-active coherent term either by the response quotient or by exact defect filling in the obstruction complex. If neither witness is present, the hypotheses of this corollary are absent and no closure is asserted. ∎
+*Proof.* The retention witness supplies self-adjoint strong-resolvent convergence, the common graph core, the uniform relative bound with constant $a<1$, and convergence of the commutators on every convergent core sequence. Together with the stated full-generator stability and resolvent hypotheses, these data permit application of Theorem F.10.4g.2 to identify the limiting sum. The cancellation witness removes the response-active coherent term either by the response quotient or by exact defect filling in the obstruction complex. If neither witness is present, the hypotheses of this corollary are absent and no closure is asserted. ∎
 
 **Proposition F.10.4g.7 (GKLS Response Does Not Canonically Split Coherent and Dissipative Parts).** On a finite matrix carrier, write the one-channel Schrödinger-picture generator as
 $$
@@ -2491,19 +2422,14 @@ W(v)W(w)=(-1)^{\omega(v,w)}W(w)W(v).
 $$
 For any subspace $S\le V_{24}$, let $\mathfrak A(S)$ be the unital $*$-algebra generated by $\{W(s):s\in S\}$.
 
-**Lemma F.10.5b (Finite Symplectic Commutant).** For every subspace $S\le V_{24}$,
+**Lemma F.10.5b (Finite Symplectic Commutant).** In the full matrix representation of the finite Weyl--Pauli algebra,
 $$
 \mathfrak A(S)'=\mathfrak A(S^{\perp_\omega})
 \tag{F.10.5.1}
 $$
-inside the full finite Pauli algebra, up to the common center generated by the radical $S\cap S^{\perp_\omega}$.
+exactly. Their common center is $\mathfrak A(S\cap S^{\perp_\omega})$; no quotient by that center is taken.
 
-*Proof.* A Weyl generator $W(v)$ commutes with every generator $W(s)$, $s\in S$, if and only if
-$$
-\omega(v,s)=0
-\quad\text{for every }s\in S,
-$$
-which is exactly $v\in S^{\perp_\omega}$. Since the Weyl generators form a linear basis of the finite matrix algebra, an arbitrary operator commutes with $\mathfrak A(S)$ exactly when its Weyl expansion uses only generators from $S^{\perp_\omega}$, modulo central elements from $S\cap S^{\perp_\omega}$. This proves (F.10.5.1). ∎
+*Proof.* The Weyl matrices form a linear basis, and $\mathfrak A(S)$ is their span over $s\in S$. Conjugation by $W(s)$ multiplies $W(v)$ by $(-1)^{\omega(s,v)}$. Thus, for $X=\sum_vc_vW(v)$, the equations $W(s)XW(s)^*=X$ force $c_v=0$ whenever some $s\in S$ has $\omega(s,v)=1$. The surviving indices are precisely $S^{\perp_\omega}$, proving the exact commutant identity. Intersecting its basis span with the span over $S$ gives the stated center. ∎
 
 **Theorem F.10.5c (Finite Symplectic-Complement Duality on the Marked Carrier).** Let a finite operational region $R$ be represented by a subspace $S_R\le V_{24}$ and assume its operational complement is represented by
 $$
@@ -2528,27 +2454,31 @@ $$
 $$
 For the conditional support statement, the extended binary Golay code has minimum Hamming weight $8$, so every nonzero element of the assumed defect code has support at least $8$. No weight conclusion follows for defects outside that code. ∎
 
-**Corollary F.10.5d (Continuum Haag Duality as the Limit of Golay Duality).** Under Theorem F.10.1 and Theorem F.10.2, if the approximating finite local algebras are chosen in marked Golay-compatible frames, the boundary correction terms vanish in the sense of Theorem F.10.1(iv), and the inductive limit preserves the relevant commutants on the admissible diamond class, then the continuum net satisfies Haag duality for the corresponding admissible diamonds:
+**Corollary F.10.5d (Continuum Haag Duality under a Commutant-Comparison Certificate).** Retain the compatible-family quotient and represented net of Theorems F.10.1--F.10.2. At each finite stage require $S_{R^c}=S_R^{\perp_\omega}$, so Theorem F.10.5c gives exact finite duality. For a represented limiting diamond algebra $\mathfrak A(\mathcal O)\subset B(\mathcal H)$, additionally assume:
+1. complementary local representatives commute in the quotient, giving $\mathfrak A(\mathcal O')\subseteq\mathfrak A(\mathcal O)'$;
+2. every operator in $\mathfrak A(\mathcal O)'$ is a strong-operator limit of a uniformly bounded net of represented complementary compatible families, with all declared boundary errors tending to zero, and $\mathfrak A(\mathcal O')$ is the corresponding von Neumann closure.
+Then
 $$
-\mathfrak A(\mathcal O)'=\mathfrak A(\mathcal O')
+\mathfrak A(\mathcal O)'=\mathfrak A(\mathcal O').
 $$
-at the operational resolution of the limiting net.
 
-*Proof.* At each finite stage, Theorem F.10.5c gives exact commutant equality on the marked carrier away from weight-$8$ unresolved boundary shells. Theorem F.10.1 sends boundary corrections to zero in the limit, and Theorem F.10.2 identifies the limiting assignment as the emergent Haag-Kastler net. Passing the commutant identity through the isometric limit gives the displayed equality. ∎
+*Proof.* Item 1 is one inclusion. Item 2 places every element of the commutant in the strong-operator closed complementary algebra, proving the reverse inclusion. The compatible-family quotient removes norm-null families but does not by itself preserve commutants or provide item 2. Finite Golay duality and vanishing boundary errors therefore remain inputs to, rather than substitutes for, the commutant-comparison certificate. ∎
 
 ### F.10.6 Predictive Markov-Blanket Locality
 
-**Definition F.10.6a (Predictive Markov Boundary).** Let $R$ be a finite MPU region, let $\bar R$ be its operational exterior, and let $B_R$ be a finite boundary syndrome variable or finite boundary algebra. In the classical finite branch, $B_R$ is a predictive Markov boundary for $R$ when every exterior protocol outcome $E_{\bar R}$ satisfies
+**Definition F.10.6a (Predictive Markov Boundary).** Fix a retained state and a complete class of interior and exterior protocols. In the classical finite branch, a boundary variable $B_R$ is sufficient when
 $$
-\Pr(E_{\bar R}\mid X_R,B_R)=\Pr(E_{\bar R}\mid B_R).
+\Pr(E_{\bar R}\mid X_R,B_R)=\Pr(E_{\bar R}\mid B_R)
 \tag{F.10.6.1}
 $$
-In the finite quantum-algebra branch, $B_R$ is a predictive Markov boundary when the restricted state on $R B_R \bar R$ satisfies
+on the support of the conditioning law, for every retained protocol outcome.
+
+For the quantum statement, require a registered realization by three independent finite tensor factors $R,B_R,\bar R$, with a normalized density matrix and channels representing the complete retained protocol class. Then the boundary is quantum Markov when
 $$
 I(R:\bar R\mid B_R)_\rho=0.
 \tag{F.10.6.2}
 $$
-It is PCE-minimal when no strict coarsening of $B_R$ satisfies the same condition for all admissible exterior protocols.
+A gauge-split common center must first be represented as classical data in such a realization. If both local protocol algebras can read its label, that accessible label is retained in both local records, for example by classical copies. Coarsening the boundary register does not erase those interior or exterior records. All comparisons of sufficient boundary data use the same retained local protocols and state. A sufficient boundary is PCE-minimal under coarsening when no strict coarsening remains sufficient for that class.
 
 **Theorem F.10.6b (Locality as Boundary Conditional Independence).** On a finite branch:
 
@@ -2578,11 +2508,12 @@ $$
 $$
 Whenever $\Pr(X_R,B_R)>0$, division by $\Pr(X_R\mid B_R)$ gives (F.10.6.1). Conversely, multiplying (F.10.6.1) by $\Pr(X_R\mid B_R)$ gives the displayed factorization. This proves (1).
 
-For finite quantum algebras, the equality condition in strong subadditivity is the finite-dimensional quantum Markov theorem. It states that
+For the quantum branch, Definition F.10.6a supplies finite tensor factors and a normalized density matrix. The finite-dimensional equality theorem of Hayden, Jozsa, Petz and Winter (2004), on these factors and the supports of their marginals, gives a CPTP recovery channel when $I(R:\bar R\mid B_R)_\rho=0$; full rank is not required. This is the retained external Markov theorem. Conversely, exact recovery by a channel on $B_R$ and data processing give
 $$
-I(R:\bar R\mid B_R)_\rho=0
+I(R:B_R)_\rho\ge I(R:B_R\bar R)_\rho
+\ge I(R:B_R)_\rho.
 $$
-if and only if the tripartite state is exactly recoverable from $\rho_{R B_R}$ by a CPTP map acting only on $B_R$. This is precisely (F.10.6.3), proving (2).
+The second inequality is partial trace. Equality and the chain rule therefore give $I(R:\bar R\mid B_R)_\rho=0$. This proves item 2 on its registered finite tensor-product domain.
 
 For (3), let $B'_R$ be another sufficient boundary datum. By the stated coarsest hypothesis, there is a classical stochastic map or quantum channel $B'_R\to B_R$ preserving every exterior protocol distribution. Hence $B'_R$ factors through $B_R$ up to operational equivalence. PCE-minimality under strict coarsening is not used for this implication and, by itself, would not supply the factorization. ∎
 
@@ -2668,59 +2599,48 @@ B(\mathcal H_R)\otimes I,
 I\otimes B(\mathcal H_{\bar R}).
 \tag{F.10.6.8}
 $$
-This is a locally complete finite gauge-split datum with common center $Z\cong\mathbb C^2$. Under the equal-block identification, choose
+This is a locally complete finite gauge-split datum with common center $Z\cong\mathbb C^2$. Under the equal-block identification choose the state
 $$
 \rho_{RZ\bar R}
-=
-\rho_R\otimes\frac{I_Z}{2}\otimes\rho_{\bar R}.
+=\rho_R\otimes|0\rangle\langle0|_Z\otimes\rho_{\bar R}.
 \tag{F.10.6.9}
 $$
-Then
+No faithfulness assumption is imposed. Retain every protocol generated by the two displayed local algebras, including protocols reading the center. The label is nevertheless deterministically zero on this state. In the complete local-record realization of Definition F.10.6a,
 $$
-I(R:\bar R\mid Z)_\rho=0,
-\qquad
+I(R:\bar R\mid Z)_\rho=0,\qquad
 I(R:\bar R)_\rho=0.
 \tag{F.10.6.10}
 $$
-Hence both the two-valued center and its strict coarsening $Z\to *$ are sufficient for every exterior protocol generated by $\mathfrak A_{\bar R}$. For log-cardinality cost the coarsening reduces the boundary cost from $\ln2$ to $0$, so the common gauge-split center is not PCE-minimal on this state and protocol class.
+Consequently the registered two-label boundary and its coarsening $Z\to *$ are both sufficient. If the structural cost is the logarithm of the registered alphabet cardinality, including unused labels, the coarsening reduces that cost from $\ln2$ to $0$. The Shannon entropy of $Z$ is already zero and is not the cost used here.
 
-*Proof.* On each central block, the two algebras in (F.10.6.8) are mutual commutants and generate the full block matrix algebra, so Definition F.10.4d.1 gives local completeness and common center $\mathbb C^2$. The state (F.10.6.9) is a product across $R$, $Z$, and $\bar R$, which makes both conditional and unconditional mutual information in (F.10.6.10) vanish. Theorem F.10.6b therefore makes $Z$ sufficient, while discarding $Z$ leaves the product state $\rho_R\otimes\rho_{\bar R}$ and makes the trivial datum sufficient. Exterior channels cannot create dependence on a discarded independent label. The strict cost inequality is immediate. ∎
+*Proof.* On each block the algebras in (F.10.6.8) are mutual commutants generating the full block algebra. Their common center remains $\mathbb C^2$ regardless of the state. Only block zero has positive state weight. Every retained local observable therefore acts, for purposes of this state, through its block-zero component. The two components see the product state $\rho_R\otimes\rho_{\bar R}$, and every local copy of the readable central label is the constant zero. Thus both unconditional and boundary-conditioned local records are independent. Replacing the boundary register by a singleton preserves every retained protocol distribution and its shielding property. The strict structural-cost inequality follows from the two registered alphabet sizes. Hence local gauge splitting and Markov sufficiency do not force state-dependent minimality of the common center. ∎
 
 **Resolution TV-F-12-R1.** Proposition F.10.6e is a target-exact `negative-refutation` of minimality from local gauge splitting, common-center structure, and Markov sufficiency alone. Corollary F.10.6d's no-sufficient-coarsening condition is therefore necessary; a classification of a specified nontrivial state family proceeds by its sufficient-center response quotient.
 
 ### F.10.7 Modular-Inclusion Reconstruction of Local Time
 
-**Definition F.10.7a (Standard Half-Sided Modular Inclusion Branch).** Let
+**Definition F.10.7a (Oriented Half-Sided Modular Inclusion Branch).** Let $\mathfrak N=\mathfrak A(D_1)\subset\mathfrak M=\mathfrak A(D_2)$ be von Neumann algebras on one Hilbert space, with a common unit vector $\Omega$ cyclic and separating for each. Use $\sigma_t^{\mathfrak M}=\operatorname{Ad}\Delta_{\mathfrak M}^{it}$ and the orientation
 $$
-\mathfrak A(D_1)\subset\mathfrak A(D_2)
-$$
-be nested causal-diamond von Neumann algebras in one representation of the regular AQFT limit. Assume there is a vector $\Omega_\omega$ that is cyclic and separating for both algebras and implements the faithful normal state $\omega$. The inclusion is future half-sided modular when
-$$
-\sigma_t^{\omega,D_2}(\mathfrak A(D_1))\subseteq \mathfrak A(D_1)
-\quad
-\text{for all }t\ge0.
+\sigma_{-t}^{\mathfrak M}(\mathfrak N)\subseteq\mathfrak N
+\qquad(t\ge0).
 \tag{F.10.7.1}
 $$
+The word future refers to the translation semigroup selected below; it does not identify positive modular parameter with positive physical time.
 
-**Theorem F.10.7b (Positive-Energy Algebraic Flow from Modular Inclusion).** Let
-$$
-\mathfrak A(D_1)\subset\mathfrak A(D_2)
-$$
-be the inclusion in Definition F.10.7a, represented with a common vector $\Omega_\omega$ that is cyclic and separating for both von Neumann algebras. If the inclusion is future half-sided modular, then its two modular groups determine a strongly continuous one-parameter unitary group $U(s)$ whose self-adjoint generator is nonnegative. The restriction $s\ge0$ is the inclusion-preserving algebraic semigroup selected by the half-sided orientation. Identifying $U(s)$ with a geometric translation or dilation of the diamonds requires a separate modular-covariance certificate.
+**Theorem F.10.7b (Positive-Energy Algebraic Flow from Modular Inclusion).** On this branch, the common-vector case of Araki--Zsidó (2005), Theorem 2.1, supplies a strongly continuous group $U(s)=e^{isP}$ with $P\ge0$, determined by the two modular operators, and $U(s)\mathfrak M U(s)^*\subseteq\mathfrak M$ for $s\ge0$. A geometric action on diamond labels requires its separate covariance certificate.
 
-*Proof.* The common cyclic-and-separating vector gives the modular operators of both pairs by the Tomita--Takesaki theorem (Takesaki 1970). Equation (F.10.7.1) is the half-sided invariance hypothesis. Thus all hypotheses of the positive half-sided modular-inclusion theorem of Borchers (1992) and Wiesbrock (1993) hold. That theorem supplies a strongly continuous unitary group $U(s)=e^{isP}$ with $P\ge0$, determined by the two modular groups, and gives the inclusion-preserving action for the half-line selected by the sign in (F.10.7.1). These conclusions are algebraic. Neither the theorem nor Definition F.10.7a supplies a representation of spacetime transformations or a covariance identity relating $U(s)$ to a geometric action on the labels $D_i$. Therefore the geometric interpretation follows only when such an identity is included in an independent modular-covariance certificate. ∎
+*Proof.* The vector states on $\mathfrak M$ and $\mathfrak N$ are faithful normal states because $\Omega$ is separating, and their GNS identifications use the same Hilbert space because $\Omega$ is cyclic for both. Their modular groups satisfy the source theorem's negative-modular-half-line hypothesis by (F.10.7.1). The cited common-vector specialization then supplies the positive generator and inclusion-preserving translation group. This is an imported modular-inclusion theorem; its source proof is not a consequence of the finite carrier arguments. No geometric covariance identity has been assumed, so the algebraic conclusion supplies no geometric identification by itself. ∎
 
 **Definition F.10.7d (Finite Borchers/Reflection Certificate $\mathfrak C_{\mathrm{Borch}}(W)$).** A wedge or half-space modular record may be used as a spacetime-reflection input only after the finite certificate $\mathfrak C_{\mathrm{Borch}}(W)$ has been supplied for the retained wedge $W$. The certificate consists of: a cyclic-and-separating retained state vector or faithful normal state; a half-sided modular inclusion or equivalent modular-covariance record; positivity of the generator implementing the retained translation semigroup; a reflected extension $j_W$ on the overlap algebra; Haag-duality or the stated substitute on the tested overlap; and a comparison between the reflected order and the operational cone already certified by $\mathfrak C_{\mathrm{cone}}$. Its numerical part is an error budget $\epsilon_{\mathrm{Borch}}(W)$ in the modular graph norm. Below that tolerance the modular conjugation can be read as a finite wedge-reflection implementation; without it, the modular data remain algebraic covariance data and do not by themselves certify CPT, spin-statistics, or Lorentzian reflection.
 
-**Corollary F.10.7c (Borchers Covariance of Modular and Inclusion Flows).** Let $\Delta_{D_2}^{it}$ be the modular group of the larger algebra and let $U(s)$ be the positive-energy algebraic group of Theorem F.10.7b. With the future half-sided sign convention of Definition F.10.7a,
+**Corollary F.10.7c (Borchers Covariance of Modular and Inclusion Flows).** With the orientation and source theorem of Definition F.10.7a and Theorem F.10.7b,
 $$
-\Delta_{D_2}^{it}U(s)\Delta_{D_2}^{-it}
-=
-U(e^{-2\pi t}s).
+\Delta_{\mathfrak M}^{it}U(s)\Delta_{\mathfrak M}^{-it}
+=U(e^{-2\pi t}s).
 $$
-Thus modular prediction time dilates the algebraic inclusion parameter. The two flows are compatible through this covariance relation but are not identical. A geometric translation or dilation of the diamond labels follows only from a separate modular-covariance certificate of the kind required by Theorem F.10.7b.
+Thus modular parameter rescales the algebraic inclusion parameter. This covariance is not an identification of the two flows or of either flow with a geometric action.
 
-*Proof.* Definition F.10.7a supplies a common vector cyclic and separating for both von Neumann algebras and the future half-sided invariance condition (F.10.7.1). These are the hypotheses of the positive half-sided modular-inclusion theorem of Borchers (1992) and Wiesbrock (1993). That theorem constructs $U(s)=e^{isP}$ with $P\geq0$ and proves the displayed dilation covariance relation. If $U(s)$ and $\Delta_{D_2}^{is}$ were the same nontrivial one-parameter group, conjugation by $\Delta_{D_2}^{it}$ would leave $U(s)$ unchanged, whereas the covariance relation sends it to $U(e^{-2\pi t}s)$. Hence the groups are distinct. The cited theorem supplies only the algebraic relation; the geometric interpretation retains the independent certificate stated in Theorem F.10.7b. ∎
+*Proof.* The covariance conclusion of Araki--Zsidó (2005), Theorem 2.1, written with $\operatorname{Ad}\Delta_{\mathfrak M}^{it}$, is the displayed identity on the same negative-half-line branch. If $U(s)=\Delta_{\mathfrak M}^{is}$, conjugation would also leave $U(s)$ unchanged. Therefore $U(s)=U(cs)$ for every $c>0$; continuity as $c\downarrow0$ would force $U(s)=I$. Hence the two groups cannot be the same nontrivial flow. Their geometric interpretation retains its independent covariance certificate. ∎
 
 **Theorem F.10.7e (Finite-Dimensional Half-Sided Modular Triviality).** Let $\mathfrak N\subseteq\mathfrak M$ be unital finite-dimensional von Neumann algebras and let $(\sigma_t)_{t\in\mathbb R}$ be an automorphism group of $\mathfrak M$. If
 $$
@@ -2820,38 +2740,39 @@ then its decoupling parameter is $\epsilon=0$ and Theorem F.10.8b gives zero con
 
 ### F.10.9 Predictive Prefactorization Algebra
 
-**Definition F.10.9a (Golay-Compatible Local Carrier Assignment).** Let $\mathsf C_{\mathrm{MPU}}$ be a finite causal site of MPU regions with inclusions and with a symmetric causal-disjointness relation $\perp$. A Golay-compatible local carrier assignment consists of finite symplectic syndrome spaces
+**Definition F.10.9a (Golay-Compatible Local Carrier Assignment).** Let $\mathsf C_{\mathrm{MPU}}$ be a finite causal site with inclusions and symmetric disjointness relation $\perp$. Assign a binary subspace $S_U\le V_{24}^{\oplus N_U}$ with its restricted symplectic pairing to each region. Supply pairing-preserving injections $j_{UV}:S_U\to S_V$ for $U\subset V$, with identity and composition laws, and $S_\varnothing=0$. For disjoint regions require
 $$
-S_U\le V_{24}^{\oplus N_U},
-\qquad
-V_{24}=\mathbb F_2^{24}\oplus\mathbb F_2^{24},
-$$
-for each finite region $U$, together with injective symplectic maps $S_U\hookrightarrow S_V$ whenever $U\subset V$, satisfying:
-
-1. $S_\varnothing=0$;
-
-2. if $U\subset V\subset W$, the inclusion $S_U\hookrightarrow S_W$ equals the composite $S_U\hookrightarrow S_V\hookrightarrow S_W$;
-
-3. if $U_i\perp U_j$ inside $V$, then
-$$
-\omega(S_{U_i},S_{U_j})=0;
+\omega(j_{U_iV}S_{U_i},j_{U_jV}S_{U_j})=0.
 \tag{F.10.9.1}
 $$
-
-4. for every pairwise causally disjoint finite family $U_1,\dots,U_n\subset V$, the direct-sum map
+For a pairwise disjoint family in $V$, require
 $$
-S_{U_1}\oplus\cdots\oplus S_{U_n}\longrightarrow S_V
+\bigoplus_i S_{U_i}\longrightarrow S_V,\qquad
+(s_i)_i\longmapsto\sum_i j_{U_iV}s_i
 \tag{F.10.9.2}
 $$
-is injective and symplectic block-diagonal;
+to be injective with the direct-sum pairing.
 
-5. each $S_U$ is already quotient-corrected by the local Golay recovery relation, so disturbances inside the Golay correction radius that have the same corrected syndrome represent the same element of $S_U$; weight-4 sextet classes remain unresolved boundary data rather than being quotiented away.
+Each $S_U$ carries its registered local Golay recovery quotient: representatives with the same recovered syndrome in the admitted correction class give the same vector, while weight-four sextet data remain retained boundary data. This quotient must be respected by the inclusion maps.
 
-Define
+Specify Weyl matrices with multiplication
 $$
-\mathfrak A_{\mathcal G}(U):=\mathfrak A(S_U),
+W_U(s)W_U(t)=m_U(s,t)W_U(s+t).
 $$
-the finite Weyl-Pauli $*$-algebra generated by $S_U$ as in Definition F.10.5a, and set $\mathfrak A_{\mathcal G}(\varnothing)=\mathbb C$.
+For every inclusion also supply phases $\eta_{UV}(s)\in U(1)$ with $\eta_{UV}(0)=1$ and
+$$
+m_U(s,t)\eta_{UV}(s+t)
+=\eta_{UV}(s)\eta_{UV}(t)m_V(j_{UV}s,j_{UV}t).
+$$
+Require $\eta_{UU}=1$ and
+$$
+\eta_{UW}(s)=\eta_{UV}(s)\eta_{VW}(j_{UV}s).
+$$
+These data define coherent unital $*$-monomorphisms
+$$
+\iota_{UV}(W_U(s))=\eta_{UV}(s)W_V(j_{UV}s).
+$$
+The phases are part of the assignment, since preservation of the binary commutator pairing alone does not specify a coherent lift of the Weyl multipliers. Set $\mathfrak A_{\mathcal G}(U)=\mathfrak A(S_U)$ and $\mathfrak A_{\mathcal G}(\varnothing)=\mathbb C$. In each ambient algebra the images under $\iota_{UV}$ are the local subalgebras used for products and covers.
 
 **Theorem F.10.9b (Golay Predictive Prefactorization Algebra).** A Golay-compatible local carrier assignment determines a unital symmetric prefactorization algebra
 $$
@@ -2882,24 +2803,15 @@ C^*\left(\bigcup_i \mathfrak A_{\mathcal G}(U_i)\right)
 \mathfrak A_{\mathcal G}(U).
 \tag{F.10.9.5}
 $$
-Under the regular convergence hypotheses of Theorem F.10.1 and Theorem F.10.2, these descent completions converge to the same emergent Haag-Kastler net as the inductive local-algebra construction. On Golay-compatible complements, finite-resolution Haag duality is exactly the duality of Theorem F.10.5c and passes to the limiting admissible diamonds by Corollary F.10.5d.
+For convergence to the represented compatible-family net of Theorems F.10.1--F.10.2, additionally require that the comparison maps preserve these concrete cover images, that the covers represent the retained unions, and that every compatible family on a covered region is approximable in quotient norm by finite algebraic combinations of compatible cover families. These hypotheses identify the closure of the cover-image quotient with the same local net algebra. Finite duality still requires the symplectic-complement assignment of Theorem F.10.5c; continuum Haag duality requires the represented commutant-comparison certificate of Corollary F.10.5d.
 
-*Proof.* If $U_i\perp U_j$, then (F.10.9.1) says that every Weyl generator from $S_{U_i}$ commutes with every Weyl generator from $S_{U_j}$. Hence the subalgebras $\mathfrak A_{\mathcal G}(U_i)$ commute pairwise inside $\mathfrak A_{\mathcal G}(V)$. Since all algebras are finite-dimensional $C^*$-algebras, the algebraic tensor product and the minimal tensor product coincide, and the universal property of the tensor product gives a unique $*$-homomorphism (F.10.9.3) satisfying (F.10.9.4).
+*Proof.* The multiplier identity in Definition F.10.9a makes each $\iota_{UV}$ multiplicative on Weyl basis elements. Their unitary images preserve adjoints, and injectivity of $j_{UV}$ makes their distinct basis images linearly independent. The phase composition law gives $\iota_{VW}\iota_{UV}=\iota_{UW}$.
 
-The empty family gives the unit map $\mathbb C\to\mathfrak A_{\mathcal G}(V)$ because $S_\varnothing=0$. Permuting the $U_i$ leaves (F.10.9.4) unchanged because the corresponding subalgebras commute. If a disjoint family is grouped into subfamilies, both iterated structure maps send
-$$
-a_1\otimes\cdots\otimes a_n
-$$
-to the same product $a_1\cdots a_n$ in the ambient algebra; associativity of multiplication proves the prefactorization associativity axiom. Functoriality under inclusions follows from item 2 of Definition F.10.9a.
+Orthogonality of disjoint syndrome images makes their Weyl generators, hence their entire image algebras, commute. Multiplication therefore defines a $*$-homomorphism from their algebraic tensor product. Finite-dimensional $C^*$-algebras have the same minimal and maximal tensor norm, so this extends to the displayed minimal tensor product. The elementary tensors span it, proving uniqueness.
 
-The Golay correction quotient is compatible with these maps because item 5 is imposed regionwise before algebra generation: replacing a local representative inside the correction radius by an equivalent corrected syndrome leaves the element of $S_U$, hence every Weyl generator and every product in (F.10.9.4), unchanged. Weight-4 sextet data are not quotiented by this step; they remain boundary syndrome classes.
+The empty product is the unit. Permuting factors preserves their product by commutation. Grouping a disjoint family and multiplying in stages gives the same ambient product by associativity and the coherent inclusion maps. These observations prove the unit, symmetry and prefactorization composition laws. Recovery-equivalent syndrome representatives already coincide before the Weyl algebras are formed, so the structure maps respect that quotient.
 
-For a finite cover, define the concrete descent completion to be
-$$
-C^*\left(\bigcup_i\mathfrak A_{\mathcal G}(U_i)\right)
-\subseteq\mathfrak A_{\mathcal G}(U).
-$$
-The universal colimit of the Čech diagram maps onto this concrete algebra; its kernel consists of additional ambient overlap, Weyl, and commutation relations not already imposed by the diagram. Thus (F.10.9.5) is the image of the universal colimit, and it equals that colimit only when the comparison map is proved injective. Under Theorems F.10.1 and F.10.2, convergence of these concrete images requires the same coherent comparison and boundary hypotheses used for the local net. ∎
+For a finite cover, the concrete completion is by definition the algebra generated by its image subalgebras in the ambient algebra. The universal cover colimit maps onto this generated image; equality with the colimit requires injectivity of that comparison map and is not assumed. On the additional convergence certificate in the statement, the cover-image families form a compatible subalgebra of the regional quotient, whose image is dense by the cover-generation assumption. Their norm closure is therefore the same regional algebra. No finite-stage isometric embedding or automatic descent of extra ambient relations is used. ∎
 
 **Proposition F.10.9c (Nonzero Universal-Colimit Comparison Kernel).** The universal-to-concrete comparison map in Theorem F.10.9b need not be injective on the declared class of Golay-compatible local carrier assignments.
 
@@ -3027,7 +2939,7 @@ In particular, the unweighted additive formula holds when both central weights a
 
 4. $C_J(R;\tau_R)=0$ if and only if $n_\alpha=1$ on every active central block. Any strict refinement that leaves all exterior protocol distributions unchanged and has strictly larger index-capacity cost $C_J(R;\tau_R)$ is rejected by PCE on the branch where that increase is registered as a strictly positive incremental PCE cost.
 
-5. On the saturated horizon branch satisfying the channel-counting calibration of Definition F.10.10a.1 below, the existing channel-capacity area law is equivalently
+5. On the saturated horizon branch satisfying Definition F.10.10a.1 below and its exact single-use identity $\log n_\alpha=C_{\max}(f_{\mathrm{RID}})$ in every active block, the existing channel-capacity area law is equivalently
 $$
 \frac{S_{\mathrm{BH}}(R)}{k_B}
 =
@@ -3051,7 +2963,7 @@ n_\alpha=\exp(C_{\max}(f_{\mathrm{RID}})),
 $$
 or a blocklength $q$ and an integer reliable code size $M_q$ are specified, with $n_\alpha=M_q$ and per-use index capacity $q^{-1}\log M_q$. Equality with the asymptotic channel capacity then requires a sequence satisfying $q^{-1}\log M_q\to C_{\max}(f_{\mathrm{RID}})$.
 
-(iii) the active state weight $\tau_R(p_\alpha)$ equals the saturated occupancy of cell $\alpha$, summing to the effective channel count $N_{\rm eff} = \sigma_{\rm eff}\,\mathcal A(\partial R)$ of Theorem E.3 in the form
+(iii) the active state weight $\tau_R(p_\alpha)$ equals the saturated occupancy of cell $\alpha$. On this exact-calibration branch their sum is set to $N_{\rm eff} = \sigma_{\rm eff}\,\mathcal A(\partial R)$; Theorem E.3 supplies the corresponding asymptotic density with an $o(\mathcal A)$ remainder. The calibration is recorded in the form
 $$
 \sum_{\alpha\in I_R}\tau_R(p_\alpha) = N_{\rm eff};
 \tag{F.10.10.9}
@@ -3131,7 +3043,7 @@ which is (F.10.10.6). For normalized weights, both masses equal one.
 
 Since every $n_\alpha\ge1$, (F.10.10.4) is zero exactly when every active $n_\alpha=1$. Let a response-equivalent strict refinement have strictly larger $C_J(R;\tau_R)$. On the branch where this increase is registered as a strictly positive incremental PCE cost, the refinement has unchanged predictive regret and strictly larger total PCE cost, so Corollary F.10.4d.3 excludes it from the PCE-minimal class. Without that cost-identification certificate, only the strict index-capacity inequality follows. This proves the conditional part of item 4.
 
-For item 5, work on the channel-counting calibration branch of Definition F.10.10a.1. Substituting (F.10.10.8) into (F.10.10.4) gives
+For item 5, work on the exact single-use channel-counting calibration branch of Definition F.10.10a.1. Substituting (F.10.10.8) into (F.10.10.4) gives
 $$
 C_J(R;\tau_R)
 =
@@ -3224,15 +3136,19 @@ $$
 s_i^{ij}:\mathcal U_{\mathrm{mod}}(D_i)
 \longrightarrow\mathcal U_{\mathrm{mod}}(D_{ij}).
 $$
-The certificate verifies the identity, composition, and compatibility laws for these maps and verifies by exact matrix arithmetic or a stated operator-norm tolerance that
+The certificate verifies the identity, composition and compatibility laws for these maps and the exact identity
 $$
-r_{ij}^{ijk}(u_{ij}(t))
-r_{jk}^{ijk}(u_{jk}(t))
-=
-r_{ik}^{ijk}(u_{ik}(t))
+r_{ij}^{ijk}(u_{ij}(t))r_{jk}^{ijk}(u_{jk}(t))
+=r_{ik}^{ijk}(u_{ik}(t)).
 \tag{F.10.11.0}
 $$
-for every registered triple and all $t$ in the declared one-parameter family. For the gluing equivalence in Theorem F.10.11b(2), assume also that overlap restrictions are invariant under the local modular actions and that every trivializing family $v_i(t)$ is normalized at $t=0$ and satisfies the Connes modular-cocycle identity. The modular diamond cocycle is
+A nonzero operator-norm tolerance records an approximate cocycle; it does not define the exact cohomology class used below. Exact finite matrix verification or an accepted proof for the entire registered time family is required on the exact branch.
+
+For automorphism descent, additionally supply overlap algebra maps that intertwine the restricted local modular actions and realize the listed unitary maps. A trivializing family $v_i(t)$ must be strongly continuous, satisfy $v_i(0)=1$ and
+$$
+v_i(t+s)=v_i(t)\sigma_t^{\omega_i}(v_i(s)).
+$$
+On the registered $C^*$-algebras require the relabeled local actions to be point-norm continuous; an extension to von Neumann closures requires its own normality certificate. Let $\mathfrak A_{\mathrm{univ}}$ be the registered universal gluing algebra of the local algebras with these overlap maps, and let $q:\mathfrak A_{\mathrm{univ}}\to\mathfrak A_{\mathrm{desc}}$ be its concrete quotient. Require that the induced action preserve $\ker q$ for all positive and negative times. A modular interpretation of the resulting automorphism group requires a further faithful-state identification. The modular diamond cocycle is
 $$
 u_{ij}(t)
 :=
@@ -3258,12 +3174,12 @@ $$
 \tag{F.10.11.3}
 $$
 
-**Theorem F.10.11b (Modular Cocycle Obstruction to Thermodynamic Gluing).** The family $\{u_{ij}(t)\}$ is a nonabelian Cech $1$-cocycle with values in overlap modular unitaries. Its cohomology class
+**Theorem F.10.11b (Modular Cocycle Obstruction to Thermodynamic Gluing).** On the exact branch of Definition F.10.11a, the family $\{u_{ij}(t)\}$ is a nonabelian Cech $1$-cocycle at each registered time, with class
 $$
-[u]\in \check H^1(\{D_i\},\mathcal U_{\mathrm{mod}})
+[u]\in\check H^1(\{D_i\},\mathcal U_{\mathrm{mod}}).
 \tag{F.10.11.4}
 $$
-is the obstruction to gluing the local modular flows on the cover. More explicitly:
+This class obstructs an exact unitary trivialization. Pointwise triviality of these classes alone does not provide a continuous family of modular-cocycle implementers or an action on a concrete quotient. The following statements use the additional descent certificates where specified:
 
 1. on every triple overlap,
 $$
@@ -3276,7 +3192,7 @@ r_{ij}^{ijk}(u_{ij}(t))\,r_{jk}^{ijk}(u_{jk}(t))
 \tag{F.10.11.5}
 $$
 
-2. $[u]=0$ if and only if the local modular flows glue, after inner overlap relabeling, to a single modular automorphism group on the descent algebra of the cover;
+2. An exact trivialization $u_{ij}(t)=s_i^{ij}(v_i(t))^{-1}s_j^{ij}(v_j(t))$, with the continuity, modular-cocycle and algebra-descent certificates of Definition F.10.11a, produces a strongly continuous automorphism group on $\mathfrak A_{\mathrm{desc}}$. Conversely, agreement of relabeled local actions determines the displayed factorization only up to a central overlap unitary. An exact unitary lift must therefore be supplied to infer $[u]=0$ from automorphism gluing. Calling the descended action modular also requires the declared faithful-state identification.
 
 3. in finite-dimensional overlaps, if
 $$
@@ -3303,7 +3219,7 @@ Only when both modular descent and this thermodynamic-variation condition hold m
 
 Assume there are local unitary families $v_i(t)$ such that
 $$
-u_{ij}(t)=v_i(t)v_j(t)^{-1}
+u_{ij}(t)=v_i(t)^{-1}v_j(t)
 $$
 on overlaps and, for each $i$,
 $$
@@ -3315,7 +3231,7 @@ $$
 =
 \operatorname{Ad}_{v_i(t)}\circ\sigma_t^{\omega_i}
 $$
-is a one-parameter automorphism group. If the overlap restrictions are invariant under the local modular actions, the Čech factorization and the Connes intertwining identity make these groups agree on overlaps, so they descend to one group on the generated algebra. Conversely, a descended group together with local cocycle implementers supplies both displayed identities.
+is a strongly continuous one-parameter automorphism group by the normalization, cocycle identity and continuity assumptions. Interpret each $v_i$ on an overlap through $s_i^{ij}$. Since $\sigma_t^{\omega_i}=\operatorname{Ad}_{u_{ij}(t)}\sigma_t^{\omega_j}$ there, the exact order $u_{ij}=v_i^{-1}v_j$ makes the relabeled actions agree. The universal property then gives mutually inverse automorphisms of $\mathfrak A_{\mathrm{univ}}$; their group law holds on all generators and hence on the generated algebra. Continuity on the generators extends by norm approximation because automorphisms are isometries. Invariance of $\ker q$ gives the action on $\mathfrak A_{\mathrm{desc}}$. Conversely, overlap agreement implies that $v_i u_{ij}v_j^{-1}$ acts trivially by conjugation, hence is central. It need not be the identity, so the converse exact-lift conclusion needs its separate certificate.
 
 In finite dimension, (F.10.11.2) gives
 $$
@@ -3327,21 +3243,22 @@ i(K_j^{ij}-K_i^{ij}),
 $$
 so (F.10.11.3) gives (F.10.11.6).
 
-On each local Rindler/KMS patch, the entanglement first law gives
+On a finite faithful reference state $\rho_i$, put $K_i=-\log\rho_i$. For a trace-zero state variation,
 $$
-\delta S_i=\delta\langle K_i\rangle
+S_i=-k_B\operatorname{Tr}(\rho_i\log\rho_i),
+\qquad
+\delta S_i=k_B\operatorname{Tr}(K_i\delta\rho_i).
 $$
-for perturbations based at the local reference state. If $K_i=Q_i/T_i$, the local Clausius residual vanishes on those perturbations. On an overlap, however,
+Indeed, differentiation of the trace entropy gives $-k_B\operatorname{Tr}[(\log\rho_i+I)\delta\rho_i]$, and the identity term vanishes. If the reference heat generator is $H_i=k_BT_iK_i+c_iI$, with $T_i>0$, define $\delta Q_i=\operatorname{Tr}(H_i\delta\rho_i)$. Then $\delta Q_i=T_i\delta S_i$. This is a variation at the specified reference state and temperature, not a finite-change identity. A continuum application requires a separately justified entropy and generator-variation certificate; identifying a predictive min-cut entropy with this entropy differential is also an additional premise.
+
+On an overlap whose maps identify the two variations, the heat generators and entropy differentials, the residual difference is
 $$
 \left(\delta S_j-\frac{\delta Q_j}{T_j}\right)
--
-\left(\delta S_i-\frac{\delta Q_i}{T_i}\right)
-=
-(\delta S_j-\delta S_i)
--
-\delta\langle K_j-K_i\rangle.
+-\left(\delta S_i-\frac{\delta Q_i}{T_i}\right)
+=(\delta S_j-\delta S_i)
+-k_B\,\delta\langle K_j-K_i\rangle.
 $$
-Thus comparison requires an overlap map identifying the two state variations and entropy differentials. When that map makes the displayed residual difference zero and the modular cocycle satisfies the independent descent conditions above, the local Clausius data and modular flows both glue. The metric equation-of-state theorem may then be applied under its remaining hypotheses. ∎
+The independent thermodynamic-variation condition makes this expression zero. Together with the certified modular descent, it permits the local data to be compared. A single global Clausius law further requires the temperature normalization and aggregation hypotheses of Theorem F.10.12c, and the metric equation-of-state theorem retains all its other hypotheses. ∎
 
 **Theorem F.10.11c (Finite Modular-to-PU Obstruction Pushforward).** Let $\{U_i\}$ be a finite KMS-descent cover satisfying the finite faithful hypotheses of Definition F.10.12a. On each overlap let $\mathfrak A_{ij}^{(B)}$ be the retained finite overlap algebra, and let $\rho_i|_{ij}$ and $\rho_j|_{ij}$ be faithful density matrices on it with modular Hamiltonians
 $$
@@ -3350,23 +3267,25 @@ K_i^{(ij)}=-\log(\rho_i|_{ij}),
 K_j^{(ij)}=-\log(\rho_j|_{ij}).
 \tag{F.10.11c.1}
 $$
-Define the retained infinitesimal modular mismatch
+Define
 $$
-\Theta_{ij}
-:=
-K_j^{(ij)}-K_i^{(ij)}
+\Theta_{ij}:=K_j^{(ij)}-K_i^{(ij)}.
 \tag{F.10.11c.2}
 $$
-modulo scalar shifts and response-null inner relabelings, and let
+On each region form the real vector space of retained self-adjoint operators modulo the scalar subspace and a registered real linear subspace of response-null differences. Require that all restriction and refinement maps preserve these subspaces. This is a linear quotient, not the orbit space of inner conjugation. Require the additive sheaf gluing axioms for these quotient data, and write $\mathcal K_{\mathrm{mod}}$ for that sheaf. The protocol-separation hypotheses below refer to this declared quotient.
+
+Require the modular descent homomorphisms to be differentiable at the identity, with derivatives equal to the declared linear restriction maps on these quotients. Differentiating the exact transported cocycle identity at $t=0$, where all factors equal the identity, then gives $\delta\Theta=0$.
+
+Let
 $$
-\Phi_{ij}:=\Pi_B(\Theta_{ij})\in\mathcal F_\varepsilon(U_{ij})
+\Phi_{ij}:=\Pi_B(\Theta_{ij})\in\mathcal F_\varepsilon(U_{ij}).
 \tag{F.10.11c.3}
 $$
-be its projection to the finite predictive correction sheaf of Theorem X.9.5b. Assume $\Pi_B$ is linear on retained self-adjoint mismatch classes, commutes with every overlap restriction and refinement map, and satisfies
+Assume that $\Pi_B$ is real linear, commutes with every restriction and refinement map, and satisfies
 $$
 \delta\Pi_B=\Pi_B\delta.
 $$
-Let $\mathcal K_{\mathrm{mod}}$ denote the additive sheaf of retained self-adjoint infinitesimal modular-mismatch classes, modulo scalar shifts and response-null inner relabelings. Because $\Pi_B$ is a linear cochain map, the assignment descends to
+It therefore induces the additive cohomology map
 $$
 (\Pi_B)_*:
 \check H^1(\{U_i\},\mathcal K_{\mathrm{mod}})
@@ -3382,7 +3301,7 @@ It has the following properties.
 
 1. If the additive infinitesimal mismatch class $[\Theta]$ vanishes in $\check H^1(\mathcal K_{\mathrm{mod}})$, then $[\Phi]=0$ in $\check H^1(\mathcal F_\varepsilon)$.
 
-2. If $[\Phi]\ne0$, the finite KMS patches cannot be glued as a zero-defect thermodynamic branch without adding a retained predictive correction or defect-filling datum.
+2. If $[\Phi]\ne0$, a branch requiring the projected additive class to vanish cannot be obtained without a retained correction or additional datum. To conclude that some allowed thermodynamic variation detects a nonzero Clausius defect, additionally require the pairing identification in item 4 and a family of variations separating the retained cohomology classes. A nonzero class alone need not be detected by the available variations.
 
 3. If the finite protocol cover separates self-adjoint overlap mismatches modulo response-null inner relabeling, all retained density spectra are bounded away from zero, and every predictive trivializing $0$-cochain for $[\Phi]=0$ carries a finite modular-lift certificate $\{v_i(t)\}$ satisfying
 $$
@@ -3391,12 +3310,12 @@ v_i(0)=1,
 v_i(t+s)=v_i(t)\sigma_t^{\omega_i}(v_i(s)),
 $$
 $$
-u_{ij}(t)=v_i(t)v_j(t)^{-1}w_{ij}(t),
+u_{ij}(t)=v_i(t)^{-1}v_j(t)w_{ij}(t),
 \tag{F.10.11c.5}
 $$
-where every $w_{ij}(t)$ is a registered response-null inner relabeling and the identities are verified on all overlaps, then $[\Phi]=0$ implies modular gluing in the response-null quotient.
+where every $w_{ij}(t)$ is a registered response-null inner relabeling, then the modular-gluing conclusion requires the following realization certificate as well. The response quotient is realized by coherent surjective $*$-homomorphisms on the local and overlap algebras, their kernels are invariant under the relevant actions, and conjugation by the image of each $w_{ij}(t)$ is the identity. The lifted families are continuous and satisfy the algebra-descent and concrete-kernel conditions of Definition F.10.11a on those quotient algebras. On this branch $[\Phi]=0$ gives a descended automorphism group in the response quotient. Its realization as a modular group retains the faithful-state and normality requirements.
 
-4. The retained local Clausius mismatch of Theorem F.10.11b is the pairing of the infinitesimal variation with $[\Phi]$. Hence $[\Phi]=0$ gives zero retained defect. The converse requires a registered family of allowed variations that separates $\check H^1(\mathcal F_\varepsilon)$.
+4. If the thermodynamic-variation record of Theorem F.10.11b(4) identifies the retained Clausius mismatch with the pairing of allowed variations and $[\Phi]$, then $[\Phi]=0$ gives zero retained Clausius defect. The converse additionally requires those variations to separate $\check H^1(\mathcal F_\varepsilon)$.
 
 *Proof.* Use the finite modular-descent maps of Definition F.10.11a to place the pair cocycles on every triple overlap. Differentiating the certified identity (F.10.11.0) at $t=0$ gives the additive cocycle equation $\delta\Theta=0$ in $\mathcal K_{\mathrm{mod}}$. Since $\Pi_B$ is a cochain map,
 $$
@@ -3412,31 +3331,33 @@ $$
 $$
 so (F.10.11c.4) is well-defined on $\check H^1(\mathcal K_{\mathrm{mod}})$.
 
-For item 3, let $[\Phi]=0$ and accept the corresponding modular-lift certificate. The first identity in (F.10.11c.5) normalizes the implementers, the second makes $\operatorname{Ad}_{v_i(t)}\circ\sigma_t^{\omega_i}$ a one-parameter modular action, and the third makes those actions agree on overlaps after quotienting the registered response-null $w_{ij}$. They therefore descend to the quotient gluing algebra. Theorem F.10.11b separately identifies the paired infinitesimal class with the retained KMS/Clausius defect. Vanishing of $[\Phi]$ without the finite lift certificate proves only vanishing of the projected additive obstruction, not finite Connes-cocycle gluing. ∎
+For item 3, accept a predictive trivialization and its full modular-lift and quotient-realization certificate. Normalization and the modular-cocycle identity make the relabeled local maps automorphism groups. In the quotient, the order $u_{ij}=v_i^{-1}v_jw_{ij}$ and the trivial adjoint action of $w_{ij}$ make these groups agree on each overlap. The universal gluing property and invariance of the concrete quotient kernel then give the descended action as in Theorem F.10.11b. Continuity, normal extension and a modular-state realization have exactly the scope of those certificates.
 
-**Theorem F.10.11d (Golay-Correctability Gate for Modular Cocycle Trivialization).** Work in the finite-dimensional overlap branch of Theorem F.10.11c, with each retained overlap algebra marked by a Golay-Pauli carrier. Let $\mathrm{wt}(X)$ denote the minimum marked carrier support of a self-adjoint representative $X$ modulo scalar shifts and response-null inner relabelings. Suppose the branch supplies finite recovery maps
+For item 4, the independently supplied pairing identifies the projected additive class with the retained Clausius defect; separating variations are needed for its converse. Vanishing of $[\Phi]$ alone proves vanishing of that projected additive obstruction. It supplies neither an exact Connes-cocycle lift nor a concrete algebra quotient, a global state, or thermodynamic aggregation. ∎
+
+**Theorem F.10.11d (Golay-Correctability Gate for Modular Cocycle Trivialization).** Work in the finite overlap branch of Theorem F.10.11c with its declared linear response quotient. For a retained self-adjoint class, let $\mathrm{wt}(X)$ be the minimum support among its marked carrier representatives. Suppose all mismatches $\Theta_{ij}$ have weight at most three, and supply recovery maps
 $$
-\mathcal R_{ij}:\{X:\mathrm{wt}(X)\le3\}\to\mathfrak A_{ij}^{(B)}
+\mathcal R_{ij}:\{X:\mathrm{wt}(X)\le3\}\to(\mathfrak A_{ij}^{(B)})_{\mathrm{sa}}
 $$
-commuting with restriction to triple overlaps and satisfying
+compatible with triple-overlap restriction and satisfying
 $$
-\Pi_B\bigl(\mathcal R_{ij}(X)\bigr)=0
+\Pi_B(\mathcal R_{ij}(X))=0
 \tag{F.10.11d.1}
 $$
-for every correctable overlap mismatch $X$ with $\mathrm{wt}(X)\le3$. If every infinitesimal modular mismatch $\Theta_{ij}$ of (F.10.11c.2) lies in this correctable class after scalar and response-null quotienting, then the projected PU obstruction class vanishes:
+on the admitted correction class. Write $\Theta^{\mathrm{rec}}_{ij}=\mathcal R_{ij}(\Theta_{ij})$. These hypotheses annihilate the recovered projected cocycle. To conclude that the original projected class vanishes, additionally require preservation of that class: there is a predictive $0$-cochain $b$ such that
+$$
+\Pi_B(\Theta^{\mathrm{rec}})-\Pi_B(\Theta)=\delta b.
+$$
+Then
 $$
 [\Phi]=0\in H^1(\mathcal F_\varepsilon).
 \tag{F.10.11d.2}
 $$
-Under the separation, faithful spectral, and finite modular-lift hypotheses of Theorem F.10.11c(3), the Connes cocycle then glues up to response-null inner relabeling. Without that lift certificate, the conclusion is only $[\Phi]=0$. Conversely, the Golay minimum-distance statement $d=8$ alone implies neither $[u]=0$ nor $[\Phi]=0$ for arbitrary modular Hamiltonian mismatches.
+Under all modular-lift, quotient-realization and continuity hypotheses of Theorem F.10.11c(3), this also permits the stated quotient automorphism gluing. The modular-state interpretation needs its own state certificate.
 
-*Proof.* Since the extended Golay code has distance $8$, its correction radius is $\lfloor(8-1)/2\rfloor=3$. The hypothesis is not merely the distance bound; it includes the recovery maps and the response projection condition (F.10.11d.1). For each retained overlap mismatch, replacing $\Theta_{ij}$ by its accepted recovered representative gives
-$$
-\Phi_{ij}=\Pi_B(\mathcal R_{ij}(\Theta_{ij}))=0.
-$$
-The restriction-commutation hypothesis makes this assignment compatible on triple overlaps, so the resulting Cech $1$-cocycle is the zero cocycle and (F.10.11d.2) follows. The final gluing statement is exactly item 3 of Theorem F.10.11c applied to $[\Phi]=0$.
+*Proof.* The code-distance input $d=8$ gives correction radius $\lfloor(8-1)/2\rfloor=3$ on the marked code branch. Equation (F.10.11d.1) gives $\Pi_B(\Theta^{\mathrm{rec}})=0$ pointwise. Class preservation therefore implies $\Phi=-\delta b$, proving (F.10.11d.2). The additional gluing conclusion is the conditional result of Theorem F.10.11c(3).
 
-For the converse, the code distance is a statement about supports of nonzero Golay codewords and stabilizer shells. A modular mismatch is a self-adjoint logarithmic difference $K_j^{(ij)}-K_i^{(ij)}$ in the overlap algebra. Unless the branch supplies a recovery map sending that mismatch to the response-null quotient, the projection $\Pi_B(\Theta_{ij})$ may be nonzero and may represent a nontrivial class in the finite obstruction sheaf. Thus distance $8$ is a gate for correctability, not by itself a proof of modular cocycle triviality. ∎
+The distinction between the original and recovered classes is essential: a map sending every mismatch to zero obeys the displayed output-annihilation condition without showing that the input class was trivial. Distance eight alone concerns codeword supports; it supplies neither class preservation for arbitrary logarithmic Hamiltonian differences nor a finite Connes lift. ∎
 
 ### F.10.12 Finite KMS-Descent Certificate for Emergent Metric Thermodynamics
 
@@ -3460,17 +3381,18 @@ $$
 such that:
 
 1. $\mathcal A_i$ is the finite protocol algebra assigned to $U_i\in\mathcal U_n$ and $\omega_i$ is a faithful finite-PCE state on $\mathcal A_i$.
-2. $\sigma_i^t$ is the modular flow of $(\mathcal A_i,\omega_i)$ and $K_i=-\log\rho_i$ is its dimensionless modular generator, so $\omega_i$ is KMS at modular inverse-temperature parameter $1$. A physical temperature $T_i$ is assigned only after specifying a physical-time flow
+2. With the convention $\sigma_i^t(A)=\rho_i^{it}A\rho_i^{-it}$ and $K_i=-\log\rho_i$, the inverse modular flow $t\mapsto\sigma_i^{-t}$ has the positive-inverse-temperature upper-strip KMS convention. A physical temperature $T_i>0$ is assigned after specifying
 $$
-\alpha_i^s=\sigma_i^{k_BT_i s/\hbar},
+\alpha_i^s=\sigma_i^{-k_BT_i s/\hbar}
+=\operatorname{Ad}_{\exp(iH_i s/\hbar)},
 $$
-equivalently a physical Hamiltonian $H_i=k_BT_iK_i$ up to an additive scalar.
-3. $S_i$ is the finite channel min-cut entropy of $U_i$ and agrees with the Appendix E area-law entropy density up to the local certified defect $\mathcal E_i$.
+where $H_i=k_BT_iK_i$ up to a scalar. Thus the physical Gibbs inverse temperature is $(k_BT_i)^{-1}$; the modular parameter is dimensionless and $s$ has units of time.
+3. $S_i$ is the physical channel min-cut entropy on $U_i$. Its area-law comparison is conditional on the accepted Appendix E branch and has a registered entropy scale $S_i^{\mathrm{ref}}>0$ with $|S_i-S_i^{\mathrm{area}}|\le S_i^{\mathrm{ref}}\mathcal E_i$. Any use of the reference-state first law additionally supplies an identification of its allowed differential with $k_B\operatorname{Tr}(K_i\delta\rho_i)$ on the retained variations. Area-law agreement alone does not supply that identification.
 4. $\Theta_i$ is the finite stress-energy flux functional obtained from the Appendix B MPU flux construction restricted to $U_i$.
 5. $\mathfrak H_i^{\mathrm{Had}}$ is the Hadamard-PCE finite-cost admissibility record for the local state; its defect is $\mathcal E_i^{\mathrm{Had}}$.
 6. $\mathfrak N_i^{\mathrm{split}}$ is either a split/nuclearity certificate or a strictly weaker replacement sufficient for the local net property claimed by the branch; its defect is $\mathcal E_i^{\mathrm{split}}$.
 7. $\mathfrak W_i$ records faithful wedge states, finite boost/modular convergence, the spectrum condition on the retained generator, Jost analyticity on the claimed tube domain, and the local field-realization map when a Wightman realization is claimed; its defect is $\mathcal E_i^{\mathrm{Wig}}$.
-8. $u_{ij}$ is the Connes Radon-Nikodym cocycle implementing the change from $(\mathcal A_i,\omega_i)$ to $(\mathcal A_j,\omega_j)$ on $U_i\cap U_j$.
+8. $u_{ij}(t)=[D\omega_i:D\omega_j]_t$ on the common overlap intertwines the actions in the direction $\sigma_i^t=\operatorname{Ad}_{u_{ij}(t)}\sigma_j^t$, using the registered overlap maps.
 9. $q_{ij}$ is the finite quotient correction by response-null degrees of freedom on $U_i\cap U_j$.
 10. Let $\widetilde u_{ij}(t)$ denote the cocycle representative after applying the response-null quotient correction $q_{ij}$. Each $r_{ij}^{ijk}$ is a registered homomorphism into the modular-unitary group of the common triple-overlap algebra. For every registered $t$,
 $$
@@ -3484,16 +3406,15 @@ r_{ki}^{ijk}(\widetilde u_{ki}(t))-1
 \tag{F.10.12a.2}
 $$
 where the norm is taken in that common triple-overlap protocol algebra.
-11. On each $U_i$, the finite Clausius defect satisfies
+11. The record supplies a positive energy comparison scale $Q_i^{\mathrm{ref}}$ and the finite Clausius bound
 $$
 |\delta Q_i-T_i\delta S_i|
-\le
-\mathcal E_i,
+\le Q_i^{\mathrm{ref}}\mathcal E_i,
 \qquad
-\delta Q_i=\Theta_i(\chi_i),
+\delta Q_i=\Theta_i(\chi_i).
 \tag{F.10.12a.3}
 $$
-where $\chi_i$ is the local Rindler/boost generator selected by the finite clock normalization.
+Here $\chi_i$ is the local Rindler/boost generator selected by the finite clock normalization, and the bound holds on the declared normalized set of retained test variations. Every defect entering the maximum below is dimensionless after its registered comparison scale has been applied. Entropy, heat and operator-norm residuals are not added or compared before that normalization.
 12. The total defect
 $$
 \delta_n
@@ -3511,48 +3432,47 @@ $$
 satisfies $\delta_n\to0$ along the refining sequence.
 13. $\chi_{\mathrm{KMS}}$ records that the states, modular generators, split/Hadamard/Wightman slots, fluxes, area terms, quotient maps, and defect bounds are fixed before macroscopic metric, Wightman, or thermodynamic comparison.
 
-**Algorithm F.10.12b (Acceptance Test for the KMS-Descent Certificate).** A record $\mathfrak C^{\mathrm{KMS}}_n$ is accepted if and only if every entry in Definition F.10.12a is fixed before using macroscopic metric data, each local algebra map is a restriction or inclusion map from the same protocol-response presheaf, the modular generators agree with the finite-PCE states by direct finite spectral calculation, the Cech, Clausius, Hadamard, split/nuclearity, and Wightman defects are certified in the stated finite protocol norm, and the sequence $\delta_n$ is bounded by a monotone numerical tail with limit zero. If the branch does not claim a Wightman realization, the $\mathfrak W_i$ slots are marked unclaimed and do not enter the output; they cannot be silently inferred from KMS descent alone.
+**Algorithm F.10.12b (Acceptance Test for the KMS-Descent Certificate).** Register every field before macroscopic comparison and specify a sound proof system with a terminating checker for finite certificate strings. Each accepted record supplies finite matrix checks or checked proofs for its algebra maps, spectral identities, all claimed time-family bounds, typed defect norms and comparison scales. A sequence claim additionally supplies a checked proof of a nonnegative tail $b_n\to0$ with $\delta_n\le b_n$, and of every weighted accumulation bound used by the claimed output. The checker verifies these finite proofs and computations; no terminating search for certificates or decision procedure for arbitrary real matrix data and infinite sequences is asserted. When a Wightman realization is unclaimed, its slots are marked unclaimed and omitted from the output. Such a realization does not follow from KMS descent alone.
 
-**Theorem F.10.12c (KMS-Descent Closure under Compatible and Summable Defects).** Suppose a refining regular operational-continuum branch admits finite KMS-descent certificates with the following additional properties:
+**Theorem F.10.12c (KMS-Descent Closure under Compatible and Summable Defects).** Suppose the regular operational branch has the certificates of Definition F.10.12a and satisfies these further conditions.
 
-1. refinement maps form a coherent projective system for the local algebras and states, and the states are weak-* precompact;
-2. every convergent subnet has the same local restrictions on a norm-dense test algebra;
-3. the quotient-adjusted overlap cocycles are compatible under refinement and converge in the common overlap topology to $(u_{ij}(t))$. There are compatible typed local relabelings $v_i(t)$ satisfying, for every registered $t,s$,
+1. On each retained regional sequence use the coherent unital completely positive comparisons $j_n^m$ and compatible-family $C^*$-quotient of Theorem F.10.1. The local states satisfy $\omega_m\circ j_n^m=\omega_n$. Regional inclusions and cover comparisons preserve these state data.
+2. The quotient-adjusted cocycles converge in the declared common overlap realization to an exact limiting cocycle. Supply compatible normalized continuous modular-cocycle implementers and the algebra, invariant-kernel, continuity and state-realization certificates required for each conclusion of Theorem F.10.11b. Their exact order is
 $$
-v_i(0)=1,
+u_{ij}(t)=s_i^{ij}(v_i(t))^{-1}s_j^{ij}(v_j(t)).
+$$
+3. For each retained global test variation, supply finite weights $w_{i,n}$ and local variations in the normalized classes of the certificates. The assembly rule accounts for overlaps and defines finite limits
+$$
+\delta Q=\lim_n\sum_i w_{i,n}\delta Q_{i,n},
 \qquad
-v_i(t+s)=v_i(t)\,\sigma_t^{\omega_i}(v_i(s)),
+\mathcal T(\delta)=\lim_n\sum_i w_{i,n}T_{i,n}\delta S_{i,n}.
 $$
-and, through the registered local-to-pair descent maps,
+Require the physical error budget
 $$
-u_{ij}(t)=s_i^{ij}(v_i(t))\,s_j^{ij}(v_j(t))^{-1}.
+\sum_i |w_{i,n}|Q_{i,n}^{\mathrm{ref}}\mathcal E_{i,n}\longrightarrow0.
 $$
-Thus the limiting cocycle is a normalized Connes coboundary in the sense of Theorem F.10.11b;
-4. the accumulated defects satisfy
-$$
-\sum_{i\in I_n}\mathcal E_{i,n}
-+
-\sum_{i,j,k}\mathcal E_{ijk,n}
-\longrightarrow0,
-$$
-with the analogous weighted sums for every conclusion claimed from the Hadamard, split, and Wightman slots.
+A single-temperature conclusion additionally requires a common calibrated $T>0$ and an entropy-variation assembly satisfying $\mathcal T(\delta)=T\delta S$. This may include a registered redshift conversion; it does not follow from variable local temperatures.
+4. Every additional Hadamard, split or Wightman conclusion retains its own domain, realization-map and weighted convergence certificate. The metric equation-of-state conclusion retains all hypotheses of Theorem 12.1 and its accepted Appendix E and Appendix B inputs.
 
-Then:
+Then the local states give a compatible state on the limiting net. The exact limiting unitary cocycle is trivial, and the declared quotient automorphism action descends. Its modular-state interpretation has only the separately certified scope. The limiting thermal identity is $\delta Q=\mathcal T(\delta)$, and it is $\delta Q=T\delta S$ on the additional single-temperature branch. The metric and Wightman conclusions are conditional on item 4.
 
-1. the local states define a compatible state on the limiting net;
-2. the limiting Connes cocycle obstruction vanishes;
-3. the integrated local Clausius defect tends to zero, so $\delta Q=T\,\delta S$ on the retained test variations;
-4. if the remaining hypotheses of Theorem 12.1 are supplied by the accepted Appendix E and Appendix B certificates, its metric equation-of-state conclusion follows;
-5. a Wightman realization is obtained only in sectors for which the weighted Wightman defects tend to zero and the realization maps converge on their stated domains.
+*Proof.* For a bounded compatible family $A=(A_n)$, define
+$$
+\omega([A])=\lim_n\omega_n(A_n).
+$$
+For $m\ge n$, state compatibility and contractivity give
+$$
+|\omega_m(A_m)-\omega_n(A_n)|
+\le\|A_m-j_n^mA_n\|.
+$$
+The compatible-family condition makes the right side uniformly small for $m\ge n$ as $n\to\infty$. Thus the limit exists and vanishes on norm-null families. It is unital, linear and positive: positive quotient elements have positive lifts in the compatible-family algebra, and every coordinate state is positive. It is therefore a state on the quotient. The regional compatibility assumptions make these states agree on the net inclusions.
 
-*Proof.* Weak-* compactness gives a subnet of states. Coherent restriction maps and item 2 make its local limits compatible and make the result independent of the subnet, proving item 1. Item 3 makes the limiting cocycle explicitly cohomologically trivial, so the retained Connes obstruction class vanishes. A vanishing triple-overlap defect proves the cocycle condition but does not, by itself, prove that the cocycle class is trivial. By the triangle inequality,
+Item 2 explicitly trivializes the unitary cocycle; the descent proof is Theorem F.10.11b with all its realization hypotheses. A small triple-overlap defect alone would establish neither this trivialization nor the concrete action. Finally,
 $$
-\left|\sum_{i\in I_n}(\delta Q_i-T_i\delta S_i)\right|
-\le
-\sum_{i\in I_n}\mathcal E_{i,n}
-\longrightarrow0,
+\left|\sum_i w_{i,n}(\delta Q_{i,n}-T_{i,n}\delta S_{i,n})\right|
+\le\sum_i|w_{i,n}|Q_{i,n}^{\mathrm{ref}}\mathcal E_{i,n}\longrightarrow0.
 $$
-which proves item 3. Items 4 and 5 then follow only after applying the separately accepted hypotheses and convergence maps named in those items. ∎
+The two assembly limits give $\delta Q=\mathcal T(\delta)$. The additional temperature and entropy identification gives $T\delta S$. Item 4 lists the independent premises needed to apply the named metric or field-realization results. ∎
 
 **Corollary F.10.12d (No Fundamental-Metric Overcount).** On a branch satisfying Theorem F.10.12c together with every remaining hypothesis named in its item 4 and Theorem 12.1, the metric is the response tensor of the regular operational-continuum limit and the field equation is the equation of state of the certified channel-capacity thermodynamics. Adding an independent microscopic gravitational state space with no finite protocol response is response-null and is removed by the PPI quotient.
 
@@ -3569,42 +3489,38 @@ C^2_{\mathrm{MC},n}
 $$
 constructed as follows.
 
-1. $C^0_{\mathrm{MC},n}$ is the direct sum over $U_i\in\mathcal U_n$ of retained self-adjoint local modular recalibrations on $\mathcal A_i$, quotiented by scalar shifts and response-null inner relabelings.
+1. $C^0_{\mathrm{MC},n}$ is the direct sum of real spaces of retained self-adjoint local modular recalibrations. Quotient scalar directions and the registered real linear response-null subspaces of Theorem F.10.11c; do not use a nonlinear conjugacy-orbit space as a vector space.
 
-2. $C^1_{\mathrm{MC},n}$ is the direct sum of retained overlap modular mismatches and local Clausius one-form defects,
+2. The overlap and local Clausius spaces are
 $$
 C^1_{\mathrm{MC},n}
-=
-\left(\bigoplus_{i<j}\mathcal M_{ij}^{\mathrm{sa}}\right)
-\oplus
-\left(\bigoplus_i\mathcal L_i\right),
+=\left(\bigoplus_{i<j}\mathcal M_{ij}^{\mathrm{sa}}\right)
+\oplus\left(\bigoplus_i\mathcal L_i\right).
 \tag{F.10.12e.2}
 $$
-where $\mathcal M_{ij}^{\mathrm{sa}}$ is the finite response quotient of self-adjoint overlap generators on $U_i\cap U_j$, and $\mathcal L_i$ is the finite-dimensional real space spanned by retained local Rindler/boost heat-entropy variations on $U_i$.
+Here $\mathcal L_i$ is the finite real span of the declared heat-entropy variation functionals, and $\mathcal M_{ij}^{\mathrm{sa}}$ is the analogous linear overlap quotient.
 
-3. $C^2_{\mathrm{MC},n}$ is the direct sum of retained triple-overlap modular defects and retained overlap differences of Clausius one-forms. The map $D^1_n$ records exactly these two compatibility failures. On the modular part it is the projected Cech differential
+3. Supply finite real linear transport maps preserving all the quotient subspaces. Their identity and composition laws define the local recalibration coboundary $D_n^0$ and the compatibility map $D_n^1$ into the declared finite triple-overlap and Clausius-difference space $C^2_{\mathrm{MC},n}$. On the modular summand,
 $$
-(D^1_n\Theta)_{ijk}
-=
-\Theta_{jk}|_{ijk}-\Theta_{ik}|_{ijk}+\Theta_{ij}|_{ijk},
+(D_n^1\Theta)_{ijk}
+=\Theta_{jk}|_{ijk}-\Theta_{ik}|_{ijk}+\Theta_{ij}|_{ijk}.
 \tag{F.10.12e.3}
 $$
-after the response projection of Theorem F.10.11c. On the Clausius part it is the difference of the local one-forms after transporting them through the same finite overlap map. The map $D^0_n$ is the corresponding local recalibration coboundary. The Connes chain rule and additivity of the Appendix B flux and Appendix E min-cut entropy give
+The full finite matrices, including the Clausius summands, must satisfy
 $$
-D^1_nD^0_n=0.
+D_n^1D_n^0=0.
 \tag{F.10.12e.4}
 $$
+This is an exact checked certificate condition. For ordinary transported Cech coboundaries it follows by cancellation of the six terms using composition of restrictions. A nonlinear min-cut entropy does not establish this linear-complex identity merely by being an entropy.
 
-4. First quotient the scalar kernel of the faithful Bogoliubov–Kubo–Mori form
+4. On each faithful finite state use
 $$
-\langle X,Y\rangle_{\rho}^{\mathrm{BKM}}
-=
-\int_0^1\operatorname{Tr}(\rho^s X\rho^{1-s}Y)\,ds
--
-\operatorname{Tr}(\rho X)\operatorname{Tr}(\rho Y).
+\langle X,Y\rangle_\rho^{\mathrm{BKM}}
+=\int_0^1\operatorname{Tr}(\rho^sX\rho^{1-s}Y)\,ds
+-\operatorname{Tr}(\rho X)\operatorname{Tr}(\rho Y).
 \tag{F.10.12e.5}
 $$
-Let $\mathcal N_{\mathrm{resp}}$ be the finite subspace generated by response-null inner relabelings in that scalar quotient. Represent each further quotient class by its unique BKM-orthogonal representative in $\mathcal N_{\mathrm{resp}}^\perp$ and use the BKM pairing of those representatives. Apply the same orthogonal-quotient construction to the Clausius response summands. The weighted direct sum of these quotient Hilbert spaces defines the inner products on $C^k_{\mathrm{MC},n}$.
+First remove its scalar kernel, then represent each quotient by the registered response-null subspace using its unique orthogonal representative. Supply positive definite inner products on the finite Clausius spaces and use the same orthogonal-quotient construction there. Every direct-sum weight is strictly positive; comparison scales convert the summands to their declared common numerical norm. These data give positive definite real inner products on all $C^k_{\mathrm{MC},n}$. Their physical interpretation as response-preserving recalibrations or a relaxation dynamics requires an independent certificate.
 
 5. The finite modular-Clausius obstruction current of the certificate is
 $$
@@ -3620,7 +3536,11 @@ $$
 \Pi_{\mathrm{ret}}\bigl(K_j^{ij}-K_i^{ij}+r_{ij}\bigr)
 \tag{F.10.12e.7}
 $$
-is the retained self-adjoint logarithmic modular mismatch on $U_i\cap U_j$. Here $K_i^{ij}$ and $K_j^{ij}$ are the restricted finite modular Hamiltonians, $r_{ij}$ is the response-projected Connes cocycle generator, and $\Pi_{\mathrm{ret}}$ is the retained finite-response projection. Equivalently, when the corrected overlap cocycle has a differentiable retained unitary representative $v_{ij}(t)$, $\Theta_{ij}=-i\left.d v_{ij}(t)/dt\right|_{t=0}$ in the retained quotient, and
+is the retained self-adjoint modular mismatch. The symbols $K_i^{ij}$ and $K_j^{ij}$ denote the finite reference modular Hamiltonians. To interpret the additional term, supply a differentiable unitary correction $w_{ij}(t)$ with $w_{ij}(0)=1$, put $r_{ij}=-i w'_{ij}(0)$, and represent the adjusted overlap family as $v_{ij}(t)=w_{ij}(t)u_{ij}(t)$. Then
+$$
+-i v'_{ij}(0)=r_{ij}+K_j^{ij}-K_i^{ij},
+$$
+so projection gives (F.10.12e.7). Here $r_{ij}$ is the correction-only generator, not a second copy of the generator of $u_{ij}$. Without this factorization certificate, the displayed sum defines a separate additive datum and is not identified with the derivative of an adjusted cocycle. The local heat-entropy component is
 $$
 \chi_i
 =
@@ -3676,8 +3596,8 @@ H^1_{\mathrm{MC}}(\mathcal U_n)
 $$
 If $D^1_n\mathfrak o_n=0$, the retained cohomological KMS/Clausius obstruction class of the certificate is exactly the class of $h_n$. If $D^1_n\mathfrak o_n\ne0$, then $D^1_n\mathfrak o_n$ is an unresolved compatibility defect rather than a same-branch cohomology class. Consequently:
 
-1. exact components $D^0_n\phi_n$ are local modular-clock or quotient recalibrations and do not define a retained same-branch obstruction;
-2. coexact components $(D^1_n)^*\psi_n$ are orthogonal finite relaxation currents; under the zero-defect same-branch stationarity gate
+1. exact components $D_n^0\phi_n$ are cohomologically trivial recalibrations. They preserve the same physical response branch only when the registered recalibration certificate establishes that identification;
+2. coexact components $(D_n^1)^*\psi_n$ are orthogonal compatibility components. Interpreting them as relaxation currents requires a dynamical certificate. Under the zero-defect stationarity gate
 $$
 D^1_n\mathfrak o_n=0,
 \qquad
@@ -3707,12 +3627,12 @@ $$
 \right)=0
 \tag{F.10.12f.5}
 $$
-implies $\|\mathfrak o_n\|\to0$. Its Clausius component therefore gives
+implies $\|\mathfrak o_n\|\to0$. Uniformly bounded evaluation on the retained test variations gives vanishing evaluated local defects. Under the weighted physical-error and assembly limits of Theorem F.10.12c(3), the limiting identity is $\delta Q=\mathcal T(\delta)$. On its additional common-temperature and entropy-assembly branch this becomes
 $$
-\delta Q=T\delta S
+\delta Q=T\delta S.
 \tag{F.10.12f.6}
 $$
-on the limiting retained test variations. If the stationarity equations hold exactly at every level, the same conclusion follows from $\|h_n\|\to0$ without a singular-value estimate.
+If the stationarity equations hold exactly at every level, $\mathfrak o_n=h_n$, so norm convergence follows from $\|h_n\|\to0$ without a singular-value estimate. The limiting thermodynamic conclusion retains the bounded-evaluation, accumulation and temperature-identification premises.
 
 *Proof.* Because every summand in Definition F.10.12e is finite-dimensional and the local states are faithful, the BKM form (F.10.12e.5) is positive semidefinite with kernel exactly the scalar directions. Those directions have already been quotiented in $C^0_{\mathrm{MC},n}$ and $\mathcal M_{ij}^{\mathrm{sa}}$, and response-null inner relabelings have also been quotiented. Hence the displayed direct-sum pairing is a positive inner product on each $C^k_{\mathrm{MC},n}$.
 
@@ -3751,7 +3671,7 @@ $$
 $$
 so $\Delta_{\mathrm{MC},n}x=0$ if and only if both terms vanish. This proves (F.10.12f.2). Every class in $\ker D^1_n/\operatorname{im}D^0_n$ has a unique representative orthogonal to $\operatorname{im}D^0_n$, and that representative lies in $\ker (D^0_n)^*\cap\ker D^1_n$; hence (F.10.12f.3).
 
-The interpretation follows from the definitions. Elements of $\operatorname{im}D^0_n$ are exactly local modular-clock changes and finite quotient corrections, so they are the response-null recalibrations already identified by Definition F.10.12a and Theorem F.10.11c. Elements of $\operatorname{im}(D^1_n)^*$ are orthogonal gradients of the finite compatibility defects. For a closed current $\mathfrak o_n\in\ker D^1_n$, projection to $H^1_{\mathrm{MC}}(\mathcal U_n)$ is therefore represented by $h_n$. If $D^1_n\mathfrak o_n\ne0$, the displayed nonzero image is a remaining descent defect and must be discharged before the same-branch obstruction can be treated cohomologically.
+For a closed current, the exact component is a coboundary and the coexact component vanishes, so its cohomology class is represented by $h_n$. The exact directions are response-preserving local clock or quotient changes only on the independently certified interpretation branch of Definition F.10.12e. The coexact space is the adjoint image of the compatibility map; Hodge decomposition alone supplies no physical time evolution. If $D_n^1\mathfrak o_n\ne0$, the current is not closed, so its compatibility defect must be resolved before a class in this cohomology is defined.
 
 The quadratic certificate penalty
 $$
@@ -3774,7 +3694,9 @@ C_H\left(
 \|h_n\|
 \right).
 $$
-Thus (F.10.12f.5) implies $\|\mathfrak o_n\|\to0$, so the retained modular mismatch and local Clausius one-form defect vanish in the finite response quotient along the refining sequence. The modular part gives only vanishing of the retained projected additive obstruction. Vanishing of the Connes-cocycle obstruction additionally requires the normalized finite modular-lift certificate of Theorem F.10.11c(3). The Clausius part gives $\delta Q_i-T_i\delta S_i\to0$ on every refined cell; additivity of the Appendix B flux and Appendix E min-cut entropy gives the limiting local relation (F.10.12f.6), exactly as in Theorem F.10.12c. If the stationarity defects vanish but $h_n$ has a nonzero finite limit, its Clausius component is a retained homogeneous quadratic null-direction defect, and Theorem 12.1g is precisely the finite tensor reconstruction of that retained defect. ∎
+Thus (F.10.12f.5) implies $\|\mathfrak o_n\|\to0$. Bounded evaluation gives vanishing retained additive modular and local Clausius defects. Connes-cocycle trivialization and concrete quotient gluing additionally require the full finite lift and realization certificates of Theorem F.10.11c(3). The weighted physical-error and assembly hypotheses of Theorem F.10.12c(3) give $\delta Q=\mathcal T(\delta)$; its common-temperature entropy identification gives (F.10.12f.6). Neither a growing cover nor varying local temperatures can be omitted from that comparison.
+
+If the stationarity defects vanish but $h_n$ has a nonzero limit, its Clausius component is a retained defect. Theorem 12.1g reconstructs a trace-free symmetric tensor only when the normalized shrinking-patch limits exist, the null-direction evaluation map is injective, and the defect data lie in its range. Its continuum equation-of-state conclusion additionally requires the smooth conserved completion and all-null or dense-direction extension stated there. ∎
 
 **Theorem F.10.12g (Finite Cosmological-Constant Descent and Quantitative Rigidity).** Let the retained cover nerve at level $n$ be a connected finite graph with oriented incidence matrix $B_n$, graph Laplacian $L_n=B_n^TB_n$, and spectral gap $\lambda_2(L_n)>0$. Let $\Lambda_n\in\mathbb R^{N_n}$ collect the local cosmological integration constants inferred from the cellwise Einstein-response equations, and let
 $$

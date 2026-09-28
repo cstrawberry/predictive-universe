@@ -51,7 +51,7 @@ The base model has five internal roles; Theorem PL.5 adds one optional typed exe
 
 1. **Fundamental Predictive Loop.** Each cell selects a target, stores a prediction, verifies the prediction against a finite response, and updates only through the verified register. This is the finite-toy realization of the prediction, verification, and update ordering of Definition 4.
 
-2. **PCE quotienting.** A verification register that gives no positive expected predictive gain is update-null in the retained predictive quotient. This is the toy-instance of Definition 15 and Lemma A.5.6a.5.
+2. **PCE quotienting.** The toy dynamics explicitly makes a verification register with no positive expected predictive gain update-null. Interpreting this gate as a consequence of PCE additionally requires the admissible no-op and both no-op dominance conditions of Lemma A.5.6a.5; Definition 15 alone does not imply it.
 
 3. **PPI finite response.** The objects admitted into the retained toy universe are finite protocol-response objects: bounded proof-existence targets with certificates or finite exhaustion traces, and finite diagonal protocol targets with trace-certified register data. This matches the finite-response formulation of Definition P.6.2.
 
@@ -59,7 +59,7 @@ The base model has five internal roles; Theorem PL.5 adds one optional typed exe
 $$
 (\phi_i(t),p^{stored}_i(t),c^{phase}_i(t)),
 $$
-where $\phi_i(t)$ is the active target, $p^{stored}_i(t)$ is the stored prediction, and $c^{phase}_i(t)$ separates prediction, verification, update, and historical readout. This is the finite-grid specialization of the role separation used in Theorem 15 and Appendix A.5.6a.
+where $\phi_i(t)$ is the active target, $p^{stored}_i(t)$ is the stored prediction, and $c^{phase}_i(t)$ separates prediction, verification, update, and historical readout. This is the finite-grid specialization of the role separation used in Theorem 15 and Appendix A.5.6a. The target library, abstention value, and multiple phase labels in this toy model are larger than three independent binary registers; the shared role names do not establish its minimality, an eight-state carrier, or \(K_0=3\) for Proof-Life.
 
 5. **Typed diagonal access.** A diagonal object $E_{B,t}$ is not silently treated as an element of the bounded arithmetic formula list $\mathsf{Form}_L$. It enters Proof-Life through $\mathcal T_0^{diag}$ as a finite protocol target governed by Appendix A.5.6a. This preserves the type distinction between bounded proof-existence objects and phase-indexed self-reference objects.
 
@@ -419,7 +419,7 @@ $$
 \qquad
 [M_i(t+1)]_Q=[M_i(t)]_Q.
 $$
-Thus random guessing, unconstrained assertion, fake exhaustion, and repeated echoing of already-null information do not grow the retained proof universe.
+Thus unsupported assertions, invalid certificates, fake exhaustion, and duplicate zero-gain records do not grow the retained proof universe. A randomly proposed value can still yield a new retained record when independent verification supplies valid evidence and the registered gain test passes; randomness of the proposal is not itself chance-nullity.
 
 The reference implementation below uses the finite novelty functional
 $$
@@ -488,7 +488,7 @@ $$
 \qquad\text{and}\qquad
 \theta\in\mathcal H_i^{reach}(t+1).
 $$
-Assume the retained horizon is invariant under predictive equivalence:
+For this application of Theorem A.5.6a.6, the retained state \(M\) includes every budget, verifier, and resource coordinate that determines processability. Assume the admitted no-op and both no-op dominance conditions of Lemma A.5.6a.5, and that the retained transition is the corresponding PCE minimizer. Require horizon invariance under predictive equivalence of these complete states:
 $$
 [M]_Q=[M']_Q
 \Longrightarrow
@@ -540,7 +540,7 @@ In the monotone retained-database variant,
 $$
 D_i(t)\subseteq D_i(t+1).
 $$
-If budget and horizon expansions are also admitted only through informative passing registers, then every retained increase of $C_i(t)$ comes from validated target-access, not from noise. This is the proof-object analogue of PU's general PCE rule: response-null surplus is quotiented, while cost-bearing retained growth must be justified by predictive gain.
+If changes to the budget, horizon and aggregate-complexity term are also allowed only through informative passing registers, with no autonomous retained increase in any term, then every increase of \(C_i(t)\) is gated by validated target access. Database monotonicity alone establishes neither monotonicity nor gain-gating of the other terms. Reading this toy gate as PCE optimization retains the no-op dominance premises of Lemma A.5.6a.5.
 
 ## 8. Phase-indexed diagonal access inside Proof-Life
 
@@ -657,8 +657,8 @@ Assume:
 
 1. $\mathcal F_0(L,N_{\max})$ uses the canonical finite candidate-certificate sets of Section 2;
 2. proof-sector negative evidence is accepted only by the full exhaustion verifier of Section 2.3;
-3. the admissible update family satisfies the PCE quotient rule of Lemma A.5.6a.5;
-4. retained reachability horizons are invariant under predictive equivalence;
+3. the admissible update family contains the no-op, satisfies both no-op dominance conditions of Lemma A.5.6a.5, and uses the corresponding PCE minimizing retained transition;
+4. the retained state includes all processability-relevant budgets, verifier choices and resources, and its reachability horizon is invariant under predictive equivalence;
 5. every diagonal-sector target is supplied with the trace-certification and access-mode hypotheses required by Appendix A.5.6a;
 6. whenever the LITE layer is invoked, active admissibility is register-coherent and historical admissibility is faithful in the sense of Theorem A.5.6a.8.
 
@@ -708,7 +708,7 @@ for every sufficiently large $N$, with the returned label equal to $y^*_{B,t}$. 
 
 ## 10. Reference implementation
 
-The following reference implementation is a finite executable instance of the Proof-Life construction. It implements the bounded certificate calculus, complete finite exhaustion verification, verification-gated retention, independently verified positive-certificate and negative-exhaustion propagation, the typed proof/diagonal target codec, the selection-only cross-sector bridge, and the A.5.6a diagonal access triality.
+The following reference implementation executes the proof-sector grid with bounded certificate decisions, complete exhaustion verification, novelty-gated retention, and independently verified positive and negative propagation. It also provides a proof/diagonal target codec, a selection-permission predicate, and a separate three-value diagonal-access truth-table demonstration. It does not execute diagonal targets in the grid, implement labeled LITE proof search, or by itself implement budget-relative horizon growth. Theorems PL.1 and PL.5 state the additional mathematical branches; Section 12.8 separately supplies a budgeted proof/capacity example.
 
 Save as `proof_life.py` and run:
 
@@ -1679,7 +1679,7 @@ $$
 | Scope | Finite Proof-Life messages only; no physical communication rate, thermodynamic cost, noisy-channel capacity, or negative-exhaustion protocol outside the frozen library follows |
 | Regression result | Pass for the exact `TV-PL-02` proposition on the declared runtime and cost domain |
 
-**Theorem PL.4 (Tagged Proof/Diagonal Coding Functor and Safe Bridge Classification).** Fix finite $L,N_{\max},T_{\max}\in\mathbb N$ and a nonempty finite tuple $\mathcal B$ of distinct exact ASCII predictor labels. Let $\mathcal D_{\mathrm{codec}}$ contain the exact proof targets of $\mathcal D_{\mathrm{run}}(L,N_{\max})$ and the exact diagonal targets
+**Theorem PL.4 (Tagged Proof/Diagonal Coding Functor and Safe Bridge Classification).** Fix finite $L,N_{\max},T_{\max}\in\mathbb N$ and a nonempty finite tuple $\mathcal B$ of distinct nonempty exact-string predictor labels using only ASCII letters, digits and underscores. Let $\mathcal D_{\mathrm{codec}}$ contain the exact proof targets of $\mathcal D_{\mathrm{run}}(L,N_{\max})$ and the exact diagonal targets
 $$
 \mathsf{Diag}(B,t,\eta,N),
 \qquad
@@ -1788,16 +1788,17 @@ Its decoder accepts exactly canonical term codes, registered predicate codes, ca
 
 *Proof.* Every finite pure-$\mathbf S$ term has finitely many redex occurrences, and every contraction produces another finite term. The reduction tree through finite depth $N$ is therefore finite. Canonical depth-first enumeration decides the target. Replaying an accepted positive address sequence proves the existential clause. When the clause is false, recomputing every outgoing address, child contractum, and $Q$-value verifies the complete $Q$-false tree; completeness excludes a missed positive branch. The leading codec tags prove image disjointness, while canonical field validation proves both inverse identities. Exhausting the unequal-tag cases for the two registered roles proves the router classification. The decoder clause follows by conjunction with the checked terminal predicate. $\square$
 
-**Corollary PL.5.1 (Finite-horizon certificates for universal weak-path execution).** For every deterministic Turing machine $\mathscr M$, finite input $x$, and finite cyclic-tag horizon $n$, put $w=w_{\mathscr M,x}$ and $\delta_R^n(0,w)=(q_n,u_n)$. Corollary 8.1 of the companion pure-$\mathbf S$ paper supplies the compiled term $\operatorname{Enc}_{\mathrm{TM}}(\mathscr M,x)=G_w$; Theorem 7.2 supplies a finite contraction index $\tau_w(n)$ and the exact term-only checkpoint value $\operatorname{Dec}_{\mathbf S}(T^w_{\tau_w(n)})=(n,q_n,u_n)$. The scheduler-generated redex trace is an accepted positive certificate for
+**Corollary PL.5.1 (Finite-horizon certificates for the fixed selected path).** Fix a finite binary cyclic tag program \(P\), an input word \(w\), and a finite horizon \(n\). Let \(c_n\) be the \(n\)th totalized cyclic-tag configuration. The companion paper's [Theorem 1R](pure_s_universality/paper.md#theorem-1r) supplies the encoder \(E_P\), total checkpoint decoder \(D_P\), selected trajectory \(T_w\), and finite contraction index \(\tau_w(n)\), with \(T_w(0)=E_P(w)\) and \(D_P(T_w(\tau_w(n)))=\operatorname{some}(n,c_n)\). Register the total predicate
 $$
-\mathsf{SReach}
-\bigl(
-G_w,
-\ulcorner Q_{\mathscr M,x,n}^{\mathrm{CTS}}\urcorner,
-\tau_w(n)
-\bigr),
+Q_{P,w,n}(T)=1
+\quad\Longleftrightarrow\quad
+D_P(T)=\operatorname{some}(n,c_n).
 $$
-where $Q_{\mathscr M,x,n}^{\mathrm{CTS}}(T)=1$ exactly when the companion paper's total decoder satisfies $\operatorname{Dec}_{\mathbf S}(T)=(n,q_n,u_n)$. When $n=\kappa_{c_{\mathscr M,x}}(r)$ is a Rogozhin pass boundary, Corollary 8.1 additionally gives $\operatorname{Dec}_{R}(T^w_{\tau_w(n)})=c_r$. Thus every nominated finite cyclic-tag horizon, including every finite fixed-Rogozhin trajectory horizon, has a finite S-Life witness. Each instance retains a finite target library, and unrestricted halting remains outside the target type. $\square$
+The selected redex-address trace through \(\tau_w(n)\) is then an accepted positive certificate for
+$$
+\mathsf{SReach}\bigl(E_P(w),\ulcorner Q_{P,w,n}\urcorner,\tau_w(n)\bigr).
+$$
+Here \(c_n\) is computed by a finite simulation and the predicate's totality record must be admitted under Definition PL.5a. On the companion's fixed universal branch \(P=U\), with period \(912\) and compiled word \(w=W(\widehat x)\), Theorem 1R also supplies ordered literal readback of every defined finite Boolean-tape source prefix. Each nominated source-prefix checkpoint therefore has a finite S-Life trace when its total reader predicate is registered. These are finite-horizon witnesses for the specified selected path. They do not identify an unbounded halting query with a bounded target or claim correctness for every reduction order. \(\square\)
 
 $\mathsf{SReach}$ is bounded term-reduction reachability; $\mathcal H_i^{reach}$ remains the cell's budget-relative target-processing horizon. The two objects are related only through an explicitly registered target and verifier. Theorems PL.1--PL.4 and their executable audit cover the base two-sector model. Theorem PL.5 defines the optional mathematical extension; executable S-Life claims require a separately verified implementation.
 
@@ -1821,7 +1822,7 @@ $$
 $$
 B\text{ succeeds as historical evaluator at }t+1.
 $$
-This is the A.5.6a access theorem-package in the toy grid.
+This is the three-value register truth table underlying the A.5.6a access separation. It illustrates the active, external and historical outcomes; it does not construct arithmetized diagonal sentences, certify a physical predictor, or execute the labeled LITE searches.
 
 The grid demo then runs a finite proof universe. Cells retain objects such as
 $$
@@ -1867,7 +1868,7 @@ The candidate set is a syntactic search domain. Membership in the evidence horiz
 
 *Proof.* Every retaining transition requires an element of $\mathcal E_i(T,t)$; the empty-set premise excludes it. For $\mathrm{PRIME}(29)$ at bound five, the canonical trial certificate costs five. A receiver at budget four is barred and one at budget five can verify it. ∎
 
-For the extension, positive evidence is charged its nominal certificate cost; a negative exhaustion is charged one unit for its header plus the sum of the nominal costs of all canonical candidates. Runtime, integer bit complexity, search enumeration, communication and shared-code descriptions have separate ledgers. Direct certificate membership uses constructor and range checks. A supplied factor can avoid the enumerative search; a complete trial-division certificate still performs its listed primality checks.
+For the extension, positive evidence is charged its nominal certificate cost; a negative exhaustion is charged one unit for its header plus the sum of the nominal costs of all canonical candidates. Runtime, integer bit complexity, search enumeration, communication and shared-code descriptions have separate ledgers. Direct certificate membership uses constructor and range checks. A supplied factor can avoid the enumerative search; a complete trial-division certificate still performs its listed primality checks. Section 10's search_budget bounds nominal proof-certificate search only; recipient verification there is unbudgeted and recomputes the target. The barred-handoff budget gate is supplied by the separate Section 12.8 implementation.
 
 The novelty quality $Q(D)=|D|$ assigns gain one to the first verified record of a target and zero to a duplicate. This is the registered finite-library quality. Interpreting it as expected predictive-score gain requires the corresponding task and score map. A random proposed value can produce an informative record when its evidence subsequently verifies.
 
@@ -1875,9 +1876,9 @@ A growing database at fixed budget need not enlarge $\mathcal H_i^{ev}$. A resou
 
 ### 12.2 Snapshot-Indexed Capacity and Composition
 
-A capacity target is a tuple $(\texttt{capacity},i,t,r,k,q)$: subject, time, snapshot revision, kind $k\in\{\mathrm{BUD},\mathrm{HOR},\mathrm{REL}\}$, and threshold $q$. A frozen subject record supplies normalized budget, verified-library fraction and empirical verifier reliability. Here $\mathrm{HOR}$ names the verified-library fraction; the evidence-processing horizon remains $\mathcal H_i^{ev}$. The target compares the nominated snapshot coordinate with $q$. Its verifier checks subject identity, time, revision, normalization, and the frozen record. A later snapshot has a different target code.
+A capacity target is a tuple $(\texttt{capacity},i,t,r,k,q)$: subject, time, snapshot revision, kind $k\in\{\mathrm{BUD},\mathrm{HOR},\mathrm{REL}\}$, and threshold $q$. A frozen subject record supplies normalized budget, verified-library fraction and empirical verifier reliability. Here $\mathrm{HOR}$ names the verified-library fraction; the evidence-processing horizon remains $\mathcal H_i^{ev}$. The target compares the nominated snapshot coordinate with $q$. Its verifier checks subject identity, time, revision, normalization, and the frozen record. A later snapshot has a different target code. In the executable example, a zero-trial reliability value of one is an explicit initialization convention, not an empirical reliability estimate. Capacity probes derive their integration coordinate from the verified snapshot; an optional caller-supplied value must agree with it. Proof and derived targets use the identity integration profile unless a separate scalar coordinate is registered.
 
-The complete target grammar is the tagged sum of the existing proof, diagonal and S-Life sectors with this capacity sector and a derived-expression sector. A derived target is a finite expression built from verified leaves by negation, conjunction or disjunction. Its certificate carries the child targets, child values, their evidence and the connective. Verify leaves with their own sector verifiers and evaluate the connective truth table. This structural recursion terminates and preserves truth by induction. A mixed proof/capacity expression retains both tags; its evaluation supplies a Boolean connective, with no implicit conversion of capacity assertions to arithmetic formulas.
+The complete target grammar is the tagged sum of the existing proof, diagonal and S-Life sectors with this capacity sector and a derived-expression sector. A derived target is a finite expression built from verified leaves by negation, conjunction or disjunction. Its certificate carries the child targets, child values, their evidence and the connective. Verify leaves with their own sector verifiers and evaluate the connective truth table. This structural recursion terminates and preserves truth by induction. A mixed proof/capacity expression retains both tags; its evaluation supplies a Boolean connective, with no implicit conversion of capacity assertions to arithmetic formulas. The executable Section 12.8 domain contains proof and capacity leaves with derived expressions over those leaves. Diagonal and S-Life leaves require separately registered executable verifiers before this mathematical grammar can be run on them.
 
 Selection links can schedule another sector's target. Evidence translation requires a registered map preserving both the target meaning and the receiving verifier. Theorem PL.4's proof/diagonal selection rule and Theorem PL.5's S-Life sector retain their existing definitions.
 
@@ -1966,7 +1967,7 @@ $$
 $$
 For $L=55$, $m=11$, $\varepsilon=1/16$, this is $137/880$. If probes are excluded from the counted library, the corresponding increment is $11/55-1/16=11/80$. The record convention fixes which formula applies. A refused probe supplies no correction; saturation terminates the linear calculation.
 
-An order witness supplies a reachable sequence of novel verified predecessors that pass their registered integration rules, followed by a novel verified target whose integration set is certified empty. A control supplies the same final database, budget, subject snapshot, target, evidence and novelty with a current model. The exact scalar example permits such a construction: five accepted external records each increase a registered state coordinate by $1/25$ while its self estimate remains fixed; the terminal self probe then has displacement $1/5$. An identity-domain external-work channel verifies those predecessors. A control updates the self estimate after each predecessor. Both histories retain the same five records; the terminal probe fails in the stale model and passes in the current model.
+An order witness supplies a reachable sequence of novel verified predecessors that pass their registered integration rules, followed by a novel verified target whose integration set is certified empty. A control supplies the same final database, budget, subject snapshot, target, evidence and novelty with a current model. The exact scalar example permits such a construction: five accepted external records each increase a registered state coordinate by $1/25$ while its self estimate remains fixed; the terminal self probe then has displacement $1/5$. An identity-domain external-work channel verifies those predecessors. A control updates the self estimate after each predecessor. Both histories retain the same five records and use the same terminal rule \(\gamma(\Delta)=\min\{1/16,\Delta\}\). Their terminal displacements are respectively \(1/5\) and \(0\), giving exclusions \(1/16\) and \(0\); the probe fails in the stale model and passes in the current model. The exclusion is thus determined by the shared rule, not separately tuned for each arm.
 
 The host uses the nominated subject's frozen snapshot through a registered embedding and carries a separate estimate of that subject. For an accurate external model, displacement is zero and proximity is minimal. An inaccurate external model is evaluated from its actual displacement. A self-indexed alias requires an embedding that identifies the target with the host's self coordinate; changing a label alone does not produce that identification.
 
@@ -2217,11 +2218,21 @@ def verify_evidence(system, target, evidence, snapshots):
                  "AND": lambda: all(vals), "OR": lambda: any(vals)}[target.operation]()
         return True, value
     if type(target) is CapacityRecordTarget:
-        frozen = snapshots.get((target.subject, target.time, target.revision))
-        if type(evidence) is not FrozenSnapshot or frozen is None or evidence != frozen:
+        identity = (target.subject, target.time, target.revision)
+        frozen = snapshots.get(identity)
+        if type(evidence) is not FrozenSnapshot or type(frozen) is not FrozenSnapshot:
+            return False, None
+        try:
+            evidence.values()
+            values = frozen.values()
+        except (ValueError, TypeError, ArithmeticError):
+            return False, None
+        if ((evidence.subject, evidence.time, evidence.revision) != identity
+                or (frozen.subject, frozen.time, frozen.revision) != identity
+                or evidence != frozen):
             return False, None
         axis = {"BUD": 0, "HOR": 1, "REL": 2}[target.kind]
-        return True, frozen.values()[axis] >= target.threshold
+        return True, values[axis] >= target.threshold
     if type(evidence) is Certificate:
         return system.verify_certificate(target.formula, target.bound, evidence), True
     if type(evidence) is ExhaustionTrace:
@@ -2268,12 +2279,14 @@ class BudgetedCell:
                         verdict = "zero_gain"
                     else:
                         row["gain"] = 1
-                        if actual is not None and type(target) is CapacityRecordTarget:
+                        coordinate = actual
+                        if type(target) is CapacityRecordTarget:
                             axis = {"BUD": 0, "HOR": 1, "REL": 2}[target.kind]
-                            if F(actual) != evidence.values()[axis]:
+                            coordinate = evidence.values()[axis]
+                            if actual is not None and F(actual) != coordinate:
                                 raise ValueError("integration coordinate disagrees with snapshot")
-                        profile = (scalar_profile(abs(F(actual) - pre), gamma)
-                                   if actual is not None else scalar_profile(F(0)))
+                        profile = (scalar_profile(abs(F(coordinate) - pre), gamma)
+                                   if coordinate is not None else scalar_profile(F(0)))
                         row["profile"] = profile["status"]
                         if profile["status"] in ("empty", "boundary_only"):
                             verdict = "integration_refused"
@@ -2281,8 +2294,8 @@ class BudgetedCell:
                             verdict = "unresolved"
                         else:
                             self.known[key] = (truth, evidence)
-                            if actual is not None:
-                                self.estimate = F(actual)
+                            if coordinate is not None:
+                                self.estimate = F(coordinate)
                             verdict = "retained"
         except (ValueError, TypeError, KeyError, AttributeError, ArithmeticError):
             verdict = "domain_error"
@@ -2315,6 +2328,18 @@ def extension_checks():
     assert host.process(mixed, (cert, snap), True, system, snapshots) == "retained"
     wrong = FrozenSnapshot("other", 5, 1, 0, 0, 0, 0)
     assert host.process(cap, wrong, True, system, snapshots) == "verification_failed"
+    misplaced = FrozenSnapshot("other", 5, 1, 100, 5, 5, 5, library_size=25)
+    assert BudgetedCell("identity", 100).process(
+        cap, misplaced, True, system, {("subject", 5, 1): misplaced}
+    ) == "verification_failed"
+    alias = FrozenSnapshot("subject", 5, True, 100, 5, 5, 5, library_size=25)
+    assert BudgetedCell("alias", 100).process(
+        cap, alias, True, system, snapshots
+    ) == "verification_failed"
+    inconsistent = FrozenSnapshot("subject", 5, 1, 100, 26, 5, 5, library_size=25)
+    assert BudgetedCell("counts", 100).process(
+        cap, inconsistent, True, system, {("subject", 5, 1): inconsistent}
+    ) == "verification_failed"
     stale, current = BudgetedCell("subject", 100), BudgetedCell("subject", 100)
     for n in range(1, 6):
         target = ProofTarget(Formula("ADD", (n, 0, n)), 1)
@@ -2323,10 +2348,12 @@ def extension_checks():
         assert current.process(target, evidence, True, system, {},
                                actual=F(n, 25)) == "retained"
     assert stale.known == current.known
+    def terminal_gamma(cell):
+        return min(GRID_STEP, abs(F(1, 5) - cell.estimate))
     assert stale.process(cap, snap, True, system, snapshots,
-                         actual=F(1, 5), gamma=GRID_STEP) == "integration_refused"
+                         gamma=terminal_gamma(stale)) == "integration_refused"
     assert current.process(cap, snap, True, system, snapshots,
-                           actual=F(1, 5)) == "retained"
+                           gamma=terminal_gamma(current)) == "retained"
     assert scalar_profile(F(1, 5), F(0))["status"] == "finite"
     assert scalar_profile(ALPHA, ALPHA)["p_interval"] == (F(0), F(0))
     assert scalar_profile(RADIUS, F(0))["status"] == "boundary_only"
@@ -2342,7 +2369,7 @@ def extension_checks():
             "tangent_distance": round(value, 12)}
 ~~~
 
-The extension source above has SHA-256 `70c8878ac1d38bb0ef80d4770c9b80c5a4c7519d928f3464bc34a37166c2e3df` under UTF-8/LF with one final newline. Its in-memory check runs Section 10's `run_self_checks()` and then `extension_checks()`. Direct positive verification was also compared with the base relation on all `6407` candidate/target pairs for $L=8$, $N_{\max}=4$. Additional fixtures cover NOT/OR composition, wrong snapshot revisions, and abstention. The executable scalar fixture uses a 25-record library so five verified predecessors give the exact coordinate $1/5$.
+The extension source above has SHA-256 `7d482c457e6ef34d7b300f1b8297a86432145420119906985994a00005c582f4` under UTF-8/LF with one final newline. Its in-memory check runs Section 10's `run_self_checks()` and then `extension_checks()`. Direct positive verification was also compared with the base relation on all `6407` candidate/target pairs for $L=8$, $N_{\max}=4$. Additional fixtures cover NOT/OR composition, wrong snapshot revisions, abstention, misfiled subject identities, Boolean snapshot aliases, inconsistent snapshot counts, and capacity-coordinate inference. The two terminal arms use the same displacement-dependent exclusion law. The executable scalar fixture uses a 25-record library so five verified predecessors give the exact coordinate $1/5$.
 
 The run produces:
 
@@ -2409,7 +2436,7 @@ Proof-Life uses the following internal PU dependencies.
 
 Proof-Life is a finite, runnable PU toy universe whose proof-sector objects are bounded proof-existence claims and whose diagonal-sector objects are phase-indexed protocol targets. Its cells do not merely hold beliefs. They make predictions about typed finite targets, verify those predictions through finite certificates, complete finite exhaustion traces, or trace-certified diagonal access data, retain only validated predictive information, and propagate positive proof-certificates and complete negative-exhaustion messages only after independent verification. Its tagged proof/diagonal bridge schedules typed targets without transporting evidence or identifying the sectors' access semantics.
 
-On the optional S-Life extension, cells also verify bounded pure-$\mathbf S$ reduction targets through positive redex traces or complete canonical negative trees. Corollary PL.5.1 maps every nominated finite horizon of the companion paper's fixed universal weak path to such a positive target. The three-sector codec preserves the evidence boundary among reduction reachability, arithmetic proofhood, and diagonal access. The runnable implementation covers the two-sector model of Theorems PL.1--PL.4; Theorem PL.5 supplies the optional mathematical third sector.
+On the optional S-Life extension, cells also verify bounded pure-$\mathbf S$ reduction targets through positive redex traces or complete canonical negative trees. Corollary PL.5.1 maps every nominated finite horizon of the companion paper's fixed universal selected path to such a positive target. The three-sector codec preserves the evidence boundary among reduction reachability, arithmetic proofhood, and diagonal access. Section 10 executes the proof-sector grid, the two-sector codec and selection predicate, and a separate diagonal truth-table demo. Section 12.8 executes the budgeted proof/capacity/derived example. General diagonal evidence, labeled LITE searches and S-Life execution retain their separate implementation and verification requirements.
 
 The model realizes the PU structure
 $$
@@ -2438,6 +2465,7 @@ Therefore Proof-Life is a finite proof-verification model of a predictive univer
 ## References
 
 * Bennett, C. H. (1973). Logical reversibility of computation. *IBM Journal of Research and Development*, *17*(6), 525--532. DOI: 10.1147/rd.176.0525
+* Cinematic Strawberry. (2026). [Pure S Is Computationally Universal Under a Fixed Root-Restarted Finite Controller](pure_s_universality/paper.md). Local companion manuscript, 14 September 2026. Project coordinator: Alexander Filin.
 * Cook, S., & Nguyen, P. (2010). *Logical Foundations of Proof Complexity*. Cambridge University Press.
 * Gödel, K. (1931). Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I. *Monatshefte für Mathematik und Physik*, *38*(1), 173--198. DOI: 10.1007/BF01700692
 * Kleene, S. C. (1952). *Introduction to Metamathematics*. Amsterdam: North-Holland Publishing Company & Groningen: P. Noordhoff N.V.

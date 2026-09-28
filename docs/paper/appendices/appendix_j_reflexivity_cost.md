@@ -24,7 +24,7 @@ Fixing the second output component is an architectural reset assumption. An inje
 
 **Theorem J.1 (Conditional Cost of the Declared Binary-Ancilla Reset Architecture)**
 
-Let $P\in\{0,1\}$ be the prediction record in Definition J.1, let $R$ contain every classical record retained and unchanged through reset, and let $q(P,R)$ be their actual joint law. Assume a degenerate register Hamiltonian, a bath at temperature $T$, cyclic control, and an isothermal reset returning the register and controller to their initial Hamiltonians. Then
+Let $P\in\{0,1\}$ be the prediction record in Definition J.1, let $R$ contain every classical record retained and unchanged through reset, and let $q(P,R)$ be their actual joint law. Assume the registered complete-reset branch of Definition 28, including its degenerate register Hamiltonian, initially independent thermal bath, cyclic control with full auxiliary-resource closure, and any required entropy and mean-heat limits. Then
 $$
 \varepsilon_0:=\ln|\{0,1\}|=\ln2
 \tag{J.2}
@@ -60,7 +60,7 @@ $$
 $$
 and equality on the right holds exactly when $p_r=1/2$ for $q_R$-almost every $r$.
 
-The conditional Landauer principle for an isothermal cyclic reset with retained side information (Sagawa and Ueda 2009; Reeb and Wolf 2014) applies because the register Hamiltonian is degenerate, the controller and register Hamiltonians return to their initial values, and $R$ is retained and unchanged. It gives
+Apply Reeb and Wolf (2014, Section 5.1, Equation (59)) to the registered branch of Definition 28. The retained classical record is unchanged, the auxiliary ledger closes, and complete erasure gives $H(P_{\mathrm{out}}\mid R_{\mathrm{out}})=0$. Hence the conditional entropy decrease in nats is $H_q(P\mid R)$; with $\beta=(k_BT)^{-1}$ and bath heat positive into the bath, the bound gives
 $$
 \frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}
 \ge H_q(P\mid R).
@@ -74,7 +74,7 @@ This is (J.3). If $H_q(P\mid R)=\ln2$, then $\varepsilon_{\mathrm{reset}}\ge\ln2
 
 **J.4 Conditional Ancilla and Finite-Event Ledgers**
 
-**Remark J.1.1 (Distribution-Dependent Reset Cost).** The binary alphabet fixes only $\ln2$ as a log-cardinality. The registered heat uses the actual conditional entropy $H_q(P\mid R)$, and equality at $\ln2$ requires both a conditionally uniform binary law and zero excess dissipation.
+**Remark J.1.1 (Distribution-Dependent Reset Cost).** The binary alphabet fixes only $\ln2$ as a log-cardinality. The registered heat uses the actual conditional entropy $H_q(P\mid R)$. On the conditionally uniform binary branch, equality $\varepsilon_{\mathrm{reset}}=\ln2$ holds exactly when $\varepsilon_{\mathrm{diss}}=0$. The numerical equality $\varepsilon_{\mathrm{reset}}=\ln2$ alone implies neither conditional uniformity nor zero excess dissipation.
 
 **Proposition (Conditional Entropy Floor of Reflexive Cycles).** Let $X$ be finite, $\tau:X\to X$ have no fixed points and all its cycles have length at least $L\ge2$. Let $q$ be $\tau$-invariant and let a retained record satisfy $R\circ\tau=R$. Conditional on any positive-probability record value, $q$ is a mixture of uniform distributions on cycles of length at least $L$. Therefore
 
@@ -106,7 +106,7 @@ For a conditionally uniform binary displaced label with no retained copy, the ri
 
 *Proof.* Injectivity forces distinct auxiliary outputs for distinct inputs that share the same accessible output. Conditional Landauer applies only to a subsequent registered reset and uses its actual joint law with all retained side information. ∎
 
-**Theorem J.1b (Complete Finite Fiber--Garbage Classification).** Let $A$ and $B$ be finite sets and let $f:A\to B$ be the accessible map on the exact reachable domain. Among all auxiliary alphabets $G$ and label maps $g:A\to G$ for which
+**Theorem J.1b (Complete Finite Fiber--Garbage Classification).** Let $A$ be a nonempty finite set, let $B$ be a finite set, and let $f:A\to B$ be the accessible map on the exact reachable domain. Among all auxiliary alphabets $G$ and label maps $g:A\to G$ for which
 $$
 x\longmapsto(f(x),g(x))
 \tag{J.3a}
@@ -151,7 +151,7 @@ $$
 =\sum_eH_{q_e}(P_e\mid R_e)+\sum_e\varepsilon_{\mathrm{diss}}(e).
 \tag{J.4a.2}
 $$
-The structural label ledger for $N_{\mathrm{ref}}$ binary reset supports is $N_{\mathrm{ref}}\ln2$, but it equals neither term in (J.4a.2) unless the relevant maximal-entropy and saturation hypotheses are separately verified. For sequential resets, each $R_e$ includes all earlier records still available and unchanged; this prevents double counting. ∎
+The structural label ledger for $N_{\mathrm{ref}}$ binary reset supports is $N_{\mathrm{ref}}\ln2$. If the registered event set has $N_{\mathrm{ref}}$ members and every $P_e$ is conditionally uniform binary given $R_e$, the entropy sum in (J.4a.2) equals this structural ledger; on that branch, the total reset ledger has the same value exactly when every $\varepsilon_{\mathrm{diss}}(e)$ vanishes. Numerical equality of the total reset ledger with $N_{\mathrm{ref}}\ln2$ alone implies neither conditional uniformity nor zero excess dissipation. For sequential resets, each $R_e$ includes all earlier records still available and unchanged; this prevents double counting. ∎
 
 **Corollary J.4a.3 (Conditional Guard-Reset Subledger).**
 
@@ -228,10 +228,14 @@ $$
 \tag{J.4b.4}
 $$
 
-*Proof.* Let $S_j$ be survival through cycle $j$. Along the unique all-survival history through cycle $j-1$,
+*Proof.* Let $S_j$ be survival through cycle $j$, and let $\mathcal F_{j-1}$ contain the admitted history before interrogation $j$. The requirement $P_N\ge1-\delta>0$ implies $\mathbb P(S_{j-1})>0$ for every $j\le N$. Averaging the conditional departure law over the surviving histories gives
 $$
 \mathbb P(S_j\mid S_{j-1})
-=1-q_j(\tau\mid H_{j-1})
+=
+\mathbb E\!\left[
+1-q_j(\tau\mid\mathcal F_{j-1})
+\,\middle|\,S_{j-1}
+\right]
 \le1-b\tau^2.
 $$
 The conditional-probability chain rule and $1-u\le e^{-u}$ give
@@ -283,7 +287,7 @@ H(J)=h_2(c_N)\sum_{j=0}^{N-1}c_N^j
 h_2(c_N)\frac{1-c_N^N}{1-c_N},
 \tag{J.4c.3}
 $$
-where $h_2$ uses natural logarithms. For fixed $0<|\omega T|<\infty$,
+where $h_2$ uses natural logarithms and the quotient expression in (J.4c.3) is assigned its continuous value $0$ when $c_N=1$. For fixed $0<|\omega T|<\infty$,
 $$
 P_N=1-\frac{(\omega T)^2}{N}+O(N^{-2}),
 \qquad
@@ -291,14 +295,29 @@ H(J)=\Theta\!\left(\frac{\log N}{N}\right).
 \tag{J.4c.4}
 $$
 
-Thus an optimally compressed degenerate register erased once per completed run, with no retained side information about $J$, has Landauer floor $k_BT_bH(J)$, which tends to zero. A raw architecture that instead closes $N$ distinct resets with a uniform conditional-entropy floor $h_{\min}>0$ has the linear lower bound of Theorem J.4b. An architecture with no reset has no Landauer reset term but retains its record or side information and is not a closed cyclic reset. Zeno survival alone therefore fixes none of these three work scalings; the physical record architecture does.
+For a finite classical record of $J$ erased once per run, assume the complete-reset thermodynamic contract of Definition 28 for that finite alphabet, with no retained side information about $J$. Its mean reset heat satisfies
+$$
+\langle Q_{\mathrm{bath}}\rangle\ge k_BT_bH(J).
+$$
+The right-hand side tends to zero; this does not prove that any implementation attains it or that its actual heat or total work tends to zero. A raw architecture that executes $N$ distinct charged resets has the linear conditional mean reset-work lower bound only under all the corresponding reset, entropy-floor and work-accounting hypotheses of Theorem J.4b. An architecture with no reset has no Landauer reset term, while retaining its record or displaced information; measurement, control and storage can still require resources. Zeno survival alone determines neither actual work nor reset heat independently of these implementation records.
 
-*Proof.* One interval has survival amplitude $\cos(\omega T/N)$, giving (J.4c.1) and independence under projection gives $P_N=c_N^N$. Equation (J.4c.2) is the truncated geometric law. Revealing the successive survival/failure bit only while the run remains active gives the entropy chain rule
+*Proof.* Conditional on all earlier interrogations returning $0$, projection leaves the qubit in $|0\rangle$. The next interval therefore has survival probability $c_N$, and the conditional-probability chain rule gives $P_N=c_N^N$. The first-failure probabilities are then the truncated geometric law (J.4c.2). Revealing a survival/failure bit only while the run remains active gives
 $$
 H(J)=\sum_{j=0}^{N-1}\Pr(J>j)h_2(c_N)
 =h_2(c_N)\sum_{j=0}^{N-1}c_N^j,
 $$
-which proves (J.4c.3). With $a=\omega T$, $1-c_N=a^2N^{-2}+O(N^{-4})$, $c_N^N=1-a^2N^{-1}+O(N^{-2})$, and $h_2(1-\epsilon)=\epsilon(1-\log\epsilon)+O(\epsilon^2)$. Substitution gives (J.4c.4). The three work statements follow respectively from conditional Landauer, Theorem J.4b, and the definition of a closed reset cycle. ∎
+which proves (J.4c.3), including its stated continuous endpoint convention. Put $a=\omega T$. For nonzero constant $a$,
+$$
+1-c_N=a^2N^{-2}+O(N^{-4}),\qquad
+c_N^N=1-a^2N^{-1}+O(N^{-2}),
+$$
+and $h_2(1-\epsilon)=\epsilon(1-\log\epsilon)+O(\epsilon^2)$. Also $\sum_{j=0}^{N-1}c_N^j=N+O(1)$. Hence
+$$
+H(J)=\frac{a^2}{N}
+\bigl(2\log N+1-\log a^2\bigr)
++O\!\left(\frac{\log N}{N^2}\right),
+$$
+which proves (J.4c.4). Conditional Landauer gives the stated reset-heat lower bound. The raw-reset work bound imports the complete J.4b premises; absence of a reset removes only that reset term. ∎
 
 **J.5 Distinction from Existing Bounds**
 
@@ -480,7 +499,7 @@ Variation of constants gives (J.8.8a); its integrand is nonnegative and is posit
 
 The verifier evaluates the channels and witnesses, checks complete positivity and normalization, checks every code and converse inequality at its declared block length, checks the convergence modulus, evaluates (J.8.10a) at the certified $\Sigma$ interval, and checks every overlap square and source partition. Failure of any check rejects the transfer; a positive entropy-production number by itself never populates this certificate.
 
-**Theorem J.8.11 (Strict Leading Horizon-Capacity Coefficient on the Transfer Branch).** Suppose Theorem J.8.4 gives $\Sigma\ge\sigma_{\min}>0$, $\mathfrak C_{\Sigma C}$ is accepted, and $\Delta_C:=g(\sigma_{\min})>0$. If $C(\Phi_{\rm id})=2\log2$ and the density/additivity hypotheses of Theorem E.9.1 hold, then
+**Theorem J.8.11 (Strict Leading Horizon-Capacity Coefficient on the Transfer Branch).** Let $\Sigma$ denote the entropy-production quantity in the accepted transfer certificate $\mathfrak C_{\Sigma C}$. Suppose Theorem J.8.4 supplies a lower bound $0<\sigma_{\min}\le\Sigma$, both $\sigma_{\min}$ and $\Sigma$ lie in an interval $I\subseteq[0,\infty)$ on which that certificate proves $g$ nondecreasing, and $\Delta_C:=g(\sigma_{\min})>0$. If $C(\Phi_{\rm id})=2\log2$ and the density/additivity hypotheses of Theorem E.9.1 hold, then
 $$
 \limsup_{\mathcal A\to\infty}
 \frac{S_\Sigma^{\rm op}}{\mathcal A}

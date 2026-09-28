@@ -17,19 +17,19 @@ $$
 $$
 Theorem 23 supplies the dimension lower bound under its Hilbert-carrier hypotheses, while equality $d_0=8$ uses the additional minimality branch. The family count further requires the branch-specific anomaly and charge-norm premises, a registered CP-active realization, and the additive family-count objective below. Fermion masses and mixings require the independent localization, label, response, scale, and remainder certificates of the flavor layer.
 
-**Connection to Gauge Structure:** The perspective space $\Sigma_8$ and its associated topology emerge from the same fundamental structure as the Standard Model gauge group. As established in **Appendix G** (Proposition G.M1 together with the capacity-saturating, SM-type anomaly analysis of Theorem G.8.4b and Corollary G.8.4c; Section G.8.5), the MPU Hilbert space $H_0 \cong \mathbb{C}^8$ admits a thermodynamically optimal partition:
+**Connection to Gauge Structure:** On the joint minimal Hilbert-carrier and active-kernel branches of Theorems Z.2 and Z.1, the MPU Hilbert space has the partition:
 $$
 H_0 \cong H_{\mathrm{active}} \oplus H_{\mathrm{inert}} \cong \mathbb{C}^2 \oplus \mathbb{C}^6
 $$
-using the conditional registered-reset bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ together with the separate structural reference $\varepsilon_0=\ln2$; no physical saturation is inferred from the attractor label alone. This partition is rigorously derived in **Appendix Z (Theorem Z.1)** via the Principle of Physical Instantiation (PPI), which fixes the active kernel dimension to $a = 2$ on the attractor-saturating branch. The partition determines both:
-1. The **gauge structure:** $G_{\mathrm{SM}} = SU(3)_C \times SU(2)_L \times U(1)_Y$ in the conditional sense of Theorem G.8.4b
-2. The **perspective space:** $\Sigma_8 = U(8)/U(1)^8$ (complete flag manifold)
+Theorem Z.1 selects $a=2$ under its sharp verification record, entropy-capacity gate, admissible same-response rank-two comparator, and strict excess-support cost; Theorem Z.2 separately supplies $d_0=8$ under its Hilbert-distinguishability and same-class minimality hypotheses. The physical reset bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ and structural reference $\varepsilon_0=\ln2$ retain distinct roles. On this joint carrier branch:
+1. The **gauge algebra:** Proposition G.M1, Theorem G.8.4b, and Corollary G.8.4c give $\mathfrak{su}(3)_C\oplus\mathfrak{su}(2)_L\oplus\mathfrak u(1)_Y$ on the capacity-saturating block-frame branch; the global group and abelian embedding require their separate character certificate. Section G.8.5 states the additional common-branch matter and family conditions.
+2. The **perspective space:** Corollary 26 gives $\Sigma_8=U(8)/U(1)^8$ when perspectives are labeled complete rank-one projective contexts.
 
 The gauge and family sectors use related MPU branch data but have different proof obligations. Gauge selection does not imply the family count, and the family-count theorem does not imply flavor observables.
 
 **Generation Count and Structural Compatibility:**
 
-1. **Minimal admissible family count:** Within the registered uniform $U(1)_F$ class, Theorem R.3.4 gives the smallest CP-capable primitive orbit at $N=3$ from the linear and cubic anomaly equations on SM15, and from the linear anomaly equation plus primitive charge-norm minimization on SM16. Proposition R.3.5.1a selects the realized count only under its additive-monotone family objective. Response-null labels are removed independently by Corollary P.6.1b.8.
+1. **Minimal admissible family count:** Within the registered uniform $U(1)_F$ class, Theorem R.3.4 gives the smallest CP-capable primitive orbit at $N=3$ from the linear and cubic anomaly equations on SM15, and from the linear anomaly equation plus primitive charge-norm minimization on SM16. Proposition R.3.5.1a selects the realized count only under its additive-monotone family objective. A label with no distinct finite-protocol response and no decrease of an already-defined PPI cost is removed on the separating protocol-complete branch of Corollary P.6.1b.8.
 2. **Triality compatibility:** A marked real 8-carrier with compact $\mathfrak{so}(8)$ structure has the three-element triality orbit $\{V,S^+,S^-\}$. This does not identify $H_0\cong\mathbb C^8$ with a real vector carrier or generate $U(1)_F$.
 3. **Lattice compatibility:** A registered $E_8$ root system supplies candidate squared distances $\{0,2,4,6,8\}$, and a registered Leech construction contains the scaled three-fold $E_8$ scaffold. These are compatibility and realizability data, not independent selections of family labels or flavor responses.
 
@@ -67,19 +67,19 @@ To aid clarity, we summarize the key mathematical objects and their notation:
 
 | Symbol | Meaning | Defined In |
 |--------|---------|------------|
-| $H_0$ | MPU Hilbert space, $\mathbb{C}^8$ | Theorem 23 |
+| $H_0$ | MPU Hilbert space, $\mathbb{C}^8$ on the minimal carrier branch | Theorem 23; Theorem Z.2 |
 | $\Sigma_8$ | Perspective Space on the ordered rank-one context branch, $U(8)/U(1)^8$ | Corollary 26 |
 | $\pi_2(\Sigma_8)$ | Second homotopy group, $\mathbb{Z}^7$ | Theorem R.1.1 |
 | $\eta_i=x_i$, $1\le i\le7$ | Integral basis of $H^2(\Sigma_8;\mathbb Z)$ | Eq. R.4 |
 | $q=(q_1,\ldots,q_7)$ | Unrestricted integral topological-sector coordinate vector | Eq. R.5 |
-| $G_{\mathrm{SM}}$ | SM gauge group, $SU(3)_C \times SU(2)_L \times U(1)_Y$ | Appendix G.8 |
+| $G_{\mathrm{SM}}$ | SM gauge group, $SU(3)_C \times SU(2)_L \times U(1)_Y$ | Section G.8 |
 | $L_{\mathrm{light}}$ | Cartan-neutral candidate sublattice; full singletness separately certified | Definition R.3.2 |
 | $U(1)_F$ | Registered family redundancy or physical-symmetry branch | Theorem R.3.4; Theorem R.8.5e |
 | $F_g=\ell_F(q^{(g)})$ | Family charge after the primitive homomorphism $\ell_F$ is registered | Theorem R.3.4 |
 | $\mathrm{Rep}$ | Predictive block (fermion representation) | Definition R.3.3 |
 | $E[q]$ | Energy in a fixed topological sector (infimum over maps) | Theorem R.3.0 |
 | $p_g=\ell_{q_g}(m_{q_g}(\eta))$ | Localization center of the reduced-sector minimum | Section R.5.2 |
-| $Y_{gg'}$ | Yukawa coupling matrix element | Eq. R.15 |
+| $K_{gg'}$ | Pre-realization Gaussian overlap kernel; physical Yukawa assembly requires Theorem T.39 | Eq. R.15 |
 | $M$ | Interface mode count, 24 | Appendix Z, Theorem Z.5 |
 | $E_8$ | Exceptional Lie group / root system | Section R.2.1 |
 | $D_4$ | Root system of $\mathfrak{so}(8)$; triality compatibility scaffold | Proposition R.4.2 |
@@ -135,7 +135,7 @@ $$
 
 ### R.1.2 Topological generators and cohomology in degree two
 
-Let $0 \subset S_1 \subset S_2 \subset \dots \subset S_8$ be the universal flag of tautological subbundles over $\Sigma_8$, where $S_8$ is the trivial bundle $\mathbb{C}^8 \times \Sigma_8$, and $\operatorname{rank}(S_k) = k$. Define the tautological quotient line bundles $Q_k := S_k/S_{k-1}$ and their first Chern classes $x_k := c_1(Q_k) \in H^2(\Sigma_8; \mathbb{Z})$ (Milnor & Stasheff 1974; Griffiths & Harris 1978). The total Chern class of the ambient rank-8 bundle $S_8$ is trivial, which implies $\sum_k x_k = 0$ in $H^2(\Sigma_8; \mathbb{Z})$.
+Let $0 \subset S_1 \subset S_2 \subset \dots \subset S_8$ be the universal flag of tautological subbundles over $\Sigma_8$, where $S_8$ is the trivial bundle $\mathbb{C}^8 \times \Sigma_8$, and $\operatorname{rank}(S_k) = k$. Define the tautological quotient line bundles $Q_k := S_k/S_{k-1}$ and their first Chern classes $x_k := c_1(Q_k) \in H^2(\Sigma_8; \mathbb{Z})$. The short exact sequences $0\to S_{k-1}\to S_k\to Q_k\to0$ split as topological complex bundles on the paracompact flag manifold. The Chern-class product formula (Milnor & Stasheff 1974, §14.4, Eq. (14.7)) therefore gives $c(S_8)=\prod_{k=1}^8c(Q_k)=\prod_{k=1}^8(1+x_k)=1$. Its degree-two component is $\sum_k x_k=0$ in $H^2(\Sigma_8;\mathbb Z)$.
 
 The degree-two cohomology has the integral presentation
 $$
@@ -190,7 +190,7 @@ In eight dimensions, the **$E_8$ root system** emerges as the natural coordinati
 
 1. **Packing optimality:** The $E_8$ lattice achieves the optimal sphere packing density in 8 dimensions (Viazovska 2017). This supplies a canonical discrete scaffold on the 8D real subspace that can organize internal "positions" efficiently.
 
-2. **Division-algebra and vector-field compatibility:** Hurwitz's normed-division-algebra theorem gives the real dimensions $\{1,2,4,8\}$ and places the octonions in dimension $8$. The separate Radon–Hurwitz theorem controls independent vector fields and Clifford-module data through the function $\rho(n)$; $\rho(8)=8$ is a compatible eight-dimensional fact, not the division-algebra classification. Appendix Z uses these results only as secondary coherence checks on the branch $d_0=8$, not as a proof that the MPU dimension is necessary. Any $E_8$–octonion identification additionally requires the chosen octavian lattice model.
+2. **Division-algebra and vector-field compatibility:** Hurwitz's normed-division-algebra theorem gives the real dimensions $\{1,2,4,8\}$ and places the octonions in dimension $8$. The separate sphere-field count uses $n=(2a+1)2^{4d+c}$, $0\le c\le3$, and $\rho(n)=8d+2^c$: the Hurwitz–Radon–Eckmann construction gives $\rho(n)-1$ independent tangent vector fields on $S^{n-1}$, and Adams (1962, Theorem 1.1) proves that $\rho(n)$ such fields cannot exist. Thus $\rho(8)=8$ means seven independent tangent fields on $S^7$, not eight fields or a division-algebra classification. Appendix Z uses these separate results only as coherence checks on $d_0=8$, not as a proof of a necessary MPU dimension. An $E_8$–octonion identification requires a specified octavian lattice and isometry.
 
 3. **Maximal symmetry:** The 240 roots of $E_8$ provide maximal symmetry for uniform local neighborhoods, consistent with PCE's preference for high-symmetry configurations that minimize descriptive complexity.
 
@@ -206,7 +206,7 @@ The following mathematical properties make $E_8$ an admissible distinguished sca
 
 3. **Kissing Number Maximization:** $E_8$ has kissing number 240, the maximum for any lattice in 8 dimensions. Each lattice point has $240$ nearest neighbors. Interpreting that coordination number as distinguishability or error-correction benefit requires a separately specified code, metric, and noise model.
 
-4. **Octavian compatibility:** After a conventional rescaling, the additive lattice underlying a chosen maximal order of integral octonions (the octavians) is isometric to $E_8$. This statement depends on the chosen octonion multiplication table and maximal order. The displayed $\mathbb Z$-span of $\{1,e_1,\ldots,e_7,\tfrac12(1+e_1+\cdots+e_7)\}$ is not the $E_8$ lattice: it contains $\mathbb Z^8$ and hence norm-one coordinate vectors. In the paper's root normalization, $E_8$ has minimum squared norm $2$ and exactly $240$ minimal vectors. The octavian realization is a compatibility model, not a consequence of the Radon--Hurwitz dimension count.
+4. **Octavian compatibility (chosen-model condition):** If a chosen maximal order of integral octonions, its multiplication table, a rescaling, and an explicit additive-lattice isometry to $E_8$ are supplied, the resulting octavian model is compatible with this branch. That isometry is not established by the Radon–Hurwitz count or by the simple displayed $\mathbb Z$-span of $\{1,e_1,\ldots,e_7,\tfrac12(1+e_1+\cdots+e_7)\}$: the span contains $\mathbb Z^8$ and norm-one coordinate vectors, whereas $E_8$ in the paper's root normalization has minimum squared norm $2$ and $240$ minimal vectors. Without the specified order and isometry, octavian compatibility is a model condition rather than a proved lattice identification.
 
 5. **Self-Duality:** $E_8$ is self-dual, meaning $E_8^* = E_8$. This means that the Euclidean dual lattice coincides with the original lattice. It does not eliminate orientation choices or prove a PCE cost minimum; either interpretation requires an explicit registered objective.
 
@@ -233,7 +233,7 @@ Among the $E$-series, only for $n = 8$ has the kissing number been proven optima
 | Unimodular | $\det(\text{Gram matrix}) = 1$ | Minimal volume distortion under embedding |
 | Kissing number | 240 (proven maximal) | Maximum local distinguishability |
 
-The even unimodular lattices in dimension 8 are classified: $E_8$ is the unique such lattice (Conway & Sloane 1999).
+Among positive-definite even integral unimodular lattices of rank $8$, $E_8$ is unique up to Euclidean isometry (Griess 2003, Theorem 3.4). This lattice classification does not by itself select an MPU coordinatization or prove a PCE optimum.
 
 **Comparison with Other Exceptional Root Systems:**
 - **$E_6, E_7$:** Ranks 6 and 7 respectively, not matching the MPU dimension 8.
@@ -306,9 +306,12 @@ $$
 All values lie in the allowed set $\{2, 4, 6, 8\}$. These are the **only** possible squared distances between $E_8$ roots—a discrete geometric constraint arising from the root system structure with no continuous parameters.
 
 **Mass Ratio Implication:**
-If three generation vacua $v_1, v_2, v_3$ in the Perspective Space project onto $E_8$ roots with these relative separations, the mass ratio invariant becomes:
+Suppose a registered realization sends $(v_3,v_1,v_2)$ to $(\alpha_1,\alpha_2,\alpha_3)$ and certifies $d_\Sigma(v_3,v_1)^2=6c_\Sigma$ and $d_\Sigma(v_3,v_2)^2=4c_\Sigma$ for a common $c_\Sigma>0$. For positive masses satisfying $\ln(m_3/m_g)=A\,d_\Sigma(v_3,v_g)^2$ for $g=1,2$ with the same $A>0$ and zero logarithmic remainders, the mass ratio invariant is
 $$
-\mathcal{R} = \frac{d^2(v_3, v_1)}{d^2(v_3, v_2)} = \frac{6}{4} = \frac{3}{2}.
+\mathcal R
+=\frac{d_\Sigma(v_3,v_1)^2}{d_\Sigma(v_3,v_2)^2}
+=\frac{6c_\Sigma}{4c_\Sigma}
+=\frac32.
 $$
 
 On the Appendix T hierarchy-model branch, the charged-lepton triad $(d^2_{32},d^2_{31},d^2_{21})=(2,6,4)$ is a forward-locked distance assignment. Neither $D_4$, active/inactive dimension counts, Golay data, nor Leech gluing uniquely fixes those physical pair labels. The algebraic ratio of the assigned distances is $\mathcal R_\ell=3$; comparison with $\mathcal R_\ell^{obs}\approx2.889$ and the fourth-order adjustment are conditional model tests under Theorems T.42.2, T.42.5, and T.42.6.
@@ -329,9 +332,9 @@ $$
 $$
 \phi_\ast[S^2_\infty] - \sum_g \phi_\ast[S^2_g] = 0.
 $$
-Because $\phi$ is constant on $S^2_\infty$ (vacuum boundary condition), $\phi_\ast[S^2_\infty]=0$. Hence $\sum_g \phi_\ast[S^2_g]=0$ in $H_2(\Sigma_8;\mathbb{Z})$. Using $\pi_2(\Sigma_8)\cong H_2(\Sigma_8;\mathbb{Z})$ (Theorem R.1.1), this is exactly $\sum_g q^{(g)}=0$.
+Since $\phi(x)\to p_\ast$ as $|x|\to\infty$, the image of a sufficiently large sphere $S^2_\infty$ lies in a contractible normal neighborhood of $p_\ast$. Thus $\phi|_{S^2_\infty}$ is null-homotopic and $\phi_\ast[S^2_\infty]=0$. Hence $\sum_g\phi_\ast[S^2_g]=0$ in $H_2(\Sigma_8;\mathbb Z)$. Using $\pi_2(\Sigma_8)\cong H_2(\Sigma_8;\mathbb Z)$ (Theorem R.1.1 and the Hurewicz identification in Section R.1.2), this is exactly $\sum_gq^{(g)}=0$.
 
-(For later use, one may define $E[q]:=\inf\{E[\psi]:\psi:S^2\to\Sigma_8,\ [\psi]=q\}\ge 0$, with $E[0]=0$ realized by constant maps.) ∎
+(For later use, let $E$ be a nonnegative functional on smooth maps $S^2\to\Sigma_8$ that vanishes on constant maps, and define $E[q]:=\inf\{E[\psi]:\psi:S^2\to\Sigma_8,\ [\psi]=q\}$. Nonnegativity gives $E[q]\ge0$, and a constant map in the zero sector attains $E[0]=0$.) ∎
 
 ### R.3.2 Embedding and the charge map
 
@@ -453,7 +456,7 @@ $$
 \tag{R.10}
 $$
 
-*Proof.* The principal symbol of $\not D_A^+$ is Clifford multiplication by a nonzero cotangent vector and is invertible away from the zero section, so the operator is elliptic. Because $M$ is closed, elliptic regularity makes its kernel and cokernel finite-dimensional and its image closed; hence it is Fredholm. The Atiyah--Singer index theorem for twisted Dirac operators (Atiyah and Singer 1968a) applies to the closed spin manifold and the smooth complex twisting bundle and gives
+*Proof.* The principal symbol of $\not D_A^+$ is Clifford multiplication by a nonzero cotangent vector and is invertible away from the zero section, so the operator is elliptic. Because $M$ is closed, elliptic regularity makes its kernel and cokernel finite-dimensional and its image closed; hence it is Fredholm. The closed-spin twisted-Dirac index theorem with a Hermitian bundle and unitary connection is stated in [Dai, *Lectures on Dirac Operators and Index Theory*, Theorem 3.3.4](https://web.math.ucsb.edu/~dai/book.pdf). Its curvature convention $\widehat A(R/2\pi)\wedge\operatorname{ch}(iF/2\pi)$ is the characteristic-class product $\widehat A(TM)\operatorname{ch}(E_{\mathrm{Rep}})$ used here, and gives
 $$
 \operatorname{Ind}(\not D_A^+)
 =\left\langle\widehat A(TM)\operatorname{ch}(E_{\mathrm{Rep}}),[M]\right\rangle,
@@ -468,7 +471,7 @@ In four dimensions this is the left-minus-right zero-mode count for the declared
 **Corollary R.IDX1.1 (Degree-4 characteristic-class form).**
 In 4D, only the degree-4 part contributes:
 $$
-\operatorname{Ind}(\not D_A)
+\operatorname{Ind}(\not D_A^+)
 \ =\ \int_M \left[\ -\tfrac{1}{24}\,p_1(TM)\ \mathrm{rk}(E_{\mathrm{Rep}})\ +\ \tfrac12\,c_1(E_{\mathrm{Rep}})^2\ -\ c_2(E_{\mathrm{Rep}})\ \right],
 $$
 with the usual identifications $c_i,\,p_1$ built from the $U(1),SU(2),SU(3)$ curvatures (and their hypercharge embedding inside $c_1$).
@@ -480,9 +483,14 @@ I_6(\mathrm{Rep}_1\oplus \mathrm{Rep}_2) = I_6(\mathrm{Rep}_1) + I_6(\mathrm{Rep
 $$
 Hence, for $k$ identical blocks, $I_6(\mathrm{Rep}^{\oplus k}) = k\,I_6(\mathrm{Rep})$.
 
-In particular, if a single predictive block is anomaly-free (all cubic/mixed gauge anomalies and mixed gauge-gravitational anomalies vanish, including the global SU(2) parity constraint), then any number $k$ of replicated blocks remains anomaly-free.
+In particular, if a predictive block has vanishing perturbative gauge and mixed gauge-gravitational anomalies and all of its global anomaly phases are trivial, then every finite positive number $k$ of replicated blocks is anomaly-free.
 
-*Proof.* The perturbative anomaly polynomial in 4D is $\mathrm{ch}_3(E_{\mathrm{Rep}})$ plus mixed terms involving $c_1(E_{\mathrm{Rep}})$ and $p_1(TM)$; all are linear in $\mathrm{ch}(E_{\mathrm{Rep}})$, which is additive under direct sums. The global SU(2) anomaly (Witten 1982) depends on the parity of the number of SU(2) doublets; replication multiplies that number by $k$, so if one block has an even count, every replicated theory does as well. ∎
+*Proof.* The perturbative anomaly polynomial in 4D is $\mathrm{ch}_3(E_{\mathrm{Rep}})$ plus mixed terms involving $c_1(E_{\mathrm{Rep}})$ and $p_1(TM)$; all are linear in $\mathrm{ch}(E_{\mathrm{Rep}})$, which is additive under direct sums. For the global condition, the determinant or Pfaffian lines of independent fermion blocks tensor under direct sums. Parallel transport on a tensor product is the tensor product of the transports, so their anomaly phases multiply. If $\alpha_{\mathrm{Rep}}(\gamma)$ is the phase for a closed gauge loop $\gamma$, then
+$$
+\alpha_{\mathrm{Rep}^{\oplus k}}(\gamma)
+=\alpha_{\mathrm{Rep}}(\gamma)^k=1
+$$
+whenever the single-block phase is trivial. This holds for every loop in the global anomaly certificate. On the $SU(2)$ singlet-and-doublet branch, Witten's parity condition [Witten 1982] is the evenness of the number of doublets; replication preserves that parity as a special case. ∎
 
 **Remark: Predictive block and SM-like content.**
 The block structure $H_x\cong\mathbb C\oplus\mathbb C^2\oplus\mathbb C^3$ from Appendix G naturally yields associated bundles whose Chern classes reproduce the usual $U(1)$, $SU(2)$, $SU(3)$ contributions. In that setting, Lemma R.IDX1 pins the net chirality per block to the topological pairing $\langle \widehat A\,\mathrm{ch},[M]\rangle$, while Lemma R.IDX2 guarantees that once a single predictive block satisfies the anomaly constraints, any number of generations (blocks) preserves them automatically.
@@ -631,9 +639,11 @@ F_1^3+F_2^3+F_3^3=3F_1F_2F_3;
 $$
 the SM15 cubic condition therefore makes one charge zero and the other two opposite. On the SM16 branch, a nonzero integral zero-sum vector has squared norm at least $2$, with equality exactly for the signed permutations of $(1,-1,0)$. Two generations have no rephasing-invariant CKM phase, whereas three can carry one. ∎
 
-**Lemma R.3.4a (Broken-$U(1)_F$ CKM and Seesaw Realization).** Normalize the selected charges to $(a,-a,0)$ and register one complex spurion $X$ with $F(X)=a$ and $\langle X\rangle\ne0$. Every charge difference $(F_g-F_h)/a$ and sum $(F_g+F_h)/a$ is an integer. Finite powers of $X$ or $X^\dagger$ therefore generate every quark and charged-lepton Yukawa entry, every neutrino Dirac entry, and every right-handed-neutrino Majorana entry through invariant effective operators.
+**Lemma R.3.4a (Broken-$U(1)_F$ CKM and Seesaw Realization).** Let the selected charges be $(a,-a,0)$ with $a\ne0$. Register a family-neutral electroweak Higgs with nonzero vacuum expectation value, one complex spurion $X$ with $F(X)=a$ and $\langle X\rangle\ne0$, and independently selectable complex Wilson coefficients for the symmetry-allowed effective operators. The quark and charged-lepton construction applies to both the SM15 and SM16 branches. The neutrino Dirac, right-handed Majorana and type-I seesaw statements additionally use the SM16 branch with one $\nu_R^g$ of charge $F_g$ per family.
 
-In particular, for nondegenerate positive $u_i,d_i$, the allowed coefficient space contains
+Every charge difference $(F_g-F_h)/a$ and sum $(F_g+F_h)/a$ is an integer. Finite powers of $X$ or $X^\dagger$ therefore allow arbitrary quark and charged-lepton Yukawa entries and, on SM16, arbitrary neutrino Dirac entries and symmetric right-handed Majorana entries.
+
+In particular, for positive $u_i,d_i$ that are nondegenerate within each sector, the allowed coefficient space contains
 $$
 Y_u=\operatorname{diag}(u_1,u_2,u_3),
 \qquad
@@ -656,9 +666,11 @@ $$
 \left(V_{11}V_{22}V_{12}^*V_{21}^*\right)
 =\frac{\sqrt3}{18}\ne0.
 $$
-Thus the registered broken branch realizes a physical CKM phase and remains compatible with a type-I seesaw. This is an existence certificate; it selects neither observed textures nor measured masses and angles.
+Thus this registered broken branch realizes a physical CKM phase and, on SM16, is compatible with a type-I seesaw. This is an existence certificate with freely chosen complex coefficients; it selects neither observed textures nor measured masses and angles.
 
-*Proof.* A quark, charged-lepton, or neutrino Dirac entry has family charge $-F_g+F_h$; a right-handed Majorana entry has charge $F_g+F_h$. A suitable finite power of $X$ or $X^\dagger$ cancels either integer multiple of $a$. The displayed matrices are full rank. Their left diagonalizers are $I_3$ and $F_3$, and direct substitution gives the displayed nonzero Jarlskog invariant. ∎
+*Proof.* Write $X^{[n]}=X^n$ for $n\ge0$ and $X^{[n]}=(X^\dagger)^{-n}$ for $n<0$. It has family charge $na$ and a nonzero value after the registered spurion is replaced by its vacuum expectation value. With a family-neutral Higgs, a Dirac operator has family charge $-F_g+F_h$, canceled by $X^{[(F_g-F_h)/a]}$. On SM16, a right-handed Majorana operator has charge $F_g+F_h$, canceled by $X^{[-(F_g+F_h)/a]}$. Since these dressing factors are nonzero and the coefficients are independently selectable, every asserted matrix entry can be assigned its desired value, with a symmetric coefficient matrix in the Majorana case.
+
+The identity $1+\omega+\omega^2=0$ gives $F_3^\dagger F_3=I_3$. Hence $Y_uY_u^\dagger$ and $Y_dY_d^\dagger$ have left diagonalizers $I_3$ and $F_3$. The displayed product of CKM entries is $\omega/9$, whose imaginary part is $\sqrt3/18$. Nondegeneracy and the nonzero Higgs expectation value make this a physical CKM witness. On SM16, independently choose a nonsingular diagonal Majorana mass matrix with eigenvalues large compared with a chosen neutrino Dirac mass matrix; both matrices are permitted by the same operator construction. This supplies the usual type-I seesaw hierarchy without imposing a measured neutrino spectrum. ∎
 
 **Proposition R.3.5 (Minimal three-generation solution within the MDL surrogate).**
 
@@ -705,7 +717,7 @@ $$
 N_g=3.
 $$
 
-*Proof.* Theorem R.3.4 shows that $N=3$ is admissible and that $N<3$ cannot support a physical CKM phase. For every $N\ge3$,
+*Proof.* Theorem R.3.4 supplies the selected three-charge orbit and excludes $N<3$ for a physical CKM phase; Lemma R.3.4a supplies its CP-active realization. For every $N\ge3$,
 $$
 L_{\mathrm{fam}}(N+1)-L_{\mathrm{fam}}(N)
 =
@@ -772,7 +784,16 @@ $$
 
 *Proof.* Every other quotient point has cost at least $\Delta_{\rm fam}$ above $q_*$. Exhaustiveness leaves no physical candidate outside $Q_B$, so $q_*$ is the unique global minimizer. The definition of $N_{\rm phys}$ removes response-null surplus representatives and gives the displayed family count. ∎
 
-**Finite family-selection certificate.** A certificate consists of a canonical response-quotient encoder, a feasible $q_*$ with $N_{\rm phys}(q_*)=3$, a rational $\delta>0$, an integer $N_0$, certified interval enclosures for every response class with $N_{\rm phys}\le N_0$, and a symbolic tail bound $L(N)$ proved for all $N>N_0$. The verifier checks: (i) exhaustiveness and canonicalization of the finite part; (ii) response separation; (iii) $\inf\overline V_B(q)\ge\overline V_B(q_*)+\delta$ for every other finite-part class; and (iv) $L(N)\ge\overline V_B(q_*)+\delta$ for all $N>N_0$. Acceptance supplies $\Delta_{\rm fam}\ge\delta$ and closes Theorem R.3.5.1c. Any admissible class violating one of these inequalities falsifies the certificate.
+**Finite family-selection certificate.** For this finite-list certificate, require an integer $N_0\ge3$ and a finite exhaustive list of all canonical response classes with $N_{\rm phys}\le N_0$, together with proofs of exhaustiveness, canonicalization and response separation. A bound on family count alone does not imply that this list is finite. The certificate also supplies a feasible listed class $q_*$ with $N_{\rm phys}(q_*)=3$, a rational $\delta>0$, and certified cost intervals $I_q=[l_q,u_q]$ for every listed class. The endpoints are rational, except that $u_q=+\infty$ is permitted for a class other than $q_*$; in particular $u_*<\infty$. Finally, it supplies a symbolic bound $L(N)$ and finite proofs of both uniform assertions
+$$
+\overline V_B(q)\ge L(N)
+\quad\text{for every }q\text{ with }N_{\rm phys}(q)=N>N_0,
+\qquad
+L(N)\ge u_*+\delta\quad\text{for every integer }N>N_0.
+$$
+All proofs use an accepted sound proof system with terminating proof checking for the registered claims.
+
+The verifier checks these finite proofs, the feasibility and interval certificates, and the finitely many inequalities $l_q\ge u_*+\delta$ for listed $q\ne q_*$. It does not enumerate the tail. Acceptance implies $\overline V_B(q)-\overline V_B(q_*)\ge\delta$ for every competitor: in the listed part use $\overline V_B(q)\ge l_q$ and $\overline V_B(q_*)\le u_*$; in the tail use the certified bound $\overline V_B(q)\ge L(N)\ge u_*+\delta$ and the same incumbent upper bound. Thus $\Delta_{\rm fam}\ge\delta$, supplying the hypotheses of Theorem R.3.5.1c. This is a sufficient certificate format, with no assertion that its finite exhaustive list or accepted proofs exist or can be discovered for the proposed physical quotient. Any admissible class omitted by the certified enumeration or violating the asserted lower bounds falsifies the certificate.
 
 **Remark R.3.5.1d (Status of the Exact Selector).** Theorem R.3.5.1c gives the mathematical closure after its exhaustive quotient, descended functional, and strict-gap certificate have been supplied; it is not itself a derivation of those inputs. Proposition R.3.5.1a proves the conclusion only inside the additive-monotone surrogate class. The present framework has not supplied the finite family-selection certificate above.
 
@@ -804,7 +825,7 @@ N_g
 =3.
 \tag{R.3.5a.1}
 $$
-This equality does not classify family labels outside the additive-monotone selection model. A label with no distinct finite-protocol response is removed independently by Corollary P.6.1b.8. A response-active extra family requires an enlarged flavor objective and is outside Proposition R.3.5.1a unless its additional cost and benefit are included explicitly.
+This equality does not classify family labels outside the additive-monotone selection model. A label with no distinct finite-protocol response and no decrease of an already-defined PPI cost is removed on the separating protocol-complete branch of Corollary P.6.1b.8. A response-active extra family requires an enlarged flavor objective and is outside Proposition R.3.5.1a unless its additional cost and benefit are included explicitly.
 
 *Proof.* Corollary R.3.5a establishes every equality in (R.3.5a.1). The final scope statements follow from the response-null quotient of Corollary P.6.1b.8 and from the declared domain of Proposition R.3.5.1a. ∎
 
@@ -977,7 +998,7 @@ k_{\mathrm{tan}}=\dim_{\mathbb C}\operatorname{Hom}(pE,(1-p)E)=ab=12,
 \qquad
 M=2k_{\mathrm{tan}}=24.
 $$
-On the predictive-recovery MacWilliams rate branch, Definition Z.13b.0 and Theorem Z.13b.0a select the interface-code dimension $k=M/2=12$. Theorem Z.13 proves the distance bound, witness, and attainer classification, while retained selection of the corresponding $[24,12,8]$ Golay equivalence class additionally requires $\mathfrak C_{\mathrm{dist}}$. Thus the shared value $k=12$ is consistent with the tangent half-mode count, but the Golay selection uses a separate fixed-rate distance certificate. The invariant $I_{\mathrm{kis}}$ follows from Definition Z.9a and Theorems Z.10--Z.11: $M=24\le K(D)$, $K(3)=12$, and the explicit regular-$24$-cell realization make four the least feasible dimension under the registered support cost. The downstream invariants retain their separately cited sources.
+On the predictive-recovery MacWilliams rate branch, Definition Z.13b.0 and Theorem Z.13b.0a select the interface-code dimension $k=M/2=12$. Theorem Z.13 proves the distance bound, witness, and attainer classification, while retained selection of the corresponding $[24,12,8]$ Golay equivalence class additionally requires $\mathfrak C_{\mathrm{dist}}$. Thus the shared value $k=12$ is consistent with the tangent half-mode count, but the Golay selection uses a separate rate-specific distance certificate. The $D=4$ component of $I_{\mathrm{kis}}$ follows from Definition Z.9a and Theorems Z.10--Z.11: $M=24\le K(D)$, $K(3)=12$, and the explicit regular-$24$-cell realization make four the least feasible dimension under the registered support cost. The equality $K(4)=24$ in $I_{\mathrm{kis}}$ is the independent kissing-number theorem of Musin (2008), already listed in Proposition R.3.5e; the dimensional selection does not prove that equality. The downstream invariants retain their separately cited sources.
 
 It remains to check that no source role replaces all the others inside $G$. The role $\mathcal C_{\mathrm{cap}}$ supplies $I_{\mathrm{cap}}$ and feeds $\mathcal C_{\mathrm{tan}}$ through $(a,d_0)$, but it contains no family-anomaly proof of $N_g=3$, no Golay correction-radius argument, and no kissing-number bridge. Thus it does not determine $I_3$ or $I_{\mathrm{kis}}$.
 
@@ -987,7 +1008,7 @@ The role $\mathcal C_{\mathrm{kis}}$ selects $D=4$ only after $M=24$ has already
 
 The role $\mathcal C_3$ supplies $K_0=N_g=t_{\mathrm{Golay}}=3$ through the horizon, branch-resolved SM15/SM16 family selection, pre-flavor family objective, and Golay-radius results. It provides the value $K_0=3$ used by the SPAP lower-bound leg for $d_0$, but it does not by itself supply the Landauer/PPI capacity gate, the Peirce tangent dimension, the predictive-recovery MacWilliams rate-selection gate, or the kissing-number bridge. Hence it is not a current-source compression.
 
-For the downstream invariants: $J_{\mathrm{top}}$ is the rank identity $\operatorname{rank}\pi_2(\Sigma_8)=d_0-1=N_g+D=7$ checked after $d_0$, $N_g$, and $D$ are already known by the source roles; it is an equality ledger consistent with the source roles, not an independent computation of any source value. $J_{\mathrm{Cl}}$ identifies the complex Clifford algebra and the marked real form of the already selected carrier; it does not derive the carrier dimension. $J_{\mathrm{ar}}$ is the marked-arena rigidity theorem of Definition Z.35d and Theorem Z.35e; it proves uniqueness of the canonical hierarchy preserving the marks $(d_0,a,\mathcal F_Q,\omega,(k,M))$ rather than deriving them from a new parent source. The downstream roles thus enter $G$ as coherence checks and rigidity statements, not as candidates for a current-source compression.
+For the downstream invariants: $J_{\mathrm{top}}$ is the rank identity $\operatorname{rank}\pi_2(\Sigma_8)=d_0-1=N_g+D=7$ checked after $d_0$, $N_g$, and $D$ are already known by the source roles; it is an equality ledger consistent with the source roles, not an independent computation of any source value. $J_{\mathrm{Cl}}$ identifies the complex Clifford algebra and the marked real form of the already selected carrier; it does not derive the carrier dimension. The projector–flag component of $J_{\mathrm{ar}}$ uses Definition Z.35d and Theorem Z.35e, which give unitary rigidity of the marked projector–flag carrier. The auxiliary $\mathrm{Gr}_{\mathbb C}(12,24)$ is specified by its dimensions; a functor or canonical map connecting it to the projector orbit requires additional data. The downstream roles thus enter $G$ as coherence checks and rigidity statements, not as candidates for a current-source compression.
 
 Finally, the Hurwitz count cannot supply the missing source. By Theorem 23a.1c, the minimal SPAP configuration groupoid has one isomorphism class, whereas the groupoid of non-real normed real division algebras has three non-isomorphic objects $\mathbb C$, $\mathbb H$, and $\mathbb O$. A functor sends isomorphic source objects to isomorphic target objects, so no functor from the minimal SPAP groupoid can have essential image consisting of all three Hurwitz objects. Hence the equality
 $$
@@ -1025,9 +1046,9 @@ M_8(\mathbb C)\cong\mathrm{Cl}_{\mathbb C}(6),
 \qquad
 M_8(\mathbb R)\cong\mathrm{Cl}_{\mathbb R}(0,6)\text{ (marked)}
 $$
-is unique under the registered marks but does not collapse the four source roles into one parent.
+has a projector–flag component that is unique up to unitary equivalence under the registered marks. Its Clifford forms retain the complex-algebra and real-marking hypotheses of Corollary 23a.1, and $\mathrm{Gr}_{\mathbb C}(12,24)$ remains an auxiliary dimension-defined space without a canonical connecting map supplied by Theorem Z.35e. These coherence data do not collapse the four source roles into one parent.
 
-*Proof.* Proposition R.3.5e and Corollary T.59a give the tuple on the declared common branch. Theorem Z.35e gives uniqueness of the marked arena hierarchy, Corollary 23a.1 gives the Clifford coherence, and Theorem R.3.5e.3 gives nonexistence of a current-source compression in the resulting graph. ∎
+*Proof.* Proposition R.3.5e and Corollary T.59a give the tuple on the declared common branch. Theorem Z.35e gives unitary rigidity at the marked projector–flag level and leaves the map to the auxiliary Grassmannian as separate data. Corollary 23a.1 gives the complex and marked-real Clifford coherence, and Theorem R.3.5e.3 excludes a current-source compression in the stated four-role graph. ∎
 
 **Remark R.3.5e.5 (Status of a Possible Bott-Theoretic Source).** Corollary R.3.5e.4 is a relative statement about the present dependency graph, not a global impossibility theorem. A future Bott-periodicity theorem or other proposed parent source would be additional structure, not a replacement already contained in the current ledger. To be admissible it must supply a parent invariant $P$ together with structure-preserving projections to every source invariant,
 $$
@@ -1059,7 +1080,7 @@ $$
 \qquad
 (D,K(D))=(4,24),
 $$
-together with the canonical hierarchy of Theorem Z.35e, without replacing any source-role chain by a numerical coincidence.
+together with the marked projector–flag rigidity of Theorem Z.35e and any separately specified maps to the auxiliary Grassmannian, without replacing any source-role chain by a numerical coincidence.
 
 **Remark R.3.5e.5a (Parent-Datum Schema Gate).** A candidate parent-source record for Remark R.3.5e.5 may be organized as a finite capacity-arena datum
 
@@ -1129,27 +1150,29 @@ $$
 \iff
 \sum_{g=1}^N F_g=0.
 $$
-On the SM16 branch, primitive normalization and minimization of $C_F=\sum_g f_g^2$ are additional PCE selection data, not anomaly equations. On either the SM15 branch or the primitive minimal-charge-norm SM16 branch,
+On the SM16 branch, primitive normalization and minimization of $C_F=\sum_g f_g^2$ are additional PCE selection data, not anomaly equations. Take the minimum over the declared SM15 branch or the primitive minimal-charge-norm SM16 branch, and require a registered CKM-type CP-active realization on the chosen family set. The minimum admissible family count is
 $$
-N_g
+N_{\min}^{(b)}
 =
-\min\left\{N:\ [\mathcal A_N^{(b)}]=0,\ \mathcal Q\ne0,\ \text{and a registered }J_{\mathrm{CP}}\ne0\text{ realization exists}\right\}
+\min\left\{N\ge1:\ \exists F\in\mathbb Z^N\setminus\{0\},\quad
+[\mathcal A_N^{(b)}]=0,\quad
+\text{a registered CKM-type }J_{\mathrm{CP}}\ne0\text{ realization exists for }F\right\}
 =
-3,
+3.
 $$
-and the selected primitive charge orbit is represented by
+At this minimum, the selected primitive charge orbit is represented by
 $$
 (1,-1,0),
 $$
-equivalently $\{F_g\}=\{a,-a,0\}$ before dividing out the common charge unit.
+equivalently $\{F_g\}=\{a,-a,0\}$ with $a\ne0$ before dividing out the common charge unit. On the separate additive-monotone realized-family branch of Proposition R.3.5.1a, the realized count obeys $N_g=N_{\min}^{(b)}=3$.
 
-*Proof.* A nonzero one-family assignment violates the linear condition. A two-family zero-sum assignment is proportional to $(1,-1)$ but cannot carry a rephasing-invariant CKM phase. For three families, the SM15 cubic equation forces one charge to vanish and the other two to be opposite. On the SM16 branch, the linear equation alone allows more triples, but the primitive norm satisfies $C_F\ge2$, with equality exactly for signed permutations of $(1,-1,0)$. Lemma R.3.4a realizes a nonzero Jarlskog invariant on that orbit. Therefore the smallest CP-capable count is three on both declared branches, with the stated difference between anomaly and PCE inputs. ∎
+*Proof.* A nonzero one-family assignment violates the linear condition. A two-family zero-sum assignment is proportional to $(1,-1)$ but cannot carry a rephasing-invariant CKM phase. Indeed, for $V\in U(2)$, row orthogonality gives $V_{11}V_{22}V_{12}^*V_{21}^*=-|V_{12}|^2|V_{22}|^2\in\mathbb R$, so the CKM quartet has zero imaginary part. For three families, the SM15 cubic equation forces one charge to vanish and the other two to be opposite. On the SM16 branch, the linear equation alone allows more triples, but a nonzero integral zero-sum vector has at least one positive and one negative entry, so its primitive norm satisfies $C_F\ge2$. At three families equality holds exactly for signed permutations of $(1,-1,0)$. Under its stated Higgs, coefficient and spectrum assumptions, Lemma R.3.4a realizes a nonzero Jarlskog invariant on that orbit. Therefore the minimum admissible CP-capable count is three on both declared branches. The additional equality for the realized count uses the family objective of Proposition R.3.5.1a. ∎
 
 **Corollary R.3.5h (Persistent-Cohomology Representative of the Generation Class).** Let
 $$
 0=C_{\le -1}^{\bullet}\subset C_{\le0}^{\bullet}\subset\cdots\subset C_{\le M}^{\bullet}=C_{\mathrm{fam}}^{\bullet}
 $$
-be a finite filtered defect complex whose total degree-one cohomology represents the family-charge obstruction class of Theorem R.3.4. Suppose:
+be a finite filtered defect complex whose total degree-one cohomology represents the family-charge obstruction class of Theorem R.3.4. Assume the additive-monotone realized-family branch of Proposition R.3.5.1a and a registered vector-space isomorphism $H^1(C_{\mathrm{fam}}^\bullet)\cong\mathbb C^{N_g}$ with its selected generation space. Suppose:
 
 1. the associated spectral sequence
 $$
@@ -1172,7 +1195,7 @@ N_g
 3.
 \tag{R.3.5h.1}
 $$
-On the canonical three-sector filtration, where the stable degree-one representatives occur in one filtration degree, this reduces to
+On the canonical three-sector filtration, where the stable degree-one representatives occur in filtration degree $1$, this reduces to
 $$
 \dim E_\infty^{1,0}=3.
 \tag{R.3.5h.2}
@@ -1184,7 +1207,7 @@ $$
 =
 \dim H^1(C_{\mathrm{fam}}^{\bullet}).
 $$
-By hypothesis, this total degree-one cohomology is exactly the anomaly and CP-active family-charge quotient of Theorem R.3.4. Corollary R.3.5g proves that the minimal admissible family-charge quotient has $N_g=3$ represented by $\{a,-a,0\}$. Filtration-exact classes are removed by PCE, and invisible stable labels are excluded by item 3. Hence the stable persistent degree-one dimension is exactly three. If the stable representatives are concentrated in one filtration degree, the sum is the single dimension in (R.3.5h.2). ∎
+The registered vector-space isomorphism gives $\dim H^1(C_{\mathrm{fam}}^\bullet)=N_g$, and Proposition R.3.5.1a gives $N_g=3$ on the assumed additive-monotone branch. Corollary R.3.5g identifies its primitive charge orbit as $\{a,-a,0\}$. Filtration-exact classes are removed by the stated PCE-null hypothesis, and invisible stable labels are excluded by item 3. Hence the stable persistent degree-one dimension is exactly three. If the stable representatives are concentrated in filtration degree $1$, the sum is the single dimension in (R.3.5h.2). ∎
 
 ## R.4 Three-Fold Structure: Topological Derivation and Structural Compatibility
 
@@ -1243,13 +1266,13 @@ The number $3$ occurs in four distinct branch records:
 
 Items 2–4 are compatibility records. They do not derive the family count without independent carrier, label, and anomaly-descent identifications.
 
-*Proof.* Item 1 follows from R.3.4 plus the additive-monotone branch of the effective R.3.5.1a. A supernumerary response-null label is removed independently by Corollary P.6.1b.8. Items 2–4 are the representation, lattice, and arithmetic facts proved in the remainder of this proposition. No implication among those three facts and the family-charge selection is used. 
+*Proof.* Item 1 follows from R.3.4 plus the additive-monotone branch of Proposition R.3.5.1a. A label with no distinct finite-protocol response and no decrease of an already-defined PPI cost is removed on the separating protocol-complete branch of Corollary P.6.1b.8. Items 2–4 are the representation, lattice, and arithmetic facts proved in the remainder of this proposition. No implication among those three facts and the family-charge selection is used. 
 
-For item 2, let $W$ be a marked Euclidean real vector space of dimension 8 and let $\mathfrak g=\mathfrak{so}(W)\cong\mathfrak{so}(8)$ be its compact rotation algebra. Its complexification $\mathfrak g_{\mathbb C}$ has Dynkin type $D_4$. The classification of complex simple Lie algebras identifies the outer automorphism group with the automorphism group of the Dynkin diagram (Humphreys 1972; Fulton & Harris 1991). The $D_4$ diagram has one central node and three indistinguishable outer nodes, so its diagram automorphism group is $S_3$. Therefore
+For item 2, let $W$ be a marked Euclidean real vector space of dimension 8 and let $\mathfrak g=\mathfrak{so}(W)\cong\mathfrak{so}(8)$ be its compact rotation algebra. Its complexification $\mathfrak g_{\mathbb C}$ has Dynkin type $D_4$. Schaposnik and Schulz (2021, §2.2, Proposition 2.1) construct order-three and order-two outer automorphisms of the compact real Lie algebra $\mathfrak{so}(8)$ that generate $S_3$. This Lie-algebra statement also applies to its simply connected group $\mathrm{Spin}(8)$; the vector quotient $SO(8)$ retains only an outer $\mathbb Z_2$ (ibid., Remark 2.2). The $D_4$ diagram has one central node and three indistinguishable outer nodes, so its diagram automorphism group is $S_3$. Therefore
 $$
 \mathrm{Out}(\mathfrak{so}(8))\cong S_3.
 $$
-The fundamental modules attached to the three outer nodes have highest weights $\omega_1,\omega_3,\omega_4$. They are respectively the vector module $V$ and the two half-spin modules $S^+,S^-$. Their dimensions are
+The three external $D_4$ nodes carry the vector module $V$ and the two chiral half-spin modules $S^+,S^-$ (Schaposnik and Schulz 2021, §2.2). These are real eight-dimensional modules on the compact $\mathrm{Spin}(8)$ carrier, whose complexifications have the displayed complex dimensions. Their dimensions are
 $$
 \dim_{\mathbb C}V=8,\qquad
 \dim_{\mathbb C}S^+=\dim_{\mathbb C}S^-=2^{4-1}=8.
@@ -1315,19 +1338,19 @@ On the minimal Hilbert-carrier branch, Theorem 23 gives $d_0\ge8$ and Theorem Z.
 
 *Proof.*
 
-**Step 1 (Even unimodular lattice requirements).** A lattice $\Lambda \subset \mathbb{R}^n$ is *even* if $|v|^2 \in 2\mathbb{Z}$ for all $v \in \Lambda$, and *unimodular* if $\det(\Lambda) = 1$ (equivalently, $\Lambda^* = \Lambda$, i.e., self-dual). Even unimodular positive definite lattices exist only in dimensions $n \equiv 0 \pmod{8}$ (Serre 1973; Milnor & Husemoller 1973).
+**Step 1 (Even unimodular lattice requirements).** A lattice $\Lambda \subset \mathbb{R}^n$ is *even* if $|v|^2 \in 2\mathbb{Z}$ for all $v \in \Lambda$. An even lattice is integral by polarization. For an integral lattice, *unimodular* means $\det(\Lambda)=1$, equivalently $\Lambda^*=\Lambda$. Even unimodular positive definite lattices exist only in dimensions $n \equiv 0 \pmod{8}$ [Zagier, *Elliptic Modular Forms and Their Applications*, Proposition 12, printed p. 33](https://www.its.caltech.edu/~matilde/Zagier123ModularForms.pdf).
 
-**Step 2 (Classification in dimension 8).** By the classification theorem for even unimodular lattices (Mordell 1938; Witt 1941), there exists exactly one even unimodular lattice in dimension 8, up to isometry. This unique lattice is $E_8$.
+**Step 2 (Classification in dimension 8).** [Mordell's original 1938 theorem](https://www.numdam.org/item/JMPA_1938_9_17_1-4_41_0.pdf), printed pp. 41–42, classifies positive-definite integral determinant-one quadratic forms in eight variables into exactly two equivalence classes: the sum of eight squares and a second class represented by his displayed form (4). The sum-of-squares class is odd because it has norm-one vectors; Mordell's other displayed representative has even values on integral vectors. Consequently an even unimodular rank-eight lattice belongs to the unique even class, isometric to $E_8$. This classifies a lattice only after the independent even unimodular carrier premise in the theorem statement; it does not select that premise or realize a physical $E_8$ carrier.
 
-**Step 3 (Information-theoretic optimality).** The $E_8$ lattice uniquely achieves multiple optimality properties relevant to PCE:
+**Step 3 (Geometric properties and PCE scope).** The selected $E_8$ lattice has the following geometric properties:
 
-| Property | Value | PCE Interpretation |
-|----------|-------|-------------------|
-| Sphere packing density | $\Delta_8 = \pi^4/384 \approx 0.2537$ | Maximizes distinguishable states per volume (maximizes $V_{\text{benefit}}$) |
-| Kissing number | 240 (maximum in 8D) | Maximizes local connectivity for error correction |
-| Self-duality | $E_8^* = E_8$ | Eliminates representational redundancy (minimizes $V_{\text{op}}$) |
+| Property | Value | Mathematical content |
+|----------|-------|----------------------|
+| Sphere packing density | $\Delta_8=\pi^4/384\approx0.2537$ | This is the maximal packing density in dimension $8$, by Viazovska (2017) |
+| Kissing number | $240$ | Its minimal vectors attain the maximal kissing number in dimension $8$ |
+| Self-duality | $E_8^*=E_8$ | The lattice equals its Euclidean dual |
 
-The optimality of $E_8$ for sphere packing in 8 dimensions was proved by Viazovska (2017).
+The density follows from covolume $1$, minimum squared norm $2$, and packing radius $1/\sqrt2$: the radius-$1/\sqrt2$ ball in $\mathbb R^8$ has volume $(\pi^4/24)(1/\sqrt2)^8=\pi^4/384$. Packing density, kissing number and self-duality do not alone identify a predictive-benefit or operating-cost functional. A PCE optimality conclusion requires a registered state/response interpretation and a proof relating its actual objective to the relevant geometric optimization problem. The rank-eight even-unimodular classification in Step 2 establishes the theorem's isometry conclusion independently of these additional interpretations.
 
 **Step 4 (Root system structure).** The 240 minimal vectors of $E_8$ (those with $|v|^2 = 2$) form the $E_8$ root system:
 
@@ -1401,7 +1424,7 @@ L_H:=\bigcup_{h\in H}(g_h+L_0)
 $$
 is even, unimodular, and rootless of rank $24$, and hence is isometric to the Leech lattice $\Lambda_{24}$.
 
-*Proof.* The even-lattice gluing theorem [Conway & Sloane 1999] sends the maximal totally isotropic subgroup $H$ to an even overlattice. Since $|H|=2^{12}$ and $\det L_0=2^{24}$, the overlattice is unimodular. Every nonzero vector of $L_H$ lies either in $L_0\setminus\{0\}$ or in a nonzero glue coset, so the identity $m_H^{\times}=4$ gives minimum nonzero squared norm $4$ and hence rootlessness. Niemeier classification [Niemeier 1973] then identifies it with $\Lambda_{24}$. An abstract isomorphism $A_{L_0}\cong\mathbb F_2^{24}$ without $\phi$, $q_B$, and the coset-minimum ledger is insufficient for this conclusion. ∎
+*Proof.* Apply the even-quadratic-lattice overlattice correspondence (Chenevier & Lannes 2015, Proposition II.1.1) to the specified quadratic-module isometry and isotropic subgroup $H$. Its inverse image in $L_0^*$ is an even integral overlattice of index $|H|=2^{12}$, so its determinant is $\det L_0/|H|^2=2^{24}/2^{24}=1$. Every nonzero vector of $L_H$ lies either in $L_0\setminus\{0\}$ or in a nonzero glue coset; the assumed ledger $m_H^{\times}=4$ therefore gives minimum nonzero squared norm $4$ and rootlessness. The rank-$24$ positive-definite even unimodular rootless-lattice characterization (Chenevier & Lannes 2015, Theorem II.3.16; Conway 1969a) identifies its Euclidean-isometry class with $\Lambda_{24}$. An abstract isomorphism $A_{L_0}\cong\mathbb F_2^{24}$ without $\phi$, $q_B$, and the coset-minimum ledger is insufficient for this conclusion. ∎
 
 **Explicit coordinate closure of the marked Golay branch.** Let $C=\mathcal G_{24}\subset\mathbb F_2^{24}$ be the doubly even self-dual extended binary $[24,12,8]$ Golay code and define
 $$
@@ -1646,16 +1669,27 @@ $$
 $$
 Together with $m_0^{\times}=4$, this excludes norm-$2$ vectors in both the zero and nonzero glue cosets. Items 1–2 of Lemma R.4.5 make the overlattice positive-definite, even, unimodular, and rank $24$; Niemeier classification therefore identifies it with $\Lambda_{24}$. A packing-energy statement or physical stability claim requires its own stated theorem or dynamical certificate. ∎
 
-**Corollary R.4.2b.1 (Conditional Universal-Optimality Support for Fixed-Dimension Lattice Subledgers).** Let a PU lattice subledger already be fixed to a Euclidean dimension $n\in\{8,24\}$ and to an admissible periodic-configuration class $\mathcal A_n$ with the density, covolume, and regularization conventions required by the corresponding universal-optimality theorem. Suppose the descended PCE pair cost on that subledger has the form
+**Corollary R.4.2b.1 (Conditional Universal-Optimality Support for Dimension-Specific Lattice Subledgers).** Let a PU lattice subledger have Euclidean dimension $n\in\{8,24\}$ and density $\rho>0$. Let $\Lambda_8=E_8$ and $\Lambda_{24}$ be the Leech lattice, both at covolume $1$. Assume its admissible periodic-configuration class $\mathcal A_n$ consists of configurations of density $\rho$ and contains $\rho^{-1/n}\Lambda_n$. For $X=\bigcup_{i=1}^{m}(t_i+L)$ with distinct representatives modulo a period lattice $L$, suppose the descended PCE pair cost is the finite energy per point
 $$
-V_f(X)=\sum_{x,y\in X}^{'} f(|x-y|^2)
+V_f(X)=\frac1m\sum_{i=1}^{m}\ \sum_{\substack{x\in X\\x\ne t_i}} f(|t_i-x|^2),
+\qquad X\in\mathcal A_n.
 \tag{R.4.2b.1}
 $$
-where $f$ is completely monotone on squared distance after the branch regularization, and suppose the accepted finite-response ledger proves that no non-pairwise, anomaly, quotient, calibration, or capacity term remains outside this cost. Then the $n=8$ subledger is minimized by the $E_8$ lattice and the $n=24$ subledger is minimized by the Leech lattice $\Lambda_{24}$ among the admissible configurations.
+Assume $f$ is completely monotone on squared distance and the accepted finite-response ledger proves that no non-pairwise, anomaly, quotient, calibration, or capacity term remains outside this cost. Then $\rho^{-1/n}\Lambda_n$ minimizes the subledger cost among $\mathcal A_n$.
 
 This support is fixed-dimension support only. It does not derive $d_0=8$, $M=24$, $D=4$, $K_0=3$, or the three-generation count, and it does not promote the $D_4$/24-cell leg to universal optimality. The $D_4$ and 24-cell statements remain the kissing-number, triality, and design-optimality statements already used elsewhere in the manuscript.
 
-*Proof.* Under the stated hypotheses, the PCE cost is exactly an admissible completely monotone pair energy in a dimension where universal optimality is a theorem. Therefore $E_8$ in dimension $8$ and $\Lambda_{24}$ in dimension $24$ minimize the entire accepted pair-energy family, independently of the particular $f$. The conclusion is conditional on the dimension and admissible cost form already being fixed; the universal-optimality theorem is not a selector of those dimensions and supplies no theorem-level parent invariant for source roles outside the fixed-dimensional lattice subledgers. ∎
+*Proof.* Write $\Lambda_n=E_8$ for $n=8$ and let $\Lambda_n$ be the Leech lattice for $n=24$, each at covolume $1$. For an admissible configuration $X$ of density $\rho$, set $Y=\rho^{1/n}X$, which has density $1$, and define $g(t)=f(\rho^{-2/n}t)$. For every integer $j\ge0$,
+$$
+(-1)^j g^{(j)}(t)
+=\rho^{-2j/n}(-1)^j f^{(j)}(\rho^{-2/n}t)\ge0,
+$$
+so $g$ is completely monotone. The normalized periodic-cell sums obey $V_g(Y)=V_f(X)$. Applying the universal-optimality theorem at density $1$ gives
+$$
+V_f(X)=V_g(Y)\ge V_g(\Lambda_n)
+=V_f(\rho^{-1/n}\Lambda_n).
+$$
+The comparison lattice is admissible and its energy is finite by hypothesis. Thus it minimizes the stated pair-cost subledger. This argument assumes the dimension, density and entire accepted cost form; it neither selects those dimensions nor supplies a parent invariant for other source roles. ∎
 
 ---
 
@@ -1676,7 +1710,7 @@ These statements share branch-selected integers and a compatible lattice isometr
 
 **Theorem R.4.10 (Unique Rootless Positive-Definite Niemeier Lattice; Conditional PCE Selection).** Among Euclidean-isometry classes of positive-definite even unimodular lattices of rank $24$, exactly one has no norm-$2$ vectors: the class of the Leech lattice $\Lambda_{24}$. Therefore any already-registered PCE branch whose admissibility conditions independently require a positive-definite even unimodular rootless rank-$24$ lattice selects the Leech isometry class uniquely. PCE alone does not supply positive definiteness, rootlessness, a marked embedded representative, or physical-vacuum stability.
 
-*Proof.* The Niemeier classification theorem (Niemeier 1973; Conway and Sloane 1999) applies to positive-definite even unimodular lattices of rank $24$. It gives exactly 24 isometry classes. Twenty-three classes have a nonempty root system consisting of their norm-$2$ vectors, and the remaining class has no norm-$2$ vectors. The classification identifies that remaining class as the Leech lattice $\Lambda_{24}$. Restricting any independently certified admissible class to the stated positive-definite, even, unimodular, rank-$24$, rootless conditions therefore leaves exactly the isometry class of $\Lambda_{24}$. ∎
+*Proof.* Chenevier and Lannes (2015, Theorems II.3.16–II.3.17) classify the positive-definite even unimodular rank-$24$ lattices into exactly $24$ Euclidean-isometry classes: $23$ have nonempty norm-$2$ root systems and one has the empty root system. Their Theorem II.3.16 identifies the rootless class as $\Lambda_{24}$, consistently with Conway (1969a). Restricting an independently certified admissible class to the stated positive-definite, even, unimodular, rank-$24$, rootless conditions therefore leaves exactly the Leech isometry class. No theorem here chooses a marking, establishes the registered gluing datum, or supplies a physical vacuum. ∎
 
 **Remark R.4.2a: Nested Uniqueness.** Three finite statements meet at the number $24$: the faithful-shell branch selects the least feasible $D=4$ from $24\le K(D)$, $K(3)=12$, and the regular $24$-cell; Niemeier classification contains exactly $24$ positive-definite even unimodular rank-$24$ isometry classes; and exactly one of them is rootless. Their conjunction identifies one rootless rank-$24$ isometry class together with compatible finite branch data; physical vacuum realization retains its registered certificate.
 
@@ -1739,71 +1773,62 @@ The correlation and stability protocols in Sections Z.29--Z.31 test distinct rec
 
 **Branch-Specific Experimental Protocols.** Sections Z.29–Z.31 state tests for the separately registered mode-count, code, lattice, and mode-channel branches:
 
-1. **Coordination number scaling (Prediction Z.2):** Effective neighbor count in $d_0 = 8$ quantum systems should scale as $K(D_{\text{eff}})$ with effective dimension.
+1. **Coordination selection (Prediction Z.2):** For a declared effective dimension, a simulator admitting competing coordination graphs tests maximal equal-radius shell selection only under a specified dynamics proved to minimize the mismatch penalty.
 
-2. **Dimensional stability (Prediction Z.3):** Systems with $M_{\text{int}} = 24$ modes embedded in $D \neq 4$ effective dimensions should exhibit instability or spontaneous dimensional reduction.
+2. **Static mode-channel mismatch (Prediction Z.3):** On the channel-cell branch, prepare $M_{\mathrm{int}}=24$ and measure the completed first-shell count $M_{\mathrm{phys}}$, giving $\Delta_{\mathrm{mc}}=|24-M_{\mathrm{phys}}|$. Instability or dimensional reduction requires an independent evolution equation and Lyapunov certificate.
 
-3. **Error-correction correlations (Prediction Z.4):** A $24\times24$ correlation matrix can test the registered $12+12$ mode partition. Identifying the extended Golay code additionally requires the preregistered parity checks, weight enumerator, syndrome map, and decoder-success statistics; a $12+12$ split alone is not code-specific.
+3. **Error-correction correlations (Prediction Z.4):** Flat QFI tests the 24-dimensional active subspace and equal QFI eigenvalues. A Golay test separately requires the marked physical encoder, noise law, and syndrome or decoder instrument, with the registered residual-law and octad-incidence statistics of Theorem Z.13b.3.
 
 Each protocol tests only its declared branch. A code-level confirmation does not by itself confirm Leech gluing, a physical vacuum, dimensional reduction, or emergent-spacetime dynamics.
 
 
 ### R.4.2.8 Syndrome-Charge Homology
 
-**Definition R.4.2.8a (Predictive Syndrome Complex).** Let $C_0$ be the finite abelian group of syndrome labels on a marked Golay--Leech carrier. A predictive syndrome complex is a finite chain complex
+**Definition R.4.2.8a (Predictive Syndrome Complex).** Let
 $$
 C_2\xrightarrow{\partial_2}C_1\xrightarrow{\partial_1}C_0
 $$
-together with a local neutrality map
+be a chain complex of finite abelian groups and group homomorphisms, with $\partial_1\partial_2=0$, on a marked Golay--Leech carrier. Let $\nu:C_0\to N$ be a group homomorphism to a finite abelian group satisfying $\nu\partial_1=0$. Set $K=\ker\nu$ and $B=\operatorname{im}\partial_1$, so $B\subset K$. Defect syndrome labels are elements of $K$, and their algebraic combination law is addition. Register a set $U\subset B$ of permitted translation increments such that $U=-U$ and the subgroup generated by $U$ is $B$. A registered neutral move is $s\mapsto s+u$ with $u\in U$. Define local-move equivalence by reachability through a finite sequence of these moves. The syndrome-charge group is
 $$
-\nu:C_0\to N
-$$
-to a finite abelian group $N$, satisfying
-$$
-\nu\circ\partial_1=0.
-$$
-A defect syndrome is an element $s\in\ker\nu$. Locally creatable neutral syndrome changes are elements of $\operatorname{im}\partial_1$. The syndrome-charge group is
-$$
-H_{\mathrm{synd}}
-=
-\ker\nu/\operatorname{im}\partial_1.
+H_{\mathrm{synd}}=K/B
+=\ker\nu/\operatorname{im}\partial_1.
 \tag{R.30}
 $$
+These are algebraic syndrome data; their interpretation as physical processes and readouts requires a separate registered realization.
 
 **Theorem R.4.2.8b (Charge as Stable Error-Correction Syndrome).** In a predictive syndrome complex:
 
-1. local neutral updates preserve the class $[s]\in H_{\mathrm{synd}}$;
-2. fusion of defects is addition in $H_{\mathrm{synd}}$;
-3. two defect configurations are operationally charge-equivalent if and only if they represent the same class in $H_{\mathrm{synd}}$;
-4. if every allowed local process changes a syndrome only by an element of $\operatorname{im}\partial_1$, then distinct classes in $H_{\mathrm{synd}}$ are superselection sectors relative to the allowed local-process algebra.
+1. registered neutral moves preserve $[s]\in H_{\mathrm{synd}}$;
+2. algebraic combination of syndrome labels induces addition in $H_{\mathrm{synd}}$;
+3. two syndrome labels are local-move equivalent if and only if they represent the same quotient class;
+4. on $\mathscr H=\mathbb C[K]$, with orthonormal basis $\{|s\rangle:s\in K\}$, suppose a represented allowed-process algebra $\mathscr A\subset\operatorname{End}(\mathscr H)$ satisfies
+$$
+\langle t|A|s\rangle=0
+\quad\text{whenever }t-s\notin B,
+\qquad A\in\mathscr A.
+$$
+Then each quotient-class subspace is invariant under $\mathscr A$, and its orthogonal projector commutes with every $A\in\mathscr A$.
 
-*Proof.* A local neutral update changes a syndrome by
-$$
-s\mapsto s+\partial_1 c
-$$
-for some $c\in C_1$. Since the quotient defining $H_{\mathrm{synd}}$ identifies syndromes that differ by an element of $\operatorname{im}\partial_1$, the class $[s]$ is unchanged. This proves (1).
+*Proof.* Since $\nu$ is a homomorphism and $\nu\partial_1=0$, $K$ and $B$ are subgroups with $B\subset K$. Each permitted increment lies in $B$, so a move leaves the quotient class unchanged, proving (1). For $s_1,s_2\in K$, $\nu(s_1+s_2)=0$ and $[s_1+s_2]=[s_1]+[s_2]$, proving (2).
 
-If two defects have syndromes $s_1,s_2\in\ker\nu$, their combined syndrome is $s_1+s_2$. Because $\nu$ is a homomorphism,
-$$
-\nu(s_1+s_2)=\nu(s_1)+\nu(s_2)=0,
-$$
-so the fused defect is again admissible, and its class is
-$$
-[s_1+s_2]=[s_1]+[s_2].
-$$
-This proves (2).
+Any finite sequence of permitted moves changes a label by an element of $B$. Conversely, if $t-s\in B$, the generating and reversibility assumptions express $t-s$ as a finite sum of elements of $U$. The corresponding sequence remains in $K$ and carries $s$ to $t$. This proves (3).
 
-For (3), if two syndromes differ by $\partial_1c$, a local neutral update carries one to the other, so they are operationally equivalent. Conversely, any finite sequence of local neutral updates adds a finite sum of elements of $\operatorname{im}\partial_1$, hence changes the syndrome only within the same quotient class.
-
-For (4), the additional locality hypothesis says that every allowed local process sends $s$ only to $s+u$ with $u\in\operatorname{im}\partial_1$. Hence every such process preserves $[s]\in H_{\mathrm{synd}}$ and the allowed local-process algebra is block diagonal with respect to the quotient-class decomposition. Distinct quotient classes are therefore superselection sectors relative to that algebra. ∎
-
-**Corollary R.4.2.8c (Golay Distance Protects Nontrivial Syndrome Charge).** On a marked Golay-stabilized branch, assume that every operator supported on a carrier set $S$ induces a syndrome-change representative supported in $S$, and that the minimum support of a representative of any nontrivial logical syndrome class is the Golay distance
+For $h\in H_{\mathrm{synd}}$, let $\Pi_h$ project onto the span of basis labels in class $h$. The hypothesis in (4) gives
 $$
-d_{\min}=8,
+(\Pi_hA-A\Pi_h)_{ts}
+=\bigl(\mathbf1_{[t]=h}-\mathbf1_{[s]=h}\bigr)A_{ts}=0:
 $$
-no nontrivial syndrome-charge sector can be created, erased, or confused by an operator supported on fewer than eight marked carrier coordinates.
+the coefficient vanishes for equal classes, and $A_{ts}=0$ for different classes. This proves (4). The conclusion is class preservation for the represented algebra. It does not establish irreducibility, completeness of physical superselection sectors, or indistinguishability under unspecified operational protocols. ∎
 
-*Proof.* By definition of $d_{\min}$ on this branch, every representative of a nonzero class in $H_{\mathrm{synd}}$ has support at least $8$. An operator supported on fewer than eight coordinates can therefore change only representatives of the zero class or locally trivial representatives. By Theorem R.4.2.8b, nonzero syndrome-charge classes are preserved under such local neutral changes. ∎
+**Corollary R.4.2.8c (Golay Distance Protects Nontrivial Syndrome Charge).** On a marked Golay-stabilized branch with the syndrome complex and represented label space of Theorem R.4.2.8b, let $\operatorname{supp}(u)\subset\{1,\ldots,24\}$ be the registered coordinate support of a syndrome change $u\in K$. Independently assume the syndrome-distance certificate
+$$
+d_{\mathrm{synd}}
+:=\min_{\substack{u\in K\\ [u]\ne0}}
+|\operatorname{supp}(u)|=8.
+$$
+The binary Golay distance alone does not identify this quotient distance without a registered syndrome map. For every represented operator $A$ supported on a carrier set $S$, assume each nonzero matrix element $\langle t|A|s\rangle$ satisfies $\operatorname{supp}(t-s)\subset S$. Then every such operator with $|S|<8$ preserves each syndrome-charge class subspace.
+
+*Proof.* If $\langle t|A|s\rangle\ne0$, the change $u=t-s$ lies in $K$ and has support size at most $|S|<8$. The distance certificate therefore forces $[u]=0$, so $[t]=[s]$. All matrix elements between different quotient classes vanish; the class projectors commute with $A$ by the calculation in Theorem R.4.2.8b. This proves preservation of the syndrome-charge classes. Decoder success, readout discrimination and protection of arbitrary physical states require their own noise, instrument and realization certificates. ∎
 
 ### R.4.2.9 Golay Matroid Locality
 
@@ -1855,20 +1880,22 @@ The following flavor model localizes wavepackets at selected $E_8$-related vacua
 
 ### R.5.1 Kähler Geometry and PCE-Compatible Potential
 
-The complete flag manifold $\Sigma_8$ is a coadjoint orbit of $U(8)$, but its invariant Kähler metric is not unique: the invariant Kähler cone has one positive parameter for each simple root. Fix the registered equal-simple-root branch
+The complete flag manifold $\Sigma_8$ is a coadjoint orbit of $U(8)$, but its invariant Kähler metric is not unique: its invariant Kähler cone has one positive parameter for each simple root. Register the equal-simple-root branch
 $$
 \delta_i:=\lambda_i-\lambda_{i+1}=1,
 \qquad i=1,\ldots,7.
 $$
-On a dense flag chart its Kähler potential is
+On the common graph chart, let $Z_k$ be the $k\times(8-k)$ holomorphic graph coordinate of the flag's $k$-plane, represented by the row space of $(I_k\ Z_k)$. The seven graph coordinates satisfy the flag-incidence relations. A local Kähler potential is
 $$
-K_\delta(Z,Z^\dagger)
-=
-\sum_{k=1}^7\delta_k\log\det(I_k+Z_kZ_k^\dagger),
+K_\delta=\sum_{k=1}^7\delta_k\log\det(I_k+Z_kZ_k^\dagger).
+$$
+The associated Kähler two-form and real Riemannian metric are
+$$
+\omega_\delta=i\partial\bar\partial K_\delta,
 \qquad
-g_\delta=i\partial\bar\partial K_\delta.
+g_\delta(u,v)=\omega_\delta(u,Jv),
 $$
-Thus the equal-coefficient formula is a declared metric branch, not a canonical metric on the full flag.
+where $J$ is the complex structure. Each summand is the pullback of the Grassmannian Kähler potential: the squared norm of the Plücker coordinate is $\det(I_k+Z_kZ_k^\dagger)$ by the Gram determinant identity. The positive weighted sum gives the declared flag metric. Finite geodesic distances below use $g_\delta$; the two-form $\omega_\delta$ is not itself a symmetric metric. The equal coefficients specify a metric branch, rather than a canonical choice on the full flag.
 
 Let
 $$
@@ -1913,25 +1940,117 @@ $$
 $$
 The subscript $0$ denotes zero family charge and need not denote the zero element of $\pi_2(\Sigma_8)$.
 
-**Theorem R.5.1 (Conditional Three-Sector Vacuum Persistence).** For each $q\in\{q_+,q_-,q_0\}$, assume:
+**Theorem R.5.1 (Conditional Three-Sector Vacuum Persistence).** For each $q\in\{q_+,q_-,q_0\}$, fix a smooth Riemannian metric on the registered compact finite-dimensional reduction $\mathcal M_q$ and a compact window $K_q$ contained in its smooth interior. A local minimum in the window means an ambient local minimum on $\mathcal M_q$ whose location belongs to $K_q$. Assume:
 
-1. $\mathcal M_q$ is the registered compact finite-dimensional smooth reduction above;
-2. the minimum set $\mathscr C_q$ of $V_{0,q}$ in the declared low-energy window is a compact Morse–Bott critical submanifold with positive-definite normal Hessian;
+1. $V_{0,q}$ and $h_q$ are smooth on a neighborhood of $K_q$;
+2. $\mathscr C_q=\operatorname{argmin}_{K_q}V_{0,q}$ is a nonempty compact embedded critical submanifold without boundary, contained in $\operatorname{int}K_q$, and is Morse–Bott with positive-definite normal Hessian;
 3. $h_q|_{\mathscr C_q}$ is Morse and has exactly one local minimum $m_q$; and
-4. there are a neighborhood $U_q$ of $\mathscr C_q$ inside the compact low-energy window and a constant $\gamma_q>0$ such that
-   $$
-   \|dV_{0,q}(m)\|\ge\gamma_q
-   \qquad
-   \text{for every }m\text{ in the window outside }U_q.
-   $$
+4. $\operatorname{Crit}(V_{0,q})\cap K_q=\mathscr C_q$.
 
-Then, for all sufficiently small $\eta>0$, $V_q$ has exactly one nondegenerate local minimum $m_q(\eta)$ in that window. Define its localization center by
+Then, for all sufficiently small $\eta>0$, $V_q=V_{0,q}+\eta h_q$ has exactly one nondegenerate local minimum $m_q(\eta)$ in $K_q$, and $m_q(\eta)\to m_q$ as $\eta\downarrow0$. Define its localization center by
 $$
 p_q:=\ell_q(m_q(\eta))\in\Sigma_8.
 $$
 The three minima are distinct as elements of the disjoint union $\bigsqcup_q\mathcal M_q$. Their centers $p_q$ are pairwise distinct precisely when the registered localization maps satisfy that separation condition.
 
-*Proof.* The finite-dimensional Morse–Bott perturbation theorem applies to $V_{0,q}$ and $h_q$ on $\mathcal M_q$. Near $\mathscr C_q$, its critical points correspond to those of $h_q|_{\mathscr C_q}$, with total index equal to the sum of normal and tangential indices. The unique restricted minimum has tangential index zero, and the positive normal Hessian has normal index zero, so it yields one nondegenerate local minimum. Compactness bounds $\|dh_q\|$ on the window. For $\eta\sup\|dh_q\|<\gamma_q$, the displayed gradient bound excludes every critical point outside $U_q$, while Morse–Bott index additivity leaves exactly the one local minimum arising from the unique minimum of $h_q|_{\mathscr C_q}$. Distinct sector components distinguish the configurations; distinctness of their images in $\Sigma_8$ is exactly the additional separation condition just stated. ∎
+*Proof.* Fix one sector and omit its subscript. Write $v_*=\min_KV_0$ and $h_0=h|_{\mathscr C}$. Choose tubular coordinates $(x,z)$ about $\mathscr C$, where $x\in\mathscr C$ and $z$ belongs to its normal fiber, with the closure of the tube contained in $\operatorname{int}K$. Let
+$$
+F_\eta(x,z)=V_0(x,z)+\eta h(x,z),
+\qquad H_x=D_z^2V_0(x,0).
+$$
+Compactness and positivity give a constant $\lambda>0$ with $H_x\ge\lambda I$ on every nonzero normal fiber. Smoothness and compactness permit a uniform fiber radius $\rho>0$ and a parameter bound such that
+$$
+\left\|I-H_x^{-1}D_z^2F_\eta(x,z)\right\|\le\tfrac12
+\qquad (\|z\|\le\rho).
+$$
+Here vertical derivatives use the specified normal-fiber metric. Shrink the same bounds so that $D_z^2F_\eta\ge(\lambda/2)I$. Since $D_zV_0(x,0)=0$, the maps
+$$
+T_{x,\eta}(z)=z-H_x^{-1}D_zF_\eta(x,z)
+$$
+are contractions with constant at most $1/2$, and $\|T_{x,\eta}(0)\|\le A|\eta|$ for a uniform $A$. Choose $|\eta|$ small enough that $A|\eta|<\rho/2$. Each $T_{x,\eta}$ maps the closed fiber ball into itself. Its iterates satisfy
+$$
+\|z_{n+1}-z_n\|\le2^{-n}\|z_1-z_0\|,
+$$
+so their Cauchy limit $s_\eta(x)$ satisfies $T_{x,\eta}(s_\eta(x))=s_\eta(x)$; contraction also proves uniqueness in the fiber ball. In particular,
+$$
+D_zF_\eta(x,s_\eta(x))=0,\qquad
+\|s_\eta(x)\|\le2A|\eta|.
+$$
+The sections $s_\eta$ depend smoothly on $(x,\eta)$. Indeed, difference quotients of the defining equation have the invertible coefficient $I-D_zT_{x,\eta}$, whose inverse is the convergent Neumann series $\sum_{j\ge0}(D_zT_{x,\eta})^j$ with norm at most $2$. Passing to the difference-quotient limit gives first derivatives, and repeated differentiation gives all higher derivatives. A finite atlas and the uniform contraction bounds make these conclusions uniform on $\mathscr C$. Uniqueness makes the local sections agree on chart overlaps.
+
+Reduce the potential to this normal-critical section:
+$$
+f_\eta(x):=F_\eta(x,s_\eta(x)).
+$$
+Since $s_0=0$, $V_0|_{\mathscr C}=v_*$ and $D_zV_0|_{\mathscr C}=0$,
+$$
+f_0=v_*,
+\qquad
+\left.\partial_\eta f_\eta\right|_{\eta=0}=h_0.
+$$
+Taylor's formula with integral remainder therefore gives
+$$
+f_\eta=v_*+\eta h_0+\eta^2r_\eta,\qquad
+r_\eta(x)=\int_0^1(1-t)\,
+\left.\partial_\xi^2 f_\xi(x)\right|_{\xi=t\eta}\,dt.
+$$
+Smoothness on the compact parameterized base bounds $r_\eta$ in $C^2$ uniformly for small $\eta$. Thus
+$$
+g_\eta:=\frac{f_\eta-v_*}{\eta}
+=h_0+\eta r_\eta
+\longrightarrow h_0
+\quad\text{in }C^2(\mathscr C)
+$$
+for $\eta\ne0$, with the smooth extension $g_0=h_0$.
+
+Every critical point of $F_\eta$ in the tube must lie on the section, because its vertical derivative vanishes. On that section,
+$$
+df_\eta=D_xF_\eta+
+D_zF_\eta\,ds_\eta=D_xF_\eta.
+$$
+Consequently, for $\eta\ne0$, the critical points in the tube correspond exactly to critical points of $g_\eta$.
+
+A Morse function on a compact manifold has finitely many critical points: each is isolated by its invertible Hessian, and an infinite sequence would have a critical accumulation point. Write these points as $x_1,\ldots,x_N$ and choose disjoint coordinate balls centered at them. In the $i$th chart set $J_i=D^2h_0(x_i)$, which is invertible. Shrink the ball so that
+$$
+\left\|I-J_i^{-1}D^2h_0(y)\right\|<\tfrac14.
+$$
+The $C^2$ convergence then gives
+$$
+\left\|I-J_i^{-1}D^2g_\eta(y)\right\|<\tfrac12
+$$
+on that ball for small $|\eta|$. The map
+$$
+y\longmapsto y-J_i^{-1}Dg_\eta(y)
+$$
+is a contraction. Its displacement at the center tends to zero, so it maps the closed ball into itself for sufficiently small $|\eta|$. The same geometric-series iteration gives a unique critical point $x_i(\eta)$ there, tending to $x_i$. On the compact complement of the open balls, $dh_0$ has a positive lower bound whenever that complement is nonempty. Uniform $C^1$ convergence excludes further critical points there. The Hessians $D^2g_\eta(x_i(\eta))$ converge to $J_i$, so they remain invertible and have the same numbers of positive and negative eigenvalues.
+
+At a critical point $(x_i(\eta),s_\eta(x_i(\eta)))$, write the full Hessian in tangential and normal coordinates as
+$$
+\begin{pmatrix} B&C\\ C^T&D\end{pmatrix},
+\qquad D=D_z^2F_\eta>0.
+$$
+Differentiating the normal-critical equation gives $ds_\eta=-D^{-1}C^T$. Therefore
+$$
+D^2f_\eta=B-CD^{-1}C^T
+=\eta D^2g_\eta.
+$$
+Completing the square in the Hessian quadratic form gives
+$$
+u^TBu+2u^TCv+v^TDv
+=
+u^T(\eta D^2g_\eta)u+
+(v+D^{-1}C^Tu)^TD(v+D^{-1}C^Tu).
+$$
+For $\eta>0$ the full Hessian is nondegenerate and its negative index equals that of $h_0$ at $x_i$. Exactly one critical point in the tube is a local minimum, because $h_0$ has exactly one local minimum. The corresponding normal and tangential coordinates converge to $(m,0)$. Zero-dimensional normal fibers or tangential charts contribute only their unique point and an empty Hessian of index zero; the corresponding contraction step is unnecessary.
+
+It remains to exclude critical points elsewhere in the window. Fix the open tube just used. Its complement in $K$ is compact and, by assumption4, contains no critical point of $V_0$. If this complement is nonempty, there is $\gamma>0$ such that $\|dV_0\|\ge\gamma$ there. Put $L=\sup_K\|dh\|<\infty$. For $\eta L<\gamma$,
+$$
+\|dV_\eta\|\ge\|dV_0\|-\eta\|dh\|
+\ge\gamma-\eta L>0
+$$
+on the complement. If the complement is empty no exclusion is needed. Every ambient local minimum located in $K$ is a critical point, including any location on the cutoff boundary, because $K$ lies in the smooth interior of $\mathcal M$. Hence the unique minimum already found in the tube is the only one in $K$.
+
+Apply this argument to the three sectors and take the minimum of their positive parameter bounds. Disjoint sector components distinguish the configurations; separation of their images under $\ell_q$ is precisely the additional condition stated for the centers. ∎
 
 The three vacua are:
 - $p_1$: vacuum for generation 1 (family charge $+a$)
@@ -2025,62 +2144,61 @@ For wavepackets transplanted to the curved flag target, write the certified resu
 
 ### R.5.4 The ξ-Free Mass Invariant
 
-**Definition R.5.1 (Diagonal Model-Kernel Invariant and Physical Gate).** Assume the registered Higgs anchor of Section R.5.3, the common Gaussian coefficient $A=ab/(2a+b)>0$, and nonzero denominator below. Define
+**Definition R.5.1 (Diagonal Model-Kernel Invariant and Physical Gate).** Assume the registered Higgs anchor of Section R.5.3, $A=ab/(2a+b)>0$, $K_0\ne0$, and $D_{31},D_{32}>0$. Let the diagonal curved-target residuals be real and satisfy $|\rho_{gg}|\le\epsilon_G<1$. On the branch where the denominator is nonzero, define
 $$
 \mathcal R_{\mathrm{model}}
 :=\frac{\log(K_{33}/K_{11})}{\log(K_{33}/K_{22})}.
 \tag{R.16}
 $$
-Approximate diagonal dominance is not enough to identify this ratio with a physical mass invariant. That identification requires an accepted Theorem-T.39 certificate for the same kernel which verifies exact diagonal alignment after matching, pairwise ordered singular values, physical labels, and the displayed residual intervals.
+Approximate diagonal dominance does not identify this ratio with a physical mass invariant. That identification requires an accepted Theorem-T.39 certificate for the same kernel verifying exact diagonal alignment after matching, pairwise ordered singular values, physical labels and the residual intervals.
 
-Put
+The diagonal specialization of (R.15) is
 $$
-A:=\frac{ab}{2a+b}>0.
+K_{gg}=K_0e^{-AD_{g3}}(1+\rho_{gg}),
+\qquad K_{33}=K_0(1+\rho_{33}).
 $$
-The diagonal specialization of (R.15), including the certified curved-target remainder, is
+All kernel ratios in (R.16) are positive because the common nonzero factor cancels and $1+\rho_{gg}>0$. Put
 $$
-K_{gg}=K_0e^{-A D_{g3}}(1+\rho_{gg}),
-\qquad
-K_{33}=K_0(1+\rho_{33}).
+\varepsilon_g:=\log\frac{1+\rho_{33}}{1+\rho_{gg}},
+\qquad g=1,2.
 $$
-Define
-$$
-\varepsilon_g:=\log\frac{1+\rho_{33}}{1+\rho_{gg}}.
-$$
-Then exact model-kernel algebra gives
+Taking real logarithms gives
 $$
 \log\frac{K_{33}}{K_{gg}}=AD_{3g}+\varepsilon_g,
-\qquad g=1,2,
-$$
-and hence
-$$
+\qquad
 \mathcal R_{\mathrm{model}}
 =\frac{AD_{31}+\varepsilon_1}{AD_{32}+\varepsilon_2}.
 \tag{R.17}
 $$
-On an accepted physical gate described in Definition R.5.1, the same expression equals $\log(m_3/m_1)/\log(m_3/m_2)$.
-On the flat Gaussian branch, or whenever the two logarithmic residuals vanish, (R.17) reduces to
-$$
-\mathcal R_{\mathrm{model}}
-=\frac{D_{31}}{D_{32}}
-=\frac{d_\Sigma^2(p_3,p_1)}{d_\Sigma^2(p_3,p_2)}.
-$$
-If $|\rho_{gg}|\le\epsilon_G<1$ for $g=1,2,3$, then
-$$
-|\varepsilon_g|
-\le
-2\log\frac1{1-\epsilon_G},
-$$
-so the same certificate gives an explicit interval around the zero-residual ratio rather than an unquantified approximation.
+On the accepted physical gate, this equals $\log(m_3/m_1)/\log(m_3/m_2)$.
 
-**Scope.** The equality to a distance ratio is the common-response, diagonal-alignment, proportional-residual reading for Dirac-type sectors: it requires $\varepsilon_{31}/D_{31}=\varepsilon_{32}/D_{32}$, with the zero-residual case included. In the Majorana neutrino sector, the selected triad $T_\nu=(2,6,6)$ is instead read through the separately gated Takagi--Weyl/alignment and anchored construction of Theorem T.24.11; the $1\leftrightarrow2$ $A_2$ edge belongs to the PMNS mixing geometry.
-
-**Finite model set on the exact triad branch.** If $\mathfrak C_{E_8}$ is fixed, $\varepsilon_1=\varepsilon_2=0$, and $D_{31}>D_{32}>0$, then
+For a uniform error estimate define
 $$
-\boxed{\mathcal R_{\mathrm{model}}\in\left\{\frac43,\frac32,2,3,4\right\}}.
+E_G:=\log\frac{1+\epsilon_G}{1-\epsilon_G},
+\qquad x:=AD_{31}>0,\qquad y:=AD_{32}>0.
+$$
+The residual bounds imply $|\varepsilon_g|\le E_G$. If $y>E_G$, every allowed denominator is positive and
+$$
+\left|\mathcal R_{\mathrm{model}}-\frac{x}{y}\right|
+=\frac{|y\varepsilon_1-x\varepsilon_2|}
+{y|y+\varepsilon_2|}
+\le\frac{E_G(x+y)}{y(y-E_G)}.
+$$
+This provides a bounded interval around $D_{31}/D_{32}$. A merely nonzero realized denominator does not supply a uniform interval: when $y\le E_G$, the residual bounds permit denominators arbitrarily close to zero. A separate denominator-separation certificate or more restrictive residual correlations are then required.
+
+**Scope.** Exact equality to the distance ratio holds precisely when
+$$
+D_{32}\varepsilon_1=D_{31}\varepsilon_2,
+$$
+with a nonzero denominator. This includes the flat Gaussian branch and the case of vanishing logarithmic residuals, and is the proportional-residual reading for a physically accepted Dirac sector. The Majorana neutrino triad $T_\nu=(2,6,6)$ uses the separate Takagi--Weyl/alignment and anchored construction of Theorem T.24.11; its $1\leftrightarrow2$ $A_2$ edge belongs to PMNS mixing geometry.
+
+**Finite model set on the exact triad branch.** If $\mathfrak C_{E_8}$ is accepted, $\varepsilon_1=\varepsilon_2=0$ and $D_{31}>D_{32}>0$, then the root-distance values $\{2,4,6,8\}$ give
+$$
+\boxed{\mathcal R_{\mathrm{model}}\in
+\left\{\frac43,\frac32,2,3,4\right\}}.
 \tag{R.18}
 $$
-The common metric scale, Gaussian normalization, and coefficient $A$ cancel. With nonzero certified residuals, the explicit interval above replaces the finite set. A physical mass invariant belongs to that set only after the Definition-R.5.1/Theorem-T.39 gate is accepted.
+The common metric scale, Gaussian normalization and coefficient $A$ cancel. Nonzero residuals replace this finite set by a certified bounded interval only when the denominator is uniformly separated from zero as above. Membership of a physical mass invariant in the finite set additionally requires the accepted Definition-R.5.1/Theorem-T.39 gate.
 
 ## R.6 Phenomenological Comparison with Observed Fermion Masses
 
@@ -2108,13 +2226,13 @@ The discrete distance-ratio set is a mathematical candidate set. Assigning one e
 
 
 
-This section evaluates the framework's predictions against experimental data from the Particle Data Group (Navas et al. 2024). We compute the mass ratio invariant $\mathcal{R}$ for each fermion sector and compare with the discrete values predicted by $E_8$ root geometry.
+This section compares conditional flavor diagnostics with quoted experimental inputs. The charged-lepton calculation below uses the historical central mass inputs in [Particle Data Group (2022), lepton summary, pp. 1–2](https://pdg.lbl.gov/2022/tables/rpp2022-sum-leptons.pdf). Its invariant $\mathcal{R}$ is compared with the discrete $E_8$ candidate set under the model and physical-realization qualifications of Section R.6.1.
 
 **Charged Lepton Sector:**
 
-Charged leptons are free from color confinement and provide a clean test. Using Particle Data Group 2024 values:
+For this retrospective charged-lepton diagnostic, choose the Particle Data Group 2022 central mass inputs:
 - $m_e = 0.51099895$ MeV
-- $m_\mu = 105.6583745$ MeV  
+- $m_\mu = 105.6583755$ MeV  
 - $m_\tau = 1776.86$ MeV
 
 Computing the invariant:
@@ -2158,24 +2276,22 @@ Further precision requires detailed analysis of renormalization group evolution 
 
 ### R.6.2 Mixing Angles and CKM Matrix
 
-Within a fully specified mass-matrix texture, off-diagonal entries contribute to the left diagonalizers and hence to mixing. The illustrative Gaussian entry model (R.15) gives:
+Within a fully specified mass-matrix texture, off-diagonal entries affect the left diagonalizers and hence the physical mixing angles. On the flat Gaussian branch of (R.15) with $K_0\ne0$, the common kernel prefactor gives the exact leading entry-ratio proxy
 $$
-Y_{12} \propto \exp\left[-\alpha_1(d^2_{13} + d^2_{23}) - \alpha_2 d^2_{12}\right]
-$$
-
-If the diagonal texture gives the displayed ratio, define
-$$
-E_{12}:=\alpha_1(d^2_{13}-d^2_{23})+\alpha_2d^2_{12},
+r_{12}^{(0)}:=\left|\frac{K_{12}}{K_{22}}\right|
+=e^{-E_{12}},
 \qquad
-\theta_{12}\sim\frac{Y_{12}}{Y_{22}}\sim e^{-E_{12}}.
+E_{12}:=\alpha_1(D_{13}-D_{23})+\alpha_2D_{12}.
 $$
-Small $\theta_{12}$ requires $E_{12}>0$. The numerical band $0.01\le\theta_{12}\le0.1$ would require
+Here $D_{ij}$ are the normalized squared root distances used in (R.15). The exponent follows by subtracting the diagonal exponent $2\alpha_1D_{23}$ from the off-diagonal exponent $\alpha_1(D_{13}+D_{23})+\alpha_2D_{12}$. Thus $r_{12}^{(0)}<1$ exactly when $E_{12}>0$, and
 $$
-\ln 10\le E_{12}\le\ln100,
+0.01\le r_{12}^{(0)}\le0.1
+\quad\Longleftrightarrow\quad
+\ln10\le E_{12}\le\ln100.
 $$
-whereas $E_8$ distances $d^2=O(1)$ and coefficients $\alpha_i=O(1)$ alone determine neither the sign nor this interval. Among the illustrative CKM magnitudes $0.22$, $0.004$, and $0.04$, only $0.04$ belongs to $[0.01,0.1]$.
+Order-one distances and coefficients alone determine neither the sign nor this interval. Of the illustrative CKM magnitudes $0.22$, $0.004$ and $0.04$, only $0.04$ lies in $[0.01,0.1]$. Identifying a physical angle with this entry-ratio proxy requires the accepted matrix texture, its diagonalization and a quantitative approximation-error certificate.
 
-For three mixing entries, a hierarchy follows only if their complete suppression exponents satisfy the corresponding strict ordering, for example $E_{13}>E_{23}>E_{12}>0$ when $\theta_{ij}\sim e^{-E_{ij}}$. Ordering selected pairwise distances does not establish that exponent ordering when each $E_{ij}$ contains several distances and coefficients. A numerical CKM prediction therefore requires the complete diagonal and off-diagonal texture, its normalization, and independently specified labels and coefficients.
+For three declared proxy laws $r_{ij}^{(0)}=e^{-E_{ij}}$, the inequalities $E_{13}>E_{23}>E_{12}>0$ imply $0<r_{13}^{(0)}<r_{23}^{(0)}<r_{12}^{(0)}<1$. Ordering selected pairwise distances does not establish that exponent ordering when each exponent contains several distances and coefficients. A physical CKM hierarchy additionally requires normalization, labels and errors controlled strongly enough to preserve the ordering after full matrix diagonalization.
 
 **PMNS vs. CKM:**
 
@@ -2229,17 +2345,17 @@ The theorem/model status is:
 
 The framework does not yet fully determine:
 
-1. **Absolute Yukawa values:** The unit-radius convention fixes the kernel coefficient $\alpha=3/2$, but absolute values additionally require the full heat-kernel normalization, Van Vleck and remainder records, physical labels, common-scale matching, and the full-matrix realization certificate of Theorem T.39
+1. **Absolute Yukawa values:** Corollary T.41.3 gives $\alpha=3/2$ on its declared exponent branch $\alpha=1/(16\sigma_B^2)$ with $\sigma_B^2=1/24$. Applying that statistical unit-radius value to a packet-width parameter requires a separate preparation and normalization certificate. Absolute values additionally require the full heat-kernel normalization, Van Vleck and remainder records, physical labels, common-scale matching, and the full-matrix realization certificate of Theorem T.39
 2. **Specific vacuum locations:** Requires minimizing $V_q$ with explicit $E_8$ embedding
-3. **CP phase $\delta_{CP}$:** Obtained conditionally in Section T.22 as $\delta = 66.7^\circ$ from the Berry-holonomy model
+3. **CP phase $\delta_{CP}$:** Section T.22.6.6 gives $66.6753023736826\ldots^\circ$ after Convention T.54's assigned lift is passed through Theorem T.56's registered nonlinear phase-response map; geometric and physical interpretations additionally require the area and flavor-realization certificates stated there
 4. **Running to low energies:** Requires RG evolution (standard QFT)
 
-Item 3 is resolved within that Berry-holonomy model. Items 1-2 require explicit construction of the PCE potential $V_{PCE}$ on the attractor orbit.
+Item 3 remains conditional on the assigned lift, response map, and accepted realization certificates. Items 1–2 require an explicit PCE potential together with the stated localization, embedding, kernel, scale, and full-matrix certificates.
 
 **Baryogenesis Complexity (Conditional Appendix Y Reduction).** Holonomy supplies a candidate CP-odd datum; a net yield additionally requires the independent $C$-odd response witness and the driven source, transport, freeze-out, washout, normalization, residual, and overlap certificates of Appendix Y. The displayed value near $6\times10^{-10}$ is therefore illustrative arithmetic, not a derived baryon asymmetry. The exact exponent ledger on the stated branch is:
 
 $$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon_0}{N_g} = \frac{38.5}{2} + \frac{\ln 2}{3} = 19.25 + 0.2310\dots = 19.4810\dots$$
-On the explicit complement-equivariant active-pair path of Theorem Y.8 and the symmetric three-family sharing branch,
+On the accepted electroweak action-transport branch of Principle T.13a, together with Theorem Y.8's nonzero complement-equivariant midpoint readout, parallel noncancelling symmetric three-family allocation, and exact same-normalization factorization with its exhaustive finite nonzero prefactor ledger,
 $$
 \kappa_B
 =\frac{\kappa_{\mathrm{EW}}}{2}+\frac{\varepsilon_0}{N_g}
@@ -2258,63 +2374,60 @@ $$
 \approx6.15\times10^{-10}.
 $$
 No theory interval or agreement pull is defined before certificate acceptance.
-**Theorem R.8.2a (Covariant Quadratic-Curvature Response Kernel).** Let the regular metric branch carry the local quadratic-curvature truncation
+**Theorem R.8.2a (Covariant Quadratic-Curvature Response Kernel).** Let $g$ be a smooth Lorentzian metric of signature $(-+++)$, let $G_N>0$ and $\beta\in\mathbb R$ be spacetime constants, and use the local quadratic-curvature action
 $$
 \Gamma_{\mathrm{grav}}[g]
-=
-\frac{1}{16\pi}
-\int d^4x\sqrt{-g}
-\left(\frac{R}{G_N}+\beta R^2\right)
+=\frac1{16\pi}\int d^4x\sqrt{-g}
+\left(\frac R{G_N}+\beta R^2\right).
 $$
-with matter defined by the PPI stress-energy variation and with no independent non-conserved gravitational source. The metric equation is
+Use compactly supported metric variations, or boundary data that remove the variation's boundary terms. Let $T_{\mu\nu}$ be the retained matter stress tensor with its usual metric-variation normalization and with no independent non-conserved gravitational source. The metric equation is
 $$
 \left(\frac1{G_N}+2\beta R\right)R_{\mu\nu}
--\frac12\left(\frac{R}{G_N}+\beta R^2\right)g_{\mu\nu}
--2\beta(\nabla_\mu\nabla_\nu-g_{\mu\nu}\Box)R
-=
-8\pi T_{\mu\nu}.
+-\frac12\left(\frac R{G_N}+\beta R^2\right)g_{\mu\nu}
+-2\beta(\nabla_\mu\nabla_\nu-g_{\mu\nu}\Box_g)R
+=8\pi T_{\mu\nu}.
 \tag{R.8.2a.1}
 $$
-It is covariantly conserved by diffeomorphism invariance. Its trace is
+Its geometric left side has identically vanishing covariant divergence. In four dimensions its trace is
 $$
--\frac{R}{G_N}+6\beta\Box R=8\pi T,
-\qquad
-T=-\rho+3p.
+-\frac R{G_N}+6\beta\Box_gR=8\pi T,
+\qquad T:=g^{\mu\nu}T_{\mu\nu}.
 \tag{R.8.2a.2}
 $$
-Equivalently, on the scalar trace channel,
+For a perfect fluid $T_{\mu\nu}=(\rho+p)u_\mu u_\nu+pg_{\mu\nu}$ with $g(u,u)=-1$, this specializes to $T=-\rho+3p$.
+
+For a specified metric, register a linear scalar domain $\mathcal D$ and range $\mathcal E$, including the boundary or initial-data conditions, such that
 $$
-R
-=
--8\pi G_N(1-6\beta G_N\Box)^{-1}T.
+\mathcal A_g:=I-6\beta G_N\Box_g:\mathcal D\longrightarrow\mathcal E
+$$
+is bijective, and require the retained curvature scalar to lie in $\mathcal D$. For $T\in\mathcal E$ the trace response on this branch is
+$$
+R=-8\pi G_N\mathcal A_g^{-1}T.
 \tag{R.8.2a.3}
 $$
-Thus the quadratic-curvature branch determines a covariant response operator
+The scalar response operator and its inverse on these domains are
 $$
-G_{\mathrm{eff}}(\Box)
-=
-G_N(1-6\beta G_N\Box)^{-1},
+G_{\mathrm{eff}}(\Box_g)=G_N\mathcal A_g^{-1},
 \qquad
-G_{\mathrm{eff}}(\Box)^{-1}
-=
-G_N^{-1}-6\beta\Box,
+G_{\mathrm{eff}}(\Box_g)^{-1}=G_N^{-1}-6\beta\Box_g.
 \tag{R.8.2a.4}
 $$
-rather than an algebraic local law whose first correction is proportional to $T$. In the strict slowly varying limit $\Box T=0$ the linear trace-channel coupling is $G_N$; any algebraic coefficient multiplying $T$ in $G_{\mathrm{eff}}(\rho,p)^{-1}$ requires a separate non-linear response-kernel certificate beyond the local $R^2$ trace truncation.
+If additionally $T\in\mathcal D$ and $\Box_gT=0$, then $R=-8\pi G_NT$. This exact harmonic-source statement requires compatibility with the chosen scalar domain; $\Box_gT=0$ alone does not eliminate homogeneous response modes or supply a controlled slow-variation approximation. An algebraic matter-dependent correction to an inverse coupling requires a separate nonlinear response certificate.
 
-*Proof.* Varying $f(R)=R/G_N+\beta R^2$ gives the metric $f(R)$ equation
+*Proof.* Put $f(R)=R/G_N+\beta R^2$. The metric variation of $R$ and integration by parts give
 $$
-f'(R)R_{\mu\nu}-\frac12f(R)g_{\mu\nu}-(\nabla_\mu\nabla_\nu-g_{\mu\nu}\Box)f'(R)=8\pi T_{\mu\nu}.
+f'(R)R_{\mu\nu}-\tfrac12f(R)g_{\mu\nu}
++(g_{\mu\nu}\Box_g-\nabla_\mu\nabla_\nu)f'(R)
+=8\pi T_{\mu\nu}.
 $$
-Since $f'(R)=G_N^{-1}+2\beta R$, this is (R.8.2a.1). The left side is the Euler-Lagrange tensor of a diffeomorphism-invariant metric action; the Noether identity gives its covariant divergence zero, so the matter equation is compatible with $\nabla^\mu T_{\mu\nu}=0$. Taking the trace in four dimensions gives
+Since $f'(R)=G_N^{-1}+2\beta R$, this is (R.8.2a.1). Contracted Bianchi gives $\nabla^\mu R_{\mu\nu}=\tfrac12\nabla_\nu R$. The divergence of the first two terms is therefore $R_{\mu\nu}\nabla^\mu f'(R)$, while the scalar-derivative commutator gives the opposite divergence for the last term. Thus the geometric tensor is conserved, and the metric equation requires $\nabla^\mu T_{\mu\nu}=0$.
+
+Taking the trace gives
 $$
-\left(G_N^{-1}+2\beta R\right)R
--2\left(G_N^{-1}R+\beta R^2\right)
-+6\beta\Box R
-=
-8\pi T,
+(G_N^{-1}+2\beta R)R
+-2(G_N^{-1}R+\beta R^2)+6\beta\Box_gR=8\pi T.
 $$
-and the $R^2$ terms cancel, yielding (R.8.2a.2). Rearranging gives $(1-6\beta G_N\Box)R=-8\pi G_NT$, hence (R.8.2a.3) and (R.8.2a.4) wherever the retained scalar response operator is invertible on the chosen branch domain. Setting $\Box T=0$ gives $R=-8\pi G_NT$ at linear trace level. ∎
+The quadratic terms cancel, yielding (R.8.2a.2) and $\mathcal A_gR=-8\pi G_NT$. The registered bijection gives (R.8.2a.3), and multiplication by the constant $G_N$ gives (R.8.2a.4). If $T\in\mathcal D\cap\mathcal E$ and $\Box_gT=0$, then $\mathcal A_gT=T$; uniqueness of the inverse yields $\mathcal A_g^{-1}T=T$. Without the inverse-domain certificate, the trace equation can admit additional scalar solutions $R_h$ of $\mathcal A_gR_h=0$ consistent with the chosen data. The response formula is a scalar trace relation for the specified metric and domains, not a solution of the coupled metric-matter equations by itself. ∎
 
 ### R.8.3 Epistemological Status
 

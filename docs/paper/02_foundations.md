@@ -11,7 +11,7 @@ This section establishes the core axioms and definitions underpinning the Predic
 
 Adaptive systems operating within uncertain environments face the fundamental challenge of optimizing the predictive quality ($Q$) of their internal state or model concerning aspects of their internal and external environment relevant to their continued functioning and goals. This optimization aims to maximize the expected improvement in predictive quality ($\Delta Q$). This improvement is quantified by metrics reflecting reduced uncertainty (e.g., decreased entropy), enhanced accuracy (e.g., increased log-likelihood, reduced prediction error), or reduced Bayes risk, achievable through information processing, interaction, and adaptation. This ongoing optimization is performed subject to limited physical and computational resources, including available energy, processing time, and achievable system complexity ($C_P$). This fundamental, resource-constrained drive to enhance predictive capability is termed the Prediction Optimization Problem (POP).
 
-For concreteness, all predictive-quality functionals $Q$ are assumed measurable and bounded below on the feasible state space so that expectations and improvements $\mathbb{E}[\Delta Q]$ are well-defined.
+For concreteness, all predictive-quality functionals $Q$ are assumed measurable and bounded below on the feasible state space. Under every admitted task and update law used in an expected-improvement comparison, require the pre-update and post-update quality variables to be integrable. Then $\Delta Q=Q_{\mathrm{after}}-Q_{\mathrm{before}}$ is integrable and $\mathbb E[\Delta Q]=\mathbb E[Q_{\mathrm{after}}]-\mathbb E[Q_{\mathrm{before}}]$ is finite; conditional expectations on events of positive probability are well-defined as well.
 
 **2.2 Axiom 2 (Ax 2): Predictive Capacity Foundation**
 
@@ -34,7 +34,7 @@ Within the Predictive Universe framework, information is defined functionally as
     $$
     \mathbb{E}\big[\Delta Q \mid E;\, M\big] > 0.
     $$
-    Equivalently, the definition requires the existence of an admissible procedure and an operationally relevant input distribution under which the system achieves an overall positive expected improvement $\mathbb{E}[\Delta Q]>0$.
+    This is an event-conditional criterion. Positive $\mathbb E[\Delta Q\mid E;M]$ does not by itself imply positive overall improvement $\mathbb E[\Delta Q]>0$ under the original task law. An unconditional claim requires its own expected-gain check, or an admissible procedure retaining the positive contribution on $E$ without a negative contribution on its complement.
 *   **(R) Relevant States:** The relevant states are determined contextually by the system's operational goals as defined by its specific POP, namely those state distinctions whose prediction can materially improve predictive quality under the system's operative resource constraints.
 
 In essence, information is any physically grounded pattern exploitable by a predictive system to achieve measurable improvements in predictive quality relevant to its adaptive goals.
@@ -45,7 +45,7 @@ A system possesses knowledge to the extent that its internal models ($M_t$) can 
 
 **2.4 Predictive Physical Complexity ($C_P$) and Operational Measures**
 
-Having established the foundational role of prediction and optimization, we now introduce the critical concept of complexity. Within the PU framework, complexity quantifies the minimal resources required to physically instantiate the structures and processes enabling adaptive prediction. We first define the theoretical measure, Predictive Physical Complexity ($C_P$), through a rigorous hierarchical approach designed to avoid circularity. We then introduce its operational proxy, the Hermitian operator $\hat{C}_v$. We justify the necessary functional correspondence between the theoretical measure and the operational proxy by demonstrating that this alignment is dynamically enforced by the framework's core optimization principles. This provides the foundation for defining physically grounded resource costs.
+Having established the foundational role of prediction and optimization, we now introduce the critical concept of complexity. Within the PU framework, complexity quantifies the minimal resources required to physically instantiate the structures and processes enabling adaptive prediction. We first define the theoretical measure, Predictive Physical Complexity ($C_P$), through a rigorous hierarchical approach designed to avoid circularity. We then introduce its operational proxy, the Hermitian operator $\hat{C}_v$. Theorem 2 gives this correspondence on the joint stable-equilibrium branch with per-MPU force identifiability; POP and PCE alone do not establish that additional premise. This provides the foundation for defining physically grounded resource costs.
 
 **2.4.1 Defining Predictive Physical Complexity ($C_P$)**
 
@@ -397,25 +397,25 @@ P\in\mathcal L_n^{(h_H)}
 P\in\mathcal L_n^{\mathrm{base}}.
 $$
 These identities give
-$$
+$
 \mathcal M_n^{(h_H)}(\mu)
 =\mathcal M_n^{\mathrm{base}}(\mu),
 \qquad
 C_{P,n}^{(h_H)}(\mu)
 =C_{P,n}^{\mathrm{base}}(\mu)
 \tag{2.4.1d.3c}
-$$
+$
 for every submitted target code $\mu$ and every $n$, and hence
-$$
+$
 C_{P,\mathrm{ext}}^{(h_H)}(\mu)
 =C_{P,\mathrm{ext}}^{\mathrm{base}}(\mu)
 \tag{2.4.1d.3d}
-$$
+$
 for every submitted target code. For a target with a common full-hierarchy realizer, Theorem 2.4.1b identifies both finite extended values with their domain-defined complexities and gives
-$$
+$
 C_P^{(h_H)}(\mu)=C_P^{\mathrm{base}}(\mu).
 \tag{2.4.1d.3e}
-$$
+$
 For an empty full hierarchy, (2.4.1d.3d) remains valid with value $\infty$, while neither side of (2.4.1d.3e) is defined. The record $\chi_{\mathrm{id}}$ verifies the proof dependencies and all snapshot, inventory, generator, and proof hashes.
 
 For a target code $\mu\in\mathsf{Code}_\mu$ submitted after hierarchy commitment, write $\mathcal L_n^{(h_H)}$, $\mathcal M_n^{(h_H)}(\mu)$, $C_{P,n}^{(h_H)}(\mu)$, and $C_{P,\mathrm{ext}}^{(h_H)}(\mu)$ for the hierarchy-relative objects. When an accepted common realizer establishes full-constraint realizability, also write $C_P^{(h_H)}(\mu)$ for the finite value in (2.4.1d.3b). Acceptance of the baseline-identity extension identifies the stagewise and extended objects with their unsuperscripted baseline counterparts for every submitted target and identifies $C_P^{(h_H)}$ with $C_P$ on their common full-realizability domain.
@@ -625,7 +625,7 @@ Equivalently, in natural-log units (nats),
 $$
 \ln d_0 = (\ln 2)\,C_{cap}.
 $$
-This establishes that a system with a Hilbert space of $d_0$ dimensions has a state-space capacity of $C_{cap}$ bits (or $\ln d_0$ nats), i.e., the maximum number of mutually orthogonal, operationally distinguishable configurations that can be encoded in a single-cycle internal state. This capacity is a structural constraint used to translate logical distinguishability requirements into Hilbert-space dimension bounds. In particular, Theorem 15 first fixes the finite operational-context floor
+This establishes that a system with a Hilbert space of $d_0$ dimensions has logarithmic state-space capacity $C_{cap}=\log_2 d_0$ bits (or $\ln d_0$ nats): the maximum number of mutually orthogonal, operationally distinguishable configurations in a single-cycle internal state is $d_0$. This capacity is a structural constraint used to translate logical distinguishability requirements into Hilbert-space dimension bounds. In particular, Theorem 15 first fixes the finite operational-context floor
 $$
 N_{\mathrm{vis}}^{\min}=2^{K_0}=8.
 $$
@@ -647,7 +647,7 @@ $$
 $$
 identifies the stable minimum and complete minimizer set, and Corollary 2.4.1b.a classifies the empty alternative. Theorem 2.4.1c is `negative-refutation` of a uniform algorithm that computes the stabilization index from arbitrary uniformly decidable hierarchy code, while Theorem 2.4.1e is `positive-discharge` of effective verification and cutoff extraction from an accepted finite realizer certificate.
 
-**Resolution TV-FND-01-R1 (Metadata).** Exact domain: nested admissible-program hierarchies under the finite-alphabet, integer-length and attained-stage-minimum convention. Premises: Theorems 2.4.1a--2.4.1e's frozen hypotheses. Equivalence: exact equality of registered program strings and minimizer sets. Budget: the full countable hierarchy for the structural theorem and the submitted finite trace for certificate verification. Verifier: the nesting/cardinality proof and Theorem 2.4.1e's exact certificate checker. Falsifier: a bounded-minimum hierarchy with empty full intersection, a full realizer outside the stable minimizer set, or an accepted cutoff failing later. Provenance class: source-internal exact mathematics with no empirical input. Downstream consumers: Definition 17, Definition 13 and every branch using domain-defined $C_P$. Nonvacuity: the explicit two-program hierarchies in Corollary 2.4.1a.1 and Theorem 2.4.1c.
+**Resolution TV-FND-01-R1 (Metadata).** Exact domain: nested admissible-program hierarchies under the finite-alphabet, integer-length and attained-stage-minimum convention. Premises: Theorems 2.4.1a--2.4.1e's frozen hypotheses. Equivalence: exact equality of registered program strings and minimizer sets. Budget: the full countable hierarchy for the structural theorem and the submitted finite trace for certificate verification. Verifier: the nesting/cardinality proof and Theorem 2.4.1e's exact certificate checker. Falsifier: a bounded-minimum hierarchy with empty full intersection, a minimum-length full realizer outside the stable minimizer set, or an accepted cutoff failing later. Provenance class: source-internal exact mathematics with no empirical input. Downstream consumers: Definition 17, Definition 13 and every branch using domain-defined $C_P$. Nonvacuity: the explicit two-program hierarchies in Corollary 2.4.1a.1 and Theorem 2.4.1c.
 
 The remaining gate is instance-level rather than a missing mathematical alternative: no accepted target-blind hierarchy registration, baseline-identity extension and populated realizer or global-exclusion certificate is supplied for a physical microstate. Finite PPI realization is also separate. Accordingly `TV-FND-01` retains `C+R`; its mathematical hierarchy classification is complete, while certificate population and physical realization remain live.
 
@@ -658,11 +658,11 @@ $$
 H_q(P\mid R)+\varepsilon_{\mathrm{diss}}
 \ge H_q(P\mid R),
 $$
-and a positive uniform floor requires the independent certificate $H_q(P\mid R)\ge h_{\min}>0$. A directional pathwise ratchet additionally requires the common forward/reverse path-measure and positive pathwise-production hypotheses of Theorem O.3 or O.3a. Statistical mechanics remains a background constraint on physical realizability. Neither SPAP nor the structural value $\varepsilon_0=\ln2$ implies a positive heat cost for every update or a universal microscopic thermodynamic arrow.
+and a positive uniform floor inferred from this entropy bound requires the independent certificate $H_q(P\mid R)\ge h_{\min}>0$. A directional pathwise ratchet additionally requires the common forward/reverse path-measure and positive pathwise-production hypotheses of Theorem O.3 or O.3a. Statistical mechanics remains a background constraint on physical realizability. Neither SPAP nor the structural value $\varepsilon_0=\ln2$ implies a positive heat cost for every update or a universal microscopic thermodynamic arrow.
 
 **2.4.2 The Operational Complexity Proxy Operator ($\hat{C}_v$)**
 
-Since the theoretical $C_P$ (Equation 1) is generally uncomputable, systems must employ a physically meaningful and accessible operational proxy within their dynamics. Essential properties required for such a proxy include: (1) Physical Cost Monotonicity (higher proxy value implies non-decreasing operational cost rate $\langle\hat{R}\rangle$), (2) Approximate Compositional Additivity (complexity of independent systems adds), and (3) Computational Accessibility (computable spectrum/projectors). Within the quantum setting emerging in the PU framework (Section 8), quantum circuit complexity provides a canonical representative of this admissible proxy class. We therefore use a (coarse-grained) circuit-complexity observable, defined up to affine rescaling within the admissible family, as the operational proxy.
+Since the theoretical $C_P$ (Equation 1) is generally uncomputable, systems must employ a physically meaningful and accessible operational proxy within their dynamics. Essential properties required for such a proxy include: (1) Spectral Cost Monotonicity (higher proxy eigenvalues have non-decreasing cost eigenvalues under the declared increasing cost function; ordering proxy means alone does not order $\langle\hat R\rangle$ for arbitrary states), (2) Approximate Compositional Additivity (complexity of independent systems adds), and (3) Computational Accessibility (computable spectrum/projectors). Within the quantum setting emerging in the PU framework (Section 8), quantum circuit complexity provides a canonical representative of this admissible proxy class. We therefore use a (coarse-grained) circuit-complexity observable, defined up to affine rescaling within the admissible family, as the operational proxy.
 
 **Theorem 1 (Operational Complexity Operator $\hat{C}_v$):** Fix an admissible coarse-grained proxy family for MPU $v$ at the chosen operational resolution, represented by mutually orthogonal projectors $\{\hat P_d\}_{d=0}^{d_{\max}}$ on $\mathcal{H}_v$ satisfying
 $$
@@ -670,7 +670,7 @@ $$
 \qquad
 \sum_{d=0}^{d_{\max}} \hat P_d = I,
 $$
-together with a non-decreasing eigenvalue assignment $\lambda(d)=K_0+\Delta C(d)$ with $\Delta C(0)=0$. Then
+together with a non-decreasing eigenvalue assignment $\lambda(d)=K_0+\Delta C(d)$ with $\Delta C(0)=0$. Assume $\hat P_0\ne0$, so that $K_0$ is attained in the spectrum. Then
 $$
 \hat{C}_v = \sum_{d=0}^{d_{\max}} (K_0 + \Delta C(d)) \hat{P}_d \quad \text{(2)}
 $$
@@ -695,35 +695,33 @@ $$
 $$
 Thus $\hat C_v$ is positive semi-definite. The displayed expectation formula shows that $\langle\psi|\hat C_v|\psi\rangle$ is the spectral average of the operational complexity shells in state $|\psi\rangle$, so $\hat C_v$ serves as an operational complexity observable. The transformed eigenvalues are $a\lambda(d)+b$, whose ordering is preserved because $a>0$. Their minimum is $aK_0+b$, proving the positivity criterion. The lowest transformed shell equals $K_0$ exactly when $aK_0+b=K_0$, equivalently $b=(1-a)K_0$. ∎
 
-The expectation value $\langle\psi|\hat{C}_v|\psi\rangle$ serves as the system's internal, operational measure of complexity used in adaptation dynamics. Its physical relevance hinges on its dynamically enforced alignment with the theoretical $C_P$. The critical justification for using this operational proxy in place of the theoretical $C_P$ relies on Theorem 2 (Dynamically Enforced Functional Correspondence), rigorously detailed in Appendix D.
+The expectation value $\langle\psi|\hat C_v|\psi\rangle$ serves as the system's internal operational measure of complexity used in adaptation dynamics. Its equality with the theoretical $C_P$ follows at the joint stable equilibria satisfying the per-MPU force-identifiability hypotheses of Theorem 2. Lemma D.1 supplies the corresponding conditional argument; this equality is not inferred from the proxy construction alone.
 
 **2.4.3 Justification: Operational Alignment via Physical Feedback and Dynamic Optimization**
 
-The crucial link between the theoretical (but uncomputable) $C_P$ and the operational (computable) proxy $\langle \hat{C}_v \rangle$ is not merely an approximation but a necessary condition for viable equilibrium states dynamically enforced by the PU framework's core optimization principles (POP, Axiom 1; PCE, Definition 15). A detailed argument, including the role of the observable work-cost gap as feedback, is provided in Appendix D. The essential result is formalized in Theorem 2.
+The link between theoretical $C_P$ and the operational proxy $\langle\hat C_v\rangle$ is a necessary equality on the joint stable-equilibrium and per-MPU force-identifiability branch of Theorem 2. It is not a consequence of POP or PCE alone. Lemma D.1 supplies the conditional argument: both operational and physical forces vanish at the joint equilibrium, and the registered force-identifiability implication then gives alignment for each MPU without cancellation between distinct MPU coordinates.
 
-**Theorem 2 (Dynamically Enforced Functional Correspondence on the Faithful-Cost-Identifiability Branch):** Let $x^*$ be a stable equilibrium of the complete physical adaptation dynamics governed by the true PCE objective $V_{true}$ of Appendix D. Assume the Dominance of Stabilizing Costs (DSC) condition and the faithful-cost-identifiability branch of Lemma D.1: a persistent per-MPU proxy-cost mismatch cannot be exactly compensated by changes in other MPUs or in non-complexity coordinates at a true stable PCE equilibrium. Then, for every MPU $v$ in the aggregate,
+**Theorem 2 (Functional Correspondence at Joint Stable Equilibria on the Faithful-Force-Identifiability Branch):** Let $x^*$ be a joint stable equilibrium of the operational and physical adaptation forces of Lemma D.1, so that $F_v^{\mathrm{op}}(x^*)=F_v^{\mathrm{phys}}(x^*)=0$ for every MPU $v$. Assume the per-MPU force-identifiability condition
+$$
+F_v^{\mathrm{phys}}(x)-F_v^{\mathrm{op}}(x)=0
+\quad\Longleftrightarrow\quad
+\langle\hat C_v\rangle_x=C_P(v)
+$$
+for every $v$, with no cancellation between distinct MPU coordinates. Then, for every MPU $v$ in the aggregate,
 $$
 C_P(v) = \langle\hat C_v\rangle_{x^\star}. \quad \text{(3)}
 $$
 
-*Proof.* For each MPU $v$, define
-$$
-\delta_v := C_P(v)-\langle \hat C_v\rangle.
-$$
-Lemma D.1 states that, on the faithful-cost-identifiability branch, a stable minimum of $V_{true}$ must satisfy $\delta_v=0$ for every $v$; otherwise the persistent per-MPU mismatch produces a true-cost discrepancy that cannot be canceled by the remaining coordinates. Corollary D.1 applies this necessary condition to stable equilibria of the complete physical adaptation dynamics. Hence
-$$
-C_P(v)=\langle \hat C_v\rangle_{x^\star}
-$$
-for every MPU $v$, which is Equation (3). ∎
+*Proof.* At the joint equilibrium, $F_v^{\mathrm{phys}}(x^*)-F_v^{\mathrm{op}}(x^*)=0-0=0$ for every $v$. The force-identifiability implication in Lemma D.1 gives $C_P(v)=\langle\hat C_v\rangle_{x^\star}$ for every $v$, which is Equation (3). ∎
 
 
 **2.4.4 Physical Resource Costs: Functions ($R, R_I$) and Operators ($\hat{R}, \hat{R}_I$)**
 
-The physical realization of systems with complexity $C_P$ incurs resource costs, fundamentally linked to thermodynamics (e.g., Landauer's principle, $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31)). These costs constrain the POP, as they limit feasible model complexity and predictive performance. To make the dynamics tractable without restricting generality beyond what is used in later theorems, we assume only that $R(C_P)$ is nonnegative, strictly increasing, and convex (DSC), and that $R_I(C_P)$ is nonnegative, increasing, and satisfies $R_I(K_0)=0$; when explicit closed forms are required, we use the representative functional forms below. In the general case, these cost rates are functions of both complexity and the effective temperature of the environment, $R(C, T_{eff})$, a dependence that becomes essential in the analysis of Prediction Relativity (Appendix N). We then define the corresponding operators acting on the Hilbert space.
+The physical realization of systems with complexity $C_P$ incurs resource costs, fundamentally linked to thermodynamics (e.g., Landauer's principle, $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive entropy-derived floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31)). These costs constrain the POP, as they limit feasible model complexity and predictive performance. To make the dynamics tractable without restricting generality beyond what is used in later theorems, we assume only that $R(C_P)$ is nonnegative, strictly increasing, and convex (DSC), and that $R_I(C_P)$ is nonnegative, increasing, and satisfies $R_I(K_0)=0$; when explicit closed forms are required, we use the representative functional forms below. In the general case, these cost rates are functions of both complexity and the effective temperature of the environment, $R(C, T_{eff})$, a dependence that becomes essential in the analysis of Prediction Relativity (Appendix N). We then define the corresponding operators acting on the Hilbert space.
 
 **Definition 3 (Resource–Cost Functions).**
 - **Definition 3a (Physical operational cost $R(C; T_{\text{eff}})$).** Let $\mathfrak t=(\mathcal E,A,f_{random},\epsilon_{acc})$ be the declared task tuple of Definition 13, and let $C_{op}$ denote the threshold produced by that definition for $\mathfrak t$. The physical operational cost is the rate of physical resource consumption required to maintain structures and run processes of complexity $C$ at effective temperature $T_{\text{eff}}$.
-  - $R$ is non‑decreasing in $C$ ($R'(C)\ge 0$). For $C > C_{op}$ on the declared task tuple, we adopt strict convexity, $R''(C) > 0$, reflecting the increasing coordination, error‑correction, and communication overhead at scale. Intuitively, adding one bit must be integrated with the existing $2^C$ states; this raises the marginal cost $R'(C)$, yielding convexity. A minimal parametric form is
+  - $R$ is non‑decreasing in $C$ ($R'(C)\ge 0$). For $C > C_{op}$ on the declared task tuple, we adopt strict convexity, $R''(C) > 0$, reflecting the increasing coordination, error‑correction, and communication overhead at scale. Strict convexity is a modeling assumption on this cost branch. The complexity variable $C$ is not identified with state-space capacity here, so a count of $2^C$ configurations does not supply a derivation of that assumption. A minimal parametric form is
    $$
     R(C; T_{\text{eff}})
     \;=\; R(C_{\text{op}}; T_{\text{eff}})
@@ -738,7 +736,7 @@ $$
   $$
   The temperature‑dependence $r_p(T_{\text{eff}}), r_I(T_{\text{eff}})$ allows coupling to environmental operating conditions used later (e.g., Prediction Relativity in App. N).
 
-**Note on Corollary 3.** The inequality $C_{op}\ge K_0$ holds only when every qualifying implementation satisfies the realization and complexity-capacity bridge hypotheses of Corollary 3. If the qualifying set is nonempty, $C_{op}<\infty$, and $C_{op}\ge K_0$ on that branch, both cost functions are simultaneously well-defined at $C=C_{op}$. Outside it, Equation (5) applies only to the declared self-referential cost branch for $C\ge K_0$ and does not constrain the general task threshold. In the limiting case $C_{op}=K_0$ on the Corollary 3 branch, the **excess** reflexive overhead above the baseline physical cost tends to zero at the threshold. For stable adaptation dynamics (see Theorem 22), we assume the **Dominance of Stabilizing Costs (DSC)**: the strict convexity of the physical cost $R(C)$ together with performance saturation (concave $PP(C)$) dominates any destabilizing concavity in the informational cost $R_I(C)$, ensuring a unique, stable equilibrium $C^*$. 
+**Note on Corollary 3.** The inequality $C_{op}\ge K_0$ holds only when every qualifying implementation satisfies the realization and complexity-capacity bridge hypotheses of Corollary 3. If the qualifying set is nonempty, $C_{op}<\infty$, and $C_{op}\ge K_0$ on that branch, both cost functions are simultaneously well-defined at $C=C_{op}$. Outside it, Equation (5) applies only to the declared self-referential cost branch for $C\ge K_0$ and does not constrain the general task threshold. In the limiting case $C_{op}=K_0$ on the Corollary 3 branch, the **excess** reflexive overhead above the baseline physical cost tends to zero at the threshold. For adaptation dynamics, we assume the **Dominance of Stabilizing Costs (DSC)**: the strict convexity of the physical cost $R(C)$ together with performance saturation (concave $PP(C)$) dominates any destabilizing concavity in the informational cost $R_I(C)$, making the reduced objective $J$ strictly concave. Theorem 22 gives a unique interior equilibrium $C^*$ when $J\in C^2([C_{op},\infty))$, $J(C)\to-\infty$ as $C\to\infty$, and $J'(C_{op})>0$. Its local exponential-stability conclusion additionally assumes a closed interval $I=[a,b]$ with $C_{op}\le a<C^*<b$, $\mu$-strong concavity of $J$ on $I$ for some $\mu>0$, and the adaptation law $\dot C=\eta_{adapt}J'(C)$ with $\eta_{adapt}>0$. 
 
 The corresponding operators used in operational dynamics are derived via functional calculus.
 
@@ -748,7 +746,7 @@ $$
 \qquad
 \lambda(d)=K_0+\Delta C(d),
 $$
-be the operational complexity operator of Theorem 1. Then the operational resource-cost operators are defined by functional calculus as
+be the operational complexity operator of Theorem 1. At the declared effective temperature, assume that $R$ and $R_I$ are finite real-valued functions on the interval $[K_0,\max_d\lambda(d)]$, with the monotonicity and convexity or concavity properties invoked below. Equation (4) supplies $R$ on this entire interval only if it lies in that formula's domain $C\ge C_{op}$; otherwise a separately specified extension to the remaining eigenvalues and their convex hull is required. Under these domain premises, the operational resource-cost operators are defined by functional calculus as
 $$
 \hat{R}(C_v) := R(\hat{C}_v) = \sum_{d=0}^{d_{\max}} R\bigl(K_0 + \Delta C(d)\bigr) \hat{P}_d \quad \text{(6)}
 $$
@@ -768,13 +766,13 @@ $$
 \sum_{d=0}^{d_{\max}} R_I\bigl(\lambda(d)\bigr)\,\|\hat P_d\psi\|^2.
 $$
 
-*Proof.* Since $\hat C_v$ is self-adjoint with finite spectrum $\{\lambda(d)\}_{d=0}^{d_{\max}}$, the spectral theorem gives
+*Proof.* Since $\hat C_v$ is self-adjoint with finite spectrum consisting of the values $\lambda(d)$ for which $\hat P_d\ne0$, finite functional calculus gives
 $$
-f(\hat C_v)=\sum_{d=0}^{d_{\max}} f\bigl(\lambda(d)\bigr)\hat P_d
+f(\hat C_v)=\sum_{\{d:\hat P_d\ne0\}} f\bigl(\lambda(d)\bigr)\hat P_d
 $$
-for every Borel function $f$ on $\sigma(\hat C_v)$. Applying this to $f=R$ and $f=R_I$ yields Equations (6) and (7). Taking expectation values in a state $|\psi\rangle$ and using $\langle\psi|\hat P_d|\psi\rangle=\|\hat P_d\psi\|^2$ gives the displayed formulas. ∎
+for every Borel function $f$ on $\sigma(\hat C_v)$. The functions $R$ and $R_I$ are defined on the whole declared interval, including the assigned values of zero projectors; adding those zero terms gives Equations (6) and (7). Taking expectation values in a state $|\psi\rangle$ and using $\langle\psi|\hat P_d|\psi\rangle=\|\hat P_d\psi\|^2$ gives the displayed formulas. ∎
 
-*Justification.* Theorem 2 states that at viable equilibria one has
+*Justification.* On the joint stable-equilibrium and per-MPU force-identifiability branch of Theorem 2, one has
 $$
 C_P(v)=\langle \hat C_v\rangle_{x^\star}.
 $$
@@ -792,7 +790,7 @@ For the logarithmic representative $R_I(C;T_{\text{eff}})=\frac{r_I(T_{\text{eff
 $$
 \langle R_I(\hat C_v)\rangle \le R_I\bigl(\langle \hat C_v\rangle\bigr)=R_I\bigl(C_P(v)\bigr).
 $$
-Exact equality holds only in sharply peaked or affine regimes. Accordingly, the operator expectations are exact spectral averages, while the mean-field replacement
+For either Jensen inequality, equality holds exactly when the relevant cost function is affine on the convex hull of the eigenvalues with positive state weight. In particular, a strictly convex or strictly concave cost requires zero spectral variance for equality; a narrow distribution with nonzero variance does not give exact equality. Accordingly, the operator expectations are exact spectral averages, while the mean-field replacement
 $$
 \langle R(\hat C_v)\rangle \approx R\bigl(\langle \hat C_v\rangle\bigr)
 $$
@@ -810,19 +808,24 @@ Several conditions are logically necessary for any system to perform prediction 
 
 *Proof.* The predictor cannot condition on $S(t)$ unless the input record is measurable to it. Verification requires evaluation of a measurable score $S_{score}(\hat S(t+\Delta t),S(t+\Delta t))$ or discrepancy statistic. If the prediction and outcome records admit no jointly measurable comparison, that score is not an experimental random variable and predictive improvement $\Delta Q$ cannot be assessed. No step requires $S(t)$ and $\hat S(t+\Delta t)$ to differ; for example, a persistence predictor may copy the input record. ∎
 
-**Theorem 6 (Necessity of Present–Future Dependence for Improvement over the No-Input Baseline).** Let $X:=S(t)$ and $Y:=S(t+\Delta t)$ be random elements of standard Borel spaces with a joint law for which $I(X;Y)$ is defined. Let the predictor output $Z$ be generated from $X$ by a Markov kernel using no information about $Y$ beyond $X$, so that $Y-X-Z$ is a Markov chain. Fix a loss function, and define the chance baseline as the minimum expected risk among decisions having no access to $X$. If a decision based on $Z$ has strictly smaller expected risk than that baseline, then $I(X;Y)>0$.
+**Theorem 6 (Necessity of Present–Future Dependence for Improvement over the No-Input Baseline).** Let $X:=S(t)$ and $Y:=S(t+\Delta t)$ take values in standard Borel spaces $\mathsf X$ and $\mathsf Y$, respectively. Let the predictor output $Z$ be generated from $X$ by a Markov kernel using no information about $Y$ beyond $X$, so that $Y-X-Z$ is a Markov chain. Let $\mathsf A$ be a nonempty standard Borel action space and $\ell:\mathsf A\times\mathsf Y\to\mathbb R$ a jointly measurable loss bounded below by a finite constant. Assume at least one constant action has finite expected risk, and define
+$$
+B_0:=\inf_{a\in\mathsf A}\mathbb E[\ell(a,Y)].
+$$
+This is the infimum no-input risk, whether or not it is attained; independent randomization cannot lower it. If a measurable decision based on $Z$ has expected risk strictly below $B_0$, then $I(X;Y)>0$.
 
-*Proof.* Suppose $I(X;Y)=0$. Since mutual information is the relative entropy between the joint law and the product of its marginals, equality to zero implies that $X$ and $Y$ are independent. The Markov property gives
+*Proof.* Suppose $I(X;Y)=0$. Mutual information is the relative entropy between the joint law and the product of its marginals, so $X$ and $Y$ are independent. The Markov property and data processing give
 $$
-I(Z;Y)\le I(X;Y)=0
+I(Z;Y)\le I(X;Y)=0,
 $$
-by the data-processing inequality, so $Z$ and $Y$ are independent. For any decision rule $a(Z)$,
+hence $Z$ and $Y$ are independent. For any measurable decision rule $a(Z)$, Tonelli's theorem applied after subtracting the finite lower bound gives
 $$
 \mathbb E[\ell(a(Z),Y)]
 =
-\int \mathbb E[\ell(a(z),Y)]\,P_Z(dz),
+\int\mathbb E[\ell(a(z),Y)]\,P_Z(dz)
+\ge B_0.
 $$
-which is an average of risks of decisions having no access to $X$. It is therefore at least the minimum no-input risk. Thus no decision based only on $Z$ can strictly improve on the stated chance baseline when $I(X;Y)=0$. The contrapositive proves the claim. ∎
+The same argument applies to any independent no-input randomization, whereas constant actions approach the defining infimum. Thus randomization has the same infimum $B_0$. The existence of a finite-risk constant action and the lower bound make $B_0$ finite. No decision based only on $Z$ can strictly improve on this baseline when $I(X;Y)=0$, proving the contrapositive. ∎
 
 **Theorem 7 (Representational Medium under Physical Instantiation).** Suppose a prediction process is physically instantiated in the operational PPI sense of Definition P.6.2: its finite input record $S(t)$, internal-model record $M_t$, output record $\hat S(t+\Delta t)$, and update operations are represented by finite protocol-distinguishable physical states and transformations. Then the process requires a physical medium carrying those states and transformations.
 
@@ -831,7 +834,7 @@ which is an average of risks of decisions having no access to $X$. It is therefo
 
 ## 2.6 Categorical Unity: Physical Ontology from Predictive Structure
 
-The Cogito-to-prediction bridge supplies the common operational foundation for this organization. On every finite self-verifying presentation with expected responses, updates, and verification statistics, Theorem P.6.1c.3 and Corollary P.6.1c.4 give a canonical predictive normal form, while Corollary P.6.1b.8b identifies physically retained distinctions with invariants of the finite response-presheaf quotient. Within that domain, Theorems 4–7 establish an ordering parameter for verification and adaptation, distinguishable verification states, exploitable statistical dependence, and a representational medium. Definition 2.6a separately registers the six semantic labels, protocol families, response restrictions, branch predicates, and overlap obligations for time, space, energy, matter, force, and charge; Theorem 2.6b classifies their finite compatible lifts. Definition 2.6c and Theorem 2.6d supply the finite gates for a common PPI-physicalizable carrier, source and ownership closure, calibration, and any strict target-independent PPI/PCE selection. Empirical realization identification retains the independent record of Definition P.14.9g.
+The Cogito-to-prediction bridge supplies the common operational foundation for this organization. For finite presentations satisfying Definition P.6.1c.1, including its state-indexed responses and quotient-compatible update and verification maps, Theorem P.6.1c.3 and Corollary P.6.1c.4 give a predictive normal form up to the registered state identification and natural isomorphism. Physical PPI identity additionally requires accepted finite-cost realizations on a separating, protocol-complete branch; Corollary P.6.1b.8b applies only to its PPI-admissible invariants and physically realized transformations. Within that domain, Theorems 4–7 give, under their respective hypotheses, an ordering parameter for prediction, measurable prediction and verification records, present–future dependence necessary for improvement over the no-input baseline, and a physical representational medium under PPI. Definition 2.6a separately registers the six semantic labels, protocol families, response restrictions, branch predicates, and overlap obligations for time, space, energy, matter, force, and charge; Theorem 2.6b classifies their finite compatible lifts. Definition 2.6c and Theorem 2.6d supply the finite gates for a common PPI-physicalizable carrier, source and ownership closure, calibration, and any strict target-independent PPI/PCE selection. Empirical realization identification retains the independent record of Definition P.14.9g.
 
 At a chosen finite resolution, fix a registered self-verifying operational presentation $\mathfrak T$ and write
 $$
@@ -857,7 +860,7 @@ $$
 =H_q(P\mid R)+\varepsilon_{\mathrm{diss}}
 \ge H_q(P\mid R),
 $$
-with $\varepsilon_{\mathrm{diss}}\ge0$ (Theorem 31; see also [Landauer 1961]). A positive uniform physical floor requires an independent bound $H_q(P\mid R)\ge h_{\min}>0$; $\varepsilon_0=\ln2$ alone supplies no ensemble-independent heat floor.
+with $\varepsilon_{\mathrm{diss}}\ge0$ (Theorem 31; see also [Landauer 1961]). A positive uniform physical floor inferred from this entropy bound requires an independent bound $H_q(P\mid R)\ge h_{\min}>0$; $\varepsilon_0=\ln2$ alone supplies no ensemble-independent heat floor.
 
 **Definition (Physical category).** A physical category $\mathfrak C$ is a family of operational observables used to describe the world: time, space, energy, matter, force, or charge. This phenomenological use of “category” is represented by the registered finite realization data of Definition 2.6a.
 
@@ -1046,20 +1049,20 @@ $$
 \qquad(i\in I_6).
 \tag{2.6d.a.2}
 $$
-Every reverse implication fails on a full finite registered record.
+The reverse implications fail at the finite algebraic groupoid level. The following records of Lemma P.6.1d.14 become full registered counterexamples only when its independent physical-eligibility and acceptance witnesses are supplied.
 
-1. The record $\mathfrak R_{\mathrm{ov}}$ of Lemma P.6.1d.14(a) has six terminal local-lift groupoids and an empty compatible-lift groupoid.
-2. The record $\mathfrak R(\varnothing,\mathbf1,!)$ has $\mathscr J_B=\mathbf1$ and $\mathscr E_q=\varnothing$.
-3. The record $\mathfrak R(\{\omega_0,\omega_1\}_{\mathrm{disc}},\mathbf1,!)$ has a nonempty essential preimage with two components.
-4. The record $\mathfrak R(B(\mathbb Z/2),\mathbf1,!)$ has one essential-preimage component and a nontrivial retained automorphism group, so its essential preimage is not equivalent to $\mathbf1$.
+1. The algebraic record $\mathfrak R_{\mathrm{ov}}$ has six terminal local-lift groupoids and an empty compatible-lift groupoid.
+2. $\mathfrak R(\varnothing,\mathbf1,!)$ has $\mathscr J_B=\mathbf1$ and $\mathscr E_q=\varnothing$.
+3. $\mathfrak R(\{\omega_0,\omega_1\}_{\mathrm{disc}},\mathbf1,!)$ has a nonempty essential preimage with two components.
+4. $\mathfrak R(B(\mathbb Z/2),\mathbf1,!)$ has one essential-preimage component and a nontrivial retained automorphism group, so its essential preimage is not equivalent to $\mathbf1$.
 
-Strict selection and essential-preimage uniqueness are incomparable. Lemma P.6.1d.14(c) gives a selection-complete record with unique selected class $[\omega_0]$ and $|\pi_0(\mathscr E_q)|=2$. Conversely, $\mathfrak R(\mathbf1,\mathbf1,!)$ has $\mathscr E_q\simeq\mathbf1$; when its selection field is $\mathsf{unselected}$, it supplies no strict-selection conclusion.
+Unique cost selection and essential-preimage uniqueness are incomparable at this algebraic level. Lemma P.6.1d.14(c) gives the unique cost minimizer $[\omega_0]$ with $|\pi_0(\mathscr E_q)|=2$. Conversely, $\mathfrak R(\mathbf1,\mathbf1,!)$ has $\mathscr E_q\simeq\mathbf1$ but may carry the token $\mathsf{unselected}$. A selection-complete physical conclusion additionally requires the lemma's compatible physical and forward-lock certificates.
 
-*Proof.* The implications in (2.6d.a.1) follow from the definitions of equivalence to the terminal groupoid, connected components, nonemptiness, and full essential preimage. Equation (2.6d.a.2) follows because every object of $\mathscr J_B$ contains one admissible local lift in each sector. Lemma P.6.1d.14 constructs all certificate fields and verifies the object, arrow, restriction, source, ownership, calibration, and, where invoked, strict-selection tables for the five displayed records. Their component and automorphism counts give the four failed converses and the two selection non-implications. ∎
+*Proof.* The implications in (2.6d.a.1) follow from equivalence to the terminal groupoid, connected components, nonemptiness, and full essential preimage. Equation (2.6d.a.2) follows because every object of $\mathscr J_B$ contains one local lift in each sector. Lemma P.6.1d.14 constructs the finite algebraic carriers, semantic arrow maps, restrictions, and cost tables for the displayed examples. Their component and automorphism counts prove the algebraic nonconverses and cost-selection comparisons. Neither these tables nor the generic finite classifier supplies the independent physical witnesses needed to promote the examples to full accepted records. ∎
 
 **Resolution record 2.6d-R1 (Finite Categorical-Unity Classifier).** Theorem 2.6b exhausts every compatible local-lift groupoid of a table-valid finite datum into the four cases `lift-empty`, `lift-rigid`, `lift-unique-with-symmetry`, and `lift-moduli`. Theorem 2.6d then classifies the full common-realization fiber $\mathscr E_q$ by nonemptiness, connected components and automorphisms, and Corollary 2.6d.a proves that none of those gates can be inferred from a weaker one. This is `positive-discharge` of the generic finite mathematical classification in `TV-FND-02` and `nonentailment` of joint existence or uniqueness from six separate local lifts.
 
-**Resolution TV-FND-02-R1 (Metadata).** Exact domain: table-valid finite categorical-unity data and their compatible-lift groupoids. Premises: Definitions 2.6a and 2.6c and Theorems 2.6b--2.6d's source, ownership, restriction and calibration checks. Equivalence: isomorphism in each lift groupoid and in the common essential-preimage fiber. Budget: exhaustive enumeration of the submitted finite tables and arrows. Verifier: the exact groupoid census and completion-certificate checks. Falsifier: a table-valid datum outside the four disjoint cases, an omitted isomorphism class, or a failed claimed converse. Provenance class: source-internal finite classification. Downstream consumers: Thesis 2.6 and every sector map invoking a common realization fiber. Nonvacuity: Lemma P.6.1d.14's five finite records.
+**Resolution TV-FND-02-R1 (Metadata).** Exact domain: table-valid finite categorical-unity data and their compatible-lift groupoids. Premises: Definitions 2.6a and 2.6c and Theorems 2.6b--2.6d's source, ownership, restriction and calibration checks. Equivalence: isomorphism in each lift groupoid and in the common essential-preimage fiber. Budget: exhaustive enumeration of the submitted finite tables and arrows. Verifier: the exact groupoid census and completion-certificate checks. Falsifier: a table-valid datum outside the four disjoint cases, an omitted isomorphism class, or a failed claimed converse. Provenance class: source-internal finite classification. Downstream consumers: Thesis 2.6 and every sector map invoking a common realization fiber. Algebraic nonvacuity: the finite groupoid constructions of Lemma P.6.1d.14. Physical nonvacuity additionally requires the compatible eligibility, realization, and acceptance witnesses stated there.
 
 No populated bounded physical-theory census, common essential-preimage record, source-exhaustion module, calibration module or empirical realization-identification record is accepted here. `TV-FND-02` therefore retains `C+R+O`: the finite classifier is complete, while selecting the realized fiber and extracting its observables remain certificate- and realization-gated.
 
@@ -1067,10 +1070,10 @@ No populated bounded physical-theory census, common essential-preimage record, s
 
 | Category | Registered operational identification and branch conditions | Primary PU locus |
 |:---------|:-------------------------------------------------------------|:-----------------|
-| Time | Predictive cycles have a directed verification/update ordering, sharpened to a thermodynamic arrow on the registered irreversible branch. Theorem 29 supplies an internal characteristic timescale; a positive minimum tick for every update is separate clock-certificate data. | Theorem 4; Definition 27; Theorem 29; Theorem 31; Appendix O |
+| Time | Predictive cycles have a directed verification/update ordering, sharpened to a thermodynamic arrow on the registered irreversible branch. Corollary 29.1 supplies a characteristic orthogonalization timescale on its time-independent unitary branch; a positive minimum tick for every update is separate clock-certificate data. | Theorem 4; Definition 27; Theorem 29; Corollary 29.1; Theorem 31; Appendix O |
 | Space | Propagation costs define $d_{\mathcal N}$. Theorem 43 makes certified irregular global minimizers impossible only on its strict-comparator branch; a continuum manifold and metric additionally require the independent Theorem-43.5 package and Theorems 44–45. | Definition 35; Theorem 43; Theorem 43.5; Theorems 44–45 |
 | Spacetime unity | Nonzero spacing, a separately registered positive edge-update duration, serialized propagation, and bounded weights give the uniform operational speed upper bound of Theorem 46. An attained normalized frontier $c=\delta/\tau_{\min}$ requires the separate uniform-weight one-link-attainment branch. The Appendix Z contract fixes only the Euclidean response-carrier value $D=4$; identifying it with spacetime dimension and Lorentzian signature requires Corollary 46a and the full Appendix O package. | Theorem 46; Corollary 46a; Definition Z.9a; Theorem Z.11; Appendix O; Appendix P (P.8.11) |
-| Energy | Resource-cost rates $R(C)$ and $R_I(C)$ lift to cost operators, while Theorem 29 identifies the internal Hamiltonian and a characteristic task-dependent timescale. A universal minimum update duration is not used. Coarse-graining yields $T_{\mu\nu}^{(MPU)}$ only on the Appendix B branch. | Definition 3; Theorem 3; Theorem 29; Appendix B (Definition B.8) |
+| Energy | Resource-cost rates $R(C)$ and $R_I(C)$ lift to cost operators, while Theorem 29 calibrates the internal Hamiltonian's mean excitation energy and Corollary 29.1 supplies a characteristic orthogonalization timescale on its time-independent unitary branch. A universal minimum update duration is not used. Coarse-graining yields $T_{\mu\nu}^{(MPU)}$ only on the Appendix B branch. | Definition 3; Theorem 3; Theorem 29; Corollary 29.1; Appendix B (Definition B.8) |
 | Matter | Definition 23 MPUs and Definition 29 aggregates enter a physical matter identification only on a common-realization-complete categorical-unity record over $q\in\operatorname{Rep}\pi_0(\mathscr J_B)$ with $\mathscr E_q\ne\varnothing$; its source audit either establishes base exhaustion or lists every retained independent sector premise. Field-like realization on $(M,g)$ additionally requires the accepted continuum-completion, localization, and response records. On the separate $d_0=8$ Perspective-Space branch, Appendix R proves $\pi_2(\Sigma_8)\cong\mathbb Z^7$, which supplies an integral candidate-sector group whose selection as stable physical matter sectors retains the realization and dynamical-stability gates. | Definition 23; Definition 25; Definition 29; Definition 2.6c; Theorems 2.6b and 2.6d; Appendix R |
 | Force | Effective response channels selected by PCE as responses of $\mathfrak{P}$ to gradients, curvatures, holonomies, or capacity deficits of the same underlying cost structure. The response channels split by the Equivalence–Constitutive Separation Law: metric-universal channels have a common source/response ledger and carry an equivalence principle; sector-selective channels carry retained charge, representation, material, or constitutive labels and do not carry a universal equivalence principle. Generalized forces are gradients of $V$ (Definition 20; Appendix D, Definition D.1), gauge forces are internal connection/representation responses (Appendix G), and gravity is the metric-universal response sourced by $T_{\mu\nu}^{(MPU)}$ (Theorem 50; Appendix N, Theorem N.11a). | Definition 20; Appendix D (Definition D.1); Appendix G; Theorem 50; Appendix N (Theorem N.11a); Appendix X |
 | Charge | The representation weight $q$ in $D_\mu=\partial_\mu+\Omega_\mu+iqA_\mu$ specifies participation in a local gauge connection only on the separately reconstructed Appendix G symmetry branch. The arithmetic density of a chosen cyclic phase subgroup in $U(1)$ does not derive local gauge redundancy, a connection, or a Noether current; those require the Appendix G and Appendix X operational-symmetry hypotheses. Charge quantization additionally depends on the global bundle structure and boundary conditions, while numerical interaction strength requires its own normalized shadow-price or capacity-boundary certificate. | Appendix G (Definition G.4.1; Equation G.6.3); Appendix X (Theorem X.8c); Appendix Z (Corollary Z.8.2a) |
@@ -1085,7 +1088,7 @@ For a record that is common-realization-complete over $q\in\operatorname{Rep}\pi
 
 
 
-2. **Lorentzian spacetime with invariant $c$.** Theorem 29 supplies a task-dependent characteristic timescale and Theorem 31 supplies a registered-reset entropy ledger; neither gives a universal edge-update clock or causal frontier. A uniform speed upper bound requires the independent nonzero-spacing, positive edge-clock, serialization, and bounded-weight hypotheses of Theorem 46. The normalization $c=\delta/\tau_{\min}$ additionally requires uniform weights and one-link frontier attainment. The Appendix Z contract fixes only the Euclidean response-carrier value $D=4$; its $3+1$ spacetime interpretation and Lorentzian signature follow only on the full Corollary 46a/Appendix O branch.
+2. **Lorentzian spacetime with invariant $c$.** Corollary 29.1 supplies a characteristic orthogonalization timescale on its time-independent unitary branch and Theorem 31 supplies a registered-reset entropy ledger; neither gives a universal edge-update clock or causal frontier. A uniform speed upper bound requires the independent nonzero-spacing, positive edge-clock, serialization, and bounded-weight hypotheses of Theorem 46. The normalization $c=\delta/\tau_{\min}$ additionally requires uniform weights and one-link frontier attainment. The Appendix Z contract fixes only the Euclidean response-carrier value $D=4$; its $3+1$ spacetime interpretation and Lorentzian signature follow only on the full Corollary 46a/Appendix O branch.
 
 3. **Forces from connections/gradients.** In the continuum effective description, interactions are encoded in the connections required for predictive coherence: the internal connection $A_\mu$ (Appendix G) and the geometric/spin connection (Theorem 48) together form the transport structure whose curvature yields physical interaction content (Theorem 47). On $\mathfrak B_{\mathrm{mass}}^{\mathrm{rate}}(q)$, Theorem N.6 identifies the accepted inertial coefficient with a certified relational action/update ledger only after a mechanical-realization certificate. It does not derive Newton's second law or a force law; those require the independent worldline and mechanical response maps of the declared Lorentzian branch. Where both packages coexist, relational reconfiguration cost is compatible with, but does not replace, the classical force response.
 

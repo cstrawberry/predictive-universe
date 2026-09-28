@@ -147,9 +147,28 @@ assert.equal(container.hidden, true);
 assert.equal(popup.hidden, true);
 
 // Cogito's M marker uses the fixed downstream point drawn by its scene.
-win.PU.data = { gravitySurfaceY: () => 0, terrainHeight: () => 0 };
+for (const file of ['core/math.js', 'core/data.js', 'core/color.js', 'core/registry.js']) {
+  vm.runInContext(fs.readFileSync(path.join(root, 'visualization/js', file), 'utf8'), context);
+}
 vm.runInContext(fs.readFileSync(path.join(root, 'visualization/js/content/annotations.js'), 'utf8'), context);
 const m = win.PU.annotations.cogito.find(note => note.label === 'M = 24');
 assert.deepEqual(Array.from(m.at), [72, -54, -28]);
-console.log('Annotation checks passed: bounded motion, spacing, pointer approach, keyboard focus, touch press, note persistence, hidden measurement, resize, and fixed M = 24 anchor.');
+// Check the positions actually submitted by the scene, not just its helper.
+win.PU.geom = {
+  point(out, position, color, size) { if (size === 4.2) out.push(Array.from(position)); },
+  line() {}, wireSphere() {}, basisRing() {}
+};
+vm.runInContext(fs.readFileSync(path.join(root, 'visualization/js/scenes/cosmology.js'), 'utf8'), context);
+const rotationNote = win.PU.annotations.dark.find(note => note.label === 'Rotation indicators');
+for (const time of [0, 3, 20]) {
+  const before = [], after = [], dt = 0.0001;
+  win.PU.scenes.get('dark').draw(before, time);
+  win.PU.scenes.get('dark').draw(after, time + dt);
+  assert.equal(before.length, 64, 'All rotation markers are drawn');
+  const speeds = before.map((point, i) => Math.hypot(...point.map((x, j) => after[i][j] - x)) / dt);
+  assert(Math.max(...speeds) - Math.min(...speeds) < 0.00001, 'A flat rotation curve has equal tangential speeds at all radii');
+  assert(speeds.every(speed => speed > 0), 'Rotation markers move');
+  assert.deepEqual(Array.from(rotationNote.at(time)), before[32], 'The annotation tracks a drawn marker exactly');
+}
+console.log('Annotation checks passed: bounded motion, spacing, pointer approach, keyboard focus, touch press, note persistence, hidden measurement, resize, fixed M = 24 anchor, flat rotation, and marker tracking.');
 
