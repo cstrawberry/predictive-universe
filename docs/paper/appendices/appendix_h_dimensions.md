@@ -6,7 +6,7 @@ This appendix checks that the framework's formulas use compatible physical units
 
 **Technical ledger.**
 
-This appendix records the physical dimensions assigned to key PU symbols and verifies dimensional homogeneity. On the separately adopted QFI linear-response bridge of Definition H.0, it evaluates the conditional acceleration-scale relation between $g_0$ and $\Lambda$. Dimensional consistency and the exact algebraic reduction do not derive the bridge or identify its output with the realized Milgrom scale.
+This appendix records the physical dimensions assigned to key PU symbols and verifies dimensional homogeneity. On the separately adopted QFI linear-response bridge of Definition H.0, it evaluates the conditional acceleration-scale relation between $g_0$ and $\Lambda$; identification of its output with the realized Milgrom scale requires an independent physical-realization certificate.
 
 Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Energy $[E]=[M][L]^{2}[T]^{-2}$ and Temperature $[\Theta]$. Boltzmann's constant $k_{B}$ carries $[E][\Theta]^{-1}$. Predictive Physical Complexity $[Complexity]$ is treated as a fundamental dimension within the PU framework, representing the quantifiable structural resources required for prediction. Dimensionless information measures (nats) are noted where relevant. Factors of $c$ and $\hbar$ are kept explicit where needed for standard physics relations, but often $c=1, \hbar=1, k_B=1$ are used in derivations for simplicity.
 
@@ -95,7 +95,7 @@ Using the dimensional assignments in Table H.1, we verify the dimensional homoge
  $$
         C_{\text{uni}}(\delta_{\rm SPAP}) = \Omega\left(\frac{\log(1/\delta_{\rm SPAP})}{(\delta_{\rm SPAP})^2}\right).
         $$
-$C_{\text{uni}}$ is the dimensionless count of the registered verification/update operations, and $\delta_{\rm SPAP}$ is the dimensionless preregistered target margin relative to the certified class-specific boundary. The logarithm therefore has a dimensionless argument. This dimensional check does not construct the boundary, identify the target with an observed score, or discharge the certificate.
+$C_{\text{uni}}$ is the dimensionless count of the registered verification/update operations, and $\delta_{\rm SPAP}$ is the dimensionless preregistered target margin relative to the certified class-specific boundary. The logarithm therefore has a dimensionless argument.
 
 ## H.4 Vacuum-Based Estimate of the Acceleration Scale $g_{0}$
 
@@ -153,7 +153,7 @@ $$
 
 #### H.4.2.1 The Bridge Law: Dimensionless QFI Ratios and Generator-Amplitude Normalization
 
-Let $\vartheta$ be a registered dimensionless acceleration-deformation coordinate. The efficiency factor $\eta'$ is a dimensionless bridge response constructed from QFI norm ratios with respect to $\vartheta$ and a separately declared generator-amplitude normalization. The factor $1/\sqrt{K_0}$ is an amplitude convention; it is not the scaling law of SLD QFI under generator rescaling.
+Let $\vartheta$ be a registered dimensionless acceleration-deformation coordinate. The efficiency factor $\eta'$ is a dimensionless bridge response constructed from QFI norm ratios with respect to $\vartheta$ and a separately declared generator-amplitude normalization. The factor $1/\sqrt{K_0}$ is an amplitude convention.
 
 **Definition H.0 (Gravitational Efficiency - Hybrid Bridge Law).**
 Define
@@ -287,12 +287,12 @@ $$
 ∎
 
 **Application (conditional i.i.d. repetition model):**
-- The structural binary reference is $\varepsilon_0=\ln2$; it is not asserted to be a universal physical reset-entropy floor.
+- The structural binary reference is $\varepsilon_0=\ln2$.
 - At the PCE-optimal operating point, the adopted bridge convention has $C_{\mathrm{max}}^*=2\varepsilon_0$ (Appendix Q, Equation Q.10), hence $w_{\mathrm{cmp}}(C_{\mathrm{max}}^*)=2$.
 - The acceleration-lock branch additionally registers two independent identically prepared comparison copies at that operating point. For this integer realization, Theorem H.1b gives the QFI multiplier $N_{\mathrm{cmp}}=2$.
 - If either copy requires an irreversible physical reset, its implementation must separately satisfy $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$; a positive uniform floor inferred from this entropy bound requires a registered $H_q(P\mid R)\ge h_{\min}>0$.
 
-Thus the factor $2$ is exact inside the adopted structural-slot plus two-copy bridge branch. It is not derived from Landauer accounting alone.
+Thus the factor $2$ is exact inside the adopted structural-slot plus two-copy bridge branch.
 
 #### H.4.2.4 Factor 3: Spatial Projection ($(D-1)/D = 3/4$)
 
@@ -318,7 +318,7 @@ $$
 \frac{D-1}{D} = \frac{3}{4}
 $$
 
-**Physical Interpretation:** The factor applies to a positive-definite four-dimensional QFI tangent variable with a Euclidean-rotationally isotropic registered ensemble and a rank-three projector orthogonal in that QFI metric. In Lorentzian spacetime, $a^\mu u_\mu=0$ places the four-acceleration in the three-dimensional rest space orthogonal to $u^\mu$; it does not remove one statistically isotropic Euclidean component from a four-dimensional acceleration ensemble. Therefore Theorem H.2 establishes only the Euclidean codimension-one identity unless a separate certificate supplies a positive-definite QFI/rest-space isometry, the required isotropic ensemble, and the rank-three orthogonal projection. No physical observable fraction $3/4$ follows without that certificate.
+**Physical Interpretation:** The factor applies to a positive-definite four-dimensional QFI tangent variable with a Euclidean-rotationally isotropic registered ensemble and a rank-three projector orthogonal in that QFI metric. In Lorentzian spacetime, $a^\mu u_\mu=0$ places the four-acceleration in the three-dimensional rest space orthogonal to $u^\mu$; it does not remove one statistically isotropic Euclidean component from a four-dimensional acceleration ensemble. Therefore Theorem H.2 establishes only the Euclidean codimension-one identity unless a separate certificate supplies a positive-definite QFI/rest-space isometry, the required isotropic ensemble, and the rank-three orthogonal projection.
 
 #### H.4.2.5 Factor 4: Democratic Generator Normalization ($1/\sqrt{K_0} = 1/\sqrt{3}$)
 
@@ -378,7 +378,7 @@ Iterating this identity across stages that act by scalars on the QFI quadratic f
 
 **Application to the Four Factors:**
 
-The hybrid response of Definition H.0a additionally includes a separately declared generator-amplitude coefficient; it is not identified with the QFI quadratic-form scaling under generator rescaling.
+The hybrid response of Definition H.0a additionally includes a separately declared generator-amplitude coefficient.
 
 1. **$\Pi_{\mathrm{act}}$ (active participation):** Scalar factor $a/d_0$ from Definition H.0a's active-tangent contraction certificate; Theorem H.1a gives only the corresponding Haar carrier-vector average
 2. **$\Pi_{\mathrm{sp}}$ (spatial projection):** Scalar factor $(D-1)/D$ from Definition H.0a's spatial-tangent contraction certificate; Theorem H.2 gives the Euclidean isotropic projection identity used by that certificate
@@ -561,7 +561,7 @@ For the empirical central value $g_0^{\mathrm{obs}}\approx1.2\times10^{-10}\,\ma
 $$
 \frac{g_0^{\mathrm{branch}}}{g_0^{\mathrm{obs}}}\approx0.98.
 $$
-This is an arithmetic central-value comparison on the adopted bridge-law branch. It neither derives Definition H.0 nor identifies $g_0^{\mathrm{branch}}$ with the realized Milgrom scale; that identification requires an independent physical-realization certificate.
+This is an arithmetic central-value comparison on the adopted bridge-law branch. Identification of $g_0^{\mathrm{branch}}$ with the realized Milgrom scale requires an independent physical-realization certificate.
 
 
 #### H.4.3.1 Uncertainty Budget
@@ -582,7 +582,7 @@ Definition H.0 is the active bridge-law normalization connecting the QFI linear-
 $$
 \eta'=\frac{3}{8\sqrt3}.
 $$
-The physical reset ledger remains separate and does not set this factor through Landauer accounting alone. Thus the T2 status dependency is present, but its numerical uncertainty is zero inside the adopted bridge law. Alternative slot interpolations or implementations without the registered two-copy realization are different T2 branches, not variations of a fitted parameter.
+Thus the T2 status dependency is present, but its numerical uncertainty is zero inside the adopted bridge law. Alternative slot interpolations or implementations without the registered two-copy realization are different T2 branches, not variations of a fitted parameter.
 
 **T3 (empirical/model mapping):**
 The comparison uses either the observational hybrid cosmological-input convention or the Appendix U branch value selected for forward evaluation. For the declared diagonal propagation,
@@ -612,7 +612,7 @@ The empirical $g_0$ inferred from galaxy data has systematic uncertainties at th
 | $\Lambda$ input (Eq. V.5) | T3 | $1.7\%$ in $g_0$ at $2\sigma$ | observational propagation |
 | Empirical $g_0$ extraction | T3 | order $20\%$ | astrophysical systematic |
 
-The approximately $2\%$ central-value difference is within the quoted empirical systematic uncertainty, but this arithmetic compatibility does not validate the bridge law.
+The approximately $2\%$ central-value difference is within the quoted empirical systematic uncertainty.
 
 **Remark H.1.** Writing $H_\Lambda=c\sqrt{\Lambda/3}$ gives $a_0=cH_\Lambda$. On the adopted Definition H.0 branch, $g_0^{\mathrm{branch}}=\eta'cH_\Lambda$ with $\eta'=3/(8\sqrt3)$. This supplies a candidate acceleration--vacuum relation; no realized galactic connection follows without an independently accepted observable and response certificate.
 
@@ -712,7 +712,7 @@ $$
 $$
 The numerical value follows by inserting Equation H.6. ∎
 
-**Remark H.1a.1.** The quantity $\Sigma_\dagger$ is a conditional PU output fixed by the acceleration-lock bridge once $\Lambda$ and the thin-sheet crossover mapping are specified. It is not an input-free prediction.
+**Remark H.1a.1.** The quantity $\Sigma_\dagger$ is a conditional PU output fixed by the acceleration-lock bridge once $\Lambda$ and the thin-sheet crossover mapping are specified.
 
 **Remark H.1a.2 (Cosmological-Input Dependence of the Acceleration Lock).** The observational-input evaluations of $g_0$, $\Sigma_\dagger$, $A_{\mathrm{eff}}^{(\mathrm{obs})}$, and $A_{\mathrm{eff}}^{(\mathrm{obs},4)}$ use the Appendix V hybrid diagonal-input convention formed from the rounded Planck 2018 base-$\Lambda$CDM marginals in Equations (V.4)–(V.5),
 $$
@@ -824,7 +824,7 @@ $$
 $$
 for every $0<r<\pi$ and all $|\sqrt Kt|\le r$. Indeed, $f(x)=\ln(x/\sin x)$ extends to an even analytic function on $(-\pi,\pi)$, and $\sin x/x=1-x^2/6+x^4/120+O(x^6)$ gives $f(x)=x^2/6+x^4/180+O(x^6)$. Taylor's theorem gives the displayed bound with $C_r=\max_{|x|\le r}|f^{(6)}(x)|/6!<\infty$. This is a single-mode statement. Its use in a full determinant requires the mode spectrum and multiplicities; identifying its constant $K$ with $K_{\mathrm{eff}}$ requires a separate mode certificate.
 
-The quartic term and $R_6$ have zero quadratic coefficient at $t=0$, but the leading focusing coefficient is $K/6$ and already depends on curvature. Equation H.18 therefore neither derives $\eta'$ nor excludes an additional curvature-dependent quadratic response. The value of $\eta'$ follows from the declared bridge law and any adopted locality convention.
+The quartic term and $R_6$ have zero quadratic coefficient at $t=0$, but the leading focusing coefficient is $K/6$ and already depends on curvature. Equation H.18 therefore does not exclude an additional curvature-dependent quadratic response. The value of $\eta'$ follows from the declared bridge law and any adopted locality convention.
 
 **Conditional environmental interpolation.** Off-operating-point behavior may be modeled at leading order by evaluating the T2 bridge interpolation $w_{\mathrm{cmp}}(C_{\mathrm{ch}})=C_{\mathrm{ch}}/\varepsilon_0$ at $C_{\mathrm{ch}}\neq C_{\mathrm{max}}^*$. Equation H.18 supplies finite-deviation terms only on its certified constant-curvature mode branch. Fractional values of $w_{\mathrm{cmp}}$ are susceptibility weights, not fractional physical reset or sample counts.
 
@@ -848,7 +848,7 @@ $$
 \tag{H.28}
 $$
 
-*Conditional observable:* Whether this interpolation produces nearly Newtonian dynamics to larger radii depends on an independently registered gravitational response kernel and baryonic profile. Some ultra-diffuse galaxies have been reported to be "dark matter deficient" (e.g., DF2) [van Dokkum et al. 2018], but that observation does not derive the structural weight; it can only test a weight selected independently before comparison.
+*Conditional observable:* Whether this interpolation produces nearly Newtonian dynamics to larger radii depends on an independently registered gravitational response kernel and baryonic profile. Some ultra-diffuse galaxies have been reported to be "dark matter deficient" (e.g., DF2) [van Dokkum et al. 2018]; such observations test a weight selected independently before comparison.
 
 Determining $C_{\mathrm{ch}}$ for a specific system requires an independently specified operational bridge from the system to its structural per-cycle information budget in the sense of Appendix Q. Once that T2 bridge is fixed, Equations (H.4a) and (H.27)–(H.28) give the corresponding conditional $g_0(C_{\mathrm{ch}})$.
 
@@ -925,7 +925,7 @@ g_0=\eta'c^2\sqrt{\frac{\Lambda}{3}}
 \approx1.18\times10^{-10}\,\mathrm{m/s^2}.
 $$
 
-The quoted value is an arithmetic evaluation after Definition H.0 and an external $\Lambda$ are supplied. Its ratio to a representative empirical central value near $1.2\times10^{-10}\,\mathrm{m/s^2}$ is approximately $0.98$; this central-value comparison is not a validation probability, uncertainty coverage statement, or derivation of the bridge.
+The quoted value is an arithmetic evaluation after Definition H.0 and an external $\Lambda$ are supplied. Its ratio to a representative empirical central value near $1.2\times10^{-10}\,\mathrm{m/s^2}$ is approximately $0.98$.
 
 **Dependency Ledger:**
 $$

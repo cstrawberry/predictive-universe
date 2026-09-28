@@ -14,7 +14,7 @@ The framework's core insight—that operational prediction, finite response, and
 
 **Puzzle:** The Standard Model of particle physics and general relativity contain approximately 25 fundamental parameters (masses, coupling constants, mixing angles) whose specific numerical values are precisely measured experimentally but are not derived from first principles within standard frameworks. Why these particular values?
 
-**PU Status-Resolved Mechanism Ledger:** The framework organizes constants into distinct branch-separated chains; it does not presently derive every row from one proved global minimizer of a common PCE potential. Minimal-branch combinatorics, active-constraint KKT data, area-density calibrations, action-unit conversions, determinant models, threshold maps, and observational validations have different premises. Appendix X supplies Constraint--Coupling Duality only after an active admissibility constraint, KKT regularity, and the branch normalization map are registered; a rate-coordinate branch additionally requires its boundary-coordinate map. The table below therefore records for each quantity the exact mechanism and the unresolved certificate, if any. “Derived” refers only to dependence within that complete named branch and never to an unconditional numerical prediction.
+**PU Status-Resolved Mechanism Ledger:** The framework organizes constants into distinct branch-separated chains. Minimal-branch combinatorics, active-constraint KKT data, area-density calibrations, action-unit conversions, determinant models, threshold maps, and observational validations have different premises. Appendix X supplies Constraint--Coupling Duality only after an active admissibility constraint, KKT regularity, and the branch normalization map are registered; a rate-coordinate branch additionally requires its boundary-coordinate map. The table below therefore records for each quantity the exact mechanism and the unresolved certificate, if any. “Derived” refers only to dependence within that complete named branch and never to an unconditional numerical prediction.
 
 **Invariant speed of light $c$:** Theorem 46 supplies a uniform operational causal-speed upper bound only on a branch with a separately registered positive edge-update time, a nonzero microscopic length scale, successive edge-by-edge serialization in the propagation-cost metric, and bounded edge weights. An attained invariant frontier requires an additional attainment record and the Corollary 46a/Appendix O Lorentzian package; the normalization $c=\ell_0/\tau_{\min}$ further requires the normalized uniform-weight one-link-saturation branch. Theorem 29 alone does not establish these additional hypotheses.
 
@@ -85,7 +85,7 @@ g_U^2=\frac{2\pi}{M\chi_U},
 $$
 The values $g_U^2=\pi/6$ and $\alpha_U^{-1}=24$ require the additional specialization $M=24$ and $\chi_U=1/2$.
 
-A continuous-time quantum-error-correction model could compare gauge-coherence maintenance costs only after specifying the noise generator, code family, recovery dynamics, target logical error, physical resource metric, predictive-benefit function, and matching scale. The adjoint Casimirs
+A continuous-time quantum-error-correction comparison of gauge-coherence maintenance costs requires the noise generator, code family, recovery dynamics, target logical error, physical resource metric, predictive-benefit function, and matching scale. The adjoint Casimirs
 $$
 C_2(\operatorname{Adj}_{U(1)})=0,
 \qquad
@@ -93,7 +93,7 @@ C_2(\operatorname{Adj}_{SU(2)})=2,
 \qquad
 C_2(\operatorname{Adj}_{SU(3)})=3
 $$
-are possible group-theoretic inputs to such a model, but they do not determine a polynomial cost law or the minimizing couplings. Any proposed ultraviolet ordering of $g_1,g_2,g_3$ is therefore model-conditional, and its low-energy ordering must be obtained by integrating the registered beta functions with specified boundary, threshold, and normalization data.
+enter such a comparison as group-theoretic inputs; the cost law, the minimizing couplings, and any ultraviolet ordering of $g_1,g_2,g_3$ follow from the complete model, and the low-energy ordering follows by integrating the registered beta functions with specified boundary, threshold, and normalization data.
 
 **Electroweak Scale, Weinberg Angle, and Higgs Status:** Appendix T organizes these rows in one ledger, but their dependencies differ. Theorem T.5 proves the native marked-pair Steiner action
 $$
@@ -110,21 +110,21 @@ with the singleton specialization $v=A_{EW}e^{-\kappa_{EW}}M_{Pl}$. The numerica
 - PCE fixed-point isotropy applies to the canonically normalized signal directions and supplies the unbroken matching-scale gauge relation; SM-normalized weak mixing and its $M_Z$ value additionally require the normalization and threshold/RG maps of Theorems T.13--T.18.
 - Conditional metastability validation via renormalization-group evolution from $\mu_G=M_R=M_{Pl}e^{-9}$; a forward pole claim additionally requires a completed threshold record plus accepted $\mathfrak H_T$ (Sections T.16-T.21)
 
-The shared Golay bookkeeping places these rows alongside Appendix U, but it does not turn the branch-level $\kappa_{EW}$, model-conditional $v$, tree-level Weinberg angle, and validation-level Higgs comparison into one unified quantitative derivation.
+The shared Golay bookkeeping places these rows alongside Appendix U.
 
-**Fermion Masses and Yukawa Couplings: Conditional Certificate Ledger.** The three-generation count has its own anomaly/CP and pre-flavor PPI hypotheses. It does not select physical flavor roots or determine masses and mixings.
+**Fermion Masses and Yukawa Couplings: Conditional Certificate Ledger.** The three-generation count has its own anomaly/CP and pre-flavor PPI hypotheses; flavor roots, masses, and mixings carry the separate records below.
 
 1. $E_8$ supplies admissible discrete distances, but a physical generation-to-root assignment is separate model data.
 2. Converting a selected distance record into a Yukawa or mass ratio requires a registered response function, continuous coefficients, effective dimensions, common-scale scheme, normalization, and nonzero remainder interval.
 3. CKM, PMNS, and CP quantities additionally require forward-locked overlap or holonomy maps, phase conventions, threshold transport, covariance, and held-out validation data.
 
-Equation R.17 is the exact residual-aware model-kernel identity under the common-coefficient ansatz and its nonzero-denominator hypothesis; its zero-residual specialization is a distance-ratio diagnostic, and its identification with a physical mass ratio requires the Definition R.5.1/Theorem T.39 realization gate. The numerical flavor comparisons in Appendices R and T are retrospective or calibrated model evaluations unless every upstream entry is locked before comparison; proximity to observed values is not an independent derivation.
+Equation R.17 is the exact residual-aware model-kernel identity under the common-coefficient ansatz and its nonzero-denominator hypothesis; its zero-residual specialization is a distance-ratio diagnostic, and its identification with a physical mass ratio requires the Definition R.5.1/Theorem T.39 realization gate. The numerical flavor comparisons in Appendices R and T are retrospective or calibrated model evaluations unless every upstream entry is locked before comparison.
 
 
 
 1. **Topological:** The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent topological charges (Theorem R.1.1). Combined with gauge-topology correspondence (Theorem R.3.1), the family-charge anomaly constraints, and the CP-violation requirement, this yields the minimal admissible three-generation pattern with family charges $\{a,-a,0\}$ (Theorem R.3.4), with exact realization on the pre-flavor family-redundancy PPI branch (Proposition R.3.5.1a).
 
-2. **Triality/geometric compatibility:** Proposition R.4.2 records the $D_4$ triality orbit $\{V,S^+,S^-\}$ as a representation-theoretic compatibility check, while the selected $E_8$ root system supplies the finite squared-distance alphabet $\{0,2,4,6,8\}$. Neither fact selects physical flavor labels or implies a mass map.
+2. **Triality/geometric compatibility:** Proposition R.4.2 records the $D_4$ triality orbit $\{V,S^+,S^-\}$ as a representation-theoretic compatibility check, while the selected $E_8$ root system supplies the finite squared-distance alphabet $\{0,2,4,6,8\}$.
 
 On a preregistered diagonal-alignment branch with a common positive exponent coefficient and zero or common certified residual, Equation R.17 reduces to
 $$
@@ -133,7 +133,7 @@ $$
 =\frac{d_{31}^2}{d_{32}^2}
 \in\left\{\frac43,\frac32,2,3,4\right\}.
 $$
-With nonzero residual intervals, Appendix R supplies an interval for $\mathcal R$ instead. The charged-lepton value is therefore an empirical comparison with a conditional discrete diagnostic, not a zero-parameter derivation. Absolute masses additionally require the normalization, scale, heat-kernel, and full-matrix realization records of Theorem T.39.
+With nonzero residual intervals, Appendix R supplies an interval for $\mathcal R$ instead. The charged-lepton value is therefore an empirical comparison with a conditional discrete diagnostic. Absolute masses additionally require the normalization, scale, heat-kernel, and full-matrix realization records of Theorem T.39.
 
 Appendix T (Section T.25) supplies conditional hierarchy-model diagnostics after the geometric labels, coefficients, thresholds, common-scale maps, sector normalizations, and remainder ledgers are fixed:
 - $m_\tau^{(0)}\approx0.94\,\mathrm{GeV}$ is a leading-order normalization candidate with an open factor-$\approx1.9$ gap; anchored lepton ratios are retrospective diagnostics until the full matrix, matching, and remainder records close.
@@ -141,7 +141,7 @@ Appendix T (Section T.25) supplies conditional hierarchy-model diagnostics after
 - $k_{us}^{\mathrm{model}}=0.2261$ is the calibrated frustration-response kernel at the independently registered stiffness point; it is not a physical $|V_{us}|$ until the common flavor certificate is accepted.
 - $c_\ell/c_d=8/3$ is an imposed normalization branch datum, or the conditional output of an accepted $\mathcal V_{\ell d}=0$ Bures-weight certificate; raw gauge/Casimir data do not derive it.
 
-No zero-parameter or sub-percent precision claim follows before the label-selection, stiffness, full-matrix, matching, covariance, and remainder certificates are fixed independently of the comparison data.
+A zero-parameter or sub-percent precision claim requires the label-selection, stiffness, full-matrix, matching, covariance, and remainder certificates fixed independently of the comparison data.
 
 **Branch-Separated technical ledger of derived constants:**
 
@@ -170,7 +170,7 @@ Where a branch supplies a strict PCE minimizer, compactness or coercivity, and a
 
 ## K.3 PU Pathway to Black Hole Information Resolution: Reflexive Dynamics and Perspectival Encoding
 
-The Black Hole Information Paradox, which arises from the conflict between quantum unitarity and the apparent information loss in thermal Hawking radiation, is modeled here as a **reflexive sequential-retrieval problem**. Ordinary measurement back-action does not itself instantiate SPAP. The stronger SPAP reading is available only if a horizon protocol supplies a live stored self-prediction, diagonal target, response map, and intervention-stability certificate; absent that record, reflexivity is an interpretive model rather than the proved source of the paradox.
+The Black Hole Information Paradox, which arises from the conflict between quantum unitarity and the apparent information loss in thermal Hawking radiation, is modeled here as a **reflexive sequential-retrieval problem**.
 
 ### K.3.1 Black Hole Information Retrieval as a Reflexive Problem
 
@@ -221,7 +221,7 @@ Then no protocol in $\mathcal P_{\mathrm{seq}}$ recovers the complete initial-st
 
 *Proof.* If some $P\in\mathcal P_{\mathrm{seq}}$ completed recovery before evaporation, then $t_{\mathrm{extract}}(P)\le t_{\mathrm{evap}}$, contradicting the hypothesis. ∎
 
-The fractional-update growth of Proposition K.1 may enter a future derivation of the timing hypothesis, but it does not supply that derivation by itself.
+The fractional-update growth of Proposition K.1 is a candidate input to the PIC capacity-and-cost calculation that Proposition K.2 assumes.
 
 **Theorem K.2a (Exact Three-Qutrit Sequential-Retrieval Threshold).** Fix any encoder $V_c$ in the frozen class of Theorem E.8.1i. Regard its three output qutrits $E_1,E_2,E_3$ as emitted in that order, one per clock cycle of duration $\tau>0$, and define the exterior channel after cycle $j$ by
 $$
@@ -267,11 +267,11 @@ On the conditionally uniform binary branch, $h_{\min}=\ln2$; equality holds exac
 The **Perspectival Information Channel (PIC)** is a proposed horizon-to-observer channel slot. A physical $C_{\mathrm{PIC}}$ is defined only after a certificate fixes the input and output algebras, CPTP or finite-response map, admissible code and protocol class, norm and error criterion, capacity upper bound, and any attainment witness. Once those data are accepted, the following generic finite-resource constraints may be tested on that same channel:
 1. **Channel limits:** on the unassisted classical communication branch of a memoryless channel with output Hilbert dimension $d_0$, the per-use classical capacity obeys $C_{\max}\le\ln d_0$. The same registered code and resource class is required when applying Theorem E.2's strict bound $C_{\max}<\ln d_0$ on the refresh/minorization branch or Proposition E.2a's bound $C_{\max}\le\ln d_0-\ln2$ on the completed binary reset-support branch. Entanglement assistance, additional side channels, or other resources require their own capacity theorem.
 2. **Registered Reset Cost:** The distribution-sensitive reset ledger of Theorem 31 and Appendix J for each reset actually performed
-3. **Scrambling rounds:** on the model branch with dimensionless horizon entropy $s_{BH}:=S_{BH}/k_B>1$ and registered per-round capacity $C_{PIC}>0$ measured in nats, the dimensionless count is $n_{\mathrm{scr}}\sim(s_{BH}/C_{PIC})\ln s_{BH}$. In units with $k_B=1$, $s_{BH}$ is the numerical entropy in nats. A physical time additionally requires a registered round clock $\tau_{\mathrm{scr}}>0$, giving $t_{\mathrm{scr}}\sim\tau_{\mathrm{scr}}n_{\mathrm{scr}}$. This is a stated scaling model, with no scrambling-time theorem inferred from finite capacity alone.
+3. **Scrambling rounds:** on the model branch with dimensionless horizon entropy $s_{BH}:=S_{BH}/k_B>1$ and registered per-round capacity $C_{PIC}>0$ measured in nats, the dimensionless count is $n_{\mathrm{scr}}\sim(s_{BH}/C_{PIC})\ln s_{BH}$. In units with $k_B=1$, $s_{BH}$ is the numerical entropy in nats. A physical time additionally requires a registered round clock $\tau_{\mathrm{scr}}>0$, giving $t_{\mathrm{scr}}\sim\tau_{\mathrm{scr}}n_{\mathrm{scr}}$.
 
 ### K.3.3 Expansive Reflexivity and Information Conservation
 
-The framework proposes **expansive reflexivity** as a model of exterior accessibility: recovery may require progressively deeper self-referential processing. This proposal does not itself prove global no-deletion or an extraction-time lower bound. The branch-qualified no-deletion theorem is stated below, while observer-relative resource limits concern accessibility rather than the injectivity of the retained update.
+The framework proposes **expansive reflexivity** as a model of exterior accessibility: recovery may require progressively deeper self-referential processing. The no-deletion theorem is stated below on its retained-update branch, while observer-relative resource limits concern accessibility rather than the injectivity of the retained update.
 
 A sufficient promotion hypothesis for no recovery before evaporation is
 $$
@@ -279,7 +279,7 @@ $$
 $$
 proved from a specified protocol class, channel capacity, clock, and decoding lower bound. Finite resources alone do not imply this comparison.
 
-On the accepted injective retained-horizon update of Theorem K.3.3a, distinct retained response classes are not merged. This no-deletion conclusion is branch-local: it follows from the stipulated isometry, or from the stronger Theorem-E.9.5 automorphism circuit, and not from the MPU label alone.
+On the accepted injective retained-horizon update of Theorem K.3.3a, distinct retained response classes are not merged. The conclusion follows from the stipulated isometry, or from the stronger Theorem-E.9.5 automorphism circuit.
 
 **Theorem K.3.3a (Retained Horizon No-Deletion).** Let $\mathcal H_{\mathrm{tot}}(t)$ be the finite-response Hilbert representative of the retained black-hole-plus-radiation branch at time $t$, and let
 $$
@@ -323,7 +323,7 @@ R_{\mathrm{ext}}\circ\iota_{t_1t_0}
 =
 \mathrm{id}
 $$
-on the retained interior subalgebra, and a von Neumann Page-entropy estimate is stronger still because it requires the trace-coupled continuity certificate of Section K.3.5; scrambling or moment control alone does not supply it. On an accepted injective retained-update branch, a specified exterior coarse algebra or resource-bounded protocol may exhibit apparent loss through inaccessible retained distinctions; attributing that loss to perspectival limitations requires the corresponding coarse-algebra and access certificate.
+on the retained interior subalgebra, and a von Neumann Page-entropy estimate is stronger still because it requires the trace-coupled continuity certificate of Section K.3.5. On an accepted injective retained-update branch, a specified exterior coarse algebra or resource-bounded protocol may exhibit apparent loss through inaccessible retained distinctions; attributing that loss to perspectival limitations requires the corresponding coarse-algebra and access certificate.
 
 ### K.3.4 Testable Predictions and Open Questions
 
@@ -346,7 +346,7 @@ The PU framework makes layer-separated black-hole diagnostics. Each row records 
 
 ### K.3.5 Consistency with the Page Curve
 
-On the horizon entropy-continuity branch, the PU framework is consistent with Page-curve behavior for the entanglement entropy of the Hawking radiation. Let $S_E(t)$ denote the von Neumann entropy of the early radiation subsystem at time $t$. The structural information-conservation result is independent of this trace-coupled promotion branch; the von Neumann Page-curve estimate is not. Bare moment-design control supplies the Page-purity law of Corollary K.3.1 unless it is strengthened by the trace-coupled certificate of Definition K.3d.4c.
+On the horizon entropy-continuity branch, the PU framework is consistent with Page-curve behavior for the entanglement entropy of the Hawking radiation. Let $S_E(t)$ denote the von Neumann entropy of the early radiation subsystem at time $t$. The structural information-conservation result is independent of this trace-coupled promotion branch; the von Neumann Page-curve estimate is not.
 
 **Theorem K.3 (Page Curve Consistency on the Horizon Entropy-Continuity Branch).** Let $d_E(t)\ge2$ and $d_L(t)$ be the early-radiation and late/interior Hilbert dimensions on a finite evaporation branch. Let $S_{\mathrm{Page}}(d_E,d_L)$ denote the exact Haar-average entropy of the smaller subsystem:
 $$
@@ -857,7 +857,7 @@ $$
 $$
 for the registered evaporation time and dimensions. The forward-lock $\chi_{\mathrm{PageTV}}$ records that the coupling protocol, dimension ledger, norm, and error ceiling were fixed before Page-curve comparison. This promotion certificate is stronger than a moment-design certificate: a bare $t_{\mathrm{des}}=2$ moment certificate controls the Haar Page-purity observable, while the von Neumann entropy estimate of Theorem K.3 requires the trace-coupled condition (K.3d.4c.2).
 
-**Remark K.3d.4c.a (Status of the Promotion Data).** The trace-coupled bound (K.3d.4c.2) is an additional certified hypothesis, not a consequence of the base moment-design certificate alone. A derivation of (K.3d.4c.2) from $\mathfrak C_{\mathrm{Hdesign}}$ would have to supply an explicit high-moment-to-trace-norm upgrade theorem, including the required scaling of $t_{\mathrm{des}}$ in $d_E$ and the associated error constants. No general logarithmic lower bound on $t_{\mathrm{des}}$ is claimed without a specified approximation theorem and norm-to-entropy conversion. Alternatively, the certificate may supply a separate dynamical coupling or trace-mixing estimate directly in trace norm. The branch organization therefore records $\mathfrak C_{\mathrm{PageTV}}$ as admissible promotion data, not as freely available from $\mathfrak C_{\mathrm{base}}$. Supplying such a trace-coupled promotion certificate from first principles for a concrete physical horizon remains a branch-level development task.
+**Remark K.3d.4c.a (Status of the Promotion Data).** The trace-coupled bound (K.3d.4c.2) is an additional certified hypothesis, not a consequence of the base moment-design certificate alone. A derivation of (K.3d.4c.2) from $\mathfrak C_{\mathrm{Hdesign}}$ would have to supply an explicit high-moment-to-trace-norm upgrade theorem, including the required scaling of $t_{\mathrm{des}}$ in $d_E$ and the associated error constants. No general logarithmic lower bound on $t_{\mathrm{des}}$ is claimed without a specified approximation theorem and norm-to-entropy conversion. Alternatively, the certificate may supply a separate dynamical coupling or trace-mixing estimate directly in trace norm. Supplying such a trace-coupled promotion certificate from first principles for a concrete physical horizon remains a branch-level development task.
 
 **Definition K.3d.4d (Relative-Entropy Contraction Trace-Coupling Certificate).** A relative-entropy contraction trace-coupling certificate is a finite record
 $$
@@ -956,7 +956,7 @@ so (K.3d.7) follows. The emission channel differs from the certified horizon mom
 
 ### K.3.6 Finite-Budget Predictive Uncertainty Gate
 
-The finite-channel-capacity bounds of Appendix E and the predictive island Markov-blanket cost of Definition K.3b constrain the declared information and reconstruction ledgers on their accepted branches. This subsection proves a complementary norm bound for configuration and update-momentum supports of a specified finite cyclic Fourier map. When the support-size product is below the cycle budget, it gives positive one-step leakage. Applying that result to an evaporating-horizon or remnant sector requires the physical state, readout, and update identifications of Remark K.3f.1; excluding indefinite storage also requires its separate iterated-dynamics or mixing certificate.
+The finite-channel-capacity bounds of Appendix E and the predictive island Markov-blanket cost of Definition K.3b constrain the declared information and reconstruction ledgers on their accepted branches. This subsection proves a complementary norm bound for configuration and update-momentum supports of a specified finite cyclic Fourier map. When the support-size product is below the cycle budget, it gives positive one-step leakage.
 
 **Definition K.3e (Finite-Budget Update Group and Discrete Fourier).** Let $\Lambda\in\mathbb N$, $\Lambda\geq1$, be the SPAP cycle budget on a registered evaporation branch. Choose the cyclic quotient $\mathbb Z/\Lambda\mathbb Z$ of the integer update-count group in Definition Q.0.6a.1 as an additional periodic-update model. A finite budget alone does not identify counts modulo $\Lambda$. The *finite-budget discrete Fourier operator* $F_\Lambda$ on $\ell^2(\mathbb{Z}/\Lambda\mathbb{Z})$ is the unitary
 
@@ -1066,14 +1066,14 @@ $$
 $$
 By Theorem K.3e, $\|\Pi_XF_\Lambda\psi\|^2\le |X||P|/\Lambda$. Substitution gives (K.3f.2). $\square$
 
-**Remark K.3f.1 (Status and Scope).** Theorem K.3e and Corollary K.3f are operator-norm statements for the specified discrete Fourier map on a finite-budget cyclic group. For a unit vector supported on $P$, they give one-step leakage outside $X$ of at least $1-h^{1-\delta_X-\delta_P}$ when $\delta_X+\delta_P<1$. Applying this estimate to a physical evaporation or remnant sector requires a separate protocol map identifying its state and readout supports with $P$ and $X$ and identifying the relevant update with $F_\Lambda$. Excluding indefinite storage additionally requires an iterated-dynamics or mixing theorem. The finite Fourier estimate alone supplies neither physical identification.
+**Remark K.3f.1 (Status and Scope).** Theorem K.3e and Corollary K.3f are operator-norm statements for the specified discrete Fourier map on a finite-budget cyclic group. For a unit vector supported on $P$, they give one-step leakage outside $X$ of at least $1-h^{1-\delta_X-\delta_P}$ when $\delta_X+\delta_P<1$. Applying this estimate to a physical evaporation or remnant sector requires a separate protocol map identifying its state and readout supports with $P$ and $X$ and identifying the relevant update with $F_\Lambda$. Excluding indefinite storage additionally requires an iterated-dynamics or mixing theorem.
 
-**Remark K.3f.2 (Conditional Connection to the Center-Ledger Area-Law Criterion).** On the rootless flux-tube branch of Proposition Z.8d, Theorem X.9.5d.4 gives a finite center-ledger criterion for Wilson-loop area law when its unbroken-center and positive-surface-gap hypotheses hold, including the aggregate bound on normalized sheet weights. Corollary K.3f can be applied to that sector only if an additional finite representation identifies the physical Wilson-line protocol with the cyclic Hilbert space, identifies the trapped flux and conjugate update sectors with $\Pi_X$ and $\Pi_P$, and intertwines the physical update with $F_\Lambda$. Under that representation, the condition $\delta_X+\delta_P<1$ gives the leakage bound of Corollary K.3f. Without it, the Fourier inequality and the center-ledger area-law criterion are separate statements.
+**Remark K.3f.2 (Conditional Connection to the Center-Ledger Area-Law Criterion).** On the rootless flux-tube branch of Proposition Z.8d, Theorem X.9.5d.4 gives a finite center-ledger criterion for Wilson-loop area law when its unbroken-center and positive-surface-gap hypotheses hold, including the aggregate bound on normalized sheet weights. Corollary K.3f can be applied to that sector only if an additional finite representation identifies the physical Wilson-line protocol with the cyclic Hilbert space, identifies the trapped flux and conjugate update sectors with $\Pi_X$ and $\Pi_P$, and intertwines the physical update with $F_\Lambda$. Under that representation, the condition $\delta_X+\delta_P<1$ gives the leakage bound of Corollary K.3f.
 
 
 ## K.4 Arrow of Time and Temporal Asymmetry
 
-**Puzzle:** Why does time have a preferred direction, with entropy increasing toward the future? Wolpert, Rovelli & Scharnhorst (2025) study a specified time-symmetric Markov entropy model in which boundary conditioning can select a temporal direction. That model comparison does not establish a universal circularity theorem for statistical mechanics, or privilege a particular boundary condition without further premises. The PU branch below therefore requires its own declared boundary state and physical realization before it can be compared with the Past Hypothesis or other accounts.
+**Puzzle:** Why does time have a preferred direction, with entropy increasing toward the future? Wolpert, Rovelli & Scharnhorst (2025) study a specified time-symmetric Markov entropy model in which boundary conditioning can select a temporal direction. That model comparison does not establish a universal circularity theorem for statistical mechanics, or privilege a particular boundary condition without further premises.
 
 **PU Resolution:** A thermodynamic arrow requires a registered total-production certificate. For every reset event satisfying Definition 28, Theorem 31 gives $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; a floor $H_q(P\mid R)\ge h_{\min}>0$ bounds the registered reset ledger and its bath-entropy export on the thermal branch, but does not imply positive total entropy production. A noninjective prescribed-ready merge is available on the declared binary-ancilla architecture only under the reachable-domain hypothesis of Appendix J, Lemma J.1.
 
@@ -1083,16 +1083,16 @@ $$
 $$
 Strict increase requires a positive term in this ledger. Theorem O.2 concerns low-noise concentration near synchronization and does not supply this production identity. The quantitative suppression of reversed trajectories in Theorem O.3 requires forward and reversed path measures on the same event algebra, $\log(P_F/P_R)=\sum_{k=1}^N\sigma_k$, and $\sigma_k\ge h_{\min}>0$ for every selected cycle; it then gives $P_R/P_F\le e^{-Nh_{\min}}$. Theorem P.12.2 distinguishes a protocol's causal ordering, reset-bath entropy, and a physical thermodynamic arrow; the ordering of a Predict--Verify--Update protocol requires its declared operation order.
 
-**Cosmological Implications:** On that branch, a low-entropy initial condition may be modeled as a state with small accumulated registered production. Any claim that PCE dynamically selects such an initial condition requires an independent cosmological boundary-selection theorem; it does not follow from Theorem 31 or Theorems O.2–O.3 alone.
+**Cosmological Implications:** On that branch, a low-entropy initial condition may be modeled as a state with small accumulated registered production. PCE selection of such an initial condition requires an independent cosmological boundary-selection theorem.
 
-**Connection to Other Arrows:** The framework distinguishes rather than universally unifies several arrows:
+**Connection to Other Arrows:** The framework distinguishes several arrows:
 - **Thermodynamic:** pathwise orientation only under Appendix O's common-measure and positive-production certificate
 - **Causal:** directionality only on the registered propagation and channel branch
 - **Psychological:** memory formation only with a specified physical write or reset and resource ledger
 - **Cosmological:** expansion and a low-entropy boundary require independent cosmological dynamics and boundary data
 
 **Perspectival Structure of the Arrow:** Proposition O.4.2 grades the availability of receiver-pattern self-model descriptors, not the existence of a thermodynamic arrow. A directional probability bound requires the common forward/reverse path algebra and positive pathwise-production certificate of Theorem O.3 or O.3a. A registered reset separately obeys Theorem 31: $H_q(P\mid R)>0$ is sufficient for positive reset heat, while positive dissipation can give positive heat even when $H_q(P\mid R)=0$. Theorem M.10.3 gives an asymptotic integration-cost lower bound on its pattern-specific reduction branch, Theorem M.10.4 constructs a boundary pattern under its independent-register and realization hypotheses, and Theorem M.10.6 states the corresponding integration criterion and conditional cost obstruction. The quantitative lower bound of Theorem B.2 enters through the uniform reduction certificate of Corollary B.2.1. These are statements about the declared pattern-integration task; physical restoration of a state requires a separately specified implementation map. The retained-history conclusion of Theorem O.4 is compatible with the closed finite-layer unitary branch of Theorem E.9.5. Theorem O.4 distinguishes recurrence of an accessible state from deletion of a forward-locked retained history; it does not forbid external restoration of a selected state, and claims about external access or assistance retain the separate hypotheses of Corollaries O.4.1 and O.4.3.
-On the common forward/reverse path algebra with the positive pathwise-production certificate of Theorem O.3 or O.3a, the cited results supply a conditional microscopic production orientation. A registered reset with a positive conditional-entropy floor separately gives a positive bath-entropy export bound under Theorem 31; it does not by itself give positive total entropy production. They do not prove that every MPU cycle has positive production, select a cosmological boundary measure, remove all temporal conditioning choices, or compare the probability of Boltzmann-brain histories with ordinary cosmological histories. Establishing a global arrow and an initial low-entropy state therefore requires additional network-dynamical and cosmological boundary-selection results.
+On the common forward/reverse path algebra with the positive pathwise-production certificate of Theorem O.3 or O.3a, the cited results supply a conditional microscopic production orientation. A global arrow and an initial low-entropy state additionally require network-dynamical and cosmological boundary-selection results.
 
 ## K.5 Throughput and Finite-Resolution Certificate Boundary
 
@@ -1212,14 +1212,14 @@ G_{\mathrm{op}}
 $$
 The final Bekenstein--Hawking reading uses the two stated bridges and does not follow from channel counting alone. ∎
 
-**Physical Interpretation:** On the throughput branch, no finite-area, finite-clock protocol in the declared channel class extracts information at an unbounded rate. On the curvature branch, the controlled Fermi expansion loses its certificate at finite framewise curvature. Horizon formation, MPU successor dynamics, and preservation of exterior predictability remain separate questions; the two theorems do not establish a censorship dichotomy.
+**Physical Interpretation:** On the throughput branch, no finite-area, finite-clock protocol in the declared channel class extracts information at an unbounded rate. On the curvature branch, the controlled Fermi expansion loses its certificate at finite framewise curvature.
 
 
 ## K.6 Conditional Strong-CP Branch
 
 **Puzzle:** Quantum chromodynamics permits a CP-violating term proportional to $\theta_{\mathrm{QCD}}\,\operatorname{tr}(G_{\mu\nu}\widetilde G^{\mu\nu})$. The neutron-electric-dipole-moment limit (Abel et al. 2020), combined with a hadronic estimate for its $\bar\theta$ dependence (Pospelov & Ritz 2005), constrains $|\bar\theta|$ at the $10^{-10}$ scale when that contribution dominates. Why is this parameter so small, despite the observed CP violation in the weak sector?
 
-**Conditional branch statement:** If the framework is supplied with a constructed equivariant $\sigma$-CP parameter map, an accepted gauge-topology bridge relating the QCD second-Chern sector to the retained holonomy coordinate, a $\sigma$-invariant vacuum, a certified operative QCD vacuum-selection functional with that vacuum as a global minimizer on the retained invariant sector, and a common-convention absolute determinant-line certificate for the full quark mass matrices, then $z_{\mathrm{CP}}=e^{i\bar\theta}=1$ and hence $\bar\theta\equiv0\pmod{2\pi}$. The all-harmonic route of Theorem K.6.2a can replace the first-harmonic ansatz when its positive sector-partition hypotheses are constructed. These are branch hypotheses; this section does not construct them from QCD or establish a branch-independent solution.
+**Conditional branch statement:** If the framework is supplied with a constructed equivariant $\sigma$-CP parameter map, an accepted gauge-topology bridge relating the QCD second-Chern sector to the retained holonomy coordinate, a $\sigma$-invariant vacuum, a certified operative QCD vacuum-selection functional with that vacuum as a global minimizer on the retained invariant sector, and a common-convention absolute determinant-line certificate for the full quark mass matrices, then $z_{\mathrm{CP}}=e^{i\bar\theta}=1$ and hence $\bar\theta\equiv0\pmod{2\pi}$. The all-harmonic route of Theorem K.6.2a can replace the first-harmonic ansatz when its positive sector-partition hypotheses are constructed. The construction of these branch hypotheses from QCD remains open.
 
 ### K.6.1 The Physical θ-Parameter
 
@@ -1444,7 +1444,7 @@ so the determinant map sends every class of $\pi_3(SU(3))\cong\mathbb Z$ to the 
 
 ### K.6.5 PCE Cost Functional on S¹
 
-The θ-parameter lives on the circle $S^1 \cong U(1)$. The retained PCE cost is specified on the first-harmonic branch of Theorem K.6.2; smoothness, parity, periodicity, and the quadratic coefficient alone do not determine it.
+The θ-parameter lives on the circle $S^1 \cong U(1)$. The retained PCE cost is specified on the first-harmonic branch of Theorem K.6.2.
 
 **Definition K.6.9 (Topological Susceptibility).** On a translation-invariant Euclidean branch, let $C(x):=\langle Q(x)Q(0)\rangle_c$ be an absolutely integrable real connected covariance. Assume that the integrated charges $\nu_D:=\int_D Q(x)\,d^4x$ exist in mean square for the retained bounded measurable regions and that their second moments permit Fubini's theorem. Choose regions $D_L$ with volumes $V_L:=|D_L|>0$, $V_L\to\infty$, and
 $$
@@ -2094,7 +2094,7 @@ so $z_{\mathrm{CP}}$ is invariant although its two terms are not. Consequently t
 
 *Proof.* The anomalous Jacobian of the chiral rephasing shifts the coefficient of the topological term by the negative of the mass-determinant phase shift. Their sum modulo $2\pi$, and hence $z_{\mathrm{CP}}$, is unchanged. Therefore the individual zero statements are convention-dependent bookkeeping statements, whereas $z_{\mathrm{CP}}=1$ is the physical conclusion. Theorem K.6.11 is valid only when its gauge and flavor certificates use the same convention and jointly establish that invariant conclusion. ∎
 
-**Remark K.6.2: Contrast with Fine-Tuning.** In standard treatments, $\bar\theta\approx0$ can be written in a fixed convention as a cancellation between $\theta_{\mathrm{QCD}}$ and $\arg\det(M_uM_d)$. In the conditional branch of Theorem K.6.11, the common-convention gauge and full-mass determinant-line certificates jointly give the invariant statement $z_{\mathrm{CP}}=1$ without a fitted cancellation. The $E_8$ input supplies the positive Yukawa magnitude kernel; it supplies neither the full Berry-phased determinant line nor its orientation.
+**Remark K.6.2: Contrast with Fine-Tuning.** In standard treatments, $\bar\theta\approx0$ can be written in a fixed convention as a cancellation between $\theta_{\mathrm{QCD}}$ and $\arg\det(M_uM_d)$. In the conditional branch of Theorem K.6.11, the common-convention gauge and full-mass determinant-line certificates jointly give the invariant statement $z_{\mathrm{CP}}=1$ without a fitted cancellation. The $E_8$ input supplies the positive Yukawa magnitude kernel.
 
 ### K.6.10 $E_8$ Triad Selection
 
@@ -2174,7 +2174,7 @@ The three $\mathcal R_{\mathrm{input}}$ values are supplied comparison inputs. T
 
 ### K.6.11 Absolute Strong-Sector Classes and Relative CP Responses
 
-The framework distinguishes absolute strong-sector phase data from relative CP-response data. On the complete conditional Appendix K branch, the absolute strong-sector class is trivial, while a separately certified weak-sector Berry phase may remain nonzero; this does not explain why physical QCD realizes the Appendix K hypotheses.
+The framework distinguishes absolute strong-sector phase data from relative CP-response data. On the complete conditional Appendix K branch, the absolute strong-sector class is trivial, while a separately certified weak-sector Berry phase may remain nonzero.
 
 **Definition K.6.13 (Type I Absolute Strong-Sector Class).** The basis-invariant absolute determinant-line class is
 $$
@@ -2352,7 +2352,7 @@ exact/non-exact distinction. ∎
 
 
 
-The retained Type II CP datum is one input to baryogenesis, not a complete source.
+The retained Type II CP datum is one input to baryogenesis.
 
 **Proposition K.6.6 (Sakharov-Condition Certificate Criterion).** A branch satisfies the three Sakharov conditions for baryogenesis (Sakharov 1967) if it carries:
 
@@ -2495,11 +2495,11 @@ Explicitly:
 |:---------|:----------|:------------|:-----------|:-------|
 | **Peccei-Quinn** (Peccei & Quinn 1977a, 1977b) | U(1)_PQ → axion | Axion field | QCD-axion mass depends on the Peccei-Quinn scale $f_a$, with $m_a\propto f_a^{-1}$; no unique mass is selected by the mechanism alone ([mass relation](https://arxiv.org/pdf/1511.02867), Equation (11)) | Testable through specified mass-coupling branches |
 | **Nelson–Barr** | Non-PQ strong-CP model class generalizing Nelson (Barr 1984) | Model-specific field content | Model-dependent | Conditional model constructions; no generic viability assessment is supplied here |
-| **Massless u** | A zero up-quark mass can remove the strong-CP parameter | No additional field required by this proposal | $m_u=0$ | Incompatible with the topological-mass contribution found in Alexandrou et al. (2020); this is a reported lattice-QCD exclusion, not a theorem from the PU framework |
+| **Massless u** | A zero up-quark mass can remove the strong-CP parameter | No additional field required by this proposal | $m_u=0$ | Incompatible with the topological-mass contribution found in Alexandrou et al. (2020), a reported lattice-QCD exclusion |
 | **Anthropic** | Selection hypothesis; no concrete selection measure specified here | Unspecified | No quantitative prediction derived here | Not assessed in this comparison |
 | **PU conditional branch** | Constructed equivariant $\sigma$-CP map + accepted QCD gauge-topology bridge + $\sigma$-invariant vacuum + positive first-harmonic cost certified as the operative QCD vacuum-selection functional with a globally minimizing realized vacuum + determinant- or Pfaffian-orientation certificate | None introduced by this branch | $\bar\theta\equiv0\pmod{2\pi}$ if every hypothesis is supplied | Conditional implication; physical bridge records open |
 
-**Scope Distinction:** This conditional branch introduces no new field, but it neither proves that no axion exists nor establishes an exhaustive QCD solution. Its geometric ingredients overlap with other framework branches only through separately accepted bridge certificates; agreement in the fine-structure, dimension, cosmological, electroweak, or baryogenesis sectors does not validate the strong-CP hypotheses.
+**Scope Distinction:** This conditional branch introduces no new field; Branch-Scope Statement K.6.1 fixes its relation to axion searches. Its geometric ingredients overlap with other framework branches only through separately accepted bridge certificates.
 
 ### K.6.16 Summary
 
@@ -2545,9 +2545,9 @@ T.53/$\mathfrak C_{\mathrm{fl}}$ gate, and it is only one optional CP input
 to Appendix Y; baryogenesis also permits an independent flavor-free CP
 certificate and always requires separate source and transport closure.
 
-5. **Empirical scope:** The branch introduces no axion and implies $\bar\theta\equiv0\pmod{2\pi}$ only after every stated bridge, vacuum, cost-selection, global-minimizer, and orientation hypothesis is supplied. Absence of an axion is not a branch-independent prediction, and the branch does not determine the total neutron EDM.
+5. **Empirical scope:** The branch introduces no axion and implies $\bar\theta\equiv0\pmod{2\pi}$ only after every stated bridge, vacuum, cost-selection, global-minimizer, and orientation hypothesis is supplied; Branch-Scope Statements K.6.1 and K.6.2 fix its relation to axion searches and to the total neutron EDM.
 
-The construction is a conditional consistency branch, not a derivation of why physical QCD realizes its hypotheses. It neither excludes Peccei-Quinn physics nor proves the absence of additional fields or symmetries. Connections to the generation and fine-structure branches are compatibility records; they do not construct the QCD gauge-topology bridge or select the physical vacuum.
+The construction is a conditional consistency branch whose connections to the generation and fine-structure branches are compatibility records.
 ---
 
 
@@ -2556,7 +2556,7 @@ The construction is a conditional consistency branch, not a derivation of why ph
 
 Theorem T.5 supplies the finite combinatorial value $\kappa_{\mathrm{St}}=77/2$. Accepted $\mathfrak C_{A\to\mathrm{St}}$ is required for $\kappa_{EW}=\kappa_{\mathrm{St}}$, and accepted $\mathfrak S_{EW}$ with a same-saddle determinant/matching record is required for the scale interval. Neither the native value nor its transported action protects a dimensionful scale from radiative or threshold corrections. Technical naturalness requires the registered renormalized effective action, symmetry or nonrenormalization mechanism, beta functions, matching thresholds, counterterm scheme, and determinant-remainder bounds.
 
-Therefore PU does not presently provide a complete hierarchy-problem solution. Numerical proximity after inserting the determinant-model inputs is a validation datum, not a derivation. Gaussian and higher corrections have no universal $O(1)$ bound without the missing fluctuation-spectrum and renormalization certificate.
+Numerical proximity after inserting the determinant-model inputs is a validation datum, not a derivation. Gaussian and higher corrections have no universal $O(1)$ bound without the missing fluctuation-spectrum and renormalization certificate.
 
 
 
@@ -2597,10 +2597,10 @@ where $M_{Pl}$ is the unreduced Planck mass, $I_A\subset\mathbb R_{>0}$ is the d
 **Phenomenological Success:**
 - Hierarchy: $v \approx 246$ GeV (input) → test internal consistency
 - $\sin^2\theta_W(M_Z)$: with external comparison input $(\Delta_1,\Delta_2,\Delta_3)=(15.14,20.94,18.41)$, one-loop SM RG evolution from the matching boundary $\sin^2\theta_W(\mu_G) = 3Z_2/(3Z_2+5Z_1)$ with $Z_i=1+\Delta_i/24$ gives the displayed one-loop diagnostic **(Theorems T.16, T.18)**. On the literal-spectrum, active-gauge-trivial branch of Remark T.17a.3, this tuple violates $5\Delta_1-3\Delta_2-2\Delta_3=0$ and cannot be obtained from the candidate map $\Delta=T_0F$, irrespective of the sector spectra (Proposition T.17a.5). Theorem T.78.5 separately records the absence of an accepted PU-internal spectral branch package
-- $m_H\approx125$ GeV as an external-RG validation value; a completed threshold record plus every member of $\mathfrak H_T$ must be specified before it becomes a forward branch prediction
+- $m_H\approx125$ GeV as an external-RG validation value
 - Fermion mass ratios (Appendix T, Section T.25)
 
-The electroweak hierarchy chain gives a model-conditional internal expression for the scale $v$ once the Appendix T determinant prescription is specified. The abstract PU zero-slack statement concerns $\lambda_{\mathrm{PU}}(\mathfrak A_{\mathrm{PU}})$ on the accepted target-shift branch; it is not the observed-input SM crossing $\lambda_{\mathrm{SM}}(\mu_\lambda)=0$. A Higgs pole value near $125$ GeV remains an external-RG validation value until a completed threshold record and $\mathfrak H_T=(\mathcal M_\gamma,\mathfrak M_\lambda,\mathcal C_{\mathrm{crit}},\mathcal R_{\mathrm{RG}},\mathcal C_{\mathrm{dec}},\mathcal C_{\mathrm{pole}})$ are accepted before comparison. The quantitative gauge-threshold sector likewise requires an accepted represented spectral branch and physical matching map specified before comparison. Theorem T.78.5 records the absent spectral package; computing additional spectral data under the same candidate map $\Delta=T_0F$ cannot remove the representation-level incompatibility of the displayed comparison tuple.
+The electroweak hierarchy chain gives a model-conditional internal expression for the scale $v$ once the Appendix T determinant prescription is specified. The abstract PU zero-slack statement concerns $\lambda_{\mathrm{PU}}(\mathfrak A_{\mathrm{PU}})$ on the accepted target-shift branch; it is not the observed-input SM crossing $\lambda_{\mathrm{SM}}(\mu_\lambda)=0$.
 
 
 ## K.8 Cosmological Constant and Primordial Perturbations
@@ -2615,7 +2615,7 @@ of complex dimension $\kappa_0 = k(M-k)=144$ (Theorem U.3). Appendix U then intr
 $$\kappa_{\mathrm{ref}} = \frac{N_{\mathbb{R}} - m}{2},$$
 with $N_{\mathbb{R}}=288$ and $m=5$ used as the Appendix U five-mode reference count, giving
 $$\kappa_{\mathrm{ref}} = 141.5$$
-(Theorems U.15-U.16). Theorem U.8c strengthens the status statement: in the current Definition U.4 continuum action, the pure-coordinate dilatation tangent has strictly negative Hessian quadratic form and is not a zero mode; the theorem does not identify it as a Hessian eigenvector. The five-mode value therefore remains a reference branch rather than a theorem-level vacuum closure. Theorem U.13b closes only the four-mode radially continuous, sampled-angular Hessian problem under its stated spectral hypotheses. The number $142$ is an arithmetic reference index until $\mathfrak C_{U,\mathrm{mark}}$ transports that nullity into the independent $288$-direction carrier.
+(Theorems U.15-U.16). Theorem U.8c strengthens the status statement: in the current Definition U.4 continuum action, the pure-coordinate dilatation tangent has strictly negative Hessian quadratic form and is not a zero mode; the theorem does not identify it as a Hessian eigenvector. The five-mode value therefore remains a reference branch rather than a theorem-level vacuum closure.
 
 **Independent-carrier compatibility ledger:** The following finite structures share stated numerical invariants, but none constructs the Appendix U complex carrier, its Hessian intertwiner, its action, or its cosmological realization:
 - **Interface modes:** $M = 2ab = 24$ where $a = 2$ (active kernel, Theorem Z.1) and $b = 6$ (inactive complement)
@@ -2655,7 +2655,7 @@ $$
 =\frac{568}{77}
 \approx7.3766.
 $$
-The factor of two is an action-placement convention, not a shared zero-mode or configuration-dimension mechanism. The five-mode value is a reference convention. The four-mode number is an arithmetic index after U.13b and becomes an action exponent only on the accepted marking and exact exponent-calibration branch; its Euclidean weight and physical cosmological realization require $\mathfrak F_U^{(4)}$ and $\mathfrak R_\Lambda^{(4)}$, respectively.
+The factor of two is an action-placement convention, not a shared zero-mode or configuration-dimension mechanism.
 
 **Primordial Sector:** On the independently registered reference-plane branch $S_U\cong\mathbb C^{12}$, Definition U.18 defines $\mathbb P(S_U)\cong\mathbb{CP}^{11}$ and Theorem U.19 gives its complex dimension $11$. The predictive-recovery MacWilliams rate supplies the number $12$, while a binary-code, QFI, or physical primordial interpretation requires a separate carrier/observable realization. Identification U.20 then posits the additional complexity map $\kappa_Q=\dim_{\mathbb C}\mathbb{CP}^{11}=11$; this is not implied by the vacuum Hessian count. Theorem U.27 gives
 $$
@@ -2665,7 +2665,7 @@ and the displayed value
 $$
 Q=\frac{e^{-11}}{\sqrt2}=1.181\times10^{-5}
 $$
-uses the separate leading-prefactor assumption $A_Q=1$. A theorem-level numerical amplitude requires the primordial determinant certificate of Definition U.26b and Theorem U.26c. The Starobinsky truncation is Assumption U.48, and $N_e=59.4$ additionally uses the registered constraint, scalaron map, initial condition $\phi_0=\phi_{\max}$, and trans-horizon quotient summarized by Definition U.69a. These entries form a falsifiable conditional branch, not a consequence of the Golay space alone.
+uses the separate leading-prefactor assumption $A_Q=1$. A theorem-level numerical amplitude requires the primordial determinant certificate of Definition U.26b and Theorem U.26c. The Starobinsky truncation is Assumption U.48, and $N_e=59.4$ additionally uses the registered constraint, scalaron map, initial condition $\phi_0=\phi_{\max}$, and trans-horizon quotient summarized by Definition U.69a. These entries form a falsifiable conditional branch.
 
 **Conditional Leading-Branch Inflationary Evaluation (Appendix U, Sections U.24-U.25):** The numerical column assumes the complete leading primordial branch recorded above; absent an accepted $\mathfrak P_{\mathrm{prim}}$, the formulas remain interval-valued functions of the certificate inputs.
 
@@ -2677,7 +2677,7 @@ uses the separate leading-prefactor assumption $A_Q=1$. A theorem-level numerica
 | $\Delta N_e$ | $\pm 0.5$ as an illustrative allowance | N/A | A certified e-fold interval requires $\mathfrak E_N$ |
 | $f_{\text{amp}}$ | $1$ on $A_Q=1$; $0.98$ on $A_Q=0.9604$ | N/A | $f_{\text{amp}}^2:=A_Q$; $A_s$ scales by this factor |
 
-The ratios $141.5/11\approx12.86$ and $142/11\approx12.91$ compare the registered vacuum and primordial complexity parameters on their respective branches. They organize a reference arithmetic comparison only after the independent carrier, action-placement, determinant/prefactor, and primordial-complexity records are accepted. The Golay ledger shares the integers $(24,12)$ but is not a common carrier and does not derive either physical amplitude.
+The ratios $141.5/11\approx12.86$ and $142/11\approx12.91$ compare the registered vacuum and primordial complexity parameters on their respective branches. They organize a reference arithmetic comparison only after the independent carrier, action-placement, determinant/prefactor, and primordial-complexity records are accepted.
 
 
 ## K.9 Cosmology: Time-Varying Gravitational Coupling and Unified Dark Sector
@@ -2865,7 +2865,7 @@ where $x_c(n)$ is the unique positive root of $e^{x}=1+n\,x$. The crossing lies 
 - Effective negative pressure: in matter domination, $p_{ad} = -\dot\Upsilon_G\rho_b/(3H)$.
 - Phantom-divide structure: by Theorem K.9.3d, $w_{DE}>-1$ throughout for $n=1$, and for $n>1$ each expanding interval whose sparsity range straddles the threshold has one phantom-divide crossing, from $w_{DE}<-1$ to $w_{DE}>-1$, at the redshift (K.9.3e.1).
 - Coupling cap: $\Upsilon_G<1+A_c$ at every finite $s_{bg}$, with saturation only in the de Sitter limit (K.9.10); on the capacity-tracking branch of Definition K.9.5e the cap is exactly $2$.
-- Local gravity tests constrain the drift predicted by a registered background-to-local coupling and screening map, including its clock conversion. A direct constraint on the homogeneous ratio $|\dot\Upsilon_G/\Upsilon_G|$ requires that map to identify it with the tested local drift. On the matter branch the homogeneous ratio is $\dot\Upsilon_G/\Upsilon_G=3H\,A_c\,n\,s_{bg}^{\,n}\,e^{-s_{bg}^{\,n}}\big/\left[1+A_c\left(1-e^{-s_{bg}^{\,n}}\right)\right]$; the background law alone supplies no local-screening identification.
+- Local gravity tests constrain the drift predicted by a registered background-to-local coupling and screening map, including its clock conversion. A direct constraint on the homogeneous ratio $|\dot\Upsilon_G/\Upsilon_G|$ requires that map to identify it with the tested local drift. On the matter branch the homogeneous ratio is $\dot\Upsilon_G/\Upsilon_G=3H\,A_c\,n\,s_{bg}^{\,n}\,e^{-s_{bg}^{\,n}}\big/\left[1+A_c\left(1-e^{-s_{bg}^{\,n}}\right)\right]$.
 - Tensor propagation and density history: Definition K.9.5j and Proposition K.9.5k give the siren ratio with its endpoint-transfer factor; Corollary K.9.5l removes explicit response-shape parameters from the joint consistency relation.
 - Sector selectivity: the background response acts on the registered non-vacuum gravitational sector. Drift of electromagnetic, strong, or weak observables requires its own coupling map and is tested under that map's uncertainty budget.
 
@@ -3219,7 +3219,7 @@ This identity tests the background-density and tensor-response maps across diffe
 
 ## K.10 Renormalization from Operational Finiteness
 
-The finite-throughput and Fermi-certificate boundaries of Section K.5 have a limited analogue in ultraviolet effective theory: each marks the domain of a registered operational description. Section K.5 does not exclude singularities, and finite spacing alone does not exclude ultraviolet modes or divergences; the latter conclusion requires the explicit lattice or bandlimit, regulator, dispersion, and matching certificate of Theorem K.10.4.
+The finite-throughput and Fermi-certificate boundaries of Section K.5 have an analogue in ultraviolet effective theory: each marks the domain of a registered operational description. Excluding ultraviolet modes or divergences requires the explicit lattice or bandlimit, regulator, dispersion, and matching certificate of Theorem K.10.4.
 
 **Definition K.10.1 (Operational Observable).** A quantity $\mathcal{O}$ is an operational observable if for every target precision $\epsilon>0$ there exists an MPU-admissible protocol $\mathcal{P}_\epsilon$ (a finite physically implementable procedure using the allowed interaction/update dynamics, including $\mathcal{E}_N$ updates of Definition 27) whose registered output is a finite real number, that estimates $\langle\mathcal O\rangle$ to within $\epsilon$, and that uses finite resources, i.e. it has finite predictive complexity and hence finite cost rate:
 $$
@@ -3612,7 +3612,7 @@ Thus the theorem-level PU content is:
 
 3. the finite-area throughput bound for the registered channel-and-clock class;
 
-4. exit of the sufficient framed Fermi certificate when its explicit tolerance is exceeded; neither statement is a singularity-exclusion theorem;
+4. exit of the sufficient framed Fermi certificate when its explicit tolerance is exceeded;
 
 5. the requirement of a diffusion certificate before any spectral-dimension endpoint can be claimed.
 
@@ -3737,7 +3737,7 @@ be the finite coarse-graining functor that forgets protocol distinctions invisib
 $$
 F_\mu\simeq \operatorname{Lan}_{q_{\Lambda\to\mu}}F_\Lambda.
 $$
-Existence of the left Kan extension alone does not identify it with the supplied physical prediction functor. Alternatively, the extension can define a mathematical coarse-graining whose agreement with physical responses remains a separate certificate. On the identified branch, universality classes may be organized as natural-isomorphism classes of lower-resolution prediction functors; this does not derive the MPU-to-RG correspondence.
+Existence of the left Kan extension alone does not identify it with the supplied physical prediction functor. Alternatively, the extension can define a mathematical coarse-graining whose agreement with physical responses remains a separate certificate. On the identified branch, universality classes may be organized as natural-isomorphism classes of lower-resolution prediction functors.
 
 **Theorem K.10.7b (Exact Finite Linear FRG–Gradient Conjugacy Criterion).** Let a finite operator truncation near a scaling solution have real coefficient vector $x\in\mathbb R^n$ and linearized dimensionless flow
 $$
@@ -3874,7 +3874,7 @@ Consequently no collection of separate finite-volume positivity checks, without 
 
 *Proof.* Equation (K.10.14a.1) is diagonal on the gauge-reduced sector, with eigenvalues $0$ and $1/L$. This proves uniqueness and positivity at every finite $L$. Taking the infimum gives (K.10.14a.2). The family is nonempty for every $L$, so the obstruction is not vacuous. ∎
 
-The proposition refutes only the inference from pointwise finite-volume gaps to a uniform gap. It neither constructs the physical Yang–Mills Hamiltonian nor decides confinement or the continuum limit.
+The proposition refutes the inference from pointwise finite-volume gaps to a uniform gap.
 
 **Remark K.10.15 (Distinction from Wilsonian Effective Field Theory).**
 
@@ -3888,11 +3888,9 @@ $$
 $$
 The black-hole specialization additionally uses Theorem Q.0.12; an MPU-substrate interpretation requires a separate clock-and-scale identification. Theorem Q.0.15 places this rate beside the Bekenstein-Hawking entropy, horizon-area calibration, and gravitational coupling on their joint hypothesis package. It is a compatibility ledger.
 
-Application of finite information bounds to ultraviolet physics separately requires the ultraviolet lattice or bandlimit and matching certificate of Theorem K.10.4. The horizon protocol and gravity-bridge hypotheses do not supply that certificate.
+**Technical synthesis.** Within the Predictive Universe framework, renormalization extracts operational predictions from continuum approximations that, if extrapolated literally, would describe operationally inaccessible physics. On Theorem K.10.3a's finite-total-distinguishability certificate, one registered instantiation cannot support an unbounded family of independent response distinctions. A hard ultraviolet retained-mode boundary follows only on Theorem K.10.4's lattice or bandlimit and matching certificate. Theorem K.5.4 proves exit from one framed Fermi-expansion certificate.
 
-**Technical synthesis.** Within the Predictive Universe framework, renormalization extracts operational predictions from continuum approximations that, if extrapolated literally, would describe operationally inaccessible physics. On Theorem K.10.3a's finite-total-distinguishability certificate, one registered instantiation cannot support an unbounded family of independent response distinctions. A hard ultraviolet retained-mode boundary follows only on Theorem K.10.4's lattice or bandlimit and matching certificate. Theorem K.5.4 proves only exit from one framed Fermi-expansion certificate; neither theorem proves the underlying microscopic theory finite or excludes curvature or field singularities.
-
-Theorem K.10.10, Corollary K.10.11, and Theorem K.10.12 give a conditional thermodynamic interpretation of the macroscopic metric equation while leaving effective quantization of perturbations open. Perturbative nonrenormalizability of the Einstein--Hilbert action is compatible with low-energy quantum gravity and does not prove that gravity is not a QFT. A hard retained-mode cutoff and finite matched observables follow only from Theorem K.10.4's microscopic lattice/bandlimit and matching certificate; finite reset-support capacity or the gravity bridge alone proves neither UV finiteness nor absence of singularities.
+Theorem K.10.10, Corollary K.10.11, and Theorem K.10.12 give a conditional thermodynamic interpretation of the macroscopic metric equation while leaving effective quantization of perturbations open. Perturbative nonrenormalizability of the Einstein--Hilbert action is compatible with low-energy quantum gravity.
 
 ---
 
@@ -4330,7 +4328,7 @@ where $X_i$ is the domain object, $F_i:X_i\to X_*$ is an explicit reduction to o
 | Quantum reconstruction | typed operational-axiom certificate | certificate boundary |
 | External AQFT comparison | non-load-bearing comparison | literature context |
 
-The register reports status only; it does not promote any row to theorem level.
+The register reports status only.
 
 1. **Black hole information:** Perspectival Information Channel and reflexive extraction costs defined (Section K.3); detailed calculations of information recovery rates and scrambling times in progress.
 
@@ -4391,7 +4389,7 @@ The framework registers a mixed-status set of exact branch consequences, interva
 - Gravitational wave behavior near the certified continuum boundary: reduced wavelengths $\bar\lambda\sim\delta/\xi_{\mathrm{cut}}$, equivalently ordinary wavelengths $\lambda\sim2\pi\delta/\xi_{\mathrm{cut}}$, on the cutoff branch $k_{\mathrm{cut}}=\xi_{\mathrm{cut}}/\delta$, $\xi_{\mathrm{cut}}>0$, of Corollary K.10.13; the scales $\bar\lambda\sim\delta$ and $\lambda\sim2\pi\delta$ additionally require the registered normalization $\xi_{\mathrm{cut}}=1$. A quantitative deviation law requires a separate microscopic perturbation and matching record
 - On a branch carrying Theorem K.10.4's lattice/bandlimit and matching certificate with retained-mode cutoff $k_{\mathrm{cut}}=\xi_{\mathrm{cut}}/\delta$, $\xi_{\mathrm{cut}}>0$: no retained operational observable depends on independent modes above $k_{\mathrm{cut}}$ except through the matched effective parameters at that scale; a certified observable dependence on such modes falsifies that branch. The identification $k_{\mathrm{cut}}=k_{\mathrm{MPU}}=\delta^{-1}$ additionally requires the registered normalization $\xi_{\mathrm{cut}}=1$.
 
-The Section 13 program supplies empirical tests of specified branches, including the CC response branch. A result supports, constrains, or falsifies only the preregistered branch whose source, endpoint, artifact model, sign, interval, stopping rule, and replication criterion were fixed in advance. A null result cannot validate the PU core; it may falsify a branch that predicts a detectable nonzero effect or remain uninformative when the registered sensitivity is insufficient.
+The Section 13 program supplies empirical tests of specified branches, including the CC response branch. A result supports, constrains, or falsifies only the preregistered branch whose source, endpoint, artifact model, sign, interval, stopping rule, and replication criterion were fixed in advance. A null result falsifies a branch that predicts a detectable nonzero effect when the registered decision rule excludes the predicted interval; when the registered sensitivity is insufficient, it is uninformative.
 
 ### K.11.5 Broader Implications
 
@@ -4404,4 +4402,4 @@ Finite channel capacity is one input shared by several conditional branches, not
 - The bounded-bias branch independently supplies the strict ceiling, and Theorem 39 proves only its endpoint-complete consequence; exact causal compliance is the separate Theorem 39c branch.
 - The Euclidean response-carrier result of Theorem Z.11 retains its shell, response-labeling, and least-feasible-selection certificates; its $3+1$ spacetime interpretation additionally requires the independent promotion certificates.
 
-The framework therefore supplies a conditional dependency stack with a recurrent finite-capacity input. It does not derive the five conclusions from the capacity inequality alone.
+The framework therefore supplies a conditional dependency stack with a recurrent finite-capacity input.

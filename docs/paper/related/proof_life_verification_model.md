@@ -51,7 +51,7 @@ The base model has five internal roles; Theorem PL.5 adds one optional typed exe
 
 1. **Fundamental Predictive Loop.** Each cell selects a target, stores a prediction, verifies the prediction against a finite response, and updates only through the verified register. This is the finite-toy realization of the prediction, verification, and update ordering of Definition 4.
 
-2. **PCE quotienting.** The toy dynamics explicitly makes a verification register with no positive expected predictive gain update-null. Interpreting this gate as a consequence of PCE additionally requires the admissible no-op and both no-op dominance conditions of Lemma A.5.6a.5; Definition 15 alone does not imply it.
+2. **PCE quotienting.** The toy dynamics explicitly makes a verification register with no positive expected predictive gain update-null. Interpreting this gate as a consequence of PCE requires, beyond Definition 15, the admissible no-op and both no-op dominance conditions of Lemma A.5.6a.5.
 
 3. **PPI finite response.** The objects admitted into the retained toy universe are finite protocol-response objects: bounded proof-existence targets with certificates or finite exhaustion traces, and finite diagonal protocol targets with trace-certified register data. This matches the finite-response formulation of Definition P.6.2.
 
@@ -1822,7 +1822,7 @@ $$
 $$
 B\text{ succeeds as historical evaluator at }t+1.
 $$
-This is the three-value register truth table underlying the A.5.6a access separation. It illustrates the active, external and historical outcomes; it does not construct arithmetized diagonal sentences, certify a physical predictor, or execute the labeled LITE searches.
+This is the three-value register truth table underlying the A.5.6a access separation. It illustrates the active, external and historical outcomes.
 
 The grid demo then runs a finite proof universe. Cells retain objects such as
 $$
@@ -1853,7 +1853,7 @@ $$
 $$
 \boxed{\text{growth}=\text{retained proof-reachability expansion}}.
 $$
-These identities are internal to the toy model and do not redefine biological life in PU.
+These identities are internal to the toy model; life in PU is defined by Definition P.8.9a.10.1.
 
 ### 12.1 Receiver-Relative Evidence and Retained Growth
 
@@ -2434,7 +2434,7 @@ Proof-Life uses the following internal PU dependencies.
 
 ## 14. Final statement
 
-Proof-Life is a finite, runnable PU toy universe whose proof-sector objects are bounded proof-existence claims and whose diagonal-sector objects are phase-indexed protocol targets. Its cells do not merely hold beliefs. They make predictions about typed finite targets, verify those predictions through finite certificates, complete finite exhaustion traces, or trace-certified diagonal access data, retain only validated predictive information, and propagate positive proof-certificates and complete negative-exhaustion messages only after independent verification. Its tagged proof/diagonal bridge schedules typed targets without transporting evidence or identifying the sectors' access semantics.
+Proof-Life is a finite, runnable PU toy universe whose proof-sector objects are bounded proof-existence claims and whose diagonal-sector objects are phase-indexed protocol targets. Its cells make predictions about typed finite targets, verify those predictions through finite certificates, complete finite exhaustion traces, or trace-certified diagonal access data, retain only validated predictive information, and propagate positive proof-certificates and complete negative-exhaustion messages only after independent verification. Its tagged proof/diagonal bridge schedules typed targets without transporting evidence or identifying the sectors' access semantics.
 
 On the optional S-Life extension, cells also verify bounded pure-$\mathbf S$ reduction targets through positive redex traces or complete canonical negative trees. Corollary PL.5.1 maps every nominated finite horizon of the companion paper's fixed universal selected path to such a positive target. The three-sector codec preserves the evidence boundary among reduction reachability, arithmetic proofhood, and diagonal access. Section 10 executes the proof-sector grid, the two-sector codec and selection predicate, and a separate diagonal truth-table demo. Section 12.8 executes the budgeted proof/capacity/derived example. General diagonal evidence, labeled LITE searches and S-Life execution retain their separate implementation and verification requirements.
 

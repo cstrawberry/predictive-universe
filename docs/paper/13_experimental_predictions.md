@@ -286,7 +286,7 @@ This finite count quantifies the contraction of the declared comparison class by
 
 **13.1 Conditional Branch 1: Potential Born-Rule Deviations**
 
-Hypothesis 3 nominates a CC-dependent response map for systems $S$ with $C_{\mathrm{agg}}>C_{\mathrm{op}}$ and operational $\mathrm{CC}(S)>0$. The core theory permits $\mathrm{CC}(S)=0$ and does not prove that the nominated map is nonzero. Theorem 51 therefore gives normalization and upper bounds for a supplied CC-dependent response; it does not predict the sign, magnitude, or statistical significance of a realized deviation without a forward-locked realization certificate.
+Hypothesis 3 nominates a CC-dependent response map for systems $S$ with $C_{\mathrm{agg}}>C_{\mathrm{op}}$ and operational $\mathrm{CC}(S)>0$. The core theory also permits $\mathrm{CC}(S)=0$. Theorem 51 gives normalization and upper bounds for a supplied CC-dependent response, and a forward-locked realization certificate supplies the sign and magnitude of a realized deviation.
 
 **13.1.1 Theorem 51 (Quantitative Born Rule Deviation Prediction)**
 
@@ -421,7 +421,7 @@ is fixed in the analysis plan, the primary discriminant is not merely a scalar b
 
 ## 13.2a Protocol 1a: Report-Induced Expectation Tests for Passive CC
 
-This protocol is a controlled variant of Protocol 1. It tests whether a report-induced expectation inside a participant's perspective can become a physically instantiated context variable and weakly bias later quantum outcome frequencies. The tested claim is not that a false report becomes true, nor that a past observation is changed. The tested claim is that a true, false, or neutral report can produce a real expectation state in the aggregate $S_A$, and that this expectation state may enter the CC map on branches where expectation-context coupling is nonzero.
+This protocol is a controlled variant of Protocol 1. It tests whether a report-induced expectation inside a participant's perspective can become a physically instantiated context variable and weakly bias later quantum outcome frequencies. The tested claim is that a true, false, or neutral report can produce a real expectation state in the aggregate $S_A$, and that this expectation state may enter the CC map on branches where expectation-context coupling is nonzero.
 
 <a id="definition-132a1-report-induced-expectation-context"></a>
 
@@ -638,11 +638,11 @@ This follows from $|\delta_{\mathrm{seen}}|\le\mathrm{TV}(p,q)\le\sin(d_{\mathrm
 
 **13.3 Protocol 2: Exploratory Coherence-Time Search**
 
-This protocol searches for, but does not predict, a CC-correlated coherence response.
+This protocol searches for a CC-correlated coherence response.
 
 **13.3.1 Candidate Effect**
 
-Hypothesis 3 permits an additional context-dependent contribution to an effective decoherence rate. Neither Proposition 13 nor the CC budget proves that this contribution is nonzero.
+Hypothesis 3 permits an additional context-dependent contribution to an effective decoherence rate.
 
 **13.3.2 Phenomenological Search Model**
 
@@ -671,7 +671,7 @@ Here $\gamma'_{\mathrm{CC}}$ and $f_{\mathrm{context}}\in[-1,1]$ are free phenom
     *   **High-Complexity System (S):** Human or AI.
     *   **Interaction/Control:** Similar requirements as Protocol 1 (shielding, interaction $N(t)$, stability, blinding). Temperature stability critical.
 *   **Procedure:** Measure $\tau_{coh}$ (e.g., Ramsey, spin echo, $T_1/T_2$) repeatedly under randomized conditions (baseline, neutral context, specific context). Rapid interleaving mitigates drifts. Residual autocorrelation will be diagnosed and, if present, mitigated by prewhitening (e.g., AR(1)).
-*   **Analysis:** Detect small differences $\Delta \hat{\tau}_{coh} = \hat{\tau}_{coh, context} - \hat{\tau}_{coh, baseline}$. With $\tau_0$ the baseline coherence time, $\Gamma_0=1/\tau_0>0$, and $x=\Delta\Gamma_{\mathrm{eff}}/\Gamma_0>-1$, the relative magnitude is $|\Delta\tau_{coh}|/\tau_0=|x|/(1+x)$. On the small-$x$ search-model branch it is $|\gamma'_{CC}\,\mathrm{CC}(S)\,f_{\mathrm{context}}|+O(x^2)$, with no nonzero floor supplied by the free phenomenological inputs. High precision and stability are needed. Use appropriate statistical tests (t-tests, ANOVA) after rigorous systematic error checks (temperature, fields correlated with S).
+*   **Analysis:** Detect small differences $\Delta \hat{\tau}_{coh} = \hat{\tau}_{coh, context} - \hat{\tau}_{coh, baseline}$. With $\tau_0$ the baseline coherence time, $\Gamma_0=1/\tau_0>0$, and $x=\Delta\Gamma_{\mathrm{eff}}/\Gamma_0>-1$, the relative magnitude is $|\Delta\tau_{coh}|/\tau_0=|x|/(1+x)$. On the small-$x$ search-model branch it is $|\gamma'_{CC}\,\mathrm{CC}(S)\,f_{\mathrm{context}}|+O(x^2)$. High precision and stability are needed. Use appropriate statistical tests (t-tests, ANOVA) after rigorous systematic error checks (temperature, fields correlated with S).
 *   **Feasibility Assessment:** Technically demanding (high-precision $\tau_{coh}$ measurement). Requires specialized equipment/expertise. Sensitivity depends on achievable baseline stability $\sigma_{\tau_{coh, base}}$. Highly exploratory.
 
 **13.3a Prediction/Protocol 2a: Chronometric Curvature-Dephasing Test**
@@ -753,7 +753,7 @@ $$
 
 **13.4 Identifiability Against Electromagnetic Confounds**
 
-A critical challenge for any experiment seeking to detect CC is to distinguish the hypothesized effect from conventional physical influences, particularly electromagnetic (EM) fields generated by the high-complexity system. The following design supplies a quantitative upper bound on the registered Maxwell–Stark channel. A gap between that bound and an observed or independently calibrated nonzero CC response requires a separate response and artifact certificate; no positive CC signal floor follows from this bound or from the CC budget alone.
+A critical challenge for any experiment seeking to detect CC is to distinguish the hypothesized effect from conventional physical influences, particularly electromagnetic (EM) fields generated by the high-complexity system. The following design supplies a quantitative upper bound on the registered Maxwell–Stark channel. A gap between that bound and an observed or independently calibrated nonzero CC response requires a separate response and artifact certificate.
 
 **Theorem 52 (Maxwell--Stark Bound within the Triple-Blind Protocol)**
 
@@ -785,7 +785,7 @@ $$
 (\mathrm{CC}(S)\ll1).
 $$
 Using representative achievable values $|\Delta\alpha|\lesssim10^{-39}\,\mathrm{J\,m^2/V^2}$ and $u\lesssim10^{-18}\,\mathrm{J/m^3}$ gives the general Maxwell bound
-$|\Delta P|_{\rm EM}\lesssim5.36\times10^{-13}T$ with $T$ in seconds: approximately $5.4\times10^{-13}$ at $1\,\mathrm{s}$ and $1.93\times10^{-9}$ at $1\,\mathrm{hr}$. On the free-space plane-wave subbranch, Equation (81) sharpens these values by a factor of two to $2.68\times10^{-13}T$, approximately $2.7\times10^{-13}$ at $1\,\mathrm{s}$ and $9.6\times10^{-10}$ at $1\,\mathrm{hr}$. An observed shift above $10^{-6}$ would exceed either registered Stark-channel bound, but would still require the full artifact ledger before attribution. The value $10^{-4}$ is a protocol sensitivity benchmark corresponding to an externally posited $\mathrm{CC}(S)\sim10^{-4}$; it is not a PU-predicted effect size.
+$|\Delta P|_{\rm EM}\lesssim5.36\times10^{-13}T$ with $T$ in seconds: approximately $5.4\times10^{-13}$ at $1\,\mathrm{s}$ and $1.93\times10^{-9}$ at $1\,\mathrm{hr}$. On the free-space plane-wave subbranch, Equation (81) sharpens these values by a factor of two to $2.68\times10^{-13}T$, approximately $2.7\times10^{-13}$ at $1\,\mathrm{s}$ and $9.6\times10^{-10}$ at $1\,\mathrm{hr}$. An observed shift above $10^{-6}$ would exceed either registered Stark-channel bound, but would still require the full artifact ledger before attribution. The value $10^{-4}$ is a protocol sensitivity benchmark corresponding to an externally posited $\mathrm{CC}(S)\sim10^{-4}$.
 
 
 **13.5 Prediction/Protocol 3: Exploratory Bell Tests / Statistical FTL Search (Three-Branch)**
@@ -946,7 +946,7 @@ $$
 =
 137.03609205522863\ldots .
 $$
-This is a closed-form finite-response branch evaluation. Its structural inputs are $K_0=3$, $d_0=8$, $a=2$ (equivalently $a/d_0=1/4$), $M=24$, and $u^*=2^{1/8}-1$; it additionally uses the independently registered unit-Ward, unit-interface-response, democratic visible-response, separable curvature-response, normalized-flux, electromagnetic-projection, and $SU(2)$ transport entries of Appendix Z (Theorem Z.26; Corollary Z.26a). Once those branch entries are fixed, the displayed expression contains no continuously adjusted coefficient. The structural integers alone do not determine the formula.
+This is a closed-form finite-response branch evaluation. Its structural inputs are $K_0=3$, $d_0=8$, $a=2$ (equivalently $a/d_0=1/4$), $M=24$, and $u^*=2^{1/8}-1$; it additionally uses the independently registered unit-Ward, unit-interface-response, democratic visible-response, separable curvature-response, normalized-flux, electromagnetic-projection, and $SU(2)$ transport entries of Appendix Z (Theorem Z.26; Corollary Z.26a). Once those branch entries are fixed, the displayed expression contains no continuously adjusted coefficient.
 Its arithmetic distance from $\alpha^{-1}_{\mathrm{exp}}=137.035999177(21)$ is
 $$
 0.00009287822863\ldots,
@@ -1688,7 +1688,7 @@ This proves $k=12$ but does not prove attainment of $d=8$. The Griesmer bound fo
 
 If a physical quantum substrate has a separately certified response coupling aligned with the PCE-Attractor code structure, then Golay-derived implementations may exhibit a performance advantage not accounted for by their ordinary code parameters and the registered physical noise model. The response coupling, comparator code family, decoder, hardware constraints, and predicted advantage interval must be specified before comparison.
 
-The predictive-recovery rate gate gives $k=12$, and the binary-linear Griesmer converse gives $d\le8$. If a separate construction/selection certificate supplies a retained code with $d=8$, Theorem U.1 identifies that binary linear $[24,12,8]$ code with the extended Golay code up to coordinate permutation. None of these mathematical statements predicts reduced physical noise, improved syndrome extraction, or enhanced logical-gate performance. Those effects constitute the substrate-alignment hypothesis tested by Protocol 4.
+Theorem 54 fixes $n=24$ and $k=12$, bounds $d\le8$, and identifies the extended Golay code under its separate distance-eight certificate. Reduced physical noise, improved syndrome extraction, and enhanced logical-gate performance constitute the substrate-alignment hypothesis tested by Protocol 4.
 
 ### 13.9.3 Empirical Evidence from Existing Literature
 
@@ -1709,11 +1709,11 @@ Ibe et al. (2025) analyze measurement-based fault-tolerant quantum-computation s
 
 The ratio of these reported operation counts is greater than $833$. For an odd-distance code correcting $t=(d-1)/2$ faults, the leading stochastic-fault order is $p^{t+1}=p^{(d+1)/2}$, giving $p^2$ for $d=3$ and $p^4$ for $d=7$.
 
-*Interpretation:* These are theoretical and numerical, architecture-specific resource estimates. They are consistent with ordinary distance-based fault-tolerance scaling and do not constitute a hardware demonstration, a selection proof for the classical $[24,12,8]$ code, or evidence for physical 24-mode substrate alignment.
+*Interpretation:* These are theoretical and numerical, architecture-specific resource estimates. They are consistent with ordinary distance-based fault-tolerance scaling.
 
 **Evidence 3: Practical Deployment in Classical Communication**
 
-Classical Golay-based error correction was used in the Voyager spacecraft telecommunications system (Curtis 2016, Section 3.3; NASA/JPL, Sections 6.1–6.2). This documented deployment establishes practical use in that system. It does not establish comparative superiority over other codes or test the quantum substrate alignment hypothesis.
+Classical Golay-based error correction was used in the Voyager spacecraft telecommunications system (Curtis 2016, Section 3.3; NASA/JPL, Sections 6.1–6.2). This documented deployment establishes practical use in that system.
 
 **Evidence 4: Structural Properties**
 
@@ -1721,13 +1721,13 @@ The extended binary Golay code possesses exceptional structural properties:
 
 - Self-duality of the parent code
 - Mathieu group $M_{24}$ symmetry
-- Connection to the Leech lattice $\Lambda_{24}$ through its code-based construction (Conway 1969b, §§1–2; Appendix R, Theorem R.4.9). Self-duality and $M_{24}$ permutation symmetry are mathematical code properties, not physical-substrate evidence.
+- Connection to the Leech lattice $\Lambda_{24}$ through its code-based construction (Conway 1969b, §§1–2; Appendix R, Theorem R.4.9).
 
 These mathematical properties suggest the code occupies a special position in the space of possible error-correcting structures.
 
 ### 13.9.4 Theoretical Interpretation: Exact Scope
 
-Standard coding bounds exclude binary linear $[24,12,d]$ codes with $d\ge9$, so $d\le8$. The extended Golay construction proves that distance $8$ is attainable and therefore optimal in that parameter class. The rate and block-length gates alone do not prove attainment. Once a separate construction/selection certificate supplies a binary linear $[24,12,8]$ code, Theorem U.1 identifies it with the extended Golay code up to coordinate permutation.
+Standard coding bounds exclude binary linear $[24,12,d]$ codes with $d\ge9$, so $d\le8$. The extended Golay construction proves that distance $8$ is attainable and therefore optimal in that parameter class. Once a separate construction/selection certificate supplies a binary linear $[24,12,8]$ code, Theorem U.1 identifies it with the extended Golay code up to coordinate permutation.
 
 The code's Mathieu symmetry is then a mathematical property of the identified Golay code. A mathematical Leech lattice follows by either of two typed routes: (i) choose a marked Golay representative and use the explicit Construction-B coordinates proved in Theorem R.4.9, which directly yield $\Lambda_C\cong\Lambda_{24}$; or (ii) start from the separate $(\sqrt2E_8)^3$ scaffold and accept Lemma R.4.5's finite-quadratic-module marking/glue datum together with its complete minimum ledger, or with $m_0^{\times}=4$ and Equation (R.4.2a.1). The abstract scaffold route must not be imposed again on the explicit coordinate construction. Physical substrate alignment and spacetime claims retain their own response and mode-channel certificates.
 
@@ -1770,7 +1770,7 @@ Accordingly, the code, lattice, and spacetime-dimension branches share a numeric
 | Self-dual CSS construction | $[[24,0]]$ stabilizer state | one mathematical state; no logical-qubit protection claim |
 | Punctured quantum Golay code | $[[23,1,7]]$ | one logical qubit with standard distance-$7$ error correction |
 
-The $k=0$ CSS construction may be labeled $[[24,0,8]]$ only under a stated stabilizer-state distance convention. It is not thereby a physical vacuum. Such an interpretation requires a Hamiltonian or dynamics, encoder, physical channel, syndrome instrument, recovery map, and response certificate. The quantum Hamming bound is satisfied by the punctured code but is not saturated, and it does not prove maximum distance at fixed $(n,k)$.
+The $k=0$ CSS construction may be labeled $[[24,0,8]]$ only under a stated stabilizer-state distance convention. The quantum Hamming bound is satisfied by the punctured code but is not saturated, and it does not prove maximum distance at fixed $(n,k)$.
 
 
 
@@ -2029,7 +2029,7 @@ On the model's twenty-four-mode branch, one added selection rule picks the exten
 
 **Technical ledger.**
 
-On the minimal $M=24$ interface branch, the predictive-recovery rate gate gives $k=12$ and the binary-linear distance converse gives $d\le8$. If a separate construction/selection certificate supplies a retained binary linear code with minimum distance $8$, Theorem U.1 selects the extended binary Golay code up to coordinate permutation. This is uniqueness within the binary linear $[24,12,8]$ parameter class, not uniqueness among all code families or physical fault-tolerance architectures. The following external benchmarks are comparison data:
+On the minimal $M=24$ interface branch, the predictive-recovery rate gate gives $k=12$ and the binary-linear distance converse gives $d\le8$. If a separate construction/selection certificate supplies a retained binary linear code with minimum distance $8$, Theorem U.1 selects the extended binary Golay code up to coordinate permutation. This is uniqueness within the binary linear $[24,12,8]$ parameter class. The following external benchmarks are comparison data:
 
 | Finding | Source | Status | PU Interpretation |
 |---------|--------|--------|-------------------|
@@ -2039,9 +2039,9 @@ On the minimal $M=24$ interface branch, the predictive-recovery rate gate gives 
 | Golay deployed in critical classical systems | Voyager, MIL-STD-188 | Established | External deployment evidence; nondiscriminating for PU |
 | Golay self-duality, $M_{24}$ permutation symmetry and code-based Leech construction | MacWilliams–Sloane (1977), Ch. 20 §6; Conway (1969b), §§1–2; Appendix R, Theorem R.4.9 | Mathematical structural facts | Their physical-substrate interpretation requires independent realization evidence |
 
-These comparisons establish mathematical structure and engineering performance of Golay-based constructions in their recorded architectures. They neither prove PCE optimality nor validate substrate alignment. Protocol 4 becomes a PU-discriminating test only after $\mathfrak T_{\mathrm{Golay}}$ and the independent substrate-response certificate are frozen and the tested residual structure differs from standard coding and device-noise expectations.
+These comparisons establish mathematical structure and engineering performance of Golay-based constructions in their recorded architectures. Protocol 4 becomes a PU-discriminating test only after $\mathfrak T_{\mathrm{Golay}}$ and the independent substrate-response certificate are frozen and the tested residual structure differs from standard coding and device-noise expectations.
 
-This prospective pathway tests the PU substrate-alignment branch; the external benchmarks above remain nondiscriminating comparison data, and Protocol 4 becomes branch-discriminating under the frozen certificates and residual test just stated.
+This prospective pathway tests the PU substrate-alignment branch.
 
 The detector-covariance and orbit-multiplicity records are declared once, with unique identifiers, in Definitions 13.9.12a–b and Proposition 13.9.12c below. Those declarations govern every subsequent detector-spectrum and sporadic-multiplicity claim; the unbridged orbit counts remain exact finite mathematics but do not imply physical degeneracies.
 
@@ -2063,7 +2063,7 @@ Rank alone determines neither whiteness nor a detector kernel.
 
 ## 13.10 Consolidated Falsifiability Analysis
 
-This section catalogs theorem-level, branch-level, validation-level, and model-level rows formulated in the technical appendices and records how each would be rejected at its stated status. A row is a forward test only after its branch, observable map, interval or falsifier, likelihood, artifact model, stopping rule, and status are frozen under Definitions 13.0a and 13.0d. Fixing the discrete core alone does not make every downstream row test-ready.
+This section catalogs theorem-level, branch-level, validation-level, and model-level rows formulated in the technical appendices and records how each would be rejected at its stated status. A row is a forward test only after its branch, observable map, interval or falsifier, likelihood, artifact model, stopping rule, and status are frozen under Definitions 13.0a and 13.0d.
 
 The predictions fall into three epistemic categories that must be distinguished to prevent conflation of claims of different logical type:
 
@@ -2259,7 +2259,7 @@ $$
 
 For a preregistered triad and one common leading coefficient, the distance ratio is an exact algebraic diagnostic. The physical triad, fourth-order coefficient, effective dimensions, mapping scheme, and remainder are not fixed by that identity.
 
-A valid test must lock those entries and a nonzero uncertainty interval before comparison, then evaluate held-out mass data. No generic five-percent theory error or discrete-set prediction is asserted without that certificate.
+A valid test must lock those entries and a nonzero uncertainty interval before comparison, then evaluate held-out mass data.
 
 
 
@@ -2716,7 +2716,7 @@ L^-_{nTT}
 $$
 Observed cost above this floor is only consistency evidence because overhead can raise cost. A contradiction requires a fixed-path count or a verified all-path upper bound below $L^-_{nTT}$ after counter uncertainty is included; it rejects the joint implementation and reduction certificate for the tested class, not the mathematical proof of Theorem B.2.
 
-The boundary pattern of Theorem M.10.4 is not a finite-cost observation: $\mu=\infty$ records absence of a completed subboundary integration on the certified branch. No finite ladder establishes observed unboundedness. Registered-reset calorimetry is a separate secondary protocol requiring independently certified reset events, conditional entropies, and bath data. This benchmark does not test CC, the perspectival quantum branch, gravity, cosmology, or a universal biological claim.
+The boundary pattern of Theorem M.10.4 is not a finite-cost observation: $\mu=\infty$ records absence of a completed subboundary integration on the certified branch. No finite ladder establishes observed unboundedness. Registered-reset calorimetry is a separate secondary protocol requiring independently certified reset events, conditional entropies, and bath data.
 
 **Optional-program status register.**
 
@@ -2730,4 +2730,4 @@ The boundary pattern of Theorem M.10.4 is not a finite-cost observation: $\mu=\i
 | Emulator | response-faithful implementation test | protocol | injective observable bridge |
 | Receiver-relative cost | crossed matched-input implementation audit | certificate-gated protocol | typed target binding, model-access decision certificate, uniform B.2 reduction, and fixed-path or all-path cost ledger |
 
-None of these rows is a theorem selecting a unique physical completion. Each becomes load-bearing only under the hypotheses and certificates stated in its own row.
+Each row becomes load-bearing only under the hypotheses and certificates stated in its own row.

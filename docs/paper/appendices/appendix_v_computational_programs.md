@@ -1,6 +1,6 @@
 # Appendix V: Computational Programs and Numerical Consistency Checks
 
-This appendix provides arithmetic programs and observational inversions for the cosmological constant $\Lambda$, together with the parametric fine-structure program. The Appendix-U five-mode calculation is a declared reference conversion using $\kappa_{\mathrm{ref}}=141.5$ and the working convention $A_{\mathrm{eff}}=0.923\pm0.011$; it is not a realized false-vacuum theorem. On the four-mode route, Theorem U.13b supplies only sampled-angular Hessian nullity. The successive gates are $\mathfrak C_{U,\mathrm{mark}}$ for the independent $288$-direction carrier index, the exact exponent-calibration certificate $\mathfrak C_{U,\mathrm{act}}$ of Proposition U.14 for action $284$, $\mathfrak F_U^{(4)}$ for the Euclidean weight, and $\mathfrak R_\Lambda^{(4)}$ for the physical quantity $\Lambda_4L_P^2$. No accepted complete instance is present. The inversion formulas remain numerical diagnostics under stipulated action placements. The $\alpha_{\mathrm{em}}$ program gives a parametric, falsifiable roadmap with no continuous fitting after its baseline invariants and projection/matching conventions are fixed. Passing the finite audits strengthens reproducibility but does not promote missing physical certificates.
+This appendix provides arithmetic programs and observational inversions for the cosmological constant $\Lambda$, together with the parametric fine-structure program. The Appendix-U five-mode calculation is a declared reference conversion using $\kappa_{\mathrm{ref}}=141.5$ and the working convention $A_{\mathrm{eff}}=0.923\pm0.011$; Theorem U.8c excludes the pure-coordinate dilatation tangent as the required fifth zero mode. On the four-mode route, Theorem U.13b supplies sampled-angular Hessian nullity. The successive gates are $\mathfrak C_{U,\mathrm{mark}}$ for the independent $288$-direction carrier index, the exact exponent-calibration certificate $\mathfrak C_{U,\mathrm{act}}$ of Proposition U.14 for action $284$, $\mathfrak F_U^{(4)}$ for the Euclidean weight, and $\mathfrak R_\Lambda^{(4)}$ for the physical quantity $\Lambda_4L_P^2$. No accepted complete instance is present. The inversion formulas remain numerical diagnostics under stipulated action placements. The $\alpha_{\mathrm{em}}$ program gives a parametric, falsifiable roadmap with no continuous fitting after its baseline invariants and projection/matching conventions are fixed. Passing the finite audits of Section V.3 confirms that the displayed calculations are mechanically reproducible.
 
 **Conventions.** Section V.1 uses SI units (with $c$ explicit). Sections V.2–V.2.5 use Heaviside–Lorentz units with $\hbar=c=1$; $\alpha_{\mathrm{em}}=e^2/(4\pi)$.
 
@@ -62,7 +62,7 @@ A future likelihood tests the frozen numerical model with that selection history
    \boxed{S_{\mathrm{inst}}=\left(\frac{C_{\max}}{\varepsilon_0}\right)\kappa = 2\,\kappa} \tag{V.1}
    $$
 
-   on the residual-budget branch, where Appendix E, Equation E.14 and Appendix Q, Equation Q.10 give $C_{\max}/\varepsilon_0=2$. The cited equations determine the ratio; the equal-contribution action map is a separate branch hypothesis. Here $\varepsilon_0=\ln2$ is the structural binary reference and is not a claim that every physical reset has cost $\ln2$. Every value proportional to $e^{-2\kappa}$ in this section is conditional on both the residual-budget ratio and the action-complexity map.
+   on the residual-budget branch, where Appendix E, Equation E.14 and Appendix Q, Equation Q.10 give $C_{\max}/\varepsilon_0=2$. The cited equations determine the ratio; the equal-contribution action map is a separate branch hypothesis. Here $\varepsilon_0=\ln2$ is the structural binary reference; the heat of a registered physical reset is given separately by the reset ledger of Theorem J.4a. Every value proportional to $e^{-2\kappa}$ in this section is conditional on both the residual-budget ratio and the action-complexity map.
 
 2. **Euclidean vacuum weight and conditional Einstein realization.** On an accepted action and Fredholm branch, define
    $$
@@ -167,7 +167,7 @@ Hence even an order-unity uncertainty in $A_{\text{eff}}$ shifts the inferred $\
 
 ## V.2 Certificate-Conditional Derivation of $\alpha_{\mathrm{em}}$ on the Appendix Z Branch
 
-This section evaluates the Appendix Z fine-structure value conditionally on its registered branch and matching data. The inherited package includes the PCE-attractor conditions of Definition 15a, the minimal Hilbert-carrier and rank-two active-projector branches, the unit Predictive-Ward normalization of Theorem Z.14, the independent unit-interface-response specialization $c_{\mathrm{int}}=1$ of Theorem Z.17, the independent democratic visible-response input $L_{\mathrm{vis}}=1/(ad_0)$ of Theorem Z.24, which Lemma Z.24a does not derive, the normalized Chern-flux branch of Lemma Z.14, the separable curvature-response branch of Theorem Z.25, the electromagnetic-projection branch, the $SU(2)$ transport ansatz of Lemma Z.13, and the residual gate. Once those antecedents are supplied, the remaining evaluation is arithmetic.
+This section evaluates the Appendix Z fine-structure value conditionally on its registered branch and matching data. The inherited package includes the PCE-attractor conditions of Definition 15a, the minimal Hilbert-carrier and rank-two active-projector branches, the unit Predictive-Ward normalization of Theorem Z.14, the independent unit-interface-response specialization $c_{\mathrm{int}}=1$ of Theorem Z.17, the independent democratic visible-response input $L_{\mathrm{vis}}=1/(ad_0)$ of Theorem Z.24, which Lemma Z.24a shows intrinsic isotropy cannot derive, the normalized Chern-flux branch of Lemma Z.14, the separable curvature-response branch of Theorem Z.25, the electromagnetic-projection branch, the $SU(2)$ transport ansatz of Lemma Z.13, and the residual gate. Once those antecedents are supplied, the remaining evaluation is arithmetic.
 
 ### V.2.1 Structural and Branch Inputs
 
@@ -465,7 +465,7 @@ $$
 | Consumers | The branch-qualified integer ledger; code realization, spacetime identification and common-carrier coexistence retain their separate gates |
 | Regression result | Pass for the exact branch-qualified regression proposition |
 
-The arithmetic and type checks accept each implication under its displayed branch package. Omitting a listed package invalidates the cited implication. The accepted scope is the displayed antecedent ledger; premise minimality and exclusion of alternative derivations require separate theorems. The accepted result is the vector of four branch-qualified implications. Promoting this displayed conditional chain to an unconditional chain requires positive discharge of every displayed branch package or a separate unconditional derivation. This closes the implication-ledger regression at its branch-qualified scope; common-carrier coexistence remains a separate certificate.
+The arithmetic and type checks accept each implication under its displayed branch package, and omitting a listed package invalidates the cited implication. The accepted result is the vector of four branch-qualified implications; promoting it to an unconditional chain requires positive discharge of every displayed branch package or a separate unconditional derivation. This closes the implication-ledger regression at its branch-qualified scope; common-carrier coexistence remains a separate certificate.
 
 ### V.3.4 Primordial $\mathbb{CP}^{11}$ Determinant Audit
 
@@ -656,9 +656,9 @@ The finite checks confirm the arithmetic that can be evaluated from the present 
 
 #### Technical audit ledger
 
-The finite audit ladder verifies only the displayed mechanical calculations. It does not verify Algorithm T.78.6a because the required RHG block data, spectrahedral minimizer, finite-part computation, and tail constants are absent. Therefore the RHG gate remains in the pre-certificate negative-closure status of Theorem T.78.2 and Corollary T.78.5.1.
+The finite audit ladder verifies the displayed mechanical calculations. The RHG gate remains in the pre-certificate negative-closure status of Theorem T.78.2 and Corollary T.78.5.1, because the RHG block data, spectrahedral minimizer, finite-part computation, and tail constants required by Algorithm T.78.6a are absent (Section V.3.6).
 
-Three additional closed auxiliary audits are recorded as Sections V.3.8–V.3.10 below. They reduce to finite cardinality or exact arithmetic rather than to missing spectral certificates, and are therefore closed at the audit level even though the spectral-certificate ladder of V.3.1–V.3.6 remains as stated.
+Three additional closed auxiliary audits are recorded as Sections V.3.8–V.3.10 below. They reduce to finite cardinality or exact arithmetic rather than to missing spectral certificates, and are therefore closed at the audit level.
 
 ### V.3.8 SPAP Role-Readout Audit
 
@@ -668,7 +668,7 @@ $$
 r:\mathcal S_{\mathrm{vis}}\to\{0,1\}^3
 $$
 
-has $|r(\mathcal S_{\mathrm{vis}})|\le N<8$, hence cannot be surjective. Therefore a claimed SPAP realization required to satisfy the full-context hypothesis (FC) can be rejected when $N<8$, before transition-table details are considered, by Corollary 5.2.2b. This finite-cardinality audit does not reject realization classes without (FC).
+has $|r(\mathcal S_{\mathrm{vis}})|\le N<8$, hence cannot be surjective. Therefore a claimed SPAP realization required to satisfy the full-context hypothesis (FC) can be rejected when $N<8$, before transition-table details are considered, by Corollary 5.2.2b.
 
 ### V.3.9 Page-Purity-Before-Entropy Audit
 

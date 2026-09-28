@@ -35,8 +35,7 @@ numerical $\eta_B$ is an output only after the same accepted certificate also
 supplies a CP source, transport, freeze-out, washout, photon normalization,
 residual interval, covariance, and no-double-counting audit. The quoted
 CMB-derived interval is a model-conditioned comparison datum requiring an
-independent empirical extraction record; it is neither a direct count nor a
-PU output.
+independent empirical extraction record.
 
 | Quantity | Branch value | Comparison datum | Status |
 |----------|--------------|------------------|--------|
@@ -621,13 +620,13 @@ Static factors such as $\tanh(\mathcal S\sin\delta)$ and $e^{-\kappa_B}$ may occ
 
 **Key Differences:**
 
-1. **Origin of the CP-odd datum:** Cohen-Kaplan takes the scalar field and its current coupling as model data. The PU branch uses the canonical determinant line over $\operatorname{Gr}(2,8)$, but its pullback to electroweak configuration space requires the registered map $\Gamma_{\mathrm{fl}}^{\mathrm{conf}}$. A CP-odd holonomy additionally requires the retained loop, the CP involution with $c_{EW}^*\mathcal F_{EW}=-\mathcal F_{EW}$, and the associated orientation data. Its promotion to a baryogenesis source further requires the Berry-to-electroweak matching, operator, and response-active transport certificates in statements Y.6.1--Y.6.1j. The generation-manifold geometry alone does not derive a physical CP source.
+1. **Origin of the CP-odd datum:** Cohen-Kaplan takes the scalar field and its current coupling as model data. The PU branch uses the canonical determinant line over $\operatorname{Gr}(2,8)$, but its pullback to electroweak configuration space requires the registered map $\Gamma_{\mathrm{fl}}^{\mathrm{conf}}$. A CP-odd holonomy additionally requires the retained loop, the CP involution with $c_{EW}^*\mathcal F_{EW}=-\mathcal F_{EW}$, and the associated orientation data. Its promotion to a baryogenesis source further requires the Berry-to-electroweak matching, operator, and response-active transport certificates in statements Y.6.1--Y.6.1j.
 
 2. **Time dependence:** The reviewed adiabatic mechanism requires an explicit varying phase $\dot\theta(t)$ during the source-active interval. PU requires time dependence to appear explicitly in the certified $\dot\theta_{\mathrm{PU}}$, boundary/inflow, nonstationary preparation, or freeze-out entry.
 
 3. **Production and survival:** In the reviewed model, baryon-violating kinetics enter the integrated production rate and their later shutoff prevents washout; expansion enters through the thermal history, not as a universal $\Gamma_a/H$ yield factor. PU requires a certified driven or boundary/freeze-out record; $\kappa_B$ supplies only a branch weight.
 
-4. **Bounded-response limit:** On Proposition Y.7's separately certified two-rate, single-harmonic branch, $\mathcal F_{CP}=\tanh x$ with $x=\mathcal S\sin\delta$. Hence $|\mathcal F_{CP}|<1$ for every finite $x$, while $\mathcal F_{CP}\to\pm1$ only as $x\to\pm\infty$. This is a limit of the registered response profile; it does not by itself establish nonperturbative dynamics, a nonequilibrium source, or a baryon yield.
+4. **Bounded-response limit:** On Proposition Y.7's separately certified two-rate, single-harmonic branch, $\mathcal F_{CP}=\tanh x$ with $x=\mathcal S\sin\delta$. Hence $|\mathcal F_{CP}|<1$ for every finite $x$, while $\mathcal F_{CP}\to\pm1$ only as $x\to\pm\infty$. This is a limit of the registered response profile.
 
 **Theorem Y.7.1** (PU Holonomy on a Geometric Spontaneous-Baryogenesis Branch). *Let $\theta_{\mathrm{PU}}$ be a differentiable real lift of the compact Berry phase on a finite transport region. Assume an accepted anomaly and matching certificate supplies constants $C_B\ne0$ and $\chi_{CP}$ such that*
 $$
@@ -1408,7 +1407,7 @@ but this is an illustrative factor product, not a prediction or validation inter
 
 #### Y.7.5a Uncertainty Status
 
-No uncertainty for $\eta_B$ is defined until the source, transport, washout, threshold, normalization, residual, and covariance records are fixed. The factor $c_{\mathrm{sph}}=28/79$ is exact within the ideal unbroken-phase linearized equilibrium model of Proposition Y.9.1; it is not a lattice quantity with a $3\%$ uncertainty. Physical use outside that model requires a separate correction and uncertainty record.
+No uncertainty for $\eta_B$ is defined until the source, transport, washout, threshold, normalization, residual, and covariance records are fixed. The factor $c_{\mathrm{sph}}=28/79$ is exact within the ideal unbroken-phase linearized equilibrium model of Proposition Y.9.1. Physical use outside that model requires a separate correction and uncertainty record.
 
 ## Y.8 Comparison with Observation
 
@@ -1426,7 +1425,7 @@ The conditional CKM rows are separate diagnostics and do not close the baryon tr
 
 ### Y.8.3 Parameter Accounting
 
-The open outputs include $A_{CP}(t)$, $\mathcal C_{\mathrm{eff}}$, $\mathcal F_{CP}$, $\gamma_{\mathrm{wash}}$, the transport generator, the photon normalization, and their covariance/residual ledger. Therefore the displayed illustrative product does not have zero adjustable or external parameters.
+The open outputs include $A_{CP}(t)$, $\mathcal C_{\mathrm{eff}}$, $\mathcal F_{CP}$, $\gamma_{\mathrm{wash}}$, the transport generator, the photon normalization, and their covariance/residual ledger. Therefore the displayed illustrative product carries adjustable or external parameters.
 
 ## Y.9 Sign of the Baryon Asymmetry
 
@@ -1547,11 +1546,11 @@ $$
 \in
 [\tanh x_-,\tanh x_+],
 $$
-and Prediction Y.2 supplies the exact tolerance test for a near-unit interval. The current archive does not derive $x=4.38$. Its physical use requires the independent geometric-area and flavor-realization gates of Theorems T.54b and T.53, the Berry-to-electroweak matching gate of Theorem Y.6.1, and the response-active transport and product-reduction gates of Theorems Y.6.1i--Y.6.1j and Corollary Y.6.1k. The displayed arithmetic therefore does not by itself establish a physical CP source, nonstationarity, a baryon yield, or an enhancement over another transport model.
+and Prediction Y.2 supplies the exact tolerance test for a near-unit interval. Physical use of the illustrative value $x=4.38$ requires the independent geometric-area and flavor-realization gates of Theorems T.54b and T.53, the Berry-to-electroweak matching gate of Theorem Y.6.1, and the response-active transport and product-reduction gates of Theorems Y.6.1i--Y.6.1j and Corollary Y.6.1k.
 
 **Mechanism 2: Complexity-Regulated Efficiency**
 
-In PU, the configuration-space complexity $\kappa_B$ may supply a reduced response weight, but nonequilibrium is controlled by the response-active drive, inflow, preparation, and freeze-out data of Theorems Y.6.1i--Y.6.1j and Corollary Y.6.1k. The branch value $\kappa_B=19.48$ gives $e^{-\kappa_B}\sim3\times10^{-9}$ only as a multiplicative weight; it neither establishes departure from equilibrium nor replaces a certified transport solution.
+In PU, the configuration-space complexity $\kappa_B$ may supply a reduced response weight, but nonequilibrium is controlled by the response-active drive, inflow, preparation, and freeze-out data of Theorems Y.6.1i--Y.6.1j and Corollary Y.6.1k. The branch value $\kappa_B=19.48$ gives the multiplicative weight $e^{-\kappa_B}\sim3\times10^{-9}$.
 
 **Mechanism 3: Reduced Washout**
 
@@ -1908,13 +1907,13 @@ $$
 
 On the combined hypotheses of Theorems Y.11, Y.11.2, and Y.11.4, the conditional shared-exponent branch has the following implications:
 
-1. **Conditional common exponent.** The electroweak and baryogenesis model expressions share one exponential input after the equal-exponent decomposition, determinant relation, and transport certificate are specified. This relates the two hierarchy questions on that branch but does not determine the open prefactors.
+1. **Conditional common exponent.** The electroweak and baryogenesis model expressions share one exponential input after the equal-exponent decomposition, determinant relation, and transport certificate are specified. This relates the two hierarchy questions on that branch.
 
-2. **Branch compatibility.** A completion of this branch must satisfy the electroweak and baryogenesis constraints simultaneously; models outside its hypotheses are not constrained by the square-root identity.
+2. **Branch compatibility.** A completion of this branch must satisfy the electroweak and baryogenesis constraints simultaneously.
 
-3. **CP half-step.** The factor $1/2$ follows only when the action ledger is additive on two CP-complementary half-histories, an action-, measure-, boundary-, orientation-, and normalization-preserving bijection relates them, and a finite nonzero forward-locked CP-odd midpoint readout retains one oriented half-history. The order of $\mathbb Z_2$ alone does not determine the power law.
+3. **CP half-step.** The factor $1/2$ follows only when the action ledger is additive on two CP-complementary half-histories, an action-, measure-, boundary-, orientation-, and normalization-preserving bijection relates them, and a finite nonzero forward-locked CP-odd midpoint readout retains one oriented half-history.
 
-4. **Constant-prefactor correlation.** Within the same certified baryogenesis regime with $\eta_B\ne0$, with the transport, thermal, CP-response, generation, and determinant prefactors held constant, $\delta\eta_B/\eta_B=(1/2)\delta v/v$ at leading order. A BSM deformation that changes those entries does not obey this one-variable differential relation without an additional calculation.
+4. **Constant-prefactor correlation.** Within the same certified baryogenesis regime with $\eta_B\ne0$, with the transport, thermal, CP-response, generation, and determinant prefactors held constant, $\delta\eta_B/\eta_B=(1/2)\delta v/v$ at leading order.
 
 **Theorem Y.11.6 (Generation-Locked Baryogenesis in the Appendix Y Channel).** Work on the pre-flavor family-redundancy PPI branch of Proposition R.3.5.1a and on a certified CP-active Berry-loop branch. Within the PU electroweak baryogenesis mechanism of this appendix, the same family and CP data required for flavor CP violation enter the baryogenesis formula. In particular:
 
@@ -2332,11 +2331,11 @@ Electric dipole moments constrain CP-odd interactions that contribute to the mea
 
 ### Y.13.1 Identified Sources
 
-No numerical uncertainty interval for $\eta_B$ is defined by the current archive. A valid uncertainty ledger must be produced by the same accepted transport certificate and must include the CP source, transport kernel, washout and freeze-out histories, electroweak thresholds, photon normalization, residual interval, covariance, and forward-lock record. The factor $c_{\mathrm{sph}}=28/79$ is exact within the ideal unbroken-phase linearized equilibrium model of Proposition Y.9.1, not a lattice quantity with a $3\%$ error. Physical use outside that model requires a separate correction and uncertainty record. The illustrative values $0.282$, $0.9997$, and $0.63$ cannot be assigned a quadrature uncertainty before their joint source and covariance are supplied.
+No numerical uncertainty interval for $\eta_B$ is defined by the current archive. A valid uncertainty ledger must be produced by the same accepted transport certificate and must include the CP source, transport kernel, washout and freeze-out histories, electroweak thresholds, photon normalization, residual interval, covariance, and forward-lock record. The factor $c_{\mathrm{sph}}=28/79$ is exact within the ideal unbroken-phase linearized equilibrium model of Proposition Y.9.1. Physical use outside that model requires a separate correction and uncertainty record. The illustrative values $0.282$, $0.9997$, and $0.63$ cannot be assigned a quadrature uncertainty before their joint source and covariance are supplied.
 
 ### Y.13.2 CP-Response Sensitivity Status
 
-The CP-response sensitivity remains open until an accepted transport calculation supplies $A_{CP}(t)$ or an equivalent certified affinity. The sphaleron rate and a static phase do not determine that affinity, so no saturation table or phase-insensitivity conclusion follows from the current archive.
+The CP-response sensitivity remains open until an accepted transport calculation supplies $A_{CP}(t)$ or an equivalent certified affinity; on that branch Prediction Y.2 supplies the phase-insensitivity criterion.
 
 ---
 
@@ -2371,9 +2370,9 @@ No theory interval is defined for this illustrative product. Theorem-level numer
 The derivation reveals that:
 - **CP-odd geometry and transport** are distinct certificate layers. The determinant-line holonomy is geometric data on the registered flavor branch. Its promotion to physical CP violation and a baryon source requires the accepted Berry-to-electroweak matching and response-active transport records. On an accepted APS-Kubo branch, $\dot\theta_{\mathrm{PU}}$ is the APS boundary-phase derivative plus Berry-curvature flux around the retained flavor loop, and transport weighting produces the surface term in (Y.6.1g.1). The approximation $\tanh(\mathcal S\sin\delta)\approx1$ belongs only to a separately certified near-unit product branch.
 - **Complexity weight** is controlled by the branch value $\kappa_B=19.48$; transport efficiency, CP response, and washout remain separate certificate entries.
-- **Matter dominance** is determined only by a complete retained signed transport certificate, including its source, oriented kernel, topological transition, and readout convention; the initial-condition record alone does not determine the sign.
+- **Matter dominance** is determined only by a complete retained signed transport certificate, including its source, oriented kernel, topological transition, and readout convention.
 
-Appendix Y therefore supplies certificate conditions for determining the sign and scale of the matter excess, not a present derivation of either physical output. The displayed factor product is an illustrative numerical diagnostic. On an accepted certificate route of Definition Y.11.7a, Definition Y.11.7e, or Definition Y.6.1c, let $\mathcal I_B$ denote the resulting certified output interval. Matter dominance is certified only if $\inf\mathcal I_B>0$, antimatter dominance only if $\sup\mathcal I_B<0$, and the sign remains unresolved if $0\in\mathcal I_B$. The certified scale is the interval $\mathcal I_B$ itself; a point value requires a singleton interval or a proved zero residual. Until such a certificate is accepted, the physical sign and numerical scale remain open branch coordinates.
+Appendix Y therefore supplies the certificate conditions under which the sign and scale of the matter excess are determined. The displayed factor product is an illustrative numerical diagnostic. On an accepted certificate route of Definition Y.11.7a, Definition Y.11.7e, or Definition Y.6.1c, let $\mathcal I_B$ denote the resulting certified output interval. Matter dominance is certified only if $\inf\mathcal I_B>0$, antimatter dominance only if $\sup\mathcal I_B<0$, and the sign remains unresolved if $0\in\mathcal I_B$. The certified scale is the interval $\mathcal I_B$ itself; a point value requires a singleton interval or a proved zero residual. Until such a certificate is accepted, the physical sign and numerical scale remain open branch coordinates.
 
 ---
 

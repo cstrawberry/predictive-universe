@@ -6,7 +6,7 @@ This appendix models how quantum records depend on the perspective from which th
 
 **Technical ledger.**
 
-This appendix gives a mathematical formalism for the Perspectival State ($S_{(s)}(t)$, Definition 24) and the registered `Evolve` instruments of Definition 27. It constructs a conditional perspective-update model, proves its stated finite-dimensional properties, analyzes Wigner's-Friend-type records, and isolates a certificate-scoped obstruction to one cross-perspective import. It does not claim a proof of every extended Wigner's-Friend protocol.
+This appendix gives a mathematical formalism for the Perspectival State ($S_{(s)}(t)$, Definition 24) and the registered `Evolve` instruments of Definition 27. It constructs a conditional perspective-update model, proves its stated finite-dimensional properties, analyzes Wigner's-Friend-type records, and isolates a certificate-scoped obstruction to one cross-perspective import.
 
 We use POP, PCE, the MPU of Definition 23, the full-context response closure of Principle 5b, the invariant SPAP response ledger of Principle 11b, and the quantum closure of Principles 8.0b–8.0c and Theorem 8.0d. Theorem 8.0d supplies $\mathcal H_0\cong\mathbb C^8$, the Born trace law, and a normalized quantum instrument for every registered verification; Principle 8.0c supplies the single retained outcome of each registered run. This appendix develops the remaining perspective dynamics of those registered instruments; its kernels do not re-postulate the carrier, Born weights, or actualization law.
 
@@ -16,11 +16,11 @@ The appendix is organized as follows:
 
 - **Section M.3** decomposes a registered quantum instrument from the conditional perspective kernel $G_{\text{persp}}(s'|s,k,N,\Delta t)$, gives an explicit drift-diffusion realization on $\Sigma$, and registers an interrogative-efficiency branch (Section M.3.3.2) on which the realization's drift data are derived rather than supplied.
 
-- **Section M.4** applies that conditional instrument model to measurement records. The Born selector and single-run actualization remain inputs from the cited quantum branch rather than consequences of perspective diffusion.
+- **Section M.4** applies that conditional instrument model to measurement records, with the Born selector and single-run actualization supplied by the cited quantum branch.
 
-- **Section M.5** records compatibility with finite-dimensional operator algebras, homogeneous spaces, and Markov kernels; it is not a consistency proof for the full physical theory.
+- **Section M.5** records compatibility with finite-dimensional operator algebras, homogeneous spaces, and Markov kernels.
 
-- **Section M.6** gives a perspectival analysis of Wigner's Friend and proves a certificate-scoped obstruction for an actualized record imported across distinct perspectives without a sharing or invariance certificate. The complete Frauchiger--Renner protocol requires a separate formalization. The section also identifies the interaction context $N$ as the conditional entry point for the independently certificate-gated CC program.
+- **Section M.6** gives a perspectival analysis of Wigner's Friend and proves a certificate-scoped obstruction for an actualized record imported across distinct perspectives without a sharing or invariance certificate, and applies it to the complete four-laboratory Frauchiger--Renner certainty graph (Theorem M.6.2c). The section also identifies the interaction context $N$ as the conditional entry point for the independently certificate-gated CC program.
 
 - **Section M.7** concludes by synthesizing the contributions of the appendix and situating the perspectival formalism within the broader framework.
 
@@ -93,7 +93,7 @@ Distinct outcomes can have the same normalized poststate; their contributions th
 
 ### M.3.3 Properties and an Explicit Drift-Diffusion Realization of the Conditional Perspective Kernel $G_{persp}$
 
-The detailed interaction dependence of the conditional kernel $G_{persp}(s' | s, k, N, \Delta t)$ is not fixed uniquely at the present level of the framework: it encodes the physics of the interaction $N$ and may vary across admissible interaction models. What is fixed here is the structural decomposition (M.2), the normalization requirement (M.3), the ideal projective limit (M.4), and an explicit drift-diffusion realization whose short-time behavior matches the Gaussian-with-drift heuristic form and whose semigroup satisfies the robustness conditions used below. We therefore begin by stating the generic properties and then present that constructive realization. Section M.3.3.2 then registers an interrogative-efficiency branch on which the realization's drift data are derived rather than supplied.
+This section fixes the structural decomposition (M.2), the normalization requirement (M.3), the ideal projective limit (M.4), and an explicit drift-diffusion realization of the conditional kernel $G_{persp}(s' | s, k, N, \Delta t)$ whose short-time behavior matches the Gaussian-with-drift heuristic form and whose semigroup satisfies the robustness conditions used below. The detailed interaction dependence of the kernel encodes the physics of the interaction $N$ and can vary across admissible interaction models. We therefore begin by stating the generic properties and then present that constructive realization. Section M.3.3.2 then registers an interrogative-efficiency branch on which the realization's drift data are derived rather than supplied.
 
 *   **Dependence on Interaction $N$:** The kernel $G_{persp}$ depends fundamentally on the nature of the interaction $N$. Different interactions will induce different perspective dynamics.
 *   **Ideal Projective Measurement Limit:** Let the apparatus record a complete outcome flag $s_k\in\Sigma$ whose distinguished ray is $[|k\rangle]$. A ray alone is not a point of the complete-flag manifold. In the idealized sharp limit the conditional kernel is required to converge weakly to
@@ -476,11 +476,11 @@ An observer with high Consciousness Complexity is a high-resource record-integra
 
 ## M.5 Mathematical Consistency
 
-The finite-dimensional Hilbert spaces, compact homogeneous manifolds, Riemannian operators, and Markov kernels used in this appendix are formalizable in ZFC. This formalizability does not prove the consistency of ZFC or the joint consistency of the manuscript's additional physical axioms. A relative-consistency claim would require an explicit model satisfying those axioms inside a background theory whose consistency is assumed.
+The finite-dimensional Hilbert spaces, compact homogeneous manifolds, Riemannian operators, and Markov kernels used in this appendix are formalizable in ZFC. Relative consistency of the manuscript's additional physical axioms is a separate statement, which requires an explicit model satisfying those axioms inside a background theory whose consistency is assumed.
 
 ## M.6 Perspectival Analysis of Wigner's Friend and Certificate-Scoped Cross-Perspective Imports
 
-The following analysis supplies a branch-consistent semantics for Wigner's-Friend records and proves one exact typing obstruction for cross-perspective imports. It is a conditional interpretive model on the registered instrument branch, not a proof that every extended Wigner's-Friend protocol is resolved.
+The following analysis supplies a branch-consistent semantics for Wigner's-Friend records and proves one exact typing obstruction for cross-perspective imports. It is a conditional interpretive model on the registered instrument branch.
 
 ### M.6.1 The Wigner's Friend Paradox
 
@@ -623,7 +623,7 @@ Thus persistent same-basis disagreement is excluded in the strong-readout limit.
 
 - The retained $F$-indexed ledger contains the definite record $k=0$.
 - No $W$-indexed record has yet been registered. If the accepted external unitary representation is used, $W$ assigns $|\Psi\rangle_{FQ}=(|F_0\rangle|0\rangle+|F_1\rangle|1\rangle)/\sqrt2$.
-- These statements are jointly satisfiable in the declared typed calculus because one is an $F$-indexed record proposition and the other is a $W$-indexed pre-readout state assignment. This is not a theorem that two incompatible unindexed actualities coexist.
+- These statements are jointly satisfiable in the declared typed calculus because one is an $F$-indexed record proposition and the other is a $W$-indexed pre-readout state assignment.
 
 **Phase 3: $W$ performs the certified same-basis record readout at $t_2$.**
 
@@ -631,7 +631,7 @@ Thus persistent same-basis disagreement is excluded in the strong-readout limit.
 - The joint kernel $G_{\mathrm{persp}}^{(WF)}$ correlates the $W$ and $F$ record flags.
 - In the ideal strong-readout limit, the post-interaction law is supported on configurations for which both retained flags equal $0$.
 
-Thus the example proves conditional same-basis record consistency. It does not resolve arbitrary Wigner--Friend protocols, select a unique outcome ontology, or cover external superposition-basis measurements outside Theorem M.6.1's hypotheses.
+Thus the example proves conditional same-basis record consistency. External superposition-basis measurements are treated by the import obstruction of Section M.6.4.
 
 ### M.6.4 Certificate-Scoped Frauchiger--Renner Import Obstruction
 
@@ -668,7 +668,7 @@ $$
 $$
 is proposed for import as a definite proposition at a distinct perspective $s_{\bar W}^{(\mathrm{pre})}\ne s_W^{(\mathrm{post})}$. Assume that the proposed import has neither (a) a record-sharing certificate supplied by an Evolve interaction or another registered channel nor (b) a perspective-invariance certificate in the sense of Definition M.6.2. Then the import is not well typed in the retained perspectival inference calculus.
 
-*Proof.* The proposition $\phi_{s_W^{(\mathrm{post})}}$ asserts an actualized record and is indexed to $s_W^{(\mathrm{post})}$. Definition M.6.2 declares that an import of such a record to a distinct perspective is admitted only by a record-sharing certificate or a perspective-invariance certificate. The two hypotheses exclude those two generating rules. Hence no rule of the retained calculus types the proposed import at $s_{\bar W}^{(\mathrm{pre})}$. This proves the stated obstruction. A claim about every step of the Frauchiger–Renner protocol requires a separate formalization of the complete protocol and is not asserted here. ∎
+*Proof.* The proposition $\phi_{s_W^{(\mathrm{post})}}$ asserts an actualized record and is indexed to $s_W^{(\mathrm{post})}$. Definition M.6.2 declares that an import of such a record to a distinct perspective is admitted only by a record-sharing certificate or a perspective-invariance certificate. The two hypotheses exclude those two generating rules. Hence no rule of the retained calculus types the proposed import at $s_{\bar W}^{(\mathrm{pre})}$. This proves the stated obstruction; Theorem M.6.2c applies it to both certainty routes of the complete four-laboratory protocol. ∎
 
 **Theorem M.6.2c (Complete Typed Certainty Graph of the Four-Laboratory FR Protocol).** Use the standard unitary laboratory state after the two friends have registered their records,
 $$
@@ -805,18 +805,18 @@ The PU resolution bears surface similarity to Rovelli's Relational Quantum Mecha
 |--------|---------------|--------------|
 | **Ontological status** | Relative quantum information; reconstruction programme | Declared branch structure; physical perspectives require the registered perspective-space, instrument, and realization certificates |
 | **Grounding** | Equivalent physical systems, quantum completeness, and information postulates | Conditional on SPAP together with the retained Hilbert/Born, update, and perspective records; a registered physical reset is a separate branch with $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$ |
-| **Why relational?** | Observer-dependent measurement descriptions | SPAP motivates perspective indexing on the declared response branch; it does not by itself derive the quantum perspective space or its physical realization |
+| **Why relational?** | Observer-dependent measurement descriptions | SPAP motivates perspective indexing on the declared response branch; Corollary 26 identifies the quantum perspective space on the ordered rank-one context branch |
 | **Mathematical structure** | Quantum questions and Hilbert spaces; no PU perspective manifold | Perspective Space $\Sigma \cong U(d_0)/U(1)^{d_0}$ with Riemannian structure (Definition 25, Theorem 25) |
 | **Dynamics** | Hamiltonian evolution and measurement interactions; no PU drift-diffusion kernel | Explicit drift-diffusion realization of $G_{\text{persp}}$ on $\Sigma$ (Equations M.5a–b) |
 | **Consistency criterion** | Quantitative correlations under stated measurement dynamics | Bakry-Émery control yields $W_2$-contractive convergence for the constructed class (Equation M.5c) |
 | **Origin of probability** | Reconstruction uses an additional superposition postulate | On the accepted carrier branch, Principle 11b fixes the invariant response ledger, Principle 8.0b and $\mathfrak C_{\mathrm{car}}$ fix the complex carrier, Theorem 8.2 and Lemma 8.2a give quotienting and retained additivity, and Definition 8.2b plus Theorem 8.3 give the unique trace representation on the accepted full-domain or finite informationally complete positive-reconstruction route; Principle 8.0c separately supplies irreducible registered single outcomes |
 | **Temporal structure** | Time-indexed questions and unitary evolution | Directed order is required by Theorem 4; a thermodynamic arrow follows only on the independently certified Appendix O branch |
 
-**Remark M.6.3: RQM Comparison.** Rovelli's relational formulation and PU use distinct additional premises. Corollary 1 excludes a uniformly exact predictor on its diagonal-closed model class; Definition 24 and the declared quantum branch supply PU's perspective-indexed representation and this appendix's dynamics. No limiting map from PU to RQM is established here, and PU does not prove that quantum mechanics must be relational.
+**Remark M.6.3: RQM Comparison.** Rovelli's relational formulation and PU use distinct additional premises. Corollary 1 excludes a uniformly exact predictor on its diagonal-closed model class; Definition 24 and the declared quantum branch supply PU's perspective-indexed representation and this appendix's dynamics.
 
 ### M.6.6 Toward Completing the Relativistic Program
 
-The conditional same-basis record-consistency construction admits a structural comparison with Einstein's operational treatment of simultaneity. The comparison does not transfer the Lorentzian relativity theorem to outcome ontology or select perspectival semantics uniquely.
+The conditional same-basis record-consistency construction admits a structural comparison with Einstein's operational treatment of simultaneity.
 
 **The Relativistic Insight.** Einstein's key move was recognizing that "simultaneity" had no absolute meaning—it was operationally defined relative to reference frames. What appeared to be an objective, frame-independent fact (whether two events are simultaneous) was revealed to be frame-dependent once the operational content was examined carefully. This was not a retreat from objectivity but its proper relativization.
 
@@ -840,7 +840,7 @@ The conditional same-basis record-consistency construction admits a structural c
 
 (ii) Each relativization is branch-relative. Frame-relative simultaneity uses an accepted Lorentzian characteristic-cone branch; perspective-relative actuality uses the retained SPAP, Hilbert/Born, update, and perspective records. A registered reset, a full-state refresh channel, and a Lorentzian cone are independent additional gates.
 
-(iii) On the nominated Hypothesis 1 branch, one registered MPU network supplies the common substrate; this ontological identification is not derived by the perspectival semantics.
+(iii) On the nominated Hypothesis 1 branch, one registered MPU network supplies the common substrate, an ontological identification made by Hypothesis 1.
 
 (iv) Lorentz transformations govern frame changes on the Lorentzian branch. A perspective kernel yields record consistency only on the certified strong-readout branch of Lemma M.6.1.
 
@@ -1063,19 +1063,19 @@ Accordingly, frame-relative simultaneity and perspective-relative actuality rema
 
 The certificate-scoped perspectival analysis of Wigner's Friend has the following implications on its declared instrument and strong-readout branches:
 
-**1. No Primitive Heisenberg Cut on the Registered Instrument Branch.** On the separately assumed Hilbert/instrument/Born and actualization branch, a registered verification/update event is represented by the `Evolve` instrument of Definition 27 and Proposition 9. The same representation can be used across the qualifying implementations without inserting a size- or consciousness-based cut. This does not make every MPU interaction an actualization event and does not derive the instrument or outcome ontology from SPAP or PCE.
+**1. No Primitive Heisenberg Cut on the Registered Instrument Branch.** On the separately assumed Hilbert/instrument/Born and actualization branch, a registered verification/update event is represented by the `Evolve` instrument of Definition 27 and Proposition 9. The same representation can be used across the qualifying implementations without inserting a size- or consciousness-based cut.
 
 **2. Homogeneous Carrier Geometry and Registered Interaction Data.** The quotient perspective space assigns the same formal type to every $s\in\Sigma$, and the $U(d_0)$ action on this carrier is transitive. A registered interaction can nevertheless select a target $s_k$, potential $V_k$ and transition kernel, so equal formal type does not make that interaction invariant. Covariance requires simultaneous transport of all such data: for a group action $a$, a measurable set $A$ and registered data $\mathcal D$, the kernel must satisfy $K_{a\mathcal D}(as,aA)=K_{\mathcal D}(s,A)$. Invariance of one interaction is the stronger special case in which its data are preserved. These statements do not exclude an absolute or response-equivalent latent ontology.
 
-**3. Certificate-Scoped Extended Wigner's-Friend Imports.** Definition M.6.2 requires a record-sharing or perspective-invariance certificate for an actualized record imported across distinct perspectives, and Lemma M.6.2a gives the corresponding import normal form. Theorem M.6.2b proves that the displayed Frauchiger–Renner-style import is ill typed when neither certificate exists. Any extended Wigner's-Friend argument containing an import that satisfies those hypotheses is blocked at that import; analysis of the complete Frauchiger–Renner protocol requires a separate formalization.
+**3. Certificate-Scoped Extended Wigner's-Friend Imports.** Definition M.6.2 requires a record-sharing or perspective-invariance certificate for an actualized record imported across distinct perspectives, and Lemma M.6.2a gives the corresponding import normal form. Theorem M.6.2b proves that the displayed Frauchiger–Renner-style import is ill typed when neither certificate exists. Any extended Wigner's-Friend argument containing an import that satisfies those hypotheses is blocked at that import, and Theorem M.6.2c shows that both certainty routes of the complete four-laboratory Frauchiger–Renner protocol pass through three such cross-perspective imports each when their edges connect distinct perspective indices.
 
-**4. Registered laboratory branch.** With the standard instrument and Born selector supplied as premises, the perspectival kernel preserves the registered laboratory outcome law by construction while adding a conditional perspective record. This establishes compatibility, not an independent derivation of quantum statistics or a novel effect. Any CC-dependent deviation requires the separate G9CC realization certificate.
+**4. Registered laboratory branch.** With the standard instrument and Born selector supplied as premises, the perspectival kernel preserves the registered laboratory outcome law by construction while adding a conditional perspective record. Any CC-dependent deviation requires the separate G9CC realization certificate.
 
-**5. Perspective-Indexed Account of the "Absoluteness" Debate.** Within the declared perspectival semantics, outcome propositions are objective only after their registered perspective is specified. The cited no-go results do not by themselves prove PU's perspective space, actualization rule, or physical realization.
+**5. Perspective-Indexed Account of the "Absoluteness" Debate.** Within the declared perspectival semantics, outcome propositions are objective only after their registered perspective is specified.
 
 ### M.6.8 Certificate-Gated Interface to Consciousness Complexity
 
-Dependence of $G_{\mathrm{persp}}(s'|s,k,N,\Delta t)$ on the registered context $N$ supplies a typed interface at which a separately constructed physical control may enter. It proves no nonzero CC effect. A physical CC branch must supply:
+Dependence of $G_{\mathrm{persp}}(s'|s,k,N,\Delta t)$ on the registered context $N$ supplies a typed interface at which a separately constructed physical control may enter. A physical CC branch must supply:
 
 1. a causal map from an aggregate state to a realizable control $N$;
 2. one normalized instrument family on which that control changes a registered outcome law, or a theorem that every admissible change is zero;
@@ -1111,7 +1111,7 @@ All source, carrier, energy, reset, timing and locality owners are exactly those
 
 **Resolution TV-M-07-R1 (Metadata).** Exact domain: both accepted G9CC contexts/outcomes and all initial perspectives for the family (M.6.8a.2). Premises: Theorem L.12.8b and $\max_cr_{c,\lambda}\to0$. Equivalence: unitary equivalence of the accepted finite G9CC carrier together with equality of the conditional perspective kernel and locked intervention response. Budget: both contexts, both target outcomes, every perspective endpoint, every initial perspective pair and the full strong-readout limit family. Verifier: joint mass one, the explicit coupling, product disagreement bound and (M.6.8a.3). Falsifier: lost normalization, noncontractive conditional kernels, failed strong readout or a nonpositive locked response. Provenance class: source-internal consumption of the accepted finite physical witness. Downstream consumers: the finite CC/perspective coexistence construction, the perspective-instrument ledger and `TV-M-07`. Result: `positive-discharge` of the registered G9CC perspective-instrument modulation. This consumes but is not recovered by `TV-L-07`, whose theorem contains no perspective kernel.
 
-Theorems 39, 39a, and 51 constrain a nominated response after it exists; they do not construct its carrier, sign, or magnitude. Theorem L.12.8b now supplies the accepted finite carrier and instrument used in Theorem M.6.8a; Appendix L's broader electromagnetic and gravitational models still derive no universal dominance ratio for an aggregate.
+Theorems 39, 39a, and 51 constrain a nominated response after it exists, and Theorem L.12.8b supplies the accepted finite carrier and instrument used in Theorem M.6.8a.
 
 ### M.6.9 Synthesis
 
@@ -1119,7 +1119,7 @@ Quantum facts in this model are indexed to the perspective that records them, mu
 
 **Technical ledger.**
 
-The perspectival construction is a conditional semantics for registered quantum records. It establishes typed consistency on its accepted instrument and readout branches; it does not prove that perspective indexing is the unique ontology.
+The perspectival construction is a conditional semantics for registered quantum records. It establishes typed consistency on its accepted instrument and readout branches.
 
 The key elements of the construction are:
 
@@ -1131,13 +1131,13 @@ The key elements of the construction are:
 
 4. **Cross-perspective reasoning is certificate-governed**: Definition M.6.2 permits an actualized-record import across distinct perspectives only through a record-sharing or perspective-invariance certificate, and Lemma M.6.2a gives the corresponding normal form.
 
-5. **The perspectival model is branch-conditional**: SPAP and registered-reset thermodynamics do not by themselves derive the perspective space, actualization instrument, or transition kernel; those data belong to the retained Hilbert/Born and perspectival branch.
+5. **The perspectival model is branch-conditional**: the perspective space, actualization instrument, and transition kernel are supplied by the retained Hilbert/Born and perspectival branch.
 
 6. **The formalism exposes a conditional empirical interface**: The interaction context $N$ in $G_{\text{persp}}$ is a declared model variable. A CC-induced outcome shift requires the independent context-control, response, and physical-channel certificates used by the experimental predictions.
 
-This provides a branch-indexed extension of the relativistic program for quantum mechanics: within the declared perspectival semantics, outcome propositions are indexed by perspective just as simultaneity statements are indexed by frame. The MPU network remains the common physical substrate, while the specific Hilbert, actualization, transition-kernel, and consistency structures retain their stated branch hypotheses.
+This provides a branch-indexed extension of the relativistic program for quantum mechanics: within the declared perspectival semantics, outcome propositions are indexed by perspective just as simultaneity statements are indexed by frame. On the Hypothesis 1 branch, the MPU network is the common physical substrate, while the specific Hilbert, actualization, transition-kernel, and consistency structures retain their stated branch hypotheses.
 
-The same perspectival machinery supplies a mathematical interface for the CC hypothesis only after the independent context-modulation and response certificates are supplied. Theorem M.6.2b proves one certificate-absence obstruction for a displayed cross-perspective import; it does not by itself dissolve every foundational protocol or derive a non-Born influence channel.
+The same perspectival machinery supplies a mathematical interface for the CC hypothesis only after the independent context-modulation and response certificates are supplied. Theorem M.6.2b proves the certificate-absence obstruction for a displayed cross-perspective import, and Theorem M.6.2c applies it to both certainty routes of the complete four-laboratory Frauchiger–Renner protocol.
 
 ### M.6.10 The Cost Functional on the Perspective Space
 
@@ -1147,7 +1147,7 @@ Shannon entropy $H(X)=-\sum_xp(x)\ln p(x)$ is a functional of a specified probab
 
 **Definition M.10.1 (Self-Model).** Let $S$ be a predictive system with $C_{agg}(S)>C_{op}$ possessing Effective Operational Property R. The self-model $\mathcal M_S$ is the component of $S$'s internal model that represents its own states, predictions, accuracy, and dynamics. On the perspectival branch it encodes an internal representation of the registered perspective $s\in\Sigma$ and density operator $\rho(t)$; vector notation is restricted to the pure-state shorthand of Definition 24.
 
-**Remark M.10.1.** The definitions below apply to systems possessing Effective Operational Property R together with an operational self-model of the form specified in Definition M.10.1. They assign no SPAP-proximity value or cost law to systems outside that domain. Within the domain, Theorem M.10.3 gives an asymptotic computational lower bound only for families carrying its pattern-specific reduction certificate, and Theorem M.10.7 gives a physical reset signature only when its implementation certificate is supplied. Effective Operational Property R is therefore a domain condition, not by itself a divergence or thermodynamic-cost theorem. A parameter $\theta_S$ is not thereby a retained content object or a complete finite-budget candidate. Any persistence claim in the complete finite-budget quotient $\sim_B$ requires a registered encoder from the parameter domain into complete candidates carrying the response, update, verification, certificate, decoder, tolerance, and cost data of Definition P.16d.0.1; equality of the raw parameter follows from equality of retained quotient classes only when the composite quotient encoder is injective on the compared domain.
+**Remark M.10.1.** The definitions below apply to systems possessing Effective Operational Property R together with an operational self-model of the form specified in Definition M.10.1. They assign no SPAP-proximity value or cost law to systems outside that domain. Within the domain, Theorem M.10.3 gives an asymptotic computational lower bound only for families carrying its pattern-specific reduction certificate, and Theorem M.10.7 gives a physical reset signature only when its implementation certificate is supplied. Effective Operational Property R is therefore a domain condition. A parameter $\theta_S$ is not thereby a retained content object or a complete finite-budget candidate. Any persistence claim in the complete finite-budget quotient $\sim_B$ requires a registered encoder from the parameter domain into complete candidates carrying the response, update, verification, certificate, decoder, tolerance, and cost data of Definition P.16d.0.1; equality of the raw parameter follows from equality of retained quotient classes only when the composite quotient encoder is injective on the compared domain.
 
 **Definition M.10.2 (Model-Change Decomposition on an Identifiable Fisher Stratum).** Let $E$ be a physical pattern and let $S$ have Effective Operational Property R. Assume that the retained parameter point lies on a finite-dimensional identifiable stratum on which the Fisher tensor $g_{\mathcal F_S}$ is positive definite, and assume the registered tangent splitting
 $$
@@ -1425,7 +1425,7 @@ N^*(S)
 \right)^2
 \right\rceil+1
 $$
-is a sufficient register count for the displayed proof and is not asserted to be least. Neither theorem proves convergence to the endpoint as $N\uparrow N^*(S)$ or realization of any intermediate value in $(1/\alpha_{SPAP},\infty)$. Either conclusion requires a separately registered interpolation-realization theorem. $\square$
+is a sufficient register count for the displayed proof and is not asserted to be least. Neither theorem proves convergence to the endpoint as $N\uparrow N^*(S)$. Theorem M.10.4.2 attains every intermediate value in $(1/\alpha_{SPAP},\infty)$ in the formal one-coordinate class; physical realization of those values requires the implementation certificate. $\square$
 
 **Theorem M.10.4.2 (Exact Attainable Range of Formal SPAP Proximity).** Fix $\alpha=\alpha_{SPAP}>0$. Across the smooth calibrated one-coordinate Fisher geometries admitted by Definition M.10.3 with $g(\delta)=\delta$, the exact attainable range is
 $$
@@ -1503,7 +1503,7 @@ Their width is $(U-L)/[(\alpha-L)(\alpha-U)]$, which tends to zero as the infimu
 
 *Proof.* Suppose an internal evaluator $\mathcal P_S$ returned the exact value of $\mu_S(E)$ on every represented pattern with $\sigma_S(E)>0$. By the reduction hypothesis, $\mathcal R_S(\mathcal P_S)$ would be a universal exact self-predictor for the diagonal class of Theorem 10. Theorem 10 excludes that predictor. Hence $\mathcal P_S$ cannot exist. ∎
 
-Theorem M.10.5 separately establishes certificate-relative external evaluation for specified represented patterns. Aggregate-complexity order by itself implies neither universal downward computability nor impossibility of evaluating selected properties of a more complex system.
+Theorem M.10.5 separately establishes certificate-relative external evaluation for specified represented patterns.
 
 **Corollary M.10.5.2 (Conditional Physical Signature).** Theorem M.10.3 supplies only its certificate-relative abstract processing-cost lower bound. A physical heat signature follows only if the implementation records resets satisfying Theorem 31, and a stress-energy signature follows only if that implementation ledger satisfies the projection hypotheses of Definition B.8. Neither the computability scope of Theorem M.10.5 nor the computational lower bound alone determines entropy production, metabolic expenditure, or stress-energy.
 
@@ -2928,13 +2928,13 @@ This appendix provides a conditional mathematical model for Perspectival State a
 
 - **Summary of Theorem M.6.1:** Friend and Wigner records are indexed by different perspectives, so the model assigns no single unindexed proposition both definite and indefinite.
 - **Summary of Lemma M.6.1:** Convergence to consistent configurations requires the strong-readout and contractive-kernel hypotheses.
-- **Summary of Definition M.6.2, Lemma M.6.2a, and Theorem M.6.2b:** Actualized records may be imported across distinct perspectives only with a record-sharing or perspective-invariance certificate. Theorem M.6.2b proves that the displayed Frauchiger–Renner-style import is ill typed when both certificates are absent; it does not claim a formal analysis of every step of the complete protocol.
-- **Summary of Structural Correspondence M.6.4:** The comparison with frame-relative simultaneity is interpretive. SPAP and the registered-reset inequality do not derive the perspective space, actuality rule, transition kernel, or Lorentzian frame structure.
+- **Summary of Definition M.6.2, Lemma M.6.2a, and Theorem M.6.2b:** Actualized records may be imported across distinct perspectives only with a record-sharing or perspective-invariance certificate. Theorem M.6.2b proves that the displayed Frauchiger–Renner-style import is ill typed when both certificates are absent, and Theorem M.6.2c extends the obstruction to both certainty routes of the complete four-laboratory protocol when their edges connect distinct perspective indices.
+- **Summary of Structural Correspondence M.6.4:** The comparison with frame-relative simultaneity is structural: perspective-relative actuality uses the retained SPAP, Hilbert/Born, update, and perspective records, while frame-relative simultaneity uses the accepted Lorentzian characteristic-cone branch.
 
-**Connection to CC.** The variable $N$ is a typed interface for Hypothesis 3. An aggregate may influence an outcome through $N$ only on an accepted G9CC response certificate constructing the causal aggregate-to-control map and changed normalized instrument. Theorems 39 and 51 then bound the supplied response; they neither prove it nonzero nor fix its effect size. Preservation of Lemma M.6.1 additionally requires the modulated readout kernel to remain in its strong-readout and contractive class.
+**Connection to CC.** The variable $N$ is a typed interface for Hypothesis 3. An aggregate may influence an outcome through $N$ only on an accepted G9CC response certificate constructing the causal aggregate-to-control map and changed normalized instrument. Theorems 39 and 51 then bound the supplied response. Preservation of Lemma M.6.1 additionally requires the modulated readout kernel to remain in its strong-readout and contractive class.
 
 **Cost Functional (M.6.10).** The perspectival profile $\mathcal{P}_S(E)=(\Delta Q_S,\mu_S,\sigma_S)$ is a receiver-pattern descriptor; its relation to $\Sigma$ requires the registered local bridge of Proposition M.10.9. The SPAP proximity $\mu_S(E)$ records the performance level required by criterion (M.18), while $\sigma_S(E)$ records the fraction of the update assigned to the self-model subspace. On an asymptotic family carrying the reduction certificate of Theorem M.10.3, $\mu_{S_\lambda}(E_\lambda)\to\infty$ gives the certified computational lower bound (M.23). Purely external patterns attain $\mu_S(E)=1/\alpha_{SPAP}$ only under the baseline-invariance hypothesis of Corollary M.10.3.1; neither statement alone fixes physical heat. External evaluation and finite-family screening require the effective model-access, decision, and optional insulation certificates of Theorems M.10.5 and M.10.8. A replay penalty is available only for an implementation defined to reproduce a specified target reset ledger, with nonnegative overhead imposed by that accounting convention. Theorem M.10.9 proves that $\mu_S(E)$ is not determined by Shannon entropy alone; comparisons with other information quantities require separately defined reduction maps.
 
-**Synthesis.** On its declared instrument and perspective-kernel premises, the formalism types `Evolve` records and represents memory, causal-order, post-selection, and weak-probe histories through finite process tensors. It proves the stated cross-perspective import obstruction, not a resolution of every foundational protocol. The CC variable $N$ is a conditional empirical interface whose physical realization remains G9CC. The framework thereby supplies a coherent branch model while retaining the independent carrier, actualization, thermodynamic, and realization obligations.
+**Synthesis.** On its declared instrument and perspective-kernel premises, the formalism types `Evolve` records and represents memory, causal-order, post-selection, and weak-probe histories through finite process tensors. It proves the stated cross-perspective import obstruction and applies it to the complete four-laboratory Frauchiger–Renner certainty graph. The CC variable $N$ is a conditional empirical interface whose physical realization remains G9CC. The framework thereby supplies a coherent branch model while retaining the independent carrier, actualization, thermodynamic, and realization obligations.
 
 **Causality terminology rule.** Every endpoint, bias-strength, gravity-backreaction, or zero-error bound in this appendix is weaker than operational causality. Postulate 2 means exact pre-lightcone context independence by Theorem 39c; a late-randomized Bob-marginal shift lies outside that branch.

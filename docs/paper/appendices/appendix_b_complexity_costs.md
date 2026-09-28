@@ -6,11 +6,11 @@ This appendix provides the detailed construction and justification for key opera
 $\hbar$, $c$, and $k_B$ factors so that every operator’s physical
 dimension is transparent. Predictive Physical Complexity ($C_P$ and its proxy $\hat C_v$) carries its own base dimension $\mathrm{[Complexity]}$, e.g.\ $[\hat C_v]=\mathrm{[Complexity]}$. Information-theoretic quantities such as the entropy $\varepsilon$ or
 the channel capacity $C_{\max}$ are dimensionless, typically expressed
-in nats (natural-log base $e$). The physical interpretation of complexity-derived cost terms is conditional on the functional-correspondence branch of Theorem 2. At a joint stable equilibrium with $F_v^{\mathrm{op}}=F_v^{\mathrm{phys}}=0$ for every MPU and the theorem's per-MPU force-identifiability implication, the operational proxy aligns with predictive complexity. Appendix D supplies adaptation dynamics under its separate variational hypotheses; this conditional equality does not establish equality of operational and predictive costs away from that branch.
+in nats (natural-log base $e$). The physical interpretation of complexity-derived cost terms is conditional on the functional-correspondence branch of Theorem 2. At a joint stable equilibrium with $F_v^{\mathrm{op}}=F_v^{\mathrm{phys}}=0$ for every MPU and the theorem's per-MPU force-identifiability implication, the operational proxy aligns with predictive complexity. Appendix D supplies adaptation dynamics under its separate variational hypotheses.
 
 ## B.1 Operational Predictive Physical Complexity $\hat{C}_v$
 
-The theoretical $C_P$ of Equation (1) need not be computable. On the operational branch, register a finite-resolution measurement and a calibration of its retained complexity bins. These data define an observable proxy; they do not supply an algorithm for exact circuit complexity of arbitrary quantum states.
+The theoretical $C_P$ of Equation (1) need not be computable. On the operational branch, register a finite-resolution measurement and a calibration of its retained complexity bins. These data define an observable proxy.
 
 **Definition B.1 (Coarse-Grained Operational Complexity Observable $\hat C_v$).** On the Hilbert branch, define
 $$
@@ -355,7 +355,7 @@ where:
 2.  **$\hat{R}(C_v), \hat{R}_I(C_v)$:** The operational resource cost *power* operators (defined in Theorem B.1, Eq B.3, derived from the power functions $R(C), R_I(C)$ in Definition 3). Since $\langle \hat{H}_v\rangle$ already accounts for the baseline operational energy associated with $R(C_{op})$, the term $\left(\hat{R}(C_v)-R(C_{op})\hat{\mathbb I}_v\right)\tau_0$ contributes only the excess operational energy (above baseline) over the timescale $\tau_0$, while $\hat{R}_I(C_v)\tau_0$ contributes the reflexive/irreversible overhead energy over $\tau_0$. Here $\hat{\mathbb I}_v$ is the identity on $\mathcal H_v$ and $R(C_{op})$ is a scalar (the power evaluated at the fixed baseline complexity $C_{op}$).
 3.  **$\hat{E}_{int}(v) = \frac{1}{2}\sum_{v' \sim v} \hat{V}_{vv'}$:** The interaction energy operator (Energy operator). Its contribution to energy density is $\hat{E}_{int}(v)/V_{\mathrm{MPU}}$. Acts on the joint Hilbert space $\mathcal{H}_v \otimes \mathcal{H}_{v'}$ (or larger, if auxiliary degrees implementing ND-RID are included explicitly as in Definition B.4).
 
-The constants $V_{\mathrm{MPU}}$ and $\tau_0$ are separately registered effective volume and operational-clock data for this dimensional conversion. Theorem 29 may motivate a characteristic internal timescale but does not identify $\tau_0$ with a universal minimum update duration. Let $\mathcal N[v]$ contain $v$, all incident-edge endpoints, and every auxiliary degree of freedom in the support of $\hat\rho_v$. Then $\hat\rho_v$ is Hermitian on $\mathcal H_{\mathcal N[v]}$, and its expectation is
+The constants $V_{\mathrm{MPU}}$ and $\tau_0$ are separately registered effective volume and operational-clock data for this dimensional conversion. Let $\mathcal N[v]$ contain $v$, all incident-edge endpoints, and every auxiliary degree of freedom in the support of $\hat\rho_v$. Then $\hat\rho_v$ is Hermitian on $\mathcal H_{\mathcal N[v]}$, and its expectation is
 $$
 \langle\hat\rho_v\rangle
 =
@@ -563,7 +563,7 @@ T^{(\mathrm{MPU})}_{\mu\nu}
 \frac{\delta S_{(\mathrm{MPU})}}{\delta g^{\mu\nu}}
 \tag{B.15a}
 $$
-Thus the expectation-value source, Belinfante continuum source, horizon heat-flux source, and metric variational source are not four independent objects; Corollary B.8d.1 identifies them as the same $T_{\mu\nu}^{(MPU)}$ on the stated branch.
+Thus Corollary B.8d.1 identifies the expectation-value source, Belinfante continuum source, horizon heat-flux source, and metric variational source as the same $T_{\mu\nu}^{(MPU)}$ on the stated branch.
 
 **Theorem B.5 (Macroscopic Covariant Conservation of $T_{\mu\nu}^{(MPU)}$)**
 
@@ -990,6 +990,6 @@ This appendix gives a typed construction pathway for $T_{\mu\nu}^{(MPU)}$:
 5. Definition B.8 and Theorem B.5 pass to a macroscopic covariantly conserved tensor only on the stated coarse-graining, convergence, and continuum branches; and
 6. Theorem B.6 identifies vacuum and perfect-fluid forms after the corresponding symmetry, renormalization, and local-equilibrium hypotheses are supplied.
 
-The resulting tensor is suitable as the source in Equation (76) only on a branch that also carries the metric-continuum, variational, horizon-flux, normalization, and overlap certificates required by the gravity derivation. This pathway preserves the finite MPU energy ledger without identifying an abstract processing cost with physical stress-energy in the absence of an implementation map.
+The resulting tensor is suitable as the source in Equation (76) only on a branch that also carries the metric-continuum, variational, horizon-flux, normalization, and overlap certificates required by the gravity derivation.
 
 

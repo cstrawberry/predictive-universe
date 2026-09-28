@@ -39,7 +39,7 @@ An MPU is a qualifying full-loop implementation that attains $C_P=C_{op}$ on the
 
 ### A.0.2 Foundation I: Conditional Property R from Predictive Closure Structure
 
-> **Methodological Note:** This section proves a sufficient formal construction: Property R follows for predictive model classes satisfying the declared composition, memory, uniformity, scalability, and arithmetic-coding hypotheses. It does not claim that prediction alone supplies those hypotheses. Physical realization under resource constraints is addressed subsequently in §A.0.3-A.0.5.
+> **Methodological Note:** This section proves a sufficient formal construction: Property R follows for predictive model classes satisfying the declared composition, memory, uniformity, scalability, and arithmetic-coding hypotheses. Physical realization under resource constraints is addressed subsequently in §A.0.3-A.0.5.
 
 For a predictive model class satisfying composition closure, logical memory, uniform specification, and arbitrarily large finite memory and composition depth, the finite computational subcapacity of Property R follows without choosing a physical implementation. The construction below is logically prior to the MPU realization but conditional on those explicit structural hypotheses.
 
@@ -87,7 +87,7 @@ The derivation of uniform bounded computation from functional completeness requi
 2.  **Logical Memory:** The class contains implementations that retain intermediate verification and gate results across the number of cycles required by each bounded simulation.
 3.  **Uniform Specification:** One finite rule generates the relevant model, circuit, and update descriptions from their finite codes and resource bounds.
 
-These hypotheses characterize the computationally rich predictive class used by Theorem A.0.1. They are sufficient for that theorem and are not asserted for every sustained, adaptive, or above-chance predictor.
+These hypotheses characterize the computationally rich predictive class used by Theorem A.0.1. They are sufficient for that theorem.
 
 **Theorem A.0.1 (Functional Completeness and Explicit Turing Simulation)**
 
@@ -296,7 +296,7 @@ $$
 \end{aligned}
 $$
 
-The two rows are independent. Transfer of the second row to an MPU's $C_P$ additionally requires Definition 23, Hilbert distinguishability, and Corollary 3's complexity-capacity bridge. Property R does not depend on the later MPU structures it helps analyze. The conclusion applies only to predictive model classes satisfying composition closure, logical memory, uniform specification, arbitrarily large finite memory and composition depth, and a formal arithmetic capable of coding finite strings, circuits, and bounded computations. It establishes no unconditional claim about consciousness or about finite physical systems that lack those hypotheses.
+The two rows are independent. Transfer of the second row to an MPU's $C_P$ additionally requires Definition 23, Hilbert distinguishability, and Corollary 3's complexity-capacity bridge. Property R does not depend on the later MPU structures it helps analyze.
 ### A.0.3 Foundation II: Minimal Physical Capacity
 
 Having established Property R on the stated uniform computationally rich model class, we now address how that conditional abstract structure may be represented in physical systems with finite resources.
@@ -345,13 +345,13 @@ Definition 23 gives $C_P(\mu_*)=C_{op}$, so $C_{op}\ge3=K_0$ on this branch.
 
 Finally, the hypothesis that $\mu_*$ realizes the registered SPAP sub-dynamics supplies the reflex update itself; the cardinality argument supplies its carrier lower bound and does not independently derive the update law. The conditional carrier result is insufficient for full Property R. Representation of the finite computations covered by a declared SPAP or RUD protocol requires the separate coding, composition, working-memory, protected-execution, and reliability certificates of Definition A.0.1 and Theorems A.0.2 and A.0.6. ∎
 
-**Role in Physical Instantiation:** Proposition A.0.3 is conditional on the registered SPAP realization, full-context, Hilbert-distinguishability, and complexity-capacity hypotheses. It does not show that every MPU or every above-chance predictor has eight operational contexts. On its stated branch, $K_0=3$ is the attained lower bound for the SPAP context encoding; Property R retains its independent logical and physical certificates.
+**Role in Physical Instantiation:** On the registered SPAP realization, full-context, Hilbert-distinguishability, and complexity-capacity branch of Proposition A.0.3, $K_0=3$ is the attained lower bound for the SPAP context encoding; Property R retains its independent logical and physical certificates.
 
 ### A.0.4 Emergence of Reliable Computation from POP/PCE Optimization
 
 While $K_0$ supplies structural carrier capacity on its realization branch, reliable execution of the finite computations required for SPAP and RUD is a separate physical problem. The analysis below uses the refresh-branch premise that each relevant ND-RID implementation contains a nonzero input-independent refresh component, for which Lemma E.1 gives $f_{\mathrm{RID}}<1$, together with the protected-computation certificates stated below.
 
-POP (Axiom 1) and PCE (Definition 15) nominate the comparison objective. Definition D.1 and Equation D.8 represent that objective by a stochastic gradient model only on a branch fixing a smooth state manifold $X$, metric defining $\operatorname{grad}_gV$, tangent mobility $\eta_x:T_xX\to T_xX$, coefficient domains and regularity, filtered $m$-dimensional Brownian motion, diffusion factor $\sigma_x:\mathbb R^m\to T_xX$ with $\sigma_x\sigma_x^*=2D_x$, boundary behavior, and either a Stratonovich convention or an Itô convention with the required connection/chart data, together with common unit/metering data. Any entropy-per-reset cost also requires a reset frequency, and physical power requires an energy conversion. POP and PCE alone do not construct this dynamics, prove existence or attainment of a minimizer, or prove convergence. Effective prediction additionally requires the independent protected-computation certificates below; when those and the dynamical branch data are accepted, the declared potential compares operational cost $V_{\text{op}}$, propagation cost $V_{\text{prop}}$, and predictive benefit $V_{\text{benefit}}$.
+POP (Axiom 1) and PCE (Definition 15) nominate the comparison objective. Definition D.1 and Equation D.8 represent that objective by a stochastic gradient model only on a branch fixing a smooth state manifold $X$, metric defining $\operatorname{grad}_gV$, tangent mobility $\eta_x:T_xX\to T_xX$, coefficient domains and regularity, filtered $m$-dimensional Brownian motion, diffusion factor $\sigma_x:\mathbb R^m\to T_xX$ with $\sigma_x\sigma_x^*=2D_x$, boundary behavior, and either a Stratonovich convention or an Itô convention with the required connection/chart data, together with common unit/metering data. Any entropy-per-reset cost also requires a reset frequency, and physical power requires an energy conversion. Theorem A.0.5 below proves existence of the error-rate minimizer from its explicit converse-cost, coercivity, continuity, and boundedness hypotheses, and convergence of the stochastic dynamics carries the separate hypotheses of Appendix D. Effective prediction additionally requires the independent protected-computation certificates below; when those and the dynamical branch data are accepted, the declared potential compares operational cost $V_{\text{op}}$, propagation cost $V_{\text{prop}}$, and predictive benefit $V_{\text{benefit}}$.
 
 **Definition A.0.1 (Effective Operational Property R)**
 Effective Operational Property R is the capability of an MPU network to execute the finite representation, simulation/reasoning, predicate-evaluation, logical-memory, Boolean-processing, and diagonal-wrapper tasks required by the declared SPAP or RUD protocol with its registered finite error bound. When this capability is physically realized through Theorem A.0.2, let $p_{\mathrm{err}}^*$ be a selected minimizer of
@@ -419,7 +419,7 @@ K_0=3,
 \text{Effective Operational Property R on covered windows}.
 \tag{A.0.2a.1}
 $$
-This is not a primitive-axiom derivation of QEC compatibility and does not assert a universal numerical threshold. It says that, once the downstream Golay branch and the finite physical recovery/threshold records are accepted, the former QEC assumption is discharged for those windows by an internally generated code witness plus the recorded physical implementation data.
+Once the downstream Golay branch and the finite physical recovery/threshold records are accepted, the former QEC assumption is discharged for those windows by an internally generated code witness plus the recorded physical implementation data.
 
 *Proof.* Proposition Z.13b.7 supplies a dual-containing Golay CSS code witness. The local-noise, syndrome, recovery, gate, overhead, threshold, and PCE-benefit entries of $\mathfrak C_{\mathrm{GQEC}}$ are exactly the entries required by Definition A.0.1q. Mapping them into the slots of $\mathfrak C_{\mathrm{QEC}}$ gives the certificate. The fixed-point display records dependency order: the Golay witness is derived downstream of the finite MPU/Golay branch, while the reliability claim is promoted only after the physical recovery and threshold records are added. ∎
 
@@ -812,7 +812,7 @@ V_{A,B}''(p)=\frac A{p^2}+6B(1-2p)>0
 $$
 on $(0,p_0]$. Thus the objective is strictly convex. Its derivative tends to $-\infty$ as $p\downarrow0$, while (A.0.10a.3) makes $V_{A,B}'(p_0)>0$. The intermediate-value theorem and strict convexity give one interior critical point and make it the unique global minimizer. Rearranging its stationarity equation gives (A.0.10a.4). Since $1-p^*<1$ and $1-p^*>1-p_0$, that identity gives (A.0.10a.5). Finally $P_3'(p)=6p(1-p)>0$, so the stated residual bounds follow. ∎
 
-The encoder, iid physical bit-flip kernel, majority recovery map, exact converse, cost units, optimizer, and residual interval are all part of this fixed comparison class. The result does not supply a Golay quantum fault-tolerance threshold or cover correlated noise.
+The encoder, iid physical bit-flip kernel, majority recovery map, exact converse, cost units, optimizer, and residual interval are all part of this fixed comparison class.
 
 **Corollary A.0.2 (Scaling of the Reduced Stationarity Model)**
 Let $a:=\gamma_p-1>0$ and let $K,p_0>0$. Suppose that, for all sufficiently large $T$, a reduced stationarity model has a solution $p_T\in(0,p_0)$ satisfying
@@ -850,7 +850,7 @@ Alternative substrates or branches that fail the direct QEC certificate, the Gol
 
 ### A.0.5 Network Composition and Full Property R
 
-On the registered SPAP realization satisfying (O1)–(O3), (FC), Hilbert distinguishability, and the complexity-capacity bridge, an MPU can carry the three-bit context register of Proposition A.0.3. Full Property R still requires the independent network composition, memory, coding, and protected-execution certificates of §A.0.5.
+On the registered SPAP realization satisfying (O1)–(O3), (FC), Hilbert distinguishability, and the complexity-capacity bridge, an MPU can carry the three-bit context register of Proposition A.0.3. Theorem A.0.6 supplies full Property R through network composition under its independent memory, coding, and protected-execution certificates.
 
 **Proposition A.0.6 (Compositional Enhancement)**
 For a network of $n$ MPUs with individual Hilbert spaces $\mathcal{H}_0 \cong \mathbb{C}^8$, the composite Hilbert space is $\mathcal{H}_{\text{composite}} = \mathcal{H}_0^{\otimes n} \cong \mathbb{C}^{8^n}$. The composite system's state space dimension grows exponentially: $\dim(\mathcal{H}_{\text{composite}}) = 8^n$.
@@ -960,21 +960,21 @@ On a model class carrying the conditional logical construction, and on a physica
 
 ### A.0.7 Transition to Formal Proofs
 
-For an MPU network satisfying the optimizer, robustness, QEC, protected-execution, diagonal-closure, and resource certificates stated in Theorems A.0.2 and A.0.6, the formal self-reference machinery applies to the covered physical tasks and windows. Sections A.1 and A.2 derive the Self-Referential Paradox of Accurate Prediction (SPAP) and Reflexive Undecidability (RUD) under their stated class and window hypotheses. The physical applicability is conditional on those certificates and does not assert network convergence.
+For an MPU network satisfying the optimizer, robustness, QEC, protected-execution, diagonal-closure, and resource certificates stated in Theorems A.0.2 and A.0.6, the formal self-reference machinery applies to the covered physical tasks and windows. Sections A.1 and A.2 derive the Self-Referential Paradox of Accurate Prediction (SPAP) and Reflexive Undecidability (RUD) under their stated class and window hypotheses.
 
 ### A.0.8 Conceptual Non-Redundancy of the Core Constraints
 
-The framework's four core constraints — finite channel capacity (Theorem E.2), irreversible thermodynamic cost ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive uniform floor inferred from this entropy bound requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31), self-referential limitation (SPAP, Theorems 10–11), and operational accessibility (Definition K.10.1) — address distinct obstructions to physical prediction. The following thought experiments describe their intended roles; they do not supply formal models proving that any constraint is independent of the others:
+The framework's four core constraints — finite channel capacity (Theorem E.2), irreversible thermodynamic cost ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive uniform floor inferred from this entropy bound requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31), self-referential limitation (SPAP, Theorems 10–11), and operational accessibility (Definition K.10.1) — address distinct obstructions to physical prediction. The following thought experiments describe their intended roles:
 
-(i) *Capacity role.* A thought experiment can stipulate unbounded channel capacity per use while also stipulating an unbiased binary reset with $\Delta S\ge k_B\ln2$, the diagonal-closure hypotheses of SPAP, and operational distinguishability. This describes the intended capacity distinction; it does not construct a consistent formal physical model satisfying all of these stipulations.
+(i) *Capacity role.* A thought experiment can stipulate unbounded channel capacity per use while also stipulating an unbiased binary reset with $\Delta S\ge k_B\ln2$, the diagonal-closure hypotheses of SPAP, and operational distinguishability. This describes the intended capacity distinction.
 
-(ii) *Reset-cost role.* A thought experiment can stipulate finite capacity, self-referential limitation, and operational accessibility while denying a thermodynamic cost for logically irreversible operations. Establishing a model of that combination would require a specified thermodynamic theory and consistency argument.
+(ii) *Reset-cost role.* A thought experiment can stipulate finite capacity, self-referential limitation, and operational accessibility while denying a thermodynamic cost for logically irreversible operations. This describes the intended reset-cost distinction.
 
 (iii) *Diagonal-closure role.* A hypothetical system that makes complete exact predictions without encountering the SPAP contradiction must fall outside at least one hypothesis of the applicable diagonal theorem. The missing ingredient can be retained self-coding, simulation of the nominated predictor on the retained input, decidable evaluation of the binary or threshold predicate, or admitted composition with the counter-predictive update. Omitting an antecedent describes the theorem's application boundary; it does not refute its conditional conclusion.
 
-(iv) *Accessibility role.* A thought experiment can assign physical status to structures with no finite distinguishing protocol while retaining stipulated capacity, reset-cost, and self-reference conditions. This contrasts interpretations of physical content without supplying a formal independence model.
+(iv) *Accessibility role.* A thought experiment can assign physical status to structures with no finite distinguishing protocol while retaining stipulated capacity, reset-cost, and self-reference conditions. This contrasts interpretations of physical content.
 
-These examples illustrate distinct intended roles for the four constraints. A proof of logical independence would require a common formal background and consistent models satisfying the retained constraints while failing the targeted one; no such model construction is established here.
+These examples illustrate distinct intended roles for the four constraints. A proof of logical independence requires a common formal background and consistent models satisfying the retained constraints while failing the targeted one; those models remain an open construction.
 
 ## A.1 Self-Referential Paradox of Accurate Prediction (SPAP)
 
@@ -1496,7 +1496,7 @@ $$
 
 The formula $\varphi$ is **reachable for $S$** if $\mathrm{Reach}_S(\varphi,p)$ holds for at least one PA proof-object $p$. It is **unreachable for $S$** if no PA proof-object for $\varphi$ is reachable in this sense.
 
-This definition is intentionally stronger than ordinary proof checking. A predictor may manipulate a proof string as an uninterpreted external symbol pattern without integrating its content into the specified self-model; that operation is not reachability under this definition. Reachability and unreachability are properties of the declared processing event and its finite-cost or cost-divergence certificate. Predictor indexing of a completed transcript establishes neither conclusion. In particular, no theorem below claims that $S$ cannot reach $G_S$ unless a separate certificate proves that claim.
+This definition is intentionally stronger than ordinary proof checking. A predictor may manipulate a proof string as an uninterpreted external symbol pattern without integrating its content into the specified self-model; that operation is not reachability under this definition. Reachability and unreachability are properties of the declared processing event and its finite-cost or cost-divergence certificate.
 ### A.5.2 Retrospective and Live Diagonal Objects
 
 Gödelian incompleteness concerns absence of a proof from a fixed formal system under its usual hypotheses. The object $G_S$ below is different: it is a finite conjunction of true closed trace facts and therefore has a finite PA proof object.
@@ -1572,7 +1572,7 @@ Equivalently, $G_S$ asserts the exact finite output transcript of the $N^*(S)$ S
 It would be too weak to define $G_S$ as “all diagonal outputs are $1$.” Such a sentence would be true only on the branch where those outputs happened to be $1$. The transcript formulation removes that branch dependence. $G_S$ records the actual finite output transcript of the specified diagonal systems. Its truth is unconditional in the standard model, because each conjunct is a concrete finite computation trace.
 
 **Remark A.5.2 (Relation to LITE).**
-Definition A.5.3 uses the same arithmetical infrastructure as §A.4: Gödel coding, primitive-recursive substitution, finite proof/trace checking, and fixed-point machinery. LITE applies this machinery to construct a total computable function $f$. Definition A.5.3 applies it to construct, for each predictor $S$, a PA object whose content is wired to $S$'s own self-model prediction registers. LITE demonstrates tractable self-reference. The index $S$ in $G_S$ records which completed computations are encoded; it does not convert their later verification into a live diagonal challenge.
+Definition A.5.3 uses the same arithmetical infrastructure as §A.4: Gödel coding, primitive-recursive substitution, finite proof/trace checking, and fixed-point machinery. LITE applies this machinery to construct a total computable function $f$. Definition A.5.3 applies it to construct, for each predictor $S$, a PA object whose content is wired to $S$'s own self-model prediction registers. LITE demonstrates tractable self-reference. The index $S$ in $G_S$ records which completed computations are encoded.
 
 **Lemma A.5.1 (Existence, Truth, and PA Proof-Object).**
 Let $S$ be a predictive system with Effective Operational Property R satisfying $n_S\ge N^*(S)$. Then $G_S$ exists as a closed PA formula, is true in the standard model $\mathbb N$, and has a finite PA proof-object.
@@ -1679,7 +1679,7 @@ n_{S_0}\ge N^*(S_0).
 \tag{A.5.9}
 $$
 
-Theorem 15 supplies the minimal per-register SPAP logic; Theorem A.0.6 supplies the network-level route to Effective Operational Property R; Theorem M.10.4 supplies the required independent-register branch. No claim is made that the total aggregate $S_0$ has exact complexity $K_0$. The exact claim is that each SPAP register core is $K_0$-minimal, while the full witness is the finite Property-R aggregate required to host the diagonal amplification.
+Theorem 15 supplies the minimal per-register SPAP logic; Theorem A.0.6 supplies the network-level route to Effective Operational Property R; Theorem M.10.4 supplies the required independent-register branch. Each SPAP register core is $K_0$-minimal, while the full witness is the finite Property-R aggregate required to host the diagonal amplification.
 
 ### A.5.5 Retrospective Trace Certification and Live-Challenge Separation
 
@@ -1757,10 +1757,10 @@ On the branch of Theorem A.5.1(iv), no $PP<\alpha_{SPAP}$ satisfies the live int
 ### A.5.6 Interpretation and Scope
 
 **Remark A.5.3 (Contrast with Gödel).**
-Theorem A.5.1 is not an incompleteness theorem for PA. The sentence $G_S$ has a PA proof. The theorem establishes a type distinction between retrospective proof verification and a live diagonal challenge.
+Theorem A.5.1 establishes a type distinction between retrospective proof verification and a live diagonal challenge. Unlike a Gödel sentence, $G_S$ has a PA proof.
 
 **Remark A.5.4 (Syntactic Proof Checking).**
-A supplied proof of $G_S$ is finite and syntactically checkable. Whether a physical predictor can complete the associated content update is a separate finite-processing question; no divergence follows from predictor indexing alone.
+A supplied proof of $G_S$ is finite and syntactically checkable. Whether a physical predictor can complete the associated content update is a separate finite-processing question, decided by a separately specified processing event and cost certificate (Corollary A.5.1).
 
 **Remark A.5.5 (Live Scope).**
 Theorem M.10.4 applies only to its realized live joint challenge with the stated register and Fisher-separation data. A historical record of that challenge may later be processed without recreating the prediction-contingent event.
@@ -1772,7 +1772,7 @@ There is no tension with §A.4. LITE is total and computable, $G_S$ is a finite 
 The trace-certification result uses standard arithmetization. The live boundary uses Theorem M.10.4's independent-register and implementation hypotheses. A computational divergence additionally uses Theorem M.10.6's pattern-specific reduction certificate. A thermodynamic statement additionally requires Theorem M.10.7's implementation ledger.
 
 **Remark A.5.8 (Terminology).**
-The phrase *complexity-bounded incompleteness* is not used for $G_S$. The established statements are retrospective trace certification, phase-indexed active diagonal failure, conditional historical or external accessibility, and certificate-relative live integration bounds.
+The established statements are retrospective trace certification, phase-indexed active diagonal failure, conditional historical or external accessibility, and certificate-relative live integration bounds.
 
 ### A.5.6a Phase-Indexed Access, Historical Recovery, and Model-Indexed LITE
 
@@ -2188,13 +2188,13 @@ The map on the admitted subspace is injective and is implemented by a unitary, s
 
 *Proof.* The CNOT sends $|p,0\rangle$ to $|p,p\rangle$ and $X_O$ sends this to $|p,1-p\rangle$, proving (A.5.6a.10.2). If a predictor were correct on this registered challenge, its locked bit would obey $p=1-p$, which has no Boolean solution. Neither gate targets $P$, and the clock ordering excludes a later write to it, proving insulation and the same-cycle reduction. A unitary is bijective and preserves the input information, so logical irreversibility is absent. The inverse recovers the ready state when $P$ remains available. When that correlation is discarded, Theorem 31 applied to the separately registered cyclic reset gives (A.5.6a.10.3) and its equality conditions. ∎
 
-This construction is an exact two-qubit, or reversible two-bit, live-register realization. Protected operation on an MPU substrate inherits the finite gate from a branch carrying Theorem A.0.6's gate/QEC execution certificate; the logical construction does not create that independent substrate certificate.
+This construction is an exact two-qubit, or reversible two-bit, live-register realization. Protected operation on an MPU substrate inherits the finite gate from a branch carrying Theorem A.0.6's gate/QEC execution certificate.
 
 ---
 
 ## A.6 Generative Non-Closure and Axiom Stabilization
 
-This section records a conservative consequence of the phase-indexed diagonal theorem in §A.5.6a. It introduces no physical primitive and no additional axiom. The precise obstruction is same-cycle and domain-specific: a trace-certified predictor cannot implement a total standard-sound Boolean closure on a represented domain containing the live diagonal sentence targeted at that cycle. The same sentence may be processed externally or historically after the targeted register is fixed. Stable finite partial closures are asserted only for prediction-update cycles satisfying the hypotheses stated below.
+This section derives generative non-closure from the phase-indexed diagonal theorem in §A.5.6a: a trace-certified predictor cannot implement a total standard-sound Boolean closure on a represented domain containing the live diagonal sentence targeted at that cycle. The same sentence may be processed externally or historically after the targeted register is fixed. Theorem A.6.4 gives stable finite partial closures for prediction-update cycles satisfying its hypotheses, and Theorem A.6.6 shows that the added vocabulary introduces no physical primitive and no additional axiom.
 
 ### A.6.1 Internal closure maps
 

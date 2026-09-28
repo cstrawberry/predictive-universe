@@ -41,7 +41,7 @@ Exact enumeration returns every quotient class, its least-cost representatives, 
 
 *Proof.* Every predicate, response equality and cost comparison is decidable on the frozen finite set. Partitioning by table equality is exhaustive. Each response class attains its candidate-cost minimum, and the nonempty finite quotient attains the minimum of $v$. The global class is unique exactly under the displayed strict comparison. ∎
 
-**Resolution TV-MPU-01-R1 (Metadata).** Exact domain: populated finite typed predictive-architecture censuses with a nonempty admissible subcensus, exact original/null response tables, PPI predicates and common-unit costs. Premises: decidability of every supplied predicate and comparison. Equivalence: equality of the complete retained response table, with class cost given by the least representative cost $v$. Budget: every candidate, quotient class and representative in the supplied census. Verifier: exhaustive admissibility, partition and exact cost comparison. Falsifier: an omitted response class, lower-cost omitted representative or claimed strict gap in a tie. Provenance class: source-internal finite classifier schema. Downstream consumers: Definition 23 and `TV-MPU-01`. Nonvacuity: one admissible architecture and a two-class equal-cost census. This is scoped `positive-discharge` for every populated finite census. Theorem 23d alone supplies no exhaustive physical census, common PPI realization or source-exhausted physical cost, so its finite-census result leaves `M+C+R`. Theorem 23e below closes `M` for every frozen bounded total decoder; accepting one decoder and bound as physically exhaustive, populating its records, and realizing them remain `C+R`.
+**Resolution TV-MPU-01-R1 (Metadata).** Exact domain: populated finite typed predictive-architecture censuses with a nonempty admissible subcensus, exact original/null response tables, PPI predicates and common-unit costs. Premises: decidability of every supplied predicate and comparison. Equivalence: equality of the complete retained response table, with class cost given by the least representative cost $v$. Budget: every candidate, quotient class and representative in the supplied census. Verifier: exhaustive admissibility, partition and exact cost comparison. Falsifier: an omitted response class, lower-cost omitted representative or claimed strict gap in a tie. Provenance class: source-internal finite classifier schema. Downstream consumers: Definition 23 and `TV-MPU-01`. Nonvacuity: one admissible architecture and a two-class equal-cost census. This is `positive-discharge` for every populated finite census. Theorem 23d alone supplies no exhaustive physical census, common PPI realization or source-exhausted physical cost, so its finite-census result leaves `M+C+R`. Theorem 23e below closes `M` for every frozen bounded total decoder; accepting one decoder and bound as physically exhaustive, populating its records, and realizing them remain `C+R`.
 
 **Theorem 23e (Bounded Description-Census Exhaustion).** Fix an integer $B\ge0$, a finite binary description alphabet, and a total deterministic decoder
 $$
@@ -63,11 +63,11 @@ If its admissible subcensus is nonempty, Theorem 23d returns every retained-resp
 
 **7.1.2 Interpretive Convention: Minimal Awareness**
 
-The ongoing MPU cycle—prediction ($P_{int}$), verification ($V$), and update ($D_{cyc}$) under POP—is interpreted here as the most basic operational form of awareness. On the independently accepted Hilbert/Born/instrument/single-outcome branch, Proposition 9 represents an ideal registered verification as an `Evolve` instrument; the convention then assigns its outcome event this same minimal-awareness language. This is an interpretive assignment, not a theorem that Definition 27 makes every interaction an actualization or that phenomenal status supplies any physical premise. All subsequent derivations use the MPU's operational prediction, ND-RID, and POP/PCE properties together with each named branch hypothesis. In particular, $C_{op}\ge K_0$ is used only on Theorem 15 and Corollary 3's (O1)–(O3), (FC), Hilbert-distinguishability, and complexity-capacity branch.
+The ongoing MPU cycle—prediction ($P_{int}$), verification ($V$), and update ($D_{cyc}$) under POP—is interpreted here as the most basic operational form of awareness. On the independently accepted Hilbert/Born/instrument/single-outcome branch, Proposition 9 represents an ideal registered verification as an `Evolve` instrument; the convention then assigns its outcome event this same minimal-awareness language. The convention fixes this interpretation, and the subsequent derivations do not depend on it: they use only the MPU's operational prediction, ND-RID, and POP/PCE properties together with each named branch hypothesis. In particular, $C_{op}\ge K_0$ is used only on Theorem 15 and Corollary 3's (O1)–(O3), (FC), Hilbert-distinguishability, and complexity-capacity branch.
 
 **7.1.3 Example: An Explicit Three-Qubit Register Carrier**
 
-This construction exhibits an eight-dimensional carrier for three binary register roles and an injective reflexive update, and it tests whether the stated reachable circuit actually contains a logically irreversible reset. The structural alphabet value $\varepsilon_0=\ln2$ is a separate log-cardinality ledger. It does not by itself compute $C_P$, establish $C_{op}=K_0$, or prove a global POP optimum; those conclusions require the bridge, attainment, and optimization hypotheses stated separately.
+This construction exhibits an eight-dimensional carrier for three binary register roles and an injective reflexive update, and it tests whether the stated reachable circuit actually contains a logically irreversible reset.
 
 **1. Hilbert Space and Computational Basis**
 
@@ -261,7 +261,7 @@ This is a dimensionless illustrative policy, not a consequence of the dimensiona
 
 ### **Minimal Predictive Algebra and the Conditional Dimension Bound $d_0\ge8$**
 
-Theorem 15 supplies a finite-context bound only on its full-context realization class. The algebraic argument below studies a narrower Hilbert branch defined by additional architectural hypotheses; PCE does not derive those hypotheses by itself.
+Theorem 15 supplies a finite-context bound only on its full-context realization class. The algebraic argument below studies a narrower Hilbert branch defined by additional architectural hypotheses.
 
 **Definition (Minimal Predictive Algebra Branch).**
 Assume the MPU carrier is a complex Hilbert space and that the Memory, Prediction, and Interface roles are represented by three unital subalgebras
@@ -290,8 +290,6 @@ $$
 $$
 The domain is $M_8(\mathbb C)$. If a nonzero two-sided ideal contains a matrix $X$ with $X_{ij}\ne0$, then $e_{ki}Xe_{j\ell}=X_{ij}e_{k\ell}$ puts every matrix unit in that ideal. Thus the only two-sided ideals are zero and the whole algebra. The kernel of $\Phi$ is an ideal, and $\Phi(1)\ne0$, so $\Phi$ is injective. Let $\pi$ be a faithful nondegenerate representation of $\mathfrak A$ and choose a unit vector $v$ in the nonzero range of $\pi(\Phi(e_{11}))$. The eight vectors $v_i:=\pi(\Phi(e_{i1}))v$ satisfy $\langle v_i,v_j\rangle=\langle v,\pi(\Phi(e_{1i}e_{j1}))v\rangle=\delta_{ij}$. Hence the representation space contains eight orthonormal vectors and has dimension at least eight. ∎
 
-The Principle of Compression Efficiency selects the saturating case $d_0=8$ only after the active-operational-dimension hypotheses stated below are imposed.
-
 **Theorem (PCE Stability of $d_0 = 8$ from Algebraic Completeness).**
 Let the PCE potential for an MPU with an active operational dimension $d$ be $V(d) = V_{cost}(d) - V_{benefit}(d)$, subject to the algebraic lower bound $d \ge 8$. The stability of the minimal dimension $d^*=8$ is a necessary consequence of PCE optimization under the following physically-motivated conditions:
 
@@ -302,7 +300,7 @@ Under these conditions, $V(d)$ is strictly increasing for $d>8$, so $d=8$ is the
 
 *Proof.* For any dimension $d > 8$, the change in the potential from adding the $d$-th dimension is $\Delta V(d) = \Delta V_{cost}(d) - \Delta V_{benefit}(d)$. By condition (2), the marginal cost is strictly positive, $\Delta V_{cost}(d) > 0$. By condition (1), the marginal benefit vanishes, $\Delta V_{benefit}(d)=0$. Therefore, the marginal change in the potential is strictly positive: $\Delta V(d) > 0$ for all $d > 8$. This implies that the potential $V(d)$ is a strictly increasing function for $d > 8$. The unique global minimum of $V(d)$ on the allowed domain $d \in \{8, 9, 10, \dots\}$ must therefore occur at the boundary, $d^*=8$. ∎
 
-Here $d$ is the **active operational dimension**, the dimension coupled into the predictive loop. Under the two hypotheses of the preceding theorem, $d=8$ is the unique minimizer of the discrete potential over $\{8,9,10,\ldots\}$. A claim that physical dynamics decouple larger sectors and converge to that minimizer requires an explicit dynamics on dimension sectors and a convergence theorem; the static minimization argument alone does not supply it. Theorem 23 remains the conditional Hilbert-rank lower bound $d_0\ge8$.
+Here $d$ is the **active operational dimension**, the dimension coupled into the predictive loop. For surplus multiplicity sectors of the Minimal Predictive Algebra, Theorems 7.6a and 7.6g classify the dynamics: on the split Hamiltonian branch (7.6g.1) the retained response descends exactly to the multiplicity-one carrier, and a nontrivial finite surplus channel has no asymptotic limit. Admission of the split branch for a physical carrier is a realization record. Theorem 23 remains the conditional Hilbert-rank lower bound $d_0\ge8$.
 
 ### **Logical Structure, Minimal Realization, and Predictive-Semantic Geometry of the MPU State Space**
 
@@ -312,7 +310,7 @@ r=(r_m,r_p,r_v):\mathcal S_{\mathrm{vis}}\longrightarrow\{0,1\}^3,
 \qquad
 r(s)=\bigl(\phi(s),p_{\mathrm{stored}}(s),c_{\mathrm{phase}}(s)\bigr),
 $$
-is surjective, and the explicit eight-state construction attains the least context set $B_3=\{0,1\}^3$ on that class. Theorem 15 does not force a tensor-product decomposition or an eight-dimensional physical carrier. The former requires the commuting-subalgebra hypotheses of the Minimal Predictive Algebra discussion; the latter requires mutually perfectly distinguishable Hilbert representatives and, for equality $d_0=8$, the admissible-comparator, response-quotient, strict-cost, and minimal-branch hypotheses of Theorem Z.2. The next results apply only on their separately stated algebraic and carrier branches.
+is surjective, and the explicit eight-state construction attains the least context set $B_3=\{0,1\}^3$ on that class. Theorem 15 does not force a tensor-product decomposition or an eight-dimensional physical carrier. The former requires the commuting-subalgebra hypotheses of the Minimal Predictive Algebra discussion; the latter requires mutually perfectly distinguishable Hilbert representatives and, for equality $d_0=8$, the admissible-comparator, response-quotient, strict-cost, and minimal-branch hypotheses of Theorem Z.2.
 
 **Theorem 23a (Minimal Faithful Realization is 3-Qubit).**
 Assume the hypotheses of the lemma above, and let
@@ -471,7 +469,7 @@ $$
 $$
 This makes it impossible for the essential image to consist of all three non-isomorphic Hurwitz objects. Therefore no such functor exists, and a fortiori the categories are not equivalent. ∎
 
-**Remark 23a.1d (What Survives).** Corollary 23a.1b remains a valid numerical coherence check. Theorem 23a.1c excludes a categorical derivation of the three non-real Hurwitz objects from the canonical minimal-branch SPAP configuration groupoid. A coarser comparison between the ordered three-register tower and the first three nontrivial Cayley-Dickson stages may still be mathematically useful, but that would be a separate construction on a different source category; it is not the same as a functor from the canonical minimal-branch SPAP configuration category.
+**Remark 23a.1d (What Survives).** Corollary 23a.1b remains a valid numerical coherence check. Theorem 23a.1c excludes a categorical derivation of the three non-real Hurwitz objects from the canonical minimal-branch SPAP configuration groupoid. A coarser comparison between the ordered three-register tower and the first three nontrivial Cayley-Dickson stages is a separate construction on a different source category.
 
 The compatible real-carrier refinement of Corollary 23a.1 selects the $\mathrm{Cl}_{\mathbb R}(0,6)$ real form. Cayley--Dickson, octonionic, or $\mathrm{Spin}(7)$ data remain additional markings unless the branch separately supplies an octonionic product, a Cayley four-form, or an equivalent stabilizer datum. They are compatible with the $d_0=8$ carrier but do not replace Theorem 15's context count, Theorem 23's Hilbert lower bound, Theorem Z.2's same-class comparator, the Peirce tangent count, or the mode--channel/kissing-number selection.
 
@@ -908,7 +906,7 @@ for outcomes with nonzero probability.
 1. **Registered instrument update:** $p_i=\operatorname{tr}\mathcal I_i^N(\rho)$ and $\sum_i\mathcal I_i^N$ is trace preserving. Only the nondegenerate sharp repeatability branch gives $\rho_i'=|i\rangle_s\langle i|_s$.
 2. **Conditional perspective shift:** given $i$, $s'$ is drawn from the normalized kernel $G_{\mathrm{persp}}(s'|s,i,N,\Delta t)$. Its drift data are either interaction-model data (Appendix M.3.3.1) or derived on the interrogative-efficiency branch (Appendix M.3.3.2).
 
-The post-event state is therefore $(\rho_i',s')$, with $(|i\rangle_s,s')$ permitted only as the pure-state shorthand of Definition 24. Theorem 27 does not derive eventwise stochasticity, and Theorem 28a does not derive the physical instrument or single-run selector. A physical reset cost follows only under Definition 28 and Theorem 31; $\varepsilon_0=\ln2$ alone is not a heat bound.
+The post-event state is therefore $(\rho_i',s')$, with $(|i\rangle_s,s')$ permitted only as the pure-state shorthand of Definition 24. Eventwise stochasticity enters as Proposition 28's branch data, and the instrument and single-run selector are premises of this registered branch (Appendix M.3.2 and M.4). A physical reset cost follows only under Definition 28 and Theorem 31.
 
 **7.3.4 Theorem 28a (Conditional Born-Rule Representation on the Hilbert Branch).**
 
@@ -1389,7 +1387,7 @@ On the declared minimal architecture, the verification/reset-support alphabet ha
 $$
 \varepsilon_0=\ln2.
 $$
-SPAP alone does not prove that all four logical pairs are reachable or that a binary record is physically erased. Definition J.1 and Lemma J.1 state the additional reachable-domain and fixed-ready-state hypotheses.
+Reachability of all four logical pairs and physical erasure of the binary record use the reachable-domain and fixed-ready-state hypotheses of Definition J.1 and Lemma J.1.
 
 #### Stage 2: Conditional Physical Reset Ledger
 
@@ -1399,13 +1397,13 @@ $$
 =H_q(P\mid R)+\varepsilon_{\mathrm{diss}},
 \qquad \varepsilon_{\mathrm{diss}}\ge0.
 $$
-On the conditionally uniform binary-record branch, the bath heat equals $k_BT\ln2$ exactly when excess dissipation vanishes. The numerical heat equality alone does not determine either the conditional source entropy or the excess dissipation. The total entropy production is $k_B\varepsilon_{\mathrm{diss}}$, not the bath entropy export. PPI does not replace the implementation and ensemble hypotheses of Landauer's theorem.
+On the conditionally uniform binary-record branch, the bath heat equals $k_BT\ln2$ exactly when excess dissipation vanishes. The total entropy production is $k_B\varepsilon_{\mathrm{diss}}$, not the bath entropy export.
 
 #### Stage 3: Information-Theoretic Entropy (Reset Support → Capacity Deficit)
 
 The fixed-support capacity statement is independent of the physical heat ledger. On a branch registering a completed reset of a factor $\mathcal H_R$ to a fixed ready state, one support factor is absent from the completed output ledger.
 
-On the joint Theorem-15/Theorem-23 branch with the same-class comparator of Theorem Z.2, $d_0=8$ and the ideal input-support log-cardinality is $\ln d_0=3\ln2$. This equality is not supplied by SPAP alone.
+On the joint Theorem-15/Theorem-23 branch with the same-class comparator of Theorem Z.2, $d_0=8$ and the ideal input-support log-cardinality is $\ln d_0=3\ln2$.
 
 **Imported result (Proposition E.2a, Reset-Support Capacity Deficit).** Let
 $$
@@ -1516,7 +1514,7 @@ On the predictive-recovery MacWilliams Golay branch of Theorem Z.13b—namely De
 
 **Remark (Conditional Error-Correction Interpretation).** On the predictive-recovery MacWilliams branch, the $[24,12,8]$ Golay code is a classical redundancy ledger with rate $1/2$. The twelve parity coordinates support reconstruction only after a classical encoder, error model, syndrome map, and decoder have been specified.
 
-This code rate is not another expression for the SPAP entropy $\varepsilon_0=\ln2$, and it does not show that half of all physical interface modes protect the other half. Entropy capacity, redundancy, and thermodynamic export are distinct quantities. A physical identification requires a response-active encoding/channel/recovery certificate and a non-double-counted resource ledger.
+A physical identification of the twelve parity coordinates with interface modes requires a response-active encoding/channel/recovery certificate and a non-double-counted resource ledger.
 
 
 
@@ -1568,7 +1566,7 @@ $$
 \left[\frac{\delta^2c^3}{\hbar}\right]
 =L^3M^{-1}T^{-2}=[G_{\mathrm{op}}].
 $$
-Without the three saturation entries, channel counting supplies only the entropy upper bound. It supplies neither the horizon-entropy identification nor the calibration $G_{\mathrm{op}}=G$.
+Without the three saturation entries, channel counting supplies only the entropy upper bound.
 
 ---
 
@@ -1656,7 +1654,7 @@ a=2\to M=24
 \xrightarrow{\text{predictive-recovery rate gate}}k=12
 \xrightarrow{\text{accepted }\mathfrak C_{\mathrm{dist}}}\mathcal G_{24}=[24,12,8].
 $$
-The physical reset inequality is a separate implementation statement. Neither it nor the Golay code follows from SPAP alone, and physical error correction requires a registered encoder, channel, syndrome instrument, decoder, and non-double-counted resource ledger.
+The physical reset inequality is a separate implementation statement, and physical error correction requires a registered encoder, channel, syndrome instrument, decoder, and non-double-counted resource ledger.
 
 **Corollary (Conditional Decoder-Failure Entropy).** On such a registered classical binary channel, the $[24,12,8]$ code uniquely corrects error patterns of Hamming weight at most $3$. Patterns outside that radius may create residual uncertainty, but their occurrence and entropy contribution are channel-dependent. This conditional contribution is distinct from the per-cycle physical bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive entropy-derived floor requires }H_q(P\mid R)\ge h_{\min}>0)$ and is not a universal second mechanism operating on every MPU cycle.
 
@@ -1952,7 +1950,7 @@ For each $r$ with both conditional inputs present, (7.6k.1) is noninjective. Eve
 
 *Proof.* If no conditional pair exists, $\Phi$ is already a function of $R$, which is item 1. Otherwise noninjectivity follows from the reachable inputs $(0,r)$ and $(1,r)$. An injective extension must map those inputs to distinct total outputs; because their ready-register and retained-$R$ outputs agree, the distinction lies in $E$, which makes $\Phi$ a function of $(R,E)$. First test whether a copy of that distinguishing information is retained; if not, test whether it has a persistent certified export; if not, test whether its restoration carries the complete Definition-28 certificate. Failure of all three tests is uncertified removal. These successive complements make items 2--5 disjoint and exhaustive. Only item 4 carries the Definition-28 Landauer conclusion. ∎
 
-Together with Theorem 7.6e, this classifies every finite reachable-source and return-map branch relevant to the binary entropy floor without identifying record export or uncertified removal with erasure heat. The conditionally uniform, zero-excess mechanism for $\varepsilon_{\mathrm{reset}}=\ln2$ requires its populated source condition and a cyclic isothermal implementation satisfying Definition 28. The numerical heat equality alone determines neither conditional uniformity nor zero excess: $H_q(\Phi\mid R)=0$ and $\varepsilon_{\mathrm{diss}}=\ln2$ give the same value.
+Together with Theorem 7.6e, this classifies every finite reachable-source and return-map branch relevant to the binary entropy floor without identifying record export or uncertified removal with erasure heat. The conditionally uniform, zero-excess mechanism for $\varepsilon_{\mathrm{reset}}=\ln2$ requires its populated source condition and a cyclic isothermal implementation satisfying Definition 28.
 
 **Theorem 7.6l (Labeled Three-Factor Real-Structure Orbits).** Put $V=(\mathbb C^2)^{\otimes3}$ and let
 $$

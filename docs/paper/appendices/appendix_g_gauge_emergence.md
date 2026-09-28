@@ -16,7 +16,7 @@ The probabilistic structure of quantum mechanics is reconstructed here through f
 
 **G.1.1 Predictive Partitions and Cost Frame Functions**
 
-Let $\mathcal H$ be the complex Hilbert carrier selected by Theorem G.1.8 on an accepted certificate $\mathfrak C_{\mathrm{car}}$. On the separately accepted normalized-instrument branch, a registered verification is represented by effects $E$ on $\mathcal H$ satisfying $0\le E\le\mathbf1$. A retained predictive partition is a finite effect family $\mathcal E=\{E_i\}$ with $\sum_iE_i=\mathbf1$. A sharp partition is a family of orthogonal projectors $\mathcal P=\{P_i\}$ satisfying $P_i^2=P_i$, $P_iP_j=\delta_{ij}P_i$, and $\sum_iP_i=\mathbf1$. Each $P_i$ labels a candidate sharp event in the predictive ledger. Identifying one such label with a realized single-run outcome requires the separate probability-calibration and single-outcome gates of Theorem G.1.4 and Principle 8.0c; Definition 27 alone does not make every physical interaction a measurement or actualization event.
+Let $\mathcal H$ be the complex Hilbert carrier selected by Theorem G.1.8 on an accepted certificate $\mathfrak C_{\mathrm{car}}$. On the separately accepted normalized-instrument branch, a registered verification is represented by effects $E$ on $\mathcal H$ satisfying $0\le E\le\mathbf1$. A retained predictive partition is a finite effect family $\mathcal E=\{E_i\}$ with $\sum_iE_i=\mathbf1$. A sharp partition is a family of orthogonal projectors $\mathcal P=\{P_i\}$ satisfying $P_i^2=P_i$, $P_iP_j=\delta_{ij}P_i$, and $\sum_iP_i=\mathbf1$. Each $P_i$ labels a candidate sharp event in the predictive ledger. Identifying one such label with a realized single-run outcome requires the separate probability-calibration and single-outcome gates of Theorem G.1.4 and Principle 8.0c.
 
 The Principle of Compression Efficiency (PCE, Definition 15) mandates minimizing the overall PCE Potential $V(x)$ (Definition D.1), which represents the net rate of resource consumption minus predictive benefit. This potential provides a basis for assigning a cost to considering or resolving different predictive possibilities.
 
@@ -679,7 +679,7 @@ Every system-only effect therefore has the same expectation $\operatorname{tr}(E
 
 *Proof.* On the rank-$r$ stratum, Theorem G.1.11d identifies every fiber with a free transitive $U(r)$ action and derives the horizontal equation using the invertible density operator on its $r$-dimensional support. If an eigenvalue reaches zero, the support dimension and structure group change from $U(r)$ to $U(r-1)$, so the local trivializations cannot form one principal bundle with one structure group across that point. Restricting to the support on each stratum, or taking a separately specified continuous limit of the horizontal data, preserves the stated equations without asserting a smooth bundle through the rank change. ∎
 
-**Relation to Corollary X.8a.2c.** Corollary X.8a.2c supplies the prior PCE selection of the Bures/SLD metric. Theorem G.1.11d does not duplicate that selector: it proves the minimal-purification principal bundle, its horizontal realization of the selected metric, and the response-null status of surplus ancillary dimensions.
+**Relation to Corollary X.8a.2c.** Corollary X.8a.2c supplies the prior PCE selection of the Bures/SLD metric. Theorem G.1.11d proves the minimal-purification principal bundle, its horizontal realization of the selected metric, and the response-null status of surplus ancillary dimensions.
 
 **Theorem G.1.11e (Full-Effect Classification and Qubit Transition Descent).** Let
 $$
@@ -764,7 +764,7 @@ which proves normalization and the response formula. ∎
 
 Theorem G.1.11e positively resolves `TV-G-01` on the full finite effect domain, including dimension two and its transition-complete finite-instrument realization.
 
-**Quantum-reconstruction certificate boundary.** A reconstruction assembly must keep its hypotheses typed separately. A finite-dimensional homogeneous self-dual cone yields a Euclidean Jordan algebra only after homogeneity and self-duality are accepted. Selecting complex matrix quantum theory additionally requires a composition rule, local tomography, and explicit exclusion of the real, quaternionic, spin-factor, and exceptional alternatives. The Born rule requires the effect or projection hypotheses of the applicable Gleason--Busch result. Wigner implementation requires preservation of transition probabilities, not merely a continuous transitive action. The value $d_0=8$, logical indeterminacy, and SPAP do not by themselves discharge these entries. Consequently the existing Hilbert/Born branch may consume an accepted reconstruction certificate, but the certificate assumptions must not be relabeled as consequences of $d_0=8$ alone.
+**Quantum-reconstruction certificate boundary.** A reconstruction assembly must keep its hypotheses typed separately. A finite-dimensional homogeneous self-dual cone yields a Euclidean Jordan algebra only after homogeneity and self-duality are accepted. Selecting complex matrix quantum theory additionally requires a composition rule, local tomography, and explicit exclusion of the real, quaternionic, spin-factor, and exceptional alternatives. The Born rule requires the effect or projection hypotheses of the applicable Gleason--Busch result. Wigner implementation requires preservation of transition probabilities, not merely a continuous transitive action. The value $d_0=8$, logical indeterminacy, and SPAP do not by themselves discharge these entries; the existing Hilbert/Born branch consumes them from an accepted reconstruction certificate.
 
 **G.2 Local Phase Freedom and Emergence of Gauge Structure**
 
@@ -975,7 +975,7 @@ for some smooth scalar $\chi$.
 
 *Proof.* The forward implication is the Poincaré lemma on the closed 1-form $A$. The reverse follows from $d^2\chi=0$. ∎
 
-On Assumption G.3.1's registered compact local-frame bundle and Theorem G.3a's locality, exact-composition, smoothness, and cost hypotheses, the connection $A_\mu$ and covariant derivative $D_\mu$ are the minimal edge-local exact representation of phase-covariant comparison. Pointwise probabilities alone do not imply those local frames. The connection theorem fixes the transporter and covariant derivative inside its comparison class, but it does not by itself fix a physical charge scale. Charge quantization is theorem-level only on a branch that supplies integral bundle data, a topological defect such as a monopole sector, or an equivalent representation-lattice certificate fixing the allowed $U(1)$ characters. On such compact topological sectors consistency quantizes $q$ in units of a fundamental charge $e_0$; without that extra certificate the framework has forced local $U(1)$ transport and the associated current, not a SPAP-derived charge-quantization theorem.
+On Assumption G.3.1's registered compact local-frame bundle and Theorem G.3a's locality, exact-composition, smoothness, and cost hypotheses, the connection $A_\mu$ and covariant derivative $D_\mu$ are the minimal edge-local exact representation of phase-covariant comparison. The connection theorem fixes the transporter and covariant derivative inside its comparison class, but it does not by itself fix a physical charge scale. Charge quantization is theorem-level only on a branch that supplies integral bundle data, a topological defect such as a monopole sector, or an equivalent representation-lattice certificate fixing the allowed $U(1)$ characters. On such compact topological sectors consistency quantizes $q$ in units of a fundamental charge $e_0$; without that extra certificate the framework has forced local $U(1)$ transport and the associated current.
 
 **Remark G.4a.2 (Existence, Dynamics, and Holonomy Detection Are Distinct).** The local phase-response argument forces a connection and covariant derivative before any field-action normalization is chosen. The Maxwell equations follow only after the minimal local quadratic gauge-action branch is added. Thus
 $$
@@ -1226,7 +1226,7 @@ $$
 $$
 \approx \psi(x) - (\psi(x) + \delta \partial_\mu \psi(x) + iq\delta A_\mu(x)\psi(x)) = -\delta(\partial_\mu + iqA_\mu(x))\psi(x)
 $$
-The link cost is therefore proportional to $\delta^2|D_\mu\psi|^2$, where $D_\mu=\partial_\mu+iqA_\mu$. For this registered quadratic nearest-neighbor link cost, Theorem G.6a gives the minimally coupled kinetic term in the continuum limit. This is a constructive witness inside that comparison class; it neither derives the link cost from PCE nor proves minimal coupling to be the unique gauge-invariant local interaction. Any uniqueness or selection claim requires an explicit operator class, derivative order, equivalence relation, and strict PCE gap.
+The link cost is therefore proportional to $\delta^2|D_\mu\psi|^2$, where $D_\mu=\partial_\mu+iqA_\mu$. For this registered quadratic nearest-neighbor link cost, Theorem G.6a gives the minimally coupled kinetic term in the continuum limit. This is a constructive witness inside that comparison class: Theorem G.3a(b) fixes the form of this quadratic link cost under Assumptions G.3.1–G.3.5. Selecting minimal coupling among gauge-invariant local interactions requires an explicit operator class, derivative order, equivalence relation, and strict PCE gap.
 For a complex scalar field $\phi$ with charge $q$, the $(-,+,\ldots,+)$ convention gives
 $$
 \mathcal{L}_{\text{scalar, free}}
@@ -1509,14 +1509,14 @@ Local phase coherence can be represented by a gauge field when the framework sup
 
 The conditional $U(1)$ realization uses the following branch ledger:
 
-1. **Quantum weights.** A complex Hilbert carrier together with independently registered normalization, positivity, retained-refinement additivity, noncontextuality, and an accepted Born-domain completeness certificate yields the trace rule on the certified domain through Theorems 8.3 and G.1.7; Theorem G.1.8 supplies the carrier branch. PCE supplies the quotient and cost interpretation, not the remaining hypotheses.
-2. **Local phase action.** A continuous local $U(1)$ action is independently admitted. Theorem Q.0.7d2 extends invariance from an already registered dense subgroup to its closure; it does not derive the group action or a gauge origin.
+1. **Quantum weights.** A complex Hilbert carrier together with independently registered normalization, positivity, retained-refinement additivity, noncontextuality, and an accepted Born-domain completeness certificate yields the trace rule on the certified domain through Theorems 8.3 and G.1.7; Theorem G.1.8 supplies the carrier branch. PCE supplies the quotient and cost interpretation.
+2. **Local phase action.** A continuous local $U(1)$ action is independently admitted, and Theorem Q.0.7d2 extends invariance from an already registered dense subgroup to its closure.
 3. **Coherence comparison.** The local-versus-all-pairs comparison is made only for the registered response family and cost functional.
 4. **Connection representation.** An edge-local covariant connection is an admitted representation of that local action, with the transformation law stated in Equation G.4.2.
 5. **Leading field dynamics.** On the Lorentz- and gauge-invariant differentiable two-derivative effective-action branch, the quadratic curvature term gives the leading Maxwell action and source-free equations. PCE ranks candidates only inside that declared class.
-6. **Matter coupling.** A registered matter representation and minimal-coupling convention give the sourced equations. They are additional physical data, not consequences of the dense-subgroup theorem.
+6. **Matter coupling.** A registered matter representation and minimal-coupling convention give the sourced equations. They are additional physical data.
 
-On the registered phase-character branch of Appendix Q, invariance under integer phase updates together with finite-resolution continuity gives an effective $U(1)$ closure. An edge-local $U(1)$ transporter is an admissible extensive representation of local phase coherence and is cheaper than the specified all-pairs phase table. The leading Maxwell and minimal-coupling description additionally assumes the local Lorentz-covariant, differentiable, two-derivative effective-action branch and the quadratic leading-order cost of Assumption G.3.3. This construction establishes a conditional $U(1)$ gauge realization; it does not exclude every other extensive local representation or every higher-derivative gauge-invariant action.
+On the registered phase-character branch of Appendix Q, invariance under integer phase updates together with finite-resolution continuity gives an effective $U(1)$ closure. An edge-local $U(1)$ transporter is an admissible extensive representation of local phase coherence and is cheaper than the specified all-pairs phase table. The leading Maxwell and minimal-coupling description additionally assumes the local Lorentz-covariant, differentiable, two-derivative effective-action branch and the quadratic leading-order cost of Assumption G.3.3. This construction establishes a conditional $U(1)$ gauge realization. Within the declared quadratic complex-linear comparison class of Assumptions G.3.1–G.3.5, Theorem G.3a makes unitary edge transporters the unique exact edge-local comparison, and higher-derivative gauge-invariant actions lie outside the declared two-derivative effective-action branch.
 
 ## G.8 Conditional Gauge, Matter, and Four-Dimensional Spacetime Compatibility
 
@@ -1531,7 +1531,7 @@ This section studies three branch-qualified selection problems. The gauge-algebr
 
 The functional $V_{global}(G,{\psi},D,\dots)$ is a modeled comparison functional on those admitted classes. Its coefficients, admissible competitors, response benefits, anomaly data, and stability penalties are branch inputs. Minimization can establish existence or uniqueness only within the specified class and only when the relevant attainment or strict-gap hypotheses hold.
 
-Under these hypotheses, the appendix compares the $D=4$ Standard Model branch with the enumerated alternatives. It does not prove that POP, PCE, or Equation G.8.5 alone excludes gauge groups, matter representations, dimensions, or response mechanisms outside those declared classes.
+Under these hypotheses, the appendix compares the $D=4$ Standard Model branch with the enumerated alternatives.
 
 ### G.8.2 Foundational Principles for Co-selection
 
@@ -1736,7 +1736,7 @@ PCE co‑selects $G$, $\{\psi\}$, and $D$ to ensure $V_{\text{anom}}=0$. Global-
 
 The existence of stable, complex, bound MPU aggregates ($C_{agg}\gg C_{op}$) is essential for generating significant predictive benefit ($V_{benefit}$). The stability of such structures (e.g., “atoms,” “planetary systems,” “galaxies” in the MPU‑network sense) depends critically on the long‑range behavior of fundamental forces, which is D‑sensitive.
 
-*   For an assumed unscreened massless-force law in $D$-dimensional spacetime, the classical potential scales as $1/r^{D-3}$ for $D>3$ and as $\ln r$ for $D=3$. The inverse-square case occurs for three spatial dimensions and is compatible with the closed-orbit criterion of Bertrand's theorem. This is a viability comparison inside the modeled spacetime class, not a derivation of $D=4$ or a substitute for the Appendix Z carrier theorem and the separate spacetime-promotion certificates [Bertrand, 1873].
+*   For an assumed unscreened massless-force law in $D$-dimensional spacetime, the classical potential scales as $1/r^{D-3}$ for $D>3$ and as $\ln r$ for $D=3$. The inverse-square case occurs for three spatial dimensions and is compatible with the closed-orbit criterion of Bertrand's theorem. This is a viability comparison inside the modeled spacetime class [Bertrand, 1873]; $D=4$ itself is derived by the Appendix Z carrier theorem, and its spacetime reading requires the separate spacetime-promotion certificates.
 *   For the assumed central potential, the effective radial potential has no strict stable circular minimum when $D_{\text{space}}\ge4$ (the four-spatial-dimensional case is marginal and higher dimensions are unstable). This is a classical obstruction within the declared unscreened central-force model. No converse exclusion is proved for $D_{\text{space}}\le2$; any claim that lower dimensions lack sufficient topology or degrees of freedom is an additional viability premise that must be encoded and tested in $\eta_{\rm ben}(D)$ or the registered penalty.
 *   A universe unable to form stable complex structures incurs a catastrophic loss of $V_{benefit}$ (as these structures are the primary engines of advanced prediction) and is thus strongly disfavored by PCE. It is a core hypothesis of this co‑selection argument that PCE robustly translates these D‑sensitive stability issues into highly unfavorable D‑dependent coefficients within the PCE potential model (Equation G.8.5), for instance, by yielding a significantly lower benefit coefficient $\eta_{ben}(D)$ or imposing high effective penalty terms for dimensions $D\neq 4$ that fail to support such stable complexity.
 
@@ -1745,8 +1745,8 @@ The existence of stable, complex, bound MPU aggregates ($C_{agg}\gg C_{op}$) is 
 
 The MPU network’s efficiency under PCE depends on D‑sensitive information‑theoretic properties.
 
-*   **Holographic Efficiency:** On a separately certified $3+1$ spacetime and horizon-thermodynamic branch, the entropy-area law gives a bulk-boundary scaling comparison. No theorem in this section proves that this efficiency is optimized uniquely at $D=4$ or promotes the Euclidean response carrier to physical spacetime.
-*   **Network Propagation and Coherence ($V_{prop}$):** Recurrence and transience of random walks change with spatial dimension, so a declared propagation-cost model may compare dimensions. Any claimed optimum depends on explicitly supplied coefficients and admissible competitors in Equation G.8.5; it is a modeled viability test, not an independent theorem selecting $D=4$.
+*   **Holographic Efficiency:** On a separately certified $3+1$ spacetime and horizon-thermodynamic branch, the entropy-area law gives a bulk-boundary scaling comparison.
+*   **Network Propagation and Coherence ($V_{prop}$):** Recurrence and transience of random walks change with spatial dimension, so a declared propagation-cost model may compare dimensions. Any claimed optimum depends on explicitly supplied coefficients and admissible competitors in Equation G.8.5; it is a modeled viability test.
 
 ### G.8.3 A Model for the PCE Potential of the Gauge Sector (in a given D)
 
@@ -2130,11 +2130,11 @@ $$
 $$
 because irreducibility is invariant under unitary conjugacy.
 
-This tensor-product image is therefore not excluded by an arbitrary-subgroup classification theorem. It is outside the admissible family of Theorem G.8.4b because it does not preserve the finite-response direct-sum certificate
+This tensor-product image is outside the admissible family of Theorem G.8.4b because it does not preserve the finite-response direct-sum certificate
 $$
 \mathcal B=C\oplus W\oplus Y
 $$
-or the determinant interface contract used in Definition G.8.4h.1. Adding a ledger operator whose eigenspaces are already $C$, $W$, and $Y$ is a way of restating the block-frame admissibility condition, not a proof that all compact connected subgroups of $U(6)$ are conjugate to the reducible block-frame action. Thus the PU result is block-frame/interface-category uniqueness, not uniqueness among all compact connected subgroups of $U(6)$.
+or the determinant interface contract used in Definition G.8.4h.1. Adding a ledger operator whose eigenspaces are already $C$, $W$, and $Y$ is a way of restating the block-frame admissibility condition, not a proof that all compact connected subgroups of $U(6)$ are conjugate to the reducible block-frame action. Thus the PU result is block-frame/interface-category uniqueness.
 
 Equivalently, PU does not assume or derive a full-centralizer maximality rule
 $$
@@ -2452,7 +2452,7 @@ For matter packages, Theorem X.8d and Theorem X.8d.3 require vanishing of every 
 *Proof.* In the $SU(5)$ example of Georgi and Glashow (1974, p.440), the extra vector bosons lie outside the twelve Standard Model generators. Explicitly, the traceless anti-Hermitian $5\times5$ matrices have dimension $24$; the $3+2$ block-diagonal subalgebra has dimension $8+3+1=12$, and the off-diagonal complex $3\times2$ block supplies the remaining twelve real generators. The certified bound $n_G\le12$ and saturation by $\mathfrak g_{\mathrm{SM}}$ exclude those additional generators on the stated branch. This argument does not classify massive vector matter, higher-dimensional baryon-violating operators, or other non-GUT mechanisms. ∎
 
 
-**Remark G.8.4c.3: Experimental Status.** The Super-Kamiokande Collaboration's 2020 analysis reports $90\%$ confidence-level lower limits $\tau/B(p\to e^+\pi^0)>2.4\times10^{34}$ years and $\tau/B(p\to\mu^+\pi^0)>1.6\times10^{34}$ years. These are dated partial-lifetime limits. A model's predicted lifetime depends on its heavy-vector masses, couplings, flavor structure, matching and hadronic matrix elements; comparison requires a specified prediction for the same decay channel. No universal $10^{31}$–$10^{32}$ year prediction or blanket exclusion of all minimal $SU(5)$ scenarios is established here. On the saturated certified branch, PU predicts continued null results only for proton-decay modes mediated by the excluded $X,Y$ generators of a larger unified gauge algebra; Corollary G.8.4c.2 does not exclude other baryon-violating mechanisms.
+**Remark G.8.4c.3: Experimental Status.** The Super-Kamiokande Collaboration's 2020 analysis reports $90\%$ confidence-level lower limits $\tau/B(p\to e^+\pi^0)>2.4\times10^{34}$ years and $\tau/B(p\to\mu^+\pi^0)>1.6\times10^{34}$ years. These are dated partial-lifetime limits. A model's predicted lifetime depends on its heavy-vector masses, couplings, flavor structure, matching and hadronic matrix elements; comparison requires a specified prediction for the same decay channel. On the saturated certified branch, PU predicts continued null results only for proton-decay modes mediated by the excluded $X,Y$ generators of a larger unified gauge algebra; Corollary G.8.4c.2 does not exclude other baryon-violating mechanisms.
 
 
 **Remark G.8.4d: Complementary Derivation Structure.** Proposition G.M1 identifies the emergent gauged algebra as the decomposition-preserving local unitary symmetry once the internal block-frame module split is fixed. Theorem G.8.4b derives the unique PCE-selected block-frame decomposition
@@ -2463,7 +2463,7 @@ inside the finite-response block-frame positive-marginal capacity branch. Togeth
 $$
 \mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)
 $$
-as the unique determinant-compatible block-frame algebra on that branch. This is not an arbitrary compact-subgroup classification in $U(6)$ and does not use a full-centralizer maximality assumption. The remaining abelian normalization is fixed only after determinant-character and anomaly descent, supplied by Theorem G.8.4e.1b and Corollary G.8.4e.1c.
+as the unique determinant-compatible block-frame algebra on that branch. The remaining abelian normalization is fixed only after determinant-character and anomaly descent, supplied by Theorem G.8.4e.1b and Corollary G.8.4e.1c.
 
 **Theorem G.8.4e (Topological No-Go for a $(1,2,3)$ Reduction of the Universal Quotient Bundle).** Let
 $$
@@ -3183,9 +3183,9 @@ A physical-vacuum claim requires a registered Hamiltonian or dynamics together w
 $$|\Omega_{\text{Golay}}\rangle = \frac{1}{64} \sum_{c \in \mathcal{G}_{24}} |c\rangle$$
 This state is stabilized by 24 independent generators: 12 X-type generators $S_i^X = X^{g_i}$ (where $g_i$ is the $i$-th row of a generator matrix) and 12 Z-type generators $S_j^Z = Z^{h_j}$ (where $h_j$ is the $j$-th row of a parity-check matrix). The "12 + 12" structure thus manifests as stabilizer generators rather than signal versus parity qubits. The Golay minimum distance 8 implies that the smallest-weight non-identity stabilizer elements have weight 8; equivalently, any nonidentity Pauli error modulo scalar phase of weight less than 8 produces a nontrivial syndrome under stabilizer measurement. The state is invariant under the Mathieu group $M_{24} = \operatorname{Aut}(\mathcal{G}_{24})$, with $|M_{24}| = 244,823,040$.
 
-On the residual-syndrome branch of Appendix Z, the marked Golay shell structure becomes a conditional residual-code diagnostic. Ordinary hardware noise may generate low-weight errors; after the registered device-local channels are modeled and separated, the substrate-aligned residual hypothesis predicts no native nonzero code shell below weight $8$ and a leading $759$-octad shell. This tests the declared residual code law, not a Hamiltonian ground state or physical vacuum. A vacuum interpretation additionally requires a registered physical carrier, Hamiltonian or dynamics, preparation map, and response-faithful measurement certificate.
+On the residual-syndrome branch of Appendix Z, the marked Golay shell structure becomes a conditional residual-code diagnostic. Ordinary hardware noise may generate low-weight errors; after the registered device-local channels are modeled and separated, the substrate-aligned residual hypothesis predicts no native nonzero code shell below weight $8$ and a leading $759$-octad shell. This tests the declared residual code law.
 
-**Remark G.8.4g.2: Functional and Carrier-Level Readings.** Theorem G.8.4g proves a finite symplectic compatibility between two chosen Lagrangian subspaces in a marked $24$-coordinate carrier. It does not identify a Golay parity quotient with physical gauge redundancy or identify a stabilizer state with a vacuum. Such a promotion requires an accepted QFI/code carrier intertwiner, a vacuum Hamiltonian or dynamics, a response-preserving coarse-graining/gauge-subspace map, and proof that finite neutral updates map to gauge transformations and Ward-null directions. On that additional branch, the two redundancies may be compared through the supplied map. Without it, the shared Lagrangian dimension is an analogy and compatibility identity: the Lie bracket of $\mathfrak g_{\mathrm{SM}}$ is not binary code addition, and gauge transformations are not Golay codewords.
+**Remark G.8.4g.2: Functional and Carrier-Level Readings.** Theorem G.8.4g proves a finite symplectic compatibility between two chosen Lagrangian subspaces in a marked $24$-coordinate carrier. It does not identify a Golay parity quotient with physical gauge redundancy or identify a stabilizer state with a vacuum. Such a promotion requires an accepted QFI/code carrier intertwiner, a vacuum Hamiltonian or dynamics, a response-preserving coarse-graining/gauge-subspace map, and proof that finite neutral updates map to gauge transformations and Ward-null directions. On that additional branch, the two redundancies may be compared through the supplied map.
 
 **Corollary G.8.4g.3 (Mathieu Compatibility Does Not Replace Capacity Selection).** On the marked Golay-Leech branch, $M_{24}$ acts as the permutation automorphism group of the marked Golay carrier and preserves the carrier-level code structure used in Theorem G.8.4g. This action does not by itself determine a canonical ordered decomposition
 $$
@@ -3788,7 +3788,7 @@ The PU framework provides a dependency-locked co-selection theorem on the inters
 
 **Homogeneous Casimir spectral certificate.** Electroweak or homogeneous spectral entries are promoted only under the finite certificate $\mathfrak C_{\mathrm{Cas}}$. The certificate fixes the homogeneous space and metric, the isotropy bundles and sector operators, the branching tables and multiplicities up to cutoff, the Casimir shifts, the parity or Golay marking used to label sectors, the $\mathrm{MS2}_{\mu_G}$ finite-part convention, the residual tail estimate, and a forward-lock stating that these choices are fixed before comparison with measured masses or couplings.
 
-    *   **Minimal-branch singlet scope.** In Theorems G.8.5a and G.8.1b, an added sterile field is gauge-null by the declared candidate class. Giving it nonzero hypercharge changes the abelian anomaly equations and requires compensating charged content or a separately registered response channel; that is a different branch. Thus neutrality follows for the sterile slot in this minimal anomaly/Yukawa class, not from a universal claim that every charged singlet lacks predictive response.
+    *   **Minimal-branch singlet scope.** In Theorems G.8.5a and G.8.1b, an added sterile field is gauge-null by the declared candidate class. Giving it nonzero hypercharge changes the abelian anomaly equations and requires compensating charged content or a separately registered response channel; that is a different branch. Thus neutrality follows for the sterile slot in this minimal anomaly/Yukawa class.
     *   **Conditional Family-Count Minimizer in the Declared Class.** Appendix R shows that, in the modeled family-charge sector, the smallest nontrivial anomaly-consistent family structure compatible with CP violation is $N=3$ with offsets $\{a,-a,0\}$ (Theorem R.3.4), and Proposition R.3.5.1a realizes this count exactly on the pre-flavor family-redundancy PPI branch. Proposition R.4.2 adds that the $D_4$ triality orbit, $E_8$/Leech scaffold, and $M=24=8\times 3$ structure are compatible with this count, but they do not provide an independent derivation.
 
 3.  **Confluence and Co-selection:**
@@ -3797,7 +3797,7 @@ The PU framework provides a dependency-locked co-selection theorem on the inters
     
 ### G.8.6 Emergent Couplings and Masses
 
-On a branch supplying an explicit MPU microdynamic potential, a proved physical-parameter map, and an attained identifiable minimizer, gauge couplings and fermion Yukawas would be determined by that minimizer. The present corpus does not supply this complete joint certificate. Appendix W gives branch-specific coupling relations, while Appendix Z gives a certificate-conditional Thomson core and a separate residual ledger; neither numerical coincidence nor an attractor-matched estimate fixes the physical couplings or Yukawas without the stated normalization, matching, operator-realization, and source-exhaustion gates.
+Appendix W gives branch-specific coupling relations, and Appendix Z gives a certificate-conditional Thomson core and a separate residual ledger; fixing the physical couplings or Yukawas from these records requires the stated normalization, matching, operator-realization, and source-exhaustion gates. A complete joint determination by one minimizer requires an explicit MPU microdynamic potential, a proved physical-parameter map, and an attained identifiable minimizer; this joint certificate is not populated in the present corpus.
 
 
 ## G.9 Rate-Level PCE Potential and the Pathway to $\alpha_{\mathrm{em}}$
@@ -3814,10 +3814,6 @@ On the strict Legendre/LAN, locality, Ward, KKT, and normalization branch of App
 
 
 ## G.1.9 Modular Representation and Certified Physical Equilibrium
-
-The Born rule remains the independent result of Sections G.1.1--G.1.4 and Theorem G.1.7. Section G.1.9 supplies a common modular constraint-geometry representation for faithful probability states; it does not derive all probability measures from PCE-driven equilibration to Gibbs fixed points.
-
-A modular representation $\rho\propto e^{-K_\rho}$ is available for every faithful state. Its promotion to physical thermal or horizon equilibrium requires the separate QDB/physical-time or complete-passivity certificate of Theorems G.1.9.3 and G.1.9.3c, together with the relevant constraint bridge. This is a structural unification of representations and certified equilibrium branches, not one universal dynamical origin for Born probabilities.
 
 This section compares modular representations used in quantum, thermal, and horizon contexts. Every faithful finite-dimensional state can be written as $\rho=Z^{-1}e^{-K}$, but this algebraic form does not imply a common equilibration dynamics. ND-RID supplies physical equilibrium only on branches carrying the stationarity, detailed-balance, complete-passivity, or physical-time certificates stated below.
 
@@ -4259,7 +4255,7 @@ This section has established:
 
 5. **Foundation for Gravity:** The modular Hamiltonian framework connects to the entanglement first law, providing the thermodynamic foundation for deriving Einstein's equations (Section G.1.9.6).
 
-Together with the entropy ledger of Section P.6.5, this gives a shared modular bookkeeping language. It does not establish one PCE dynamical origin for all probability laws or all physical equilibrium states.
+Together with the entropy ledger of Section P.6.5, this gives a shared modular bookkeeping language.
 
  The two unifications are summarized in the following correspondence:
 
@@ -4294,7 +4290,7 @@ Theorem 31's physical reset ledger is not an antecedent of $\varepsilon_0$, $a$,
 
 ### G.1.9.10 Topological Origin of the Factor $2\pi$
 
-The factor $2\pi$ appears in several independently certified branches: circle-valued action phase and holonomy, Euclidean Rindler regularity, Bohr--Sommerfeld phase closure, and local phase transport. Once the relevant circle action is registered, each occurrence follows from the standard period of $S^1\cong U(1)$. The common topology explains the repeated normalization; PCE selects particular finite representatives only within the declared comparison classes and does not derive every circle structure from one optimization.
+The factor $2\pi$ appears in several independently certified branches: circle-valued action phase and holonomy, Euclidean Rindler regularity, Bohr--Sommerfeld phase closure, and local phase transport. Once the relevant circle action is registered, each occurrence follows from the standard period of $S^1\cong U(1)$. The common topology explains the repeated normalization; PCE selects particular finite representatives only within the declared comparison classes.
 
 **Proposition G.1.9.10a (Common Circle-Period Normalization of $2\pi$).** *The factor $2\pi$ appearing in the framework's quantization conditions arises from the topology of the circle $S^1 \cong U(1)$, whose fundamental group $\pi_1(S^1) = \mathbb{Z}$ enforces single-valuedness constraints on quantum amplitudes.*
 
@@ -4385,7 +4381,7 @@ $$
 
 *Proof.* Theorem Z.1 gives $a=2$ only with its fixed-response/performance comparator and strict active-support cost. Definition Z.9a and Theorems Z.10--Z.11 give $D=4$ from a faithful $24$-label injection, $K(3)=12$, an explicit regular-$24$-cell realization, and strict surplus-dimension cost. Thus $D-2=2=a$. This is a compatibility identity on the branch intersection, not an implication from either ledger to the other. ∎
 
-**Remark G.8.7d (Interpretation).** The equality $a=D-2=2$ compares the rank of the active two-label carrier on Theorem Z.1's branch with the number of transverse polarizations on the separate Lorentz/gauge branch. It is a conditional numerical compatibility, not a derivation of gauge polarization from thermodynamic irreversibility or proof that no other branch is consistent.
+**Remark G.8.7d (Interpretation).** The equality $a=D-2=2$ compares the rank of the active two-label carrier on Theorem Z.1's branch with the number of transverse polarizations on the separate Lorentz/gauge branch. It is a numerical compatibility on the intersection of those two branches.
 
 **Table G.8.7 (Factor Correspondence).**
 
@@ -4413,7 +4409,7 @@ If $C=C^\perp$, then $2\dim C=24$ and $k=12$. Independently, Theorem G.8.2e give
 
 ## G.10 Conditional Active-Kernel Spinor-Lift Structure
 
-The preceding sections construct the Standard Model gauge algebra on their stated finite-response block-frame branch. This section constructs a projective $SU(2)$ amplitude lift of the SPAP involution on the minimal active kernel. Compatibility with relativistic spinors additionally consumes the complete Corollary 46a/Appendix O Lorentzian branch and the applicable spin or tangential-structure gate of Theorem 48. The mass correspondence further requires direct active-kernel provenance and $\mathfrak B_{mass}$. Thus SPAP and PPI alone do not establish that all matter fields are spinors or determine a mass ledger.
+The preceding sections construct the Standard Model gauge algebra on their stated finite-response block-frame branch. This section constructs a projective $SU(2)$ amplitude lift of the SPAP involution on the minimal active kernel. Compatibility with relativistic spinors additionally consumes the complete Corollary 46a/Appendix O Lorentzian branch and the applicable spin or tangential-structure gate of Theorem 48. The mass correspondence further requires direct active-kernel provenance and $\mathfrak B_{mass}$.
 
 ## G.10.1 The SPAP $\mathbb{Z}_2$ Structure
 
@@ -4645,7 +4641,7 @@ The connection is conditional at each physical bridge:
 5. If the registered connected physical projective-symmetry subgroup preserves transition probabilities and acts transitively on the pure active-kernel rays, Theorem G.10.3 identifies it with $PU(2)\cong SO(3)$ and gives the simply connected amplitude lift $SU(2)$.
 6. The covering homomorphism $SU(2)\to SO(3)$ has kernel $\{I,-I\}\cong\mathbb Z_2$ (Theorem G.10.4).
 
-Together with the minimal carrier dimension $d_0=8$ and the finite-response block-frame capacity-saturation theorem, the same active rank $a=2$ selects the rank-2 weak inactive summand inside the unique $3+2+1$ decomposition. On the minimal flag lift, Theorem G.8.4c.0c states that any local unitary fiber isometry from the active rank-2 carrier to the weak rank-2 summand transports the Pauli $\mathfrak{su}(2)$ algebra to the weak block. This is a local finite-response frame identification and does not assert a canonical global bundle isomorphism.
+Together with the minimal carrier dimension $d_0=8$ and the finite-response block-frame capacity-saturation theorem, the same active rank $a=2$ selects the rank-2 weak inactive summand inside the unique $3+2+1$ decomposition. On the minimal flag lift, Theorem G.8.4c.0c states that any local unitary fiber isometry from the active rank-2 carrier to the weak rank-2 summand transports the Pauli $\mathfrak{su}(2)$ algebra to the weak block. This is a local finite-response frame identification.
 
 **Joint Branch Assembly.** On the branch carrying the registered Boolean involution together with Wigner/projective-ray hypotheses, the logical involution is represented by
 $$
@@ -4915,7 +4911,7 @@ v\wedge w=-w\wedge v,\qquad v\wedge v=0.
 $$
 This establishes exchange antisymmetry and Pauli exclusion for the realized charged fields. The logical spinor lift alone supplies neither the source theorem hypotheses nor the charged-field realization. ∎
 
-**Remark G.10.2: PCE Interpretation of Spin-Statistics.** Proposition G.10.7 does not derive exchange antisymmetry from the $2\pi$ spinor sign alone. The sign is fixed by the AQFT/modular spin-statistics branch. PCE supplies the compression interpretation: once identical half-integer spin sectors are on the fermionic branch, the antisymmetric exterior algebra removes redundant same-state over-occupation and gives the Pauli-exclusion counting rule. The tangent-cell packing result of Theorem Z.10 is compatible with this logic but is not a substitute for the AQFT spin-statistics branch unless an additional finite-response map identifies identical-fermion occupation cells with QFI/Bures tangent cells.
+**Remark G.10.2: PCE Interpretation of Spin-Statistics.** In Proposition G.10.7 the exchange sign is fixed by the AQFT/modular spin-statistics branch. PCE supplies the compression interpretation: once identical half-integer spin sectors are on the fermionic branch, the antisymmetric exterior algebra removes redundant same-state over-occupation and gives the Pauli-exclusion counting rule. The tangent-cell packing result of Theorem Z.10 is compatible with this logic but is not a substitute for the AQFT spin-statistics branch unless an additional finite-response map identifies identical-fermion occupation cells with QFI/Bures tangent cells.
 
 **Remark G.10.2a (Configuration-Space Topology Does Not Replace Spin-Statistics).** For two unordered distinct points in $\mathbb R^3$,
 $$
@@ -4998,13 +4994,13 @@ The last two arrows are conditional branch junctions, not consequences of the SP
 
 ## G.11 Conclusion
 
-The appendix builds conditional links from predictive structure to quantum probabilities, gauge fields, matter, spacetime dimension, and selected numerical relations. Each link keeps its own assumptions and evidential status.
+The appendix builds conditional links from predictive structure to quantum probabilities, gauge fields, matter, spacetime dimension, and selected numerical relations.
 
 **Technical ledger.**
 
 This appendix establishes the following branch-qualified constructions within the Predictive Universe framework:
 
-1. **Quantum Probability:** On the finite-dimensional retained-ledger branch with registered normalization, positivity, refinement invariance, noncontextuality, and an accepted $\mathfrak C_{\mathrm{Born}}$, Theorems 8.3 and G.1.7 give the trace form on the certified domain; Theorem G.1.3 supplies the all-projector specialization only on the full-projection route. The complex Hilbert carrier separately retains the hypotheses of Theorem G.1.8. POP/PCE supplies the comparison and quotient interpretation but does not prove the remaining representation premises.
+1. **Quantum Probability:** On the finite-dimensional retained-ledger branch with registered normalization, positivity, refinement invariance, noncontextuality, and an accepted $\mathfrak C_{\mathrm{Born}}$, Theorems 8.3 and G.1.7 give the trace form on the certified domain; Theorem G.1.3 supplies the all-projector specialization only on the full-projection route. The complex Hilbert carrier separately retains the hypotheses of Theorem G.1.8. POP/PCE supplies the comparison and quotient interpretation.
 
 2. **Gauge Structure:** The registered phase-character and local-effective-action branches give a conditional $U(1)$ connection with leading Maxwell/minimal-coupling terms (Section G.7). The Standard Model algebra is unique only in the determinant-compatible finite-response block-frame capacity class of Theorem G.8.4b and Corollary G.8.4c; matter content retains its anomaly, response, and finite-catalog certificates.
 
@@ -5019,7 +5015,3 @@ This appendix establishes the following branch-qualified constructions within th
 
 
 These results ground the quantum measurement framework, gauge interactions, spacetime dimensionality, and fundamental constants in the unified logic and resource economics of prediction. Quantitative predictions are further constrained by the alphabet identities of Appendix W.
-
----
-
-*Note:* For $d=2$, the trace rule follows by higher-dimensional restriction only when the accepted global Born-domain certificate covers the embedded qubit effects, or by a separate dimension-two effect/finite informationally complete positive-reconstruction certificate. The inequality $d_0\ge8$ alone supplies neither route.

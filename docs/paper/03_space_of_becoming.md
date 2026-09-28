@@ -1,6 +1,6 @@
 # 3. The Dynamics of Prediction and Interaction
 
-Building on Section 2, this section defines the Fundamental Predictive Loop and Reflexive Interaction Dynamics as PU's operational update model. The loop and RID do not by themselves force one numerical viability interval. Theorem 8 supplies a lower bound only under its super-chance success premise, while Theorem 9 supplies an upper bound only under its pathwise-excitation certificate; Definition 8 registers the resulting branch-relative Space of Becoming.
+Building on Section 2, this section defines the Fundamental Predictive Loop and Reflexive Interaction Dynamics as PU's operational update model. Theorem 8 supplies a lower bound only under its super-chance success premise, while Theorem 9 supplies an upper bound only under its pathwise-excitation certificate; Definition 8 registers the resulting branch-relative Space of Becoming.
 
 #### 3.1 The Fundamental Predictive Loop
 
@@ -312,7 +312,7 @@ These properties highlight the intrinsic limitations and complexities introduced
 
 #### 3.3 The Space of Becoming: Predictive Viability Bounds
 
-This section defines Predictive Performance and a branch-relative viability band. Theorem 8's lower bound requires its registered super-chance premise; Theorem 9's upper bound requires its pathwise-excitation certificate. POP, RID, and finite resources alone do not imply either bound. Definition 8 names the Space of Becoming only after the applicable antecedents are supplied.
+This section defines Predictive Performance and a branch-relative viability band.
 
 #### 3.3.1 Definition 7 (Def 7): Predictive Performance (PP)
 
@@ -505,7 +505,7 @@ For the registered task, score, evaluation windows, and excitation branch above,
 $$
 \alpha<PP_W<\beta.
 $$
-This is the framework's operational-viability axiom. Theorem 8 verifies its lower inequality when strict expected super-chance performance is required. On Theorem 19's exact response-law branch, finite $C$ gives $PP_W<\beta$; Theorem 9 alone verifies the strict upper inequality only on an alternative branch whose registered viability endpoint satisfies $\beta_0<\beta$. No system-independent scalar relation between $\beta$ and an $\alpha_{SPAP}$ follows from Theorems 10–11.
+This is the framework's operational-viability axiom. Theorem 8 verifies its lower inequality when strict expected super-chance performance is required. On Theorem 19's exact response-law branch, finite $C$ gives $PP_W<\beta$; Theorem 9 alone verifies the strict upper inequality only on an alternative branch whose registered viability endpoint satisfies $\beta_0<\beta$.
 
 #### 3.3.7 Proposition 1 (Regulation Requirement under Uniform Uncontrolled Exit Risk)
 

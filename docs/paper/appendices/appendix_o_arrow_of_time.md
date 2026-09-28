@@ -8,7 +8,7 @@ This appendix asks how many local predictive cycles can form a coherent temporal
 
 The Predictive Universe (PU) framework is built upon the operational dynamics of interacting Minimal Predictive Units (MPUs). As established in Theorem 4, the very act of prediction requires a primitive, ordered, and directional concept of evolution, which we identify with local time. Each MPU, through its cyclical operation, effectively possesses its own internal "clock." However, the existence of these local causal rhythms does not, in itself, explain the emergence of the coherent, large-scale temporal structure observed in the universe.
 
-This appendix addresses this crucial issue. It does not attempt to derive the existence of time *ex nihilo*—a task fraught with logical circularity. Instead, it starts from the premise established in Theorem 4: the very act of prediction logically presupposes a primitive, ordered, and directional concept of evolution. We argue this is a non-negotiable prerequisite for any universe containing predictive agents. The central challenge addressed here is then threefold:
+This appendix addresses this crucial issue. It starts from the premise established in Theorem 4: the very act of prediction logically presupposes a primitive, ordered, and directional concept of evolution. We argue this is a non-negotiable prerequisite for any universe containing predictive agents. The central challenge addressed here is then threefold:
 1.  **The Problem of Coherence:** How does a network of countless MPUs, each potentially operating on its own local causal timeline, achieve the vast domains of temporal synchronization necessary to support consistent physical laws and coherent structures?
 2.  **The Problem of Directionality:** What physical mechanism enforces the observed, universal, and irreversible direction of time's flow—the arrow of time?
 3.  **The Problem of Dynamics:** If time emerges from this synchronized medium, what is the nature of disturbances within it, and how does this temporal structure provide a substrate for advanced predictive phenomena like Consciousness Complexity (CC)?
@@ -76,8 +76,6 @@ $$
 This is positive for sufficiently small nonzero $h$. Substitution of $h=\delta t_{ij}$ proves (O.2). For an admitted comparison with positive residual loss, the benefit hypothesis gives $\Delta(-V_{\mathrm{benefit}})>0$; for a comparison with zero residual loss, the compensation hypothesis gives $\Delta V_{\mathrm{op}}>0$. Every other component change is nonnegative. Summing the components of (D.1), or using its strictly positive dual certificate, gives $\Delta V>0$ in either case. ∎
 
 ## O.4 Conditional Low-Noise Concentration Near Synchronization
-
-The local desynchronization penalty of Theorem O.1 does not by itself imply dynamical convergence. Theorem O.2 identifies the synchronized minimizer set and low-noise stationary concentration only under its connectedness, exact-zero edge-penalty, compactness, ergodicity, and detailed-balance hypotheses.
 
 Let the network configuration state $x$ be expanded to include the local phase variables $\{\phi_i\}$. Under the connectedness, exact-zero edge-penalty, phase-independence, compactness, ergodicity, detailed-balance, and low-noise hypotheses stated in Theorem O.2, the phase-sector minimizers are precisely the synchronized configurations characterized there.
 
@@ -513,7 +511,7 @@ If the initial algebra has minimal dimension within the certified filtration, th
 
 *Proof.* The certificate's forward-lock and no-deletion/retention entries preserve earlier records under the injective inclusion maps. For the entropy claim, write the intrinsic density matrix blockwise and list its eigenvalues, including zeros. They form a probability vector with $\sum_\alpha d_\alpha$ entries, whose Shannon entropy is at most $\ln(\sum_\alpha d_\alpha)$. Since each $d_\alpha\ge1$, one has $\sum_\alpha d_\alpha\le\sum_\alpha d_\alpha^2=\dim_{\mathbb C}\mathcal A_{\mathrm{ret}}^{(q)}(t_0)$. These upper bounds do not compare the actual states at different times. The ancestry exclusion is only the declared finite-response distinction. No positive thermodynamic cost follows; reset heat retains every separate hypothesis of Theorem 31. ∎
 
-**Remark O.3e (Non-Redundancy with the Arrow Theorem).** Theorems O.3, O.3a, and O.3b derive directionality and fluctuation suppression. Proposition O.3d does not rederive that arrow. It supplies the separate retained-algebra reading of low-boundary and conditioning claims, and is therefore used only where the text discusses the Past Hypothesis or record-selection ambiguity.
+**Remark O.3e (Non-Redundancy with the Arrow Theorem).** Theorems O.3, O.3a, and O.3b derive directionality and fluctuation suppression. Proposition O.3d supplies the separate retained-algebra reading of low-boundary and conditioning claims, and is therefore used only where the text discusses the Past Hypothesis or record-selection ambiguity.
 
 **Definition O.3f (Retained Entropic Clock-Flow Certificate).** Fix a retained sector $R$ and observer level $q$ carrying $\mathfrak C_{\mathrm{ret}}^{(q)}$. A retained entropic clock-flow certificate is a finite record
 $$
@@ -682,7 +680,7 @@ Theorem O.4 is compatible with global unitarity (Theorem E.9.5): it concerns per
 
 ### O.5.2 Typed Computational-Thermodynamic Asymmetry and the P-versus-NP Boundary
 
-Thermodynamic irreversibility, witness-generation difficulty, average-case inversion hardness, path-measure asymmetry, and SPAP diagonal obstruction all distinguish a forward task from a reverse or predictive task. That common verbal pattern does not make the quantities interchangeable. This section places them in one typed bookkeeping space, states the bridge conditions required to move between types, and isolates a sufficient certificate under which the proposed one-way-function route would imply $\mathsf{P}\ne\mathsf{NP}$. No claim in this section treats gravity as a fundamental computational field: gravity remains the emergent thermodynamic/equation-of-state structure developed elsewhere in PU.
+Thermodynamic irreversibility, witness-generation difficulty, average-case inversion hardness, path-measure asymmetry, and SPAP diagonal obstruction all distinguish a forward task from a reverse or predictive task. That common verbal pattern does not make the quantities interchangeable. This section places them in one typed bookkeeping space, states the bridge conditions required to move between types, and isolates a sufficient certificate under which the proposed one-way-function route would imply $\mathsf{P}\ne\mathsf{NP}$.
 
 **Definition O.5.2a (Typed Computational-Thermodynamic Asymmetry Profile).** A typed asymmetry profile is the five-coordinate product
 $$
@@ -925,11 +923,11 @@ Even after a valid $\mathsf{P}\ne\mathsf{NP}$ proof, one obtains a worst-case su
 
 *Proof.* The cited PU results establish, respectively, predictor-responsive diagonal obstruction, a conditional physical cost for a specified finite-memory reset, path-measure temporal asymmetry, and receiver-relative modeling limitations. By Theorem O.5.2e none supplies the fixed-family average-case quantifiers or success-preserving bridge required by Definition O.5.2f. The unconditional implication proved in Theorem O.5.2g applies once its full certificate antecedent is independently discharged. A certificate recorded under an unresolved hypothesis yields only the correspondingly conditional implication. Other logically possible routes to $\mathsf{P}\ne\mathsf{NP}$ are outside this certificate theorem. ∎
 
-**Remark O.5.2h (Universe-as-Computation Boundary).** PU may use a common typed ledger to compare time's arrow, physical reset cost, witness generation, inversion, and self-reference. It may not identify them. The statement that the universe “computes itself” is an interpretive description of sequential physical evolution, not a theorem that the universe searches an exponentially large list, “knows” or fails to know its future, runs at a complexity-theoretic maximum speed, or derives time from $\mathsf{P}\ne\mathsf{NP}$. The defensible implication is the narrower conditional theorem: an independently certified $\mathfrak C_{\mathrm{OWF}}$ yields $\mathsf{P}\ne\mathsf{NP}$.
+**Remark O.5.2h (Universe-as-Computation Boundary).** PU uses a common typed ledger to compare time's arrow, physical reset cost, witness generation, inversion, and self-reference without identifying them. The statement that the universe “computes itself” is an interpretive description of sequential physical evolution. The theorem-level implication is conditional: an independently certified $\mathfrak C_{\mathrm{OWF}}$ yields $\mathsf{P}\ne\mathsf{NP}$.
 
 ### O.5.3 Scoped Relativization Barrier, Certificate Status, and Restricted Inversion Theorems
 
-Section O.5.2 proves that an unconditionally certified standard one-way function would imply $\mathsf{P}\ne\mathsf{NP}$, while SPAP, candidate counting, and physical reset cost do not supply that certificate by identification alone. This section adds four limited results: a relativization barrier for derivations whose premises are oracle-stable and whose computational steps are separately proved oracle-natural; a certificate-submission audit that preserves conditionality and incompleteness; two unconditional restricted inversion obstructions; and a quantitatively stated conditional physical-hardness branch. It does not assert that every admissible bridge relativizes, classify every conceivable PU derivation, discharge a standard one-way-function certificate, or resolve $\mathsf{P}$ versus $\mathsf{NP}$.
+Section O.5.2 proves that an unconditionally certified standard one-way function would imply $\mathsf{P}\ne\mathsf{NP}$, while SPAP, candidate counting, and physical reset cost do not supply that certificate by identification alone. This section adds four results: a relativization barrier for derivations whose premises are oracle-stable and whose computational steps are separately proved oracle-natural; a certificate-submission audit that preserves conditionality and incompleteness; two unconditional restricted inversion obstructions; and a quantitatively stated conditional physical-hardness branch.
 
 **Definition O.5.3a (Common-Oracle Reading and Oracle-Natural Bridge).** Let $\mathcal O\subseteq\{0,1\}^*$ be an oracle. The *common-oracle reading* of a computational statement replaces every declared machine, predictor, verifier, evaluator, solver, and inverter by its $\mathcal O$-oracle version and gives the same oracle to every interacting side. A statement is *oracle-stable* when its common-oracle reading is true for every $\mathcal O$.
 
@@ -1217,7 +1215,7 @@ An abstract inverter or SAT algorithm is a mathematical counterexample, not by i
 
 *Proof.* Clause 1 is the negation of the eventual-negligibility statement (O.5.3.7). Clause 2 follows from (O.5.3.6). For clause 3, a polynomial-time SAT decider implies $\mathsf{P}=\mathsf{NP}$ and the prefix construction returns a preimage for every image point; Equation (O.5.3.6) transports that success to the registered physical protocol. The finite-$n$ statement follows because finitely many samples cannot decide universal asymptotic quantifiers. ∎
 
-**Remark O.5.3i (Exact Status).** The theorem-level conclusions of this section are precisely scoped:
+**Remark O.5.3i (Exact Status).** The theorem-level conclusions of this section are:
 
 1. oracle-natural derivations from registered oracle-stable premises cannot discharge standard one-wayness or $\mathsf{P}\ne\mathsf{NP}$;
 2. Proposition O.5.3f gives a deterministic fixed-exponent, infinitely-often, all-image obstruction, not average-case one-wayness;
@@ -1234,7 +1232,7 @@ $$
 \mathfrak C_{\mathrm{PPT}\to\mathrm{PU}}=\varnothing_{\mathrm{cert}}.
 }
 $$
-Nonrelativizing routes not covered by Theorem O.5.3c remain unclassified, not ruled out. Other proof barriers apply only after their separate hypotheses and their applicability to a proposed proof method are established; they are not promoted here to properties of a candidate function. The open mathematical problem is unchanged.
+Nonrelativizing routes not covered by Theorem O.5.3c remain unclassified, not ruled out.
 
 **Theorem O.5.3j (Exact Uniform Reversible Compilation of PPT Inverters).** Let $\mathcal I$ be a specified uniform probabilistic Turing machine on inputs $(1^n,y)$ with $y\in\{0,1\}^n$ and $r(n)$ independent fair random bits. Assume explicit integer-valued polynomial bounds $T(n),S(n),r(n)$ for its running time, tape space and coin count. Use a length-tagged, zero-padded binary encoding in a polynomial-width output register, with a distinguished failure flag; the output in the following display denotes that encoding. There is a log-space-uniform family of reversible Boolean circuits over NOT, CNOT and Toffoli gates, with polynomial size and polynomially many clean ancillas, such that
 $$
@@ -1255,7 +1253,7 @@ Replace each Boolean gate by a constant-size reversible NOT/CNOT/Toffoli gadget 
 
 ## O.6 Conditional Temporal-Medium Interpretations for CC and Gravity
 
-Theorem O.2 supplies synchronized phase-sector minimizers and low-noise stationary concentration under its stated hypotheses. It proves neither a causal cone nor a physical carrier for CC or gravity. This section records an interpretation available only after the independent response and gravitational certificates are added.
+Theorem O.2 supplies synchronized phase-sector minimizers and low-noise stationary concentration under its stated hypotheses. The CC and gravity readings of this synchronized medium rest, in addition, on independent response and gravitational certificates: Theorem O.6a supplies an exact bounded temporal-wave to qubit-response intertwiner on the registered CC branch, and Theorem O.6.3 supplies an explicit finite arrow--CC--gravity coexistence witness.
 
 **O.6.1 Conditional Temporal Signaling Interpretation**
 
@@ -1621,7 +1619,7 @@ $$
 \;\Longrightarrow\;
 \mathrm{LorentzianSignature}\ (-,+,+,+),
 $$
-with the four antecedents supplied by the rank-four continuum branch of Theorem 45, Theorem O.3's pathwise certificate together with Hypothesis O.7.2.2 (entropy-selected time, its rank-three spatial kernel, and the registered propagation-tensor identification), Hypothesis O.7.2.3 (second-order continuum closure), and Hypothesis O.7.2.4, whose operational-speed upper-bound input is supplied by Theorem 46 plus Theorem P.8.4, while its attained-frontier, nondegeneracy, and cone-coincidence inputs remain branch clauses of the characteristic principal symbol. The signature conclusion is conditional theorem-level on this branch; neither the Euclidean carrier dimension nor entropy-time selection alone forces the Lorentzian signature without the other structural inputs.
+with the four antecedents supplied by the rank-four continuum branch of Theorem 45, Theorem O.3's pathwise certificate together with Hypothesis O.7.2.2 (entropy-selected time, its rank-three spatial kernel, and the registered propagation-tensor identification), Hypothesis O.7.2.3 (second-order continuum closure), and Hypothesis O.7.2.4, whose operational-speed upper-bound input is supplied by Theorem 46 plus Theorem P.8.4, while its attained-frontier, nondegeneracy, and cone-coincidence inputs remain branch clauses of the characteristic principal symbol. Theorem O.7a proves the signature conclusion on this branch from all four structural inputs jointly: the Euclidean carrier dimension enters through the rank-four continuum input, and entropy-time selection through the time-coordinate input.
 
 *Proof of (a).* Fix $x$ and consider the characteristic polynomial in $\omega$ with $k\in S_x^*\setminus\{0\}$. Hypotheses O.7.2.1–O.7.2.2 and rank-nullity give $\dim S_x^*=3$, so the orthogonal complement $\{k:b^ik_i=0\}\subset S_x^*$ is at least two-dimensional and contains nonzero $k$. For any such $k$, the polynomial simplifies to $p_x(\omega,k)=a(x)\omega^2+A^{ij}(x)k_i k_j$ with discriminant
 $$
@@ -1763,15 +1761,15 @@ The tangent-frame Lorentz-kinematics component of premise (T5) of §12 follows o
 
 ## O.8 Conclusion
 
-The framework obtains coherent timing and a preferred statistical direction only when the relevant synchronization and history records are present. Connections to consciousness or gravity need additional physical models.
+The framework obtains coherent timing and a preferred statistical direction on branches carrying the relevant synchronization and history records, and Lorentzian signature on its four-hypothesis branch. Connections to consciousness and gravity are made through the additional physical models of Section O.6.
 
 **Technical ledger.**
 
 The framework obtains temporal coherence and a probabilistic forward orientation on explicitly certified branches.
 *   **Temporal Coherence:** Under the statistical and ledger premises of Theorem O.1 and the connected low-noise detailed-balance hypotheses of Theorem O.2, stationary measures concentrate near synchronized phase configurations.
 *   **The Arrow of Time:** Under the pathwise guarantee-level certificate of Theorem O.3a, a cycle satisfies $P_R/P_F\le e^{-h_{\min}}$; the factor $1/2$ requires the separate condition $h_{\min}\ge\ln2$. The registered binary-support and reset-cost ledgers do not by themselves establish this stochastic pathwise bound; SPAP alone does not require a physical state merge.
-*   **Retained history and receiver-pattern scope:** Theorem O.4 distinguishes recurrence of an accessible state from deletion of a forward-locked retained history. Proposition O.4.2 grades the availability of Appendix M's receiver-pattern descriptors, not the existence of a thermodynamic arrow. External evaluation and integration-cost conclusions retain the model-access, decision, insulation, and pattern-specific reduction certificates of Theorems M.10.3 and M.10.5. None of these results forbids an external controller from restoring a selected accessible state.
+*   **Retained history and receiver-pattern scope:** Theorem O.4 distinguishes recurrence of an accessible state from deletion of a forward-locked retained history. Proposition O.4.2 grades the availability of Appendix M's receiver-pattern descriptors, not the existence of a thermodynamic arrow. External evaluation and integration-cost conclusions retain the model-access, decision, insulation, and pattern-specific reduction certificates of Theorems M.10.3 and M.10.5. An external controller may still restore a selected accessible state without erasing the forward-locked retained history (Corollary O.4.1).
 
-The temporal-coherence and pathwise-arrow results can be combined with the CC and gravity sectors only on their common certified branch. A CC modulation requires the independent context-to-response and energy-accounting data of Appendices L and S. A gravitational-wave identification additionally requires the Appendix-B source tensor, the operational-continuum/AQFT bridge, the metric equation, and a linearized transverse-traceless propagation theorem. Appendix O supplies temporal ordering and, on Hypotheses O.7.2.1–O.7.2.4, a Lorentzian-signature branch; it does not by itself identify a temporal-coherence disturbance with a gravitational wave.
+The temporal-coherence and pathwise-arrow results can be combined with the CC and gravity sectors only on their common certified branch. A CC modulation requires the independent context-to-response and energy-accounting data of Appendices L and S. A gravitational-wave identification additionally requires the Appendix-B source tensor, the operational-continuum/AQFT bridge, the metric equation, and a linearized transverse-traceless propagation theorem. Appendix O supplies temporal ordering and, on Hypotheses O.7.2.1–O.7.2.4, the Lorentzian signature of Theorem O.7a.
 
 

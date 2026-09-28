@@ -336,7 +336,7 @@ The root is therefore the unique maximizer of this polynomial on $[0,\infty)$. I
 
 ## S.5 Schwarzschild Interpretation of the CC Endpoint-Bias Bound
 
-The independently declared bounded-bias constraint $\alpha_{CC,\max}<0.5$ is weaker than exact causality and admits a separate gravitational interpretation. Theorem 39 supplies its endpoint-complete consequence; causal compliance still requires Theorem 39c. From Equation S.5, as $\text{CC} \to \alpha_{CC,\max}$, the required context power diverges: $P_{context} \to \infty$. The supplied work over the coherence interval is
+The independently declared bounded-bias constraint $\alpha_{CC,\max}<0.5$ is weaker than exact causality and admits a separate gravitational interpretation. From Equation S.5, as $\text{CC} \to \alpha_{CC,\max}$, the required context power diverges: $P_{context} \to \infty$. The supplied work over the coherence interval is
 $$
 E_{\mathrm{context}}
 =P_{\mathrm{context}}\tau_c.
@@ -493,7 +493,7 @@ Thus arbitrary CC enhancement is excluded on the intersection of the independent
 
 ## S.6 Non-Local Gravitational Influence via Entanglement
 
-While the gravitational effects analyzed in Sections S.3-S.4 operate locally on the context-generating aggregate, for entangled systems the local gravitational field can modulate joint $A$-$B$ correlation statistics through standard local-unitary phase control: Alice's action changes joint correlations detectable only after classical comparison of measurement records, while Bob's marginal statistics remain unchanged, preserving no-signaling. Reconciliation with any main-text Postulate 3 statement asserting Bob-marginal statistical shifts would require a separate non-CPTP or non-local mechanism beyond the local gravitational dephasing analyzed here, and any mechanism producing such a shift would lie outside and falsify the exact pre-lightcone context-independence branch classified by Corollary 39c.1.
+While the gravitational effects analyzed in Sections S.3-S.4 operate locally on the context-generating aggregate, for entangled systems the local gravitational field can modulate joint $A$-$B$ correlation statistics through standard local-unitary phase control: Alice's action changes joint correlations detectable only after classical comparison of measurement records, while Bob's marginal statistics remain unchanged, preserving no-signaling. Postulate 3's branch (iii) posits Bob-marginal statistical shifts through a separate non-CPTP or non-local mechanism beyond the local gravitational dephasing analyzed here; a late-randomized shift of that kind lies outside the exact pre-lightcone context-independence branch classified by Corollary 39c.1 and is a preregistered falsifier of that branch.
 
 **Setup:** Consider Alice and Bob sharing a maximally entangled two-qubit state:
 $$
@@ -597,7 +597,7 @@ For $\text{CC}=0.1$, the power-law factor is $\text{CC}^{-8}=10^8$. The absolute
 - Post-selected and compared (requiring classical communication afterward)
 - Statistically aggregated (individual outcomes remain random)
 
-**Conditional carrier comparison.** A gravitational carrier couples through a certified stress-energy and metric response, while an electromagnetic carrier couples through a certified current, field, and target susceptibility. Universal stress-energy coupling does not prove that the nominated gravitational phase channel is realizable, dominant, or uniquely attributable. The result below assumes a two-level energy gap, a retained source, and a local CPTP phase response; it does not apply automatically to every quantum system. Distinguishing carriers requires preregistered response surfaces, matched geometry and retention data, and nuisance-controlled likelihood comparison.
+**Conditional carrier comparison.** A gravitational carrier couples through a certified stress-energy and metric response, while an electromagnetic carrier couples through a certified current, field, and target susceptibility. Universal stress-energy coupling does not prove that the nominated gravitational phase channel is realizable, dominant, or uniquely attributable. Distinguishing carriers requires preregistered response surfaces, matched geometry and retention data, and nuisance-controlled likelihood comparison.
 
 **Theorem S.3 (Conditional Gravitational Joint-Correlation Estimate).** Assume the uniform spherical perfect-fluid source model, the retained-energy law with $0<\eta_{\mathrm{ret}}\le1$, and the global quadratic cost branch S.5. Register the centre-clock comparison and baseline/transfer calibration of S.35–S.41, with a two-level subsystem $A$ at $0\le r_A<R_S$, constant energy gap $\Delta E_A$, and interaction time $t$. Within the retained quasi-static weak-field model, assume the ideal local phase channel and selected joint measurement of S.36–S.38. Put
 $$
@@ -1009,8 +1009,6 @@ $$
 }.
 \tag{S.63}
 $$
-The proportional response in (S.62) is an independent constitutive assumption, not a consequence of Definition 30.
-
 For small gravitational effect $K_{\Gamma} P_{context} \ll 1$:
 $$
 \text{CC}_{eff} \approx \text{CC}_{ideal}(1 - K_{\Gamma} P_{context})
@@ -1037,7 +1035,7 @@ $$
 6. S.63 additionally assumes that effective CC scales with the reduced coherence time.
 7. Section S.4 additionally assumes the phenomenological utility $B_{net}$.
 
-Equation S.21 and Equation S.64 have the same linear form only after the additional calibration $\mathrm{CC}_{ideal}=\mathrm{CC}$ and $K_\Gamma=K_{eff}$. Neither the deterministic phase calculation nor the coherence-response ansatz proves that calibration.
+Equation S.21 and Equation S.64 have the same linear form only after the additional calibration $\mathrm{CC}_{ideal}=\mathrm{CC}$ and $K_\Gamma=K_{eff}$.
 
 ## S.8 Integration with Appendix L
 
@@ -1149,13 +1147,13 @@ The experimental programs in Appendix L and this appendix address different aspe
 - Whether the source and geometry certificate supports interpreting the imposed compactness cutoff physically.
 - Whether the registered unresolved-noise or chronometric branch describes coherence times and clock-gap scaling.
 
-Appendices L and S supply carrier, resource and response models on their stated hypotheses. Testing these models requires their common source, geometry, timing, calibration and uncertainty records; neither appendix by itself establishes that a nominated CC implementation exists or realizes the proposed self-limitation mechanism.
+Appendices L and S supply carrier, resource and response models on their stated hypotheses. The tests above, run on their common source, geometry, timing, calibration and uncertainty records, test whether a nominated CC implementation exists and realizes the proposed self-limitation mechanism.
 
 ### S.8.4a Experimental Discrimination of Registered Carrier Models
 
 Fix common source, target, geometry, retention, timing, and uncertainty data. Preregister an electromagnetic response surface and a gravitational response surface, including all nuisance channels and the domain on which the two are identifiable. Vary radiated power, retained total power, distance, modulation frequency, and electromagnetic screening independently when feasible. Electromagnetic screening is a differential control for the declared EM path; the equivalence principle does not prove that every gravitational response is unshieldable in every effective or engineered model.
 
-Compare the two models by a declared likelihood or finite-distance statistic with a stopping rule and multiplicity correction. A result supports one registered model only if it rejects the other within the shared uncertainty ledger. Proposition L.5 supplies neither a dominance expectation nor a numerical response ratio; nonidentifiability or rejection of both leaves the carrier question open.
+Compare the two models by a declared likelihood or finite-distance statistic with a stopping rule and multiplicity correction. A result supports one registered model only if it rejects the other within the shared uncertainty ledger; nonidentifiability or rejection of both leaves the carrier question open.
 
 ### S.8.5 Theoretical Integration Points
 
@@ -1208,11 +1206,11 @@ This appendix develops a conditional gravitational-feedback model for operationa
 3. **Proper-time response:** $\Delta\tau_d=KP_{context}$ follows for the uniform spherical, weak-field geometry, with $K$ carrying $\eta_{\mathrm{ret}}$.
 4. **Utility maximizer:** S.27 is the unique interior maximizer of the truncated phenomenological utility when its small-CC and weak-response conditions hold. Appendix-D concentration requires an additional potential-identification and detailed-balance package.
 5. **Collapse ceiling:** $r_s<R_S$ gives a system-dependent ceiling distinct from the independently declared bounded-bias endpoint.
-6. **Entangled statistics:** A local gravitational phase channel can change selected joint correlations while preserving Bob's marginal. It does not realize a late-randomized Bob-marginal anomaly.
+6. **Entangled statistics:** A local gravitational phase channel can change selected joint correlations while preserving Bob's marginal; the late-randomized Bob-marginal anomaly is the separate branch-(iii) hypothesis of Postulate 3.
 7. **Phase and dephasing:** Deterministic time dilation gives coherent phase rotation. Dephasing requires unresolved noise, a source trace, or the saturated chronometric ND-RID response law.
 8. **Appendix-L composition:** Electromagnetic and gravitational maps compose only for an implementation satisfying both source, partition, response, and causal certificates.
 
-Accordingly, gravitational self-limitation is an admissible mechanism on the combined cost, source, geometry, dephasing, and response branches. It is not an unconditional consequence of CC, PCE, or thermodynamic limits alone.
+Accordingly, gravitational self-limitation is an admissible mechanism on the combined cost, source, geometry, dephasing, and response branches.
 
 **Causality terminology rule.** Every endpoint, bias-strength, gravity-backreaction, or zero-error bound in this appendix is weaker than operational causality. Postulate 2 means exact pre-lightcone context independence by Theorem 39c; a late-randomized Bob-marginal shift lies outside that branch.
 

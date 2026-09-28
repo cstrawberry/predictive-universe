@@ -40,7 +40,7 @@ The argument proceeds from the finite predictive foundation through information 
 
 - **Part I (Z.1–Z.5):** Foundations — MPU invariants, SPAP structure, algebraic constraints, and the ordered $(12,24)$ Ramanujan-PU-Leech ledger
 - **Part II (Z.6–Z.8):** Information Structure — PCE-Attractor, QFI spectrum, capacity saturation
-- **Part III (Z.9–Z.14):** Dimensional Emergence — Operational distinguishability, mode-channel correspondence, dimensional selection, over-determination
+- **Part III (Z.9–Z.14):** Dimensional Emergence — Operational distinguishability, mode-channel correspondence, dimensional selection, dependency-separated compatibility
 - **Part IV (Z.15–Z.21):** Electromagnetic Coupling — Ward identity, discrete gauge structure, interface correction, complete formula
 - **Part V (Z.22–Z.27):** Verification and Extensions — Numerical evaluation, QED running, higher-order corrections
 - **Part VI (Z.28–Z.32):** Experimental Predictions — thresholded mode support and relaxation, coordination scaling, dimensional stability, golden-ratio marker
@@ -60,7 +60,7 @@ $$
 }
 $$
 
-where $u^* = 2^{1/8} - 1$, $K_0 = 3$, and $\operatorname{sinc}(u)=\sin(u)/u$. The second-order correction is evaluated in Section Z.27 from the intrinsic Bures curvature of $\mathrm{Gr}(2,8)$ (Theorem Z.23), the independently declared democratic visible-response coefficient of Theorem Z.24, and the normalized Chern-flux branch over the generator of $\pi_2(\mathrm{Gr}(2,8))$ (Lemma Z.14). Lemma Z.24a records that intrinsic isotropy does not derive the response coefficient. The exact $SU(2)$ transport factor is the sinc factor on the ansatz of Lemma Z.13. Its third-order truncation is
+where $u^* = 2^{1/8} - 1$, $K_0 = 3$, and $\operatorname{sinc}(u)=\sin(u)/u$. The second-order correction is evaluated in Section Z.27 from the intrinsic Bures curvature of $\mathrm{Gr}(2,8)$ (Theorem Z.23), the independently declared democratic visible-response coefficient of Theorem Z.24, and the normalized Chern-flux branch over the generator of $\pi_2(\mathrm{Gr}(2,8))$ (Lemma Z.14). The exact $SU(2)$ transport factor is the sinc factor on the ansatz of Lemma Z.13. Its third-order truncation is
 $$
 \operatorname{sinc}(u^*)=1-\frac{u^{*2}}{6}+O(u^{*4}),
 $$
@@ -81,14 +81,14 @@ It is closed as a theorem-level comparison interval only when $R_\alpha$ is fixe
 
 2. **Operational channels $\to$ dimension.** Definition Z.9a registers an injective response-preserving map from the $M=24$ QFI-active modes to distinct equal-radius tangent cells and makes PCE select the least feasible integer dimension after predictive performance is held fixed; every extra response-null dimension has positive support cost. Theorem Z.10 proves the necessary bound $M\le K(D)$. Since $K(1)=2$, $K(2)=6$, and $K(3)=12$, no faithful $24$-mode shell exists in $D\le3$. The regular $24$-cell explicitly realizes all $24$ cells in $\mathbb R^4$, so $D=4$ is feasible. Least-feasible selection therefore gives $D=4$ without assuming global kissing saturation, an equality $M=K(D)$, or any bound in $D\ge5$.
 
-3. **Coupling-candidate ledger.** Capacity saturation fixes $u^*=2^{1/8}-1$ on Theorem Z.7's branch. The registered Ward/interface/curvature/transport model then defines the core candidate $\alpha^{-1}_{0}$ of Theorem Z.26. Identifying it with a physical electromagnetic response requires the operator/current realization and complete-remainder certificate in Theorem Z.26; no such identification follows from capacity saturation alone.
+3. **Coupling-candidate ledger.** Capacity saturation fixes $u^*=2^{1/8}-1$ on Theorem Z.7's branch. The registered Ward/interface/curvature/transport model then defines the core candidate $\alpha^{-1}_{0}$ of Theorem Z.26. Identifying it with a physical electromagnetic response requires the operator/current realization and complete-remainder certificate in Theorem Z.26.
 
 4. **Uncertainty accounting.** The number $\pm0.000060$ is a diagnostic comparison-budget scale, not a certified interval. A theorem-level Thomson interval requires the finite residual entry $R_\alpha$ to be fixed before comparison by Definition Z.27.11j, Definition Z.27.11g, or a same-branch zero-residual theorem. Corollary Z.27.11e.1 shows that the zero-residual core does not land at the recorded comparison value; the currently displayed hypercharge-recoil value remains diagnostic until its independent operator-realization and source-exhaustion gates are supplied.
 
 ### Z.1.4 Methodological Note
 - One carrier-selection theorem: the faithful least-feasible mode-channel contract of this appendix.
 - One separate spacetime viability comparison: the coefficient-dependent stability model of Section G.8.2.
-- Agreement of the two records is a conditional compatibility check, not a multiply-determined necessity theorem.
+- Agreement of the two records is a conditional compatibility check.
 
 External path (Section G.8.2): inverse-square orbital stability, anomaly cancellation, and network information efficiency provide a separate viability comparison. Internal path (this appendix): a faithful shell must satisfy $M_{\mathrm{int}}\le K(D)$, and Definition Z.9a selects the least feasible dimension. For $M_{\mathrm{int}}=24$, the exact values $K(1)=2$, $K(2)=6$, $K(3)=12$ exclude lower dimensions, while the regular $24$-cell proves feasibility in $D=4$.
 
@@ -103,7 +103,7 @@ $$
 \cong U(8)/[U(2)\times U(6)]
 \cong \operatorname{Gr}(2,8).
 $$
-This orbit fixes a candidate carrier and its dimensions. It does not, by itself, select a physical Hamiltonian, an $E_8$ embedding, flavor labels, response functions, or Standard Model parameters.
+This orbit fixes a candidate carrier and its dimensions.
 
 **Proposition Z.1.5 (Grassmannian Carrier and Parameter-Ledger Separation).** *On the minimal active-projector branch, the reference-state orbit is $\operatorname{Gr}(2,8)$, with complex dimension $12$ and real dimension $24$. These carrier identities do not by themselves determine an $E_8$ embedding, flavor labels, mass ratios, CP phases, a realized generation multiplicity, an electromagnetic response coefficient, or Standard Model parameters.*
 
@@ -551,7 +551,7 @@ is the complexification of the $64$-dimensional real associative algebra $M_8(\m
 
 The equality $d_0=8$ follows on Theorem Z.2's (O1)–(O3), (FC), Hilbert-distinguishability, and same-class-comparator branch. The identity $d_0=2a^2$ is recorded only after the separate Theorem-Z.1 branch fixes $a=2$.
 
-Theorem Z.11 proves that the registered value $M=24$ selects the least feasible dimension $D=4$ inside the faithful Bures tangent-shell contract: $K(3)=12$ excludes lower dimensions and the regular $24$-cell supplies the required realization in four. The current theorem package does not assign $d_0$, $a$, or $M$ to counterfactual values $K_0\ne3$; each such branch would require its own carrier, active-kernel, faithful-shell, and least-cost certificates.
+Theorem Z.11 proves that the registered value $M=24$ selects the least feasible dimension $D=4$ inside the faithful Bures tangent-shell contract: $K(3)=12$ excludes lower dimensions and the regular $24$-cell supplies the required realization in four.
 
 **Definition Z.3a (Radon-Hurwitz/Golay Compatibility Data).** On the minimal branch $d_0=8$, let
 $$
@@ -1329,7 +1329,7 @@ because $8>4>2\ge0$. This is an arithmetic ordering of the prescribed increments
 | $0^{-+}$ | 0 | - | + | 0 | 4 | 0 | 8 |
 | $3^{++}$ | 3 | + | + | 6 | 0 | 0 | 10 |
 
-The table verifies substitution into the branch rule; it is not an empirical determination of Leech shell labels.
+The table verifies substitution into the branch rule.
 
 **Remark Z.8h.2 (Derived Inventory and Assignment Boundary).** The derived numerical inventory is
 $$
@@ -1540,7 +1540,7 @@ Non-overlap requires $|x-y|\ge 2$, hence $\sin(\theta/2)\ge 1/2$ and therefore $
 
 **Remark Z.7a.1 (Scope of the Global-Maximality Branch).** Hypothesis (iii) is independent global-maximality branch data; local noninsertability does not establish it. Theorem Z.7a is not an input to Definition Z.9a, Theorem Z.10, or Theorem Z.11. The dimensional-selection route uses the capacity bound $M_{\mathrm{int}}\le K(D)$, the exact values $K(1),K(2),K(3)$, an explicit response-labeled regular $24$-cell realization, and strict surplus-dimension cost; it neither assumes nor concludes $M=K(D)$ (Remark Z.11.1).
 
-**Remark Z.4: Information-Geometry Descent.** On the normalized monotone-metric comparison and pointwise cost-minimality branch of Corollary X.8a.2c, the response metric is Bures/SLD. The channel contract translates $\epsilon_{\rm dist}$-distinguishability into minimum angular separation after the propagation model $T$ supplies $\theta_{\rm cap}(\epsilon_{\rm dist})$. Theorem Z.7a's global kissing conclusion additionally requires its full-class global-maximality hypothesis; non-overlap, equal radii, and local noninsertability alone do not establish it. The least-feasible dimensional route of Definition Z.9a and Theorems Z.10--Z.11 uses the faithful-shell contract without assuming global kissing saturation.
+**Remark Z.4: Information-Geometry Descent.** On the normalized monotone-metric comparison and pointwise cost-minimality branch of Corollary X.8a.2c, the response metric is Bures/SLD. The channel contract translates $\epsilon_{\rm dist}$-distinguishability into minimum angular separation after the propagation model $T$ supplies $\theta_{\rm cap}(\epsilon_{\rm dist})$. The least-feasible dimensional route of Definition Z.9a and Theorems Z.10--Z.11 uses the faithful-shell contract without assuming global kissing saturation.
 
 ---
 
@@ -1628,7 +1628,7 @@ M_{\mathrm{phys}}(\rho_{\mathrm{eq}})=K(D).
 $$
 ∎
 
-**Remark Z.9.1 (Scope).** As in Remark Z.7a.1, the displayed equality holds only under the additional global-capacity and full-kissing-class equivalence premises stated in the theorem. It is not an input to Definition Z.9a, Theorem Z.10, or Theorem Z.11, and the fixed-count entropy argument alone does not supply it.
+**Remark Z.9.1 (Scope).** As in Remark Z.7a.1, the displayed equality belongs to the saturation ledger and is not an input to Definition Z.9a, Theorem Z.10, or Theorem Z.11.
 
 ### Z.10.4 Mode-Channel Mismatch Cost
 
@@ -1836,7 +1836,7 @@ For example, the certified bounds
 $$
 K(9)\le363<504<510\le K(10)
 $$
-give $D_{\min}(504)=10$ [Machado & de Oliveira Filho 2018; Ganzhinov 2025]. Determining $D_{\min}(1016)$ requires adjacent certified kissing bounds or an explicit realization at the first feasible dimension; the broad bracket $840\le K(12)\le1356$ alone does not decide it [Conway & Sloane 1999; Machado & de Oliveira Filho 2018]. These counterfactual calculations neither assign $M'$ from $K_0$ nor alter the proved $(M,D)=(24,4)$ branch.
+give $D_{\min}(504)=10$ [Machado & de Oliveira Filho 2018; Ganzhinov 2025]. Determining $D_{\min}(1016)$ requires adjacent certified kissing bounds or an explicit realization at the first feasible dimension; the broad bracket $840\le K(12)\le1356$ alone does not decide it [Conway & Sloane 1999; Machado & de Oliveira Filho 2018].
 
 **Remark Z.11.3b (Counterfactual Backbone Spacing of the Thomson-Limit Core).** Fix the arithmetic family
 $$
@@ -1883,7 +1883,7 @@ Equation (Z.11.3b.1) is a stipulated counterfactual family. Physical admission o
 
 These checks certify arithmetic on the displayed inputs. The branch hypotheses, physical Thomson identification, and residual gate retain their owning certificate requirements.
 
-**Remark Z.11.2a (Interpretive Status and Scope).** The staircase is a closure statement on the minimal branch, not a second dynamical derivation of every rung from packing alone. The top equality $|\Phi(D_4)|=M=24$ is a compatibility identity between the independently fixed mode count and the regular-$24$-cell realization used by Theorems Z.10--Z.11; it is not a second source of the mode count. The lower steps $|\Phi(A_1)|=a$, $|\Phi(A_2)|=b$, and $|\Phi(A_3)|=q_{\mathrm{geom}}$ are exact geometric identities once $(a,b,q_{\mathrm{geom}})=(2,6,12)$ is fixed. Equality with the binary code dimension $k$ occurs only on the separately accepted predictive-recovery rate branch and supplies no carrier identification. Its content is that the full discrete backbone lands on the canonical low-rank chain $A_1 \subset A_2 \subset A_3 \subset D_4 \subset E_8$. This places the Appendix Z closure directly inside the root-system machinery already used elsewhere: $D_4$ reappears in the Dirac-sector geometry of Theorem T.24.3, $A_2$ reappears in Theorem T.24.5 and in the geometric mismatch between $A_2$ and $D_4$ of Theorem T.49, Definition T.50, and Theorems T.51–T.52, and the terminal inclusion $D_4 \subset E_8$ lands in the Appendix R $E_8$ scaffold. The staircase is therefore a low-dimensional closure of existing project geometry. The higher-count structures $|\Phi(E_8)|=240$ and the Leech-lattice data in dimension 24 enter the framework through their own later roles and are not additional rungs of this minimal-branch identity.
+**Remark Z.11.2a (Interpretive Status and Scope).** The staircase is a closure statement on the minimal branch. The top equality $|\Phi(D_4)|=M=24$ is a compatibility identity between the independently fixed mode count and the regular-$24$-cell realization used by Theorems Z.10--Z.11. The lower steps $|\Phi(A_1)|=a$, $|\Phi(A_2)|=b$, and $|\Phi(A_3)|=q_{\mathrm{geom}}$ are exact geometric identities once $(a,b,q_{\mathrm{geom}})=(2,6,12)$ is fixed. Equality with the binary code dimension $k$ occurs only on the separately accepted predictive-recovery rate branch and supplies no carrier identification. Its content is that the full discrete backbone lands on the canonical low-rank chain $A_1 \subset A_2 \subset A_3 \subset D_4 \subset E_8$. This places the Appendix Z closure directly inside the root-system machinery already used elsewhere: $D_4$ reappears in the Dirac-sector geometry of Theorem T.24.3, $A_2$ reappears in Theorem T.24.5 and in the geometric mismatch between $A_2$ and $D_4$ of Theorem T.49, Definition T.50, and Theorems T.51–T.52, and the terminal inclusion $D_4 \subset E_8$ lands in the Appendix R $E_8$ scaffold. The staircase is therefore a low-dimensional closure of existing project geometry. The higher-count structures $|\Phi(E_8)|=240$ and the Leech-lattice data in dimension 24 enter the framework through their own later roles and are not additional rungs of this minimal-branch identity.
 
 **Remark Z.4a (Euclidean Carrier and Lorentzian Gate).** The kissing construction lives in a four-dimensional Euclidean response carrier. Identifying that carrier with a Euclideanized spacetime tangent space and continuing it to a physical Lorentzian metric require the separate continuum, hyperbolic-principal-symbol, time-orientation, and analytic-continuation certificates of Appendices O and U. On that branch, one direction is timelike and three are spacelike; the kissing theorem alone proves no signature or Wick rotation.
 
@@ -1998,7 +1998,7 @@ $$
 $$
 so $r=24$ is the unique solution of $N_{\mathrm{EU}}(r)=r$ in the admissible set $\{8,16,24\}$. By Theorem Z.12, the Appendix Z branch has interface rank $M=24$. By Theorem Z.8c, among the $24$ rank-$24$ even-unimodular isometry classes, exactly one is rootless, namely the class represented by $\Lambda_{24}$. Hence the self-counting rank fixes the Niemeier class count and rootlessness fixes the vacuum-lattice isometry class; a physical vacuum still requires its realization certificate. ∎
 
-**Remark Z.7: Interpretation of the Compatibility Ledger.** On the stated minimal Appendix Z branch, $M=24$ follows from the single algebraic identity $M=2a(d_0-a)$ with $(d_0,a)=(8,2)$. The capacity, geometric, coding, lattice, unimodular, modular, and shell rows are compatibility checks on separately registered branches; they are not independent optimization derivations of $M$. Proposition Z.12.1a adds a discrete self-consistency check only in the declared comparison set $\{8,16,24\}$: within that set, rank $24$ is the unique rank for which the number of positive-definite even-unimodular isomorphism classes equals the rank. Neither statement excludes a different upstream branch or establishes necessity outside its stated comparison class.
+**Remark Z.7: Interpretation of the Compatibility Ledger.** On the stated minimal Appendix Z branch, $M=24$ follows from the single algebraic identity $M=2a(d_0-a)$ with $(d_0,a)=(8,2)$. The capacity, geometric, coding, lattice, unimodular, modular, and shell rows are compatibility checks on separately registered branches; they are not independent optimization derivations of $M$. Proposition Z.12.1a adds a discrete self-consistency check only in the declared comparison set $\{8,16,24\}$: within that set, rank $24$ is the unique rank for which the number of positive-definite even-unimodular isomorphism classes equals the rank.
 
 **Corollary Z.12.1b (Canonical Branch Rigidity in the Finite-Response Quotient).** Let $\mathfrak B$ be a finite-response branch satisfying the minimal Appendix Z hypotheses and the eight-entry ledger of Theorem Z.12, including an accepted $\mathfrak C_{\mathrm{dist}}$ for its coding row. Suppose further that $\mathfrak B$ carries the Niemeier self-counting condition of Proposition Z.12.1a and the rootless vacuum condition of Theorem Z.8c. Then every retained branch representative has the same canonical structural tuple
 $$
@@ -2060,7 +2060,7 @@ No comparison class of integers or quantitative richness predicate is specified,
 | Golay and Leech structures | Code length and lattice rank | Separate predictive-recovery and lattice-selection branches |
 | Modular structures | Weight or coefficient index | Separate arithmetic record |
 
-These shared integers establish compatibility only. No declared comparison class or richness functional proves that $24$ is the unique meeting point of mathematics and physics, that the records arise from one optimization problem, or that their agreement is non-coincidental. Any stronger unification claim requires an explicit map between the independently certified structures.
+These shared integers establish compatibility. The QFI, modular, and Leech records additionally share the ordered $(12,24)$ ledger of Theorem Z.5.2a and Corollary Z.5.3a.1. Deriving the records from one optimization problem requires an explicit map between the independently certified structures.
 **Theorem (Backbone Completeness Rigidity).** For integers $K\ge1$ and $1\le a\le2^K-1$, the equation
 
 $$
@@ -2110,7 +2110,7 @@ $$
 
 The final output is a four-dimensional Euclidean response carrier. A physical $3+1$ spacetime requires the independent operational-continuum, hyperbolic-principal-symbol, time-orientation, and metric-reconstruction certificates; a physical gauge action requires the separate Appendix G reconstruction and matter-response certificates.
 
-**Interpretive Principle:** The internal mode count does not directly become physical spacetime or gauge degrees of freedom.
+**Interpretive Principle:** The internal mode count fixes the Euclidean response carrier; physical spacetime and gauge degrees of freedom enter through the certificates named above.
 
 1. $M_{\mathrm{int}}=24$ is fixed by the active-kernel partition and QFI tangent count.
 2. Definition Z.9a supplies a response-preserving injection into distinct tangent cells and a strict cost for response-null surplus dimensions.
@@ -2157,7 +2157,7 @@ $$
 $$
 The equality is therefore valid, but both sides depend on the common upstream datum $b=6$. ∎
 
-**Remark Z.9: Interpretation.** The equality is an arithmetic closure relation on the minimal mode-channel branch. It is not an encoding claim and does not constitute an independent derivation of either Lorentz structure or the inactive rank.
+**Remark Z.9: Interpretation.** The equality is an arithmetic closure relation on the minimal mode-channel branch, with both sides depending on the common upstream datum $b=6$.
 
 #### Z.12.3.3 Consistency with Gauge Structure
 
@@ -2206,7 +2206,7 @@ $$\dim[\mathfrak{g}_{\mathrm{SM}}] = k = 12$$
 
 The two branches derive the value $12$ from different registered structures. Their equality is an arithmetic compatibility check; it proves neither a common source nor either branch's physical realization. ∎
 
-**Cross-Reference:** This records compatibility with the gauge dimension derived in Appendix G; it is not an additional derivation or evidential support for that branch.
+**Cross-Reference:** This records compatibility with the gauge dimension derived in Appendix G.
 
 #### Z.12.3.4 The Physical Correspondence Structure
 
@@ -2249,7 +2249,7 @@ remains a ledger remainder unless a separate residual-sector certificate is supp
 
 **Remark Z.9a: Epistemological Status.** Proposition Z.14a establishes a dimensional correspondence among independently defined structures: the 24 internal QFI modes live in $\mathcal{H}_0 = \mathbb{C}^8$, while the Lorentz and gauge generators act on emergent spacetime and field spaces. Their independently derived dimensions are numerically consistent. Definition Z.9c gives the response-map certificate required for physical identification between the generators.
 
-**Remark Z.9b: Status of the Residual.** The residual $R = 6$ is defined by arithmetic closure: $R := M - \dim[\mathfrak{so}(3,1)] - \dim[\mathfrak{g}_{\mathrm{SM}}] = 24 - 6 - 12 = 6$. This equals the inactive dimension $b = 6$ (Corollary Z.6a), but no physical interpretation follows from the arithmetic. A symmetric rank-two tensor in four dimensions has ten off-shell components; a massless graviton has two physical polarizations and a massive spin-two field has five. Thus the residual value $6$ cannot be identified with gravitational polarizations by the subtraction $10-4$. Any gravitational or flavor interpretation requires a separate response certificate.
+**Remark Z.9b: Status of the Residual.** The residual $R = 6$ is defined by arithmetic closure: $R := M - \dim[\mathfrak{so}(3,1)] - \dim[\mathfrak{g}_{\mathrm{SM}}] = 24 - 6 - 12 = 6$. This equals the inactive dimension $b = 6$ (Corollary Z.6a). A symmetric rank-two tensor in four dimensions has ten off-shell components; a massless graviton has two physical polarizations and a massive spin-two field has five. Thus the residual value $6$ cannot be identified with gravitational polarizations by the subtraction $10-4$. Any gravitational or flavor interpretation requires a separate response certificate.
 
 **Definition Z.9c (Residual Metric-Response Certificate).** Let $V_{24}$ be real and 24-dimensional. Fix injections $\iota_L:\mathbb R^6\hookrightarrow V_{24}$ and $\iota_G:\mathbb R^{12}\hookrightarrow V_{24}$ with
 $$
@@ -2315,7 +2315,7 @@ The independently derived Lorentz, gauge, coding, and carrier counts agree on th
 
 **Remark Z.9f: Numerical Coincidences.**
 
-Under Theorem Z.12, these equalities are not used as independent proofs of Lorentz or gauge dynamics.
+Under Theorem Z.12, these equalities hold at the canonical minimal-branch tuple
 
 
 $$
@@ -2405,7 +2405,7 @@ Here $k_2>0$ is a cost coefficient and $C_{\max}>0$ is a separately registered c
 
 For the registered binary $[24,12,8]$ code, the classical minimum-distance theorem licenses exactly these statements: up to seven binary symbol errors are detectable, and up to three are uniquely correctable by an accepted decoder. The count is maximal within the stated binary linear $[24,12]$ class.
 
-It does not follow that the MPU network, a quantum state, or a physical vacuum implements that decoder. Such a reading requires an explicit encoding of physical response records into code coordinates, a noise channel, syndrome extraction, and a recovery map. Rootlessness of the glued lattice separately supplies geometric norm isolation and does not replace those dynamical data.
+Implementation of that decoder by the MPU network, a quantum state, or a physical vacuum requires an explicit encoding of physical response records into code coordinates, a noise channel, syndrome extraction, and a recovery map. For the MPU network, an accepted Golay-QEC bootstrap record (below) supplies the noise, syndrome, and recovery entries on the protected windows it covers. Rootlessness of the glued lattice separately supplies geometric norm isolation and does not replace those dynamical data.
 
 
 
@@ -2447,7 +2447,7 @@ for a lattice basis, and hence for every lattice vector. On that certificate eve
 
 *Proof.* Theorem Z.8c gives the Leech minimum in its Euclidean lattice metric. The displayed Gram identity extends bilinearly from a basis to the whole lattice and therefore transports every squared norm, proving the conditional QFI statement. ∎
 
-**Remark Z.8a: Mass Gap Connection.** The geometric gap (minimum squared norm 4 vs. 2) suggests a qualitative correspondence to mass gaps in emergent field theory. The absence of roots corresponds to the absence of near-degenerate vacuum configurations. This provides a possible information-theoretic perspective on confinement and mass generation, though the quantitative relationship between lattice norm and physical mass scale remains to be established.
+**Remark Z.8a: Mass Gap Connection.** The geometric gap (minimum squared norm 4 vs. 2) is the lattice-norm input of the mass and confinement branches. The absence of roots means that every nonzero retained label has squared norm at least 4. On $\mathfrak B_{\mathrm{mass}}(q)$, Theorem Z.8g converts the norm gap into the mass gap $2(\gamma/q)\mu_0^{alg}$ of Remark Z.8g.2, and Proposition Z.8d uses it to calibrate the flux-tube tension on its additive site-ledger certificate.
 **Theorem Z.8c (Unique Rootless Even Unimodular Lattice in Dimension 24).** Among Euclidean-isometry classes of positive-definite even unimodular lattices of rank $24$, with each norm taken in the lattice's native Euclidean Gram form, exactly one class is rootless: the class represented by the Leech lattice $\Lambda_{24}$. Equivalently, such a lattice has $\|v\|_{\min}^2=4$ if and only if it is isometric to $\Lambda_{24}$; every other Niemeier class has minimum squared norm $2$.
 
 *Proof.* Niemeier's classification gives exactly $24$ Euclidean-isometry classes of positive-definite even unimodular lattices of rank $24$. Twenty-three classes have nonempty root systems and therefore contain vectors with $|v|^2=2$. The remaining class has empty root system and is represented by $\Lambda_{24}$. Thus rootlessness characterizes the Leech isometry class and gives $|v|_{\min}^2=4$; every other Niemeier class has $|v|_{\min}^2=2$. Orthogonal images of one representative are distinct embedded subsets but remain in the same classified isometry class. ∎
@@ -2617,7 +2617,7 @@ $$
 P_{\Lambda_1\Lambda_2}=0.
 $$
 
-Thus the factor $1/3$ below is not a Golay rank factor. It is the experimental maximum relative spin-polarization factor of the STAR $\cos\theta^*$ opening-angle observable.
+Thus the factor $1/3$ below is the experimental maximum relative spin-polarization factor of the STAR $\cos\theta^*$ opening-angle observable.
 
 **Definition Z.8k.1 (Local scalar strange-pair transfer coefficient).** Let
 
@@ -2920,7 +2920,7 @@ $$
 0.0107\ldots\,\sigma.
 $$
 
-**Scalar-channel conjecture boundary.** Conjecture Z.8k.3 is not part of the global Golay-code structure. It is an observable-specific scalar-channel transfer conjecture. It does not change
+**Scalar-channel conjecture boundary.** Conjecture Z.8k.3 is an observable-specific scalar-channel transfer conjecture. It does not change
 
 $$
 k=12,\qquad M=24,\qquad k^2=bM=144,
@@ -2952,7 +2952,7 @@ Conjecture Z.8k.3 is separately falsified if the short-range scalar-transfer coe
 
 ### Z.13.5 The Syndrome-Partition Correspondence
 
-The Golay code and the active-projector ledger share the conditional arithmetic identity $bM=k^2=144$ on their combined branches. The structural value $\varepsilon_0=\ln2$ and the active-projector data do not determine error-correction capacity. The rate $k=12$ requires Definition Z.13b.0 and Theorem Z.13b.0a; the extended Golay parameters require Theorem Z.13b's binary code-class and maximum-distance hypotheses or the typed Type-II route of Definition Z.13b.P0 and Proposition Z.13b.P1. Correction of up to three binary errors is a statement about the declared classical code model. A physical correction claim additionally requires an encoder, noise channel, syndrome instrument, recovery map, and performance norm.
+The Golay code and the active-projector ledger share the conditional arithmetic identity $bM=k^2=144$ on their combined branches. The rate $k=12$ requires Definition Z.13b.0 and Theorem Z.13b.0a; the extended Golay parameters require Theorem Z.13b's binary code-class and maximum-distance hypotheses or the typed Type-II route of Definition Z.13b.P0 and Proposition Z.13b.P1. Correction of up to three binary errors is a statement about the declared classical code model. A physical correction claim additionally requires an encoder, noise channel, syndrome instrument, recovery map, and performance norm.
 
 **Cross-reference note:** The physical interpretation of this correspondence in terms of vacuum fluctuation dynamics is developed in Section U.10, which should be consulted for the instanton complexity analysis.
 
@@ -3564,7 +3564,7 @@ This proposition is a code witness for a QEC compatibility certificate. It does 
 
 #### Z.13.5.3 Structural Correspondence: Constraint Equations and Quantum Correlations
 
-The syndrome-partition correspondence compares binary parity-matrix entry counts with the declared continuous interface ledger. Constructing a map between these carriers requires additional data; equality of their displayed counts does not establish a topology isomorphism.
+The syndrome-partition correspondence compares binary parity-matrix entry counts with the declared continuous interface ledger.
 
 **Definition Z.8a (Syndrome Space).** In a linear binary code with parity-check matrix $H$, the syndrome of an error pattern $e \in \mathbb{F}_2^n$ is:
 $$s = He^T \in \mathbb{F}_2^{n-k}$$
@@ -3854,7 +3854,7 @@ A systematic parity matrix contains $12^2$ displayed binary entries, but row ope
 **Step 1 (The Interaction Tensor).** For the MPU to function as a unified predictor, the inactive reservoir ($b = 6$ dimensions) must communicate with the active interface ($M = 24$ modes). This communication can be characterized by an interaction tensor specifying coupling coefficients. The parameter count of a general $b \times M$ real matrix provides a natural measure:
 $$C_{\mathrm{interaction}} = b \times M = 6 \times 24 = 144$$
 
-The identification of this count as "interaction information content" is an interpretive proposal; the precise physical meaning in the continuous quantum domain remains to be established.
+The identification of this count as "interaction information content" is an interpretive proposal.
 
 **Step 2 (The Parity Structure).** Independently, the Golay parity matrix $P$ contains:
 $$C_{\mathrm{stabilization}} = k \times k = 12 \times 12 = 144 \text{ bits}$$
@@ -4656,11 +4656,11 @@ $$u^* = d_0^{1/M} - 1 = 8^{1/24} - 1 = 2^{1/8} - 1 \implies \alpha^{-1}_{(2)} �
 2. **Spacetime Dimension:** 
 $$M=24\le K(D),\quad K(3)=12,\quad \text{24-cell (Definition Z.8) in }\mathbb R^4\ \implies\ D_{\min}=4 \quad\text{inside the faithful-shell contract}$$
 
-The shared integer is a cross-branch consistency datum. The electromagnetic value additionally requires its capacity, response, normalization, flux, and transport entries, while $D=4$ additionally requires the faithful least-feasible tangent-shell contract. Neither result follows from $M=24$ alone.
+The shared integer is a cross-branch consistency datum. The electromagnetic value additionally requires its capacity, response, normalization, flux, and transport entries, while $D=4$ additionally requires the faithful least-feasible tangent-shell contract.
 
 The minimal discrete branch fixes $M=24$ directly from $M=2ab$. The capacity coordinate and $D=4$ follow only after their respective capacity and completed mode--channel equations are accepted. The Golay code, lattice classification, modular weight, and Niemeier count are separately gated compatibility records. In particular, Leech rootlessness is an independent admissibility condition and is not produced by $M=24$.
 
-Theorem Z.12 therefore supplies a dependency-separated audit, not eightfold overdetermination or a general resolution of fine-tuning.
+Theorem Z.12 therefore supplies a dependency-separated audit of the records that share $M=24$.
 
 ---
 
@@ -4802,7 +4802,7 @@ These statements concern encoded binary words. They imply no quantum-state, vacu
 3. a syndrome instrument and decoder or recovery map;
 4. a norm in which the claimed stability is evaluated.
 
-On a branch carrying those data, the code's distance theorem applies to the encoded error patterns. Without them, the $12+12$ split is a classical compatibility ledger only.
+On a branch carrying those data, the code's distance theorem applies to the encoded error patterns.
 
 ---
 
@@ -5197,7 +5197,7 @@ because $(M-1)(32/23)/(2\cdot8)=2$. The value $1/(ad_0)$ is a branch input, not 
 
 **Lemma Z.24a (Scope of Isotropy).** Schur's lemma therefore justifies isotropy of the intrinsic tangent Ricci contraction, but it cannot derive $L_{\mathrm{vis}}=1/(ad_0)$. Any use of that coefficient is conditional on the democratic visible-response model of Theorem Z.24. ∎
 
-**Remark Z.24a.1 (Response Status).** The curvature calculation and the response projection are separate ledgers. A future operator-realized electromagnetic certificate may compute $L_{\mathrm{vis}}$; until then $K_{\mathrm{eff}}=2$ is a conditional model value.
+**Remark Z.24a.1 (Response Status).** The curvature calculation and the response projection are separate ledgers. On the democratic visible-response branch of Theorem Z.24, $K_{\mathrm{eff}}=2$ is the model value; an operator-realized electromagnetic projection that computes $L_{\mathrm{vis}}$ supplies the missing response premise.
 
 **Proposition Z.24b (Complete Isotropy-Modulus Classification for the Visible Response).** On the irreducible stabilizer module
 $$
@@ -7767,7 +7767,7 @@ The reasoning:
 
 4. **Golden-ratio guarantee interval.** The Hopkins–Stillinger–Torquato theorem proves that every optimal spherical-code solution with $1\le R\le\varphi$ is also a solution of the corresponding densest-local-packing problem. Its radial-translation lemma is sharp at $\varphi$, but this does not by itself prove that OSC and DLP optima differ at any specified radius above $\varphi$ or that a dynamical transition occurs. On an independently certified OSC$\to$DLP MCC branch, $R=\varphi$ is therefore a preregistered candidate marker, not a theorem-forced crossover.
 
-Thus $\varphi$ is a branch-conditional candidate marker for an OSC/DLP decorrelation test, not a derived universal transition scale.
+Thus $\varphi$ is a branch-conditional candidate marker for an OSC/DLP decorrelation test.
 
 ---
 
@@ -7951,13 +7951,13 @@ Relative = 0.677765 ppm
 
 2. **Fine-Structure Constant Core $\alpha^{-1}_{0}=137.03609205522863\ldots$**
    - $u^* = 8^{1/24} - 1 = 2^{1/8}-1$ from capacity saturation
-   - Interface correction derived a priori from the Appendix Z interface branch
+   - Interface correction on the unit-interface-response branch of Theorem Z.17
    - Multiplicative curvature response fixed by the canonical separable branch
    - Second-order curvature correction from Bures/Grassmannian geometry
    - Exact $SU(2)$ transport factor $\operatorname{sinc}(u^*)$
    - Canonical composition audit: the multiplicative cross-response of the certified interface and curvature entries is the fixed diagnostic term $\Delta_{\times}=-\pi (u^*)^2\operatorname{sinc}(u^*)/288=-0.0000892350892540067\ldots$, accounting for $96.08\%$ of the centered residual while leaving a $26.59$ ppb remainder. The audit supplies forward locks and anti-postselection witnesses only; it does not close $R_\alpha$ without Definition Z.27.11j or Definition Z.27.11g (Definition Z.27.11e.3; Proposition Z.27.11e.4; Corollary Z.27.11e.5; Remark Z.27.11e.6).
    - Closed-form certificate-conditional derivation: from the discrete tuple together with the unit Ward, unit-interface-response, democratic visible-response, separable curvature-response, electromagnetic-projection, and transport branches, Theorem Z.26 derives $\alpha^{-1}_{0}$ as a single-valued elementary expression, and Corollary Z.26a records the no-fitting consequence. No coefficient is adjusted to comparison data within this declared branch package.
-   - Hypercharge-recoil candidate evaluation: if an independently constructed operator realization and source-exhaustion certificate are accepted, the determinant-compatible hypercharge trace gives $5/3$, the active-recoil lift gives $10/9$, the passive-complement seventh-order source gives $-\frac{1}{3}c_1(u^*)^7$, and the resulting candidate residual is $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ (Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21.1). The stipulated finite complex alone does not prove operator realization or source exhaustion.
+   - Hypercharge-recoil candidate evaluation: if an independently constructed operator realization and source-exhaustion certificate are accepted, the determinant-compatible hypercharge trace gives $5/3$, the active-recoil lift gives $10/9$, the passive-complement seventh-order source gives $-\frac{1}{3}c_1(u^*)^7$, and the resulting candidate residual is $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ (Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21.1).
    - Certificate row: $\alpha^{-1}_{\mathrm{cand}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ on the candidate branch; if the passive-complement source is downgraded to the seventh-order positive-contraction bound, $\alpha^{-1}_{0}+R_{\alpha}^{YR}\in[137.03599917502362\ldots,137.03599917878353\ldots]$ (Corollary Z.27.11k.21)
    - Source accounting: $[\omega_Y]$, $[\omega_5]$, and $[\sigma_{\perp}]$ are the only retained non-exact post-core Ward sources; the exact, obstructed, bulk, interface, electromagnetic-projection, curvature, sinc-transport, and future residual entries are excluded from double counting by Definition Z.27.11k.12 and Corollary Z.27.11k.21.1
    - Falsifier: a measurement outside the certified residual interval for the accepted branch refutes the Appendix Z normalization branch (Corollary Z.26c); separately, Corollary Z.27.11e.1 obstructs any same-branch theorem fixing $R_\alpha=0$ at the recorded CODATA comparison value
@@ -8106,7 +8106,7 @@ The common backbone therefore propagates code and dimensionless norm information
 $$
 \frac M2=ab=k=n_G=\dim_{\mathbb C}\operatorname{Gr}(2,8)=12
 $$
-are branch-dependent numerical compatibilities among distinct typed carriers. Theorem Z.35c records both mathematical lattice routes: explicit marked Construction-B coordinates, or the separate $(\sqrt2E_8)^3$ gluing/minimum certificate. Neither equality, code distance, nor lattice construction establishes a QFI/code intertwiner, physical decoder, vacuum stability, gauge dynamics, spacetime dimension, or energy gap.
+are branch-dependent numerical compatibilities among distinct typed carriers. Theorem Z.35c records both mathematical lattice routes: explicit marked Construction-B coordinates, or the separate $(\sqrt2E_8)^3$ gluing/minimum certificate.
 
 **Definition Z.35d (Marked PU Arena Package).** A marked PU arena package is a tuple
 $$
@@ -8156,4 +8156,4 @@ The pair $(12,24)$ may be used as input to define an auxiliary Grassmannian $\op
 
 *Proof.* Choose orthonormal bases of the two carriers adapted first to the rank-two images of the projectors and then to the successive subspaces of the ordered quotient flags. The unitary carrying one adapted basis to the other intertwines the projectors and flags. Unitary invariance preserves the declared QFI normalization. The stabilizer of a rank-two projector is $U(2)\times U(6)$, so its orbit is $\operatorname{Gr}(2,8)$, whose complex dimension is $2(8-2)=12$ and whose real dimension is $24$. Constructing a map to $\operatorname{Gr}_{\mathbb C}(12,24)$ would require an assignment on objects and morphisms beyond these two integers; no such assignment is part of the package. ∎
 
-**Remark Z.35f (Logical Boundary).** Theorems Z.35a, Z.35b, Z.35c, and Z.35e, together with Definition Z.35d, organize the branch-determined geometry, holonomy, code-lattice propagation, and marked arena hierarchy already supported by the manuscript. Theorem Z.35e closes the canonical arena hierarchy only for packages preserving the marked minimal-branch data of Definition Z.35d. It does not assert a single master partition function for every sector, a literal single moduli stack underlying all PU constructions, or a single-source derivation of the recurrent integer ledger. The recurrent-ledger compression question is the separate Appendix R current-graph non-collapse result: the source roles $(\mathcal C_3,\mathcal C_{\mathrm{cap}},\mathcal C_{\mathrm{tan}},\mathcal C_{\mathrm{kis}})$ admit no current-source compression, and the downstream invariants $(J_{\mathrm{top}},J_{\mathrm{Cl}},J_{\mathrm{ar}})$ are coherence and rigidity statements rather than additional sources. Whether a future common parent invariant subsumes the source roles remains open.
+**Remark Z.35f (Logical Boundary).** Theorems Z.35a, Z.35b, Z.35c, and Z.35e, together with Definition Z.35d, organize the branch-determined geometry, holonomy, code-lattice propagation, and marked arena hierarchy already supported by the manuscript. Theorem Z.35e closes the canonical arena hierarchy only for packages preserving the marked minimal-branch data of Definition Z.35d. The recurrent-ledger compression question is the separate Appendix R current-graph non-collapse result of Theorem R.3.5e.3: the source roles $(\mathcal C_3,\mathcal C_{\mathrm{cap}},\mathcal C_{\mathrm{tan}},\mathcal C_{\mathrm{kis}})$ admit no current-source compression, and the downstream invariants $(J_{\mathrm{top}},J_{\mathrm{Cl}},J_{\mathrm{ar}})$ are coherence and rigidity statements rather than additional sources. Whether a future common parent invariant subsumes the source roles remains open.

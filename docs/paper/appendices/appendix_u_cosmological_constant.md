@@ -497,7 +497,7 @@ and even vanishing of this quadratic form is strictly weaker than kernel members
 2. *Negative-direction branch near a reference action.* Theorem U.8d preserves a strictly negative pure-dilatation quadratic form when the critical-point tangents and Hessian forms vary continuously in the respective form norms on a common form domain.
 3. *Virial non-implication.* Corollary U.9.1 shows that first-variation virial stationarity does not by itself imply a zero mode.
 
-Thus virial stationarity alone supplies no fifth-mode certificate. The accepted $\nu=1$ branch of Theorem U.16a requires either the exact critical family of Theorem U.9 or the independently verified compact fifth-mode certificate of Definition U.16b; the latter need not be a pure-coordinate dilatation.
+The accepted $\nu=1$ branch of Theorem U.16a requires either the exact critical family of Theorem U.9 or the independently verified compact fifth-mode certificate of Definition U.16b; the latter need not be a pure-coordinate dilatation.
 
 ### U.7.3 Total Zero Mode Count
 
@@ -1020,7 +1020,7 @@ For reference counting only, the five-coordinate convention writes the formal fa
 $$
 Z_{5,\mathrm{ref}}=A_{5,\mathrm{ref}}(\lambda)\,\lambda^{-(N_{\mathbb R}-5)/2}e^{-\lambda S^*}.
 $$
-This expression is not a consequence of Theorem U.14. Moreover, $\lambda=C_{\max}/\varepsilon_0=2$ is held constant, so an asymptotic $O(\lambda^{-1})$ remainder would not be a controlled small correction. Theorem U.8c shows that the fifth coordinate is not a dilatation zero mode of the current continuum action; the five-coordinate expression is therefore only a comparison convention and cannot set a theorem-level exponent.
+Because $\lambda=C_{\max}/\varepsilon_0=2$ is held constant, an asymptotic $O(\lambda^{-1})$ remainder would not be a controlled small correction. Theorem U.8c shows that the fifth coordinate is not a dilatation zero mode of the current continuum action; the five-coordinate expression is therefore only a comparison convention and cannot set a theorem-level exponent.
 
 ---
 
@@ -1301,7 +1301,7 @@ A_{\mathrm{eff}}^{(\mathrm{obs},\kappa)}
 $$
 This computes the prefactor required to match the observed value after $\kappa$ is chosen; it does not determine $A_{\mathrm{eff}}$ from PU vacuum dynamics. Conversely, the Appendix U working value is obtained by the convention $K_{\mathrm{transfer}}=A_{EW}^{-1}$ together with an explicit systematic allowance for ghost/zero-mode and extensivity conventions. Since Theorem T.29.2 makes $A_{EW}$ model-conditional, the transferred factor cannot have stronger status in Appendix U than the determinant model from which it is transferred. Finally, Proposition U.15a defines the determinant object but does not evaluate all finite determinant, Jacobian, ghost, zero-mode, finite-volume, extensivity, and measure factors on the four-mode false-vacuum branch. Hence the current manuscript has a forward convention and an observational inversion, but not a theorem-level vacuum prefactor. ∎
 
-**Remark U.15c.1 (Vacuum Decay-Magnitude and Real-Stress Boundary).** Theorem U.13b proves only a four-dimensional kernel for its radially continuous, sampled-angular Hessian. The arithmetic number
+**Remark U.15c.1 (Vacuum Decay-Magnitude and Real-Stress Boundary).** Theorem U.13b proves a four-dimensional kernel for its radially continuous, sampled-angular Hessian. The arithmetic number
 $$
 \frac{288-4}{2}=142
 $$
@@ -1832,7 +1832,7 @@ The sampled-Hessian theorem, the independent Grassmannian reference carrier, and
 | Golay octads | Exact Steiner incidence and distance data on the selected binary-code branch | Does not construct the complex Grassmannian, its tangent carrier, or a vacuum Hessian | Theorem U.2; Theorem Z.13b |
 | $24$-cell vertices | Exact spherical-design quadrature and the sampled angular operator | Does not identify its sampled modes with the independent Grassmannian tangent directions without $\mathfrak C_{U,\mathrm{mark}}$ | Theorems U.7, U.13, U.13b |
 
-The common counts $(24,12)$ are arithmetic compatibility data. Neither structure is derived merely from PCE optimization, and neither fixes a physical vacuum.
+The common counts $(24,12)$ are arithmetic compatibility data. The Golay class is selected on the predictive-recovery rate branch of Theorem Z.13b.0a by an accepted $\mathfrak C_{\mathrm{dist}}$ of Theorem Z.13b, and Theorem Z.11 supplies the regular $24$-cell witness in the least feasible Euclidean carrier dimension; neither structure fixes a physical vacuum.
 
 ### U.12.2 Parameter Accounting
 
@@ -1908,7 +1908,7 @@ Therefore
 $$
 r-\lambda=d_0(M-a).
 $$
-This is an exact arithmetic compatibility between two independently established ledgers. It supplies no carrier map, causal derivation, action identity, or observable bridge.
+This is an exact arithmetic compatibility between two independently established ledgers.
 
 ### U.14.2 Design Strength Matching
 
@@ -2709,7 +2709,7 @@ is the least positive-dimensional member.
 
 *Proof.* The only positive-dimensional projectivizations have complex dimensions $1$ and $8$, and $1<8$. ∎
 
-Transport to the independently registered plane $S_U$ requires the unitary marking $J_{12}:S_U\to\mathcal S_{\mathrm{line}}$. Selection as a physical single-field inflation sector additionally requires the kinetic, scalaron, truncation, transfer, and observable records of Definition U.69a. The theorem asserts no minimality among all invariant submanifolds.
+Transport to the independently registered plane $S_U$ requires the unitary marking $J_{12}:S_U\to\mathcal S_{\mathrm{line}}$. Selection as a physical single-field inflation sector additionally requires the kinetic, scalaron, truncation, transfer, and observable records of Definition U.69a.
 
 ---
 
@@ -4251,7 +4251,7 @@ $$
 $$
 This proves orthogonality of the sampled dilatation tangent to the coordinate module $E_3=\mathrm{span}\{x^{(1)},x^{(2)},x^{(3)},x^{(4)}\}$ identified by Corollary U.13a.1 and named in Theorem U.13b.
 
-This orthogonality is not a fifth-mode closure theorem. Proposition U.13a gives $L_W1=0$, so the sampled angular kernel of $L_W$ is exactly the constant mode; Corollary U.13a.1 places the four coordinate functions at $\lambda=3$, not in $\ker L_W$. The four translation zero modes of the sampled-angular Hessian therefore arise from the separated radial operator in the $\lambda=3$ sector via Lemma U.13a.3, not from any angular-kernel mechanism. The exclusion of a zero mode in the constant angular sector uses Lemma U.13a.2. Therefore Theorem U.13b supplies the theorem-level four-mode Hessian-nullity conclusion only under its stated false-vacuum spectral hypotheses. Transporting that nullity into the independent $288$-direction reference index requires $\mathfrak C_{U,\mathrm{mark}}$; the 24-cell coordinate-sum identity supplies only an orthogonality audit.
+The exclusion of a fifth zero mode rests on the radial spectral analysis of Theorem U.13b rather than on this orthogonality. Proposition U.13a gives $L_W1=0$, so the sampled angular kernel of $L_W$ is exactly the constant mode; Corollary U.13a.1 places the four coordinate functions at $\lambda=3$, not in $\ker L_W$. The four translation zero modes of the sampled-angular Hessian therefore arise from the separated radial operator in the $\lambda=3$ sector via Lemma U.13a.3, not from any angular-kernel mechanism. The exclusion of a zero mode in the constant angular sector uses Lemma U.13a.2. Therefore Theorem U.13b supplies the theorem-level four-mode Hessian-nullity conclusion under its stated false-vacuum spectral hypotheses. Transporting that nullity into the independent $288$-direction reference index requires $\mathfrak C_{U,\mathrm{mark}}$.
 
 **Remark U.73c (Logical Boundary of the False-Vacuum Branch).** Theorem U.73a closes the quartic-homogeneity route negatively for the bounce branch used in the Hessian-nullity calculation. It does not exclude a different, explicitly massless continuum action with an asymptotically quartic ultraviolet regime; it shows only that such a regime is not established for the current Appendix U branch. Theorem K.10.7 supplies RG/fixed-point language but not an exact scale-invariant fixed-point theorem at the bounce scale; Theorem U.3 fixes the Gaussian base count $144$ but does not determine the homogeneity degree of $V_{\mathrm{eff}}$; and Proposition R.4.2a constrains the lattice sector rather than the local false-vacuum mass term.
 
@@ -4263,7 +4263,7 @@ on the five-mode reference branch and
 $$
 A_{\mathrm{eff}}^{(\mathrm{obs},4)}=2.49\pm0.04
 $$
-on the four-mode reference-index branch. These are observational inversions. They do not supply the missing carrier/action marking, Fredholm weight, or vacuum-weight-to-Einstein realization records of Theorem U.73f.
+on the four-mode reference-index branch. These are observational inversions; forward values require the carrier/action marking, Fredholm weight, and vacuum-weight-to-Einstein realization records of Theorem U.73f.
 
 **Definition U.73e (Four-Mode Regulated Relative-Fredholm Record).** A canonical four-mode record is
 $$
@@ -4392,7 +4392,7 @@ This appendix proves exact finite geometric counts and sampled-Hessian nullity, 
 $$
 \Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283}.
 $$
-With the working value $A_{\mathrm{eff}}=0.923\pm0.011$, the five-mode reference convention gives $\Lambda L_P^2=(2.88\pm0.03)\times10^{-122}$. This is reference-convention data because Theorem U.8c obstructs the pure-coordinate five-mode tangent in the current Definition U.4 action. Under the Definition U.6 four-mode false-vacuum branch, Theorem U.13b fixes only the sampled-Hessian nullity $m_4=4$. Accepted $\mathfrak C_{U,\mathrm{mark}}$ and exact $\mathfrak C_{U,\mathrm{act}}$ separately give $\kappa_{\mathrm{idx}}=142$ and $B_U=284$; a complete $\mathfrak F_U^{(4)}$ then gives the decay magnitude $w_4^{\mathrm{dec}}=A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$. Only $\mathfrak R_\Lambda^{(4)}$ can derive $w_4^{\mathrm{real}}$ and license $\Lambda_4L_P^2=8\pi w_4^{\mathrm{real}}$. The exact arithmetic multiplier is $8\pi e^{-284}=1.1497594801473928\times10^{-122}$. Once exact $\mathfrak C_{U,\mathrm{act}}$ and complete $\mathfrak F_U^{(4)}$ are accepted, an interval $I_A$ gives $w_4^{\mathrm{dec}}\in e^{-284}I_A$. A physical interval follows only from $\mathfrak R_\Lambda^{(4)}$: if it proves $w_4^{\mathrm{real}}\in I_{\mathrm{real}}$, then $\Lambda_4L_P^2\in8\pi I_{\mathrm{real}}$. Substituting the five-mode working prefactor is only a same-number reference check and has no theorem-level four-mode status. Theorem U.73f records $w_4^{\mathrm{dec}}$, $w_4^{\mathrm{real}}$, and $\Lambda_4L_P^2$ as $\varnothing_{\mathrm{cert}}$: the decay magnitude remains empty until the marking, action, and Fredholm records coexist, and the real coefficient and physical interval additionally require $\mathfrak R_\Lambda^{(4)}$. Inverting the observed value gives $A_{\mathrm{eff}}^{(\mathrm{obs})}=0.917\pm0.016$ on the five-mode reference convention and $A_{\mathrm{eff}}^{(\mathrm{obs},4)}=2.49\pm0.04$ under the independently stipulated four-mode action placement $S=284$; both are observational inversions rather than Fredholm evaluations.
+With the working value $A_{\mathrm{eff}}=0.923\pm0.011$, the five-mode reference convention gives $\Lambda L_P^2=(2.88\pm0.03)\times10^{-122}$. This is reference-convention data because Theorem U.8c obstructs the pure-coordinate five-mode tangent in the current Definition U.4 action. Under the Definition U.6 four-mode false-vacuum branch, Theorem U.13b fixes the sampled-Hessian nullity $m_4=4$. Accepted $\mathfrak C_{U,\mathrm{mark}}$ and exact $\mathfrak C_{U,\mathrm{act}}$ separately give $\kappa_{\mathrm{idx}}=142$ and $B_U=284$; a complete $\mathfrak F_U^{(4)}$ then gives the decay magnitude $w_4^{\mathrm{dec}}=A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$. Only $\mathfrak R_\Lambda^{(4)}$ can derive $w_4^{\mathrm{real}}$ and license $\Lambda_4L_P^2=8\pi w_4^{\mathrm{real}}$. The exact arithmetic multiplier is $8\pi e^{-284}=1.1497594801473928\times10^{-122}$. Once exact $\mathfrak C_{U,\mathrm{act}}$ and complete $\mathfrak F_U^{(4)}$ are accepted, an interval $I_A$ gives $w_4^{\mathrm{dec}}\in e^{-284}I_A$. A physical interval follows only from $\mathfrak R_\Lambda^{(4)}$: if it proves $w_4^{\mathrm{real}}\in I_{\mathrm{real}}$, then $\Lambda_4L_P^2\in8\pi I_{\mathrm{real}}$. Substituting the five-mode working prefactor is only a same-number reference check and has no theorem-level four-mode status. Theorem U.73f records $w_4^{\mathrm{dec}}$, $w_4^{\mathrm{real}}$, and $\Lambda_4L_P^2$ as $\varnothing_{\mathrm{cert}}$. Inverting the observed value gives $A_{\mathrm{eff}}^{(\mathrm{obs})}=0.917\pm0.016$ on the five-mode reference convention and $A_{\mathrm{eff}}^{(\mathrm{obs},4)}=2.49\pm0.04$ under the independently stipulated four-mode action placement $S=284$; both are observational inversions rather than Fredholm evaluations.
 
 **Primordial Sector.** On the complete special leading comparison branch enumerated in Theorem U.69, with $A_Q=1$, $N_e=59.4$, the displayed branch values for the harmonic-rank and Hopf-Rayleigh records, the linear scalaron map, the Starobinsky truncation, $\phi_0=\phi_{\max}$, and the stated trans-horizon quotient, the complexity $\kappa_Q=11$ yields the following branch-comparison values:
 
@@ -4415,6 +4415,6 @@ The ratios $141.5/11$ and $142/11$ summarize two arithmetic reference ledgers. T
 
 **Falsifiability.** The special leading comparison tuple becomes a preregistered CMB test only after Definition U.69a's branch data and a nonempty Theorem-U.69b remainder/covariance certificate fix the quantitative windows before comparison.
 
-The displayed primordial values are conditional on the full determinant, harmonic-rank, kinetic-normalization, scalaron-map, local-equilibrium truncation, e-fold registration, initial-field, and trans-horizon branch data of Definition U.69a. Theorem U.69b assigns $\mathcal R_{\mathrm{prim}}=\varnothing_{\mathrm{cert}}$ until an accepted $\mathfrak P_{\mathrm{prim}}$ is entered. The vacuum sector supplies arithmetic reference indices and a sampled-Hessian nullity theorem. The $24$-cell design does not identify the independent Grassmannian carrier, and neither an action, a Fredholm weight, nor a physical cosmological constant is fixed without the corresponding certificates.
+The displayed primordial values are conditional on the full determinant, harmonic-rank, kinetic-normalization, scalaron-map, local-equilibrium truncation, e-fold registration, initial-field, and trans-horizon branch data of Definition U.69a. Theorem U.69b assigns $\mathcal R_{\mathrm{prim}}=\varnothing_{\mathrm{cert}}$ until an accepted $\mathfrak P_{\mathrm{prim}}$ is entered. The vacuum sector supplies arithmetic reference indices and a sampled-Hessian nullity theorem. An accepted $\mathfrak C_{U,\mathrm{mark}}$ transports that nullity to the independent Grassmannian carrier, and accepted $\mathfrak C_{U,\mathrm{act}}$, $\mathfrak F_U^{(4)}$, and $\mathfrak R_\Lambda^{(4)}$ records fix the action, the Fredholm weight, and the physical cosmological constant respectively.
 
 ---

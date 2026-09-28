@@ -4,11 +4,11 @@ This section studies the interplay between complexity, predictive performance, a
 
 ## 6.0 The Capacity Bound as Structural Constraint
 
-**Capacity branch note.** The refresh/minorization branch gives the theorem-level strict ND-RID bound $C_{\max}<\ln d_0$ under Lemma E.1 and Theorem E.2. Independently, a registered completed reset of an $r$-dimensional factor inside the $d_0$-dimensional MPU Hilbert space gives $C(\mathcal E_N)\le\ln d_0-\ln r$ by Proposition E.2a. For a binary registered reset, $r=2$. Exact equalities such as $C_{\max}^*=\ln d_0-\varepsilon_0=2\ln2$ require the separate residual-budget same-family saturation branch; they do not follow from SPAP or from the refresh strict-capacity bound alone.
+**Capacity branch note.** The refresh/minorization branch gives the theorem-level strict ND-RID bound $C_{\max}<\ln d_0$ under Lemma E.1 and Theorem E.2. Independently, a registered completed reset of an $r$-dimensional factor inside the $d_0$-dimensional MPU Hilbert space gives $C(\mathcal E_N)\le\ln d_0-\ln r$ by Proposition E.2a. For a binary registered reset, $r=2$. Exact equalities such as $C_{\max}^*=\ln d_0-\varepsilon_0=2\ln2$ require the separate residual-budget same-family saturation branch.
 
 *Throughout this section, natural units $\hbar = c = k_B = 1$ are used unless otherwise noted.*
 
-Finite predictive transfer is bounded on two independent channel branches. A registered completed reset of an $r$-dimensional factor gives $C(\mathcal E_N)\le\ln d_0-\ln r$ by Proposition E.2a, specializing to $\ln d_0-\ln2$ for $r=2$. A refresh/minorization channel independently gives $C_{\max}<\ln d_0$ by Theorem E.2. The first conclusion uses fixed-ready-state support loss; the second uses the full-state refresh component of Lemma E.1. SPAP alone implies neither physical channel architecture.
+Finite predictive transfer is bounded on two independent channel branches. A registered completed reset of an $r$-dimensional factor gives $C(\mathcal E_N)\le\ln d_0-\ln r$ by Proposition E.2a, specializing to $\ln d_0-\ln2$ for $r=2$. A refresh/minorization channel independently gives $C_{\max}<\ln d_0$ by Theorem E.2. The first conclusion uses fixed-ready-state support loss; the second uses the full-state refresh component of Lemma E.1.
 
 ### 6.0.1 Capacity Manifestations Across Domains
 
@@ -297,7 +297,7 @@ The adaptation process involves changing the system's complexity $C(t)\to C(t+1)
 $$
 \varepsilon_{\mathrm{reset}}\ge H_q(P\mid R).
 $$
-A positive implementation-independent floor inferred from this entropy bound additionally requires a registered bound $H_q(P\mid R)\ge h_{\min}>0$. A complexity transformation alone does not imply logical erasure, cyclic reset, or positive conditional entropy; reversible and reset-free implementations are therefore not shown to be thermodynamically irreversible by Theorem 31.
+A positive implementation-independent floor inferred from this entropy bound additionally requires a registered bound $H_q(P\mid R)\ge h_{\min}>0$. Reversible and reset-free complexity transformations lie outside this registered reset branch.
 
 **6.2.5 Definition 19 (Def 19): Complexity-Performance Scaling Principles**
 
@@ -631,7 +631,7 @@ $$
 $$
 Using $\exp[-s\ln(N/N_0)]=(N/N_0)^{-s}$ gives (22f). Positivity of $s$ follows from $\kappa_{\mathrm{eff}},\eta_{\ell},\hat C_{\mathrm{target}}>0$. Restriction to $N>N_0$ gives the physical statement. ∎
 
-**Remark 19.1a (Interpretation of (22e)).** Equation (22e) is additional branch data; it is not implied by POP, PCE, Definition 19, or Theorem 19. On a connected differentiable range $N\ge N_0$, Equation (22e) is equivalent to the boundary condition $C(N_0)=C_{op}$ together with
+**Remark 19.1a (Interpretation of (22e)).** Equation (22e) is branch data additional to POP, PCE, Definition 19, and Theorem 19. On a connected differentiable range $N\ge N_0$, Equation (22e) is equivalent to the boundary condition $C(N_0)=C_{op}$ together with
 $$
 N\frac{dC}{dN}=\eta_{\ell}
 $$
@@ -798,7 +798,7 @@ $$
 $$
 so $dR_I=(r_I/\ln 2)(dC/C)$ and fixed $dR_I$ is equivalent to fixed $dC/C$. ∎
 
-This is a conditional Weber–Fechner-form model relation: if $C$ is calibrated to external stimulus magnitude, the operational internal signal is identified with expended $R_I$, and $\delta_R$ is an empirically fixed just-noticeable internal threshold, then perceived intensity is logarithmic in $C$ and the model's exact just-noticeable fractional increment is $e^a-1$. The label records the mathematical form only; no claim about the exact content of Weber's 1834 or Fechner's 1860 publications, or universal empirical validity, is made here. Within PU, the logarithmic form is the representative reflexive-information cost (5). The signal identification remains an explicit psychophysical bridge assumption, not a claim that every stimulus code is exhausted by reflexive-information cost. For self-model-engaging perception, the relevant internal-cost interpretation is the perspectival profile and self-model cost functional of Appendix M §M.6.10, especially Definition M.10.1 and Proposition M.10.9. The logarithmic gain is $r_I/\ln 2$, while the model's fractional threshold is fixed by $\delta_R$ through $\Delta C/C=e^{\delta_R\ln 2/r_I}-1\approx\delta_R\ln 2/r_I$ for small increments.
+This is a conditional Weber–Fechner-form model relation: if $C$ is calibrated to external stimulus magnitude, the operational internal signal is identified with expended $R_I$, and $\delta_R$ is an empirically fixed just-noticeable internal threshold, then perceived intensity is logarithmic in $C$ and the model's exact just-noticeable fractional increment is $e^a-1$. Within PU, the logarithmic form is the representative reflexive-information cost (5). The signal identification remains an explicit psychophysical bridge assumption. For self-model-engaging perception, the relevant internal-cost interpretation is the perspectival profile and self-model cost functional of Appendix M §M.6.10, especially Definition M.10.1 and Proposition M.10.9. The logarithmic gain is $r_I/\ln 2$, while the model's fractional threshold is fixed by $\delta_R$ through $\Delta C/C=e^{\delta_R\ln 2/r_I}-1\approx\delta_R\ln 2/r_I$ for small increments.
 
 **6.4 Adaptation Dynamics Driven by PCE**
 
@@ -1225,7 +1225,7 @@ $$
 $$
 the density of $\mathcal N(0,H^{-1})$. Taking $\varphi(\xi)$ to depend on one coordinate proves the projection statement. ∎
 
-**Remark 22.1 (Explanatory Scope).** On the Gibbs-family and compact-domain hypotheses of Corollary 22.1, rescaled low-temperature fluctuations about the unique nondegenerate minimum have the stated Gaussian leading law. Applying this conclusion to measured fluctuations requires a separate identification of their stationary law with that Gibbs family. The corollary does not classify arbitrary stationary fluctuations near a PCE operating point.
+**Remark 22.1 (Explanatory Scope).** On the Gibbs-family and compact-domain hypotheses of Corollary 22.1, rescaled low-temperature fluctuations about the unique nondegenerate minimum have the stated Gaussian leading law. Applying this conclusion to measured fluctuations requires a separate identification of their stationary law with that Gibbs family.
 
 **Remark 22.2 (Non-Gaussian Regimes).** Corollary 22.1 concerns the strictly local fluctuation regime near a non-degenerate PCE minimum. At degenerate or marginal minima, zero Hessian eigenvalues remove the positive-definite quadratic bound used by Corollary 22.1. The appropriate rescaling and limiting law require additional control of the potential in those directions; the stated $C^2$ regularity alone does not determine them. Far from a minimum, or in the presence of multiplicative rather than additive fluctuations, heavier-tailed distributions can arise, including the conditional Pareto regime analyzed in Appendix P.8.9a.11 under multiplicative PCE adaptation.
 
@@ -1538,7 +1538,7 @@ The complex adaptation dynamics governing $C(t)$ and $\hat{C}_{target}(t)$ (Equa
 
 **6.9 Task- and Branch-Dependent Viability Bounds $\alpha$ and $\beta$**
 
-The viability bounds are registered relative to a task, score calibration, and physical branch. The SPAP theorems do not determine either numerical endpoint, and a Landauer bound does not determine a dimensionless performance score.
+The viability bounds are registered relative to a task, score calibration, and physical branch.
 
 * **Lower bound $\alpha$.** Let $R_{base}$ be the registered chance or reference risk and let $\phi$ be the strictly decreasing calibration from risk to performance. Then $\alpha_{task}=\phi(R_{base})$.
 

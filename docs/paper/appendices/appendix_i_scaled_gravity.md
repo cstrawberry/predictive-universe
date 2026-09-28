@@ -2,7 +2,7 @@
 
 **I.1 Aim and Scope**
 
-This appendix presents a testable dark-sector model at galaxy, cluster, and cosmological scales. Its response laws are model inputs; a common physical construction would turn them into one multi-scale physical model.
+This appendix presents a testable dark-sector model at galaxy, cluster, and cosmological scales. Its response laws are model inputs; an accepted common covariant response record (Definition I.13d) makes them the outputs of one multi-scale physical model.
 
 **Technical ledger.**
 
@@ -222,7 +222,7 @@ g_0=\eta'a_0
 $$
 The quantity $\chi_b=|\nabla\Phi_b|/g_\Lambda$ is the canonical direct dimensionless ratio of the local baryonic acceleration to the branch acceleration scale. ∎
 
-**Remark I.1.** The functional form $a_0 \propto c^2\sqrt{\Lambda}$ follows from equating two well-established temperatures (Unruh and de Sitter). The additional factor $\eta' = 3/(8\sqrt{3})$ is not obtained from that temperature equality alone; it is the conditional consequence of the QFI linear-response bridge law adopted in Appendix H, Definition H.0. Once that bridge-law normalization is fixed, no continuously adjustable parameter remains in the galactic-scale prediction; the scale is locked to $\Lambda$ by Corollary I.3a.
+**Remark I.1.** The functional form $a_0 \propto c^2\sqrt{\Lambda}$ follows from equating two well-established temperatures (Unruh and de Sitter). The additional factor $\eta' = 3/(8\sqrt{3})$ is the conditional consequence of the QFI linear-response bridge law adopted in Appendix H, Definition H.0. Once that bridge-law normalization is fixed, no continuously adjustable parameter remains in the galactic-scale prediction; the scale is locked to $\Lambda$ by Corollary I.3a.
 
 **Definition I.3b (Predictive Focusing and Susceptibility Datum).** In this subsection use $c=\hbar=k_B=1$, take $\lambda$ to have length dimension, and measure entropy in nats. On a regular emergent metric/channel-capacity thermodynamic branch, register $G_{\mathrm{op}}>0$ as constant along the affine pencil used below, and let $k^\mu=dx^\mu/d\lambda$ be an affine null generator, let $a(\lambda)$ be the transverse area of one retained horizon pencil, and let $S_{\mathrm{pred}}(\lambda)$ be the retained predictive entropy assigned to that same pencil. Define
 $$
@@ -531,7 +531,7 @@ These identities give the elliptic source-control and fluctuation record for the
 
 *Proof.* Connectedness gives $\ker L=\operatorname{span}\{\mathbf1\}$ and makes $L$ positive definite on $\mathbf1^\perp$. Spectral inversion there gives $L^+$, uniqueness, the energy identity, and $\|L^+\|_{\mathbf1^\perp}=1/\lambda_2(L)$. Linearity gives the covariance identity. Diagonalizing $L$ on $\mathbf1^\perp$ and using $0\preceq(L^+)^2\preceq\lambda_2(L)^{-2}I$ proves the trace bound. ∎
 
-**Remark I.3k (Definite Answer to the RCD Elliptic-Backreaction Question).** The RCD elliptic-regularity step is not presently a computed numerical closure in Appendix I. The conditional theorem-level form is the following: if an averaging domain $D$ on a noncollapsed $\mathrm{RCD}^*(K,4)$ branch supplies $\lambda_1(D)>0$, $\theta\in W^{1,2}(D)$, $\sigma\in L^2(D)$, and an elliptic scale-bridge estimate of dimension $L^{-2}$
+**Remark I.3k (Definite Answer to the RCD Elliptic-Backreaction Question).** The conditional theorem-level form is the following: if an averaging domain $D$ on a noncollapsed $\mathrm{RCD}^*(K,4)$ branch supplies $\lambda_1(D)>0$, $\theta\in W^{1,2}(D)$, $\sigma\in L^2(D)$, and an elliptic scale-bridge estimate of dimension $L^{-2}$
 $$
 \frac{1}{\lambda_1(D)}\mathrm{Ch}_D(\theta)
 +
@@ -548,7 +548,7 @@ $$
 $$
 then $|\mathcal Q_D^{\mathrm{PU}}|\le2\mathcal B_D^{\mathrm{ell}}$ for the same declared arguments. Without (I.3k.1), Appendix I has only a conditional analytic target, not a theorem-level numerical estimate.
 
-In particular, no current Appendix I calculation fixes a canonical-domain value such as $C_D\approx10^{20}$ in Planck units. Such a number may be integrated only after the domain geometry, Poincaré constant, Hölder regularity scale, field-equation elliptic gauge, and finite defect budgets are computed on the same branch.
+A canonical-domain value such as $C_D\approx10^{20}$ in Planck units requires the domain geometry, Poincaré constant, Hölder regularity scale, field-equation elliptic gauge, and finite defect budgets computed on the same branch.
 
 ---
 
@@ -561,18 +561,18 @@ The system dynamically adjusts its effective local parameters $\delta$ and $C_{\
 
 *   **Analysis of Cost and Benefit:**
     *   **Structural Cost $V_{cost}$:** This term records the declared physical resources needed to maintain the network infrastructure. A denser network may carry a specified spacing cost. Channel fidelity is parametrized independently by the registered refresh decomposition $\mathcal E_N=(1-p)\Psi+pT_\sigma$: Lemma E.1 gives $f_{RID}\le1-p$, and Theorem E.2 supplies the associated strict capacity record. Appendix A.0.4's $V_{rel}$ is a reliability/error-correction cost as a function of the declared error model; it does not prove that $C_{\max}$ is monotone in reset heat. Accordingly, a constructive branch must enter an explicit increasing maintenance function $V_{\mathrm{chan}}(p)$ or $V_{\mathrm{chan}}(C_{\max})$ and verify its derivative on the admitted interval. With that registered function, $V_{cost}=V_{\mathrm{spacing}}(\delta)+V_{\mathrm{chan}}(C_{\max})$ has the monotonicity used below.
-    *   **Predictive Benefit $V_{benefit}$:** The monotonicities used by the crossover model are a registered response ansatz: on the admitted domain, $V_{benefit}$ is assumed to increase as $\delta$ decreases, as $C_{\max}$ increases, and as $\rho_b$ increases. A constructive branch must specify this function, its units, and derivative-sign certificates; predictive terminology alone proves none of the three monotonicities.
+    *   **Predictive Benefit $V_{benefit}$:** The monotonicities used by the crossover model are a registered response ansatz: on the admitted domain, $V_{benefit}$ is assumed to increase as $\delta$ decreases, as $C_{\max}$ increases, and as $\rho_b$ increases. A constructive branch must specify this function, its units, and derivative-sign certificates.
 
 *   **Conditional crossover behavior:** If $V_{struct}(\delta,C_{\max};\rho_b)$ is coercive on the admissible parameter domain, has a unique minimizer for each retained value of $\rho_b$, and its minimizer moves from a small-$\delta$, large-$C_{\max}$ regime at high $\rho_b$ to a large-$\delta$, small-$C_{\max}$ regime at low $\rho_b$, then the equilibrium pair depends on $\rho_b$ and exhibits the stated crossover.
     *   **High $\rho_b$ (e.g., galactic cores):** The assumed minimizer lies in the high-cost, high-performance regime with small spacing $\delta_0$ and large channel capacity $C_{\max,0}$.
     *   **Low $\rho_b$ (e.g., galactic outskirts):** The assumed minimizer lies in the low-cost, low-performance regime with large spacing $\delta_{\mathrm{large}}$ and small channel capacity $C_{\max,\mathrm{low}}$.
 
-The qualitative cost-benefit tendencies motivate these branch hypotheses but do not establish them. Equation (I.4) is a phenomenological interpolation for a branch on which the crossover hypotheses are supplied.
+The qualitative cost-benefit tendencies motivate these branch hypotheses. Equation (I.4) is a phenomenological interpolation for a branch on which the crossover hypotheses are supplied.
 
 
 **I.6 Scale-Dependent Newton Constant**
 
-Equation I.4 is a phenomenological scale-dependent kernel, not a consequence of PCE relaxation alone. Its inputs are $G_0$, the length $L_0$, the fractional enhancement $A_G=G_{\mathrm{large}}/G_0-1$, and the dimensionless steepness $m>0$. A constructive relaxation derivation must supply an admissible microscopic dynamics, a map from $(\delta,C_{\max})$ to these parameters, existence and stability of the required response, and a residual bound against the kernel.
+Equation I.4 is a phenomenological scale-dependent kernel. Its inputs are $G_0$, the length $L_0$, the fractional enhancement $A_G=G_{\mathrm{large}}/G_0-1$, and the dimensionless steepness $m>0$. A constructive relaxation derivation must supply an admissible microscopic dynamics, a map from $(\delta,C_{\max})$ to these parameters, existence and stability of the required response, and a residual bound against the kernel.
 
 The exponential below defines the nominated Equation-I.4 model. A logistic or Hill replacement is a different kernel; it preserves any claimed quantitative conclusion only after a common-domain approximation bound and propagated observable residual are certified:
 
@@ -671,13 +671,13 @@ Here $M_b'(r)=4\pi r^2\rho_b(r)$. When $G'(r)=0$, this reduces to the simpler pr
 $$
 \bar\gamma(L):=\frac{d\ln G_{\rm eff}(L)}{d\ln L}
 $$
-satisfies $\bar\gamma(L\!\ll\!L_0)\to 0$, preserving precision‑gravity bounds.
+satisfies $\bar\gamma(L\!\ll\!L_0)\to 0$, preserving the Newtonian-coupling component of precision‑gravity bounds.
 
-Environmental dependence does not by itself establish early-Universe safety. A covariant cosmological completion must satisfy the CMB background and perturbation projections of Definition I.13d.
+Early-Universe safety requires a covariant cosmological completion satisfying the CMB background and perturbation projections of Definition I.13d.
 
 **I.7.2 Cluster Scales: Conditional Non-Local Source-Modification Branch**
 
-A cluster-scale modification of the gravitational law is not excluded by CMB data without specifying a covariant cosmological completion and computing its perturbation-era response. This appendix instead studies a separate phenomenological source-modification branch. Its admissibility requires the local-gravity, lensing, CMB-projection, and covariant-conservation certificates stated later in this appendix; PCE alone does not select this branch over every law-modification alternative.
+At cluster scales this appendix studies a separate phenomenological source-modification branch. Its admissibility requires the local-gravity, lensing, CMB-projection, and covariant-conservation certificates stated later in this appendix. A cluster-scale modification of the gravitational law remains an alternative; testing it against CMB data requires a covariant cosmological completion and its perturbation-era response.
 
 On this branch, the predictive-matter response is modeled by the quasistatic spatial convolution
 
@@ -686,7 +686,7 @@ $$
 \tag{I.7}
 $$
 
-Here $K\ge0$ is a normalized spatial response kernel in $L^1(\mathbb R^3)$, $\int K\,d^3x=1$, $\Phi_b$ is the background-subtracted baryonic potential, $g_\ast>0$ is a characteristic acceleration, and $q$ is a nonlinearity exponent. For the finite-mass branch, assume $A_{\rm PM}\ge0$, $\rho_b\ge0$, $0<M_b:=\int\rho_b\,d^3x<\infty$, and that $w(r')=(|\nabla\Phi_b(r')|/g_\ast)^q$ is defined almost everywhere with respect to baryonic mass and satisfies $\int\rho_b w\,d^3x<\infty$. Use $w=1$ when $q=0$; for $q<0$, require $|\nabla\Phi_b|>0$ almost everywhere with respect to baryonic mass. Calling this equal-time kernel causal requires an additional construction as the quasistatic reduction of a retarded spacetime susceptibility. For the registered kernel and parameters the model can be tested against cluster lensing and baryonic maps; offsets in merging clusters are outputs to be calculated, not consequences of nonlocality alone.
+Here $K\ge0$ is a normalized spatial response kernel in $L^1(\mathbb R^3)$, $\int K\,d^3x=1$, $\Phi_b$ is the background-subtracted baryonic potential, $g_\ast>0$ is a characteristic acceleration, and $q$ is a nonlinearity exponent. For the finite-mass branch, assume $A_{\rm PM}\ge0$, $\rho_b\ge0$, $0<M_b:=\int\rho_b\,d^3x<\infty$, and that $w(r')=(|\nabla\Phi_b(r')|/g_\ast)^q$ is defined almost everywhere with respect to baryonic mass and satisfies $\int\rho_b w\,d^3x<\infty$. Use $w=1$ when $q=0$; for $q<0$, require $|\nabla\Phi_b|>0$ almost everywhere with respect to baryonic mass. Calling this equal-time kernel causal requires an additional construction as the quasistatic reduction of a retarded spacetime susceptibility. For the registered kernel and parameters the model can be tested against cluster lensing and baryonic maps; offsets in merging clusters are outputs to be calculated.
 
 Tonelli's theorem and kernel normalization give the finite integrated predictive-matter mass
 $$
@@ -694,7 +694,7 @@ M_{\rm PM}
 =A_{\rm PM}\int\rho_b(r')\left(\frac{|\nabla\Phi_b(r')|}{g_\ast}\right)^q d^3r'
 =A_{\rm PM}\left\langle\left(\frac{|\nabla\Phi_b|}{g_\ast}\right)^q\right\rangle_{\rho_b}M_b.
 $$
-Thus cluster baryon budgets constrain the displayed combination rather than $A_{\rm PM}$ alone. For $q>0$, the exactly homogeneous background contribution vanishes only after the declared background subtraction sets $\nabla\Phi_b=0$. This fact does not establish CMB compatibility: perturbations at recombination must satisfy the CMB projection and residual bounds of Definition I.13d. Likewise, covariant conservation does not follow from the scalar density formula (I.7); it requires the action/Ward or retarded-susceptibility conservation certificate used by Theorem I.13e.
+Thus cluster baryon budgets constrain the displayed combination rather than $A_{\rm PM}$ alone. For $q>0$, the exactly homogeneous background contribution vanishes only after the declared background subtraction sets $\nabla\Phi_b=0$. CMB compatibility additionally requires perturbations at recombination to satisfy the CMB projection and residual bounds of Definition I.13d, and covariant conservation of the scalar density model (I.7) requires the action/Ward or retarded-susceptibility conservation certificate used by Theorem I.13e.
 
 **Anisotropic stress.** The lensing–dynamics identity (I.8) assumes a metric theory with minimal coupling and negligible anisotropic stress so that both probes are sensitive to the same potential; departures from this condition are separately testable.
 
@@ -755,14 +755,14 @@ $$
 10^{-12}-5\times10^{-25}\le\varepsilon_G(R)\le10^{-12}.
 $$
 *   **Recovery of $G_0$:** The bound proves $G(R)/G_0\to1$ as $R/L_0\to0$ for finite $A_G$ and $m>0$.
-*   **PPN parameters:** The estimate for $\varepsilon_G(R)$ controls only the local Newtonian-coupling component of the model. Bounds on $\gamma_{\mathrm{PPN}}$, $\beta_{\mathrm{PPN}}$, preferred-frame terms, and radiation-sector effects require the covariant local-gravity projection $\Pi_{\mathrm{loc}}$ and its residual interval from Definition I.13d. No PPN conclusion follows from the smallness of $\varepsilon_G$ alone.
+*   **PPN parameters:** The estimate for $\varepsilon_G(R)$ controls only the local Newtonian-coupling component of the model. Bounds on $\gamma_{\mathrm{PPN}}$, $\beta_{\mathrm{PPN}}$, preferred-frame terms, and radiation-sector effects require the covariant local-gravity projection $\Pi_{\mathrm{loc}}$ and its residual interval from Definition I.13d.
 
 **I.9 Numerical Plausibility and Cosmological Bounds**
 
 The parameters $(G_0, L_0, A_G, m)$ in Equation (I.4) must align with astronomical observations.
 
 *   **Galaxy dynamics:** Rotation curves and galaxy scaling relations (e.g., baryonic Tully-Fisher Relation [McGaugh 2012], Radial Acceleration Relation [McGaugh et al. 2016]) are comparators for Equation I.4, but the present source record does not establish a universal field-enhancement factor of $2$ to $10$ over $R \sim 1$–$100\,\mathrm{kpc}$. On the spherical branch of Equation I.6, the complete effective source obeys $4\pi R^2(\rho_b+\rho_{\mathrm{DM,eff}})=G_0^{-1}\,d[G(R)M_b(R)]/dR$. With the central normalization $\lim_{R\downarrow0}[R^2g(R)-G(R)M_b(R)]=0$, the radial field is $g(R)=G(R)M_b(R)/R^2$. For bounded baryonic mass $M_b(R)\to M>0$, Equation I.4 therefore gives an asymptotic field enhancement $g(R)/(G_0M/R^2)\to1+A_G$. An independently fitted asymptotic enhancement $f$ would imply $A_G=f-1$ on this model; no numerical interval for $A_G$ follows without a specified sample, baryonic model, likelihood, and uncertainties. Finite-window fits require the full Equation I.6 source.
-*   **Transition scale:** Choosing $L_0$ of order a few kiloparsecs is an empirical fit or prior for Equation I.4 off the Definition I.13c.1 branch, not a consequence of the acceleration candidate in Appendix H alone. Acceleration and length have different dimensions; the Proposition I.13c.2 map $L_0=\sqrt{GM_b/(\beta_\chi g_\Lambda)}$ is the system-dependent conversion on its branch, and the bridge remains open off it.
+*   **Transition scale:** Choosing $L_0$ of order a few kiloparsecs is an empirical fit or prior for Equation I.4 off the Definition I.13c.1 branch. Acceleration and length have different dimensions; the Proposition I.13c.2 map $L_0=\sqrt{GM_b/(\beta_\chi g_\Lambda)}$ is the system-dependent conversion on its branch, and the bridge remains open off it.
 *   **Steepness:** The sharpness of the transition in the Radial Acceleration Relation suggests $m \gtrsim 2$.
 *   **Cosmological variation:** If the fundamental parameters $(\delta, C_{\max})$ that determine $(L_0, A_G, m)$ evolve on cosmological timescales (e.g., Hubble time), current bounds on temporal variation of $G$ (e.g., $|\dot G/G|\!\lesssim\!10^{-12}\,\mathrm{yr}^{-1}$ from cosmology and solar system) can still be met, provided the cosmological evolution is slow (Section I.14, [Uzan 2011]).
 *   **Redshift invariance of the transition acceleration:** The static branch predicts a fixed transition acceleration $\beta_\chi g_\Lambda$ when $\Lambda$, $\beta_\chi$, the geometry convention, and the response-to-observable map remain fixed. A systematic drift outside the registered nuisance and uncertainty budget excludes that conjunction; $L_0\propto\sqrt{M_b}$ retains the system's mass dependence.
@@ -771,14 +771,14 @@ The parameters $(G_0, L_0, A_G, m)$ in Equation (I.4) must align with astronomic
 
 Within the status classes of Convention P.14.1a, the scale-dependent gravity framework gives model-level predictions whose parameters must be tested with a common T1/T2/T3 ledger:
 
-1.  **Model-level force laws:** Equation I.4 predicts a finite-window scale-dependent enhancement but approaches a constant coupling at $R\gg L_0$; for a bounded baryonic mass it is therefore asymptotically Keplerian. The baryonic Tully-Fisher and deep-RAR scalings follow only on the separate capacity-elastic branch of Definition I.5a and Corollary I.7a, under the constitutive asymptotic $\mu(g/g_\Lambda)\sim g/g_\Lambda$. Neither behavior is a theorem-level consequence of Appendix H alone.
+1.  **Model-level force laws:** Equation I.4 predicts a finite-window scale-dependent enhancement but approaches a constant coupling at $R\gg L_0$; for a bounded baryonic mass it is therefore asymptotically Keplerian. The baryonic Tully-Fisher and deep-RAR scalings follow only on the separate capacity-elastic branch of Definition I.5a and Corollary I.7a, under the constitutive asymptotic $\mu(g/g_\Lambda)\sim g/g_\Lambda$.
 2.  **Capacity-elastic acceleration-lock test:** On the separate Definition-I.5a branch, the constitutive variable is
 $$
 \chi_b=\frac{|\nabla\Phi_b|}{g_\Lambda},
 \qquad
 g_\Lambda=\frac{c^2\sqrt{\Lambda}}8.
 $$
-After the acceleration normalization and capacity-elastic response law are certified, galaxy acceleration data test collapse against $\chi_b$ without an independent MOND acceleration. Equation I.4 instead depends on $R/L_0$; the Definition I.13c.1 branch supplies the dimensionally valid $L_0\leftrightarrow g_\Lambda$ map of Proposition I.13c.2, and off that branch no such map follows from either formula.
+After the acceleration normalization and capacity-elastic response law are certified, galaxy acceleration data test collapse against $\chi_b$ without an independent MOND acceleration. Equation I.4 instead depends on $R/L_0$; the Definition I.13c.1 branch supplies the dimensionally valid $L_0\leftrightarrow g_\Lambda$ map of Proposition I.13c.2.
 3.  **Parameter-universality test:** The phenomenological parameter set $(L_0,A_G,m)$ may be tested for approximate universality across a preregistered galaxy class off the Definition I.13c.1 branch. On that branch, $m=3$ and $L_0=\sqrt{GM_b/(\beta_\chi g_\Lambda)}$ carries the per-system mass datum. A common $\beta_\chi$ therefore predicts a common $L_0/\sqrt{M_b}$ at common $G$ and $g_\Lambda$; the universality test uses $\beta_\chi$ or that mass-normalized length, with mass uncertainty propagated. $A_G$ awaits the Proposition I.13c.3 menu adjudication or hierarchical inference.
 4.  **Surface-density lock:** On the infinite planar-sheet branch of Corollary H.1a, the transition surface-density scale is
 $$
@@ -797,8 +797,8 @@ $$
 {\Lambda_{\mathrm{eff}}(0)}
 }.
 $$
-6.  **Particle-DM comparison test:** Equation I.4 and the capacity-elastic branch are candidate gravity-only fits; writing them without a particle-DM term neither proves that they explain the anomalies nor that particle dark matter is absent. A direct-detection null is an independent empirical outcome. Exclusion of a particle-DM competitor requires a common likelihood, nuisance and covariance model, calibrated gravity-only forward map, and a declared model-selection rule.
-7.  **Cosmological signatures:** The scale dependence of gravity could influence structure growth and cosmological observables. Deviations from $\Lambda$CDM predictions might be observable in cosmic microwave background (CMB) or large-scale structure surveys if $G$ varies with local density or cosmic time.
+6.  **Particle-DM comparison test:** Equation I.4 and the capacity-elastic branch are candidate gravity-only fits. A direct-detection null is an independent empirical outcome. Exclusion of a particle-DM competitor requires a common likelihood, nuisance and covariance model, calibrated gravity-only forward map, and a declared model-selection rule.
+7.  **Cosmological signatures:** If $G$ varies with local density or cosmic time, the scale dependence of gravity modifies structure growth and cosmological observables, and cosmic microwave background (CMB) and large-scale structure surveys test the resulting deviations from $\Lambda$CDM predictions.
 8.  **Transient stresses:** On an accepted covariant dark-susceptibility branch of Definition I.13d, the certified dynamical response, conserved stress tensor, and cluster/merger projection determine the transient-stress and lensing-offset predictions within the certified residual interval. Equation I.7 specifies the quasistatic predictive-matter density $\rho_{\rm PM}$; merger predictions require the additional time-dependent response and projection certificates. These predictions are tested against baryonic matter distributions and gravitational lensing maps on that same branch.
 
 **I.11 Prospective Rotation-Curve Analysis**
@@ -1271,7 +1271,7 @@ determines the unordered weight multiset $\{p_1,\ldots,p_b\}$ uniquely. Thus two
 
 *Proof.* At each depth, every word contributes the product of its branch weights, so summing the $q$th powers factorizes at every level and proves (I.12b.2a.1). The local scaling exponent along a constant branch is the logarithmic ratio shown. Newton's identities recover the elementary symmetric polynomials of the $p_i$ recursively from the power sums $s_1,\ldots,s_b$. These coefficients determine the monic polynomial $\prod_i(t-p_i)$ and hence its multiset of roots. The converse follows because permutation changes none of the power sums. ∎
 
-This theorem closes the inverse problem only within the declared finite homogeneous cascade class. It neither chooses that class over the simpler kernel nor supplies the covariant action and projection package of Definition I.12b.1.
+This theorem closes the inverse problem within the declared finite homogeneous cascade class. Preference for that class over the simpler kernel follows the adjudication conditions of Theorem I.12b.2, and the covariant action and projection package enters through Definition I.12b.1.
 
 **I.13 Expected Parameter Ranges**
 
@@ -1281,7 +1281,7 @@ L_0\sim1\!-\!10\,\mathrm{kpc},\qquad
 A_G\sim1\!-\!9,\qquad
 m\simeq2\!-\!4.
 $$
-These ranges will be constrained by the forthcoming rotation-curve fits. The range for $A_G$ agrees with Section I.9's phenomenological interval for enhancements of 2–10 times. No theorem-level value of $A_G$ is derived in the present appendix.
+These ranges will be constrained by the forthcoming rotation-curve fits. Through Section I.9's relation $A_G=f-1$, the range for $A_G$ corresponds to asymptotic enhancements $f$ of 2–10 times. Proposition I.13c.3 confines $A_G$ to the menu $\{1,3,7\}$ on its product-tracking branch, with the selection within the menu open.
 
 **Definition I.13a (Backbone-Channel-Recruitment Benchmark Branch).** The backbone-channel-recruitment benchmark branch is the subbranch of the galaxy-scale relaxation kernel (I.4) on which the discrete backbone is used to choose the preregistered test pair
 $$
@@ -1619,7 +1619,6 @@ The appendix defines a multi-scale dark-response candidate program and separates
    $$
    g_\Lambda=\frac{c^2\sqrt{\Lambda}}8.
    $$
-   This identity does not determine a galaxy, lensing, cluster, merger, CMB, or homogeneous response kernel.
 2. **Galaxy and cluster models.** Equation I.4 and the nonlocal predictive-matter kernels are phenomenological candidate laws until one accepted $\mathfrak X_{\mathrm{DS}}$ supplies their common covariant action or retarded susceptibility, projections, conservation law, parameter selector, and residual intervals. Stacked-profile agreement does not select the kernel, and CMB safety requires the perturbative projection $\Pi_{\mathrm{CMB}}$ for that same accepted record.
 3. **Conditional closure and falsification.** Given an accepted $\mathfrak X_{\mathrm{DS}}$, Theorem I.13e makes all registered projections deterministic outputs of one branch. A failure of common conservation, lensing, local-gravity, CMB, homogeneous, or residual tests falsifies that branch. On the harmonic realization of Theorem I.13f, the source is the harmonic part of the finite recoverability current and vanishes on the certified harmonic-zero, trace-zero branch.
 

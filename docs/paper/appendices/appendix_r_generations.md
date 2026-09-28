@@ -6,7 +6,7 @@ This appendix asks why the framework uses three particle families. It separates 
 
 ### Technical family-count introduction
 
-This appendix separates generation topology, $D_4$ triality, binary coding, and lattice gluing. On SM15, linear and cubic anomaly cancellation plus a registered CP-active realization supplies the smallest admissible three-charge orbit; on SM16, the linear anomaly equation must be supplemented by primitive charge-norm minimization. The additive-monotone family objective separately selects the realized count. Triality and the factorization $24=3\cdot8$ are compatibility records. The predictive-recovery rate branch fixes $k=12$; retained Golay selection additionally requires the fixed-rate certificate $\mathfrak C_{\mathrm{dist}}$. From a marked Golay copy, the explicit coordinate construction following Lemma R.4.5 produces a mathematical Leech lattice; the separate $(\sqrt2E_8)^3$ realization still requires the registered discriminant-form and norm-certificate routes of Lemma R.4.5 and Corollary R.4.2b. None of these finite structures alone supplies masses, vacuum dynamics, or spacetime.
+This appendix separates generation topology, $D_4$ triality, binary coding, and lattice gluing. On SM15, linear and cubic anomaly cancellation plus a registered CP-active realization supplies the smallest admissible three-charge orbit; on SM16, the linear anomaly equation must be supplemented by primitive charge-norm minimization. The additive-monotone family objective separately selects the realized count. Triality and the factorization $24=3\cdot8$ are compatibility records. The predictive-recovery rate branch fixes $k=12$; retained Golay selection additionally requires the fixed-rate certificate $\mathfrak C_{\mathrm{dist}}$. From a marked Golay copy, the explicit coordinate construction following Lemma R.4.5 produces a mathematical Leech lattice; the separate $(\sqrt2E_8)^3$ realization still requires the registered discriminant-form and norm-certificate routes of Lemma R.4.5 and Corollary R.4.2b.
 
 
 
@@ -190,7 +190,7 @@ In eight dimensions, the **$E_8$ root system** emerges as the natural coordinati
 
 1. **Packing optimality:** The $E_8$ lattice achieves the optimal sphere packing density in 8 dimensions (Viazovska 2017). This supplies a canonical discrete scaffold on the 8D real subspace that can organize internal "positions" efficiently.
 
-2. **Division-algebra and vector-field compatibility:** Hurwitz's normed-division-algebra theorem gives the real dimensions $\{1,2,4,8\}$ and places the octonions in dimension $8$. The separate sphere-field count uses $n=(2a+1)2^{4d+c}$, $0\le c\le3$, and $\rho(n)=8d+2^c$: the Hurwitz–Radon–Eckmann construction gives $\rho(n)-1$ independent tangent vector fields on $S^{n-1}$, and Adams (1962, Theorem 1.1) proves that $\rho(n)$ such fields cannot exist. Thus $\rho(8)=8$ means seven independent tangent fields on $S^7$, not eight fields or a division-algebra classification. Appendix Z uses these separate results only as coherence checks on $d_0=8$, not as a proof of a necessary MPU dimension. An $E_8$–octonion identification requires a specified octavian lattice and isometry.
+2. **Division-algebra and vector-field compatibility:** Hurwitz's normed-division-algebra theorem gives the real dimensions $\{1,2,4,8\}$ and places the octonions in dimension $8$. The separate sphere-field count uses $n=(2a+1)2^{4d+c}$, $0\le c\le3$, and $\rho(n)=8d+2^c$: the Hurwitz–Radon–Eckmann construction gives $\rho(n)-1$ independent tangent vector fields on $S^{n-1}$, and Adams (1962, Theorem 1.1) proves that $\rho(n)$ such fields cannot exist. Thus $\rho(8)=8$ means seven independent tangent fields on $S^7$, not eight fields or a division-algebra classification. Appendix Z uses these separate results as coherence checks on $d_0=8$; the dimension itself comes from the lower bound of Theorem 23 and the minimal branch of Theorem Z.2. An $E_8$–octonion identification requires a specified octavian lattice and isometry.
 
 3. **Maximal symmetry:** The 240 roots of $E_8$ provide maximal symmetry for uniform local neighborhoods, consistent with PCE's preference for high-symmetry configurations that minimize descriptive complexity.
 
@@ -233,7 +233,7 @@ Among the $E$-series, only for $n = 8$ has the kissing number been proven optima
 | Unimodular | $\det(\text{Gram matrix}) = 1$ | Minimal volume distortion under embedding |
 | Kissing number | 240 (proven maximal) | Maximum local distinguishability |
 
-Among positive-definite even integral unimodular lattices of rank $8$, $E_8$ is unique up to Euclidean isometry (Griess 2003, Theorem 3.4). This lattice classification does not by itself select an MPU coordinatization or prove a PCE optimum.
+Among positive-definite even integral unimodular lattices of rank $8$, $E_8$ is unique up to Euclidean isometry (Griess 2003, Theorem 3.4).
 
 **Comparison with Other Exceptional Root Systems:**
 - **$E_6, E_7$:** Ranks 6 and 7 respectively, not matching the MPU dimension 8.
@@ -250,7 +250,7 @@ Among positive-definite even integral unimodular lattices of rank $8$, $E_8$ is 
 | $D_8$   | 112        | ✓            | ✗ ($\det=4$)       | ✗               |
 | $E_8$   | 240        | ✓            | ✓ (even; $\det=1$)| ✓               |
 
-Within the displayed rank-$8$ root-lattice comparison, $E_8$ is the only entry that is simultaneously simply laced, even unimodular, and packing-optimal. Treating those properties as a PCE cost minimum is a registered modeling choice; the lattice theorems establish the properties, not that physical selection rule.
+Within the displayed rank-$8$ root-lattice comparison, $E_8$ is the only entry that is simultaneously simply laced, even unimodular, and packing-optimal.
 
 Thus $E_8$ is singled out by the conjunction of (i) uniqueness as the even unimodular lattice in dimension 8 and (ii) provably optimal packing density in dimension 8. We therefore adopt $E_8$ as the canonical discrete scaffold on the effective 8D real subspace.
 
@@ -706,7 +706,7 @@ which proves the family-count selection. ∎
 $$
 L_{\mathrm{model}}(N) \;\ge\; L_0 + N\,L_{\mathrm{block}} + L_{\mathrm{mix}}(N)
 $$
-can in principle attain its minimum at an interior value $N > 3$, because a strictly increasing lower bound does not force the bounded quantity to be monotone. For example, the assignment $L(3)=100$, $L(4)=5$, $L(N)=N$ for $N \ge 5$ respects the lower bound $B(N)=N$ for every $N \ge 3$ yet is minimized at $N=4$. Proposition R.3.5 therefore establishes the selection result strictly within the surrogate class in which $L_{\mathrm{fam}}$ equals the displayed additive-monotone expression; it establishes minimal admissibility, while exact realized multiplicity is confined to the surrogate-objective selection branch. This is consistent with the theorem-model boundary recorded in Proposition R.3.5f: the theorem-level structural content of the generation sector is minimal admissibility within the anomaly+CP class of Theorem R.3.4; exact realized $N_g = 3$ is on the surrogate-objective selection branch defined in part (c) above.
+can in principle attain its minimum at an interior value $N > 3$, because a strictly increasing lower bound does not force the bounded quantity to be monotone. For example, the assignment $L(3)=100$, $L(4)=5$, $L(N)=N$ for $N \ge 5$ respects the lower bound $B(N)=N$ for every $N \ge 3$ yet is minimized at $N=4$. Proposition R.3.5 therefore establishes minimal admissibility within the anomaly+CP class of Theorem R.3.4 and selects the exact realized $N_g = 3$ within the surrogate class in which $L_{\mathrm{fam}}$ equals the displayed additive-monotone expression of part (c), matching the theorem-model boundary recorded in Proposition R.3.5f.
 
 **Proposition R.3.5.1a (Family Count on the Additive-Monotone Selection Branch).** Assume the family-redundancy and anomaly-plus-CP admissibility conditions of Theorem R.3.4 and assume that the realized family-count objective is
 $$
@@ -793,9 +793,9 @@ L(N)\ge u_*+\delta\quad\text{for every integer }N>N_0.
 $$
 All proofs use an accepted sound proof system with terminating proof checking for the registered claims.
 
-The verifier checks these finite proofs, the feasibility and interval certificates, and the finitely many inequalities $l_q\ge u_*+\delta$ for listed $q\ne q_*$. It does not enumerate the tail. Acceptance implies $\overline V_B(q)-\overline V_B(q_*)\ge\delta$ for every competitor: in the listed part use $\overline V_B(q)\ge l_q$ and $\overline V_B(q_*)\le u_*$; in the tail use the certified bound $\overline V_B(q)\ge L(N)\ge u_*+\delta$ and the same incumbent upper bound. Thus $\Delta_{\rm fam}\ge\delta$, supplying the hypotheses of Theorem R.3.5.1c. This is a sufficient certificate format, with no assertion that its finite exhaustive list or accepted proofs exist or can be discovered for the proposed physical quotient. Any admissible class omitted by the certified enumeration or violating the asserted lower bounds falsifies the certificate.
+The verifier checks these finite proofs, the feasibility and interval certificates, and the finitely many inequalities $l_q\ge u_*+\delta$ for listed $q\ne q_*$. It does not enumerate the tail. Acceptance implies $\overline V_B(q)-\overline V_B(q_*)\ge\delta$ for every competitor: in the listed part use $\overline V_B(q)\ge l_q$ and $\overline V_B(q_*)\le u_*$; in the tail use the certified bound $\overline V_B(q)\ge L(N)\ge u_*+\delta$ and the same incumbent upper bound. Thus $\Delta_{\rm fam}\ge\delta$, supplying the hypotheses of Theorem R.3.5.1c. This is a sufficient certificate format. Any admissible class omitted by the certified enumeration or violating the asserted lower bounds falsifies the certificate.
 
-**Remark R.3.5.1d (Status of the Exact Selector).** Theorem R.3.5.1c gives the mathematical closure after its exhaustive quotient, descended functional, and strict-gap certificate have been supplied; it is not itself a derivation of those inputs. Proposition R.3.5.1a proves the conclusion only inside the additive-monotone surrogate class. The present framework has not supplied the finite family-selection certificate above.
+**Remark R.3.5.1d (Status of the Exact Selector).** Theorem R.3.5.1c gives the mathematical closure once its exhaustive quotient, descended functional, and strict-gap certificate are supplied, and Proposition R.3.5.1a proves the conclusion inside the additive-monotone surrogate class. The present framework has not supplied the finite family-selection certificate above.
 
 **Proposition R.3.5.1e (Response-Active Extension Countermodels to the Weakened Selector).** Let $V$ be any anomaly-free CP-active chiral family block. Each of the following operations preserves the stated weakened admissibility data while permitting a response-active extension.
 
@@ -867,7 +867,7 @@ $$
 
 *Proof.* Each row follows by substituting the values supplied by its listed source branches. The ledger records cross-branch numerical identities; it does not derive one source branch from another. ∎
 
-**Remark R.3.5e.1.** Proposition R.3.5e records a compact ledger of exact equalities on the intersection of the source branches named in its final column. It is not, by itself, a single-parent derivation of all entries. The closure supplied by the following results is a current-graph non-collapse decomposition: the present proof graph decomposes the recurrent ledger into structural subchains with named source invariants, separates these from downstream equality and rigidity invariants, and proves that no current source invariant subsumes the others. Whether a future common parent invariant underlies all source roles remains open.
+**Remark R.3.5e.1.** Proposition R.3.5e records a compact ledger of exact equalities on the intersection of the source branches named in its final column. The closure supplied by the following results is a current-graph non-collapse decomposition: the present proof graph decomposes the recurrent ledger into structural subchains with named source invariants, separates these from downstream equality and rigidity invariants, and proves that no current source invariant subsumes the others. Whether a future common parent invariant underlies all source roles remains open.
 
 **Proposition R.3.5e.2 (Independent-Source Assembly of the Recurrent Integer Subledger).** On the intersection of the separately declared structural-binary, active-kernel, carrier, tangent-mode, predictive-recovery, and mode-channel branches cited by Proposition R.3.5e, the subledger
 $$
@@ -1050,7 +1050,7 @@ has a projector–flag component that is unique up to unitary equivalence under 
 
 *Proof.* Proposition R.3.5e and Corollary T.59a give the tuple on the declared common branch. Theorem Z.35e gives unitary rigidity at the marked projector–flag level and leaves the map to the auxiliary Grassmannian as separate data. Corollary 23a.1 gives the complex and marked-real Clifford coherence, and Theorem R.3.5e.3 excludes a current-source compression in the stated four-role graph. ∎
 
-**Remark R.3.5e.5 (Status of a Possible Bott-Theoretic Source).** Corollary R.3.5e.4 is a relative statement about the present dependency graph, not a global impossibility theorem. A future Bott-periodicity theorem or other proposed parent source would be additional structure, not a replacement already contained in the current ledger. To be admissible it must supply a parent invariant $P$ together with structure-preserving projections to every source invariant,
+**Remark R.3.5e.5 (Status of a Possible Bott-Theoretic Source).** Corollary R.3.5e.4 is a relative statement about the present dependency graph. A future Bott-periodicity theorem or other proposed parent source would be additional structure outside the current ledger. To be admissible it must supply a parent invariant $P$ together with structure-preserving projections to every source invariant,
 $$
 P\to I_3,
 \qquad
@@ -1211,7 +1211,7 @@ The registered vector-space isomorphism gives $\dim H^1(C_{\mathrm{fam}}^\bullet
 
 ## R.4 Three-Fold Structure: Topological Derivation and Structural Compatibility
 
-This section compares the branch-resolved family-count derivation with structural three-fold compatibility checks. On SM15, the linear and cubic anomaly equations plus a registered CP-active realization select the smallest admissible orbit at $N=3$. On SM16, the linear anomaly equation must be supplemented by primitive normalization and the strict charge-norm objective. Proposition R.3.5.1a supplies the separate additive-monotone realized-count selection. Section R.4.2 records the $D_4$ triality orbit and the Leech/$E_8$ three-fold scaffold at $M=24$ as compatibility layers; neither replaces those branch-specific inputs.
+This section compares the branch-resolved family-count derivation with structural three-fold compatibility checks. On SM15, the linear and cubic anomaly equations plus a registered CP-active realization select the smallest admissible orbit at $N=3$. On SM16, the linear anomaly equation must be supplemented by primitive normalization and the strict charge-norm objective. Proposition R.3.5.1a supplies the separate additive-monotone realized-count selection. Section R.4.2 records the $D_4$ triality orbit and the Leech/$E_8$ three-fold scaffold at $M=24$ as compatibility layers.
 
 ### R.4.1 Topological Pathway: Anomaly Cancellation
 
@@ -1322,7 +1322,7 @@ Thus the topological, triality, geometric, and information-theoretic structures 
 
 ### R.4.2.1 The Conditional Golay Bridge
 
-The shared integer $24$ alone does not identify a code with a lattice. The section closes one code-to-Leech map by an explicit coordinate construction and keeps the separate $(\sqrt2E_8)^3$ realization conditional on its finite-quadratic-module marking and norm certificate.
+The section closes one code-to-Leech map by an explicit coordinate construction and keeps the separate $(\sqrt2E_8)^3$ realization conditional on its finite-quadratic-module marking and norm certificate.
 
 
 
@@ -1596,10 +1596,6 @@ The binary code and the twenty-four-dimensional lattice are each optimal in thei
 | Rank-$24$ lattices | The Leech lattice is the unique positive-definite even unimodular rootless rank-$24$ lattice up to isometry | None after positive definiteness, evenness, unimodularity, rank, and rootlessness are assumed |
 | Code-to-lattice transfer | The explicit coordinate construction following Lemma R.4.5 sends $\mathcal G_{24}$ to $\Lambda_C\cong\Lambda_{24}$; the separate $(\sqrt2E_8)^3$ scaffold reaches the same isometry class only on its abstract gluing branch | No extra bridge datum for the displayed coordinate construction; for the abstract scaffold, items 1–2 of Lemma R.4.5 plus either its complete minimum ledger or $m_0^{\times}=4$ together with Equation (R.4.2a.1) |
 
-Common length/rank $24$ and separate extremality do not make the coding and lattice objectives identical. Their intersection is a certified correspondence only on the registered bridge datum; it is not forced by PCE coordinate neutrality or by the integer $24$ alone.
-
-
-
 | Domain | Optimization Problem | Result | Role of $\mathcal{G}_{24}$ | Reference |
 |--------|---------------------|--------|---------------------------|-----------|
 | Information theory | Maximize $d$ for binary linear $[24,12,d]$ codes | $d_{\max}=8$ | Unique coordinate-permutation equivalence class of attainers; retained selection requires $\mathfrak C_{\mathrm{dist}}$ | Theorems R.4.4 and Z.13b |
@@ -1634,9 +1630,7 @@ M=24\longrightarrow
 D=4,&\text{independent faithful-shell least-feasible branch}.
 \end{cases}
 $$
-On an arbitrary finite-quadratic-module marking, code distance transfers to nonzero glue-coset minima only when Equation (R.4.2a.1) is proved. The explicit coordinate construction instead proves its Euclidean minimum directly. Neither route supplies a code-to-spacetime, code-to-dynamics, or physical-vacuum-stability implication.
-
-The selected code determines a mathematical Leech lattice of minimum squared norm $4$ through the explicit coordinate construction. On the separate $(\sqrt2E_8)^3$ scaffold, the same minimum follows only from the registered abstract gluing and one of its two norm-certification routes. Neither mathematical construction identifies a physical vacuum or proves dynamical stability without a separate realization certificate.
+On an arbitrary finite-quadratic-module marking, code distance transfers to nonzero glue-coset minima only when Equation (R.4.2a.1) is proved. The explicit coordinate construction instead proves its Euclidean minimum directly. Identifying either mathematical construction with a physical vacuum, or proving its dynamical stability, requires a separate realization certificate.
 
 ### R.4.2.3 Code Distance and the Registered Gluing Datum
 
@@ -1719,8 +1713,6 @@ These statements share branch-selected integers and a compatible lattice isometr
 2. At the independently fixed positive-definite rank $24$, the Niemeier theorem classifies exactly $24$ even unimodular lattice isometry classes.
 3. Within that fixed-rank class, rootlessness selects the unique Leech isometry class.
 
-The class count does not select rank $24$, and a lattice isometry class is not a physical vacuum. Physical vacuum uniqueness or stability requires a separate dynamical realization certificate.
-
 ---
 
 ### R.4.2.5 Automorphism Group and Symmetry Structure
@@ -1729,7 +1721,7 @@ The class count does not select rank $24$, and a lattice isometry class is not a
 
 **Remark R.4.2b: Physical Status of Sporadic Symmetries.** Once the marked Golay and Leech structures are selected, their automorphism groups are determined: $\operatorname{Aut}(\mathcal G_{24})=M_{24}$ and $\operatorname{Aut}(\Lambda_{24})=\mathrm{Co}_0=2.\mathrm{Co}_1$, whose central quotient is $\mathrm{Co}_1$. A physical action of those groups is not thereby established. These groups act on the $24$-dimensional mode space, not directly on the four-dimensional Euclidean response carrier or on any promoted spacetime. A physical action on $3+1$ spacetime would require independent promotion and observable-action certificates in addition to the mode-to-carrier map.
 
-Whether sporadic group structure produces observable signatures—such as specific degeneracy patterns in quantum systems engineered to probe the full 24-mode space, or constraints on allowed transitions—remains an open question. The experimental predictions in **Section Z.29–Z.31** provide protocols for testing the $M = 24$ mode structure and Golay code organization; confirmation of these predictions would indirectly validate the mathematical structures whose automorphism groups are sporadic. Direct physical manifestations of sporadic symmetries represent an avenue for future theoretical and experimental investigation.
+The experimental predictions in **Section Z.29–Z.31** provide protocols for testing the $M = 24$ mode structure and Golay code organization. Whether sporadic group structure itself produces observable signatures—such as specific degeneracy patterns in quantum systems engineered to probe the full 24-mode space, or constraints on allowed transitions—remains an open question.
 
 
 ---
@@ -1742,17 +1734,17 @@ Whether sporadic group structure produces observable signatures—such as specif
 - Mechanism 3 (Geometric compatibility): relies on sphere packing optimality and $E_8$/Leech lattice constructions (Section R.4.2).
 - Mechanism 4 (Mode-count compatibility): relies on the QFI interface count $M=24$ from Theorem Z.5.
 
-These four strands are logically distinct, though they share foundational constants ($d_0 = 8$, $\varepsilon_0=\ln2$) at the axiomatic level. Only Mechanism 1 derives the minimal family-count theorem. Mechanism 2 shows that a marked real 8-carrier has a canonical three-element triality orbit; Mechanism 3 shows that the geometric sector carries a compatible three-fold lattice scaffold; Mechanism 4 shows that the interface-mode count is compatible with three 8-dimensional blocks.
+These four strands are logically distinct, though they share the minimal-branch backbone constants $d_0 = 8$ (Theorem Z.2) and $\varepsilon_0=\ln2$ (Theorem J.1). Only Mechanism 1 derives the minimal family-count theorem. Mechanism 2 shows that a marked real 8-carrier has a canonical three-element triality orbit; Mechanism 3 shows that the geometric sector carries a compatible three-fold lattice scaffold; Mechanism 4 shows that the interface-mode count is compatible with three 8-dimensional blocks.
 
 **Structural compatibility from QFI mode count:** The interface mode count $M = 24$ (**Appendix Z**, Theorem Z.5) admits the factorization:
 $$
 M = 24 = 8 \times 3 = d_0 \times N_g.
 $$
-This factorization does not independently derive $N_g = 3$; rather, it shows that the topological count is compatible with organizing the interface modes into three 8-dimensional blocks. The QFI structure is therefore a consistency check, not an additional derivation pathway.
+This factorization shows that the topological count is compatible with organizing the interface modes into three 8-dimensional blocks; the QFI structure is a consistency check.
 
 **Qualitative assessment:** The convergence of one branch-resolved derivation with three compatibility checks supports internal coherence. The proved result is the SM15 anomaly-plus-CP minimum or the SM16 linear-anomaly-plus-primitive-norm-plus-CP minimum, followed by the additive-monotone pre-flavor realization theorem.
 
-**Remark: Methodological Note.** The strength of the consistency argument rests on the agreement between the topological derivation, the $D_4$ triality orbit, the $E_8$/Leech scaffold, and the QFI factorization. The latter three do not provide independent proofs of $N = 3$; they supply supporting structural checks. ∎
+**Remark: Methodological Note.** The strength of the consistency argument rests on the agreement between the topological derivation, the $D_4$ triality orbit, the $E_8$/Leech scaffold, and the QFI factorization. The latter three supply supporting structural checks. ∎
 
 ---
 
@@ -1767,7 +1759,7 @@ M=24\longrightarrow
 D=4,&\text{faithful-shell least-feasible branch}.
 \end{cases}
 $$
-The $24$-cell realizes the local kissing configuration on the third branch. Neither the Golay code nor the Leech lattice is an antecedent of the dimension implication, and no network dynamics follows from the $24$-cell without a separate realization theorem. Golay error correction supports physical robustness only after an encoding, noise channel, syndrome map, decoder, and dynamical stability estimate are registered.
+The $24$-cell realizes the local kissing configuration on the third branch; network dynamics from it requires a separate realization theorem. Golay error correction supports physical robustness only after an encoding, noise channel, syndrome map, decoder, and dynamical stability estimate are registered.
 
 The correlation and stability protocols in Sections Z.29--Z.31 test distinct records: a Golay correlation pattern tests the predictive-recovery encoding; a mathematical lattice check can test either the explicit coordinates or the abstract marked-gluing ledger; and a physical lattice or stability claim additionally requires its realization dynamics. A dimensional test requires the independent mode-channel certificate.
 
@@ -1778,8 +1770,6 @@ The correlation and stability protocols in Sections Z.29--Z.31 test distinct rec
 2. **Static mode-channel mismatch (Prediction Z.3):** On the channel-cell branch, prepare $M_{\mathrm{int}}=24$ and measure the completed first-shell count $M_{\mathrm{phys}}$, giving $\Delta_{\mathrm{mc}}=|24-M_{\mathrm{phys}}|$. Instability or dimensional reduction requires an independent evolution equation and Lyapunov certificate.
 
 3. **Error-correction correlations (Prediction Z.4):** Flat QFI tests the 24-dimensional active subspace and equal QFI eigenvalues. A Golay test separately requires the marked physical encoder, noise law, and syndrome or decoder instrument, with the registered residual-law and octad-incidence statistics of Theorem Z.13b.3.
-
-Each protocol tests only its declared branch. A code-level confirmation does not by itself confirm Leech gluing, a physical vacuum, dimensional reduction, or emergent-spacetime dynamics.
 
 
 ### R.4.2.8 Syndrome-Charge Homology
@@ -2204,7 +2194,7 @@ The common metric scale, Gaussian normalization and coefficient $A$ cancel. Nonz
 
 ### R.6.0 Framework Evolution: Theorem--Model Boundary
 
-The generation-number theorem and the flavor-response models are separate layers. $E_8$ supplies admissible discrete geometry, while physical label selection, continuous response coefficients, scale maps, and remainders remain model or certificate data. The flavor layer is not presently a zero-continuous-parameter prediction engine.
+The generation-number theorem and the flavor-response models are separate layers. $E_8$ supplies admissible discrete geometry, while physical label selection, continuous response coefficients, scale maps, and remainders remain model or certificate data.
 
 
 
@@ -2217,8 +2207,6 @@ Before the observational comparison, the theorem and model layers are:
 | **Mass diagnostic** | Candidate set $\{4/3,3/2,2,3,4\}$ | Physical root triad and common leading response law |
 | **Mixing mechanism** | Exponential overlap can suppress selected transitions | Packet kernel, distances, normalization, and response map |
 | **Numerical status** | Retrospective comparisons | Scale, scheme, effective dimension, and remainder certificates remain open |
-
-The $E_8$ geometry supplies a discrete candidate space for flavor models. It does not by itself select sector labels or close the Appendix-T flavor certificate, so the resulting comparisons are not zero-parameter predictions.
 
 ### R.6.1 Observational Data and Conditional Model Comparisons
 
@@ -2272,7 +2260,7 @@ The quark sector analysis is complicated by QCD running effects and the difficul
 - Up quarks: $\mathcal{R}_u \approx 2-3$ (between discrete values 2 and 3)
 - Down quarks: $\mathcal{R}_d \approx 1.5-2$ (near discrete value 3/2 or 2)
 
-Further precision requires detailed analysis of renormalization group evolution and threshold corrections, which is beyond the scope of this appendix but represents an important direction for future work.
+Further precision requires detailed analysis of renormalization group evolution and threshold corrections.
 
 ### R.6.2 Mixing Angles and CKM Matrix
 
@@ -2295,7 +2283,7 @@ For three declared proxy laws $r_{ij}^{(0)}=e^{-E_{ij}}$, the inequalities $E_{1
 
 **PMNS vs. CKM:**
 
-The same entry model can accommodate larger PMNS than CKM mixing if the complete lepton and quark textures, labels, phases, and response coefficients yield the required singular-vector rotations. Smaller selected separations or coefficients are compatible mechanisms, not a proof of the observed contrast.
+The same entry model can accommodate larger PMNS than CKM mixing if the complete lepton and quark textures, labels, phases, and response coefficients yield the required singular-vector rotations. Smaller selected separations or coefficients are compatible mechanisms for that contrast.
 
 ### R.6.3 Status of Phenomenological Comparisons
 
@@ -2309,7 +2297,7 @@ The generation-number theorem is distinct from the later flavor-texture models. 
 | Up quarks | $\{3/2,2,3\}$ | $\sim2.4$ | Unselected candidate set |
 | Down quarks | $\{3/2,2\}$ | $\sim1.9$ | Unselected candidate set |
 
-These rows are model comparisons. Forward predictions require independently selected sector labels and response/error certificates.
+These rows are model comparisons.
 
 ## R.7 CP Violation and Jarlskog Invariant
 
@@ -2324,11 +2312,11 @@ Thus three nondegenerate families permit a physical phase, but $J_{CP}\ne0$ addi
 
 ### R.8.1 What the Framework Establishes and What It Models
 
-Theorem R.3.4 establishes the minimal admissible three-generation pattern on its branch-resolved SM15 and primitive-minimal-norm SM16 classes, and Proposition R.3.5.1a supplies the exact pre-flavor realization on its stated additive-monotone branch. The $D_4$, $E_8$, and Leech records are compatibility structures, not additional independent derivations of the generation count.
+Theorem R.3.4 establishes the minimal admissible three-generation pattern on its branch-resolved SM15 and primitive-minimal-norm SM16 classes, and Proposition R.3.5.1a supplies the exact pre-flavor realization on its stated additive-monotone branch. The $D_4$, $E_8$, and Leech records are compatibility structures.
 
-The flavor layer is conditional. Root distances provide candidate discrete diagnostics only after physical labels are selected. Exponential hierarchy, CKM/PMNS separation, CP phases, and the coefficient $\alpha=3/2$ require the particular overlap, potential, Schur, holonomy, scale, and remainder certificates stated in Appendix T. They are mechanisms or calibrated model outputs, not first-principles consequences of the generation theorem or of the Grassmannian orbit alone.
+The flavor layer is conditional. Root distances provide candidate discrete diagnostics only after physical labels are selected. Exponential hierarchy, CKM/PMNS separation, CP phases, and the coefficient $\alpha=3/2$ require the particular overlap, potential, Schur, holonomy, scale, and remainder certificates stated in Appendix T. They are mechanisms or calibrated model outputs.
 
-The model-independent statement about CP is limited: within the ordinary three-family mixing formalism, a nonzero Jarlskog invariant requires at least three generations. Its magnitude and phase are not fixed by that necessity result.
+The model-independent statement about CP is that, within the ordinary three-family mixing formalism, a nonzero Jarlskog invariant requires at least three generations. Its magnitude and phase are flavor-model inputs.
 
 
 
@@ -2352,7 +2340,7 @@ The framework does not yet fully determine:
 
 Item 3 remains conditional on the assigned lift, response map, and accepted realization certificates. Items 1–2 require an explicit PCE potential together with the stated localization, embedding, kernel, scale, and full-matrix certificates.
 
-**Baryogenesis Complexity (Conditional Appendix Y Reduction).** Holonomy supplies a candidate CP-odd datum; a net yield additionally requires the independent $C$-odd response witness and the driven source, transport, freeze-out, washout, normalization, residual, and overlap certificates of Appendix Y. The displayed value near $6\times10^{-10}$ is therefore illustrative arithmetic, not a derived baryon asymmetry. The exact exponent ledger on the stated branch is:
+**Baryogenesis Complexity (Conditional Appendix Y Reduction).** Holonomy supplies a candidate CP-odd datum; a net yield additionally requires the independent $C$-odd response witness and the driven source, transport, freeze-out, washout, normalization, residual, and overlap certificates of Appendix Y. The exact exponent ledger on the stated branch is:
 
 $$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon_0}{N_g} = \frac{38.5}{2} + \frac{\ln 2}{3} = 19.25 + 0.2310\dots = 19.4810\dots$$
 On the accepted electroweak action-transport branch of Principle T.13a, together with Theorem Y.8's nonzero complement-equivariant midpoint readout, parallel noncancelling symmetric three-family allocation, and exact same-normalization factorization with its exhaustive finite nonzero prefactor ledger,
@@ -2440,7 +2428,7 @@ This appendix separates one conditional family-count result from later flavor mo
 
 ### R.8.4 Conditional Connection to Baryogenesis
 
-Within the Standard Model three-family mixing formalism, a physical CKM phase requires at least three families. A baryon yield additionally requires baryon-number violation, a CP-odd source, nonequilibrium transport, freeze-out, washout, normalization, and uncertainty certificates. The Berry-holonomy and sphaleron entries of Appendix Y are therefore conditional source-model data; they do not by themselves derive the observed $\eta_B$ or make exactly three generations cosmologically necessary.
+Within the Standard Model three-family mixing formalism, a physical CKM phase requires at least three families. A baryon yield additionally requires baryon-number violation, a CP-odd source, nonequilibrium transport, freeze-out, washout, normalization, and uncertainty certificates. The Berry-holonomy and sphaleron entries of Appendix Y are therefore conditional source-model data; they do not by themselves derive the observed $\eta_B$.
 
 The family-count theorem and baryogenesis model are compatible on their common branch. Baryogenesis is not an independent proof of the generation count, because alternative CP sources or enlarged family sectors are outside the theorem's declared class.
 

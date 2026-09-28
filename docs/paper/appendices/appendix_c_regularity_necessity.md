@@ -12,7 +12,7 @@ This appendix formulates conditional exclusion gates supporting Theorem 43. The 
 *   **(GC) Global Coherence:** The declared aggregate task must preserve the specified encoded distinction or synchronization record across its macroscopic window.
 *   **(RE) Resource Efficiency:** The registered propagation and operation ledgers must remain within their declared sustainable budgets.
 
-Section C.2 defines the geometric properties. Section C.3 constructs a representative Ollivier-curvature response only for its specified metric, kernel, smoothness, and homogeneity data. Sections C.4–C.5 derive the conditional GC, RE, and LV penalties, while Section C.6 collects them. The separate continuum package of Section 11 additionally requires noncollapse, curvature-transfer, Mosco, and rigidity certificates; Appendix C alone does not yield a smooth manifold.
+Section C.2 defines the geometric properties. Section C.3 constructs a representative Ollivier-curvature response only for its specified metric, kernel, smoothness, and homogeneity data. Sections C.4–C.5 derive the conditional GC, RE, and LV penalties, while Section C.6 collects them. The separate continuum package of Section 11 additionally requires noncollapse, curvature-transfer, Mosco, and rigidity certificates.
 
 ## C.2 Formal Definitions of Geometric Properties
 
@@ -195,14 +195,14 @@ $$
 \left(\delta_\mu+C_{geom}\lambda_R M L_{C_P}\right)>0.
 \tag{C.10}
 $$
-This establishes a strictly positive lower bound only for this Ollivier-Ricci model under the local hypotheses in Lemma C.3.3, the baseline-row discrepancy bound, and $\eta_R<1$. It does not establish a Bakry-Émery lower bound, a measured-Gromov-Hausdorff-stable curvature class, or the Section 11.4 continuum branch. Those transfers require the additional weighted-shell/local-isotropy input of Remark C.3.3a or an equivalent replacement, radius-2 or curvature-matrix control, and the separate convergence hypotheses isolated in Theorem C.6a and Appendix F.
+This establishes a strictly positive lower bound only for this Ollivier-Ricci model under the local hypotheses in Lemma C.3.3, the baseline-row discrepancy bound, and $\eta_R<1$. Transfer to a Bakry-Émery lower bound, a measured-Gromov-Hausdorff-stable curvature class, or the Section 11.4 continuum branch requires the additional weighted-shell/local-isotropy input of Remark C.3.3a or an equivalent replacement, radius-2 or curvature-matrix control, and the separate convergence hypotheses isolated in Theorem C.6a and Appendix F.
 
 
 ¹ Footnote: The parameter $\lambda_R$ is specific to this curvature model (Equation C.2) and represents the sensitivity of local transition probabilities to gradients in the effective cost-rate $I'$. It should not be confused with the resource scarcity Lagrange multiplier $\lambda$ from main text Definition 20.
 
 
 **Remark C.3.3a (From Ollivier-Ricci to a continuum scalar curvature estimator).**
-This estimator is an additional continuum-bridge hypothesis, not a consequence of the Appendix C theorem stack. Let $(\mathcal N_h,d_h)$ be a sequence of MPU networks sampling a $C^3$ Riemannian manifold $(M,g)$, with adjacent rescaled edge lengths $h+O(h^2)$. Assume first-shell weights $\omega_{xy}\geq0$ satisfying
+This estimator is an additional continuum-bridge hypothesis. Let $(\mathcal N_h,d_h)$ be a sequence of MPU networks sampling a $C^3$ Riemannian manifold $(M,g)$, with adjacent rescaled edge lengths $h+O(h^2)$. Assume first-shell weights $\omega_{xy}\geq0$ satisfying
 $$
 \sum_{y\sim x}\omega_{xy}=1,
 \qquad
@@ -411,7 +411,7 @@ Thus RE fails for all sufficiently large $L$ on the registered non-amortized tra
 
 ## C.5 Penalization of Unbounded Curvature Fluctuations
 
-This section derives two conditional penalties from curvature fluctuations. The resource-efficiency estimate requires the curvature-load and external-innovation certificates together with uniform strong convexity of the operational cost. The local-viability estimate requires mutually independent failure events and an external tracking bound relating their mean probability to complexity variance. Curvature variance or absence of a positive curvature lower bound alone implies neither penalty.
+This section derives two conditional penalties from curvature fluctuations. The resource-efficiency estimate requires the curvature-load and external-innovation certificates together with uniform strong convexity of the operational cost. The local-viability estimate requires mutually independent failure events and an external tracking bound relating their mean probability to complexity variance.
 
 **Theorem C.3 (Scope of the Curvature–Load Coupling Branch).** Let $\hat C_{\mathrm{actual}}:\mathcal V\to[0,\infty)$ be a registered external-load field. Equations (C.1)–(C.14) and Equation (38) do not by themselves imply a lower bound on $\operatorname{Var}(\hat C_{\mathrm{actual}})$ from curvature variance or from the absence of a positive curvature lower bound. Such an inference requires an independently registered quantitative curvature-to-load transfer certificate. An inference for $\operatorname{Var}(\hat C_{\mathrm{target}})$ additionally requires an external innovation or tracking certificate relating $\hat C_{\mathrm{target}}$ to $\hat C_{\mathrm{actual}}$ within a stated error.
 
@@ -747,7 +747,7 @@ Finally, Definition C.2 provides a discrete curvature bound, but the present App
 | Limit-energy identification | Mosco convergence of the rescaled random-walk Dirichlet forms, or another route identifying the limit Cheeger energy as quadratic |
 | Curvature-class transfer | A discrete $CD(K,D)$ or $RCD(K,D)$ condition, or an equivalent radius-2 curvature-transfer theorem, uniform in $n$ and stable under measured Gromov–Hausdorff convergence |
 
-Without all four, Theorem 44 remains genuinely conditional.
+Theorem 43.5 packages all four on the $M=24$, $D=4$ operational-continuum branch on which Theorem 44 is stated.
 
 **Theorem C.6c (Conditional Noncollapsed $\mathrm{RCD}^*(K,4)$ Bridge).** Let $(X_n,d_n,\mu_n,x_n)$ converge in pointed measured-Gromov--Hausdorff topology to $(X,d,\mu,x)$. Assume:
 
@@ -925,13 +925,13 @@ Case (d). The second moment is $\frac12I_4$: coordinate sign changes annihilate 
 
 ## C.7 Conclusion and status boundary
 
-Local symmetry of the model's nearest-neighbor shell is only one part of large-scale geometric order. A continuum description also needs independent control of collapse, convergence, energy, and rigidity. Under the stated cost, communication, and viability conditions, the appendix excludes sufficiently severe irregularity and identifies the extra records needed for the continuum branch.
+Under the stated cost, communication, and viability conditions, the appendix excludes sufficiently severe irregularity and identifies the extra records needed for the continuum branch. Beyond the local symmetry of the model's nearest-neighbor shell, a continuum description needs independent control of collapse, convergence, energy, and rigidity.
 
 **Technical ledger.**
 
 This appendix separates local shell isotropy from global continuum closure. Theorem C.6e controls only the fixed-trace shell tensor and Lemma C.6f only the exact fourth-moment shell tensor; geometric noncollapse, measured-Gromov--Hausdorff compactness, Mosco convergence, and Cheeger-energy identification remain independent hypotheses.
 
-Appendix C does not by itself construct the full AQFT net or the local-horizon KMS/Clausius bridge. Those are supplied separately by Theorem F.0 and Theorem 48a. The operational-continuum branch proves a finite-resolution manifold compression after the microscopic continuum-control defects of Theorem D.6e are included in the adaptation potential and selected by Theorem 43.5; the exact real-number continuum remains an effective completion, not an additional physical substrate.
+Theorem F.0 and Theorem 48a separately supply the full AQFT net and the local-horizon KMS/Clausius bridge. The operational-continuum branch proves a finite-resolution manifold compression after the microscopic continuum-control defects of Theorem D.6e are included in the adaptation potential and selected by Theorem 43.5; the exact real-number continuum remains an effective completion, not an additional physical substrate.
 
 On the registered edge-comparability, traffic or synchronization, clock or contraction, curvature-response, adaptation-tracking, convex-cost, and viability-budget branches, the Appendix C estimates exclude sufficiently severe irregularity. Theorem 43.5 separately packages the $M=24$, $D=4$ operational-continuum branch with its noncollapse, curvature-transfer, Mosco, recovery, and rigidity certificates, while Appendix F states the independent algebraic AQFT requirements.
 

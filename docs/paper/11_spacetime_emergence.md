@@ -1,9 +1,5 @@
 # 11. Emergence of Spacetime Geometry (Operational Continuum Branch)
 
-The topological-bandwidth result below is a conditional band-limited completion on an accepted $\mathfrak C_{\mathrm{TB}}^\Omega$. Its completed diamond basis may be infinite in the effective representation, while each physical protocol uses only finite retained subrecords.
-
-**Placement of D4 data in the spacetime ledger.** The D4 witness does not replace the Lorentzian cone or second-order certificates. It may feed the continuum-recovery side of the spacetime ledger, while $\mathfrak C_{\mathrm{cone}}$, $\mathfrak C_2$, and $\mathfrak C_{\mathrm{sig}}$ still determine the operational cone, second-order closure, and signature branch.
-
 This section details the emergence of effective spacetime geometry from the underlying discrete MPU network. The continuum layer is not an additional ontology: the real world does not have to become an actual continuum. It only has to generate continuum behavior as a finite-resolution effective closure. Theorem 43 supplies the regularity-necessity theorem, Theorem 43.5 packages the operational-continuum branch on the $M=24$, $D=4$ shell under its stated hypotheses, and Corollary 43.5a supplies the zero-defect $D_4$ gluing certificate $\mathfrak Z_{\mathrm{cont}}$ that discharges the global-core competitor condition on the strict gluing branch. Appendix F supplies the algebraic AQFT bridge under controlled generator-convergence hypotheses, with Definition F.0c and Theorem F.0d giving the Mosco-Bochner certificate route and Definition F.0e with Theorem F.0f giving the projective single-clock route from finite local algebras to the stable local AQFT envelope. The emergence process is presented in stages: obtaining the operational continuum compression of the discrete propagation-cost metric, identifying the metric tensor, and deriving a uniform operational causal-speed upper bound from MPU interactions, while treating frontier attainment separately and importing Lorentzian signature from the Appendix O hyperbolic-principal-symbol branch. Definition 46f and Theorem 46g then package the topological-bandwidth closure of this branch: operational inclusion gives topology and causal order, predictive capacity gives metric scale, and the finite Paley-Wiener sector gives retained field reconstruction below the accepted operational bandwidth. The interpretation of curvature as predictive holonomy is also discussed.
 
 **Definition 46a.1 (Predictive Well-Posedness Signature Certificate $\mathfrak C_{\mathrm{sig}}$).** The finite-frontier and cone constructions determine a causal order only up to the supplied operational certificate. To read a covered second-order sector as genuinely Lorentzian, add the certificate $\mathfrak C_{\mathrm{sig}}(U)$. It records the principal symbol of the retained second-order operator on $U$, one-time Cauchy well-posedness, exclusion of elliptic and ultrahyperbolic alternatives by the PPI/PCE comparison, exclusion of higher-derivative or Ostrogradsky branches from the retained sector, and agreement of the resulting characteristic cone with $\mathfrak C_{\mathrm{cone}}$ up to the stated tolerance. With $\mathfrak C_{\mathrm{sig}}$, the metric signature is a certified branch datum. Without it, finite propagation remains a causal-order result rather than a proof of Lorentzian signature.
@@ -165,7 +161,7 @@ E_{\mathcal N}
 \sum_{\substack{u,v\in\mathcal V\\u\ne v}}
 \frac{\delta}{d_{\mathcal N}(u,v)}.
 $$
-For disconnected finite graphs, the summand is taken as $0$ whenever $d_{\mathcal N}(u,v)=\infty$. This is the average reciprocal propagation-cost distance induced by (64); it is not the harmonic mean itself and it is not a new dynamical law. It is admissible only after the edge-cost representative, microscopic scale $\delta$, and branch status of the finite graph have been fixed.
+For disconnected finite graphs, the summand is taken as $0$ whenever $d_{\mathcal N}(u,v)=\infty$. This is the average reciprocal propagation-cost distance induced by (64); it is not the harmonic mean itself. It is admissible only after the edge-cost representative, microscopic scale $\delta$, and branch status of the finite graph have been fixed.
 
 **11.3 Geometric Regularity: A Necessary Condition for Viability**
 
@@ -345,7 +341,7 @@ If $m>d+1$, the $m$ points are affinely dependent, so there are real coefficient
 
 **11.4 Geometric Convergence to an Operational Continuum Manifold**
 
-Assuming Theorem 43, the operational-continuum branch is packaged in Theorem 43.5. Appendix C supplies first-shell $D_4$ isotropy; the independent continuum certificate supplies geometric noncollapse; Appendix D supplies the finite-defect microscopic selection mechanism and the Mosco–Cheeger closure; and Theorem 44a supplies the regular-branch manifold upgrade when the rigidity defect vanishes along the selected sequence. The resulting continuum description is an effective finite-resolution compression of the MPU network, not an assertion that the physical substrate becomes an exact real-number continuum.
+Assuming Theorem 43, the operational-continuum branch is packaged in Theorem 43.5. Appendix C supplies first-shell $D_4$ isotropy; the independent continuum certificate supplies geometric noncollapse; Appendix D supplies the finite-defect microscopic selection mechanism and the Mosco–Cheeger closure; and Theorem 44a supplies the regular-branch manifold upgrade when the rigidity defect vanishes along the selected sequence. The resulting continuum description is an effective finite-resolution compression of the MPU network.
 
 **11.4.1 Theorem 44 (Gromov-Hausdorff Limit)**
 
@@ -469,7 +465,7 @@ is positive, self-adjoint, commutes with every $U\in\mathcal G$, and is not scal
 
 ## 11.5.2 Continuum Relabeling Symmetry and Diffeomorphism Invariance
 
-The emergent manifold branch of Theorems 44–45 admits coordinate charts without making a chart label an observable. Discrete vertex-relabeling invariance motivates coordinate redundancy, but it does not by itself establish invariance under the full group of smooth diffeomorphisms of the limiting manifold.
+The emergent manifold branch of Theorems 44–45 admits coordinate charts without making a chart label an observable. Discrete vertex-relabeling invariance motivates coordinate redundancy.
 
 Continuum diffeomorphism covariance is obtained on the closure branch of §11.5.3: the effective theory must admit a local finite-order action, its fields must transform as geometric objects, and Hypothesis 11.5.3.3 must identify continuum bookkeeping relabelings with orientation-preserving diffeomorphisms. Under those three hypotheses, Theorem 45a gives the scalar-density action and diffeomorphism invariance.
 
@@ -592,7 +588,7 @@ Input (T4) of §12 is therefore a derived consequence of Theorem 45a together wi
 
 **11.6 Finite Operational Causal Speed and Lorentzian Signature (Conditional on Thm 43, Thm 45)**
 
-The ND-RID substrate supplies the emergent metric with a uniform operational causal-speed upper bound through Theorem 46. An attained frontier is an additional branch input; normalized uniform-weight one-link saturation is required for $c=\delta/\tau_{\min}$. The Lorentzian signature is not determined by the upper bound alone. Promotion of a separately accepted attained frontier to a Lorentzian principal symbol is carried out by Appendix O, Theorems O.7a and O.7b, and imported into the main text by Corollary 46a under the full signature package or an accepted cone-saturation certificate for the covered retained sectors.
+The ND-RID substrate supplies the emergent metric with a uniform operational causal-speed upper bound through Theorem 46. An attained frontier is an additional branch input; normalized uniform-weight one-link saturation is required for $c=\delta/\tau_{\min}$. Promotion of a separately accepted attained frontier to a Lorentzian principal symbol is carried out by Appendix O, Theorems O.7a and O.7b, and imported into the main text by Corollary 46a under the full signature package or an accepted cone-saturation certificate for the covered retained sectors.
 
 **11.6.1 Theorem 46 (Finite Operational Causal-Speed Bound)**
 
@@ -1113,7 +1109,7 @@ $$
 Then the propagator is CPTP. A representation $\mathcal L_{\gamma,s}=\dot\gamma^\mu(s)\mathcal L_\mu$ is admissible only when this contracted generator has GKSL form along the selected orientation; directionwise GKSL form of the individual $\mathcal L_\mu$ does not imply that condition.
 
 * The **Hamiltonian part** describes unitary dynamics on the declared positive-Hermitian reduced-state carrier. Its identification with the product connection of Theorem 47 requires the unitary-compatibility and Hamiltonian-matching certificate of Theorem 48c.
-* The **dissipative part** $\{L_{\mu,a}\}$ describes the registered open-system loss of coherence or distinguishability. Strict trace-distance contraction requires its separate channel certificate; it does not follow from the ND-RID label alone. On the corresponding effective-action branch, Section X.5 supplies the Schwinger--Keldysh/CTP noise and response description.
+* The **dissipative part** $\{L_{\mu,a}\}$ describes the registered open-system loss of coherence or distinguishability. Strict trace-distance contraction requires its separate channel certificate. On the corresponding effective-action branch, Section X.5 supplies the Schwinger--Keldysh/CTP noise and response description.
 
 **Chronometric Phase and Curvature-Dephasing.**
 A concrete gravitational example appears in Appendix S, where differential proper-time accumulation induces phase gradients. For an internal clock transition $i\leftrightarrow j$ with constant nonzero energy splitting

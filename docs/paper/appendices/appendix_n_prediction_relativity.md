@@ -2,7 +2,7 @@
 
 ## N.1 Master Principle: The PCE Potential
 
-On a registered finite-resolution branch, the PU variational grammar nominates a **PCE Potential** $V$ that balances declared operation and interaction costs against predictive benefit. Definition D.1 is a branch-indexed potential schema; it does not by itself construct a physical dynamics or prove that a global minimizer exists. For a single MPU $i$ interacting with its local environment, one admitted decomposition is
+On a registered finite-resolution branch, the PU variational grammar nominates a **PCE Potential** $V$ that balances declared operation and interaction costs against predictive benefit. Definition D.1 is a branch-indexed potential schema. For a single MPU $i$ interacting with its local environment, one admitted decomposition is
 
 $$
 V_i = \underbrace{V_{op}(i)}_{\text{Operational Cost}} + \underbrace{V_{prop}(i)}_{\text{Propagation Cost}} - \underbrace{V_{benefit}(i)}_{\text{Predictive Benefit}}
@@ -19,7 +19,7 @@ $$
 dx_t=-\eta(x_t)\operatorname{grad}_gV(x_t)\,dt+\sigma(x_t)\,dW_t,
 \qquad \sigma\sigma^*=2D,
 $$
-only on a branch fixing a finite-dimensional smooth state manifold $X$ (a vector space is allowed), a Riemannian metric $g$, tangent mobility $\eta_x:T_xX\to T_xX$, Brownian dimension $m$, a filtered probability space with an $m$-dimensional Brownian motion, a diffusion factor $\sigma_x:\mathbb R^m\to T_xX$ satisfying $\sigma_x\sigma_x^*=2D_x$, coefficient domains and regularity, boundary behavior, and either a Stratonovich convention or an Itô convention with the required connection/chart data. A common unit/metering record is also required. If a reset entropy enters a cost term, a registered reset frequency is required to make an entropy rate; physical power additionally requires the declared temperature/energy conversion. The equation alone proves neither well-posedness nor existence, attainment, or uniqueness of a global minimizer, and it does not prove convergence to one. Those conclusions require the separate existence, stability, ergodicity, low-noise, or attractor certificates stated in Appendix D. The principles below are therefore conditional inputs to this branch model rather than an unconditional evolution law of a frozen joint PU theory.
+only on a branch fixing a finite-dimensional smooth state manifold $X$ (a vector space is allowed), a Riemannian metric $g$, tangent mobility $\eta_x:T_xX\to T_xX$, Brownian dimension $m$, a filtered probability space with an $m$-dimensional Brownian motion, a diffusion factor $\sigma_x:\mathbb R^m\to T_xX$ satisfying $\sigma_x\sigma_x^*=2D_x$, coefficient domains and regularity, boundary behavior, and either a Stratonovich convention or an Itô convention with the required connection/chart data. A common unit/metering record is also required. If a reset entropy enters a cost term, a registered reset frequency is required to make an entropy rate; physical power additionally requires the declared temperature/energy conversion. Theorem N.1a supplies, on the complete quadratic package, a unique strong solution, the unique global minimizer $b$ as the globally exponentially attracting equilibrium of the deterministic flow, convergence of every finite-second-moment law to the invariant law $\mathcal N(b,\beta^{-1}H^{-1})$, and concentration at $b$ in the low-noise limit $\beta\to\infty$; other packages require the separate existence, stability, ergodicity, low-noise, or attractor certificates stated in Appendix D. The principles below are therefore conditional inputs to this branch model.
 
 **Theorem N.1a (Complete Anisotropic Quadratic PCE Diffusion Package).** Fix $d\ge1$, the domain $X=\mathbb R^d$ with Euclidean metric and no boundary, $b\in\mathbb R^d$, symmetric positive-definite matrices $H,M\in\mathbb R^{d\times d}$, and $\beta>0$. Give $V$ the common declared cost unit and choose the time unit so that $MH$ has units of inverse time. Set
 $$
@@ -93,7 +93,7 @@ The PCE Potential incorporates costs that diverge as the system approaches funda
 
 ## N.3 Conditional Response Models for Predictive Resource Costs
 
-The UCT keeps endpoint kinetic work, SPAP complexity, proper-acceleration response, and internal implementation heating as distinct ledger entries. This section registers response models under which selected entries may be placed in one frame-consistent work functional. It does not identify their limiting operations or derive a common microscopic origin.
+The UCT keeps endpoint kinetic work, SPAP complexity, proper-acceleration response, and internal implementation heating as distinct ledger entries. This section registers response models under which selected entries may be placed in one frame-consistent work functional.
 
 ### N.3.1 Registered Temperature-Response Branch for Resource Costs
 
@@ -133,7 +133,7 @@ $$
 \dot Q_{\mathrm{diss,max}}.
 \tag{N.4a}
 $$
-Operation above that threshold may produce thermal runaway in that model. The quantity $A_{\mathrm{pred,crit}}$ is neither a universal speed limit nor a consequence of the SPAP boundary; it depends on the registered processor and cooling mechanism. PCE can favor operation below it only after this implementation-specific term has been incorporated into the relevant PCE potential.
+Operation above that threshold may produce thermal runaway in that model. The quantity $A_{\mathrm{pred,crit}}$ depends on the registered processor and cooling mechanism. PCE can favor operation below it only after this implementation-specific term has been incorporated into the relevant PCE potential.
 
 ## N.4 The Unified Cost of Transgression (UCT)
 
@@ -341,16 +341,16 @@ so $C\in\mathcal F_{T_1}$. Thus $\mathcal F_{T_2}\subseteq\mathcal F_{T_1}$, and
 
 ## N.6 Interpretation and Programme
 
-*   **Two Costs in One Conditional Ledger:** Relativistic endpoint kinetic work and predictive-resource cost can be entered in the same work ledger, but velocity and proper acceleration are distinct variables. A body may coast inertially at high constant velocity with $a=0$ and therefore has no Unruh increment. On the detector-response, additive-temperature, and active-refresh branch, periods of nonzero proper acceleration can add a predictive-loss term; internal processing can add a separate self-heating term. The UCT combines these declared contributions without proving that the kinematic and SPAP limits have a common microscopic origin.
+*   **Two Costs in One Conditional Ledger:** Relativistic endpoint kinetic work and predictive-resource cost can be entered in the same work ledger, but velocity and proper acceleration are distinct variables. A body may coast inertially at high constant velocity with $a=0$ and therefore has no Unruh increment. On the detector-response, additive-temperature, and active-refresh branch, periods of nonzero proper acceleration can add a predictive-loss term; internal processing can add a separate self-heating term. The UCT combines these declared contributions.
 
 *   **No Simple Algebraic Lock:** There is no algebraic equality linking $v$ and $PP$, and proper acceleration rather than velocity activates the modeled Unruh increment. Within a specified trajectory class, fixed boundary data, and an accepted response/refresh branch, the right-hand side of (N.5) or (N.18) may be used as a conditional objective or lower-bound surrogate. A finite budget can then produce a trade-off between trajectory work and predictive resources, but the UCT alone does not force every system to lower $PP$, adopt a smoother path, or contract its predictive horizon. **Temporal Horizon Contraction** and **Predictive Resolution Contraction** label possible outputs of that registered optimization model. Incorporating the complete functional into the global PCE potential $V$ remains future work.
 
-*   **Empirical Target:** On the registered detector-response, additive-temperature, active-refresh, and export branch, proper acceleration contributes a specified incremental refresh cost whose effect on predictive performance can be tested after baseline thermal and implementation costs are controlled. The UCT makes no universal claim about every accelerated system, and geodesic motion does not activate the proper-acceleration term without an additional orbital bridge. Laboratory, astrophysical, biological, or artificial-system tests must therefore certify the relevant response and refresh mechanism before interpreting a null or positive result as a UCT test.
+*   **Empirical Target:** On the registered detector-response, additive-temperature, active-refresh, and export branch, proper acceleration contributes a specified incremental refresh cost whose effect on predictive performance can be tested after baseline thermal and implementation costs are controlled. Geodesic motion does not activate the proper-acceleration term without an additional orbital bridge. Laboratory, astrophysical, biological, or artificial-system tests must therefore certify the relevant response and refresh mechanism before interpreting a null or positive result as a UCT test.
 
 
 ## N.7 Ontological Interpretation of Prediction Relativity
 
-The preceding sections construct a conditional work ledger using the standard detector-response form of the Unruh effect as an input. The relational account below is a proposed interpretation of that emergent-spacetime ledger. It neither derives the Unruh response from pre-geometric MPU dynamics nor establishes that predictive updating and physical acceleration share a microscopic mechanism.
+The preceding sections construct a conditional work ledger using the standard detector-response form of the Unruh effect as an input. The relational account below is a proposed interpretation of that emergent-spacetime ledger.
 
 ### N.7.1 Motion as an Emergent Interpretation of a Predictive Process
 
@@ -364,11 +364,11 @@ At the most fundamental level of the PU framework, there is no pre-existing spac
 
 ### N.7.2 Relational Interpretation of the Unruh Effect: Open Microscopic Bridge
 
-The UCT uses the standard emergent-spacetime Unruh response as an input: a detector with proper acceleration $a$ has temperature $T_U=\hbar a/(2\pi c k_B)$. PU may interpret acceleration as rapid relational updating, but the stronger claim that microscopic MPU update heat produces the Unruh bath is not derived here.
+The UCT uses the standard emergent-spacetime Unruh response as an input: a detector with proper acceleration $a$ has temperature $T_U=\hbar a/(2\pi c k_B)$. PU interprets acceleration as rapid relational updating; the Unruh bath itself enters as the standard input stated above.
 
-A future microscopic bridge would have to specify, before comparison, the MPU update generator, the accelerated detector observable, the state and scaling limit, the KMS response, and an energy ledger showing that the relevant exported heat is neither double-counted with detector work nor with the standard field response. Only such a construction could identify update dissipation with the Unruh spectrum.
+Identifying update dissipation with the Unruh spectrum requires a microscopic bridge that fixes, before comparison, the MPU update generator, the accelerated detector observable, the state and scaling limit, the KMS response, and an energy ledger showing that the relevant exported heat is neither double-counted with detector work nor with the standard field response.
 
-Accordingly, "processing heat" and the Unruh bath are presently analogous contributions to the UCT cost ledger, not proven identical mechanisms. If an independently defined serialized link-cycle time $\tau_{\mathrm{link}}$ is used to set $a_*:=c/\tau_{\mathrm{link}}$, substitution into the standard Unruh formula gives the formal identity
+Accordingly, "processing heat" and the Unruh bath enter the UCT cost ledger as analogous contributions. If an independently defined serialized link-cycle time $\tau_{\mathrm{link}}$ is used to set $a_*:=c/\tau_{\mathrm{link}}$, substitution into the standard Unruh formula gives the formal identity
 $$
 \frac{\hbar}{k_B T_U(a_*)}=2\pi\tau_{\mathrm{link}}.
 $$
@@ -404,7 +404,7 @@ Binary pulsars are ideal for this test for several key reasons:
 
 **Conditional Orbital-Bridge Model (GR + UCT bridge):** The proper-acceleration UCT theorem adds no center-of-mass loss channel for ideal geodesic motion. The alternative timing model below adds a channel only by postulating the orbital-acceleration bridge of Definition N.12a.
 
-*   **The Conditional Mechanism:** The bridge admits the timing-model orbital acceleration as an effective relational variable and fits $q_{\mathrm{act}}^{\mathrm{orb}}$. It is not a claim that ordinary orbital coordinate acceleration gives either neutron star a standard Unruh bath. Any exported energy must also be entered explicitly and without double counting in the orbital ledger.
+*   **The Conditional Mechanism:** The bridge admits the timing-model orbital acceleration as an effective relational variable and fits $q_{\mathrm{act}}^{\mathrm{orb}}$. Any exported energy must also be entered explicitly and without double counting in the orbital ledger.
 *   **The Model Energy Loss:** On that bridge define positive loss powers by $P_{\mathrm{loss}}:=-dE_{\mathrm{orb}}/dt$. The additive model is
 $$
 P_{\mathrm{loss,model}}(t)
@@ -413,7 +413,7 @@ P_{\mathrm{loss,GR(GW)}}(t)
 +
 P_{UCT}^{\mathrm{orb}}(t),
 $$
-where $P_{UCT}^{\mathrm{orb}}\ge0$ is the empirical bridge term defined below, not an unconditional consequence of Theorem N.UCT.
+where $P_{UCT}^{\mathrm{orb}}\ge0$ is the empirical bridge term defined below.
 
 #### N.8.3 Conditional Orbital-Bridge Signature and Identifiability
 
@@ -430,7 +430,7 @@ The key to detecting this effect lies in the fact that the two energy loss mecha
     $$
     This formula uses proper acceleration. For a geodesic binary it enters the timing model only after Definition N.12a replaces that input by its declared orbital variable and introduces the distinct fitted factor $q_{\mathrm{act}}^{\mathrm{orb}}$. The proper-acceleration factor $q_{\mathrm{act}}$, the orbital factor $q_{\mathrm{act}}^{\mathrm{orb}}$, and Proposition N.4's boundary utilization $q$ remain distinct unless an additional bridge equates them.
 
-For a fixed orbital-bridge factor, the candidate correction follows the phase dependence of the acceleration combination specified in Definition N.12a and can perturb $\dot P_b$. Its distinguishability from GR, tidal, magnetospheric, and timing-model nuisance terms is an identifiability question for the fitted model. No unique temporal signature follows from Theorem N.UCT alone.
+For a fixed orbital-bridge factor, the candidate correction follows the phase dependence of the acceleration combination specified in Definition N.12a and can perturb $\dot P_b$. Its distinguishability from GR, tidal, magnetospheric, and timing-model nuisance terms is an identifiability question for the fitted model.
 
 #### N.8.4 The Experimental Test: A Precision Timing Analysis
 
@@ -694,7 +694,7 @@ under its declared decision rule. Acceptance of $\mathfrak C_{\mathrm{resp}}$ gi
 $K_-q_{\mathrm{act}}^{\mathrm{orb}}\le r(q_{\mathrm{act}}^{\mathrm{orb}},\nu)$
 uniformly over the same nuisance domain. Since $K_->0$, division gives (N.12f). The evaluations of $f(e)$, the quadrupole power, and $K_{\mathrm{quad}}$ are direct substitutions and establish only the leading fixed-parameter sensitivity. ∎
 
-The quoted fractional comparison precision $1.3\times10^{-4}$ is not, merely by being a precision, a one-sided upper limit from $\mathfrak C_{\mathrm{tim}}$. If it is inserted only as a diagnostic scale and if $K_{\mathrm{quad}}$ is used only as the leading response comparator, then
+If the quoted fractional comparison precision $1.3\times10^{-4}$ is inserted only as a diagnostic scale and if $K_{\mathrm{quad}}$ is used only as the leading response comparator, then
 $$
 q_{\mathrm{sens}}
 :=
@@ -732,9 +732,9 @@ This is a prospective diagnostic, not a forecasted bound. It becomes a same-syst
 
 ## N.9 The UCT as a Strategic Choice Between Intensive and Extensive Knowledge Acquisition
 
-The UCT does not by itself dictate a knowledge-acquisition strategy or establish a common physical origin for the motion and prediction limits. It permits a conditional finite-budget optimization only after a trajectory class, prediction task, response model, active-refresh mechanism, and non-double-counted work ledger have been registered.
+The UCT permits a conditional finite-budget optimization between knowledge-acquisition strategies only after a trajectory class, prediction task, response model, active-refresh mechanism, and non-double-counted work ledger have been registered.
 
-1.  **Rindler Response and Sampling:** An ideal detector on an eternally uniformly accelerated worldline has a Rindler horizon and a KMS response characterized by $T_U=\hbar a/(2\pi c k_B)$. This detector-response statement is not a universal ambient thermal bath interacting with every accelerated system. Only on the declared response and refresh branch may the modeled increment enter the predictor's cost ledger. Broad sampling may also include inertial coasting, for which proper acceleration and the Unruh increment vanish.
+1.  **Rindler Response and Sampling:** An ideal detector on an eternally uniformly accelerated worldline has a Rindler horizon and a KMS response characterized by $T_U=\hbar a/(2\pi c k_B)$. Only on the declared response and refresh branch may the modeled increment enter the predictor's cost ledger. Broad sampling may also include inertial coasting, for which proper acceleration and the Unruh increment vanish.
 
 2.  **The Prediction Coherence Boundary and the Cost of Modeling:** For a preregistered target schedule $\alpha_{\mathrm{tgt}}(\tau)<\alpha_{\mathrm{SPAP}}$ on task classes carrying $\mathfrak C_{B.2}$, Theorem 14 gives
     $$
@@ -749,7 +749,7 @@ The UCT does not by itself dictate a knowledge-acquisition strategy or establish
     :=
     \alpha_{\mathrm{SPAP}}-\alpha_{\mathrm{tgt}}.
     $$
-    Transfer to $C_P$ or $C_{\mathrm{SPAP}}$ requires the same-family domination bridge of Lemma N.2. An observed $PP$ may instantiate the target only with the registered confidence event; no unconditional $C_P$ divergence follows from notation alone.
+    Transfer to $C_P$ or $C_{\mathrm{SPAP}}$ requires the same-family domination bridge of Lemma N.2. An observed $PP$ may instantiate the target only with the registered confidence event.
 
 For a specified proper-time interval, suppose the baseline task power, the saturation-branch acceleration-refresh increment, endpoint kinetic work, and all other entries are disjoint and transformed to the laboratory ledger according to Theorem N.UCT. If the available laboratory work is $B_{\mathrm{lab}}$, a necessary feasibility condition is
 $$
@@ -777,7 +777,7 @@ An intensive strategy may allocate more of this budget to task fidelity and less
 
 ## N.10 Conditional Unruh–Landauer Acceleration–Refresh Formula
 
-The following equation isolates the Landauer-saturating acceleration-dependent refresh increment on the declared detector-response branch. It is not a universal equation unifying prediction and motion.
+The following equation isolates the Landauer-saturating acceleration-dependent refresh increment on the declared detector-response branch.
 
 ### N.10.1 Saturating Acceleration–Refresh Formula
 
@@ -812,7 +812,7 @@ $$
 which is the stated formula. ∎
 
 **Remark N.10.1: Conditional Dimensional Analogy to $E=mc^2$.**
-Equation (N.14) contains $c^{-1}$ because the accepted Unruh-temperature formula contains $c^{-1}$. On the detector-response and Landauer-saturating active-refresh branch, this yields a motion–refresh coefficient involving $\hbar$, $\ln2$, and $c$. The resemblance to a relativistic energy relation is dimensional and branch-conditional: it does not establish mass–prediction equivalence, a second causal barrier, or a common microscopic origin for the SPAP and kinematic limits.
+Equation (N.14) contains $c^{-1}$ because the accepted Unruh-temperature formula contains $c^{-1}$. On the detector-response and Landauer-saturating active-refresh branch, this yields a motion–refresh coefficient involving $\hbar$, $\ln2$, and $c$. The resemblance to a relativistic energy relation is dimensional and branch-conditional.
 
 ### N.10.2 The Prediction-Motion Coupling Coefficient
 
@@ -830,7 +830,7 @@ This coefficient collects constants already consumed by that conditional bridge:
 - **Structural information input** ($\varepsilon_0=\ln2$): the exact binary structural coefficient, which is not by itself a physical dissipation energy;
 - **Relativistic input** ($c$): the invariant-speed constant already present in the accepted Unruh formula.
 
-Their appearance in one coefficient establishes no independent causal or microscopic coupling law. On the stated saturation branch, Equation (N.14) can be written
+On the stated saturation branch, Equation (N.14) can be written
 
 $$
 E_{\text{pred}}^{\text{sat}} = \lambda_{PM} \cdot a \cdot C.
@@ -867,7 +867,7 @@ $$
 \frac{\ln2}{2\pi}m_PL_P.
 $$
 
-This is an algebraic rewriting of the branch coefficient, not evidence for a new fundamental constant or an independently derived prediction–motion interaction.
+This is an algebraic rewriting of the branch coefficient.
 
 ### N.10.3 Unruh–Landauer Saturation Calibration
 
@@ -890,13 +890,13 @@ $$
 \tag{N.17}
 $$
 
-Equation (N.17) is a calibration identity on the Unruh–Landauer saturation branch. It follows because the standard Unruh temperature already contains the invariant speed $c$; it does not independently derive $c$, a second speed limit, or the Lorentz causal structure from SPAP. For a nonsaturating implementation with actual acceleration-dependent dissipation $E_{\mathrm{pred}}\ge E_{\mathrm{pred}}^{\mathrm{sat}}$, the same inferred ratio obeys
+Equation (N.17) is a calibration identity on the Unruh–Landauer saturation branch. It follows because the standard Unruh temperature already contains the invariant speed $c$. For a nonsaturating implementation with actual acceleration-dependent dissipation $E_{\mathrm{pred}}\ge E_{\mathrm{pred}}^{\mathrm{sat}}$, the same inferred ratio obeys
 $$
 \frac{\hbar\varepsilon_0 aC}{2\pi E_{\mathrm{pred}}}\le c,
 $$
-with equality only at saturation. Merely satisfying the additive UCT work bound does not force equality.
+with equality only at saturation.
 
-**Interpretation:** $c_\gamma$ is the kinematic invariant speed. The symbol $c_\varepsilon^{\mathrm{sat}}$ is a convenient readout of the same already-present constant from one conditional cost formula, not an independently established epistemic barrier.
+**Interpretation:** $c_\gamma$ is the kinematic invariant speed. The symbol $c_\varepsilon^{\mathrm{sat}}$ is a convenient readout of the same already-present constant from one conditional cost formula.
 
 **Proposition N.10.3a (No Margolus-Levitin/Gamma Product Bound from N.17).** Equation (N.17) records a coefficient comparison $c_\gamma=c_\varepsilon^{\mathrm{sat}}$ on the Landauer-saturating Unruh branch; it is not an independent operational measurement of a second invariant speed. It does not identify the limiting operation $v \to c$ with saturation of the Margolus-Levitin orthogonalization bound, and it does not imply any universal lower bound of the form
 $$
@@ -992,7 +992,7 @@ The Unified Cost of Transgression places two distinct resource effects in one fr
 |**Prediction target**|$\alpha_{\mathrm{tgt}}\uparrow\alpha_{\mathrm{SPAP}}$|$C_{\mathrm{uni}}(\delta)=\Omega\!\left(\log(1/\delta)/\delta^2\right)$ as $\delta\downarrow0$ under $\mathfrak C_{B.2}$ |transfers to $C_P$ only with the same-family bridge of Lemma N.2 |
 |**Acceleration coupling**|$a\ne0$ |Unruh–Landauer incremental cost on the registered saturation/activation branch |conditional bridge |
 
-Here $\delta=\alpha_{\mathrm{SPAP}}-\alpha_{\mathrm{tgt}}$. The shared laboratory work functional does not identify the two limiting operations. When the Unruh response and predictive-refresh bridge are active, acceleration adds a prediction-related term to the distinct kinetic and SPAP ledgers. Substitution of an observed $PP$ for the target requires the registered confidence event.
+Here $\delta=\alpha_{\mathrm{SPAP}}-\alpha_{\mathrm{tgt}}$. When the Unruh response and predictive-refresh bridge are active, acceleration adds a prediction-related term to the distinct kinetic and SPAP ledgers. Substitution of an observed $PP$ for the target requires the registered confidence event.
 
 Equation (N.17) recovers the same $c$ from the saturated Unruh–Landauer formula because that formula imports $c$ through the standard Unruh temperature. It is a consistency calibration, not a derivation of Lorentz causality from SPAP. Theorem 46 supplies only the independent uniform operational speed upper bound. An attained normalized frontier $c=\delta/\tau_{\min}$ requires the separate uniform-weight one-link-attainment branch, and its Lorentzian invariant-speed interpretation requires Corollary 46a and the full Appendix O package.
 
@@ -1000,7 +1000,7 @@ The coefficient $\lambda_{PM}=\hbar\varepsilon_0/(2\pi c)$ is therefore a dimens
 
 ## N.11 Inertial Mass as Relational Information
 
-Section N.3 supplied a conditional acceleration–refresh cost on its registered detector-response branch, while Section N.7 proposed—but did not derive—a relational interpretation of motion. The mass construction below is a separate conditional ledger governed by its own $\mathfrak B_{\mathrm{mass}}$ hypotheses. It does not follow from the UCT coefficient or establish a common microscopic origin for acceleration, prediction, and inertia.
+Section N.3 supplied a conditional acceleration–refresh cost on its registered detector-response branch, while Section N.7 proposed a relational interpretation of motion. The mass construction below is a separate conditional ledger governed by its own $\mathfrak B_{\mathrm{mass}}$ hypotheses.
 
 ### N.11.1 The Relational Ontology of "Being"
 
@@ -1124,7 +1124,7 @@ then proves the order criterion. In the XOR state, each single bit is independen
 
 ### N.11.2 Open-System Thermodynamics and the KMS Condition
 
-The modular KMS identity of Theorem G.1.9.5 is a representation statement and does not by itself imply physical processing or a nonzero exchange rate. A physical steady-state exchange claim requires a separately registered open-system activity record.
+A physical steady-state exchange claim requires a separately registered open-system activity record.
 
 **Theorem N.4 (Activity-Conditioned Steady-State Exchange Bound).** Assume a registered active boundary channel on which completed exchange cycles are serialized, so distinct cycles on that channel do not overlap in physical time, and whose physical-time certificate states that every completed cycle has duration at least $\tau_{\min}>0$. Let $N(T)$ count cycles wholly completed in $[0,T]$ and define
 $$
@@ -1148,7 +1148,7 @@ $$
 $$
 but only after accepting its response-active physical-time bridge. The serialized duration certificate gives $N(T)\tau_{\min}\le T$. Taking the declared limsup yields $r_e\le1/\tau_{\min}$; equality is precisely the additional saturated-activity condition. ∎
 
-**Remark N.4.1: Open vs. Closed Systems.** An active open-system exchange is compatible with the second law only after the environment and all reset records are included in one entropy ledger. Theorem N.4 permits $r_e=0$ and asserts no entropy or heat flow merely from modular flow.
+**Remark N.4.1: Open vs. Closed Systems.** An active open-system exchange is compatible with the second law only after the environment and all reset records are included in one entropy ledger.
 
 **Corollary N.4.1 (Boundary Update-Ledger Rate on the Certified Concurrent Branch).** Let an accepted $\mathfrak C_{\partial}$ have finitely many channels $i=1,\ldots,N_{\partial}$. Specify a completed-cycle structural increment $\varepsilon_i\ge0$ and duration $\tau_i>0$ for each channel. Require a concurrency certificate for one common run in which the completed-cycle counts satisfy the actual limits
 $$
@@ -1419,7 +1419,7 @@ Thus the relational and trajectory data alone do not determine the momentum-resp
 
 **Resolution TV-N-07-R1 (Metadata).** Exact domain: the positive-dimensional Euclidean local mechanical class of Proposition N.6a and its admitted nonzero-velocity data. Premises: a positive relational coefficient and no preexisting momentum or force-unit calibration. Equivalence: the realized momentum response must agree; multiplication of the action is not quotiented out. Budget: every $\lambda>0$ and each admitted local classical solution. Verifier: Euler--Lagrange cancellation and canonical-momentum evaluation. Falsifier: dependence of a registered relational datum on $\lambda$, or equal momenta for two distinct $\lambda$ at the admitted nonzero velocity. Provenance class: source-internal scale-modulus countermodel. Downstream consumers: Theorem N.6 and `TV-N-07`. This proves `nonentailment` of a universal unit coefficient from the declared relational/trajectory data; a scale-selecting physical response certificate remains open.
 
-**Remark N.11.1: Scope of the Machian Interpretation.** Quantum mutual information satisfies $\mathcal I_{\mathrm{rel}}=0$ exactly when the state is a product across the declared split. On $\mathfrak B_{\mathrm{mass}}^{\mathrm{rate}}(q)$, Equation (N.26) then assigns zero to this particular relational mass coefficient. It does not follow that the system is vacuum, that every retained observable vanishes, or that no other mass/source ledger is present. Operational indistinguishability from a specified vacuum requires a separate certificate proving equality of all retained response functionals. Thus the Machian reading is a branch interpretation of the certified relational contribution, not an unconditional ontology theorem.
+**Remark N.11.1: Scope of the Machian Interpretation.** Quantum mutual information satisfies $\mathcal I_{\mathrm{rel}}=0$ exactly when the state is a product across the declared split. On $\mathfrak B_{\mathrm{mass}}^{\mathrm{rate}}(q)$, Equation (N.26) then assigns zero to this particular relational mass coefficient. It does not follow that the system is vacuum, that every retained observable vanishes, or that no other mass/source ledger is present. Operational indistinguishability from a specified vacuum requires a separate certificate proving equality of all retained response functionals. Thus the Machian reading is a branch interpretation of the certified relational contribution.
 
 **Theorem N.11.4a (Complete Finite Retained-Algebra Response Test and Zero-MI Vacuum Refutation).** Let $\mathcal H$ be finite-dimensional, let $\mathfrak A\subseteq\mathcal B(\mathcal H)$ be a unital $*$-subalgebra, and let $\mathbb E_{\mathfrak A}$ be the trace-preserving Hilbert--Schmidt conditional expectation onto $\mathfrak A$. For density operators $\rho$ and $\omega$, the following are equivalent:
 $$
@@ -1491,12 +1491,12 @@ with negligible self-force and backreaction on the declared approximation domain
 
 *Proof.* Theorem N.7 gives $m_G/m_I=1$ after its reference calibration. Substitution in the registered response law gives $a=(m_G/m_I)g=g$. ∎
 
-The conclusion is a branch theorem, not an empirical derivation. Testing the branch requires propagating the retained source and response maps into a signed composition-dependent Eötvös parameter and comparing that output with the cited equivalence-principle measurements; equality of the abstract coefficients alone supplies no experimental likelihood.
+The conclusion is a branch theorem. Testing the branch requires propagating the retained source and response maps into a signed composition-dependent Eötvös parameter and comparing that output with the cited equivalence-principle measurements.
 
 
 ### N.11.5a Universal Certified Mass Ledgers and Typed Response Separation
 
-Theorem N.7 establishes $m_I=m_G$ for simple systems only on the common $\mathfrak B_{mass}$ source/response ledger and its independently calibrated reference equality; simplicity alone is insufficient.
+Theorem N.7 establishes $m_I=m_G$ for simple systems only on the common $\mathfrak B_{mass}$ source/response ledger and its independently calibrated reference equality.
 
 
 
@@ -1802,7 +1802,7 @@ Neither $C_*^{\mathrm{rel}}=C_{\mathrm{HSW}}$ nor a shared microscopic carrier i
 
 ### N.11.6 Complexity-Dependent Equivalence Principle Violation
 
-For systems with $C_{agg}>C_{op}$, the explicit constitutive branch below defines a possible correction ledger. The complexity inequality alone implies no equivalence-principle violation.
+For systems with $C_{agg}>C_{op}$, the explicit constitutive branch below defines a possible correction ledger.
 
 **Theorem N.8 (Complexity Correction to the Equivalence Principle on the CC-Gravitational Response Branch).** Work on the saturated chronometric Appendix-S branch
 $$
@@ -1887,7 +1887,7 @@ The coefficient $K_\Gamma$ is not the exact response coefficient in Equation (N.
 $$
 \delta_C=\frac{K_\Gamma P}{1+bP};
 $$
-therefore $K_\Gamma P$ is only the leading small-$|bP|$ term. At the explicitly stipulated fully retained point $\eta_{\mathrm{ret}}=1$ of Remark N.11.2a, Equation (N.41) gives $K_\Gamma P=9.9908\times10^{-41}$; this number is not an exact evaluation of $\delta_C$ without the calibration and denominator.
+therefore $K_\Gamma P$ is only the leading small-$|bP|$ term. At the explicitly stipulated fully retained point $\eta_{\mathrm{ret}}=1$ of Remark N.11.2a, Equation (N.41) gives $K_\Gamma P=9.9908\times10^{-41}$.
 
 **Remark N.11.2: Distinguishing Prediction.** Standard physics predicts $\delta_C = 0$ exactly. Quantum-spacetime phenomenology commonly parameterizes potential new effects as Planck-suppressed corrections controlled by ratios such as $E/E_P$ (or $p/E_P$), without dependence on macroscopic computational activity [Amelino-Camelia 2013]. On the declared branch, the leading small-power signature is $\delta_C=(a-b)P_{\mathrm{context}}+R_2$, with the explicit remainder bound stated after Equation (N.38) in Theorem N.8; the exact law is rational rather than proportional. It differs from a correction controlled only by an energy-to-Planck-scale ratio and becomes a PU prediction only after the decoherence, same-cycle response, mechanical-realization, retained-source, stress-source-realization, coefficient-calibration, and source-exhaustion records are independently accepted.
 
@@ -1934,7 +1934,7 @@ K_\Gamma P_{context}={}&(9.9908\times10^{-41})
 \left(\frac{P_{context}}{0.1\,\mathrm W}\right).
 \end{aligned}
 $$
-These values are stipulated illustrative inputs, not quantities derived by PU and not an empirical characterization of a biological system. The calculation validates only the numerical evaluation and dimensions of Equation (N.41). Under an accepted calibration $a-b=K_\Gamma$, the exact response is $\delta_C=K_\Gamma P_{\mathrm{context}}/(1+bP_{\mathrm{context}})$; the quoted $K_\Gamma P_{\mathrm{context}}$ is only its leading small-$|bP_{\mathrm{context}}|$ term.
+These values are stipulated illustrative inputs. The calculation validates only the numerical evaluation and dimensions of Equation (N.41).
 
 **Proposition N.8.1 (Conditional Self-Model Maintenance Mean-Heat Ledger).** Let a maintenance cycle of duration $\tau_{\mathrm{cycle}}>0$ contain a prescribed deterministic finite number $n_{\mathrm{reset}}$ of sequential classical resets. Require the complete Definition 28 contract for every reset, conditional on the admitted histories, at one temperature $T_{\mathrm{eff}}>0$, with finite mean heats and a justified conditional-expectation and additive heat ledger. Suppose
 $$
@@ -2236,7 +2236,7 @@ E=mc^2
 $$
 The corresponding structural update rate is $\mathcal I_{\mathrm{rel}}/(2q\tau_{\min})$. A physical heat reading uses the complete thermal branch of Corollary N.5.2: the same-cycle reset law and conditional-entropy/source record, positive common temperature, full Definition 28 implementation, deterministic completed-cycle schedule, finite-horizon conditional summation and the declared long-time mean-heat convention. Exact mean-heat equality requires its further same-rate reversible-limit convergence and compatibility certificate.
 
-**Remark N.11.5: Conditional Inertia Interpretation.** Theorem N.6 shows that the already accepted rest-action coefficient is compatible with a registered relational-update ledger and, on the stronger thermodynamic/Unruh branch, supplies a refresh-power lower-bound scale. Exact refresh-power equality additionally requires the same-rate reversible-limit certificate of Corollary N.5.2. It does not independently derive Newton's force law or prove that arbitrary correlations resist acceleration; those claims require a mechanical response map for the declared system--environment split.
+**Remark N.11.5: Conditional Inertia Interpretation.** Theorem N.6 shows that the already accepted rest-action coefficient is compatible with a registered relational-update ledger and, on the stronger thermodynamic/Unruh branch, supplies a refresh-power lower-bound scale. Exact refresh-power equality additionally requires the same-rate reversible-limit certificate of Corollary N.5.2.
 
 **Remark N.11.6: Conditional Connection to UCT.** The UCT includes $m_0$ as an input. On canonical $\mathfrak B_{\mathrm{mass}}$, Theorem N.5 permits
 $$
@@ -2256,7 +2256,7 @@ The first term is the conditional mass substitution. The second is the laborator
 
 ### N.11.10 Summary
 
-Appendix N proves a typed family of branch theorems, not an unconditional identification of mass with every state correlation.
+Appendix N proves a typed family of branch theorems.
 
 | Result | Proved content | Independent gate retained |
 |:--|:--|:--|

@@ -74,7 +74,7 @@ This is (J.3). If $H_q(P\mid R)=\ln2$, then $\varepsilon_{\mathrm{reset}}\ge\ln2
 
 **J.4 Conditional Ancilla and Finite-Event Ledgers**
 
-**Remark J.1.1 (Distribution-Dependent Reset Cost).** The binary alphabet fixes only $\ln2$ as a log-cardinality. The registered heat uses the actual conditional entropy $H_q(P\mid R)$. On the conditionally uniform binary branch, equality $\varepsilon_{\mathrm{reset}}=\ln2$ holds exactly when $\varepsilon_{\mathrm{diss}}=0$. The numerical equality $\varepsilon_{\mathrm{reset}}=\ln2$ alone implies neither conditional uniformity nor zero excess dissipation.
+**Remark J.1.1 (Distribution-Dependent Reset Cost).** The binary alphabet fixes only $\ln2$ as a log-cardinality. The registered heat uses the actual conditional entropy $H_q(P\mid R)$. On the conditionally uniform binary branch, equality $\varepsilon_{\mathrm{reset}}=\ln2$ holds exactly when $\varepsilon_{\mathrm{diss}}=0$.
 
 **Proposition (Conditional Entropy Floor of Reflexive Cycles).** Let $X$ be finite, $\tau:X\to X$ have no fixed points and all its cycles have length at least $L\ge2$. Let $q$ be $\tau$-invariant and let a retained record satisfy $R\circ\tau=R$. Conditional on any positive-probability record value, $q$ is a mixture of uniform distributions on cycles of length at least $L$. Therefore
 
@@ -197,7 +197,7 @@ with equality exactly when every displayed dissipative overhead vanishes.
 
 *Proof.* Restrict Equation (J.4a.2) to $\mathcal E_{\mathrm{guard}}$ and use the stated conditional-entropy floor. On the conditionally uniform binary branch, every conditional entropy equals $\ln2$, giving (J.4a.4). ∎
 
-No reset term follows merely because a guard is semantic or predetermined. This corollary counts exactly the physically assigned reset events satisfying its conditional-entropy premise; an entry retained reversibly or never reset contributes no event to $\mathcal E_{\mathrm{guard}}$. A predetermined guard is nevertheless counted if its physical implementation contains an assigned reset satisfying the stated hypotheses.
+This corollary counts exactly the physically assigned reset events satisfying its conditional-entropy premise; an entry retained reversibly or never reset contributes no event to $\mathcal E_{\mathrm{guard}}$. A semantic or predetermined guard contributes a reset term exactly when its physical implementation contains an assigned reset satisfying the stated hypotheses.
 
 **Theorem J.4b (Conditional Finite-Work Quantum-Zeno Obstruction).** Consider $N$ equal interrogation cycles over duration $T$, with $\tau=T/N\le\tau_0$. Assume that every surviving cycle closes a registered reset in a cyclic degenerate register at common bath temperature $T_b>0$ and that, uniformly over surviving histories,
 $$
@@ -402,7 +402,7 @@ because local boundedness on the compact interval makes the integral finite. Thi
 $$
 \sum_rq(r)\Sigma_r\ge\frac{2L^2}{A_{\max}\tau},
 $$
-which vanishes as $\tau\to\infty$. A strict channel-capacity deficit additionally requires a theorem connecting dissipative excess to the certified achievable boundary-channel rate.
+which vanishes as $\tau\to\infty$. A strict channel-capacity deficit follows from an accepted reset-to-capacity transfer certificate $\mathfrak C_{\Sigma C}$ of Definition J.8.10, whose inequality (J.8.10a) connects dissipative excess to the certified achievable boundary-channel rate.
 
 **Construction J.8.7 (Bounded Two-State LDB Erasure Witness).** Let the ready state be $0$, let $R$ be a singleton, and put $p_1(0)=p_0(0)=1/2$. Fix $\beta,\gamma,\Delta,\tau>0$ and define
 $$
@@ -531,5 +531,4 @@ On the declared binary-ancilla architecture, noninjectivity displaces a binary s
 $$
 \frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}\ge H_q(P\mid R).
 $$
-SPAP alone fixes neither this architecture nor the joint law $q$.
 
