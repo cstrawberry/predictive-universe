@@ -475,7 +475,7 @@ $$
 \lambda_\ell=4\ell(\ell+11)+m_Q^2
 $$
 
-and the stated multiplicities for nonconstant modes on $\mathbb{CP}^{11}$.
+and the retained multiplicities $m_\ell-q_\ell$, $\ell\ge0$, of the projected zeta function (U.26b.5) on $\mathbb{CP}^{11}$. The mode inventory is that of Definition U.26b: the constant mode $\ell=0$, with $m_0=1$ and $\lambda_0=m_Q^2$, stays in the determinant unless $P_Q$ removes it.
 
 **Pass condition.** The audit must output a definite value of
 
@@ -487,6 +487,8 @@ $$
 with the finite-part convention, zero-mode quotient, and measure factor fixed before comparison with $A_s$, $r$, or $A_s r$.
 
 **Fail condition.** If $m_Q^2$, $\mathcal J_Q$, or the finite-part convention is not fixed, the audit may verify the formal zeta expression but cannot promote the leading branch $A_Q=1$ to theorem-level determinant closure.
+
+**Executed record.** On the declared Hopf-intertwinor record $\mathfrak D_Q^{\mathcal B}$ of Theorem U.26d, with $m_Q^2=121$, $P_Q=0$, $\mathcal J_Q=1$, $\mu_Q=1$, the positive orientation and the exact tail rule, the audit sums (U.26b.5) over every $\ell\ge0$, including the retained constant mode $\lambda_0=121$ as Definition U.26b prescribes for $P_Q=0$, evaluates $\zeta_Q^{\mathcal B}(0)$ as an exact rational number and gives $A_Q^{\mathrm{det}}=1-5.9409142259565\ldots\times10^{-9}$ from the closed form (U.26d.2). The pass condition holds on that record (Resolution TV-U-04-R1). A record that projects out only the constant mode sets $q_0=1$, which by Definition U.26b also sets $r_Q^{\mathrm{extra}}=1$, replaces $\kappa_Q=11$ by $\kappa_Q^{\mathrm{corr}}=\frac{21}2$ and adds that mode's Jacobian to $\mathcal J_Q$; its zeta function is $\zeta_Q^{\mathcal B}(s)-121^{-s}$, so $\zeta_Q(0)$ decreases by $1$ and $\zeta_Q'(0)$ increases by $\ln121$; it defines a different record. Selection of the primordial determinant record from the primordial carrier and action records remains open under `TV-U-04`.
 
 ### V.3.5 McKay/Bures-Weight No-Go Audit
 

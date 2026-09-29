@@ -1815,6 +1815,67 @@ For (QF) and (QO), true completion means equality of every admitted finite proto
 
 *Proof.* Under the stated exclusion of every earlier priority class, Theorem 14.4c leaves (QF) or (QO). Definition 14.4b.2 then gives equality of all retained finite protocol responses with the Born branch and the asserted compatibility properties. Equality identifies the quotient class in Definition D.8.9a when both candidates are admitted at the same parent data. Selection among different classes retains all the strict-certificate premises of Theorem D.8.9b. $\square$
 
+**Theorem 14.4c.3 (Relay-Closed Query Normal Form and Query-Exhaustion Discharge).** Let $\mathcal H$ be the carrier, at the time a pre-commit query starts, of the governed system together with every system on which the query acts, and let $\mathcal H'$ be the carrier at the time its returned value is delivered, including every ancilla and relay register that a later retained protocol can access. Both are complex Hilbert spaces, and $\mathcal T(\cdot)$ denotes trace-class operators. Let $\{F_0,F_1\}$ on $\mathcal H$ and $\{G_0,G_1\}$ on $\mathcal H'$ be the binary effects whose Born laws give the governed outcome when the query is absent, and when the query has run with its returned value unused, respectively; each is the Heisenberg image of the Commit Snapshot readout under the corresponding baseline evolution. Put
+$$
+K_q:=\ker G_{1-q},
+\qquad
+\Pi_q:=\text{the orthogonal projector onto }K_q,
+\qquad
+q\in\{0,1\}.
+\tag{14.4c.3.1}
+$$
+A Born realization of a query is a binary instrument $\mathcal I=(\mathcal I_0,\mathcal I_1)$ of completely positive maps $\mathcal I_q:\mathcal T(\mathcal H)\to\mathcal T(\mathcal H')$ whose sum $\Psi:=\mathcal I_0+\mathcal I_1$ is trace preserving; $\mathcal I_q(\rho)$ is the unnormalized delivered state with returned value $q$. For a set $S$ of density operators on $\mathcal H$, call $\mathcal I$ correct on $S$ when, for every $\rho\in S$ and $q\in\{0,1\}$,
+$$
+\operatorname{tr}\mathcal I_q(\rho)=\operatorname{tr}(F_q\rho),
+\qquad
+\operatorname{tr}\!\left[G_{1-q}\mathcal I_q(\rho)\right]=0.
+\tag{14.4c.3.2}
+$$
+Then:
+
+1. **Relay closure.** Adjoining ancillas in fixed states, applying CPTP relay or delivery channels, applying further instruments with finite outcome sets selected by earlier outcomes, taking partial traces, and applying a stochastic post-processing matrix that returns one bit, each finitely many times, produce a binary instrument $\mathcal T(\mathcal H)\to\mathcal T(\mathcal H')$. Every finite relay composite therefore has a Born realization of the displayed type. Correctness of a supplied composite is the family of identities (14.4c.3.2); these are linear in $\rho$, so they hold on $S$ exactly when they hold on a subset of $S$ that spans the linear span of $S$, and such a subset can be chosen finite when $\mathcal H$ is finite-dimensional.
+
+2. **Normal form.** For $\rho\in S$, the second identity in (14.4c.3.2) holds for $q=0,1$ exactly when
+$$
+\mathcal I_q(\rho)=\Pi_q\Psi(\rho)\Pi_q=G_q^{1/2}\Psi(\rho)G_q^{1/2}
+\quad(q=0,1),
+\qquad
+\Psi(\rho)=\Pi_0\Psi(\rho)\Pi_0+\Pi_1\Psi(\rho)\Pi_1.
+\tag{14.4c.3.3}
+$$
+Under (14.4c.3.3), the first identity in (14.4c.3.2) reads $\operatorname{tr}(G_q\Psi(\rho))=\operatorname{tr}(F_q\rho)$. A realization correct on $S$ therefore acts on $S$ as the channel $\Psi$, which places the governed value in the orthogonal sectors $K_0\oplus K_1$ without changing its Born law, followed by the ordinary Lüders readout $X\mapsto G_q^{1/2}XG_q^{1/2}$ of the governed effects, and this readout leaves $\Psi(\rho)$ unchanged.
+
+3. **Existence in the Born-instrument class.** Among all binary instruments $\mathcal T(\mathcal H)\to\mathcal T(\mathcal H')$, a realization correct on $S$ exists exactly when $K_q\ne\{0\}$ for every $q$ such that $\operatorname{tr}(F_q\rho)>0$ for some $\rho\in S$. In that case the measure-and-prepare instrument $\mathcal I_q(\rho)=\operatorname{tr}(F_q\rho)\,\omega_q$ is correct on $S$, where $\omega_q$ is a density operator supported in $K_q$ when $K_q\ne\{0\}$ and an arbitrary density operator otherwise. For the realizations of physically instantiated finite queries in $\bar{\mathcal Q}$, the criterion is necessary, and existence there holds, for example, when the measurement $\{F_0,F_1\}$ and the preparations $\omega_q$ are admitted finite pre-commit operations, so that $\bar{\mathcal Q}$ contains the measure-and-prepare instrument.
+
+4. **Diagonal fragility.** Let $\mathcal I$ be correct on $S$, and let $\rho\in S$ satisfy $\operatorname{tr}(F_0\rho)\operatorname{tr}(F_1\rho)>0$. Choose unit vectors $k_q\in K_q$, and let the governed system apply, after reading the returned value $q$, the preparation $D_q(X):=\operatorname{tr}(X)\,|k_{1-q}\rangle\langle k_{1-q}|$. Then the governed outcome equals $1-q$ with probability one whenever the returned value is $q$. When these preparations are admissible policies, no realization correct on $S$ satisfies the intervention-stability hypotheses of Theorem 14.4b.
+
+5. **Query-exhaustion discharge.** Let a true completion in the sense of Definition 14.4b.2 have branch preparation set $S$, each $\rho\in S$ carrying the preparation distribution $\mu_\rho$ of Definition 14.4b.1, and let each physically instantiated pre-commit query in $\bar{\mathcal Q}$ have the sealed-core Born realization with which that definition compares its protocol responses. For $Q\in\bar{\mathcal Q}_h$ with $r(Q)<\infty$, $\sigma(Q)<\infty$ and $\tau(Q)<\tau_{\mathrm{commit}}$, its realization satisfies (14.4c.3.2). Consequently every finite correct pre-commit query of the true completion coincides, on every retained protocol, with the committing channel $\Psi$ followed by ordinary Lüders readout of the governed effects, and its returned value is a record of the governed value committed by $\Psi$. If the criterion of item 3 fails, no finite correct pre-commit query exists. The query-exhaustion condition of Theorem 14.4c therefore holds in this exact form on every such true completion.
+
+*Proof.* Item 1 follows by induction on the number of steps. An instrument $(\mathcal A_a)_{a\in A}$ with finite outcome set followed, for each $a$, by an instrument $(\mathcal J^a_b)_{b\in B}$ gives the completely positive family $(\mathcal J^a_b\circ\mathcal A_a)_{(a,b)}$, whose sum is trace preserving because each inner sum is trace preserving. Ancilla adjunction $X\mapsto X\otimes\omega$, relay and delivery channels, and partial traces are CPTP, so composition with them preserves both properties. A stochastic matrix $s(q\mid a)$ gives $\mathcal I_q=\sum_as(q\mid a)\mathcal A_a$, which is completely positive with trace-preserving sum. Both sides of each identity in (14.4c.3.2) are linear in $\rho$, so validity on a spanning subset of $S$ extends to every element of $S$, and in finite dimension every spanning subset contains a finite basis of the span.
+
+For item 2, fix $\rho\in S$ and $q$, and put $X=\mathcal I_q(\rho)\ge0$. If $\operatorname{tr}(G_{1-q}X)=0$, then
+$$
+0=\operatorname{tr}\!\left(G_{1-q}^{1/2}XG_{1-q}^{1/2}\right)
+=\operatorname{tr}\!\left[(X^{1/2}G_{1-q}^{1/2})^*(X^{1/2}G_{1-q}^{1/2})\right],
+$$
+so $X^{1/2}G_{1-q}^{1/2}=0$. Hence $XG_{1-q}=0$ and, taking adjoints, $G_{1-q}X=0$. The range of $X$ lies in $K_q$, and $X=\Pi_qX\Pi_q$. The subspaces $K_0$ and $K_1$ are orthogonal: for $v\in K_0$ and $w\in K_1$, $G_0v=v$ and $G_0w=0$, so $\langle v,w\rangle=\langle G_0v,w\rangle=\langle v,G_0w\rangle=0$. Therefore $\Pi_q\Pi_{1-q}=0$, $\Pi_q\Psi(\rho)\Pi_q=\Pi_q(\mathcal I_0(\rho)+\mathcal I_1(\rho))\Pi_q=\mathcal I_q(\rho)$, and $\Psi(\rho)=\Pi_0\Psi(\rho)\Pi_0+\Pi_1\Psi(\rho)\Pi_1$. Since $0\le G_q\le I$ with $G_q=I$ on $K_q$ and $G_q=0$ on $K_{1-q}$, the spectral theorem gives $G_q^{1/2}\Pi_q=\Pi_q$ and $G_q^{1/2}\Pi_{1-q}=0$, which yields the second expression in (14.4c.3.3). Conversely, $G_{1-q}\Pi_q=0$ makes $\operatorname{tr}[G_{1-q}\Pi_q\Psi(\rho)\Pi_q]=0$. Under (14.4c.3.3), $\operatorname{tr}(G_q\Psi(\rho))=\operatorname{tr}(\Pi_q\Psi(\rho)\Pi_q)=\operatorname{tr}\mathcal I_q(\rho)$, so the first identity in (14.4c.3.2) is the stated law equality. Finally $\sum_qG_q^{1/2}\Psi(\rho)G_q^{1/2}=\sum_q\Pi_q\Psi(\rho)\Pi_q=\Psi(\rho)$.
+
+For item 3, if $\mathcal I$ is correct on $S$ and $\operatorname{tr}(F_q\rho)>0$ for some $\rho\in S$, then $\mathcal I_q(\rho)\ne0$ and item 2 places its range in $K_q$, so $K_q\ne\{0\}$. Conversely, the measure-and-prepare maps are completely positive because $F_q\ge0$, and their sum is trace preserving because $F_0+F_1=I$. The first identity in (14.4c.3.2) holds by construction. The second holds because $G_{1-q}\omega_q=0$ when $K_q\ne\{0\}$, and because the criterion gives $\operatorname{tr}(F_q\rho)=0$ for every $\rho\in S$ when $K_q=\{0\}$. Realizations of queries in $\bar{\mathcal Q}$ are binary instruments of the displayed type by item 1, so the necessity argument applies to them, and a correct instrument contained in that class is a correct realization there.
+
+For item 4, item 3 gives $K_0\ne\{0\}$ and $K_1\ne\{0\}$. After $D_q$, the governed outcome law is
+$$
+\operatorname{tr}\!\left[G_kD_q(\mathcal I_q(\rho))\right]
+=\operatorname{tr}(F_q\rho)\,\langle k_{1-q},G_kk_{1-q}\rangle
+=\operatorname{tr}(F_q\rho)\,\delta_{k,1-q},
+$$
+because $G_{1-q}k_{1-q}=k_{1-q}$ and $G_qk_{1-q}=0$. The returned value and the governed outcome disagree with probability one on $\rho$, so the guarantee required by Theorem 14.4b fails under this diagonal policy.
+
+For item 5, Definition 14.4b.2 equates the joint law of the returned value and every later retained response with that of the Born realization. For $\rho\in S$, the returned value is $Q(\lambda)$, whose law under $\mu_\rho$ is the law of $h(\lambda)$; true completion of the query-free protocol makes that law $\operatorname{tr}(F_q\rho)$. With the returned value unused, the committed outcome is $h(\lambda)$, which equals $Q(\lambda)$ for $\mu_\rho$-almost every $\lambda$, so the Born joint law $\operatorname{tr}[G_k\mathcal I_q(\rho)]$ vanishes for $k\ne q$. This is (14.4c.3.2) on $S$. Item 1 covers every finite relay composite. Every later retained protocol acts on the returned value and on $\mathcal I_q(\rho)$ only, so item 2 gives the stated coincidence on every retained protocol, and item 3 gives absence when its criterion fails. ∎
+
+For a qubit with $F_q=G_q=|q\rangle\langle q|$, the Lüders instrument $\mathcal I_q(\rho)=|q\rangle\langle q|\rho|q\rangle\langle q|$ is correct on every density operator, with $\Psi$ the dephasing channel; it realizes the (QO) alternative. For $F_0=G_0=\operatorname{diag}(3/4,1/4)$ and $F_1=G_1=I-F_0$, both kernels in (14.4c.3.1) vanish, and they vanish on every delivery carrier because a unital Heisenberg image of effects bounded below by $\tfrac14I$ stays bounded below by $\tfrac14I$; so no pre-commit query is correct on any nonempty $S$, and a true completion of this unsharp governed readout has no finite correct pre-commit query, the defining property of (QF). On the Bell branch $S=\{|\Phi^+\rangle\langle\Phi^+|\}$, with $|\Phi^+\rangle=(|00\rangle+|11\rangle)/\sqrt2$ and governed effects $|q\rangle\langle q|\otimes I$ on the first wing, the partner-wing instrument $\mathcal I_q(\rho)=(I\otimes|q\rangle\langle q|)\rho(I\otimes|q\rangle\langle q|)$, relayed to the first wing before its Commit Snapshot, is correct on $S$. Its channel $\Psi$ dephases the partner wing, and $\Pi_q\Psi(|\Phi^+\rangle\langle\Phi^+|)\Pi_q=\tfrac12|qq\rangle\langle qq|$. The same instrument violates the first identity in (14.4c.3.2) at $|0\rangle\otimes|+\rangle$, so its correctness is specific to the branch $S$.
+
+**Resolution TV-DISC-06-R1 (Metadata).** Exact domain: binary governed outcomes on complex-Hilbert-space sealed-core carriers, every branch preparation set $S$, and every finite relay composite of instruments with finite outcome sets, CPTP relay and delivery channels, ancilla adjunctions, partial traces and one-bit stochastic post-processing. Premises: the single outcome map $h$ and the correctness relation $Q=h$ $\mu$-almost everywhere of Definition 14.4b.1, and the sealed-core Born realization of every physically instantiated query required by Definition 14.4b.2. Equivalence: equality of the joint law of the returned value and every later retained response. Budget: one finite composition word per query and the two identities (14.4c.3.2) for each $q$ and each $\rho$ in a subset of $S$ spanning its linear span, finite when $\mathcal H$ is finite-dimensional. Verifier: exact evaluation of (14.4c.3.2) and (14.4c.3.3) on the Kraus or Choi data of the composite over such a spanning subset; when no finite spanning subset exists, this evaluation is a formal verification condition. Falsifier: a correct Born-realized relay composite with $\mathcal I_q(\rho)\ne\Pi_q\Psi(\rho)\Pi_q$ for some $\rho\in S$, a correct realization when the criterion of item 3 fails, or a correct realization that remains intervention-stable under the admissible preparations of item 4. Provenance class: source-internal operator-algebraic classification. Downstream consumers: the query-exhaustion hypothesis of Theorem 14.4c, Corollaries 14.4c.1 and 14.4c.2, and `TV-DISC-06`. Nonvacuity: the qubit Lüders instrument, the unsharp $\operatorname{diag}(3/4,1/4)$ readout, and the partner-wing relay on $|\Phi^+\rangle$. This is `positive-discharge` of the relay-closed query normal-form enumeration and of the coverage of the query-exhaustion condition on this domain: every finite correct pre-commit query lies in the normal form (14.4c.3.3), failure of the kernel criterion of item 3 excludes such a query, and no further surviving class occurs. Item 3 decides existence in the unrestricted Born-instrument class; existence within the query class $\bar{\mathcal Q}$ of a given completion further requires that this class contain a correct instrument, such as the measure-and-prepare instrument; that containment is implementability data of the completion's profile in Definition 14.4b.1.
+
 ## 14.5 Interpretive Implications: The Vacuum as Structured Information
 
 The following interpretations combine proved structural results with the branch and realization certificates stated in each subsection.
@@ -2223,6 +2284,67 @@ is gauge invariant. Put $\alpha=\int_0^{2\pi}a(\theta)\,d\theta$. The function $
 
 Therefore a literal finite equivalence groupoid cannot be both a faithful finite description and orbit-surjective onto this continuum gauge comparison class. A positive bridge must instead restrict the continuum target to finitely many retained orbits or pass through an infinite limit groupoid and separately prove its response, topology, kernel, and surjectivity properties.
 
+**Theorem 14.5.7d (Refinement, Profinite and Retained-Quotient Classification for the $U(1)$ Holonomy Bridge).** Let $\mathcal H$ be the groupoid of smooth $U(1)$ connections on the trivial bundle over $S^1$ modulo gauge transformations, with $\pi_0(\mathcal H)\cong U(1)$ by holonomy as in Theorem 14.5.7c. For $n\ge1$, let $\mathcal G_n$ be the discrete groupoid on $\mathbb Z/n$ and let $F_n:\mathcal G_n\to\mathcal H$ send $k\in\{0,\ldots,n-1\}$ to the constant connection $A_{2\pi k/n}=k\,d\theta/n$ in the notation of the proof of Theorem 14.5.7c, whose holonomy is $e^{2\pi ik/n}$. Then:
+
+1. **Countable refinements.** For every groupoid $\mathcal G$ with countably many isomorphism classes, including the union of an increasing chain of finite groupoids, every functor $F:\mathcal G\to\mathcal H$ has countable image in $\pi_0(\mathcal H)$, so $F$ is not essentially surjective and its orbit cokernel (14.5.7c.1) is uncountable. For the chain $F_{2^j}$, $j\ge0$, the union of the images is the dense countable group of dyadic roots of unity.
+
+2. **Profinite sources.** Every continuous homomorphism from a profinite group into $U(1)$ has finite image. Hence no profinite group maps continuously and homomorphically onto the holonomy group $U(1)$, whose law is $\operatorname{Hol}(A+A')=\operatorname{Hol}(A)\operatorname{Hol}(A')$. The Cantor space $\{0,1\}^{\mathbb N}$ maps continuously onto $U(1)$ by
+$$
+b\longmapsto\exp\!\Big(2\pi i\sum_{k\ge1}b_k2^{-k}\Big),
+\tag{14.5.7d.1}
+$$
+and by the first statement no profinite group structure on $\{0,1\}^{\mathbb N}$ makes this surjection a homomorphism.
+
+3. **Finite retained quotients.** Let $q:U(1)\to R$ be a retained response quantizer onto a finite label set $R$, and suppose every fiber $q^{-1}(r)$ contains an open arc of length at least $\ell>0$. Then for every integer $n>2\pi/\ell$, the composite of $\pi_0(F_n)$ with $q$ is surjective. Thus $F_n$ followed by the quotient of $\mathcal H$ onto the discrete retained groupoid $R$ is essentially surjective, two labels $k,k'$ become isomorphic exactly when $q(e^{2\pi ik/n})=q(e^{2\pi ik'/n})$, and every retained response $q(\operatorname{Hol}(A))$ is attained on the image of $F_n$.
+
+*Proof.* For item 1, a functor induces a function $\pi_0(F):\pi_0(\mathcal G)\to\pi_0(\mathcal H)$, and a function from a countable set has countable image, while $U(1)$ is uncountable. A union of an increasing chain of finite groupoids has countably many objects. The images of $F_{2^j}$ are the $2^j$-th roots of unity, whose union contains $e^{2\pi ia}$ for every dyadic rational $a$ and is therefore dense.
+
+For item 2, let $\phi:\Gamma\to U(1)$ be a continuous homomorphism from a profinite group. The neighborhood $W=\{e^{i\vartheta}:|\vartheta|<2\pi/3\}$ contains no nontrivial subgroup: if $z=e^{i\vartheta}$ with $0<|\vartheta|<2\pi/3$, the least $k\ge1$ with $|k\vartheta|\ge2\pi/3$ satisfies $2\pi/3\le|k\vartheta|<4\pi/3$, so $z^k\notin W$. Open normal subgroups form a neighborhood basis of the identity in a profinite group, so some open normal $N$ lies in $\phi^{-1}(W)$. Then $\phi(N)$ is a subgroup contained in $W$, hence trivial, and $\phi$ factors through the finite group $\Gamma/N$, which is finite because an open subgroup of a compact group has finite index. The holonomy of a connection is $\exp(i\int_{S^1}A)$, which is multiplicative under addition of connections. The map (14.5.7d.1) is the composite of the continuous binary-expansion surjection $\{0,1\}^{\mathbb N}\to[0,1]$ with $t\mapsto e^{2\pi it}$, which maps $[0,1]$ onto $U(1)$.
+
+For item 3, consecutive $n$-th roots of unity are separated by arc length $2\pi/n<\ell$, so every open arc of length at least $\ell$ contains one of them. Each fiber of $q$ therefore meets $\{e^{2\pi ik/n}\}$, which is surjectivity. The objects $k,k'$ have isomorphic images in the discrete quotient exactly when their labels agree. ∎
+
+Theorem 14.5.7d settles the three bridge types for this comparison class. Countable refinements can approximate every orbit arbitrarily closely, as the dyadic chain does, and still miss uncountably many orbits. Profinite sources reach the continuum orbit set only through maps that do not intertwine the holonomy group law. Finite retained quotients whose fibers contain open arcs are reached at the explicit finite stage $n>2\pi/\ell$.
+
+**Resolution TV-DISC-09-R1 (Metadata).** Exact domain: the $U(1)$ holonomy comparison groupoid on $S^1$ of Theorem 14.5.7c, all groupoids with countably many isomorphism classes, all profinite groups with continuous homomorphisms into $U(1)$, and all finite quantizers whose fibers contain open arcs of length at least $\ell>0$. Premises: Theorem 14.5.7c's holonomy identification of $\pi_0(\mathcal H)$. Equivalence: isomorphism in $\mathcal H$ and equality of retained labels in $R$. Budget: one functor per source and the stage $n>2\pi/\ell$. Verifier: cardinality comparison, the no-small-subgroup argument for $W$, and root-of-unity spacing. Falsifier: an essentially surjective functor from a groupoid with countable $\pi_0$, a continuous homomorphism from a profinite group with infinite image in $U(1)$, or a quantizer fiber with an arc of length at least $\ell$ missed by $F_n$ with $n>2\pi/\ell$. Provenance class: source-internal groupoid and topological-group classification. Downstream consumers: Theorem 14.5.7c, the Discrete-Continuous Correspondence clarification, Appendix X's assumed gauge-subspace map, and `TV-DISC-09`. Nonvacuity: the dyadic chain $F_{2^j}$, the $2$-adic integers as a profinite source, the surjection (14.5.7d.1), and the $N$-arc quantizer with $\ell=2\pi/N$. This is `negative-refutation` of essentially surjective countable-refinement bridges and of continuous homomorphic profinite bridges onto $U(1)$, and `positive-discharge` of the finite retained-quotient bridge on this class. Nonabelian and higher-dimensional gauge targets, the admitted retained quantizer of the physical gauge sector, and the response-faithful realization of the bridge remain `N+M+C+R` under `TV-DISC-09`.
+
+**Proposition 14.5.7e (Exact Gibbs Ledger of Stabilizer and Marked Vacua).** Let $H_S$ and $H_{S,\zeta}$ be the Hamiltonians (14.5.7a.1) and (14.5.7a.2) of Theorem 14.5.7a, let $\beta>0$ be the inverse temperature in units of their unit gap, and put
+$$
+p_\beta=\frac{e^{-\beta}}{1+e^{-\beta}}.
+\tag{14.5.7e.1}
+$$
+For $\mathbf s\in\{0,1\}^r$, let $\Pi_{\mathbf s}=\prod_j\bigl(I+(-1)^{s_j}S_j\bigr)/2$ be the syndrome projector. Then:
+
+1. $\operatorname{tr}e^{-\beta H_S}=2^{n-r}(1+e^{-\beta})^r$, and the Gibbs state is
+$$
+\rho_\beta=\sum_{\mathbf s\in\{0,1\}^r}\prod_{j=1}^rp_\beta^{s_j}(1-p_\beta)^{1-s_j}\,\frac{\Pi_{\mathbf s}}{2^{n-r}}.
+\tag{14.5.7e.2}
+$$
+Its syndrome bits are independent with $P(s_j=1)=p_\beta$, it is maximally mixed on every syndrome sector, and therefore every Hermitian Pauli logical operator $L$ commuting with all $S_j$ and outside $\pm$ the stabilizer group has $\operatorname{tr}(\rho_\beta L)=0$. The code-space weight is $(1+e^{-\beta})^{-r}\le e^{-rp_\beta}$.
+
+2. For $H_{S,\zeta}$, the $n$ commuting Pauli operators $S_1,\ldots,S_r,\zeta_1\overline Z_1,\ldots,\zeta_{n-r}\overline Z_{n-r}$ are independent, $\operatorname{tr}e^{-\beta H_{S,\zeta}}=(1+e^{-\beta})^n$, and under the Gibbs state $\rho_\beta^{\zeta}$ their $\pm1$ values are independent, each equal to $-1$ with probability $p_\beta$. The marked ground state has Gibbs weight $(1+e^{-\beta})^{-n}$, and every marked logical operator has thermal polarization
+$$
+\operatorname{tr}\bigl(\rho_\beta^{\zeta}\,\zeta_a\overline Z_a\bigr)=\tanh(\beta/2),
+\qquad
+a=1,\ldots,n-r,
+\tag{14.5.7e.3}
+$$
+independently of $n$ and $r$.
+
+3. For $0<\varepsilon<1$ and $L_\varepsilon=-\ln(1-\varepsilon)$, the code-space weight is at least $1-\varepsilon$ exactly when $\beta\ge\beta_r(\varepsilon):=-\ln\bigl(e^{L_\varepsilon/r}-1\bigr)$, and
+$$
+\ln\frac r{L_\varepsilon}-\frac{L_\varepsilon}r
+\le\beta_r(\varepsilon)
+\le\ln\frac r{L_\varepsilon}.
+\tag{14.5.7e.4}
+$$
+Along any family with $r\to\infty$ at fixed $\beta$, the vacuum occupation of $H_S$ and the marked ground-state occupation of $H_{S,\zeta}$ tend to zero.
+
+*Proof.* The terms of $H_S$ commute, so $e^{-\beta H_S}=\prod_j\bigl[(I+S_j)/2+e^{-\beta}(I-S_j)/2\bigr]=\sum_{\mathbf s}e^{-\beta|\mathbf s|}\Pi_{\mathbf s}$. Because the generators are independent and $-I$ is absent, nondegeneracy of the symplectic commutation form supplies, for each $\mathbf s$, a Pauli operator anticommuting exactly with the $S_j$ having $s_j=1$; conjugation by it maps $\Pi_{\mathbf 0}$ onto $\Pi_{\mathbf s}$, so every $\Pi_{\mathbf s}$ has the rank $2^{n-r}$ of the code space in Theorem 14.5.7a. Taking the trace gives $2^{n-r}\sum_{\mathbf s}e^{-\beta|\mathbf s|}=2^{n-r}(1+e^{-\beta})^r$, and dividing gives (14.5.7e.2), a product of Bernoulli weights with parameter $p_\beta$. A Pauli logical operator $L$ outside $\pm$ the stabilizer group anticommutes with some Pauli operator $M$ commuting with every $S_j$, because the symplectic double complement of the span of the stabilizer generators is that span; hence $M\Pi_{\mathbf s}M^*=\Pi_{\mathbf s}$ and $\operatorname{tr}(\Pi_{\mathbf s}L)=-\operatorname{tr}(\Pi_{\mathbf s}L)=0$. The inequality $\ln(1+x)\ge x/(1+x)$ gives $(1+e^{-\beta})^{-r}\le e^{-rp_\beta}$. Item 2 applies the same computation to the $n$ operators $S_1,\ldots,S_r,\zeta_1\overline Z_1,\ldots,\zeta_{n-r}\overline Z_{n-r}$, which Theorem 14.5.7a supplies as an independent commuting Pauli family; sign changes of generators preserve independence and the absence of $-I$, and the sectors have rank one; the factor for $\zeta_a\overline Z_a$ gives $(1-p_\beta)-p_\beta=\tanh(\beta/2)$. For item 3, $(1+e^{-\beta})^{-r}\ge1-\varepsilon$ is equivalent to $\ln(1+e^{-\beta})\le L_\varepsilon/r$, hence to $e^{-\beta}\le e^{L_\varepsilon/r}-1$. The bounds $y\le e^y-1\le ye^y$ at $y=L_\varepsilon/r$ give (14.5.7e.4), and item 1's exponential bound gives the limit. ∎
+
+Proposition 14.5.7e settles the equilibrium ledger of every stabilizer vacuum of Theorem 14.5.7a. The literal vacuum carries Gibbs weight at least $1-\varepsilon$ exactly for $\beta\ge\beta_r(\varepsilon)$, which grows like $\ln r$ by (14.5.7e.4); the unmarked Gibbs state carries no logical marking, and a marking term held in the Hamiltonian retains the $n$-independent polarization (14.5.7e.3). Dynamical memory stability under local thermal coupling, locality of the marking terms, and stability under extensive perturbations are separate obligations.
+
+**Resolution TV-DISC-07-R1 (Metadata).** Exact domain: every Hamiltonian (14.5.7a.1) and (14.5.7a.2) of Theorem 14.5.7a at every inverse temperature $\beta>0$ in gap units. Premises: independence and commutativity of the stabilizer and logical generators and absence of $-I$. Equivalence: equality of Gibbs states and of syndrome and logical expectation values. Budget: one sum over $2^r$ syndrome sectors, reduced to a product. Verifier: exact trace evaluation of (14.5.7e.2) and the elementary bounds used for (14.5.7e.4). Falsifier: a stabilizer Hamiltonian of Theorem 14.5.7a whose Gibbs partition function differs from $2^{n-r}(1+e^{-\beta})^r$, a nonzero unmarked logical expectation, or a marked polarization different from $\tanh(\beta/2)$. Provenance class: source-internal exact statistical-mechanical calculation. Downstream consumers: Theorem 14.5.7a, Section 14.5.1's error-correcting-code reading of the vacuum, and `TV-DISC-07`. Nonvacuity: the $[[4,2,2]]$ code with generators $XXXX,ZZZZ$ and marked logicals $ZZII,ZIZI$. This is `positive-discharge` of the equilibrium thermodynamic ledger and `negative-refutation` of fixed-temperature occupation stability of the literal vacuum for families with $r\to\infty$. The marked Golay-to-Leech carrier, dynamical thermal-memory stability under local coupling, locality of the marking terms, extensive-perturbation and tunneling stability, and the response-faithful realization remain `M+C+R` under `TV-DISC-07`.
+
 ## 14.5.8 Paradox-Avoidance Residue and the Statistics of Self-Referential Observation
 
 #### Historical Background
@@ -2612,6 +2734,68 @@ $$
 The zero-sum subspace has dimension $m-1$, and a neighborhood of its origin supplies distinct decompositions with identical retained responses. Hence no functional of the mixture law alone can recover either component. ∎
 
 The theorem does not alter the hard-core support construction. It proves that a separately identifiable passive residue requires additional forward-locked information, such as a known active kernel, an intervention family with a proved exclusion restriction, or an orthogonal parametric constraint. Projective consistency and support exclusion alone do not supply that information, so the actualization, reflexive-depth, and no-signaling obligations remain open.
+
+**Theorem 14.5.8i (Intervention-Design Classification for Passive/Active Separation).** Let $Y$ be a finite outcome set with $|Y|=m\ge2$, and let $\mathcal C$ be a finite nonempty set of retained protocol settings. Suppose that each $c\in\mathcal C$ observes
+$$
+P^{(c)}=\lambda_cP_{\mathrm{act}}^{(c)}+(1-\lambda_c)P_{\mathrm{pass}},
+\qquad
+0<\lambda_c<1,
+\tag{14.5.8i.1}
+$$
+with every weight $\lambda_c$ known and one passive law $P_{\mathrm{pass}}$ common to all settings, which is the exclusion restriction. Then:
+
+1. **Known active law.** If $P_{\mathrm{act}}^{(c_0)}$ is known for one $c_0\in\mathcal C$, then
+$$
+P_{\mathrm{pass}}=\frac{P^{(c_0)}-\lambda_{c_0}P_{\mathrm{act}}^{(c_0)}}{1-\lambda_{c_0}},
+\qquad
+P_{\mathrm{act}}^{(c)}=\frac{P^{(c)}-(1-\lambda_c)P_{\mathrm{pass}}}{\lambda_c}
+\quad(c\in\mathcal C).
+$$
+
+2. **Invariant active law with weight variation.** If $P_{\mathrm{act}}^{(c)}=P_{\mathrm{act}}$ for every $c$ and $\lambda_{c_1}\ne\lambda_{c_2}$, then
+$$
+P_{\mathrm{pass}}=\frac{\lambda_{c_1}P^{(c_2)}-\lambda_{c_2}P^{(c_1)}}{\lambda_{c_1}-\lambda_{c_2}},
+\qquad
+P_{\mathrm{act}}=\frac{(1-\lambda_{c_2})P^{(c_1)}-(1-\lambda_{c_1})P^{(c_2)}}{\lambda_{c_1}-\lambda_{c_2}}.
+\tag{14.5.8i.2}
+$$
+If estimates satisfy $\lVert\widehat P^{(c_j)}-P^{(c_j)}\rVert_1\le\varepsilon_j$ for $j=1,2$, the values obtained by inserting them into (14.5.8i.2) obey
+$$
+\lVert\widehat P_{\mathrm{pass}}-P_{\mathrm{pass}}\rVert_1
+\le\frac{\lambda_{c_1}\varepsilon_2+\lambda_{c_2}\varepsilon_1}{|\lambda_{c_1}-\lambda_{c_2}|},
+\qquad
+\lVert\widehat P_{\mathrm{act}}-P_{\mathrm{act}}\rVert_1
+\le\frac{(1-\lambda_{c_2})\varepsilon_1+(1-\lambda_{c_1})\varepsilon_2}{|\lambda_{c_1}-\lambda_{c_2}|}.
+\tag{14.5.8i.3}
+$$
+
+3. **Constant weight.** If $P_{\mathrm{act}}^{(c)}=P_{\mathrm{act}}$ for every $c$, all weights are equal, and the common law $P^{(c)}$ lies in the interior of the simplex, then Theorem 14.5.8h applies to that common law, and the pair $(P_{\mathrm{act}},P_{\mathrm{pass}})$ has a local fiber of dimension at least $m-1$.
+
+4. **Unconstrained active laws.** If $P_{\mathrm{pass}}$ and every $P_{\mathrm{act}}^{(c)}$ lie in the interior of the simplex, then for every nonzero $h\in\mathbb R^Y$ with $\sum_yh_y=0$ and small enough norm, the laws
+$$
+P_{\mathrm{pass}}-h,
+\qquad
+P_{\mathrm{act}}^{(c)}+\frac{1-\lambda_c}{\lambda_c}\,h
+\quad(c\in\mathcal C)
+\tag{14.5.8i.4}
+$$
+are probability laws that reproduce every $P^{(c)}$ in (14.5.8i.1). Without a known active law or a cross-setting constraint on the active laws, the exclusion restriction and the known weights therefore leave a local fiber of dimension at least $m-1$ for $P_{\mathrm{pass}}$.
+
+*Proof.* Item 1 solves (14.5.8i.1) at $c_0$ for $P_{\mathrm{pass}}$, which is possible because $\lambda_{c_0}<1$, and then solves each setting for its active law, which is possible because $\lambda_c>0$. For item 2, substitution of (14.5.8i.1) gives
+$$
+\lambda_{c_1}P^{(c_2)}-\lambda_{c_2}P^{(c_1)}=(\lambda_{c_1}-\lambda_{c_2})P_{\mathrm{pass}},
+\qquad
+(1-\lambda_{c_2})P^{(c_1)}-(1-\lambda_{c_1})P^{(c_2)}=(\lambda_{c_1}-\lambda_{c_2})P_{\mathrm{act}},
+$$
+and division by $\lambda_{c_1}-\lambda_{c_2}\ne0$ proves (14.5.8i.2). The same linear combinations applied to the estimation errors, together with the triangle inequality, prove (14.5.8i.3). In item 3 every setting observes the same law $\lambda P_{\mathrm{act}}+(1-\lambda)P_{\mathrm{pass}}$, so Theorem 14.5.8h gives the stated fiber. For item 4,
+$$
+\lambda_c\left(P_{\mathrm{act}}^{(c)}+\frac{1-\lambda_c}{\lambda_c}h\right)+(1-\lambda_c)(P_{\mathrm{pass}}-h)=P^{(c)},
+$$
+the zero-sum condition preserves total mass one, and interiority preserves nonnegativity for every sufficiently small $h$ because $\mathcal C$ is finite. Distinct $h$ give distinct passive laws, and the zero-sum subspace has dimension $m-1$. ∎
+
+Theorem 14.5.8i classifies the intervention designs that separate the passive component under the exclusion restriction: a design with a known active law at one setting, or with an invariant active law and two distinct known weights, identifies it, with the error propagation (14.5.8i.3). An exclusion restriction on the passive law alone leaves the fiber (14.5.8i.4).
+
+**Resolution TV-DISC-10-R1 (Metadata).** Exact domain: finite outcome sets with $m\ge2$, finite nonempty setting designs, known weights in $(0,1)$ and a setting-invariant passive law, with active laws known at one setting, setting-invariant, or unconstrained. Premises: the mixture representation (14.5.8i.1) and Theorem 14.5.8h. Equivalence: equality of every retained setting law $P^{(c)}$. Budget: one linear solve per design and the $\ell^1$ error propagation (14.5.8i.3). Verifier: exact rational substitution into (14.5.8i.1)--(14.5.8i.4). Falsifier: two distinct passive laws reproducing the same design data under item 1 or item 2, or a failure of (14.5.8i.4) to reproduce some $P^{(c)}$. Provenance class: source-internal finite identifiability classification. Downstream consumers: Conjecture 14.5.8, Theorem 14.5.8h, the Experimental Signature paragraph of Section 14.5.8, and `TV-DISC-10`. Nonvacuity: $m=3$, $P_{\mathrm{act}}=(1/2,1/3,1/6)$, $P_{\mathrm{pass}}=(1/5,2/5,2/5)$, $\lambda\in\{1/4,2/3\}$ for item 2, and the zero-sum shift $h=(1/100,-1/100,0)$ for item 4. This is `positive-discharge` of identification under the designs of items 1 and 2 and `nonentailment` of passive-law identification from the exclusion restriction and known weights without an active-law constraint. The actualization map, the reflexive-depth dependence, physical realization of the known weights, the passive-law exclusion restriction, and a known active law or active-law invariance, and the no-signaling marginal certificate remain `N+M+C+R` under `TV-DISC-10`.
 
 #### Experimental Signature
 

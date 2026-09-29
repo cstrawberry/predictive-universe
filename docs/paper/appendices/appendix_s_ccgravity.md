@@ -251,6 +251,61 @@ K_{\mathrm{eff}}:=\frac K{\tau_c}
 $$
 The fully retained specialization has $\eta_{\mathrm{ret}}=1$. For $w_c=1/3$, the prefactor is $8\pi G/(3c^4)$. A finite-separation or physical timing certificate must also carry the spatial truncation and metric errors.
 
+**Theorem S.1b (Complete Static Source: Laue Identity, Confinement Stress and Exterior Active Mass).** Use inertial coordinates with $x^0=ct$. Let $T^{\mu\nu}$ be the complete symmetric stress-energy of a retained context source, including every confinement and boundary stress, given as a static ($\partial_0T^{\mu\nu}=0$) tensor-valued distribution on $\mathbb R^3$ with compact support $\mathcal K$, and conserved, $\partial_\mu T^{\mu\nu}=0$. For $\chi\in C_c^\infty(\mathbb R^3)$ equal to $1$ on a neighbourhood of $\mathcal K$, write $\int T^{\mu\nu}:=\langle T^{\mu\nu},\chi\rangle$ and $E:=\int T^{00}$.
+
+(a) *(Laue identity.)* $\int T^{ij}=0$ for all $i,j$.
+
+(b) *(Exterior active mass.)* The active density of (S.13) applied to the complete tensor, $\rho_{\mathrm{act}}:=(T^{00}+\sum_iT^{ii})/c^2$, has total mass $E/c^2$. If $T^{ij}=wT^{00}\delta^{ij}$ on $\mathcal K$ with constant $w$ and $E\ne0$, then $w=0$. If $\rho_{\mathrm{act}}$ is a spherically symmetric finite signed measure, the weak-field potential solving $\nabla^2\Phi=4\pi G\rho_{\mathrm{act}}$ with $\Phi\to0$ at infinity equals $-GE/(c^2r)$ outside the support.
+
+(c) *(Unique spherical confinement stress.)* Write a spherically symmetric static stress as $T^{ij}=\sigma_rn^in^j+\sigma_t(\delta^{ij}-n^in^j)$ with $n=x/r$. On $r>0$, conservation holds exactly when
+$$
+\sigma_t=\frac1{2r}\frac{d}{dr}\bigl(r^2\sigma_r\bigr).
+\tag{S.1b.1}
+$$
+For the uniform radial stress $\sigma_r=p\,\mathbf 1_{r<R_S}$ with $p\ge0$, the unique conserved completion is
+$$
+\sigma_t=p\,\mathbf 1_{r<R_S}-\frac{pR_S}{2}\,\delta(r-R_S),
+\tag{S.1b.2}
+$$
+a thin confining shell with surface tension $pR_S/2$, whose integrated stress trace $-3pV_S$ cancels the fluid value $3pV_S$.
+
+(d) *(Nominated geometry.)* Let the source be the uniform ball of (S.6)--(S.7), with $T^{00}=u_{\mathrm{context}}$ and isotropic pressure $p_{\mathrm{context}}=w_cu_{\mathrm{context}}$ on $r<R_S$, completed by the shell of (c) carrying surface energy density $\sigma_E\ge0$. Then $E=u_{\mathrm{context}}V_S+4\pi R_S^2\sigma_E$, and the unique weak-field potential is
+$$
+\Phi(r)=
+\begin{cases}
+-\dfrac{GE}{c^2R_S}-\dfrac{2\pi G}{3c^2}(1+3w_c)u_{\mathrm{context}}\bigl(R_S^2-r^2\bigr),&0\le r\le R_S,\\[2ex]
+-\dfrac{GE}{c^2r},&r\ge R_S.
+\end{cases}
+\tag{S.1b.3}
+$$
+Hence the interior field (S.15) and the clock comparisons (S.16)--(S.20) hold unchanged on the complete confined source, while its exterior active mass is $E/c^2$, independent of $w_c$.
+
+*Proof.* (a) Staticity reduces conservation to $\partial_kT^{kj}=0$. For each $i$, $x^i\chi$ is a test function, so
+$$
+0=\langle\partial_kT^{kj},x^i\chi\rangle
+=-\langle T^{ij},\chi\rangle-\langle T^{kj},x^i\partial_k\chi\rangle,
+$$
+and the last term vanishes because $\partial_k\chi=0$ on a neighbourhood of $\mathcal K$.
+
+(b) The trace of (a) gives $\int\sum_iT^{ii}=0$, so the active mass is $E/c^2$. The isotropic form gives $\int\sum_iT^{ii}=3wE$, which forces $w=0$ when $E\ne0$. For a spherically symmetric measure, Gauss's law gives the exterior potential $-GM_{\mathrm{act}}/r$ with $M_{\mathrm{act}}=E/c^2$.
+
+(c) With $\partial_jn^i=(\delta^{ij}-n^in^j)/r$, one has $\partial_j(n^in^j)=2n^i/r$ and $\partial_j(\delta^{ij}-n^in^j)=-2n^i/r$, while $\partial_j\sigma=\sigma'n^j$. Hence
+$$
+\partial_jT^{ij}=n^i\left[\sigma_r'+\frac{2}{r}(\sigma_r-\sigma_t)\right],
+$$
+which vanishes exactly under (S.1b.1). For $\sigma_r=p\,\mathbf 1_{r<R_S}$, $(r^2\sigma_r)'=2rp\,\mathbf 1_{r<R_S}-pR_S^2\delta(r-R_S)$, which gives (S.1b.2), and $\sigma_t$ is determined by $\sigma_r$. The integrated trace is $3p\cdot\tfrac43\pi R_S^3+2(-pR_S/2)4\pi R_S^2=0$, as (a) requires.
+
+(d) By (c), $T^{00}=u_{\mathrm{context}}\mathbf 1_{r<R_S}+\sigma_E\delta(r-R_S)$ and $\sum_iT^{ii}=3p_{\mathrm{context}}\mathbf 1_{r<R_S}-p_{\mathrm{context}}R_S\delta(r-R_S)$, so
+$$
+\rho_{\mathrm{act}}=\frac{(1+3w_c)u_{\mathrm{context}}}{c^2}\mathbf 1_{r<R_S}
++\frac{\sigma_E-p_{\mathrm{context}}R_S}{c^2}\delta(r-R_S).
+$$
+Gauss's law inside the ball encloses only the uniform term, which gives (S.15); the shell lies outside every interior sphere. Outside, (b) gives $-GE/(c^2r)$. Continuity at $R_S$ and radial integration of (S.15) give the interior branch of (S.1b.3), which satisfies the Poisson equation on each region, and the flux jump at $R_S$ equals the shell's active surface density. The decaying solution of the Poisson equation is unique, and differences of the interior branch reproduce (S.16). ∎
+
+**Resolution TV-S-02-R1 (Metadata).** Exact domain: static, compactly supported, conserved complete stress-energy distributions in flat space; their spherically symmetric subclass; and the confined uniform-ball source of Theorem S.1b(d). Premises: symmetry, staticity and distributional conservation of the complete tensor, and the active-density model (S.13) applied to that complete tensor. Equivalence: sources are compared by their complete tensors and active-density measures. Budget: every component $T^{ij}$, every radial-stress profile and every radius. Verifier: the test-function identity in (a), the radial divergence formula, the integrated trace in (c) and Gauss's law. Falsifier: a static, conserved, compactly supported tensor with $\int T^{ij}\ne0$; a conserved spherical stress violating (S.1b.1); or a complete static source whose exterior active mass differs from $E/c^2$. Provenance class: source-internal distributional identity and unique completion. Downstream consumers: Section S.2, Equation (S.9), Section S.3, Theorem L.3 (whose isotropic active-density model applied to a complete static isolated tensor requires $w=0$ by (b)), Theorem L.6a and `TV-S-02`. Nonvacuity: every $u_{\mathrm{context}}>0$, $p\ge0$ and $\sigma_E\ge0$ gives the source of (d). Theorem S.1b gives `positive-discharge` of the static boundary-stress partition: the confinement sector is uniquely fixed by the retained radial stress, the integrated stresses cancel, and the complete source enters the exterior active mass once as $E/c^2$; it gives `negative-refutation` of a complete, flat-space-conserved, static isolated source that is an isotropic fluid with $w\ne0$. The target remains live for its M+C+R+O components: the metric-variation source of an actual carrier action, the radiated, reset and thermal sectors of time-dependent operation, and their physical realization and observable map.
+
+**Resolution TV-S-03-R1 (Metadata).** Exact domain: the nominated uniform spherical retained source completed by the confining shell of Theorem S.1b(c), at linearized weak-field order, for all interior and exterior radii. Premises: Theorem S.1b(a)--(c), the active-density model (S.13) and the decaying Poisson problem. Equivalence: geometries are compared by their weak-field potentials. Budget: every $u_{\mathrm{context}}>0$, $w_c\in[0,1]$, $\sigma_E\ge0$ and $R_S>0$, and every pair of clock radii. Verifier: the Poisson equation on each region, continuity at $R_S$, the flux jump equal to the shell's active surface density, and the interior difference reproducing (S.16). Falsifier: a second decaying solution or an interior clock difference differing from (S.16). Provenance class: source-internal exact boundary-value solution. Downstream consumers: Sections S.3 and S.6, Theorem S.3, Section L.11.5 and `TV-S-03`. Nonvacuity: every positive parameter tuple. Theorem S.1b(d) gives `positive-discharge` of the nominated boundary-value geometry at linearized weak-field order, with the exact interior clock transfer and exterior potential. The target remains live for its M+C+R+O components: a certified nonlinear weak-field error, the calibrated clock/phase transfer with its covariance, and the physical realization of the source.
+
 ## S.4 PCE Optimization and Self-Limiting $\text{CC}^*$
 
 Assume a calibrated unresolved-phase or noise ensemble converts the gravitational proper-time spread into an effective attenuation and that its small-response law is linear:
@@ -490,6 +545,46 @@ On the bounded-bias CC branch, no finite system can increase operational CC with
 - the nondegenerate weak-field perturbative ceiling $\mathrm{CC}<\mathrm{CC}_{WF}$.
 
 Thus arbitrary CC enhancement is excluded on the intersection of the independently bounded-bias branch and the two finite-system branches. The endpoint gate excludes endpoint-complete binary forcing, while the gravitational ceilings control physical viability and perturbative validity.
+
+**Theorem S.2a (Causal Finite-Energy Binary-Bias Channels and Sharp Ceilings).** Let a target qubit have Hamiltonian $H_T=\hbar\omega|e\rangle\langle e|$ with $\omega>0$, and let a battery have Hamiltonian $H_B$ with orthonormal eigenvectors $|E-\hbar\omega\rangle,|E\rangle,|E+\hbar\omega\rangle$ at the displayed energies, $E\ge\hbar\omega$, initially in $|E\rangle_B$. For $\theta\in[0,\pi/2]$ let $U_\theta^+$ act on the equal-energy pair $|g,E\rangle,|e,E-\hbar\omega\rangle$ by
+$$
+|g,E\rangle\mapsto\cos\theta\,|g,E\rangle-i\sin\theta\,|e,E-\hbar\omega\rangle,
+\qquad
+|e,E-\hbar\omega\rangle\mapsto\cos\theta\,|e,E-\hbar\omega\rangle-i\sin\theta\,|g,E\rangle,
+\tag{S.2a.1}
+$$
+and as the identity on the orthogonal complement; let $U_\theta^-$ act in the same way on the equal-energy pair $|e,E\rangle,|g,E+\hbar\omega\rangle$. Put $\Phi_\theta^\pm(\rho):=\operatorname{tr}_B[U_\theta^\pm(\rho\otimes|E\rangle\langle E|)U_\theta^{\pm\dagger}]$, let the context $c\in\{0,1\}$ select the identity channel for $c=0$ and $\Phi_\theta^\pm$ for $c=1$, and support both in one bounded world tube containing the target and battery. Then:
+
+(a) $[U_\theta^\pm,H_T+H_B]=0$; each $\Phi_\theta^\pm$ is CPTP, and for every spacelike factor $R$ the nonselective marginal of $R$ is unchanged, as in (L.12.8b.13). With $p:=\langle e|\rho|e\rangle$, the pumping channel gives $p\mapsto p+(1-p)\sin^2\theta$ and lowers the mean battery energy by $\hbar\omega(1-p)\sin^2\theta\le\hbar\omega$; the damping channel gives $p\mapsto p\cos^2\theta$ and raises it by $\hbar\omega p\sin^2\theta\le\hbar\omega$.
+
+(b) $L_\theta^\pm:=\Phi_\theta^\pm-\mathrm{id}$ is a Definition-30 map with
+$$
+\mathrm{CC}(L_\theta^\pm)=\sin^2\theta.
+\tag{S.2a.2}
+$$
+Hence every value in $[0,1]$ is the CC of a causal, energy-conserving, finite-energy binary-bias channel, and the value $1$ is attained at $\theta=\pi/2$.
+
+(c) For a binary endpoint with Born probability $p$, the endpoint probabilities realized by these channels form the whole interval $[0,1]$, so the realized bias set is exactly $[-p,1-p]$. Every Definition-30 map formed as a difference of two CPTP maps has CC at most $1$. Thus $1$ is the sharp ceiling for causal finite-energy binary-bias channels.
+
+(d) Consequently Definition 30, local CPTP implementation, nonselective remote-marginal invariance and a conserved finite energy ledger do not entail $\mathrm{CC}\le\alpha$ for any $\alpha<1$, and in particular do not entail $\alpha_{CC,\max}<1/2$. The bounded-bias premise of Definition 31, item 2 is logically independent of these premises.
+
+(e) On the branch of Theorem S.2, the set of $\mathrm{CC}\in[0,\alpha)$ satisfying (S.31) is exactly $[0,\mathrm{CC}_{BH})$, and the set satisfying $K_{\mathrm{eff}}P_{\mathrm{context}}<\delta_{\mathrm{WF}}$ is exactly $[0,\mathrm{CC}_{\mathrm{WF}})$. Both gravitational ceilings are sharp and are not attained.
+
+*Proof.* (a) The two vectors in (S.2a.1) are orthonormal eigenvectors of $H_T+H_B$ with the common eigenvalue $E$, so $U_\theta^+$ is a rotation inside one eigenspace, extended by the identity on the invariant orthogonal complement; it is unitary and commutes with $H_T+H_B$. The same argument applies to $U_\theta^-$ with common eigenvalue $E+\hbar\omega$. The Kraus operators of $\Phi_\theta^+$ are $\langle E|U_\theta^+|E\rangle=\cos\theta|g\rangle\langle g|+|e\rangle\langle e|$ and $\langle E-\hbar\omega|U_\theta^+|E\rangle=-i\sin\theta|e\rangle\langle g|$, whose squared moduli sum to $I$. They give the stated population map and coherence map $\rho_{eg}\mapsto\cos\theta\,\rho_{eg}$, and the second Kraus branch leaves the battery at $E-\hbar\omega$ with probability $(1-p)\sin^2\theta$. The damping channel is identical with $g$ and $e$ exchanged and the battery raised by $\hbar\omega$. Trace preservation gives unital Heisenberg adjoints, which proves remote-marginal invariance exactly as in (L.12.8b.13).
+
+(b) Differences of trace-preserving Hermiticity-preserving maps are trace-annihilating and Hermiticity-preserving. For the pumping channel,
+$$
+L_\theta^+(\rho)=(1-p)\sin^2\theta\,\bigl(|e\rangle\langle e|-|g\rangle\langle g|\bigr)+(\cos\theta-1)\bigl(\rho_{eg}|e\rangle\langle g|+\rho_{ge}|g\rangle\langle e|\bigr),
+$$
+a traceless Hermitian qubit operator with $\tfrac14\|L_\theta^+(\rho)\|_1^2=(1-p)^2\sin^4\theta+(1-\cos\theta)^2|\rho_{eg}|^2$. Since $|\rho_{eg}|^2\le p(1-p)$ and $0\le1-\cos\theta\le(1-\cos\theta)(1+\cos\theta)=\sin^2\theta$, this is at most $(1-p)\sin^4\theta\le\sin^4\theta$, with equality at $\rho=|g\rangle\langle g|$. Corollary 9.1 gives (S.2a.2); the damping channel is the same computation with $g$ and $e$ exchanged.
+
+(c) For a target value $p'\ge p$ with $p<1$, choose $\sin^2\theta=(p'-p)/(1-p)$ in the pumping channel; for $p'\le p$ with $p>0$, choose $\cos^2\theta=p'/p$ in the damping channel. No channel produces a probability outside $[0,1]$. For CPTP maps $\Phi_1,\Phi_0$, $\tfrac12\|\Phi_1(\rho)-\Phi_0(\rho)\|_1\le1$, so Corollary 9.1 bounds CC by $1$.
+
+(d) At $\theta=\pi/2$, the pair $(\mathrm{id},\Phi_{\pi/2}^+)$ satisfies every listed premise and has $\mathrm{CC}=1$ by (b). No derivation from those premises can therefore conclude $\mathrm{CC}\le\alpha<1$.
+
+(e) On $[0,\alpha)$ the map $x\mapsto x/(\alpha-x)$ is a strictly increasing bijection onto $[0,\infty)$, and all quantities in the proof of Theorem S.2 are positive. Each displayed inequality there is therefore equivalent to the next, so $r_s<R_S$ holds exactly when $\mathrm{CC}<\mathrm{CC}_{BH}$ and the weak-field inequality holds exactly when $\mathrm{CC}<\mathrm{CC}_{\mathrm{WF}}$. At either ceiling the corresponding strict inequality fails. ∎
+
+**Resolution TV-S-06-R1 (Metadata).** Exact domain: qubit targets with gap $\hbar\omega>0$, three-level energy batteries with $E\ge\hbar\omega$, the energy-conserving pumping and damping families (S.2a.1) with $\theta\in[0,\pi/2]$, every input state and every spacelike factor; all Definition-30 maps formed as differences of two CPTP maps; and the collapse and weak-field sets of Theorem S.2 on $[0,\alpha)$. Premises: Definition 30, Corollary 9.1, local CPTP implementation in one bounded world tube, conservation of $H_T+H_B$, and the hypotheses of Theorem S.2 for part (e). Equivalence: binary-bias channels are compared by their Definition-30 maps and energy ledgers. Budget: every CC value in $[0,1]$, every endpoint probability, and every point of $[0,\alpha)$ for the gravitational sets. Verifier: eigenspace invariance and commutation of $U_\theta^\pm$, the two Kraus operators, the trace-norm computation, the bias interpolation in (c), and monotonicity of $x/(\alpha-x)$. Falsifier: failure of energy conservation or trace preservation; a CC value differing from $\sin^2\theta$; an endpoint probability in $[0,1]$ not realized; or a CC value in $[0,\mathrm{CC}_{BH})$ violating (S.31). Provenance class: source-internal finite construction, sharp-ceiling classification and logical-independence countermodel. Downstream consumers: Definition 31, item 2; Theorem 39; Theorem S.2; Corollary S.2.1; and `TV-S-06`. Nonvacuity: $\theta=\pi/2$ with any $\omega>0$ and $E\ge\hbar\omega$. Theorem S.2a gives `positive-discharge` of the classification of the attainable CC values and bias sets of causal finite-energy binary-bias channels, with sharp ceiling $1$, and of the sharp gravitational ceilings $\mathrm{CC}_{BH}$ and $\mathrm{CC}_{\mathrm{WF}}$; it gives `negative-refutation` of a universal causal or finite-stress-energy ceiling below $1$ and `nonentailment` of $\alpha_{CC,\max}<1/2$ from those premises. The target remains live for its C+R components: a registered carrier response law from which a strict ceiling $\alpha_{CC,\max}<1/2$ follows for a populated physical carrier class, and the physical realization of that class.
 
 ## S.6 Non-Local Gravitational Influence via Entanglement
 
@@ -791,6 +886,43 @@ Either record excludes $\mathfrak K_{\mathrm{cl}}$ for the registered protocol. 
 
 **Remark S.6.1 (Selective Records and the Trace-Preserving Branch).** A record conditioned on acceptance with probability strictly between zero and one is a selective-subensemble record. Its normalized selective formula alone supplies no local CPTP certificate for Theorems S.1 and S.3. Within $\mathfrak K_{\mathrm{cl}}$, the full-ensemble mean obeys Lemma S.6.1d(ii) when its measurability and integrability conditions hold. If all outcomes are accepted, the record is a full-ensemble record and must separately satisfy the applicable marginal and no-signaling constraints; normalization alone does not place it outside the trace-preserving branch. A spatially superposed source with probe-blind postselection in a nonorthogonal source basis is a proposed realization of (S.6.1e.1) on a coherent-mediator branch (Saldanha, Marletto and Vedral 2026). Its exclusion from $\mathfrak K_{\mathrm{cl}}$ requires a response that cannot be represented in the configuration-diagonal product form (S.6.1c.1), and its positive impulse requires a separate response certificate.
 
+**Proposition S.6.1f (Causal Bosonic-Mediator Realization of Definition S.6.1a).** Let $A$ and $B$ be qubits with $Z|0\rangle=|0\rangle$, $Z|1\rangle=-|1\rangle$ and spectral projectors $\Pi^{+1}=|0\rangle\langle0|$, $\Pi^{-1}=|1\rangle\langle1|$, and let the mediator $M$ be one bosonic mode with displacements $D(\gamma)=\exp(\gamma a^\dagger-\bar\gamma a)$. For $X\in\{A,B\}$ put $C_X(\gamma):=\sum_{z=\pm1}\Pi^z_X\otimes D(z\gamma)$. Choose bounded world tubes $W_1\prec W_2\prec W_3\prec W_4$ containing the mediator together with $B$, $A$, $B$ and $A$ respectively, apply
+$$
+U_1=C_B(-\beta),\quad U_2=C_A(-\alpha),\quad U_3=C_B(\beta),\quad U_4=C_A(\alpha)
+\tag{S.6.1f.1}
+$$
+in those tubes with identity extension on every other factor, and let the mediator start in an arbitrary state $\sigma_M$.
+
+(a) With $\theta:=2\operatorname{Im}(\alpha\bar\beta)$,
+$$
+U_4U_3U_2U_1=e^{i\theta Z_A\otimes Z_B}\otimes I_M,
+\tag{S.6.1f.2}
+$$
+so the joint $AB$ channel is exactly a controlled phase and the mediator returns to $\sigma_M$ uncorrelated with $AB$.
+
+(b) From $|+\rangle_A|+\rangle_B$, the ideal output $\sigma_\Phi$ has the diagonal phase intervals $I_{00}=I_{11}=\{\theta\}$ and $I_{01}=I_{10}=\{-\theta\}$, so
+$$
+\Phi=8\operatorname{Im}(\alpha\bar\beta),
+\qquad
+\mathcal N(\sigma_\Phi)=\tfrac12\bigl|\sin\bigl(4\operatorname{Im}(\alpha\bar\beta)\bigr)\bigr|.
+\tag{S.6.1f.3}
+$$
+
+(c) Let the actual process be any composition $\mathcal V_7\circ\cdots\circ\mathcal V_1$ of CPTP maps on $A\otimes B\otimes M$ whose ideal counterparts $\mathcal W_1,\ldots,\mathcal W_7$ are conjugation by $U_1$, the identity, conjugation by $U_2$, the identity, conjugation by $U_3$, the identity and conjugation by $U_4$, the identities representing the three mediator transits. Then the actual output $\rho_{\mathrm{out}}$ satisfies (S.6.1a.1) with
+$$
+\epsilon_N:=\sum_{k=1}^7\|\mathcal V_k-\mathcal W_k\|_\diamond,
+\tag{S.6.1f.4}
+$$
+where $\|\cdot\|_\diamond$ is the completely bounded trace norm. Whenever $\tfrac12|\sin(4\operatorname{Im}(\alpha\bar\beta))|-\epsilon_N>0$, the tuple of (S.6.1f.1)--(S.6.1f.4) populates Definition S.6.1a with a strictly positive margin, Proposition S.6.1b gives $\mathcal N(\rho_{\mathrm{out}})>0$, and Corollary S.6.1e(a) excludes every representation in $\mathfrak K_{\mathrm{cl}}$.
+
+*Proof.* (a) Since $[a,a^\dagger]=1$, the commutator $[\gamma a^\dagger-\bar\gamma a,\delta a^\dagger-\bar\delta a]=\gamma\bar\delta-\bar\gamma\delta$ is a scalar, and $D(\gamma)D(\delta)=e^{(\gamma\bar\delta-\bar\gamma\delta)/2}D(\gamma+\delta)$. On the sector $\Pi^{z_A}_A\otimes\Pi^{z_B}_B$ the product (S.6.1f.1) acts on $M$ by $D(z_A\alpha)D(z_B\beta)D(-z_A\alpha)D(-z_B\beta)$. Two applications of the composition law give $e^{(\gamma\bar\delta-\bar\gamma\delta)/2}D(\gamma+\delta)$ and $e^{(\gamma\bar\delta-\bar\gamma\delta)/2}D(-\gamma-\delta)$ for $\gamma=z_A\alpha$, $\delta=z_B\beta$, and their product is $e^{\gamma\bar\delta-\bar\gamma\delta}I=e^{2iz_Az_B\operatorname{Im}(\alpha\bar\beta)}I$. Summing over sectors gives (S.6.1f.2).
+
+(b) The output is $\tfrac12\sum_{z_A,z_B}e^{i\theta z_Az_B}|z_Az_B\rangle$, whose phases are the displayed intervals, and $\Phi=I_{00}+I_{11}-I_{01}-I_{10}=4\theta$. Proposition S.6.1b gives the negativity.
+
+(c) For CPTP maps, $\|\mathcal X\circ\mathcal Y\|_\diamond\le\|\mathcal X\|_\diamond\|\mathcal Y\|_\diamond$ and $\|\mathcal V_k\|_\diamond=\|\mathcal W_k\|_\diamond=1$, so the telescoping identity $\mathcal V_7\cdots\mathcal V_1-\mathcal W_7\cdots\mathcal W_1=\sum_k\mathcal V_7\cdots\mathcal V_{k+1}(\mathcal V_k-\mathcal W_k)\mathcal W_{k-1}\cdots\mathcal W_1$ bounds the difference by $\epsilon_N$. Applying both maps to $|{+}{+}\rangle\langle{+}{+}|\otimes\sigma_M$ and tracing out $M$, which contracts the trace norm, gives $\|\rho_{\mathrm{out}}-\sigma_\Phi\|_1\le\epsilon_N$ by (a). The remaining conclusions are Proposition S.6.1b and Corollary S.6.1e(a). ∎
+
+**Resolution TV-S-09-R1 (Metadata).** Exact domain: two qubits and one bosonic mediator mode with the four local controlled displacements (S.6.1f.1) in strictly ordered bounded world tubes, every initial mediator state, every complex $\alpha,\beta$, and every CPTP deviation of the seven stages with finite completely bounded trace-norm distance. Premises: the displacement composition law, submultiplicativity of the completely bounded trace norm, Proposition S.6.1b and Corollary S.6.1e(a). Equivalence: implementations are compared by their $AB$ output channels and by (S.6.1a.1)--(S.6.1a.2). Budget: all four phase sectors, all seven stages and every input of the mediator. Verifier: the sectorwise group-commutator identity, the phase intervals, the negativity formula and the telescoping bound. Falsifier: a residual mediator correlation in (S.6.1f.2), a phase differing from (S.6.1f.3), an output violating (S.6.1f.4), or a nonpositive margin. Provenance class: source-internal finite-mode causal construction. Downstream consumers: Definition S.6.1a, Proposition S.6.1b, Corollary S.6.1e(a), `TV-EXP-10` and `TV-S-09`. Nonvacuity: $\alpha=\beta e^{i\pi/2}$ with $|\beta|^2=\pi/8$ gives $\Phi=\pi$ and the ideal margin $\tfrac12$. Proposition S.6.1f gives `positive-discharge` of a populated causal mediator implementation with source-to-channel response $\Phi=8\operatorname{Im}(\alpha\bar\beta)$, four phase intervals, normalized output, trace-distance noise bound and strictly positive certified margin in the bosonic-mediator class, with the product-response representation excluded. The target remains live for the metric identification: derivation of $\alpha$ and $\beta$ from source masses, separations and a causal linearized-gravity mode function, and population of $\epsilon_N$ for a physical platform; the source-superposition impulse certificate remains owned by `TV-EXP-10`.
+
 ## S.7 Conditional Gravitational Phase and Dephasing Mechanisms
 
 A deterministic time-dilation gradient produces a coherent relative phase. Decay of off-diagonal density-matrix elements requires an additional phase-ensemble average, unresolved source fluctuation, source trace, or saturated chronometric ND-RID response law. These branches are distinguished below.
@@ -933,6 +1065,87 @@ Dividing its magnitude by $\tau_c$ and imposing the saturated branch law gives $
 
 If a protocol changes the internal gap while retaining the same nonzero proper-time geometry and branch mass-density difference, this conditional linear gap law differs from a model whose rate depends only on that mass-density difference. Those common-geometry and source conditions require independent experimental control.
 
+**Theorem S.7.3b (Classification of Population-Preserving Phase and Dephasing Channels).** Let a system have finite dimension $n\ge2$ and orthonormal energy eigenbasis $\{|i\rangle\}$ with energies $E_i$. Write $\langle a,b\rangle:=a^\dagger b$,
+$$
+\mathfrak E_n:=\{M\in\mathbb C^{n\times n}:M\succeq0,\ M_{ii}=1\},
+\qquad
+\Phi_M(\rho):=M\circ\rho,
+\tag{S.7.3b.1}
+$$
+where $\circ$ is the entrywise product in the energy basis.
+
+(a) *(Channel form.)* A linear map $\Phi$ is CPTP and satisfies $\Phi(|i\rangle\langle i|)=|i\rangle\langle i|$ for every $i$ exactly when $\Phi=\Phi_M$ for a unique $M\in\mathfrak E_n$, namely $M_{ij}=\langle i|\Phi(|i\rangle\langle j|)|j\rangle$.
+
+(b) *(Environmental trace.)* For every environment state $\sigma_E$ and unitaries $V_i$ on $E$, the energy-diagonal coupling $U=\sum_i|i\rangle\langle i|\otimes V_i$ gives
+$$
+\operatorname{tr}_E\!\left[U(\rho\otimes\sigma_E)U^\dagger\right]=\Phi_M(\rho),
+\qquad
+M_{ij}=\operatorname{tr}(V_i\sigma_EV_j^\dagger).
+\tag{S.7.3b.2}
+$$
+Conversely, every $M\in\mathfrak E_n$ of rank $r$ is realized in this way with $\dim E=r$ and a pure $\sigma_E$.
+
+(c) *(Deterministic phase.)* $\Phi_M$ is a unitary channel exactly when $M=vv^\dagger$ with $|v_i|=1$, equivalently when $|M_{ij}|=1$ for all $i,j$. Every other $\Phi_M$ has a pair $i\ne j$ with $|M_{ij}|<1$ and strictly lowers $|\rho_{ij}|$ for every state with $\rho_{ij}\ne0$. In particular, the deterministic gravitational phase $v_i=e^{-iE_i\Delta\tau_{\mathrm{diff}}/\hbar}$ of Equation (S.53) preserves every coherence modulus.
+
+(d) *(Stochastic phase.)* $\Phi_M=\mathbb E[U_X(\cdot)U_X^\dagger]$ for a random diagonal unitary $U_X=\sum_ie^{-iX_i}|i\rangle\langle i|$ exactly when $M$ lies in the convex hull of $\{vv^\dagger:|v_i|=1\}$; then $M_{ij}=\mathbb E[e^{-i(X_i-X_j)}]$, and finite mixtures suffice. For $n\le3$ every $M\in\mathfrak E_n$ has this form. For $n=4$, the Gram matrix
+$$
+M_4:=\bigl(\langle w_i,w_j\rangle\bigr)_{i,j=1}^4,
+\qquad
+w_1=\begin{pmatrix}1\\0\end{pmatrix},\
+w_2=\begin{pmatrix}0\\1\end{pmatrix},\
+w_3=\frac1{\sqrt2}\begin{pmatrix}1\\1\end{pmatrix},\
+w_4=\frac1{\sqrt2}\begin{pmatrix}1\\i\end{pmatrix},
+\tag{S.7.3b.3}
+$$
+lies in $\mathfrak E_4$, has rank two, and is not such a mixture; hence $\Phi_{M_4}$ is not a mixture of unitary channels, and by (b) it is an environmental trace with a qubit environment. For every $n\ge4$, $M_4\oplus I_{n-4}$ lies in $\mathfrak E_n$ outside the stochastic-phase hull.
+
+(e) *(Markov semigroups.)* Let $\omega_i\in\mathbb R$ and let $\Gamma$ be real symmetric with zero diagonal. The family $M(t)_{ij}=e^{-it(\omega_i-\omega_j)-t\Gamma_{ij}}$ lies in $\mathfrak E_n$ for every $t\ge0$ exactly when $\Gamma$ is conditionally negative semidefinite:
+$$
+\sum_{i,j}\bar x_ix_j\Gamma_{ij}\le0
+\qquad\text{whenever}\qquad
+\sum_ix_i=0.
+\tag{S.7.3b.4}
+$$
+Then $\Phi_{M(t+s)}=\Phi_{M(t)}\circ\Phi_{M(s)}$, so $t\mapsto\Phi_{M(t)}$ is a CPTP semigroup with pairwise coherence decay rates $\Gamma_{ij}$.
+
+(f) *(Gap laws and the chronometric branch.)* For $\kappa>0$ and $\beta\ge0$, the gap law $\Gamma_{ij}=\kappa|E_i-E_j|^\beta$ for $i\ne j$, with $\Gamma_{ij}=\kappa$ for all $i\ne j$ when $\beta=0$, satisfies (S.7.3b.4) for every finite spectrum exactly when $0\le\beta\le2$; for $\beta>2$ the spectrum $\{0,\epsilon,2\epsilon\}$ with $\epsilon>0$ violates it. The saturated chronometric rates of Theorem S.7.3a, $\Gamma_{ij}=q_\tau|E_i-E_j|/\hbar$, are the case $\beta=1$ with $\kappa=q_\tau/\hbar$. For every $n$ and spectrum they are realized by the stochastic phase $X_i=E_iY_t/\hbar$, where the proper-time slip $Y_t$ has the centered Cauchy law of scale $q_\tau t$ (the point mass at $0$ when $q_\tau t=0$):
+$$
+\mathbb E\!\left[e^{-i(E_i-E_j)Y_t/\hbar}\right]
+=e^{-q_\tau t|E_i-E_j|/\hbar}.
+\tag{S.7.3b.5}
+$$
+A centered Gaussian slip of variance $s_t^2$ gives instead $M_{ij}=e^{-s_t^2(E_i-E_j)^2/(2\hbar^2)}$, the quadratic gap law of the variance branch (S.56).
+
+*Proof.* (a) Let $\{K_k\}$ be Kraus operators of $\Phi$. Each $K_k|i\rangle\langle i|K_k^\dagger$ is positive and bounded above by the rank-one projector $|i\rangle\langle i|$, so its range lies in $\operatorname{span}\{|i\rangle\}$ and $K_k|i\rangle=d_{k,i}|i\rangle$. Every Kraus operator is therefore diagonal, and
+$$
+\Phi(\rho)_{ij}=\sum_kd_{k,i}\bar d_{k,j}\rho_{ij},
+\qquad
+M:=\sum_kd_kd_k^\dagger\succeq0,
+$$
+while trace preservation gives $M_{ii}=\sum_k|d_{k,i}|^2=1$. Conversely, a spectral decomposition $M=\sum_kd_kd_k^\dagger$ supplies diagonal Kraus operators $\operatorname{diag}(d_k)$ with $\sum_k\operatorname{diag}(|d_k|^2)=I$, and $\Phi_M$ fixes each $|i\rangle\langle i|$. Evaluation on $|i\rangle\langle j|$ gives uniqueness.
+
+(b) Expansion gives $U(\rho\otimes\sigma_E)U^\dagger=\sum_{i,j}\rho_{ij}|i\rangle\langle j|\otimes V_i\sigma_EV_j^\dagger$, and the partial trace gives (S.7.3b.2). The matrix $M_{ij}=\operatorname{tr}[(V_j\sigma_E^{1/2})^\dagger(V_i\sigma_E^{1/2})]$ is a Hilbert–Schmidt Gram matrix with $M_{ii}=\operatorname{tr}\sigma_E=1$, so $M\in\mathfrak E_n$. For the converse, factor $M=W^\dagger W$ with $W\in\mathbb C^{r\times n}$ of rank $r$ and unit columns $w_i$, put $u_i:=\bar w_i$, so that $\langle u_j,u_i\rangle=M_{ij}$, fix a unit vector $\psi\in\mathbb C^r$, choose unitaries with $V_i\psi=u_i$, and take $\sigma_E=|\psi\rangle\langle\psi|$.
+
+(c) A unitary channel fixing each $|i\rangle\langle i|$ has $U|i\rangle\propto|i\rangle$, so $U=\operatorname{diag}(v)$ with $|v_i|=1$ and $M=vv^\dagger$; conversely $vv^\dagger$ gives that unitary and $|v_iv_j^*|=1$. If $|M_{ij}|=1$ for all $i,j$, factor $M=W^\dagger W$ with unit columns; equality in the Cauchy–Schwarz inequality makes every column a unimodular multiple of $w_1$, so $M$ has rank one and equals $vv^\dagger$ with $|v_i|=1$. Positivity of each $2\times2$ principal minor gives $|M_{ij}|\le1$, and $|(M\circ\rho)_{ij}|=|M_{ij}||\rho_{ij}|$ gives the strict decrease.
+
+(d) A random diagonal unitary gives $\Phi_M$ with $M=\mathbb E[vv^\dagger]$, $v_i=e^{-iX_i}$; this lies in the convex hull of the compact set $\{vv^\dagger:|v_i|=1\}$, which is compact in finite dimension, and Carathéodory's theorem reduces it to a finite mixture. A finite mixture is a finitely supported random phase vector. Let $M\in\mathfrak E_n$ be an extreme point and factor $M=W^\dagger W$ as in (b). If the projectors $w_iw_i^\dagger$ did not span the real space of $r\times r$ Hermitian matrices, a nonzero Hermitian $K$ would satisfy $w_i^\dagger Kw_i=0$ for all $i$; for small $\epsilon>0$ the matrices $W^\dagger(I\pm\epsilon K)W$ would lie in $\mathfrak E_n$, average to $M$, and differ from $M$ because $W$ has rank $r$. Hence $n\ge r^2$. For $n\le3$ every extreme point has rank one and equals $vv^\dagger$ with $|v_i|=1$, and the compact convex set $\mathfrak E_n$ is the convex hull of its extreme points. For (S.7.3b.3), the projectors $w_iw_i^\dagger$ generate $I$, $\sigma_z$, $\sigma_x$ and $\sigma_y$, so they span the Hermitian $2\times2$ matrices. If $M_4=\lambda A+(1-\lambda)B$ with $A,B\in\mathfrak E_4$ and $0<\lambda<1$, then $0\le\lambda A\le M_4$ puts the range of $A$ inside the range of $W^\dagger$, so $A=W^\dagger HW$ with $H\succeq0$. The unit diagonal gives $\operatorname{tr}[(H-I)w_iw_i^\dagger]=0$ for every $i$, hence $H=I$ and $A=M_4$. Thus $M_4$ is extreme, and a decomposition into rank-one unimodular matrices would consist of $M_4$ itself, contradicting rank two. If $\Phi_{M_4}=\mathbb E[U(\cdot)U^\dagger]$ for a random unitary $U$, then $\mathbb E[|\langle j|U|i\rangle|^2]=0$ for $j\ne i$, so $U$ is almost surely diagonal and $\Phi_{M_4}$ would be a stochastic-phase channel. A decomposition of $M_4\oplus I_{n-4}$ would restrict on the first four indices to one of $M_4$.
+
+(e) Conjugation by $\operatorname{diag}(e^{-it\omega_i})$ preserves $\mathfrak E_n$, so only the entrywise exponential $e^{-t\Gamma}$ matters. If $\Gamma$ satisfies (S.7.3b.4), put $K_{ij}:=\Gamma_{i1}+\Gamma_{1j}-\Gamma_{ij}$. For $y\in\mathbb C^n$ and $s=\sum_jy_j$, the vector $x=y-se_1$ has zero sum and $y^\dagger Ky=-x^\dagger\Gamma x\ge0$, so $K\succeq0$. The Schur product theorem makes $e^{\circ tK}=\sum_{m\ge0}t^mK^{\circ m}/m!$ positive, and
+$$
+e^{-t\Gamma_{ij}}=e^{-t\Gamma_{i1}}\bigl(e^{\circ tK}\bigr)_{ij}e^{-t\Gamma_{1j}}
+$$
+exhibits $e^{-t\Gamma}$ as a real diagonal congruence of that positive matrix, with unit diagonal. Conversely, if $e^{-t\Gamma}\succeq0$ for all $t>0$ and $\sum_ix_i=0$, then $x^\dagger(J-e^{-t\Gamma})x\le0$ for the all-ones matrix $J$; dividing by $t$ and letting $t\downarrow0$ gives (S.7.3b.4). The semigroup law is $M(t)\circ M(s)=M(t+s)$.
+
+(f) For $0<\beta<2$, the substitution $u=|x|s$ gives
+$$
+|x|^\beta=c_\beta^{-1}\int_0^\infty\bigl(1-\cos(xs)\bigr)s^{-1-\beta}\,ds,
+\qquad
+c_\beta:=\int_0^\infty(1-\cos u)u^{-1-\beta}\,du\in(0,\infty).
+$$
+For each $s$, the matrix $\cos((E_i-E_j)s)=\operatorname{Re}\bigl(e^{iE_is}e^{-iE_js}\bigr)$ is positive and $J$ vanishes on zero-sum vectors, so $1-\cos((E_i-E_j)s)$ satisfies (S.7.3b.4); integration against the positive weight preserves it. For $\beta=2$, zero-sum vectors give $\sum_{i,j}\bar x_ix_j(E_i-E_j)^2=-2|\sum_ix_iE_i|^2$. For $\beta=0$, they give $\kappa\sum_{i\ne j}\bar x_ix_j=-\kappa\sum_i|x_i|^2$. For $\beta>2$, the spectrum $\{0,\epsilon,2\epsilon\}$ and $x=(1,-2,1)$ give the value $2\kappa\epsilon^\beta(2^\beta-4)>0$. Equation (S.7.3b.5) is the Cauchy characteristic function $\mathbb E[e^{iuY_t}]=e^{-q_\tau t|u|}$ at $u=-(E_i-E_j)/\hbar$, and the Gaussian formula is the Gaussian characteristic function; by (d) both define stochastic-phase channels. ∎
+
+**Resolution TV-S-04-R1 (Metadata).** Exact domain: finite-dimensional systems with a fixed orthonormal energy eigenbasis; every CPTP map fixing each energy projector; every family $M(t)$ with Hamiltonian phases and a real symmetric zero-diagonal rate matrix; every power gap law with $\kappa>0$ and $\beta\ge0$; the zero rate matrix of $\kappa=0$ satisfies (S.7.3b.4) for every $\beta$. Premises: the Kraus representation, the Schur product theorem, finite-dimensional convexity (Carathéodory and extreme-point representation) and the Cauchy and Gaussian characteristic functions. Equivalence: channels agreeing on every matrix unit; semigroups with equal phase and rate matrices. Budget: every $n\ge2$, every complex correlation matrix and every finite spectrum, with the $n=4$ separation witness (S.7.3b.3) and the three-level $\beta>2$ witness. Verifier: the diagonal-Kraus argument, Gram factorization, Cauchy–Schwarz equality, the extreme-point count $n\ge r^2$, the Pauli span of $w_iw_i^\dagger$, the congruence identity in (e) and the displayed quadratic forms. Falsifier: a population-preserving CPTP map outside Schur form; a nonunitary $\Phi_M$ with every $|M_{ij}|=1$; a rank-two extreme point of $\mathfrak E_3$; a rank-one unimodular decomposition of $M_4$; a violation of (S.7.3b.4) for some $\beta\le2$; or a $\beta>2$ law with $\kappa>0$ satisfying it on $\{0,\epsilon,2\epsilon\}$. Provenance class: source-internal complete classification with explicit separation and realization witnesses. Downstream consumers: Section S.7.3, Theorem S.7.3a, Equations (S.58)--(S.63), `TV-S-05`, the R19 separation from `TV-CONT-09`, and `TV-S-04`. Nonvacuity: the all-ones matrix (identity channel) and $I_n$ (complete dephasing) lie in $\mathfrak E_n$ for every $n\ge2$, and $M_4\oplus I_{n-4}$ witnesses the separation for every $n\ge4$. Theorem S.7.3b gives `positive-discharge` of the S1 classification of CPTP channels generated by deterministic phase, stochastic phase, environmental trace and the saturated chronometric ND–RID law; part (c) proves that a pure unitary lowers no coherence modulus, and part (d) proves strict separation of the environmental-trace and stochastic-phase classes for $n\ge4$. The target remains live for its C+R components: the certificate identifying which class a registered gravitational source populates, with its slip law and scale such as $q_\tau$, and the physical realization of that source-to-channel map.
+
 Assume the baseline and gravitational decoherence channels are independent Markovian channels with exponential coherence factors
 $$
 e^{-t/\tau_{\mathrm{coh}}^0}
@@ -1036,6 +1249,64 @@ $$
 7. Section S.4 additionally assumes the phenomenological utility $B_{net}$.
 
 Equation S.21 and Equation S.64 have the same linear form only after the additional calibration $\mathrm{CC}_{ideal}=\mathrm{CC}$ and $K_\Gamma=K_{eff}$.
+
+**Theorem S.7.4a (Microscopic Coherence Response and Complete-Objective Optimum).**
+
+(a) *(Coherence-carried response.)* Let the target be a qubit with energy basis $\{|0\rangle,|1\rangle\}$ and gap $\Delta E\ne0$. Let the ideal context response $L_{\mathrm{ideal}}$ be a Definition-30 map every output of which is off-diagonal in the energy basis; this holds whenever the two contexts act on a common input by context-dependent diagonal unitaries. Let the gravitational noise act after the context response on both branches by a population-preserving CPTP map $\Phi_M$ of Theorem S.7.3b(a). Then $L_{\mathrm{eff}}:=\Phi_M\circ L_{\mathrm{ideal}}$ is a Definition-30 map and
+$$
+\mathrm{CC}_{\mathrm{eff}}=|M_{01}|\,\mathrm{CC}_{\mathrm{ideal}}.
+\tag{S.7.4a.1}
+$$
+On the saturated chronometric branch (S.57), with the semigroup of Theorem S.7.3b(e)--(f) acting over the window $\tau_c$,
+$$
+\mathrm{CC}_{\mathrm{eff}}=\mathrm{CC}_{\mathrm{ideal}}\,e^{-K_cP_{\mathrm{context}}},
+\qquad
+K_c:=\frac{|\Delta E|}{\hbar}K_{\mathrm{eff}}\tau_c,
+\tag{S.7.4a.2}
+$$
+and $K_c$ is the coefficient $K_\Gamma$ of (S.60) at $\tau_{\mathrm{coh}}^0=\tau_c$. With $y:=K_cP_{\mathrm{context}}\ge0$,
+$$
+0\le e^{-y}-(1-y)\le\frac{y^2}{2},
+\qquad
+0\le\frac1{1+y}-e^{-y}\le\frac{y^2}{2}.
+\tag{S.7.4a.3}
+$$
+Thus the linear law (S.64) and the rational law (S.63) agree with (S.7.4a.2) through first order in $y$, with these explicit remainders.
+
+(b) *(Complete objective on the full interval.)* Let $A,K,k_b>0$, $k_c\ge0$ and $\alpha=\alpha_{CC,\max}$, and let $R$ be one of $R_{\mathrm{lin}}(y)=1-y$, $R_{\mathrm{rat}}(y)=(1+y)^{-1}$ or $R_{\mathrm{exp}}(y)=e^{-y}$. With the complete cost law (S.5), define on $[0,\alpha)$
+$$
+B_R(\mathrm{CC}):=k_b\,\mathrm{CC}\,R\bigl(KP_{\mathrm{context}}(\mathrm{CC})\bigr)-k_cP_{\mathrm{context}}(\mathrm{CC}).
+\tag{S.7.4a.4}
+$$
+Then $B_R$ has exactly one maximizer $\mathrm{CC}^*_R\in(0,\alpha)$; it is strictly increasing on $[0,\mathrm{CC}^*_R]$ and strictly decreasing on $[\mathrm{CC}^*_R,\alpha)$. Explicitly, $\mathrm{CC}^*_R=\alpha s_*/(1+s_*)$, where, with $\kappa:=KA$ and $c:=2k_cA/(k_b\alpha)$, $s_*$ is the unique positive root of
+$$
+\begin{aligned}
+R_{\mathrm{lin}}:&\quad 1-3\kappa s^2-2\kappa s^3=c\,s(1+s)^2,\\
+R_{\mathrm{rat}}:&\quad 1-\kappa s^2-2\kappa s^3=c\,s(1+s)^2(1+\kappa s^2)^2,\\
+R_{\mathrm{exp}}:&\quad (1-2\kappa s^2-2\kappa s^3)e^{-\kappa s^2}=c\,s(1+s)^2.
+\end{aligned}
+\tag{S.7.4a.5}
+$$
+
+*Proof.* (a) Composition of the CPTP map $\Phi_M$ with a Hermitian-preserving, trace-annihilating map preserves both properties, so $L_{\mathrm{eff}}$ satisfies Definition 30, and by linearity it is the difference of the two noisy context branches. A context-dependent diagonal unitary preserves populations, so $L_{\mathrm{ideal}}(\rho)=U_1\rho U_1^\dagger-U_0\rho U_0^\dagger$ is off-diagonal. An off-diagonal Hermitian qubit operator $X$ with entry $X_{01}=\delta$ has eigenvalues $\pm|\delta|$, so $\|X\|_1=2|\delta|$, while $\Phi_M(X)$ has entry $M_{01}\delta$ and trace norm $2|M_{01}||\delta|$. Corollary 9.1 and the supremum over density operators give (S.7.4a.1). On the chronometric branch, Theorem S.7.3b(e)--(f) gives $|M_{01}|=e^{-\Gamma_{\mathrm{ch}}\tau_c}$, and (S.57) gives $\Gamma_{\mathrm{ch}}\tau_c=K_cP_{\mathrm{context}}$, proving (S.7.4a.2); substitution of $\tau_{\mathrm{coh}}^0=\tau_c$ in (S.60) gives $K_\Gamma=K_c$. For (S.7.4a.3), Taylor's theorem gives $e^{-y}-(1-y)=e^{-\xi}y^2/2\in[0,y^2/2]$ for some $\xi\in[0,y]$, and $e^y\ge1+y$ gives $(1+y)^{-1}-e^{-y}\ge0$. The function $h(y):=y^2/2-(1+y)^{-1}+e^{-y}$ has $h(0)=h'(0)=0$ and $h''(y)=1+e^{-y}-2(1+y)^{-3}$. For $y\ge1$, $h''(y)\ge1-2/8>0$. For $0\le y\le1$, $e^{-y}\ge1-y$ gives $h''(y)\ge[(2-y)(1+y)^3-2]/(1+y)^3\ge0$, because $(2-y)(1+y)^3$ equals $2$ at $y=0$ and has derivative $(1+y)^2(5-4y)>0$ on $[0,1]$. Hence $h'\ge0$ and $h\ge0$.
+
+(b) The map $s\mapsto\alpha s/(1+s)$ is a strictly increasing bijection of $[0,\infty)$ onto $[0,\alpha)$, under which (S.5) becomes $P_{\mathrm{context}}=As^2$. In the variable $s$, $B_R=k_b\alpha\varphi_R(s)-k_cAs^2$ with $\varphi_R(s):=sR(\kappa s^2)/(1+s)$, and
+$$
+\frac{dB_R}{ds}=k_b\alpha s\bigl(h_R(s)-c\bigr),
+\qquad
+h_R(s):=\frac{\varphi_R'(s)}{s}=N_R(s)w_R(s),
+$$
+where direct differentiation gives $N_{\mathrm{lin}}=1-3\kappa s^2-2\kappa s^3$, $N_{\mathrm{rat}}=1-\kappa s^2-2\kappa s^3$, $N_{\mathrm{exp}}=1-2\kappa s^2-2\kappa s^3$ and
+$$
+w_{\mathrm{lin}}=\frac1{s(1+s)^2},
+\qquad
+w_{\mathrm{rat}}=\frac1{s(1+s)^2(1+\kappa s^2)^2},
+\qquad
+w_{\mathrm{exp}}=\frac{e^{-\kappa s^2}}{s(1+s)^2}.
+$$
+Each $N_R$ decreases strictly from $1$ to $-\infty$ on $(0,\infty)$ and has one zero $s_0$; each $w_R$ is positive and strictly decreasing. On $(0,s_0)$, $h_R$ is a product of two positive strictly decreasing functions and decreases strictly from $+\infty$ to $0$; on $(s_0,\infty)$ it is negative. Therefore $h_R(s)=c$ has exactly one root $s_*\in(0,s_0]$, with $s_*=s_0$ exactly when $k_c=0$, and $dB_R/ds$ is positive on $(0,s_*)$ and negative on $(s_*,\infty)$. Transport through the increasing bijection proves the monotonicity statement and (S.7.4a.5). ∎
+
+**Resolution TV-S-05-R1 (Metadata).** Exact domain: (a) qubit targets whose ideal Definition-30 response has only energy-off-diagonal outputs, followed on both context branches by a population-preserving CPTP noise map, with the chronometric semigroup specialization over $\tau_c$; (b) the complete objective (S.7.4a.4) on the full interval $[0,\alpha)$ with the global quadratic cost (S.5), every $A,K,k_b>0$ and $k_c\ge0$, and the three response laws $R_{\mathrm{lin}},R_{\mathrm{rat}},R_{\mathrm{exp}}$. Premises: Definition 30, Corollary 9.1, Theorem S.7.3b, Equations (S.5), (S.57) and (S.60). Equivalence: response maps are compared by their operational norms and objectives by their values on $[0,\alpha)$. Budget: every input state, every coherence factor $M_{01}$, every parameter tuple and every point of the interval. Verifier: the trace norm of off-diagonal qubit operators, the Taylor and convexity arguments for (S.7.4a.3), and the factorization $h_R=N_Rw_R$ with its strict monotonicity. Falsifier: an off-diagonal response whose noisy norm differs from $|M_{01}|$ times its ideal norm; a parameter tuple with two local maximizers or a supremum approached at $\mathrm{CC}\uparrow\alpha$; or a violation of (S.7.4a.3). Provenance class: source-internal exact derivation and global optimization. Downstream consumers: Section S.4, whose truncated surrogate (S.27) is complemented by the complete-objective root (S.7.4a.5); Section S.7.4; the utility-selection ledger of Section S.8.2; and `TV-S-05`. Nonvacuity: a context-dependent Stark or gravitational phase unitary on the input $(|0\rangle+|1\rangle)/\sqrt2$ supplies a nonzero off-diagonal response, and every admissible parameter tuple supplies a maximizer. Theorem S.7.4a gives `positive-discharge` of the microscopic coherence-carried response and remainder on the declared qubit class and of the global, strict optimization of the complete objective over the full interval for the three registered response laws. The target remains live for its M component, the multilevel response law, for which trace-norm contractivity of $\Phi_M$ supplies an upper envelope, and for its C+R components: population of $k_b$, $k_c$, $A$ and $K$ (or $K_c$) and the physical realization of the coherence-carried carrier.
 
 ## S.8 Integration with Appendix L
 
@@ -1154,6 +1425,32 @@ Appendices L and S supply carrier, resource and response models on their stated 
 Fix common source, target, geometry, retention, timing, and uncertainty data. Preregister an electromagnetic response surface and a gravitational response surface, including all nuisance channels and the domain on which the two are identifiable. Vary radiated power, retained total power, distance, modulation frequency, and electromagnetic screening independently when feasible. Electromagnetic screening is a differential control for the declared EM path; the equivalence principle does not prove that every gravitational response is unshieldable in every effective or engineered model.
 
 Compare the two models by a declared likelihood or finite-distance statistic with a stopping rule and multiplicity correction. A result supports one registered model only if it rejects the other within the shared uncertainty ledger; nonidentifiability or rejection of both leaves the carrier question open.
+
+**Proposition S.8.4b (Identifiable Electromagnetic and Gravitational Response Surfaces on One Ledger).** Fix one source at the origin, completed as in Theorem S.1b, and one two-level target clock of frequency $\omega_{\mathrm{TLS}}>0$ and projected dipole $d_{\mathrm{eff}}$ in a far-zone direction $\mathbf n$ at distance $r>R_S$. Its observable is the dimensionless fractional frequency shift $y$ relative to a reference clock at zero potential. A design point is $\xi=(s,\sigma,P,E,r)$, with $s\in\{0,1\}$ the screening state of the declared electromagnetic path, $\sigma=\operatorname{sgn}\Delta\in\{\pm1\}$ the detuning sign, radiated power $P\ge0$ and retained energy $E\ge0$ owned by disjoint sectors of Theorem L.6a, and $r>R_S$. Let $D(\mathbf n)\ge0$ be the registered directivity, so that the far-zone intensity is $D(\mathbf n)P/(4\pi r^2)$. On the far-detuned branch of Corollary L.2.1 and the exterior branch of Theorem S.1b, the leading response surfaces are
+$$
+y_{\mathrm{EM}}(\xi)=c_E\,s\,\sigma\frac{P}{r^2},
+\qquad
+c_E:=\frac{d_{\mathrm{eff}}^2D(\mathbf n)}{4\pi\epsilon_{\mathrm{vac}}c\hbar^2\omega_{\mathrm{TLS}}|\Delta|},
+\qquad
+y_{\mathrm G}(\xi)=-c_G\frac{E}{r},
+\qquad
+c_G:=\frac{G}{c^4}.
+\tag{S.8.4b.1}
+$$
+For design points $\xi_1,\ldots,\xi_n$ register the model $\mathbf y=a_E\mathbf u+a_G\mathbf v+\mathbf e$ with $u_m:=s_m\sigma_mP_m/r_m^2$, $v_m:=-E_m/r_m$, unknown amplitudes $(a_E,a_G)$ whose nominal values are $(c_E,c_G)$, and $\mathbf e\sim\mathcal N(0,\Sigma)$ with registered $\Sigma\succ0$. Put $\tilde{\mathbf u}:=\Sigma^{-1/2}\mathbf u$ and $\tilde{\mathbf v}:=\Sigma^{-1/2}\mathbf v$.
+
+(a) *(Identifiability.)* The map $(a_E,a_G)\mapsto a_E\mathbf u+a_G\mathbf v$ is injective exactly when $\mathbf u$ and $\mathbf v$ are linearly independent; then the generalized least-squares estimator is unbiased with covariance $(X^\top\Sigma^{-1}X)^{-1}$, $X=[\mathbf u\ \mathbf v]$. Independence holds for each of the following two-point designs with all other entries fixed and $P,E>0$: (i) screening, $s=0$ and $s=1$; (ii) power, two distinct values of $P$ with $s=1$; (iii) distance, two distinct radii with $s=1$; (iv) detuning sign, $\sigma=\pm1$ with $s=1$.
+
+(b) *(Formal distinguishability.)* For thresholds $e_{\min},g_{\min}>0$, every electromagnetic-only mean $a_E\mathbf u$ with $|a_E|\ge e_{\min}$ and every gravitational-only mean $a_G\mathbf v$ with $|a_G|\ge g_{\min}$ are separated in Mahalanobis distance by at least
+$$
+\Delta_{\min}:=\max\bigl\{e_{\min}\|P^\perp_{\tilde{\mathbf v}}\tilde{\mathbf u}\|,\ g_{\min}\|P^\perp_{\tilde{\mathbf u}}\tilde{\mathbf v}\|\bigr\},
+\tag{S.8.4b.2}
+$$
+where $P^\perp_{\mathbf w}$ projects orthogonally to $\mathbf w$ for $\mathbf w\ne0$ and $P^\perp_0:=I$. Hence their data laws have total-variation distance at least $2\Phi_{\mathcal N}(\Delta_{\min}/2)-1$, with $\Phi_{\mathcal N}$ the standard normal distribution function, and $N$ independent replications of the design multiply $\Delta_{\min}$ by $\sqrt N$. If $\mathbf u\ne0$ and $\mathbf v\ne0$, then $\Delta_{\min}>0$ exactly when $\mathbf u,\mathbf v$ are independent. If exactly one template vanishes, for instance $\mathbf u=0$ when every design point has $s_m=0$ or $P_m=0$, its amplitude is unidentifiable by (a), while $\Delta_{\min}=g_{\min}\|\tilde{\mathbf v}\|$ or $e_{\min}\|\tilde{\mathbf u}\|$ is positive and still separates the two restricted hypotheses; if both vanish, $\Delta_{\min}=0$.
+
+*Proof.* The Stark surface follows from (L.14): $\delta_{\mathrm{Stark}}/\omega_{\mathrm{TLS}}=|\Omega_R|^2/(2\Delta\omega_{\mathrm{TLS}})$ with $|\Omega_R|^2=d_{\mathrm{eff}}^2E_0^2/\hbar^2$ and $E_0^2=2I/(\epsilon_{\mathrm{vac}}c)$ for intensity $I=D(\mathbf n)P/(4\pi r^2)$, and screening sets $I=0$. The gravitational surface is the first-order clock rate $1+\Phi(r)/c^2$ with the exterior potential $-GE/(c^2r)$ of Theorem S.1b. (a) Injectivity of a linear map on $\mathbb R^2$ is linear independence of its columns, and the generalized least-squares formulas are standard for full column rank. In design (i), $\mathbf u=(0,\sigma P/r^2)$ and $\mathbf v=-(E/r)(1,1)$; in (ii), $\mathbf u\propto(P_1,P_2)$ and $\mathbf v\propto(1,1)$; in (iii), $\mathbf u\propto(r_1^{-2},r_2^{-2})$ and $\mathbf v\propto(r_1^{-1},r_2^{-1})$; in (iv), $\mathbf u\propto(1,-1)$ and $\mathbf v\propto(1,1)$. Each pair has nonzero determinant. (b) For fixed $a_E$, $\min_{a_G}\|a_E\tilde{\mathbf u}-a_G\tilde{\mathbf v}\|=|a_E|\|P^\perp_{\tilde{\mathbf v}}\tilde{\mathbf u}\|$, and symmetrically in $a_G$, which gives (S.8.4b.2). For nonzero $\tilde{\mathbf u},\tilde{\mathbf v}$ both projections vanish exactly when $\tilde{\mathbf u},\tilde{\mathbf v}$ are dependent, and $P^\perp_0=I$ gives the zero-template values. Two Gaussian laws with common covariance and Mahalanobis separation $\Delta$ have total-variation distance $2\Phi_{\mathcal N}(\Delta/2)-1$, which increases with $\Delta$. Stacking $N$ independent replications multiplies every squared Mahalanobis norm by $N$. ∎
+
+**Resolution TV-S-08-R1 (Metadata).** Exact domain: one completed static source and one far-zone two-level target clock on a common source/target/geometry/unit ledger, the leading far-detuned Stark and exterior weak-field surfaces (S.8.4b.1), finite designs over screening, detuning sign, radiated power, retained energy and distance, and Gaussian noise with registered positive covariance. Premises: Corollary L.2.1, Theorem L.6a's disjoint ownership of $P$ and $E$, Theorem S.1b and the first-order clock rate. Equivalence: carrier models are compared by the laws they induce on the design data. Budget: every design and every pair of separated electromagnetic-only and gravitational-only amplitudes. Verifier: the intensity-to-shift substitution, the four determinants, the projection identity and the Gaussian total-variation formula. Falsifier: a design of types (i)--(iv) with dependent $\mathbf u,\mathbf v$, or a pair of separated models closer than (S.8.4b.2). Provenance class: source-internal formal observable and identifiability construction. Downstream consumers: Section S.8.4a, Proposition L.5, Protocols L.1 and L.3, and `TV-S-08`. Nonvacuity: design (iii) with $r_1\ne r_2$ and any $\Sigma\succ0$. Proposition S.8.4b gives `positive-discharge` of identifiable electromagnetic and gravitational response surfaces on one ledger, with screening, power, distance, detuning-sign and covariance controls, and of their formal distinguishability, which for nonzero templates holds exactly on independent designs. The target remains live for its C+R components: population of $c_E$ through a measured polarizability, directivity and detuning, of the $P$ and $E$ ledgers and of $\Sigma$ for a registered platform, the higher-order Stark, cross and nonstatic remainders, and physical realization.
 
 ### S.8.5 Theoretical Integration Points
 

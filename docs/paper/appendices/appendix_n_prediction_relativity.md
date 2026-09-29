@@ -339,6 +339,42 @@ so $C\in\mathcal F_{T_1}$. Thus $\mathcal F_{T_2}\subseteq\mathcal F_{T_1}$, and
 
 4.  **Add Kinetic Work:** The laboratory kinetic work required to accelerate from rest to velocity $v_f$ is at least $W_{\text{kin}}^{\mathrm{lab}}\ge m_0c^2(\gamma_f-1)$ (Lemma N.3). The theorem's disjoint-ledger hypothesis permits addition, giving exactly (N.5). QED.
 
+**Theorem N.UCTa (Exact Four-Momentum Resource Ledger and Sharp Causal-Export Bound).** Retain the prescribed timelike payload trajectory of Theorem N.UCT, starting from laboratory rest, with laboratory velocity $\mathbf v(\tau)$, $\beta(\tau):=|\mathbf v(\tau)|/c$ and Lorentz factor $\gamma(\tau)$. Treat the payload as a pointlike body with four-momentum $p=m(\tau)u$, where $u$ is its four-velocity and $m(\tau)>0$ is an absolutely continuous invariant mass with $m(0)=m_0$. In the instantaneous comoving frame register, per unit proper time and as ensemble means along the trajectory, the supplied four-momentum rate $f_{\mathrm{in}}$ with components $(P_{\mathrm{in}}/c,\mathbf F_{\mathrm{in}})$, delivered to the payload by the laboratory source and a declared field, and the exported four-momentum rate $k$ with components $(R/c,\boldsymbol\Pi)$, with $\gamma(|P_{\mathrm{in}}|+c|\mathbf F_{\mathrm{in}}|+R+c|\boldsymbol\Pi|)$ integrable. Assume source exhaustion, $dp/d\tau=f_{\mathrm{in}}-k$, and let the laboratory work $W_{\mathrm{tot}}^{\mathrm{lab}}$ and the laboratory-frame energy change $\Delta E_F$ of the declared field satisfy $W_{\mathrm{tot}}^{\mathrm{lab}}-\Delta E_F=\int_0^{\tau_f}\gamma(P_{\mathrm{in}}+\mathbf v\cdot\mathbf F_{\mathrm{in}})\,d\tau$. Put $\Delta U:=(m(\tau_f)-m_0)c^2$. Then:
+
+1. The ledger is exact:
+   $$
+   W_{\mathrm{tot}}^{\mathrm{lab}}
+   =m_0c^2(\gamma_f-1)+\gamma_f\Delta U+\Delta E_F
+   +\int_0^{\tau_f}\gamma\,(R+\mathbf v\cdot\boldsymbol\Pi)\,d\tau.
+   \tag{N.5a}
+   $$
+   Its entries are the laboratory energy changes of disjoint owners: payload motion at the initial rest mass, the boosted change $\gamma_f\Delta U$ of payload rest energy, the declared field, and the exported kinetic, predictive and anisotropic radiation. The four-vector balance behind (N.5a) holds in every inertial frame, so under source exhaustion no entry is counted twice or omitted.
+2. If the export is future-directed causal, $R\ge c|\boldsymbol\Pi|$, then with the Doppler factor $D:=\gamma(1-\beta)=\sqrt{(1-\beta)/(1+\beta)}$,
+   $$
+   W_{\mathrm{tot}}^{\mathrm{lab}}
+   \ge m_0c^2(\gamma_f-1)+\gamma_f\Delta U+\Delta E_F
+   +\int_0^{\tau_f}D\,R\,d\tau,
+   \tag{N.5b}
+   $$
+   with equality exactly when $\boldsymbol\Pi=-(R/c)\,\mathbf v/|\mathbf v|$ for almost every $\tau$ with $R>0$ and $\mathbf v\ne0$.
+3. With $\boldsymbol\Pi=0$, $\Delta U=0$, $\Delta E_F=0$ and $R\ge R_{\mathrm{com}}$, Equation (N.5a) reproduces (N.5).
+4. The zero-mean-comoving-momentum premise of Theorem N.UCT cannot be removed. For rectilinear motion along a fixed unit vector $\mathbf e$ with constant proper acceleration $a>0$, constant $m=m_0$, constant $R>0$ and backward null export $\boldsymbol\Pi=-(R/c)\,\mathbf e$, the supply $P_{\mathrm{in}}=R$ and $\mathbf F_{\mathrm{in}}=(m_0a-R/c)\,\mathbf e$ realizes the trajectory, and with $\eta=a\tau_f/c$,
+   $$
+   W_{\mathrm{tot}}^{\mathrm{lab}}
+   =m_0c^2(\cosh\eta-1)+\frac{Rc}{a}\bigl(1-e^{-\eta}\bigr)
+   =m_0c^2(\cosh\eta-1)+\int_0^{\tau_f}\gamma R\,d\tau-\frac{Rc}{a}(\cosh\eta-1),
+   \tag{N.5c}
+   $$
+   which lies strictly below the right side of (N.5) with $R_{\mathrm{com}}=R$.
+
+*Proof.* A four-vector with comoving components $(E/c,\mathbf p)$ has laboratory time component $\gamma(E+\mathbf v\cdot\mathbf p)/c$. Applying this to $dp/d\tau=f_{\mathrm{in}}-k$ gives
+$$
+\frac{d}{d\tau}\bigl(\gamma mc^2\bigr)=\gamma(P_{\mathrm{in}}+\mathbf v\cdot\mathbf F_{\mathrm{in}})-\gamma(R+\mathbf v\cdot\boldsymbol\Pi).
+$$
+Integrating from laboratory rest, where $\gamma(0)=1$, and using the definition of $\Delta E_F$ gives $W_{\mathrm{tot}}^{\mathrm{lab}}-\Delta E_F=\gamma_fm(\tau_f)c^2-m_0c^2+\int_0^{\tau_f}\gamma(R+\mathbf v\cdot\boldsymbol\Pi)\,d\tau$, and $\gamma_fm(\tau_f)c^2-m_0c^2=m_0c^2(\gamma_f-1)+\gamma_f\Delta U$ proves (N.5a). Each entry is the laboratory energy change of one owner, and the underlying four-vector identity is Lorentz covariant. Causality gives $\mathbf v\cdot\boldsymbol\Pi\ge-|\mathbf v||\boldsymbol\Pi|\ge-\beta R$, hence $\gamma(R+\mathbf v\cdot\boldsymbol\Pi)\ge\gamma(1-\beta)R$, with equality exactly when $\mathbf v\cdot\boldsymbol\Pi=-\beta R$. For $\mathbf v\ne0$ and $R>0$ this forces $|\boldsymbol\Pi|=R/c$ antiparallel to $\mathbf v$, while for $\mathbf v=0$ or $R=0$ equality is automatic; integration proves (N.5b). Item 3 is the displayed specialization. In item 4 the comoving components of $dp/d\tau=f_{\mathrm{in}}-k$ read $c^2\dot m=P_{\mathrm{in}}-R=0$ and $m_0a=F_{\mathrm{in}}-\Pi$ along the direction of motion, which the stated supply satisfies. There $\gamma=\cosh(a\tau/c)$, $\beta=\tanh(a\tau/c)$ and $D=e^{-a\tau/c}$, so $\int_0^{\tau_f}DR\,d\tau=(Rc/a)(1-e^{-\eta})$ and $\int_0^{\tau_f}\gamma R\,d\tau=(Rc/a)\sinh\eta$, whose difference is $(Rc/a)(\cosh\eta-1)>0$. ∎
+
+**Resolution TV-N-02-R1 (Metadata).** Exact domain: pointlike payloads on prescribed timelike trajectories from laboratory rest with absolutely continuous invariant mass, integrable comoving supply and export rates, and a declared field with registered laboratory-frame energy change. Premises: special-relativistic four-momentum balance, source exhaustion, the stated laboratory-work/field identity and integrability. Equivalence: Lorentz transformations of the balance and relabeling of the owners. Budget: every trajectory, rate profile and export direction in the domain; the countermodel is exact. Verifier: the boost of the time component, integration from rest, the causal inequality and the closed-form rapidity integrals. Falsifier: a trajectory violating (N.5a), a causal export below (N.5b), equality in (N.5b) with a non-antiparallel export, or failure of (N.5c). Provenance class: source-internal exact identity, sharp bound and countermodel. Downstream consumers: Theorem N.UCT, Box N.1, Corollary N.3.1, Corollary N.12.5 and `TV-N-02`. Nonvacuity: the constant-acceleration backward-export trajectory of item 4 and every isotropic trajectory of Theorem N.UCT. Theorem N.UCTa gives `positive-discharge` of the exact invariant ledger with kinetic, predictive, internal, anisotropic and field entries and of its sharp causal-export lower bound, and `nonentailment` of (N.5) without its zero-mean-comoving-momentum premise. A physical source identification of the predictive export $(R,\boldsymbol\Pi)$ and of the declared field, and its formal realization, remain open under `TV-N-02`.
+
 ## N.6 Interpretation and Programme
 
 *   **Two Costs in One Conditional Ledger:** Relativistic endpoint kinetic work and predictive-resource cost can be entered in the same work ledger, but velocity and proper acceleration are distinct variables. A body may coast inertially at high constant velocity with $a=0$ and therefore has no Unruh increment. On the detector-response, additive-temperature, and active-refresh branch, periods of nonzero proper acceleration can add a predictive-loss term; internal processing can add a separate self-heating term. The UCT combines these declared contributions.
@@ -729,6 +765,42 @@ q_{\mathrm{sens}}^{\mathrm{future}}
 \approx4.3\times10^{-21}.
 $$
 This is a prospective diagnostic, not a forecasted bound. It becomes a same-system bound only if the future release supplies an accepted timing-likelihood certificate with the corresponding $r_+^{(1-\alpha)}$ and an accepted response certificate supplies $K_-$ in the same fitted model. An orbital-phase identification additionally requires the response certificate to distinguish the declared acceleration profile from every registered nuisance template.
+
+**Corollary N.12.5 (Four-Momentum Orbital Share and Jeans Timing Template).** Apply the four-momentum balance of Theorem N.UCTa, in its covariant form $Dp/d\tau=-k$ on a background metric, to a body with no nongravitational supply whose comoving export is $k=(R/c^2)u+\Pi$ with $\Pi\cdot u=0$ and $R\ge c|\Pi|$.
+
+1. The balance splits into $dm/d\tau=-R/c^2$ and $m\,Du/d\tau=-\Pi$. An isotropic export, $\Pi=0$, keeps a geodesic worldline geodesic and drains only rest mass; the motion changes only through the comoving momentum export $\Pi$.
+2. In the Newtonian two-body limit with masses $m_i$, positions $\mathbf x_i$, velocities $\mathbf v_i$, separation $r=|\mathbf x_1-\mathbf x_2|$, rest-mass loss $\dot m_i=-R_i/c^2$, and equations $m_i\dot{\mathbf v}_i=\mathbf F_i-\boldsymbol\Pi_i$ with mutual Newtonian forces $\mathbf F_1=-\mathbf F_2$, the orbital energy $E_{\mathrm{orb}}=\frac12m_1|\mathbf v_1|^2+\frac12m_2|\mathbf v_2|^2-Gm_1m_2/r$ obeys, with $j$ the companion of $i$,
+   $$
+   \dot E_{\mathrm{orb}}=-\sum_{i=1}^2\mathbf v_i\cdot\boldsymbol\Pi_i-\sum_{i=1}^2\frac{R_i}{c^2}\left(\frac12|\mathbf v_i|^2-\frac{Gm_j}{r}\right).
+   \tag{N.12h}
+   $$
+   For causal exports $|\boldsymbol\Pi_i|\le R_i/c$ this gives
+   $$
+   |\dot E_{\mathrm{orb}}|\le\sum_{i=1}^2\kappa_iR_i,
+   \qquad
+   \kappa_i:=\frac{|\mathbf v_i|}{c}+\frac{|\mathbf v_i|^2/2+Gm_j/r}{c^2}.
+   \tag{N.12i}
+   $$
+3. The relative coordinate $\mathbf x=\mathbf x_1-\mathbf x_2$ obeys $\ddot{\mathbf x}=-GM\mathbf x/r^3+\mathbf f$ with $M=m_1+m_2$, $\dot M=-(R_1+R_2)/c^2$ and $\mathbf f=-\boldsymbol\Pi_1/m_1+\boldsymbol\Pi_2/m_2$. Its osculating specific energy $\epsilon=\frac12|\dot{\mathbf x}|^2-GM/r$, semimajor axis $a=-GM/(2\epsilon)$ and period $P_b=2\pi\sqrt{a^3/(GM)}$ satisfy exactly
+   $$
+   \dot\epsilon=-\frac{G\dot M}{r}+\dot{\mathbf x}\cdot\mathbf f,
+   \qquad
+   \dot a=\frac{a\dot M}{M}\left(1-\frac{2a}{r}\right)+\frac{2a^2}{GM}\,\dot{\mathbf x}\cdot\mathbf f,
+   \qquad
+   \frac{\dot P_b}{P_b}=\frac32\frac{\dot a}a-\frac12\frac{\dot M}M.
+   $$
+   For $\mathbf f=0$ the specific angular momentum $h=|\mathbf x\times\dot{\mathbf x}|$ is conserved and $d(e^2)/dt=(2h^2\dot M/(GM^2))(1/a-1/r)$. Averaging over one Kepler orbit at frozen elements and frozen $\dot M$, with $\langle1/r\rangle_t=1/a$, gives
+   $$
+   \frac{\langle\dot P_b\rangle}{P_b}
+   =\frac{2(R_1+R_2)}{Mc^2}+\frac{3a}{GM}\langle\dot{\mathbf x}\cdot\mathbf f\rangle,
+   \tag{N.12j}
+   $$
+   and, for isotropic exports with $R_1+R_2>0$, $\langle\dot a\rangle=-a\dot M/M$, $\langle\dot e\rangle=0$ and $\langle\dot P_b\rangle/P_b=-2\dot M/M>0$.
+4. A realization of item 3 of Definition N.12a by causal comoving export, with UCT orbital loss $P_{\mathrm{UCT}}^{\mathrm{orb}}$ in the orbital-energy balance, requires $R_1+R_2\ge P_{\mathrm{UCT}}^{\mathrm{orb}}/\max_i\kappa_i$ by (N.12i). The same export contributes the rest-mass term $2(R_1+R_2)/(Mc^2)\ge2P_{\mathrm{UCT}}^{\mathrm{orb}}/(\max_i\kappa_iMc^2)$ to (N.12j), which lengthens the period, whereas an orbital-energy loss shortens it. An isotropic source-exhaustive export carries this Jeans term alone. The timing template of the orbital bridge is therefore fixed by the split of the export into $R_i$ and $\boldsymbol\Pi_i$.
+
+*Proof.* Write $p=mu$ with $u\cdot u=-c^2$ and $u\cdot Du/d\tau=0$. Contracting $Dp/d\tau=-k$ with $u$ gives $-c^2\,dm/d\tau=-(R/c^2)(-c^2)$, hence $dm/d\tau=-R/c^2$, and the orthogonal part is $m\,Du/d\tau=-\Pi$; for $\Pi=0$ the worldline equation is the geodesic equation. In the Newtonian limit, $\sum_im_i\mathbf v_i\cdot\dot{\mathbf v}_i=\mathbf F_1\cdot(\mathbf v_1-\mathbf v_2)-\sum_i\mathbf v_i\cdot\boldsymbol\Pi_i$ cancels the fixed-mass derivative of the potential energy, and the mass derivatives contribute $\sum_i\frac12\dot m_i|\mathbf v_i|^2-G(\dot m_1m_2+m_1\dot m_2)/r$; substituting $\dot m_i=-R_i/c^2$ gives (N.12h), and the triangle inequality with $|\boldsymbol\Pi_i|\le R_i/c$ gives (N.12i). Dividing the two equations of motion by the masses and subtracting gives the relative equation. Differentiating $\epsilon$ and using that equation gives $\dot\epsilon$; differentiating $a=-GM/(2\epsilon)$ and substituting $\epsilon=-GM/(2a)$ gives $\dot a$, and $P_b\propto a^{3/2}M^{-1/2}$ gives the period relation. For $\mathbf f=0$ the force is central, so $h$ is conserved, and differentiating $e^2=1+2\epsilon h^2/(G^2M^2)$ gives the displayed rate. With the eccentric anomaly $E$, $r=a(1-e\cos E)$ and $dt=(1-e\cos E)\,dE/n$ with $n=2\pi/P_b$, so $\langle1/r\rangle_t=1/a$; averaging the exact relations at frozen elements gives (N.12j) and the isotropic rates. Item 4 combines (N.12i) with the first term of (N.12j). ∎
+
+**Resolution TV-N-05-R1 (Metadata).** Exact domain: pointlike bodies with the covariant export balance and causal comoving export (item 1), and the Newtonian two-body model with rest-mass loss and comoving momentum export (items 2--4). Premises: the four-momentum balance of Theorem N.UCTa, Newtonian gravity for items 2--4, causal export, and single-orbit averaging at frozen elements for (N.12j), which is first order in the export rates. Equivalence: rotations and Galilean boosts of the Newtonian frame and the orbital phase origin. Budget: all export rates and directions and all bound Kepler orbits. Verifier: contraction with $u$, direct differentiation of $E_{\mathrm{orb}}$, the osculating-element identities and the eccentric-anomaly average. Falsifier: a violation of (N.12h), an isotropic export that changes a geodesic worldline, or an averaged period rate different from (N.12j). Provenance class: source-internal exact identities, causal bound and averaged timing template. Downstream consumers: Definition N.12a, Corollaries N.12.1--N.12.4 and `TV-N-05`. Nonvacuity: a circular binary with isotropic export and the backward null export of Theorem N.UCTa. Corollary N.12.5 gives `positive-discharge` of the four-momentum orbital-share bound, of the Jeans rest-mass template and of the necessary export condition for the orbital bridge. The derivation of the effective coefficient from proper internal accelerations or fields, the nuisance schema and the sealed prediction functional remain open under `TV-N-05`.
 
 ## N.9 The UCT as a Strategic Choice Between Intensive and Extensive Knowledge Acquisition
 
@@ -1121,6 +1193,65 @@ then proves the order criterion. In the XOR state, each single bit is independen
 
 **Resolution TV-N-06-R1 (Metadata).** Exact domain: all finite-dimensional tripartite quantum states and the two named channel splits of Proposition N.4.0a. Premises: standard von Neumann mutual and conditional mutual information. Equivalence: local isometries and relabelings that preserve the named split. Budget: every density matrix on the declared finite carrier; the XOR witness is exact. Verifier: entropy expansion and the four-atom diagonal probability table. Falsifier: a state violating (N.4.0a.1), or equality of the named-channel allocations in a state violating (N.4.0a.2). Provenance class: source-internal exact classification and counterexample. Downstream consumers: Proposition N.4 and `TV-N-06`. This gives `positive-discharge` of the exact two-channel additivity/order criterion and `nonentailment` of split-independent attribution from marginal carrier independence. General multi-channel split independence, capacity-normalization selection and a populated no-shared-server physical realization remain open, so the target is not closed.
 
+**Proposition N.4.0b (Complete Multichannel Split Classification and Qubit-Carrier Normalization).** Fix $N\ge2$ and a finite-dimensional state $\rho_{SE_1\cdots E_N}$ with local dimensions $d_S$ and $d_{E_i}$. For $A\subseteq[N]:=\{1,\ldots,N\}$ let $E_A$ be the composite of the channels in $A$, let $A^c:=[N]\setminus A$, and set
+$$
+f(A):=I(S:E_A)_\rho,
+\qquad
+f(\varnothing):=0.
+$$
+For an ordering $\pi$ of $[N]$ and a channel $i$, let $P_\pi(i)$ be the set of channels that precede $i$. The ordered chain-rule allocation of route 2 of Proposition N.4 is
+$$
+a_i^\pi:=I(S:E_i\mid E_{P_\pi(i)})=f(P_\pi(i)\cup\{i\})-f(P_\pi(i)).
+\tag{N.4.0b.1}
+$$
+Then:
+
+1. $a_i^\pi\ge0$ and $\sum_ia_i^\pi=I(S:E)$ for every ordering $\pi$.
+2. For every channel $i$ and every $A\subseteq[N]\setminus\{i\}$,
+   $$
+   I(S:E_i)-I(S:E_i\mid E_A)=I(E_i:E_A)-I(E_i:E_A\mid S).
+   \tag{N.4.0b.2}
+   $$
+3. The following are equivalent: (a) every channel receives the same allocation in every ordering; (b) $a_i^\pi=I(S:E_i)$ for every $i$ and every $\pi$; (c) $f$ is additive, $I(S:E_A)=\sum_{i\in A}I(S:E_i)$ for every $A\subseteq[N]$; (d) $I(E_i:E_A)=I(E_i:E_A\mid S)$ for every $i$ and every $A\subseteq[N]\setminus\{i\}$. For $N=2$, condition (c) is the single identity $I(S:E_1E_2)=I(S:E_1)+I(S:E_2)$, which (N.4.0a.1) converts into (N.4.0a.2).
+4. For $N\ge3$, condition (c) is implied neither by its top member $A=[N]$ nor by all of its proper members. On diagonal states built from independent uniform bits: if $S=E_1\oplus E_2$, $E_3=S$ and every further channel is a fixed pure qubit, then $I(S:E)=\sum_iI(S:E_i)=\ln2$, while $I(S:E_1E_2)=\ln2\ne0=I(S:E_1)+I(S:E_2)$, and the allocation to $E_2$ is $\ln2$ in the ordering $(1,2,3,\ldots)$ and $0$ in the ordering $(3,1,2,\ldots)$. If $S=E_1\oplus\cdots\oplus E_N$, then $f(A)=0$ for every $A\ne[N]$ and $f([N])=\ln2$, so the whole allocation goes to the last channel of each ordering.
+5. For every channel $i$, every $A\subseteq[N]\setminus\{i\}$ and every state,
+   $$
+   0\le I(S:E_i\mid E_A)\le2\ln\min(d_S,d_{E_i}),
+   \tag{N.4.0b.3}
+   $$
+   with equality for every $A$ in a maximally entangled state of Schmidt rank $\min(d_S,d_{E_i})$ between $S$ and $E_i$, tensored with any state of the remaining channels. The same bound with $S_i$ in place of $S$ governs route 1. Hence on the admissible class $\mathcal A_i$ of all states of the declared carrier, $\sup_{\mathcal A_i}I_i=2\ln\min(d_S,d_{E_i})$ is attained. For a qubit channel carrier with $d_{E_i}=2\le d_S$ this supremum is $2\ln2=2\varepsilon_0$, so the budget $C_i^{\mathrm{rel}}=2\varepsilon_0$ carries the admissible class, supremum proof and attaining witness that Proposition N.4 requires before $C_i^{\mathrm{rel}}$ is called an operational capacity.
+6. If every channel is saturated at $C_i^{\mathrm{rel}}=2\ln d_{E_i}$ in one ordering, equivalently $I(S:E)=2\ln d_E$, then $d_S\ge d_E$ and $f(A)=2\ln d_{E_A}$ for every $A\subseteq[N]$. Consequently (c) holds and every ordering assigns $2\ln d_{E_i}$ to channel $i$: on the saturated branch the chain-rule attribution is split-independent.
+
+*Proof.* Strong subadditivity gives $a_i^\pi\ge0$, and the allocations telescope to $f([N])=I(S:E)$. Expanding both sides of (N.4.0b.2) in von Neumann entropies gives
+$$
+S(S)+S(E_i)+S(E_A)-S(SE_i)-S(SE_A)-S(E_iE_A)+S(SE_iE_A)
+$$
+on each side; this is (N.4.0a.1) with $E_2$ replaced by the composite $E_A$. Every $A\subseteq[N]\setminus\{i\}$ equals $P_\pi(i)$ for an ordering that lists $A$ first and $i$ next. Hence (a) holds exactly when $f(A\cup\{i\})-f(A)$ does not depend on $A$, that is, equals its value $f(\{i\})=I(S:E_i)$ at $A=\varnothing$; this is (b). Induction on $|A|$ turns (b) into (c), and (c) gives $f(A\cup\{i\})-f(A)=f(\{i\})$, which is (b). Equation (N.4.0b.2) identifies (b) with (d). In the first bit witness, $E_1$ and $E_2$ are each independent of $S$, the pair determines $S$, and $E_3$ determines $S$; therefore $I(S:E_1E_2)=I(S:E_3)=I(S:E)=\ln2$, $I(S:E_1)=I(S:E_2)=0$, $I(S:E_2\mid E_1)=\ln2$ and $I(S:E_1\mid E_3)=I(S:E_2\mid E_1E_3)=0$. In the parity witness every proper subfamily of independent uniform bits is independent of the total parity, and the full family determines it.
+
+For (N.4.0b.3), the Araki--Lieb inequality $S(XY)\ge|S(X)-S(Y)|$ gives $I(X:Y)\le2\min(S(X),S(Y))\le2\ln\min(d_X,d_Y)$. The chain rule gives $I(S:E_i\mid E_A)=I(S:E_iE_A)-I(S:E_A)\le I(S:E_iE_A)\le2\ln d_S$ and, symmetrically, $I(S:E_i\mid E_A)\le I(E_i:SE_A)\le2\ln d_{E_i}$. In the product witness $S$ is uncorrelated with $E_A$, so $I(S:E_i\mid E_A)=I(S:E_i)=2\ln\min(d_S,d_{E_i})$. For item 6, $2\ln d_E=I(S:E)\le2\ln d_S$ gives $d_S\ge d_E$. For every $A$, the same bound gives $f(A)\le2\ln d_{E_A}$, while $f([N])=f(A)+I(S:E_{A^c}\mid E_A)\le f(A)+2\ln d_{E_{A^c}}$ gives $f(A)\ge2\ln d_E-2\ln d_{E_{A^c}}=2\ln d_{E_A}$. Since $\ln d_{E_A}=\sum_{i\in A}\ln d_{E_i}$, $f$ is additive. ∎
+
+**Resolution TV-N-06-R2 (Metadata).** Exact domain: every finite-dimensional state on $S E_1\cdots E_N$ with $N\ge2$ channels, every ordering and every channel subfamily of Proposition N.4.0b, and the admissible class of all states of a fixed finite carrier. Premises: von Neumann mutual and conditional mutual information, strong subadditivity and the Araki--Lieb inequality. Equivalence: local unitaries on $S$ and on each channel, and channel relabelings acting on orderings. Budget: all $2^N$ subfamilies and all $N!$ orderings; the bit witnesses and the maximally entangled witnesses are exact. Verifier: entropy expansion, telescoping, induction over subfamilies, the two diagonal bit tables and the Araki--Lieb chain. Falsifier: an order-independent allocation with a nonadditive subfamily, an additive $f$ with an order-dependent allocation, an increment exceeding (N.4.0b.3), or a saturated state with nonadditive $f$. Provenance class: source-internal exact classification, sharp bound and counterexamples. Downstream consumers: Proposition N.4, Corollary N.4.1, Theorem N.5 and `TV-N-06`. Nonvacuity: the two bit witnesses and the product of $N$ Bell pairs. Proposition N.4.0b gives `positive-discharge` of the complete multichannel split classification, of the attained normalization supremum on the stated admissible class, including $C_i^{\mathrm{rel}}=2\varepsilon_0$ for qubit channel carriers, and of split independence on the saturated branch; item 4 gives `nonentailment` of subfamily additivity from total additivity and of total additivity from additivity of every proper subfamily. Admission of a physical system's boundary channels to the qubit-carrier admissible class remains open under `TV-N-06`.
+
+**Proposition N.4.0c (Explicit Concurrent No-Shared-Server Boundary Realization).** Fix $N\ge1$, $\hbar>0$ and periods $\tau_1,\ldots,\tau_N>0$. On $\mathcal H=\bigotimes_{i=1}^N(\mathbb C^2_{S_i}\otimes\mathbb C^2_{E_i})$ put $S:=S_1\cdots S_N$, take the qubit channels $E_i$, and set
+$$
+H=\sum_{i=1}^NH_i,
+\qquad
+H_i=\frac{2\pi\hbar}{\tau_i}|1\rangle\!\langle1|_{S_i},
+\qquad
+\psi(0)=\bigotimes_{i=1}^N\Phi^+_{S_iE_i},
+\tag{N.4.0c.1}
+$$
+where $\Phi^+=(|00\rangle+|11\rangle)/\sqrt2$ and each $H_i$ acts as the identity on the other factors. Then:
+
+1. $\psi(t)=\bigotimes_i\Phi_i(t)$ with $\Phi_i(t)=(|00\rangle+e^{-2\pi it/\tau_i}|11\rangle)/\sqrt2$, and $I(S:E_A)_{\psi(t)}=2|A|\ln2$ for every $A\subseteq[N]$ and every $t\ge0$. Both routes of Proposition N.4 hold with $I_i=2\ln2=C_i^{\mathrm{rel}}$ and $q_i=1$, the budget being the attained supremum of Proposition N.4.0b, and $\mathcal I_{\mathrm{rel}}=2N\ln2$ satisfies (N.21).
+2. Channel $i$ returns to its initial state exactly at the times $t\in\tau_i\mathbb Z_{\ge0}$, because $|\langle\Phi_i(0)|\Phi_i(t)\rangle|^2=\cos^2(\pi t/\tau_i)$. Taking a completed cycle of channel $i$ to be a first return, every cycle lasts exactly $\tau_i$, $N_i(T)=\lfloor T/\tau_i\rfloor$, and $N_i(T)/T\to1/\tau_i$ in one common run.
+3. The generators $H_i$ act on pairwise disjoint tensor factors, commute, and give $e^{-iHt/\hbar}=\bigotimes_ie^{-iH_it/\hbar}$. The reduced trajectory and the cycle count of channel $i$ depend only on $(\tau_i,\Phi^+_{S_iE_i})$, each local energy $\langle H_i\rangle=\pi\hbar/\tau_i$ is separately conserved, and the cycle intervals of each channel tile $[0,\infty)$, so the cycles of distinct channels run simultaneously. No server, clock, energy supply or serialization constraint is shared, and the concurrency certificate of Corollary N.4.1 holds.
+4. With $\varepsilon_i=\varepsilon_0=\ln2$, Equation (N.24) gives $\dot\varepsilon_\partial=\sum_i\ln2/\tau_i$. For $\tau_i=\tau_{\min}$ this equals $N\ln2/\tau_{\min}=\mathcal I_{\mathrm{rel}}/(2\tau_{\min})$, which is (N.25) at $q=1$.
+
+*Proof.* Each $H_i$ has eigenvalues $0$ and $2\pi\hbar/\tau_i$, so $e^{-iH_it/\hbar}$ multiplies $|11\rangle_{S_iE_i}$ by $e^{-2\pi it/\tau_i}$ and fixes $|00\rangle_{S_iE_i}$. A local unitary on $S_i$ preserves Schmidt coefficients, so every $\Phi_i(t)$ is maximally entangled and the global state is a product over channels. Hence $\rho_{SE_A}$ is the product of the pure pairs $(S_i,E_i)$ for $i\in A$ with the maximally mixed $S_j$ for $j\notin A$, which gives $I(S:E_A)=2|A|\ln2$. The overlap is $|(1+e^{-2\pi it/\tau_i})/2|^2=\cos^2(\pi t/\tau_i)$, equal to one exactly on $\tau_i\mathbb Z$; the counts and limits follow. Disjoint supports give commutation, the tensor-product propagator, factor-local reduced dynamics and separate energy conservation, with $\langle\Phi^+|H_i|\Phi^+\rangle=\pi\hbar/\tau_i$. Item 4 is substitution into (N.24) and (N.25). ∎
+
+**Resolution TV-N-06-R3 (Metadata).** Exact domain: the finite unitary qubit model (N.4.0c.1) for every $N\ge1$ and all periods $\tau_i>0$. Premises: Schrödinger evolution with the displayed Hamiltonian, the first-return cycle convention and the registered increment $\varepsilon_i=\varepsilon_0$. Equivalence: local unitaries on each factor and relabeling of channels. Budget: every time $t\ge0$, every channel subfamily and every counting horizon $T$. Verifier: the phase propagator, Schmidt-coefficient invariance, the overlap formula, the floor-function counts and substitution into (N.24)--(N.25). Falsifier: a channel whose count depends on another channel's data, a subfamily with $I(S:E_A)\ne2|A|\ln2$, or a first-return time different from $\tau_i$. Provenance class: source-internal explicit finite realization. Downstream consumers: Proposition N.4, Corollary N.4.1, Theorem N.5 and `TV-N-06`. Nonvacuity: the model itself for $N=1$ and $N=2$. Proposition N.4.0c gives `positive-discharge` of a concurrent, saturated, no-shared-server formal realization of Proposition N.4 and Corollary N.4.1 in the finite unitary qubit class. Admission of a physical system's boundary channels and completed-cycle events to this class remains `R` under `TV-N-06`.
+
 
 ### N.11.2 Open-System Thermodynamics and the KMS Condition
 
@@ -1418,6 +1549,22 @@ Thus the relational and trajectory data alone do not determine the momentum-resp
 *Proof.* A positive constant multiplying the Lagrangian cancels from its Euler--Lagrange equation, so the solution sets coincide; uniqueness or global existence is not asserted. The continuous force gives a local classical solution for the admitted initial data, and differentiation with respect to velocity gives (N.6a.3). At the nonzero initial velocity, distinct values of $\lambda$ give distinct canonical momenta. The registered relational data contain no $\lambda$ coordinate. In particular $\lambda=1$ and $\lambda=2$ give inequivalent realizations under the stated momentum-response test. ∎
 
 **Resolution TV-N-07-R1 (Metadata).** Exact domain: the positive-dimensional Euclidean local mechanical class of Proposition N.6a and its admitted nonzero-velocity data. Premises: a positive relational coefficient and no preexisting momentum or force-unit calibration. Equivalence: the realized momentum response must agree; multiplication of the action is not quotiented out. Budget: every $\lambda>0$ and each admitted local classical solution. Verifier: Euler--Lagrange cancellation and canonical-momentum evaluation. Falsifier: dependence of a registered relational datum on $\lambda$, or equal momenta for two distinct $\lambda$ at the admitted nonzero velocity. Provenance class: source-internal scale-modulus countermodel. Downstream consumers: Theorem N.6 and `TV-N-07`. This proves `nonentailment` of a universal unit coefficient from the declared relational/trajectory data; a scale-selecting physical response certificate remains open.
+
+**Proposition N.6b (Relativistic Free-Action Rigidity and Mechanical Scale Fixing).** Work in Minkowski spacetime with $x^0=ct$ and $\eta=\operatorname{diag}(-1,1,1,1)$, and let $\mathcal C^+:=\{\dot x:\eta(\dot x,\dot x)<0,\ \dot x^0>0\}$ be the future timelike cone. Let $F:\mathcal C^+\to\mathbb R$ be $C^1$, invariant under the restricted Lorentz group and positively homogeneous of degree one, $F(s\dot x)=sF(\dot x)$ for $s>0$; homogeneity is the reparametrization invariance of the free worldline action $S=\int F(dx/d\sigma)\,d\sigma$. Then:
+
+1. There is a constant $\kappa\in\mathbb R$ with $F(\dot x)=-\kappa\sqrt{-\eta(\dot x,\dot x)}/c$, so $S=-\kappa\int d\tau$ along every future timelike worldline.
+2. In laboratory time the Lagrangian is $L=-\kappa\sqrt{1-|\mathbf v|^2/c^2}$, the canonical momentum is $\mathbf p=\kappa\gamma\mathbf v/c^2$, the energy is $\kappa\gamma$, the rest-action rate is $|dS/d\tau|=|\kappa|$, and
+   $$
+   L=-\kappa+\frac{\kappa}{2c^2}|\mathbf v|^2+O\!\left(\frac{\kappa|\mathbf v|^4}{c^4}\right).
+   \tag{N.6b.1}
+   $$
+   The momentum-response coefficient is therefore $\kappa/c^2$, which for $\kappa>0$ is the rest-action rate divided by $c^2$.
+3. The free member ($U=0$, $d=3$) of the family (N.6a.1) has the relativistic completion $S_\lambda=-\lambda m_{\mathrm{rel}}c^2\int d\tau$, whose Lagrangian is $\lambda\frac{m_{\mathrm{rel}}}2|\dot q|^2$ up to the constant $-\lambda m_{\mathrm{rel}}c^2$ and higher orders in $|\dot q|/c$, and whose rest-action rate is $\lambda m_{\mathrm{rel}}c^2$. If the certified action of item 4 of Theorem N.5 is this free worldline action and $m_{\mathrm{rel}}$ is the coefficient $m$ of (N.26), then Equations (N.28)--(N.30) of Theorem N.5 fix its rest-action rate as $mc^2$, so $\lambda mc^2=mc^2$, $\lambda=1$ and $\mathbf p=\gamma m\mathbf v$. On that identification branch the retained momentum response of a free body has the coefficient of (N.26), which is clause (ii) of $\mathfrak C_{\mathrm{mech}}$ in Theorem N.6 for free bodies.
+4. Without the rest-action identification the modulus of Proposition N.6a remains: every $\kappa>0$ gives the same free worldlines, the straight future timelike lines, and the registered relational data contain no $\kappa$ coordinate.
+
+*Proof.* (1) For $N>0$ the restricted Lorentz group acts transitively on the hyperboloid $\{\dot x\in\mathcal C^+:-\eta(\dot x,\dot x)=N^2\}$, since a boost carries each of its points to $(N,0,0,0)$. Invariance makes $F$ constant on each hyperboloid, $F(\dot x)=h(N)$ with $N=\sqrt{-\eta(\dot x,\dot x)}$, and homogeneity gives $h(sN)=sh(N)$, hence $h(N)=Nh(1)$. Put $\kappa:=-c\,h(1)$. Along a worldline parametrized by $\sigma$, $\sqrt{-\eta(\dot x,\dot x)}=c\,d\tau/d\sigma$, which gives $S=-\kappa\int d\tau$. (2) With $\sigma=t$, $\dot x=(c,\mathbf v)$ and $\sqrt{-\eta(\dot x,\dot x)}=c\sqrt{1-|\mathbf v|^2/c^2}$. Differentiation gives $\mathbf p$, the Legendre transform $\mathbf p\cdot\mathbf v-L=\kappa\gamma$ gives the energy, and Taylor expansion of the square root gives (N.6b.1) with the next term $\kappa|\mathbf v|^4/(8c^4)$. (3) Item 2 with $\kappa=\lambda m_{\mathrm{rel}}c^2$ gives the displayed Lagrangian, momentum and rest-action rate. Equations (N.28)--(N.30) fix the rest-action rate of the certified action as $mc^2$, and $m>0$ gives $\lambda=1$. (4) For $\kappa\ne0$ the Euler--Lagrange equation $d(\kappa\gamma\mathbf v)/dt=0$ gives constant $\mathbf v$ for every $\kappa$, and Proposition N.6a records that the relational data carry no scale coordinate. ∎
+
+**Resolution TV-N-07-R2 (Metadata).** Exact domain: $C^1$ restricted-Lorentz-invariant, degree-one-homogeneous free Lagrangians on the future timelike cone of Minkowski spacetime, and the relativistic free completion of the family (N.6a.1). Premises: Poincaré invariance and first-order locality of the free worldline action, reparametrization invariance, and, for item 3, identification of the certified action of Theorem N.5 with that free worldline action and of $m_{\mathrm{rel}}$ with (N.26). Equivalence: restricted Lorentz transformations and orientation-preserving reparametrizations. Budget: every future timelike velocity and every $\lambda>0$. Verifier: transitivity on hyperboloids, the homogeneity functional equation, the Legendre transform and the Taylor expansion. Falsifier: an invariant homogeneous $F$ not proportional to the proper-time element, or a momentum coefficient different from the rest-action rate divided by $c^2$. Provenance class: source-internal exact classification and conditional scale fixing. Downstream consumers: Proposition N.6a, Theorem N.6, Theorem N.5 and `TV-N-07`. Nonvacuity: the free particle with $\kappa=mc^2$. Proposition N.6b gives `positive-discharge` of the free-action rigidity classification and of the derivation $\lambda=1$, with momentum coefficient (N.26), from the rest-action identification. That identification for a physical body, interacting and bound bodies, and the common response and observable realization remain open under `TV-N-07`.
 
 **Remark N.11.1: Scope of the Machian Interpretation.** Quantum mutual information satisfies $\mathcal I_{\mathrm{rel}}=0$ exactly when the state is a product across the declared split. On $\mathfrak B_{\mathrm{mass}}^{\mathrm{rate}}(q)$, Equation (N.26) then assigns zero to this particular relational mass coefficient. It does not follow that the system is vacuum, that every retained observable vanishes, or that no other mass/source ledger is present. Operational indistinguishability from a specified vacuum requires a separate certificate proving equality of all retained response functionals. Thus the Machian reading is a branch interpretation of the certified relational contribution.
 

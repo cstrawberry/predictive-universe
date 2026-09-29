@@ -427,6 +427,40 @@ Once the downstream Golay branch and the finite physical recovery/threshold reco
 
 *Proof.* The Eastin–Knill theorem and its transversal corollary (Eastin & Knill 2009, Theorem 1 and Corollary 1) apply on the stated arbitrary-single-subsystem-error-detection branch, with finite physical factors, a nontrivial logical space, unitary encoded gates and a specified transversal partition. They exclude universality of that transversal logical-gate family. Correction of merely a restricted nontrivial local-error set does not supply these hypotheses. Therefore a ledger claiming universal protected computation on this branch must record a gate resource outside that family. Theorem A.0.5 places every admitted optimizer in $(0,p_{\mathrm{err},0}]$, so $p_{\mathrm{err}}^*>0$; recording a positive implementation overhead does not contradict that conclusion. ∎
 
+**Proposition A.0.2d (Exact Golay Code-Capacity Recovery, Failure Polynomials and Concatenation Thresholds).** Let $\mathcal G_{24}$ be the extended Golay code with the generator matrix $G=[I_{12}\mid P]$ of Theorem Z.13c, fix a retained puncture point $j$, and let $C_{23}:=P_j(\mathcal G_{24})$ and $C_{23}^\perp=S_j(\mathcal G_{24})$ be the codes of Proposition Z.13b.7. Errors are independent bit flips of rate $p$ on classical positions, or independent $X$ and $Z$ flips of rate $q$ on qubits with ideal syndrome measurement.
+
+1. **Classical block and optimal decoding.** The $4096$ cosets of $\mathcal G_{24}$ have minimum-weight leaders of weights $0,1,2,3,4$ with multiplicities $(\alpha_0,\ldots,\alpha_4)=(1,24,276,2024,1771)$. For $0\le p\le1/2$ the coset-leader decoder has block error
+$$
+f_{24}(p)=1-\sum_{w=0}^{4}\alpha_wp^w(1-p)^{24-w}
+\tag{A.0.2d.1}
+$$
+for every transmitted word, and no decoder has smaller message-averaged block error. Moreover $f_{24}(p)=8855p^4+O(p^5)$, $f_{24}(p)<8855p^4$ on $(0,1/2]$, and $f_{24}$ is strictly increasing on $[0,1]$.
+2. **Exact concatenation thresholds.** The equation $f_{24}(p)=p$ has exactly one solution $p^*_{24}\in(0,1/2)$, and $0.06847305<p^*_{24}<0.06847306$. For the disjoint-concatenation recursion $p_{\ell+1}=f_{24}(p_\ell)$ of Proposition A.0.2c, $p_\ell\to0$ exactly when $p_0<p^*_{24}$, eventually doubly exponentially, while $p_0\ge p^*_{24}$ gives $p_\ell\ge p^*_{24}$ for every $\ell$. Bounded-distance decoding, which declares failure on every pattern of weight at least $4$, has block error $f_{\mathrm{bd}}(p)=\Pr(\operatorname{Bin}(24,p)\ge4)$, and the same statements hold with $10626$ in place of $8855$ and threshold $0.06406708<p^*_{\mathrm{bd}}<0.06406709$. Both thresholds exceed $p_{\mathrm{suf}}=0.045486$.
+3. **Quantum witness.** Measuring $X$- and $Z$-type generators built from a basis of $C_{23}^\perp$ extracts two $11$-bit syndromes. Since $C_{23}$ is perfect, each syndrome $s$ has a unique leader $l_s$ of weight at most $3$, with $1,23,253,1771$ leaders of weights $0,1,2,3$, and the recovery $X(l_s)$, respectively $Z(l_s)$, corrects every $X$-error and every $Z$-error of weight at most $3$. The logical $X$ failure probability is
+$$
+f_{23}(q)=\sum_{i\in\{7,11,15,23\}}A_i\sum_{w=0}^{3}\sum_{m=0}^{w}\binom im\binom{23-i}{w-m}q^{i+w-2m}(1-q)^{23-i-w+2m},
+\tag{A.0.2d.2}
+$$
+with $(A_7,A_{11},A_{15},A_{23})=(253,1288,506,1)$, and the logical $Z$ failure probability is the same polynomial. Moreover $f_{23}(q)=8855q^4+O(q^5)$, $f_{23}(q)<8855q^4$ on $(0,1/2]$, $f_{23}$ is strictly increasing on $[0,1/2]$ with $f_{23}(1/2)=1/2$, and $f_{23}(q)=q$ has exactly one solution $q^*_{23}\in(0,1/2)$, with $0.07747579<q^*_{23}<0.07747580$. For $0<q\le1/2$, the total failure probability $1-(1-f_{23}(q))^2$ lies below the unencoded value $1-(1-q)^2$ exactly when $q<q^*_{23}$, and the concatenated recursion $q_{\ell+1}=f_{23}(q_\ell)$ on $[0,1/2]$ has threshold $q^*_{23}$ in the sense of item 2.
+4. **Transversal Clifford set.** Every even-weight word of $C_{23}$ has weight divisible by $4$, and every odd-weight word has weight congruent to $3$ modulo $4$. Consequently $H^{\otimes23}$, $S^{\otimes23}$ and blockwise $\mathrm{CNOT}$ preserve the stabilizer group and implement logical $H$, $S^\dagger$ and $\mathrm{CNOT}$, so the Clifford group is transversal on the witness. By Corollary A.0.2b, a universal protected ledger adds a non-Clifford logical resource outside this family.
+
+*Proof.* For item 1, minimum distance $8$ places the $1+24+276+2024=2325$ vectors of weight at most $3$ in distinct cosets, so each is the unique leader of its coset. With the parity-check matrix $H_{24}=[P^{T}\mid I_{12}]$, which satisfies $H_{24}G^{T}=P^{T}+P^{T}=0$, the syndromes of the $10626$ weight-$4$ vectors reach the remaining $4096-2325=1771$ syndromes. Hence the covering radius is $4$ and the multiplicities are as stated. The coset of the error does not depend on the transmitted word, and the coset-leader decoder succeeds exactly when the error is the chosen leader, which gives (A.0.2d.1) for every transmitted word. For uniformly distributed messages and any decoder $D$,
+$$
+\Pr(\text{correct})
+=\frac1{|\mathcal G_{24}|}\sum_r\Pr\bigl(r\mid D(r)\bigr)
+\le\frac1{|\mathcal G_{24}|}\sum_r\max_{c\in\mathcal G_{24}}p^{d(r,c)}(1-p)^{24-d(r,c)}
+=\sum_{\text{cosets}}p^{w_L}(1-p)^{24-w_L},
+$$
+because $p\le1/2$ makes $p^w(1-p)^{24-w}$ nonincreasing in $w$, and each coset consists of $|\mathcal G_{24}|$ received words at distance $w_L$, its leader weight, from the code. The right side is $1-f_{24}(p)$. Exactly $\binom{24}4-1771=8855$ weight-$4$ patterns are not leaders, which gives the leading coefficient. The remaining assertions concern the displayed integer polynomial: Sturm counts show that $8855-f_{24}(p)/p^4$, which vanishes at $0$ and is positive at $1/2$, has no root in $(0,1/2]$, that $f'_{24}$ has no root in $(0,1)$, and that $(f_{24}(p)-p)/p$ has exactly one root in $(0,1/2)$; exact rational evaluation gives $f_{24}(p)<p$ at $p=0.06847305$ and $f_{24}(p)>p$ at $p=0.06847306$.
+
+For item 2, if $p_0<p^*_{24}$, then $f_{24}(p)<p$ on $(0,p^*_{24})$, so $p_\ell$ decreases to a fixed point in $[0,p_0]$, which is $0$; the bound $f_{24}(p)<8855p^4$ gives $r_{\ell+1}\le r_\ell^4$ for $r_\ell:=8855^{1/3}p_\ell$, which is doubly exponential once $r_\ell<1$. If $p_0\ge p^*_{24}$, monotonicity gives $p_{\ell+1}=f_{24}(p_\ell)\ge f_{24}(p^*_{24})=p^*_{24}$ by induction. The bounded-distance polynomial satisfies the corresponding Sturm and rational-evaluation facts, and $0.06406708>0.045486$.
+
+For item 3, Proposition Z.13b.7 gives $C_{23}^\perp\subset C_{23}$, so the $X$- and $Z$-type generators commute and their joint eigenspaces are labeled by the two syndromes. An error $X(e)$ has syndrome $H_{23}e$, where the rows of $H_{23}$ span $C_{23}^\perp$. Minimum distance $7$ places the $1+23+253+1771=2048$ vectors of weight at most $3$ in distinct cosets, and $2048=2^{11}$ is the number of syndromes, so every syndrome has a unique leader of weight at most $3$. After recovery the residual $X(e+l_s)$ has $e+l_s\in C_{23}$. The subcode $C_{23}^\perp$ has dimension $11$ and only even weights, while $C_{23}$ contains the odd word $\mathbf 1$; hence $C_{23}^\perp$ is the even-weight subcode, the residual is a stabilizer when $e+l_s$ has even weight, and it is the logical $X$ class otherwise. Writing $e=c+l$ uniquely with $c\in C_{23}$ and $\operatorname{wt}(l)\le3$ gives $e+l_s=c$, so failure occurs exactly when $\operatorname{wt}(c)$ is odd. For $c$ of weight $i$ and $l$ of weight $w$ meeting $\operatorname{supp}c$ in $m$ positions, $\operatorname{wt}(e)=i+w-2m$, and there are $\binom im\binom{23-i}{w-m}$ such $l$; summing over the odd-weight codewords, whose multiplicities are $(A_7,A_{11},A_{15},A_{23})$, gives (A.0.2d.2). The $Z$ sector is identical because both CSS components use $C_{23}$. Every weight-$4$ error lies at distance $3$ from a unique weight-$7$ codeword, so the leading coefficient is $253\binom74=\binom{23}4=8855$. At $q=1/2$ all $2^{23}$ patterns are equally likely and $2^{11}\cdot2^{11}$ of them fail, so $f_{23}(1/2)=1/2$. The remaining polynomial assertions follow from Sturm counts on $(0,1/2)$ and exact rational evaluation. The $X$ and $Z$ components are independent, which gives the total failure probability, and $x\mapsto1-(1-x)^2$ is increasing, so the comparison holds exactly when $f_{23}(q)<q$. Since $f_{23}$ is increasing and maps $[0,1/2]$ into itself, the argument of item 2 applies to the recursion.
+
+For item 4, the weights of $C_{23}$ are $0,7,8,11,12,15,16,23$ with multiplicities $1,253,506,1288,1288,506,253,1$, which gives the congruences. Conjugation by $H^{\otimes23}$ exchanges $X(c)$ and $Z(c)$; it therefore preserves the generator set built from $C_{23}^\perp$ and exchanges $\bar X=X(\mathbf 1)$ and $\bar Z=Z(\mathbf 1)$, where $\mathbf 1\in C_{23}\setminus C_{23}^\perp$. Conjugation by $S^{\otimes23}$ fixes every $Z(c)$ and maps $X(c)$ to $i^{\operatorname{wt}(c)}X(c)Z(c)$. For $c\in C_{23}^\perp$ the image is the stabilizer $X(c)Z(c)$ because $\operatorname{wt}(c)\equiv0\pmod4$; for $\bar X$ it is $i^{23}\bar X\bar Z=-i\bar X\bar Z$, the image of $X$ under conjugation by $S^\dagger$. Blockwise CNOT maps $X(c)\otimes\mathbb 1$ to $X(c)\otimes X(c)$ and $\mathbb 1\otimes Z(c)$ to $Z(c)\otimes Z(c)$, preserving the product stabilizer group, and acts as logical CNOT on $(\bar X,\bar Z)$. The gates $H$, $S^\dagger$ and CNOT generate the Clifford group up to phases. ∎
+
+**Resolution TV-ALOG-02-R1 (Metadata).** Exact domain: the extended Golay block and the $[[23,1,7]]$ CSS witness of Proposition Z.13b.7 under independent bit flips or independent $X/Z$ flips with ideal syndrome measurement, and the disjoint-concatenation recursion of Proposition A.0.2c. Premises: Theorem Z.13c's generator matrix and Proposition Z.13b.7. Equivalence: decoders are compared by block or logical failure probability, and stabilizer-equivalent residuals are identified. Budget: the $4096$- and $2048$-entry syndrome tables and the displayed integer polynomials of degrees $24$ and $23$. Verifier: syndrome enumeration through weight $4$, the averaging bound for decoder optimality, Sturm root counts and exact rational evaluation, the coset-decomposition count (A.0.2d.2), and the Pauli conjugation identities. Falsifier: a syndrome not reached through weight $4$, a failing-pattern count different from (A.0.2d.2), a sign change of $f_{24}-p$, $f_{\mathrm{bd}}-p$ or $f_{23}-q$ outside the stated intervals, or a transversal image outside the stabilizer group. Provenance class: source-internal finite code computation. Downstream consumers: Proposition A.0.2c, Definition A.0.1q.1, Theorem A.0.2a, Corollary A.0.2b and `TV-ALOG-02`. Nonvacuity: the explicit generator matrix and syndrome tables. This is `positive-discharge` of the code-capacity syndrome and recovery maps, the exact logical-failure polynomials, the exact concatenation thresholds and the transversal Clifford set of the Golay witness. The MPU-link noise model, fault-tolerant extraction with faulty syndrome measurements, the non-Clifford resource with its logical-error and overhead ledger, the PCE-benefit gap, the common protected MPU memory/execution map and the compiled LITE instance remain `M+C+R`-open under `TV-ALOG-02`.
+
 **Theorem A.0.2 (Conditional Effective Property R at a Certified PCE Optimum)**
 Assume the refresh-branch implementation condition of Lemma A.0.1, an accepted QEC compatibility certificate $\mathfrak C_{\mathrm{QEC}}$ supplied directly or through an accepted Golay-QEC bootstrap record $\mathfrak C_{\mathrm{GQEC}}$, the hypotheses of Theorem A.0.5, and Dominant Cost Convexity. Let $p_{\mathrm{err}}^*$ be a minimizer supplied by Theorem A.0.5. Assume further that a robustness certificate proves $p_{\mathrm{err}}^*<1/2$ on the declared protected-computation window and that the network supplies the working-memory, QEC-overhead, protected-gate, and circuit-execution resources required by Theorem A.0.6. Then:
 1.  $p_{\mathrm{err}}^*>0$ exists and is unique.
@@ -1279,7 +1313,125 @@ After removal of closed nonterminal classes, the solution is unique; rational co
 
 For item 5, to approximate $r_e$ within $2^{-n}$, simulate $e$ for $n$ steps. If it first halts at $t\le n$, output $2^{-t}$; otherwise output zero. A later first halt has $t>n$ and changes the value by less than $2^{-n}$, proving uniform computability. Equality with zero is equivalent to nonhalting and is therefore undecidable. For item 6, an approximation error below $\delta/3$ cannot cross a threshold separated from $p$ by at least $\delta$. ∎
 
-The theorem classifies the finite-state, computable-horizon, rational finite-support, uniformly computable-real approximation, and Turing-complete branches of the registered reachability problem. Countably infinite support without an effective tail modulus and noncomputable transition data remain outside these decision classes.
+The theorem classifies the finite-state, computable-horizon, rational finite-support, uniformly computable-real approximation, and Turing-complete branches of the registered reachability problem. Countably infinite support without an effective tail modulus and noncomputable transition data remain outside these decision classes. Theorems A.2.5a–A.2.5c place them exactly in the arithmetical hierarchy relative to the transition data and classify the probabilistic deciders.
+
+**Theorem A.2.5a (Countable-Support Tail Moduli and Approximation of RUD Reachability).** Fix an oracle $A\subseteq\mathbb N$ and write $A':=\{k:\varphi^A_k(k)\text{ halts}\}$ for its jump. A real is left-c.e. in $A$ when it is the limit of an $A$-computable nondecreasing sequence of rationals. Write $\mathbf S^A_{e,w}$ for the construction of §A.2.3 applied to the oracle machine $\varphi^A_e$ on input $w$. Let $\mathcal C^{\omega}_A$ be the class of coded pointed ND-RID instances $(S,x_0)$ with $Y=\{\mathsf{tick}\}$, an $A$-decidable state set $X\subseteq\mathbb N$, an $A$-decidable terminal-bit projection $\pi_b$, and one-tick kernel
+$$
+P(x,x')
+=
+\sum_{o\in O}V_{\mathrm{prob}}(x,\mathsf{tick})(o)\,T_{\mathrm{prob}}(x,\mathsf{tick},o)(x')
+$$
+whose values are uniformly left-c.e. in $A$: one $A$-oracle program lists, for every pair $(x,x')$, a nondecreasing sequence of nonnegative rationals $P_s(x,x')$ converging to $P(x,x')$. Supports may be countably infinite, no tail modulus is supplied, and a row may satisfy $\sum_{x'}P(x,x')<1$, its deficit being sent to an absorbing state with terminal bit $0$. Write
+$$
+p_t:=\mathbb P_{x_0}\bigl(\exists n\le t:\ b_n=1\bigr),
+\qquad
+p:=\mathbb P_{x_0}\bigl(\exists n<\infty:\ b_n=1\bigr)=\lim_{t\to\infty}p_t.
+\tag{A.2.5a.1}
+$$
+Then the following hold.
+
+1. **Coverage.** Every kernel on a countable state space, with any terminal projection, belongs to $\mathcal C^{\omega}_A$ for an oracle $A$ coding its state set, its terminal projection and the binary expansions of its values.
+2. **Normalized rows.** If $\sum_{x'}P(x,x')=1$, then every value $P(x,x')$ and a finite set $F_{x,n}$ with $\sum_{x'\notin F_{x,n}}P(x,x')<2^{-n}$ are computable from $A$ uniformly in the code, $x$ and $n$. On normalized rows the branch without a supplied tail modulus therefore coincides with the supplied-modulus branch, and when every nonterminal row is normalized, every $p_t$ is computable from $A$ uniformly in the code and $t$. The same conclusion for $p_t$ holds for rows with $A$-computable finite support lists and $A$-computable values, and for rows with $A$-computable values and an $A$-computable tail modulus.
+3. **Subnormalized rows.** Computable values do not replace the tail modulus. Let $x_0$ be nonterminal with terminal absorbing successors $y_{k,s}$ and
+$$
+P(x_0,y_{k,s})
+=
+\begin{cases}
+2^{-k-1},&\varphi^A_k(k)\text{ first halts at step }s,\\
+0,&\text{otherwise}.
+\end{cases}
+\tag{A.2.5a.2}
+$$
+Every value is computable from $A$, while $p_1=p=\sum_{k\in A'}2^{-k-1}$ is not computable from $A$.
+4. **Left-c.e. reachability.** $p$ is left-c.e. in $A$ and computable from $A'$, uniformly in the code.
+5. **Temporal modulus and gap promise.** If every $p_t$ is computable from $A$ uniformly in $t$, then $p$ is computable from $A$ exactly when an $A$-computable function $\mu$ satisfies $p-p_{\mu(n)}<2^{-n}$ for every $n$. The finitely branching instance whose states $z_j$ move with probability $1/2$ to the tick simulation of $\varphi^A_j(j)$ and with probability $1/2$ to $z_{j+1}$ has $A$-computable values $p_t$ and $p=\sum_{j\in A'}2^{-j-1}$, which is not computable from $A$. On deterministic instances $p\in\{0,1\}$, so the gap-promise comparison of Theorem A.2.5(6) with $\theta=\delta=1/2$ is not decidable from $A$. The computable approximation supplied in that item is therefore a necessary premise, and when every $p_t$ is computable from $A$ it exists exactly under the displayed modulus condition.
+
+*Proof.* The oracle named in item 1 computes every datum of the instance, so each value is computable from $A$ and in particular left-c.e. in $A$.
+
+For item 2, the sum $\sum_{x''\ne x'}P(x,x'')$ is left-c.e. in $A$, so $P(x,x')=1-\sum_{x''\ne x'}P(x,x'')$ is also the limit of an $A$-computable nonincreasing rational sequence. A real approximable from both sides by $A$-computable monotone rational sequences is computable from $A$. Because the lower partial sums converge to one, a search over finite sets $F$ and stages $s$ halts at a pair with $\sum_{x'\in F}P_s(x,x')>1-2^{-n}$, and that $F$ satisfies $\sum_{x'\notin F}P(x,x')<2^{-n}$. Next, $p_t$ is the sum of the weights $w(\gamma)=\prod_iP(x_i,x_{i+1})$ of the first-hitting paths $\gamma=(x_0,\ldots,x_n)$ with $n\le t$, namely the paths whose last state is their first terminal state. When every nonterminal row is normalized, $1-p_t$ is the sum of the weights of the length-$t$ paths that avoid the terminal set. Both sums are left-c.e. in $A$, so $p_t$ is computable from $A$. With $A$-computable finite support lists, the first-hitting paths of length at most $t$ through listed successors form a finite $A$-computable list, and the remaining first-hitting paths have weight zero, so $p_t$ is a finite sum of products of $A$-computable values. With an $A$-computable tail modulus, truncate every row visited before tick $t$ to $F_{x,m}$; the probability of leaving the truncation within $t$ ticks is at most $t2^{-m}$, and the truncated tree is finite, so $p_t$ is approximated from $A$ to every precision.
+
+For item 3, each value is decided from $A$ by running $\varphi^A_k(k)$ for $s$ steps. All successors are terminal, so $p=p_1=\sum_{k\in A'}2^{-k-1}$. Since $A'$ is infinite and coinfinite, this real is not a dyadic rational, and its binary expansion is the characteristic sequence of $A'$. Sufficiently fine approximations therefore determine every binary digit, so an $A$-computable approximation would decide $A'$ from $A$, which is impossible.
+
+For item 4, distinct first-hitting paths define disjoint events, and their union is the reachability event because a trajectory that reaches the terminal set has a unique first-hitting prefix. Paths through the absorbing deficit state never reach the terminal set. Countable additivity gives
+$$
+p=\sum_{\gamma}w(\gamma).
+\tag{A.2.5a.3}
+$$
+The set of first-hitting paths is $A$-decidable. List it as $\gamma^{(0)},\gamma^{(1)},\ldots$ and set $p^{\mathrm{lo}}_s:=\sum_{i<s}\prod_jP_s(x^{(i)}_j,x^{(i)}_{j+1})$. These $A$-computable rationals are nondecreasing and converge to $p$, so $p$ is left-c.e. in $A$. For each dyadic $j2^{-n}$, the assertion $p>j2^{-n}$ is $\exists s\,(p^{\mathrm{lo}}_s>j2^{-n})$ and is decided by $A'$; the largest such $j$ locates $p$ within $2^{-n}$.
+
+For item 5, a modulus $\mu$ gives $p$ within $2^{-n}$ from an approximation of $p_{\mu(n+1)}$ within $2^{-n-1}$. Conversely, if $p$ is computable from $A$, compute a rational $r$ with $|r-p|<2^{-n-3}$, and for $t=0,1,\ldots$ compute rationals $r_t$ with $|r_t-p_t|<2^{-n-3}$ until $r_t>r-3\cdot2^{-n-3}$. The search halts because $p_t\uparrow p$, and at the halting value $p-p_t<5\cdot2^{-n-3}<2^{-n}$; monotonicity of $p_t$ makes this $t$ an admissible value $\mu(n)$. In the displayed instance, $z_j$ is reached at tick $j$, so $p_t$ is a finite dyadic sum decided by simulating the machines $\varphi^A_j(j)$, $j<t$, for at most $t$ steps, while $p=\sum_{j\in A'}2^{-j-1}$ is not computable from $A$ by the argument of item 3. Finally, $\mathbf S^A_{e,w}$ has $p=1$ when $\varphi^A_e(w)$ halts and $p=0$ otherwise, so a decision of $p>1/2$ under the promise $|p-1/2|\ge1/2$ decides $A'$ from $A$. ∎
+
+**Theorem A.2.5b (Arithmetical Classification of RUD Threshold Problems).** On the class $\mathcal C^{\omega}_A$ of Theorem A.2.5a, let $\theta$ be rational, let $p$ be the reachability probability (A.2.5a.1) of a code, and write $\Sigma^0_n(A)$ and $\Pi^0_n(A)$ for the arithmetical classes relative to $A$.
+
+1. **Upper bounds.** Uniformly in the code, $\{p>\theta\}\in\Sigma^0_1(A)$, $\{p\le\theta\}\in\Pi^0_1(A)$, $\{p\ge\theta\}\in\Pi^0_2(A)$, $\{p=\theta\}\in\Pi^0_2(A)$ and $\{p<\theta\}\in\Sigma^0_2(A)$.
+2. **First level.** For $0\le\theta<1$, $\{p>\theta\}$ is $\Sigma^0_1(A)$-complete and $\{p\le\theta\}$ is $\Pi^0_1(A)$-complete. In particular positive-probability reachability is $\Sigma^0_1(A)$-complete and $\{p=0\}$ is $\Pi^0_1(A)$-complete.
+3. **Second level.** For $0<\theta\le1$, $\{p\ge\theta\}$ and $\{p=\theta\}$ are $\Pi^0_2(A)$-complete, and $\{p<\theta\}$ is $\Sigma^0_2(A)$-complete; $\theta=1$ is almost-sure reachability. For every other rational threshold, $\{p=0\}$ excepted, each of the five sets is empty or the whole class.
+4. **Reductions and jumps.** Every hardness reduction is a computable many-one reduction to finitely branching instances with transition probabilities in $\{0,\tfrac12,1,\theta,1-\theta\}$ and $A$-computable transition maps. For $A=\varnothing^{(m)}$ the four levels are $\Sigma^0_{m+1}$, $\Pi^0_{m+1}$, $\Pi^0_{m+2}$ and $\Sigma^0_{m+2}$. Deterministic $\mathsf{TERM}$ with $A$-computable transitions is $\Sigma^0_1(A)$-complete and therefore Turing-equivalent to $A'$; $A=\varnothing$ gives the $\Sigma^0_1$-completeness behind Theorem A.2.3.
+
+*Proof.* Theorem A.2.5a(4) supplies $A$-computable nondecreasing rationals $p^{\mathrm{lo}}_s\uparrow p$. Therefore
+$$
+p>\theta\iff\exists s\,\bigl(p^{\mathrm{lo}}_s>\theta\bigr),
+\qquad
+p\ge\theta\iff\forall k\,\exists s\,\bigl(p^{\mathrm{lo}}_s>\theta-2^{-k}\bigr).
+$$
+The sets $\{p\le\theta\}$ and $\{p<\theta\}$ are the complements, and $p=\theta$ is the conjunction of $p\le\theta$ and $p\ge\theta$. This proves item 1.
+
+For item 2, map $k$ to $\mathbf S^A_{k,k}$, whose reachability probability is $1$ when $\varphi^A_k(k)$ halts and $0$ otherwise. For $0\le\theta<1$ this reduces $A'$ to $\{p>\theta\}$ and its complement to $\{p\le\theta\}$. Since $A'$ is $\Sigma^0_1(A)$-complete, item 1 gives completeness.
+
+For item 3, reduce the $\Pi^0_2(A)$-complete set $\mathrm{Inf}^A:=\{e:W^A_e\text{ is infinite}\}$, where $W^A_e$ is the domain of $\varphi^A_e$. The instance $G_e$ runs rounds $k=1,2,\ldots$. In round $k$ it advances the $A$-computable enumeration of $W^A_e$ by one stage per tick until at least $k$ elements have appeared; it then moves to a terminal absorbing state with probability $1/2$ and to round $k+1$ with probability $1/2$. If $|W^A_e|=m<\infty$, round $m+1$ never ends, so
+$$
+p(G_e)=\sum_{k=1}^{m}2^{-k}=1-2^{-m}<1;
+\tag{A.2.5b.1}
+$$
+if $W^A_e$ is infinite, every round ends and $p(G_e)=\sum_{k\ge1}2^{-k}=1$. Let $H_{e,\theta}$ move from its initial state to $G_e$ with probability $\theta$ and to an absorbing nonterminal state with probability $1-\theta$. Then
+$$
+p(H_{e,\theta})=\theta\,p(G_e)\le\theta,
+$$
+with equality exactly when $e\in\mathrm{Inf}^A$. Hence $\{p\ge\theta\}$ and $\{p=\theta\}$ are $\Pi^0_2(A)$-hard and $\{p<\theta\}$ is $\Sigma^0_2(A)$-hard, and item 1 gives membership. The remaining thresholds follow from $0\le p\le1$.
+
+For item 4, the displayed instances use only the listed probabilities and $A$-computable simulation or enumeration steps. The relativized Post theorem gives $\Sigma^0_n(\varnothing^{(m)})=\Sigma^0_{n+m}$ and $\Pi^0_n(\varnothing^{(m)})=\Pi^0_{n+m}$. On deterministic instances $\mathsf{TERM}$ coincides with $p>0$, so item 1 and the reduction of item 2 make it $\Sigma^0_1(A)$-complete, and every $\Sigma^0_1(A)$-complete set is many-one equivalent to $A'$. ∎
+
+**Theorem A.2.5c (Runtime-Free Probabilistic RUD and Necessity of Computable Branching).**
+
+1. Let $D$ be a probabilistic interactive algorithm whose internal and interaction nodes have uniformly enumerable countable successor lists with uniformly left-c.e. branching probabilities. No runtime bound, halting guarantee or uniform advantage is assumed. Then $D$ does not, on every instance $\mathbf S_{e,w}$, halt with the correct value of $\mathsf{TERM}(S_{e,w},x_0)$ with probability strictly greater than $1/2$. At a node whose branching probabilities sum to one, the hypothesis is uniform computability of those probabilities, by the argument of Theorem A.2.5a(2). The statement relativizes to every oracle $A$ and the instances $\mathbf S^A_{e,w}$.
+2. Computability of the branching law cannot be dropped. Let $\mathcal K:=\{\langle e,w\rangle:e(w)\text{ halts}\}$ and
+$$
+\kappa_{\mathcal K}:=\sum_{j\in\mathcal K}2\cdot4^{-(j+1)}.
+\tag{A.2.5c.1}
+$$
+Then $\kappa_{\mathcal K}$ is left-c.e. and not computable, so the complementary probability $1-\kappa_{\mathcal K}$ is not left-c.e. On input $j=\langle e,w\rangle$, flip a coin of bias $\kappa_{\mathcal K}$ exactly
+$$
+n_j:=\left\lceil\tfrac92\,16^{j+1}\ln6\right\rceil
+\tag{A.2.5c.2}
+$$
+times, form the sample mean $\widehat\kappa$, and output $\mathsf{Yes}$ exactly when the residue of $4^{j+1}\widehat\kappa$ modulo $4$ lies in $[4/3,10/3)$. This algorithm has a computable runtime bound and decides $\mathsf{TERM}(S_{e,w},x_0)$ with probability at least $2/3$ on every instance.
+
+Theorem A.2.4 therefore holds without its runtime bound, finite support lists and uniform advantage, with rational probabilities weakened to uniformly left-c.e. branching probabilities, and item 2 shows that this computability condition cannot be removed.
+
+*Proof.* For item 1, fix $(e,w)$. The responses of $\mathbf S_{e,w}$ to the registered interaction are computable from its code, as in the proof of Theorem A.2.3. The finite halting paths of the joint computation–interaction tree are therefore uniformly enumerable, and distinct halting paths are disjoint events. The probability of each path is a finite product of nonnegative left-c.e. reals and is left-c.e., so
+$$
+q_{\mathsf{Yes}}:=\mathbb P(D\text{ halts with }\mathsf{Yes}),
+\qquad
+q_{\mathsf{No}}:=\mathbb P(D\text{ halts with }\mathsf{No})
+$$
+are left-c.e. uniformly in $(e,w)$, and $q_{\mathsf{Yes}}+q_{\mathsf{No}}\le1$. If $\mathsf{TERM}$ holds, correctness gives $q_{\mathsf{Yes}}>1/2>q_{\mathsf{No}}$; otherwise $q_{\mathsf{No}}>1/2>q_{\mathsf{Yes}}$. Run the lower approximations of both probabilities in parallel until one exceeds $1/2$ and output its label. The search halts, and it never selects the smaller probability because that probability's approximations stay below $1/2$. This decides the halting problem, contradicting Theorem A.2.3. Replacing computability by computability from $A$ gives the relativized statement.
+
+For item 2, the construction of Theorem A.2.3 gives $\mathsf{TERM}(S_{e,w},x_0)\iff\langle e,w\rangle\in\mathcal K$. Write $\kappa_{\mathcal K}=\sum_jc_j4^{-(j+1)}$ with $c_j=2\cdot\mathbf 1_{\mathcal K}(j)$. For every $j$,
+$$
+4^{j+1}\kappa_{\mathcal K}=4N_j+c_j+r_j,
+\qquad
+N_j\in\mathbb Z,
+\qquad
+0\le r_j\le\sum_{m\ge1}2\cdot4^{-m}=\frac23.
+$$
+Put $\varepsilon_j:=4^{-(j+1)}/3$. Hoeffding's inequality and (A.2.5c.2) give
+$$
+\mathbb P\bigl(|\widehat\kappa-\kappa_{\mathcal K}|\ge\varepsilon_j\bigr)
+\le2e^{-2n_j\varepsilon_j^2}\le\frac13.
+$$
+On the complementary event, $4^{j+1}\widehat\kappa$ lies within $1/3$ of $4^{j+1}\kappa_{\mathcal K}$, so its residue modulo $4$ lies in $[0,1)\cup(11/3,4)$ when $j\notin\mathcal K$ and in $(5/3,3)$ when $j\in\mathcal K$. The output is therefore correct with probability at least $2/3$, and the runtime is bounded by a computable function of $j$. Enumerating $\mathcal K$ shows that $\kappa_{\mathcal K}$ is left-c.e. If $\kappa_{\mathcal K}$ were computable, the same residue test applied to an approximation within $\varepsilon_j$ would decide $\mathcal K$. If $1-\kappa_{\mathcal K}$ were left-c.e., $\kappa_{\mathcal K}$ would be approximable from both sides and hence computable. ∎
+
+**Resolution TV-ALOG-07-R1 (Metadata).** Exact domain: coded pointed ND-RID instances with countable state spaces, finite or countably infinite supports, normalized or subnormalized one-tick kernels uniformly left-c.e. in an arbitrary oracle $A$, rational thresholds, and probabilistic interactive deciders with countable successor lists. Premises: the registered repeated-tick terminal-reachability property of §A.2.3 and the oracle presentation of Theorem A.2.5a. Equivalence: equality of induced reachability probabilities, and many-one equivalence of the registered decision problems. Budget: unbounded registered ticks; every path weight, reduction instance and decoder run is finite. Verifier: the first-hitting path decomposition (A.2.5a.3), the two-sided monotone approximation of normalized rows, the computable reductions from $A'$ and $\mathrm{Inf}^A$ with (A.2.5b.1), the relativized Post theorem, the dovetailed decider argument and the residue decoder (A.2.5c.1)–(A.2.5c.2). Falsifier: an instance in $\mathcal C^{\omega}_A$ whose reachability probability is not left-c.e. in $A$, a reduction instance whose probability differs from the displayed values, or a decider with uniformly left-c.e. branching and success probability above $1/2$ on every $\mathbf S_{e,w}$. Provenance class: source-internal computability classification. Downstream consumers: Theorems A.2.3–A.2.5, Theorem 12, §A.3 and `TV-ALOG-07`. Nonvacuity: the instances $\mathbf S^A_{e,w}$, (A.2.5a.2), $G_e$, $H_{e,\theta}$ and the $\kappa_{\mathcal K}$ decider. This is `positive-discharge` of the countable-support, tail-modulus, transition-oracle and arithmetical-hierarchy classification. With Theorem A.2.5 it completes the registered RUD support and computability frontier and positively resolves `TV-ALOG-07`.
 
 ## A.3 Significance and Relation to Logical Indeterminacy
 

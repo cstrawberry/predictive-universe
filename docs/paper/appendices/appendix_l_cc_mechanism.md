@@ -122,6 +122,35 @@ Distinct families in (L.1a.2) may encode the same quotient, so uniqueness of the
 
 This theorem exhausts finite operational sufficiency and its minimizers once the response table is supplied. Constructing the physical source-to-generator map associated with a selected quotient remains the independent realization step of Definition L.2.
 
+**Theorem L.1b (Expectation and Single-Shot Realization of the Minimal Context Quotient).** In Theorem L.1a, let each $\omega\in\Omega$ be a distinct density operator $\rho_\omega$ on a finite-dimensional $\mathcal H_{\mathrm{agg}}$, let the quotient have cells $\mathcal F_1,\ldots,\mathcal F_K$, and put
+$$
+V_r:=\operatorname{span}_{\mathbb R}\{\rho_\omega-\rho_{\omega'}:\omega\sim_r\omega'\}.
+\tag{L.1b.1}
+$$
+
+(a) *(Expectation realization.)* Some finite family of bounded self-adjoint observables has an expectation vector (L.2) that realizes $T_*$ up to a bijection of values exactly when $\rho_\omega-\rho_{\omega'}\notin V_r$ for every pair $\omega\not\sim_r\omega'$. In that case one observable $O_*$ suffices.
+
+(b) *(Countermodel.)* For the qubit states $\rho_1=|0\rangle\langle0|$, $\rho_2=I/2$, $\rho_3=|1\rangle\langle1|$ and a response table with $r(1)=r(3)\ne r(2)$, the quotient has two cells, while every operationally sufficient expectation statistic takes three distinct values. Hence the cardinality-minimal statistic of Theorem L.1a need not be an expectation vector of Definition L.1.
+
+(c) *(Single sufficient observable.)* For every response table on distinct states there is one observable $O$ whose expectation $\omega\mapsto\operatorname{tr}(\rho_\omega O)$ is operationally sufficient; it separates all elements of $\Omega$.
+
+(d) *(Single-shot extraction.)* A CPTP map $\Lambda$ from the aggregate to a $K$-level classical control register with $\Lambda(\rho_\omega)=|k\rangle\langle k|$ for every $\omega\in\mathcal F_k$ exists exactly when states in different cells have mutually orthogonal supports. In that case, with $\Pi_k$ the projector onto the span of the supports in $\mathcal F_k$, $\Pi_0:=I-\sum_k\Pi_k$ and a cyclic shift $X$ on $\mathbb C^K$, the unitary
+$$
+U_*:=\sum_{k=1}^K\Pi_k\otimes X^k+\Pi_0\otimes I
+\tag{L.1b.2}
+$$
+maps $\rho_\omega\otimes|0\rangle\langle0|$ to $\rho_\omega\otimes|k\rangle\langle k|$ for every $\omega\in\mathcal F_k$, labelling the control basis by $\mathbb Z_K$ with $|K\rangle=|0\rangle$. It retains the aggregate state and commutes with $H_{\mathrm{agg}}\otimes I+I\otimes H_C$ whenever $H_C=0$ and every $\Pi_k$ commutes with $H_{\mathrm{agg}}$; for $K=2$ and $H_{\mathrm{agg}}=0$ it is the encoder of Theorem L.12.8b.
+
+*Proof.* (a) Every observable defines the real-linear functional $\ell(X)=\operatorname{tr}(XO)$ on Hermitian operators, and every such functional arises in this way. An expectation vector is constant on each cell exactly when all its functionals vanish on $V_r$. If some cross-cell difference lies in $V_r$, every such vector takes equal values on that pair, so it cannot realize $T_*$. Conversely, let $D_1,\ldots,D_m$ be the cross-cell differences, none in $V_r$, and let $\ell_1,\ldots,\ell_s$ be a basis of the annihilator of $V_r$. For each $i$ some $\ell_j(D_i)\ne0$, so $\lambda\mapsto\sum_j\lambda^{j-1}\ell_j(D_i)$ is a nonzero polynomial of degree less than $s$. Some $\lambda\in\{0,1,\ldots,m(s-1)\}$ is a root of none of them, and $O_*$ representing $\sum_j\lambda^{j-1}\ell_j$ is constant on cells and separates them.
+
+(b) Here $V_r=\mathbb R\sigma_z$ and $\rho_2-\rho_1=-\sigma_z/2\in V_r$, so (a) excludes realization. Every expectation statistic is affine with $T(\rho_2)=\tfrac12[T(\rho_1)+T(\rho_3)]$; sufficiency requires $T(\rho_2)\ne T(\rho_1)$ and $T(\rho_2)\ne T(\rho_3)$, which forces $T(\rho_1)\ne T(\rho_3)$ and three distinct values.
+
+(c) Apply the construction of (a) with $V_r$ replaced by $\{0\}$ and $D_i$ ranging over all nonzero differences of distinct states.
+
+(d) If $\Lambda$ exists, $E_k:=\Lambda^*(|k\rangle\langle k|)$ satisfies $0\le E_k\le I$, $\operatorname{tr}(\rho_\omega E_k)=1$ on $\mathcal F_k$ and $\operatorname{tr}(\rho_{\omega'}E_k)=0$ off it. The first equality places $\operatorname{supp}\rho_\omega$ in the eigenvalue-one eigenspace of $E_k$ and the second places $\operatorname{supp}\rho_{\omega'}$ in its kernel; these spaces are orthogonal. Conversely, orthogonality makes the $\Pi_k$ mutually orthogonal, so $U_*$ is a direct sum of unitaries and hence unitary, and $\Pi_k\rho_\omega=\rho_\omega$ on $\mathcal F_k$ gives the displayed action; tracing out the aggregate gives $\Lambda$. The commutation statement follows because each summand of $U_*$ is a product of an operator commuting with $H_{\mathrm{agg}}$ and a control operator commuting with $H_C=0$. ∎
+
+**Resolution TV-L-01-R1 (Metadata).** Exact domain: every finite response table on finitely many distinct density operators on a finite-dimensional aggregate Hilbert space, every finite observable family, and every CPTP map to a finite classical control register. Premises: Theorem L.1a, Definition L.1's expectation-vector form and the Hilbert–Schmidt representation of real-linear functionals. Equivalence: statistics are identified up to bijection of values, and extraction maps by their action on $\{\rho_\omega\}$. Budget: all states, response tables, observable families and extraction channels. Verifier: the annihilator construction with the polynomial choice of $\lambda$, the qubit midpoint identity, the eigenspace argument for $E_k$ and unitarity of (L.1b.2). Falsifier: an expectation vector realizing $T_*$ despite a cross-cell difference in $V_r$; a two-valued sufficient expectation statistic in (b); or exact single-shot extraction from non-orthogonal cells. Provenance class: source-internal realization criteria with an explicit countermodel. Downstream consumers: Definitions L.1--L.2, Theorem L.12.8b, `TV-P-04` and `TV-L-01`. Nonvacuity: any two orthogonal pure states with distinct responses satisfy (a) and (d). Theorem L.1b gives `positive-discharge` of the formal realization of the selected quotient by one observable under criterion (a) and by the nondemolition encoder (L.1b.2) on the orthogonal-support class, and `nonentailment` of expectation-vector realizability of the minimal quotient from Theorem L.1a. The target remains live for its C+R components: population of the physical response table and of the source-to-generator record for a registered aggregate, and physical realization of the selected quotient by the observable of (a) or, on support-orthogonal cells, by the encoder (L.1b.2); for cells that are not support-orthogonal, (d) excludes exact single-shot extraction.
+
 ## **L.2 Electromagnetic Field Generation and Stress-Energy Contribution**
 
 ### **Theorem L.2 (Electromagnetic Field on a Registered Coherent-Dipole Branch)**
@@ -247,6 +276,8 @@ For $|\Phi|\ll c^2$, the differential proper-time accumulation across the target
 $$ \Delta\tau_d=\frac{\Delta\Phi}{c^2}\tau_c+O\!\left(\tau_c\frac{\Phi\Delta\Phi}{c^4},\tau_c\frac{(\Delta\Phi)^2}{c^4}\right). $$
 At first order this is Equation (L.16). ∎
 
+For a complete static isolated source, including its confinement stresses, Theorem S.1b gives the exterior active mass $E_{\mathrm{grav}}^{\mathrm{inst}}/c^2$, so (L.17) then holds with $w=0$; a nonzero $w$ describes an isotropic sector whose confinement stresses are not included in the modeled source.
+
 ### **Corollary L.3.1 (Gravitational Phase Difference)**
 
 For the phase convention $\phi=-\omega_{\text{TLS}}\tau$, the oriented phase difference is
@@ -330,6 +361,42 @@ for one bounded nonconstant $f$ and one $\epsilon>0$, while holding $(\tau,R)$ f
 Consequently a microtubule, radical-pair, membrane, or other carrier census based only on coherence and resource cost cannot discharge its response-map component. A response-faithful source and target operator must enter the comparison objective or its certificate as independently typed data.
 
 **Resolution TV-L-04-R1 (Metadata).** Exact domain: every registered carrier comparison whose admissibility and objective factor through the same coherence/resource pair $(\tau,R)$ and whose response class contains the three fixed-datum maps in (L.4.2a.1). Premises: bounded nonconstant $f$, $\epsilon>0$ and identical $(\tau,R)$ for all three maps. Equivalence: carriers are compared by the registered objective and by their complete context-to-control response maps. Budget: the entire three-map witness class. Verifier: equality of the carrier data and objective values and direct comparison of the three responses. Falsifier: dependence of the objective on the response map or exclusion of any displayed witness by a declared admissibility condition. Provenance class: source-internal logical-independence construction. Downstream consumers: the biological-carrier comparison and `TV-L-04`. Proposition L.4.2a gives `nonentailment` of response existence, sign and magnitude from a coherence/resource-only objective. The target remains live for a response-complete objective or certificate, the enlarged carrier census and the physical matched-control realization.
+
+**Proposition L.4.2b (Sub-Radiant Dipole Arrays Carry No Dipole-Order Target Response).** Let $N\ge2$ point dipoles with common unit polarization $\boldsymbol\epsilon$, amplitudes $d_j\ge0$ and phases $\phi_j$ oscillate at angular frequency $\omega>0$ at positions $|\mathbf x_j|\le a$, so that $\mathbf J_\omega=-i\omega\sum_jd_je^{i\phi_j}\boldsymbol\epsilon\,\delta(\mathbf x-\mathbf x_j)$, and put $S:=\sum_jd_je^{i\phi_j}$ and $k=\omega/c$.
+
+(a) The exact outgoing amplitude of Theorem L.8.2c is
+$$
+\mathcal A_\omega(\mathbf n)=\frac{\mu_0\omega^2}{4\pi}P_{\mathbf n}\boldsymbol\epsilon\sum_jd_je^{i\phi_j}e^{-ik\mathbf n\cdot\mathbf x_j},
+\qquad
+\left|\mathcal A_\omega(\mathbf n)-\frac{\mu_0\omega^2S}{4\pi}P_{\mathbf n}\boldsymbol\epsilon\right|
+\le\frac{\mu_0\omega^2}{4\pi}\,ka\sum_jd_j.
+\tag{L.4.2b.1}
+$$
+
+(b) At dipole order the array is the point dipole $S\boldsymbol\epsilon$, whose radiated power is the $P_{\mathrm{rad}}$ of Proposition L.4.2. In every direction its angular power density is at most $3P_{\mathrm{rad}}/(8\pi)$, so a far-zone target at distance $r$ receives peak field $E_0^2\le3P_{\mathrm{rad}}/(4\pi\epsilon_{\mathrm{vac}}cr^2)$ and, on the branch of Corollary L.2.1, the leading AC-Stark shift (L.23) obeys
+$$
+|\delta_{\mathrm{Stark}}|\le\frac{3d_{\mathrm{TLS}}^2P_{\mathrm{rad}}}{8\pi\epsilon_{\mathrm{vac}}c\hbar^2|\Delta|r^2}.
+\tag{L.4.2b.2}
+$$
+Every sub-radiant configuration $S=0$, in particular every maximizer of Proposition L.4.2 under its polygon condition, has identically zero dipole-order field and zero dipole-order target response at every point.
+
+(c) For $S=0$ the exact far-zone amplitude obeys $|\mathcal A_\omega(\mathbf n)|\le(\mu_0\omega^2/4\pi)\,ka\sum_jd_j$, and the exact radiated power obeys
+$$
+P_{\mathrm{EM}}\le\frac{(ka)^2\omega^4(\sum_jd_j)^2}{8\pi\epsilon_{\mathrm{vac}}c^3}
+=\frac32(ka)^2P_{\mathrm{coh}},
+\qquad
+P_{\mathrm{coh}}:=\frac{\omega^4(\sum_jd_j)^2}{12\pi\epsilon_{\mathrm{vac}}c^3},
+\tag{L.4.2b.3}
+$$
+where $P_{\mathrm{coh}}$ is the dipole-order power of the in-phase configuration.
+
+*Proof.* (a) Substitution of the point current into the amplitude of Theorem L.8.2c gives the first formula. The bounds $|e^{-is}-1|\le|s|$, $|\mathbf n\cdot\mathbf x_j|\le a$ and $\|P_{\mathbf n}\boldsymbol\epsilon\|\le1$ give the estimate.
+
+(b) Replacing each phase factor $e^{-ik\mathbf n\cdot\mathbf x_j}$ by $1$ gives the point dipole $S\boldsymbol\epsilon$ and $P_{\mathrm{rad}}=\omega^4|S|^2/(12\pi\epsilon_{\mathrm{vac}}c^3)$. Its angular power density is $\epsilon_{\mathrm{vac}}c|\mathcal A_{\mathrm{dip}}(\mathbf n)|^2/2=3P_{\mathrm{rad}}\|P_{\mathbf n}\boldsymbol\epsilon\|^2/(8\pi)\le3P_{\mathrm{rad}}/(8\pi)$, using $\mu_0^2\epsilon_{\mathrm{vac}}^2c^4=1$. The far-zone intensity is this density divided by $r^2$ and equals $\epsilon_{\mathrm{vac}}cE_0^2/2$. Substitution into (L.23) with $|\Omega_R|\le d_{\mathrm{TLS}}E_0/\hbar$ gives (L.4.2b.2). For $S=0$ the dipole moment vanishes, so its complete retarded field vanishes at every point.
+
+(c) With $S=0$, (L.4.2b.1) bounds $|\mathcal A_\omega|$ pointwise. Theorem L.8.2c gives $P_{\mathrm{EM}}=\epsilon_{\mathrm{vac}}c\|\mathcal A_\omega\|_2^2/2\le\epsilon_{\mathrm{vac}}c\cdot4\pi\sup_{\mathbf n}|\mathcal A_\omega(\mathbf n)|^2/2$, which gives (L.4.2b.3). ∎
+
+**Resolution TV-L-04-R2 (Metadata).** Exact domain: finite arrays of harmonic point dipoles with common polarization inside a ball of radius $a$, at dipole order and in the exact far zone, with far-detuned two-level targets on the branch of Corollary L.2.1. Premises: Maxwell's equations on the retarded branch, the outgoing amplitude of Theorem L.8.2c and the Stark expansion (L.23). Equivalence: carriers are compared by their target fields, far-zone amplitudes and radiated powers. Budget: every $N\ge2$, amplitude, phase, position, direction and distance. Verifier: the phase-factor estimate, the angular power identity with $\|P_{\mathbf n}\boldsymbol\epsilon\|\le1$, the intensity-amplitude relation and the solid-angle integral. Falsifier: a sub-radiant array with nonzero dipole-order field, a far-zone target response exceeding (L.4.2b.2), or a sub-radiant power exceeding (L.4.2b.3). Provenance class: source-internal coverage-complete bound on the frozen dipole-array class. Downstream consumers: Proposition L.4.2, Proposition L.4.2a, Section L.4.1.3 and `TV-L-04`. Nonvacuity: two equal dipoles with phases $0$ and $\pi$ satisfy the polygon condition. Proposition L.4.2b gives `negative-refutation` of a nonzero dipole-order target response from a sub-radiant array and `positive-discharge` of the far-zone response ceiling (L.4.2b.2) and the $(ka)^2$ suppression (L.4.2b.3), with the Stark target operator entering as independently typed data. The target remains live for near-field and beyond-dipole electromagnetic carriers, non-electromagnetic biological carriers and their typed source and target operators, and the matched-control realization of their response maps.
 
 ### **L.4.1.2 Physical Implementation Substrates**
 
@@ -487,6 +554,57 @@ so the unique equilibrium is globally exponentially attracting. Implicit differe
 
 This solves the nonlinear gain, bandwidth, noise, and stability region for the declared target. A physical carrier must still supply its parameters and map a context intervention to $u$.
 
+**Theorem L.4.6b (Sharp Phase-to-Probability Transfer and Seed Data-Processing Ceiling).** Let a finite-dimensional seeded register carry a state $\rho$, let $G$ be a self-adjoint phase generator with spectral spread $\Delta g:=g_{\max}-g_{\min}>0$, and let a context $c\in\{0,1\}$ imprint the phase $\varphi_c$ through $\rho_c:=e^{-i\varphi_cG}\rho e^{i\varphi_cG}$, with $\delta:=\varphi_1-\varphi_0$. Let $\Lambda$ be any context-independent CPTP map acting on the register together with any context-independent ancilla, amplifier or energy-supply state $\sigma$, let $0\le E\le I$ be any output effect, and put $P_c:=\operatorname{tr}[E\Lambda(\rho_c\otimes\sigma)]$ and $P(\varphi):=\operatorname{tr}[E\Lambda(e^{-i\varphi G}\rho e^{i\varphi G}\otimes\sigma)]$. Then:
+
+(a) $F(\rho_0,\rho_1)\ge|\operatorname{tr}(\rho e^{-i\delta G})|\ge\cos(\Delta g|\delta|/2)$ whenever $\Delta g|\delta|\le\pi$, where $F$ is the Uhlmann root fidelity, and
+$$
+|P_1-P_0|
+\le D(\rho_0,\rho_1)
+\le\sin\!\left(\min\left\{\frac{\Delta g|\delta|}{2},\frac\pi2\right\}\right).
+\tag{L.4.6b.1}
+$$
+
+(b) $P$ is differentiable and $|P'(\varphi)|\le\Delta g/2$ for every $\varphi$.
+
+(c) *(Optimal instrument.)* For the qubit generator $G=\sigma_z/2$, state $|+\rangle=(|0\rangle+|1\rangle)/\sqrt2$ and readout $E=|{+_y}\rangle\langle{+_y}|$ with $|{+_y}\rangle=(|0\rangle+i|1\rangle)/\sqrt2$,
+$$
+P(\varphi)=\frac{1+\sin\varphi}{2},
+\qquad
+P'(0)=\frac12=\frac{\Delta g}{2},
+\tag{L.4.6b.2}
+$$
+and the Helstrom projector of $\rho_1-\rho_0$ attains $|P_1-P_0|=|\sin(\delta/2)|$ for $|\delta|\le\pi$. A context-independent dephasing before readout that multiplies the energy-basis coherence by a real factor $m\in[0,1]$ gives exactly $P(\varphi)=(1+m\sin\varphi)/2$.
+
+(d) *(Seeded registers.)* If the register consists of $N$ units and $G=\sum_{k=1}^NG^{(k)}$ with copies of one unit generator of spread $\Delta g_1$, then every input, entangled or not, obeys $|P_1-P_0|\le\sin(\min\{N\Delta g_1|\delta|/2,\pi/2\})$. A product input $\rho_{\mathrm u}^{\otimes N}$ with $\Delta g_1|\delta|\le\pi$ obeys
+$$
+|P_1-P_0|
+\le\sqrt{1-\cos^{2N}(\Delta g_1|\delta|/2)}
+\le\sqrt N\,\sin(\Delta g_1|\delta|/2).
+\tag{L.4.6b.3}
+$$
+For $G^{(k)}=\sigma_z^{(k)}/2$, the input $(|0\cdots0\rangle+|1\cdots1\rangle)/\sqrt2$ with its Helstrom readout attains $\sin(N|\delta|/2)$ for $N|\delta|\le\pi$, and $|+\rangle^{\otimes N}$ with its Helstrom readout attains the first bound in (L.4.6b.3).
+
+(e) *(Amplification ceiling.)* For $0<\Delta g_1|\delta|\le\pi$, relative to the optimal single-unit seed $b_{\mathrm{seed}}:=\sin(\Delta g_1|\delta|/2)$ of (a), every context-independent CPTP amplifier of $N$ seeded units has gain
+$$
+\mathcal A:=\frac{|P_1-P_0|}{b_{\mathrm{seed}}}\le N,
+\qquad
+\mathcal A\le\sqrt N\ \text{for product seeds}.
+\tag{L.4.6b.4}
+$$
+When the seed $b_{\mathrm{seed}}$ of Proposition L.4.6 is this optimal single-unit transfer, a composite gain $\mathcal A_{\mathrm{crit}}$ realized by such processing of phase seeds therefore requires $N\ge\mathcal A_{\mathrm{crit}}$ seeded units, and $N\ge\mathcal A_{\mathrm{crit}}^2$ for product seeds; the illustrative value $10^{37}$ requires $N\ge10^{37}$, respectively $N\ge10^{74}$. A realization of Theorem L.4.6a whose input $u$ is produced by such processing obeys the same bounds on every context-conditioned outcome probability.
+
+*Proof.* (a) Let $\Pi_k$ be the spectral projectors of $G$ with eigenvalues $g_k$ and $q_k:=\operatorname{tr}(\rho\Pi_k)$. Unitary invariance gives $F(\rho_0,\rho_1)=F(\rho,e^{-i\delta G}\rho e^{i\delta G})$. For the purification $|\Psi\rangle=\sum_j\sqrt{\lambda_j}|j\rangle|j\rangle$ of $\rho=\sum_j\lambda_j|j\rangle\langle j|$, Uhlmann's theorem gives $F\ge|\langle\Psi|(e^{-i\delta G}\otimes I)|\Psi\rangle|=|\operatorname{tr}(\rho e^{-i\delta G})|=|\sum_kq_ke^{-i\delta g_k}|$. After multiplication by $e^{i\delta(g_{\max}+g_{\min})/2}$, the points $e^{-i\delta g_k}$ have arguments in $[-\Delta g|\delta|/2,\Delta g|\delta|/2]$ and real parts at least $\cos(\Delta g|\delta|/2)\ge0$; their convex combination has the same lower bound on its real part, hence on its modulus. The Fuchs–van de Graaf inequality $D\le\sqrt{1-F^2}$ gives $D(\rho_0,\rho_1)\le\sin(\Delta g|\delta|/2)$ in this range, and $D\le1$ always. Finally, $\Lambda$ and $(\cdot)\otimes\sigma$ are context-independent CPTP maps, trace distance contracts under them, and Lemma 9.1 bounds $|P_1-P_0|$ by the resulting trace distance.
+
+(b) Put $F_{\mathrm{reg}}:=\operatorname{tr}_{\mathrm{anc}}[(I\otimes\sigma)\Lambda^*(E)]$, an effect on the register with $P(\varphi)=\operatorname{tr}(F_{\mathrm{reg}}\rho_\varphi)$. Differentiation gives $P'(\varphi)=\operatorname{tr}(\rho_\varphi\,i[G,F_{\mathrm{reg}}])$. With $g_0:=(g_{\max}+g_{\min})/2$, $\|i[G,F_{\mathrm{reg}}]\|=\|[G-g_0I,F_{\mathrm{reg}}-I/2]\|\le2\|G-g_0I\|\|F_{\mathrm{reg}}-I/2\|\le\Delta g/2$.
+
+(c) The state $e^{-i\varphi\sigma_z/2}|+\rangle=(e^{-i\varphi/2}|0\rangle+e^{i\varphi/2}|1\rangle)/\sqrt2$ gives $P(\varphi)=|1-ie^{i\varphi}|^2/4=(1+\sin\varphi)/2$. For pure states $D=\sqrt{1-|\langle\psi_0|\psi_1\rangle|^2}=|\sin(\delta/2)|$, and Lemma 9.1 shows that the Helstrom projector attains it. The dephasing multiplies the coherence by $m$, which multiplies the $\sin\varphi$ term by $m$.
+
+(d) The spread of $\sum_kG^{(k)}$ is $N\Delta g_1$, so (a) applies. For product inputs, the root fidelity is multiplicative, so $F\ge\cos^N(\Delta g_1|\delta|/2)$ and $D\le\sqrt{1-F^2}$ gives the first bound in (L.4.6b.3); the second follows from $1-y^N\le N(1-y)$ for $y=\cos^2(\Delta g_1|\delta|/2)\in[0,1]$. The two displayed inputs are pure with overlaps $\cos(N\delta/2)$ and $\cos^N(\delta/2)$, so their trace distances equal the stated values, and Lemma 9.1 gives attainment.
+
+(e) The bound $|\sin(Nx)|\le N|\sin x|$ follows by induction from $\sin((n+1)x)=\sin(nx)\cos x+\cos(nx)\sin x$. Combining it with (d) gives $\mathcal A\le N$ when $N\Delta g_1|\delta|\le\pi$ and $\mathcal A\le1/b_{\mathrm{seed}}\le N$ otherwise, because then $\pi/(2N)<\Delta g_1|\delta|/2\le\pi/2$ and concavity of the sine on $[0,\pi/2]$ gives $\sin(\Delta g_1|\delta|/2)\ge\sin(\pi/(2N))\ge1/N$; the product bound is the second inequality in (L.4.6b.3). ∎
+
+**Resolution TV-L-05-R1 (Metadata).** Exact domain: every finite-dimensional seeded register, input state, self-adjoint phase generator, context phase pair, context-independent CPTP amplifier with context-independent ancilla, and output effect; the $N$-unit registers with identical unit generators. Premises: Lemma 9.1, Uhlmann's theorem, the Fuchs–van de Graaf inequality, multiplicativity of fidelity and contractivity of trace distance under CPTP maps. Equivalence: instruments are compared by their context-conditioned outcome probabilities. Budget: all states, generators, amplifiers and effects, with the qubit, GHZ and product witnesses attaining each bound. Verifier: the arc lemma, the commutator norm bound, the explicit qubit transfer (L.4.6b.2), the GHZ and product overlaps, and the inequality $|\sin Nx|\le N|\sin x|$. Falsifier: a context-independent CPTP processing of phase-seeded units whose context-conditioned probability difference exceeds (L.4.6b.1) or (L.4.6b.3), or a slope exceeding $\Delta g/2$. Provenance class: source-internal sharp classification with attaining witnesses and a data-processing no-go. Downstream consumers: Proposition L.4.6, Theorem L.4.6a, Section L.4.1.7 and `TV-L-05`. Nonvacuity: the qubit instrument (c) at any $\delta\ne0$. Theorem L.4.6b gives `positive-discharge` of the registered phase-to-normalized-probability instrument, with target generator, state, readout and noise factor specified and its slope and finite-phase transfer proved optimal, and `negative-refutation` of seed-only amplification beyond (L.4.6b.4). The target remains live for its C+R components: the physical carrier and context-to-phase map with its populated generator spread, phase and noise parameters, including any context-dependent resource entering the amplifier beyond the phase seed.
+
 ### **L.4.1.7 Relationship to Controversial Experimental Claims**
 
 *The following section addresses reported anomalous phenomena that require independent replication and states the conditions for attributing such an effect to a CC mechanism.*
@@ -617,6 +735,34 @@ Every spacetime pushforward preserving the ownership labels acts diagonally on (
 *Proof.* The fibers of the function $\lambda$ are pairwise disjoint and exhaust $\mathcal E$, proving (L.6a.0). Equations (L.6a.1)--(L.6a.2) are the universal coordinate projections of the resulting direct sum. A projection with the stated action agrees with $P_\ell$ on every summand and hence on all of $\mathcal A$, proving uniqueness. Equation (L.6a.3) is the first-law balance in the common stress-energy/flux space. Summation gives (L.6a.4). A label-preserving pushforward maps each summand to itself, which proves commutation and covariance. ∎
 
 The construction supplies one common audit and an exact no-double-counting test. A proposed implementation must still populate the tagged transactions and prove that its physical source-to-record map is exhaustive.
+
+**Theorem L.6b (Exhaustive Covariant Records and Dual Gravitational Attribution on the Inertial Branch).** In Minkowski spacetime with inertial coordinates, let $T^{\mu\nu}=\sum_{\ell\in\mathcal S}T_\ell^{\mu\nu}$ be a finite sum of symmetric $C^1$ sector tensors with past-compact, spatially compact support, exchange currents $f_\ell^\nu:=\partial_\mu T_\ell^{\mu\nu}$ and external source $j_{\mathrm{ext}}^\nu:=\sum_\ell f_\ell^\nu$. Let $\mathcal D$ be a compact region with piecewise $C^1$ boundary, split into finitely many boundary pieces $\partial\mathcal D=\bigcup_kB_k$, and define the four-vector records
+$$
+R_{\ell,k}^\alpha:=\int_{B_k}T_\ell^{\mu\alpha}\,d\Sigma_\mu,
+\qquad
+X_\ell^\alpha:=\int_{\mathcal D}f_\ell^\alpha\,d^4x,
+\qquad
+J^\alpha:=\int_{\mathcal D}j_{\mathrm{ext}}^\alpha\,d^4x,
+\tag{L.6b.1}
+$$
+with outward orientation.
+
+(a) *(Sector balance.)* $\sum_kR_{\ell,k}^\alpha=X_\ell^\alpha$ for every sector $\ell$ and every $\alpha$.
+
+(b) *(Exhaustive audit.)* $\sum_{\ell,k}R_{\ell,k}^\alpha=J^\alpha$. For a slab $\mathcal D=[x^0_1,x^0_2]\times V$, tag the final-minus-initial slice records of each sector as stored, the side record of each sector with its registered output label, and $J^\alpha$ as source. Every nonzero record then has exactly one owner, and the balance map (L.6a.3) vanishes identically for every such sector decomposition. A Poincaré map $\Lambda$ carries the records of $(T_\ell,\mathcal D)$ to $\Lambda^\alpha{}_\beta$ times those of the transformed tensors on $\Lambda\mathcal D$.
+
+(c) *(Dual gravitational attribution.)* The retarded linearized field $\bar h^{\mu\nu}=-(16\pi G/c^4)\sum_\ell G_{\mathrm{ret}}*T_\ell^{\mu\nu}$ is the exact sum of the sector fields $\bar h_\ell^{\mu\nu}:=-(16\pi G/c^4)G_{\mathrm{ret}}*T_\ell^{\mu\nu}$, and
+$$
+\partial_\mu\bar h_\ell^{\mu\nu}=-\frac{16\pi G}{c^4}G_{\mathrm{ret}}*f_\ell^\nu,
+\qquad
+\partial_\mu\bar h^{\mu\nu}=-\frac{16\pi G}{c^4}G_{\mathrm{ret}}*j_{\mathrm{ext}}^\nu.
+\tag{L.6b.2}
+$$
+The total is a harmonic-gauge solution of the linearized Einstein equation exactly when $j_{\mathrm{ext}}=0$, and a sector tensor $T_\ell$ is an admissible linearized source by itself exactly when $f_\ell=0$. On every open region where Maxwell fields and charged dust obey the coupled equations, $f_{\mathrm{EM}}^\nu=-F^\nu{}_\mu J^\mu=-f_{\mathrm{matter}}^\nu$, so if $F^\nu{}_\mu J^\mu\ne0$ somewhere on that region, neither sector alone is the source of a solution of the linearized Einstein equation on it, while their sum is conserved there and the exchange cancels in $j_{\mathrm{ext}}$.
+
+*Proof.* (a) For fixed $\alpha$, the vector field $V^\mu=T_\ell^{\mu\alpha}$ is $C^1$, and Gauss's theorem on $\mathcal D$ gives $\oint_{\partial\mathcal D}V^\mu d\Sigma_\mu=\int_{\mathcal D}\partial_\mu V^\mu d^4x=X_\ell^\alpha$; the boundary integral splits over the pieces $B_k$. (b) Summing (a) over $\ell$ gives $J^\alpha$. For a slab the outward boundary consists of the final slice, the reversed initial slice and the side, so the tagged records are the stored change and the outflows. Moving $J^\alpha$ to the source label and all other records to output labels gives $\mathfrak D(a)=J^\alpha-\sum_{\ell,k}R^\alpha_{\ell,k}=0$. The tagging assigns each record one label by construction. Poincaré maps preserve $d^4x$ and map oriented boundary pieces to oriented boundary pieces, and $T_\ell^{\mu\alpha}$ transforms tensorially, which gives the covariance statement. (c) Linearity of retarded convolution gives the sum. Retarded convolution commutes with derivatives on past-compact distributions, which gives (L.6b.2). In harmonic gauge the linearized Einstein equation reads $\Box\bar h^{\mu\nu}=-16\pi GT^{\mu\nu}/c^4$, satisfied by $G_{\mathrm{ret}}*$ since $\Box G_{\mathrm{ret}}=\delta$; the gauge condition holds exactly when $G_{\mathrm{ret}}*j_{\mathrm{ext}}=0$, that is when $j_{\mathrm{ext}}=0$, because applying $\Box$ recovers $j_{\mathrm{ext}}$. The linearized Bianchi identity makes the linearized Einstein tensor divergence-free on every open set, so a source must be conserved there; this gives the sector criterion and its local form on a region. For Maxwell–dust, $\partial_\mu T^{\mu\nu}_{\mathrm{EM}}=-F^\nu{}_\mu J^\mu$ and $\partial_\mu T^{\mu\nu}_{\mathrm{matter}}=F^\nu{}_\mu J^\mu$ by the Lorentz-force law. ∎
+
+**Resolution TV-L-03-R1 (Metadata).** Exact domain: Minkowski spacetime, finite symmetric $C^1$ sector decompositions with past-compact spatially compact support, every compact region with piecewise $C^1$ boundary and every boundary partition, and the retarded linearized gravitational field of the same sectors. Premises: Gauss's theorem, tensorial transformation, retarded convolution and the linearized Bianchi identity. Equivalence: audits are compared by their tagged four-vector records and gravitational attributions by their sector fields. Budget: every sector, boundary piece and component $\alpha$. Verifier: the divergence theorem per sector, summation of exchange currents, the slab orientation, commutation of $G_{\mathrm{ret}}*$ with derivatives and the Lorentz-force exchange. Falsifier: a sector decomposition whose records fail (a) or (b), a transaction with two owners, or a nonconserved sector field satisfying the linearized Einstein equation. Provenance class: source-internal covariant exhaustion theorem. Downstream consumers: Theorems L.6 and L.6a, Equation (S.9), Section S.8.6 and `TV-L-03`. Nonvacuity: the sectors $T_1^{\mu\nu}=(\partial^\mu\partial^\nu-\eta^{\mu\nu}\Box)\phi+\psi\,\delta^\mu_0\delta^\nu_0$ and $T_2^{\mu\nu}=-\psi\,\delta^\mu_0\delta^\nu_0$ with nonzero $\phi,\psi\in C_c^\infty(\mathbb R^4)$, which meet every premise and have $j_{\mathrm{ext}}=0$, the nonzero total $(\partial^\mu\partial^\nu-\eta^{\mu\nu}\Box)\phi$, whose trace $-3\Box\phi$ vanishes only for $\phi=0$, and $f_1^\nu=-f_2^\nu=\delta^\nu_0\partial_0\psi\ne0$; and a $C^1$ Maxwell–charged-dust solution on a neighborhood of a bounded slab, with both sector tensors multiplied by one cutoff in $C_c^\infty(\mathbb R^4)$ supported in that neighborhood and equal to $1$ near the slab, which meets every premise, has the physical records on the slab and has $J^\alpha=0$. Theorem L.6b gives `positive-discharge` of exhaustiveness and covariance of the source-to-record map on the inertial branch, and of the dual electromagnetic–gravitational attribution in which the complete source is counted once and a sector alone is admissible exactly when separately conserved. The target remains live for its C+R+O components: population of the tagged EM, reset and thermal transactions for a registered implementation, extension of the record map beyond the inertial branch, where a Killing field or an accepted quasi-local energy convention must supply the records, and a retarded attribution class that admits registered conserved physical sources. Such a source with positive total energy, for instance a nonzero self-consistent Maxwell–charged-dust system, has no past-compact spatially compact representative, because conservation keeps that total energy constant, while a past-compact spatially compact source vanishes on every sufficiently early time slice.
 
 ## **L.6 Connection to Thermodynamic Gravity Derivation**
 
@@ -1041,6 +1187,49 @@ with $\partial_t\rho+\nabla\cdot\mathbf J=0$. Then its total charge is constant,
 A nonzero cavitation-radiation certificate must therefore contain a symmetry-breaking charged multipole or another response-active current. Boundary acceleration alone cannot populate Definition L.8.2b.
 
 **Resolution TV-L-06-R1 (Metadata).** Exact domain: compact flat-spacetime Maxwell sources with exactly spherical charge density, radial conserved current and purely radial boundary motion. Premises: Maxwell's equations, current conservation and the stated spherical symmetry. Equivalence: sources are compared by their complete exterior retarded fields and radiated Poynting flux. Budget: every electric and magnetic multipole and the full exterior region; a smooth static spherical charge supplies a nonempty background witness. Verifier: angular-harmonic projection, charge conservation and the unique spherically symmetric exterior solution. Falsifier: a nonzero higher multipole, magnetic field or exterior radiative flux satisfying all declared hypotheses. Provenance class: source-internal coverage-complete symmetry no-go. Downstream consumers: Definition L.8.2b and `TV-L-06`. Proposition L.8.2e gives `negative-refutation` of the spherical/radial cavitation-radiation route. The target remains live for symmetry-breaking charged multipoles or other response-active currents, their Maxwell/detector realization and the certified spectrum and range/time scaling map.
+
+**Theorem L.8.2f (Symmetry Selection Rules for Cavitation Radiation and an Explicit Axial Radiator).** Let a harmonic conserved current $\mathbf J_\omega$ satisfy the hypotheses of Theorem L.8.2c, with charge density $\rho_\omega=\nabla\cdot\mathbf J_\omega/(i\omega)$ and outgoing amplitude $\mathcal A_\omega$. Let $K\subseteq O(3)$ be a group with $\mathbf J_\omega(g\mathbf x)=g\mathbf J_\omega(\mathbf x)$ for all $g\in K$; then also $\rho_\omega(g\mathbf x)=\rho_\omega(\mathbf x)$. Use polar angles $(\theta,\phi)$ about $\widehat{\mathbf z}$ with unit vectors $\widehat{\boldsymbol\theta},\widehat{\boldsymbol\phi}$.
+
+(a) $\mathcal A_\omega(g\mathbf n)=g\,\mathcal A_\omega(\mathbf n)$ for every $g\in K$ and $\mathbf n\in S^2$.
+
+(b) *(Spherical class.)* If $K\supseteq SO(3)$, then $\mathcal A_\omega\equiv0$; this recovers Proposition L.8.2e frequency by frequency.
+
+(c) *(Axial class without swirl.)* If $K$ contains every rotation about $\widehat{\mathbf z}$ and every reflection through a plane containing $\widehat{\mathbf z}$, then
+$$
+\mathcal A_\omega(\mathbf n)=a_\omega(\theta)\,\widehat{\boldsymbol\theta}(\mathbf n),
+\qquad
+a_\omega(0)=a_\omega(\pi)=0,
+\tag{L.8.2f.1}
+$$
+so every $\widehat{\boldsymbol\phi}$-polarized component vanishes, the pattern is independent of $\phi$, and the dipole coefficient $\mathbf p_\omega$ is parallel to $\widehat{\mathbf z}$.
+
+(d) *(Axial class with equatorial mirror.)* If $K$ also contains $z\mapsto-z$, then $a_\omega(\pi-\theta)=-a_\omega(\theta)$, the radiation vanishes in the equatorial plane, and $\mathbf p_\omega=0$, so the dipole term $D_\omega$ of Theorem L.8.2c vanishes.
+
+(e) *(Explicit axial radiator.)* Let $g\ge0$ be a smooth radial function supported in $|\mathbf x|\le a$ with $\int g\,d^3x=1$, let $p\in\mathbb C\setminus\{0\}$, and put $\mathbf J_\omega(\mathbf x):=-i\omega p\,g(|\mathbf x|)\widehat{\mathbf z}$, so that $\rho_\omega=-p\,\partial_zg$ and $\mathbf p_\omega=p\widehat{\mathbf z}$. This source has the symmetry of (c) and is odd under $z\mapsto-z$. With $k=\omega/c$,
+$$
+\mathcal A_\omega(\mathbf n)=-\frac{\mu_0\omega^2p\,\hat g(k)}{4\pi}\sin\theta\,\widehat{\boldsymbol\theta},
+\qquad
+\hat g(k):=4\pi\int_0^ag(r)\frac{\sin kr}{kr}r^2\,dr\in\left[1-\frac{k^2a^2}{6},1\right],
+\tag{L.8.2f.2}
+$$
+and the exact radiated power is
+$$
+P_{\mathrm{EM}}(\omega)=\hat g(k)^2\,\frac{\omega^4|p|^2}{12\pi\epsilon_{\mathrm{vac}}c^3}.
+\tag{L.8.2f.3}
+$$
+For $ka<\sqrt6$ this is the complete-field certificate of Theorem L.8.2c with $\eta=k^2a^2/6$. The far-zone field scales as $r^{-1}$, its intensity as $r^{-2}\sin^2\theta$, and the spectrum as $\omega^4\hat g(\omega/c)^2|p|^2$.
+
+*Proof.* (a) Substituting $\mathbf x=g\mathbf y$ with $|\det g|=1$ and $(g\mathbf n)\cdot(g\mathbf y)=\mathbf n\cdot\mathbf y$ gives $\int\mathbf J_\omega(\mathbf x)e^{-ik(g\mathbf n)\cdot\mathbf x}d^3x=g\int\mathbf J_\omega(\mathbf y)e^{-ik\mathbf n\cdot\mathbf y}d^3y$, and $P_{g\mathbf n}g=gP_{\mathbf n}$. The divergence commutes with orthogonal maps, which gives the invariance of $\rho_\omega$.
+
+(b) Every rotation about $\mathbf n$ fixes $\mathbf n$, so by (a) the transverse vector $\mathcal A_\omega(\mathbf n)$ is fixed by all of them and vanishes.
+
+(c) On the axis, the same argument with rotations about $\widehat{\mathbf z}$ gives $\mathcal A_\omega(\pm\widehat{\mathbf z})=0$. Off the axis, the reflection through the plane spanned by $\widehat{\mathbf z}$ and $\mathbf n$ fixes $\mathbf n$ and $\widehat{\boldsymbol\theta}$ and reverses $\widehat{\boldsymbol\phi}$, so the transverse vector $\mathcal A_\omega(\mathbf n)$ is a multiple of $\widehat{\boldsymbol\theta}$. A rotation by $\alpha$ about $\widehat{\mathbf z}$ maps $\widehat{\boldsymbol\theta}(\theta,\phi)$ to $\widehat{\boldsymbol\theta}(\theta,\phi+\alpha)$, so the coefficient is independent of $\phi$. From $\int\mathbf J_\omega\,d^3x=-i\omega\mathbf p_\omega$ and the symmetry, $\mathbf p_\omega$ is fixed by every rotation about $\widehat{\mathbf z}$, hence parallel to $\widehat{\mathbf z}$.
+
+(d) The mirror $M_z$ maps $\mathbf n(\theta,\phi)$ to $\mathbf n(\pi-\theta,\phi)$ and $\widehat{\boldsymbol\theta}(\theta,\phi)$ to $-\widehat{\boldsymbol\theta}(\pi-\theta,\phi)$, so (a) gives $a_\omega(\pi-\theta)=-a_\omega(\theta)$ and $a_\omega(\pi/2)=0$. The same symmetry gives $M_z\mathbf p_\omega=\mathbf p_\omega$, which with (c) forces $\mathbf p_\omega=0$ and hence $D_\omega=0$.
+
+(e) The current is fixed by rotations about $\widehat{\mathbf z}$ and by reflections through planes containing it, and $\rho_\omega=\nabla\cdot\mathbf J_\omega/(i\omega)=-p\,\partial_zg$ changes sign under $z\mapsto-z$. Also $\int\mathbf J_\omega d^3x=-i\omega p\widehat{\mathbf z}$. Radial integration gives $\int g(|\mathbf x|)e^{-ik\mathbf n\cdot\mathbf x}d^3x=\hat g(k)$ for every $\mathbf n$, and $P_{\mathbf n}\widehat{\mathbf z}=-\sin\theta\,\widehat{\boldsymbol\theta}$, which gives (L.8.2f.2). The bounds $1-x^2/6\le\sin x/x\le1$, $g\ge0$, $\int g=1$ and $|\mathbf x|\le a$ on the support give the interval for $\hat g(k)$. Theorem L.8.2c gives $P_{\mathrm{EM}}=\epsilon_{\mathrm{vac}}c\|\mathcal A_\omega\|_2^2/2$, and $\int_{S^2}\sin^2\theta\,d\Omega=8\pi/3$ with $\mu_0^2\epsilon_{\mathrm{vac}}c=1/(\epsilon_{\mathrm{vac}}c^3)$ gives (L.8.2f.3). The remainder $\mathcal R_\omega=(\hat g(k)-1)D_\omega$ satisfies $\|\mathcal R_\omega\|_2\le(k^2a^2/6)\|D_\omega\|_2$. The scaling statements follow from $\mathbf E_\omega=e^{ikr}\mathcal A_\omega/r+O(r^{-2})$. ∎
+
+**Resolution TV-L-06-R2 (Metadata).** Exact domain: harmonic conserved compact currents satisfying Theorem L.8.2c whose symmetry group contains $SO(3)$, the axial group without swirl, or that group with the equatorial mirror; and the explicit axial radiator (e). Premises: Maxwell's equations on the retarded branch and the exact outgoing amplitude of Theorem L.8.2c. Equivalence: sources are compared by their outgoing amplitudes $\mathcal A_\omega$ on $S^2$ and their radiated powers. Budget: every frequency, direction and admissible current in the three symmetry classes, and every $a>0$, $p\ne0$ and $\omega\ne0$ for the witness. Verifier: the change of variables in (a), stabilizer invariance, the mirror action on $\widehat{\boldsymbol\theta}$, the radial Fourier transform and the $\sin x/x$ bounds. Falsifier: a nonzero $\widehat{\boldsymbol\phi}$ component, on-axis amplitude or off-axis dipole in class (c), a nonzero dipole in class (d), or a witness power differing from (L.8.2f.3). Provenance class: source-internal symmetry classification with an exact nonvacuity witness. Downstream consumers: Corollary L.8.2, Definition L.8.2b, Theorem L.8.2c, Proposition L.8.2e and `TV-L-06`. Nonvacuity: the radiator (e) with $ka<\sqrt6$ has $P_{\mathrm{EM}}(\omega)>0$. Theorem L.8.2f gives `positive-discharge` of the radiation selection rules for the spherical, axial and axial-mirror symmetry classes of cavitation currents and of an explicit nonzero Maxwell map with certified spectrum and range scaling for the axial class; it gives `negative-refutation` of dipole radiation from axial sources carrying the equatorial mirror. The target remains live for its M component, the classification of response-active currents outside these three symmetry classes, and for the physical cavitation carrier: a source certificate deriving a symmetry-broken current of class (c) from the registered temporal modulation, the detector transfer, noise, threshold and decision record of Definition L.8.2b, and the time-domain scaling of a registered collapse profile.
 
 ## **L.8 Experimental Protocols and Testable Predictions**
 
@@ -1472,6 +1661,35 @@ Unless $\alpha/\mu=\beta\tau$, no interior scalar optimum exists and a minimum l
 
 The theorem reports the complete frontier for the declared attenuation class. Exhausting all implementations satisfying Theorem L.9 requires a separate proof that their response laws reduce to (L.9.6.1), or a larger frontier census.
 
+**Theorem L.9.6a (Pareto Frontier for General Monotone Implementation Laws).** Let $Q=I_R\times I_t\subseteq[0,\infty)^2$ be a product of closed intervals, let $q>0$, and let $\delta:Q\times[0,\infty)\to[0,\infty)$ be continuous with $E\mapsto\delta(R,t;E)$ strictly increasing and $\delta(R,t;0)<q$. Order feasible triples, $\delta\ge q$, as in Theorem L.9.6, and put
+$$
+E_{\min}(R,t):=\inf\{E\ge0:\delta(R,t;E)\ge q\}\in(0,\infty].
+\tag{L.9.6a.1}
+$$
+
+(a) A triple is feasible exactly when $E\ge E_{\min}(R,t)$, and $\delta(R,t;E_{\min}(R,t))=q$ when $E_{\min}(R,t)<\infty$. The Pareto frontier consists exactly of the points $(R,t,E_{\min}(R,t))$ with $E_{\min}(R,t)<\infty$ for which no $(R',t')\in Q$ with $R'\ge R$, $t'\ge t$ and $(R',t')\ne(R,t)$ has $E_{\min}(R',t')\le E_{\min}(R,t)$.
+
+(b) If $\delta(\cdot,t;E)$ and $\delta(R,\cdot;E)$ are strictly decreasing for every $E>0$, then $E_{\min}$ is strictly increasing in each argument on $\{E_{\min}<\infty\}$, and the frontier is the entire graph of $E_{\min}$ over that set.
+
+(c) $E_{\min}$ is lower semicontinuous on $Q$. For positive weights $\alpha,\beta,\gamma$ and a compact rectangle $Q_0\subseteq\{E_{\min}<\infty\}$, minimizing $\gamma E-\alpha R-\beta t$ over feasible triples with $(R,t)\in Q_0$ reduces to minimizing $\gamma E_{\min}(R,t)-\alpha R-\beta t$ on $Q_0$, and a minimizer exists.
+
+(d) *(Factorized laws.)* Let $\delta=\zeta Ea(R)b(t)$ with $\zeta>0$ and positive $C^2$ functions $a,b$ with $a'<0$ and $b'<0$, and put $A:=1/a$, $B:=1/b$. If
+$$
+\frac{AA''}{A'^2}\,\frac{BB''}{B'^2}<1
+\tag{L.9.6a.2}
+$$
+at every interior point of $Q_0$, every minimizer in (c) lies on the boundary of $Q_0$. For the exponential class (L.9.6.1) the product in (L.9.6a.2) equals $1$ identically. For the inverse-square spatial law of Proposition L.9.3 with the exponential temporal law of Proposition L.9.4, $\delta=\zeta ER^{-2}e^{-t/\tau}$ on $R\ge R_0>0$, the product equals $1/2$; this law satisfies (b), its scalar minimizers lie on the boundary, and it is not of the form (L.9.6.1) on any open set of radii.
+
+*Proof.* (a) By strict monotonicity and continuity in $E$, the feasible energies at fixed $(R,t)$ form the closed up-set $[E_{\min}(R,t),\infty)$, and $E_{\min}>0$ because $\delta(R,t;0)<q$; continuity then gives $\delta(R,t;E_{\min})=q$. A feasible triple with $E>E_{\min}(R,t)$ is dominated by $(R,t,E_{\min}(R,t))$. The point $(R,t,E_{\min}(R,t))$ is dominated exactly when a feasible $(R',t',E')$ has $R'\ge R$, $t'\ge t$, $E'\le E_{\min}(R,t)$ and one strict inequality. Equality $(R',t')=(R,t)$ would force $E'<E_{\min}(R,t)$, which is infeasible; otherwise feasibility gives $E_{\min}(R',t')\le E'\le E_{\min}(R,t)$, and conversely such a pair supplies the dominating triple $(R',t',E_{\min}(R',t'))$.
+
+(b) For $(R',t')\ge(R,t)$ with $(R',t')\ne(R,t)$, passing through $(R',t)\in Q$ gives $\delta(R',t';E)<\delta(R,t;E)$ at $E=E_{\min}(R,t)$, so $\delta(R',t';E_{\min}(R,t))<q$. Monotonicity in $E$ and closedness of the feasible up-set give $E_{\min}(R',t')>E_{\min}(R,t)$, and (a) places every graph point on the frontier.
+
+(c) By (a), $E_{\min}(R,t)\le c$ exactly when $\delta(R,t;c)\ge q$, a closed condition by continuity, so every sublevel set is closed. Since $\gamma>0$, the least feasible energy is optimal at each $(R,t)$. A lower semicontinuous function minus a continuous one attains its minimum on the compact set $Q_0$.
+
+(d) Here $E_{\min}=(q/\zeta)A(R)B(t)$ with $A',B'>0$. Put $c_0:=\gamma q/\zeta>0$ and $f:=c_0AB-\alpha R-\beta t$. At an interior local minimizer the Hessian of $f$ is positive semidefinite, so $c_0^2(AA''BB''-A'^2B'^2)\ge0$; division by $A'^2B'^2>0$ contradicts (L.9.6a.2). For $A=e^{\mu R}$ and $B=e^{t/\tau}$ each ratio equals $1$. For $A=R^2$ the ratio is $R^2\cdot2/(2R)^2=1/2$. The inverse-square law is continuous, strictly increasing in $E$ with $\delta(R,t;0)=0<q$, and strictly decreasing in $R$ and $t$ for $E>0$. If it agreed with $\zeta'Ee^{-\mu R-t/\tau'}$ on an open set, $R^{-2}e^{\mu R}$ would be locally constant there, whereas its derivative $(\mu-2/R)R^{-2}e^{\mu R}$ vanishes only at $R=2/\mu$. ∎
+
+**Resolution TV-L-08-R1 (Metadata).** Exact domain: every continuous implementation response law on a product of closed intervals of range and retention time that is strictly increasing in source energy with subthreshold zero-energy response; the strictly decreasing subclass; the factorized subclass with strictly decreasing $C^2$ factors; and the inverse-square law of Propositions L.9.3--L.9.4 on $R\ge R_0>0$. Premises: continuity, strict monotonicity in energy, the dominance order of Theorem L.9.6 and positive scalarization weights. Equivalence: implementation laws are compared by their feasible sets and Pareto frontiers. Budget: every admissible law, every point of $Q$ and every compact rectangle. Verifier: the up-set structure of feasible energies, the dominance argument, closed sublevel sets, the second-order necessary condition and the derivative of $R^{-2}e^{\mu R}$. Falsifier: a nondominated feasible triple off the graph of $E_{\min}$; a strictly decreasing law with a dominated graph point; an interior minimizer under (L.9.6a.2); or an exponential representation of the inverse-square law on an open set. Provenance class: source-internal complete frontier classification with a nonreduction witness. Downstream consumers: Theorem L.9.6, Propositions L.9.3--L.9.5, Remark L.9.5a and `TV-L-08`. Nonvacuity: the inverse-square law with any $\zeta,\tau,R_0,q>0$. Theorem L.9.6a gives `positive-discharge` of the complete Pareto-frontier census and scalar-optimum existence for every continuous energy-monotone law, with a boundary-optimum criterion for factorized laws, and `negative-refutation` of reduction of the registered implementation laws to the exponential class (L.9.6.1). The target remains live for its M component, the frontier of implementation laws satisfying Theorem L.9 that are discontinuous or not strictly increasing in energy, and for its C+R components: identification of the response law realized by a physical implementation satisfying Theorem L.9, population of its source parameters and cost, and realization of the frontier.
+
 **Remark L.9.5a (Conditional Appendix-S Self-Limitation Gate).** Appendix S's decoherence constraint, combined with the power floor of Proposition L.9.5, bounds a registered test radius. On a stationary overlap branch, suppose $P_{\mathrm{context}}=\chi P_{\mathrm{agg}}$ with $\chi>0$, $K_{\mathrm{eff}}>0$, $|\Delta E|>0$ and $\tau_c>0$, and let $0\le\Lambda_{\max}<\infty$. Require a certificate that retention over $\tau_c$ imposes
 $$
 \Gamma_{\mathrm{deco}}\tau_c
@@ -1657,6 +1875,38 @@ $$
 *Proof.* The Stark Hamiltonian commutes with $E_e$, while amplitude damping gives $\dot p_c=-\gamma(\omega_{\mathrm{TLS}}+\delta_c)p_c$, $p_c(0)=1$. Solving yields (L.11.2a.1), and differentiation gives (L.11.2a.3). Compare each perturbed endpoint first at the original duration $\tau$. The frequency derivative has magnitude at most $\tau L_\gamma$ throughout the certified segment. Next vary duration at the perturbed frequency; its derivative has magnitude $\gamma e^{-\gamma t}\le\gamma_{\max}$ for all intervening nonnegative times. Thus $|\widehat p_c-p_c|\le\tau L_\gamma e_c+\gamma_{\max}e_\tau$. The triangle inequality for the two endpoints gives (L.11.2a.4). ∎
 
 This theorem supplies a dimensionless endpoint, sign, susceptibility, nuisance variables, and a rigorous uncertainty functional once the frozen Maxwell shifts and bath law are populated.
+
+**Theorem L.11.2b (Certified Dispersive Remainder and Finite Collision-Bath Realization).**
+
+(a) Let $\Delta\ne0$ and $\Omega_R\ge0$ be frozen, and let $\delta_{\mathrm{ex}}:=\operatorname{sgn}(\Delta)\bigl(\sqrt{\Delta^2+\Omega_R^2}-|\Delta|\bigr)$ be the signed change of the rotating-frame eigenvalue separation. Then $\delta_{\mathrm{ex}}$ has the sign of $\Delta$ when $\Omega_R>0$, and
+$$
+0\le\frac{\Omega_R^2}{2|\Delta|}-|\delta_{\mathrm{ex}}|\le\frac{\Omega_R^4}{8|\Delta|^3}.
+\tag{L.11.2b.1}
+$$
+Thus Equation (L.87) holds for frozen parameters with the explicit remainder constant $1/8$.
+
+(b) Let the target Hamiltonian be $\tfrac{\hbar}{2}\omega_c\sigma_z$ with $\omega_c:=\omega_{\mathrm{TLS}}+\delta_c$, as in Theorem L.11.2a. Let the bath consist of $n\ge1$ fresh qubits of frequency $\omega_b$, each initially in its ground state and coupled to the target in turn for a duration $\tau_0>0$ by
+$$
+H_{\mathrm{col}}=\frac{\hbar\omega_c}{2}\sigma_z\otimes I+\frac{\hbar\omega_b}{2}I\otimes\sigma_z+\hbar g\,(\sigma_+\otimes\sigma_-+\sigma_-\otimes\sigma_+),
+\qquad g>0.
+$$
+With $\nu_c:=\omega_c-\omega_b$ and $R_c:=\sqrt{g^2+\nu_c^2/4}$, each collision transfers the excitation with probability
+$$
+p_{\mathrm{col}}(\nu_c)=\frac{g^2}{R_c^2}\sin^2(R_c\tau_0),
+\tag{L.11.2b.2}
+$$
+and an initially excited target has, after the $n$ collisions, excited probability exactly
+$$
+p_c=\bigl(1-p_{\mathrm{col}}(\nu_c)\bigr)^n.
+\tag{L.11.2b.3}
+$$
+Whenever $p_{\mathrm{col}}<1$ at the frequencies used, (L.11.2b.3) is Equation (L.11.2a.1) with $\tau=n\tau_0$ and the smooth nonnegative decay law $\gamma(\omega):=-\tau_0^{-1}\ln[1-p_{\mathrm{col}}(\omega-\omega_b)]$. The susceptibility (L.11.2a.3) then holds with this $\gamma$, and the locked response $\mathcal A_{\mathrm{AD}}=p_1-p_0$ is nonzero exactly when $p_{\mathrm{col}}(\nu_1)\ne p_{\mathrm{col}}(\nu_0)$.
+
+*Proof.* (a) Put $x=\Omega_R^2/\Delta^2\ge0$ and $f(x)=\sqrt{1+x}$. Since $f''<0$ and $f'''>0$ on $[0,\infty)$, Taylor's theorem with Lagrange remainder gives $1+x/2-x^2/8\le f(x)\le1+x/2$. Multiplication by $|\Delta|$ and subtraction of $|\Delta|$ give $\Omega_R^2/(2|\Delta|)-\Omega_R^4/(8|\Delta|^3)\le|\delta_{\mathrm{ex}}|\le\Omega_R^2/(2|\Delta|)$, and $\sqrt{\Delta^2+\Omega_R^2}>|\Delta|$ for $\Omega_R>0$ fixes the sign.
+
+(b) $H_{\mathrm{col}}$ commutes with the excitation number $\sigma_z\otimes I+I\otimes\sigma_z$. The vector $|g,g\rangle$ is an eigenvector, and on $\operatorname{span}\{|e,g\rangle,|g,e\rangle\}$ the Hamiltonian is $\hbar(\tfrac{\nu_c}{2}Z'+gX')$ plus a multiple of the identity, where $Z',X'$ are Pauli operators on that span. Rabi's formula gives the transfer probability (L.11.2b.2). With the ancilla in its ground state, the post-collision amplitude of $|e,g\rangle$ arises only from the prior excited component, with modulus squared $1-p_{\mathrm{col}}$, and tracing out the ancilla leaves excited probability $(1-p_{\mathrm{col}})$ times its prior value. Induction over the fresh ancillas gives (L.11.2b.3). Taking logarithms gives the exponential form with the displayed $\gamma$, which is smooth and nonnegative where $p_{\mathrm{col}}<1$; differentiation gives (L.11.2a.3), and strict monotonicity of $x\mapsto(1-x)^n$ on $[0,1)$ gives the response criterion. ∎
+
+**Resolution TV-L-02-R1 (Metadata).** Exact domain: frozen rotating-frame two-level parameters with $\Delta\ne0$; and finite collision baths of fresh ground-state qubits with exchange coupling acting on the diagonal Stark-shifted target of Theorem L.11.2a, for both context values. Premises: the rotating-wave Hamiltonian of (L.86)--(L.87) and the diagonal Stark premise of Theorem L.11.2a. Equivalence: carriers are compared by their endpoint probabilities, susceptibilities and locked responses. Budget: all frozen $(\Delta,\Omega_R)$, all $n\ge1$, $g,\tau_0>0$ and bath frequencies. Verifier: the two Taylor bounds, excitation conservation, the one-excitation Rabi formula and induction over collisions. Falsifier: a frozen parameter pair violating (L.11.2b.1), or a collision sequence whose excited probability differs from (L.11.2b.3). Provenance class: source-internal certified remainder and explicit finite bath construction. Downstream consumers: Theorem L.11.2a, Sections L.11.1--L.11.4 and `TV-L-02`. Nonvacuity: $\omega_b=\omega_{\mathrm{TLS}}+\delta_1$ with $0<g\tau_0<\pi/2$ and $\delta_0\ne\delta_1$ gives $p_{\mathrm{col}}(\nu_1)=\sin^2(g\tau_0)\in(0,1)$ and, when $p_{\mathrm{col}}(\nu_0)\ne p_{\mathrm{col}}(\nu_1)$, a nonzero locked response. Theorem L.11.2b gives `positive-discharge` of the certified dispersive remainder for frozen parameters and of an explicit finite bath realizing the decay law, endpoint and susceptibility of Theorem L.11.2a. The target remains live for its M+C+R+O components: the Maxwell geometry and source certificate of a registered current, the rotating-wave and adiabatic-elimination certificate linking the driven dressed target to the diagonal shift seen by the bath, and the physical identification and population of the bath, carrier and observable.
 
 ## **L.11.3 Parameter and Feasibility Status**
 
@@ -2090,6 +2340,44 @@ Here $\kappa$ has the same drift-rate units as $\lambda_0$. The law satisfies $\
 *Proof.* Direct enumeration gives (L.12.4a.2); randomized policies are convex combinations and cannot exceed the best deterministic value. Equations (L.12.4a.3)--(L.12.4a.4) are the binary-symmetric-channel formulas. Data processing gives the first inequality in (L.12.4a.5), and the channel-capacity bound gives the second. The remaining statements follow by substitution. ∎
 
 This is a complete policy, rate, precision, drift, and DPI solution for the declared binary DAG. General context alphabets, causal graphs, and physical source maps require their own classifications.
+
+**Theorem L.12.4b (Finite-Alphabet Causal-Policy Classification and Quantitative Advantage Bound).** Let $\mathcal T$, $\mathcal C$ and $\mathcal X$ be finite target, context and carrier-input alphabets, let $P$ be a joint law of $(\Theta,C)$ on $\mathcal T\times\mathcal C$, and let $r:\mathcal T\times\mathcal X\to[0,1]$ be a registered reward. Consider any finite causal DAG containing $\Theta$, $C$, the carrier input $X$ and the target record, including latent common causes and directed ND–RID paths into $\Theta$ and $C$, in which $X$ is produced from $C$ by a policy kernel $\kappa(x\mid c)$ whose randomness is independent of every other variable, neither $\Theta$ nor $C$ is a descendant of $X$, and the expected reward given $(\Theta,C,X)$ equals $r(\Theta,X)$. Define
+$$
+V(\kappa):=\sum_{\theta,c,x}P(\theta,c)\kappa(x\mid c)r(\theta,x),
+\qquad
+V_0:=\max_{x\in\mathcal X}\sum_\theta P(\theta)r(\theta,x),
+\qquad
+f(c,x):=\sum_\theta P(\theta\mid c)r(\theta,x).
+\tag{L.12.4b.1}
+$$
+
+(a) The optimal value is $V^*:=\max_\kappa V(\kappa)=\sum_{c:P(c)>0}P(c)\max_xf(c,x)$. A policy is optimal exactly when, for every $c$ with $P(c)>0$, $\kappa(\cdot\mid c)$ is supported on $\operatorname{arg\,max}_xf(c,x)$; randomization never exceeds the best deterministic policy. The value depends on the graph only through $P$ and $r$.
+
+(b) With $\operatorname{osc}g:=\max g-\min g$, $\omega(r):=\max_x\operatorname{osc}_\theta r(\theta,x)$ and $\omega'(r):=\max_{x,x'}\operatorname{osc}_\theta[r(\theta,x)-r(\theta,x')]$, the advantage $\Delta:=V^*-V_0$ obeys
+$$
+0\le\Delta\le\bar d\,\min\{\omega(r),\omega'(r)\},
+\qquad
+\bar d:=\sum_cP(c)\,d_{\mathrm{TV}}\bigl(P_{\Theta\mid c},P_\Theta\bigr).
+\tag{L.12.4b.2}
+$$
+
+(c) In nats, $\bar d\le\sqrt{I(\Theta;C)/2}$. Hence $\Delta\le\min\{\omega(r),\omega'(r)\}\sqrt{I(\Theta;C)/2}$, a strict advantage $\Delta>0$ forces $I(\Theta;C)\ge2\Delta^2/\min\{\omega(r),\omega'(r)\}^2$, and the causal-separation hypotheses of Lemma L.12.1 give $\Delta=0$.
+
+(d) If the target record is the output $Y$ of a carrier channel $W(y\mid x)$ whose noise is independent of $(\Theta,C)$ given $X$, then $I(\Theta;Y)\le\min\{I(\Theta;C),C(W)\}$, where $C(W)$ is the one-use Shannon capacity.
+
+(e) For the binary DAG of Theorem L.12.4a with $r(\theta,x)=\Pr(Y=\theta\mid X=x)$, one has $\bar d=\tfrac12-q$ and $\omega(r)=1-2s$, and the upper bound in (L.12.4b.2) holds with equality, recovering (L.12.4a.3).
+
+*Proof.* (a) The independence of the policy randomness, the position of $X$ downstream of $(\Theta,C)$ and the reward hypothesis give the joint weight $P(\theta,c)\kappa(x\mid c)$ and conditional reward $r(\theta,x)$, so $V(\kappa)=\sum_cP(c)\sum_x\kappa(x\mid c)f(c,x)$. For each $c$ the inner average is at most $\max_xf(c,x)$, with equality exactly under the support condition, and the graph enters only through these quantities.
+
+(b) A constant policy at a maximizer $x_0$ of $V_0$ gives $\Delta\ge0$. Put $\mu_c:=P_{\Theta\mid c}-P_\Theta$, a signed measure of total mass zero with $\sum_\theta|\mu_c(\theta)|=2d_{\mathrm{TV}}(P_{\Theta\mid c},P_\Theta)$. Subtracting the midrange of $g$ shows $|\sum_\theta\mu_c(\theta)g(\theta)|\le d_{\mathrm{TV}}(P_{\Theta\mid c},P_\Theta)\operatorname{osc}g$. Since $f(c,x)=\sum_\theta\mu_c(\theta)r(\theta,x)+\sum_\theta P(\theta)r(\theta,x)\le\sum_\theta\mu_c(\theta)r(\theta,x)+V_0$, averaging $\max_xf(c,x)-V_0$ over $c$ gives $\Delta\le\bar d\,\omega(r)$. Also $\sum_cP(c)f(c,x_0)=V_0$, and $f(c,x)-f(c,x_0)=\sum_\theta\mu_c(\theta)[r(\theta,x)-r(\theta,x_0)]+[\sum_\theta P(\theta)r(\theta,x)-V_0]\le\sum_\theta\mu_c(\theta)[r(\theta,x)-r(\theta,x_0)]$, so averaging $\max_x[f(c,x)-f(c,x_0)]$ gives $\Delta\le\bar d\,\omega'(r)$.
+
+(c) Pinsker's inequality gives $d_{\mathrm{TV}}(P_{\Theta\mid c},P_\Theta)\le\sqrt{D(P_{\Theta\mid c}\|P_\Theta)/2}$, and concavity of the square root with $I(\Theta;C)=\sum_cP(c)D(P_{\Theta\mid c}\|P_\Theta)$ gives $\bar d\le\sqrt{I(\Theta;C)/2}$. Under Lemma L.12.1, $P_{\Theta\mid c}=P_\Theta$ for every $c$ with $P(c)>0$, so $\bar d=0$.
+
+(d) The hypotheses give the Markov chain $\Theta\to C\to X\to Y$. Data processing gives $I(\Theta;Y)\le I(\Theta;C)$ and $I(\Theta;Y)\le I(X;Y)\le C(W)$.
+
+(e) For $\Theta$ unbiased and $C=\Theta\oplus Z_q$, each $P_{\Theta\mid c}$ is $(1-q,q)$ up to order, so its distance from the uniform law is $\tfrac12-q$; each row of the binary symmetric carrier has oscillation $1-2s$. Their product is $\tfrac12(1-2q)(1-2s)$, which is (L.12.4a.3). ∎
+
+**Resolution TV-L-10-R1 (Metadata).** Exact domain: every finite target, context and carrier-input alphabet, every joint law $P$ of $(\Theta,C)$, every registered reward with values in $[0,1]$, every deterministic or randomized policy, and every finite causal DAG, with latent common causes and directed ND–RID paths allowed, in which neither $\Theta$ nor $C$ descends from the carrier input and the target record depends on the context only through that input. Premises: independent policy randomness, Pinsker's inequality, concavity of the square root and the data-processing inequality. Equivalence: policies are compared by expected reward, and graphs are identified when they induce the same $P$ and $r$. Budget: all laws, rewards and policies on finite alphabets. Verifier: the pointwise-maximization identity, the signed-measure bound, Pinsker and Jensen, the Markov chain in (d) and the binary-symmetric equality. Falsifier: a policy exceeding $V^*$; a law and reward with $\Delta$ above (L.12.4b.2); or a strict advantage under the causal-separation hypotheses. Provenance class: source-internal complete classification with a sharp witness. Downstream consumers: Corollary L.12.4, Theorem L.12, Corollary L.12.3, Theorem L.12.8 and `TV-L-10`. Nonvacuity: the binary DAG of Theorem L.12.4a with $q,s<\tfrac12$ attains the bound with $\Delta>0$. Theorem L.12.4b gives `positive-discharge` of the finite-alphabet, general-causal-graph classification of the causal-information-to-response law, with a sharp total-variation advantage bound and its mutual-information form. The target remains live for its M component, the classification on infinite alphabets, including the continuous resonance reward (L.101), and for its C+R components: the physical source, the carrier channel with its populated reward, and the perspective-response map converting $\Delta$ into a drift response.
 
 -----
 

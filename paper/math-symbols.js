@@ -108,6 +108,7 @@ const PU_MATH_SYMBOLS = {
     "boxtimes": "⊠",
     "odot": "⊙",
     "mid": "|",
+    "nmid": "∤",
     "to": "→",
     "rightarrow": "→",
     "leftarrow": "←",

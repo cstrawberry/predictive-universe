@@ -1106,6 +1106,41 @@ $$
 
 This resolves the finite-dimensional measurable-semigroup lift. Identifying the group parameter with a physical clock and $H$ with calibrated energy still requires Theorem 7.6c and Theorem 29.
 
+**Theorem 8.8e.1 (Channel-Level Transition Realization and Purity-Preserving Semigroup Census).** Let $2\le d<\infty$ and let $(\mathcal E_t)_{t\ge0}$ be CPTP maps on $M_d(\mathbb C)$ such that
+$$
+\mathcal E_0=\operatorname{id},
+\qquad
+\mathcal E_{t+s}=\mathcal E_t\circ\mathcal E_s,
+\qquad
+t\longmapsto\operatorname{tr}\bigl(A\,\mathcal E_t(\rho)\bigr)\ \text{is Borel measurable}
+\tag{8.8e.1.1}
+$$
+for all $s,t\ge0$, $A\in M_d(\mathbb C)$ and density operators $\rho$, and assume that every $\mathcal E_t$ maps pure states to pure states. For unit vectors $\psi,\phi$ register the constant preparation $\mathcal P_\psi(\tau)=\tau|\psi\rangle\!\langle\psi|$, the binary verification instrument $\mathcal I_{\phi,1}(Y)=P_\phi YP_\phi$, $\mathcal I_{\phi,0}(Y)=(I-P_\phi)Y(I-P_\phi)$ with $P_\phi=|\phi\rangle\!\langle\phi|$, and the transition response
+$$
+p_t(\phi\mid\psi)
+:=\operatorname{tr}\mathcal I_{\phi,1}\bigl(\mathcal E_t(\mathcal P_\psi(1))\bigr)
+=\langle\phi,\mathcal E_t(|\psi\rangle\!\langle\psi|)\phi\rangle .
+\tag{8.8e.1.2}
+$$
+Then exactly one of the following holds.
+
+1. **Reset branch.** There is a unit vector $w$ with $\mathcal E_t(\rho)=|w\rangle\!\langle w|$ for every $t>0$ and every density operator $\rho$, so $p_t(\phi\mid\psi)=|\langle\phi,w\rangle|^2$ for $t>0$ independently of $\psi$.
+2. **Unitary branch.** There is a strongly continuous unitary group $U(t)=e^{-iHt/\hbar}$ with $\mathcal E_t(\rho)=U(t)\rho U(t)^\dagger$ for every $t\ge0$. The ray maps $\mathcal T_t[\psi]=[U(t)\psi]$ satisfy every premise of Theorem 8.8e, $[U(t)\psi]$ is the unique ray $[\phi]$ with $p_t(\phi\mid\psi)=1$, and
+$$
+p_t(\phi\mid\psi)=|\langle\phi,U(t)\psi\rangle|^2 .
+\tag{8.8e.1.3}
+$$
+
+The unitary branch holds exactly when some $\mathcal E_t$ with $t>0$ is injective, equivalently when $\operatorname{tr}(A\,\mathcal E_t(\rho))\to\operatorname{tr}(A\rho)$ as $t\downarrow0$ for all $A$ and $\rho$. Every self-adjoint $H$ on $\mathbb C^d$ populates the unitary branch through $\mathcal E_t=U(t)(\cdot)U(t)^\dagger$, and every unit vector $w$ populates the reset branch. The depolarizing semigroup $\mathcal E_t(X)=e^{-\gamma t}X+(1-e^{-\gamma t})\operatorname{tr}(X)I_d/d$ with $\gamma>0$ satisfies (8.8e.1.1) and is continuous, while every output at $t>0$ has full rank. Hence purity preservation is independent of the semigroup, complete-positivity and continuity clauses, and the reset branch shows that the non-reset clause is independent of the remaining ones. On the selected carrier $\mathcal H_0\cong\mathbb C^8$, Theorem 8.8e.1 is the formal transition-law realization: channel-level complete positivity, measurability, purity preservation and non-reset imply the premises of Theorem 8.8e, and the prepare--evolve--verify protocol (8.8e.1.2) realizes the transition law (8.8e.1.3).
+
+*Proof.* Let $\mathcal E(X)=\sum_{i=1}^rK_iXK_i^\dagger$ be CPTP on $M_d(\mathbb C)$ with linearly independent Kraus operators, and suppose $\mathcal E$ maps pure states to pure states. For every unit $\psi$, $\sum_i|K_i\psi\rangle\!\langle K_i\psi|$ has rank at most one, so the vectors $K_i\psi$ are collinear. Let $K,K'$ be linear maps with $K\psi$ and $K'\psi$ collinear for every $\psi$ and $\operatorname{rank}K\ge2$. On $\{\psi:K\psi\ne0\}$ write $K'\psi=\lambda(\psi)K\psi$. If $K\psi$ and $K\phi$ are independent, expanding $K'(\psi+\phi)$ gives $\lambda(\psi)=\lambda(\psi+\phi)=\lambda(\phi)$; if they are dependent and nonzero, a vector $\chi$ with $K\chi$ independent of $K\psi$ gives $\lambda(\psi)=\lambda(\chi)=\lambda(\phi)$. Thus $\lambda$ is a constant, and for $\psi\in\ker K$ and $K\phi\ne0$, $K'\psi=K'(\psi+\phi)-K'\phi=\lambda K\psi=0$. Hence $K'=\lambda K$. If some $K_i$ has rank at least two, this and linear independence give $r=1$, and trace preservation makes $K_1$ unitary. Otherwise every $K_i=|w_i\rangle\!\langle z_i|$ has rank one; collinearity at a vector with $\langle z_i,\psi\rangle\langle z_j,\psi\rangle\ne0$ gives a common range $\mathbb Cw$, and trace preservation gives $\mathcal E(X)=\operatorname{tr}(X)|w\rangle\!\langle w|$. For $d\ge2$ a unitary channel is injective and a replacement channel is not, so the two cases are exclusive.
+
+Let $R=\{t>0:\mathcal E_t\text{ is a replacement channel}\}$. If $t\in R$, then $\mathcal E_{t+s}=\mathcal E_t\circ\mathcal E_s$ is a replacement channel for every $s\ge0$, and $t/2\in R$ because two unitary channels compose to a unitary channel. Hence $R\ne\varnothing$ implies $R=(0,\infty)$. Then $\mathcal E_{t+s}=\mathcal E_s\circ\mathcal E_t$ shows that the output ray at time $t+s$ equals the output ray at time $s$, so it is constant; this is the reset branch. If $R=\varnothing$, each $\mathcal E_t$ with $t>0$ is $V_t(\cdot)V_t^\dagger$ for a unitary $V_t$ unique up to phase. The ray maps $[\psi]\mapsto[V_t\psi]$ preserve transition probabilities and form a semigroup. The map $[\psi]\mapsto|\psi\rangle\!\langle\psi|$ is a homeomorphism of projective space onto the rank-one projections, and the matrix entries of $\mathcal E_t(|\psi\rangle\!\langle\psi|)$ are measurable in $t$ by (8.8e.1.1); hence the ray maps are Borel measurable. Theorem 8.8e supplies the strongly continuous unitary lift $U(t)=e^{-iHt/\hbar}$, and because pure states span $M_d(\mathbb C)$, $\mathcal E_t=U(t)(\cdot)U(t)^\dagger$. Substitution in (8.8e.1.2) gives (8.8e.1.3), and $p_t(\phi\mid\psi)=1$ exactly when $\phi\in\mathbb C\,U(t)\psi$.
+
+A replacement channel is not injective, and for a unit vector $w^\perp\perp w$ it gives $\operatorname{tr}(P_{w^\perp}\mathcal E_t(P_{w^\perp}))=0$ for every $t>0$, whereas a strongly continuous unitary group is injective and weakly continuous at zero. The populating semigroups are direct, and the depolarizing output $e^{-\gamma t}P_\psi+(1-e^{-\gamma t})I_d/d$ has smallest eigenvalue $(1-e^{-\gamma t})/d>0$. ∎
+
+**Resolution TV-QM-06-R2 (Metadata).** Exact domain: every Borel-measurable CPTP semigroup on $M_d(\mathbb C)$, $2\le d<\infty$, that maps pure states to pure states, including the selected carrier $d=8$, together with the preparation channels $\mathcal P_\psi$ and binary instruments $\mathcal I_\phi$ of (8.8e.1.2). Premises: (8.8e.1.1), the purity clause and Theorem 8.8e. Equivalence relation: equality of channels, equivalently of the complete transition table $p_t(\phi\mid\psi)$; implementing unitaries are compared up to phase. Budget: every Kraus family, every $t\ge0$, both branches, every ray pair and the depolarizing boundary. Verifier: the collinearity lemma, the unitary/replacement dichotomy, closure of the replacement set under addition and halving, measurability of the ray maps, Theorem 8.8e and (8.8e.1.3). Falsifier: a purity-preserving CPTP map on $M_d(\mathbb C)$ that is neither unitary nor a replacement channel; a measurable purity-preserving semigroup that is a replacement channel at some positive time and unitary at another; a non-reset semigroup whose transition table differs from (8.8e.1.3); or a reset semigroup that is weakly continuous at zero. Provenance class: source-internal finite channel classification and formal operational realization. Downstream consumers: Theorems 8.5, 8.7 and 8.8e, Proposition 11, Corollary 8.3c and `TV-QM-06`. Nonvacuity: every self-adjoint $H$ on $\mathbb C^8$ populates the unitary branch, every unit vector populates the reset branch, and the depolarizing semigroup populates the purity boundary. Result: `positive-discharge` of the formal transition-law realization on one finite carrier: channel-level complete positivity, measurability, purity preservation and non-reset yield the transition-probability-preserving ray semigroup of Theorem 8.8e, its continuous unitary lift and the prepare--evolve--verify transition law (8.8e.1.3). Identification of $t$ with a calibrated clock and of $H$ with calibrated energy remains `R` under `TV-QM-06` and consumes the separately owned clock, reference-energy, work/power and observable calibration record of `TV-MPU-05`.
+
 **Theorem 8.8f (Dimension-Uniform Finite-Matrix CCR Obstruction).** For every pair of $d\times d$ matrices $X_d,P_d$ and every $\hbar>0$,
 $$
 A_d:=[X_d,P_d]-i\hbar I_d
@@ -1191,6 +1226,81 @@ Finally, the spectral theorem and $|e^{it}-1|\le|t|$ give both bounds in (8.8f.1
 
 This construction supplies an exact infinite-dimensional canonical pair and its domain and within-carrier strong-continuity controls. A strong-limit claim from finite PU carriers requires a separate directed carrier family, finite-to-infinite intertwiner, and quantitative response-convergence certificate. Admission of $\mathcal H_\infty$ as an effective PU response carrier additionally requires a certificate identifying the group parameters with physical translations and calibrated response observables.
 
+**Theorem 8.8f.2 (Directed Hermite Carriers and Quantitative Weyl-Response Convergence).** Fix $\ell>0$ and let
+$$
+h_k(x)=\bigl(2^kk!\sqrt\pi\,\ell\bigr)^{-1/2}H_k(x/\ell)\,e^{-x^2/(2\ell^2)}
+\qquad(k\ge0)
+$$
+be the Hermite orthonormal basis of $L^2(\mathbb R)$, with $H_k$ the Hermite polynomials. On $\mathcal S(\mathbb R)$ put $a=(X/\ell+i\ell P/\hbar)/\sqrt2$ and $N_{\mathrm{op}}=a^\dagger a$, so that $ah_k=\sqrt k\,h_{k-1}$ and $a^\dagger h_k=\sqrt{k+1}\,h_{k+1}$. For $N\ge1$ let $\mathcal H_N=\mathbb C^N$ have basis $e_0,\ldots,e_{N-1}$, and define
+$$
+J_Ne_k=h_k,
+\qquad
+\iota_{N,M}e_k=e_k\quad(N\le M),
+\qquad
+\Pi_N=J_NJ_N^*,
+\tag{8.8f.2.1}
+$$
+$$
+a_N=\sum_{k=1}^{N-1}\sqrt k\,|e_{k-1}\rangle\!\langle e_k|,
+\qquad
+X_N=\frac{\ell}{\sqrt2}\bigl(a_N+a_N^\dagger\bigr),
+\qquad
+P_N=\frac{i\hbar}{\sqrt2\,\ell}\bigl(a_N^\dagger-a_N\bigr),
+\tag{8.8f.2.2}
+$$
+and $W_N(u,v)=e^{i(vX_N-uP_N)/\hbar}$. On the Schrödinger carrier of Theorem 8.8f.1 let
+$$
+(W(u,v)\psi)(x)=e^{-iuv/(2\hbar)}e^{ivx/\hbar}\psi(x-u),
+$$
+so that $W(u,0)=U(u)$, $W(0,v)=V(v)$, and $s\mapsto W(su,sv)$ is the strongly continuous unitary group generated by the closure of $vX-uP$ on $\mathcal S(\mathbb R)$. Then:
+
+1. **Directed carrier and intertwiners.** Each $J_N$ is an isometry, $J_M\iota_{N,M}=J_N$, $X_N=J_N^*XJ_N$, $P_N=J_N^*PJ_N$, $\iota_{N,M}^*X_M\iota_{N,M}=X_N$, $\iota_{N,M}^*P_M\iota_{N,M}=P_N$, and $\bigcup_NJ_N\mathcal H_N$ is dense. Indexing $\mathbb C^8$ by $e_0,\ldots,e_7$, the identification $e_{j_1}\otimes\cdots\otimes e_{j_k}\mapsto e_{\sum_rj_r8^{r-1}}$ of $(\mathbb C^8)^{\otimes k}$ with $\mathcal H_{8^k}$ turns $\iota_{8^k,8^{k+1}}$ into $\xi\mapsto\xi\otimes e_0$.
+2. **Finite commutator.**
+$$
+[X_N,P_N]=i\hbar\bigl(I_N-N|e_{N-1}\rangle\!\langle e_{N-1}|\bigr).
+\tag{8.8f.2.3}
+$$
+Its trace vanishes, and its defect $-i\hbar N|e_{N-1}\rangle\!\langle e_{N-1}|$ has operator norm $\hbar N$, in agreement with the lower bound of Theorem 8.8f. For every $\psi\in\mathcal S(\mathbb R)$,
+$$
+\bigl\|J_N[X_N,P_N]J_N^*\psi-i\hbar\psi\bigr\|
+\le\frac{2\hbar}{N}\bigl\|(N_{\mathrm{op}}+1)^2\psi\bigr\|.
+\tag{8.8f.2.4}
+$$
+3. **Quantitative Weyl-response convergence.** For $\psi\in\mathcal S(\mathbb R)$, $u,v\in\mathbb R$ and $\kappa=\bigl(u^2/(2\ell^2)+v^2\ell^2/(2\hbar^2)\bigr)^{1/2}$,
+$$
+\bigl\|J_NW_N(u,v)J_N^*\psi-W(u,v)\psi\bigr\|
+\le(1+\kappa)^3N^{-1/2}\bigl\|(N_{\mathrm{op}}+1)\psi\bigr\|.
+\tag{8.8f.2.5}
+$$
+Consequently $J_NW_N(u,v)J_N^*\to W(u,v)$ strongly, uniformly for $(u,v)$ in compact sets; $J_NX_NJ_N^*\to X$ and $J_NP_NJ_N^*\to P$ in the strong resolvent sense; the Weyl response $\langle J_N^*\psi,W_N(u,v)J_N^*\psi\rangle$ converges to $\langle\psi,W(u,v)\psi\rangle$ with error at most $\|\psi\|$ times the right side of (8.8f.2.5); and for a unit vector $\psi$ the laws of $X_N$ and $P_N$ in $J_N^*\psi/\|J_N^*\psi\|$, defined once $J_N^*\psi\ne0$, converge weakly to the Schrödinger position and momentum laws of $\psi$.
+
+*Proof.* The recursions $Xh_k=\ell(\sqrt k\,h_{k-1}+\sqrt{k+1}\,h_{k+1})/\sqrt2$ and $Ph_k=i\hbar(\sqrt{k+1}\,h_{k+1}-\sqrt k\,h_{k-1})/(\sqrt2\,\ell)$ make $X$ and $P$ tridiagonal in the Hermite basis, so their compressions to $\operatorname{span}\{h_0,\ldots,h_{N-1}\}$ are (8.8f.2.2) and are compatible along $\iota_{N,M}$. Orthonormality and completeness of the Hermite functions give the isometry and density statements, and the base-eight index of $\xi\otimes e_0$ equals that of $\xi$.
+
+For item 2, $a_Na_N^\dagger=\operatorname{diag}(1,\ldots,N-1,0)$ and $a_N^\dagger a_N=\operatorname{diag}(0,1,\ldots,N-1)$, while $[X_N,P_N]=i\hbar[a_N,a_N^\dagger]$; this is (8.8f.2.3). With $c_m=\langle h_m,\psi\rangle$,
+$$
+J_N[X_N,P_N]J_N^*\psi-i\hbar\psi=-i\hbar(I-\Pi_N)\psi-i\hbar Nc_{N-1}h_{N-1}.
+$$
+Since $(m+1)^2\ge N^2$ for $m\ge N-1$, both $\|(I-\Pi_N)\psi\|$ and $N|c_{N-1}|$ are at most $N^{-1}\|(N_{\mathrm{op}}+1)^2\psi\|$, which gives (8.8f.2.4).
+
+For item 3, put $G=vX-uP=\gamma a+\bar\gamma a^\dagger$ with $\gamma=(v\ell+iu\hbar/\ell)/\sqrt2$, so $|\gamma|=\hbar\kappa$, and put $A_N=J_N(vX_N-uP_N)J_N^*=\Pi_NG\Pi_N$. Then $e^{iA_N/\hbar}=J_NW_N(u,v)J_N^*+(I-\Pi_N)$. For $\xi\in\mathcal S(\mathbb R)$, with $\Pi_0=0$,
+$$
+(G-A_N)\xi=(I-\Pi_N)G(I-\Pi_{N-1})\xi+\gamma\sqrt N\,\langle h_N,\xi\rangle h_{N-1}.
+$$
+Because $\|a\eta\|,\|a^\dagger\eta\|\le\|(N_{\mathrm{op}}+1)^{1/2}\eta\|$ and $m+1\ge N$ on the range of $I-\Pi_{N-1}$, this gives $\|(G-A_N)\xi\|\le3|\gamma|N^{-1/2}\|(N_{\mathrm{op}}+1)\xi\|$. The operators $\mathcal W_s:=W(su,sv)$ preserve $\mathcal S(\mathbb R)$, are strongly differentiable there with derivative $iG\mathcal W_s/\hbar$, and satisfy $\mathcal W_s^*X\mathcal W_s=X+su$ and $\mathcal W_s^*P\mathcal W_s=P+sv$; invariance of this dense domain identifies their generator with the closure of $G$ (Reed and Simon 1980, §VIII.4). Hence $\mathcal W_s^*a\mathcal W_s=a+s\beta$ with $\beta=(u/\ell+i\ell v/\hbar)/\sqrt2$ and $|\beta|=\kappa$, so
+$$
+\mathcal W_s^*(N_{\mathrm{op}}+1)\mathcal W_s=N_{\mathrm{op}}+1+s\beta a^\dagger+s\bar\beta a+s^2\kappa^2,
+\qquad
+\|(N_{\mathrm{op}}+1)\mathcal W_s\psi\|\le(1+s\kappa)^2\|(N_{\mathrm{op}}+1)\psi\|.
+$$
+Differentiating $s\mapsto e^{i(1-s)A_N/\hbar}\mathcal W_s\psi$ gives Duhamel's identity
+$$
+W(u,v)\psi-e^{iA_N/\hbar}\psi
+=\frac i\hbar\int_0^1e^{i(1-s)A_N/\hbar}(G-A_N)\mathcal W_s\psi\,ds,
+$$
+so $\|W(u,v)\psi-e^{iA_N/\hbar}\psi\|\le3\kappa N^{-1/2}\int_0^1(1+s\kappa)^2ds\,\|(N_{\mathrm{op}}+1)\psi\|=\bigl((1+\kappa)^3-1\bigr)N^{-1/2}\|(N_{\mathrm{op}}+1)\psi\|$. Adding $\|(I-\Pi_N)\psi\|\le(N+1)^{-1}\|(N_{\mathrm{op}}+1)\psi\|$ proves (8.8f.2.5). Uniform boundedness and density of $\mathcal S(\mathbb R)$ give strong convergence on $L^2(\mathbb R)$, uniformly on compact parameter sets. At $u=0$ and at $v=0$, $e^{iA_N/\hbar}$ equals $e^{ivJ_NX_NJ_N^*/\hbar}$ and $e^{-iuJ_NP_NJ_N^*/\hbar}$, and the Duhamel bound makes these groups converge strongly to $V(v)$ and $U(u)$ for every parameter; this is strong resolvent convergence (Reed and Simon 1980, Theorem VIII.21). The response bound follows from the Cauchy--Schwarz inequality, and Lévy's continuity theorem converts pointwise convergence of the characteristic functions $v\mapsto\langle\psi,V(v)\psi\rangle$ and $u\mapsto\langle\psi,U(u)\psi\rangle$ into weak convergence of the laws. ∎
+
+**Resolution TV-QM-07-R2 (Metadata).** Exact domain: the directed family $(\mathcal H_N,\iota_{N,M})_{N\ge1}$ of (8.8f.2.1), its finite pairs (8.8f.2.2), the isometric intertwiners $J_N$, the Schrödinger Weyl carrier of Theorem 8.8f.1 and every $\psi\in\mathcal S(\mathbb R)$, including the subfamily $N=8^k$ on $(\mathbb C^8)^{\otimes k}$. Premises: the Hermite basis at a fixed length $\ell$, Theorem 8.8f.1, Stone's theorem, Duhamel's identity and Lévy's continuity theorem. Equivalence relation: unitary equivalence of Weyl systems and equality of Weyl responses. Budget: every $N$, every $(u,v)\in\mathbb R^2$, the constant $(1+\kappa)^3$, and the rank-one commutator defect with operator norm $\hbar N$. Verifier: isometry and compatibility of $J_N$ and $\iota_{N,M}$, (8.8f.2.3)--(8.8f.2.5), the conjugation $\mathcal W_s^*a\mathcal W_s=a+s\beta$ and the generator estimate $\|(G-A_N)\xi\|\le3|\gamma|N^{-1/2}\|(N_{\mathrm{op}}+1)\xi\|$. Falsifier: a Schwartz vector violating (8.8f.2.4) or (8.8f.2.5); a compatibility failure $J_M\iota_{N,M}\ne J_N$ or $\iota_{N,M}^*X_M\iota_{N,M}\ne X_N$; or a failure of the trace-zero identity (8.8f.2.3). Provenance class: source-internal finite-to-infinite operator construction with explicit rate. Downstream consumers: Theorems 8.8f and 8.8f.1, the canonical-pair and continuum-carrier routes, and `TV-QM-07`. Nonvacuity: every $\psi\in\mathcal S(\mathbb R)$, in particular every Hermite function, populates the convergence statements, and the rank-one defect in (8.8f.2.3) exhibits the norm obstruction of Theorem 8.8f inside the same family. Result: `positive-discharge` of a directed finite-carrier family with compatible isometric finite-to-infinite intertwiners, strong commutator convergence on $\mathcal S(\mathbb R)$ and quantitative Weyl-response convergence at rate $N^{-1/2}$, including the MPU-network subfamily $(\mathbb C^8)^{\otimes k}$ with $\xi\mapsto\xi\otimes e_0$. Identification of $u$ and $v$ with physical translation and boost parameters, and of $X_N$ and $P_N$ with calibrated PU response observables, remains `R` under `TV-QM-07`.
+
 **Theorem 8.8g (Complete Finite Jordan-Carrier Classification under Predictive Correspondence).** Let the retained finite ordered carrier be homogeneous and self-dual, and accept the Koecher--Vinberg reconstruction used in Theorem G.1.8. Suppose its Euclidean Jordan algebra $A$ has a predictive dynamical correspondence in the sense of Definition G.1.8b and that every simple ideal carries the induced blockwise correspondence of Corollary G.1.8e. Then
 $$
 A\cong H_n(\mathbb C)
@@ -1200,6 +1310,125 @@ for one $n\ge1$. This conclusion excludes real, quaternionic and spin-factor car
 *Proof.* Koecher--Vinberg identifies the cone with the cone of squares of a finite-dimensional Euclidean Jordan algebra. Theorem G.1.8d classifies every simple ideal admitting the correspondence as complex Hermitian. Corollary G.1.8e then forces a single ideal, which proves the first statement and exhausts the finite simple and reducible families. A sharp context in $H_n(\mathbb C)$ has at most $n$ mutually orthogonal primitive outcomes, so eight outcomes give $n\ge8$. The admitted faithful eight-dimensional representative gives $n\le8$; hence $n=8$. ∎
 
 Construction G.1.8f and Theorem G.1.8g supply a nonempty common complex witness with finite separating effects, positive filters, locally tomographic composites and exact $U(1)$ phase kernel. The mathematical carrier census is therefore complete on the predictive-correspondence branch. Populating the PU-to-correspondence, local-composite, phase and response records in $\mathfrak C_{\mathrm{car}}$ and realizing them physically remain the `C+R` components.
+
+**Theorem 8.8g.1 (Correspondence-Clause Census and Automatic Simplicity on Euclidean Jordan Carriers).** Let $\mathfrak J$ be the class of finite-dimensional Euclidean Jordan algebras, and write $A\in\mathfrak J$ as $A=\bigoplus_{k=1}^mA_k$ with simple ideals $A_k$, units $c_k$ and $1=\sum_kc_k$. By the simple list of Barnum and Hilgert (2020, §3, Table 1), the simple members are $\mathbb R\cong H_1(\mathbb C)$, the spin factors $V_s=\mathbb R1\oplus\mathbb R^s$ with $(\alpha1+x)\circ(\beta1+y)=(\alpha\beta+\langle x,y\rangle)1+\alpha y+\beta x$ $(s\ge2)$, $H_n(\mathbb R)$, $H_n(\mathbb C)$ and $H_n(\mathbb H)$ $(n\ge3)$, and $H_3(\mathbb O)$, with $V_2\cong H_2(\mathbb R)$, $V_3\cong H_2(\mathbb C)$, $V_5\cong H_2(\mathbb H)$ and $V_9\cong H_2(\mathbb O)$. For an idempotent $e$ write $A_\lambda(e)=\{x:e\circ x=\lambda x\}$ for its Peirce spaces. For a linear map $\psi:A\to\operatorname{Der}(A)$ name the three clauses of (G.1.8b.1):
+$$
+\mathrm{(S)}\ \psi_a(a)=0\ (a\in A),
+\qquad
+\mathrm{(G)}\ \operatorname{im}\psi=\operatorname{Der}(A),
+\qquad
+\mathrm{(N)}\ \ker\psi=\mathbb R1.
+\tag{8.8g.1.1}
+$$
+Put $\delta(A):=\dim A-\dim\operatorname{Der}(A)$. The table in Theorem G.1.8d gives
+$$
+\delta(H_n(\mathbb R))=n,\quad
+\delta(H_n(\mathbb C))=1,\quad
+\delta(H_n(\mathbb H))=-2n,\quad
+\delta(V_s)=s+1-\frac{s(s-1)}2,\quad
+\delta(H_3(\mathbb O))=-25.
+\tag{8.8g.1.2}
+$$
+Then:
+
+1. **Stationarity is blockwise.** Every $\psi$ satisfying (S) has the form $\psi_a=\bigoplus_k\psi^{(k)}_{a_k}$ for $a=\sum_ka_k$, where each $\psi^{(k)}:A_k\to\operatorname{Der}(A_k)$ satisfies (S).
+2. **Stationary maps on simple carriers.** On $\mathbb R$, $\psi=0$. On $V_s$, the maps satisfying (S) are exactly
+$$
+\psi_{\alpha1+x}(\beta1+y)=T^\sharp(x,y),
+\qquad
+\langle T^\sharp(x,y),z\rangle=T(x,y,z),
+\tag{8.8g.1.3}
+$$
+for alternating trilinear forms $T$ on $\mathbb R^s$. On $H_n(\mathbb C)$, $\psi_a=i[a,\cdot]$ satisfies (S), (G) and (N). On $H_n(\mathbb R)$ with $n\ge2$, on $H_n(\mathbb H)$ with $n\ge3$ and on $H_3(\mathbb O)$, the only map satisfying (S) is $\psi=0$.
+3. **Complete clause census.**
+$$
+\begin{array}{c|l}
+\text{clauses}&\text{carriers in }\mathfrak J\text{ admitting such }\psi\\ \hline
+\mathrm{(S)+(G)+(N)}&H_n(\mathbb C),\ n\ge1\\
+\mathrm{(S)+(G)}&\bigoplus_{k=1}^mH_{n_k}(\mathbb C)\\
+\mathrm{(S)+(N)}&H_n(\mathbb C),\ n\ge1;\ \ V_s,\ s\ge5\\
+\mathrm{(G)+(N)}&\bigoplus_kA_k\ \text{with}\ \sum_k\delta(A_k)=1
+\end{array}
+\tag{8.8g.1.4}
+$$
+On the (S)+(G) row, $\ker\psi=\operatorname{span}\{c_1,\ldots,c_m\}$, and for $m\ge2$ every $c_k$ is a response-active central sharp effect: a state supported in $A_k$ gives it value one and a state supported in another ideal gives it value zero. The simple members of the (G)+(N) row are exactly the $H_n(\mathbb C)$, while its reducible members include $V_4\oplus\mathbb R\oplus\mathbb R$, $H_n(\mathbb H)\oplus\mathbb R^{2n+1}$ and $H_3(\mathbb O)\oplus\mathbb R^{26}$.
+
+Consequently Definition G.1.8b forces simplicity, and the blockwise hypothesis of Corollary G.1.8e and Theorem 8.8g holds automatically. The three clauses are mutually independent on $\mathfrak J$: dropping (N) admits the complex superselection sums with response-active central projections, dropping (S) admits defect-one sums with spin, quaternionic or exceptional summands, and dropping (G) admits every spin factor $V_s$ with $s\ge5$, including $V_5\cong H_2(\mathbb H)$ and $V_9\cong H_2(\mathbb O)$. On simple carriers, (G) together with either (S) or (N) selects $H_n(\mathbb C)$.
+
+*Proof.* (1) A derivation $D$ satisfies $D(e)=D(e\circ e)=2e\circ D(e)$, so $D(e)\in A_{1/2}(e)$ for every idempotent $e$. For a central idempotent $A_{1/2}(c_k)=0$, hence $D(c_k)=0$ and $D(a_k)=D(c_k\circ a_k)=c_k\circ D(a_k)\in A_k$; thus $\operatorname{Der}(A)=\bigoplus_k\operatorname{Der}(A_k)$. Write $\psi_a=\bigoplus_k\sum_jL_{kj}(a_j)$ with linear $L_{kj}:A_j\to\operatorname{Der}(A_k)$. The $A_k$-component of $\psi_a(a)$ is $\sum_jL_{kj}(a_j)a_k$. Taking $a=a_k$ gives $L_{kk}(a_k)a_k=0$; taking $a=a_j+a_k$ with $j\ne k$ then gives $L_{kj}(a_j)a_k=0$ for every $a_k$, so $L_{kj}=0$ and $\psi^{(k)}=L_{kk}$.
+
+(2) $\operatorname{Der}(\mathbb R)=0$. On $V_s$, every $K\in\mathfrak{so}(s)$ acting on $\mathbb R^s$ and annihilating $1$ is a derivation, and the dimension $s(s-1)/2$ in Theorem G.1.8d's table shows that these are all derivations. Write $\psi_{\alpha1+x}=\alpha N+L(x)$ with $N\in\mathfrak{so}(s)$ and linear $L:\mathbb R^s\to\mathfrak{so}(s)$. Condition (S) reads $\alpha Nx+L(x)x=0$ for all $\alpha,x$, so $N=0$ and $L(x)x=0$. Then $\langle L(x)y,z\rangle$ is alternating in $(x,y)$ and in $(y,z)$, hence an alternating trilinear form; conversely every alternating $T$ gives $L(x)=T^\sharp(x,\cdot)\in\mathfrak{so}(s)$ with $L(x)x=0$. On $H_n(\mathbb C)$, $i[a,\cdot]$ is a derivation annihilating $a$, every derivation has this form, and $i[a,\cdot]=0$ exactly for scalar $a$ (Theorem G.1.8d).
+
+For $H_n(\mathbb R)$, $H_n(\mathbb H)$ and $H_3(\mathbb O)$ fix the diagonal frame $e_1,\ldots,e_n$ and the off-diagonal Peirce spaces $A_{ij}=\{[a]_{ij}\}$, where $[a]_{ij}$ has entry $a$ at $(i,j)$ and $\bar a$ at $(j,i)$, so that $[a]_{ji}=[\bar a]_{ij}$ and $[a]_{ij}\circ[b]_{jk}=\tfrac12[ab]_{ik}$ for distinct $i,j,k$. Let $\psi$ satisfy (S). Polarization gives $\psi_a(b)=-\psi_b(a)$. For orthogonal idempotents $e,f$, the derivation $\psi_e$ annihilates $e$, hence commutes with $L_e$ and preserves the Peirce spaces of $e$, so $\psi_e(f)\in A_0(e)$; also $\psi_e(f)=-\psi_f(e)\in A_{1/2}(e)$. Hence $\psi_e(f)=0$, and each $D_i:=\psi_{e_i}$ annihilates the frame and preserves every $A_{jk}$. If $x\in A_{jk}$ and $i\notin\{j,k\}$, then $\psi_x(e_i)\in A_{1/2}(e_i)$, while $\psi_x(e_i)=-D_i(x)\in A_{jk}\subseteq A_0(e_i)$; hence $D_i(x)=0$. For $x\in A_{ij}$, $0=\psi_x(1)=-\sum_kD_k(x)$ gives $(D_i+D_j)(x)=0$.
+
+For $\mathbb D\in\{\mathbb R,\mathbb H\}$, the dimension count in Theorem G.1.8d's table shows that every derivation of $H_n(\mathbb D)$ is $\operatorname{ad}_K$ for a unique antihermitian $K$; a derivation annihilating the frame is $\operatorname{ad}$ of $\operatorname{diag}(u_1,\ldots,u_n)$ with $u_l\in\operatorname{Im}\mathbb D$, acting by $[a]_{jk}\mapsto[u_ja-au_k]_{jk}$. If it vanishes on $A_{jk}$, then $u_jb=bu_k$ for all $b$, so $u_j=u_k$ is central and imaginary, hence zero. For $\mathbb D=\mathbb R$, $\operatorname{Im}\mathbb R=0$, so every frame-annihilating derivation vanishes and $D_i=0$. For $\mathbb D=\mathbb H$ and $n\ge3$, every $j\ne i$ has some $k\notin\{i,j\}$, so $D_i$ is $\operatorname{ad}$ of $u^{(i)}$ placed at the $i$-th diagonal entry; then $(D_i+D_j)|_{A_{ij}}=0$ gives $u^{(i)}a=au^{(j)}$ for all $a$, so $u^{(i)}=u^{(j)}$ is central and imaginary, hence zero. For $H_3(\mathbb O)$ write a frame-annihilating derivation as $D[a]_{ij}=[D_{ij}(a)]_{ij}$, so $D_{ji}(a)=\overline{D_{ij}(\bar a)}$. The product rule gives
+$$
+D_{ik}(ab)=D_{ij}(a)b+aD_{jk}(b)
+\qquad(\{i,j,k\}=\{1,2,3\}).
+\tag{8.8g.1.5}
+$$
+If $D_{jk}=0$, then $b=1$ gives $D_{ik}=D_{ij}$, and $a=1$ gives $D_{ij}(b)=cb$ with $c:=D_{ij}(1)$, so $c(ab)=(ca)b$ for all $a,b$. The nucleus of $\mathbb O$ is $\mathbb R$, hence $c\in\mathbb R$. Applying (8.8g.1.5) to the ordered triple $(k,i,j)$ gives $0=D_{kj}(ba)=(cb)a+b(ca)=2cba$, so $c=0$ and $D=0$. Hence $D_i=0$ on all three carriers. For $x\in A_{ij}$ the derivation $\psi_x$ now annihilates the frame. For $y$ in another Peirce space $A_{kl}$, $\psi_x(y)\in A_{kl}$ and $\psi_y(x)\in A_{ij}$, so $\psi_x(y)=-\psi_y(x)=0$. Every index lies in some pair $\{k,l\}\ne\{i,j\}$ when $n\ge3$, and on $H_n(\mathbb R)$ every frame-annihilating derivation vanishes, so the vanishing criteria above give $\psi_x=0$. Since the frame and the Peirce spaces span $A$, $\psi=0$.
+
+(3) By item 1, (S) reduces the first three rows to the simple summands. With (G), each $\psi^{(k)}$ is surjective. On $V_s$, $\dim\operatorname{im}\psi\le s<s(s-1)/2$ for $s\ge4$; for $s=2$, $\psi=0$ while $\operatorname{Der}(V_2)\ne0$; and $V_3\cong H_2(\mathbb C)$. The remaining zero maps of item 2 are not surjective because the corresponding derivation algebras are nonzero. Hence every summand is complex, and $\bigoplus_ki[a_k,\cdot]$ realizes the (S)+(G) row with kernel $\operatorname{span}\{c_k\}$. With (N), $1\in\ker\psi$ forces $c_k\in\ker\psi^{(k)}$ for every $k$, so $\dim\ker\psi\ge m$ and $m=1$. On $V_s$, $\ker\psi=\mathbb R1\oplus\{x:T(x,\cdot,\cdot)=0\}$. For $s=2$, $T=0$. For $s=4$, every alternating trilinear form is $T(x,y,z)=\det(v,x,y,z)$ for some $v\in\mathbb R^4$, and $T(v,\cdot,\cdot)=0$, so $\ker\psi\ne\mathbb R1$. For $s\ge5$, the form
+$$
+T_s=\sum_{r=1}^{\lfloor(s-1)/2\rfloor}e^{2r-1}\wedge e^{2r}\wedge e^s
++[s\ \text{even}]\,e^1\wedge e^3\wedge e^{s-1}
+\tag{8.8g.1.6}
+$$
+has index triples covering $\{1,\ldots,s\}$ and pairwise sharing at most one index, so the coefficients of $T_s(x,\cdot,\cdot)$ on distinct basis two-forms are the separate coordinates $\pm x_l$, and $T_s(x,\cdot,\cdot)=0$ forces $x=0$. With item 2 this gives the (S)+(N) row, and (S)+(G)+(N) combines $m=1$ with the complex summands of the (S)+(G) row. For (G)+(N), rank-nullity makes a surjection with kernel $\mathbb R1$ exist exactly when $\dim\operatorname{Der}(A)=\dim A-1$, and $\operatorname{Der}(A)=\bigoplus_k\operatorname{Der}(A_k)$ turns this into $\sum_k\delta(A_k)=1$. By (8.8g.1.2), $\delta=1$ on a simple carrier exactly for $\mathbb R$, $V_3$ and $H_n(\mathbb C)$, and the displayed sums have defects $-1+1+1$, $-2n+(2n+1)$ and $-25+26$. The central projections $c_k$ are idempotent effects with values one and zero on states supported in $A_k$ and in another ideal. ∎
+
+**Theorem 8.8g.2 (Self-Composite Product-Effect Rigidity on Euclidean Jordan Carriers).** For $r\ge1$ let $\mathcal N(r)$ be the set of dimensions of simple members of $\mathfrak J$ of rank $r$:
+$$
+\mathcal N(1)=\{1\},\quad
+\mathcal N(2)=\{s+1:s\ge2\},\quad
+\mathcal N(3)=\{6,9,15,27\},\quad
+\mathcal N(r)=\Bigl\{\tfrac{r(r+1)}2,\ r^2,\ r(2r-1)\Bigr\}\ \ (r\ge4).
+\tag{8.8g.2.1}
+$$
+Within each rank, the dimension determines the simple carrier. Let $A,C\in\mathfrak J$ be simple with
+$$
+\operatorname{rank}A=n\ge2,
+\qquad
+\operatorname{rank}C=n^2,
+\qquad
+\dim C=(\dim A)^2 .
+\tag{8.8g.2.2}
+$$
+The dimension identity is the dimension content of a product-effect isomorphism $A^*\otimes_{\mathbb R}A^*\to C^*$, and the rank identity is the multiplicative-size clause of Principle 8.0b(iv) for the self-composite. Then
+$$
+A\cong H_n(\mathbb C),
+\qquad
+C\cong H_{n^2}(\mathbb C).
+\tag{8.8g.2.3}
+$$
+Hence:
+
+1. Every spin factor $V_s$ with $s\ne3$, every $H_n(\mathbb R)$ and $H_n(\mathbb H)$ with $n\ge2$, and $H_3(\mathbb O)$ fails (8.8g.2.2) at its own square. A size-indexed family of simple carriers of rank equal to size, on a multiplicatively closed set of sizes, that satisfies the product-effect dimension identity for all pairs of sizes at least two is complex at every size.
+2. Let $A=\bigoplus_{k=1}^mA_k$ with simple $A_k$ of rank $r_k$, and let its self-composite be block-distributive: $C=\bigoplus_{k,l}C_{kl}$ with simple $C_{kl}$, $\operatorname{rank}C_{kl}=r_kr_l$ and $\dim C_{kl}=\dim A_k\dim A_l$. Then $A\cong\bigoplus_kH_{r_k}(\mathbb C)$. Conversely, Kronecker products realize the composite $\bigoplus_{k,l}H_{r_kr_l}(\mathbb C)$ with a product-effect isomorphism on every block. For $m\ge2$ the central projections of these survivors are response-active, as in Theorem 8.8g.1.
+3. Each retained gate is independent. Without simplicity of $A$ and $C$, the classical carriers $\mathbb R^m$ with $\mathbb R^m\otimes\mathbb R^m\cong\mathbb R^{m^2}$ and the complex superselection sums of item 2 survive with genuine Kronecker composites. Without the dimension identity, every simple member of $\mathfrak J$ survives. Without simplicity of $A$ alone, the pair $(\mathbb R\oplus V_7,H_9(\mathbb C))$ meets both identities in (8.8g.2.2), since $\operatorname{rank}(\mathbb R\oplus V_7)=3$ and $(1+8)^2=81=\dim H_9(\mathbb C)$. Without simplicity of $C$ alone, the pair $(V_2,V_2\oplus V_5)$ meets both identities in (8.8g.2.2), since $\operatorname{rank}(V_2\oplus V_5)=4$ and $3+6=3^2$. If the size clause is weakened to $\operatorname{rank}C\ge n^2$, the pair $(V_4,H_5(\mathbb C))$ meets the dimension identity with $5^2=25$ and $5\ge4$. If the self-composite is replaced by one unequal pair, then for every $m\ge2$
+$$
+\dim H_{2m-1}(\mathbb R)\cdot\dim H_m(\mathbb H)
+=\bigl(m(2m-1)\bigr)^2
+=\dim H_{m(2m-1)}(\mathbb C),
+\tag{8.8g.2.4}
+$$
+with ranks $2m-1$, $m$ and $m(2m-1)$; at $m=2$ the triple is $H_3(\mathbb R)$, $V_5\cong H_2(\mathbb H)$ and $H_6(\mathbb C)$.
+
+Theorem 8.8g.2 selects the complex carrier from the Jordan--von Neumann--Wigner list and (8.8g.2.2) alone. For associative carriers it replaces the same-scalar-type premise of Theorem 8.4(i) by the self-composite of size $n^2$.
+
+*Proof.* In the simple list of Barnum and Hilgert (2020, §3, Table 1), $\mathbb R$ has rank $1$, $V_s$ has rank $2$, $H_n(\mathbb D)$ has rank $n$ and $H_3(\mathbb O)$ has rank $3$. The dimensions in Theorem G.1.8d's table then give (8.8g.2.1), and they separate the simple carriers of each rank. For $n=2$, $\dim A=s+1\ge3$ and $(s+1)^2\in\{10,16,28\}$ force $s=3$, so $A\cong V_3\cong H_2(\mathbb C)$ and $\dim C=16$ gives $C\cong H_4(\mathbb C)$. For $n\ge3$ write $\dim A=nf$ with $f\in\{(n+1)/2,\,n,\,2n-1\}$, or $\dim A=27$ at $n=3$, and $\dim C=n^2g$ with $g\in\{(n^2+1)/2,\,n^2,\,2n^2-1\}$. Then (8.8g.2.2) reads $f^2=g$, and
+$$
+\begin{array}{c|ccc}
+f^2-g&g=\frac{n^2+1}2&g=n^2&g=2n^2-1\\ \hline
+f=\frac{n+1}2&-\frac{(n-1)^2}4&-\frac{(n-1)(3n+1)}4&-\frac{(n-1)(7n+5)}4\\
+f=n&\frac{(n-1)(n+1)}2&0&-(n-1)(n+1)\\
+f=2n-1&\frac{(n-1)(7n-1)}2&(n-1)(3n-1)&2(n-1)^2
+\end{array}
+\tag{8.8g.2.5}
+$$
+vanishes for $n\ge2$ only at $f=n$, $g=n^2$. At $n=3$, $27^2=729\notin\{45,81,153\}$. This proves (8.8g.2.3). A multiplicatively closed size set containing $n\ge2$ contains $n^2$, which gives item 1. In item 2, each diagonal block $(k,k)$ with $r_k\ge2$ satisfies (8.8g.2.2), and $A_k\cong\mathbb R\cong H_1(\mathbb C)$ when $r_k=1$. Kronecker products of real bases of $H_p(\mathbb C)$ and $H_q(\mathbb C)$ form a real basis of $H_{pq}(\mathbb C)$; they send units to units and positive pairs to positive operators, and products of sharp contexts are sharp contexts, which proves the converse. The boundary pairs in item 3 follow from (8.8g.2.1), additivity of rank over direct sums and $\dim H_{2m-1}(\mathbb R)=\dim H_m(\mathbb H)=m(2m-1)$. ∎
+
+**Resolution TV-QM-04-R2 (Metadata).** Exact domain: every finite-dimensional Euclidean Jordan algebra, every linear map $\psi:A\to\operatorname{Der}(A)$, and every simple or block-distributive self-composite obeying the rank and dimension identities (8.8g.2.2). Premises: the Koecher--Vinberg reconstruction used in Theorem 8.8g, the simple list and derivation dimensions cited in Theorem G.1.8d, and the real nucleus of $\mathbb O$. Equivalence relation: Jordan isomorphism. Budget: the three correspondence clauses, every simple family and every finite direct sum, the defect values (8.8g.1.2), every alternating trilinear form on $\mathbb R^s$, the nine entries of (8.8g.2.5), the octonionic rank-three case and the boundary models of Theorem 8.8g.2(3). Verifier: blockwise decomposition of stationary maps, the Peirce, antihermitian-diagonal and nucleus arguments for the zero stationary maps, the determinant form on $\mathbb R^4$ and the covering forms (8.8g.1.6), rank-nullity with (8.8g.1.2), the factorizations (8.8g.2.5), and Kronecker bases. Falsifier: a non-blockwise stationary map on a reducible carrier; a nonzero stationary map on $H_n(\mathbb R)$, on $H_n(\mathbb H)$ with $n\ge3$ or on $H_3(\mathbb O)$; an alternating trilinear form on $\mathbb R^4$ with trivial kernel; a noncomplex carrier satisfying all three clauses of (8.8g.1.1); or a noncomplex simple pair satisfying (8.8g.2.2). Provenance class: source-internal finite Jordan classification with explicit countermodels. Downstream consumers: Theorem 8.4, Principle 8.0b, Definition G.1.8a, Corollary G.1.8e, Theorems G.1.8 and 8.8g, `TV-QM-04` and `TV-QM-01`. Nonvacuity: $H_n(\mathbb C)$ with $i[a,\cdot]$ and its Kronecker self-composites populate both positive selections; $\bigoplus_kH_{n_k}(\mathbb C)$, $V_4\oplus\mathbb R\oplus\mathbb R$, $V_5$ with (8.8g.1.6), $\mathbb R^m$ and the pairs of Theorem 8.8g.2(3) populate every boundary. Result: `positive-discharge` of the complete correspondence-clause census, of automatic simplicity under Definition G.1.8b, of self-composite product-effect rigidity and of the irredundancy of both selecting packages on $\mathfrak J$; the reducible, spin-factor, quaternionic and exceptional boundary rows give `nonentailment` of complex-carrier selection from any two correspondence clauses and from each weakened composite gate. Independence of sharp self-duality and homogeneous transitivity from these gates outside the Koecher--Vinberg class remains `M` under `TV-QM-04`; population of the correspondence or self-composite record remains `C+R` under `TV-QM-01`.
 
 **Theorem 8.8h (Exact Binary-Instrument Realization of the Born Frame).** Let $\mathcal F_{64}$ be the 64 projections in (8.8b.1). For every $E\in\mathcal F_{64}$, register the binary instrument
 $$
@@ -1854,6 +2083,54 @@ The pure-state marginal identity (8.8m.2) gives equal Schmidt coefficients $1/\s
 
 **Resolution TV-QM-05-R3 (Metadata).** Exact domain: every finite procedure on independently accepted finite-dimensional complex input, output and reference carriers with standard positive-semidefinite composites, positive affine preparation-extensional branch rules, a separately calibrated trace/record link, one source-derived pure preparation with marginal $I_d/d$, and one affine flagged spectator rule on (8.8m.3). Premises: the carrier/composite portion of Theorem 8.8k condition 1 excluding its $\omega_d$ preparation clause; branch affinity and preparation extensionality; (8.8m.1)--(8.8m.5); and positivity of every retained labeled block before coarse-graining. Equivalence relation: equality of the independently source-derived carrier, preparation and process certificates, the outcome-labeled affine branch maps and the one affine flagged rule on its complete convex domain; later records are compared by their projectively consistent pushforwards. Budget: every product preparation, the certified pure state $\psi$, every admitted branch, flag block and later refinement, every spanning preparation relation, all zero/duplicate-effect edges and the six boundary models. Verifier: source-derived ordered-carrier/composite coordinates, an independent purity and partial-trace certificate for (8.8m.2), affine-domain closure, every product identity (8.8m.5), the affine-span and unitary-orientation arguments, blockwise positivity, (8.8m.6), Choi positivity, the trace/record equality, the mismatch (8.8m.8) and dual normalization. Any carrier, preparation, process or trace calibration inferred from $q$, a Born rule or the effect representation being derived is rejected. Falsifier: two affine values for the same convex-domain preparation; a nonpositive retained branch from $\psi$; failure of a product local-action identity; a source side tag splitting product and purification preparations; a nonfaithful reference presented as satisfying (8.8m.2); positivity checked after hiding the flag; a normalized terminal table unequal to the branch traces but presented as satisfying (8.8m.1); or a non-CP branch satisfying every declared premise. Provenance class: source-internal physical preparation/process descent followed by finite affine spanning, Schmidt decomposition and the Choi theorem. Downstream consumers: Theorems 8.8k, 8.8j and 8.8i, the finite instrument protocols, `TV-QM-05` and `TV-QM-08`. Nonvacuity: every physically realized finite CP instrument equipped with the theorem's source-derived purification, affine retained-flag spectator rule and independently calibrated trace/record link populates the positive branch; (8.8l.8)--(8.8l.11), the rank-one product reference, (8.8m.7)--(8.8m.8) and the hidden-flag pair populate the independent boundaries. Result: `positive-discharge` of the conditional implication from an independently physical maximally mixed purification and one affine hereditary local branch rule to the retained-flag certificate and finite CP instrument; the normalized effect-functional conclusion additionally uses the independently supplied trace/record link. Physical population of the carrier, preparation, affine-process and trace/record certificates remains `M+R` under `TV-QM-05`, and complete PU-process and response-link coverage remains `C+R` under `TV-QM-08`.
 
+**Theorem 8.8m.1 (Reference-Steering Classification of Nonaffine Branch Rules).** Let $d,d'\ge1$, let $\psi=|\Psi\rangle\!\langle\Psi|$ be a pure input--reference preparation on $\mathbb C^d\otimes\mathbb C^d_R$ with $\operatorname{tr}_R\psi=I_d/d$, as in (8.8m.2), and let $F:\mathcal D_d\to M_{d'}(\mathbb C)^+$ be one retained output block of a procedure acting on the input wing. A reference setting is a finite POVM $M=(M_i)_{i\in I}$ on $\mathbb C^d_R$ executed before the procedure, with its record $i$ retained separately. It has
+$$
+p_i^M=\operatorname{tr}\bigl[(I\otimes M_i)\psi\bigr],
+\qquad
+\rho_i^M=\frac{\operatorname{tr}_R[(I\otimes M_i)\psi]}{p_i^M}\quad(p_i^M>0),
+\qquad
+\overline F(M)=\sum_{p_i^M>0}p_i^MF(\rho_i^M),
+\tag{8.8m.1.1}
+$$
+where $\overline F(M)$ is the retained block after the reference record is forgotten. Register the following conditions.
+
+- **(SI)** Setting independence: $\overline F(M)=\overline F(M')$ for all finite POVMs $M,M'$ on the reference.
+- **(SI$_1$)** Rank-one setting independence: the same identity for all POVMs with rank-one elements.
+- **(PF)** Record pushforward: whenever $M'$ refines $M$, with $M_i=\sum_{j\in J_i}M'_j$ for disjoint $J_i$, $p_i^MF(\rho_i^M)=\sum_{j\in J_i}p_j^{M'}F(\rho_j^{M'})$, zero-probability terms omitted.
+
+Then:
+
+1. **Exact steering.** With a Schmidt form $\Psi=d^{-1/2}\sum_re_r\otimes f_r$ and the antiunitary $\theta:\mathbb C^d\to\mathbb C^d_R$, $\theta\sum_rc_re_r=\sum_r\bar c_rf_r$,
+$$
+\operatorname{tr}_R\bigl[(I\otimes N)\psi\bigr]=\frac1d\,\theta^{-1}N\theta
+\qquad(N\in M_d(\mathbb C)^{\mathrm{sa}}).
+\tag{8.8m.1.2}
+$$
+Hence every finite decomposition $I_d/d=\sum_iA_i$ with $A_i\succeq0$ is the unnormalized conditional family $(p_i^M\rho_i^M)_i$ of exactly one POVM, namely $M_i=d\,\theta A_i\theta^{-1}$.
+2. **Affine classification.** (SI), (PF) and affinity of $F$ on $\mathcal D_d$ are equivalent. When they hold, $F$ is the restriction of the unique linear map $\Phi$ of (8.8k.4), and $\overline F(M)=\Phi(I_d/d)$ for every setting $M$.
+3. **Pure-input classification.** (SI$_1$) holds exactly when the average $\sum_kp_kF(P_k)$ over finite pure ensembles depends only on the barycenter $\sum_kp_kP_k$, equivalently when $F$ agrees on pure states with a unique linear map.
+4. **Exact residual classes.** Every nonaffine $F$ violates (SI) and (PF). Either it violates (SI$_1$) and is preparation-sensitive on pure ensembles, or it satisfies (SI$_1$) and is detected by a setting with a mixed conditional state. Both classes are nonempty. For $d=d'=2$, $\Psi=(|00\rangle+|11\rangle)/\sqrt2$ and $z(\rho)=\operatorname{tr}(\rho\sigma_z)$, the normalized positive rule
+$$
+F_z(\rho)=z(\rho)^2|0\rangle\!\langle0|+\bigl(1-z(\rho)^2\bigr)|1\rangle\!\langle1|
+\tag{8.8m.1.3}
+$$
+has $\overline{F_z}(M_Z)=|0\rangle\!\langle0|$ for $M_Z=(|0\rangle\!\langle0|,|1\rangle\!\langle1|)$ and $\overline{F_z}(M_X)=|1\rangle\!\langle1|$ for $M_X=(|+\rangle\!\langle+|,|-\rangle\!\langle-|)$, at trace distance one. The rule $n$ of (8.8k.10) is the identity on pure states and satisfies (SI$_1$), while the setting $M_{\mathrm{mix}}=(\operatorname{diag}(1,\tfrac13),\operatorname{diag}(0,\tfrac23))$ steers $\operatorname{diag}(\tfrac34,\tfrac14)$ and $|1\rangle\!\langle1|$ with probabilities $\tfrac23$ and $\tfrac13$ and gives
+$$
+\overline n(M_{\mathrm{mix}})=\operatorname{diag}\!\left(\tfrac35,\tfrac25\right)\ne\tfrac12I_2=\overline n\bigl((I_2)\bigr).
+\tag{8.8m.1.4}
+$$
+5. **Faithfulness is necessary.** If the reference preparation is replaced by a pure state whose input marginal has rank $r<d$, every conditional state lies in the face of density operators supported in that marginal's support, and every rule affine on that face satisfies (SI) and (PF) whatever its values elsewhere. A product reference, with $r=1$, constrains no rule.
+
+Applied blockwise to the retained branches $t_a$ of Theorem 8.8m on its purification $\psi$, (SI) or (PF) supplies the positive affine preparation-extensional branch rules assumed there, when a preparation procedure is a finite ensemble whose output is the average of its members' outputs. The residual preparation-sensitive and mixture-nonaffine branches are therefore classified on the faithful steering branch: they are exactly the rules whose retained output block depends on the reference setting, and (8.8m.1.3) and (8.8m.1.4) populate the two classes.
+
+*Proof.* For $N=|g\rangle\!\langle g|$, $(I\otimes\langle g|)\Psi=d^{-1/2}\sum_r\langle g,f_r\rangle e_r=d^{-1/2}\theta^{-1}g$ and $\theta^{-1}|g\rangle\!\langle g|\theta=|\theta^{-1}g\rangle\!\langle\theta^{-1}g|$; real linearity over rank-one projections gives (8.8m.1.2). The map $N\mapsto d^{-1}\theta^{-1}N\theta$ is an order isomorphism sending $I$ to $I_d/d$, which proves item 1.
+
+If $F$ is affine with linear extension $\Phi$, then $p_i^MF(\rho_i^M)=\Phi(p_i^M\rho_i^M)$, and additivity of $N\mapsto\operatorname{tr}_R[(I\otimes N)\psi]$ gives (PF). Every setting refines the one-outcome setting $(I)$, so (PF) implies (SI). Assume (SI), let $\rho=\mu\sigma_1+(1-\mu)\sigma_2$ with $\sigma_1,\sigma_2\in\mathcal D_d$ and $0<\mu<1$, and put $\lambda=(d\|\rho\|_{\mathrm{op}})^{-1}\in(0,1]$. If $\lambda<1$, set $\tau=(I_d/d-\lambda\rho)/(1-\lambda)\in\mathcal D_d$. Item 1 realizes settings with conditional families $(\lambda\rho,(1-\lambda)\tau)$ and $(\lambda\mu\sigma_1,\lambda(1-\mu)\sigma_2,(1-\lambda)\tau)$, the $\tau$ outcome omitted when $\lambda=1$. (SI) equates their responses; cancelling $(1-\lambda)F(\tau)$ and dividing by $\lambda$ gives $F(\rho)=\mu F(\sigma_1)+(1-\mu)F(\sigma_2)$. The positive-cone construction (8.8k.4) then supplies $\Phi$, and $\overline F(M)=\Phi(\sum_ip_i^M\rho_i^M)=\Phi(I_d/d)$.
+
+For item 3, item 1 realizes every finite pure ensemble of $I_d/d$ by a rank-one setting. The same mixing construction, concatenating pure ensembles of $\rho$ with one pure ensemble of $\tau$, shows that (SI$_1$) makes pure-ensemble averages depend only on the barycenter. The barycentric average is then affine on $\mathcal D_d$ and agrees with $F$ on pure states, (8.8k.4) extends it uniquely, and pure states span $M_d(\mathbb C)$. The converse follows from linearity. For item 4, a nonaffine $F$ violates (SI) and (PF) by item 2; if it satisfies (SI$_1$), a violating pair of settings contains one with an element of rank at least two, whose conditional state is mixed by (8.8m.1.2). With $\theta$ equal to complex conjugation, the settings $M_Z$ and $M_X$ steer $\{|0\rangle,|1\rangle\}$ and $\{|+\rangle,|-\rangle\}$ with equal weights, on which $z^2=1$ and $z^2=0$. For (8.8m.1.4), $\tfrac23\operatorname{diag}(\tfrac34,\tfrac14)+\tfrac13\operatorname{diag}(0,1)=\tfrac12I_2$ and $n(\operatorname{diag}(\tfrac34,\tfrac14))=\operatorname{diag}(\tfrac9{10},\tfrac1{10})$. For item 5, $\operatorname{tr}_R[(I\otimes N)\psi]$ is supported in the support of the input marginal for every $N\succeq0$. ∎
+
+**Resolution TV-QM-05-R4 (Metadata).** Exact domain: every retained output block $F:\mathcal D_d\to M_{d'}(\mathbb C)^+$ acting on the input wing of a pure input--reference preparation with input marginal $I_d/d$, and every finite reference POVM executed before the procedure. Premises: the Schmidt form of $\psi$, the conditional-state semantics (8.8m.1.1) with the reference record retained separately, and the positive-cone extension (8.8k.4). Equivalence relation: equality of retained output blocks after the reference record is forgotten; a preparation procedure is represented by its finite ensemble. Budget: every finite reference POVM and refinement, every finite pure or mixed ensemble of every density operator, and the two witness rules. Verifier: (8.8m.1.2), the order isomorphism $N\mapsto d^{-1}\theta^{-1}N\theta$, the mixing construction with $\lambda=(d\|\rho\|_{\mathrm{op}})^{-1}$, (8.8k.4) and the exact evaluations (8.8m.1.3)--(8.8m.1.4). Falsifier: a POVM whose conditional family differs from (8.8m.1.2); an affine rule with a setting-dependent response; a nonaffine rule satisfying (SI) or (PF) on a faithful maximally mixed purification; or a rule nonlinear on pure states that satisfies (SI$_1$). Provenance class: source-internal finite steering classification. Downstream consumers: Theorems 8.3b, 8.8k and 8.8m, Corollary 8.3c and `TV-QM-05`. Nonvacuity: every finite CP instrument supplies affine blocks satisfying (SI) and (PF); (8.8m.1.3) and (8.8m.1.4) populate the two residual classes; a product reference populates the faithfulness boundary. Result: `positive-discharge` of the complete classification of residual nonaffine branch rules on the faithful steering branch: affinity, setting independence and record pushforward are equivalent, pure-state linearity is equivalent to rank-one setting independence, and every nonaffine rule carries a finite setting-dependence witness. Physical population and realization of the carrier, the purification, the reference-setting family, the setting-independence or pushforward record, the hereditary rule and the trace/record link, together with their coverage of PU procedures, remain `R` under `TV-QM-05`.
+
 **Resolution ledger 8.8-R1.** These analytic artifacts use finite ordered cones, the displayed 64-effect frame, finite trial laws, one finite Choi matrix, finite-dimensional projective space, and finite matrices. Equivalence is ordered-state-space isomorphism, equality of registered finite laws, or unitary/projective equivalence as appropriate.
 
 | Target | Exact scoped proposition and polarity | Verifier and falsifier | Downstream consumers |
@@ -1864,7 +2141,7 @@ The pure-state marginal identity (8.8m.2) gives equal Schmidt coefficients $1/\s
 | `TV-QM-04` | The associative real/complex/quaternionic census is `positive-discharge`: Corollary 8.8a.1 proves that either the product-effect isomorphism or the exact one-dimensional connected scalar-phase gate independently selects $\mathbb C$, while removing both gives `nonentailment`; a merely nontrivial connected phase retains $\mathbb H$ until response equivalence licenses PCE quotienting. | Recompute (8.8a.2)--(8.8a.3), the three identity-component dimensions, and the response-equivalence gate; a real or quaternionic member satisfying either exact selector falsifies the classification. | Theorem 8.4 and scalar/Jordan carrier selection. |
 | `TV-QM-05` | Theorems 8.8d and 8.8d.1 give `positive-discharge` of the finite Choi and preparation-descent classifications. Theorem 8.8k derives finite CP instruments on its independently retained-Choi-certified branch. Theorem 8.8l gives `nonentailment` from separable spectator locality, a nonfaithful reference, a forgetful Choi shadow and complete local-effect coverage in a typed proper local process subtheory. Theorem 8.8m derives retained branch CP from an independently source-derived pure preparation with marginal $I_d/d$ and one affine hereditary local rule on the complete product-plus-purification domain; its normalized effect response additionally uses the separately calibrated trace/record link. Physical population and coverage of these records remain open. | Check (8.8d.1.1)--(8.8d.1.2), (8.8k.3)--(8.8k.11), (8.8l.8)--(8.8l.13) and (8.8m.1)--(8.8m.8), including affine spanning, unitary orientation, every retained Choi block, the side-tag incompatibility, the trace-link mismatch and the trace/record equality; a non-CP branch satisfying every 8.8m premise falsifies the positive theorem, while a hidden flag, source side tag, nonfaithful reference or response-defined carrier/preparation/process calibration rejects physical closure. | Theorem 8.3b, Theorems 8.8i--8.8m and instrument realization. |
 | `TV-QM-06` | Finite measurable transition-isometry semigroup classification and Wigner/Stone lift are `positive-discharge`; physical clock calibration is open. | Check compact isometry, group law, measurability, and the unitary lift; a nonsurjective isometry or discontinuous measurable homomorphism falsifies it. | Theorems 8.5, 8.7, 7.6c and 29. |
-| `TV-QM-07` | Operator-norm and normalized-Hilbert--Schmidt finite-commutator convergence receive `negative-refutation`; Theorem 8.8f.1 gives `positive-discharge` of exact infinite-carrier Weyl existence, a common unbounded-generator core, and within-carrier strong-continuity bounds. Finite-to-infinite convergence, PU carrier intertwining, and physical-parameter records remain open. | Evaluate the finite trace bounds and verify (8.8f.1.1)--(8.8f.1.4); failure of the Weyl phase, domain invariance, or either graph-norm bound falsifies the positive construction. | Canonical-pair and continuum-carrier routes. |
+| `TV-QM-07` | Operator-norm and normalized-Hilbert--Schmidt finite-commutator convergence receive `negative-refutation`; Theorem 8.8f.1 gives `positive-discharge` of exact infinite-carrier Weyl existence, a common unbounded-generator core, and within-carrier strong-continuity bounds. Theorem 8.8f.2 gives `positive-discharge` of a directed finite-carrier family with compatible finite-to-infinite intertwiners and quantitative Weyl-response convergence; physical translation and observable-parameter records remain open. | Evaluate the finite trace bounds and verify (8.8f.1.1)--(8.8f.1.4) and (8.8f.2.3)--(8.8f.2.5); failure of the Weyl phase, domain invariance, either graph-norm bound, intertwiner compatibility or the convergence rate falsifies the applicable positive construction. | Canonical-pair and continuum-carrier routes. |
 | `TV-QM-08` | Theorem 8.8j gives `positive-discharge` of universal finite outcome-wise CP-instrument binary-first factorization and of same-effect transition consistency on its leafwise-extensional, history-pushforward, retained-prefix-causal branch. Theorems 8.8k and 8.8m give conditional retained-flag routes to CP and normalized trace-effect response, while Theorem 8.8l proves that SPAP/PPI/PCE, separable spectator locality, a forgetful Choi shadow and even all local effects plus the local identity in a typed proper CP-process subtheory do not supply complete process coverage. Full PU-process and response-link coverage and realization remain `C+R`-open, and $Q_*$ retains `nonentailment` from context normalization alone. | Verify (8.8j.2)--(8.8j.9), (8.8k.3)--(8.8k.9), (8.8l.8)--(8.8l.14) and (8.8m.1)--(8.8m.8), every outcome-labeled branch/Choi block, tree-flattening law, product-domain affine extension, flag-to-leaf marginal, exogenous-continuation invariance and calibration independence; a failed identity or a covered equal-effect pair with unequal weights falsifies the applicable positive theorem, while a hidden flag, side tag, response-defined bridge, omitted process or response-active side ledger rejects closure. | Theorems 8.8i--8.8m, G.1.11e and 8.0d and the finite measurement protocols. |
 
 

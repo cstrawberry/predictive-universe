@@ -319,6 +319,59 @@ H(J)=\frac{a^2}{N}
 $$
 which proves (J.4c.4). Conditional Landauer gives the stated reset-heat lower bound. The raw-reset work bound imports the complete J.4b premises; absence of a reset removes only that reset term. ∎
 
+**Theorem J.4d (Exact Record-Architecture Ledger for Stopped Zeno Runs).** In the setting of Theorem J.4c, stop the run at its first failure. For $j=1,\ldots,N$ let $O_j\in\{0,1,\bot\}$ be the outcome of interrogation $j$, with $O_j=\bot$ exactly when an earlier interrogation returned $1$, and let $A_j:=\mathbf 1[O_j\ne\bot]$ be the active flag. A classical record architecture is a finite family of classical registers with fixed ready symbols, all ready at the start, that acts only on its registers and changes their joint content $M$ only by the following steps:
+
+1. at step $j$, writing $O_j$ once into a ready register;
+2. writing into a ready register a fresh random symbol $\xi$ independent of all earlier variables;
+3. applying a deterministic map of $M$ that is injective on the reachable support;
+4. a registered reset $e$ of one register $P_e$ to its ready symbol, with the remaining content $R_e$ unchanged.
+
+Let $M_{j^-}$ be the content immediately before step $j$ writes $O_j$, and let $M_{\mathrm{end}}$ be the final content. Then
+$$
+\sum_eH(P_e\mid R_e)+H(M_{\mathrm{end}})
+=H(J)+\sum_{j=1}^NH(A_j\mid M_{j^-})+\sum_\xi H(\xi),
+\tag{J.4d.1}
+$$
+with $H(J)$ given by (J.4c.3). Hence every cyclic architecture, one with $M_{\mathrm{end}}$ ready, has total entropic reset floor at least $H(J)$, with equality exactly when every random symbol it writes is almost surely constant and the architecture is status-tracking, meaning that every $M_{j^-}$ determines $A_j$ almost surely; in particular, equality holds whenever the controller reads each stopping decision from a register of $M$ and no random symbol is written. The compressed architecture, which keeps the first-failure time in a register with ready value $\infty$, attains equality. The memoryless architecture, which resets every register before the next interrogation, has
+$$
+\sum_eH(P_e\mid R_e)=\sum_{j=1}^NH(O_j)=H(J)+\sum_{j=2}^Nh_2\bigl(c_N^{\,j-1}\bigr),
+\tag{J.4d.2}
+$$
+and, for $a=|\omega T|>0$ and $N\ge\max\{1,3a^2\}$,
+$$
+\frac{a^2}{\pi^2}\Bigl(1-\frac1N\Bigr)\log\frac N{a^2}
+\le\sum_{j=2}^Nh_2\bigl(c_N^{\,j-1}\bigr)
+\le a^2\log\frac Na+\frac{a^2}2.
+\tag{J.4d.3}
+$$
+Thus the status-tracking floor $H(J)=\Theta(\log N/N)$ of (J.4c.4) vanishes as $N\to\infty$, while the memoryless floor grows logarithmically in $N$. An architecture with no reset retains $H(M_{\mathrm{end}})\ge H(J)$. Under the registered-reset hypotheses of Theorem J.4a at bath temperature $T_b$, every cyclic architecture exports mean reset heat at least $k_BT_bH(J)$.
+
+*Proof.* Each step changes the entropy of $M$ by an exact amount. Step 1 adds $H(O_j\mid M_{j^-})$; step 2 adds $H(\xi\mid M)=H(\xi)$ by independence; step 3 preserves the entropy because it is injective on the reachable support; step 4 maps $(P_e,R_e)$ to $(\mathrm{ready},R_e)$ and removes $H(P_e\mid R_e)$. The initial content is deterministic, so summing the changes gives
+$$
+\sum_eH(P_e\mid R_e)+H(M_{\mathrm{end}})
+=\sum_{j=1}^NH(O_j\mid M_{j^-})+\sum_\xi H(\xi).
+$$
+The content $M_{j^-}$ is a function of $O_{<j}$ and of the random symbols written before step $j$. Given $A_j=1$, the projection of Theorem J.4c has left the qubit in $|0\rangle$, so $O_j$ equals $0$ or $1$ with probabilities $c_N$ and $1-c_N$ independently of all earlier variables; given $A_j=0$, $O_j=\bot$. Since the architecture acts only on its registers, $O_j$ is conditionally independent of $(O_{<j},M_{j^-})$ given $A_j$. As $A_j$ is a function of $O_j$ and also of $O_{<j}$,
+$$
+H(O_j\mid M_{j^-})=H(A_j\mid M_{j^-})+H(O_j\mid A_j)
+=H(A_j\mid M_{j^-})+H(O_j\mid O_{<j}).
+$$
+The outcome string and $J$ determine each other, so the chain rule gives $\sum_jH(O_j\mid O_{<j})=H(J)$. This proves (J.4d.1).
+
+The last two terms of (J.4d.1) are nonnegative and vanish exactly under the stated equality condition. In the compressed architecture, step $j$ writes $O_j$ into an outcome register $K$ with ready symbol $\bot$ and then applies $(K,\mathsf J)\mapsto(\bot,\mathsf J')$, where $\mathsf J'=j$ if $K=1$ and $\mathsf J'=\mathsf J$ otherwise. On the reachable support this map is injective, because $\mathsf J'=j$ occurs exactly when $K=1$, and before step $j$ the register satisfies $\mathsf J=\infty$ exactly when $A_j=1$. In the memoryless architecture each $M_{j^-}$ is constant, each reset removes $H(O_j)$, and $A_j$ is Bernoulli with mean $c_N^{\,j-1}$; this gives (J.4d.2).
+
+For (J.4d.3), put $x_j=1-c_N^{\,j-1}$, so that $h_2(c_N^{\,j-1})=h_2(x_j)$. The identity $1-c^k=(1-c)\sum_{i<k}c^i$ and $1-c_N=\sin^2(a/N)$ give
+$$
+(j-1)\sin^2(a/N)\,c_N^{\,N}\le x_j\le(j-1)\sin^2(a/N)\le\frac{(j-1)a^2}{N^2}.
+$$
+For $N\ge\max\{1,3a^2\}$ one has $a/N\le\pi/2$, hence $\sin^2(a/N)\ge4a^2/(\pi^2N^2)$, and Bernoulli's inequality gives $c_N^{\,N}\ge1-N\sin^2(a/N)\ge1-a^2/N\ge\tfrac23$. Therefore $x_j^-\le x_j\le x_j^+$ with $x_j^-=2(j-1)a^2/(\pi^2N^2)$ and $x_j^+=(j-1)a^2/N^2\le a^2/N\le\tfrac13<e^{-1}$. The function $x\log(1/x)$ increases on $[0,e^{-1}]$, and $x\log(1/x)\le h_2(x)\le x\log(1/x)+x$. Since $a^2/N^2\le x_j^+\le a^2/N$ for $2\le j\le N$,
+$$
+x_j^-\log\frac{N}{a^2}\le h_2(x_j)\le x_j^+\Bigl(1+\log\frac{N^2}{a^2}\Bigr).
+$$
+Summing with $\sum_{j=2}^N(j-1)=N(N-1)/2$ gives (J.4d.3); the upper bound uses $N\ge a$, which follows from $N\ge\max\{1,3a^2\}$. The retained-entropy statement is (J.4d.1) without reset terms, and the heat statement is Theorem J.4a applied to each reset. ∎
+
+**Resolution TV-JREF-02-R1 (Metadata).** Exact domain: stopped qubit Zeno runs of Theorem J.4c with $N\ge1$ and every classical record architecture built from steps 1--4 of Theorem J.4d. Premises: the Lüders interrogation law of Theorem J.4c; for the heat statement, the registered-reset hypotheses of Theorem J.4a. Equivalence: step schedules equal up to injective relabeling of register contents. Budget: every $N$, every $a=|\omega T|>0$, and every finite register family, step schedule and random-symbol law. Verifier: exact per-step entropy accounting, the conditional-independence step, the chain rule and the elementary bounds behind (J.4d.3). Falsifier: a cyclic architecture in the class with entropic reset floor below $H(J)$, or a status-tracking architecture without random symbols whose floor differs from $H(J)$. Provenance class: source-internal exact information ledger. Downstream consumers: Theorems J.4b--J.4c, Corollary J.8.9c and `TV-JREF-02`. Nonvacuity: the compressed and memoryless architectures, whose floors are separated by (J.4d.3). This is `positive-discharge` of the classical record-architecture classification for the stopped Zeno run. Architectures that process records in coherent quantum registers require a reset ledger with quantum side information and form the remaining `M` component of `TV-JREF-02`.
+
 **J.5 Distinction from Existing Bounds**
 
 The structural value $\varepsilon_0=\ln2$ counts a binary alphabet. The physical bath-heat ledger depends on $H_q(P\mid R)$, and the total entropy production is the excess $k_B\varepsilon_{\mathrm{diss}}$. Measurement, feedback, finite-time, and reservoir costs may be added only through compatible implementation theorems with an explicit no-double-counting rule.
@@ -483,6 +536,121 @@ $$
 Variation of constants gives (J.8.8a); its integrand is nonnegative and is positive on $0<s<\tau$. Bounded rates and Lemma J.8.5 give $\epsilon_\tau>0$. The dynamical activity is at most $w_{0\leftarrow1}+w_{1\leftarrow0}=2\gamma\cosh(\beta E_1/2)\le2\gamma\cosh c$, proving (J.8.8b), and Theorem J.8.4 gives (J.8.8c). Since $k\le2\gamma\cosh c$ and $E_1(s)\ge\Delta/2$ on $\tau/4\le s\le3\tau/4$, (J.8.8d) follows by restricting the integral in (J.8.8a) to that interval. Substitution into (J.8.8c) gives (J.8.8e). Equation (J.8.8f) is (J.8.2). ∎
 
 **Remark J.8.9 (Witness Scope).** The witness proves nonemptiness of the finite-error, bounded-rate, cyclic-control LDB branch and supplies a strictly positive computable entropy-production floor. Exact finite-time erasure is governed by the singular-rate or limiting certificate identified in Remark J.8.6. Quantum ND-RID transfer, a channel-capacity deficit, and horizon saturation or strictness are governed by their separately named transfer certificates.
+
+**Construction J.8.9a (Adapted Bounded-Rate Reset Protocol).** Let $\mathcal G=\{0,1,\ldots,m-1\}$ with $m\ge2$ and ready label $0$, and let $p$ be an input law on $\mathcal G$. Fix the bath inverse temperature $\beta=(k_BT)^{-1}$ and parameters $\eta\in(0,1)$, $\Lambda>0$, $\gamma>0$ and $\tau_1>0$; put $\tau=5\tau_1$ and $\varsigma(v)=\sin^2(\pi v/2)$ for $0\le v\le1$. With $u_m$ the uniform law on $\mathcal G$, define
+$$
+\pi^\eta=(1-\eta)p+\eta u_m,
+\qquad
+e_j=\frac1\beta\log\frac{\pi^\eta(0)}{\pi^\eta(j)}
+\quad(1\le j\le m-1).
+\tag{J.8.9a.1}
+$$
+On the $k$th phase $(k-1)\tau_1\le t\le k\tau_1$ write $v=t/\tau_1-k+1$. The control Hamiltonian has $E_0(t)=0$ and, for $j\ge1$, energies $E_j(t)$ and a common rate scale $\kappa(t)$ given by:
+
+1. $k=1$: $E_j=\varsigma(v)e_j$ and $\kappa=0$;
+2. $k=2$: $E_j=e_j$ and $\kappa=\gamma\varsigma(v)$;
+3. $k=3$: $E_j=e_j+\Lambda\varsigma(v)$ and $\kappa=\gamma$;
+4. $k=4$: $E_j=e_j+\Lambda$ and $\kappa=\gamma(1-\varsigma(v))$;
+5. $k=5$: $E_j=(1-\varsigma(v))(e_j+\Lambda)$ and $\kappa=0$.
+
+The jump rates are
+$$
+w_{0\leftarrow j}(t)=\kappa(t),
+\qquad
+w_{j\leftarrow0}(t)=\kappa(t)e^{-\beta E_j(t)}
+\qquad(1\le j\le m-1),
+\tag{J.8.9a.2}
+$$
+and all other rates vanish. Phases 1 and 5 shape and restore the energies behind a closed barrier, phase 2 opens the barrier at the shaped Gibbs law $\pi^\eta$, phase 3 lifts every non-ready level by $\Lambda$, and phase 4 closes the barrier. With retained side information, one copy runs in each sector $r$ with its own input law $p_r$, its own energies (J.8.9a.1) and the common parameters $(\eta,\Lambda,\gamma,\tau_1)$.
+
+**Theorem J.8.9b (Common-Overlap Reset Certificate and Limiting Exact-Erasure Ledger).** Let $A$, $f$, $q(X,R)$ and a minimizing label map $g$ of Theorem J.1b be given, with $m:=|G|_{\min}\ge2$ in (J.3b). Retain $\tilde R:=(f(X),R)$ unchanged, and in every sector $\tilde r$ with $q(\tilde r)>0$ reset the auxiliary register $G=g(X)$ to the ready label $0$ by Construction J.8.9a with input law $p_{\tilde r}=q(G\mid\tilde R=\tilde r)$. Then the following hold.
+
+1. For every parameter choice the construction populates Definition J.8.1 with side information $\tilde R$ and Definition J.8.3 with $N_{\max}=3\gamma\tau_1m/\eta$. Its rates are continuous and bounded by $\gamma m/\eta$ and satisfy local detailed balance in the form $w_{0\leftarrow j}e^{-\beta E_j}=w_{j\leftarrow0}e^{-\beta E_0}$; the register Hamiltonian is degenerate and the controls are cyclic at $t=0$ and $t=\tau$. Every sector ends with ready-state error $\epsilon_{\tilde r}>0$.
+
+2. The bath heat obeys the common-overlap ledger
+$$
+\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}
+=H_q\bigl(X\mid f(X),R\bigr)-\sum_{\tilde r}q(\tilde r)H\bigl(p^{\mathrm{out}}_{\tilde r}\bigr)+\Sigma,
+\qquad
+\Sigma=\sum_{\tilde r}q(\tilde r)\Sigma_{\tilde r}.
+\tag{J.8.9b.1}
+$$
+
+3. With $\bar\delta:=\eta e^{-\gamma\tau_1/2}+\pi\beta\Lambda/(8\gamma\tau_1)$, the mean ready-state error $\epsilon=\sum_{\tilde r}q(\tilde r)\epsilon_{\tilde r}$ and the entropy production satisfy
+$$
+\epsilon\le\frac m\eta e^{-\beta\Lambda}+\bar\delta,
+\qquad
+0\le\Sigma\le\log\frac1{1-\eta}+\beta\Lambda\bar\delta.
+\tag{J.8.9b.2}
+$$
+
+4. For the sequence $\eta_n=1/n$, $\beta\Lambda_n=n$ and $\gamma\tau_{1,n}=n^3$ with $n\ge2$,
+$$
+\epsilon_n\le mne^{-n}+\frac{e^{-n^3/2}}n+\frac\pi{8n^2},
+\qquad
+\Sigma_n\le\log\frac n{n-1}+e^{-n^3/2}+\frac\pi{8n},
+\tag{J.8.9b.3}
+$$
+and therefore
+$$
+\lim_{n\to\infty}\frac{\langle Q_{\mathrm{bath}}\rangle_n}{k_BT}=H_q\bigl(X\mid f(X),R\bigr).
+\tag{J.8.9b.4}
+$$
+Thus the registered exact-reset value on the right of (J.3d) is the limit of bounded-rate, finite-error, cyclic local-detailed-balance resets whose error and entropy production vanish, while the error stays positive at every finite $n$. With $\tau_1$ held fixed, every member has duration $5\tau_1$ and rate bound $\gamma_nm/\eta_n=mn^4/\tau_1$, so the limit is a singular-rate limit at fixed finite time.
+
+5. For the binary-ancilla architecture of Definition J.1 with all four pairs reachable, $f(\phi,p)=\phi$, $g(\phi,p)=p$, uniform $q$ and no further retained record, one has $m=2$, $H_q(X\mid f(X))=\log2$, each sector has $p_{\tilde r}=\pi^\eta=(\tfrac12,\tfrac12)$ and $e_1=0$, and
+$$
+\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}=\log2-h_2(\epsilon)+\Sigma,
+\qquad
+\epsilon\le e^{-\beta\Lambda}+\frac{\pi\beta\Lambda}{8\gamma\tau_1},
+\qquad
+\Sigma\le\frac{\pi\beta^2\Lambda^2}{8\gamma\tau_1}.
+\tag{J.8.9b.5}
+$$
+Running Construction J.8.7 in each sector instead ties the same minimal map and ensemble to the reset of Theorem J.8.8, whose ledger (J.8.8f) is then the common-overlap ledger (J.8.9b.1) of this instance.
+
+Items 1, 3 and 4 hold sector by sector for Construction J.8.9a on any finite register and input law, with the input entropy in place of $H_q(X\mid f(X),R)$.
+
+*Proof.* Fix a sector and drop its index. In each phase the energies and $\kappa$ are continuous, and they agree at the phase boundaries: $\kappa$ takes the values $0,\gamma,\gamma,0$ at $t=\tau_1,2\tau_1,3\tau_1,4\tau_1$, $E_j$ takes the values $e_j,e_j,e_j+\Lambda,e_j+\Lambda$ there, and $E_j(0)=E_j(\tau)=\kappa(0)=\kappa(\tau)=0$. The master equation $\dot p=W(t)p$ therefore has continuous coefficients and a continuously differentiable solution. The rates vanish in phases 1 and 5. In phases 2--4, $E_j\ge e_j$, so $w_{j\leftarrow0}\le\gamma e^{-\beta e_j}=\gamma\pi^\eta(j)/\pi^\eta(0)\le\gamma m/\eta$ because $\pi^\eta(0)\ge\eta/m$, while $w_{0\leftarrow j}\le\gamma$. The product form of local detailed balance is immediate from (J.8.9a.2) and gives $\log(w_{0\leftarrow j}/w_{j\leftarrow0})=\beta(E_j-E_0)$ whenever $\kappa>0$. Transitions act only on $G$, so the sectors of $\tilde R$ and its law are preserved. With $\zeta(t):=\sum_{j\ge1}e^{-\beta E_j(t)}$, the activity rate is $\kappa(p_0\zeta+1-p_0)\le\kappa\max\{1,\zeta\}$, and in phases 2--4, $\zeta\le\zeta_0:=\sum_{j\ge1}e^{-\beta e_j}=(1-\pi^\eta(0))/\pi^\eta(0)\le m/\eta$; this gives $N\le3\gamma\tau_1m/\eta$. During phase 2 the star graph has positive rates in both directions on every edge, so every state acquires positive probability; afterward $\dot p_j\ge-\kappa p_j$ keeps each $p_j$ with $j\ge1$ positive, and phase 5 freezes the populations. Hence $\epsilon>0$. This proves item 1.
+
+Let $\pi(t)$ be the Gibbs law of $E(t)$ and $J_j=w_{0\leftarrow j}p_j-w_{j\leftarrow0}p_0$ the pair fluxes. Local detailed balance gives the entropy-production rate
+$$
+\sigma=\sum_{j\ge1}J_j\log\frac{w_{0\leftarrow j}p_j}{w_{j\leftarrow0}p_0}
+=-\sum_x\dot p_x\log\frac{p_x}{\pi_x(t)},
+$$
+and the heat rate into the bath is $-\sum_xE_x\dot p_x=\beta^{-1}(\sigma+\sum_x\dot p_x\log p_x)$. Integration between the degenerate endpoints gives $\beta\langle Q_{\mathrm{bath}}\rangle=H(p)-H(p^{\mathrm{out}})+\Sigma$, which is (J.8.2) in this sector. Averaging over sectors and applying (J.3c) proves (J.8.9b.1).
+
+Put $D(t)=D(p(t)\Vert\pi(t))$. Then $\dot D=-\sigma-\sum_xp_x\partial_t\log\pi_x$ with $\partial_t\log\pi_x=-\beta(\dot E_x-\sum_y\pi_y\dot E_y)$. The rates vanish in phases 1 and 5, $\pi$ is constant in phases 2 and 4, and in phase 3 $\dot E_x=\dot\lambda\,\mathbf 1[x\ge1]$ with $\lambda=\Lambda\varsigma(v)$. Since $p(\tau_1)=p$ and $\pi(\tau_1)=\pi^\eta$,
+$$
+\Sigma=D(p\Vert\pi^\eta)-D(4\tau_1)+\beta\int_{2\tau_1}^{3\tau_1}\dot\lambda\,(S-\pi_S)\,dt,
+\qquad
+S=\sum_{j\ge1}p_j,
+\qquad
+\pi_S=\sum_{j\ge1}\pi_j=\frac{\zeta}{1+\zeta}.
+$$
+The bound $\pi^\eta\ge(1-\eta)p$ gives $D(p\Vert\pi^\eta)\le\log(1/(1-\eta))$. Summing the master equation over $j\ge1$ gives the closed equation $\dot S=\kappa(1+\zeta)(\pi_S-S)$, so $\delta:=S-\pi_S$ obeys $\dot\delta=-\kappa(1+\zeta)\delta-\dot\pi_S$. In phase 2, $\dot\pi_S=0$, $\int\kappa\,dt=\gamma\tau_1/2$ and $\delta(\tau_1)=\pi^\eta(0)-p(0)=\eta(1/m-p(0))$, so $|\delta(2\tau_1)|\le\eta e^{-\gamma\tau_1/2}$. In phase 3, $\kappa(1+\zeta)\ge\gamma$ and $|\dot\pi_S|=\beta\dot\lambda\pi_S(1-\pi_S)\le\pi\beta\Lambda/(8\tau_1)$, so $|\delta|\le\bar\delta$ there. In phase 4, $\dot\pi_S=0$, so $|\delta(4\tau_1)|\le\bar\delta$. Since $\dot\lambda\ge0$ and $\int\dot\lambda\,dt=\Lambda$, and since $\Sigma\ge0$ termwise in the flux form, the entropy-production bound follows. The populations are frozen in phase 5, so $\epsilon=S(4\tau_1)=\pi_S(4\tau_1)+\delta(4\tau_1)\le\zeta_0e^{-\beta\Lambda}+\bar\delta\le(m/\eta)e^{-\beta\Lambda}+\bar\delta$. Averaging over sectors proves (J.8.9b.2).
+
+Substituting the sequence of item 4 into (J.8.9b.2) gives (J.8.9b.3), whose right sides tend to zero. Grouping the non-ready labels gives $H(p^{\mathrm{out}}_{\tilde r})\le h_2(\epsilon_{\tilde r})+\epsilon_{\tilde r}\log(m-1)$, and concavity of $h_2$ bounds the sector average by $h_2(\epsilon)+\epsilon\log(m-1)$, which tends to zero. Equation (J.8.9b.1) then gives (J.8.9b.4), and item 1 keeps each finite-$n$ error positive.
+
+In the binary instance every sector has the uniform input law, which equals $\pi^\eta$ for every $\eta$. Hence $e_1=0$, phases 1 and 2 leave $p$ unchanged, $D(p\Vert\pi^\eta)=0$, $\delta(\tau_1)=0$ and $\zeta_0=1$. The bounds of item 3 reduce to those in (J.8.9b.5), and (J.8.9b.1) with $m=2$ gives its ledger. Each sector law is also the input law of Construction J.8.7, whose copies act only on $G$; Theorem J.8.8 therefore populates Definitions J.8.1 and J.8.3 sector by sector with side information $\tilde R$, and (J.8.2) with $H_q(X\mid f(X))=\log2$ and the common sector error $\epsilon_\tau$ gives (J.8.8f) for the averaged ledger. The per-sector arguments used no property of $p$ beyond its being a law on $\mathcal G$. ∎
+
+**Resolution TV-JREF-01-R2 (Metadata).** Exact domain: every nonempty finite reachable domain whose accessible map $f$ has largest fiber size $m\ge2$, every minimizing label map of Theorem J.1b and every finite joint law $q(X,R)$, reset by Construction J.8.9a. Premises: Theorem J.1b, the finite-state local-detailed-balance class of Definition J.8.1 with one registered bath temperature, and the heat identity (J.8.2). Equivalence: equality of sector input laws and control parameters. Budget: every $(\eta,\Lambda,\gamma,\tau_1)$ and the sequence of Theorem J.8.9b, item 4. Verifier: continuity and rate bounds, the relative-entropy balance, variation of constants for the lumped non-ready mass, and the displayed substitutions. Falsifier: a sector violating (J.8.9b.1) or (J.8.9b.2), or a limit in (J.8.9b.4) different from $H_q(X\mid f(X),R)$. Provenance class: source-internal explicit construction in finite-state stochastic thermodynamics with one thermal reservoir. Downstream consumers: Theorem J.1, Theorem J.1b, Remark J.8.6, Theorem J.8.4, Corollary J.8.9c and `TV-JREF-01`. Nonvacuity: the binary-ancilla instance of Theorem J.8.9b, item 5. This is `positive-discharge` of the common-overlap certificate that ties a J.1b-minimal map and ensemble to one bounded-rate physical reset and its full side-information ledger, and of the limiting certificate named in Remark J.8.6 for the exact-reset value of (J.3d). Together with Resolution TV-JREF-01-R1, every component of `TV-JREF-01` has a `positive-discharge` artifact.
+
+**Corollary J.8.9c (Explicit Cyclic Zeno Reset Realization).** In the stopped run of Theorem J.4d, let the qubit continue under $H=\hbar\omega\sigma_x$ after a failure, and use the compressed architecture: an outcome register $K$ with ready symbol $\bot$ and a first-failure register $\mathsf J$ over $\{\infty,1,\ldots,N\}$ with ready symbol $\infty$. At time $T$ apply the $\mathsf J$-controlled unitary
+$$
+U_{\mathrm{ret}}=|\infty\rangle\langle\infty|_{\mathsf J}\otimes I+\sum_{x=1}^N|x\rangle\langle x|_{\mathsf J}\otimes\sigma_xe^{i\omega(T-xT/N)\sigma_x},
+\tag{J.8.9c.1}
+$$
+and then reset $\mathsf J$ by Construction J.8.9a with $m=N+1$, ready label $\infty$, input law (J.4c.2) and no retained side information, at bath temperature $T_b$. The cycle returns the qubit to $|0\rangle$, $K$ to $\bot$ and $\mathsf J$ to $\infty$ up to the reset error $\epsilon$, the qubit mean energy vanishes at every stage, and
+$$
+\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT_b}=H(J)-H(p^{\mathrm{out}})+\Sigma,
+\tag{J.8.9c.2}
+$$
+with the bounds (J.8.9b.2). Along the sequence of Theorem J.8.9b, item 4, the error and entropy production vanish and the reset heat converges to $k_BT_bH(J)$, the status-tracking floor of Theorem J.4d, which is $\Theta(\log N/N)$ for fixed $0<|\omega T|<\infty$ by (J.4c.4) and vanishes for every $N$ when $\omega T=0$. The interrogations use the Lüders instrument of Theorem J.4c; the apparatus that implements that instrument carries its own ledger.
+
+*Proof.* Theorem J.4d shows that the updates of $K$ are injective on the reachable support, return $K$ to $\bot$ after every step, and leave $\mathsf J=J$ at time $T$. If $J=\infty$, the last interrogation leaves $|0\rangle$. If $J=x\le N$, the projection leaves $|1\rangle$ at time $xT/N$, and free evolution gives $\psi_x=e^{-i\omega(T-xT/N)\sigma_x}|1\rangle$ at time $T$. Since $\sigma_x$ commutes with $e^{i\omega s\sigma_x}$, one has $\sigma_xe^{i\omega(T-xT/N)\sigma_x}\psi_x=\sigma_x|1\rangle=|0\rangle$, so (J.8.9c.1) maps every reachable joint state to $|x\rangle_{\mathsf J}\otimes|0\rangle$ and leaves no record of $J$ in the qubit. Every qubit state in the run is a mixture of states $e^{-i\theta\sigma_x}|b\rangle$ with real $\theta$ and $b\in\{0,1\}$, and $\langle b|e^{i\theta\sigma_x}\sigma_xe^{-i\theta\sigma_x}|b\rangle=\langle b|\sigma_x|b\rangle=0$; hence $\langle H\rangle=0$ throughout. The reset of $\mathsf J$ is the sector-wise form of Theorem J.8.9b for a register of $N+1$ labels with trivial side information and input entropy $H(J)$, which gives (J.8.9c.2), its bounds and the limit. ∎
+
+**Resolution TV-JREF-02-R2 (Metadata).** Exact domain: stopped qubit Zeno runs with $N\ge1$, the compressed architecture, the return unitary (J.8.9c.1) and Construction J.8.9a on the $(N+1)$-label first-failure register. Premises: Theorems J.4c, J.4d and J.8.9b. Equivalence: relabeling of register symbols. Budget: every $N$, every $\omega T$ and every parameter choice of Construction J.8.9a. Verifier: the return identity, the vanishing qubit mean energy and Theorem J.8.9b. Falsifier: a reachable joint state not mapped to the ready qubit, or a violation of (J.8.9c.2). Provenance class: source-internal explicit cyclic realization in finite-dimensional quantum dynamics and finite-state stochastic thermodynamics. Downstream consumers: Theorems J.4b--J.4c and `TV-JREF-02`. Nonvacuity: $N=1$ with $0<|\omega T|<\pi/2$. This is `positive-discharge` of the explicit cyclic reset/control realization with its bath and side-information ledger; its reset heat attains the status-tracking floor $k_BT_bH(J)$ of Theorem J.4d in the limit. The coherent quantum-record architectures named in Resolution TV-JREF-02-R1 remain the live component of `TV-JREF-02`.
 
 **Definition J.8.10 (Reset-to-Capacity Transfer Certificate).** A transfer certificate $\mathfrak C_{\Sigma C}$ contains:
 

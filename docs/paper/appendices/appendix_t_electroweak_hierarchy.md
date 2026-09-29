@@ -612,7 +612,7 @@ $$
 \mathfrak C_{A\to\mathrm{St}}
 =(\Gamma_{EW},\mathcal S_{EW}^{(0)},\Phi_A,\gamma_*,\mathcal E_A,\chi_A)
 $$
-is accepted only if $\Gamma_{EW}$ fixes the physical path class, endpoints, domain, units, gauge quotient, and unit clock; $\mathcal S_{EW}^{(0)}$ is its dimensionless classical action; $\Phi_A:\Gamma_{EW}\to\Gamma_{\mathrm{St}}(p_A)$ preserves endpoints and clock; the checkable proof object $\mathcal E_A$ verifies
+is accepted only if $\Gamma_{EW}$ fixes the physical path class, endpoints, domain, units, gauge quotient, unit clock, and an active-response observable $\rho_{EW}$ assigning to each $\gamma\in\Gamma_{EW}$ an integrable curve $\rho_{EW}(\gamma):[0,1]\to\mathbb R^{\mathcal O_8}$, with $\rho_{EW}$ separating gauge classes; $\mathcal S_{EW}^{(0)}$ is its dimensionless classical action; $\Phi_A:\Gamma_{EW}\to\Gamma_{\mathrm{St}}(p_A)$ preserves endpoints and clock; the checkable proof object $\mathcal E_A$ verifies
 $$
 \mathcal S_{EW}^{(0)}[\gamma]
 \ge\mathcal I_{\mathrm{St}}[\Phi_A(\gamma)]
@@ -622,13 +622,19 @@ the supplied witness satisfies $\Phi_A(\gamma_*)=x_*$, where $x_*(t):=te_{p_A}$,
 $$
 \mathcal S_{EW}^{(0)}[\gamma_*]=\mathcal I_{\mathrm{St}}[x_*];
 $$
+$\Phi_A$ intertwines the active response with the marked-pair incidence response of (T.13.2),
+$$
+\rho_{EW}(\gamma)=B\,\partial_t\Phi_A(\gamma)
+\quad\text{for every }\gamma\in\Gamma_{EW};
+\tag{T.13a.0}
+$$
 and $\chi_A=1$ locks the record before comparison. Then
 $$
 \kappa_{EW}:=\inf_{\gamma\in\Gamma_{EW}}\mathcal S_{EW}^{(0)}[\gamma]
 =\kappa_{\mathrm{St}}.
 \tag{T.13a.1}
 $$
-Theorem T.5 proves $\mathcal I_{\mathrm{St}}[x_*]=\kappa_{\mathrm{St}}$; therefore the lower bound gives $\kappa_{EW}\ge\kappa_{\mathrm{St}}$ and the witness gives $\kappa_{EW}\le\kappa_{\mathrm{St}}$. Thus equality is proved by the certificate rather than assumed. Fluctuation determinants and gauge volumes remain outside both classical actions.
+Theorem T.5 proves $\mathcal I_{\mathrm{St}}[x_*]=\kappa_{\mathrm{St}}$; therefore the lower bound gives $\kappa_{EW}\ge\kappa_{\mathrm{St}}$ and the witness gives $\kappa_{EW}\le\kappa_{\mathrm{St}}$. Thus equality is proved by the certificate rather than assumed. By (T.13a.0), $\mathcal I_{\mathrm{St}}[\Phi_A(\gamma)]=\frac12\int_0^1\|\rho_{EW}(\gamma)(t)\|_2^2\,dt$, and separation makes $\Phi_A$ injective on gauge classes, so the record carries the physical active response into the marked-pair response as well as matching the action value. Fluctuation determinants and gauge volumes remain outside both classical actions.
 
 ### T.6.2 Main Result
 **Theorem T.5 (Marked-Pair Steiner Action).** For the action of Definition T.13,
@@ -714,6 +720,36 @@ $$
 *Proof.* The trace is $\sum_{O\in\mathcal O_8}B_{O,p_A}^2$, which counts the $77$ octads through $p_A$. The factor $1/2$ is the normalization in Definition T.13. ∎
 
 **Corollary T.5d.3 (Closure of the Native Active-Pair Gate).** The equality $2\kappa_{\mathrm{St}}=77$ is the diagonal trace of the canonical pair-incidence operator against the marked rank-one projector. On accepted $\mathfrak C_{A\to\mathrm{St}}$ it transports to $2\kappa_{EW}=77$; that transport is not part of the finite trace theorem.
+
+**Theorem T.5e (Action-Transport Certificate Reduction and Quadratic Intertwiner Classification).** Let $\Gamma_{EW}$ and $\mathcal S_{EW}^{(0)}:\Gamma_{EW}\to[0,\infty]$ be as in Principle T.13a, and let $N$, $x_*$ and $\kappa_{\mathrm{St}}=77/2$ be as in Definition T.13 and Theorem T.5.
+
+1. A record $\mathfrak C_{A\to\mathrm{St}}$ satisfying the endpoint, clock, domination and witness conditions of Principle T.13a exists if and only if $\mathcal S_{EW}^{(0)}$ attains its infimum and
+$$
+\min_{\Gamma_{EW}}\mathcal S_{EW}^{(0)}=\frac{77}{2}.
+\tag{T.5e.1}
+$$
+When (T.5e.1) holds, the constant transport $\Phi_c(\gamma):=x_*$, with any minimizer as witness, satisfies these conditions; it satisfies the observable-intertwining condition (T.13a.0) only when $\Gamma_{EW}$ consists of one gauge class and its registered observable is the constant curve $Be_{p_A}$.
+2. Let $\Gamma_{EW}$ consist of the absolutely continuous paths $y:[0,1]\to\mathbb R^m$ with $y(0)=0$ and $y(1)=y_1\ne0$, with trivial gauge quotient, and let $\mathcal S_Q[y]=\frac12\int_0^1\dot y^{\mathsf T}Q\dot y\,dt$ with $Q\succ0$. A linear transport $\Phi_L(y)(t):=Ly(t)$, $L:\mathbb R^m\to\mathbb R^{\mathcal P_2([24])}$, satisfies the endpoint, clock, domination and witness conditions of Principle T.13a if and only if
+$$
+Ly_1=e_{p_A},
+\qquad
+Q-L^{\mathsf T}NL\succeq0,
+\qquad
+(Q-L^{\mathsf T}NL)\,y_1=0.
+\tag{T.5e.2}
+$$
+Such an $L$ exists if and only if $y_1^{\mathsf T}Qy_1=77$, and then $L_1:=e_{p_A}\,y_1^{\mathsf T}Q/77$ is one. For a registered observable of the form $\rho_{EW}(y)=BL\dot y$, such an $L$ satisfies every condition of Principle T.13a if and only if it is injective, and an injective one exists if and only if $m\le276$ and $y_1^{\mathsf T}Qy_1=77$; the maps of item 3 are examples.
+3. In the setting of item 2, a linear map with $L^{\mathsf T}NL=Q$ and $Ly_1=e_{p_A}$, an exact intertwiner of the two quadratic response forms, exists if and only if $m\le276$ and $y_1^{\mathsf T}Qy_1=77$. Every such map is injective and equals $N^{-1/2}JQ^{1/2}$ for an isometric embedding $J:\mathbb R^m\to\mathbb R^{276}$ with $JQ^{1/2}y_1=N^{1/2}e_{p_A}$, and every such $J$ gives one.
+
+Consequently, for every $\kappa>0$ the action $\kappa\int_0^1\dot y^2\,dt$ on real paths from $0$ to $1$ has minimum $\kappa$ and admits a record satisfying every condition of Principle T.13a, with registered observable $\rho_{EW}(y)=Be_{p_A}\dot y$, exactly when $\kappa=77/2$. The incidence data fix $\kappa_{\mathrm{St}}$, and a record satisfying the endpoint, clock, domination and witness conditions of Principle T.13a exists exactly when the physical action independently attains the value $77/2$; the transport record carries no action value of its own, and its observable-intertwining condition requires a transport injective on gauge classes.
+
+*Proof.* Item 1. If a record exists, the domination inequality of Principle T.13a and Theorem T.5 give $\inf\mathcal S_{EW}^{(0)}\ge\kappa_{\mathrm{St}}$, and the witness gives $\mathcal S_{EW}^{(0)}[\gamma_*]=\mathcal I_{\mathrm{St}}[x_*]=77/2$; hence the infimum is attained and equals $77/2$. Conversely, if $\gamma_*$ attains $77/2$, then $\Phi_c$ maps every path to $x_*\in\Gamma_{\mathrm{St}}(p_A)$, keeps the unit clock, and sends the physical endpoints to $0$ and $e_{p_A}$; domination holds because $\mathcal S_{EW}^{(0)}[\gamma]\ge77/2=\mathcal I_{\mathrm{St}}[x_*]$, and $\Phi_c(\gamma_*)=x_*$ with equal actions. For $\Phi_c$, (T.13a.0) reads $\rho_{EW}(\gamma)=Be_{p_A}$ for every $\gamma$, and a constant observable separates gauge classes only when there is one.
+
+Item 2. $\Phi_L$ maps $\Gamma_{EW}$ into $\Gamma_{\mathrm{St}}(p_A)$ exactly when $Ly_1=e_{p_A}$. Put $M:=Q-L^{\mathsf T}NL$, so that $\mathcal S_Q[y]-\mathcal I_{\mathrm{St}}[Ly]=\frac12\int_0^1\dot y^{\mathsf T}M\dot y\,dt$. If $w^{\mathsf T}Mw<0$, the admissible velocities $\dot y=y_1+s\,\varphi(t)\,w$ with $\int_0^1\varphi\,dt=0$ and $\int_0^1\varphi^2\,dt=1$ make this difference equal to $\frac12(y_1^{\mathsf T}My_1+s^2w^{\mathsf T}Mw)<0$ for large $s$; hence domination is equivalent to $M\succeq0$. Cauchy--Schwarz, as in Theorem T.5, gives $\min\mathcal S_Q=\frac12y_1^{\mathsf T}Qy_1$, attained only by $y_*(t)=ty_1$, and $Ly_*=x_*$. If $M\succeq0$ and $\gamma_*$ is a witness, then $77=y_1^{\mathsf T}L^{\mathsf T}NLy_1\le y_1^{\mathsf T}Qy_1\le2\mathcal S_Q[\gamma_*]=77$, so $y_1^{\mathsf T}My_1=0$ and $My_1=0$; conversely $My_1=0$ makes $y_*$ a witness. This proves (T.5e.2). Item 1 gives the necessity of $y_1^{\mathsf T}Qy_1=77$. For sufficiency, $L_1y_1=e_{p_A}$ and $L_1^{\mathsf T}NL_1=Qy_1y_1^{\mathsf T}Q/77$ because $e_{p_A}^{\mathsf T}Ne_{p_A}=77$; the Cauchy--Schwarz inequality in the $Q$-inner product gives $Q-Qy_1y_1^{\mathsf T}Q/(y_1^{\mathsf T}Qy_1)\succeq0$, and this matrix annihilates $y_1$. For $\rho_{EW}(y)=BL\dot y$ the identity (T.13a.0) holds by definition. Theorem T.5 gives $B^{\mathsf T}B=N\succ0$, so $B$ is injective. If $L$ is injective, $BL\dot y=BL\dot y'$ forces $\dot y=\dot y'$ and hence $y=y'$, since both paths start at $0$; if $0\ne w\in\ker L$, the distinct paths $ty_1$ and $ty_1+\sin(\pi t)\,w$ have the same observable. An injective $L$ requires $m\le\dim\mathbb R^{\mathcal P_2([24])}=276$, and $y_1^{\mathsf T}Qy_1=77$ is necessary by the first part; conversely every map of item 3 is injective and satisfies (T.5e.2) with $Q-L^{\mathsf T}NL=0$.
+
+Item 3. Theorem T.5 gives $N\succ0$, so $N^{\pm1/2}$ exist. If $L^{\mathsf T}NL=Q\succ0$, then $Lw=0$ implies $w^{\mathsf T}Qw=0$, so $L$ is injective and $m\le276$. The map $J:=N^{1/2}LQ^{-1/2}$ satisfies $J^{\mathsf T}J=I_m$, and $Ly_1=e_{p_A}$ is equivalent to $JQ^{1/2}y_1=N^{1/2}e_{p_A}$, whose two sides have squared norms $y_1^{\mathsf T}Qy_1$ and $77$. Conversely, if $m\le276$ and $y_1^{\mathsf T}Qy_1=77$, extend the assignment of the unit vector $Q^{1/2}y_1/\sqrt{77}$ to $N^{1/2}e_{p_A}/\sqrt{77}$ to an isometric embedding $J$; then $L:=N^{-1/2}JQ^{1/2}$ has both properties. The final statement follows from item 1 and from item 2 in the case $m=1$, $Q=2\kappa$, $y_1=1$, whose minimum is $\kappa$: the injective transport $L=e_{p_A}$ satisfies (T.5e.2) exactly when $2\kappa=77$. ∎
+
+**Resolution TV-T-02-R1 (Metadata).** Exact domain: every path class with an attained action minimum, the quadratic classes $(Q,y_1)$ with linear transports, and the exact intertwiners of item 3 of Theorem T.5e. Premises: Definition T.13, Principle T.13a and Theorem T.5. Equivalence: identity of path class, endpoints and unit clock; in item 3, the orthogonal freedom in $J$. Budget: closed-form classification with no cutoff or tolerance. Verifier: the lower-bound and witness argument of Principle T.13a, Cauchy--Schwarz, the negative-direction test, the rank-one map $L_1$, the kernel-path injectivity test, and the polar form of $L$. Falsifier: an accepted record whose physical action has minimum different from $77/2$, a certified linear transport for a quadratic action with $y_1^{\mathsf T}Qy_1\ne77$, failure of $L_1$, a certified linear transport for which injectivity of $L$ and separation by $BL\dot y$ differ, or an exact intertwiner outside the stated form. Provenance class: target-independent variational and linear algebra; no $v$, $M_{Pl}$ or prefactor datum enters. Downstream consumers: Principle T.13a, Theorems T.6 and T.79, Corollary T.29.1, Theorem T.79.2, Definition T.79.8a, `TV-T-02`, `TV-T-03`, `TV-K-08` and `RT-T7`. Nonvacuity: $m=1$, $Q=77$, $y_1=1$ and $L=e_{p_A}$ give a certified record, while $Q=2\kappa$ with $\kappa\ne77/2$ admits none. This is `positive-discharge` of the classification of certified linear transports, of their observable-intertwining criterion, and of exact response intertwiners on the quadratic class, and `nonentailment` of (T.13a.1) from the incidence data: the Steiner arithmetic fixes $\kappa_{\mathrm{St}}$, while the physical saddle value is an independent datum. Classification of response-preserving transports for saddle actions outside the quadratic class of items 2--3 (`M`), the physical path class and action with minimum $77/2$ (`R`), and an accepted record on that class with a response-faithful transport (`C`) remain open under `TV-T-02`.
 
 -----
 
@@ -820,6 +856,42 @@ Only on an accepted $\mathfrak C_{A\to\mathrm{St}}$ is this the covered electrow
 **Prediction T.2** (No Additional Sequential Generation on the Family-Redundancy Branch). The framework predicts exactly three realized fermion generations on the Appendix R anomaly+CP minimality route together with the pre-flavor family-redundancy PPI branch. A fourth sequential generation would require an additional response-distinct chiral family sector. On this branch, response-null copies are removed by the PPI quotient, while response-distinct copies change the finite family-charge, anomaly, or flavor certificate and leave the branch.
 
 The prediction has empirical content because the existing $M=24$, $D=4$, $k=12$ ledger imports the Appendix R anomaly+CP family route as its realized family-count branch. Discovery of a fourth sequential generation matching the Standard-Model gauge structure would therefore falsify that branch, and any replacement would have to supply a new registered family/anomaly certificate compatible with the already constrained $M=24$, $D=4$, and $k=12$ closures. Thus T.2 is not a free multiplicity adjustment inside the recurrent minimal ledger $\mathfrak L_0$ of Definition P.16a.2; it is a branch falsifier for the current Appendix R family-count route.
+
+**Theorem T.9.2a (Four-Family Anomaly Catalog and One-Loop Gauge Threshold Shift).** Work in the family-charge class of Definition R.8.5a.
+
+1. On the SM15 branch with $N=4$, a primitive vector $f\in\mathbb Z^4$ satisfies (P1)--(P3) if and only if, up to permutation and overall sign,
+$$
+f=(x,-x,y,-y),
+\qquad
+x\ge1,\quad y\ge0,\quad \gcd(x,y)=1,
+\tag{T.9.2a.1}
+$$
+and then $C_F(f)=2(x^2+y^2)$. On the SM16 branch with $N=4$, (P1)--(P3) select every primitive zero-sum vector.
+2. On either branch with $N=4$, the unique minimizer of $C_F$ under (P1)--(P3) is $(1,-1,0,0)$ up to permutation and sign, and every four-family record satisfying (P1)--(P4) obeys
+$$
+L_b(\mathcal Q)-L_b(f_*)\ \ge\ L_{\mathrm{block}}+L_{\mathrm{mix}}(4)-L_{\mathrm{mix}}(3)\ >\ 0
+$$
+relative to the selected orbit $f_*=(1,-1,0)$ of Theorem R.8.5b.
+3. For $N_g$ complete sequential generations on either branch and $N_H$ Higgs doublets, the one-loop GUT-normalized coefficients are
+$$
+b_1=\frac43N_g+\frac{N_H}{10},
+\qquad
+b_2=-\frac{22}{3}+\frac43N_g+\frac{N_H}{6},
+\qquad
+b_3=-11+\frac43N_g,
+\tag{T.9.2a.2}
+$$
+which reproduce Definition T.15b at $(N_g,N_H)=(3,1)$. Each additional sequential generation retained on the whole running interval of Theorem T.15 raises every $b_i$ by $4/3$, leaves every difference $b_i-b_j$ unchanged, and at fixed matching data raises every $A_i(M_Z)$ of Theorem T.16 by $\frac{2}{3\pi}\ln(\mu_G/M_Z)$. For $N_H=1$, $b_3<0$ holds exactly for $N_g\le8$ and $b_2<0$ exactly for $N_g\le5$.
+
+Every four-family survivor of the anomaly equations therefore lies in the explicit catalog (T.9.2a.1) or, on SM16, in the zero-sum hyperplane; each is PCE-demoted by at least $L_{\mathrm{block}}$, and all carry the same one-loop gauge-coefficient shift. Their heavy-generation decoupling thresholds and Yukawa and mixing entries are flavor-certificate data.
+
+*Proof.* Item 1. Condition (P1) gives $f_4=-(f_1+f_2+f_3)$, and the identity
+$$
+(f_1+f_2+f_3)^3-f_1^3-f_2^3-f_3^3=3(f_1+f_2)(f_2+f_3)(f_3+f_1)
+$$
+turns (P2) into $(f_1+f_2)(f_2+f_3)(f_3+f_1)=0$. If $f_1+f_2=0$, then (P1) gives $f_3+f_4=0$; the other two factors give the same form after a permutation. Conversely every vector $(x,-x,y,-y)$ satisfies (P1)--(P2). Primitivity is $\gcd(|x|,|y|)=1$, and a permutation and overall sign bring $(x,y)$ into the displayed range. On SM16 no cubic equation is imposed. Item 2. A nonzero integer vector with zero sum has a positive and a negative entry, so $C_F\ge2$, with equality exactly for one entry $1$, one entry $-1$ and zeros; $(1,-1,0,0)$ also satisfies the SM15 cubic equation. The cost difference is the displayed expression plus $\lambda_F(C_F(f)-2)\ge0$, as in the proof of Theorem R.8.5b. Item 3. The one-loop coefficient of a gauge factor is $-\frac{11}{3}C_2(G)+\frac23\sum_{\mathrm{Weyl}}T(R)+\frac13\sum_{\mathrm{complex\ scalars}}T(R)$, with $T=\frac12$ for fundamentals and $T=\frac35y^2$ for the GUT-normalized abelian factor. One generation contains four $SU(2)$ doublets, three in $Q$ and one in $L$, and four color triplets or antitriplets, two in $Q$ and one each in $u^c,d^c$; this gives $\frac43$ to $b_2$ and $b_3$. Its Weyl components have $\sum y^2=6\cdot\frac1{36}+3\cdot\frac49+3\cdot\frac19+2\cdot\frac14+1=\frac{10}{3}$, giving $\frac23\cdot\frac35\cdot\frac{10}3=\frac43$ to $b_1$, and $\nu^c$ is a gauge singlet. A Higgs doublet contributes $\frac16$ to $b_2$ and $\frac13\cdot\frac35\cdot2\cdot\frac14=\frac1{10}$ to $b_1$, and the gauge terms are $-\frac{22}3$ and $-11$. Theorem T.16 contains $\frac{b_i}{2\pi}\ln(\mu_G/M_Z)$ in $A_i(M_Z)$, so a shift $\Delta b_i=\frac43$ adds $\frac2{3\pi}\ln(\mu_G/M_Z)$. Finally $-11+\frac43N_g<0$ exactly for $N_g<\frac{33}4$, and $-\frac{22}3+\frac43N_g+\frac16<0$ exactly for $N_g<\frac{43}8$. ∎
+
+**Resolution TV-T-17-R1 (Metadata).** Exact domain: all primitive four-family integer charge vectors of Definition R.8.5a on both spectrum branches, and all sequential SM15 or SM16 generation counts $N_g\ge1$ with $N_H$ Higgs doublets at one loop. Premises: Definition R.8.5a, Theorem R.8.5b, Definition T.15b and Theorems T.15--T.16. Equivalence: the $U(1)_F$ orbit relation of Definition R.8.5a. Budget: complete algebraic classification at $N=4$ and exact group-theoretic coefficients, with no search cutoff. Verifier: the cubic factorization, the sign argument for $C_F$, and the Dynkin-index sums. Falsifier: a primitive SM15 solution with $N=4$ outside (T.9.2a.1), a four-family record of cost at most $L_b(f_*)$, or a coefficient differing from (T.9.2a.2). Provenance class: target-independent integer algebra and group theory; no mass, mixing or coupling datum enters. Downstream consumers: Prediction T.2, Theorems R.8.5b and R.8.5e, Definition T.15b, Theorem T.16 and `TV-T-17`. Nonvacuity: $(1,-1,0,0)$ and $(2,-2,1,-1)$ lie in the SM15 catalog. This is `positive-discharge` of the complete four-family anomaly catalog, its PCE gap to the three-family orbit, and the one-loop gauge-coefficient packet shared by every sequential survivor. The survivors with $N\ge5$, non-sequential response-active extensions, and each survivor's heavy-threshold, Yukawa and mixing packet remain `M+C+R`-open under `TV-T-17`.
 
 -----
 
@@ -928,6 +1000,48 @@ $$
 y_c=-\frac13,\qquad y_w=\frac12.
 $$
 This is the block assignment $\mathbf3_{-1/3}\oplus\mathbf2_{1/2}$ for the fundamental color and weak actions specified above. ∎
+
+**Theorem T.11.1a (Anomaly-Only Abelian Charge Catalog on the One-Family Shapes).** Fix the one-family representation shape
+$$
+Q=(3,2),\qquad u^c=(\bar3,1),\qquad d^c=(\bar3,1),\qquad L=(1,2),\qquad e^c=(1,1)
+$$
+(SM15), or this shape with one gauge-singlet Weyl fermion $\nu^c$ (SM16), and let the abelian charges $y=(y_q,y_{u^c},y_{d^c},y_\ell,y_{e^c},y_{\nu^c})$ be unrestricted real numbers, with $y_{\nu^c}:=0$ on SM15. Impose the $[SU(3)]^2U(1)$, $[SU(2)]^2U(1)$, mixed gravitational and $[U(1)]^3$ anomaly equations
+$$
+2y_q+y_{u^c}+y_{d^c}=0,
+\qquad
+3y_q+y_\ell=0,
+\qquad
+6y_q+3y_{u^c}+3y_{d^c}+2y_\ell+y_{e^c}+y_{\nu^c}=0,
+$$
+$$
+6y_q^3+3y_{u^c}^3+3y_{d^c}^3+2y_\ell^3+y_{e^c}^3+y_{\nu^c}^3=0.
+\tag{T.11.1a.1}
+$$
+The $[SU(3)]^3$ and $SU(2)$ Witten conditions hold on both shapes for every $y$, because the shape contains two color triplets against two antitriplets and four weak doublets. Then:
+
+1. On SM15, in the coordinates $(y_q,y_{u^c},y_{d^c},y_\ell,y_{e^c})$, the solution set is the union of three lines,
+$$
+\mathbb R(1,-4,2,-3,6)\ \cup\ \mathbb R(1,2,-4,-3,6)\ \cup\ \mathbb R(0,1,-1,0,0);
+\tag{T.11.1a.2}
+$$
+the second is the image of the first under the relabeling $u^c\leftrightarrow d^c$ of equal gauge representations.
+2. On SM16, the three linear equations have the general solution $y_{u^c}=-y_q+s$, $y_{d^c}=-y_q-s$, $y_\ell=-3y_q$, $y_{e^c}=3y_q+r$, $y_{\nu^c}=3y_q-r$, and the cubic equation becomes
+$$
+18\,y_q\,(r-s)(r+s)=0.
+\tag{T.11.1a.3}
+$$
+The solution set is therefore the union of the three planes $\Pi_0=\{y_q=0\}$, $\Pi_+=\{r=s\}$ and $\Pi_-=\{r=-s\}$, where $\Pi_-=\operatorname{span}\{(1,-4,2,-3,6,0),(1,-1,-1,-3,3,3)\}$ is spanned by six times the Standard Model hypercharge and $3(B-L)$, and $\Pi_+$ is its image under $u^c\leftrightarrow d^c$, equivalently under $e^c\leftrightarrow\nu^c$.
+3. Up to these relabelings, anomaly cancellation alone leaves two classes on SM15, the Standard Model ray and the quark-only line $(0,t,-t,0,0)$, and two classes on SM16, the plane $\Pi_-$ and the plane $\Pi_0$. The Yukawa equations of Theorem G.8.1a with one Higgs doublet, which distinguish $u^c$ from $d^c$ by their Higgs couplings, retain on SM15 only the ray $\mathbb R(1,-4,2,-3,6)$.
+
+*Proof.* The first equation of (T.11.1a.1) gives $y_{u^c}+y_{d^c}=-2y_q$, the second $y_\ell=-3y_q$, and substitution into the gravitational equation gives $y_{e^c}+y_{\nu^c}=6y_q$; this is the displayed parametrization. Using $(\alpha+\beta)^3+(\alpha-\beta)^3=2\alpha^3+6\alpha\beta^2$,
+$$
+3\bigl[(-y_q+s)^3+(-y_q-s)^3\bigr]=-6y_q^3-18y_qs^2,
+\qquad
+(3y_q+r)^3+(3y_q-r)^3=54y_q^3+18y_qr^2,
+$$
+so the cubic sum equals $6y_q^3-6y_q^3-18y_qs^2-54y_q^3+54y_q^3+18y_qr^2=18y_q(r^2-s^2)$, which is (T.11.1a.3). Each factor defines a plane, and the two displayed vectors satisfy $r=-s$ with $(y_q,s)=(1,-3)$ and $(1,0)$, so they span $\Pi_-$. The relabeling $u^c\leftrightarrow d^c$ sends $s\mapsto-s$ and $e^c\leftrightarrow\nu^c$ sends $r\mapsto-r$; both exchange $\Pi_+$ and $\Pi_-$ and fix $\Pi_0$. On SM15, $y_{\nu^c}=0$ forces $r=3y_q$, and (T.11.1a.3) becomes $18y_q(3y_q-s)(3y_q+s)=0$. The factor $y_q=0$ gives $r=0$ and the quark-only line, $s=-3y_q$ gives the Standard Model ray, and $s=3y_q$ gives its relabeled image, proving (T.11.1a.2). For item 3, the Yukawa equations of Theorem G.8.1a are $y_q+y_H+y_{u^c}=0$, $y_q-y_H+y_{d^c}=0$ and $y_\ell-y_H+y_{e^c}=0$. For $y=a(1,2,-4,-3,6)$ the first gives $y_H=-3a$ and the third then gives $6a=0$. For $y=(0,t,-t,0,0)$ the first gives $y_H=-t$ and the third then gives $t=0$. Every $y=a(1,-4,2,-3,6)$ satisfies all three with $y_H=3a$. ∎
+
+**Resolution TV-T-01-R1 (Metadata).** Exact domain: all real abelian charge vectors on the fixed SM15 and SM16 one-family representation shapes, under the four perturbative anomaly equations (T.11.1a.1), with the $[SU(3)]^3$ and Witten conditions verified on the shapes. Premises: the representation shapes of Theorem G.8.5b and, for item 3 only, the Yukawa equations of Theorem G.8.1a. Equivalence: relabeling of multiplets with equal gauge representation; overall scale is retained, so solutions are recorded as lines and planes. Budget: exact polynomial factorization, with no cutoff or search. Verifier: the linear parametrization, the identity (T.11.1a.3), and substitution of the displayed vectors and Yukawa equations. Falsifier: a solution outside (T.11.1a.2) or the three planes, a point of them violating (T.11.1a.1), or a nonzero SM15 solution off the Standard Model ray satisfying the Yukawa equations. Provenance class: target-independent polynomial algebra. Downstream consumers: Theorem G.8.1a, Corollary G.8.4c.0h, Theorems G.8.4c.0e and G.8.4c.0g, Definition G.8.4c.0f, `TV-T-01` and `RT-T1`. Nonvacuity: the Standard Model hypercharge vector, $3(B-L)$ and $(0,1,-1,0,0)$. This is `positive-discharge` of the complete anomaly-only abelian-charge catalog on the two fixed one-family shapes, with the Higgs-Yukawa equations of Theorem G.8.1a as the entries that remove the quark-only and relabeled survivors on SM15. Variable representation shapes, vectorlike, sterile, exotic and defect packages, global anomaly characters beyond these shapes, the response quotient and PCE gap, and the Higgs vacuum and mass-generation entries of $\mathfrak C_{\mathrm{matEW}}$ remain `M+C+R`-open under `TV-T-01`.
 
 ### T.11.2 Design-Preserving Inner Product
 
@@ -2120,6 +2234,89 @@ so $L$ is not norm preserving on that response span. Theorem T.22d separately gi
 - **Nonvacuity.** With $\iota_0(x_1,x_2,x_3)=(x_1,x_2,x_3,0,0,0)$, both $(1,0,\iota_0)$ and $(2,0,\iota_0)$ lie in the class. The natural unit-QFI member $\upsilon=1$ gives $\gamma=1/4$ and is the non-rigidity counterexample. The $\upsilon=2$ member gives the formal coefficient $\gamma=1$ but has $F_Q=4$ in the same $u$.
 - **Downstream consumers.** Theorems T.22d–T.22e resolve the homogeneous-Pauli rigidity component of `TV-T-05` and exclude its same-$u$, linear response-isometric unit-QFI transport route. Definition T.22a and Theorem T.22b retain their accepted-datum antecedent for any separately admitted normalization branch or response-preserving carrier map outside that classified linear-isometric route, so the target remains `C`-open. Theorems T.24–T.25 retain their exact $\gamma$-dependent formulas, while Theorem T.26, Theorem T.79, and `RT-T2` retain every threshold, matching, RG, decoupling, pole, and spectral-source gate.
 
+**Theorem T.22f (Transition-Kernel Invariance of the Target-Shift Coefficient).** Let $I\subset\mathbb R$ be an open interval with $-I=I\ni0$, keep the physical parameter $u$ fixed, and let $\mu$ be the coherent-state moment map of Remark T.22c, so that $\mu(\psi)=\langle\psi|S|\psi\rangle$ for a normalized weak-doublet vector $\psi$ and $S=(S_1,S_2,S_3)$. Let $q,q':I\to\mathbb{CP}^1$ be $C^2$ weak-doublet curves with the same transition kernel,
+$$
+|\langle q'(u)|q'(u')\rangle|^2=|\langle q(u)|q(u')\rangle|^2
+\qquad(u,u'\in I),
+\tag{T.22f.1}
+$$
+computed with normalized representatives. Let $x:I\to\mathbb R^6$ be any reservoir target curve in the $L_{\mathrm{info}}$-orthonormal coordinates of Lemma T.5b whose chordal response equals that of $\mu\circ q'$:
+$$
+|x(u)-x(u')|=|\mu(q'(u))-\mu(q'(u'))|
+\qquad(u,u'\in I).
+\tag{T.22f.2}
+$$
+Then there are $R\in O(3)$ and a linear isometric embedding $A:\mathbb R^3\to\mathbb R^6$ such that
+$$
+x(u)-x(0)=AR\bigl(\mu(q(u))-\mu(q(0))\bigr)
+\qquad(u\in I).
+\tag{T.22f.3}
+$$
+Consequently the even target displacement $x_{\mathrm{even}}(u):=\frac12[x(u)+x(-u)]-x(0)$ equals $AR\,\Delta\mu^{q}_{\mathrm{even}}(u)$, where $\Delta\mu^{q}_{\mathrm{even}}$ is the even displacement of Definition T.22a for $q$, and the two $u^2$ coefficients have equal norm. For the realized unit-QFI carrier $q=q_{1,\phi}$ of Theorem T.22d, every such $x$ has even quadratic coefficient of norm $1/4$ and violates Equation (T.22a.3). The conclusion covers linear and nonlinear target maps, and curve replacements induced by unitary or antiunitary maps; Theorem T.22e's linear response-isometric intertwiners are the special case $x=L\circ\mu\circ q$ with $q'=q$.
+
+*Proof.* For normalized $\psi,\chi$, the vectors $2\mu(\psi)$ and $2\mu(\chi)$ are Bloch unit vectors, so
+$$
+|\langle\psi|\chi\rangle|^2=\frac12+2\,\mu(\psi)\cdot\mu(\chi),
+\qquad
+|\mu(\psi)-\mu(\chi)|^2=1-|\langle\psi|\chi\rangle|^2.
+\tag{T.22f.4}
+$$
+By (T.22f.1) and (T.22f.4), $\mu(q'(u))\cdot\mu(q'(u'))=\mu(q(u))\cdot\mu(q(u'))$ for all $u,u'\in I$. If $\sum_jc_j\mu(q(u_j))=0$ for finitely many real $c_j$, then $|\sum_jc_j\mu(q'(u_j))|^2=\sum_{j,k}c_jc_k\,\mu(q(u_j))\cdot\mu(q(u_k))=0$. Hence $\mu(q(u))\mapsto\mu(q'(u))$ defines a linear isometry between the two spans, which extends to some $R\in O(3)$ with $\mu(q'(u))=R\mu(q(u))$. Next put $y(u):=x(u)-x(0)$ and $m(u):=\mu(q'(u))-\mu(q'(0))$. Setting $u'=0$ in (T.22f.2) gives $|y(u)|=|m(u)|$, and expanding $|y(u)-y(u')|^2=|m(u)-m(u')|^2$ gives $y(u)\cdot y(u')=m(u)\cdot m(u')$. The same Gram argument gives a linear isometry from $\operatorname{span}\{m(u)\}\subset\mathbb R^3$ into $\mathbb R^6$ with $m(u)\mapsto y(u)$; since that span has dimension at most $3<6$, it extends to a linear isometric embedding $A$. Therefore $x(u)-x(0)=A\,m(u)=AR\bigl(\mu(q(u))-\mu(q(0))\bigr)$, which is (T.22f.3). Linearity of $AR$ gives $x_{\mathrm{even}}=AR\,\Delta\mu^{q}_{\mathrm{even}}$, and $AR$ preserves norms, so the quadratic coefficients have equal norm. For $q=q_{1,\phi}$, Theorem T.22d gives $\Delta\mu^{q}_{\mathrm{even}}(u)=\frac14u^2e_3+O(u^4)$ in the raw coordinates of Remark T.22c, so the norm is $1/4\ne1$. Unitary and antiunitary maps preserve transition probabilities, and a linear map that preserves the response norm on the span of the chords preserves chordal distances; both routes therefore satisfy the hypotheses. ∎
+
+**Theorem T.22g (Homogeneous Doublet-Orbit Classification of the Target-Shift Coefficient).** Keep $u$, $q_0=(0,1)^T$, $S_a=\sigma_a/2$ and the moment map of Remark T.22c fixed. For $a=(a_1,a_2,a_3)\in\mathbb R^3$ with $a_\perp:=(a_1,a_2)\ne0$, define the homogeneous doublet orbit
+$$
+q_a(u):=e^{iu\,a\cdot S}q_0,
+\qquad
+a\cdot S:=a_1S_1+a_2S_2+a_3S_3.
+$$
+Its generator adds the stabilizer component $a_3S_3$ to the Pauli family of Theorem T.22d, which is the slice $a_3=0$, $|a_\perp|=\upsilon$. For every $u$,
+$$
+F_Q(q_a;u)=|a_\perp|^2,
+\tag{T.22g.1}
+$$
+$$
+1-|\langle q_0|q_a(u)\rangle|^2=\frac{|a_\perp|^2}{|a|^2}\sin^2\frac{|a|u}{2},
+\tag{T.22g.2}
+$$
+$$
+|\Delta\mu^{a}_{\mathrm{even}}(u)|=\frac{|a_\perp|}{2|a|}\bigl(1-\cos(|a|u)\bigr),
+\qquad
+\gamma(a)=\frac{|a|\,|a_\perp|}{4}.
+\tag{T.22g.3}
+$$
+The group $\mathcal G_{T05}$ of Theorem T.22d acts on marked orbits by $(\theta,O)\cdot(a,\iota)=(R_\theta a,O\iota R_{-\theta})$, and $(|a_\perp|,a_3)\in\mathbb R_{>0}\times\mathbb R$ is a complete invariant of this action. Writing $1-|\langle q_0|q_a(u)\rangle|^2=\frac{F_Q}{4}u^2+c_4(a)u^4+O(u^6)$,
+$$
+c_4(a)=-\frac{|a_\perp|^2|a|^2}{48},
+\qquad
+\gamma(a)^2=-3c_4(a).
+\tag{T.22g.4}
+$$
+Hence:
+
+1. On the unit-QFI slice $|a_\perp|=1$, $\gamma=\sqrt{1+a_3^2}/4\in[1/4,\infty)$, and Equations (T.22a.2)--(T.22a.3) hold exactly when $a_3^2=15$, equivalently $|a|=4$. For $a=(\cos\phi,\sin\phi,\pm\sqrt{15})$ the orbit has $F_Q=1$ at every $u$, unit even quadratic norm and transition response $1-|\langle q_0|q_a(u)\rangle|^2=\frac1{16}\sin^2(2u)$.
+2. If the block distortion of Lemma T.4 is realized on the same orbit as twice its transition infidelity, $2\bigl(1-|\langle q_0|q_a(u)\rangle|^2\bigr)=1-\cos u$, then $|a_\perp|=1$, $a_3=0$ and $\gamma=1/4$. The unit-QFI, $\gamma=1$ orbits of item 1 instead give $2\bigl(1-|\langle q_0|q_a(u)\rangle|^2\bigr)=\frac1{16}(1-\cos4u)=\frac{u^2}{2}-\frac23u^4+O(u^6)$.
+
+*Proof.* The base vector $q_0$ is an eigenvector of $S_3$, and $\langle q_0|S_1|q_0\rangle=\langle q_0|S_2|q_0\rangle=0$. Since $S_j^2=I/4$ and $S_jS_k+S_kS_j=0$ for $j\ne k$, $\operatorname{Var}_{q_0}(a\cdot S)=\frac14(a_1^2+a_2^2)$. The generator commutes with $e^{iu\,a\cdot S}$, so $F_Q(q_a;u)=4\operatorname{Var}_{q_a(u)}(a\cdot S)=4\operatorname{Var}_{q_0}(a\cdot S)$, which is (T.22g.1). By equivariance, $\mu(q_a(u))=R(u)\mu_0$, where $\mu_0:=\mu(q_0)=-\frac12e_3$ and $R(u)\in SO(3)$ is the rotation through angle $|a|u$ about $\hat a:=a/|a|$, with the orientation of Remark T.22c. Rodrigues' formula gives
+$$
+\frac12\bigl[R(u)+R(-u)\bigr]\mu_0-\mu_0
+=-\bigl(1-\cos(|a|u)\bigr)\bigl(\mu_0-(\hat a\cdot\mu_0)\hat a\bigr),
+$$
+and $|\mu_0-(\hat a\cdot\mu_0)\hat a|=\frac12|a_\perp|/|a|$. This is the first identity in (T.22g.3), whose $u^2$ coefficient has norm $\frac{|a|^2}{2}\cdot\frac{|a_\perp|}{2|a|}=\gamma(a)$. By (T.22f.4) and Rodrigues' formula,
+$$
+|\langle q_0|q_a(u)\rangle|^2
+=\frac12+2\mu_0\cdot R(u)\mu_0
+=\frac12+\frac12\cos(|a|u)+\bigl(1-\cos(|a|u)\bigr)\frac{a_3^2}{2|a|^2},
+$$
+which rearranges to (T.22g.2). Expanding $\sin^2(|a|u/2)=\frac{|a|^2u^2}{4}-\frac{|a|^4u^4}{48}+O(u^6)$ gives (T.22g.4). The stabilizer element $h_\theta$ fixes $q_0$ projectively and conjugates $a\cdot S$ to $(R_\theta a)\cdot S$, so $h_\theta q_a(u)=q_{R_\theta a}(u)$ up to phase, while $O(6)$ changes the marking alone. These operations preserve $|a_\perp|$ and $a_3$; rotation about $e_3$ joins any two vectors $a_\perp$ of equal norm, and $O(6)$ joins any two isometric markings, so $(|a_\perp|,a_3)$ is complete. Item 1 is (T.22g.3) at $|a_\perp|=1$ together with (T.22g.2) at $|a|=4$. For item 2, (T.22g.2) gives
+$$
+2\bigl(1-|\langle q_0|q_a(u)\rangle|^2\bigr)
+=\frac{|a_\perp|^2}{|a|^2}\bigl(1-\cos(|a|u)\bigr)
+=\frac{|a_\perp|^2}{2}u^2-\frac{|a_\perp|^2|a|^2}{24}u^4+O(u^6),
+$$
+and comparison with $1-\cos u=\frac{u^2}{2}-\frac{u^4}{24}+O(u^6)$ forces $|a_\perp|=|a|=1$, hence $a_3=0$. The last display is the case $|a_\perp|=1$, $|a|=4$. ∎
+
+**Resolution TV-T-05-R1 (Metadata).** Exact domain: pairs of $C^2$ weak-doublet curves in the fixed parameter $u$ with equal transition kernels, every reservoir target curve with the chordal response (T.22f.2), and every marked homogeneous doublet orbit $(a,\iota)$ with $a_\perp\ne0$. Premises: $S_a=\sigma_a/2$, the base state and moment map of Remark T.22c, the reservoir coordinates of Lemma T.5b, Definition T.22a, Lemma T.4 and Theorem T.22d. Equivalence: equality of transition kernels for curves, equality of chordal responses for target curves, and the relation $\mathcal G_{T05}$ on marked orbits; rescaling $u$ is excluded. Budget: closed-form classification over all curves and all $a\in\mathbb R^3$, with no cutoff, regulator or tolerance. Verifier: the qubit identities (T.22f.4), the two Gram-matrix extensions, Rodrigues' formula, and the series in (T.22g.2)--(T.22g.4). Falsifier: two kernel-equal curves or a chordally equal target curve with different even quadratic norms, an orbit violating (T.22g.1)--(T.22g.4), or a unit-QFI orbit with $\gamma=1$ and $a_3^2\ne15$. Provenance class: target-independent $SU(2)$ and Euclidean-distance geometry; no Higgs-mass, threshold or coupling datum enters. Downstream consumers: Definition T.22a, Theorems T.22b and T.24–T.25, item 5 of Theorem T.79, `RT-T2` and `TV-T-05`. Nonvacuity: $a=(1,0,0)$ is the realized carrier with $\gamma=1/4$, $a=(1,0,\sqrt{15})$ has $F_Q=1$ and $\gamma=1$, and $a=(2,0,0)$ is the $F_Q=4$ unit member. Theorem T.22f is `negative-refutation` of a transition-kernel-preserving or chordal-response-preserving unit target response built from the realized unit-QFI carrier, linear or nonlinear. Theorem T.22g is `positive-discharge` of the complete homogeneous-orbit classification, including the unit-QFI solution locus $|a_3|=\sqrt{15}$ of Definition T.22a and its quartic transition response. The `C` component of `TV-T-05` remains open as a separately admitted normalization branch or as the admission of a unit-QFI carrier whose transition kernel differs from the realized one at order $u^4$, such as the generator $S_\phi\pm\sqrt{15}S_3$, together with its compatibility with the generator of Definition T.20a and the block distortion of Lemma T.4.
+
 **Theorem T.23** (Optimal Signal Configuration). For the complete target shift $x(u)$ in Theorem T.22, the unique minimizing signal satisfies
 $$
 \frac{\partial V}{\partial s}
@@ -2959,6 +3156,58 @@ Theorem T.34.1b makes $c_\ell/c_d=8/3$ equivalent to $\mathcal V_{\ell d}=0$, he
 | Nonvacuity | $(1,1,1)$ lies in the full class and misses the target; every rational $s$ with $0<s<72/73$ supplies a positive target-locus member |
 | Downstream consumers | Results T.33--T.34.2, `TV-T-08`, `TV-V-07`, `RT-T3`, and every flavor row using $c_\ell/c_d$; the fixed-table forcing route has negative closure, while alternative compatible representation/source classes remain to be classified and Corollary T.34.2 still consumes an independently populated representation-variance certificate and realization |
 
+**Theorem T.34.1f (Lepton–Quark Multiplet-Pair Classification of the Tilt Ratio).** Extend the normalization factor of Theorem T.34 to every one-generation Standard Model multiplet $f$ by
+$$
+z_f=(C_f\cdot\kappa)\,g_U^2,
+\qquad
+C_f:=\bigl(y_f^2,\ C_2^{SU(2)}(f),\ N_c(f)\,C_2^{SU(3)}(f)\bigr),
+\qquad
+\kappa=(\kappa_1,\kappa_2,\kappa_3),
+$$
+with the hypercharges of Corollary G.8.4c.0h in the convention $Q_{\mathrm{em}}=T_3+Y$. The lepton-type vectors are $C_L=(\frac14,\frac34,0)$ and $C_{e^c}=(1,0,0)$; the quark-type vectors are $C_Q=(\frac1{36},\frac34,4)$, $C_{u^c}=(\frac49,0,4)$ and $C_{d^c}=(\frac19,0,4)$; the neutral singlet has $C_{\nu^c}=0$ and carries no prefactor. For each of the six pairs $(\ell,q)$ put
+$$
+\rho_{\ell q}(\kappa):=\frac{c_\ell}{c_q}=\Bigl(\frac{z_q}{z_\ell}\Bigr)^{1/2},
+\qquad
+m_{\ell q}:=\min\Bigl\{\frac{C_{q,i}}{C_{\ell,i}}:C_{\ell,i}>0\Bigr\}.
+$$
+Then, on $\mathbb R_{>0}^3$:
+
+1. $\rho_{\ell q}(\mathbb R_{>0}^3)=(\sqrt{m_{\ell q}},\infty)$, with $m_{LQ}=\frac19$, $m_{Lu^c}=m_{Ld^c}=0$, $m_{e^cQ}=\frac1{36}$, $m_{e^cu^c}=\frac49$ and $m_{e^cd^c}=\frac19$.
+2. For $\rho>\sqrt{m_{\ell q}}$ the level set $\{\rho_{\ell q}=\rho\}$ is the open two-dimensional cone $\{\kappa\in\mathbb R_{>0}^3:(C_q-\rho^2C_\ell)\cdot\kappa=0\}$, and it meets $\mathcal K_W$ of Theorem T.34.1e in a nonempty open segment.
+3. Every $\rho_{\ell q}$ is nonconstant; the value $8/3$ is attained on a nonempty open segment of $\mathcal K_W$ for every pair and is forced for none.
+
+The pair $(L,Q)$ is the table of Theorem T.34, and item 2 at $\rho=8/3$ reproduces (T.34.1e.2).
+
+*Proof.* Each lepton vector has a positive entry and zero color entry, so $z_\ell>0$ on $\mathbb R_{>0}^3$, while each quark vector has color entry $3\cdot\frac43=4$. Splitting $C_q\cdot\kappa$ over the indices with $C_{\ell,i}>0$ and the remaining indices, which include the color index, gives
+$$
+C_q\cdot\kappa\ \ge\ m_{\ell q}\,C_\ell\cdot\kappa+4\kappa_3\ >\ m_{\ell q}\,C_\ell\cdot\kappa .
+$$
+Letting $\kappa_3\to\infty$ shows that $z_q/z_\ell$ is unbounded, and letting $\kappa_3\to0$ with the remaining weight concentrated on an index attaining $m_{\ell q}$ approaches $m_{\ell q}$. Continuity on the connected set $\mathbb R_{>0}^3$ gives item 1. For item 2, $z_q/z_\ell=\rho^2$ is the displayed linear equation. Its normal vector $C_q-\rho^2C_\ell$ has color entry $4>0$, and it has a negative entry exactly when $\rho^2>C_{q,i}/C_{\ell,i}$ for some index with $C_{\ell,i}>0$, that is, when $\rho^2>m_{\ell q}$. A plane through the origin whose normal has entries of both signs meets the open octant in a nonempty open two-dimensional cone, and each ray of that cone meets the plane $\kappa_1+3\kappa_2+8\kappa_3=12$ exactly once. Item 3 follows because $(8/3)^2=64/9$ exceeds every $m_{\ell q}$. ∎
+
+**Theorem T.34.1g (Entropy-Only Weight Selection Misses Every Tilt Locus).** On $\mathcal K_W$ the PCE objective
+$$
+S(\kappa)=8\kappa_3\ln\kappa_3+3\kappa_2\ln\kappa_2+\kappa_1\ln\kappa_1
+$$
+of Corollary T.34.2 satisfies $S\ge0$, with equality only at $\kappa=(1,1,1)$. At this unique minimizer $\mathcal V_{\ell d}=28$, and for the six pairs of Theorem T.34.1f
+$$
+\rho_{\ell Q}(1,1,1)=\frac{\sqrt{43}}3,
+\qquad
+\rho_{\ell u^c}(1,1,1)=\frac{2\sqrt{10}}3,
+\qquad
+\rho_{\ell d^c}(1,1,1)=\frac{\sqrt{37}}3
+\qquad(\ell\in\{L,e^c\}),
+\tag{T.34.1g.1}
+$$
+none of which equals $8/3$. Consequently the minimizer of Corollary T.34.2 on $\mathcal K_W\cap\{\mathcal V_{\ell d}=0\}$ has strictly positive objective, numerically $0.2482437938\ldots$, and the equation $\mathcal N$ enters Corollary T.34.2 as a constraint independent of the entropy objective.
+
+*Proof.* Put $n=(1,3,8)$, so $\sum_in_i=12$ and $\mathcal W$ reads $\sum_in_i\kappa_i=12$. Jensen's inequality for the strictly convex function $x\ln x$ with probability weights $n_i/12$ gives
+$$
+\frac{S(\kappa)}{12}=\sum_i\frac{n_i}{12}\,\kappa_i\ln\kappa_i\ \ge\ \Bigl(\sum_i\frac{n_i\kappa_i}{12}\Bigr)\ln\Bigl(\sum_i\frac{n_i\kappa_i}{12}\Bigr)=0,
+$$
+with equality exactly when $\kappa_1=\kappa_2=\kappa_3$, hence $\kappa=(1,1,1)$ on $\mathcal K_W$. There $\mathcal V_{\ell d}=21+55-48=28$ and $z_q/z_\ell=\sum_iC_{q,i}/\sum_iC_{\ell,i}$. Since $\sum_iC_L=\sum_iC_{e^c}=1$, $\sum_iC_Q=\frac{43}9$, $\sum_iC_{u^c}=\frac{40}9$ and $\sum_iC_{d^c}=\frac{37}9$, this gives (T.34.1g.1). The point $(1,1,1)$ is the unique zero of $S$ on $\mathcal K_W$ and violates $\mathcal V_{\ell d}=0$, so the constrained minimum of Corollary T.34.2 is positive; its numerical value follows from the weights computed there. ∎
+
+**Resolution TV-T-08-R1 (Metadata).** Exact domain: the six ordered lepton–quark pairs of one-generation Standard Model multiplets with nonzero Casimir vector, all positive weight triples, and $\mathcal K_W$ with the objective of Corollary T.34.2. Premises: the normalization formula of Theorem T.34 applied multiplet by multiplet, the hypercharges of Corollary G.8.4c.0h, $C_2^{SU(2)}=\frac34$, $C_2^{SU(3)}=\frac43$ and $N_c=3$; the equation $\mathcal N$ is tested, not assumed. Equivalence: common positive rescaling of $\kappa$, removed by $\mathcal W$, and relabelings preserving each multiplet's gauge data. Budget: closed-form classification with no cutoff or tolerance. Verifier: the mediant bound, the sign test on $C_q-\rho^2C_\ell$, Jensen's inequality, and exact rational evaluation at $(1,1,1)$. Falsifier: a pair whose ratio is constant or bounded above, a value above $\sqrt{m_{\ell q}}$ that is not attained, a point of $\mathcal K_W$ with $S<0$ or a second zero of $S$, or $\rho_{\ell q}(1,1,1)=8/3$ for some pair. Provenance class: target-independent symbolic algebra and convexity; no mass, tilt or mixing datum enters. Downstream consumers: Theorem T.34, Corollaries T.34.1--T.34.2, Theorems T.38 and T.44, `TV-T-08`, `TV-V-07` and `RT-T3`. Nonvacuity: $(1,1,1)$ and every point of the six $8/3$ segments. This is `positive-discharge` of the classification of the frozen multiplet-pair class, `negative-refutation` of forcing $c_\ell/c_q=8/3$ on every pair, and `negative-refutation` of selection of the $8/3$ locus by the entropy objective alone. A PU-internal variance certificate independent of $S$ (`C`) and its physical realization (`R`) remain open under `TV-T-08`.
+
 **Corollary T.34.2** (PCE-Optimal Bures Weights on the $c_\ell/c_d = 8/3$ Normalization Branch). On the lepton-to-quark tilt normalization branch $c_\ell/c_d = 8/3$ (Corollary T.34.1), equivalently on a branch carrying the Bures-weight certificate of Theorem T.34.1b, minimize the strictly convex PCE objective
 $$
 S(\kappa)=8\kappa_3\ln\kappa_3 + 3\kappa_2\ln\kappa_2 + \kappa_1\ln\kappa_1
@@ -3259,6 +3508,37 @@ is a bijection of inequivalent formal scalar records. The scalar equation alone 
 | Provenance class | Target-independent symbolic algebra from the numerical equation in Theorem T.39a.2 |
 | Nonvacuity | $(1/2,4\pi/M)$ and $(1,2\pi/M)$ are distinct formal scalar solutions. They are not accepted geometric instances of the literal Definition T.39a.1 |
 | Downstream consumers | Theorems T.39a/T.39a.2, Appendix K's coupling summary, `TV-T-07`, `TV-G-13`, and `RT-T7`; a physical $g_U^2=\pi/6$ retains an independently realizable geometric branch and the separate choices $M=24$, $\chi_U=1/2$ |
+
+**Theorem T.39a.2b (Integral Invariant Calibration Lines on $\mathrm{Gr}(2,8)$).** Let $\omega_B$ be the Bures Kähler form of Definition T.39a.1, let $\Sigma\cong\mathbb{CP}^1$ be the Schubert sphere parametrized there, and let $\mathcal S$ be the tautological rank-two bundle of Lemma T.53.1.
+
+1. Every $U(8)$-invariant real $2$-form on $\mathrm{Gr}(2,8)$ equals $c\,\omega_B$ for some $c\in\mathbb R$.
+2. $H_2(\mathrm{Gr}(2,8);\mathbb Z)=\mathbb Z[\Sigma]$, and $c\,\omega_B$ has integral periods if and only if $c\in\frac2\pi\mathbb Z$. Write $\omega_k:=\frac{2k}{\pi}\omega_B$ for $k\in\mathbb Z$.
+3. For each $k\ne0$ there is, up to isomorphism, exactly one Hermitian line bundle with unitary connection $(L_k,\nabla_k)$ on $\mathrm{Gr}(2,8)$ satisfying
+$$
+F_{\nabla_k}=2\pi i\,\omega_k,
+\tag{T.39a.2b.1}
+$$
+namely $L_k=\det(\mathcal S)^{\otimes k}$ with the connection induced by the Hermitian metric of $\mathbb C^8$. For $k=-1$ it is the positive Berry line $\mathcal L_+$ with the connection of Lemma T.53.1, and
+$$
+\omega_{\mathrm{KE}}=4\,\omega_B,
+\qquad
+\int_\Sigma\omega_{\mathrm{KE}}=2\pi.
+\tag{T.39a.2b.2}
+$$
+4. On $\Sigma$, the Levi-Civita connection of Theorem T.39a on the tangent line has curvature form $K_{\mathrm{hol}}\,\omega_B|_\Sigma=8\,\omega_B|_\Sigma$ and period $4\pi$, the value $|k|=2$.
+5. For every $k\ne0$, replacing $\omega_B$ by $\omega_k$ in items 1--2 of Definition T.39a.1 gives an existing line-bundle datum, a circle on $\Sigma$ supplies the minimal mode loop of item 3 whenever $|k|M\ge2$, and items 3--5 reduce to the scalar fiber (T.39a.2a.1). Integrality therefore selects the discrete curvature normalizations $\omega_k$, whose minimal nonzero members $|k|=1$ are carried by $\det(\mathcal S)$ and $\mathcal L_+$, and selects no value of $\chi_U$.
+
+*Proof.* Item 1. The stabilizer of $V_0=\operatorname{span}(e_1,e_2)$ in $U(8)$ is $U(2)\times U(6)$, acting on $T_{V_0}\mathrm{Gr}(2,8)\cong\operatorname{Hom}(\mathbb C^2,\mathbb C^6)$ by $X\mapsto BXA^{-1}$. A real bilinear form on a complex vector space is uniquely $\operatorname{Re}(s+h)$ with $s$ complex bilinear and $h$ sesquilinear. The central elements $(e^{i\alpha}I_2,I_6)$ act by $X\mapsto e^{-i\alpha}X$, multiply $s$ by $e^{-2i\alpha}$ and fix $h$, so invariance for all $\alpha$ forces $s=0$. The representation $\mathbb C^6\otimes(\mathbb C^2)^*$ of $U(6)\times U(2)$ is irreducible, so Schur's lemma gives $h(X,Y)=\lambda\operatorname{tr}(X^\dagger Y)$, and $\operatorname{Re}(\lambda\operatorname{tr}X^\dagger Y)$ is alternating exactly when $\operatorname{Re}\lambda=0$. The invariant $2$-forms at $V_0$ therefore form a line; transitivity of $U(8)$ determines an invariant form by its value at $V_0$, and $\omega_B$ is a nonzero invariant form.
+
+Item 2. The Schubert cell decomposition of $\mathrm{Gr}(2,8)$ has only even-dimensional cells and exactly one cell of real dimension $2$, whose closure is $\Sigma$; hence $H_2(\mathrm{Gr}(2,8);\mathbb Z)\cong\mathbb Z[\Sigma]$. Definition T.39a.1 computes $\int_\Sigma\omega_B=\pi/2$, so the periods of $c\,\omega_B$ are the integer multiples of $c\pi/2$.
+
+Item 3. On $\Sigma$, the chart matrix of Lemma T.53.1 has the single entry $z$ and $\log\det(I_2+Z^\dagger Z)=\log(1+|z|^2)$, so Lemma T.53.2 gives $\omega_{\mathrm{KE}}|_\Sigma=i\,dz\wedge d\bar z/(1+|z|^2)^2=2\,dx\wedge dy/(1+|z|^2)^2$, while the Bures line element of Definition T.39a.1 gives $\omega_B|_\Sigma=dx\wedge dy/\bigl(2(1+|z|^2)^2\bigr)$. Both forms are $U(8)$-invariant, so item 1 and this restriction give (T.39a.2b.2). With the covariant derivative $D=d-i\mathcal A$ of Lemma T.53.1, the curvature of $\mathcal L_+$ is $-i\,d\mathcal A=-i\,\omega_{\mathrm{KE}}=2\pi i\,\omega_{-1}$. Tensor powers add curvatures and $\det(\mathcal S)=\mathcal L_+^*$, so $\det(\mathcal S)^{\otimes k}$ satisfies (T.39a.2b.1). If $(L,\nabla)$ and $(L',\nabla')$ satisfy (T.39a.2b.1) for the same $k$, then $L'\otimes L^*$ carries a flat unitary connection; $\mathrm{Gr}(2,8)$ is simply connected, so that connection has trivial holonomy and the two data are isomorphic.
+
+Item 4. Theorem T.39a gives the constant Gaussian curvature $K_{\mathrm{hol}}=8$ on $\Sigma$, whose Bures area is $\pi/2$; the Gauss--Bonnet period is $\int_\Sigma8\,\omega_B=4\pi=2\pi\cdot2$.
+
+Item 5. For $k\ne0$ and $|k|M\ge2$, a geodesic cap $D\subset\Sigma$ of Bures area $\pi/(2|k|M)<\pi/2$ has boundary holonomy phase of magnitude $2\pi\bigl|\int_D\omega_k\bigr|=4|k|\cdot\pi/(2|k|M)=2\pi/M$, which supplies item 3 of Definition T.39a.1 with the orientation that makes it positive. Items 4--5 of that definition then give $\chi_Ug_U^2=2\pi/M$, and Theorem T.39a.2a applies unchanged. The line-bundle datum does not enter this equation, so every $\chi>0$ remains compatible with every $k\ne0$. ∎
+
+**Resolution TV-T-07-R1 (Metadata).** Exact domain: all $U(8)$-invariant real $2$-forms on $\mathrm{Gr}(2,8)$, all Hermitian line bundles with unitary connection whose curvature is $2\pi i$ times such a form, and the calibration equations of items 3--5 of Definition T.39a.1 on each. Premises: $\omega_B$ and $\Sigma$ of Definition T.39a.1, Lemmas T.53.1--T.53.2, the curvature $K_{\mathrm{hol}}=8$ of Theorem T.39a, and Theorem T.39a.2a. Equivalence: isomorphism of Hermitian line bundles with connection, and the scalar-record relation of Theorem T.39a.2a. Budget: closed-form classification with no cutoff, regulator or tolerance. Verifier: Schur's lemma on $\operatorname{Hom}(\mathbb C^2,\mathbb C^6)$, the Schubert-cell homology, the two restrictions to $\Sigma$, triviality of flat unitary connections on a simply connected space, and substitution into (T.39a.2a.1). Falsifier: an invariant $2$-form not proportional to $\omega_B$, an integral invariant form outside $\frac2\pi\mathbb Z\,\omega_B$, two nonisomorphic data with equal curvature, or an integral datum forcing a unique $\chi_U$. Provenance class: target-independent homogeneous-space geometry; no coupling, threshold or fine-structure value enters. Downstream consumers: Definition T.39a.1, Theorems T.39a, T.39a.2 and T.39a.2a, Lemma T.53.1, Appendix K's coupling summary, `TV-T-07`, `TV-G-13` and `RT-T7`. Nonvacuity: $\det(\mathcal S)$ and $\mathcal L_+$ satisfy (T.39a.2b.1) for $k=1$ and $k=-1$. This is `positive-discharge` of the classification of integrality-compatible invariant calibration lines, with discrete normalization $\omega_k$ and minimal member the Berry line $\mathcal L_+$ fixed in Lemma T.53.1 before any phase comparison, and `negative-refutation` of the proposition that integrality of the calibration line selects $\chi_U$. A $\chi_U$ source fixed before coupling data (`N`), the response-preserving identification of a line holonomy with $g_U^2$ and its unit map (`R`), and the accepted record (`C`) remain open under `TV-T-07`.
 
 **Problem T.3** (CKM/PMNS Status Ledger). Sections T.22 and T.24 construct
 mixing-model kernels on the generation manifold $\operatorname{Gr}(2,8)$.
@@ -3799,6 +4079,52 @@ give an explicit witness for the triad $(d_{32}^2,d_{31}^2,d_{21}^2)=(2,6,4)$. T
 
 *Proof.* Testing $d_{32}^2\in\{2,4,6,8\}$ in $3d_{32}^2\in\{2,4,6,8\}$ leaves only $d_{32}^2=2$, with $d_{31}^2=6$. For roots of squared norm $2$, $d_{21}^2=4-2\langle r_1,r_2\rangle$, so the additional orthogonality condition gives $4$. Direct subtraction verifies all three distances for the displayed roots. ∎
 
+**Theorem T.42.1b (Weyl-Orbit Classification of Ordered $E_8$ Root Triads).** Let $\Phi_8$ be the $240$ roots of $E_8$ and $W=W(E_8)$, of order $696729600$, which is the automorphism group of the $E_8$ lattice [Conway & Sloane 1999]. For an ordered triple $t=(r_1,r_2,r_3)$ of pairwise distinct roots use the notation of Lemma T.24.6,
+$$
+(a,b,c)=(\langle r_3,r_2\rangle,\langle r_3,r_1\rangle,\langle r_2,r_1\rangle),
+\qquad
+(d_{32}^2,d_{31}^2,d_{21}^2)=(4-2a,4-2b,4-2c)\in\{2,4,6,8\}^3,
+$$
+with Gram matrix $G$, and let $W$ act diagonally. Put $\Phi_t^\perp:=\Phi_8\cap\operatorname{span}(t)^\perp$. Then:
+
+1. A tuple in $\{2,4,6,8\}^3$ is the distance tuple of an ordered triple of pairwise distinct roots if and only if $\det G\ge0$.
+2. Two ordered triples of pairwise distinct roots lie in the same $W$-orbit if and only if they have the same distance tuple. The stabilizer of $t$ is $W(\Phi_t^\perp)$, so $|Wt|=|W|/|W(\Phi_t^\perp)|$.
+3. Under the hierarchy convention $d_{31}^2\ge d_{32}^2$ there are exactly $23$ orbits:
+
+|$(d_{32}^2,d_{31}^2,d_{21}^2)$|$(a,b,c)$|$\mathcal R$|$\det G$|$\Phi_8\cap\operatorname{span}t$|$\Phi_t^\perp$|orbit size|
+|:--|:--|:--|:--|:--|:--|:--|
+|(2,2,2)|(1,1,1)|$1$|4|$A_3$|$D_5$|362880|
+|(2,2,4)|(1,1,0)|$1$|4|$A_3$|$D_5$|362880|
+|(2,2,6)|(1,1,−1)|$1$|0|$A_2$|$E_6$|13440|
+|(2,4,2)|(1,0,1)|$2$|4|$A_3$|$D_5$|362880|
+|(2,4,4)|(1,0,0)|$2$|6|$A_2+A_1$|$A_5$|967680|
+|(2,4,6)|(1,0,−1)|$2$|4|$A_3$|$D_5$|362880|
+|(2,6,2)|(1,−1,1)|$3$|0|$A_2$|$E_6$|13440|
+|(2,6,4)|(1,−1,0)|$3$|4|$A_3$|$D_5$|362880|
+|(2,6,6)|(1,−1,−1)|$3$|4|$A_3$|$D_5$|362880|
+|(2,6,8)|(1,−1,−2)|$3$|0|$A_2$|$E_6$|13440|
+|(2,8,6)|(1,−2,−1)|$4$|0|$A_2$|$E_6$|13440|
+|(4,4,2)|(0,0,1)|$1$|6|$A_2+A_1$|$A_5$|967680|
+|(4,4,4)|(0,0,0)|$1$|8|$3A_1$|$D_4+A_1$|1814400|
+|(4,4,6)|(0,0,−1)|$1$|6|$A_2+A_1$|$A_5$|967680|
+|(4,4,8)|(0,0,−2)|$1$|0|$2A_1$|$D_6$|30240|
+|(4,6,2)|(0,−1,1)|$3/2$|4|$A_3$|$D_5$|362880|
+|(4,6,4)|(0,−1,0)|$3/2$|6|$A_2+A_1$|$A_5$|967680|
+|(4,6,6)|(0,−1,−1)|$3/2$|4|$A_3$|$D_5$|362880|
+|(4,8,4)|(0,−2,0)|$2$|0|$2A_1$|$D_6$|30240|
+|(6,6,2)|(−1,−1,1)|$1$|4|$A_3$|$D_5$|362880|
+|(6,6,4)|(−1,−1,0)|$1$|4|$A_3$|$D_5$|362880|
+|(6,6,6)|(−1,−1,−1)|$1$|0|$A_2$|$E_6$|13440|
+|(6,8,2)|(−1,−2,1)|$4/3$|0|$A_2$|$E_6$|13440|
+
+The admissible class of Definition T.42 ($d_{31}^2>d_{32}^2$) consists of the thirteen rows with $\mathcal R\ne1$: four orbits for $\mathcal R=2$, four for $\mathcal R=3$, three for $\mathcal R=3/2$, and one each for $\mathcal R=4$ and $\mathcal R=4/3$.
+
+Consequently every selector computed from the lattice geometry of a labeled triad alone is constant on each orbit, and its tie classes are unions of the displayed orbits. The sector tuples $(2,6,4)$, $(2,4,6)$ and $(4,8,4)$ of Section T.25.3.4 and the neutrino tuple $(2,6,6)$ of Proposition T.24.9 are single orbits, so each fixes its $E_8$ embedding up to lattice automorphism. The $\mathcal R=3$ fiber of Theorem T.42.1 consists of the four orbits $(2,6,d_{21}^2)$, $d_{21}^2\in\{2,4,6,8\}$; its two full-rank members $(2,6,4)$ and $(2,6,6)$ both span $A_3$ and have equal Gram determinant and orbit size.
+
+*Proof.* Lemma T.24.6 excludes $\det G<0$. By Steinberg's fixed-point theorem, the pointwise stabilizer of a set of vectors in a finite Weyl group is generated by the reflections in the roots orthogonal to that set; hence $\operatorname{Stab}_W(t)=W(\Phi_t^\perp)$. For the span types $A_2$, $2A_1$, $A_3$, $A_2+A_1$ and $3A_1$ of the table, $\Phi_t^\perp$ has $72$, $60$, $40$, $30$ and $26$ roots, forming the systems $E_6$, $D_6$, $D_5$, $A_5$ and $D_4+A_1$, and the Weyl orders $|W(E_6)|=51840$, $|W(D_6)|=23040$, $|W(D_5)|=1920$, $|W(A_5)|=720$ and $|W(D_4)\times W(A_1)|=384$ give the orbit sizes in the table. Enumeration of the roots $\pm e_i\pm e_j$ and $\frac12(\pm1,\ldots,\pm1)$ with an even number of minus signs gives these orthogonal systems and the following counts. A fixed root $r_3$ has $56$ roots $r_2$ with $\langle r_3,r_2\rangle=1$, $56$ with $\langle r_3,r_2\rangle=-1$ and $126$ with $\langle r_3,r_2\rangle=0$. For $\langle r_3,r_2\rangle=\pm1$, the number of roots $r_1\notin\{r_2,r_3\}$ with prescribed $(b,c)$ is $72$ at $(0,0)$, $1$ at each pair with $\det G=0$, and $27$ at each other pair with $\det G>0$. For $\langle r_3,r_2\rangle=0$, it is $60$ at $(0,0)$, $32$ when exactly one of $b,c$ vanishes, $12$ when $b,c\in\{\pm1\}$, and $1$ at each pair with $\det G=0$. Hence the set of ordered triples with a given realizable tuple has $240\cdot56\cdot n$ or $240\cdot126\cdot n$ elements, and in every row this number equals the orbit size $|W|/|W(\Phi_t^\perp)|$; for example $240\cdot56\cdot27=362880=|W|/1920$ and $240\cdot126\cdot60=1814400=|W|/384$. An orbit contained in a set of the same finite cardinality equals that set, which proves item 2 on the table. The exchange $r_1\leftrightarrow r_2$ commutes with $W$ and interchanges $d_{31}^2$ and $d_{32}^2$, so it carries the table to the $13$ orbits with $d_{31}^2<d_{32}^2$. The $36$ realizable tuples then have orbit sizes summing to $13651680=240\cdot239\cdot238$, the number of ordered triples of pairwise distinct roots, which proves exhaustion and item 1. Every lattice automorphism lies in $W$, so a selector computed from lattice geometry and labels alone is $W$-invariant and constant on orbits. The final statements are read off from the table. ∎
+
+**Resolution TV-T-11-R1 (Metadata).** Exact domain: all ordered triples of pairwise distinct $E_8$ roots, including the admissible class of Definition T.42 and the hierarchy-convention class of Theorem T.24.7. Premises: the standard $E_8$ root system and $W(E_8)=\operatorname{Aut}(E_8)$; no mass, mixing, selector or label datum. Equivalence: the diagonal $W(E_8)$ action. Budget: exhaustive over all $240\cdot239\cdot238$ ordered triples, with no cutoff. Verifier: Steinberg's stabilizer theorem, the root-neighbour counts, the $23$ equalities between counts and orbit sizes, and the total $13651680$. Falsifier: two triples with equal distance tuples in different orbits, a realized tuple with $\det G<0$, an unrealized tuple with $\det G\ge0$, or a row whose count differs from $|W|/|W(\Phi_t^\perp)|$. Provenance class: target-independent finite lattice enumeration. Downstream consumers: Definition T.42, Theorems T.42.1 and T.24.7, Proposition T.24.9, Section T.25.3, Theorem T.64, `TV-T-11`, `TV-T-13` and `RT-T3`. Nonvacuity: every row has the displayed positive orbit size, and the witnesses of Theorem T.42.1 and Proposition T.24.9 lie in the rows $(2,6,4)$ and $(2,6,6)$. This is `positive-discharge` of the complete degeneracy classification for lattice-intrinsic triad selection: an $\operatorname{Aut}(E_8)$-invariant selector outputs a union of the listed orbits, each registered distance tuple fixes its $E_8$ embedding up to lattice automorphism, and on Definition T.42's class the only lattice-intrinsic choice is among thirteen distance tuples. A preregistered target-independent selector and tie rule over these orbits (`C`) and the physical generation-label map (`R`) remain open under `TV-T-11`.
+
 -----
 
 ## T.21.6 Hierarchy Invariant and Phenomenology
@@ -4197,6 +4523,43 @@ $\beta_{\mathrm{pkt}}=1/144$; Theorem Z.13a independently gives $C=144$.
 Thus $\beta_{\mathrm{pkt}}=1/C$ is an exact numerical identity on the
 intersection of those two branches, not a causal derivation from capacity or
 from the electromagnetic visible-response model.
+
+**Theorem T.42.2c (Exact Van Vleck–Morette Coefficients on the Bures Grassmannian).** Let $\gamma$ be a unit-speed geodesic of $\mathrm{Gr}(2,8)$ in the Bures metric of Theorem T.39a, whose initial tangent $X\in\operatorname{Hom}(\mathbb C^2,\mathbb C^6)$ has singular values $\sigma_1,\sigma_2$ with $\frac12(\sigma_1^2+\sigma_2^2)=1$. Put $a^2:=\sigma_1^2/2$, $b^2:=\sigma_2^2/2$ and $\tau:=a^2b^2\in[0,\frac14]$, so that $\tau=0$ is the rank-one Schubert direction and $\tau=\frac14$ the equal-singular-value direction.
+
+1. The Jacobi operator $Y\mapsto R(Y,X)X$ has eigenvalues
+$$
+8a^2,\quad 8b^2,\quad 2(a+b)^2\ (\times2),\quad 2(a-b)^2\ (\times2),\quad 2a^2\ (\times8),\quad 2b^2\ (\times8),\quad 0\ (\times2),
+\tag{T.42.2c.1}
+$$
+with trace $32$ and squared sum $112-128\tau$.
+2. With $s:=\sqrt8\,d_{g_B}$ as in Theorem T.42.2 and $s\max(a,b)<\pi$, the Van Vleck–Morette determinant along $\gamma$ is $\Delta(s)=\prod_\kappa\frac{\sqrt\kappa\,s/\sqrt8}{\sin(\sqrt\kappa\,s/\sqrt8)}$, the product running over the nonzero eigenvalues in (T.42.2c.1), and
+$$
+\frac12\log\frac{\Delta(s)}{\Delta(0)}=\frac{s^2}{3}+\frac{7-8\tau}{1440}\,s^4+O(s^6).
+\tag{T.42.2c.2}
+$$
+Its contributions to $G_p$ of Theorem T.42.2 are therefore $G^{(2)}(0)=2/3$ and $G^{(4)}(0)=(7-8\tau)/60\in[\frac1{12},\frac7{60}]$ for every geodesic type.
+3. Consider a certificate of Theorem T.42.2 in which $\Delta_p$ is the Van Vleck–Morette determinant of item 2 along $\gamma_p$, and write $E_p:=\log\mathcal T_p+\log\frac{1+\epsilon_p}{1+\epsilon_p(0)}$ for its transport and heat-remainder terms.
+   (a) If $E_p''(0)=0$, item 4 of Theorem T.42.2 forces $\alpha_{\mathrm{UV}}-\alpha_{\mathrm{IR}}=1/3$, whereas the registered values $\alpha_{\mathrm{UV}}=3/2$ of Corollary T.41.3 and $\alpha_{\mathrm{IR}}=(3/2)\operatorname{sinc}(1/\sqrt3)$ of Section T.21.6.2 give $0.0819554165\ldots$.
+   (b) If $E_p^{(4)}(0)=0$, which holds on the Van Vleck reading of Remark T.42.2.1, the exact-output condition $G_p^{(4)}(0)=D_p/6$ of (T.42.2.2) forces $D_p=(7-8\tau_p)/10\in[\frac12,\frac7{10}]$, which excludes both registered assignments $D_{\mathrm{eff}}(2)=3/8$ and $D_{\mathrm{eff}}(4)=13/6$ of Theorem T.42.5.
+   (c) On the reading of (b) with the registered assignments, the common-coefficient condition $\beta_{\tau\mu}=\beta_{\mu e}$ fails for every pair of geodesic types, because $(7-8\tau)/D_{\mathrm{eff}}(2)\in[\frac{40}{3},\frac{56}{3}]$ while $(7-8\tau)/D_{\mathrm{eff}}(4)\in[\frac{30}{13},\frac{42}{13}]$.
+
+The registered values of $\alpha_{\mathrm{UV}}$ and $\alpha_{\mathrm{IR}}$ therefore require nonzero second-order content, and the registered effective dimensions, in the common coefficient and in the exact subbranch $\beta_{\mathrm{pkt}}=1/144$, require nonzero fourth-order content, from the infrared transport $\mathcal T_p$ or the heat remainder $\epsilon_p$.
+
+*Proof.* Item 1. For the symmetric space $U(8)/(U(2)\times U(6))$ with tangent vectors embedded as $P(X)=\begin{pmatrix}0&-X^\dagger\\X&0\end{pmatrix}$, the curvature of every invariant metric is $R(Y,X)X=-[[P(Y),P(X)],P(X)]$. Computing the off-diagonal block gives
+$$
+R(Y,X)X=XX^\dagger Y+YX^\dagger X-2XY^\dagger X.
+$$
+By $U(2)\times U(6)$ equivariance take $X=\sigma_1E_{11}+\sigma_2E_{22}$. For $Y=cE_{ij}$ with $c\in\mathbb C$: if $i\ge3$, then $R(Y,X)X=\sigma_j^2Y$, giving $2a^2$ and $2b^2$ on $4$ complex rows each; if $i=j\le2$, then real $c$ gives $0$ and imaginary $c$ gives $4\sigma_i^2$, that is $8a^2$ and $8b^2$; if $\{i,j\}=\{1,2\}$, then $R(cE_{12},X)X=(\sigma_1^2+\sigma_2^2)cE_{12}-2\sigma_1\sigma_2\bar cE_{21}$ and symmetrically, so the four real combinations $E_{12}\pm E_{21}$ and $i(E_{12}\pm E_{21})$ have eigenvalues $(\sigma_1\pm\sigma_2)^2=2(a\pm b)^2$, each twice. The listed eigenvalues fill all $24$ real dimensions. With $a^2+b^2=1$, the trace is $32$ and the squared sum is $112(a^4+b^4)+96a^2b^2=112-128\tau$. At $\tau=0$ the holomorphic sectional curvature is $8$, as in Theorem T.39a.
+
+Item 2. The curvature of a symmetric space is parallel, so in a parallel orthonormal eigenframe along $\gamma$ the Jacobi field with $J(0)=0$ and $J'(0)=e_\kappa$ is $\kappa^{-1/2}\sin(\sqrt\kappa\,r)\,e_\kappa(r)$, where $r=d_{g_B}$. The Van Vleck–Morette determinant is the reciprocal normalized Jacobian of the exponential map, hence the displayed product for $r$ below the first conjugate distance $\pi/\sqrt{8\max(a^2,b^2)}$. Using $\log(x/\sin x)=x^2/6+x^4/180+O(x^6)$ with $x^2=\kappa s^2/8$ gives
+$$
+\frac12\log\frac{\Delta(s)}{\Delta(0)}=\frac{s^2}{96}\sum\kappa+\frac{s^4}{23040}\sum\kappa^2+O(s^6),
+$$
+and item 1 gives (T.42.2c.2). Differentiation yields $G^{(2)}(0)=2/3$ and $G^{(4)}(0)=24(7-8\tau)/1440$.
+
+Item 3. Under the stated vanishing, $G_p^{(2)}(0)$, respectively $G_p^{(4)}(0)$, equals the value of item 2. Item 4 of Theorem T.42.2 then reads $2/3=2(\alpha_{\mathrm{UV}}-\alpha_{\mathrm{IR}})$, and $\frac32-\frac32\operatorname{sinc}(1/\sqrt3)=0.0819554165\ldots$. The condition $G_p^{(4)}(0)=D_p/6$ gives $D_p=(7-8\tau_p)/10$, and $3/8<1/2$ and $13/6>7/10$. Finally $\beta_p=(7-8\tau_p)/(1440D_p)$, so equality of the two quotients requires equal values of $(7-8\tau)/D_p$; the two displayed ranges are disjoint because $42/13<40/3$. ∎
+
+**Resolution TV-T-10-R1 (Metadata).** Exact domain: every unit-speed Bures geodesic of $\mathrm{Gr}(2,8)$, classified by $\tau\in[0,\frac14]$, below its first conjugate point, and every certificate of Theorem T.42.2 whose $\Delta_p$ is that Van Vleck–Morette determinant and whose transport and heat-remainder terms have vanishing second or fourth derivative at the origin. Premises: the Bures metric and curvature normalization of Theorem T.39a, Theorem T.42.2, Corollary T.41.3, Section T.21.6.2 and Theorem T.42.5. Equivalence: $U(2)\times U(6)$ action on initial tangents, which preserves $\tau$. Budget: closed-form classification over all tangent types, with no cutoff or tolerance. Verifier: the block formula for $R(Y,X)X$, the eigenvector list, the Jacobi-field product, and the Taylor series of $\log(x/\sin x)$. Falsifier: a Bures geodesic whose Jacobi spectrum differs from (T.42.2c.1), a Taylor coefficient differing from (T.42.2c.2), or a pure Van Vleck certificate attaining $D_p=3/8$ or $D_p=13/6$. Provenance class: target-independent symmetric-space geometry; no lepton mass enters. Downstream consumers: Theorems T.39, T.42.2, T.42.5–T.42.5b and T.42.6, Remark T.42.2.1, Theorem K.6.7, `TV-T-10` and `RT-T3`. Nonvacuity: the rank-one direction $\tau=0$ and the equal-singular-value direction $\tau=\frac14$. This is `positive-discharge` of the exact Van Vleck–Morette kernel and its second- and fourth-order coefficients for every geodesic type, and `negative-refutation` of the Van Vleck reading of the registered effective dimensions and of the common exact coefficient on that reading. The heat-operator kernel of $\Lambda_{\mathrm{fl}}$, the infrared transport and remainder functions that must carry the missing coefficients, and the full physical matrices with outward remainders remain `M+C+R+O`-open under `TV-T-10`.
 
 ### T.21.8.3 $E_8$ Generation Triangle and Path Additivity
 
@@ -7446,6 +7809,12 @@ $$
 \cos\theta=\frac{4-d^2}{4}
 $$
 for their $E_8$ images. Therefore $60^\circ$ gives $d^2=2$, $120^\circ$ gives $d^2=6$, and the absent $90^\circ$ case would give $d^2=4$. Opposite roots would give $d^2=8$ and are excluded by hypothesis. ∎
+
+**Corollary T.24.5c (Uniqueness of the Marked $A_2$ Lift up to $E_8$ Automorphism).** Let $J,J':(H_\nu^{\mathrm{gen}},g_\nu)\to\mathbb R^8$ be linear isometries that send every retained labeled displacement $v_{ij}$ to an $E_8$ root; in particular $J=\jmath_\nu\circ\iota_\nu$ for any marking $(\pi,\iota_\nu,\jmath_\nu)$ passing item 4 of Definition T.24.5a. Then $J'=w\circ J$ for some $w\in W(E_8)$. There are exactly $13440$ such isometries; they form one $W(E_8)$-orbit with stabilizer $W(E_6)$. Consequently every angle, distance and Gram quantity computed in the marked lift, including the values $d^2_{ij,\nu}$ of Theorem T.24.5b, is independent of the marking up to lattice automorphism, and the label map $\pi$ contributes no further invariant.
+
+*Proof.* The relations $v_{ji}=-v_{ij}$ and $v_{12}+v_{23}=v_{13}$, together with the isometry $\iota_\nu$ onto $\mathfrak h_0$, show that $v_{12},v_{23}$ form a basis of $H_\nu^{\mathrm{gen}}$ with $g_\nu(v_{12},v_{12})=g_\nu(v_{23},v_{23})=2$ and $g_\nu(v_{12},v_{23})=\langle\alpha_{\pi(1)\pi(2)},\alpha_{\pi(2)\pi(3)}\rangle=-1$ for every $\pi\in S_3$. Hence $r:=J(v_{12})$ and $s:=J(v_{23})$ are roots with $\langle r,s\rangle=-1$, and $-(r+s)$ is a root because it is a lattice vector of squared norm $2$. The ordered triple $(r,s,-(r+s))$ has pairwise inner products $-1$, that is, the distance tuple $(6,6,6)$, and the assignment $(r,s)\mapsto(r,s,-(r+s))$ is a $W(E_8)$-equivariant bijection onto the triples with that tuple. Theorem T.42.1b makes these triples a single orbit of size $13440=|W(E_8)|/|W(E_6)|$, so some $w$ sends $(J(v_{12}),J(v_{23}))$ to $(J'(v_{12}),J'(v_{23}))$. The linear maps $J'$ and $w\circ J$ agree on a basis and are equal. Since $J$ is determined by the ordered pair $(r,s)$, there are exactly $13440$ such isometries. Angles, distances and Gram matrices are preserved by $w$. ∎
+
+**Resolution TV-T-13-R1 (Metadata).** Exact domain: all linear isometries from the retained displacement plane of Definition T.24.5a into $\mathbb R^8$ that send every labeled displacement to an $E_8$ root, for every label map $\pi\in S_3$. Premises: items 3--4 of Definition T.24.5a and Theorem T.42.1b. Equivalence: composition with $W(E_8)=\operatorname{Aut}(E_8)$. Budget: exhaustive over all $240\cdot56$ ordered root pairs with inner product $-1$, with no cutoff. Verifier: the basis relation $v_{12}+v_{23}=v_{13}$, the Gram value $-1$, the $(6,6,6)$ row of Theorem T.42.1b, and linear extension from a basis. Falsifier: two admissible markings not related by $W(E_8)$, or a count different from $13440$. Provenance class: target-independent finite lattice geometry; no neutrino mass or PMNS datum enters. Downstream consumers: Definition T.24.5a, Theorems T.24.5b and T.24.5, Corollary T.24.5.1, Proposition T.24.9, Lemma T.24.10, `TV-T-13` and `RT-T3`. Nonvacuity: the standard map $\jmath_0$ of Definition T.24.5a. This is `positive-discharge` of the classification of marked $A_2$ lifts: the lift is unique up to lattice automorphism for every label map. The joint classification of Takagi matrices, scales and PMNS holonomies with this lift and the sealed spectrum/mixing interval packet remain `M+C+R+O`-open under `TV-T-13`.
 
 **Theorem T.24.5** (Conditional Majorana $A_2$ Consequence). On a branch carrying an accepted datum $\mathfrak C_{\mathrm{TW}}$ of Definition T.24.5a and the adjacent non-opposite primitive-root restriction of Theorem T.24.5b, the retained generation displacement has $A_2$ angle geometry. Majorana bilinearity alone does not select or certify that datum.
 
@@ -11450,14 +11819,14 @@ where:
 
 5. $\mathfrak Z_{\mathrm{PU}}$ is the master spectral ledger used for the RHG thresholds and flavor stationary data; it also records any claimed spectral-action Higgs finite parts, which remain distinct from $\mathfrak H_T$ unless an explicit matching map identifies them.
 
-6. $\mathcal I_{\mathrm{mix}}$ is the finite integrability ledger recording all mixed finite-part derivatives shared by RHG thresholds, Yukawa normalizations, CKM/PMNS holonomies, neutrino-sector entries, and any linked Higgs finite parts:
+6. $\mathcal I_{\mathrm{mix}}$ is the finite integrability ledger. On every common chamber $U$ of $\mathfrak Z_{\mathrm{PU}}$ used by the certificate, the sector record that owns each coordinate $t_a$ of $U$ (an RHG threshold, a Yukawa normalization, a CKM/PMNS holonomy, a neutrino-sector entry, or a linked Higgs finite part) supplies from its own record a $C^1$ function $\omega_a$ on $U$ that is an independently derived candidate for the $t_a$-component $\partial_{t_a}\log\det_{\mathrm{PU}}$ of the gradient of the one declared spectral functional $\log\det_{\mathrm{PU}}$ of $\mathfrak Z_{\mathrm{PU}}$. The ledger records
 $$
-\partial_{t_a}\partial_{t_b}\log\det_{\mathrm{PU}}
+\partial_{t_b}\omega_a
 =
-\partial_{t_b}\partial_{t_a}\log\det_{\mathrm{PU}}
+\partial_{t_a}\omega_b
 \tag{T.79.8a.1}
 $$
-on every common chamber used by the certificate.
+for all coordinates of $U$, together with $\oint_c\sum_a\omega_a\,dt_a=0$ for every closed piecewise-$C^1$ loop $c$ in $U$ when $U$ is not simply connected. On a connected open chamber these conditions hold exactly when $\omega_a=\partial_{t_a}F$ for one $C^2$ function $F$ on $U$, unique up to an additive constant, so they reject separately owned candidate components that admit no common potential; derivatives computed from $\mathfrak Z_{\mathrm{PU}}$ pass with $F=\log\det_{\mathrm{PU}}$. Derivatives of the sectors' separate projections lie outside this input type: the positive blocks $L_1=2+t_1+t_2$ and $L_2=3+t_1+2t_2$ of one consistent ledger give $\omega_1=\partial_{t_1}\log L_1$ and $\omega_2=\partial_{t_2}\log L_2$ with $\partial_{t_2}\omega_1=-\frac14\ne-\frac29=\partial_{t_1}\omega_2$ at $t=0$, a failure of (T.79.8a.1). The conditions establish some common potential $F$; its identification with $\log\det_{\mathrm{PU}}$ on $U$, additive constant included, is carried by the factorization certificate of Theorem X.9.6g.1, which expresses each candidate component $\omega_a$ through the ledger function $\partial_{t_a}\log\det_{\mathrm{PU}}$ of (X.9.6.27), and by the one-ledger restriction and overlap-compatible descent of Theorem X.9.6g.4.
 
 7. $\mathcal R_{\mathrm{joint}}$ is the joint residual interval after propagating the $\mathfrak S_{EW}$ scale remainder, the evaluated $A_{EW}$ determinant remainder or explicitly labeled model allowance, RHG tail bounds, flavor Hessian/Van Vleck bounds, holonomy bounds, Higgs matching, RG truncation, decoupling, and pole-conversion bounds. An unproved allowance remains branch dependence and is not a probabilistic theory interval.
 
@@ -11478,7 +11847,7 @@ V_{\mathrm{CKM}},U_{\mathrm{PMNS}},
 $$
 is uniquely determined up to $\mathcal R_{\mathrm{joint}}$. The $v$ component is included only because the joint record contains accepted $\mathfrak C_{A\to\mathrm{St}}$ and $\mathfrak S_{EW}$ together with same-saddle $A_{EW}$; the $m_H$ component is included only because it contains $\mathfrak H_T$. Neither is inferred from $\mathfrak R_{\mathrm{RHG}}$ or $\mathfrak C_{\mathrm{fl}}$. If an accepted spectral-action branch is also linked, its Higgs finite parts $(\mu_H^2,\lambda_H)$ are included only through the separately recorded spectral-action-to-$\mathfrak H_T$ matching map. Any two sector projections sharing a chamber of $\mathfrak Z_{\mathrm{PU}}$ must satisfy the identities in $\mathcal I_{\mathrm{mix}}$.
 
-*Proof.* Theorem T.78.11 fixes the RHG threshold outputs and Theorem T.79.6 fixes the flavor outputs. Theorem T.5 supplies only $\kappa_{\mathrm{St}}$; $\mathfrak C_{A\to\mathrm{St}}$ supplies $\kappa_{EW}$, and $\mathfrak S_{EW}$ together with same-saddle $A_{EW}$ fixes the interval for $v$. The record $\mathfrak H_T$ fixes the independent Higgs boundary and observable-conversion gates. The deterministic functor of Theorem T.79.2 therefore maps the complete record to one $\Pi_T$. For the common-ledger condition, shared chamber dependence is represented by finite smooth determinant or zeta functions, whose mixed partial derivatives commute. Failure of (T.79.8a.1), of the spectral-action-to-$\mathfrak H_T$ matching map when invoked, or of any forward lock rejects the joint certificate. Otherwise the remaining uncertainty is exactly $\mathcal R_{\mathrm{joint}}$. ∎
+*Proof.* Theorem T.78.11 fixes the RHG threshold outputs and Theorem T.79.6 fixes the flavor outputs. Theorem T.5 supplies only $\kappa_{\mathrm{St}}$; $\mathfrak C_{A\to\mathrm{St}}$ supplies $\kappa_{EW}$, and $\mathfrak S_{EW}$ together with same-saddle $A_{EW}$ fixes the interval for $v$. The record $\mathfrak H_T$ fixes the independent Higgs boundary and observable-conversion gates. The deterministic functor of Theorem T.79.2 therefore maps the complete record to one $\Pi_T$. For the common-ledger condition, (T.79.8a.1) and the period condition of Definition T.79.8a item 6 make the sector-supplied candidate components $\omega_a$ of the gradient of $\log\det_{\mathrm{PU}}$ on each connected common chamber the gradient of one $C^2$ function, unique up to an additive constant, and the derivatives of the finite smooth function $\log\det_{\mathrm{PU}}$ of $\mathfrak Z_{\mathrm{PU}}$ satisfy both conditions. On the accepted record, item 6 identifies that function with $\log\det_{\mathrm{PU}}$ on the chamber through Theorems X.9.6g.1 and X.9.6g.4. Failure of (T.79.8a.1) or of the period condition, of the spectral-action-to-$\mathfrak H_T$ matching map when invoked, or of any forward lock rejects the joint certificate. Otherwise the remaining uncertainty is exactly $\mathcal R_{\mathrm{joint}}$. ∎
 
 **Corollary T.79.8c (No Independent RHG-Flavor-Higgs Refit).** Once $\mathfrak J_{\mathrm{RHG-fl}}$ is accepted, changing $\mathfrak C_{A\to\mathrm{St}}$, $\mathfrak S_{EW}$, $A_{EW}$, RHG block matrices, heat/zeta tail bounds, stationary flavor cells, Hessian determinants, holonomy paths, neutrino branch data, $\mathcal M_\gamma$, $\mathfrak M_\lambda$, marginality, RG/decoupling/pole conventions, or residual intervals after comparison defines a new joint branch and cannot confirm the original one.
 

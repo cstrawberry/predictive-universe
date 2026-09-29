@@ -414,6 +414,19 @@ for a self-adjoint $H$, unique up to a central scalar.
 
 This theorem completely separates the reversible finite-carrier branch from genuinely dissipative contraction dynamics. A continuum vacuum, spectrum condition, spacetime covariance, and Wightman field domain enter through the promotion package of Definition F.0h.
 
+**Theorem F.0k (Finite-Dimensional Poincaré Covariance Has Trivial Translations).** Let $s\ge1$, let $\mathcal P_s=\mathbb R^{1+s}\rtimes SO^+(1,s)$ be the proper orthochronous Poincaré group of $(1+s)$-dimensional Minkowski space, or its universal covering group, and let $U$ be a strongly continuous unitary representation of it on a finite-dimensional Hilbert space. Then $U(a,1)=I$ for every translation $a$. Consequently the joint energy-momentum spectrum is $\{0\}$, every vector is translation invariant, and the spectrum condition holds only in this trivial form. Therefore no Haag--Kastler or Wightman realization $(\mathfrak A,\mathcal H,U)$ with finite-dimensional $\mathcal H$ carries nontrivial Poincaré translations, and a promotion with nontrivial translations beyond the finite gate of Theorem F.0j requires an infinite-dimensional representation space.
+
+*Proof.* The translations form an abelian subgroup. A strongly continuous unitary representation of $\mathbb R^{1+s}$ on a finite-dimensional space has commuting self-adjoint generators and a common orthonormal eigenbasis with $U(a,1)v=e^{ip\cdot a}v$, where $p\cdot a$ is the Minkowski product. Let $S$ be the finite set of joint eigenvalues $p$. For a Lorentz element $\Lambda$, where in the covering case $U(0,\Lambda)$ denotes $U$ at a covering element over $\Lambda$, the group law gives $U(0,\Lambda)U(a,1)U(0,\Lambda)^{-1}=U(\Lambda a,1)$. If $U(a,1)v=e^{ip\cdot a}v$ for all $a$, then
+$$
+U(a,1)U(0,\Lambda)v=U(0,\Lambda)U(\Lambda^{-1}a,1)v=e^{i(\Lambda p)\cdot a}\,U(0,\Lambda)v,
+\tag{F.0k.1}
+$$
+because $p\cdot\Lambda^{-1}a=(\Lambda p)\cdot a$. Thus $S$ is invariant under $SO^+(1,s)$. Let $p\ne0$ and choose a spatial axis $k$ with $(p^0,p^k)\ne(0,0)$; one exists because $p\ne0$. The boost of rapidity $\theta$ in the $(0,k)$-plane sends $p^0$ to $p^0\cosh\theta-p^k\sinh\theta$. Since $\cosh$ and $\sinh$ are linearly independent, this is a nonconstant continuous function of $\theta$, so the orbit of $p$ is infinite. This contradicts finiteness of $S$. Hence $S=\{0\}$ and $U(a,1)=I$. ∎
+
+Theorem F.0k plays for Poincaré translations the role that Theorem F.10.7e plays for half-sided modular translations: both place every nontrivial geometric flow in an infinite-dimensional limit.
+
+**Resolution TV-F-03-R1 (Metadata).** Exact domain: strongly continuous unitary representations of $\mathcal P_s$ or its universal covering group on finite-dimensional Hilbert spaces, $s\ge1$. Premises: the semidirect-product group law and Minkowski invariance of the Lorentz action. Equivalence: unitary equivalence of representations. Budget: every joint momentum eigenvalue and every one-parameter boost subgroup. Verifier: the spectral decomposition of the translation subgroup, the covariance identity (F.0k.1) and nonconstancy of $p^0\cosh\theta-p^k\sinh\theta$. Falsifier: a finite-dimensional strongly continuous unitary Poincaré representation with a nonzero momentum eigenvalue. Provenance class: source-internal exact representation-theoretic no-go. Downstream consumers: Theorem F.0j, Definition F.0h, Definition F.3, Theorems F.2 and F.4, Corollary F.10.4c.4 and `TV-F-03`. Nonvacuity: the trivial representation on $\mathbb C$, which is Poincaré covariant with vanishing energy-momentum. This is `negative-refutation` of Haag--Kastler/Wightman promotion with nontrivial translations on finite-dimensional Hilbert spaces. The infinite-dimensional common continuum net, cyclic vacuum, spectrum condition, covariance, domains and Wightman fields remain `M+C+R` under `TV-F-03`.
+
 *   **Definition F.3 (Emergent Local Net and Promotion Conditions).** On a branch satisfying Theorem F.0, Theorem F.0d, or Theorem F.0f, the limit is a local $C^*$-net $\mathcal O\mapsto\mathfrak A(\mathcal O)$ on $(M,g_{\mu\nu})$ with the properties proved by the invoked theorem. A standard relativistic Haag--Kastler or Wightman promotion additionally requires the reversible representation, invariant vacuum, spectrum, covariance, and field-domain entries stated in Definition F.0h; a dissipative contraction semigroup is not itself a Haag--Kastler dynamics.
 
 **F.4 Admissible States and Dynamics**
@@ -937,6 +950,21 @@ and injectivity gives $T_\rho=\rho(g)$. The faithful regular representation make
 Because $G$ is finite, a finite subfamily of $\mathcal S$ already has common kernel $N_{\mathcal S}$. Its direct sum is a faithful representation of $G/N_{\mathcal S}$. Its matrix coefficients and their complex conjugates separate the points of this finite quotient. The unital algebra they generate is all functions on the quotient: for each point, finite products of functions separating it from every other point construct its indicator function. Products and conjugates of matrix coefficients are coefficients of tensor products and conjugate representations. For any tensor word $\rho$ and linear functional $\ell$, the map $v\mapsto[x\mapsto\ell(\rho(x^{-1})v)]$ is an intertwiner into the left regular function representation. The coefficient-span identity therefore gives an equivariant surjection from a finite direct sum of such words onto $\mathbb C(G/N_{\mathcal S})$. An invariant orthogonal complement to its kernel splits this surjection because the representations are unitary. Thus the regular quotient representation belongs to the generated category. The map $J_\rho$ above embeds every quotient representation into a finite sum of regular representations, so closure under finite direct sums and subrepresentations includes every quotient representation. The generated category is therefore $\operatorname{Rep}(G/N_{\mathcal S})$. Applying the result just proved yields (F.9.5d.2). ∎
 
 This exact finite reconstruction does not itself construct localized transportable endomorphisms or a continuum field net; those remain the premises of Definition F.5b and Theorem F.5c.
+
+**Proposition F.5d.1 (Fusion Data Do Not Fix the Reconstructed Finite Group).** Let $D_8=\langle r,s\mid r^4=s^2=1,\ srs=r^{-1}\rangle$ and $Q_8=\{\pm1,\pm i,\pm j,\pm k\}$. For $G\in\{D_8,Q_8\}$, the simple objects of $\operatorname{Rep}(G)$ are four one-dimensional sectors $\chi_{ab}$, $(a,b)\in\mathbb Z_2^2$, and one two-dimensional sector $\rho$, with the same fusion rules
+$$
+\chi_{ab}\otimes\chi_{a'b'}\cong\chi_{a+a',\,b+b'},
+\qquad
+\chi_{ab}\otimes\rho\cong\rho,
+\qquad
+\rho\otimes\rho\cong\bigoplus_{a,b}\chi_{ab},
+\tag{F.9.5d.3}
+$$
+the same dimensions, and the same conjugation, every simple object being self-conjugate. The forgetful fiber functors nevertheless reconstruct nonisomorphic groups by Theorem F.5d: $D_8$ has five elements of order two and $Q_8$ has one. The Frobenius--Schur indicator $\frac18\sum_g\chi_\rho(g^2)$ equals $+1$ for $D_8$ and $-1$ for $Q_8$. Fusion rules, statistical dimensions and conjugation therefore do not determine the reconstructed response group; Theorem F.5d reads that group from the full tensor structure through the fiber functor of Definition F.5b.
+
+*Proof.* In both groups the commutator subgroup is the center of order two, $\{1,r^2\}$ or $\{\pm1\}$, and the quotient by it is $\mathbb Z_2^2$. Hence each group has exactly four one-dimensional characters, which form $\mathbb Z_2^2$ under pointwise multiplication. Since $8=4\cdot1^2+2^2$, there is exactly one further irreducible representation $\rho$, of dimension two: the symmetry action of $D_8$ on the square and the defining action of $Q_8$ on $\mathbb C^2$. For a one-dimensional $\chi$, $\chi\otimes\rho$ is irreducible of dimension two, hence isomorphic to $\rho$. The character $\chi_\rho$ is real, so $\langle\chi_\rho^2,\chi\rangle=\langle\chi_\rho,\bar\chi\chi_\rho\rangle=\langle\chi_\rho,\chi_\rho\rangle=1$ for each one-dimensional $\chi$; the dimension count $4=4\cdot1$ gives the last rule in (F.9.5d.3). All characters are real, so every simple object is self-conjugate. The elements of order two are $r^2,s,sr,sr^2,sr^3$ in $D_8$ and $-1$ in $Q_8$. In $D_8$, $g^2=1$ for six elements and $g^2=r^2$ for $r,r^3$, so the indicator is $\frac18(6\cdot2+2\cdot(-2))=1$; in $Q_8$, $g^2=1$ for $\pm1$ and $g^2=-1$ otherwise, so it is $\frac18(2\cdot2+6\cdot(-2))=-1$. ∎
+
+**Resolution TV-F-07-R1 (Metadata).** Exact domain: the representation categories of the two nonabelian groups of order eight with their forgetful fiber functors. Premises: Theorem F.5d and elementary character theory. Equivalence: isomorphism of fusion rings with dimension and conjugation data; isomorphism of reconstructed groups. Budget: all five simple objects and all eight group elements of each group. Verifier: the character inner products, the count of elements of order two and the Frobenius--Schur sums. Falsifier: a fusion coefficient, dimension or conjugate differing between the two groups, or an isomorphism $D_8\cong Q_8$. Provenance class: source-internal exact finite countermodel. Downstream consumers: Definition F.5b, Theorems F.5c and F.5d, the fusion-table clause after (F.9.5c.2) and `TV-F-07`. Nonvacuity: both displayed groups. This is `nonentailment` of the reconstructed response group from fusion rules, statistical dimensions and conjugation. Localized transportable DHR sectors and their continuum descent, the field net and gauge action, and the Wigner/particle response realization remain `M+C+R` under `TV-F-07`.
 
 ---
 
@@ -1588,6 +1616,64 @@ In units $c=\hbar=1$, this is $\tau=-\beta_U t$ with $\beta_U=2\pi/\kappa$. A st
 
 *Proof.* The finite-factor, faithfulness, physical-flow and upper-strip KMS hypotheses allow Theorem F.10.4b.2 to be applied with $\beta=\tau_U/\hbar$. Its flow identity gives the displayed relation. Theorem F.10.3 supplies the continuum thermal certificate but does not identify the limiting wedge algebra with a finite factor. ∎
 
+**Theorem F.10.4b.3a (Finite Classification of Modular Intertwining, Passivity and Complete Passivity).** Let $\mathfrak A=\mathcal B(\mathcal H)$ with $2\le\dim\mathcal H<\infty$, let $H=H^\dagger$ be a Hamiltonian that is not a scalar multiple of $I$, let $\omega(A)=\operatorname{Tr}(\rho A)$ with $\rho>0$, and let $\alpha_\tau$ be the physical Heisenberg flow of Theorem F.10.4b.2. The state $\omega$ is passive for $H$ when $\operatorname{Tr}(U\rho U^*H)\ge\operatorname{Tr}(\rho H)$ for every unitary $U$, and completely passive when $\rho^{\otimes n}$ is passive for
+$$
+H_n=\sum_{k=1}^nI^{\otimes(k-1)}\otimes H\otimes I^{\otimes(n-k)}
+$$
+for every $n\ge1$. Then:
+
+1. $\sigma_t^\omega\alpha_\tau=\alpha_\tau\sigma_t^\omega$ for all $t,\tau\in\mathbb R$ if and only if $\omega\circ\alpha_\tau=\omega$ for all $\tau$, if and only if $[H,\rho]=0$;
+2. $\omega$ is passive if and only if $[H,\rho]=0$ and every common orthonormal eigenbasis, with $He_a=E_ae_a$ and $\rho e_a=p_ae_a$, satisfies
+$$
+(E_a-E_b)(p_a-p_b)\le0\qquad\text{for all }a,b;
+\tag{F.10.4b.3a.1}
+$$
+3. the following are equivalent: (a) $\omega$ is completely passive; (b) $\rho=e^{-\beta H}/\operatorname{Tr}e^{-\beta H}$ for some $\beta\in[0,\infty)$; (c) $\sigma_t^\omega=\alpha_{-\beta\hbar t}$ for all $t$ and some $\beta\in[0,\infty)$; (d) $\omega(A\,\alpha_{i\beta\hbar}(B))=\omega(BA)$ for all $A,B$ and some $\beta\in[0,\infty)$. For $\beta>0$, (d) is the upper-strip KMS condition of Theorem F.10.4b.2 with imaginary-time period $\beta\hbar$; for $\beta=0$ it is the trace condition $\omega(AB)=\omega(BA)$. The values of $\beta$ in (b), (c) and (d) coincide and are unique;
+4. the implications $3\Rightarrow2\Rightarrow1$ are strict. With $H=E_0\operatorname{diag}(0,1,2)$ and $E_0>0$, the state $\rho_1=\operatorname{diag}(\tfrac12,\tfrac16,\tfrac13)$ satisfies item 1 and violates (F.10.4b.3a.1), while $\rho_2=\operatorname{diag}(\tfrac12,\tfrac13,\tfrac16)$ is passive but not completely passive. In fact $\rho_2^{\otimes n}$ is passive exactly for $n\le4$. For $n=5$ the product eigenvectors $e_{22000}$ and $e_{11111}$ have energies $4E_0<5E_0$ and weights
+$$
+\left(\tfrac16\right)^2\left(\tfrac12\right)^3=\tfrac1{288}<\tfrac1{243}=\left(\tfrac13\right)^5.
+\tag{F.10.4b.3a.2}
+$$
+
+Thus the physical flow commutes with the modular flow exactly on stationary faithful states, and the modular-time identification of Theorem F.10.4b.2 holds, with $\beta\ge0$, exactly on the completely passive ones. For $\beta=0$ item 3 reads $\rho=I/\dim\mathcal H$, $\sigma_t^\omega=\mathrm{id}$ and $\omega(AB)=\omega(BA)$. For simple spectrum, the equivalence (a)$\Leftrightarrow$(b) is Theorem G.1.9.3c; the present statement covers every nonscalar spectrum, including degenerate levels, and adds items 1, 2, 3(c) and 4. Items 3(a), 3(b) and 3(d), including $\beta=0$ and the uniqueness of $\beta$, agree with Theorem 48a.2 in Section 12, which proves the same equivalence for every nonscalar spectrum by product-eigenvector exchanges.
+
+*Proof.* (1) If $[H,\rho]=0$, the unitary groups $\rho^{it}$ and $e^{i\tau H/\hbar}$ commute, so the two automorphism groups commute, and cyclicity of the trace gives $\omega\circ\alpha_\tau=\omega$. If $\omega\circ\alpha_\tau=\omega$ for all $\tau$, trace duality gives $e^{-i\tau H/\hbar}\rho e^{i\tau H/\hbar}=\rho$, and differentiation at $\tau=0$ gives $[H,\rho]=0$. If the automorphism groups commute, then $W(t,\tau)=\rho^{it}e^{i\tau H/\hbar}\rho^{-it}e^{-i\tau H/\hbar}$ implements the identity automorphism of the factor and is therefore a scalar unitary $c(t,\tau)I$. Since $\det W=1$, $c(t,\tau)$ is a $(\dim\mathcal H)$-th root of unity; it depends continuously on $(t,\tau)$ and equals $1$ at $\tau=0$, so $c\equiv1$. Differentiating $\rho^{it}e^{i\tau H/\hbar}\rho^{-it}=e^{i\tau H/\hbar}$ at $\tau=0$ and then at $t=0$ gives $[\log\rho,H]=0$, hence $[\rho,H]=0$.
+
+(2) Let $\omega$ be passive. For self-adjoint $K$, the function $f(s)=\operatorname{Tr}(e^{isK}\rho e^{-isK}H)$ is minimal at $s=0$, so $0=f'(0)=i\operatorname{Tr}(K[\rho,H])$. Writing $[\rho,H]=iM$ with $M$ self-adjoint and choosing $K=M$ gives $\operatorname{Tr}M^2=0$, so $[\rho,H]=0$. In a common eigenbasis, the unitary exchanging $e_a$ and $e_b$ and fixing the other basis vectors changes the energy by $-(E_a-E_b)(p_a-p_b)$, which proves (F.10.4b.3a.1). Conversely, under commutation and (F.10.4b.3a.1),
+$$
+\operatorname{Tr}(U\rho U^*H)=\sum_{a,b}p_a\,|\langle e_b,Ue_a\rangle|^2\,E_b
+$$
+has a doubly stochastic coefficient matrix, which by the Birkhoff--von Neumann theorem is a convex combination of permutation matrices. Ordering the basis by increasing energy, and by decreasing weight inside each energy level, makes the weights nonincreasing by (F.10.4b.3a.1). The rearrangement inequality then gives $\sum_ap_aE_{\pi(a)}\ge\sum_ap_aE_a$ for every permutation $\pi$, so $\omega$ is passive.
+
+(3) (b)$\Rightarrow$(a): for $\beta=0$, $\rho^{\otimes n}$ is a multiple of the identity and every comparison is an equality. For $\beta>0$, $\rho^{\otimes n}=\gamma_n:=e^{-\beta H_n}/\operatorname{Tr}e^{-\beta H_n}$, and every state $\tau$ satisfies
+$$
+\operatorname{Tr}(\tau H_n)-\beta^{-1}S(\tau)-\bigl[\operatorname{Tr}(\gamma_nH_n)-\beta^{-1}S(\gamma_n)\bigr]=\beta^{-1}D(\tau\|\gamma_n)\ge0.
+$$
+Taking $\tau=U\gamma_nU^*$, for which $S(\tau)=S(\gamma_n)$, gives passivity.
+
+(a)$\Rightarrow$(b): the case $n=1$ and item 2 give a common eigenbasis $(e_a)$ with $p_a>0$. The product basis $e_x=e_{x_1}\otimes\cdots\otimes e_{x_n}$ diagonalizes $\rho^{\otimes n}$ and $H_n$, with energy $\sum_kE_{x_k}$ and weight $\prod_kp_{x_k}$. Put $l_a=-\log p_a$. If $k_a$ is the number of occurrences of $a$ in $x$, item 2 applied to $(\rho^{\otimes n},H_n)$ gives, for all rational probability vectors $q_a=k_a/n$ and $q'_a=k'_a/n$ with a common denominator,
+$$
+\langle q,E\rangle<\langle q',E\rangle
+\Longrightarrow
+\langle q,l\rangle\le\langle q',l\rangle.
+\tag{F.10.4b.3a.3}
+$$
+Suppose the points $P_a=(E_a,l_a)\in\mathbb R^2$ are not collinear. Three of them are affinely independent, and $q\mapsto(\langle q,E\rangle,\langle q,l\rangle)$ maps the probability simplex on those three labels homeomorphically onto a triangle $T$ with nonempty interior. Choose an interior point $(e,\lambda)$ and $\delta>0$ such that the open discs of radius $\delta/2$ about $(e-\delta,\lambda+\delta)$ and $(e+\delta,\lambda-\delta)$ lie in $T$. Rational simplex points are dense, so rational $q,q'$ have images in the first and second discs, respectively. Then $\langle q,E\rangle<\langle q',E\rangle$ and $\langle q,l\rangle>\langle q',l\rangle$, contradicting (F.10.4b.3a.3). Hence the points are collinear. Since $H$ is not scalar, the energies are not all equal, so $l_a=\beta E_a+c$ for real $\beta,c$, and $\rho$ is the displayed Gibbs matrix. If $\beta<0$, two levels with $E_a<E_b$ would have $p_a<p_b$, violating (F.10.4b.3a.1). Therefore $\beta\ge0$.
+
+(b)$\Leftrightarrow$(c): the Gibbs form gives $\rho^{it}=(\operatorname{Tr}e^{-\beta H})^{-it}e^{-i\beta tH}$, hence $\sigma_t^\omega=\alpha_{-\beta\hbar t}$. Conversely, if $\operatorname{Ad}\rho^{it}=\operatorname{Ad}e^{-i\beta tH}$ for all $t$, then $\rho^{it}e^{i\beta tH}=c(t)I$ with $c(t)=\operatorname{Tr}(\rho^{it}e^{i\beta tH})/\dim\mathcal H$ differentiable and $c(0)=1$. Differentiation at $t=0$ gives $\log\rho=-\beta H-ic'(0)I$, where $-ic'(0)$ is real because $\log\rho$ and $H$ are self-adjoint. Normalization gives (b). (b)$\Leftrightarrow$(d): here $\alpha_{i\beta\hbar}(B)=e^{-\beta H}Be^{\beta H}$. Setting $A=I$ in (d) and using trace duality gives $e^{\beta H}\rho e^{-\beta H}=\rho$. With $Y=e^{\beta H}\rho=\rho e^{\beta H}$, cyclicity turns (d) into $\operatorname{Tr}(YAe^{-\beta H}B)=\operatorname{Tr}(Ae^{-\beta H}YB)$ for all $B$, so $Y$ commutes with every matrix $Ae^{-\beta H}$, hence with every matrix. Thus $Y$ is a positive scalar, which is (b). Conversely, for the Gibbs matrix cyclicity gives $\operatorname{Tr}(e^{-\beta H}Ae^{-\beta H}Be^{\beta H})=\operatorname{Tr}(e^{-\beta H}BA)$, which is (d). These implications and those between (b) and (c) keep the same $\beta$. If (b) held for $\beta\ne\beta'$, then $(\beta-\beta')H$ would be scalar, which is excluded because $H$ is not scalar; hence $\beta$ is unique.
+
+(4) Both states commute with $H$. For $\rho_1$, the levels $E_0<2E_0$ carry weights $\tfrac16<\tfrac13$, violating (F.10.4b.3a.1). For $\rho_2^{\otimes n}$, a product eigenvector with $k_1$ factors at level $1$ and $k_2$ at level $2$ has energy $E=(k_1+2k_2)E_0$ and
+$$
+-\log p=n\log2+\frac{E}{E_0}\log\tfrac32+k_2\log\tfrac43.
+$$
+At energy $mE_0$ the admissible values are $\max\{0,m-n\}\le k_2\le\lfloor m/2\rfloor$. Condition (F.10.4b.3a.1) holds for all pairs exactly when, for every $m$, the largest value of $-\log p$ at level $m$ does not exceed the smallest at level $m+1$, since every level $0,\ldots,2n$ is occupied and nonadjacent comparisons follow by chaining through the intermediate levels; that is, exactly when
+$$
+\bigl(\lfloor m/2\rfloor-\max\{0,m+1-n\}\bigr)\log\tfrac43\le\log\tfrac32 .
+$$
+Since $1<\log\tfrac32/\log\tfrac43<2$, this is the integer condition $\lfloor m/2\rfloor-\max\{0,m+1-n\}\le1$. For $m\le n-1$ it requires $\lfloor(n-1)/2\rfloor\le1$, and for $m\ge n$ it requires $\lfloor n/2\rfloor-1\le1$; both hold exactly when $n\le4$. Item 2 therefore gives passivity for $n\le4$. For $n=5$, exchanging $e_{22000}$ and $e_{11111}$ lowers the energy by $E_0(\tfrac1{243}-\tfrac1{288})=\tfrac{5E_0}{7776}>0$, which is (F.10.4b.3a.2). Item 3 then excludes complete passivity of $\rho_2$, as does the inequality of its consecutive weight ratios $\tfrac32\ne2$ for equally spaced levels. ∎
+
+**Resolution TV-F-09-R1 (Metadata).** Exact domain: finite factors $\mathcal B(\mathcal H)$ with $2\le\dim\mathcal H<\infty$, faithful states, nonscalar Hamiltonians, the physical flow of Theorem F.10.4b.2 and the modular flow of Definition F.10.4b.1. Premises: finite dimensionality, faithfulness, and the passivity definitions of Theorem F.10.4b.3a. Equivalence: equality of density matrices and of automorphism groups. Budget: all unitaries and all tensor powers $n\ge1$, handled by the variational, exchange, Birkhoff--von Neumann and density arguments; for the witnesses, every occupation type at every $n$. Verifier: the commutator and determinant identities, the central-element boundary argument, the relative-entropy identity, the collinearity argument and exact rational evaluation of (F.10.4b.3a.2). Falsifier: a stationary faithful state whose modular flow does not commute with the physical flow, a completely passive non-Gibbs faithful state for a nonscalar Hamiltonian, or failure of the displayed weights. Provenance class: source-internal exact finite classification extending Theorem G.1.9.3c from simple to arbitrary nonscalar spectrum; Lenard (1978) and Pusz and Woronowicz (1978) supply the corresponding source-class results. Downstream consumers: Definition F.10.4b.1, Theorem F.10.4b.2, Corollary F.10.4b.3, Theorem G.1.9.3c, Corollary G.1.9.3d and `TV-F-09`. Nonvacuity: every Gibbs state of a nonscalar Hamiltonian, and the qutrit states $\rho_1,\rho_2$. This is `positive-discharge` of the finite intertwining, passivity and complete-passivity classification, and `nonentailment` of the modular-time identification from intertwining alone or from single-copy passivity. Populating the registered PU Hamiltonian, state and calibrated clock with a proof of their complete passivity or KMS property, and the limiting wedge modular-flow identification required by Corollary F.10.4b.3, remain `M+C+R` under `TV-F-09`.
+
 **Definition F.10.4b.4 (Thermally Regularized Predictive OTOC).** On a finite faithful KMS branch with density matrix $\rho_*$ and energy inverse temperature $\beta>0$, set $y=\rho_*^{1/4}$. For Hermitian contractions $A,B$, define
 $$
 F_{AB}(t)=
@@ -1692,6 +1778,37 @@ there. Both sides extend to entire exponential polynomials, so the identity theo
 
 Theorem F.10.4b.7b is a negative resolution artifact for the exact-saturation route in `TV-F-10`. Theorem F.10.4b.5 gives the chaos bound on every branch whose certificate supplies its analytic-strip hypotheses; populating those hypotheses in general and the approximate uniform mixing, prefactor, tail, and logarithmic-scrambling classification remain open.
 
+**Theorem F.10.4b.7c (Exact-Window Obstruction on Finite Open Carriers).** Let $\mathcal H$ be finite-dimensional, let $\mathcal L^*$ be a linear map on $\mathcal B(\mathcal H)$ with $\mathcal L^*(X^*)=\mathcal L^*(X)^*$, for example a GKLS Heisenberg generator or $i[H,\cdot\,]$, let $A\ne0$, and put $A(t)=e^{t\mathcal L^*}A$. Let $P(t)=\Phi(A(t),A(t))$ for a complex bilinear form $\Phi$ on $\mathcal B(\mathcal H)$, and let
+$$
+Q(t)=\kappa\,\|MA(t)N\|_2^2,\qquad\kappa\ne0,
+\tag{F.10.4b.7c.1}
+$$
+with invertible $M,N$ and the Hilbert--Schmidt norm. Then:
+
+1. no real open interval $I$ on which $Q\ne0$ carries constants $c\ne0$ and $\lambda>0$ with $1-P(t)/Q(t)=ce^{\lambda t}$ throughout $I$. In particular, for a faithful density matrix $\rho_*$, $y=\rho_*^{1/4}$ and self-adjoint $A,B\ne0$, the regularized numerator of Definition F.10.4b.4 with the disconnected normalization
+$$
+F_{\mathrm{disc}}(t)=\operatorname{Tr}(y^2A(t)y^2A(t))\,\operatorname{Tr}(y^2By^2B)
+\tag{F.10.4b.7c.2}
+$$
+admits no exact positive-exponent window, whether or not $\rho_*$ is stationary;
+2. hypothesis (F.10.4b.7c.1) cannot be weakened to a nonzero exponential-polynomial normalization generated by the carrier. For the dephasing qubit $\mathcal L^*(X)=\gamma(\sigma_zX\sigma_z-X)$ with $\gamma>0$, $\rho_*=I/2$, $A=\sigma_x+\sigma_z$ and $B=\sigma_z$, the numerator is $P(t)=1-e^{-4\gamma t}$. With $Q(t)=-\operatorname{Tr}(y^2A'(t)y^2A'(t))=-e^{-4\gamma t}$ for $A'=\sigma_x$,
+$$
+1-\frac{P(t)}{Q(t)}=e^{4\gamma t}\qquad(t\in\mathbb R).
+\tag{F.10.4b.7c.3}
+$$
+
+*Proof.* Decompose $\mathcal B(\mathcal H)$ into generalized eigenspaces of $\mathcal L^*$. Then
+$$
+A(t)=\sum_k\sum_{j=0}^{J_k}t^je^{\nu_kt}A_{k,j}
+$$
+with distinct $\nu_k\in\mathbb C$. Let $r$ be the largest real part of a $\nu_k$ carrying a nonzero coefficient, let $J$ be the largest $j$ with $A_{k,j}\ne0$ and $\operatorname{Re}\nu_k=r$, and put $C(t)=\sum_{\operatorname{Re}\nu_k=r}e^{i(\operatorname{Im}\nu_k)t}A_{k,J}$, a nonzero matrix-valued trigonometric polynomial. For real $t$, $\|MA(t)N\|_2^2=\operatorname{Tr}(N^*A(t)^*M^*MA(t)N)$ expands into terms $t^{j+j'}e^{(\bar\nu_k+\nu_l)t}$. Every exponent has real part at most $2r$, and the terms with real part $2r$ and degree $2J$ sum to $t^{2J}e^{2rt}g(t)$ with $g(t)=\|MC(t)N\|_2^2$. Since $M,N$ are invertible and $C\not\equiv0$, $g$ is a nonzero trigonometric polynomial, so $Q$ contains a term $t^{2J}e^{(2r+i\eta)t}$ with nonzero coefficient. Every exponent $\nu_k+\nu_l$ of $P$ has real part at most $2r$.
+
+If $1-P/Q=ce^{\lambda t}$ on $I$, then $Q-P=ce^{\lambda t}Q$ on $I$. Both sides are finite linear combinations of the real-analytic functions $t^me^{zt}$, so the identity holds on $\mathbb R$, and linear independence of these functions for distinct pairs $(m,z)$ forces equal coefficients. The right side contains $c\,t^{2J}e^{(2r+\lambda+i\eta)t}$ with nonzero coefficient, whereas every exponent on the left has real part at most $2r<2r+\lambda$. This contradiction proves item 1 in general. For the regularized OTOC, $\mathcal L^*$ preserves self-adjointness, so $A(t)^*=A(t)$ for real $t$; hence $\operatorname{Tr}(y^2A(t)y^2A(t))=\|yA(t)y\|_2^2$, $\operatorname{Tr}(y^2By^2B)=\|yBy\|_2^2>0$, and $\operatorname{Tr}(yA(t)yByA(t)yB)$ is bilinear in $A(t)$.
+
+For item 2, $e^{t\mathcal L^*}\sigma_x=e^{-2\gamma t}\sigma_x$ and $e^{t\mathcal L^*}\sigma_z=\sigma_z$. With $y^4=I/2$, $\operatorname{Tr}(\sigma_x\sigma_z\sigma_x\sigma_z)=-2$, $\operatorname{Tr}\sigma_z^4=2$ and vanishing mixed traces, $P(t)=\tfrac12\operatorname{Tr}(A(t)\sigma_zA(t)\sigma_z)=1-e^{-4\gamma t}$, while $\operatorname{Tr}(y^2A'(t)y^2A'(t))=\tfrac12\operatorname{Tr}(A'(t)^2)=e^{-4\gamma t}$. Substitution gives (F.10.4b.7c.3). ∎
+
+**Resolution TV-F-10-R1 (Metadata).** Exact domain: finite-dimensional carriers with self-adjointness-preserving linear generators, bilinear numerators and norm-type normalizations (F.10.4b.7c.1), including GKLS generators and nonstationary faithful reference states; for item 2, the displayed dephasing qubit. Premises: finite dimensionality and invertibility of $M,N$. Equivalence: equality of real functions of $t$ on the window. Budget: every generalized-eigenspace term, handled by linear independence of the functions $t^me^{zt}$. Verifier: the leading-exponent comparison and direct evaluation of (F.10.4b.7c.3). Falsifier: an exact positive-exponent window under a norm-type normalization on a finite carrier, or failure of (F.10.4b.7c.3). Provenance class: source-internal exact finite analysis. Downstream consumers: Definition F.10.4b.4, Theorems F.10.4b.5 and F.10.4b.7b, Proposition F.10.4b.7a and `TV-F-10`. Nonvacuity: the dephasing qubit with the normalization (F.10.4b.7c.2). This is `negative-refutation` of exact positive-exponent OTOC windows on finite open carriers with norm-type normalization, and `nonentailment` of that obstruction from an exponential-polynomial normalization alone. Approximate windows, refining-carrier limits, and the uniform mixing, prefactor and tail entries of $\mathfrak C_{\mathrm{scr}}$ needed for logarithmic scrambling remain `M+C+R` under `TV-F-10`; saturation remains a separate result.
+
 ### F.10.4c Reflection-Positivity Gate for Lorentzian Reconstruction
 
 **Definition F.10.4c.1 (Finite PU Reflection Positivity).** Let $\mathfrak A_E$ be a finite Euclidean history algebra, $\Theta$ an antilinear reflection involution, and $\mathfrak A_+$ its positive-time subalgebra. A normalized linear functional $\Omega_E$ is reflection positive when
@@ -1741,6 +1858,12 @@ $$
 \mu_f(B)=\langle O(f)\Omega,E(B)O(f)\Omega\rangle\ge0.
 $$
 These measures are supported in the forward cone. The scalar Källén--Lehmann theorem identifies their common covariant two-point distribution by a positive mass-shell measure. Vacuum subtraction removes the separate zero-momentum vacuum contribution. The retained time-ordering and subtraction theorem supplies the dispersion representation; positivity and temperedness alone do not specify its contact extension. For nonreal $p^2$, the stated integrability condition controls the subtracted large-$s$ kernel, which is of order $s^{-N-1}$; the real-axis expression is its distributional boundary value. A mass atom contributes its coefficient times $(p^2-m^2+i0)^{-1}$, proving the residue statement. The existence and hypotheses of the spectral/dispersion import remain part of the QFT branch certificate, beyond the finite Hilbert-space construction of Theorem F.10.4c.2. ∎
+
+**Corollary F.10.4c.5 (No Finite-Dimensional Källén--Lehmann Spectral Weight).** Assume the scalar Wightman branch of Corollary F.10.4c.4 on a finite-dimensional Hilbert space, with the translations part of a strongly continuous unitary representation of the proper orthochronous Poincaré group or its covering group. Then every vacuum-subtracted smeared field annihilates the vacuum, $O(f)\Omega=0$, and the Källén--Lehmann measure vanishes, $\rho_O=0$. No mass atom, pole or continuum survives. A nonzero Källén--Lehmann measure therefore requires an infinite-dimensional representation space, and no Poincaré-covariant finite quotient of the reflection-positive reconstruction of Theorem F.10.4c.2 supplies one.
+
+*Proof.* Theorem F.0k gives $U(a)=I$, so the joint spectral measure $E$ of $P$ is the point mass $E(\{0\})=I$. For each test function $f$ the positive measure $\mu_f(B)=\langle O(f)\Omega,E(B)O(f)\Omega\rangle$ is therefore $\|O(f)\Omega\|^2\delta_0$. The scalar Källén--Lehmann representation of Corollary F.10.4c.4 writes $\mu_f$ as $\int\rho_O(ds)\,|\hat f|^2\,dm_s$, where $m_s$ is the Lorentz-invariant measure on the forward shell $\{p^2=s,\ p^0\ge0\}$. With at least one spatial dimension, every $m_s$, including the forward light-cone measure for $s=0$, assigns zero mass to the origin. Hence $\|O(f)\Omega\|^2=\mu_f(\{0\})=0$. Choose $f$ with $\hat f$ nowhere zero, for example a Gaussian. The total mass $\int\rho_O(ds)\int|\hat f|^2dm_s$ of $\mu_f$ equals $\|O(f)\Omega\|^2=0$, and since every inner integral is strictly positive, $\rho_O=0$. ∎
+
+**Resolution TV-F-11-R1 (Metadata).** Exact domain: scalar Wightman branches satisfying Corollary F.10.4c.4 on finite-dimensional Hilbert spaces with a strongly continuous unitary Poincaré representation, in at least one spatial dimension. Premises: Theorem F.0k and the Källén--Lehmann representation retained in Corollary F.10.4c.4. Equivalence: equality of positive spectral measures. Budget: every test function and every mass shell. Verifier: the point-mass spectral measure, the absence of an atom of $m_s$ at the origin, and positivity of the Gaussian test integral. Falsifier: a finite-dimensional Poincaré-covariant scalar branch with nonzero $\rho_O$ or $O(f)\Omega\ne0$. Provenance class: source-internal exact representation-theoretic consequence of Theorem F.0k. Downstream consumers: Theorem F.10.4c.2, Corollaries F.10.4c.3 and F.10.4c.4 and `TV-F-11`. Nonvacuity: the one-dimensional vacuum theory with trivial representation and $O=0$. This is `negative-refutation` of a nonzero Källén--Lehmann measure with Poincaré controls on finite-dimensional Hilbert spaces. The infinite-dimensional OS/reflection data, transfer semigroup, nonnegative Källén--Lehmann measure, and Poincaré, spectrum and temperedness controls remain `M+C+R` under `TV-F-11`.
 
 ### F.10.4d Minimal Gauge Split-Factorization
 
@@ -2116,6 +2239,50 @@ The cost is finite at each positive tolerance; this assertion supplies no unifor
 
 *Proof.* Write $\mathcal B_{\delta,O}=\bigoplus_\alpha M_{n_\alpha}$ and $m=\sum_\alpha n_\alpha$. Choose $N$ with $8^N\ge m$ and an isometry $V:\mathbb C^m\to(\mathbb C^8)^{\otimes N}$. The map $j_0(B)=VBV^*$ faithfully represents the algebra in the corner with identity $VV^*$. A finite state with density $D$ becomes $VDV^*$; no extension of the algebra to the unused complement is required. Item 8 supplies the physical interfaces and their errors, which are not consequences of this dimension count. The triangle inequality combines the abstract error $\delta_0$ and implementation error $\delta_{\mathrm{impl}}$ to prove (F.10.4f.10), and gives the analogous GNS and phase-space bounds. Items 7--8 charge every implementation resource to $C_{\delta,O}$, proving the cost inequality. The polynomial in $\log(1/\delta)$ may diverge as the tolerance decreases, so no tolerance-uniform bound follows. ∎
 
+**Theorem F.10.4f.5 (Exact Finite Energy-Nuclearity Norm and Species Bound).** Let $\mathcal K=\mathcal K_O\otimes\mathcal K_c$ be a finite-dimensional Hilbert space with inner product linear in its second slot, let $\mathfrak A_h(O)=B(\mathcal K_O)\otimes I_c$, and let
+$$
+H_h=H_O\otimes I_c+I_O\otimes H_c,
+\qquad
+\Omega_h=\Omega_O\otimes\Omega_c,
+$$
+with $H_O,H_c$ self-adjoint, $\Omega_O,\Omega_c$ unit vectors and $H_c\Omega_c=0$. For $\beta>0$ put $Z_O(\beta)=\operatorname{Tr}e^{-\beta H_O}$, and let $E_{\min}$ be the least eigenvalue of $H_O$. Then the finite phase-space map (F.10.4f.2) satisfies
+$$
+\lVert\Theta^{(h)}_{\beta,O}\rVert_1=Z_O(\beta),
+\qquad
+\operatorname{rank}\Theta^{(h)}_{\beta,O}=\dim\mathcal K_O,
+\qquad
+\lVert\Theta^{(h)}_{\beta,O}\rVert=e^{-\beta E_{\min}}.
+\tag{F.10.4f.12}
+$$
+The infimum defining the nuclear norm is attained by the energy-eigenbasis decomposition below. Consequently:
+
+1. a decomposition satisfying (F.10.4f.5) exists exactly when $\log Z_O(\beta)\le C_{\mathrm{PU}}(O,\beta)$, and the norm condition in (F.10.4f.3) holds exactly when $H_O\ge0$;
+2. if $\mathcal K_O=\bigotimes_{s=1}^{N}\mathcal K_s$ and $H_O=\sum_sH_s$, with $H_s$ acting on the $s$-th factor, then $Z_O=\prod_sZ_s$. If each $H_s$ has the eigenvalue $0$ and at least one further eigenvalue in $[0,E_*]$, counted with multiplicity, then (F.10.4f.5) forces the species bound
+$$
+N\le\frac{C_{\mathrm{PU}}(O,\beta)}{\log\!\left(1+e^{-\beta E_*}\right)};
+\tag{F.10.4f.13}
+$$
+3. along a sequence of such approximants, one $h$-independent $C_{\mathrm{PU}}(O,\beta)$ admits decompositions satisfying (F.10.4f.5) for every $h$ exactly when $\sup_h\log Z_{O,h}(\beta)<\infty$. In particular, an unbounded number of species obeying the hypothesis of item 2 with one fixed $E_*$ excludes every uniform capacity certificate at every $\beta>0$.
+
+*Proof.* The map $V\xi=\xi\otimes\Omega_c$ is an isometry, $A\mapsto A\otimes I_c$ is an isometric identification of the domains, and $e^{-\beta H_c}\Omega_c=\Omega_c$. Hence $\Theta^{(h)}_{\beta,O}(A\otimes I_c)=V\Theta_O(A)$ with $\Theta_O(A)=e^{-\beta H_O}A\Omega_O$. Composition with the contractions $V$ and $V^*$ increases neither nuclear norms nor ranks, and $V^*V=I$, so it suffices to treat $\Theta_O$.
+
+Let $(e_j)$ be an orthonormal eigenbasis of $H_O$ with eigenvalues $E_j$. Then
+$$
+\Theta_O(A)=\sum_je^{-\beta E_j}\,\langle e_j,A\Omega_O\rangle\,e_j.
+\tag{F.10.4f.14}
+$$
+The functional $A\mapsto\langle e_j,A\Omega_O\rangle$ has norm $\lVert e_j\rVert\,\lVert\Omega_O\rVert=1$, attained at $A=|e_j\rangle\langle\Omega_O|$, so (F.10.4f.14) has nuclear sum $Z_O(\beta)$. Conversely, let $\Theta_O=\sum_r\varphi_r(\cdot)\xi_r$ be any nuclear decomposition, finite or absolutely summable, and define the contraction $S:\mathcal K_O\to B(\mathcal K_O)$ by $S\xi=|\xi\rangle\langle\Omega_O|$. Then $\Theta_O(S\xi)=e^{-\beta H_O}\xi$, so
+$$
+Z_O(\beta)=\operatorname{Tr}(\Theta_O\circ S)=\sum_r\varphi_r(S\xi_r)\le\sum_r\lVert\varphi_r\rVert\,\lVert\xi_r\rVert.
+$$
+Hence $\lVert\Theta_O\rVert_1=Z_O(\beta)$, attained by (F.10.4f.14). The map $A\mapsto A\Omega_O$ is onto $\mathcal K_O$ and $e^{-\beta H_O}$ is invertible, which gives the rank. Finally $\lVert\Theta_O(A)\rVert\le\lVert e^{-\beta H_O}\rVert\,\lVert A\rVert$, with equality at $A=|e_{\min}\rangle\langle\Omega_O|$ for a lowest eigenvector $e_{\min}$; thus $\lVert\Theta_O\rVert=e^{-\beta E_{\min}}$.
+
+Item 1 follows because the finite-dimensional infimum is attained, and $e^{-\beta E_{\min}}\le1$ exactly when $E_{\min}\ge0$. For item 2, $e^{-\beta H_O}=\bigotimes_se^{-\beta H_s}$ and the trace is multiplicative on tensor products. The two displayed eigenvalues give $Z_s(\beta)\ge1+e^{-\beta E_*}$, and taking logarithms in $\prod_sZ_s(\beta)\le e^{C_{\mathrm{PU}}(O,\beta)}$ gives (F.10.4f.13). Item 3 is item 1 applied uniformly in $h$, and item 2 gives $\log Z_{O,h}(\beta)\ge N_h\log(1+e^{-\beta E_*})$. ∎
+
+Theorem F.10.4f.5 identifies the finite nuclear norm of Definition F.10.4f.1 with the local partition function on product-vacuum approximants. The weak-limit hypotheses of Theorem F.10.4f.2 and the positive-tolerance realization costs of Theorem F.10.4f.4 keep their stated scope.
+
+**Resolution TV-F-14-R1 (Metadata).** Exact domain: the finite product-vacuum approximants $(\mathfrak A_h(O),H_h,\Omega_h)$ of Theorem F.10.4f.5 at fixed $\beta>0$, with factorized species Hamiltonians for items 2 and 3. Premises: finite dimensionality, self-adjointness, $H_c\Omega_c=0$, and the nuclear-norm and capacity conventions of Definition F.10.4f.1. Equivalence: equality of phase-space maps under the isometric domain identification $A\mapsto A\otimes I_c$ and the codomain isometry $\xi\mapsto\xi\otimes\Omega_c$. Budget: every finite nuclear decomposition, handled by the trace-duality lower bound. Verifier: the eigenbasis decomposition (F.10.4f.14), the contraction $S$, and multiplicativity of $\operatorname{Tr}e^{-\beta H}$ under tensor products. Falsifier: a decomposition with nuclear sum below $Z_O(\beta)$, or a species family violating (F.10.4f.13) under an accepted certificate. Provenance class: source-internal exact finite functional analysis. Downstream consumers: Definition F.10.4f.1, Theorem F.10.4f.2, Definition F.10.4f.3 and `TV-F-14`. Nonvacuity: one qubit species with $H_s=\operatorname{diag}(0,E_*)$, $\Omega_O=e_0$ and $\mathcal K_c=\mathbb C$, for which $\lVert\Theta^{(h)}_{\beta,O}\rVert_1=1+e^{-\beta E_*}$. This is `positive-discharge` of the finite nuclear-norm, attaining-decomposition, species-bound and divergence-rejection components on the product-vacuum class. Uniform nuclear and tail bounds for entangled vacuum vectors and interacting region–complement Hamiltonians, the weak-limit hypotheses of Theorem F.10.4f.2, and uniform finite approximation maps with bounded PCE cost under Definition F.10.4f.3 remain `M+C+R` under `TV-F-14`.
+
 ### F.10.4g Fractal Heat-Kernel and Trapped-Set Audit
 
 **Definition F.10.4g.1 (Uniform Recursive Heat-Kernel Audit).** Let $\{L_h\}_{h\downarrow0}$ be finite local generators on a bounded region $O$, with symmetric-sector heat kernels $p_t^{(h)}(x,y)$ relative to declared reference measures. The audit records constants $C,c>0$, $d_w>1$, $q>0$, $\beta_{\mathrm{FUP}}>0$, an explicit macroscopic space-time window $\mathcal W_h$, and a test core $\mathcal C_O$. A spectral-dimension certificate $d_s=4$ is a separate part of the audit.
@@ -2405,6 +2572,52 @@ The coherent operators, dissipators, common cores, and semigroups then have iden
 
 This finite certificate fixes a representative because the basis and gauge are declared data. It does not make the split canonical from the full response generator, nor does it provide a nonconstant continuum approximation.
 
+**Proposition F.10.4g.9 (Nonconstant Dyadic Gauge-Fixed Dephasing Sequence).** Fix $d\ge1$, $\omega\in\mathbb R$, $\gamma\ge0$, and real sequences $\omega_n\to\omega$ and $\gamma_n\to\gamma$ with $\gamma_n\ge0$. Let $\Lambda_n=2^{-n}\{0,\ldots,2^n-1\}^d\subset[0,1)^d$, with physical mesh $a_n=2^{-n}$, so that $\Lambda_n\subset\Lambda_{n+1}$ and $0\in\Lambda_n$. Put $\mathfrak A_n=\bigotimes_{x\in\Lambda_n}M_2(\mathbb C)$, let $\mathfrak A_n(O)$ be the subalgebra of the sites in $\Lambda_n\cap O$, and let $j_n^m(A)=A\otimes I_{\Lambda_m\setminus\Lambda_n}$ for $m\ge n$. In the traceless-Hamiltonian, traceless-jump gauge, with jump operators $\sqrt{\gamma_n}\,\sigma_z^{(x)}$, define
+$$
+\mathcal L_n^*=i[H_n,\cdot\,]+\mathcal D_n^*,
+\qquad
+H_n=\frac{\omega_n}2\sigma_z^{(0)},
+\qquad
+\mathcal D_n^*(A)=\gamma_n\sum_{x\in\Lambda_n}\bigl(\sigma_z^{(x)}A\sigma_z^{(x)}-A\bigr).
+\tag{F.10.4g.9.1}
+$$
+Let $\mathfrak A_\infty$ be the inductive-limit $C^*$-algebra, with canonical embeddings $j_n$ and local core $\mathfrak A_{\mathrm{loc}}=\bigcup_nj_n(\mathfrak A_n)$. Define $H=\frac\omega2\sigma_z^{(0)}$ and $\mathcal D^*$ by the same formula with $\gamma$ and $\Lambda_\infty=\bigcup_n\Lambda_n$; on $\mathfrak A_{\mathrm{loc}}$ the sum is finite. Then:
+
+1. the maps $j_n^m$ are coherent, region-preserving, unital isometric $*$-monomorphisms, the algebras are nonconstant with $\dim\mathfrak A_n=4^{2^{nd}}$, and $a_n\to0$;
+2. for $A\in\mathfrak A_n$ supported on $F\subset\Lambda_n$ and $m\ge n$,
+$$
+\bigl\|j_n^m(i[H_n,A])-i[H_m,j_n^mA]\bigr\|\le|\omega_n-\omega_m|\,\|A\|,
+\qquad
+\bigl\|j_n^m(\mathcal D_n^*A)-\mathcal D_m^*(j_n^mA)\bigr\|\le2|\gamma_n-\gamma_m|\,|F|\,\|A\|,
+\tag{F.10.4g.9.2}
+$$
+so the coherent and dissipative parts separately satisfy (F.0.1) on $\mathfrak A_{\mathrm{loc}}$, with limits $i[H,\cdot]$ and $\mathcal D^*$. For $A=\sigma_x^{(0)}$ both differences are nonzero whenever $\omega_n\ne\omega_m$ and $\gamma_n\ne\gamma_m$;
+3. let $T_t$ act on the algebra of each finite site set $F$ by $\operatorname{Ad}e^{itH}\circ\bigotimes_{x\in F}e^{t\gamma(\operatorname{Ad}\sigma_z^{(x)}-\mathrm{id})}$. Then $T_t$ extends to a strongly continuous semigroup of unital completely positive contractions of $\mathfrak A_\infty$, whose generator is the closure of $\mathcal L^*=i[H,\cdot\,]+\mathcal D^*$ on the core $\mathfrak A_{\mathrm{loc}}$. For $A=j_n(A_n)$ supported on $F$ and $t\ge0$,
+$$
+\bigl\|j_n(e^{t\mathcal L_n^*}A_n)-T_tA\bigr\|\le t\bigl(|\omega_n-\omega|+2|\gamma_n-\gamma|\,|F|\bigr)\|A\|,
+\tag{F.10.4g.9.3}
+$$
+and the coherent groups $\operatorname{Ad}e^{itH_n}$ and dephasing semigroups $e^{t\mathcal D_n^*}$ converge separately in the same way, with the respective terms of (F.10.4g.9.3);
+4. on $O=[0,1)^d$, the entries $H_{n,O}^{\mathrm{res}}=H_n$, $V_{n,O}^{\mathrm{null}}=0$, $\Theta_O=1$, $\Psi_O=(j_n)_n$ and $\mathcal C_O=\mathfrak A_{\mathrm{loc}}$ populate the retention witness of Definition F.10.4g.5 in its bounded form, with $a=0$ and $b=\sup_n|\omega_n|$: $j_n(H_n)\to H$ in norm, and $[H_n,A_n]\to[H,A]$ for every convergent core sequence $A_n\to A$. The relative bound uses no part of $\mathcal D_n^*$, and every uniformly bounded, norm-convergent sequence of self-adjoint coherent parts meets the relative-bound and commutator-convergence conditions in this form.
+
+*Proof.* Item 1 follows from $\Lambda_n\subset\Lambda_m$, $|\Lambda_n|=2^{nd}$ and the tensor-product form of $j_n^m$. For item 2, a dephasing term at a site outside $F$ annihilates $A\otimes I$, and $H_m-H_n=\frac{\omega_m-\omega_n}2\sigma_z^{(0)}$; since $\|[\sigma_z^{(0)},A]\|\le2\|A\|$ and $\|\sigma_z^{(x)}A\sigma_z^{(x)}-A\|\le2\|A\|$, the differences are $\frac{\omega_n-\omega_m}2\,i[\sigma_z^{(0)},A]$ and $(\gamma_n-\gamma_m)\sum_{x\in F}(\sigma_z^{(x)}A\sigma_z^{(x)}-A)$, which gives (F.10.4g.9.2). For $A=\sigma_x^{(0)}$ they equal $-(\omega_n-\omega_m)\sigma_y^{(0)}$ and $-2(\gamma_n-\gamma_m)\sigma_x^{(0)}$. The traceless-gauge GKLS record of a matrix-algebra generator is unique (Gorini, Kossakowski and Sudarshan 1976), so $H_n$ and $\mathcal D_n^*$ are the gauge-fixed coherent and dissipative parts of $\mathcal L_n^*$.
+
+For item 3, the superoperators $i[H_n,\cdot]$ and $\operatorname{Ad}\sigma_z^{(x)}-\mathrm{id}$ commute pairwise, because $H_n$ is diagonal and commutes with every $\sigma_z^{(x)}$. Hence $e^{t\mathcal L_n^*}$ is the displayed product with $(\omega_n,\gamma_n)$; it leaves each $\mathfrak A_n(F)$ invariant, fixes the factors outside $F$, and is unital completely positive. The same formula with $(\omega,\gamma)$ defines $T_t$ on $\mathfrak A_{\mathrm{loc}}$ compatibly with every $j_n^m$. These maps are contractions, so they extend to $\mathfrak A_\infty$, and complete positivity passes to the norm limits because the positive cones of all matrix amplifications are norm closed. Strong continuity holds on each finite-dimensional $\mathfrak A(F)$ and extends by density and uniform contractivity. The dense subspace $\mathfrak A_{\mathrm{loc}}$ lies in the generator domain, is invariant under $T_t$, and the generator acts there as $\mathcal L^*$; by Engel and Nagel (2000), Proposition II.1.7, it is a core. On $\mathfrak A_n(F)$ the difference of the two generators has norm at most $|\omega_n-\omega|+2|\gamma_n-\gamma|\,|F|$. Duhamel's formula
+$$
+e^{t\mathcal L_n^*}A-e^{t\mathcal L^*}A=\int_0^te^{(t-s)\mathcal L_n^*}(\mathcal L_n^*-\mathcal L^*)e^{s\mathcal L^*}A\,ds,
+$$
+with contractive factors and $e^{s\mathcal L^*}A\in\mathfrak A_n(F)$, gives (F.10.4g.9.3). The coherent and dissipative factors obey the same argument with only their own parameter differences.
+
+For item 4, $\|[H_n,A]\|\le|\omega_n|\,\|A\|\le b\|A\|$ on the core, which is the relative bound with $a=0$. Also $\|j_n(H_n)-H\|=\tfrac12|\omega_n-\omega|\to0$, so the resolvents converge in norm in every representation, and
+$$
+\|[H_n,A_n]-[H,A]\|\le|\omega_n-\omega|\,\|A_n\|+|\omega|\,\|A_n-A\|\to0.
+$$
+∎
+
+The sequence is ultralocal: $T_t$ preserves the support of every core element, so its Lieb--Robinson cone is contained in every causal cone of Theorem F.0(4). It therefore supplies a nonconstant carrier, separately convergent gauge-fixed coherent and dissipative parts, and the bounded form of the retention witness of Definition F.10.4g.5. Propagation is absent, and so is an extensive coherent part, for which the relative bound with $a<1$ is a substantive constraint.
+
+**Resolution TV-F-04-R1 (Metadata).** Exact domain: the dyadic qubit carriers and gauge-fixed generators (F.10.4g.9.1) in every dimension $d\ge1$ with convergent parameters $\omega_n\to\omega$, $\gamma_n\to\gamma\ge0$. Premises: the traceless-Hamiltonian, traceless-jump gauge and the displayed embeddings. Equivalence: equality after transport by $j_n^m$ and $j_n$. Budget: every core element and every compact interval of nonnegative time, handled by the product formula and the Duhamel estimate. Verifier: commutation of the single-site terms, the bounds (F.10.4g.9.2)--(F.10.4g.9.3), and the invariant-core criterion of Engel and Nagel (2000). Falsifier: a nonzero limiting defect on a core element, failure of (F.10.4g.9.3), or a violated retention-witness inequality. Provenance class: source-internal explicit formal construction. Downstream consumers: Definition F.10.4g.5, Corollary F.10.4g.6, Proposition F.10.4g.8, Theorem F.0(3) and `TV-F-04`. Nonvacuity: $\omega_n=\omega+2^{-n}$ and $\gamma_n=\gamma+2^{-n}$, whose finite-stage defects on $\sigma_x^{(0)}$ are nonzero. This is `positive-discharge` of a nonconstant formal refinement sequence with separately convergent gauge-fixed coherent and dissipative parts and a retention witness populated in its bounded form $a=0$. A propagating gauge-fixed sequence with a translation-invariant extensive coherent part obeying the relative bound of Definition F.10.4g.5 with $a<1$, and the realization of the gauge-fixed split on the PU MPU carrier, remain `C+R` under `TV-F-04`.
+
 ### F.10.5 Golay Self-Duality and Finite-Resolution Haag Duality
 
 **Definition F.10.5a (Golay-Pauli Carrier).** Let
@@ -2616,6 +2829,29 @@ Consequently the registered two-label boundary and its coarsening $Z\to *$ are b
 *Proof.* On each block the algebras in (F.10.6.8) are mutual commutants generating the full block algebra. Their common center remains $\mathbb C^2$ regardless of the state. Only block zero has positive state weight. Every retained local observable therefore acts, for purposes of this state, through its block-zero component. The two components see the product state $\rho_R\otimes\rho_{\bar R}$, and every local copy of the readable central label is the constant zero. Thus both unconditional and boundary-conditioned local records are independent. Replacing the boundary register by a singleton preserves every retained protocol distribution and its shielding property. The strict structural-cost inequality follows from the two registered alphabet sizes. Hence local gauge splitting and Markov sufficiency do not force state-dependent minimality of the common center. ∎
 
 **Resolution TV-F-12-R1.** Proposition F.10.6e is a target-exact `negative-refutation` of minimality from local gauge splitting, common-center structure, and Markov sufficiency alone. Corollary F.10.6d's no-sufficient-coarsening condition is therefore necessary; a classification of a specified nontrivial state family proceeds by its sufficient-center response quotient.
+
+**Proposition F.10.6f (PCE-Minimal Sufficient Boundaries Need Not Be Unique).** On the classical finite branch of Definition F.10.6a, let $X_R,E_{\bar R}\in\{0,1\}$ and let the registered boundary $B_R\in\{1,2,3\}$ have the joint law
+$$
+\Pr(X_R,B_R,E_{\bar R})=\tfrac13\bigl(\delta_{(0,1,0)}+\delta_{(0,2,1)}+\delta_{(1,3,1)}\bigr),
+\tag{F.10.6.11}
+$$
+with the complete interior and exterior readouts $X_R$ and $E_{\bar R}$ as the retained protocol class. Label the five deterministic coarsenings $B'$ of $B_R$ by the partitions of $\{1,2,3\}$. Then
+$$
+\begin{aligned}
+&I(X_R:E_{\bar R}\mid B')=0
+\quad\text{for }\{1\}\{2\}\{3\},\ \{1,2\}\{3\},\ \{1\}\{2,3\},\\
+&I(X_R:E_{\bar R}\mid B')=\tfrac23\log2
+\quad\text{for }\{1,3\}\{2\},
+\qquad
+I(X_R:E_{\bar R})=\log3-\tfrac43\log2 .
+\end{aligned}
+\tag{F.10.6.12}
+$$
+Hence $\{1,2\}\{3\}$ and $\{1\}\{2,3\}$ are both sufficient and PCE-minimal under coarsening, neither is a coarsening of the other, and their only common coarsening is not sufficient. The coarsening family of $B_R$, ordered by coarsening, therefore has no coarsest sufficient member. Both minimal boundaries have alphabet cardinality $2$, block probabilities $(\tfrac23,\tfrac13)$ and Shannon entropy $\log3-\tfrac23\log2$, so neither the registered-alphabet cost nor the boundary entropy selects one of them. The diagonal density matrix of (F.10.6.11) on tensor factors $\mathbb C^2\otimes\mathbb C^3\otimes\mathbb C^2$, with coarsenings applied as classical relabeling channels on the middle factor, gives the same values of (F.10.6.2).
+
+*Proof.* On each boundary value the pair $(X_R,E_{\bar R})$ is deterministic, so the finest boundary is sufficient. Given $B_R\in\{1,2\}$, $X_R=0$ is constant, and given $B_R\in\{2,3\}$, $E_{\bar R}=1$ is constant. A constant variable is independent of every variable, so both two-block coarsenings satisfy the conditional independence that Theorem F.10.6b(1) identifies with (F.10.6.1). Given $B_R\in\{1,3\}$, an event of probability $\tfrac23$, the pair is $(0,0)$ or $(1,1)$ with probability $\tfrac12$ each, which gives $\tfrac23\log2>0$. Without conditioning, $\Pr(X_R=1,E_{\bar R}=0)=0$ while $\Pr(X_R=1)\Pr(E_{\bar R}=0)=\tfrac19$, and direct evaluation gives $\log3-\tfrac43\log2>0$. These are all five partitions of a three-element set. The only strict coarsening of either two-block partition is the one-block partition, which fails, so both are PCE-minimal. They are distinct partitions with the same number of blocks, hence incomparable, and every common coarsening of them is the one-block partition. The block probabilities follow from (F.10.6.11). For the diagonal density matrix, every reduced state after a classical relabeling channel is diagonal in a product basis, so each quantum conditional mutual information equals the corresponding classical value. ∎
+
+**Resolution TV-F-17-R1 (Metadata).** Exact domain: the deterministic coarsenings of the registered three-valued boundary in (F.10.6.11), with the complete interior and exterior readouts, and its diagonal quantum realization. Premises: Definition F.10.6a's sufficiency and PCE-minimality under coarsening, and Theorem F.10.6b(1). Equivalence: equality of boundary partitions; conditional independence is tested on the full joint law. Budget: all five partitions of $\{1,2,3\}$. Verifier: exact evaluation of the conditional laws and of (F.10.6.12). Falsifier: failure of sufficiency for either two-block partition, sufficiency of the one-block partition, or a comparability relation between the two minimal partitions. Provenance class: source-internal exact finite countermodel. Downstream consumers: Definition F.10.6a, Corollaries F.10.6c and F.10.6d and `TV-F-17`. Nonvacuity: the displayed law. This is `negative-refutation` of uniqueness of the PCE-minimal sufficient boundary under coarsening, and hence of the existence of a coarsest sufficient member of the deterministic coarsening family on the finite classical and diagonal quantum branches. A registered selection rule among minimal sufficient boundaries, uniform recovery and decoupling-to-clustering bounds along refining carriers beyond the fixed-state Theorem F.10.8b, and their physical realization remain `M+C+R` under `TV-F-17`.
 
 ### F.10.7 Modular-Inclusion Reconstruction of Local Time
 

@@ -486,7 +486,94 @@ For a candidate in item 1, strict rank selection by Theorem Z.2.5e additionally 
 
 *Proof.* Equality in item 1 is exactly the factorization that makes every vector in $N=\ker p$ response-null. The additional class and cost hypotheses permit application of Theorem Z.2.5e to the corresponding active-rank or eight-context comparison. If the equality fails, its negation supplies a retained protocol input on which the two response functions differ. Definition D.8.9a quotients by equality of all retained finite protocol-response presheaves, so that candidate belongs to a different quotient class. The two response alternatives are exhaustive by excluded middle; the strict-cost conclusion uses the additional registered comparison hypotheses. ∎
 
-**Resolution record Z.2.5f-R1 (`TV-Z-01/02`, same-response closure).** Corollary Z.2.5f supplies the exhaustive response-factorization dichotomy for finite split extensions. Strict least-rank selection is discharged only for the two comparison classes and cost hypotheses of Theorem Z.2.5e. An extension with different non-support ledger entries requires a separate complete-cost comparison, even when its response factors through $E_0$. Physical realization of the selected quotient remains a separate carrier record.
+**Resolution record Z.2.5f-R1 (`TV-Z-01/02`, same-response closure).** Corollary Z.2.5f supplies the exhaustive response-factorization dichotomy for finite split extensions. Strict least-rank selection is discharged only for the two comparison classes and cost hypotheses of Theorem Z.2.5e. An extension with different non-support ledger entries requires a separate complete-cost comparison, even when its response factors through $E_0$. Physical realization of the selected quotient remains a separate carrier record. Proposition Z.2.5g and Theorem Z.2.5h construct the register-level unitary and CPTP model of both selected quotients on $\mathcal H_0$; the carrier record is a response-preserving overlap map from the active operational branch of Theorems Z.1 and Z.2 to this model.
+
+**Proposition Z.2.5g (Unitary Eight-Context Carrier and Null-Extension Realization).** Let $\mathcal H_0=(\mathbb C^2)^{\otimes3}$ carry the orthonormal register basis $|\phi\,p\,c\rangle$ of Definition Z.1, let $T$ be the two-phase transition of Theorem 15(2), and let $\mathsf Y$ be an eight-level classical label register with basis $|s\rangle_{\mathsf Y}$, $s\in\{0,1\}^3$. Define
+$$
+U_T|s\rangle=|T(s)\rangle,
+\qquad
+\mathcal M_8(\rho)=\sum_{s\in\{0,1\}^3}\langle s|\rho|s\rangle\,|s\rangle\langle s|_{\mathsf Y}.
+\tag{Z.2.5g.1}
+$$
+Then:
+
+1. $U_T$ is a permutation unitary whose basis orbit is the eight-cycle of Theorem 15(2), so $U_T^8=I$ and $U_T^k\ne I$ for $0<k<8$. It carries each $c=0$ register state to the $c=1$ state with the same $(\phi,p)$ and exchanges the two phase slices.
+2. $\mathcal M_8$ is completely positive and trace preserving, $\mathcal M_8(|s\rangle\langle s|)=|s\rangle\langle s|_{\mathsf Y}$, and
+$$
+\mathcal M_8(U_T\rho U_T^\dagger)=P_T\,\mathcal M_8(\rho)\,P_T^\dagger,
+\qquad
+P_T|s\rangle_{\mathsf Y}=|T(s)\rangle_{\mathsf Y}.
+$$
+The eight context preparations are mutually orthogonal, each has a deterministic response, distinct contexts have distinct responses, and the joint coordinate readout returns every label in $\{0,1\}^3$.
+3. For $d\ge8$, use the aligned coordinates, inclusion $i_d$ and projection $p_d$ of Theorem Z.2.5e, put $U_T^{(d)}=U_T\oplus I_{d-8}$, and define the measurement channel
+$$
+\mathcal M_d(\sigma)=\mathcal M_8(p_d\sigma p_d^\dagger)+\operatorname{Tr}\bigl[(I_d-i_dp_d)\sigma\bigr]\,|\bot\rangle\langle\bot|
+$$
+with one additional flag outcome $\bot$. Then, for every density operator $\rho$ on $\mathcal H_0$,
+$$
+U_T^{(d)}i_d=i_dU_T,
+\qquad
+\mathcal M_d(i_d\rho\,i_d^\dagger)=\mathcal M_8(\rho).
+\tag{Z.2.5g.2}
+$$
+
+Consequently $(\mathcal H_0,U_T,\mathcal M_8)$ is a register-level model of the eight-dimensional member of $\mathcal C_{\mathrm{ctx,null}}$, with a unitary and a CPTP response that carry the dynamics of Theorem 15(2). On every larger carrier the flagged extension $(U_T^{(d)},\mathcal M_d)$ restricts through $i_d$ to the same dynamics and response, and Theorem Z.2.5e selects the eight-dimensional carrier under strictly increasing support cost.
+
+*Proof.* Theorem 15(2) proves that $T$ is a bijection of $\{0,1\}^3$ whose orbit through $(0,0,0)$ has length eight. A bijection of an orthonormal basis defines a permutation unitary, and the orbit length gives $U_T^8=I$ and $U_T^k|000\rangle\ne|000\rangle$ for $0<k<8$. The phase statements are the slice formulas $T(\phi,p,0)=(\phi,p,1)$ and $T(\phi,p,1)=(1-p,\phi,0)$.
+
+The Kraus operators of $\mathcal M_8$ are $|s\rangle_{\mathsf Y}\langle s|$, and $\sum_s|s\rangle\langle s|=I_8$. Direct evaluation gives $\mathcal M_8(|s\rangle\langle s|)=|s\rangle\langle s|_{\mathsf Y}$. Since $\langle s|U_T\rho U_T^\dagger|s\rangle=\langle T^{-1}(s)|\rho|T^{-1}(s)\rangle$, reindexing by $r=T^{-1}(s)$ gives the intertwining identity. The contexts are orthonormal basis vectors with the distinct deterministic outputs $|s\rangle\langle s|_{\mathsf Y}$, and the joint readout of a context is its label.
+
+The block form of $U_T^{(d)}$ gives $U_T^{(d)}i_d=i_dU_T$. The channel $\mathcal M_d$ has Kraus operators $|s\rangle_{\mathsf Y}\langle s|p_d$ and $|\bot\rangle\langle f_r|$ for an orthonormal basis $(f_r)$ of $\operatorname{ran}(I_d-i_dp_d)$; their completeness is $i_dp_d+(I_d-i_dp_d)=I_d$. By (Z.2.5e.2), $p_di_d=I_8$, so $p_di_d\rho\,i_d^\dagger p_d^\dagger=\rho$ and $\operatorname{Tr}[(I_d-i_dp_d)i_d\rho\,i_d^\dagger]=\operatorname{Tr}\rho-\operatorname{Tr}\rho=0$. This proves (Z.2.5g.2). The final sentence is items 4--6 of Theorem Z.2.5e. ∎
+
+**Theorem Z.2.5h (Verification-Record Realization of the Rank-Two Quotient and Its Architecture Census).** On $\mathcal H_0$ define the match bit $\mu(\phi,p,c)=1\oplus\phi\oplus p$, equal to $1$ for match ($\phi=p$) and $0$ for mismatch, and the verification-record channel
+$$
+\Phi_{\mathrm{ver}}(\rho)=\sum_{s\in\{0,1\}^3}\langle s|\rho|s\rangle\,|\mu(s)\mu(s)\mu(s)\rangle\langle\mu(s)\mu(s)\mu(s)|,
+\tag{Z.2.5h.1}
+$$
+which writes the sharp verification value into the repetition-code words of Definition Z.3. Let $\mathcal A=\operatorname{span}\{|000\rangle,|111\rangle\}$, and let $\mathcal M_{\mathrm{rec}}$ be the projective readout of match on $|111\rangle$ and mismatch on $|000\rangle$. Then:
+
+1. $\Phi_{\mathrm{ver}}$ is CPTP and factors as $\Phi_{\mathrm{ver}}=\mathcal P_\mu\circ\mathcal M_8$ with the classical-to-quantum preparation $\mathcal P_\mu(|s\rangle\langle s|_{\mathsf Y})=|\mu(s)^3\rangle\langle\mu(s)^3|$. Its output support is exactly $\mathcal A$, and $\mathcal M_{\mathrm{rec}}\circ\Phi_{\mathrm{ver}}$ returns $\mu(s)$ with certainty on every context $|s\rangle$.
+2. Let $\Phi$ be a CPTP map from $\mathcal B(\mathcal H_0)$ into a finite-dimensional output algebra, let $E_{\mathrm m},E_{\mathrm{mm}}\ge0$ with $E_{\mathrm m}+E_{\mathrm{mm}}\le I$, and suppose $\operatorname{Tr}[E_{\mathrm m}\Phi(|s\rangle\langle s|)]=1$ and $\operatorname{Tr}[E_{\mathrm{mm}}\Phi(|s'\rangle\langle s'|)]=1$ for two contexts $s,s'$. Then the output support of $\Phi$, the span of the ranges of all its outputs, has dimension at least $2$. Hence $\Phi_{\mathrm{ver}}$ attains the least record rank. Its output support $\mathcal A$, with rays labeled by $\mathcal M_{\mathrm{rec}}$, is the $a=2$ member of $\mathcal C_{\mathrm{bin,null}}^{(8)}$ with $A_{\mathrm{null}}=0$, and for every $N\subseteq\mathcal A^\perp$ with $\dim N=a-2\in\{1,\ldots,5\}$ the readout $\mathcal M_{\mathrm{rec}}\circ P_{\mathcal A}$ on $\mathcal A\oplus N$ is a same-response member of rank $a$.
+3. For each of the sixteen injective two-phase architectures of Remark 5.2.2c and each $T$-orbit $O$, let $q_O$ be the uniform density operator on the Commit-Snapshot states $O\cap\{c=1\}$, which is their long-run frequency law along $O$. Then
+$$
+\Phi_{\mathrm{ver}}(q_O)=(1-f_O)|000\rangle\langle000|+f_O|111\rangle\langle111|,
+\qquad
+f_O=0,\ 1,\ \tfrac23,\ \tfrac12
+\ \text{ for }\ |O|=2,\ 4,\ 6,\ 8.
+\tag{Z.2.5h.2}
+$$
+The corresponding QFI support counts of Prediction Z.1 are $14$, $14$, $26$ and $24$.
+4. For every architecture satisfying (FC), including Theorem 15(2),
+$$
+\Phi_{\mathrm{ver}}(q_O)=\frac12\bigl(|000\rangle\langle000|+|111\rangle\langle111|\bigr)=\rho_0,
+\tag{Z.2.5h.3}
+$$
+the flat rank-two state of Definition Z.3. Each record value then has exactly two Commit-Snapshot preimages, so the discarded snapshot label has conditional Shannon entropy $\ln2$ given the record.
+
+*Proof.* (1) The Kraus operators $|\mu(s)^3\rangle\langle s|$ satisfy $\sum_s|s\rangle\langle s|=I_8$. Every output is diagonal on $\{|000\rangle,|111\rangle\}$, and both code words occur because $\mu$ takes both values, so the output support is $\mathcal A$. The factorization is (Z.2.5h.1) read through (Z.2.5g.1), and $\mathcal M_{\mathrm{rec}}$ returns the label $\mu$ on $|\mu^3\rangle\langle\mu^3|$.
+
+(2) If $\operatorname{Tr}(E_{\mathrm m}\sigma)=1$ for a density operator $\sigma$, then $\operatorname{Tr}[(I-E_{\mathrm m})\sigma]=0$ with $I-E_{\mathrm m}\ge0$, so $(I-E_{\mathrm m})\sigma=0$ and $\operatorname{ran}\sigma\subseteq\ker(I-E_{\mathrm m})$. Likewise the mismatch output $\sigma'$ has $\operatorname{ran}\sigma'\subseteq\ker(I-E_{\mathrm{mm}})$. If $E_{\mathrm{mm}}v=v$, then $0\le\langle v,E_{\mathrm m}v\rangle\le\langle v,(I-E_{\mathrm{mm}})v\rangle=0$, hence $E_{\mathrm m}v=0$. Thus $\operatorname{ran}\sigma'\subseteq\ker E_{\mathrm m}$, which is orthogonal to $\ker(I-E_{\mathrm m})$. The two nonzero ranges are orthogonal, so the output support has dimension at least $2$, and part (1) attains $2$. The labeled orthogonal rays of $\mathcal A$ and the nonzero complement $\mathcal A^\perp$ satisfy the defining conditions of $\mathcal C_{\mathrm{bin,null}}^{(8)}$ with $A_0=\mathcal A$. On $\mathcal A\oplus N$, $P_{\mathcal A}$ annihilates $N$, so the readout factors through $P_{\mathcal A}$ exactly as in Theorem Z.2.5e.
+
+(3) In the notation of Remark 5.2.2c, $W(\phi,p)=p\oplus k(\phi)$ and $U(\phi,p)=\phi\oplus h(p)$. Two applications of $T$ send a Commit-Snapshot state $(\phi,q,1)$ to $(G(\phi,q),1)$, where
+$$
+G(\phi,q)=\bigl(1-q,\ \phi\oplus g(q)\bigr),
+\qquad
+g(q):=h(q)\oplus k(1-q).
+$$
+Because $T$ alternates the two phase slices, each $T$-orbit $O$ contains exactly $|O|/2$ Commit-Snapshot states, which form one $G$-cycle, and each occurs with long-run frequency $2/|O|$ among them. As $(k,h)$ ranges over the sixteen architectures, $g$ ranges over the four Boolean maps of one variable, each four times. A match state has $\phi=q$. Direct iteration gives all orbits:
+
+- $g\equiv0$: the cycle $(0,0)\to(1,0)\to(1,1)\to(0,1)\to(0,0)$, with match fraction $1/2$ and $|O|=8$;
+- $g\equiv1$: the cycle $(0,0)\leftrightarrow(1,1)$, with match fraction $1$ and $|O|=4$, and the fixed mismatches $(0,1)$ and $(1,0)$, with $|O|=2$;
+- $g(q)=q$: the cycle $(0,0)\to(1,0)\to(1,1)\to(0,0)$, with match fraction $2/3$ and $|O|=6$, and the fixed mismatch $(0,1)$;
+- $g(q)=1\oplus q$: the cycle $(0,0)\to(1,1)\to(0,1)\to(0,0)$, with match fraction $2/3$ and $|O|=6$, and the fixed mismatch $(1,0)$.
+
+Hence $f_O$ depends only on $|O|$ as in (Z.2.5h.2), and (Z.2.5h.1) applied to $q_O$ gives the displayed diagonal state. A pure image has seven positive--zero pairs and count $14$; the spectrum $(2/3,1/3,0^6)$ has count $2(1+12)=26$; the flat spectrum has count $24$ by Theorem Z.5.
+
+(4) (FC) holds exactly when one orbit visits all eight register states, hence exactly for $g\equiv0$, which contains Theorem 15(2) with $k=h=0$. Then $f_O=1/2$, and (Z.2.5h.2) becomes (Z.2.5h.3). The four snapshot states are all pairs $(\phi,q)$; match has the preimages $(0,0),(1,1)$ and mismatch has $(1,0),(0,1)$, each with conditional probability $1/2$. ∎
+
+**Resolution TV-Z-02-R1 (Metadata).** Exact domain: the three-register carrier $\mathcal H_0$ with the transition of Theorem 15(2), the context channel (Z.2.5g.1), and every null extension $i_d$, $d\ge8$, of $\mathcal C_{\mathrm{ctx,null}}$. Premises: Definition Z.1, Theorem 15(2) and Theorem Z.2.5e. Equivalence: label-preserving unitary change of basis of the eight context rays and of the aligned null complement. Budget: all eight contexts, all powers of $U_T$ and every $d\ge8$. Verifier: permutation-matrix unitarity, Kraus completeness, the intertwining identity and (Z.2.5g.2). Falsifier: a nonunitary $U_T$, a context with a nondeterministic or repeated response, or failure of (Z.2.5g.2) for some $d\ge8$. Provenance class: source-internal finite construction in finite-dimensional quantum systems with unitary and CPTP maps. Downstream consumers: Theorem Z.2, Corollary Z.2, Theorem Z.2.5h and `TV-Z-02`. Nonvacuity: the eight-cycle through $|000\rangle$. This is `positive-discharge` of the register-level unitary and CPTP model of the eight-context carrier, quotient and response on $\mathcal H_0$, together with the restriction identity (Z.2.5g.2) for every $d\ge8$. The carrier record, a response-preserving overlap map from the PCE-minimal active operational branch of Theorem Z.2 to this model that carries its retained protocol-response presheaf, remains `C` under `TV-Z-02`.
+
+**Resolution TV-Z-01-R1 (Metadata).** Exact domain: the verification-record channel (Z.2.5h.1), every CPTP realization of the sharp two-valued record, and all thirty-two orbits of the sixteen injective two-phase architectures of Remark 5.2.2c. Premises: Definition Z.1, Definition Z.3, Theorem 15(2), Remark 5.2.2c, Theorem Z.2.5e and Proposition Z.2.5g. Equivalence: label-preserving unitary change of basis of the match and mismatch rays and of the null complement. Budget: all eight context preparations, all record-producing CPTP maps with effect pairs, and all sixteen architectures. Verifier: Kraus completeness, the orthogonal-support argument for certain effects, and the four-case analysis of the Commit-Snapshot map $G$. Falsifier: a sharp two-valued CPTP record with one-dimensional output support, an orbit whose match fraction differs from (Z.2.5h.2), or an (FC) architecture whose verification image differs from $\rho_0$. Provenance class: source-internal finite construction and classification in finite-dimensional quantum systems with CPTP maps. Downstream consumers: Theorem Z.1, Definition Z.3, Theorem Z.5, Prediction Z.1 and `TV-Z-01`. Nonvacuity: the Theorem 15(2) orbit. This is `positive-discharge` of the register-level CPTP model of the selected rank-two quotient: $\Phi_{\mathrm{ver}}$ realizes it on $\mathcal H_0$ as the output support of an explicit verification record, every sharp two-valued CPTP record has output support of dimension at least two, and the census obtains $\rho_0$ as the verification image of every (FC) cycle. The carrier record, a response-preserving overlap map from the Hilbert carrier of the retained SPAP verification record on Theorem Z.1's active-kernel branch to this model, remains `C` under `TV-Z-01`.
 
 ## Z.4 Algebraic Constraints on d_0
 
@@ -1691,6 +1778,19 @@ After a registered orthogonal identification and unit normalization, the Hurwitz
 **Candidate map.** Choose a bijection from the nonzero syndromes to the three frames and, in each real eight-dimensional syndrome block, choose the ordered basis $q_\mu,iq_\mu$ with $\omega=(-1+i+j+k)/2$ and $q_\mu\in\{I,i\sigma_1,i\sigma_2,i\sigma_3\}$. Map these eight basis labels to $+\omega^{s-1}q_\mu$ and $-\omega^{s-1}q_\mu$, respectively. This is an explicit bijection of 24 mode labels with 24 shell vertices once the choices are registered.
 
 The map is a bijection of finite mode labels. A response-preserving realization registers the observable kernel $K_{\mathrm{mode}}$ and verifies $K_{\mathrm{mode}}(u,v)=K_{\mathrm{shell}}(\iota u,\iota v)$ for every pair of labels. For a nominated group action, its equivariance certificate checks $\iota(g\cdot u)=g\cdot\iota(u)$ on generators. These finite conditions define an explicit route to Theorem Z.11's injection certificate. The full 24-dimensional interface inner product has a different type: the two independent labels $q_\mu,iq_\mu$ map to antipodal, linearly dependent carrier vectors.
+
+**Proposition Z.10b (Isotropy Obstruction for the Mode-to-Cell Response Kernel).** Let $\mathfrak m=T_{[A]}\mathrm{Gr}(2,8)\cong\operatorname{Hom}(\mathbb C^2,\mathbb C^6)$ carry the isotropy action of $H=S(U(2)\times U(6))$ and the normalized Bures metric $g_B$, and let $(e_\mu)_{\mu=1}^{24}$ be any real basis of $\mathfrak m$ whose members have unit QFI. For every integer $D<24$:
+
+1. every $H$-equivariant real-linear map from $\mathfrak m$ into an orthogonal $H$-representation of dimension $D$ is zero;
+2. no unit vectors $x_1,\ldots,x_{24}\in\mathbb R^D$ satisfy $x_\mu\cdot x_\nu=K(e_\mu,e_\nu)$ for all $\mu,\nu$ with $K$ an $H$-invariant real bilinear form on $\mathfrak m$.
+
+Every injection of the $24$ labels into the regular $24$-cell of Theorem Z.11 preserves the per-mode QFI value and assigns equal cell radii. Consequently the pairwise kernel $K_{\mathrm{mode}}$ of a four-dimensional response-preserving injection equals $K(e_\mu,e_\nu)$ for no unit-QFI real basis and no stabilizer-invariant bilinear form $K$, including the QFI and Bures metrics; it must be registered as symmetry-breaking data, such as the marked syndrome-to-frame map of the preceding construction.
+
+*Proof.* The central elements $(e^{-3i\theta/4}I_2,e^{i\theta/4}I_6)\in H$ act on $\mathfrak m$ by $Z\mapsto e^{i\theta}Z$. Hence $\mathfrak m\otimes_{\mathbb R}\mathbb C\cong V\oplus\overline V$ with $V=\operatorname{Hom}(\mathbb C^2,\mathbb C^6)$, the central phase acting by $e^{i\theta}$ on $V$ and by $e^{-i\theta}$ on $\overline V$. Lemma Z.24a.0 gives irreducibility of $V$, and the central characters give $V\not\cong\overline V$, so $\mathfrak m$ is irreducible over $\mathbb R$ and its commutant is $\{x+yJ:x,y\in\mathbb R\}$, with $J$ multiplication by $i$. The kernel of an equivariant linear map is an invariant subspace; it is not $\{0\}$ because $\dim\mathfrak m=24>D$, so it is $\mathfrak m$. This proves item 1.
+
+For item 2, a Gram matrix is symmetric, so $K$ is symmetric on a basis and hence symmetric. The invariant bilinear forms are $g_B((x+yJ)\cdot,\cdot)$, and $g_B(J\cdot,\cdot)$ is alternating, so $K=c\,g_B$. The unit diagonal and the normalization $F_Q=4g_B$ give $1=c\,g_B(e_\mu,e_\mu)=c/4$, so $K=4g_B$, and $(K(e_\mu,e_\nu))$ is the Gram matrix of a basis under a positive-definite form, of rank $24$. The Gram matrix of $24$ vectors in $\mathbb R^D$ has rank at most $D<24$. The per-mode statement is Theorem Z.5 together with the common norm of the $24$-cell vertices. ∎
+
+**Resolution TV-Z-06-R1 (Metadata).** Exact domain: every real basis of $\mathfrak m$ with unit QFI, every $D<24$, every orthogonal $H$-representation and every $H$-invariant real bilinear form. Premises: Theorem Z.5, Lemma Z.12, Lemma Z.24a.0 and Definition Z.9a. Equivalence: $H$-equivariant isometry of $\mathfrak m$ and orthogonal change of basis of $\mathbb R^D$. Budget: every $D\le23$, including $D=4$. Verifier: the central-character irreducibility argument, the commutant $\{x+yJ\}$ and the Gram-rank bound. Falsifier: a nonzero equivariant map $\mathfrak m\to\mathbb R^D$ with $D<24$, or $24$ unit vectors in $\mathbb R^D$ whose Gram matrix is $4(g_B(e_\mu,e_\nu))$. Provenance class: source-internal representation-theoretic no-go. Downstream consumers: Definition Z.9a, Theorems Z.10--Z.11 and `TV-Z-06`. Nonvacuity: the real basis $\{E_{kj},iE_{kj}\}$ of $\operatorname{Hom}(\mathbb C^2,\mathbb C^6)$ rescaled to unit QFI, and the $D_4$ root shell. This is `negative-refutation` of populating the Definition Z.9a injection certificate in $D<24$ by an $H$-equivariant linear map or an $H$-invariant pairwise kernel. A registered symmetry-breaking $K_{\mathrm{mode}}$ with its verified injection, the support-cost record and the continuum, principal-symbol, temporal and metric maps on the same carrier remain `C+R` under `TV-Z-06`.
 
 ## Z.11 Dimensional Selection
 
@@ -5227,7 +5327,7 @@ Both $L=1$ and $L=1/16$ are positive and invariant, but they give $K_{\mathrm{ef
 
 **Lemma Z.14 (Conditional Normalized Chern-Flux Branch).** The group $\pi_2(\mathrm{Gr}(a,d_0))\cong\mathbb Z$ is generated by the standard Schubert $\mathbb{CP}^1$. Topology alone does not define a holonomy around a two-cycle. Let $L$ be a separately chosen Hermitian line bundle with unitary connection of curvature $F_\nabla$, adopt the convention
 $$
-F:=-iF_\nabla,
+F:=iF_\nabla,
 \qquad
 c_1(L)=\left[\frac{F}{2\pi}\right],
 $$
@@ -5256,7 +5356,7 @@ $$
 \Delta^{(2)}=\frac{\pi u^*}{24\sqrt{K_0}}.
 $$
 
-*Proof.* On the selected line-bundle, orientation, and unit-class branch of Lemma Z.14, the real curvature two-form $F=-iF_\nabla$ obeys
+*Proof.* On the selected line-bundle, orientation, and unit-class branch of Lemma Z.14, the real curvature two-form $F=iF_\nabla$ obeys
 $$
 \int_{\mathbb{CP}^1}F=2\pi.
 $$
@@ -5283,6 +5383,36 @@ $$
 ∎
 
 **Remark Z.25.1 (Separable-Response Branch Dependence).** Theorem Z.25 is stated on the canonical separable curvature-response branch, in which the second-order $U(1)$ interface matching functional factorizes as the product of the five named scalars with unit coefficient in QFI-natural units. Lemma Z.14, Theorem Z.18, Theorem Z.19, Theorem Z.23, and Theorem Z.7 establish the normalized holonomy, active fraction, embedding factor, intrinsic curvature, and coupling on their stated branches. The effective response factor additionally requires the independent democratic input $L_{\mathrm{vis}}=1/(ad_0)$ in Theorem Z.24. The separable product structure is another branch assumption on the second-order response functional, analogous to the explicit factorization hypotheses stated in Theorem H.3 for the gravitational bridge-law product structure. Consequently Theorem Z.25 supplies one load-bearing entry of the Thomson certificate core. It does not by itself close the full Thomson interval, because the residual entry $R_\alpha$ remains governed by Definition Z.27.11a and Theorem Z.27.11j.1.
+
+**Theorem Z.25a (Normalized Chern-Flux Bundles, Invariant Connections and Invariant Second-Order Functionals on $\mathrm{Gr}(2,8)$).** Let $X=\mathrm{Gr}(2,8)=SU(8)/S(U(2)\times U(6))$, identify $\mathfrak m=T_{[A]}X$ with $\operatorname{Hom}(\mathbb C^2,\mathbb C^6)$, let $g_{KE}$ be the metric of Lemma Z.12 and $g_B=g_{KE}/4$, let $J$ be multiplication by $i$, and put $\omega_{KE}=g_{KE}(J\cdot,\cdot)$ and $\omega_B=g_B(J\cdot,\cdot)$. Let $S$ be the tautological rank-two bundle and $\mathbb{CP}^1\subset X$ the Schubert line of Lemma Z.14.
+
+1. Hermitian line bundles on $X$ are classified up to unitary isomorphism by the flux integer $n=\int_{\mathbb{CP}^1}c_1(L)\in\mathbb Z$, and every integer occurs. The normalized class $n=1$ is represented, uniquely up to unitary isomorphism, by $(\det S)^*$.
+2. With the $SU(8)$ action induced from $\mathbb C^8$, $(\det S)^*$ carries exactly one $SU(8)$-invariant unitary connection $\nabla$. Its curvature is $F_\nabla=\nabla^2=-i\,\omega_{KE}$, so the real curvature form $iF_\nabla$, which represents $2\pi c_1((\det S)^*)$ in the standard convention $c_1=[iF_\nabla/2\pi]$, is
+$$
+iF_\nabla=\omega_{KE}=4\,\omega_B.
+\tag{Z.25a.1}
+$$
+The Schubert line has $g_{KE}$-area $2\pi$ and $g_B$-area $\pi/2$, and $\int_{\mathbb{CP}^1}iF_\nabla=2\pi$.
+3. Every unitary connection on $(\det S)^*$ has the form $\nabla+i\,a$ with a real one-form $a$, and every such connection has flux $\int_{\mathbb{CP}^1}iF_{\nabla+ia}=2\pi$. Its real curvature equals (Z.25a.1) exactly when $da=0$. Hence the unit-flux normalization fixes the curvature class, and invariance fixes the curvature form.
+4. The $S(U(2)\times U(6))$-invariant real bilinear forms on $\mathfrak m$ are exactly $x\,g_{KE}+y\,\omega_{KE}$ with $x,y\in\mathbb R$. Consequently every $SU(8)$-invariant symmetric two-tensor on $X$ is a constant multiple of $g_B$, every invariant two-form is a constant multiple of $\omega_B$, and every invariant second-order tangent functional is $Q_c(Z)=c\,g_B(Z,Z)$. In particular $\operatorname{Ric}_{g_B}=32g_B$ and $iF_\nabla(Z,JZ)=4g_B(Z,Z)$.
+5. Invariance leaves the composition of the scalar $c$ free. On the branch-input domain $(n,L)\in\mathbb Z_{>0}\times(0,\infty)$ of Lemma Z.14 and Proposition Z.24b, let $c_{\mathrm{sep}}(n,L)=\kappa nL$ with $\kappa=2\pi\cdot\frac a{d_0}\cdot\frac1{\sqrt{K_0}}\cdot\frac{32}{M}\cdot u^*$, the separable law of Theorem Z.25 with $K_{\mathrm{eff}}=32L$. For all $\mu,\nu\in\mathbb R$,
+$$
+c_{\mu,\nu}(n,L)=c_{\mathrm{sep}}(n,L)+\mu\,(n-1)(16L-1)+\nu
+\tag{Z.25a.2}
+$$
+defines the invariant second-order functional $Q_{c_{\mu,\nu}}$. For $\mu\ne0$ the law $c_{\mu,0}$, and for $\nu\ne0$ the law $c_{0,\nu}$, is not of product form $f(n)h(L)$. At the registered point $(n,L)=(1,1/16)$, $c_{\mu,\nu}=\pi u^*/(24\sqrt{K_0})+\nu$, where the first term is $\Delta^{(2)}$ of Theorem Z.25.
+
+*Proof.* (1) The fibration $S(U(2)\times U(6))\to SU(8)\to X$ has simply connected total space and connected fiber, so $X$ is simply connected. Lemma Z.14 gives $\pi_2(X)\cong\mathbb Z$ generated by $[\mathbb{CP}^1]$, so the Hurewicz theorem gives $H_2(X;\mathbb Z)\cong\mathbb Z$ with the same generator, and the universal-coefficient theorem gives $H^2(X;\mathbb Z)\cong\operatorname{Hom}(H_2(X;\mathbb Z),\mathbb Z)\cong\mathbb Z$ by pairing with $[\mathbb{CP}^1]$. Complex line bundles on the finite CW complex $X$ are classified by $c_1\in H^2(X;\mathbb Z)$ (Bott and Tu 1982). Two Hermitian metrics on one complex line bundle differ by a positive function, whose square root is a unitary isomorphism. The powers $((\det S)^*)^{\otimes n}$ realize every $n$, and Lemma Z.14 gives $n=1$ for $(\det S)^*$.
+
+(2) The Hermitian metric of $(\det S)^*$ induced from $\mathbb C^8$ and its holomorphic structure determine a unique Chern connection. The group $SU(8)$ acts by holomorphic bundle isometries, so the Chern connection is invariant. Two invariant unitary connections differ by $i\,a$ with $a$ an invariant real one-form, which is determined by the $S(U(2)\times U(6))$-invariant functional $a_{[A]}$ on $\mathfrak m$. The central elements $(e^{-3i\theta/4}I_2,e^{i\theta/4}I_6)$ act on $\mathfrak m$ by $Z\mapsto e^{i\theta}Z$, so $a_{[A]}(Z)=(2\pi)^{-1}\int_0^{2\pi}a_{[A]}(e^{i\theta}Z)\,d\theta=0$; hence $a=0$. The real curvature $iF_\nabla$ of the invariant connection is an invariant real two-form, so item 4 gives $iF_\nabla=\kappa'\omega_{KE}$. Under the identification of Lemma Z.12, a tangent vector $T$ is the off-diagonal block of $\dot P=i[P,G_T]$ for the projector $P$ of the active plane, and $\operatorname{Tr}(\dot P^2)=2\operatorname{Tr}(TT^\dagger)=g_{KE}(T,T)$. Parametrize the Schubert line by $P_v=|v\rangle\langle v|+|e_2\rangle\langle e_2|$ with $v=\cos(\vartheta/2)e_1+e^{i\varphi}\sin(\vartheta/2)e_3$. Then $\operatorname{Tr}(\dot P_v^2)=2(\langle\dot v,\dot v\rangle-|\langle v,\dot v\rangle|^2)=(d\vartheta^2+\sin^2\vartheta\,d\varphi^2)/2$, the round sphere of radius $1/\sqrt2$, with area $2\pi$ and Gauss curvature $2$; the latter agrees with the $g_{KE}$ value of the holomorphic Jacobi eigenvalue of a rank-one tangent in Proposition Z.23b. On a complex curve the Kähler form restricts to the area form, so $\int_{\mathbb{CP}^1}\omega_{KE}=2\pi$. Lemma Z.14 gives $\int_{\mathbb{CP}^1}c_1((\det S)^*)=1$, so $\int_{\mathbb{CP}^1}iF_\nabla=2\pi$ and $\kappa'=1$. Directly, in the affine coordinate $z$ of $v\propto e_1+ze_3$, the holomorphic frame $(e_1+ze_3)\wedge e_2$ of $\det S$ has squared norm $1+|z|^2$, the dual frame of $(\det S)^*$ has Chern connection form $-\bar z\,dz/(1+|z|^2)$, and its curvature is $dz\wedge d\bar z/(1+|z|^2)^2=-i\,\omega_{KE}|_{\mathbb{CP}^1}$. Since $g_B=g_{KE}/4$, $\omega_B=\omega_{KE}/4$ and the $g_B$-area is $\pi/2$.
+
+(3) Unitary connections on a Hermitian line bundle form an affine space over $i\,\Omega^1(X;\mathbb R)$, and $\nabla+i\,a$ has curvature $F_\nabla+i\,da$ and real curvature $iF_\nabla-da$. Stokes' theorem on the closed surface $\mathbb{CP}^1$ gives $\int_{\mathbb{CP}^1}da=0$. The real curvature equals (Z.25a.1) exactly when $da=0$, and item 2 shows that invariance forces $a=0$.
+
+(4) Complexification gives $\mathfrak m\otimes_{\mathbb R}\mathbb C\cong V\oplus\overline V$ with $V=\operatorname{Hom}(\mathbb C^2,\mathbb C^6)$. Lemma Z.24a.0 gives irreducibility of $V$, and the central phase acts by $e^{i\theta}$ on $V$ and $e^{-i\theta}$ on $\overline V$, so $V\not\cong\overline V$. Schur's lemma gives $\operatorname{End}_{S(U(2)\times U(6))}(\mathfrak m)=\{x+yJ:x,y\in\mathbb R\}$. Because $g_{KE}$ is invariant and nondegenerate, every invariant bilinear form is $g_{KE}(E\cdot,\cdot)$ with $E$ in this commutant, which gives $x\,g_{KE}+y\,\omega_{KE}$. Since $J$ is $g_{KE}$-orthogonal with $J^2=-1$, the form $\omega_{KE}$ is alternating. Invariant tensor fields on the homogeneous space $X$ are determined by their invariant values at $[A]$, and a quadratic functional sees only the symmetric part. Proposition Z.23b gives $\operatorname{Ric}_{g_B}=32g_B$, and $iF_\nabla(Z,JZ)=\omega_{KE}(Z,JZ)=g_{KE}(JZ,JZ)=g_{KE}(Z,Z)=4g_B(Z,Z)$.
+
+(5) By item 4 every real function $c$ of the branch inputs defines the invariant functional $c\,g_B$. A product law satisfies $c(1,\tfrac1{16})\,c(2,1)=c(1,1)\,c(2,\tfrac1{16})$. For $c_{\mu,0}$ the difference of the two sides is $15\kappa\mu/16$, and for $c_{0,\nu}$ it is $15\kappa\nu/16$; both are nonzero because $\kappa>0$. At $(1,1/16)$ the middle term of (Z.25a.2) vanishes, and $a/d_0=1/4$, $M=24$ give $\kappa/16=\pi u^*/(24\sqrt{K_0})$. ∎
+
+**Resolution TV-Z-12-R1 (Metadata).** Exact domain: Hermitian line bundles and unitary connections on $\mathrm{Gr}(2,8)$, the $S(U(2)\times U(6))$-invariant real bilinear forms on $\mathfrak m$, and composition laws on $\mathbb Z_{>0}\times(0,\infty)$. Premises: Lemma Z.12, Lemma Z.14, Proposition Z.23b, Lemma Z.24a.0, Proposition Z.24b and Theorem Z.25. Equivalence: unitary bundle isomorphism, $SU(8)$-equivariance for connections, and equality of functionals. Budget: every flux class, every unitary connection on the normalized bundle, every invariant bilinear form and every composition law. Verifier: the Hurewicz and universal-coefficient classification, the commutant $\{x+yJ\}$, Stokes' theorem, the Schubert-line area $2\pi$, and the two $2\times2$ product minors. Falsifier: a second $SU(8)$-invariant connection on $(\det S)^*$, an invariant symmetric form not proportional to $g_{KE}$, a Schubert-line $g_{KE}$-area other than $2\pi$, or an invariance argument that excludes (Z.25a.2). Provenance class: source-internal classification with standard topology (Bott and Tu 1982). Downstream consumers: Lemma Z.14, Theorem Z.25, Remark Z.25.1, Theorem Z.26 and `TV-Z-14`. Nonvacuity: $(\det S)^*$ with its Chern connection, $c_{\mathrm{sep}}$, $c_{1,0}$ and $c_{0,1}$. This is `positive-discharge` of the classification of normalized line bundles, invariant connections and invariant second-order functionals, and `nonentailment` of separability, and of the separable value, from invariance and the normalized factors. The flux-to-response identification $\Omega_{\min}=2\pi$ and the composition law of the second-order interface functional remain `C+R` under `TV-Z-12`.
 
 
 
@@ -5451,6 +5581,46 @@ $$
 then the certified interval on that branch does not contain the measured value and the branch is demoted or refuted in the sense of Corollary Z.26c. In particular, any accepted same-branch certificate with $B\le B_{\mathrm{budget}}^{\mathrm{can}}$ would not contain the comparison value $137.035999177$, because $9.28782286269\times10^{-5}>5.649085604\times10^{-5}$. The comparison-budget number $B_{\mathrm{budget}}^{\mathrm{can}}$ itself does not become such a certified radius unless it is entered through the residual gate.
 
 *Proof.* The certified interval is $\alpha^{-1}_{0}+[-B,B]$. The stated inequality is exactly the condition that $\alpha^{-1}_{\mathrm{exp}}$ lies outside that interval. Corollary Z.26c supplies the branch-demotion/refutation consequence for an accepted pre-comparison certificate. The last sentence is the status distinction of Remark Z.26d and Definition Z.27.11a. ∎
+
+**Theorem Z.26e (Finite-Transport Rigidity and Exact Realizations of the Sinc Kernel).** Let $\mathcal H$ be a finite-dimensional Hilbert space, $G$ a Hermitian operator on $\mathcal H$, $|j\rangle,|k\rangle$ orthonormal, and $T_{jk}$ the transport generator of Lemma Z.13, with eigenvectors $|\pm\rangle=(|j\rangle\pm|k\rangle)/\sqrt2$.
+
+1. **Sine rigidity.** $\langle k|e^{-iuG}|j\rangle=-i\sin u$ for all real $u$ if and only if $G|j\rangle=|k\rangle$ and $G|k\rangle=|j\rangle$, that is, $\operatorname{span}\{|j\rangle,|k\rangle\}$ is $G$-invariant and $G$ restricts there to $T_{jk}$.
+2. **No time-homogeneous finite realization.** For every finite-dimensional complex vector space $\mathcal W$, linear operator $L$ on $\mathcal W$, vector $B\in\mathcal W$ and linear functional $A$ on $\mathcal W$, the function $u\mapsto A(e^{uL}B)$ is an exponential polynomial $\sum_mP_m(u)e^{\nu_mu}$. The function $\operatorname{sinc}$ agrees with no exponential polynomial on any nonempty open interval. Hence no matrix element or expectation value of a finite-dimensional unitary group $e^{-iuG}$, Lindblad semigroup $e^{u\mathcal L}$, or other finite-dimensional time-homogeneous linear evolution in the transport parameter equals $\operatorname{sinc}(u)$ on an open interval.
+3. **Exact open-channel realization.** For a Borel probability measure $\nu$ on $\mathbb R$ define the path-averaged transport channel
+$$
+\mathcal N_u^\nu(\rho)=\int_{\mathbb R}e^{-iusT_{jk}}\,\rho\,e^{iusT_{jk}}\,d\nu(s).
+\tag{Z.26e.1}
+$$
+It is CPTP for every real $u$, and $\mathcal N_u^\nu(|+\rangle\langle-|)=\widehat\nu(2u)\,|+\rangle\langle-|$ with $\widehat\nu(t)=\int e^{-its}\,d\nu(s)$. Hence $\mathcal N_u^\nu(|+\rangle\langle-|)=\operatorname{sinc}(u)\,|+\rangle\langle-|$ for all real $u$ if and only if $\nu$ is the uniform law on $[-1/2,1/2]$. A finitely supported $\nu$ gives a finite exponential sum, in accordance with item 2.
+4. **Chord identities and argument normalization.** Along $\psi_u=e^{-iuT_{jk}}|j\rangle$ with $0<u\le\pi/2$, the Bures angle is $\theta_B=\arccos|\langle j|\psi_u\rangle|=u$, the trace distance is $D_{\mathrm{tr}}=\sqrt{1-|\langle j|\psi_u\rangle|^2}=\sin u$, and the Bures distance is $D_B=\sqrt{2(1-|\langle j|\psi_u\rangle|)}=2\sin(u/2)$. Therefore
+$$
+\frac{D_{\mathrm{tr}}}{\theta_B}=\operatorname{sinc}(u),
+\qquad
+\frac{D_B}{\theta_B}=\operatorname{sinc}\!\left(\frac u2\right),
+\tag{Z.26e.2}
+$$
+and $\operatorname{sinc}(u)=u^{-1}\int_0^u\langle j|e^{-isT_{jk}}|j\rangle\,ds$ is the uniform path average of the survival amplitude. The two exact chord kernels of the same transport first differ at order $u^2$, as $1-u^2/6$ against $1-u^2/24$. At $u^*=2^{1/8}-1$,
+$$
+\operatorname{sinc}(u^*/2)-\operatorname{sinc}(u^*)=1.02343207321\ldots\times10^{-3},
+$$
+and replacing $\operatorname{sinc}(u^*)$ by $\operatorname{sinc}(u^*/2)$ in the curvature entry $\pi u^*\operatorname{sinc}(u^*)/(24\sqrt{K_0})$ of Theorem Z.26 changes it by $7.00039767949\ldots\times10^{-6}$.
+
+*Proof.* (1) Write $G=\sum_\lambda\lambda P_\lambda$ with distinct real eigenvalues and spectral projectors $P_\lambda$. Then $\langle k|e^{-iuG}|j\rangle=\sum_\lambda c_\lambda e^{-iu\lambda}$ with $c_\lambda=\langle k|P_\lambda|j\rangle$. The functions $e^{-iu\lambda}$ with distinct real $\lambda$ are linearly independent, and $-i\sin u=(e^{-iu}-e^{iu})/2$. Equality for all $u$ therefore forces $1,-1$ to be eigenvalues with $c_1=1/2$, $c_{-1}=-1/2$ and $c_\lambda=0$ otherwise. The Cauchy--Schwarz inequality gives
+$$
+1=|c_1|+|c_{-1}|
+\le\sum_{\lambda=\pm1}\|P_\lambda k\|\,\|P_\lambda j\|
+\le\Bigl(\sum_{\lambda=\pm1}\|P_\lambda k\|^2\Bigr)^{1/2}\Bigl(\sum_{\lambda=\pm1}\|P_\lambda j\|^2\Bigr)^{1/2}
+\le1.
+$$
+Equality throughout gives $j,k\in\operatorname{ran}(P_1+P_{-1})$, $\|P_\lambda k\|=\|P_\lambda j\|$, and $P_\lambda k$ parallel to $P_\lambda j$. The signs of $c_{\pm1}$ then give $P_1k=P_1j$, $P_{-1}k=-P_{-1}j$ and $\|P_{\pm1}j\|^2=1/2$. Hence $Gj=P_1j-P_{-1}j=k$ and $Gk=P_1j+P_{-1}j=j$. Conversely, these relations give $G^2=I$ on the span and $e^{-iuG}|j\rangle=\cos u\,|j\rangle-i\sin u\,|k\rangle$.
+
+(2) The Jordan form of $L$ makes every entry of $e^{uL}$ an exponential polynomial. Suppose $\operatorname{sinc}=\sum_mP_m(u)e^{\nu_mu}$ on an open interval, with distinct $\nu_m$ and nonzero polynomials $P_m$. Both sides are entire, so the identity holds on $\mathbb R$, and multiplication by $u$ gives $\sin u=\sum_muP_m(u)e^{\nu_mu}$. The functions $u^re^{\nu u}$ are linearly independent, and $\sin u=(2i)^{-1}e^{iu}-(2i)^{-1}e^{-iu}$. If $i$ is not among the $\nu_m$, the coefficient of $e^{iu}$ is $0$ on the right and $(2i)^{-1}$ on the left. If $\nu_m=i$, then $uP_m(u)=(2i)^{-1}$, which is impossible at $u=0$. Unitary groups, Lindblad semigroups and time-homogeneous linear evolutions on the finite-dimensional spaces $\mathcal H$ or $\mathcal B(\mathcal H)$ are instances of $e^{uL}$.
+
+(3) Each $\rho\mapsto e^{-iusT_{jk}}\rho\,e^{iusT_{jk}}$ is a unitary channel, and a probability mixture of CPTP maps is CPTP. Since $T_{jk}|\pm\rangle=\pm|\pm\rangle$, the conjugate of $|+\rangle\langle-|$ is $e^{-2ius}|+\rangle\langle-|$, which gives the multiplier $\widehat\nu(2u)$. For the uniform law, $\int_{-1/2}^{1/2}e^{-2ius}\,ds=\sin u/u$. Conversely, equality for all $u$ makes $\widehat\nu$ equal to the characteristic function of the uniform law on $[-1/2,1/2]$, and a Borel probability measure is determined by its characteristic function. For finitely supported $\nu$, $\widehat\nu(2u)$ is a finite exponential sum.
+
+(4) Item 1 gives $\psi_u=\cos u\,|j\rangle-i\sin u\,|k\rangle$, so $|\langle j|\psi_u\rangle|=\cos u$ on $0<u\le\pi/2$. Substitution gives $\theta_B=u$, $D_{\mathrm{tr}}=\sin u$ and $D_B=\sqrt{2(1-\cos u)}=2\sin(u/2)$, hence (Z.26e.2). The survival amplitude is $\cos s$, and $u^{-1}\int_0^u\cos s\,ds=\sin u/u$. The Taylor series of $\operatorname{sinc}$ gives the two second-order coefficients. The displayed numbers follow from $u^*=2^{1/8}-1$ and $K_0=3$ by direct evaluation. ∎
+
+**Resolution TV-Z-13-R1 (Metadata).** Exact domain: Hermitian generators on finite-dimensional spaces with an orthonormal pair, all finite-dimensional time-homogeneous linear evolutions in the transport parameter, the channels (Z.26e.1) for every Borel probability law, and the geodesic of $T_{jk}$. Premises: Lemma Z.13 and Theorem Z.26. Equivalence: unitary change of basis fixing $|j\rangle$ and $|k\rangle$. Budget: every finite dimension, generator and averaging law. Verifier: spectral decomposition with Cauchy--Schwarz equality, uniqueness of exponential-polynomial representations and of characteristic functions, and direct evaluation of the chords. Falsifier: a generator that does not restrict to $T_{jk}$ but has amplitude $-i\sin u$, a finite-dimensional time-homogeneous evolution with a matrix element equal to $\operatorname{sinc}$ on an interval, or a non-uniform law with multiplier $\operatorname{sinc}$. Provenance class: source-internal analytic classification. Downstream consumers: Lemma Z.13, Theorem Z.26, Remark Z.26d, Definition Z.27.11L and `TV-Z-14`. Nonvacuity: $T_{jk}$ itself and the uniform law on $[-1/2,1/2]$. This is `positive-discharge` of an exact finite open-channel derivation of the all-orders sinc kernel, rigid in its averaging law and in the generator normalization $T_{jk}$, with a no-go for every finite-dimensional time-homogeneous evolution, and `nonentailment` of the sinc argument from the finite transport alone, because the trace-distance and Bures chords give $\operatorname{sinc}(u)$ and $\operatorname{sinc}(u/2)$. Identification of the curvature-response scalar with the trace-distance chord, or with the uniformly path-averaged channel, remains `C+R` under `TV-Z-13`.
 
 ### Z.27.9 Theoretical Error Budget
 
@@ -7685,6 +7855,102 @@ $$
 so $\lambda_{aj}(t)\to1/2$. Because there are finitely many pairs and $0<\tau<1/2$, after some finite time precisely the twelve active-passive pairs exceed threshold. Each contributes two generators, proving (Z.28.8).
 
 When $\lambda_{12}(0)>\tau$, the numerator of (Z.28.10) decreases strictly and its denominator increases, so $\lambda_{12}(t)$ decreases continuously from above $\tau$ to zero and has a unique crossing $t_A$. After $\max\{T_\perp,T_\times\}$, the twelve active-passive pairs are the only active pairs apart from $\{1,2\}$. Under (Z.28.11), the count is therefore $2(12+1)=26$ immediately before $t_A$ and $2\cdot12=24$ at and after the crossing. The final sentence follows because the hypotheses impose no distinctness or ordering on the remaining threshold crossings. ∎
+
+**Theorem Z.28.3 (Terminal QFI Support of the Detailed-Balance Thermal Generator Class).** Let $\mathfrak D_{\mathrm{th}}$ be the class of triples $(H,\beta,w)$ consisting of a Hamiltonian $H=\sum_{i=1}^{8}E_i|i\rangle\langle i|$ on $\mathbb C^8$, an inverse temperature $\beta\in(0,\infty)$, and jump rates $w_{ij}\ge0$ for $i\ne j$ that satisfy detailed balance,
+$$
+w_{ij}e^{-\beta E_j}=w_{ji}e^{-\beta E_i},
+$$
+and irreducibility: the graph on $\{1,\ldots,8\}$ with an edge $\{i,j\}$ whenever $w_{ij}>0$ is connected. The generator of $(H,\beta,w)$ is
+$$
+\mathcal L_{H,\beta,w}(\rho)
+=
+\sum_{i\ne j}\mathcal D\bigl[\sqrt{w_{ij}}\,|i\rangle\langle j|\bigr](\rho).
+\tag{Z.28.12}
+$$
+Let the distinct energies of $H$ have multiplicities $n_1,\ldots,n_r$, with $n_1$ the ground multiplicity, and put
+$$
+\pi_i=\frac{e^{-\beta E_i}}{\sum_je^{-\beta E_j}},
+\qquad
+\rho_\beta=\operatorname{diag}(\pi_1,\ldots,\pi_8),
+\qquad
+\Gamma_j=\sum_{i\ne j}w_{ij}.
+$$
+Then:
+
+1. $\rho_\beta$ is the unique stationary density operator of (Z.28.12), and every solution converges to it. A diagonal initial state stays diagonal, its populations obey $\dot p=Qp$ with $Q_{ij}=w_{ij}$ for $i\ne j$ and $Q_{jj}=-\Gamma_j$, and every coherence obeys $\rho_{kl}(t)=e^{-(\Gamma_k+\Gamma_l)t/2}\rho_{kl}(0)$ for $k\ne l$.
+2. The coefficient (Z.28.1) of $\rho_\beta$ satisfies $\lambda_{ij}(\pi)>0$ exactly when $E_i\ne E_j$. Hence, for every $\beta\in(0,\infty)$ and every admissible $w$,
+$$
+M_{\mathrm{QFI}}(\rho_\beta)=2\sum_{k<l}n_kn_l=64-\sum_{k=1}^{r}n_k^2.
+\tag{Z.28.13}
+$$
+3. $M_{\mathrm{QFI}}(\rho_\beta)=24$ exactly when $H$ has two distinct energies with multiplicities $\{2,6\}$.
+4. As $\beta\to\infty$, $\rho_\beta\to P_{\mathrm g}/n_1$, where $P_{\mathrm g}$ is the ground projector. This limit has support count $2n_1(8-n_1)$, equal to $24$ exactly when $n_1\in\{2,6\}$, and it is unitarily equivalent to $I_2/2\oplus0_6$ exactly when $n_1=2$. As $\beta\to0$, every $\lambda_{ij}(\pi)$ tends to $0$.
+5. On the two-level spectrum with ground multiplicity $2$, excited multiplicity $6$ and gap $\Delta>0$, put $x=e^{-\beta\Delta}\in(0,1)$. The positive-coefficient multiset of $\rho_\beta$ is $\{\lambda_2(x)^{(24)}\}$ with
+$$
+\lambda_2(x)=\frac{(1-x)^2}{(2+6x)(1+x)},
+\tag{Z.28.14}
+$$
+which decreases strictly from $1/2$ to $0$ on $(0,1)$. For $0<\tau<1/2$ the terminal thresholded count is $24$ when $x<x_\tau$ and $0$ when $x>x_\tau$, where
+$$
+x_\tau=\frac{1-2\tau}{1+4\tau+2\sqrt{\tau(4+\tau)}}.
+\tag{Z.28.15}
+$$
+Thus the hot-state suppression of this spectrum is one simultaneous $24\to0$ crossing at $k_BT_\tau=\Delta/\ln(1/x_\tau)$. With ground multiplicity $6$, the coefficient is $(1-x)^2/((6+2x)(1+x))$, which decreases strictly from $1/6$ to $0$, and for $0<\tau<1/6$ the crossing is $x=(1-6\tau)/(1+4\tau+2\sqrt{\tau(4+\tau)})$.
+6. Let $\gamma>0$ be the least nonzero eigenvalue of $-Q$ and $\pi_{\min}=\min_i\pi_i$. For every diagonal initial state and every pair $i<j$,
+$$
+\|p(t)-\pi\|_1\le e^{-\gamma t}\sqrt{\pi_{\min}^{-1}-1},
+\qquad
+|\lambda_{ij}(p(t))-\lambda_{ij}(\pi)|\le3e^{-\gamma t}\sqrt{\pi_{\min}^{-1}-1}.
+\tag{Z.28.16}
+$$
+If a threshold $\tau$ is fixed with $g_\tau:=\min_{i<j}|\lambda_{ij}(\pi)-\tau|>0$, then $M_{\mathrm{QFI}}^{(\tau)}(t)=2\#\{\{i,j\}:i<j,\ \lambda_{ij}(\pi)>\tau\}$ for every $t\ge0$ with $t>\gamma^{-1}\ln\bigl(3\sqrt{\pi_{\min}^{-1}-1}/g_\tau\bigr)$.
+7. Let $\widehat p$ be the empirical outcome frequencies of $N$ independent projective measurements in the eigenbasis $\{|i\rangle\}$ on copies of the diagonal state $\rho(t)$, and put $\widehat\lambda_{ij}=\lambda_{ij}(\widehat p)$. With probability at least $1-16e^{-2N\epsilon^2}$, every pair satisfies
+$$
+|\widehat\lambda_{ij}-\lambda_{ij}(\pi)|\le\eta:=6\epsilon+3e^{-\gamma t}\sqrt{\pi_{\min}^{-1}-1}.
+\tag{Z.28.17}
+$$
+Consequently Proposition Z.28.1, with $m$ the least positive coefficient of $\rho_\beta$, recovers the exact terminal support (Z.28.13) with that probability whenever $\eta<\tau<m-\eta$. On the spectrum of item 5, $m=\lambda_2(x)$.
+
+Items 2--5 use only the terminal state and therefore hold for every generator on $\mathbb C^8$ whose unique attracting stationary state is $\rho_\beta$.
+
+*Proof.* (1) For $i\ne j$, the jump $L_{ij}=\sqrt{w_{ij}}|i\rangle\langle j|$ gives $L_{ij}\rho L_{ij}^\dagger=w_{ij}\rho_{jj}|i\rangle\langle i|$, and $\sum_{i\ne j}L_{ij}^\dagger L_{ij}=\operatorname{diag}(\Gamma_1,\ldots,\Gamma_8)$. The jump terms therefore act only on the diagonal, the anticommutator multiplies $\rho_{kl}$ by $-(\Gamma_k+\Gamma_l)/2$, and the population equation is $\dot p=Qp$. Detailed balance gives $w_{ij}>0$ exactly when $w_{ji}>0$, so connectedness gives $\Gamma_j>0$ for every $j$ and every coherence decays. Put $c_{ij}=w_{ij}\pi_j=w_{ji}\pi_i$ and $\langle u,v\rangle_\pi=\sum_iu_iv_i/\pi_i$. With $f=u/\pi$ and $h=v/\pi$ componentwise,
+$$
+\langle u,-Qv\rangle_\pi=\frac12\sum_{i\ne j}c_{ij}(f_i-f_j)(h_i-h_j).
+$$
+Thus $-Q$ is self-adjoint and positive for $\langle\cdot,\cdot\rangle_\pi$, $Q\pi=0$, and $\langle v,-Qv\rangle_\pi=0$ forces $v/\pi$ to be constant on the connected graph, so $\ker Q=\mathbb R\pi$. The difference $p(t)-\pi$ is $\langle\cdot,\cdot\rangle_\pi$-orthogonal to $\pi$ because both laws have total mass one, so it decays at rate $\gamma>0$. Hence $\pi$ is the unique stationary law, $p(t)\to\pi$, and with the decay of coherences every solution converges to the unique stationary state $\rho_\beta$.
+
+(2) For finite $\beta$ every $\pi_i$ is positive, and $\pi_i=\pi_j$ exactly when $E_i=E_j$. Hence $\lambda_{ij}(\pi)>0$ exactly for pairs in different energy levels. Each such unordered pair supplies two real off-diagonal generators, which gives $2\sum_{k<l}n_kn_l=(\sum_kn_k)^2-\sum_kn_k^2=64-\sum_kn_k^2$.
+
+(3) The count is $24$ exactly when $\sum_kn_k^2=40$ with $\sum_kn_k=8$. Since $\sum_kn_k^2\le8\max_kn_k$, the largest part is at least $5$. A largest part $5$ leaves parts summing to $3$ with square sum at most $9$, giving at most $34$. A largest part $6$ leaves parts summing to $2$ whose square sum must be $4$, hence one part $2$. A largest part $7$ or $8$ gives $50$ or $64$. The only solution is $\{6,2\}$.
+
+(4) As $\beta\to\infty$, $e^{-\beta(E_i-E_{\mathrm g})}\to0$ for every excited level, so $\pi_i\to1/n_1$ on the ground level and $\pi_i\to0$ elsewhere. The positive coefficients of the limit are exactly the $n_1(8-n_1)$ ground--excited pairs, giving $2n_1(8-n_1)$, which equals $24$ exactly for $n_1\in\{2,6\}$. The limit has rank $n_1$ and flat spectrum, so it is unitarily equivalent to $I_2/2\oplus0_6$ exactly when $n_1=2$. As $\beta\to0$, $\pi\to(1/8,\ldots,1/8)$, and (Z.28.1) is continuous at positive spectra, so every coefficient tends to $0$.
+
+(5) The populations are $1/(2+6x)$ on the ground level and $x/(2+6x)$ on the excited level. Pairs inside one level have coefficient $0$, and each of the $12$ ground--excited pairs has coefficient (Z.28.14), counted twice. Differentiation gives
+$$
+\lambda_2'(x)=\frac{(x-1)(5x+3)}{(1+x)^2(1+3x)^2}<0
+\qquad(0<x<1),
+$$
+with limits $1/2$ at $x\to0$ and $0$ at $x\to1$. For $x>0$ the equation $\lambda_2(x)=\tau$ is equivalent to
+$$
+(1-6\tau)x^2-(2+8\tau)x+(1-2\tau)=0.
+$$
+The number (Z.28.15) lies in $(0,1)$ because its numerator lies in $(0,1)$ and its denominator exceeds $1$. For $\tau\ne1/6$ the identity
+$$
+\bigl(1+4\tau-2\sqrt{\tau(4+\tau)}\bigr)\bigl(1+4\tau+2\sqrt{\tau(4+\tau)}\bigr)=(1-2\tau)(1-6\tau)
+$$
+rewrites (Z.28.15) as $\bigl(1+4\tau-2\sqrt{\tau(4+\tau)}\bigr)/(1-6\tau)$, a root of the quadratic; for $\tau=1/6$ the equation is linear with root $1/5$, which is (Z.28.15). Strict monotonicity makes it the unique crossing. The ground-multiplicity-six case is identical with populations $1/(6+2x)$ and $x/(6+2x)$, derivative $(x-1)(3x+5)/((1+x)^2(3+x)^2)$, and equation $(1-2\tau)x^2-(2+8\tau)x+(1-6\tau)=0$.
+
+(6) By item 1, $\|p(t)-\pi\|_\pi\le e^{-\gamma t}\|p(0)-\pi\|_\pi$ for the norm of $\langle\cdot,\cdot\rangle_\pi$, and $\|p(0)-\pi\|_\pi^2=\sum_ip_i(0)^2/\pi_i-1\le\pi_{\min}^{-1}-1$. The Cauchy--Schwarz inequality with weights $\pi_i$ gives $\|v\|_1\le\|v\|_\pi$. On $\{(a,b)\in[0,1]^2:a+b>0\}$, the function $\lambda(a,b)=(a-b)^2/(a+b)$ has
+$$
+\partial_a\lambda=\frac{(a-b)(a+3b)}{(a+b)^2},
+\qquad
+\partial_b\lambda=-\frac{(a-b)(3a+b)}{(a+b)^2},
+$$
+both of absolute value at most $3$ because $|a-b|\le a+b$ and $a+3b,\,3a+b\le3(a+b)$. A segment between two points of the closed square other than the origin avoids the origin, and $\lambda(a,b)\le a+b$ covers the origin, so $|\lambda(a,b)-\lambda(a',b')|\le3(|a-a'|+|b-b'|)$. This gives (Z.28.16). Past the displayed time, every $\lambda_{ij}(p(t))$ lies on the same side of $\tau$ as $\lambda_{ij}(\pi)$.
+
+(7) Each $\widehat p_i$ is the mean of $N$ independent Bernoulli variables with mean $p_i(t)$. Hoeffding's inequality (Hoeffding 1963) and a union bound over the eight outcomes and both signs give $\max_i|\widehat p_i-p_i(t)|\le\epsilon$ with probability at least $1-16e^{-2N\epsilon^2}$. On that event the Lipschitz bound gives $|\widehat\lambda_{ij}-\lambda_{ij}(p(t))|\le6\epsilon$, and (Z.28.16) adds the relaxation term. The ideal coefficients of $\rho_\beta$ are either $0$ or at least $m$, so Proposition Z.28.1 applies with the error $\eta$. ∎
+
+**Resolution TV-Z-19-R1 (Metadata).** Exact domain: the class $\mathfrak D_{\mathrm{th}}$ of (Z.28.12) on $\mathbb C^8$ for every Hamiltonian spectrum, every $\beta\in(0,\infty)$ and every irreducible detailed-balance rate matrix, with diagonal initial states and eigenbasis measurements for items 6--7; the class is fixed without reference to $\rho_0$ or to the count $24$. Premises: (Z.28.1), Proposition Z.28.1, detailed balance, irreducibility and independent measurement records. Equivalence: unitary conjugation preserving the eigenspaces of $H$ and relabeling of levels within one energy. Budget: all twenty-two degeneracy partitions of $8$, every admissible $(\beta,w)$, and every threshold with $g_\tau>0$. Verifier: the Dirichlet-form spectral argument, the partition bound of item 3, the closed-form crossing (Z.28.15), and the Lipschitz and Hoeffding estimates. Falsifier: a member with a stationary state other than $\rho_\beta$, a finite-temperature $\{2,6\}$ state whose support count differs from $24$, another spectrum with count $24$, or a trajectory violating (Z.28.16). Provenance class: source-internal finite construction and classification with standard concentration estimates. Downstream consumers: Prediction Z.1, Proposition Z.28.1, Theorem Z.28.2 and `ET-Z-19`. Nonvacuity: the two-level member with $w_{aj}=\gamma_\perp$, $w_{ja}=\gamma_\perp e^{-\beta\Delta}$ and $w_{12}=w_{21}=\gamma_{\mathrm{ex}}$ for active $a$ and passive $j$, whose $\beta\to\infty$ limit is the generator (Z.28.3) of Theorem Z.28.2. This is `positive-discharge` of the terminal-support classification on $\mathfrak D_{\mathrm{th}}$ and for every generator whose unique attracting stationary state is $\rho_\beta$, and of the formal threshold-count, relaxation-time and uncertainty records (Z.28.15)--(Z.28.17) on $\mathfrak D_{\mathrm{th}}$ with diagonal initial states. The classification of thermal generators outside $\mathfrak D_{\mathrm{th}}$, including Hamiltonian, dephasing and degenerate-level Davies terms, nondiagonal initial states and non-primitive boundary members such as the generator (Z.28.3), remains `M` under `TV-Z-19`; the corresponding records and their realization on a registered hot-state carrier remain `C+R`. Observed temperature- and time-resolved spectroscopy is owned by `ET-Z-19`.
 
 ---
 

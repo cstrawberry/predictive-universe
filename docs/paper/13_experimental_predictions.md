@@ -1666,6 +1666,69 @@ Every real accepted mean occurs in $\mathfrak G_{\mathrm{all}}$ whenever at leas
 
 **Resolution TV-EXP-10-R1.** Proposition 13.8.5i is `positive-discharge` of the exhaustive classical source-and-postselection mean classification and `negative-refutation` of a universal classical sign bound. Theorem 13.8.5b remains exact on $\mathfrak G_{\mathrm{cl}}$, whose zero-conditional-noise premise is precisely the restriction that removes the offset in (13.8.5i.1). The coherent Gaussian response map and its exact visibility threshold remain Lemma 13.8.5c and Theorem 13.8.5d; apparatus realization is an empirical record.
 
+**Proposition 13.8.5j (Full Two-Port Instrument, Unconditional-Marginal Audit and Hull-Exit Threshold).** Let $|A\rangle,|B\rangle$ be orthonormal source-path states, and realize the record of Lemma 13.8.5c by the source-path/probe state
+$$
+\rho_{SP}=\sum_{X,Y\in\{A,B\}}c_{XY}\,|X\rangle\langle Y|\otimes|\varphi_X\rangle\langle\varphi_Y|,
+\qquad
+c_{AA}=\alpha^2,
+\quad
+c_{BB}=\beta^2,
+\quad
+c_{AB}=c_{BA}=V\alpha\beta,
+\tag{13.8.5j.1}
+$$
+where $|\varphi_X\rangle$ has the real momentum wavefunction $\varphi_X(p)$. Let the two-port source measurement project onto $|\pm\rangle=(|A\rangle\pm|B\rangle)/\sqrt2$, with $|-\rangle$ the dark port. Then $\rho_{SP}$ is a density operator for every $V\in[0,1]$, and:
+
+1. The joint density of port and probe momentum is
+$$
+w_\pm(p)=\frac12\left[\alpha^2\varphi_A(p)^2+\beta^2\varphi_B(p)^2\pm2V\alpha\beta\,\varphi_A(p)\varphi_B(p)\right],
+\tag{13.8.5j.2}
+$$
+so $w_-$ is the dark-port density of Lemma 13.8.5c. The bright port has acceptance $P_+=\tfrac12(1+2V\alpha\beta O)$ and mean
+$$
+\langle p\rangle_+
+=\frac{(\alpha^2+V\alpha\beta O)\delta_A+(\beta^2+V\alpha\beta O)\delta_B}{1+2V\alpha\beta O}
+\in[\delta_B,\delta_A].
+$$
+
+2. For every instrument applied to the source path alone, including the two-port measurement, the $\{A,B\}$ which-path measurement and the identity channel, the probe reduced state after summing over outcomes is
+$$
+\operatorname{tr}_S\rho_{SP}=\alpha^2|\varphi_A\rangle\langle\varphi_A|+\beta^2|\varphi_B\rangle\langle\varphi_B|,
+\tag{13.8.5j.3}
+$$
+which is independent of $V$. Hence $w_++w_-=\alpha^2\varphi_A^2+\beta^2\varphi_B^2$, the unconditional mean is $\alpha^2\delta_A+\beta^2\delta_B\in[\delta_B,\delta_A]$, the unconditional variance is $\sigma_p^2+\alpha^2\beta^2d^2$, and $P_{\mathrm{ps}}\langle p\rangle_{\mathrm{ps}}+P_+\langle p\rangle_+=\alpha^2\delta_A+\beta^2\delta_B$. The unconditional record lies in $\mathfrak G_{\mathrm{cl}}$, with $a\equiv1$ and $\xi$ independent of $\lambda$ with the centered Gaussian law of variance $\sigma_p^2$.
+
+3. With $\widetilde P=1-2V\alpha\beta O>0$, the dark-port mean of Lemma 13.8.5c satisfies
+$$
+\delta_B-\langle p\rangle_{\mathrm{ps}}=\frac{\alpha d\,(V\beta O-\alpha)}{\widetilde P},
+\qquad
+\langle p\rangle_{\mathrm{ps}}-\delta_A=\frac{\beta d\,(V\alpha O-\beta)}{\widetilde P}.
+\tag{13.8.5j.4}
+$$
+Therefore $\langle p\rangle_{\mathrm{ps}}\notin[\delta_B,\delta_A]$, so that by Theorem 13.8.5b no channel in $\mathfrak G_{\mathrm{cl}}$ reproduces the dark-port mean, exactly when
+$$
+VO>\frac{\alpha}{\beta}
+\qquad\text{or}\qquad
+VO>\frac{\beta}{\alpha}.
+\tag{13.8.5j.5}
+$$
+For $\alpha<\beta$, the hull-exit threshold $V>\alpha/(\beta O)$ lies strictly below $V_{\mathrm{crit}}$. For $\alpha>\beta$, the exit occurs above $\delta_A$, while $V_{\mathrm{crit}}>1$ and the negative branch of Theorem 13.8.5d is unattainable. On the benchmark evaluation, $\alpha/\beta=0.9991516517\ldots$, so at $V=1$ the dark-port mean leaves the classical hull exactly when $s>109.224\ldots$, and it is negative exactly when $s>120.762\ldots$.
+
+*Proof.* Let $J|X\rangle=|X\rangle\otimes|\varphi_X\rangle$. Since $|A\rangle,|B\rangle$ are orthonormal and each $\varphi_X$ is normalized, $J$ is an isometry, and $\rho_{SP}=JcJ^*$ with $c=(c_{XY})$. The matrix $c$ has nonnegative diagonal and determinant $\alpha^2\beta^2(1-V^2)\ge0$, so $c\ge0$, and $\operatorname{tr}\rho_{SP}=\operatorname{tr}c=\alpha^2+\beta^2=1$.
+
+For item 1, $\langle\pm|A\rangle=1/\sqrt2$ and $\langle\pm|B\rangle=\pm1/\sqrt2$, and the wavefunctions are real, so $\langle\pm,p|\rho_{SP}|\pm,p\rangle=\tfrac12\sum_{X,Y}c_{XY}s_Xs_Y\varphi_X(p)\varphi_Y(p)$ with $s_A=1$ and $s_B=\pm1$; this is (13.8.5j.2). The integrals in the proof of Lemma 13.8.5c give $\int w_+\,dp=\tfrac12(1+2V\alpha\beta O)$ and $\int p\,w_+\,dp=\tfrac12[\alpha^2\delta_A+\beta^2\delta_B+V\alpha\beta O(\delta_A+\delta_B)]$. Their quotient is the displayed combination, whose two weights are nonnegative and sum to one.
+
+For item 2, let $(\mathcal I_k)_k$ be an instrument on the source path. Because $\sum_k\mathcal I_k$ is trace preserving, $\sum_k\operatorname{tr}_S[(\mathcal I_k\otimes\mathrm{id})(\rho_{SP})]=\operatorname{tr}_S\rho_{SP}=\sum_Xc_{XX}|\varphi_X\rangle\langle\varphi_X|$, which is (13.8.5j.3). Since $\varphi_X^2$ is the normal density of mean $\delta_X$ and variance $\sigma_p^2$, the law of total variance gives variance $\sigma_p^2+\alpha^2\beta^2d^2$ for the two-point mixture. Adding the unnormalized first moments of the two ports gives the port-weighted identity. The stated $\mathfrak G_{\mathrm{cl}}$ member satisfies items 1--3 of Definition 13.8.5a and has the density $\alpha^2\varphi_A^2+\beta^2\varphi_B^2$ for $p=\delta_\lambda+\xi$.
+
+For item 3, subtract the mean of Lemma 13.8.5c from $\delta_B\widetilde P/\widetilde P$ and from $\delta_A\widetilde P/\widetilde P$. Using $\alpha^2+\beta^2=1$, the numerators reduce to $\alpha d(V\beta O-\alpha)$ and $\beta d(V\alpha O-\beta)$, proving (13.8.5j.4). Since $\alpha,\beta,d,\widetilde P>0$, the mean lies below $\delta_B$ exactly when $V\beta O>\alpha$ and above $\delta_A$ exactly when $V\alpha O>\beta$, which is (13.8.5j.5); Theorem 13.8.5b places the accepted mean of every channel in $\mathfrak G_{\mathrm{cl}}$ in $[\delta_B,\delta_A]$. For $\alpha<\beta$,
+$$
+V_{\mathrm{crit}}\frac{\beta O}{\alpha}
+=\frac{\alpha^2\delta_A+\beta^2\delta_B}{\alpha^2(\delta_A+\delta_B)}>1,
+$$
+because $\beta^2\delta_B>\alpha^2\delta_B$. For $\alpha>\beta$, $\alpha^2\delta_A+\beta^2\delta_B-\alpha\beta(\delta_A+\delta_B)=(\alpha-\beta)(\alpha\delta_A-\beta\delta_B)>0$ gives $V_{\mathrm{crit}}>1/O\ge1$. At $V=1$ on the benchmark, $O(s)=\exp(-81/(8s^2))$, and $O(s)>\alpha/\beta$ is equivalent to $s>[81/(8\ln(\beta/\alpha))]^{1/2}=109.224\ldots$. ∎
+
+**Resolution TV-EXP-10-R2 (Metadata).** Exact domain: the coherent Gaussian two-port source-superposition realization (13.8.5j.1) with $0<\delta_B<\delta_A$, $\sigma_p>0$, $\alpha,\beta>0$, $\alpha^2+\beta^2=1$ and $V\in[0,1]$. Premises: Lemma 13.8.5c's wavefunctions and Theorem 13.8.5b's hull bound on $\mathfrak G_{\mathrm{cl}}$. Equivalence: equality of joint port/momentum densities and of probe reduced states. Budget: two ports, one source-side instrument family and the first two momentum moments. Verifier: exact Gaussian moment integrals and rational simplification of (13.8.5j.4). Falsifier: a source-side instrument changing (13.8.5j.3), a bright-port mean outside $[\delta_B,\delta_A]$, or a dark-port mean inside the hull under (13.8.5j.5). Provenance class: source-internal exact calculation on a declared realization. Downstream consumers: Theorem 13.8.5d, Remark S.6.1, Corollary S.6.1e(b) and `TV-EXP-10`. Nonvacuity: every $V\in[0,1]$, including the benchmark evaluation. This is `positive-discharge` of the full-instrument and unconditional-marginal audit on the declared realization and of the exact $\mathfrak G_{\mathrm{cl}}$ hull-exit criterion for its dark-port mean. Gravitational force provenance of $\delta_A,\delta_B$ in the axial geometry of Definition S.6.1c, a positive conditional impulse margin (S.6.1e.1) after subtraction of its certified statistical and systematic error budget, and the sealed formal packet for `ET-EXP-10` remain `C+R+O` under `TV-EXP-10`.
+
 ## 13.9 Prediction 4: Conditional Golay Alignment from PCE Structure
 
 Beyond the CC-specific predictions of Sections 13.1–13.5, the PU framework proposes a substrate-alignment test on a certified 24-mode distance-eight coding branch. The PCE rate gate fixes the dimension, while a separate existence/selection certificate must supply minimum distance eight. Existing code-performance data are comparison evidence; they do not establish substrate alignment.

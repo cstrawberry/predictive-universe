@@ -91,6 +91,28 @@ This is a complete optimizer, uniqueness, comparative-statics, and capacity cens
 
 *Proof.* A real function on a nonempty finite quotient attains its maximum. The supplied equivalence and numerical procedures make each of its finitely many comparisons terminate. Exactly one maximizing response class is equivalent to the strict-gap condition. Pairwise comparison with every $y$ gives (I.2a.3). Between consecutive crossing values, every pairwise score ordering is unchanged, so the optimizer set and its associated capacity set are constant. Exact comparison sorts the finitely many crossings; a representative point of each nonempty open interval and each crossing gives the complete census. Without the effective-data premises, the displayed winning regions remain mathematical characterizations and do not assert a uniform terminating algorithm. ∎
 
+**Theorem I.2b (Affine-Score Optimizers on Arbitrary Realization Sets).** Let $X$ be a nonempty set of microscopic realizations of arbitrary cardinality, let $x\mapsto(a_x,b_x)$ record the affine score $J_t(x)=a_x+tb_x$ on an open interval $I$, and assume $V(t):=\sup_{x\in X}J_t(x)<\infty$ for every $t\in I$.
+
+1. $V$ is convex on $I$. Conversely, every finite convex function $V$ on $I$ is the value function of such a family whose supremum is attained at every $t$; one such family is $X=I\times\{-,+\}$ with the one-sided supporting lines $b_{(s,\pm)}=V'_\pm(s)$ and $a_{(s,\pm)}=V(s)-sV'_\pm(s)$.
+
+2. If $x$ maximizes $J_t$, then $V'_-(t)\le b_x\le V'_+(t)$. If $x$ maximizes $J_t$ and $x'$ maximizes $J_{t'}$ with $t<t'$, then $b_x\le b_{x'}$.
+
+3. The set of $t$ at which two maximizers have different score pairs $(a_x,b_x)$ is contained in the countable set $K_V$ of points where $V$ is not differentiable. At every $t\notin K_V$ with an attained maximum, every maximizer has $(a_x,b_x)=(V(t)-tV'(t),V'(t))$. For every countable set $Q\subset I$ there is a family of the form in item 1 whose set of such $t$ is exactly $Q$.
+
+4. If $X$ is a compact topological space and $x\mapsto(a_x,b_x)$ is continuous, then $V$ is finite, the supremum is attained for every $t\in I$, and the maximizing score pair is unique for every $t\in I\setminus K_V$. Uniqueness up to the response equivalence of Theorem I.2a at such $t$ additionally requires that maximizers with equal score pairs lie in one response class.
+
+This is a complete optimizer, comparative-statics and breakpoint classification for affine scores on microscopic realization sets of arbitrary cardinality; for finite $X$ it reduces to the census of Theorem I.2a, with $V$ piecewise affine and finitely many breakpoints.
+
+*Proof.* Item 1. A pointwise supremum of affine functions is convex. Conversely, a finite convex function on an open interval has finite one-sided derivatives $V'_-(s)\le V'_+(s)$ at every $s$, and every $g\in[V'_-(s),V'_+(s)]$ is a subgradient: $V(t)\ge V(s)+g(t-s)$ for all $t\in I$. The displayed lines therefore lie below $V$ and touch it at $s=t$, so their supremum is $V$ and is attained.
+
+Item 2. A maximizer $x$ at $t$ satisfies $a_x+\tau b_x\le V(\tau)$ for every $\tau$, with equality at $\tau=t$. Dividing $V(\tau)-V(t)\ge b_x(\tau-t)$ by $\tau-t$ and letting $\tau\downarrow t$ and $\tau\uparrow t$ gives the two derivative bounds. Adding the optimality inequalities $a_x+tb_x\ge a_{x'}+tb_{x'}$ and $a_{x'}+t'b_{x'}\ge a_x+t'b_x$ gives $(t'-t)(b_{x'}-b_x)\ge0$.
+
+Item 3. For distinct $t$, the open intervals $(V'_-(t),V'_+(t))$ are disjoint because $V'_+(t)\le V'_-(t')$ for $t<t'$, so at most countably many are nonempty and $K_V$ is countable. At $t\notin K_V$, item 2 gives $b_x=V'(t)$ and then $a_x=V(t)-tV'(t)$ for every maximizer. For an enumeration $Q=\{q_n\}$, put $V_Q(t)=\sum_nw_n|t-q_n|$ with $w_n=2^{-n}/(1+|q_n|)$. The series converges on $I$, each term is convex and $w_n$-Lipschitz, and dominated convergence of the one-sided difference quotients gives $V'_{Q,+}(t)-V'_{Q,-}(t)=\sum_{n:q_n=t}2w_n$, so $K_{V_Q}=Q$. In the family of item 1 for $V_Q$, the maximizers $(t,-)$ and $(t,+)$ at $t\in Q$ have different slopes, while at $t\notin Q$ all maximizers share one score pair.
+
+Item 4. Continuity of $x\mapsto a_x+tb_x$ on a compact space gives a finite attained maximum for every $t$, and items 2 and 3 apply. The final sentence restates the relation between score pairs and the response classes of Theorem I.2a. For finite $X$, $V$ is a maximum of finitely many affine functions and its breakpoints are among the crossings (I.2a.4). ∎
+
+**Resolution TV-DARK-01-R1 (Metadata).** Exact domain: affine PCE scores $J_t(x)=a_x+tb_x$ on nonempty realization sets of arbitrary cardinality with finite value function on an open parameter interval. Premises: the affine score form of Theorem I.2a. Equivalence: equality of score pairs, refined by the response equivalence of Theorem I.2a where stated. Budget: every realization set and, for sharpness, every countable subset of $I$. Verifier: supporting-line and subgradient inequalities, countability of the kink set and termwise one-sided differentiation. Falsifier: a family with two maximizers of different score pairs at a differentiability point of $V$, or a countable $Q$ not realized as a tie set. Provenance class: source-internal exact convex analysis. Downstream consumers: Theorem I.2a and `TV-DARK-01`. Nonvacuity: $X=I\times\{-,+\}$ for $V(t)=|t|$ on $I=(-1,1)$. This is `positive-discharge` of the optimizer, uniqueness and breakpoint classification for affine score families outside the finite branch. The population of the microscopic state, potential and response class, and score families that are not affine in the parameter, remain open under `TV-DARK-01`.
+
 **I.4 Predictive-Information Saturation in Sparse Regimes**
 
 The coordinate $\hat C_{\mathrm{target}}$ is the internal task scale of Definition 21. It represents the complexity of externally exploitable patterns only on a branch with an innovation certificate that compares the coordinate with external records.
@@ -344,6 +366,46 @@ $$
 is fixed. By contrast, pole locations and a normalized line shape without one absolute-amplitude datum leave the scaling modulus $a\mapsto ca$, $c>0$, and do not fix (I.3c.5.4).
 
 *Proof.* The Cauchy determinant formula gives (I.3c.5.3), so (I.3c.5.2) has exactly one solution. The class definition makes nonnegativity of that solution necessary and sufficient for passivity within the declared finite family. Setting $s=0$ proves (I.3c.5.4). Positive common rescaling preserves pole locations and normalized residue ratios while changing the static susceptibility, proving the final statement. ∎
+
+**Theorem I.3c.6 (Unknown-Pole Passive Reconstruction and Nonrational Nonidentifiability).** For an integer $N\ge1$, let $\mathcal P_N$ be the class of functions
+$$
+\chi(s)=\chi_\infty+\sum_{j=1}^n\frac{a_j}{s+\lambda_j},
+\qquad s>0,
+\tag{I.3c.6.1}
+$$
+with $0\le n\le N$, $\chi_\infty\in\mathbb R$, $a_j>0$ and distinct $\lambda_j>0$, the poles being unknown. Let $\mathcal S$ be the passive relaxation class
+$$
+\chi(s)=\chi_\infty+\int_{(0,\infty)}\frac{d\mu(\lambda)}{s+\lambda},
+\qquad
+\int_{(0,\infty)}\frac{d\mu(\lambda)}{\lambda}<\infty,
+\tag{I.3c.6.2}
+$$
+with $\mu$ a positive Borel measure. Here $\chi-\chi_\infty$ is the Laplace transform of the completely monotone retarded relaxation kernel $\phi(t)=\int e^{-\lambda t}\,d\mu(\lambda)$, $t>0$, and $\mathcal P_N\subset\mathcal S$. Then:
+
+1. Two members of $\mathcal P_N$ that agree at $2N+1$ distinct points of $(0,\infty)$ coincide, including their pole sets, residues, $\chi_\infty$ and $\chi(0)=\chi_\infty+\sum_ja_j/\lambda_j$. If both carry the same supplied $\chi_\infty$, agreement at $2N$ distinct points suffices.
+
+2. Both counts are sharp. For every $2N-1$ distinct points of $(0,\infty)$ there are two members of $\mathcal P_N$ with $\chi_\infty=0$, each with exactly $N$ poles, that agree at those points and have different values of $\chi(0)$. For every $2N$ distinct points there are two members of $\mathcal P_N$, each with exactly $N$ poles, that agree at those points and have different values of $\chi(0)$.
+
+3. A member of $\mathcal S$ is determined by its values on any subset of $(0,\infty)$ having an accumulation point in $(0,\infty)$: these values fix $\chi$ on $(0,\infty)$, $\chi_\infty=\lim_{s\to\infty}\chi(s)$, $\chi(0)=\lim_{s\downarrow0}\chi(s)=\chi_\infty+\int d\mu/\lambda$, and $\mu$. No finite set of sample values determines $\chi(0)$ on $\mathcal S$. The same two conclusions hold on the causal class of Theorem I.3c sampled at imaginary frequency: if $\chi_g(\cdot,\mathbf k)$ satisfies the analytic gate stated there, its values at $\omega=is$ for $s$ in such a set fix $\chi_\infty(\mathbf k)$ and $\chi_g(\cdot,\mathbf k)$ on the closed upper half-plane, including $\chi_g(0,\mathbf k)$, while no finite set of values at $\omega=is$, $s>0$, determines $\chi_g(0,\mathbf k)$ on that class.
+
+The fixed-pole reconstruction of Theorem I.3c.5 therefore extends to unknown poles at the sharp count $2N+1$, or $2N$ with $\chi_\infty$ supplied, while on the nonrational passive class and on the causal class of Theorem I.3c finite samples never fix the static normalization.
+
+*Proof.* Item 1. Write $Q_i=\prod_j(s+\lambda^{(i)}_j)$, of degree $n_i\le N$, for the two members. Then $\chi_1-\chi_2=P/(Q_1Q_2)$ with
+$$
+P=(\chi_{\infty,1}-\chi_{\infty,2})Q_1Q_2+Q_2\sum_ja^{(1)}_j\prod_{k\ne j}\bigl(s+\lambda^{(1)}_k\bigr)-Q_1\sum_ja^{(2)}_j\prod_{k\ne j}\bigl(s+\lambda^{(2)}_k\bigr),
+$$
+a polynomial of degree at most $2N$, and at most $2N-1$ when $\chi_{\infty,1}=\chi_{\infty,2}$. Since $Q_1Q_2>0$ on $(0,\infty)$, agreement at $2N+1$ points, or at $2N$ points in the second case, makes $P$ vanish identically. The two members are then the same rational function, and uniqueness of partial fractions with nonzero residues identifies $\chi_\infty$, the poles $-\lambda_j$ and the residues $a_j$; setting $s=0$ gives $\chi(0)$.
+
+Item 2. Let $0<s_1<\cdots<s_\ell$ be the sample points and choose rates $0<\theta_1<\cdots<\theta_{2N}$. Every square submatrix of $[1/(s_k+\theta_j)]$ with increasing row and column indices has the positive Cauchy determinant $\prod_{k<k'}(s_{k'}-s_k)\prod_{j<j'}(\theta_{j'}-\theta_j)/\prod_{k,j}(s_k+\theta_j)$. Appending a last column of ones keeps every maximal minor positive: multiplying a further last column $1/(s_k+\theta)$ by $\theta$ and letting $\theta\to\infty$, the factors containing $\theta$ in the Cauchy formula combine to $\theta\prod_j(\theta-\theta_j)/\prod_k(s_k+\theta)\to1$, so
+$$
+\det\Bigl[\frac1{s_k+\theta_j}\Bigm|1\Bigr]
+=\frac{\prod_{k<k'}(s_{k'}-s_k)\prod_{j<j'}(\theta_{j'}-\theta_j)}{\prod_{k,j}(s_k+\theta_j)}>0,
+$$
+the products running over the rows and the retained rates. Let $M$ be the $(2N-1)\times2N$ matrix $[1/(s_k+\theta_j)]$ when $\ell=2N-1$, and the $2N\times(2N+1)$ matrix $[1/(s_k+\theta_j)\mid1]$ when $\ell=2N$. All maximal minors of $M$ are positive, so the vector $c$ with $c_i=(-1)^i\det M^{(i)}$, where $M^{(i)}$ deletes column $i$, satisfies $Mc=0$ by Laplace expansion of a determinant with a repeated row, and its entries alternate strictly in sign. Split the pole terms by the sign of $c_j$: $\chi_\pm(s)=\sum_{\pm c_j>0}|c_j|/(s+\theta_j)$, each with exactly $N$ poles. When $\ell=2N$, the entry $c_{2N+1}$ is negative because $2N+1$ is odd, its magnitude $|c_{2N+1}|$ is the constant $\chi_\infty$ of $\chi_-$, and $\chi_+$ has $\chi_\infty=0$. In both cases $D:=\chi_+-\chi_-$ equals $\sum_{j\le2N}c_j/(s+\theta_j)$, plus $c_{2N+1}$ when $\ell=2N$, so its value at $s_k$ is the $k$th entry of $Mc=0$, and $D=P/\prod_j(s+\theta_j)$ with $P\ne0$ of degree at most $\ell$ vanishing at the $\ell$ sample points. Hence $P=\kappa\prod_k(s-s_k)$ with $\kappa\ne0$, and $D(0)=\kappa\prod_k(-s_k)/\prod_j\theta_j\ne0$.
+
+Item 3. For $\operatorname{Re}s>0$ and $\lambda>0$, one has $|s+\lambda|\ge\lambda$ and $|s+\lambda|^{-2}\le(\lambda\operatorname{Re}s)^{-1}$, so (I.3c.6.2) defines a holomorphic function on the right half-plane by dominated differentiation under the integral. Agreement on a set with an accumulation point in $(0,\infty)$ therefore gives agreement on $(0,\infty)$ by the identity theorem. Dominated convergence with the integrable majorant $1/\lambda$ gives $\chi(s)\to\chi_\infty$ as $s\to\infty$, and monotone convergence gives the limit $\chi(0)$ as $s\downarrow0$. Tonelli's theorem gives $\chi(s)-\chi_\infty=\int_0^\infty e^{-st}\phi(t)\,dt$ with $\phi$ continuous and integrable on $(0,\infty)$, so uniqueness of the Laplace transform fixes $\phi$ and then $\mu$. Finally, given finitely many sample points, adjoin points until their number is even and positive, say $2N$, and apply item 2: two members of $\mathcal P_N\subset\mathcal S$ agree at all of them and have different $\chi(0)$. For the analytic gate of Theorem I.3c, $s\mapsto\chi_g(is,\mathbf k)=\chi_\infty(\mathbf k)+h(is)$ is holomorphic on $\operatorname{Re}s>0$, so the identity theorem fixes it there; the decay bound gives $\chi_\infty(\mathbf k)$ as its limit as $s\to\infty$, and $h$ is then fixed on the open upper half-plane and, by continuity, on its closure, including $h(0)$. Every member of $\mathcal P_N$ gives $h(\omega)=\sum_ja_j/(\lambda_j-i\omega)$, which equals the pole sum of (I.3c.6.1) at $\omega=is$, has its poles in the lower half-plane, is holomorphic near $0$, satisfies $h(-x)=\overline{h(x)}$ and obeys $|h(z)|\le C|z|^{-1}$ for large $|z|$; the countermodels of item 2 therefore lie in that class. ∎
+
+**Resolution TV-DARK-02-R1 (Metadata).** Exact domain: the unknown-pole passive rational classes $\mathcal P_N$, $N\ge1$, the passive relaxation class $\mathcal S$ of (I.3c.6.2), sampled on $(0,\infty)$, and the analytic-gate class of Theorem I.3c, sampled at $\omega=is$, $s>0$. Premises: the class definitions and the analytic gate of Theorem I.3c. Equivalence: equality of the response on $(0,\infty)$, equivalently of $(\chi_\infty,\mu)$ on $\mathcal S$ and of $\chi_g(\cdot,\mathbf k)$ on the closed upper half-plane for the analytic-gate class. Budget: every $N$, every finite sample set and every sample set with an accumulation point in $(0,\infty)$. Verifier: the degree count for $P$, positivity of the Cauchy and bordered Cauchy minors, the alternating kernel vector, the identity theorem and Laplace uniqueness. Falsifier: two distinct members of $\mathcal P_N$ agreeing at $2N+1$ points, or a set of $2N$ points ($2N-1$ with $\chi_\infty$ supplied) on which every pair of agreeing members of $\mathcal P_N$ shares $\chi(0)$. Provenance class: source-internal exact analysis. Downstream consumers: Theorem I.3c, Corollary I.3d, Theorem I.3c.5, Definition I.13d, item 2, and `TV-DARK-02`. Nonvacuity: the $N=1$ countermodel pairs of item 2. This is `positive-discharge` of the causal inverse classification on the unknown-pole rational class, on the nonrational passive relaxation class and on the analytic-gate causal class of Theorem I.3c, and `nonentailment` of the static normalization by any finite sample on these classes. The PU-internal derivation of the poles or relaxation measure and of the absolute normalization of the metric/channel-capacity susceptibility remains open under `TV-DARK-02`.
 
 **Definition I.3e (RCD-Buchert-Cheeger Backreaction Datum).** On a regular emergent metric/channel-capacity thermodynamic branch, let $D$ be a compact averaging domain in the noncollapsed $\mathrm{RCD}^*(K,4)$ limit of Theorem C.6c, with normalized measure $\langle f\rangle_D$. A backreaction datum consists of:
 
@@ -1273,6 +1335,16 @@ determines the unordered weight multiset $\{p_1,\ldots,p_b\}$ uniquely. Thus two
 
 This theorem closes the inverse problem within the declared finite homogeneous cascade class. Preference for that class over the simpler kernel follows the adjudication conditions of Theorem I.12b.2, and the covariant action and projection package enters through Definition I.12b.1.
 
+**Corollary I.12b.2b (Minimal Moment Order).** For every $b\ge2$ and every positive homogeneous $b$-ary cascade with pairwise distinct weights $p_1,\ldots,p_b$, there is $\delta_0>0$ such that, for each $\delta\in(-\delta_0,\delta_0)$, the roots of $\prod_{i=1}^b(t-p_i)+\delta$ are the weights of a positive homogeneous $b$-ary cascade with the same moments $s_1,\ldots,s_{b-1}$ and with $s_b$ replaced by $s_b-b\delta$. Distinct values of $\delta$ give cascades that are not permutation-equivalent and have different mass exponents $\tau(b)$. The moment record through order $b$ in Theorem I.12b.2a is therefore minimal: the integer moments through order $b-1$ determine neither the cascade class nor $\tau$.
+
+*Proof.* Write $P(t)=\prod_i(t-p_i)=t^b-e_1t^{b-1}+\cdots+(-1)^be_b$. Each $p_i$ is a simple root in $(0,1)$, so $P$ changes sign across each $p_i$. Choose disjoint closed intervals in $(0,\infty)$ around the $p_i$ on whose endpoints $P$ has opposite signs, and let $\delta_0$ be the least absolute value of $P$ at these endpoints. For $|\delta|<\delta_0$, $P+\delta$ keeps these signs, so it has a root in each interval; being of degree $b$, it has exactly these $b$ real roots, which are positive and pairwise distinct. The perturbation changes only the constant coefficient, so $e_1,\ldots,e_{b-1}$ are unchanged, the roots still sum to $e_1=1$, and $e_b$ becomes $e_b+(-1)^b\delta$. Newton's identities express $s_q$ for $q\le b-1$ through $e_1,\ldots,e_q$, so these moments are unchanged, while
+$$
+s_b=\sum_{i=1}^{b-1}(-1)^{i-1}e_is_{b-i}+(-1)^{b-1}be_b
+$$
+changes by $(-1)^{b-1}b(-1)^b\delta=-b\delta$. Distinct $\delta$ give distinct $s_b$, hence distinct weight multisets and, by (I.12b.2a.1), distinct $\tau(b)=-\log_bs_b$. ∎
+
+**Resolution TV-DARK-07-R1 (Metadata).** Exact domain: positive homogeneous $b$-ary cascades with pairwise distinct weights, $b\ge2$. Premises: Theorem I.12b.2a. Equivalence: permutation of branches. Budget: every $b$ and every $\delta$ in the stated interval. Verifier: persistence of simple real roots under a constant perturbation and Newton's identities. Falsifier: a cascade in the domain whose integer moments through order $b-1$ determine its class. Provenance class: source-internal exact algebra. Downstream consumers: Definition I.12b.1, Theorems I.12b.2 and I.12b.2a and `TV-DARK-07`. Nonvacuity: $p_i=2i/(b(b+1))$. This is `positive-discharge` of the minimality of the order-$b$ moment record, a sharpness statement for Theorem I.12b.2a. The extension to normalized covariant generators, the strict gain over the simple kernel, and the response realization and prediction map remain open under `TV-DARK-07`.
+
 **I.13 Expected Parameter Ranges**
 
 Order-of-magnitude reasoning based on galaxy scaling laws and the empirical $g_0$ scale suggests the following ranges for the universal parameters:
@@ -1348,6 +1420,101 @@ and no direction's tracked capacity falls below $\varepsilon_0$, so the Remark I
 *Proof.* Per direction, the ratio of dense to floor distinguishability is $e^{2\varepsilon_0}/e^{\varepsilon_0}=e^{\varepsilon_0}=2$, and the product over $j$ independent directions is $2^j$; with the inverse-distinguishability tracking of the registered premise, $G_{\mathrm{large}}/G_0=2^j$ and $A_G=2^j-1$, taking the values $1$, $3$, $7$ at $j=1,2,3$. Every direction's minimum tracked capacity is $\varepsilon_0$, which is the structural floor, so no sub-floor value occurs. The identities $2^{K_0}=2^3=8=d_0$ and $2^1-1=1=A_c$ give the endpoint and serialized statements by Definition I.13a and Proposition K.9.5f. The falsification sentence restates the exclusion condition for a finite menu. ∎
 
 For a field scaling $|\nabla\Phi_b|\propto R^{-p}$ and a registered power clock $\sigma_{loc}=s_{loc}^{n}$, the same substitution gives $m=pn$. A common $\beta_\chi$ and fixed $g_\Lambda$ therefore predict $L_0\propto\sqrt{M_b}$ in the exterior-Keplerian class. A redshift-invariant transition additionally requires a common, time-independent $\beta_\chi$, the same mass and geometry definitions, and a calibrated observable map. These are tested across the registered galaxy class.
+
+**Theorem I.13c.4 (Spherical Classification of Power-Clock Kernels).** On a Definition I.13c.1 branch with registered power clock $\sigma_{loc}=s_{loc}^{\,n}$, $n>0$ (the registered branch has $n=3/2$), put $a_\chi:=\beta_\chi g_\Lambda$. Let the baryonic mass distribution be spherically symmetric and nonnegative, with enclosed mass $M_b(R)$ and Newtonian field $|\nabla\Phi_b|(R)=GM_b(R)/R^2>0$ on an open interval $I\subset(0,\infty)$. There are constants $L>0$ and $m>0$ with
+$$
+\sigma_{loc}(R)=\Bigl(\frac RL\Bigr)^m\qquad(R\in I)
+\tag{I.13c.4.1}
+$$
+exactly when
+$$
+M_b(R)=\frac{a_\chi L^{m/n}}{G}\,R^{2-m/n}\qquad(R\in I).
+\tag{I.13c.4.2}
+$$
+Every such pair has $m\le2n$. Equality $m=2n$ holds exactly when $I$ carries no baryonic mass, and then $L=\sqrt{GM_b/a_\chi}$ is the Proposition I.13c.2 map. For $m<2n$ the baryonic density on $I$ is
+$$
+\rho_b(R)=\frac{(2-m/n)\,a_\chi L^{m/n}}{4\pi G}\,R^{-1-m/n}>0.
+\tag{I.13c.4.3}
+$$
+Hence, on the registered branch, the clock has the Equation I.4 form $(R/L_0)^m$ with fixed $(L_0,m)$ on an interval exactly for power-law enclosed-mass profiles $M_b\propto R^{\alpha}$ with $0\le\alpha<2$; its steepness is $m=3$ exactly on baryon-free exterior intervals and $m<3$ on every interval that carries baryons. For $A_G\ne0$ the same classification holds for the response $\varepsilon_G(R)=A_G\bigl(1-e^{-(a_\chi/|\nabla\Phi_b(R)|)^{n}}\bigr)$ and the Equation I.4 form $A_G\bigl(1-e^{-(R/L_0)^m}\bigr)$ with the branch amplitude, so on an interval where $M_b$ is not a power of $R$ that response has no such form. For $A_G=0$ the response vanishes identically.
+
+*Proof.* By Definition I.13c.1, $\sigma_{loc}=(a_\chi/|\nabla\Phi_b|)^n$. All quantities are positive on $I$, so (I.13c.4.1) is equivalent to $a_\chi/|\nabla\Phi_b|=(R/L)^{m/n}$, that is, to $GM_b(R)/R^2=a_\chi L^{m/n}R^{-m/n}$, which is (I.13c.4.2). The enclosed mass of a nonnegative distribution is nondecreasing in $R$, so the exponent obeys $2-m/n\ge0$. It vanishes exactly when $M_b$ is constant on $I$, that is, when $I$ carries no mass; then (I.13c.4.2) reads $M_b=a_\chi L^2/G$, which is the stated map. For $m<2n$, differentiation of (I.13c.4.2) and $M_b'(R)=4\pi R^2\rho_b(R)$ give (I.13c.4.3). For $A_G\ne0$ the map $x\mapsto A_G(1-e^{-x})$ is injective, so the response has the form $A_G(1-e^{-(R/L_0)^m})$ on $I$ exactly when (I.13c.4.1) holds there; the statement about non-power profiles is the contrapositive. ∎
+
+**Theorem I.13c.5 (Static Action Realization of the Spatial-Clock Kernel).** On the branch of Theorem I.13c.4 with amplitude $A_G\ge0$, define for $y>0$
+$$
+\nu_\chi(y):=1+A_G\bigl(1-e^{-y^{-n}}\bigr),
+\qquad
+h_\chi(y):=y\,\nu_\chi(y),
+\tag{I.13c.5.1}
+$$
+so that the Definition I.13c.1 response at $y=|\nabla\Phi_b|/a_\chi$ is $1+\varepsilon_G=\nu_\chi(y)$.
+
+1. $h_\chi$ is strictly increasing on $(0,\infty)$ exactly when $A_G\le A_{\mathrm{crit}}(n)$, where $A_{\mathrm{crit}}(n)=\infty$ for $n\le1$ and
+$$
+A_{\mathrm{crit}}(n)=\frac1{n\,e^{-(n-1)/n}-1}\qquad(n>1).
+\tag{I.13c.5.2}
+$$
+For $n=3/2$, $A_{\mathrm{crit}}=1/(\tfrac32e^{-1/3}-1)=13.3695\ldots$, so the menu $\{1,3,7\}$ of Proposition I.13c.3 lies strictly below it.
+
+2. If $A_G\le A_{\mathrm{crit}}(n)$, let $k_\chi:=h_\chi^{-1}$ on $(0,\infty)$ with $k_\chi(0)=0$, $F(x):=\int_0^xk_\chi(t)\,dt$ and $\mathcal F(\xi):=a_\chi^2F(|\xi|/a_\chi)$ on $\mathbb R^3$. Then $\mathcal F$ is $C^1$, strictly convex and coercive, with
+$$
+\frac{|\xi|^2}{2(1+A_G)}\le\mathcal F(\xi)\le\frac{|\xi|^2}2;
+\tag{I.13c.5.3}
+$$
+its response $\mu(x):=F'(x)/x$ satisfies $\mu(h_\chi(y))=1/\nu_\chi(y)$, $\mu(x)\to1$ as $x\to\infty$ and $\mu(x)\to1/(1+A_G)$ as $x\downarrow0$; and the static energy
+$$
+\mathcal E[\Phi]=\frac1{4\pi G}\int\mathcal F(\nabla\Phi)\,d^3x+\int\rho_b\Phi\,d^3x
+\tag{I.13c.5.4}
+$$
+has the Euler-Lagrange equation $\nabla\cdot[\mu(|\nabla\Phi|/a_\chi)\nabla\Phi]=4\pi G\rho_b$; its integrand satisfies the hypotheses that Theorem I.6 imposes on $F$ with $p=2$, so on every bounded Lipschitz domain that theorem gives a unique weak solution for every source in $W^{-1,2}$ and every Dirichlet datum with a $W^{1,2}$ lifting.
+
+3. Under the hypothesis of item 2, for every spherically symmetric baryonic distribution the radial field with $|\nabla\Phi|=a_\chi h_\chi(g_N/a_\chi)$, $g_N=GM_b(R)/R^2$ and $h_\chi(0):=0$, satisfies $\mu(|\nabla\Phi|/a_\chi)\nabla\Phi=\nabla\Phi_b$, hence the Euler-Lagrange equation with the outward-flux normalization, and
+$$
+|\nabla\Phi|=\nu_\chi\Bigl(\frac{g_N}{a_\chi}\Bigr)g_N.
+\tag{I.13c.5.5}
+$$
+In an exterior region this is Equation I.4 with $G_0=G$, $m=2n$ and $L_0=\sqrt{GM_b/a_\chi}$, for every baryonic mass with the same $(a_\chi,A_G,n)$. For an infinite sheet of surface density $\Sigma_b$, the planar solution with even potential and odd field has $|\nabla\Phi|=\nu_\chi(2\pi G\Sigma_b/a_\chi)\,2\pi G\Sigma_b$, and $\sigma_{loc}=1$ exactly at
+$$
+\Sigma_b=\Sigma_\times:=\frac{a_\chi}{2\pi G},
+\qquad\text{so that}\qquad
+M_b=2\pi\Sigma_\times L_0(M_b)^2\quad\text{for every }M_b>0.
+\tag{I.13c.5.6}
+$$
+
+4. Under the hypothesis of item 2, for every $C^2$ solution whose flux $\mu(|\nabla\Phi|/a_\chi)\nabla\Phi$ is $C^1$, the field stress
+$$
+T^{\Phi}_{ij}=\frac1{4\pi G}\Bigl[\mu\Bigl(\frac{|\nabla\Phi|}{a_\chi}\Bigr)\partial_i\Phi\,\partial_j\Phi-\delta_{ij}\mathcal F(\nabla\Phi)\Bigr]
+\tag{I.13c.5.7}
+$$
+obeys $\partial_jT^{\Phi}_{ij}=\rho_b\,\partial_i\Phi$. For compactly supported $\rho_b$, the total self-force $\int\rho_b\nabla\Phi\,d^3x$ vanishes whenever $\oint_{|x|=r}|T^{\Phi}|\,dS\to0$ along a sequence $r\to\infty$.
+
+5. If $A_G>A_{\mathrm{crit}}(n)$, no $C^1$ radial potential $a_\chi^2F(|\xi|/a_\chi)$ has flux-normalized spherical solutions obeying (I.13c.5.5) for all spherical sources.
+
+6. If $A_G>0$, no response map that is positively homogeneous of degree one in the baryonic source, in particular no linear response kernel and no action of Theorem I.13h whose source coordinate is $\rho_b$, reproduces the exterior law of item 3 for a spherical source and its rescaling by any factor $\lambda\ne1$ at any exterior radius.
+
+For $A_G>0$ the weak-field projection of the branch is therefore intrinsically nonlinear in the source; the susceptibility of Definition I.3b and the finite quadratic test of Theorem I.13h apply to it as linearizations about a fixed background.
+
+*Proof.* Item 1. Put $u=y^{-n}$. Differentiation gives
+$$
+h_\chi'(y)=1+A_G\bigl[1-\varphi_n(u)\bigr],
+\qquad
+\varphi_n(u)=e^{-u}(1+nu),
+\qquad
+\varphi_n'(u)=e^{-u}(n-1-nu).
+$$
+If $n\le1$, $\varphi_n$ decreases from $\varphi_n(0)=1$, so $h_\chi'\ge1$, with equality only when $A_G=0$. If $n>1$, $\varphi_n$ increases on $(0,u_*)$ and decreases afterward, with $u_*=(n-1)/n$ and maximum $M_n=n\,e^{-(n-1)/n}$, and $M_n>1$ because $\log n>1-1/n$ for $n>1$. Hence $\inf h_\chi'=1-A_G(M_n-1)$, attained at $y_*=u_*^{-1/n}$, and only there when $A_G>0$. For $A_G<A_{\mathrm{crit}}$, $h_\chi'>0$; for $A_G=A_{\mathrm{crit}}$, $h_\chi'\ge0$ with a single zero, so $h_\chi$ is still strictly increasing; for $A_G>A_{\mathrm{crit}}$, $h_\chi'<0$ near $y_*$ while $h_\chi'\to1+A_G>0$ as $y\downarrow0$, so $h_\chi$ is not monotone. Evaluating (I.13c.5.2) at $n=3/2$ gives the displayed value.
+
+Item 2. Since $y\le h_\chi(y)\le(1+A_G)y$ and $h_\chi$ is continuous and strictly increasing, $h_\chi$ is a bijection of $(0,\infty)$, and $k_\chi$ is continuous and strictly increasing with $x/(1+A_G)\le k_\chi(x)\le x$. Integration gives (I.13c.5.3). As $F'=k_\chi$ is strictly increasing, $F$ is strictly convex and strictly increasing on $[0,\infty)$; for $\xi\ne\xi'$ and $0<t<1$, $|t\xi+(1-t)\xi'|\le t|\xi|+(1-t)|\xi'|$, with strict inequality when $|\xi|=|\xi'|$, so $\mathcal F$ is strictly convex. Its gradient $\nabla_\xi\mathcal F(\xi)=\mu(|\xi|/a_\chi)\xi$ tends to zero as $\xi\to0$ because $k_\chi(x)\le x$, so $\mathcal F\in C^1(\mathbb R^3)$. For $x=h_\chi(y)$, $\mu(x)=k_\chi(x)/x=y/h_\chi(y)=1/\nu_\chi(y)$, and the limits follow from $\nu_\chi(y)\to1$ as $y\to\infty$ and $\nu_\chi(y)\to1+A_G$ as $y\downarrow0$. The Euler-Lagrange equation is the computation of Proposition I.5b with $g_\Lambda$ replaced by $a_\chi$. With $p=2$, the bounds (I.13c.5.3) and $|\nabla_\xi\mathcal F(\xi)|\le|\xi|$ supply the growth hypotheses of Theorem I.6.
+
+Item 3. With $y=g_N/a_\chi$ and $|\nabla\Phi|=a_\chi h_\chi(y)$, item 2 gives $\mu(h_\chi(y))\,a_\chi h_\chi(y)=a_\chi y=g_N$. Both fields are radial and outward, so $\mu(|\nabla\Phi|/a_\chi)\nabla\Phi=\nabla\Phi_b$, whose divergence is $4\pi G\rho_b$ by Gauss's law; (I.13c.5.5) is $h_\chi(y)=y\,\nu_\chi(y)$. In an exterior region $M_b$ is constant and $y^{-n}=(a_\chi R^2/(GM_b))^n=(R/L_0)^{2n}$, which gives Equation I.4 with the stated parameters for every $M_b$. For the sheet, planar symmetry and the flux jump $4\pi G\Sigma_b$ across the sheet give $\mu(|\Phi'|/a_\chi)\Phi'=2\pi G\Sigma_b\operatorname{sgn}z$, and the same inversion gives the planar field. There $\sigma_{loc}=(a_\chi/(2\pi G\Sigma_b))^n$ equals $1$ exactly at $\Sigma_\times$, and $L_0(M_b)^2=GM_b/a_\chi=M_b/(2\pi\Sigma_\times)$.
+
+Item 4. Since $\nabla_\xi\mathcal F(\xi)=\mu(|\xi|/a_\chi)\xi$, one has $\partial_i[\mathcal F(\nabla\Phi)]=\mu\,\partial_k\Phi\,\partial_i\partial_k\Phi$. Differentiating (I.13c.5.7), this term cancels the term $\mu\,\partial_j\Phi\,\partial_j\partial_i\Phi$ from the product rule, leaving $\partial_jT^{\Phi}_{ij}=(4\pi G)^{-1}\partial_i\Phi\,\partial_j(\mu\,\partial_j\Phi)=\rho_b\,\partial_i\Phi$. For compactly supported $\rho_b$, the divergence theorem on a ball of radius $r$ containing the support gives $\int\rho_b\,\partial_i\Phi\,d^3x=\oint_{|x|=r}T^{\Phi}_{ij}n_j\,dS$, which tends to zero along the stated sequence.
+
+Item 5. By Gauss's law, a flux-normalized spherical solution obeys $F'(|\nabla\Phi|/a_\chi)=g_N/a_\chi$, because $\mu(x)x=F'(x)$. Requiring (I.13c.5.5) for all spherical sources gives $F'(h_\chi(y))=y$ for every $y>0$, since every $y>0$ is attained by some source and radius. For $A_G>A_{\mathrm{crit}}(n)$, item 1 shows that the continuous function $h_\chi$ is not monotone and hence not injective, so $F'$ would take two values at one point.
+
+Item 6. Let $\mathcal T$ satisfy $\mathcal T[\lambda\rho]=\lambda\mathcal T[\rho]$ for $\lambda>0$, and suppose a spherical source $\rho$ of mass $M_b$ and its rescaling $\lambda\rho$, $\lambda\ne1$, both obey the exterior law at an exterior radius $R$. Homogeneity gives $|\mathcal T[\lambda\rho](R)|=\lambda|\mathcal T[\rho](R)|$; inserting the exterior law for both sources and dividing by $\lambda GM_b/R^2$ gives $e^{-(R/L_0(\lambda M_b))^{2n}}=e^{-(R/L_0(M_b))^{2n}}$ when $A_G>0$, hence $L_0(\lambda M_b)=L_0(M_b)$, contradicting $L_0(\lambda M_b)=\sqrt\lambda\,L_0(M_b)$. The response of Theorem I.13h is linear in its source coordinate, $o_y=Ry$. ∎
+
+**Resolution TV-DARK-04-R1 (Metadata).** Exact domain: Definition I.13c.1 branches with power-clock exponent $n>0$, amplitude $A_G\ge0$ and $a_\chi>0$, over spherically symmetric nonnegative baryonic distributions and infinite planar sheets. Premises: Definition I.13c.1, Proposition I.13c.2, Proposition I.5b and Theorem I.6. Equivalence: equality of the static field for every source in the stated symmetry classes. Budget: every $n$, $A_G$, $a_\chi$ and spherical profile. Verifier: power inversion, the derivative formula for $h_\chi'$, the Gauss-law flux reduction and the stress-divergence computation. Falsifier: a non-power-law spherical profile whose clock, or whose response with $A_G\ne0$, has the Equation I.4 form on an interval, a pair $(n,A_G)$ with $A_G\le A_{\mathrm{crit}}(n)$ and $h_\chi$ not monotone, or a spherical source whose realized field violates (I.13c.5.5). Provenance class: source-internal exact classification and explicit static action construction. Downstream consumers: Definition I.13d, items 2, 3 and 5; Corollary H.1a.3; `TV-DARK-04`, `TV-DARK-05` and `TV-HBR-02`. Nonvacuity: a point mass with $n=3/2$ and $A_G=7$. This is `positive-discharge` of the spherical classification of the admitted non-Keplerian extensions and of a translation- and rotation-invariant convex static action that realizes the branch response map exactly on every spherical and planar source with one parameter set, is well posed on every bounded Lipschitz domain, and carries the stress identity of item 4. For $A_G>0$, item 6 is a scoped `negative-refutation` of every source-linear realization of the branch projection, a nonempty class containing the Newtonian response. The response-cost and spatial-clock premises, the target-independent rate $\beta_\chi$, the participating-direction selector, the unit and calibration maps, and the extension of the kernel classification beyond spherical symmetry remain open under `TV-DARK-04`.
 
 **Definition I.13d (Covariant Dark-Susceptibility and Effective-Action Certificate).** A covariant dark-susceptibility certificate is a finite record
 $$
@@ -1602,6 +1769,79 @@ and an exact rational basis and Hodge projector are obtained by Gaussian elimina
 If a rational self-adjoint operator $\Lambda_h$ is supplied on $\mathcal H^1$, the compressed static kernel $\Lambda_h^{-1}$ exists and is positive exactly when every leading principal minor of the quadratic-form matrix $[\langle e_i,\Lambda_he_j\rangle]$ in any declared rational basis is positive. These rank and minor tests terminate. For a complete terminating algebraic test, additionally supply the current, harmonic-to-null-response map, nine normalized null-response values, normalized trace datum and normalization constants as exact rational data in the registered bases, or supply terminating exact arithmetic and equality/order comparison for their declared number representation. Under that effective-data contract, elimination also checks harmonic stationarity and the nine-vector quotient tomography with its trace datum, deciding the finite algebraic subcertificate. The real-data identities remain valid without a claim of a uniform decision procedure. They do not create the covariant, causal, or physical projection entries of Definition I.13d.
 
 *Proof.* Finite Hodge decomposition gives $C^1=\operatorname{im}d_0\oplus\mathcal H^1\oplus\operatorname{im}\delta_1$ orthogonally. Rank-nullity and $\operatorname{im}d_0\subseteq\ker d_1$ give (I.13i.2). All matrices are rational, so exact elimination constructs the kernels, their intersection, and the orthogonal projector. The stationary equations are precisely $d_1J=0=\delta_0J$. Sylvester's criterion gives the final positive-definiteness equivalence and is a finite rational computation. ∎
+
+**Theorem I.13j (Linear Covariant Conserved-Response Classification).** On Minkowski space with signature $(-,+,+,+)$, let $h_{\mu\nu}$ be a symmetric perturbation, $h=\eta^{\mu\nu}h_{\mu\nu}$ and $\Box=\eta^{\mu\nu}\partial_\mu\partial_\nu$, and let $\mathfrak L$ be the class of Lorentz-invariant, parity-even quadratic actions
+$$
+S[h;T]=-\int\Bigl[\tfrac12h_{\mu\nu}a(\Box)\Box h^{\mu\nu}+h_\mu{}^{\sigma}b(\Box)\partial_\sigma\partial_\nu h^{\mu\nu}+h\,c(\Box)\partial_\mu\partial_\nu h^{\mu\nu}+\tfrac12h\,d(\Box)\Box h+h^{\lambda\sigma}\frac{f(\Box)}{\Box}\partial_\sigma\partial_\lambda\partial_\mu\partial_\nu h^{\mu\nu}\Bigr]d^4x+\frac\kappa2\int h_{\mu\nu}T^{\mu\nu}\,d^4x
+\tag{I.13j.1}
+$$
+with real form factors $a,b,c,d,f$ and a fixed coupling $\kappa\ne0$. The classification is carried out on Fourier symbols: under $\partial_\mu\mapsto ik_\mu$ and $\Box\mapsto-k^2$, $k^2=k_\mu k^\mu$, the form factors are real functions of $\Box$, each member is identified with the symbol of (I.13j.1) at the wave vectors with $k^2\ne0$, where $f(\Box)/\Box$ is defined, and every statement below is an identity between such symbols.
+
+1. The gravitational part of the action is invariant under $h_{\mu\nu}\mapsto h_{\mu\nu}+\partial_\mu\xi_\nu+\partial_\nu\xi_\mu$ for every $\xi$, equivalently the symbol of its field-equation tensor is transverse, exactly when
+$$
+b=-a,\qquad d=-c,\qquad f=\tfrac12(a-c)
+\tag{I.13j.2}
+$$
+at every nonzero value of $\Box$. The source term is invariant under the same maps exactly when $\partial_\mu T^{\mu\nu}=0$. On the subclass (I.13j.2) the gravitational side of the field equation is identically divergence-free, so the divergence of the field equation imposes on the source exactly the conservation law $\partial_\mu T^{\mu\nu}=0$. Solvability for a given conserved source is a further nondegeneracy condition on the form factors: the member $a=c=0$ satisfies (I.13j.2) and solves no nonzero source. Item 2 gives the nondegenerate static case. Linearized general relativity is the member $a=c=1$.
+
+2. On this gauge-invariant subclass, let $T^{\mu\nu}$ be a static conserved dust source with $T^{00}=\rho(\mathbf x)$, and fix a wave vector $\mathbf k\ne0$ at which $a\ne0$ and $a\ne3c$, both evaluated at $\Box=-|\mathbf k|^2$. The static field mode at $\mathbf k$ is unique up to gauge, and the gauge-invariant potentials of $ds^2=-(1+2\Phi)dt^2+(1-2\Psi)d\mathbf x^2$ are
+$$
+\Phi=\mu_{\mathrm{dyn}}\Phi_{\mathrm{GR}},
+\qquad
+\Psi=\nu_{\mathrm{sl}}\Phi_{\mathrm{GR}},
+\qquad
+\frac{\Phi+\Psi}2=\Sigma_{\mathrm{lens}}\Phi_{\mathrm{GR}},
+$$
+$$
+\mu_{\mathrm{dyn}}=\frac{2(a-2c)}{a(a-3c)},
+\qquad
+\nu_{\mathrm{sl}}=\frac{-2c}{a(a-3c)},
+\qquad
+\Sigma_{\mathrm{lens}}=\frac1a,
+\tag{I.13j.3}
+$$
+where $\Phi_{\mathrm{GR}}$ is the potential of the same source and coupling at $a=c=1$. Nonrelativistic dynamics responds to $\Phi$ and light deflection to $\Phi+\Psi$.
+
+3. The map $(a,c)\mapsto(\mu_{\mathrm{dyn}},\Sigma_{\mathrm{lens}})$ is a bijection from $\{a\ne0,\ a\ne3c\}$ onto $\{\Sigma\ne0,\ \mu\ne\tfrac43\Sigma\}$, with inverse
+$$
+a=\frac1\Sigma,
+\qquad
+c=\frac{2\Sigma-\mu}{\Sigma(4\Sigma-3\mu)}.
+\tag{I.13j.4}
+$$
+Hence every pair of real functions $\mu_{\mathrm{dyn}}(|\mathbf k|)$ and $\Sigma_{\mathrm{lens}}(|\mathbf k|)$ on $|\mathbf k|>0$ with $\Sigma_{\mathrm{lens}}\ne0$ and $\mu_{\mathrm{dyn}}\ne\tfrac43\Sigma_{\mathrm{lens}}$ pointwise is the pair of static response symbols of the form factors $a,c$ that (I.13j.4) fixes on $\Box<0$, with $b,d,f$ given by (I.13j.2); every extension of $a,c$ to $\Box>0$, with $b,d,f$ again given by (I.13j.2), is a gauge-invariant member of $\mathfrak L$ with these static projections. The galaxy projection therefore does not determine the lensing projection on $\mathfrak L$, and the no-slip condition $\Psi=\Phi$, which is the negligible-anisotropic-stress premise of Theorem I.5 on $\mathfrak L$, holds at a wave vector exactly when $a=c$ there, equivalently when $\mu_{\mathrm{dyn}}=\Sigma_{\mathrm{lens}}$.
+
+4. At every static wave vector with $a\ne0$ and $a\ne3c$, the static response of item 2 is linear in $\rho$. Hence, for $A_G>0$, no gauge-invariant member with $a\ne0$ and $a\ne3c$ on all of $\Box<0$ reproduces the Proposition I.13c.2 exterior law with its mass-dependent $L_0$, by Theorem I.13c.5, item 6. The translation-invariant linear kernel whose point-mass response is Equation I.4 with a fixed $L_0$ has a real continuous ratio $\mu_{\mathrm{dyn}}$ and is realized through item 3 with any lensing function obeying the conditions there.
+
+*Proof.* Work with symbols at $k^2\ne0$, and let $E^{\mu\nu}$ be the symbol of the gravitational part of $\delta S/\delta h_{\mu\nu}$, so that the field equation is $E^{\mu\nu}+\tfrac\kappa2T^{\mu\nu}=0$. Since $E^{\mu\nu}$ is symmetric, $\delta_\xi S=2\int E^{\mu\nu}\partial_\mu\xi_\nu\,d^4x=-2\int\xi_\nu\partial_\mu E^{\mu\nu}\,d^4x$ for the gravitational part, so invariance for all $\xi$ is equivalent to $k_\mu E^{\mu\nu}=0$ identically in $h$ at every such $k$. Contracting the five terms of (I.13j.1) gives, up to a nonzero common factor,
+$$
+k_\mu E^{\mu\nu}\propto(a+b)\,k^2k_\mu h^{\mu\nu}+(b+c+2f)\,k^\nu k_\alpha k_\beta h^{\alpha\beta}+(c+d)\,k^2k^\nu h.
+$$
+For $k^2\ne0$ choose $\epsilon\perp k$ with $\epsilon^2\ne0$. The perturbations $\epsilon_\mu\epsilon_\nu$, $k_\mu\epsilon_\nu+\epsilon_\mu k_\nu$ and $k_\mu k_\nu$ isolate $c+d$, $a+b$ and then $b+c+2f$, so invariance is (I.13j.2) at the value $\Box=-k^2$, and every nonzero real value arises. The source term changes by $\kappa\int\partial_\mu\xi_\nu T^{\mu\nu}\,d^4x=-\kappa\int\xi_\nu\partial_\mu T^{\mu\nu}\,d^4x$, which vanishes for every $\xi$ exactly when $T$ is conserved. On (I.13j.2) the identity $k_\mu E^{\mu\nu}=0$ reduces the divergence of the field equation to $\tfrac\kappa2ik_\mu T^{\mu\nu}=0$. At $a=c=0$, (I.13j.2) makes every form factor vanish, so $E^{\mu\nu}=0$ and the field equation reads $\tfrac\kappa2T^{\mu\nu}=0$. At $a=c=1$, (I.13j.2) gives $b=d=-1$ and $f=0$, which is the Fierz--Pauli operator of linearized general relativity.
+
+For item 2, rotate so that $\mathbf k=K\mathbf e_3$ with $K>0$; then $k^0=0$ and $k^2=K^2$. A gauge transformation shifts $h_{\mu3}$ by $iK\xi_\mu$ for $\mu\ne3$ and $h_{33}$ by $2iK\xi_3$ and leaves $h_{AB}$ with $A,B\in\{0,1,2\}$ unchanged, so a gauge with $h_{\mu3}=0$ exists and $\Phi=-h_{00}/2$ and $\Psi=-h_{11}/2$ are the gauge-invariant Newtonian-gauge potentials. Transversality gives $KE^{3\nu}=0$ identically and conservation gives $T^{3\nu}=0$, so only the components with indices in $\{0,1,2\}$ carry equations. In this gauge, (I.13j.1) with (I.13j.2) reduces to
+$$
+\frac{K^2}2\Bigl[a\,h_{AB}h^{AB}-c\,\bigl(h^C{}_C\bigr)^2\Bigr]+\frac\kappa2h_{AB}T^{AB},
+$$
+with field equations $K^2\bigl(a\,h^{AB}-c\,\eta^{AB}h^C{}_C\bigr)+\tfrac\kappa2T^{AB}=0$. For $T^{00}=\rho$ and $a\ne0$ they give $h_{AB}=0$ for $A\ne B$, $h_{22}=h_{11}$, and
+$$
+c\,\Phi=(2c-a)\Psi,
+\qquad
+2(c-a)\Phi-4c\Psi=-\frac{\kappa\rho}{2K^2},
+$$
+a linear system with determinant $2a(a-3c)\ne0$. Its unique solution is
+$$
+\Phi=\frac{\kappa\rho\,(a-2c)}{4K^2a(a-3c)},
+\qquad
+\Psi=-\frac{\kappa\rho\,c}{4K^2a(a-3c)},
+$$
+which at $a=c=1$ gives $\Phi_{\mathrm{GR}}=\Psi_{\mathrm{GR}}=\kappa\rho/(8K^2)$. Division gives (I.13j.3). In the metric of item 2, slow test bodies accelerate by $-\nabla\Phi$, and the transverse deflection of null geodesics is governed by $\Phi+\Psi$.
+
+For item 3, $\Sigma_{\mathrm{lens}}=1/a\ne0$, and $\mu_{\mathrm{dyn}}/\Sigma_{\mathrm{lens}}=2(a-2c)/(a-3c)$ equals $4/3$ only if $a=0$. Conversely, given $\Sigma\ne0$ and $\mu\ne\tfrac43\Sigma$, put $a=1/\Sigma$ and solve $\mu a(a-3c)=2(a-2c)$, which is linear in $c$ with coefficient $4-3\mu a\ne0$; this gives (I.13j.4), and then $a-3c=-2a/(4-3\mu a)\ne0$. The two maps are mutually inverse. At $a=c$, $\nu_{\mathrm{sl}}=\mu_{\mathrm{dyn}}=\Sigma_{\mathrm{lens}}$; conversely $\mu_{\mathrm{dyn}}=\Sigma_{\mathrm{lens}}$ reads $2(a-2c)=a-3c$, that is, $a=c$. Static projections evaluate the form factors only on $\Box=-|\mathbf k|^2<0$, which proves the extension statement.
+
+For item 4, the static equations of item 2 are linear in $\rho$, so the static response is homogeneous of degree one in the source and Theorem I.13c.5, item 6, applies when $A_G>0$. The point-mass potential of Equation I.4 with fixed $L_0$ differs from $-G_0M(1+A_G)/r$ by $G_0MA_G\int_r^\infty e^{-(s/L_0)^m}s^{-2}\,ds$, which is at most $G_0MA_G/r$ near $r=0$ and decays faster than any power; this difference is integrable on $\mathbb R^3$, so its Fourier transform is real, radial and continuous, and the ratio of the potential to the Newtonian potential of $G_0$ is a real continuous function of $|\mathbf k|$. ∎
+
+**Resolution TV-DARK-05-R1 (Metadata).** Exact domain: the Lorentz-invariant, parity-even linear quadratic class $\mathfrak L$ on Minkowski space, classified by its Fourier symbols at wave vectors with $k^2\ne0$, with static conserved dust sources, together with the static action of Theorem I.13c.5 for the spatial-clock branch. Premises: the class definition (I.13j.1) and Theorem I.13c.5. Equivalence: gauge equivalence $h_{\mu\nu}\sim h_{\mu\nu}+\partial_\mu\xi_\nu+\partial_\nu\xi_\mu$, with static projections compared at each wave number. Budget: all real form-factor symbols, with the static claims at each wave number where $a\ne0$ and $a\ne3c$. Verifier: the divergence identity, the transverse-gauge reduction, the $2\times2$ static system and the algebraic inverse (I.13j.4). Falsifier: a gauge-invariant symbol violating (I.13j.2) at some $\Box\ne0$, a nondegenerate static mode violating (I.13j.3), or a pair in the stated image that no symbol realizes. Provenance class: source-internal exact symbol-level classification. Downstream consumers: Theorem I.5, Definition I.13d, items 2, 5 and 6, Theorem I.13e, `TV-DARK-05` and `TV-HBR-02`. Nonvacuity: linearized general relativity, $a=c=1$. This is `positive-discharge` of the symbol-level conserved-completion classification and of the static weak-field and lensing mode projections on $\mathfrak L$, and `nonentailment` of the lensing projection by the galaxy projection on $\mathfrak L$. With Theorem I.13c.5, which supplies the static nonrelativistic common action of the branch, and its item 6, the mass-dependent spatial-clock branch with $A_G>0$ requires a nonlinear covariant completion. An operator-level realization of the symbols of $\mathfrak L$, with a multiplier class for the form factors, an inverse-$\Box$ prescription on the null cone, a source space and solvability beyond the nondegenerate static modes, and the retarded generally covariant conserved completion of the branch with its lensing, cluster, CMB, homogeneous and backreaction projections remain open under `TV-DARK-05`.
 
 **I.14 Timescale Separation (Quasistatic Local-Relaxation Branch)**
 

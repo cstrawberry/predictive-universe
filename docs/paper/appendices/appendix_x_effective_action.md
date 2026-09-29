@@ -213,6 +213,32 @@ which is invariant under (X.4a.2). Therefore no local normalized modular or null
 
 *Proof.* The cancellation in (X.4b.2) uses $T_{\mu\nu}^{\mathrm{vac}}=-\rho_{\mathrm{vac}}g_{\mu\nu}$ with constant $\rho_{\mathrm{vac}}$, and the normalized generating-functional cancellation uses a source-independent scalar factor. Each listed nonconstant, state-dependent, curvature-dependent, or boundary-sensitive term violates at least one of those hypotheses and therefore is not identified by Theorem X.4b. That theorem is finite or trace-class, so it has no type-III conclusion without a descent theorem. Finally, (X.4a.2) is invariant under simultaneous shifts and hence cannot select one value of $\Lambda_{\mathrm{eff}}$. ∎
 
+**Theorem X.4d (Regulator-Free Modular/KMS Invariance under Constant Vacuum Shifts).** Let $(\mathcal M,\tau)$ be a W*-dynamical system of any type, including a type-III local algebra, with $\tau_t=\operatorname{Ad}e^{itH}$ for a self-adjoint generator $H$ on the representation space. Let the constant shift $c$ of (X.4a.2) act by the identity-response rule
+$$
+H\longmapsto H_c=H+\alpha(c)\mathbf1,
+\qquad
+\alpha(c)\in\mathbb R,
+\tag{X.4d.1}
+$$
+which holds, with $\alpha(c)=c\int f^{\mu\nu}g_{\mu\nu}$, for every generator $H=\int f^{\mu\nu}T_{\mu\nu}$ smeared with a test tensor $f^{\mu\nu}$ of finite $\int f^{\mu\nu}g_{\mu\nu}$ from a stress tensor whose constant-shift ambiguity is $T_{\mu\nu}\mapsto T_{\mu\nu}+c\,g_{\mu\nu}\mathbf1$. Then, for every $c$:
+
+1. the shifted dynamics $\tau^{(c)}_t=\operatorname{Ad}e^{itH_c}$ equals $\tau_t$ for every $t$;
+2. for every $\beta$, the normal $(\tau^{(c)},\beta)$-KMS states are exactly the normal $(\tau,\beta)$-KMS states;
+3. every faithful normal state $\omega$ keeps its modular operator, modular conjugation and modular group, which depend only on $(\mathcal M,\omega)$; for a faithful normal $(\tau,\beta)$-KMS state with $\beta\ne0$, $\sigma^\omega_t=\tau_{-\beta t}$; and relative modular operators, Connes cocycles and Araki relative entropies among normal states are unchanged;
+4. every map that assigns to a representative of (X.4a.2) a value computed from $\mathcal M$, the dynamics, its KMS states, their modular data or their relative entropies takes a single value on each constant-shift orbit.
+
+Consequently the modular and KMS conclusions of Theorem X.4b hold without a finite regulator on every system of this class. This supplies the type-III modular/KMS statement named in Corollary X.4c on every continuum net satisfying (X.4d.1); the AQFT descent certificate retained there supplies that net, and (X.4d.1) is the identity-response hypothesis of Theorem X.4b stated for it. Selection of the representative of (X.4a.2) requires a law with inputs outside $(\mathcal M,\tau)$ and its states, such as the independent representative law named in Corollary F.10.12g.1.
+
+*Proof.* Item 1. The operator $H_c$ is self-adjoint on $\operatorname{Dom}H_c=\operatorname{Dom}H$ and equals $h_c(H)$ for the real function $h_c(\lambda)=\lambda+\alpha(c)$, so functional calculus gives $e^{itH_c}=e^{it\alpha(c)}e^{itH}$ as an identity of unitary operators. The scalar phase cancels in $e^{itH_c}xe^{-itH_c}=e^{itH}xe^{-itH}$ for every $x\in\mathcal M$.
+
+Item 2. The KMS condition refers only to the state and the automorphism group [Bratteli & Robinson 1997], so item 1 gives equality of the KMS sets.
+
+Item 3. By Tomita-Takesaki theory, $\Delta_\omega$ and $J_\omega$ come from the polar decomposition of the closure of $x\Omega_\omega\mapsto x^*\Omega_\omega$ in the GNS representation of $(\mathcal M,\omega)$, and $\sigma^\omega_t=\operatorname{Ad}\Delta_\omega^{it}$; none of these objects refers to $H$. Takesaki's theorem [Takesaki 1970; Bratteli & Robinson 1997] characterizes $\sigma^\omega$ as the unique $\sigma$-weakly continuous one-parameter automorphism group for which $\omega$ satisfies the KMS condition at inverse temperature $-1$. If $\omega$ is $(\tau,\beta)$-KMS, then $\omega$ satisfies that condition for $t\mapsto\tau_{-\beta t}$, so $\sigma^\omega_t=\tau_{-\beta t}$, and item 1 makes the right-hand side independent of $c$. Relative modular operators, Connes cocycles and Araki relative entropies are built from pairs of normal states on $\mathcal M$ without reference to $H$.
+
+Item 4. By items 1–3 every listed input coincides along the orbit, so the value of the map coincides as well. The null-flux part of Theorem X.4b uses only $g_{\mu\nu}k^\mu k^\nu=0$ and no regulator, which gives the final statement. ∎
+
+**Resolution TV-X-23-R1 (Metadata).** Exact domain: W*-dynamical systems of any type whose dynamics is implemented by a self-adjoint generator, under the identity-response shift rule (X.4d.1) and the constant-shift quotient (X.4a.2). Premises: (X.4d.1), Tomita-Takesaki theory and Takesaki's KMS characterization of the modular group. Equivalence: the constant-shift relation (X.4a.2). Budget: one scalar phase identity; no finite regulator and no descent sequence. Verifier: operator identities in the given representation. Falsifier: a modular, KMS or relative-entropy quantity that changes along a constant-shift orbit under (X.4d.1). Provenance class: source-internal mathematics on standard modular theory. Downstream consumers: Definition X.4a, Theorem X.4b, Corollary X.4c, Corollary F.10.12g.1 and `TV-X-23`. Nonvacuity: on $M_2(\mathbb C)$ with $H=\operatorname{diag}(0,1)$ the Gibbs state $e^{-\beta H}/\operatorname{tr}e^{-\beta H}$ is the same for $H+\alpha\mathbf1$, and every faithful normal state $\omega$ on a type-III factor gives an instance with $\tau_t=\sigma^\omega_{-t}$, implemented by $H=-\log\Delta_\omega$, for which $\omega$ is $(\tau,1)$-KMS. Theorem X.4d gives `positive-discharge` of the regulator-independent modular/KMS component of `TV-X-23` for the quotient (X.4a.2), and item 4 gives `nonentailment` of the physical representative from modular and KMS data. The independently populated global boundary/normalization law selecting the representative (`C+O`) and the physical certification that the constant vacuum shift of the accepted AQFT net of `RT-T8` obeys (X.4d.1) (`R`) remain live under `TV-X-23`.
+
 **Relation to Corollary B.8d.2.** Corollary B.8d.2 already proves that additive metric-proportional vacuum normalization is absorbed into $\Lambda$ and records how the PCE-attractor convention can fix a representative. Definition X.4a and Theorem X.4b identify the corresponding local operational quotient and its modular/null-flux scope; Theorem F.10.12g adds the quantitative finite-cover descent. Corollary F.10.12g.1 proves that every selector depending only on that descent record is constant on the common-shift orbit and therefore cannot determine its mean. Selecting a global $\Lambda_{\mathrm{eff}}$ requires the independent representative law named there, while type-III modular/KMS applicability retains the AQFT descent certificate required by Corollary X.4c.
 
 
@@ -685,6 +711,80 @@ $$
 $$
 so divergence of the accumulated noise length sends every off-diagonal factor to zero. This step leaves all diagonal histories and therefore does not select an Euler–Lagrange solution. Under the additional stationary-phase hypotheses, the nonstationary diagonal contribution vanishes in the semiclassical limit and the retained contribution is supported near stationary histories. Theorem 12.3b identifies those stationary histories with metric geodesics on its branch. ∎
 
+**Theorem X.5c.6 (Frequency-Resolved KMS Decoherence Floor).** On the stationary finite quadratic branch of Definition X.5c.1, assume the exact identity (X.9j) at every real $\omega\ne0$, normalize the frequency measure of (X.9g) by Plancherel's identity $\int_\omega x(\omega)^\dagger x(\omega)=\int dt\,x(t)^Tx(t)$ for the stated Fourier convention, and put
+$$
+C(\omega)=\frac{\Gamma^A(\omega)-\Gamma^R(\omega)}{2i}.
+$$
+Let $E_\perp\subseteq\mathbb R^n$ be a retained subspace with orthogonal projection $P$, and suppose that the dissipative kernel has the Ohmic floor
+$$
+P\,C(\omega)\,P\succeq D_\perp\,\omega\,P
+\qquad(\omega>0)
+\tag{X.5c.6.1}
+$$
+for a constant $D_\perp>0$. Then:
+
+1. for every real $\omega\ne0$,
+$$
+P\,N(\omega)\,P\succeq\frac{2D_\perp}{\beta}\,P;
+\tag{X.5c.6.2}
+$$
+
+2. for real square-integrable histories $x_r,x_a$ for which the integrals in (X.9g) converge absolutely, the $ra$ and $ar$ terms of $\Gamma^{(2)}_{\mathrm{CTP}}$ are real and
+$$
+\bigl|e^{i\Gamma^{(2)}_{\mathrm{CTP}}[x_r,x_a]}\bigr|
+=
+\exp\left(-\frac12\int_\omega x_a(\omega)^\dagger N(\omega)\,x_a(\omega)\right);
+\tag{X.5c.6.3}
+$$
+
+3. if in addition $x_a(t)\in E_\perp$ for every $t$ and $\int\lVert x_a(t)\rVert^2dt\ge L^2$, then
+$$
+\bigl|e^{i\Gamma^{(2)}_{\mathrm{CTP}}[x_r,x_a]}\bigr|
+\le
+\exp\left(-\frac{D_\perp L^2}{\beta}\right),
+\tag{X.5c.6.4}
+$$
+which is the bound (X.9m.3) with $\nu=2D_\perp/\beta$ for the complete frequency-resolved KMS kernel;
+
+4. the scalar branch $n=1$, $E=1$,
+$$
+\Gamma^R(\omega)=M\omega^2-\kappa-\frac{i\gamma\Lambda\omega}{\Lambda-i\omega},
+\qquad
+M,\kappa,\gamma,\Lambda>0,
+\tag{X.5c.6.5}
+$$
+with $\Gamma^A=\overline{\Gamma^R}$ and $N$ given by (X.9j), satisfies every hypothesis of Definition X.5c.1, is analytic in $\operatorname{Im}\omega>0$, and has Onsager coefficient $\mathcal D=\gamma$ and $N(0)=2\gamma/\beta$. It violates (X.5c.6.1) for every $D_\perp>0$. For every $\Omega>0$, every history pair as in item 2 whose difference field $x_a$ has Fourier transform supported in $\Omega\le|\omega|\le\Omega+1$ and squared norm $L^2$ satisfies
+$$
+\bigl|e^{i\Gamma^{(2)}_{\mathrm{CTP}}[x_r,x_a]}\bigr|
+\ge
+\exp\left(-\coth\left(\frac{\beta\Omega}{2}\right)\frac{\gamma\Lambda^2L^2}{2\Omega}\right),
+\tag{X.5c.6.6}
+$$
+and the right side tends to $1$ as $\Omega\to\infty$ at fixed $L$.
+
+Thus a floor of the full dissipative kernel suppresses every transverse history difference by its accumulated length, and the quantum factor $(\beta\omega/2)\coth(\beta\omega/2)\ge1$ makes the classical Nyquist level $2D_\perp/\beta$ a lower bound on the noise at all frequencies. On the branch (X.5c.6.5), the Onsager coefficient controls history differences concentrated at low frequency, while at fixed accumulated length the weight of differences carried by frequencies $|\omega|\ge\Omega$ tends to $1$ as $\Omega\to\infty$.
+
+*Proof.* The matrix $C(\omega)$ is Hermitian because $\Gamma^A=\Gamma^{R\dagger}$. CTP reality gives $\Gamma^R(-\omega)=\overline{\Gamma^R(\omega)}$ and $\Gamma^A(-\omega)=\Gamma^R(-\omega)^\dagger=\Gamma^R(\omega)^T$, hence
+$$
+C(-\omega)=-\overline{C(\omega)}.
+$$
+Entrywise conjugation preserves the Loewner order of Hermitian matrices, because $\overline A=A^T$ has the spectrum of $A$, and $P$ is real. For $\omega<0$, conjugating (X.5c.6.1) at $-\omega>0$ therefore gives $-P\,C(\omega)P\succeq-D_\perp\omega P$. Dividing by $-\omega>0$ in that case, and by $\omega$ in (X.5c.6.1), yields
+$$
+P\,\omega^{-1}C(\omega)\,P\succeq D_\perp P
+\qquad(\omega\ne0).
+$$
+Put $s(\omega)=(\beta\omega/2)\coth(\beta\omega/2)$. Since $\tanh y\le y$ for $y\ge0$ and $s$ is even, $s(\omega)\ge1$. Equation (X.9j) gives $PN(\omega)P=(2/\beta)s(\omega)\,P\omega^{-1}C(\omega)P$, and $(s(\omega)-1)P\omega^{-1}C(\omega)P\succeq0$ gives (X.5c.6.2).
+
+For item 2, real histories satisfy $x(-\omega)=\overline{x(\omega)}$. Put $T_R=\int_\omega x_a(-\omega)^T\Gamma^R(\omega)x_r(\omega)$. CTP reality and the substitution $\omega\mapsto-\omega$ give $\overline{T_R}=\int_\omega x_a(\omega)^T\Gamma^R(-\omega)x_r(-\omega)=T_R$, and the same argument applies to the $\Gamma^A$ term. The $aa$ term of (X.9g) equals $\tfrac i2\int_\omega x_a(\omega)^\dagger N(\omega)x_a(\omega)$, whose integrand is nonnegative. Hence $\operatorname{Im}\Gamma^{(2)}_{\mathrm{CTP}}=\tfrac12\int_\omega x_a^\dagger Nx_a$, which is (X.5c.6.3). For item 3, $x_a(\omega)=Px_a(\omega)$ because $P$ is real and commutes with the Fourier transform. Then (X.5c.6.2) and Plancherel's identity give $\int_\omega x_a^\dagger Nx_a\ge(2D_\perp/\beta)\int\lVert x_a(t)\rVert^2dt\ge2D_\perp L^2/\beta$, and (X.5c.6.3) gives (X.5c.6.4).
+
+For item 4, the last term of (X.5c.6.5) satisfies the reality condition, and its only pole is $\omega=-i\Lambda$. A direct computation gives
+$$
+C(\omega)=-\operatorname{Im}\Gamma^R(\omega)=\frac{\gamma\Lambda^2\omega}{\Lambda^2+\omega^2}.
+$$
+Hence $N(\omega)=\coth(\beta\omega/2)\gamma\Lambda^2\omega/(\Lambda^2+\omega^2)$ is real, even and nonnegative, the Onsager--Casimir relation is automatic for $n=1$ and $E=1$, $\mathcal D=\lim_{\omega\downarrow0}C(\omega)/\omega=\gamma$, and (X.9k) gives $N(0)=2\gamma/\beta$. Since $\omega^{-1}C(\omega)\to0$ as $\omega\to\infty$, no $D_\perp>0$ satisfies (X.5c.6.1). For $|\omega|\ge\Omega$, monotonicity of $\coth$ on $(0,\infty)$ and $|\omega|/(\Lambda^2+\omega^2)\le1/|\omega|$ give $N(\omega)\le\coth(\beta\Omega/2)\gamma\Lambda^2/\Omega$. Inserting this bound into (X.5c.6.3) with $\int_\omega|x_a(\omega)|^2=L^2$ gives (X.5c.6.6). A nonzero real even smooth function supported in $[\Omega,\Omega+1]\cup[-\Omega-1,-\Omega]$, rescaled to squared norm $L^2$, is the Fourier transform of such a real history. ∎
+
+**Resolution TV-X-02-R1 (Metadata).** Exact domain: stationary finite quadratic CTP branches of Definition X.5c.1 satisfying (X.9j) at every real nonzero frequency, with the Plancherel-normalized frequency measure, together with the scalar branch (X.5c.6.5). Premises: the CTP reality, noise-positivity and Onsager--Casimir conditions of Definition X.5c.1, and the Ohmic floor (X.5c.6.1) for items 1--3. Equivalence: real orthogonal changes of retained basis commuting with $E$ and $P$. Budget: one retained projection, one floor constant and one history pair. Verifier: the inequality $y\coth y\ge1$, the conjugation symmetry $C(-\omega)=-\overline{C(\omega)}$, reality of the $ra$ and $ar$ terms, and Plancherel's identity. Falsifier: a branch satisfying (X.9j) and (X.5c.6.1) for which $PN(\omega)P$ has an eigenvalue on $E_\perp$ below $2D_\perp/\beta$, or a band-limited history on (X.5c.6.5) violating (X.5c.6.6). Provenance class: source-internal finite-frequency theorem with an explicit countermodel. Downstream consumers: Theorem X.5c.4, Corollary X.5c.5 and `TV-X-02`. Nonvacuity: the Ohmic scalar branch $\Gamma^R(\omega)=M\omega^2-\kappa-i\gamma\omega$, which satisfies (X.5c.6.1) with $D_\perp=\gamma$. Items 1--3 give `positive-discharge` of frequency-resolved KMS decoherence on the Ohmic-floor class, and item 4 gives `nonentailment` of history-pair suppression uniform in frequency content from (X.9j) and a positive Onsager coefficient. The microscopic-channel derivation of the CTP kernel together with its identity (X.9j) and Ohmic floor (X.5c.6.1), trace reduction and the stationary-phase remainder of Corollary X.5c.5 remain `M+C+R` under `TV-X-02`.
+
 ## X.6 Rate‑Level PCE Potential vs. Effective Potential
 
 For homogeneous deformations $u=g_e^2$, choose a finite regulated spacetime region $\Omega$ with volume $\mathcal V_\Omega$ and branch-compatible boundary conditions. Define
@@ -743,6 +843,50 @@ $$
 +O(u^*).
 $$
 For $a/d_0=1/4$ and $c_{\mathrm{int}}=1$, the displayed constant correction is $-\pi/\sqrt{K_0}$. Theorems Z.24–Z.26 require their additional curvature, projection, and transport branches.
+
+**Theorem X.3a (Stationary-Point and Dynamics Classification of the Rate-Level and Effective Potentials).** Work in the homogeneous single-coupling truncation of this section at fixed $k$, on an open coupling interval $I\supset[0,u^*]$. Let $g_{\rm true}(u)=\sum_{i=1}^M\ln(1+\lambda_iu)$ with $\lambda_i\ge0$ and $\sum_i\lambda_i>0$, let $\mathcal C_{\rm cap}=g_{\rm true}-\ln d_0$, and let $u^*$ be its unique zero; on the flat spectrum $\lambda_i=\lambda$ this is the solution of (X.11). Let $\phi\in C^1(I)$ be the rate-level potential, with units of power, and let $V_{\rm eff}\in C^1(I)$ be $V_{\rm eff}^{(\Omega)}(\cdot;k)$ of (X.10), or its thermodynamic limit when that exists, with units of action per spacetime volume; the coupling $u$ is dimensionless. Let $\mathcal G:I\to(0,\infty)$ be a continuous metric on the coupling chart. For $W\in C^1(I)$ write
+$$
+\zeta_W=-\frac{W'(u^*)}{g_{\rm true}'(u^*)}.
+\tag{X.3a.1}
+$$
+Then:
+
+1. For every $W\in C^1(I)$, the stationarity condition $\frac{d}{du}\bigl(W+\zeta\,\mathcal C_{\rm cap}\bigr)\big|_{u=u^*}=0$ holds exactly for $\zeta=\zeta_W$. In particular (X.12) holds for every $C^1$ effective potential, with $\zeta=\zeta_{V_{\rm eff}}$, and under the equality form of (X.11) the constrained stationary point $u^*$ is common to every pair $(\phi,V_{\rm eff})$.
+
+2. On the admissible set $\{u\ge0:\mathcal C_{\rm cap}(u)\le0\}=[0,u^*]$, a constrained minimizer at $u^*$ requires $W'(u^*)\le0$, equivalently $\zeta_W\ge0$. For convex $W$ this sign condition is also sufficient, and $u^*$ is then the unique constrained minimizer when $W$ is strictly convex or $W'(u^*)<0$. For the potential (W.0.1), which is strictly convex by Lemma W.1, $u^*$ is the unique constrained minimizer exactly when $\zeta_\phi\ge0$, that is, when $2A_{\mathrm{PCE}}u^*\le\Gamma_0\sum_i\lambda_i/(1+\lambda_iu^*)$; on the flat spectrum $\lambda_i=1$ this reads $2A_{\mathrm{PCE}}u^*(1+u^*)\le\Gamma_0M$, in agreement with Corollary Z.8.2a, and strict inequality is the cap-active hypothesis of Theorem Z.7. Within the convex class, $\phi$ and $V_{\rm eff}$ both select $u^*$ exactly when $\zeta_\phi\ge0$ and $\zeta_{V_{\rm eff}}\ge0$.
+
+3. If $W$ is convex on $I$ and $W'(u^*)<0$, the optimal value $v_W(c)=\min\{W(u):u\ge0,\ g_{\rm true}(u)\le c\}$ is differentiable at $c=\ln d_0$ with
+$$
+v_W'(\ln d_0)=-\zeta_W,
+\tag{X.3a.2}
+$$
+so $\zeta_W$ is the response of the selected value to the capacity level.
+
+4. The natural-gradient equations $\dot u=-\mathcal G(u)^{-1}\phi'(u)$ and $\dot u=-\mathcal G(u)^{-1}V_{\rm eff}'(u)$ on $I$ have the same stationary points and the same direction of motion at every point exactly when $\operatorname{sign}\phi'(u)=\operatorname{sign}V_{\rm eff}'(u)$ for every $u\in I$. For $\kappa>0$, their solution sets correspond under the time rescaling by $\kappa$, meaning that a $C^1$ curve $w:J\to I$ on an open time interval $J$ solves the first equation exactly when $t\mapsto w(t/\kappa)$, $t\in\kappa J$, solves the second, exactly when
+$$
+\phi=\kappa V_{\rm eff}+b
+\qquad\text{on }I
+\tag{X.3a.3}
+$$
+for a constant $b$. When $\mathcal G^{-1}\phi'$ and $\mathcal G^{-1}V_{\rm eff}'$ are locally Lipschitz on $I$, both equations have unique local flows $\Phi^\phi_t$ and $\Phi^V_t$, and (X.3a.3) is equivalent to the flow identity $\Phi^\phi_t=\Phi^V_{\kappa t}$. The constant $\kappa$ carries the units of $\phi/V_{\rm eff}$; in $\hbar=c=1$ units a power has mass dimension $2$ and an action per spacetime volume has mass dimension $4$, so $\kappa$ has mass dimension $-2$. Under (X.3a.3), $\zeta_\phi=\kappa\zeta_{V_{\rm eff}}$.
+
+5. Agreement of constrained stationary points therefore fixes no further relation between the two potentials. A pair $u_1,u_2\in I$ with $\phi'(u_1)V_{\rm eff}'(u_2)\ne\phi'(u_2)V_{\rm eff}'(u_1)$ refutes the dynamical identification (X.3a.3), and $\zeta_\phi\ne\kappa\zeta_{V_{\rm eff}}$ refutes the shadow-price identification for a declared unit constant $\kappa$. For $M=24$, $\lambda_i=1$, $d_0=8$ and $A_{\mathrm{PCE}}=\Gamma_0$, the potentials $\phi(u)=\Gamma_0\bigl(u^2-24\ln(1+u)\bigr)$ and $V_{\rm eff}(u)=-\epsilon_Vu$ with $\epsilon_V>0$ both satisfy (X.12) and both select $u^*=2^{1/8}-1$ on the admissible set, while $\phi''>0=V_{\rm eff}''$ excludes (X.3a.3).
+
+*Proof.* Item 1. Since $g_{\rm true}'(u^*)=\sum_i\lambda_i/(1+\lambda_iu^*)>0$, the linear equation $W'(u^*)+\zeta g_{\rm true}'(u^*)=0$ has the unique solution (X.3a.1). Taking $W=V_{\rm eff}$ gives (X.12). Because $g_{\rm true}$ is strictly increasing on $[0,\infty)$ by Lemma W.1, the equality constraint $\mathcal C_{\rm cap}(u)=0$ has the single solution $u^*$, which is therefore the constrained stationary point of every potential.
+
+Item 2. If $u^*$ minimizes $W$ on $[0,u^*]$, then $W(u^*-h)\ge W(u^*)$ for small $h>0$; dividing by $h$ and letting $h\downarrow0$ gives $W'(u^*)\le0$. Since $u^*>0$, only the capacity constraint is active there, and the KKT condition $W'(u^*)+\zeta g_{\rm true}'(u^*)=0$ with $\zeta\ge0$ is the statement $\zeta_W\ge0$. If $W$ is convex and $W'(u^*)\le0$, then for $u\in[0,u^*]$,
+$$
+W(u)\ge W(u^*)+W'(u^*)(u-u^*)\ge W(u^*).
+$$
+When $W'(u^*)<0$ the second inequality is strict for $u<u^*$, and strict convexity makes the first inequality strict for $u\ne u^*$. For (W.0.1), $\phi'(u^*)=2A_{\mathrm{PCE}}u^*-\Gamma_0\sum_i\lambda_i/(1+\lambda_iu^*)$, which gives the displayed inequality; on the flat spectrum $g_{\rm true}'(u^*)=M/(1+u^*)$ and $\zeta_\phi=\Gamma_0-2A_{\mathrm{PCE}}u^*(1+u^*)/M$, the multiplier of Corollary Z.8.2a. Since $\phi'$ is strictly increasing, $\phi'(u^*)<0$ holds exactly when the unconstrained minimizer lies above $u^*$. The final sentence applies the preceding statements to $\phi$ and to $V_{\rm eff}$.
+
+Item 3. The function $g_{\rm true}$ is $C^1$ with positive derivative, so for $c$ near $\ln d_0$ the cap point $u(c)=g_{\rm true}^{-1}(c)$ is defined and $C^1$ with $u'(c)=1/g_{\rm true}'(u(c))$. Continuity of $W'$ gives $W'(u(c))<0$ for $c$ near $\ln d_0$, and item 2, applied with capacity level $c$, makes $u(c)$ the constrained minimizer. Hence $v_W(c)=W(u(c))$, and the chain rule gives $v_W'(\ln d_0)=W'(u^*)/g_{\rm true}'(u^*)=-\zeta_W$.
+
+Item 4. Write $X_\phi=-\mathcal G^{-1}\phi'$ and $X_V=-\mathcal G^{-1}V_{\rm eff}'$. Because $\mathcal G>0$, the two vector fields vanish at the same points and point in the same direction everywhere exactly when $\phi'$ and $V_{\rm eff}'$ have the same sign everywhere. If (X.3a.3) holds, then $X_\phi=\kappa X_V$, and for a $C^1$ curve $w$ the curve $v(t)=w(t/\kappa)$ satisfies $\dot v(t)-X_V(v(t))=\kappa^{-1}\bigl(\dot w(t/\kappa)-X_\phi(w(t/\kappa))\bigr)$, so $w$ solves the first equation exactly when $v$ solves the second. Conversely, assume this correspondence and fix $u_0\in I$. Since $X_\phi$ is continuous, the Peano existence theorem gives a solution $w$ of the first equation with $w(0)=u_0$; then $v(t)=w(t/\kappa)$ solves the second, and $X_V(u_0)=\dot v(0)=\kappa^{-1}\dot w(0)=\kappa^{-1}X_\phi(u_0)$. Hence $X_\phi=\kappa X_V$, so $\phi'=\kappa V_{\rm eff}'$ on $I$, and integration over the connected interval $I$ gives (X.3a.3). For locally Lipschitz fields the Picard--Lindelöf theorem makes solutions unique, so the correspondence of solutions is the flow identity $\Phi^\phi_t=\Phi^V_{\kappa t}$, and differentiating that identity at $t=0$ returns $X_\phi=\kappa X_V$. Substitution into (X.3a.1) gives $\zeta_\phi=\kappa\zeta_{V_{\rm eff}}$. Since $u$ is dimensionless, $\kappa=\phi'/V_{\rm eff}'$ has the units of $\phi/V_{\rm eff}$; with $\hbar=c=1$, a power is an energy squared and $\Gamma_k$ is dimensionless while a spacetime volume has mass dimension $-4$.
+
+Item 5. Under (X.3a.3), $\phi'(u_1)V_{\rm eff}'(u_2)=\kappa V_{\rm eff}'(u_1)V_{\rm eff}'(u_2)=\phi'(u_2)V_{\rm eff}'(u_1)$, which gives the first refutation by contraposition; the second is the last statement of item 4. In the example, $1+u^*=2^{1/8}$ and $u^*<1$, so $\phi'(u^*)=\Gamma_0\bigl(2u^*-24\cdot2^{-1/8}\bigr)<0$ and $V_{\rm eff}'(u^*)=-\epsilon_V<0$. Item 1 gives (X.12) for both, item 2 gives selection of $u^*$ by the strictly convex $\phi$ and by the linear $V_{\rm eff}$, and $\phi''(u)=\Gamma_0\bigl(2+24(1+u)^{-2}\bigr)>0$ shows that $\phi'$ is not a constant multiple of $V_{\rm eff}'$. ∎
+
+**Resolution TV-X-24-R1 (Metadata).** Exact domain: the homogeneous single-coupling truncation of Section X.6 at fixed $k$, an open coupling interval $I\supset[0,u^*]$, $C^1$ potentials, the capacity coordinate $g_{\rm true}$ with nonnegative, not identically zero spectrum, a continuous positive coupling metric $\mathcal G$, and, for the flow form of item 4, locally Lipschitz fields $\mathcal G^{-1}\phi'$ and $\mathcal G^{-1}V_{\rm eff}'$. Premises: the equality or inequality form of (X.11), the units of Appendix W and (X.10), and convexity wherever items 2 and 3 use it. Equivalence: equality of constrained stationary points; equality of stationary points and directions of motion under the identity coupling map; correspondence of solution sets after a constant time rescaling, which for locally Lipschitz fields is flow identity; equality of shadow prices under a declared unit constant. Budget: one derivative of each potential at $u^*$ and one proportionality test of $\phi'$ and $V_{\rm eff}'$ on $I$. Verifier: exact one-variable calculus and the Peano and Picard--Lindelöf theorems. Falsifier: a $C^1$ potential violating (X.12) at $u^*$, a convex potential with $W'(u^*)\le0$ whose constrained minimum lies below $u^*$, or a time-rescaled correspondence of solution sets without (X.3a.3). Provenance class: source-internal mathematics. Downstream consumers: Equations (X.10)–(X.12), Equation (W.0.1), Lemma W.1, Theorem Z.7, Corollary Z.8.2a and `TV-X-24`. Nonvacuity: the explicit pair of item 5. Theorem X.3a gives `positive-discharge` of the classification component of `TV-X-24`: every $C^1$ pair preserves the constrained stationary point, and the natural-gradient solution sets correspond under a constant time rescaling exactly under the positive affine relation (X.3a.3), with $\kappa$ of mass dimension $-2$. Item 5 gives `nonentailment` of the dynamical and shadow-price identifications from stationary-point agreement. Construction of $V_{\rm eff}^{(\Omega)}(u;k)$ from an accepted $\Gamma_k$ together with a decision of (X.3a.3) and its constant $\kappa$ (`C`), and the physical realization of $\phi$ as a power ledger on the same carrier (`R`), remain live under `TV-X-24`.
 
 ## X.7 Computational Pipeline and Renormalization Conditions
 
@@ -981,6 +1125,59 @@ For item 2, the determinant-line normalization certificate says that a finite co
 
 For item 3, the convergence statement (X.8a.7) is the definition of the generator of the rescaled iteration semigroup under the branch scaling $t_n$. Since the same $\mathcal R_{\mathrm{dec}}$ supplies the linearization, determinant flow, and rescaled iterate generator, response, compression flow, and drift-diffusion are images of the same finite recursive operator on the stated branch. ∎
 
+**Proposition X.8a.4a (Dyadic Flow-Map Decimation Family on a Finite Exponential Branch).** Let $\mathcal X$ be a finite outcome set and $T:\mathcal X\to\mathbb R^n$ a minimal statistic, meaning that the differences $T(x)-T(x')$ span $\mathbb R^n$. Take as retained response kernels the strictly positive laws
+$$
+p_\theta(x)=\exp\bigl(\theta\cdot T(x)-W(\theta)\bigr),
+\qquad
+W(\theta)=\ln\sum_{x\in\mathcal X}e^{\theta\cdot T(x)},
+\qquad
+\theta\in\mathbb R^n,
+$$
+fix $\theta_*\in\mathbb R^n$, and let the PCE potential be $V(\theta)=D_{\mathrm{KL}}(p_{\theta_*}\Vert p_\theta)$. Let $\Phi_t$ be the flow of $\dot\theta=-\nabla V(\theta)$, fix $t_0>0$, and set
+$$
+t_j=2^{-j}t_0,
+\qquad
+\mathcal R_j:=\Phi_{t_j}
+\qquad(j\ge0).
+\tag{X.8a.4a.1}
+$$
+Let $\mathcal F_*=W''(\theta_*)$, the Fisher information at $\theta_*$, which is the connected response kernel of Proposition X.1 in the natural source coordinates, and let $f_1,\dots,f_n$ be its eigenvalues. Then:
+
+1. $\Phi_t$ is a global flow of $C^1$ diffeomorphisms of the positive-kernel chart $\mathbb R^n$, and $\mathcal R_{j+1}\circ\mathcal R_{j+1}=\mathcal R_j$ for every $j$;
+2. $\operatorname{Fix}(\mathcal R_j)=\{\theta_*\}$ for every $j$, and $\theta_*$ is the unique PCE-stationary kernel;
+3. $(\mathcal R_j-I)/t_j\to-\nabla V$ uniformly on $\mathbb R^n$, and $\mathcal R_j^{\,k}=\Phi_{kt_j}$ for every $k\ge0$, so the rescaled iterates have generator $\mathcal L_{\mathrm{PCE}}=-\nabla V$;
+4. $D\mathcal R_j(\theta_*)=e^{-t_j\mathcal F_*}$ is symmetric positive definite and
+$$
+\lim_{j\to\infty}\frac{I-D\mathcal R_j(\theta_*)}{t_j}=\mathcal F_*;
+\tag{X.8a.4a.2}
+$$
+5. $\ln\det D\mathcal R_j(\theta_*)=-t_j\operatorname{Tr}\mathcal F_*$, and the finite logarithmic determinant (X.8a.6) at $\theta_*$ is
+$$
+\operatorname{Tr}\log\bigl(1+D\mathcal R_j(\theta_*)\bigr)
+=
+\sum_{i=1}^n\ln\bigl(1+e^{-t_jf_i}\bigr)
+=
+n\ln2-\frac{t_j}{2}\operatorname{Tr}\mathcal F_*+O(t_j^2);
+\tag{X.8a.4a.3}
+$$
+6. the response kernel (X.8a.4a.2), the linearized generator $D\mathcal L_{\mathrm{PCE}}(\theta_*)=-\mathcal F_*$ and the determinant rate $-\operatorname{Tr}\mathcal F_*$ are functions of the single operator $\mathcal F_*$, so they commute pairwise; the response kernel and the linearized generator determine each other, and each determines the determinant rate.
+
+Reading $\operatorname{Sym}_{\mathrm{br}}$ in (X.8a.8) as the limit (X.8a.4a.2), the family (X.8a.4a.1) is a separately specified family of resolution-dependent update maps with its scaling-limit certificate in the sense of the remark after Definition X.8a.3. On this branch it supplies the response image (X.8a.8), the determinant image (X.8a.6) and the rescaled-iterate generator $-\nabla V$, which is the deterministic PCE drift. The identification of this generator with the Appendix M drift-diffusion generator (M.5a), whose diffusion term $\Delta_\Sigma$ acts on the perspective manifold, is the further certificate required by item 3 of Theorem X.8a.4.
+
+*Proof.* For exponential families, $V(\theta)=W(\theta)-W(\theta_*)-(\theta-\theta_*)\cdot\nabla W(\theta_*)$, so $\nabla V=\nabla W-\nabla W(\theta_*)$ and $V''=W''$. The function $W$ is smooth, $\nabla W(\theta)=\mathbb E_\theta T$ lies in the convex hull of the finite set $T(\mathcal X)$, and $W''(\theta)=\operatorname{Cov}_\theta(T)\preceq(\max_x\lVert T(x)\rVert^2)I$. Hence $\nabla V$ is bounded and globally Lipschitz, and the smooth vector field $-\nabla V$ has a global flow of $C^1$ diffeomorphisms; every $\theta$ gives a strictly positive kernel. If $v\cdot\operatorname{Cov}_\theta(T)v=0$, then $v\cdot T$ is constant on the full support $\mathcal X$, and minimality forces $v=0$. Thus $V$ is strictly convex and $\theta_*$ is its unique critical point. The group law $\Phi_s\circ\Phi_s=\Phi_{2s}$ gives item 1.
+
+The point $\theta_*$ is a zero of the vector field. If $\Phi_t(\theta)=\theta$ for some $t>0$, then $\frac{d}{ds}V(\Phi_s\theta)=-\lVert\nabla V(\Phi_s\theta)\rVert^2\le0$ and $V(\Phi_t\theta)=V(\theta)$, so $\nabla V$ vanishes on the orbit segment, in particular at $\theta$; hence $\theta=\theta_*$. This proves item 2.
+
+Let $B=\sup\lVert\nabla V\rVert$ and let $\ell$ be the Lipschitz constant of $\nabla V$. From $\Phi_t(\theta)-\theta=-\int_0^t\nabla V(\Phi_s\theta)\,ds$ and $\lVert\Phi_s\theta-\theta\rVert\le sB$,
+$$
+\left\lVert\frac{\Phi_t(\theta)-\theta}{t}+\nabla V(\theta)\right\rVert\le\frac{\ell Bt}{2}
+$$
+for every $\theta$. The group law gives $\mathcal R_j^{\,k}=\Phi_{kt_j}$, proving item 3.
+
+Along the constant solution $\theta_*$ the variational equation is $\frac{d}{dt}D\Phi_t(\theta_*)=-W''(\theta_*)D\Phi_t(\theta_*)$ with $D\Phi_0=I$, so $D\Phi_t(\theta_*)=e^{-t\mathcal F_*}$. Since $\mathcal F_*$ is symmetric positive definite, so is $e^{-t_j\mathcal F_*}$, and $(I-e^{-t\mathcal F_*})/t\to\mathcal F_*$ as $t\downarrow0$. This proves item 4. The identity $\det e^{-t\mathcal F_*}=e^{-t\operatorname{Tr}\mathcal F_*}$ and the eigenvalues $1+e^{-tf_i}$ of $1+e^{-t\mathcal F_*}$ give item 5, with $\ln(1+e^{-y})=\ln2-y/2+O(y^2)$. Finally $D(-\nabla V)(\theta_*)=-W''(\theta_*)=-\mathcal F_*$; the three displayed images are $\mathcal F_*$, $-\mathcal F_*$ and $-\operatorname{Tr}\mathcal F_*$, which proves item 6. ∎
+
+**Resolution TV-X-04-R1 (Metadata).** Exact domain: minimal finite-outcome exponential families in the natural chart, with Kullback--Leibler PCE potential, gradient flow in the natural coordinates and the dyadic family (X.8a.4a.1). Premises: finite $\mathcal X$, minimal $T$, the Euclidean metric of the natural chart, a fixed stationary kernel $\theta_*$ and a fixed base step $t_0>0$. Equivalence: changes $T\mapsto OT+c$ of the statistic with $O$ orthogonal and $c\in\mathbb R^n$, which induce the isometry $\theta\mapsto O\theta$ of the natural chart and conjugate $\Phi_t$, the maps $\mathcal R_j$ and $\mathcal F_*$ by $O$; the scaling $T\mapsto2T$ multiplies $\mathcal F_*$, and the Euclidean gradient field measured against the transported one, by $4$, so the Euclidean structure of the natural chart is part of the datum. Budget: one statistic, one stationary kernel and one base step. Verifier: the Bregman form of $V$, the bounds $\nabla W\in\operatorname{conv}T(\mathcal X)$ and $W''\preceq(\max_x\lVert T(x)\rVert^2)I$, the variational equation at $\theta_*$, and the determinant identity. Falsifier: a second fixed point of some $\mathcal R_j$, failure of $\mathcal R_{j+1}^2=\mathcal R_j$, or a linearization at $\theta_*$ different from $e^{-t_j\mathcal F_*}$. Provenance class: source-internal finite construction. Downstream consumers: Definition X.8a.3, Theorem X.8a.4, Theorem X.8a and `TV-X-04`. Nonvacuity: the Bernoulli family $\mathcal X=\{0,1\}$, $T(x)=x$, for which $\mathcal F_*=p_*(1-p_*)$ with $p_*=p_{\theta_*}(1)$. This is `positive-discharge` of the construction of a recursive operator family with its scaling sequence and of the pairwise commutation of the response-Hessian, determinant and PCE-drift images on the stated class. Population of the actual PU retained kernel cone and PCE potential, the identification of the rescaled generator with the Appendix M drift-diffusion generator (M.5a), the determinant-line normalization with the relative Gelfand--Yaglom prefactor record, and the physical realization remain `M+C+R` under `TV-X-04`.
+
 **Definition X.8a.5a (Predictive Free-Energy Inverse-Hessian Datum).** A finite predictive free-energy inverse-Hessian datum on a regular finite-mode branch is a tuple
 $$
 \mathfrak B_{\mathrm{PU}}
@@ -1099,6 +1296,52 @@ Consequently the four constructions in Theorem X.8a.5 have a nonempty quadratic 
 
 *Proof.* Strict positivity makes $\mathfrak L_{\mathrm{PU}}^{-1}$ strictly positive, so (X.8a.5d.1) is a twice differentiable strictly convex functional on the full dual chart. Its constant Hessian is $\mathfrak L_{\mathrm{PU}}^{-1}$, proving (X.8a.5d.2). The direct-sum projections satisfy item 4 of Definition X.8a.5a, and in finite dimension every operator used in the regulator trace is trace class. The assumed form compatibility supplies item 3. All entries of the datum are therefore populated, and Theorem X.8a.5 gives the four sector images. ∎
 
+**Proposition X.8a.5e (Sector Decomposition of Compatible Finite Master Operators).** Let $\mathscr H_{\mathrm{PU}}=\bigoplus_\alpha\mathscr H_\alpha$, $\alpha\in\{\mathrm{field},\mathrm{RG},\Sigma,\mathrm{PCE}\}$, be finite-dimensional with orthogonal sector projections $\Pi_\alpha$, and let $\mathfrak L$ be self-adjoint on $\mathscr H_{\mathrm{PU}}$. The following are equivalent: (a) every summand reduces $\mathfrak L$, as Theorem X.9.6b requires; (b) $\mathfrak L\Pi_\alpha=\Pi_\alpha\mathfrak L$ for every $\alpha$; (c) $\mathfrak L=\bigoplus_\alpha\mathfrak L_\alpha$ with $\mathfrak L_\alpha:=\Pi_\alpha\mathfrak L\Pi_\alpha^*$. Under these conditions:
+
+1. $\mathfrak L$ is strictly positive exactly when every $\mathfrak L_\alpha$ is strictly positive, and then $\Pi_\alpha\mathfrak L^{-1}\Pi_\alpha^*=\mathfrak L_\alpha^{-1}$;
+
+2. the quadratic generating functional of Corollary X.8a.5d splits as
+$$
+W[J]=\sum_\alpha\frac12\bigl\langle\Pi_\alpha J,\mathfrak L_\alpha^{-1}\Pi_\alpha J\bigr\rangle,
+\qquad
+\Gamma[\Phi]=\sum_\alpha\frac12\bigl\langle\Pi_\alpha\Phi,\mathfrak L_\alpha\Pi_\alpha\Phi\bigr\rangle,
+\tag{X.8a.5e.1}
+$$
+and the Legendre transform of the field-source restriction of $W$ has Hessian $\mathfrak L_{\mathrm{field}}$, which is (X.8a.5.2);
+
+3. the map $(\mathfrak L_{\mathrm{field}},\mathfrak L_{\mathrm{RG}},\mathfrak L_\Sigma,\mathfrak L_{\mathrm{PCE}})\mapsto\bigoplus_\alpha\mathfrak L_\alpha$ is a bijection from quadruples of strictly positive self-adjoint sector operators onto the strictly positive self-adjoint operators reduced by every summand;
+
+4. each of (X.8a.5.2)--(X.8a.5.5) depends on $\mathfrak L$ only through its own block, so replacing one block changes that sector image and leaves the other three unchanged.
+
+Consequently, on the finite branch a populated quadruple of sector forms has a compatible single inverse-Hessian datum exactly when each populated form is strictly positive and satisfies its sector-internal conditions, namely the Dirichlet property on $\mathscr H_\Sigma$, item 5 of Definition X.8a.5a for the regulator, and the identification of the PCE form with the Appendix D response metric. The single-operator realization imposes no relation among the four sector operators.
+
+*Proof.* In finite dimension a subspace with orthogonal projection $\Pi$ reduces $\mathfrak L$ exactly when $\mathfrak L$ maps $\operatorname{ran}\Pi$ and $\operatorname{ran}\Pi^\perp$ into themselves, which is $\Pi\mathfrak L=\mathfrak L\Pi$; this is (a)$\Leftrightarrow$(b). If (b) holds, then $\Pi_\alpha\mathfrak L\Pi_\beta=\mathfrak L\Pi_\alpha\Pi_\beta=0$ for $\alpha\ne\beta$, so $\mathfrak L=\sum_{\alpha,\beta}\Pi_\alpha\mathfrak L\Pi_\beta=\bigoplus_\alpha\mathfrak L_\alpha$; a direct sum commutes with every $\Pi_\alpha$, proving (b)$\Leftrightarrow$(c). The spectrum of a direct sum is the union of the block spectra, and its inverse is the direct sum of the block inverses, proving item 1. Item 1 turns $W[J]=\frac12\langle J,\mathfrak L^{-1}J\rangle$ into the first sum in (X.8a.5e.1); the supremum defining the Legendre transform is attained at $J=\mathfrak L\Phi$ with value $\frac12\langle\Phi,\mathfrak L\Phi\rangle$, which splits in the same way. Restricting the sources to $\mathscr H_{\mathrm{field}}$ leaves $\frac12\langle J_{\mathrm{field}},\mathfrak L_{\mathrm{field}}^{-1}J_{\mathrm{field}}\rangle$, whose Legendre transform has Hessian $\mathfrak L_{\mathrm{field}}$. The blocks are recovered from $\bigoplus_\alpha\mathfrak L_\alpha$ by compression, and every strictly positive operator reduced by all summands has the form (c) with strictly positive blocks, proving item 3. Equations (X.8a.5.2)--(X.8a.5.5) use $\mathfrak L_W$ only through $\Pi_\alpha\mathfrak L_W\Pi_\alpha^*$, together with the separately supplied $R_k$ and $V$, proving item 4. The final statement combines item 3 with Corollary X.8a.5d, whose quadratic datum realizes every compatible strictly positive finite operator. ∎
+
+**Proposition X.8a.5f (Perspective Zero Mode of the Inverse-Hessian Datum).** Let the perspective summand be a finite-dimensional real space $\mathscr H_\Sigma\subset L^2(\Sigma,\nu)$ of functions on the perspective space, with $\nu$ a finite measure and with the constant function $1\in\mathscr H_\Sigma$. Put $B_\Sigma=\Pi_\Sigma\mathfrak L_W\Pi_\Sigma^*$, so that $\mathcal L_\Sigma=-B_\Sigma$ in (X.8a.5.4).
+
+1. If $\mathfrak L_W$ is the strictly positive operator of Definition X.8a.5a and $\lambda_\Sigma>0$ is the least eigenvalue of $B_\Sigma$, then $\lVert e^{t\mathcal L_\Sigma}f\rVert_\nu\le e^{-\lambda_\Sigma t}\lVert f\rVert_\nu$ for every $f\in\mathscr H_\Sigma$ and $t\ge0$. The semigroup has no nonzero invariant vector, $e^{t\mathcal L_\Sigma}1\ne1$ for every $t>0$, and
+$$
+\left|\int_\Sigma e^{t\mathcal L_\Sigma}f\,d\nu\right|
+\le
+e^{-\lambda_\Sigma t}\,\nu(\Sigma)^{1/2}\lVert f\rVert_\nu .
+\tag{X.8a.5f.1}
+$$
+Thus, for every inverse-Hessian datum whose perspective summand contains the constants, the total weight $\int_\Sigma e^{t\mathcal L_\Sigma}f\,d\nu$ of the perspective transport of every $f\in\mathscr H_\Sigma$ is bounded in absolute value by the envelope (X.8a.5f.1), which decays to zero with exponential rate $\lambda_\Sigma$.
+
+2. A conservative perspective form, meaning $\mathcal E_\Sigma(f,g)=\langle f,B_\Sigma g\rangle_\nu$ with $B_\Sigma$ self-adjoint and nonnegative on $\mathscr H_\Sigma$ and $\mathcal E_\Sigma(1,g)=0$ for every $g\in\mathscr H_\Sigma$, has $B_\Sigma1=0$. It is therefore the perspective block of no inverse-Hessian datum on a summand containing $1$. This applies to the form of the Appendix M generator (M.5a), $\mathcal E_\Sigma(f,g)=\int_\Sigma\langle\nabla_\Sigma f,\nabla_\Sigma g\rangle e^{-V_k}d\mathrm{vol}_\Sigma$ on $L^2(\Sigma,e^{-V_k}d\mathrm{vol}_\Sigma)$, restricted to any finite mode space of smooth functions containing the constants.
+
+3. For a conservative form put $\mathscr H_\Sigma^0=\{f\in\mathscr H_\Sigma:\langle1,f\rangle_\nu=0\}$. Then $B_\Sigma$ maps $\mathscr H_\Sigma^0$ into itself, and its restriction $B_\Sigma^0$ is strictly positive exactly when $\ker B_\Sigma=\operatorname{span}\{1\}$. In that case, for strictly positive self-adjoint operators $\mathfrak L_{\mathrm{field}},\mathfrak L_{\mathrm{RG}},\mathfrak L_{\mathrm{PCE}}$ on the other three summands, the quadratic construction (X.8a.5d.1) for $\mathfrak L_{\mathrm{field}}\oplus\mathfrak L_{\mathrm{RG}}\oplus B_\Sigma^0\oplus\mathfrak L_{\mathrm{PCE}}$, with $\mathscr H_\Sigma$ replaced by $\mathscr H_\Sigma^0$, the orthogonal sector projections and a positive regulator satisfying item 5, satisfies items 1--5 of Definition X.8a.5a with perspective block $B_\Sigma^0$, and $-B_\Sigma^0$ generates the restriction to $\mathscr H_\Sigma^0$ of the conservative semigroup
+$$
+e^{-tB_\Sigma}=e^{-tB_\Sigma^0}\oplus I_{\operatorname{span}\{1\}}
+\qquad\text{on }\mathscr H_\Sigma^0\oplus\operatorname{span}\{1\}.
+\tag{X.8a.5f.2}
+$$
+The restricted form on a nonzero $\mathscr H_\Sigma^0$ is not a Dirichlet form: for $0\ne f\in\mathscr H_\Sigma^0$ the unit contraction $(0\vee f)\wedge1$ is nonnegative and nonzero, so its $\nu$-mean is positive and it lies outside $\mathscr H_\Sigma^0$. For the (M.5a) form on a connected $\Sigma$, $\ker B_\Sigma=\operatorname{span}\{1\}$ on every finite mode space of smooth functions containing the constants.
+
+*Proof.* For $0\ne f\in\mathscr H_\Sigma$, $\langle f,B_\Sigma f\rangle_\nu=\langle\Pi_\Sigma^*f,\mathfrak L_W\Pi_\Sigma^*f\rangle>0$, so the compression $B_\Sigma$ of the strictly positive self-adjoint operator $\mathfrak L_W$ is strictly positive and self-adjoint on $\mathscr H_\Sigma$, and the spectral theorem gives $\lVert e^{-tB_\Sigma}\rVert\le e^{-\lambda_\Sigma t}<1$ for $t>0$. No nonzero vector is invariant; in particular $e^{-tB_\Sigma}1\ne1$ because $1\ne0$. Self-adjointness and the Cauchy--Schwarz inequality give $|\langle1,e^{-tB_\Sigma}f\rangle_\nu|=|\langle e^{-tB_\Sigma}1,f\rangle_\nu|\le e^{-\lambda_\Sigma t}\lVert1\rVert_\nu\lVert f\rVert_\nu$ with $\lVert1\rVert_\nu=\nu(\Sigma)^{1/2}$, proving item 1. For item 2, $\langle g,B_\Sigma1\rangle_\nu=\mathcal E_\Sigma(g,1)=\mathcal E_\Sigma(1,g)=0$ for every $g\in\mathscr H_\Sigma$, so $B_\Sigma1=0$ and $B_\Sigma$ is not strictly positive, while the compression of a strictly positive $\mathfrak L_W$ to $\mathscr H_\Sigma$ is strictly positive by the first step of item 1. The generator (M.5a) annihilates constants and is symmetric in $L^2(\Sigma,e^{-V_k}d\mathrm{vol}_\Sigma)$ by its divergence form, so integration by parts on the compact boundaryless manifold $\Sigma$ gives the displayed gradient form, and $\nabla_\Sigma1=0$ makes it conservative. For item 3, $\langle1,B_\Sigma f\rangle_\nu=\langle B_\Sigma1,f\rangle_\nu=0$, so $B_\Sigma$ preserves $\mathscr H_\Sigma^0=1^\perp$. Since $B_\Sigma\succeq0$, its restriction to $1^\perp$ is strictly positive exactly when $\ker B_\Sigma\cap1^\perp=\{0\}$, which, because $1\in\ker B_\Sigma$, is $\ker B_\Sigma=\operatorname{span}\{1\}$. The operator $\mathfrak L=\mathfrak L_{\mathrm{field}}\oplus\mathfrak L_{\mathrm{RG}}\oplus B_\Sigma^0\oplus\mathfrak L_{\mathrm{PCE}}$ is strictly positive, so (X.8a.5d.1) is twice differentiable and strictly convex on the full dual chart with $(W'')^{-1}=\mathfrak L$. This operator represents the closed nonnegative form $\langle u,\mathfrak Lv\rangle$ of a finite datum in the sense of Definition X.9.6a on the module with summand $\mathscr H_\Sigma^0$, the direct-sum projections give item 4 and the regulator gives item 5, so items 1--5 of Definition X.8a.5a hold, and the perspective compression of $\mathfrak L$ is $B_\Sigma^0$. The decomposition $B_\Sigma=B_\Sigma^0\oplus0$ gives (X.8a.5f.2). If $0\ne f\in\mathscr H_\Sigma^0$, then $\int f\,d\nu=0$ forces $\nu(\{f>0\})>0$, so $(0\vee f)\wedge1$ has positive integral. For the (M.5a) form, $\mathcal E_\Sigma(f,f)=0$ forces $\nabla_\Sigma f=0$, hence $f$ is constant on a connected $\Sigma$; for a nonnegative self-adjoint $B_\Sigma$, $\ker B_\Sigma=\{f:\mathcal E_\Sigma(f,f)=0\}$. ∎
+
+**Resolution TV-X-05-R1 (Metadata).** Exact domain: finite-dimensional four-sector modules $\mathscr H_{\mathrm{PU}}$ with self-adjoint operators reduced by every summand, and finite perspective summands $\mathscr H_\Sigma\subset L^2(\Sigma,\nu)$ containing the constants. Premises: Definition X.8a.5a, the reducing hypothesis of Theorem X.9.6b, and the conservative form of the Appendix M generator (M.5a). Equivalence: unitary changes of basis inside each summand. Budget: four sector blocks and one perspective mode space. Verifier: block-diagonal commutation, the spectral theorem for direct sums, the Legendre transform of a quadratic form, and the identity $B_\Sigma1=0$. Falsifier: a compatible strictly positive finite operator with a nonzero off-diagonal block, or a strictly positive perspective block with a nonzero invariant vector. Provenance class: source-internal finite classification and scoped no-go with its quotient construction. Downstream consumers: Theorem X.8a.5, Corollaries X.8a.5b--X.8a.5d, Theorem X.9.6b, Corollary X.9.6c and `TV-X-05`. Nonvacuity: on $\mathscr H_\Sigma=\mathbb R^2$ with counting measure, the conservative form $\mathcal E_\Sigma(f,f)=(f_1-f_2)^2$ has $B_\Sigma^0=2$ on $\mathscr H_\Sigma^0$, while $(f_1-f_2)^2+f_1^2$ is a strictly positive nonconservative block. Proposition X.8a.5e gives `positive-discharge` of the compatibility-verification component: on the finite branch, compatibility with one branch operator is equivalent to sectorwise strict positivity and the sector-internal conditions. Proposition X.8a.5f gives `negative-refutation` of realizing a conservative perspective form on a summand containing the constants, and `positive-discharge` of its realization as the perspective block of a Definition X.8a.5a datum on the mean-zero summand. Population of the actual field, RG, mean-zero perspective and PCE forms with their common domains, projections and regulator remains `C` under `TV-X-05`; the sector images of Theorem X.8a.5 for that datum additionally require the form-compatibility hypotheses of Theorem X.9.6b, whose Dirichlet requirement the mean-zero restriction does not meet.
+
 **Corollary X.8b (Effective-Action Projection of Predictive Curvature).** Assume the regular product-bundle branch of Theorem 47 and Theorem G.4b and the effective-action hypotheses of Theorem X.5a. Then
 $$
 \mathcal F^{\mathrm{pred}}
@@ -1192,6 +1435,55 @@ does not by itself imply a multiplicative double-copy relation between internal 
 Without such a certificate, Corollary X.8b and Proposition X.8b.1 give projection, Ward, and mixed-coefficient locks only; they do not license replacing internal ledger data by kinematic numerators.
 
 *Proof.* Equation (X.8b.2.1) is an additive splitting of the curvature of the product-bundle connection. Projection onto the two summands is functorial and gives the two projected Ward identities used in Proposition X.8b.1. A double-copy relation, however, is multiplicative: it requires a graph expansion in which one set of numerator or ledger factors is replaced by another while preserving the denominators, factorization channels, and Jacobi relations. None of those graph-expansion data is contained in the direct-sum identity (X.8b.2.1). Therefore the replacement $c_\Gamma\mapsto n_\Gamma$ is not a consequence of curvature projection. Items 1-5 are precisely the missing data required to make the multiplicative statement a branch theorem rather than an inference from an additive identity. ∎
+
+**Proposition X.8b.3 (Invariant-Polynomial Classification of Mixed Curvature Terms).** On the locked branch of Corollary X.5a.2, let the product-bundle connection of Proposition X.8b.1 take values in
+$$
+\mathfrak g_{\mathrm{pred}}=\mathfrak{so}(1,3)\oplus\mathfrak g_*,
+\qquad
+\mathfrak g_*=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1),
+$$
+let $I^k(\mathfrak h)$ denote the real homogeneous polynomials of degree $k$ on $\mathfrak h$ annihilated by the adjoint action, and let $y$ be the $\mathfrak u(1)$ coordinate. Then:
+
+1. $I^\bullet(\mathfrak g_{\mathrm{pred}})=I^\bullet(\mathfrak{so}(1,3))\otimes I^\bullet(\mathfrak g_*)$, so the mixed Lorentz--internal invariants of degree $k$ form $\bigoplus_{p+q=k,\ p,q\ge1}I^p(\mathfrak{so}(1,3))\otimes I^q(\mathfrak g_*)$;
+
+2. $\dim I^k(\mathfrak{so}(1,3))=0,2,0,3$ for $k=1,2,3,4$, with $I^2(\mathfrak{so}(1,3))$ spanned by $\operatorname{tr}(X^2)$ and $\epsilon(X,X)=\epsilon_{abcd}X^{ab}X^{cd}$; moreover $I^1(\mathfrak g_*)=\mathbb Ry$ and $\dim I^2(\mathfrak g_*)=3$;
+
+3. every invariant bilinear form $b$ on $\mathfrak g_{\mathrm{pred}}$, symmetric or not, satisfies $b(\mathfrak{so}(1,3),\mathfrak g_*)=b(\mathfrak g_*,\mathfrak{so}(1,3))=0$; hence, for every invariant $P$ in Proposition X.8b.1, the part of $\Gamma_{\mathrm{curv}}$ quadratic in $\mathcal F^{\mathrm{pred}}$ contains no $R$--$F$ cross term;
+
+4. the mixed invariants have dimension $0$ in degree $2$; dimension $2$ in degree $3$, spanned by $\operatorname{tr}(X^2)\,y$ and $\epsilon(X,X)\,y$; and dimension $6$ in degree $4$, spanned by the products of $I^2(\mathfrak{so}(1,3))$ with $I^2(\mathfrak g_*)$. Without an abelian internal summand every mixed invariant of degree at most $3$ vanishes;
+
+5. for a representation $V=S\otimes V_{\mathrm{int}}$ with $\rho(X\oplus Y)=\rho_S(X)\otimes1+1\otimes\rho_{\mathrm{int}}(Y)$, the trace invariants $P_k=\operatorname{tr}_V\rho^k$ satisfy
+$$
+P_k(X\oplus Y)=\sum_{j=0}^k\binom kj\operatorname{tr}_S\bigl(\rho_S(X)^j\bigr)\operatorname{tr}_{V_{\mathrm{int}}}\bigl(\rho_{\mathrm{int}}(Y)^{k-j}\bigr).
+\tag{X.8b.3.1}
+$$
+For the left-handed Weyl module $S=(\tfrac12,0)$ and the one-family package $V_{\mathrm{int}}=R_1$ of Theorem G.8.5a in the convention $y_{e^c}=1$, write $X_S=\rho_S(X)$ and $Y_R=\rho_{\mathrm{int}}(Y)$. Then
+$$
+P_2=15\operatorname{tr}X_S^2+2\operatorname{tr}Y_R^2,
+\qquad
+P_3\equiv0,
+\qquad
+P_4=15\operatorname{tr}X_S^4+6\operatorname{tr}X_S^2\operatorname{tr}Y_R^2+2\operatorname{tr}Y_R^4,
+\tag{X.8b.3.2}
+$$
+with $\operatorname{tr}X_S^4=\tfrac12(\operatorname{tr}X_S^2)^2$ and, for $Y=Y_3+Y_2+Y_{\mathrm{hyp}}$ with $Y_{\mathrm{hyp}}$ acting by $i\,y\,b$ on hypercharge $y$,
+$$
+\operatorname{tr}_{R_1}Y_R^2=4\operatorname{tr}_{\mathbf 3}Y_3^2+4\operatorname{tr}_{\mathbf 2}Y_2^2-\frac{10}{3}b^2 .
+\tag{X.8b.3.3}
+$$
+The identity $P_3\equiv0$ is equivalent to cancellation of every perturbative gauge anomaly and of the mixed gravitational--hypercharge anomaly of $R_1$. The traces in this item are complex valued: $\rho_S$ takes values in $\mathfrak{sl}(2,\mathbb C)$ and $\rho_{\mathrm{int}}(Y)$ is anti-Hermitian, so each $P_k$ lies in $I^k(\mathfrak g_{\mathrm{pred}})\otimes\mathbb C$, $\operatorname{tr}Y_R^2$ and $\operatorname{tr}Y_R^4$ are real, and $\operatorname{tr}X_S^2=\tfrac14\operatorname{tr}(X^2)+\tfrac{i\tau}8\,\epsilon(X,X)$, with $\operatorname{tr}(X^2)$ taken in the defining representation and $\tau\in\{\pm1\}$ fixed by the orientation of $\epsilon_{abcd}$ and the labeling of the two Weyl modules. A real curvature functional uses $\operatorname{Re}P_k$ and $\operatorname{Im}P_k$, each an element of $I^k(\mathfrak g_{\mathrm{pred}})$.
+
+Thus the real and imaginary parts of the trace-generated curvature invariants on the realized chiral module have no mixed term in degrees $2$ and $3$, and their first mixed term is $6\operatorname{tr}X_S^2\operatorname{tr}Y_R^2$ in degree $4$, with real part $\tfrac32\operatorname{tr}(X^2)\operatorname{tr}Y_R^2$ and imaginary part $\tfrac{3\tau}4\epsilon(X,X)\operatorname{tr}Y_R^2$. Every mixed coefficient of $\Gamma_{\mathrm{curv}}$ is the coefficient of a product of a Lorentz invariant and an internal invariant inside $P$, and Proposition X.8b.2 continues to govern any double-copy reading.
+
+*Proof.* Item 1: $S(\mathfrak g_{\mathrm{pred}}^*)=S(\mathfrak{so}(1,3)^*)\otimes S(\mathfrak g_*^*)$, and $\mathfrak{so}(1,3)$ acts on the first factor only. Expanding an element in a basis $\{e_j\}$ of the second factor as $\sum_ja_j\otimes e_j$, it is $\mathfrak{so}(1,3)$-invariant exactly when every $a_j$ is; the same argument for $\mathfrak g_*$ gives item 1.
+
+Item 2: invariance is a real linear condition, so $I^k(\mathfrak h)\otimes\mathbb C$ is the complex invariant space of $\mathfrak h\otimes\mathbb C$. Since $\mathfrak{so}(1,3)\otimes\mathbb C\cong\mathfrak{sl}(2,\mathbb C)\oplus\mathfrak{sl}(2,\mathbb C)$, item 1 reduces the count to $\mathfrak{sl}(2,\mathbb C)$. A traceless $2\times2$ matrix with nonzero determinant has distinct eigenvalues and is conjugate into the diagonal line $\mathfrak t=\mathbb C\operatorname{diag}(1,-1)$, and such matrices are dense. An invariant polynomial is therefore determined by its restriction to $\mathfrak t$, which is even because $\operatorname{Ad}\begin{pmatrix}0&1\\-1&0\end{pmatrix}$ maps $\operatorname{diag}(1,-1)$ to $\operatorname{diag}(-1,1)$. Hence the invariant space of $\mathfrak{sl}(2,\mathbb C)$ has dimension at most $1$ in even degree and $0$ in odd degree, and powers of $\operatorname{tr}(X^2)$ attain it. The two-factor count is the number of pairs $(i,j)$ with $2i+2j=k$, which is $0,2,0,3$. The forms $\operatorname{tr}(X^2)$ and $\epsilon(X,X)$ are invariant, and they are independent because $\epsilon(X,X)=0\ne\operatorname{tr}(X^2)$ on a rotation generator while $\epsilon\not\equiv0$. A linear invariant of $\mathfrak g_*$ vanishes on $[\mathfrak g_*,\mathfrak g_*]=\mathfrak{su}(3)\oplus\mathfrak{su}(2)$, giving $I^1(\mathfrak g_*)=\mathbb Ry$. The complexifications of $\mathfrak{su}(3)$ and $\mathfrak{su}(2)$ are simple, so Schur's lemma makes each invariant quadratic form a multiple of the trace form; with item 1 and $I^1(\mathfrak{su}(n))=0$ this gives $\dim I^2(\mathfrak g_*)=3$.
+
+Item 3: invariance gives $b([Z,X],Y)=-b(X,[Z,Y])$. For $X,Z\in\mathfrak{so}(1,3)$ and $Y\in\mathfrak g_*$, $[Z,Y]=0$, so $b([Z,X],Y)=0$; since $\mathfrak{so}(1,3)$ is semisimple, $[\mathfrak{so}(1,3),\mathfrak{so}(1,3)]=\mathfrak{so}(1,3)$ and $b(\mathfrak{so}(1,3),\mathfrak g_*)=0$. The same argument in the second slot gives the other identity. The quadratic part of $P(\mathcal F^{\mathrm{pred}},*\mathcal F^{\mathrm{pred}})$ is an invariant bilinear form evaluated on $R\oplus F$ and $*R\oplus*F$, so its cross terms vanish.
+
+Item 4 follows from items 1 and 2. For item 5, the two summands of $\rho$ commute, so the binomial theorem and $\operatorname{tr}(A\otimes B)=\operatorname{tr}A\operatorname{tr}B$ give (X.8b.3.1). On $S$, $X_S$ is traceless and $2\times2$, so $X_S^2=-\det(X_S)I$; hence $\operatorname{tr}X_S=\operatorname{tr}X_S^3=0$ and $\operatorname{tr}X_S^4=\tfrac12(\operatorname{tr}X_S^2)^2$. With $\dim S=2$ and $\dim R_1=15$, (X.8b.3.1) gives $P_2$ and $P_4$ as displayed and $P_3=2\operatorname{tr}Y_R^3+3\operatorname{tr}X_S^2\operatorname{tr}Y_R$. The hypercharge sum over the fifteen states is $6\cdot\tfrac16-3\cdot\tfrac23+3\cdot\tfrac13-2\cdot\tfrac12+1=0$, so $\operatorname{tr}Y_R=0$. Expanding $\operatorname{tr}Y_R^3$, the terms in which $Y_3$ or $Y_2$ appears exactly once vanish because those blocks are traceless, $\operatorname{tr}_{\mathbf 2}Y_2^3=0$, and the remaining coefficients are the anomaly sums $2-1-1=0$ for $SU(3)^3$, $2\cdot\tfrac16-\tfrac23+\tfrac13=0$ for $SU(3)^2U(1)$, $3\cdot\tfrac16-\tfrac12=0$ for $SU(2)^2U(1)$ and $6\cdot\tfrac1{216}-3\cdot\tfrac8{27}+3\cdot\tfrac1{27}-2\cdot\tfrac18+1=0$ for $U(1)^3$; hence $P_3\equiv0$. Conversely, $P_3\equiv0$ at $X=0$ gives $\operatorname{tr}Y_R^3\equiv0$, and then $\operatorname{tr}X_S^2\operatorname{tr}Y_R\equiv0$ gives $\operatorname{tr}Y_R\equiv0$. In (X.8b.3.3), $Q$ contributes two color triplets and three weak doublets, $u^c$ and $d^c$ one color antitriplet each, $L$ one weak doublet, mixed traces vanish, and $\sum y^2=6\cdot\tfrac1{36}+3\cdot\tfrac49+3\cdot\tfrac19+2\cdot\tfrac14+1=\tfrac{10}3$. The eigenvalues of the anti-Hermitian $Y_R$ are imaginary, so its even traces are real. The trace $\operatorname{tr}X_S^2$ is a complex-valued invariant quadratic form on $\mathfrak{so}(1,3)$, so item 2 gives $\operatorname{tr}X_S^2=c_1\operatorname{tr}(X^2)+c_2\epsilon(X,X)$ with $c_1,c_2\in\mathbb C$. For $X$ the sum of a rotation by $\theta$ about the third spatial axis and a boost of rapidity $\beta$ along it, $X_S=\tfrac12(s\beta-i\theta)\operatorname{diag}(1,-1)$ with $s\in\{\pm1\}$ labeling the Weyl module, $\operatorname{tr}(X^2)=2(\beta^2-\theta^2)$ and $\epsilon(X,X)=8s'\theta\beta$ with $s'\in\{\pm1\}$ fixed by the orientation conventions; comparing $\operatorname{tr}X_S^2=\tfrac12(\beta^2-\theta^2)-is\theta\beta$ with these values gives $c_1=\tfrac14$ and $c_2=\tfrac{i\tau}8$, $\tau=-ss'$. ∎
+
+**Resolution TV-X-06-R1 (Metadata).** Exact domain: invariant polynomials of degree at most $4$ and all invariant bilinear forms on $\mathfrak{so}(1,3)\oplus\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$, and the complex-valued trace invariants of $(\tfrac12,0)\otimes R_1$ with their real and imaginary parts. Premises: the locked gauge algebra of Corollary X.5a.2, the product-bundle connection of Proposition X.8b.1 and the one-family package of Theorem G.8.5a with $y_{e^c}=1$. Equivalence: Lie-algebra automorphisms and rescaling of the hypercharge generator. Budget: polynomial degree $4$ and one chiral module. Verifier: the tensor-product invariant lemma, the diagonal-line restriction for $\mathfrak{sl}(2,\mathbb C)$, Schur's lemma, the identity $X_S^2=-\det(X_S)I$, the evaluation of $\operatorname{tr}X_S^2$ on a rotation--boost pair and the finite hypercharge sums. Falsifier: a nonzero invariant pairing between $\mathfrak{so}(1,3)$ and $\mathfrak g_*$, a nonzero cubic invariant of $\mathfrak{so}(1,3)$, or a nonzero $P_3$ on $(\tfrac12,0)\otimes R_1$. Provenance class: source-internal exact classification and computation. Downstream consumers: Corollary X.8b, Propositions X.8b.1--X.8b.2 and `TV-X-06`. Nonvacuity: for a rotation generator $X$ and the hypercharge generator, $6\operatorname{tr}X_S^2\operatorname{tr}Y_R^2=6\cdot(-\tfrac12)\cdot(-\tfrac{10}3b^2)=10b^2\ne0$. This is `positive-discharge` of the invariant-projection and mixed-term classification through degree $4$ and of the trace normalization on the realized one-family chiral module. The selection of the branch invariant $P$ and its coefficients from the effective branch, with their numerical normalization, remains `C+R` under `TV-X-06`.
 
 **Theorem X.8c (Constraint-Coupling Duality: Predictive Price Principle).** Consider a regular finite-mode truncation of a PU effective branch after quotienting gauge redundancies or imposing the gauge-fixing used in Section X.3. Let the retained coarse variables be $\Phi\in\mathcal U\subset\mathbb R^n$, let $V_{\mathrm{PCE}}(\Phi)$ be the differentiable PCE objective on that chart, and let the physical admissibility constraints be
 $$
@@ -1342,6 +1634,62 @@ $$
 \alpha_A=\frac{1}{4\pi\mathcal N_A\lambda_A}.
 $$
 Uniqueness of the vector follows from uniqueness of the KKT multipliers in Theorem X.8c and positivity of the fixed normalizations $\mathcal N_A$. ∎
+
+**Proposition X.8c.2 (Rate-Coordinate Capacity Branch: Qualification, Regularity and Unit Calibration).** In the rate-coordinate convention of Theorem X.8c, fix one sector $A$ with coordinate $u$ on an open interval $U\subset(-1/\lambda,\infty)$, a strictly convex objective $\phi_A\in C^2(U)$, and the inequality form of the capacity constraint (X.11),
+$$
+\mathfrak c(u)=M\ln(1+\lambda u)\le\ln d_0,
+\qquad
+M,\lambda>0,\quad d_0>1 .
+$$
+Put $u_{\max}=(d_0^{1/M}-1)/\lambda$ and assume $u_{\max}\in U$. Then:
+
+1. the feasible set is $U\cap(-\infty,u_{\max}]$, and $\mathfrak c'(u)=M\lambda/(1+\lambda u)>0$ on $U$, so the linear-independence constraint qualification holds at every feasible point;
+
+2. if $\phi_A'(u_{\max})<0$, the unique constrained minimizer is $u_A^*=u_{\max}$, the constraint is active with strictly positive multiplier
+$$
+\lambda_A=-\frac{d_0^{1/M}}{M\lambda}\,\phi_A'(u_{\max}),
+\tag{X.8c.2.1}
+$$
+the bordered KKT Jacobian has determinant $-(M\lambda)^2d_0^{-2/M}\ne0$, the active set is locally constant in $b=\ln d_0$, and the optimal value obeys $\partial\phi_A(u_A^*)/\partial b=-\lambda_A$, which is (X.8f.4) for this constraint. If $\phi_A'(u_{\max})\ge0$, every constrained minimizer has zero multiplier;
+
+3. for $\phi_A'(u_{\max})<0$ the active coordinate $u_A^*=u_{\max}$ is the same for every objective, while $\lambda_A$ is proportional to $-\phi_A'(u_{\max})$; for $(M,\lambda,d_0)=(24,1,8)$ it is the value $u^*=8^{1/24}-1$ of Section X.3;
+
+4. if $\phi_A'(u_{\max})<0$ and $\kappa_A>0$, so that $u_A^*=u_{\max}>0$ and $\lambda_A>0$, the stiffness identification $g_A^{-2}=\mathcal N_A\lambda_A$ and the rate identification $g_A^2=u_A^*/\kappa_A$ of (X.6) assign the same coupling exactly when
+$$
+\mathcal N_A
+=
+\frac{\kappa_A}{u_A^*\lambda_A}
+=
+-\frac{\kappa_A M\lambda}{u_A^*d_0^{1/M}\phi_A'(u_A^*)} ;
+\tag{X.8c.2.2}
+$$
+at fixed $\kappa_A$, a normalization $\mathcal N_A$ fixed independently of $\phi_A$ therefore makes the two identifications agree for at most one value of $\phi_A'(u_A^*)$, and the objectives $\phi_s(u)=\tfrac12(u-s)^2$, $s>u_{\max}$, share $u_A^*$ and have pairwise distinct multipliers; on the zero-multiplier branch $\phi_A'(u_{\max})\ge0$ the stiffness identification gives $g_A^{-2}=0$ for every finite $\mathcal N_A$, which matches no finite rate coupling;
+
+5. if $(M,\lambda,d_0)$ are scale independent, each $\phi_{A,k}$ is an objective of the above type, and $(k,u)\mapsto\phi_{A,k}'(u)$ is continuously differentiable with $\phi_{A,k}'(u_{\max})<0$, then $u_A^*$ is scale independent, $\lambda_A(k)$ is $C^1$ with
+$$
+k\frac{d\lambda_A}{dk}
+=
+-\frac{d_0^{1/M}}{M\lambda}\,k\,\partial_k\phi_{A,k}'(u_{\max}),
+\tag{X.8c.2.3}
+$$
+the rate-convention coupling runs only through $\kappa_A(k)$, and on the calibrated branch (X.8c.2.2) the price $\eta_A=\mathcal N_A\lambda_A=\kappa_A/u_A^*$ obeys $k\,d\ln\eta_A/dk=k\,d\ln\kappa_A/dk$, so Theorem X.8e gives
+$$
+\beta_A=-\frac12\,g_A\,k\frac{d\ln\kappa_A}{dk}.
+\tag{X.8c.2.4}
+$$
+
+*Proof.* The function $\mathfrak c$ is strictly increasing on $(-1/\lambda,\infty)$ and $\mathfrak c(u_{\max})=M\ln d_0^{1/M}=\ln d_0$, which gives the feasible set; in one dimension the constraint qualification is $\mathfrak c'\ne0$. If $\phi_A'(u_{\max})<0$, strict convexity makes $\phi_A'$ strictly increasing, so $\phi_A'<0$ on the feasible set and $\phi_A$ is strictly decreasing there; hence $u_{\max}$ is the unique minimizer. Stationarity $\phi_A'(u^*)+\lambda_A\mathfrak c'(u^*)=0$ and $1+\lambda u_{\max}=d_0^{1/M}$ give (X.8c.2.1). The active KKT system $\phi_A'+\lambda_A\mathfrak c'=0$, $\mathfrak c-b=0$ has Jacobian
+$$
+\begin{pmatrix}
+\phi_A''+\lambda_A\mathfrak c''&\mathfrak c'\\
+\mathfrak c'&0
+\end{pmatrix},
+$$
+with determinant $-\mathfrak c'(u^*)^2=-(M\lambda)^2d_0^{-2/M}$. For $b$ near $\ln d_0$, $u_{\max}(b)=(e^{b/M}-1)/\lambda$ is smooth and $\phi_A'(u_{\max}(b))<0$ by continuity, so the constraint stays active, and $\frac{d}{db}\phi_A(u_{\max}(b))=\phi_A'(u_{\max})e^{b/M}/(M\lambda)=-\lambda_A$. If $\phi_A'(u_{\max})\ge0$, a minimizer below $u_{\max}$ has zero multiplier by complementarity, and a minimizer at $u_{\max}$ has $\lambda_A=-\phi_A'(u_{\max})/\mathfrak c'(u_{\max})\le0$, so $\lambda_A=0$ by dual feasibility. This proves items 1--3; the stated value is $u_{\max}=8^{1/24}-1$.
+
+For item 4, $u_A^*=u_{\max}>0$ because $d_0>1$, and $\lambda_A>0$ by item 2, so $g_A^{-2}=\mathcal N_A\lambda_A$ and $g_A^{2}=u_A^*/\kappa_A$ hold together exactly when $\mathcal N_A\lambda_A=\kappa_A/u_A^*$, which with (X.8c.2.1) is (X.8c.2.2). A fixed $\mathcal N_A$ satisfies this identity for at most one value of $\lambda_A$, hence of $\phi_A'(u_A^*)$. For $\phi_s$, $\phi_s'(u_{\max})=u_{\max}-s<0$, so $u_A^*=u_{\max}$ and $\lambda_A=(s-u_{\max})d_0^{1/M}/(M\lambda)$, which is injective in $s$. On the zero-multiplier branch $\mathcal N_A\lambda_A=0$ for finite $\mathcal N_A$, while $u_A^*/\kappa_A$ is finite. For item 5, $u_{\max}$ does not involve $k$, (X.8c.2.1) holds at each $k$, and differentiating it gives (X.8c.2.3). The rate identification $g_A^2=u_A^*/\kappa_A(k)$ has scale-independent numerator. On the calibrated branch $\eta_A=\kappa_A/u_A^*$, so $d\ln\eta_A=d\ln\kappa_A$, and Theorem X.8e gives (X.8c.2.4). ∎
+
+**Resolution TV-X-07-R1 (Metadata).** Exact domain: one-sector rate-coordinate problems with strictly convex $C^2$ objective on an open interval and the inequality form of the capacity constraint (X.11). Premises: $M,\lambda>0$, $d_0>1$, $u_{\max}\in U$, for item 4 the active branch $\phi_A'(u_{\max})<0$ with $\kappa_A>0$, and for item 5 scale-independent capacity data with a $C^1$ objective family. Equivalence: the constraint representations $\mathfrak c(u)\le\ln d_0$ and $u\le u_{\max}$, which have the same feasible set and nonvanishing constraint derivatives. Budget: one objective, three capacity parameters and one normalization. Verifier: the closed forms for $u_{\max}$, $\lambda_A$, the bordered Jacobian determinant and the envelope derivative. Falsifier: an objective with $\phi_A'(u_{\max})<0$ whose constrained minimizer differs from $u_{\max}$, or agreement of the stiffness and rate couplings with $\mathcal N_A\ne\kappa_A/(u_A^*\lambda_A)$. Provenance class: source-internal exact computation with an explicit objective family. Downstream consumers: Theorem X.8c, Corollary X.8c.1, Theorem X.8e, Theorem X.8f.2, Section X.6 and `TV-X-07`. Nonvacuity: $(M,\lambda,d_0)=(24,1,8)$ with $\phi_A(u)=\tfrac12(u-1)^2$ gives $u_A^*=8^{1/24}-1$ and $\lambda_A=(2-8^{1/24})8^{1/24}/24>0$. This is `positive-discharge` of the constraint qualification, strong regularity, active-set stability and unit calibration (X.8c.2.2) on the rate-coordinate capacity branch, and `nonentailment` of agreement between the stiffness and rate identifications under an objective-independent normalization. Derivation of the active constraints from the effective action, the multi-sector price vector with its beta functions, and the scale dependence of $\kappa_A$ remain `M+C+R+O` under `TV-X-07`.
 
 **Definition X.8d.0 (Predictive Anomaly Cocycle).** Fix a regular effective-action sector at MPU resolution $\delta$. Let $\mathcal X$ be the set of local predictive descriptions in that sector, and let
 $$
@@ -1923,7 +2271,7 @@ $$
 with the following entries.
 
 1. $\mathcal Z$ is a finite retained state bundle whose chart projections include the accepted branch variables: the projective Hilbert ray sector $\mathbb P(\mathbb C^{d_0})$ when the Hilbert-carrier branch is used, the perspective sector $\Sigma$, the retained PCE/adaptation coordinates, and any boundary-geometry variables already accepted in the continuum/gravity branch. On the minimal Hilbert branch $d_0=8$, the ray factor is $\mathbb{CP}^7$.
-2. $\mathcal G$ is a positive retained response metric whose sector projections agree with the accepted Fisher/QFI/Fubini-Study/Bures or natural-gradient metrics on the corresponding branch, after quotienting response-null directions.
+2. $\mathcal G$ is a positive retained response metric whose sector projections agree with the accepted Fisher/QFI/Fubini-Study/Bures or natural-gradient metrics on the corresponding branch, after quotienting response-null directions, with the ray-sector normalization fixed below. On the projective Hilbert ray sector the quantum Fisher, Fubini-Study and Bures metrics are $F_Q=4g_{\mathrm{FS}}$ (Theorem 23c), $g_{\mathrm{FS}}$ and $\tfrac14F_Q=g_{\mathrm{FS}}$; with ray generator $\Phi_{\Omega}|_{\mathrm{ray}}=\langle H\rangle$ the ray projection is the multiple $2g_{\mathrm{FS}}=\tfrac12F_Q$ of these metrics, the normalization under which (X.8g.4a) with $\mathsf E_{\Omega}=0$ on the ray block is the projective Schrödinger flow $[e^{-iHt/\hbar}\psi]$ (Theorem X.8g.7).
 3. $\mathsf J_{\Omega}$ is a skew-adjoint reversible-response operator. It restricts to the complex structure $J$ of Theorem X.8g.2 on the reversible Hilbert response subbundle, is zero on purely dissipative/adaptive blocks unless a branch certificate supplies a reversible coupling there, and is recorded block-by-block in $\mathfrak o_{\Omega}$.
 4. $\mathsf E_{\Omega}$ is a self-adjoint positive semidefinite verification/adaptation mobility operator. It is supported only on dissipative, verification, coarse-graining, or slow-adaptation blocks supplied by the branch record; it is not a tunable continuum collapse parameter.
 5. $\Phi_{\Omega}$ is the retained PCE generator in the units of the flow. When the local generator is first written as a nat-rate $\Phi_{\mathrm{nat}}$, the mechanical generator is $\Phi_{\Omega}=\hbar\Phi_{\mathrm{nat}}$ on branches where Theorem Q.0.1 and Corollary Q.0.1 supply the action-entropy bridge. Thus $\hbar$ is consumed as the existing unit bridge, not rederived here.
@@ -1963,6 +2311,100 @@ The multiplier sign convention and shadow-price interpretation are inherited fro
 *Proof.* Item 1 is Corollary X.8g.3 applied to the Hilbert ray projection with generator $\langle H\rangle$ and no dissipative mobility on that block. Item 2 is the definition of natural-gradient descent after restricting the flow to a block with zero reversible operator; the entropy floor is a separate discrete-event theorem and therefore enters only through the event branch. For item 3, Theorem X.8f.2 gives Equation (X.8g.4b) at the stipulated constrained local minimum with LICQ and $h_a=\mathcal C_a-C_a^{\max}$. Its independent symmetry, continuum, and strong-regularity premises supply the respective Noether/Ward and differentiable shadow-price conclusions. Item 4 follows because Theorem 50 uses the Section 12 gravity-bridge hypotheses as inputs; a projected stationarity equation can supply the variational slot only after those inputs exist. Item 5 is a dependency audit: the Born rule is derived by the Section 8 operator-measure route, while $\mathfrak C_{\Omega}$ records a compatible flow on the already accepted branch. ∎
 
 **Remark X.8g.6 (Status of the Equation of Becoming).** On a branch carrying $\mathfrak C_{\Omega}$, Equation (X.8g.4a) may be called the Equation of Becoming. Its status is compression/certificate-level: one retained flow datum recovers already accepted sector dynamics by projection. A failed projection falsifies the accepted $\mathfrak C_{\Omega}$ branch or the offending sector record, not the theorem-level PU backbone. The Landauer phase grid $g_L=e^{i\ln2}$ and related Appendix Q signatures can be read as fingerprints of this compression only on branches where the corresponding Action-Entropy and phase-generator records are already accepted.
+
+**Theorem X.8g.7 (Finite Ray–Perspective–Adaptation Becoming-Flow Datum).** Fix an integer $d\ge2$ and a Hermitian operator $H$ on $\mathbb C^d$; a finite-dimensional real space $\mathscr H_\Sigma\subset L^2(\Sigma,\nu)$ of perspective perturbations, with $\nu$ a finite measure, carrying a nonnegative $\nu$-self-adjoint operator $B_\Sigma$ that represents the retained perspective form $\mathcal E_\Sigma(f,g)=\langle f,B_\Sigma g\rangle_\nu$; an integer $n\ge1$, a positive definite matrix $F\in\mathbb R^{n\times n}$, a mobility $\mu>0$, a convex nat-rate PCE objective $V\in C^1(\mathbb R^n)$, and convex capacity functions $h_a=\mathcal C_a-C_a^{\max}\in C^1(\mathbb R^n)$, $a=1,\dots,r$, with a Slater point $\bar\theta$ satisfying $h_a(\bar\theta)<0$ for every $a$. Put $K=\{\theta\in\mathbb R^n:h_a(\theta)\le0\ \text{for every }a\}$. The matrix $F$ is the Fisher metric of the Gaussian location family $\mathcal N(\theta,F^{-1})$ in its mean coordinate. Represent a tangent vector to $\mathbb{CP}^{d-1}$ at $[\psi]$, $\lVert\psi\rVert=1$, by its horizontal lift $u\in\mathbb C^d$, $\langle\psi,u\rangle=0$, and write $g_{\mathrm{FS}}(u,v)=\operatorname{Re}\langle u,v\rangle$ and $\langle H\rangle_\psi=\langle\psi,H\psi\rangle$. On
+$$
+\mathcal Z=\mathbb{CP}^{d-1}\times\mathscr H_\Sigma\times K
+$$
+set
+$$
+\mathcal G=2g_{\mathrm{FS}}\oplus\langle\cdot,\cdot\rangle_\nu\oplus F,
+\qquad
+\mathsf J_\Omega=J\oplus0\oplus0,\quad Ju=iu,
+\qquad
+\mathsf E_\Omega=0\oplus I\oplus\mu I,
+\tag{X.8g.7.1}
+$$
+$$
+\Phi_\Omega([\psi],f,\theta)
+=
+\langle H\rangle_\psi
++\frac\hbar2\langle f,B_\Sigma f\rangle_\nu
++\hbar V(\theta),
+\tag{X.8g.7.2}
+$$
+let $\mathcal K_\Omega$ be the list $h_a\le0$, let $\Pi_\Omega$ consist of the ray, perspective, adaptation and KKT projections, and let $\Pi_{T_{\mathcal K}}$ be the $\mathcal G$-metric projection onto the tangent cone $T_{[\psi]}\mathbb{CP}^{d-1}\times\mathscr H_\Sigma\times T_K(\theta)$. Write $\Pi^F_{T_K(\theta)}$ for the $F$-metric projection onto the tangent cone $T_K(\theta)$ and $N_K(\theta)$ for the normal cone. Then:
+
+1. $\mathcal G$ is a Riemannian metric; on the ray block it is the real part of the positive Hermitian form $2\langle\cdot,\cdot\rangle$, so Theorem X.8g.2 gives the compatible triple $(2g_{\mathrm{FS}},J,2\operatorname{Im}\langle\cdot,\cdot\rangle)$; $\mathsf J_\Omega$ is $\mathcal G$-skew-adjoint; and $\mathsf E_\Omega$ is $\mathcal G$-self-adjoint, positive semidefinite and supported on the perspective and adaptation blocks. The perspective and adaptation generators enter through the unit bridge $\Phi_\Omega=\hbar\Phi_{\mathrm{nat}}$ of Definition X.8g.4.
+
+2. With $D\mathcal Z/Dt$ the velocity of the curve, Equation (X.8g.4a) is the decoupled system
+$$
+\hbar\,\dot\psi_{\mathrm{hor}}=-i\bigl(H-\langle H\rangle_\psi\bigr)\psi,
+\qquad
+\dot f=-B_\Sigma f,
+\qquad
+\dot\theta=\mu\,\Pi^F_{T_K(\theta)}\bigl(-F^{-1}\nabla V(\theta)\bigr),
+\tag{X.8g.7.3}
+$$
+where $\dot\psi_{\mathrm{hor}}$ is the horizontal part of the velocity of a unit lift.
+
+3. The ray projection of every solution is $[e^{-iHt/\hbar}\psi_0]$, the projective Schrödinger flow. If the ray block of $\mathcal G$ is replaced by $c\,g_{\mathrm{FS}}$ with $c>0$ and every other entry is kept, the ray projection becomes $[e^{-2iHt/(c\hbar)}\psi_0]$. Hence the ray projection is the projective Schrödinger flow of $H$ for every Hermitian $H$ exactly when $c=2$. The pure-state SLD quantum Fisher metric, $c=4$, and the Fubini--Study or Bures metric, $c=1$, give the projective Schrödinger flows of $H/2$ and $2H$ respectively.
+
+4. The perspective projection of every solution is $f(t)=e^{t\mathcal L_\Sigma}f_0$ with $\mathcal L_\Sigma=-B_\Sigma$, the sign convention of (X.9.6.3), and $\lVert f(t)\rVert_\nu$ is nonincreasing.
+
+5. For every $\theta_0\in K$ there is a unique Lipschitz curve $\theta:[0,\infty)\to K$ with $\theta(0)=\theta_0$ whose right derivative exists at every $t\ge0$ and satisfies the adaptation equation of (X.8g.7.3). On the interior of $K$ it is the natural-gradient flow $\dot\theta=-\mu F^{-1}\nabla V(\theta)$, and along the whole curve
+$$
+\frac{d^+}{dt}V(\theta(t))
+=
+-\mu\,\Bigl\lVert\Pi^F_{T_K(\theta(t))}\bigl(-F^{-1}\nabla V(\theta(t))\bigr)\Bigr\rVert_F^2\le0 .
+\tag{X.8g.7.4}
+$$
+
+6. For $\theta_*\in K$ the following are equivalent: (a) $\theta_*$ is a rest point of the adaptation equation; (b) there are $\zeta_a\ge0$ with $\zeta_ah_a(\theta_*)=0$ and $\nabla V(\theta_*)+\sum_a\zeta_a\nabla h_a(\theta_*)=0$; (c) $\theta_*$ minimizes $V$ on $K$. The rest points of (X.8g.7.3) are exactly the triples $([\psi_*],f_*,\theta_*)$ with $\psi_*$ an eigenvector of $H$, $f_*\in\ker B_\Sigma$ and $\theta_*$ as in (b), and at each of them $d\Phi_\Omega+\sum_a\hbar\zeta_a\,dh_a=0$ on $T\mathcal Z$, which is (X.8g.4b) with multipliers $\hbar\zeta_a$. When the active gradients $\{\nabla h_a(\theta_*):h_a(\theta_*)=0\}$ are linearly independent, these multipliers are unique and are the KKT shadow prices that Theorem X.8f.2 assigns to the minimizer $\theta_*$ of $\hbar V$ on $K$.
+
+7. Along every solution $\langle H\rangle_{\psi(t)}$ is constant and
+$$
+\frac{d^+}{dt}\Phi_\Omega
+=
+-\hbar\lVert B_\Sigma f\rVert_\nu^2
+-\hbar\mu\,\Bigl\lVert\Pi^F_{T_K(\theta)}\bigl(-F^{-1}\nabla V(\theta)\bigr)\Bigr\rVert_F^2 ,
+\tag{X.8g.7.5}
+$$
+so $\mathsf J_\Omega$ contributes no dissipation and $\Phi_\Omega$ is stationary exactly at perspective and adaptation rest points.
+
+8. The solution set of (X.8g.4a) on $\mathcal Z$ is the product of the ray, perspective and adaptation solution sets of items 3--5. Every sector law in items 3--6 is therefore the image under $\Pi_\Omega$ of the one datum (X.8g.7.1)--(X.8g.7.2), and no sector law enters separately from $(\mathcal G,\mathsf J_\Omega,\mathsf E_\Omega,\Phi_\Omega,\mathcal K_\Omega)$.
+
+*Proof.* Item 1. The form $2\langle u,v\rangle$ is positive definite on horizontal vectors, $\langle\cdot,\cdot\rangle_\nu$ is positive definite on $\mathscr H_\Sigma$, and $F\succ0$, so $\mathcal G$ is Riemannian. Multiplication by $i$ preserves horizontality because $\langle\psi,iu\rangle=i\langle\psi,u\rangle$, and $2\operatorname{Re}\langle iu,v\rangle=2\operatorname{Im}\langle u,v\rangle=-2\operatorname{Re}\langle u,iv\rangle$, which is $\mathcal G$-skewness; Theorem X.8g.2 applies to the Hermitian form $2\langle\cdot,\cdot\rangle$. The blocks $I$ and $\mu I$ are self-adjoint and positive semidefinite for $\langle\cdot,\cdot\rangle_\nu$ and $F$. Replacing $\psi$ by $e^{i\alpha}\psi$ multiplies horizontal lifts by $e^{i\alpha}$ and leaves $\mathcal G$, $J$ and $\Phi_\Omega$ unchanged, so every expression below is defined on rays.
+
+Item 2. For horizontal $u$, $\lVert\psi+su\rVert^2=1+s^2\lVert u\rVert^2$, hence
+$$
+\frac{d}{ds}\Big|_{s=0}\frac{\langle\psi+su,H(\psi+su)\rangle}{\lVert\psi+su\rVert^2}
+=
+2\operatorname{Re}\langle H\psi,u\rangle
+=
+2\operatorname{Re}\bigl\langle(H-\langle H\rangle_\psi)\psi,u\bigr\rangle,
+$$
+because $\langle\psi,u\rangle=0$. The vector $(H-\langle H\rangle_\psi)\psi$ is horizontal, so it is the $2g_{\mathrm{FS}}$-gradient of the ray block of $\Phi_\Omega$. Self-adjointness of $B_\Sigma$ gives the $\nu$-gradient $\hbar B_\Sigma f$ of the perspective block, and the $F$-gradient of $\hbar V$ is $\hbar F^{-1}\nabla V$. Therefore
+$$
+-(\mathsf J_\Omega+\mathsf E_\Omega)\operatorname{grad}_{\mathcal G}\Phi_\Omega
+=
+\bigl(-i(H-\langle H\rangle_\psi)\psi,\ -\hbar B_\Sigma f,\ -\hbar\mu F^{-1}\nabla V(\theta)\bigr).
+$$
+The squared $\mathcal G$-distance to a product of closed convex cones is the sum of the blockwise squared distances, so $\Pi_{T_{\mathcal K}}$ acts blockwise; it is the identity on the two linear blocks, and positive homogeneity of $\Pi^F_{T_K(\theta)}$ moves the factor $\hbar\mu$ outside. Dividing the perspective and adaptation blocks by $\hbar$ gives (X.8g.7.3).
+
+Item 3. For $\psi(t)=e^{-iHt/\hbar}\psi_0$, $\lVert\psi(t)\rVert=1$ and $\dot\psi=-i\hbar^{-1}H\psi$, whose horizontal part $\dot\psi-\langle\psi,\dot\psi\rangle\psi$ is $-i\hbar^{-1}(H-\langle H\rangle_\psi)\psi$. The ray equation is a smooth vector field on the compact manifold $\mathbb{CP}^{d-1}$, so its solutions are global and unique, and $[\psi(t)]$ is the solution through $[\psi_0]$. With the ray block $c\,g_{\mathrm{FS}}$ the gradient becomes $(2/c)(H-\langle H\rangle_\psi)\psi$, which is the same computation with $H$ replaced by $2H/c$. If $c\ne2$ and $H$ is not a multiple of $I$, take eigenvectors $e_1,e_2$ with distinct eigenvalues and $\psi=(e_1+e_2)/\sqrt2$; then $(H-\langle H\rangle_\psi)\psi\ne0$, and the two vector fields differ at $[\psi]$. For a pure state and a horizontal tangent $u$, Equation (X.8a.2b.2) with the regular SLD limit $c_{\mathrm{SLD}}(1,0)=c_{\mathrm{SLD}}(0,1)=2$ gives the metric value $4\lVert u\rVert^2$, and the Bures metric is one quarter of it; this gives the values $c=4$ and $c=1$.
+
+Item 4. The perspective equation is linear with the nonnegative self-adjoint operator $B_\Sigma$, so $f(t)=e^{-tB_\Sigma}f_0$ is its unique solution and $\lVert e^{-tB_\Sigma}\rVert\le1$.
+
+Item 5. Give $\mathbb R^n$ the inner product $\langle x,y\rangle_F=x^TFy$. The function $\varphi=\mu(V+\iota_K)$, with $\iota_K$ the convex indicator of $K$, is proper, convex and lower semicontinuous because $K$ is closed, convex and nonempty. Since $V$ is finite and continuous, the subdifferential sum rule gives the $F$-subdifferential $\partial^F\varphi(\theta)=\mu\bigl(F^{-1}\nabla V(\theta)+F^{-1}N_K(\theta)\bigr)$ with domain $K$, and $\partial^F\varphi$ is maximal monotone. The Kōmura--Brezis theorem for evolution equations governed by maximal monotone operators (Kōmura 1967; Brezis 1973, Chapter III) gives, for every $\theta_0\in K$, a unique Lipschitz curve in $K$ with $\dot\theta\in-\partial^F\varphi(\theta)$ almost everywhere, whose right derivative exists at every $t\ge0$ and equals minus the element of least $F$-norm of $\partial^F\varphi(\theta(t))$. The cones $T_K(\theta)$ and $F^{-1}N_K(\theta)$ are mutually polar for $\langle\cdot,\cdot\rangle_F$, so Moreau's decomposition writes every $w$ as the $F$-orthogonal sum $w=\Pi^F_{T_K(\theta)}w+\Pi^F_{F^{-1}N_K(\theta)}w$. For $w=-F^{-1}\nabla V(\theta)$, the least-norm element of $-w+F^{-1}N_K(\theta)$ is $-w+\Pi^F_{F^{-1}N_K(\theta)}w=-\Pi^F_{T_K(\theta)}w$, which gives the adaptation equation. On the interior of $K$ the tangent cone is $\mathbb R^n$. The chain rule for the $C^1$ function $V$ along a curve with right derivative, together with $\nabla V=-Fw$ and the orthogonality in Moreau's decomposition, gives $\frac{d^+}{dt}V(\theta(t))=-\mu\langle w,\Pi^F_{T_K}w\rangle_F=-\mu\lVert\Pi^F_{T_K}w\rVert_F^2$, which is (X.8g.7.4).
+
+Item 6. By Moreau's decomposition, $\Pi^F_{T_K(\theta_*)}w=0$ exactly when $w\in F^{-1}N_K(\theta_*)$, that is, $-\nabla V(\theta_*)\in N_K(\theta_*)$. For convex $V$ this is equivalent to (c): if it holds, then $V(y)\ge V(\theta_*)+\nabla V(\theta_*)\cdot(y-\theta_*)\ge V(\theta_*)$ for $y\in K$; conversely, minimality along the segments $\theta_*+s(y-\theta_*)\in K$ gives $\nabla V(\theta_*)\cdot(y-\theta_*)\ge0$. For (b), let $\mathsf A$ be the active set. Convexity gives $\nabla h_a(\theta_*)\cdot(y-\theta_*)\le h_a(y)\le0$ for $a\in\mathsf A$ and $y\in K$, so every nonnegative combination of active gradients lies in $N_K(\theta_*)$. Conversely, let $n\in N_K(\theta_*)$ and let $v$ satisfy $\nabla h_a(\theta_*)\cdot v\le0$ for $a\in\mathsf A$. For $\epsilon>0$ put $v_\epsilon=v+\epsilon(\bar\theta-\theta_*)$. Convexity gives $\nabla h_a(\theta_*)\cdot(\bar\theta-\theta_*)\le h_a(\bar\theta)<0$ for $a\in\mathsf A$, so $\nabla h_a(\theta_*)\cdot v_\epsilon<0$ and $h_a(\theta_*+sv_\epsilon)<0$ for small $s>0$; inactive constraints remain negative by continuity. Hence $\theta_*+sv_\epsilon\in K$, $n\cdot v_\epsilon\le0$, and letting $\epsilon\to0$ gives $n\cdot v\le0$. Farkas' lemma places $n$ in the cone generated by the active gradients, and setting $\zeta_a=0$ for inactive constraints gives (b). A difference of two multiplier vectors is a vanishing combination of active gradients, so linear independence gives uniqueness, and Theorem X.8f.2 applies to the minimizer $\theta_*$ of $\hbar V$ on $K$. The ray component vanishes exactly when $(H-\langle H\rangle_\psi)\psi=0$, that is, when $\psi$ is an eigenvector, and the perspective component vanishes exactly on $\ker B_\Sigma$. At such a triple the ray and perspective differentials of $\Phi_\Omega$ vanish and the adaptation differential is $\hbar\nabla V(\theta_*)=-\sum_a\hbar\zeta_a\nabla h_a(\theta_*)$.
+
+Item 7. Along the ray flow, $\frac{d}{dt}\langle H\rangle_\psi=2\operatorname{Re}\langle w_\psi,-i\hbar^{-1}w_\psi\rangle=0$ with $w_\psi=(H-\langle H\rangle_\psi)\psi$. Along the perspective flow, $\frac{d}{dt}\frac\hbar2\langle f,B_\Sigma f\rangle_\nu=\hbar\langle B_\Sigma f,\dot f\rangle_\nu=-\hbar\lVert B_\Sigma f\rVert_\nu^2$. Multiplying (X.8g.7.4) by $\hbar$ and adding gives (X.8g.7.5).
+
+Item 8. By (X.8g.7.3), the velocity of each block depends only on that block, so a curve solves (X.8g.4a) exactly when each of its three components solves its own equation. ∎
+
+**Resolution TV-X-09-R1 (Metadata).** Exact domain: the finite class $\mathcal Z=\mathbb{CP}^{d-1}\times\mathscr H_\Sigma\times K$ with the data (X.8g.7.1)--(X.8g.7.2); the minimal Hilbert branch $d_0=8$ gives the ray factor $\mathbb{CP}^7$. Premises: a Hermitian $H$; a finite perspective mode space with nonnegative self-adjoint form operator $B_\Sigma$; the Gaussian-location Fisher metric $F$; a mobility $\mu>0$; a convex $C^1$ objective; convex $C^1$ capacity functions with a Slater point; the unit bridge of Definition X.8g.4; and the Kōmura--Brezis well-posedness theorem. Equivalence: the global phase of the ray representative and orthogonal changes of basis in $\mathscr H_\Sigma$. Budget: one Hamiltonian, one perspective form, one Fisher matrix, one mobility, one objective and $r$ capacity functions. Verifier: the gradient identity $\operatorname{grad}\langle H\rangle=(H-\langle H\rangle_\psi)\psi$ for $2g_{\mathrm{FS}}$, the horizontal velocity of $e^{-iHt/\hbar}\psi_0$, Moreau's decomposition and the Slater normal-cone identity. Falsifier: a ray solution of (X.8g.4a) that differs from projective Schrödinger evolution at $c=2$, a perspective solution different from $e^{t\mathcal L_\Sigma}f_0$, or a rest point that fails the KKT system. Provenance class: source-internal finite construction using the cited well-posedness theorem. Downstream consumers: Definition X.8g.4, Proposition X.8g.5 items 1--3, Remark X.8g.6 and `TV-X-09`. Nonvacuity: $d=8$; $\mathscr H_\Sigma=\mathbb R^2$ with counting measure and $B_\Sigma=\begin{pmatrix}1&-1\\-1&1\end{pmatrix}$; $n=1$, $F=1$, $\mu=1$, $V(\theta)=\tfrac12(\theta-2)^2$ and $h(\theta)=\theta-1$, whose adaptation curve from $\theta_0=0$ is $\theta(t)=2-2e^{-t}$ for $t\le\ln2$ and $\theta(t)=1$ afterwards, with multiplier $\zeta=1$. This is `positive-discharge` of the construction of one $(\mathcal G,\Omega,\mathcal K)$ datum whose ray, perspective, adaptation and KKT sectors are exact projections of (X.8g.4a) on the stated finite class, together with the ray-scale lock $\mathcal G_{\mathrm{ray}}=2g_{\mathrm{FS}}$. Population of the accepted branch data, namely the retained Appendix M perspective form, the PCE objective and capacity constraints, any accepted boundary-geometry variables and the overlap audit $\mathfrak o_\Omega$, remains `C` under `TV-X-09`; the horizon reading of Proposition X.8g.5 item 4 consumes the Section 12 package.
 
 ### X.8h Predictive S-Matrix Positivity Cone
 
@@ -2047,6 +2489,60 @@ $$
 \lambda_1d\rho_1+\lambda_2d\rho_2.
 $$
 Thus the set is closed under nonnegative linear combinations. ∎
+
+**Proposition X.8h.4a (Gap-Localized Moment Conditions and the Three-Coefficient Region).** Fix $m$ and $\mu_0>0$ in Definition X.8h.1, and call a coefficient vector realizable when (X.8h.3) produces it from some positive measure $d\rho$ on $[\mu_0,\infty)$ with finite inverse moments.
+
+1. For every $r\ge m$ and $N\ge0$ the gap-localized Hankel matrix
+$$
+L^{(r)}_{ij}=c_{r+i+j}-\mu_0c_{r+i+j+1},
+\qquad
+i,j=0,\dots,N,
+\tag{X.8h.4a.1}
+$$
+is positive semidefinite; in particular $\mu_0c_{n+1}\le c_n$ for every $n\ge m$.
+
+2. A vector $(c_m,c_{m+1},c_{m+2})$ is realizable exactly when it vanishes or satisfies
+$$
+c_m>0,\quad
+c_{m+1}>0,\quad
+c_{m+1}^2\le c_mc_{m+2},\quad
+\mu_0c_{m+2}\le c_{m+1},
+\quad\text{and}\quad
+\bigl(\mu_0c_{m+2}=c_{m+1}\Rightarrow\mu_0c_{m+1}=c_m\bigr).
+\tag{X.8h.4a.2}
+$$
+
+3. The closure of the realizable three-coefficient region is the set cut out by all Hankel conditions of Theorem X.8h.2 and all conditions (X.8h.4a.1) whose entries lie among $c_m,c_{m+1},c_{m+2}$, namely $c_m\ge0$, $c_{m+2}\ge0$, $c_{m+1}^2\le c_mc_{m+2}$ and $\mu_0c_{m+2}\le c_{m+1}$.
+
+4. For $\mu_0=2$, the vector $(1,1,1)$ satisfies every Hankel condition of Corollary X.8h.3 whose entries lie among the three coefficients and violates (X.8h.4a.1). The vectors $(1,0,0)$ and $(1,\tfrac14,\tfrac18)$ satisfy every such Hankel and gap-localized condition and are not realizable.
+
+Thus the Hankel test of Corollary X.8h.3 is a necessary condition whose three-coefficient region is strictly larger than the realizable one. The exact region at this order adds the gap bound $\mu_0c_{m+2}\le c_{m+1}$ and excludes the two boundary faces that would require spectral weight at $\mu=\infty$.
+
+*Proof.* Put $a=1/\mu_0$ and let $\nu$ be the image of $\mu^{-m-1}d\rho(\mu)$ under $\mu\mapsto x=1/\mu$. Then $\nu$ is a finite positive measure on $(0,a]$ and $c_{m+k}=\int x^k\,d\nu(x)$ for $k\ge0$ by (X.8h.3). Conversely, every finite positive measure $\nu$ on $(0,a]$ is obtained in this way from the positive measure $d\rho$ on $[\mu_0,\infty)$ whose image under $\mu\mapsto1/\mu$ is $x^{-m-1}d\nu(x)$, and that $d\rho$ has finite inverse moments $\int\mu^{-n-1}d\rho=\int x^{n-m}d\nu\le a^{n-m}\nu((0,a])$ for $n\ge m$. Write $s_k=c_{m+k}$.
+
+For item 1,
+$$
+\sum_{i,j=0}^Na_ia_jL^{(r)}_{ij}
+=
+\int_{\mu_0}^\infty\mu^{-r-1}\Bigl(1-\frac{\mu_0}{\mu}\Bigr)\Bigl(\sum_{i=0}^Na_i\mu^{-i}\Bigr)^2d\rho(\mu)\ge0,
+$$
+because $\mu\ge\mu_0$ on the support.
+
+For necessity in item 2, $s_0=\nu((0,a])$. If $s_0=0$, then $\nu=0$ and the vector vanishes. Otherwise $s_1>0$ because $x>0$ on $(0,a]$, the Cauchy--Schwarz inequality gives $s_1^2\le s_0s_2$, and $x^2\le ax$ gives $s_2\le as_1$, which is $\mu_0c_{m+2}\le c_{m+1}$. Equality $s_2=as_1$ means $\int x(a-x)\,d\nu=0$, so $\nu=s_0\delta_a$ and $s_1=as_0$. For sufficiency, if $s_1^2=s_0s_2$, take $\nu=s_0\delta_{s_1/s_0}$; here $s_1/s_0=s_2/s_1\le a$. If $s_1^2<s_0s_2$, then $s_2<as_1$, since equality would force $s_1=as_0$ and hence $s_1^2=s_0s_2$, and $s_1<as_0$, since $s_1^2<s_0s_2\le as_0s_1$. Put
+$$
+y=\frac{as_1-s_2}{as_0-s_1}>0 .
+$$
+The quadratic $s_0t^2-2s_1t+s_2$ has negative discriminant, so its value $a^2s_0-2as_1+s_2$ at $t=a$ is positive, which is $y<a$. The measure $\nu=w_1\delta_y+w_2\delta_a$ with
+$$
+w_1=\frac{as_0-s_1}{a-y}>0,
+\qquad
+w_2=\frac{s_1-ys_0}{a-y}
+$$
+has moments $s_0$ and $s_1$, and $w_2>0$ is equivalent to $s_0s_2>s_1^2$. Its second moment is $s_2$ because $\int x(a-x)\,d\nu=w_1y(a-y)=y(as_0-s_1)=as_1-s_2$.
+
+For item 3, the listed conditions hold on the realizable region by Theorem X.8h.2 and item 1, and they define a closed set. They force $s_1\ge0$, and $s_0=0$ forces the zero vector. A point satisfying them outside (X.8h.4a.2) therefore has either $s_0>0$ and $s_1=s_2=0$, which is the limit of $s_0\delta_\epsilon$ as $\epsilon\downarrow0$, or $s_1>0$, $s_2=as_1$ and $s_1<as_0$, which is the limit of $(s_0-s_1/a)\delta_\epsilon+(s_1/a)\delta_a$. Item 4 follows with $a=\tfrac12$ from item 2 and the displayed conditions: $(1,1,1)$ has $\mu_0c_{m+2}=2>c_{m+1}$; $(1,0,0)$ has $c_m>0=c_{m+1}$; and $(1,\tfrac14,\tfrac18)$ has $\mu_0c_{m+2}=c_{m+1}$ with $\mu_0c_{m+1}=\tfrac12\ne c_m$. ∎
+
+**Resolution TV-X-10-R1 (Metadata).** Exact domain: positive measures on $[\mu_0,\infty)$ with finite inverse moments as in Definition X.8h.1; all truncation orders for item 1 and the first three coefficients above the subtraction order for items 2--4. Premises: fixed $m$ and $\mu_0>0$. Equivalence: the image measure $\nu$ of $\mu^{-m-1}d\rho$ under $\mu\mapsto1/\mu$. Budget: three coefficients, and every $N$ for item 1. Verifier: the localizing identity, the Cauchy--Schwarz inequality and the explicit one- and two-atom measures. Falsifier: a positive measure violating (X.8h.4a.1), or a vector satisfying (X.8h.4a.2) without a representing measure. Provenance class: source-internal exact classification. Downstream consumers: Theorem X.8h.2, Corollaries X.8h.3--X.8h.4, item 1 of Definition X.8h.5 and `TV-X-10`. Nonvacuity: for $\mu_0=2$ the vector $(1,\tfrac14,\tfrac1{16})$ is realized by $\nu=\delta_{1/4}$, that is, spectral weight at $\mu=4$. Item 1 and item 2 give `positive-discharge` of the gap-localized conditions and of the exact three-coefficient classification, and item 4 gives `nonentailment` of realizability from the Hankel test of Corollary X.8h.3. The region at higher truncation orders, the OPE and crossing solution classification, external states, and the analyticity, unitarity, crossing, factorization and error proofs remain `M+C+R` under `TV-X-10`.
 
 **Definition X.8h.5 (Finite Predictive Factorization Geometry).** On a finite gapped regular branch, define the truncated predictive response region
 $$
@@ -2786,6 +3282,70 @@ $$
 $$
 The quotient measures are equal by (X.8j.10), so the two sums are equal. Any remaining difference is internal to fibers of $q_\lambda$ or $q'_\lambda$, is invisible to all admissible protocols at resolution $\lambda$, and is removed by the PCE quotient. ∎
 
+**Proposition X.8j.4e (Poisson Soft-Ledger Class: Inclusive Finiteness and Regulator Independence).** Fix a hard record, a detector resolution $\lambda>0$ and a soft exponent $A>0$. An admissible infrared regulator profile is a measurable $\psi$ with $\mathbf 1_{[\epsilon,\lambda]}\le\psi\le\mathbf 1_{(0,\lambda]}$ for some $\epsilon\in(0,\lambda)$ and $\int_0^\lambda\psi(\omega)\,d\omega/\omega<\infty$. Let the unresolved soft quanta form a Poisson point process on $(0,\lambda]$ with intensity $A\psi(\omega)\,d\omega/\omega$, let $N^\psi$ be their number, and let $X^\psi=\sum_i\omega_i$ be their total energy, the soft entry of the boundary energy ledger. Register the detector protocol family as the readout of the hard record and of $X^\psi$, so that Definition X.8j.4a identifies records with equal hard record and equal $X^\psi$, and every function of $X^\psi$ is soft-ledger invariant. Let $X^0$ be the total energy for the intensity $A\,d\omega/\omega$ on $(0,\lambda]$, and let $\gamma_{\mathrm E}$ be Euler's constant. Then:
+
+1. with $m_\epsilon=A\ln(\lambda/\epsilon)$, every exclusive count probability satisfies $\mathbb P(N^\psi=k)\le e^{-m_\epsilon}m_\epsilon^k/k!$ whenever $m_\epsilon\ge k$; in particular $\mathbb P(N^\psi=0)\le(\epsilon/\lambda)^A$, and every exclusive count probability tends to $0$ as $\epsilon\to0$;
+
+2. $X^0$ is almost surely finite and positive, $\mathbb E X^0=A\lambda$, and
+$$
+F_0(E):=\mathbb P(X^0\le E)
+=
+\frac{e^{-\gamma_{\mathrm E}A}}{\Gamma(1+A)}\Bigl(\frac E\lambda\Bigr)^A
+\qquad(0\le E\le\lambda);
+\tag{X.8j.4e.1}
+$$
+
+3. for every $E\in(0,\lambda)$ and $\delta\in(0,\lambda-E]$,
+$$
+0\le\mathbb P(X^\psi\le E)-F_0(E)\le F_0(E+\delta)-F_0(E)+\frac{A\epsilon}{\delta},
+\tag{X.8j.4e.2}
+$$
+and, when $\sqrt{\epsilon\lambda}\le\lambda-E$,
+$$
+0\le\mathbb P(X^\psi\le E)-F_0(E)
+\le
+A\sqrt{\epsilon/\lambda}\left(1+\frac{e^{-\gamma_{\mathrm E}A}\max\bigl((E/\lambda)^{A-1},1\bigr)}{\Gamma(1+A)}\right);
+\tag{X.8j.4e.3}
+$$
+
+4. consequently the inclusive soft-ledger-invariant response $\mathbb P(X^\psi\le E)$ converges to the regulator-independent limit $F_0(E)$ with the explicit tail bound (X.8j.4e.3), uniformly over admissible profiles with the same $\epsilon$, and two admissible profiles with the same $\epsilon$ give values differing by at most the right side of (X.8j.4e.3).
+
+*Proof.* Since $0\le\psi\le1$, the superposition theorem for Poisson processes realizes the intensity $A\,d\omega/\omega$ on $(0,\lambda]$ as the union of independent Poisson processes with intensities $A\psi\,d\omega/\omega$ and $A(1-\psi)\,d\omega/\omega$. Hence $X^0$ has the law of $X^\psi+Y$ with $Y\ge0$ independent of $X^\psi$ and, by Campbell's formula, $\mathbb EY=A\int_0^\lambda(1-\psi(\omega))\,d\omega\le A\epsilon$, because $1-\psi\le\mathbf 1_{(0,\epsilon)}$ on $(0,\lambda]$.
+
+Item 1: $N^\psi$ is Poisson with mean $m=A\int_0^\lambda\psi\,d\omega/\omega\ge m_\epsilon$, and $e^{-m}m^k/k!$ is nonincreasing in $m$ for $m\ge k$.
+
+Item 2: Campbell's formula gives $\mathbb EX^0=\int_0^\lambda\omega\,A\,d\omega/\omega=A\lambda$, so $X^0<\infty$ almost surely. The number of points in $[\epsilon,\lambda]$ is Poisson with mean $m_\epsilon\to\infty$, so there are infinitely many points almost surely and $X^0>0$; thus $F_0(0)=0$. The Mecke formula for Poisson processes gives, for measurable $g\ge0$,
+$$
+\mathbb E\bigl[X^0g(X^0)\bigr]
+=
+A\int_0^\lambda\mathbb E\bigl[g(X^0+\omega)\bigr]\,d\omega .
+$$
+With $g=\mathbf 1_{(0,x]}$ and $0<x\le\lambda$ this becomes
+$$
+\int_{(0,x]}y\,dF_0(y)=A\int_0^\lambda F_0(x-\omega)\,d\omega=A\int_0^xF_0(y)\,dy .
+$$
+The right side is continuous in $x$, so the measure $y\,dF_0(y)$ on $(0,\lambda]$ has density $AF_0(y)$, and $dF_0(y)=AF_0(y)y^{-1}dy$ there. On every interval $[x_1,\lambda]$ with $x_1>0$, $F_0$ is absolutely continuous with $F_0'=AF_0/y$ almost everywhere, so $F_0(y)y^{-A}$ is constant; hence $F_0(y)=\kappa y^A$ on $(0,\lambda]$. The Laplace functional of the Poisson process and the identity $\int_0^z(1-e^{-u})\,du/u=\gamma_{\mathrm E}+\ln z+E_1(z)$ give
+$$
+\mathbb E e^{-sX^0}
+=
+\exp\left(-A\int_0^\lambda(1-e^{-s\omega})\frac{d\omega}{\omega}\right)
+=
+e^{-\gamma_{\mathrm E}A}(s\lambda)^{-A}e^{-AE_1(s\lambda)} .
+$$
+On the other hand $\mathbb Ee^{-sX^0}=\kappa A s^{-A}\int_0^{s\lambda}e^{-u}u^{A-1}du+R(s)$ with $0\le R(s)\le e^{-s\lambda}$. Multiplying both expressions by $s^A$ and letting $s\to\infty$ gives $\kappa\Gamma(1+A)=e^{-\gamma_{\mathrm E}A}\lambda^{-A}$, which is (X.8j.4e.1).
+
+Item 3: $X^\psi\le X^\psi+Y$ gives the lower bound. For the upper bound,
+$$
+\mathbb P(X^\psi\le E)
+\le
+\mathbb P(X^\psi+Y\le E+\delta)+\mathbb P(Y>\delta)
+\le
+F_0(E+\delta)+\frac{A\epsilon}{\delta}
+$$
+by Markov's inequality, which is (X.8j.4e.2). By the mean-value theorem, $F_0(E+\delta)-F_0(E)=e^{-\gamma_{\mathrm E}A}A(\xi/\lambda)^{A-1}(\delta/\lambda)/\Gamma(1+A)$ for some $\xi\in(E,\lambda]$, and $(\xi/\lambda)^{A-1}\le\max\bigl((E/\lambda)^{A-1},1\bigr)$; setting $\delta=\sqrt{\epsilon\lambda}$, for which $\delta/\lambda=\sqrt{\epsilon/\lambda}$ and $A\epsilon/\delta=A\sqrt{\epsilon/\lambda}$, gives (X.8j.4e.3), whose right side depends only on the dimensionless ratios $\epsilon/\lambda$ and $E/\lambda$. Item 4 follows because the bound depends on $\psi$ only through $\epsilon$ and both regulated values lie in the same interval above $F_0(E)$. ∎
+
+**Resolution TV-X-12-R1 (Metadata).** Exact domain: Poisson soft-emission records at detector resolution $\lambda$ with soft intensity $A\psi(\omega)\,d\omega/\omega$ for every admissible regulator profile $\psi$. Premises: a fixed hard record, $A>0$, $\lambda>0$, the profile bounds, and the registered hard-record and total-soft-energy readout. Equivalence: records with equal hard record and equal total soft energy, as in Definition X.8j.4a. Budget: one soft exponent, one resolution and one regulator scale. Verifier: the Poisson superposition coupling, Campbell's and Mecke's formulas, Markov's inequality and the Laplace-functional identity. Falsifier: an admissible profile violating (X.8j.4e.2), or a distribution function of $X^0$ different from (X.8j.4e.1) on $[0,\lambda]$. Provenance class: source-internal exact computation on a frozen stochastic class. Downstream consumers: Definition X.8j.4a, Theorem X.8j.4b, Corollary X.8j.4c, Theorem X.8j.4d and `TV-X-12`. Nonvacuity: $A=\lambda=1$, where (X.8j.4e.1) gives $F_0(1)=e^{-\gamma_{\mathrm E}}$, the Dickman law. This is `positive-discharge` of inclusive response finiteness and regulator independence with explicit tail bounds on the Poisson soft-ledger class, with vanishing exclusive count probabilities. The soft charge and boundary dressing construction, the derivation of the Poisson soft-emission law and of $A$ from a long-range gauge or emergent-metric sector, and correlated soft emission remain `M+C+R` under `TV-X-12`.
+
 ### X.8k Predictive Calderón-Schur Boundary Reconstruction
 
 **Definition X.8k.1 (Finite Boundary Response Map).** Let a finite regular predictive network have boundary nodes $\partial N$ and interior nodes $I$. Let the quadratic predictive response operator be a positive block operator
@@ -3177,6 +3737,125 @@ P(H_A+\eta Q)\ne P(H_A).
 $$
 That changed response is a spectral value, a registered matrix element, or another protocol output included in the package. Thus the two admitted packages witness non-identifiability of that changed nuclear response from the accepted parent data. The same argument applies to a response-active change of $J_A^{\mathrm{spin}}$, a transition or decay operator, or $\Lambda_{A,\mathrm{out}}(E)$. Consequently the elementary vector alone does not determine those nuclear operator entries. ∎
 
+**Theorem X.8k.6d (Classification of Response-Null Interiors).** Fix the boundary coordinate space, and let $\mathbb K\in\{\mathbb R,\mathbb C\}$ be the scalar field of the branch.
+
+1. *Static Schur class.* For the block operators of Definition X.8k.1 with interior dimension $n_I$, the representatives with Schur response $\Lambda_\partial=\Lambda$ are exactly
+$$
+\mathfrak L_{A,B}
+=
+\begin{pmatrix}
+\Lambda+B^*A^{-1}B & B^*\\
+B & A
+\end{pmatrix},
+\qquad
+A=A^*>0,
+\quad
+B:\mathbb K^{\partial N}\to\mathbb K^{I},
+\tag{X.8k.6d.1}
+$$
+and $\mathfrak L_{A,B}\ge0$ holds exactly when $\Lambda\ge0$. Two such representatives with the same Schur response and the same boundary block $L_{\partial\partial}$ are related by a boundary-fixing congruence
+$$
+\mathfrak L'=S^*\mathfrak LS,
+\qquad
+S=I_{\partial}\oplus G,
+\quad
+G\in GL(n_I),
+\tag{X.8k.6d.2}
+$$
+and every such congruence preserves both $\Lambda_\partial$ and $L_{\partial\partial}$. The interior Gram operator $L_{\partial I}L_{II}^{-1}L_{I\partial}$, which can be any positive semidefinite operator of rank at most $n_I$, is the complete invariant of the interior modulo (X.8k.6d.2), and every class contains a representative with $L_{II}=I$.
+
+2. *Meromorphic impedance class.* Let $H_{\mathrm{conf}}$ and $H'_{\mathrm{conf}}$ satisfy Definition X.8k.5 on $\mathcal H_I\oplus\mathcal H_\partial$ and $\mathcal H'_I\oplus\mathcal H_\partial$, with $n=\dim\mathcal H_I$ and $n'=\dim\mathcal H'_I$. Define the boundary-controllable interior subspace
+$$
+\mathcal K_\partial
+=
+\sum_{k=0}^{n-1}\operatorname{ran}\bigl(H_{II}^kH_{I\partial}\bigr)
+\subseteq\mathcal H_I,
+\tag{X.8k.6d.3}
+$$
+and define $\mathcal K'_\partial$ in the same way. Then:
+
+(a) $\mathcal K_\partial$ reduces $H_{II}$, and $\mathcal K_\partial^\perp\oplus0$ is the $H_{\mathrm{conf}}$-invariant subspace spanned by the eigenvectors of $H_{\mathrm{conf}}$ whose colorless boundary component vanishes;
+
+(b) the following are equivalent: (i) $\Lambda_{\mathrm{QCD}}=\Lambda'_{\mathrm{QCD}}$ as meromorphic functions of $E$; (ii) $H_{\partial\partial}=H'_{\partial\partial}$ and
+$$
+H_{\partial I}H_{II}^kH_{I\partial}
+=
+H'_{\partial I}H'^{\,k}_{II}H'_{I\partial},
+\qquad
+0\le k\le n+n'-1;
+\tag{X.8k.6d.4}
+$$
+(iii) $H_{\partial\partial}=H'_{\partial\partial}$ and there is a unitary $U:\mathcal K_\partial\to\mathcal K'_\partial$ with
+$$
+UH_{II}|_{\mathcal K_\partial}=H'_{II}|_{\mathcal K'_\partial}U,
+\qquad
+UH_{I\partial}=H'_{I\partial};
+\tag{X.8k.6d.5}
+$$
+
+(c) the number
+$$
+r_\partial
+=
+\dim\mathcal K_\partial
+=
+\operatorname{rank}\bigl(H_{\partial I}H_{II}^{j+k}H_{I\partial}\bigr)_{j,k=0}^{n-1}
+\tag{X.8k.6d.6}
+$$
+is the minimal interior dimension realizing $\Lambda_{\mathrm{QCD}}$; the representatives attaining it are exactly those with $\mathcal K_\partial=\mathcal H_I$, and any two of them are conjugate by a boundary-preserving unitary $U\oplus I_{\mathcal H_\partial}$;
+
+(d) an interior modification preserves every colorless boundary protocol response exactly when it composes a unitary change of frame (X.8k.6d.5) on $\mathcal K_\partial$ with an arbitrary finite self-adjoint replacement, of any dimension, of the invisible block $H_{II}|_{\mathcal K_\partial^\perp}$.
+
+Complete colorless impedance data therefore determine the confined interior up to these two response-null operations. On a comparison class whose members satisfy $\mathcal K_\partial=\mathcal H_I$ and whose PPI relation is equality of $\Lambda_{\mathrm{QCD}}$, PPI equivalence is exactly boundary-preserving unitary equivalence, which is the certificate entry named in Theorem X.8k.6b.
+
+*Proof.* Item 1. In boundary-first block order,
+$$
+\mathfrak L_{A,B}
+=
+T^*(\Lambda\oplus A)T,
+\qquad
+T=
+\begin{pmatrix}
+I&0\\
+A^{-1}B&I
+\end{pmatrix},
+$$
+and $T$ is invertible. Hence $\mathfrak L_{A,B}\ge0$ exactly when $\Lambda\oplus A\ge0$, that is, when $\Lambda\ge0$, and (X.8k.2) applied to (X.8k.6d.1) returns $\Lambda$. Conversely, a representative with Schur response $\Lambda$ has the form (X.8k.6d.1) with $A=L_{II}$ and $B=L_{I\partial}$, because self-adjointness gives $L_{\partial I}=L_{I\partial}^*$. For $S=I_\partial\oplus G$, the blocks of $S^*\mathfrak LS$ are $L_{\partial\partial}$, $L_{\partial I}G$, $G^*L_{I\partial}$ and $G^*L_{II}G$, and $(L_{\partial I}G)(G^*L_{II}G)^{-1}(G^*L_{I\partial})=L_{\partial I}L_{II}^{-1}L_{I\partial}$, so both $\Lambda_\partial$ and $L_{\partial\partial}$ are preserved. Conversely, let two representatives have the same $\Lambda$ and the same $L_{\partial\partial}$, and put $C=L_{II}^{-1/2}L_{I\partial}$ and $C'=L_{II}'^{-1/2}L'_{I\partial}$. Then $C^*C=L_{\partial\partial}-\Lambda=C'^*C'$, so $\lVert Cx\rVert=\lVert C'x\rVert$ for every boundary vector $x$. The assignment $Cx\mapsto C'x$ is therefore a well-defined isometry of $\operatorname{ran}C$ onto $\operatorname{ran}C'$. Both ranges have dimension $\operatorname{rank}C^*C$, so any isometry between their orthogonal complements extends it to a unitary $Q$ with $QC=C'$. The operator $G=L_{II}^{-1/2}Q^*L_{II}'^{1/2}$ satisfies $G^*L_{II}G=L'_{II}$ and $G^*L_{I\partial}=L_{II}'^{1/2}QC=L'_{I\partial}$, which is (X.8k.6d.2). The Gram operator equals $C^*C$; it is invariant under (X.8k.6d.2), equality of Gram operators produced the congruence, and every positive semidefinite operator $M$ of rank at most $n_I$ equals $C^*C$ for some $C:\mathbb K^{\partial N}\to\mathbb K^{I}$, so that $(A,B)=(I,C)$ realizes it. Taking $G=L_{II}^{-1/2}$ gives the representative with $L_{II}=I$.
+
+Item 2(a). The Cayley-Hamilton theorem expresses $H_{II}^n$ through lower powers, so $H_{II}\mathcal K_\partial\subseteq\mathcal K_\partial$. Since $H_{II}$ is self-adjoint, $\mathcal K_\partial^\perp$ is invariant as well, and $\mathcal K_\partial$ reduces $H_{II}$. Self-adjointness of $H_{\mathrm{conf}}$ gives $H_{\partial I}=H_{I\partial}^*$, and $\operatorname{ran}H_{I\partial}\subseteq\mathcal K_\partial$ gives $H_{\partial I}v=0$ for $v\in\mathcal K_\partial^\perp$. Hence $H_{\mathrm{conf}}(v\oplus0)=H_{II}v\oplus0$, so $\mathcal K_\partial^\perp\oplus0$ is invariant and is spanned by eigenvectors of $H_{II}|_{\mathcal K_\partial^\perp}$, each of which is an eigenvector of $H_{\mathrm{conf}}$ with zero boundary component. Conversely, if $H_{\mathrm{conf}}(u\oplus0)=E(u\oplus0)$, then $H_{II}u=Eu$ and $H_{\partial I}u=0$, so $\langle H_{II}^kH_{I\partial}x,u\rangle=E^k\langle x,H_{\partial I}u\rangle=0$ for every $k$ and every boundary vector $x$, and $u\in\mathcal K_\partial^\perp$.
+
+Item 2(b). Write $F(E)=H_{\partial I}(H_{II}-E)^{-1}H_{I\partial}$, so that $\Lambda_{\mathrm{QCD}}(E)=H_{\partial\partial}-E-F(E)$. For $|E|>\lVert H_{II}\rVert$, the Neumann series gives
+$$
+F(E)
+=
+-\sum_{k\ge0}E^{-k-1}H_{\partial I}H_{II}^kH_{I\partial},
+$$
+so $F(E)\to0$ as $|E|\to\infty$. If (i) holds, then $H_{\partial\partial}=\lim_{|E|\to\infty}(\Lambda_{\mathrm{QCD}}(E)+E)$ agrees for the two operators, hence $F=F'$, and uniqueness of Laurent coefficients at infinity gives equality of all moments, in particular (ii). If (ii) holds, the adjugate formula makes $\det(E-H_{II})(H_{II}-E)^{-1}$ a matrix polynomial of degree at most $n-1$, so
+$$
+P(E)=\det(E-H_{II})\det(E-H'_{II})\bigl(F(E)-F'(E)\bigr)
+$$
+is a matrix polynomial of degree at most $n+n'-1$. Equality of the first $n+n'$ Laurent coefficients gives $F(E)-F'(E)=O(|E|^{-n-n'-1})$, hence $P(E)=O(|E|^{-1})$ and $P=0$. Thus $F=F'$ off the finitely many poles, and (i) holds. Under (i) all moments agree, so for every finitely supported family $(x_k)$ of boundary vectors
+$$
+\Bigl\lVert\sum_kH_{II}^kH_{I\partial}x_k\Bigr\rVert^2
+=
+\sum_{j,k}\bigl\langle x_j,H_{\partial I}H_{II}^{j+k}H_{I\partial}x_k\bigr\rangle
+$$
+has the same value for the primed operators. Therefore $U\bigl(\sum_kH_{II}^kH_{I\partial}x_k\bigr):=\sum_kH'^{\,k}_{II}H'_{I\partial}x_k$ is well defined, isometric and onto $\mathcal K'_\partial$, and its defining formula gives (X.8k.6d.5); this proves (iii). If (iii) holds, repeated use of the intertwining relation gives $H'^{\,k}_{II}H'_{I\partial}=UH_{II}^kH_{I\partial}$, and since $H_{II}^kH_{I\partial}$ takes values in $\mathcal K_\partial$, where $U$ is isometric,
+$$
+H'_{\partial I}H'^{\,k}_{II}H'_{I\partial}
+=
+(UH_{I\partial})^*UH_{II}^kH_{I\partial}
+=
+H_{\partial I}H_{II}^kH_{I\partial}
+$$
+for every $k$, which is (ii).
+
+Item 2(c). By (iii), equal impedances have controllable subspaces of equal dimension, so $r_\partial$ is an invariant of $\Lambda_{\mathrm{QCD}}$ and $n\ge r_\partial$. The block Krylov map $\mathcal C=(H_{I\partial},H_{II}H_{I\partial},\ldots,H_{II}^{n-1}H_{I\partial})$ has range $\mathcal K_\partial$ and Gram matrix $\mathcal C^*\mathcal C=(H_{\partial I}H_{II}^{j+k}H_{I\partial})_{j,k}$, and $\operatorname{rank}\mathcal C^*\mathcal C=\operatorname{rank}\mathcal C$, which proves (X.8k.6d.6). The compressed operator with interior block $H_{II}|_{\mathcal K_\partial}$ and the same $H_{I\partial}$ and $H_{\partial\partial}$ has the same moments, hence the same impedance, and interior dimension $r_\partial$. A representative has interior dimension $r_\partial$ exactly when $\mathcal K_\partial=\mathcal H_I$. For two such representatives, $U$ in (iii) is a unitary $\mathcal H_I\to\mathcal H'_I$, and conjugation by $U\oplus I_{\mathcal H_\partial}$ carries $H_{\mathrm{conf}}$ to $H'_{\mathrm{conf}}$ block by block.
+
+Item 2(d). Theorem X.8k.6, item 5, and the column argument in its proof identify preservation of every linear colorless boundary protocol response with equality of $\Lambda_{\mathrm{QCD}}$. By (iii), equality holds exactly when the controllable parts correspond through (X.8k.6d.5). Every moment in (X.8k.6d.4) is computed inside $\mathcal K_\partial$, so the invisible blocks enter no moment and may be replaced arbitrarily. ∎
+
+**Resolution TV-X-13-R1 (Metadata).** Exact domain: the finite static Schur class of Definition X.8k.1 and the finite self-adjoint colorless impedance class of Definition X.8k.5, each over a fixed boundary coordinate space. Premises: $L_{II}>0$ and self-adjointness of $\mathfrak L$ for item 1; self-adjointness of $H_{\mathrm{conf}}$ for item 2. Equivalence: equality of $\Lambda_\partial$, together with equality of $L_{\partial\partial}$ for the congruence statement; equality of $\Lambda_{\mathrm{QCD}}$ as a meromorphic function of $E$. Budget: $n+n'$ moment blocks, one block Krylov rank and one Gram-operator comparison. Verifier: exact finite linear algebra over the branch field. Falsifier: an impedance-equal pair whose controllable parts are not unitarily conjugate, a moment-equal pair with unequal impedance, or a Schur-equal pair with equal boundary blocks and no interior congruence. Provenance class: source-internal finite mathematics. Downstream consumers: Theorem X.8k.2, Corollary X.8k.3, Theorems X.8k.6 and X.8k.6b, and `TV-X-13`. Nonvacuity: with one boundary coordinate, $H_{\partial\partial}=0$ and $H_{I\partial}=(1,0)^{\mathsf T}$, the interiors $H_{II}=\operatorname{diag}(1,5)$ and $H_{II}=\operatorname{diag}(1,7)$ both give $\Lambda_{\mathrm{QCD}}(E)=-E-(1-E)^{-1}$ and differ only in their invisible blocks, while the controllable interior $H_{II}=\begin{pmatrix}1&1\\1&t\end{pmatrix}$ gives $H_{\partial I}(H_{II}-E)^{-1}H_{I\partial}=(t-E)/\bigl((1-E)(t-E)-1\bigr)$, which changes with $t$. Theorem X.8k.6d gives `positive-discharge` of the response-null-interior classification component of `TV-X-13` on both finite classes, and the registered refutation pattern, two colorless-distinguishable interiors with identical complete impedance data, is excluded there. Instantiation of the PU boundary operator $\mathfrak L$ or $H_{\mathrm{conf}}$ from accepted protocol records (`C`) and its physical boundary-protocol realization (`R`) remain live under `TV-X-13`.
+
 ### X.8l Predictive Hodge Decomposition of Update Currents
 
 **Definition X.8l.1 (Finite Predictive Hodge Datum).** Let
@@ -3255,6 +3934,46 @@ Every cohomology class in $\ker d_1/\operatorname{im}d_0$ has a unique represent
 **Corollary X.8l.3 (Dissipation, Circulation, and Ledger Memory).** In (X.8l.1), the exact, coexact, and harmonic components are the three orthogonal summands of Theorem X.8l.2. Modulo the exact and coexact subspaces, the remaining component is the harmonic representative. Interpreting these summands as dissipative update, circulation, and persistent memory requires a specified evolution that realizes those roles; the Hodge decomposition alone is a kinematic statement.
 
 *Proof.* Exact components lie in $\operatorname{im}d_0$ and vanish in cohomology. Coexact components are orthogonal response circulations. Theorem X.8l.2 identifies the quotient-invariant residue with the harmonic representative of $H^1$. ∎
+
+**Proposition X.8l.4 (Hodge-Role Evolutions).** Let a finite predictive Hodge datum of Definition X.8l.1 be given over $\mathbb K\in\{\mathbb R,\mathbb C\}$, let $P_{\mathrm{ex}}$, $P_{\mathrm{co}}$ and $P_{\mathrm H}$ be the orthogonal projections onto $\operatorname{im}d_0$, $\operatorname{im}\delta_1$ and $\ker\Delta_1$, and consider linear evolutions $\dot J=XJ$ on $C^1$. Call $X$ Hodge-compatible when it commutes with the three projections. Say that $X$ realizes the memory role when $P_{\mathrm H}J(t)$ is constant along every solution; the dissipation role when $\frac{d}{dt}\lVert P_{\mathrm{ex}}J\rVert^2<0$ whenever $P_{\mathrm{ex}}J\ne0$; and the circulation role when $\lVert P_{\mathrm{co}}J(t)\rVert$ is constant along every solution and $XJ\ne0$ for every nonzero coexact current $J$. Then:
+
+1. A Hodge-compatible $X$ realizes the three roles exactly when
+$$
+X=d_0A\delta_0+\delta_1Bd_1
+\tag{X.8l.4.1}
+$$
+for operators $A$ on $C^0$ and $B$ on $C^2$ such that $X_{\mathrm{ex}}=X|_{\operatorname{im}d_0}$ has negative definite Hermitian part and $X_{\mathrm{co}}=X|_{\operatorname{im}\delta_1}$ is skew-adjoint and invertible. Every operator on $\operatorname{im}d_0$ and every operator on $\operatorname{im}\delta_1$ occurs as a block of (X.8l.4.1).
+
+2. A Hodge-compatible role-realizing evolution exists for every datum over $\mathbb C$. Over $\mathbb R$ it exists exactly when $\operatorname{rank}d_1$ is even; when $\operatorname{rank}d_1$ is odd, every norm-preserving real linear evolution of $\operatorname{im}\delta_1$ has a nonzero stationary coexact current.
+
+3. For $\gamma>0$ and a skew-adjoint $\Theta$ on $C^2$ for which $\delta_1\Theta d_1$ is invertible on $\operatorname{im}\delta_1$, the evolution
+$$
+\dot J=-\gamma d_0\delta_0J+\delta_1\Theta d_1J
+\tag{X.8l.4.2}
+$$
+realizes the three roles, with
+$$
+J(t)=e^{-\gamma td_0\delta_0}P_{\mathrm{ex}}J(0)+e^{t\delta_1\Theta d_1}P_{\mathrm{co}}J(0)+P_{\mathrm H}J(0),
+\qquad
+\frac{d}{dt}\tfrac12\lVert J\rVert^2=-\gamma\lVert\delta_0J\rVert^2,
+$$
+and $\lVert P_{\mathrm{ex}}J(t)\rVert\le e^{-\gamma\lambda_1t}\lVert P_{\mathrm{ex}}J(0)\rVert$, where $\lambda_1$ is the least positive eigenvalue of $\delta_0d_0$.
+
+4. Along every evolution whose increments lie in $\operatorname{im}d_0\oplus\operatorname{im}\delta_1$, $P_{\mathrm H}J$ is conserved, and the currents reachable from $J_0$ by such increments are exactly those with $P_{\mathrm H}J=P_{\mathrm H}J_0$. The harmonic representative, equivalently the class in $H^1$ of a closed current, is therefore the complete invariant of vertex-potential and face-circulation updates.
+
+5. A Hodge-compatible generator with real spectrum, in particular a Hodge-compatible generator on $C^1$ of the form (X.9.6d.1.1), realizes the circulation role only when $\operatorname{im}\delta_1=0$; nontrivial circulation requires a skew-adjoint component with nonzero imaginary spectrum.
+
+*Proof.* Item 1. For Hodge-compatible $X$, $P_{\mathrm H}J(t)=e^{tX|_{\ker\Delta_1}}P_{\mathrm H}J(0)$, which is constant for all initial data exactly when $X$ vanishes on $\ker\Delta_1$. Since $\ker\delta_0=(\operatorname{im}d_0)^\perp$ and $\ker d_0=(\operatorname{im}\delta_0)^\perp$, the maps $\delta_0:\operatorname{im}d_0\to\operatorname{im}\delta_0$ and $d_0:\operatorname{im}\delta_0\to\operatorname{im}d_0$ are bijections; for an operator $T$ on $\operatorname{im}d_0$, the operator $A$ equal to $(d_0|_{\operatorname{im}\delta_0})^{-1}T(\delta_0|_{\operatorname{im}d_0})^{-1}$ on $\operatorname{im}\delta_0$ and to $0$ on $\ker d_0$ satisfies $d_0A\delta_0=TP_{\mathrm{ex}}$. The same argument with $d_1:\operatorname{im}\delta_1\to\operatorname{im}d_1$ and $\delta_1:\operatorname{im}d_1\to\operatorname{im}\delta_1$ represents every operator on $\operatorname{im}\delta_1$ as $\delta_1Bd_1$. Conversely, $d_0A\delta_0$ takes values in $\operatorname{im}d_0$ and vanishes on $\ker\delta_0\supseteq\operatorname{im}\delta_1\oplus\ker\Delta_1$, and $\delta_1Bd_1$ takes values in $\operatorname{im}\delta_1$ and vanishes on $\ker d_1\supseteq\operatorname{im}d_0\oplus\ker\Delta_1$, so (X.8l.4.1) is Hodge-compatible with zero harmonic block. For Hodge-compatible $X$, $\frac{d}{dt}\lVert P_{\mathrm{ex}}J\rVert^2=2\operatorname{Re}\langle P_{\mathrm{ex}}J,X_{\mathrm{ex}}P_{\mathrm{ex}}J\rangle$, which is negative for every nonzero exact component exactly when the Hermitian part of $X_{\mathrm{ex}}$ is negative definite. The coexact norm is constant along every solution exactly when $\operatorname{Re}\langle y,X_{\mathrm{co}}y\rangle=0$ for every coexact $y$, that is, when $X_{\mathrm{co}}$ is skew-adjoint, and nonstationarity of every nonzero coexact current is injectivity, equivalently invertibility, of $X_{\mathrm{co}}$.
+
+Item 2. The dissipation block $X_{\mathrm{ex}}=-I$ and the zero harmonic block are always available, and $\dim\operatorname{im}\delta_1=\operatorname{rank}d_1$. Over $\mathbb C$, $X_{\mathrm{co}}=i\omega I$ with $\omega\ne0$ is skew-adjoint and invertible. Over $\mathbb R$, a skew-symmetric matrix of odd order $n$ satisfies $\det X_{\mathrm{co}}=\det X_{\mathrm{co}}^{\mathsf T}=(-1)^n\det X_{\mathrm{co}}=-\det X_{\mathrm{co}}$, so it is singular and has a nonzero kernel vector; for even order, the orthogonal direct sum of blocks $\begin{pmatrix}0&-1\\1&0\end{pmatrix}$ in an orthonormal basis is skew-symmetric and invertible.
+
+Item 3. The operator $d_0\delta_0$ is self-adjoint and nonnegative, vanishes on $\ker\delta_0$, and is positive definite on $\operatorname{im}d_0$, where its eigenvalues are the positive eigenvalues of $\delta_0d_0$; hence $-\gamma d_0\delta_0$ is a negative definite block with $\lVert e^{-\gamma td_0\delta_0}y\rVert\le e^{-\gamma\lambda_1t}\lVert y\rVert$ for $y\in\operatorname{im}d_0$. The operator $\delta_1\Theta d_1$ is skew-adjoint because $(\delta_1\Theta d_1)^*=\delta_1\Theta^*d_1=-\delta_1\Theta d_1$, and it is invertible on $\operatorname{im}\delta_1$ by hypothesis, so item 1 applies. The two blocks act on orthogonal invariant summands and the harmonic block vanishes, which gives the displayed solution. Finally, $\operatorname{Re}\langle J,XJ\rangle=-\gamma\lVert\delta_0J\rVert^2+\operatorname{Re}\langle d_1J,\Theta d_1J\rangle=-\gamma\lVert\delta_0J\rVert^2$.
+
+Item 4. By Theorem X.8l.2, $\operatorname{im}d_0\oplus\operatorname{im}\delta_1=(\ker\Delta_1)^\perp$, so such increments leave $P_{\mathrm H}J$ unchanged, and a current with $P_{\mathrm H}J=P_{\mathrm H}J_0$ differs from $J_0$ by one element of $(\ker\Delta_1)^\perp$. For $d_1J=0$, the harmonic representative corresponds to $[J]\in H^1$ by Theorem X.8l.2.
+
+Item 5. The spectrum of the invariant block $X_{\mathrm{co}}$ lies in the spectrum of $X$, hence is real, while a skew-adjoint operator is normal with purely imaginary spectrum. A skew-adjoint $X_{\mathrm{co}}$ with real spectrum therefore has spectrum $\{0\}$ and, being normal, vanishes; it is invertible only on the zero space. Generators of the form (X.9.6d.1.1) have real spectrum by Corollary X.9.6d.1. ∎
+
+**Resolution TV-X-14-R1 (Metadata).** Exact domain: finite predictive Hodge data of Definition X.8l.1 over $\mathbb R$ or $\mathbb C$ and linear evolutions on $C^1$, with the memory, dissipation and circulation roles defined in Proposition X.8l.4. Premises: positive inner products and the Hodge decomposition of Theorem X.8l.2. Equivalence: equality of generators and of Hodge components. Budget: three orthogonal projections, one block decomposition and one parity test of $\operatorname{rank}d_1$. Verifier: exact finite linear algebra. Falsifier: a Hodge-compatible role-realizing generator outside (X.8l.4.1) or violating its sign conditions, an invertible real skew-symmetric coexact block of odd order, or a current reachable by exact and coexact increments with a different harmonic projection. Provenance class: source-internal finite mathematics. Downstream consumers: Definition X.8l.1, Theorem X.8l.2, Corollary X.8l.3, item 5 of Corollary X.9.6d, Corollary X.9.6d.1 and `TV-X-14`. Nonvacuity: the complex with vertices $1,\ldots,5$, edges $12,13,23,24,34,35,45$ and filled triangles $123$ and $234$ has exact, coexact and harmonic dimensions $4$, $2$ and $1$, and (X.8l.4.2) with $\gamma>0$ and $\Theta=\begin{pmatrix}0&1\\-1&0\end{pmatrix}$ realizes all three roles; a complex with a single filled triangle has a one-dimensional real coexact space and admits no Hodge-compatible real circulation role. Proposition X.8l.4 classifies the Hodge-compatible role-realizing evolutions on every finite Hodge datum and gives `positive-discharge` of the evolution-construction component of `TV-X-14` on every complex datum and every real datum with even $\operatorname{rank}d_1$; on real data with odd $\operatorname{rank}d_1$ it proves that no Hodge-compatible evolution realizes the circulation role. It also proves that the harmonic representative is the complete memory invariant. Population of the physical protocol complex, its inner products and the response-faithful current map with complete source ownership (`C`), and the physical realization of a role-realizing evolution on that complex (`R`), remain live under `TV-X-14`.
 
 ## X.9 Dualities as PCE-Cost Degeneracies
 
@@ -3620,6 +4339,23 @@ For a nonabelian response groupoid, this $H^1$ is a pointed set with distinguish
 
 *Proof.* The first two statements are Theorem X.9.5c.2. Data that fail (X.9.5.7) are not descent data, so effective descent cannot be invoked. For an independently declared obstruction to a required trivialization, Definition X.9.5e supplies exactly the registered defect-filling equation. ∎
 
+**Corollary X.9.5c.4 (Finite Nerve Computation of Transition Classes).** Let $\mathfrak B_{\mathrm{desc}}$ be a finite bridge-site descent datum whose response-gauge groupoid restricts to one group $G$ on every nonempty overlap, with exact multiplication, inversion and equality, and with reverse labels $g_{ji}=g_{ij}^{-1}$ and $g_{ii}=1$. Let $N$ be the nerve of $\mathcal U$ truncated at dimension two: one vertex for each $U_i$, one edge for each nonempty $U_{ij}$, labeled by $g_{ij}$ as the transport from $j$ to $i$ in (X.9.5.6), and one triangle for each nonempty $U_{ijk}$, attached along the closed walk $(i,k,j,i)$. Assume that $N$ is connected. Then:
+
+1. the cocycle equation (X.9.5.7) holds exactly when every triangle of $N$ is flat in the sense of Theorem X.9.6i.8, because the ordered holonomy of $(i,k,j,i)$ in the convention (D.8.9c.3.2) is $g_{ij}g_{jk}g_{ki}$;
+
+2. local redefinitions $r_i\mapsto h_ir_i$ act by $g_{ij}\mapsto h_ig_{ij}h_j^{-1}$, which is the vertex gauge of Theorem X.9.6i.8 with $k_i=h_i^{-1}$, so
+$$
+\check H^1(\mathcal U,\mathcal G_{\mathrm{br}})
+\cong
+\operatorname{Hom}\bigl(\pi_1(N,v_0),G\bigr)/G,
+\tag{X.9.5c.4.1}
+$$
+computed through the presentation (X.9.6i.8.3) of $N$, with the distinguished class $[1]$ corresponding to the trivial homomorphism;
+
+3. the alternatives of Theorem X.9.5c.2 and Corollary X.9.5c.3 are decided exactly: a nonflat triangle is a descent failure, to be rejected or filled under Definition X.9.5e; and, under the effective-descent and separatedness hypotheses of Theorem X.9.5c.2, a flat datum with trivial chord holonomies admits an untwisted global representative, while a flat datum with a nontrivial class descends to a twisted global object labeled by its conjugacy class of homomorphisms. Every descent datum on a cover with simply connected nerve is untwisted.
+
+*Proof.* Item 1. By (X.9.5.6), $g_{ij}$ transports the representative from $j$ to $i$, so the ordered product (D.8.9c.3.2) along $(i,k,j,i)$ is $g_{ij}g_{jk}g_{ki}$, and flatness of the triangle is the equation (X.9.5.7) for $U_{ijk}$; the reverse-label convention makes the equations for the other orderings of the same triple equivalent to it, and together with $g_{ii}=1$ it makes every equation with a repeated index hold identically. Item 2. If $r'_i=h_ir_i$, then $r'_i=h_ig_{ij}r_j=h_ig_{ij}h_j^{-1}r'_j$ on $U_{ij}$, which is the stated action. The pointed set (X.9.5.8) is the set of cocycles modulo this action; by item 1 the cocycles are the flat transition records on $N$, and item 2 of Theorem X.9.6i.8 identifies their gauge classes with $\operatorname{Hom}(\Pi_T,G)/G$, where $\Pi_T$ presents $\pi_1(N,v_0)$ and the trivial homomorphism is the class of identity transitions. Item 3 combines items 1 and 2 with items 2 and 3 of Theorem X.9.5c.2; for simply connected $N$, $\operatorname{Hom}(\pi_1(N,v_0),G)$ contains only the trivial homomorphism. ∎
+
 ### X.9.5d Higher-Form Predictive Ledger
 
 
@@ -3742,6 +4478,46 @@ $$
 $$
 Because $\ell_{\mathrm{scr}}>0$, the exponential term tends to zero, and the certificate assumes $\mathcal R_{\mathrm{conf}}(L)\to0$. The squeeze theorem gives (X.9.5d.7.1). The inequality permits a positive value at every finite $L$, so finite-distance nullity does not follow. ∎
 
+**Proposition X.9.5d.8 (Exact Center-Flux Classification on the Electric $\mathbb Z_3$ Ledger Hamiltonian).** Let $\Gamma=(V,L)$ be a finite connected graph with oriented link set $L$, give each link the flux register $\mathbb C^3$ with orthonormal flux basis $\{|e\rangle:e\in\mathbb Z_3\}$, and let
+$$
+H_E=\sum_{\ell\in L}h(E_\ell),
+\qquad
+h(0)=0,
+\quad
+h(1)=h(2)=\epsilon>0,
+\tag{X.9.5d.8.1}
+$$
+be the electric term of the $\mathbb Z_3$ Kogut-Susskind lattice Hamiltonian in its strong-coupling limit, with zero plaquette coupling. For a static charge assignment $q:V\to\mathbb Z_3$ with $\sum_{v\in V}q(v)=0$, the condition for a nonzero Gauss sector on the connected graph $\Gamma$, let $\mathcal H_q$ be the Gauss sector $\operatorname{div}E=q$, where $(\operatorname{div}E)(v)$ is the outgoing minus the incoming flux at $v$ modulo $3$. Call $F\subseteq L$ $q$-neutral when every connected component of the graph $(V,F)$ has total charge $0$ in $\mathbb Z_3$, and let $s(q)$ be the least cardinality of a $q$-neutral link set. Then:
+
+1. The ground energy of $H_E$ on $\mathcal H_q$ is $\epsilon\,s(q)$. The ground space is spanned by the flux configurations supported on the minimum $q$-neutral link sets; each such set is a forest, carries exactly one configuration of divergence $q$, and that configuration is nonzero on every edge of the set.
+
+2. For a charge pair $q=\delta_x-\delta_y$ with $x\ne y$, $s(q)=d_\Gamma(x,y)$, so the static potential is
+$$
+V(x,y)=\epsilon\,d_\Gamma(x,y),
+$$
+and the minimal flux configurations are exactly the unit flux strings along the geodesics from $x$ to $y$. The electric energy $\epsilon$ is an exact string tension per retained link.
+
+3. For three unit charges $q=\delta_x+\delta_y+\delta_z$ at distinct vertices, $s(q)$ is the Steiner number of $\{x,y,z\}$, the least number of links of a tree containing $x$, $y$ and $z$, and the minimal flux configurations are the flows on the minimum Steiner trees; at a trivalent junction three unit fluxes fuse to zero because $3=0$ in $\mathbb Z_3$.
+
+4. Adding dynamical $\mathbb Z_3$ matter with site charges $n_v$, Gauss law $\operatorname{div}E=q+n$ and mass term $m\sum_{v}[n_v\ne0]$ with $m>0$ supplies charged endpoints at finite cost, and the pair potential becomes
+$$
+V_m(x,y)=\min\bigl(\epsilon\,d_\Gamma(x,y),\,2m\bigr),
+\tag{X.9.5d.8.2}
+$$
+which saturates for $d_\Gamma(x,y)\ge2m/\epsilon$.
+
+Hence one explicit Hamiltonian exhibits both endpoint alternatives named in Definition X.9.5d.3: on the static-charge branch no finite-cost endpoint exists and center flux costs $\epsilon$ per link, which is linear confinement; on the dynamical-matter branch finite-cost endpoints screen the center charge and bound the pair potential by $2m$, the perimeter-admissible alternative of item 3 of Theorem X.9.5d.4.
+
+*Proof.* Item 1. The operator $H_E$ is diagonal in the flux basis and $\mathcal H_q$ is spanned by the flux configurations of divergence $q$, so the ground energy is $\epsilon$ times the least support size of such a configuration. Let $E$ have divergence $q$ and support $F$, and let $C$ be a component of $(V,F)$. A link with exactly one endpoint in $C$ lies outside $F$ and carries zero flux, while each link inside $C$ contributes its flux once with each sign to the divergence sum over $C$; hence $\sum_{v\in C}q(v)=0$, so $F$ is $q$-neutral and the energy is at least $\epsilon\,s(q)$. Conversely, let $F$ be a minimum $q$-neutral set. If $F$ contained a cycle, deleting one of its links would preserve every component and its charge, contradicting minimality, so $F$ is a forest. On a tree component of total charge $0$ there is exactly one configuration of divergence $q$: removing a leaf $v$ fixes the flux on its link from $q(v)$ and transfers that charge to the neighbor, and the process ends at a last vertex whose remaining charge is the component total $0$. If this configuration vanished on a link $\ell\in F$, deleting $\ell$ would split its tree into two parts, each of total charge $0$ by the divergence sum, so $F\setminus\{\ell\}$ would be $q$-neutral, contradicting minimality. Thus the minimum sets carry configurations of energy $\epsilon\,s(q)$ with full support, and by the first part every ground configuration has a minimum $q$-neutral support.
+
+Item 2. The component of a $q$-neutral set containing $x$ has charge $1$ unless it contains $y$, so it contains an $x$-$y$ path and has at least $d_\Gamma(x,y)$ links; a geodesic path is $q$-neutral. A minimum set therefore equals one geodesic path, and its unique configuration carries flux $1$ from $x$ to $y$.
+
+Item 3. A component containing exactly one or exactly two of $x,y,z$ has charge $1$ or $2$, and a component containing none of them has charge $0$. A $q$-neutral set therefore contains a connected subgraph containing $x$, $y$ and $z$, hence at least a Steiner number of links, and a minimum Steiner tree is $q$-neutral; a minimum $q$-neutral set is therefore a minimum Steiner tree. At a junction of degree three, the leaf-removal construction of item 1 delivers one unit of flux along each leg, and the junction has divergence $-3=0$.
+
+Item 4. The mass term is diagonal in the joint flux-charge basis, so the ground energy is the minimum of $\epsilon|\operatorname{supp}E|+m|\operatorname{supp}n|$ over configurations with $\operatorname{div}E=q+n$. Let $C_x$ be the component of $(V,\operatorname{supp}E)$ containing $x$; the divergence sum gives $\sum_{v\in C_x}(q+n)(v)=0$. If $y\in C_x$, then $C_x$ contains an $x$-$y$ path and the energy is at least $\epsilon\,d_\Gamma(x,y)$. If $y\notin C_x$, then $\sum_{v\in C_x}q(v)=1$, so $n$ is nonzero somewhere in $C_x$, and the same argument applies to the disjoint component $C_y$, so the energy is at least $2m$. The geodesic string with $n=0$ and the configuration $E=0$, $n=-q$ attain the two values. ∎
+
+**Resolution TV-X-17-R1 (Metadata).** Exact domain: finite connected graphs with $\mathbb Z_3$ flux registers, the electric Hamiltonian (X.9.5d.8.1) with $h(1)=h(2)=\epsilon$ and zero plaquette coupling, all static Gauss sectors, and the dynamical-matter extension of item 4. Premises: the Gauss law modulo $3$ and the charge-conjugation-symmetric electric energy. Equivalence: equality of energies and of flux configurations within each Gauss sector. Budget: one minimum neutral-forest computation per sector. Verifier: exact finite combinatorics of the diagonal Hamiltonian. Falsifier: a Gauss-sector configuration below $\epsilon\,s(q)$, a minimum neutral set containing a cycle, or a pair sector below $\min(\epsilon d_\Gamma,2m)$. Provenance class: source-internal finite mathematics on the standard $\mathbb Z_3$ lattice gauge Hamiltonian. Downstream consumers: Definition X.9.5d.3, Theorem X.9.5d.4, Corollary X.9.5d.5 and `TV-X-17`. Nonvacuity: on the $2\times4$ grid graph the pair at $(0,0)$ and $(1,3)$ has energy $4\epsilon$ with four geodesic ground states, three unit charges at $(0,0)$, $(0,3)$ and $(1,1)$ have energy $4\epsilon$ on their Steiner tree, and the neutral sector has the unique zero-flux ground state. Proposition X.9.5d.8 gives `positive-discharge` of the flux-string and endpoint classification and of the tension and screening derivation of `TV-X-17` on the strong-coupling electric $\mathbb Z_3$ Hamiltonian class. A volume-uniform tension bound at nonzero plaquette coupling (`M`), the identification of the PU center-ledger datum with this Gauss law and electric energy (`C`), its physical realization (`R`), and the Wilson-loop and color-record observable map (`O`) remain live under `TV-X-17`.
+
 **Definition X.9.5e (Finite Defect-Filling Datum).** A finite defect-filling datum applies to an independently declared abelian obstruction class that prevents a cocycle condition or a separately required lift or global trivialization. A nontrivial transition class of genuine nonabelian descent data is not by itself such an obstruction: Theorem X.9.5c.2 instead gives a possibly twisted global object. For an obstruction in the stated sense, a finite defect-filling datum is a tuple
 $$
 \mathfrak D_{\mathrm{fill}}
@@ -3789,6 +4565,20 @@ Non-invertible defects are admitted by the same rule when they possess a finite 
 **Corollary X.9.5e.2 (No Surplus Symmetry or Unfilled Anomaly).** In PU, a declared exact redundancy must have zero total obstruction after quotienting response-null classes and after including accepted defect inflow. A nonzero genuine transition class may label a twisted global object and is not thereby an anomaly. Any nonzero unfilled response-active obstruction in the sense of Definition X.9.5e is either completed by a physical defect channel under Theorem X.9.5e.1 or the branch is rejected.
 
 *Proof.* This is the contrapositive of the admissibility criterion in Theorem X.9.5e.1. ∎
+
+**Proposition X.9.5e.3 (Finite Filling Classification).** Let $\mathfrak D_{\mathrm{fill}}$ be an accepted finite defect-filling datum.
+
+1. The class $[\omega]$ admits a filling exactly when $-[\omega]\in\partial(\mathcal D_{\mathrm{act}})$.
+
+2. If every pair of accepted defects is fusable, so that $(\mathcal D_{\mathrm{act}},\otimes,\mathbf 1)$ is a finite monoid, then $S=\partial(\mathcal D_{\mathrm{act}})$ is a subgroup of $H_{\mathrm{obs}}$, the fillable classes are exactly the elements of $S$, and the residue of $[\omega]$ in the finite cokernel $H_{\mathrm{obs}}/S$ vanishes exactly when $[\omega]$ is fillable.
+
+3. For a fillable $[\omega]$, the minimal-cost filling response classes form a finite nonempty set, and (X.9.5.13) defines the PCE selection exactly when this set has one element.
+
+4. Let $\mathcal D_{\mathrm{act}}$ consist exactly of the fusion products of elementary defects $e_1,\ldots,e_p$, with every such product defined and the empty product equal to $\mathbf1$, fix generator weights $c_1,\ldots,c_p\ge0$, and let $C_{\mathrm{def}}(D)$ be the least word cost $\sum_kc_{i_k}$ over fusion words $e_{i_1}\otimes\cdots\otimes e_{i_r}=D$. Then the least filling cost of $[\omega]$ is the least total weight of a word in $\partial e_1,\ldots,\partial e_p$ with sum $-[\omega]$, that is, the shortest-path distance from $0$ to $-[\omega]$ in the Cayley digraph of $H_{\mathrm{obs}}$ with generators $\partial e_i$ and edge weights $c_i$, and a label-setting shortest-path computation over the $|H_{\mathrm{obs}}|$ vertices decides it. A cost $C_{\mathrm{def}}$ additive under fusion vanishes identically on this class, because finiteness of $\mathcal D_{\mathrm{act}}$ gives $D^{\otimes m}=D^{\otimes n}$ with $m<n$ for each $D$; it is the case $c_1=\cdots=c_p=0$, in which every fillable class has least filling cost $0$ and (X.9.5.13) selects a class exactly when all fillers of $[\omega]$ are response equivalent.
+
+*Proof.* Item 1 restates (X.9.5.12). Item 2. From $\mathbf1\otimes\mathbf1=\mathbf1$ and (X.9.5.11), $\partial\mathbf1=2\partial\mathbf1$, so $\partial\mathbf1=0\in S$, and (X.9.5.11) makes $S$ closed under addition. For $x\in S$ of order $p$ in the finite group $H_{\mathrm{obs}}$, $-x=(p-1)x\in S$, so $S$ is a subgroup; item 1 then identifies the fillable classes with $-S=S$, and $[\omega]\in S$ exactly when its image in $H_{\mathrm{obs}}/S$ vanishes. Item 3. The fillers of $[\omega]$ form a nonempty subset of the finite set $\mathcal D_{\mathrm{act}}$, so $C_{\mathrm{def}}$ attains its minimum on it and the minimizing response classes are finitely many; the selection rule of Theorem X.9.5e.1 requires a unique minimizing class. Item 4. By (X.9.5.11), a fusion word $e_{i_1}\otimes\cdots\otimes e_{i_r}$ has boundary $\sum_k\partial e_{i_k}$, which is the endpoint of the Cayley-digraph path from $0$ with those steps, and its word cost is the path weight. Every path from $0$ is a word of an accepted defect and every accepted defect has such a word, so minimizing $C_{\mathrm{def}}$ over fillers is minimizing path weight to $-[\omega]$. Deleting a closed subpath does not increase the weight, so the minimum is attained on one of the finitely many simple paths, and with nonnegative weights a label-setting shortest-path algorithm computes it exactly. The least word cost defining $C_{\mathrm{def}}(D)$ is attained because word costs lie in $\{\sum_in_ic_i:n_i\in\mathbb Z_{\ge0}\}$, which has finitely many elements below each bound. If $C_{\mathrm{def}}$ is additive, $\mathbf1\otimes\mathbf1=\mathbf1$ gives $C_{\mathrm{def}}(\mathbf1)=0$, and a repetition $D^{\otimes m}=D^{\otimes n}$, $0\le m<n$, among the finitely many powers of $D$ gives $mC_{\mathrm{def}}(D)=nC_{\mathrm{def}}(D)$, hence $C_{\mathrm{def}}(D)=0$. ∎
+
+**Resolution TV-X-16-R1 (Metadata).** Exact domain: finite covers whose transition coefficients form one exact group on every nonempty overlap (Corollary X.9.5c.4), and accepted finite defect-filling data with finite abelian obstruction group (Proposition X.9.5e.3). Premises: the reverse-label convention, connectedness of the truncated nerve, (X.9.5.11), and in item 4 nonnegative generator weights with the least-word defect cost. Equivalence: the coboundary relation of local redefinitions; response equivalence of defects. Budget: one truncated nerve with its spanning-tree presentation, one image subgroup, and one shortest-path computation over $H_{\mathrm{obs}}$. Verifier: exact group arithmetic and finite shortest-path search. Falsifier: a nonflat nerve triangle accepted as descent data, a flat datum with trivial chord holonomies and no untwisted representative, a filled class outside $-\partial(\mathcal D_{\mathrm{act}})$, or a total fusion monoid whose boundary image is not a subgroup. Provenance class: source-internal finite mathematics. Downstream consumers: Definition X.9.5c.1, Theorem X.9.5c.2, Corollary X.9.5c.3, Definition X.9.5e, Theorem X.9.5e.1, Corollary X.9.5e.2, Theorem X.9.6i.8 and `TV-X-16`. Nonvacuity: three arcs covering a circle with pairwise but no triple overlaps have the triangle boundary as nerve, so $\check H^1$ with $G=S_3$ has three classes, two of them twisted, and a common triple overlap fills the triangle and leaves only $[1]$; for $H_{\mathrm{obs}}=\mathbb Z_4$ and $\mathcal D_{\mathrm{act}}=\{\mathbf 1,D\}$ with $D\otimes D=\mathbf 1$ and $\partial D=2$, the class $2$ is filled by $D$ and the class $1$ has nonzero residue in $\mathbb Z_4/\{0,2\}$; for $\mathcal D_{\mathrm{act}}=\{e^{\otimes j}\}_{j=0}^{3}$ with $e^{\otimes4}=\mathbf1$, $\partial e=1$ in $\mathbb Z_4$ and weight $1$, the class $1$ is filled by $e^{\otimes3}$ with least filling cost $3$. Corollary X.9.5c.4 and Proposition X.9.5e.3 give `positive-discharge` of the finite Čech computation, the separation of twisted descent from anomaly, and the classification of minimal fillings in `TV-X-16` on these classes. Population of the PU covers, response sheaves, obstruction groups and defect catalogs (`C`), higher-form groups whose coefficients lie outside the finitely generated class together with nonconstant response-gauge groupoids (`M`), and the physical realization of filling defects (`R`) remain live under `TV-X-16`.
 
 
 **Definition X.9.5f (Finite Response Differential Characters).** Let $C_\bullet^B$ be the finite protocol cell complex of a retained budget $B$, with integer chains, real cochains, and the response-null quotient already imposed on cycle evaluations. A degree-$n$ response differential character is a pair
@@ -4077,6 +4867,37 @@ on the retained branch domain. A new bridge law that fails (X.9.6c.1) is not a n
 
 *Proof.* Theorem X.9.6b identifies the sector operators with specified compressions or functional-calculus images of $\mathfrak L_{\mathrm{PU}}$. Its reducing-sector hypotheses do not imply that arbitrary admitted stochastic or CPTP kernels intertwine those sector constructions. The present naturality gate separately requires that intertwining for each composable pair $(C_\ell,K)$. Once it is certified, the two composed sector maps agree, which is Equation (X.9.6c.1). Without it, the projection theorem remains valid but the proposed bridge is not certified as a functor on that kernel category. ∎
 
+**Proposition X.9.6c.5 (Reducing-Summand Structure and Construction of the Master Operator).** Let $\alpha$ range over $\{\mathrm{field},\mathrm{RG},\Sigma,\mathrm{PCE}\}$.
+
+1. Let $\mathfrak D_{\mathrm{PU}}$ satisfy the reducing hypotheses of Theorem X.9.6b, and let $L_\alpha$ be the part of $\mathfrak L_{\mathrm{PU}}$ in $\mathscr H_\alpha$. Then each $L_\alpha$ is nonnegative and self-adjoint with $\operatorname{Dom}(L_\alpha)=\Pi_\alpha\operatorname{Dom}(\mathfrak L_{\mathrm{PU}})$, and
+$$
+\mathfrak L_{\mathrm{PU}}=\bigoplus_\alpha L_\alpha,
+\qquad
+\mathcal D_{\mathrm{PU}}=\bigoplus_\alpha\operatorname{Dom}\bigl(L_\alpha^{1/2}\bigr),
+\qquad
+\mathscr Q_{\mathrm{PU}}(u,v)=\sum_\alpha\bigl\langle L_\alpha^{1/2}\Pi_\alpha u,L_\alpha^{1/2}\Pi_\alpha v\bigr\rangle,
+\tag{X.9.6c.5.1}
+$$
+$$
+\Pi_\alpha\mathfrak L_{\mathrm{PU}}\Pi_\alpha^*=L_\alpha,
+\qquad
+(\mathfrak L_{\mathrm{PU}}-z)^{-1}=\bigoplus_\alpha(L_\alpha-z)^{-1},
+\qquad
+\operatorname{spec}\mathfrak L_{\mathrm{PU}}=\bigcup_\alpha\operatorname{spec}L_\alpha,
+\tag{X.9.6c.5.2}
+$$
+the resolvent identity holding for $z\notin\bigcup_\alpha\operatorname{spec}L_\alpha$. On a finite-mode branch the direct sum in (X.9.6c.5.1) is the sector decomposition of Proposition X.8a.5e, and the poles of the master resolvent are exactly the sector eigenvalues; each is a simple pole whose residue is minus the orthogonal eigenprojection of $\mathfrak L_{\mathrm{PU}}$, the direct sum of the sector eigenprojections for that eigenvalue.
+
+2. Conversely, let $L_\alpha\ge0$ be self-adjoint on $\mathscr H_\alpha$ for each $\alpha$, with $L_\Sigma$ the operator of a Dirichlet form, $L_{\mathrm{RG}}+R_k$ boundedly invertible with a defined supertrace of $(L_{\mathrm{RG}}+R_k)^{-1}\partial_kR_k$, and $L_{\mathrm{PCE}}$ the Appendix D response metric. Then the form in (X.9.6c.5.1) is densely defined, nonnegative and closed, its operator is $\bigoplus_\alpha L_\alpha$, and the resulting closed predictive Dirichlet datum satisfies the reducing, domain-invariance, Dirichlet, regulator and response-metric hypotheses of Theorem X.9.6b with sector compressions $L_\alpha$. When the $L_\alpha$ are the quadratic field kernel, the RG-sector kernel, the operator of the Appendix M perspective diffusion form and the Appendix D response metric of a finite-mode branch, the datum represents those four sector forms and satisfies every hypothesis of Theorem X.9.6b; for strictly positive finite sector operators this is item 3 of Proposition X.8a.5e.
+
+3. Consequently the closed predictive Dirichlet data satisfying the hypotheses of Theorem X.9.6b are exactly the direct sums of four admissible sector operators, and the master operator carries exactly those four operators; this extends Proposition X.8a.5e to nonnegative sector operators given by closed forms. As there, an off-diagonal coupling block lies outside the reducing hypotheses, and a cross-sector relation among the $L_\alpha$, such as a shared spectral value, a common regulator or a common normalization, requires a separately registered datum.
+
+*Proof.* Item 1. Proposition X.8a.5e proves the decomposition in finite dimension; the following argument also covers unbounded sector operators. The reducing hypothesis states that $\Pi_\alpha\operatorname{Dom}(\mathfrak L_{\mathrm{PU}})\subseteq\operatorname{Dom}(\mathfrak L_{\mathrm{PU}})$ and $\Pi_\alpha\mathfrak L_{\mathrm{PU}}u=\mathfrak L_{\mathrm{PU}}\Pi_\alpha u$ on $\operatorname{Dom}(\mathfrak L_{\mathrm{PU}})$. Since the $\Pi_\alpha$ are mutually orthogonal projections with sum $I$, every $u\in\operatorname{Dom}(\mathfrak L_{\mathrm{PU}})$ is $\sum_\alpha\Pi_\alpha u$ with each term in the domain, and $\mathfrak L_{\mathrm{PU}}u=\sum_\alpha L_\alpha\Pi_\alpha u$. Each $L_\alpha$ is symmetric and nonnegative. For nonreal $z$, $\mathfrak L_{\mathrm{PU}}-z$ is a bijection of $\operatorname{Dom}(\mathfrak L_{\mathrm{PU}})$ onto $\mathscr H_{\mathrm{PU}}$ commuting with $\Pi_\alpha$, so $L_\alpha-z$ maps $\Pi_\alpha\operatorname{Dom}(\mathfrak L_{\mathrm{PU}})$ onto $\mathscr H_\alpha$; a symmetric operator with $\operatorname{ran}(L_\alpha\mp i)=\mathscr H_\alpha$ is self-adjoint. For $f\in\mathscr H_{\mathrm{PU}}$ and $u=(\mathfrak L_{\mathrm{PU}}-z)^{-1}f$, the reducing relation gives $(\mathfrak L_{\mathrm{PU}}-z)\Pi_\alpha u=\Pi_\alpha f$, so the resolvent commutes with every $\Pi_\alpha$ and is the direct sum of the sector resolvents. With finitely many sectors, $z$ lies in the resolvent set of $\mathfrak L_{\mathrm{PU}}$ exactly when it lies in the resolvent set of every $L_\alpha$, which gives the spectrum formula. Functional calculus respects the reducing decomposition, so $\mathfrak L_{\mathrm{PU}}^{1/2}=\bigoplus_\alpha L_\alpha^{1/2}$, and the representation theorem for closed nonnegative forms identifies $\mathscr Q_{\mathrm{PU}}$ with $\langle\mathfrak L_{\mathrm{PU}}^{1/2}u,\mathfrak L_{\mathrm{PU}}^{1/2}v\rangle$ on $\mathcal D_{\mathrm{PU}}=\operatorname{Dom}(\mathfrak L_{\mathrm{PU}}^{1/2})$, which gives (X.9.6c.5.1). The restricted form on $\mathscr H_\alpha$ is the form of $L_\alpha$, so its representing operator, the compression in (X.9.6c.5.2), is $L_\alpha$. On a finite-mode branch, $(\mathfrak L_{\mathrm{PU}}-z)^{-1}=\sum_\lambda(\lambda-z)^{-1}E_\lambda$ over the distinct eigenvalues with orthogonal eigenprojections $E_\lambda$, and block diagonality makes $E_\lambda$ the direct sum of the sector eigenprojections.
+
+Item 2. A finite direct sum of nonnegative self-adjoint operators on orthogonal summands is nonnegative and self-adjoint on the direct sum of their domains. Its form is the sum in (X.9.6c.5.1) on $\bigoplus_\alpha\operatorname{Dom}(L_\alpha^{1/2})$, which is dense, and it is closed because its form norm is the direct sum of the complete form norms of the summands. Each $\Pi_\alpha$ reduces the direct sum with invariant form and operator domains, the restricted forms are the given sector forms, so the perspective restriction is Dirichlet, the RG compression plus $R_k$ is the given invertible operator, and the PCE compression is the given metric. These are the reducing, domain-invariance, Dirichlet, regulator and response-metric hypotheses of Theorem X.9.6b, and when the $L_\alpha$ are the four branch sector operators the restricted forms are the four sector forms, which is its representation hypothesis.
+
+Item 3 combines items 1 and 2. ∎
+
 **Corollary X.9.6d (Predictive Resonance Spectrum).** Let $\mathcal L_{\mathrm{PCE}}$ be the finite active ND-RID/PCE transfer generator obtained from the appropriate Markov or response compression of $\mathfrak L_{\mathrm{PU}}$ in Theorem X.9.6b, with faithful stationary PCE/KMS state $\rho_*$. Define the predictive resonance set by the poles of the finite resolvent
 $$
 R_{\mathrm{PCE}}(z)
@@ -4157,6 +4978,42 @@ $$
 U\Delta_{\mathrm{PU}}= -\mathcal L_{\mathrm{PCE}}U
 $$
 on the retained quotient and inducing an isomorphism of the relevant zero-mode spaces. Then Hodge harmonic modes map to transfer zero modes, and the converse follows from injectivity on the quotient. For a simple isolated zero eigenvalue, let $v,w$ be right and left eigenvectors normalized by $w^*v=1$. Under a perturbation $-\eta D$, the first-order shift is $-\eta w^*Dv$. A negative real shift therefore requires $\operatorname{Re}(w^*Dv)>0$. On a self-adjoint branch, $w=v$ for a unit eigenvector, and a positive ordinary expectation suffices. No sign claim is made without the appropriate leakage certificate. Finally, Laplace transforms of the finite expansion (X.9.6.8) have poles only at its resonance values, proving item 6. ∎
+
+**Corollary X.9.6d.1 (Real Resonances on the Compression Branch).** In Corollary X.9.6d, suppose that
+$$
+\mathcal L_{\mathrm{PCE}}
+=
+-T\bigl(P\mathfrak L_{\mathrm{PU}}P^*\bigr)T^{-1}
+\tag{X.9.6d.1.1}
+$$
+for a branch-determined finite projection or form-compression $P$ of the master operator and an invertible linear map $T$ from the compressed space onto the active transfer space; $T$ is the identity when the generator is the compression itself, as in (X.9.6.3). Then:
+
+1. $\operatorname{Res}_{\mathrm{PU}}\subset(-\infty,0]$, $\mathcal L_{\mathrm{PCE}}$ is diagonalizable, and every $P_\lambda^{AB}$ in (X.9.6.8) is constant, so $C_{AB}(t)$ is a finite sum of real exponentials $e^{\lambda t}$ with $\lambda\le0$ and carries no oscillatory resonance.
+
+2. If $T$ is unitary onto the centered active space with its KMS/GNS inner product, then $\mathcal L_{\mathrm{PCE}}$ is self-adjoint in that inner product, the detailed-balance normal clause of Corollary X.9.6d applies, and
+$$
+C_{AA}(t)
+=
+\sum_{\lambda\in\operatorname{Res}_{\mathrm{PU}}}e^{\lambda t}\lVert E_\lambda A\rVert_{\rho_*}^2
+\tag{X.9.6d.1.2}
+$$
+with orthogonal eigenprojections $E_\lambda$, so $C_{AA}$ is completely monotone: $(-1)^n\frac{d^n}{dt^n}C_{AA}(t)\ge0$ for every $n\ge0$ and $t\ge0$.
+
+3. A generator with a nonreal eigenvalue or a Jordan block of size at least two admits no representation (X.9.6d.1.1). The primitive three-state Markov generator with unit rates $1\to2\to3\to1$,
+$$
+Q=
+\begin{pmatrix}
+-1&1&0\\
+0&-1&1\\
+1&0&-1
+\end{pmatrix},
+\tag{X.9.6d.1.3}
+$$
+generates a primitive unital semigroup with the uniform faithful stationary state and has resonances $0$ and $-\tfrac32\pm\tfrac{\sqrt3}{2}i$; it therefore meets the primitivity, unitality and faithful-stationarity structure used in items 1–4 of Corollary X.9.6d while lying outside the form (X.9.6d.1.1).
+
+*Proof.* The compression $P\mathfrak L_{\mathrm{PU}}P^*$ is the operator of a restricted closed nonnegative form on a finite space, hence a nonnegative self-adjoint matrix, unitarily diagonalizable with nonnegative eigenvalues. Similarity by $T$ preserves eigenvalues and Jordan structure, so $\mathcal L_{\mathrm{PCE}}$ is diagonalizable with spectrum in $(-\infty,0]$. In the Jordan expansion used in the proof of Corollary X.9.6d every nilpotent part vanishes, so every $P_\lambda^{AB}$ is constant, proving item 1. Under the unitary hypothesis of item 2, $\mathcal L_{\mathrm{PCE}}$ is unitarily equivalent to a nonpositive self-adjoint matrix, hence self-adjoint and normal in the KMS/GNS inner product with orthogonal eigenprojections, and $C_{AA}(t)=\langle A,e^{t\mathcal L_{\mathrm{PCE}}}A\rangle_{\rho_*,c}$ expands as (X.9.6d.1.2). Each $e^{\lambda t}$ with $\lambda\le0$ satisfies $(-1)^n\frac{d^n}{dt^n}e^{\lambda t}=|\lambda|^ne^{\lambda t}\ge0$, and a nonnegative combination preserves these inequalities. Item 3 is the contrapositive of item 1 together with a computation: $Q=-I+S_{\mathrm{cyc}}$, where $S_{\mathrm{cyc}}$ is the cyclic permutation matrix with eigenvalues $1,\omega,\omega^2$ and $\omega=e^{2\pi i/3}$, so the eigenvalues of $Q$ are $0$ and $\omega-1,\omega^2-1=-\tfrac32\pm\tfrac{\sqrt3}{2}i$. Every row of $Q$ sums to zero, so $Q\mathbf1=0$ and the semigroup is unital; every column also sums to zero, so the uniform distribution is stationary; and $e^{tQ}$ has strictly positive entries for $t>0$ because the transition graph is a directed cycle, which makes the semigroup primitive. ∎
+
+**Resolution TV-X-18-R1 (Metadata).** Exact domain: closed predictive Dirichlet data satisfying the reducing hypotheses of Theorem X.9.6b, with possibly unbounded sector operators in Proposition X.9.6c.5, and finite transfer generators of the form (X.9.6d.1.1) in Corollary X.9.6d.1. Premises: the reducing and domain-invariance hypotheses, the representation theorem for closed nonnegative forms, and the sector conditions of item 2 of Proposition X.9.6c.5. Equivalence: equality of operators and forms on the common carrier; similarity of finite generators. Budget: four sector operators, one direct sum, one similarity map and one finite spectral decomposition. Verifier: operator-theoretic identities and exact finite spectral computation. Falsifier: a datum satisfying the reducing hypotheses with a nonzero off-diagonal block, a sector compression different from the part of $\mathfrak L_{\mathrm{PU}}$ in that sector, or a generator of the form (X.9.6d.1.1) with a nonreal eigenvalue or a nontrivial Jordan block. Provenance class: source-internal mathematics. Downstream consumers: Definition X.9.6a, Theorem X.9.6b, Corollaries X.9.6c, X.9.6d and X.9.6e, Definition X.9.6h and `TV-X-18`. Nonvacuity: $L_{\mathrm{field}}=(1)$, $L_{\mathrm{RG}}=(2)$, the Dirichlet form $(u_1-u_2)^2$ with $L_\Sigma=\begin{pmatrix}1&-1\\-1&1\end{pmatrix}$, and $L_{\mathrm{PCE}}=(3)$ assemble into a master operator whose resolvent has simple poles at $0,1,2,3$, the residue at $2$ being minus the sum of the RG and perspective eigenprojections; the generator (X.9.6d.1.3) witnesses item 3. Proposition X.9.6c.5 gives `positive-discharge` of the construction-and-verification component of `TV-X-18` for every admissible sector quadruple, covering sector domains, compressions, resolvents and resolvent poles; Corollary X.9.6d.1 proves that compression-branch resonances are real and nonpositive, and its example (X.9.6d.1.3) gives `nonentailment` of the compression form (X.9.6d.1.1) from primitivity, unitality and faithful stationarity. Population of the four PU sector operators on one carrier, namely $\Gamma^{(2)}$, the Wetterich RG compression with its regulator $R_k$, the Appendix M perspective Dirichlet form and the Appendix D PCE metric (`C`), and their physical realization (`R`) remain live under `TV-X-18`.
 
 **Corollary X.9.6e (Spectral-Ledger Non-Duplication).** Let $c$ be a scalar branch datum claimed to be PU-internal on the closed finite-mode branch and claimed to arise from a heat trace, zeta determinant, eta invariant, finite resolvent trace, or finite spectral action term. Then $c$ must be expressible as
 $$
@@ -4387,6 +5244,35 @@ $$
 with the stated finite-part convention for zero-mode removal. The eta trace is also a finite sum over nonzero eigenvalues of $F_\ell(\mathbf t)$ on any chamber where the zero-mode ledger is fixed. Therefore all derivatives in (X.9.6.27) are derivatives of finite smooth functions on the chamber, and mixed partial derivatives commute.
 
 Corollary X.9.6e requires each spectral scalar to use registered compressed operators, spectral functions, and normalization data. It does not ensure that a sum of signed sector traces retains every sector value. The additional factorization certificate identifies a scalar in the present aggregate class with Equation (X.9.6.27); sector-resolved functionals remain available under Corollary X.9.6e when this aggregate representation is not certified. Since noncommuting mixed derivatives cannot occur for the finite smooth ledger functions just described, any certificate producing them is incompatible with the claimed single-ledger origin. ∎
+
+**Theorem X.9.6g.1a (Net Spectral Measure of the Aggregate Ledger).** On an open chamber of Definition X.9.6g on which every $L_j(\mathbf t)$ is positive, define the finitely supported integer-valued measures
+$$
+\nu_{\mathbf t}
+=
+\sum_{j=1}^N\sigma_j\sum_{\lambda\in\operatorname{spec}L_j(\mathbf t)}\delta_\lambda,
+\qquad
+\nu^\eta_{\mathbf t}
+=
+\sum_{\ell=1}^{N_\eta}\tau_\ell\sum_{\mu\in\operatorname{spec}'F_\ell(\mathbf t)}\delta_\mu,
+\tag{X.9.6g.1a.1}
+$$
+with eigenvalues repeated by multiplicity and $\operatorname{spec}'$ the nonzero spectrum retained by the zero-mode ledger. Then:
+
+1. $\zeta_{\mathrm{PU}}(s;\mathbf t)=\int\lambda^{-s}\,d\nu_{\mathbf t}(\lambda)$, $\log\det_{\mathrm{PU}}(\mathbf t)=\int\log\lambda\,d\nu_{\mathbf t}(\lambda)$, and $\eta_{\mathrm{PU}}(s;\mathbf t)=\int\operatorname{sign}(\mu)|\mu|^{-s}\,d\nu^\eta_{\mathbf t}(\mu)$.
+
+2. For fixed $\mathbf t$, the values of $\zeta_{\mathrm{PU}}(\cdot;\mathbf t)$ on any subset of $\mathbb C$ with a finite accumulation point determine $\nu_{\mathbf t}$, and the values of $\eta_{\mathrm{PU}}(\cdot;\mathbf t)$ on such a set determine exactly the odd part $r\mapsto\nu^\eta_{\mathbf t}(\{r\})-\nu^\eta_{\mathbf t}(\{-r\})$, $r>0$.
+
+3. With the finite-part prescriptions, zero-mode ledgers, chamber choices and normalization maps held fixed, every scalar of the aggregate form (X.9.6.27) at $\mathbf t_c$ is a function of the germs at $\mathbf t_c$ of $\mathbf t\mapsto\nu_{\mathbf t}$ and of the odd part of $\nu^\eta_{\mathbf t}$. Two master zeta-index ledgers with equal germs therefore have equal aggregate projections, whatever their sector decompositions.
+
+4. On a class of ledgers sharing one normalization map, a sector scalar admits a factorization certificate (X.9.6.27) only if it takes equal values on ledgers of the class with equal germs. For the one-parameter ledger $A$ with one sector, $\sigma_1=+1$ and $L_1(t)=\operatorname{diag}(1+t,2+t)$, and the ledger $B$ with $\sigma_1=+1$, $L_1(t)=\operatorname{diag}(1+t,2+t,3+t)$, $\sigma_2=-1$ and $L_2(t)=(3+t)$, the net measures agree for every $t>-1$, while the sector-one log-determinants $\log(1+t)+\log(2+t)$ and $\log(1+t)+\log(2+t)+\log(3+t)$ differ; on any class containing both ledgers the sector-one log-determinant is therefore not an aggregate scalar and remains available from sector-resolved data under Corollary X.9.6e.
+
+*Proof.* Item 1. Each $L_j(\mathbf t)$ is a positive matrix, so $\operatorname{Tr}L_j(\mathbf t)^{-s}$ is the sum of $\lambda^{-s}$ over its eigenvalues; summing with the signs $\sigma_j$ gives the first identity, and applying $-\partial_s$ at $s=0$ to $\lambda^{-s}$ gives $\log\lambda$. An eigenvalue $\mu\ne0$ of $F_\ell(\mathbf t)$ contributes $\mu|\mu|^{-s-1}=\operatorname{sign}(\mu)|\mu|^{-s}$ to (X.9.6.26).
+
+Item 2. Grouping equal eigenvalues gives $\zeta_{\mathrm{PU}}(s;\mathbf t)=\sum_{\lambda}\nu_{\mathbf t}(\{\lambda\})e^{-s\log\lambda}$, a finite exponential sum with distinct real frequencies. It is entire in $s$, so its values on a set with a finite accumulation point determine it on $\mathbb C$ by the identity theorem; if two such sums agree, their difference is an exponential sum over the union of their atoms, say $m$ distinct values $\lambda$, and its values at $s=0,1,\ldots,m-1$ form an invertible Vandermonde system in the distinct numbers $\lambda^{-1}$, so every coefficient of the difference vanishes and the two measures coincide. Likewise $\eta_{\mathrm{PU}}(s;\mathbf t)=\sum_{r>0}\bigl(\nu^\eta_{\mathbf t}(\{r\})-\nu^\eta_{\mathbf t}(\{-r\})\bigr)r^{-s}$ determines these differences, and two measures with the same differences give the same function.
+
+Item 3. The entries of (X.9.6.27) are finite parts, derivatives in $\mathbf t$ at $\mathbf t_c$ and values of $\zeta_{\mathrm{PU}}$, $\log\det_{\mathrm{PU}}$ and $\eta_{\mathrm{PU}}$, and these are determined by the three functions on a neighborhood of $\mathbf t_c$, hence by item 1 by the stated germs; the fixed map $\mathcal N_c$ then gives equal outputs. Item 4 is the contrapositive of item 3 for a common normalization map. In the example, $\nu^A_t=\delta_{1+t}+\delta_{2+t}$ and $\nu^B_t=\delta_{1+t}+\delta_{2+t}+\delta_{3+t}-\delta_{3+t}$ coincide for every $t$ in the chamber $t>-1$. ∎
+
+**Resolution TV-X-20-R1 (Metadata).** Exact domain: master zeta-index ledgers of Definition X.9.6g on open chambers where every $L_j(\mathbf t)$ is positive, with fixed finite-part prescriptions, chamber choices, zero-mode ledgers and normalization maps. Premises: finite dimensionality of the ledger operators and the definitions (X.9.6.24)–(X.9.6.26). Equivalence: equality of the germs of the net spectral measure and of the odd part of the net eta measure. Budget: one grouping of the finitely many signed eigenvalues at each point and one Vandermonde inversion. Verifier: exact finite spectral computation. Falsifier: two ledgers with equal germs and unequal aggregate projections under one normalization map, or an aggregate function that fails to determine its net measure. Provenance class: source-internal finite mathematics. Downstream consumers: Definition X.9.6g, Theorem X.9.6g.1, Corollaries X.9.6g.2 and X.9.6g.3, Definition X.9.6g.7 and `TV-X-20`. Nonvacuity: the ledgers $A$ and $B$ of item 4. Theorem X.9.6g.1a gives `positive-discharge` of the identification of the aggregate zeta-index class with functionals of the net spectral germs, and its example gives `nonentailment` of sector values from the aggregate ledger. Construction of one PU spectral source together with verification of every sector projection from sector-resolved data, mixed derivatives, orientations, finite parts, tails and overlaps (`M+C`), its realization (`R`), and its numerical observable map (`O`) remain live under `TV-X-20`.
 
 **Corollary X.9.6g.2 (Anti-Duplication Gate for Constants).** Two PU constants using the same spectral projection, finite-part functional, and normalization are the same ledger datum. For different orthogonal compressions, the traces add on the direct sum of the compressed operators; equality with a trace of the original operator's functional calculus requires reducing projections and the declared sector coverage. A jointly smooth common ledger has commuting mixed derivatives, whether its projections are orthogonal or overlapping. Representing all sector constants through the aggregate functions in (X.9.6.27) additionally requires the factorization certificate of Theorem X.9.6g.1.
 
@@ -4675,7 +5561,7 @@ $$
 
 4. $J_P$ is the real-structure operator if that sector carries a real branch.
 
-5. $V_P=V_P^*$ is a finite zero-order response potential.
+5. $V_P=V_P^*$ is a finite zero-order response potential in the even bimodule commutant: $[V_P,a]=[V_P,J_Pb^*J_P^{-1}]=[V_P,\Gamma_P]=0$ for all $a,b\in\mathfrak A_P$, the $J_P$ terms being present exactly when $J_P$ is defined. The branch fixes $\mathfrak A_P$, $\Gamma_P$ and $J_P$ before $D_P$ and $V_P$ are supplied.
 
 6. The exact factorization identity holds:
 $$
@@ -4701,6 +5587,52 @@ for all retained algebra generators $a,b\in\mathfrak A_P$ for which $J_P$ is def
 *Proof.* Equation (X.9.6.35) is an equality of finite self-adjoint operators on $\mathscr H_P$. Hence every quadratic response generated by $P\mathfrak L_{\mathrm{PU}}P^*$ is equivalently generated by the certified first-order operator $D_P$ together with the zero-order potential $V_P$. The order-zero and order-one identities (X.9.6.36) show that the represented algebra acts as a finite first-order response geometry on the retained branch. Since $\mathfrak A_P$ acts faithfully, no retained algebra generator is lost in the factorization.
 
 Let $L'_P$ be another proposed carrier for the same sector. If it induces the same protocol-response presheaf as $P\mathfrak L_{\mathrm{PU}}P^*$, then Theorem P.6.1b.3 identifies it in the operational quotient on the theorem's separating, protocol-complete equivalence branch. Corollary P.6.1b.8 excludes an extra label or operator decoration only when its removal is admitted, preserves all other charged data, and strictly lowers complete cost; an equal-cost duplicate is not excluded by that strict comparison. If $L'_P$ changes a finite response, it is not the same sector projection in the PPI quotient and must be entered as a distinct finite branch with its own certificate. These alternatives exhaust the finite response quotient. ∎
+
+**Proposition X.9.6h.3a (Zero-Order Class and First-Order Obstruction for Local Dirac Certificates).**
+
+1. Let $P$ be a branch-determined sector projection, let the retained finite data $(\mathfrak A_P,\mathscr H_P,\Gamma_P,J_P)$, with $\mathscr H_P$ the carrier of $P\mathfrak L_{\mathrm{PU}}P^*$, satisfy items 2 and 4 of Definition X.9.6h.2 and the order-zero condition in (X.9.6.36), and consider the variant of Definition X.9.6h.2 whose item 5 admits every finite self-adjoint operator on $\mathscr H_P$. Then the record with $D_P=0$, $V_P=P\mathfrak L_{\mathrm{PU}}P^*$ and a residual record listing the two exact identities satisfies this variant; the data $\mathfrak A_P=\mathbb C\mathbf1$ and $\Gamma_P=\mathbf1$ without a real branch meet these conditions on every sector. With an unrestricted zero-order potential, acceptance therefore entails no nonzero first-order operator; the first-order content of a local Dirac certificate is fixed by the class admitted for $V_P$, which item 5 of Definition X.9.6h.2 takes to be the even bimodule commutant (X.9.6h.3a.1) of the branch-fixed data. On the data $\mathfrak A_P=\mathbb C\mathbf1$, $\Gamma_P=\mathbf1$ without a real branch that commutant contains every self-adjoint operator on $\mathscr H_P$, so a branch fixing those data also admits the record with $D_P=0$ under Definition X.9.6h.2.
+
+2. Fix finite $(\mathfrak A_P,\mathscr H_P,\Gamma_P,J_P)$ satisfying the order-zero condition in (X.9.6.36), let
+$$
+\mathcal Z_P
+=
+\bigl\{V:\ [V,a]=[V,J_Pb^*J_P^{-1}]=[V,\Gamma_P]=0\ \text{for all }a,b\in\mathfrak A_P\bigr\}
+\tag{X.9.6h.3a.1}
+$$
+be the even bimodule commutant, let $\mathbb E_{\mathcal Z}$ be the Hilbert-Schmidt orthogonal projection onto $\mathcal Z_P$, and let $\mathscr D^{(1)}_P$ be the real vector space of odd self-adjoint operators that satisfy the order-one condition in (X.9.6.36) and the $J_P$-sign relation of (X.9.6.14). If $P\mathfrak L_{\mathrm{PU}}P^*=D_P^2+V_P$ with $D_P\in\mathscr D^{(1)}_P$ and $V_P\in\mathcal Z_P$, then
+$$
+(1-\mathbb E_{\mathcal Z})\bigl(P\mathfrak L_{\mathrm{PU}}P^*\bigr)
+\in
+(1-\mathbb E_{\mathcal Z})\operatorname{span}_{\mathbb R}\bigl\{D_1D_2+D_2D_1:\ D_1,D_2\in\mathscr D^{(1)}_P\bigr\}.
+\tag{X.9.6h.3a.2}
+$$
+This is a finite linear test. Every certificate of Definition X.9.6h.2 with $V_P\in\mathcal Z_P$ satisfies the inclusion (X.9.6h.3a.2) with $\mathscr D^{(1)}_P$ replaced by the larger real space $\widetilde{\mathscr D}^{(1)}_P$ of odd self-adjoint operators satisfying the order-one condition in (X.9.6.36), which is the class of first-order operators admitted by items 3 and 7 of that definition. The smaller test with $\mathscr D^{(1)}_P$ requires the $J_P$-sign relation as a hypothesis on $D_P$: for $\mathfrak A_P=\mathbb C^2$ acting on $\mathscr H_P=\mathbb C^4$ by $\operatorname{diag}(a_1,a_1,a_2,a_2)$, $\Gamma_P=\operatorname{diag}(1,-1,-1,1)$, $J_P$ the exchange of the second and third coordinates followed by complex conjugation, and $D=E_{12}+E_{21}+iE_{24}-iE_{42}$ in matrix units, the operator $L_4=D^2+\mathbf1$ has the certificate $D_P=D$, $V_P=\mathbf1$ of Definition X.9.6h.2 and violates (X.9.6h.3a.2) for either sign $\epsilon'$.
+
+3. The test (X.9.6h.3a.2) excludes even positive operators on explicit finite real even data. Let $\mathfrak A_P=\mathbb C^2$ act on $\mathscr H_P=\mathscr H_{11}\oplus\mathscr H_{22}$, with $\mathscr H_{11}=\mathscr H_{22}=\mathbb C^2$ graded by $\operatorname{diag}(1,-1)$, $a=(a_1,a_2)$ acting by $a_i$ on $\mathscr H_{ii}$, and $J_P$ componentwise complex conjugation with KO signs $\epsilon=\epsilon'=\epsilon''=1$, so that $J_P^2=1$, $J_P\Gamma_P=\Gamma_PJ_P$, and $J_PD=DJ_P$ is the sign relation. Then $\mathscr D^{(1)}_P$ consists of the block-diagonal operators $d_1\sigma_x\oplus d_2\sigma_x$ with $d_1,d_2\in\mathbb R$, $\mathcal Z_P$ is the diagonal algebra, and the even positive operator
+$$
+L=
+\begin{pmatrix}
+2I_2&I_2\\
+I_2&2I_2
+\end{pmatrix}
+\tag{X.9.6h.3a.3}
+$$
+violates (X.9.6h.3a.2); dropping the $J_P$-sign relation leaves only diagonal anticommutators, so Definition X.9.6h.2 admits no certificate for $L$ with these data, while the unrestricted variant of item 1 certifies it.
+
+*Proof.* Item 1. The zero operator is self-adjoint and odd for every grading, the order-one identity holds for $D_P=0$ because $[D_P,a]=0$, faithfulness, the real-structure entry and the order-zero identity are hypotheses on the retained data, $V_P=P\mathfrak L_{\mathrm{PU}}P^*$ is a finite self-adjoint operator on $\mathscr H_P$, and $D_P^2+V_P=P\mathfrak L_{\mathrm{PU}}P^*$ holds by the choice of $V_P$. Every entry of the unrestricted variant is therefore present. The algebra $\mathbb C\mathbf1$ acts faithfully, without a real branch the order-zero identity is void, and every operator on $\mathscr H_P$ commutes with $\mathbb C\mathbf1$ and with $\Gamma_P=\mathbf1$.
+
+Item 2. The set in (X.9.6h.3a.1) is the commutant of a self-adjoint family, hence a $*$-subalgebra of the finite operator algebra, and $\mathbb E_{\mathcal Z}$ fixes each of its elements. From $P\mathfrak L_{\mathrm{PU}}P^*=D_P^2+V_P$ with $V_P\in\mathcal Z_P$ one obtains $(1-\mathbb E_{\mathcal Z})(P\mathfrak L_{\mathrm{PU}}P^*)=(1-\mathbb E_{\mathcal Z})(D_P^2)$, and $D_P^2=\tfrac12(D_PD_P+D_PD_P)$ lies in the displayed span. The span, the projection and membership are finite linear-algebra computations. Items 3 and 7 of Definition X.9.6h.2 place $D_P$ in $\widetilde{\mathscr D}^{(1)}_P$, and the same computation applies. In the four-dimensional example, $J_P^2=1$, $J_P\Gamma_P=\Gamma_PJ_P$, the algebra acts faithfully, and $J_Pb^*J_P^{-1}=\operatorname{diag}(b_1,b_2,b_1,b_2)$ commutes with it; the two families generate the diagonal algebra, so $\mathcal Z_P$ is the diagonal algebra and contains $\mathbf1$. The operator $D$ is self-adjoint, and its matrix units join coordinates of opposite grading, so $D$ is odd; the nonzero entries of $[D,a]$ join coordinates $2$ and $4$, where $J_Pb^*J_P^{-1}$ takes the common value $b_2$, so the order-one identity holds; and $L_4$ has diagonal $(2,3,1,2)$, $(1,4)$ entry $i$, $(4,1)$ entry $-i$ and no other nonzero entries. For $D'\in\mathscr D^{(1)}_P$ the sign relation reads $(D')_{jk}=\epsilon'\,\overline{(D')_{\pi(j)\pi(k)}}$, with $\pi$ the exchange of $2$ and $3$, and oddness gives $(D')_{jk}=0$ for $j,k\in\{1,4\}$. Hence
+$$
+(D'D''+D''D')_{14}
+=
+2\operatorname{Re}\bigl((D')_{13}(D'')_{34}\bigr)+2\operatorname{Re}\bigl((D'')_{13}(D')_{34}\bigr)
+\in\mathbb R
+$$
+for $D',D''\in\mathscr D^{(1)}_P$. Since $1-\mathbb E_{\mathcal Z}$ removes the diagonal and keeps every off-diagonal entry, every element of the right side of (X.9.6h.3a.2) has real $(1,4)$ entry, while $(1-\mathbb E_{\mathcal Z})L_4$ has $(1,4)$ entry $i$.
+
+Item 3. The algebra is commutative, so order zero holds, and $J_Pb^*J_P^{-1}$ acts on $\mathscr H_{ii}$ by $b_i$. For the block $D_{12}:\mathscr H_{22}\to\mathscr H_{11}$ of an operator $D$, the order-one identity reads $(a_2-a_1)(b_2-b_1)D_{12}=0$ for all $a,b$, so $D_{12}=0$, and likewise $D_{21}=0$. An odd real self-adjoint operator on $\mathscr H_{ii}=\mathbb C^+\oplus\mathbb C^-$ is $d_i\sigma_x$ with $d_i$ real, which gives $\mathscr D^{(1)}_P$. An operator commuting with both block projections and with $\Gamma_P$ preserves the four one-dimensional graded summands, so $\mathcal Z_P$ is diagonal, and every $D_1D_2+D_2D_1$ is diagonal. The right-hand side of (X.9.6h.3a.2) is therefore zero, while $(1-\mathbb E_{\mathcal Z})L$ is the nonzero off-diagonal part of (X.9.6h.3a.3). Without the sign relation the odd self-adjoint blocks are $\begin{pmatrix}0&z_i\\\bar z_i&0\end{pmatrix}$ with $z_i\in\mathbb C$, whose anticommutators are again diagonal, so the same conclusion holds for every $D_P$ admitted by items 3 and 7 of Definition X.9.6h.2. The operator $L$ commutes with $\Gamma_P$ and has eigenvalues $1$ and $3$, each of multiplicity two. ∎
+
+**Resolution TV-X-19-R1 (Metadata).** Exact domain: local first-order Dirac certificates of Definition X.9.6h.2 on finite sector data, whose potentials lie in the even bimodule commutant (X.9.6h.3a.1), in items 2 and 3, with the test on $\mathscr D^{(1)}_P$ applied to certificates whose $D_P$ obeys the $J_P$-sign relation of (X.9.6.14), and the unrestricted-potential variant in item 1. Premises: finite dimensionality, the order-zero condition, the grading relation, and, for the test with $\mathscr D^{(1)}_P$, the $J_P$-sign relation of (X.9.6.14) on $D_P$. Equivalence: equality of finite operators. Budget: one linear span of anticommutators, one Hilbert-Schmidt projection and one membership test. Verifier: exact finite linear algebra. Falsifier: a record of item 1 whose entries fail the unrestricted variant, a factorization of (X.9.6h.3a.3) with first-order odd $D_P$ and $V_P\in\mathcal Z_P$, or a certificate of Definition X.9.6h.2 with $V_P\in\mathcal Z_P$ violating the test with $\widetilde{\mathscr D}^{(1)}_P$. Provenance class: source-internal finite mathematics. Downstream consumers: Definitions X.9.6f and X.9.6h.2, Theorems X.9.6f.1 and X.9.6h.3, Definition X.9.6h.4 and `TV-X-19`. Nonvacuity: the record of item 1 exists for every sector projection, the triple of item 3 is a finite real even datum with two-dimensional $\mathscr D^{(1)}_P$, and the four-dimensional example of item 2 is a certificate of Definition X.9.6h.2 violating the test with $\mathscr D^{(1)}_P$. Proposition X.9.6h.3a gives `nonentailment` of a nonzero first-order factor from the unrestricted-potential variant of Definition X.9.6h.2, and item 5 of Definition X.9.6h.2 accordingly admits only commutant potentials; it gives `nonentailment` of a commutant-potential factorization from finite real even structure and positivity, and, by the four-dimensional example of item 2, `nonentailment` of the sign-restricted test (X.9.6h.3a.2) from Definition X.9.6h.2. The classification of the finite real even triples compatible with the retained responses and anomalies, and a proof of the local first-order factorization for the actual PU sector compressions (`M+C`), together with its realization (`R`), remain live under `TV-X-19`.
 
 **Definition X.9.6h.4 (PU Spectral-Action Transfer Ledger).** A PU spectral-action transfer ledger for a sector projection $P$ is a finite record
 $$
@@ -4887,6 +5819,31 @@ On the smooth-envelope branch, Equation (X.9.6h.4.10) is an entry of the heat-ke
 
 The gauge, Higgs-kinetic, Higgs-quadratic, Higgs-quartic, threshold, and matching entries in (X.9.6h.5.1)–(X.9.6h.5.3) are specified linear projections followed by the registered normalization map. A specified function of a determined finite spectral record is single-valued. Appending another response-active coefficient while retaining the same operator, test function, projections, grading, heat coefficients, finite-part convention, tail certificate, and normalization map would assign two outputs to that single-valued map, contrary to Corollary X.9.6e and Theorems X.9.6g.1 and X.9.6g.4. Such an appended term must therefore be response-null or belong to a distinct certified branch. ∎
 
+**Proposition X.9.6h.5a (Cutoff and Moment Freedom of the Spectral-Action Transfer).** Fix $D_P$, the projection list $\{P_s\}_{s\in\mathcal S_{\mathrm{SA}}}$ and $\Lambda_{\mathrm{SA}}$ of Definition X.9.6h.4, and let the cutoff profile $f$ range over even smooth positive functions on $\mathbb R$ of rapid decay, entering through their restriction to $[0,\infty)$ as $f(D_P^2/\Lambda_{\mathrm{SA}}^2)$, with moments $f_0=f(0)$ and $f_k=\int_0^\infty f(v)v^{k/2-1}\,dv$ for $k=2,4$.
+
+1. *Finite-matrix branch.* Let $X\subset[0,\infty)$ be the finite union over $s$ of the spectra of $P_sD_P^2P_s/\Lambda_{\mathrm{SA}}^2$ on $P_s\mathscr H_P$, and let $N_{s,x}$ be the multiplicity of $x$ in sector $s$. The vector of sector actions $(\operatorname{Tr}f(P_sD_P^2P_s/\Lambda_{\mathrm{SA}}^2))_s$ depends on $f$ only through $f|_X$, and as $f$ varies it fills exactly the open cone
+$$
+\Bigl\{\Bigl(\sum_{x\in X}N_{s,x}y_x\Bigr)_s:\ y\in(0,\infty)^X\Bigr\}.
+\tag{X.9.6h.5a.1}
+$$
+If every sector has an eigenvalue occurring in no other sector, the cone (X.9.6h.5a.1) is all of $(0,\infty)^{\mathcal S_{\mathrm{SA}}}$.
+
+2. *Smooth-envelope moments.* The moment triple $(f_0,f_2,f_4)$ ranges over all of $(0,\infty)^3$.
+
+3. *Forward lock.* Every output of $\mathcal N_{\mathrm{SA}}$ that depends on the cutoff through the sector actions of item 1 or the moments of item 2, and is continuous and nonconstant there, takes every value in a nondegenerate interval as the cutoff varies. Its value is therefore fixed only by the cutoff and moment entries registered in $\chi_{\mathrm{SA}}$, and a cutoff or moment chosen after comparison can match any value in that interval.
+
+*Proof.* Item 1. On the finite branch, the proof of Theorem X.9.6h.5 gives $\operatorname{Tr}f(P_sD_P^2P_s/\Lambda_{\mathrm{SA}}^2)=\sum_{x\in X}N_{s,x}f(x)$, so the vector depends on $f|_X$ and lies in (X.9.6h.5a.1). Conversely, let $y\in(0,\infty)^X$ and $\varepsilon=\tfrac12\min_xy_x$. Choose even smooth bumps $\beta_x\ge0$ on $\mathbb R$ with compact support, $\beta_x(x)=1$ and $\beta_x=0$ on $X\setminus\{x\}$; for $x>0$ take the sum of a bump supported in a short interval around $x$ and its mirror image. Put $f(v)=\varepsilon e^{-v^2}+\sum_x\bigl(y_x-\varepsilon e^{-x^2}\bigr)\beta_x(v)$. Each coefficient is positive, so $f$ is even, smooth, positive and of rapid decay, and $f(x)=y_x$ on $X$. If each sector $s$ owns an eigenvalue $x_s$ occurring in no other sector, give every point of $X\setminus\{x_s\}_s$ the weight $\eta>0$ and set $y_{x_s}=\bigl(z_s-\eta\sum_{x\ne x_s}N_{s,x}\bigr)/N_{s,x_s}$, which uses $N_{s,x_{s'}}=0$ for $s'\ne s$; for $\eta$ small enough every $y_{x_s}$ is positive, and $y$ realizes any prescribed $z\in(0,\infty)^{\mathcal S_{\mathrm{SA}}}$.
+
+Item 2. Let $(c_0,c_2,c_4)\in(0,\infty)^3$, let $(m_0,m_2,m_4)=(1,\sqrt\pi/2,1/2)$ be the moments of $e^{-v^2}$, and put $\varepsilon=\tfrac12\min_kc_k/m_k$ and $b_k=c_k-\varepsilon m_k>0$. Let $\chi\ge0$ be smooth and even on $\mathbb R$ with $\chi(0)=1$ and support in $[-1,1]$, write $A=\int_0^\infty\chi$, $B=\int_0^\infty v\chi$, and $\chi_\eta(v)=\chi(v/\eta)$, so that $\int_0^\infty\chi_\eta=\eta A$ and $\int_0^\infty v\chi_\eta=\eta^2B$. Let $\psi\ge0$ be smooth and even with support in $[-1,1]$ and $\int\psi=1$, and put $\psi_{c}(v)=(4/c)\bigl(\psi(4(v-c)/c)+\psi(4(v+c)/c)\bigr)$, an even function whose restriction to $[0,\infty)$ is supported in $[3c/4,5c/4]$, with $\int_0^\infty\psi_c=1$ and $\int_0^\infty v\psi_c=c$. For $\eta>0$ set $a(\eta)=b_2-b_0\eta A$ and $c(\eta)=(b_4-b_0\eta^2B)/a(\eta)$; as $\eta\downarrow0$, $a(\eta)\to b_2>0$ and $c(\eta)\to b_4/b_2>0$, so some $\eta>0$ has $a(\eta)>0$, $c(\eta)>0$ and $\eta<c(\eta)/2$. Then
+$$
+f=b_0\chi_\eta+a(\eta)\psi_{c(\eta)}+\varepsilon e^{-v^2}
+$$
+is even, smooth, positive and of rapid decay, the supports of $\chi_\eta$ and $\psi_{c(\eta)}$ meet $[0,\infty)$ in disjoint sets and the second excludes $0$, and $f_0=b_0+\varepsilon m_0=c_0$, $f_2=b_0\eta A+a(\eta)+\varepsilon m_2=c_2$, $f_4=b_0\eta^2B+a(\eta)c(\eta)+\varepsilon m_4=c_4$.
+
+Item 3. The attainable sets in items 1 and 2 are convex, hence connected, and a continuous nonconstant function on a connected set takes every value between two of its values. ∎
+
+**Resolution TV-X-21-R1 (Metadata).** Exact domain: spectral-action transfer ledgers of Definition X.9.6h.4 with fixed $D_P$, projections and $\Lambda_{\mathrm{SA}}$, and even smooth positive rapidly decaying cutoff profiles, on the finite-matrix branch (item 1) and for the moments $f_0,f_2,f_4$ of the smooth-envelope expansion (item 2). Premises: the finite spectral trace formula of Theorem X.9.6h.5 and the displayed moment convention. Equivalence: equality of sector action vectors and of moment triples. Budget: one finite interpolation and one three-moment construction. Verifier: explicit smooth constructions and exact evaluation of their traces and moments. Falsifier: a positive vector in (X.9.6h.5a.1) or in $(0,\infty)^3$ not attained by any admissible profile. Provenance class: source-internal mathematics. Downstream consumers: Definition X.9.6h.4, Theorem X.9.6h.5, Corollary X.9.6i.2 and `TV-X-21`. Nonvacuity: with one eigenvalue $1$ in sector $C$ and one eigenvalue $2$ in sector $W$ at $\Lambda_{\mathrm{SA}}=1$, the pair $(S_{f,C},S_{f,W})=(f(1),f(2))$ attains every point of $(0,\infty)^2$. Proposition X.9.6h.5a gives `nonentailment` of every cutoff-dependent spectral-action coefficient from the spectral data $(D_P,\{P_s\},\Lambda_{\mathrm{SA}})$ alone and proves that the forward lock $\chi_{\mathrm{SA}}$ carries the whole cutoff dependence. Enumeration of the admissible triples and target-independent cutoffs, and forward computation of all coefficients with certified tails (`M+C`), together with the realization of the spectral data (`R`) and the observable map to gauge-Higgs outputs (`O`), remain live under `TV-X-21`.
+
 **Remark X.9.6h.6 (Cross-Ledger Equivalence Gate).** A future cross-ledger equivalence record connecting the anomaly, modular, geometric, spectral, and thermodynamic ledgers must be entered as an explicit finite gate before any global-equivalence conclusion is used. Such a gate must supply:
 
 1. the accepted finite record for each participating ledger;
@@ -5043,3 +6000,56 @@ then all calibration-internal sector constants are projections of the same flat 
 **Corollary X.9.6i.7 (Finite Fundamental-Cycle Calibration Audit).** Suppose the one-skeleton of a populated finite calibration atlas has selected overlap transitions in a finite group with exact multiplication and equality. Choose a spanning tree. The ordered holonomies of the fundamental cycles associated with the non-tree edges form a complete finite audit inventory for a global vertex gauge on that selected one-skeleton transition record: such a vertex gauge exists exactly when every fundamental-cycle holonomy is the identity. When the calibration record permits nontrivial flat holonomy, the same computation returns its exact generators; each nonidentity result must occur on a registered loop and in the registered holonomy class. An unregistered residual rejects the asserted one-skeleton cross-ledger equivalence on that record. Naturality squares, naturality triangles, and curvature two-cells of the full atlas remain separate typed and populated gates.
 
 *Proof.* Apply Theorem D.8.9c.3 to the selected transition labels. Its tree propagation proves the identity criterion and returns each failed chord with its ordered fundamental-cycle holonomy. Retaining rather than trivializing a flat connection changes the acceptance predicate from identity to membership in the holonomy class fixed by Definition X.9.6i.3; exact computation of the same cycle products decides that predicate. Proposition F.10.12h executes one flat and one obstructed $S_3$ triangle. Theorem D.8.9c.1 supplies the parallel additive Hilbert-valued audit. Naturality squares and triangles of an unpopulated atlas, continuous transition groups, curvature two-cells, and the physical calibration record remain the mathematical and populated inputs required by Definition X.9.6i.3. ∎
+
+**Theorem X.9.6i.8 (Complete Cell Audit of a Typed Calibration Atlas).** Type a populated calibration atlas as a record
+$$
+\mathfrak X_{\mathrm{cal}}
+=
+(X,G,R,\{r_v\}_{v\in V},\{g_{vu}\},\rho)
+\tag{X.9.6i.8.1}
+$$
+where $X$ is a finite connected two-dimensional cell complex whose vertex set $V$ lists the participating charts or ledgers, whose oriented edges, forming the set $E$, are the selected overlaps, and whose two-cells $\sigma\in X_2$ are the registered curvature cells, each attached along a closed edge walk $\partial\sigma$ with base vertex $a(\sigma)$; $G$ is a group whose elements are given with exact multiplication, inversion and equality; $R$ is a $G$-set carrying the retained ledger records in the chart frames fixed by the atlas; $r_v\in R$ is the record projected to the vertex $v$; each edge $u\to v$ carries $g_{vu}\in G$ with reverse label $g_{uv}=g_{vu}^{-1}$, as in Theorem D.8.9c.3; and $\rho$ is the registered flat-holonomy class, equal to the trivial class when no flat holonomy is retained. The naturality square of the edge $u\to v$ is
+$$
+r_v=g_{vu}\cdot r_u,
+\tag{X.9.6i.8.2}
+$$
+which is the overlap equation (X.9.5.6); the curvature of the cell $\sigma$ is $F_\sigma=\operatorname{Hol}(\partial\sigma)$ in the ordered convention (D.8.9c.3.2); and a naturality triangle is the flatness condition $F_\sigma=1$ of a triangular cell. Vertex gauges $k\in G^V$ act by $g_{vu}\mapsto k_v^{-1}g_{vu}k_u$ and $r_v\mapsto k_v^{-1}\cdot r_v$. Fix a spanning tree $T$ with root $v_0$, let $k^T$ be the tree transport with $k^T_{v_0}=1$ and $k^T_v=g_{vu}k^T_u$ along tree edges, and let
+$$
+c_e=(k^T_v)^{-1}g_{vu}k^T_u,
+\qquad
+e=(u\to v)\in E\setminus T,
+$$
+be the fundamental-cycle holonomy of the chord $e$. Let $w_\sigma$ be the word obtained by reading $\partial\sigma$ in the order (D.8.9c.3.2), deleting tree edges, and writing $x_e$ or $x_e^{-1}$ for each chord traversed along or against its orientation, and let
+$$
+\Pi_T
+=
+\langle x_e,\ e\in E\setminus T\ \mid\ w_\sigma,\ \sigma\in X_2\rangle
+\tag{X.9.6i.8.3}
+$$
+be the resulting edge-path presentation of $\pi_1(X,v_0)$. Then:
+
+1. *Curvature cells.* For every cell $\sigma$,
+$$
+F_\sigma
+=
+k^T_{a(\sigma)}\,w_\sigma(c)\,\bigl(k^T_{a(\sigma)}\bigr)^{-1}.
+$$
+Every curvature two-cell, and in particular every naturality triangle, is therefore flat exactly when $w_\sigma(c)=1$, and each nonflat cell returns its exact curvature conjugacy class.
+
+2. *Classification.* The chord map $\{g_{vu}\}\mapsto(c_e)_{e\in E\setminus T}$ induces a bijection from transition records modulo vertex gauge onto $G^{E\setminus T}$ modulo simultaneous conjugation, and it restricts to a bijection from flat transition records modulo vertex gauge onto $\operatorname{Hom}(\Pi_T,G)/G$. A flat record admits a global vertex gauge with identity transitions exactly when its class is the trivial homomorphism, and it carries the registered flat holonomy exactly when its class is $\rho$. For finite $G$ there are exactly $|G|^{|V|-1}\,|\operatorname{Hom}(\Pi_T,G)|$ flat transition records. For a complex without two-cells, $\Pi_T$ is free on the chords and this item reduces to Corollary X.9.6i.7.
+
+3. *Squares and cells.* If every naturality square (X.9.6i.8.2) commutes, then $\operatorname{Hol}(\gamma)\in\operatorname{Stab}_G(r_v)$ for every closed edge walk $\gamma$ based at $v$, and in particular $F_\sigma\in\operatorname{Stab}_G(r_{a(\sigma)})$ for every cell. When $G$ acts freely on the orbits containing the records, commuting squares force every closed-walk holonomy to equal $1$, so the record admits a global vertex gauge with identity transitions. When stabilizers are nontrivial, the square audit fixes cell curvature only modulo the stabilizer and the two gates are logically independent: for $S_3$ acting on $\{1,2,3\}$, the triangle $(a,b,c)$ with every record equal to $3$, $g_{ba}=(1\,2)$ and $g_{cb}=g_{ac}=1$ has commuting squares and curvature $(1\,2)$, while the triangle with identity transitions and records $(r_a,r_b,r_c)=(1,2,1)$ is flat and has a failing square.
+
+4. *Termination.* After one tree construction, the triangle and curvature-cell gates use $\sum_\sigma|\partial\sigma|$ group multiplications and equality tests in $G$. The square gates use $|E|$ action evaluations and equality tests in $R$, and they are decided when the action map $G\times R\to R$ is computable and equality in $R$ is decidable, in particular when $R$ is finite and given by an action table. The comparison of $(c_e)$ with a representative of $\rho$ is one simultaneous-conjugacy test, which takes at most $|G|$ conjugations for finite $G$ and, for infinite $G$, is decided by a simultaneous-conjugacy decision procedure for $G$ registered with the atlas; enumerating $\operatorname{Hom}(\Pi_T,G)$ for finite $G$ inspects at most $|G|^{|E\setminus T|}$ chord tuples.
+
+Consequently the naturality-square, naturality-triangle and curvature-cell gates left open in Corollary X.9.6i.7 and listed in Remark X.9.6h.6 are characterized by items 1–3 on every populated atlas of type (X.9.6i.8.1) and decided exactly on every effective atlas, meaning one with computable action on $R$, decidable equality in $R$ and, when $G$ is infinite, a registered simultaneous-conjugacy procedure for the comparison with $\rho$; the returned chord classes and cell curvatures are the complete list of loop residuals that the calibration record must register under Definition X.9.6i.3.
+
+*Proof.* Item 1. Under a vertex gauge $k$, each factor $g_{v_{i+1}v_i}$ of a closed walk $(v_0,\ldots,v_m=v_0)$ becomes $k_{v_{i+1}}^{-1}g_{v_{i+1}v_i}k_{v_i}$, so the ordered product telescopes to $k_{v_0}^{-1}\operatorname{Hol}(\gamma)k_{v_0}$. The gauge $k^T$ carries every tree label to $1$ and every chord label to $c_e$, so in the gauged record the product along $\partial\sigma$ keeps only the chord factors, in the order and with the exponents defining $w_\sigma$. Hence $(k^T_{a(\sigma)})^{-1}F_\sigma k^T_{a(\sigma)}=w_\sigma(c)$, and conjugation preserves the identity.
+
+Item 2. Every record is gauge equivalent, through $k^T$, to its tree-normal form, which has identity tree labels and chord labels $c_e$, and every chord tuple occurs as a tree-normal form. A gauge preserves identity tree labels exactly when $k_v=k_u$ along every tree edge, that is, when $k$ is constant on the connected tree; a constant gauge $k$ acts by $c_e\mapsto k^{-1}c_ek$. This proves the first bijection. Flatness is gauge invariant because gauges conjugate holonomies, and by item 1 a tree-normal record is flat exactly when its chord tuple satisfies every relator $w_\sigma$, that is, defines a homomorphism $\Pi_T\to G$; this proves the second bijection. The trivial homomorphism is fixed by conjugation, and its class consists of the records whose fundamental-cycle holonomies are all $1$; the gauge $k^T$ carries each such record to identity transitions, and a record gauge equivalent to identity transitions has every closed-walk holonomy conjugate to $1$, hence equal to $1$. Membership in $\rho$ is equality of gauge classes by the definition of $\rho$. For finite $G$, a record is fixed by its $|V|-1$ tree labels, which are arbitrary, and its chord labels, which correspond bijectively to chord holonomies through $g_{vu}=k^T_vc_e(k^T_u)^{-1}$; flatness depends on the chord holonomies alone, which gives the count. Without two-cells there are no relators and the flat records are all records, as in Corollary X.9.6i.7. The group $\Pi_T$ is the standard edge-path presentation of the fundamental group of a connected two-dimensional cell complex; the classification uses only the displayed presentation.
+
+Item 3. Along a closed walk $(v_0,\ldots,v_m=v_0)$, commuting squares give $r_{v_{i+1}}=g_{v_{i+1}v_i}\cdot r_{v_i}$ for each step, including reversed traversals because $g_{uv}=g_{vu}^{-1}$. Composing the steps gives $r_{v_0}=\operatorname{Hol}(\gamma)\cdot r_{v_0}$. A free action forces $\operatorname{Hol}(\gamma)=1$, in particular $c_e=1$ for every chord, and the gauge $k^T$ then carries the record to identity transitions. In the first $S_3$ triangle, $(1\,2)$ fixes $3$, so all three squares commute, while $F=g_{ac}g_{cb}g_{ba}=(1\,2)\ne1$. In the second, $F=1$ and $r_b=2\ne1=g_{ba}\cdot r_a$.
+
+Item 4 counts the operations in items 1–3 and the chord tuples of $G^{E\setminus T}$; each operation is an exact group operation, an evaluation of the action, an equality test in $G$ or $R$, or the registered conjugacy test. ∎
+
+**Resolution TV-X-22-R1 (Metadata).** Exact domain: populated calibration atlases typed as (X.9.6i.8.1), with exact group labels, a finite connected two-dimensional cell complex of overlaps and registered curvature cells, and records in one $G$-set. Premises: connectedness of $X$, exact multiplication, inversion and equality in $G$, records expressed in the chart frames fixed by the atlas, and, for the decision statements, a computable action with decidable equality in $R$ and, for infinite $G$, a registered simultaneous-conjugacy procedure. Equivalence: vertex gauge on transition records; simultaneous conjugation on chord tuples. Budget: the operation count of item 4. Verifier: exact group and $G$-set arithmetic along the spanning tree, the edges and the cell boundaries. Falsifier: a flat cell with nonidentity relator value, an accepted nonflat cell, two gauge-inequivalent records with conjugate chord tuples, or commuting squares together with a closed-walk holonomy outside the record stabilizer. Provenance class: source-internal finite mathematics. Downstream consumers: Definition X.9.6i.3, Theorem X.9.6i.4, Corollary X.9.6i.7, Remark X.9.6h.6, Theorem D.8.9c.3 and `TV-X-22`. Nonvacuity: the two $S_3$ triangles of item 3; for $G=S_3$ on the boundary of a tetrahedron, exhaustive enumeration returns $216=6^3\cdot1$ flat records forming one gauge class, and on a triangle without two-cells it returns $216$ records forming three classes, one for each conjugacy class of $S_3$. Theorem X.9.6i.8 gives `positive-discharge` of the mathematical audit component of `TV-X-22`, namely the characterization of the square, triangle and curvature-cell gates and the classification of retained loop residuals for every atlas of type (X.9.6i.8.1), with exact decision on every effective atlas, in particular on every atlas with finite $G$ and finite $R$. Typing and populating the actual PU calibration atlas as an effective atlas, with its record $G$-set, its registered holonomy class and, for an infinite transition group, a simultaneous-conjugacy procedure (`C`), remain live under `TV-X-22`.

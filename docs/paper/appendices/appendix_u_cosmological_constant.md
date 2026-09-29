@@ -2269,6 +2269,94 @@ $$
 $$
 Multiplication by the registered Jacobian and measure factor $\mathcal J_Q$ gives (U.26b.6). The projection removes exactly the modes listed in $P_Q$; a positive retained constant mode remains in the determinant. Corollary U.24, on the stated variance and real-projection premises, then gives (U.26c.2) with the index accepted by Definition U.26b. ∎
 
+**Theorem U.26d (Hopf-Intertwinor Determinant Record).** Let $\mathfrak D_Q^{\mathcal B}$ be the record of Definition U.26b with
+$$
+\mathcal O_Q^{\mathcal B}:=-\Delta_{FS}+121,
+\quad
+\operatorname{Dom}\mathcal O_Q^{\mathcal B}=H^2(\mathbb{CP}^{11}),
+\quad
+m_Q^2=121,
+\quad
+P_Q=0,
+\quad
+q_\ell=0,
+\quad
+r_Q^{\mathrm{extra}}=0,
+\quad
+\mathcal J_Q=1,
+\quad
+\mu_Q=1,
+$$
+where $\mu_Q$ is measured in the unit of Theorem U.25a's curvature-$4$ normalization, the determinant line of the strictly positive operator carries its canonical positive orientation, and the tail rule is the exact meromorphic identity (U.26d.2), with no truncation. Then:
+
+1. Under the Hopf pullback of Proposition U.21, $\mathcal O_Q^{\mathcal B}$ is the restriction to $U(1)$-invariant functions of $\mathcal B^2:=-\Delta_{S^{23}}+11^2$, where $\mathcal B$ has eigenvalue $q+11$ on degree-$q$ spherical harmonics. Hence
+$$
+\operatorname{Spec}\mathcal O_Q^{\mathcal B}=\{(2\ell+11)^2:\ell\ge0\}
+\tag{U.26d.1}
+$$
+with the multiplicities $m_\ell$ of (U.26b.5). The operator is strictly positive, so (U.26b.3) holds and $\kappa_Q=11$ passes item 4 of Definition U.26b.
+
+2. With $\nu:=\ell+\frac{11}2$,
+$$
+m_\ell=P(\nu):=\frac{2\nu}{11\,(10!)^2}\prod_{j=1}^5\Bigl(\nu^2-\bigl(j-\tfrac12\bigr)^2\Bigr)^2
+=\sum_{k\in\{1,3,\ldots,21\}}p_k\nu^k,
+\qquad p_k\in\mathbb Q,
+$$
+and the projected zeta function (U.26b.5) of $\mathfrak D_Q^{\mathcal B}$ satisfies the meromorphic identity
+$$
+\zeta_Q^{\mathcal B}(s)=\sum_{k\in\{1,3,\ldots,21\}}p_k\bigl(2^{-k}-4^{-s}\bigr)\zeta(2s-k).
+\tag{U.26d.2}
+$$
+
+3. Consequently
+$$
+\zeta_Q^{\mathcal B}(0)=\sum_kp_k\bigl(1-2^{-k}\bigr)\frac{B_{k+1}}{k+1}
+=\frac{127966857327955653967}{18482593843631627226316800000}
+=6.9236416928594\ldots\times10^{-9},
+\tag{U.26d.3}
+$$
+$$
+\zeta_Q^{\mathcal B\,\prime}(0)
+=2\ln2\sum_kp_k\zeta(-k)-2\sum_kp_k\bigl(1-2^{-k}\bigr)\zeta'(-k)
+=-1.18818284872075\ldots\times10^{-8},
+\tag{U.26d.4}
+$$
+where $B_{k+1}$ are Bernoulli numbers, and
+$$
+A_Q^{\mathrm{det}}=\exp\Bigl[\tfrac12\zeta_Q^{\mathcal B\,\prime}(0)\Bigr]=1-5.9409142259565\ldots\times10^{-9}.
+\tag{U.26d.5}
+$$
+At another finite-part scale $\mu$ the prefactor is $\mu^{\zeta_Q^{\mathcal B}(0)}A_Q^{\mathrm{det}}$.
+
+4. On a primordial branch whose accepted carrier, action and variance records place $\mathcal O_Q^{\mathcal B}$ as the retained fluctuation operator, Theorem U.26c gives
+$$
+Q=\sqrt{\frac{A_Q^{\mathrm{det}}}2}\,e^{-11}=\bigl(1-2.9704571173\ldots\times10^{-9}\bigr)\,Q^{(0)}.
+$$
+
+*Proof.* For item 1, the proof of Theorem U.25a identifies functions on $\mathbb{CP}^{11}$ with $U(1)$-invariant functions on $S^{23}$ and intertwines the two Laplacians. Degree-$q$ spherical harmonics on $S^{23}$ have eigenvalue $q(q+22)$, so $\mathcal B^2$ has eigenvalue $q(q+22)+121=(q+11)^2$. Invariance forces bidegree $(\ell,\ell)$ and $q=2\ell$, which gives (U.26d.1) with the multiplicities of Theorem U.25a. Every eigenvalue is at least $121$, and $P_Q=0$ removes no mode, so (U.26b.3) holds and $r_Q^{\mathrm{extra}}=0$.
+
+For item 2, $\binom{\ell+11}{11}=\frac{\ell+11}{11}\binom{\ell+10}{10}$ and $\binom{\ell+10}{11}=\frac{\ell}{11}\binom{\ell+10}{10}$ give
+$$
+m_\ell=\binom{\ell+10}{10}^2\frac{(\ell+11)^2-\ell^2}{121}=\frac{2\ell+11}{11}\binom{\ell+10}{10}^2 .
+$$
+Pairing the factors $\ell+k$ and $\ell+11-k$, $1\le k\le5$, gives $\binom{\ell+10}{10}=(10!)^{-1}\prod_{j=1}^5\bigl(\nu^2-(j-\frac12)^2\bigr)$. Hence $P$ is an odd polynomial of degree $21$ that vanishes at $\nu=\frac12,\frac32,\ldots,\frac92$. For $\operatorname{Re}s>11$ the series (U.26b.5) converges absolutely, and adjoining these vanishing terms gives
+$$
+\zeta_Q^{\mathcal B}(s)=\sum_{n\ge0}P\bigl(n+\tfrac12\bigr)(2n+1)^{-2s}
+=4^{-s}\sum_kp_k\,\zeta_H\bigl(2s-k,\tfrac12\bigr),
+$$
+where $\zeta_H$ is the Hurwitz zeta function. The identity $\zeta_H(z,\frac12)=(2^z-1)\zeta(z)$ gives (U.26d.2) for $\operatorname{Re}s>11$; both sides are meromorphic in $s$, so the identity holds everywhere.
+
+For item 3, each $\zeta(2s-k)$ with odd $k\ge1$ is holomorphic near $s=0$. Evaluation at $s=0$ with $\zeta(-k)=-B_{k+1}/(k+1)$ gives the exact rational number (U.26d.3), and differentiation of (U.26d.2) at $s=0$ gives the closed form (U.26d.4). Its decimal follows from the eleven constants $\zeta'(-k)$, obtained from the functional equation
+$$
+\zeta'(1-2m)=2(-1)^{m+1}(2m-1)!\,(2\pi)^{-2m}\zeta(2m)\Bigl[\psi(2m)-\ln(2\pi)+\frac{\zeta'(2m)}{\zeta(2m)}\Bigr],
+\qquad k=2m-1,
+$$
+with $\psi$ the digamma function. Equation (U.26b.6) with $\mathcal J_Q=1$ gives (U.26d.5). Replacing $\mathcal O_Q^{\mathcal B}$ by $\mathcal O_Q^{\mathcal B}/\mu^2$ multiplies $\zeta_Q^{\mathcal B}(s)$ by $\mu^{2s}$ and adds $2\ln\mu\,\zeta_Q^{\mathcal B}(0)$ to $\zeta_Q^{\mathcal B\,\prime}(0)$, which gives the scale law.
+
+Item 4 is (U.26c.2) with Theorem U.27's $Q^{(0)}=e^{-11}/\sqrt2$. ∎
+
+**Resolution TV-U-04-R1 (Metadata).** Exact domain: the declared record $\mathfrak D_Q^{\mathcal B}$ on $\mathbb{CP}^{11}$ with Theorem U.25a's normalization, namely the operator $-\Delta_{FS}+121$ on $H^2(\mathbb{CP}^{11})$, $P_Q=0$, $\mathcal J_Q=1$, $\mu_Q=1$, positive orientation and the exact meromorphic tail rule. Premises: Proposition U.21, Theorem U.25a, Definition U.26b, the Hurwitz identity $\zeta_H(z,\frac12)=(2^z-1)\zeta(z)$ and $\zeta(-k)=-B_{k+1}/(k+1)$. Equivalence: equality of every fixed entry; a change of mass, projector, measure normalization or scale defines another record, and a change of scale acts by the factor $\mu^{\zeta_Q^{\mathcal B}(0)}$. Budget: the complete spectrum through the exact identity (U.26d.2), eleven Bernoulli numbers and eleven constants $\zeta'(-k)$, with no truncation, regulator or target query; the mass is declared through the Hopf descent of $\mathcal B^2$ before evaluation. Verifier: the multiplicity identity for $m_\ell$, the vanishing of $P$ at $\nu=\frac12,\ldots,\frac92$, the Hurwitz and functional-equation identities, exact rational evaluation of (U.26d.3), and evaluation of (U.26d.4)--(U.26d.5) at precision exceeding the displayed digits. Falsifier: a different exact value of $\zeta_Q^{\mathcal B}(0)$, a failure of (U.26d.2) for $\operatorname{Re}s>11$, or a decimal of (U.26d.4) outside its displayed digits. Provenance class: target-independent exact spectral evaluation. Downstream consumers: Theorem U.26c, Theorem U.27, Definition U.51a, Definition U.69a, the audit of Section V.3.4, `RT-T6` and `TV-U-04`. Nonvacuity: the record is explicit and its operator is strictly positive. This is `positive-discharge` of the proof-producing zeta/finite-part evaluation of `TV-U-04` on the declared record $\mathfrak D_Q^{\mathcal B}$, with every entry of Definition U.26b fixed before evaluation. The freezing component of `TV-U-04`, a rule that derives $\mathcal O_Q$, $m_Q^2$, $P_Q$, $\mathcal J_Q$ and $\mu_Q$ from the primordial carrier and action records and thereby admits $\mathfrak D_Q^{\mathcal B}$ or another record, remains `M+C`-open. Placement of the admitted operator as the physical primordial fluctuation operator belongs to the records $\mathfrak C_{Q,\mathrm{car}}$, $\mathfrak C_{Q,\mathrm{act}}$ and $\mathfrak C_{Q,\mathrm{var}}$ of Definition U.69a and remains `C+R`-open under `RT-T6`.
+
 **Remark U.26a (Conditional Error Propagation).** The illustrative $9\%$ prefactor scale requires the applicability and constant bounds $\kappa_*\le11$ and $C\le1$ in Assumption U.26. Near $A_Q=1$, differentiating $Q\propto\sqrt{A_Q}$ gives $\delta Q/Q\simeq\tfrac12\delta A_Q/A_Q$, yielding the illustrative $4.5\%$ scale. These are conditional theoretical error scales, not measured standard deviations. A registered map $A_s\propto Q^2$ with its other inputs held common gives $\delta A_s/A_s\simeq2\delta Q/Q$; observational comparisons require that map and its covariance record. A determinant-certified branch uses the certified interval or uncertainty of $\mathfrak D_Q$ and the declared finite-part convention $\mu_Q$.
 
 ### U.17.4 Primordial Scale Parameter
@@ -2850,6 +2938,57 @@ The diagonal embedding $\Delta_5^{\mathbb F}$ is injective on the $12$-dimension
 - **Nonvacuity.** The class is nonempty: the normalized coordinate indicators give an orthonormal basis of $\mathcal S_{\mathrm{line}}$, and for each $\ell=1,\ldots,5$ a normalized restriction of $\operatorname{Re}(x_1+ix_2)^\ell$ is a nonzero real spherical harmonic supplying an admissible $\mathcal M_\ell$.
 - **Downstream consumers.** Definition U.56a, Result U.60 and results U.61--U.68 retain their assumption/certificate-gated statuses; Definition U.69a, Theorem U.69b, `RT-T6`, and `TV-U-05` record the shared-route refutation while leaving the degree-tagged carrier, positive rank certificate, e-fold conversion, and remaining primordial records open.
 
+**Theorem U.41c (Exact Harmonic-Rank Formula, Frozen Rank-$60$ Witness and Registered Real Form).** Let $\mathbb F\in\{\mathbb R,\mathbb C\}$, let $h_\ell$ be a real spherical harmonic of degree $\ell$ for $\ell=1,\ldots,5$, and put
+$$
+Z_\ell:=\{L\in\mathcal L_{12}:h_\ell|_L=0\}.
+$$
+
+1. For the maps of Definition U.41a, with any orthonormal basis $\{s_a\}$ and any nonzero normalizations of the $h_\ell$,
+$$
+\operatorname{rank}_{\mathbb F}\mathcal M_\ell^{\mathbb F}=12-|Z_\ell|,
+\qquad
+\operatorname{rank}_{\mathbb F}\mathcal M_{\mathrm{HM}}^{\oplus,\mathbb F}=60-\sum_{\ell=1}^5|Z_\ell|,
+\qquad
+\operatorname{rank}_{\mathbb F}\mathcal M_{\mathrm{HM}}^{\mathrm{sh},\mathbb F}=12-\Bigl|\bigcap_{\ell=1}^5Z_\ell\Bigr|.
+\tag{U.41c.1}
+$$
+Thus (U.41a.3) holds exactly when no $h_\ell$ vanishes at a vertex of $V_{24}$. In the space $\mathcal H_\ell$ of degree-$\ell$ harmonics this condition fails only on the union of twelve proper hyperplanes $\{h:h(v)=0\}$, one for each line, so the rank-$60$ tuples form an open dense subset of full measure in $\mathcal H_1\times\cdots\times\mathcal H_5$.
+
+2. Put $p:=(1,2,4,8)$ and freeze
+$$
+h_\ell^{(p)}(x):=\sum_{k=0}^{\lfloor\ell/2\rfloor}(-1)^k\binom{\ell-k}{k}\bigl(2\langle p,x\rangle\bigr)^{\ell-2k}\bigl(|p|^2|x|^2\bigr)^k,
+\qquad \ell=1,\ldots,5.
+\tag{U.41c.2}
+$$
+Each $h_\ell^{(p)}$ is a harmonic homogeneous polynomial of degree $\ell$, namely $|p|^\ell$ times the zonal harmonic with pole $p/|p|$. Its values on $V_{24}$ are nonzero rational numbers, and
+$$
+\operatorname{rank}_{\mathbb F}\mathcal M_{\mathrm{HM}}^{\oplus,\mathbb F}=60,
+\qquad
+\operatorname{rank}_{\mathbb F}\mathcal M_{\mathrm{HM}}^{\mathrm{sh},\mathbb F}=12
+\tag{U.41c.3}
+$$
+over $\mathbb Q$, $\mathbb R$ and $\mathbb C$. The shared-carrier bound (U.41b.2) is therefore attained.
+
+3. For the harmonics $h_\ell=\operatorname{Re}(x_1+ix_2)^\ell$ of Resolution record U.41b-R1, $(|Z_1|,\ldots,|Z_5|)=(3,10,3,2,3)$, the block rank is $39$, and the shared rank is $10$.
+
+4. The real subspace $\mathbb R^{\mathcal L_{12}}$ is the unique twelve-dimensional real form of $\mathcal S_{\mathrm{line}}$ on which the even lift $E_\pm$ is real-valued. The normalized indicators $\sqrt{12}\,\mathbf 1_L$, $L\in\mathcal L_{12}$, form a real orthonormal basis of it, and on the real block domain $\bigoplus_{\ell=1}^5\mathbb R^{\mathcal L_{12}}$ the frozen tests (U.41c.2) give $\operatorname{rank}_{\mathbb R}\mathcal M_{\mathrm{HM}}^{\oplus,\mathbb R}=60$.
+
+*Proof.* Let $U_\ell(t):=\sum_k(-1)^k\binom{\ell-k}{k}(2t)^{\ell-2k}$ be the Chebyshev polynomial of the second kind, so that $U_\ell(\cos\theta)=\sin((\ell+1)\theta)/\sin\theta$ and $U_\ell(1)=\ell+1$. For a nonzero $y\in\mathbb R^4$, (U.41c.2) with $y$ in place of $p$ equals $|y|^\ell|x|^\ell\,U_\ell\bigl(\langle y,x\rangle/(|y||x|)\bigr)$, and the Gegenbauer equation $(1-t^2)U_\ell''-3tU_\ell'+\ell(\ell+2)U_\ell=0$ is exactly the harmonicity of this degree-$\ell$ homogeneous polynomial on $\mathbb R^4$.
+
+Since $\{s_a\}$ is a basis and $(E_\pm f)(v)=f(\ell_v)$, (U.41a.1) defines the basis-independent linear map $(\mathcal M_\ell^{\mathbb F}f)(v)=f(\ell_v)h_\ell(v)$. Homogeneity gives $h_\ell(-v)=(-1)^\ell h_\ell(v)$, so $h_\ell$ vanishes at $v$ exactly when it vanishes at $-v$, and $Z_\ell$ is well defined. Hence $\mathcal M_\ell^{\mathbb F}f=0$ exactly when $f$ vanishes on every line outside $Z_\ell$: $\ker\mathcal M_\ell^{\mathbb F}=\mathbb F^{Z_\ell}$ and $\operatorname{rank}_{\mathbb F}\mathcal M_\ell^{\mathbb F}=12-|Z_\ell|$. The rank of the block-diagonal map (U.41a.2) is the sum of the block ranks. For the shared map (U.41a.4), $\ker\mathcal M_{\mathrm{HM}}^{\mathrm{sh},\mathbb F}=\bigcap_\ell\ker\mathcal M_\ell^{\mathbb F}=\mathbb F^{\bigcap_\ell Z_\ell}$. A nonzero rescaling of $h_\ell$ leaves $Z_\ell$ unchanged. For $v\in S^3$ the evaluation $h\mapsto h(v)$ is a nonzero functional on $\mathcal H_\ell$, because the harmonic (U.41c.2) with pole $v$ takes the value $U_\ell(1)=\ell+1$ at $v$. Each excluded set is therefore a proper hyperplane, and a finite union of proper subspaces is closed, nowhere dense and of measure zero. This proves item 1.
+
+For item 2, on $V_{24}$ one has $|x|=1$ and $|p|^2=85$, so $h_\ell^{(p)}(v)=85^{\ell/2}U_\ell(t_v)$ with $t_v:=\langle p,v\rangle/\sqrt{85}$. The zeros of $U_\ell$ are $\cos(k\pi/(\ell+1))$, $1\le k\le\ell$; for $\ell\le5$ their squares lie in $\{0,\frac14,\frac12,\frac34,\frac{3\pm\sqrt5}8\}$. The inner products $\langle p,v\rangle$ are $\pm1,\pm2,\pm4,\pm8$ on the coordinate vertices and $\frac12(\pm1\pm2\pm4\pm8)$, an odd multiple of $\frac12$, on the half-vectors. Therefore
+$$
+85\,t_v^2=\langle p,v\rangle^2\in\{1,4,16,64\}\cup\Bigl\{\frac{(2m+1)^2}4:0\le m\le7\Bigr\},
+$$
+a set that contains none of $0$, $\frac{85}4$, $\frac{85}2$, $\frac{255}4$, since these would make $85$, $170$ or $255$ a perfect square, while $85(3\pm\sqrt5)/8$ is irrational. Hence no $h_\ell^{(p)}$ vanishes on $V_{24}$. The values are rational because $\langle p,v\rangle\in\frac12\mathbb Z$ and $|p|^2|v|^2=85$. Item 1 gives (U.41c.3); rank is unchanged by the field extensions $\mathbb Q\subset\mathbb R\subset\mathbb C$ and by the column factor $\sqrt{12}$ of the normalized basis.
+
+For item 3, the five harmonics are $x_1$, $x_1^2-x_2^2$, $x_1(x_1^2-3x_2^2)$, $x_1^4-6x_1^2x_2^2+x_2^4$ and $x_1(x_1^4-10x_1^2x_2^2+5x_2^4)$. Direct evaluation on $V_{24}$ gives $Z_1=Z_3=Z_5=\{\ell_{e_2},\ell_{e_3},\ell_{e_4}\}$, $Z_4=\{\ell_{e_3},\ell_{e_4}\}$, and $Z_2=\{\ell_{e_3},\ell_{e_4}\}$ together with the eight half-vector lines; on the half-vectors the first, third, fourth and fifth harmonics take the nonzero values $\pm\frac12$, $\mp\frac14$, $-\frac14$ and $\mp\frac18$. Item 1 gives block rank $60-21=39$ and shared rank $12-|\{\ell_{e_3},\ell_{e_4}\}|=10$.
+
+For item 4, let $V\subset\mathbb C^{\mathcal L_{12}}$ be a real form with $E_\pm(V)\subset\mathbb R^{V_{24}}$. Every $f\in V$ takes the real values $f(L)=(E_\pm f)(v)$, $v\in L$, so $V\subset\mathbb R^{\mathcal L_{12}}$, and equality of real dimensions gives $V=\mathbb R^{\mathcal L_{12}}$. This subspace is a real form, since $\mathbb R^{\mathcal L_{12}}\cap i\mathbb R^{\mathcal L_{12}}=0$ and $\mathbb R^{\mathcal L_{12}}+i\mathbb R^{\mathcal L_{12}}=\mathbb C^{\mathcal L_{12}}$. The line inner product gives $\langle\sqrt{12}\,\mathbf 1_L,\sqrt{12}\,\mathbf 1_{L'}\rangle_{\mathrm{line}}=\delta_{LL'}$. In this basis the blocks have the real entries $\sqrt{12}\,h_\ell^{(p)}(v)$, and item 2 gives real rank $60$. ∎
+
+**Resolution TV-U-05-R2 (Metadata).** Exact domain: Definition U.41a's block and shared harmonic-response maps over $\mathbb F\in\{\mathbb R,\mathbb C\}$ for every tuple of real spherical harmonics of degrees $1,\ldots,5$ on the vertex set of Definition U.28, the frozen tuple (U.41c.2), and the real forms of $\mathcal S_{\mathrm{line}}$ on which $E_\pm$ is real-valued. Premises: Definitions U.28, U.32 and U.41a and the Chebyshev--Gegenbauer identities; no carrier, action or cosmological datum. Equivalence: common orthonormal source-basis changes, registered row reorderings and nonzero rescalings of each $h_\ell$, all of which preserve every $Z_\ell$. Budget: all sixty degree-line pairs and all one hundred twenty vertex values of (U.41c.2) in exact rational arithmetic, with no search cutoff and no target query. Verifier: the kernel identity $\ker\mathcal M_\ell^{\mathbb F}=\mathbb F^{Z_\ell}$, the Chebyshev zero-set test on the twelve values $\langle p,v\rangle^2$, the evaluations of item 3, and the real-form containment argument. Falsifier: a vertex $v$ and a degree $\ell\le5$ with $h_\ell^{(p)}(v)=0$, a harmonic tuple whose ranks differ from (U.41c.1), or a second real form on which $E_\pm$ is real-valued. Provenance class: `proved-lemma` from target-independent exact finite linear algebra and Chebyshev zero sets. Downstream consumers: Definition U.41a, Theorem U.41b, Definition U.56a, Definition U.69a, `RT-T6` and `TV-U-05`. Nonvacuity: (U.41c.2) is an explicit block-rank-$60$ tuple and the U.41b-R1 tuple an explicit block-rank-$39$ tuple. This is `positive-discharge` of the frozen-harmonic, exact block-rank-$60$ and registered-real-form clauses of Definition U.41a on the stated domain; it also shows that the shared-carrier bound of U.41b-R1 is attained. The retained $60$-dimensional degree-tagged physical carrier $\mathcal S_{Q,\mathrm{HM}}^{\mathrm{deg},\mathbb F}$, its response-preserving isomorphism $J_{\mathrm{HM}}^{\mathbb F}$ of (U.41a.5), and its overlap with $\mathfrak C_{Q,\mathrm{car}}$ remain `C+R`-open under `TV-U-05`; the e-fold conversion remains an entry of Definition U.56a.
+
 ---
 
 ## U.21 Effective Single-Field Dynamics
@@ -2944,6 +3083,42 @@ $$
 =\partial_\mu d\,\partial_\nu d.
 $$
 Substitution into the certified kinetic form proves (U.44c.1) and its Lorentzian contraction. A coordinate change $q=cd$, $c\ne0$, represents the same metric with coefficient $12/c^2$; it preserves the unit-speed normalization only when $|c|=1$. The value $12$ therefore follows from the complete datum, not from the graph eigenvalue without its response normalization. ∎
+
+**Theorem U.44d (Invariant Kinetic-Form Classification on the Line Carrier).** Let $P_8$, $P_{-4}$ and $P_0$ be the orthogonal spectral projectors of the line adjacency $A$ of Lemma U.34 onto $\mathcal S_8$, $\mathcal S_{-4}$ and $\mathcal S_0$, and let $J$ be the all-ones $12\times12$ matrix.
+
+1. $W(F_4)$ has exactly three orbits on ordered pairs of lines: equal lines, adjacent lines, and lines spanned by orthogonal vertices. The summands $\mathcal S_8$, $\mathcal S_{-4}$ and $\mathcal S_0$ of Theorem U.36 are irreducible and pairwise non-isomorphic $W(F_4)$-modules, and a Hermitian form $H(v,w)=h(v,Mw)$ on $\mathcal S_{\mathrm{line}}$, with $h$ the line inner product, is $W(F_4)$-invariant exactly when
+$$
+M=a\,P_8+b\,P_{-4}+c\,P_0,
+\qquad (a,b,c)\in\mathbb R^3 .
+\tag{U.44d.1}
+$$
+
+2. In terms of $I$, $A$ and $J$,
+$$
+M=c\,I+\frac{c-b}4\,A+\Bigl(\frac a{12}+\frac b6-\frac c4\Bigr)J .
+\tag{U.44d.2}
+$$
+Hence $M\mathbf 1=0$ exactly when $a=0$, $M\ge0$ exactly when $a,b,c\ge0$, and $M$ vanishes on distinct nonadjacent pairs exactly when $a/12+b/6-c/4=0$. The three conditions of Lemma U.43 together give $M=(b/12)L$, where $L=8I-A=12P_{-4}+8P_0$.
+
+3. Every invariant Hermitian form restricts to the Hopf-Rayleigh plane as $H|_{\mathcal S_{-4}}=b\,h$. Consequently every positive $W(F_4)$-invariant kinetic form $K(v)=\frac12\bar M_{Pl}^2H(v,v)$ on $\mathcal S_{-4}$ has the form
+$$
+K_\lambda(v)=\frac{\lambda^2\bar M_{Pl}^2}{2}\,h(v,v),
+\qquad \lambda^2=b>0,
+\tag{U.44d.3}
+$$
+and on the single-field chart of Definition U.44b it pulls back to $\lambda^2\bar M_{Pl}^2\,dd^2$. The canonical field is then $\phi=\lambda\bar M_{Pl}(d-d_0)$, and the endpoint span of Corollary U.47 becomes $\lambda\bar M_{Pl}\pi/2$.
+
+4. The value $\lambda^2=12$ is equivalent to item 2 of Definition U.44b. Invariance, nearest-neighbor locality, the constant kernel and positivity leave $\lambda^2$ free: $M=L/12$ satisfies all four conditions and gives $\lambda^2=1$.
+
+*Proof.* Theorem U.35 makes $W(F_4)$ transitive on $V_{24}$. The signed permutations of $e_2,e_3,e_4$ lie in $W(F_4)$, fix $e_1$, and act transitively on each set $\{w\in V_{24}:\langle e_1,w\rangle=t\}$ for $t=\frac12,0,-\frac12$: the first and last are the eight half-vectors with first coordinate $\pm\frac12$, and the middle one is $\{\pm e_2,\pm e_3,\pm e_4\}$. Hence $W(F_4)$ is transitive on ordered vertex pairs with each prescribed inner product. Distinct lines $\ell_v\ne\ell_w$ have $|\langle v,w\rangle|\in\{\frac12,0\}$ by Lemma U.29, so the orbits on ordered pairs of lines are the three listed ones. The commutant of the permutation representation on $\mathbb C^{\mathcal L_{12}}$ consists of the matrices constant on these orbits and is spanned by $I$, $A$ and $J-I-A$. The matrix $A$ commutes with $W(F_4)$, so its three eigenspaces are nonzero invariant summands whose projectors lie in the commutant. If a summand were reducible, or two summands shared an irreducible constituent, the commutant dimension $\sum_\chi m_\chi^2$ would be at least $4$. Hence the summands are irreducible and pairwise non-isomorphic, and Schur's lemma identifies the commutant with $\operatorname{span}_{\mathbb C}\{P_8,P_{-4},P_0\}$. Since $h$ is invariant under the permutation action, $H$ is invariant exactly when $M$ commutes with $W(F_4)$, and a Hermitian element of the commutant has real coefficients. This proves item 1.
+
+For item 2, $J=12P_8$, $A=8P_8-4P_{-4}$ and $I=P_8+P_{-4}+P_0$ give $P_{-4}=J/6-A/4$ and $P_0=I-J/4+A/4$; substitution gives (U.44d.2). The vector $\mathbf 1$ spans $\mathcal S_8$, so $M\mathbf 1=a\mathbf 1$; the eigenvalues of $M$ are $a,b,c$; and on a distinct nonadjacent pair $I$ and $A$ vanish while $J$ equals $1$. With $a=0$ the locality condition gives $c=2b/3$, and (U.44d.2) becomes $\frac{2b}3I-\frac b{12}A=\frac b{12}L$. The identity $L=12P_{-4}+8P_0$ follows from the same projector relations.
+
+For item 3, $P_{-4}$ is the identity on $\mathcal S_{-4}$ and $P_8$, $P_0$ vanish there, so $H(v,v)=b\,h(v,v)$ for $v\in\mathcal S_{-4}$; positivity on this plane is $b>0$. The pullback, the canonical field and the endpoint span follow from the proofs of Theorem U.44c, Definition U.46 and Corollary U.47 with $12$ replaced by $\lambda^2$.
+
+For item 4, on retained tangent vectors $v\in\mathcal S_{-4}$ item 2 of Definition U.44b reads $K(v)=\frac12\bar M_{Pl}^2h(v,Lv)=6\bar M_{Pl}^2h(v,v)$, since $L=12$ on $\mathcal S_{-4}$ by item 2 above; this is (U.44d.3) with $\lambda^2=12$. The matrix $L/12$ is invariant and local, annihilates $\mathbf 1$, is positive semidefinite, and has $b=1$. ∎
+
+**Resolution TV-U-06-R1 (Metadata).** Exact domain: Hermitian forms on $\mathcal S_{\mathrm{line}}=\mathbb C^{\mathcal L_{12}}$ with the inner product of Definition U.32 that are invariant under the $W(F_4)$ line action, their restrictions to $\mathcal S_{-4}$, and the induced kinetic metrics on the chart of Definition U.44b. Premises: Lemmas U.29 and U.34, Theorems U.35, U.36 and U.44c, and Definition U.44b. Equivalence: equality of Hermitian forms. Budget: the three orbits on ordered line pairs and the three spectral projectors, in exact rational arithmetic, with no search cutoff and no target query. Verifier: the orbit count, the projector identities behind (U.44d.2), $P_8+P_{-4}+P_0=I$, and Schur's lemma. Falsifier: a $W(F_4)$-invariant Hermitian form outside (U.44d.1), a fourth orbit on ordered line pairs, or an invariant positive form whose restriction to $\mathcal S_{-4}$ is not a positive multiple of $h$. Provenance class: `proved-lemma` by finite representation theory. Downstream consumers: Lemma U.43, Identification U.44a, Definition U.44b, Theorem U.44c, Definition U.46, Corollary U.47, Definition U.69a, `RT-T6` and `TV-U-06`. Nonvacuity: $M=L$ with $\lambda^2=12$ and $M=L/12$ with $\lambda^2=1$ are explicit invariant local positive forms with constant kernel. This is `positive-discharge` of the complete invariant kinetic-form classification, which forces the Fubini--Study shape $\lambda^2\bar M_{Pl}^2g_{FS}$ on $\mathbb{CP}^1_{\mathrm{inv}}$, and `nonentailment` of $\lambda^2=12$ from invariance, locality, constant kernel and positivity. The unit bridge fixing $\lambda^2$, namely item 2 of Definition U.44b as a continuum response certificate on the retained physical carrier, remains `C+R`-open under `TV-U-06`.
 
 ### U.21.3 Target Space Metric
 
@@ -3991,6 +4166,98 @@ The ratios $141.5/11$ and $142/11$ are arithmetic summaries of reference ledgers
 
 Thus the common numbers $(24,12,8,5)$ provide compatibility diagnostics and candidate markings. They do not derive the Grassmannian, projective carrier, saddle exponent, or observable from the Golay code. Every result invariant under coordinate permutation remains independent of $\beta$; coordinatewise octad/harmonic/response results are branch-indexed by the accepted marking.
 
+**Theorem U.71a (Golay--$24$-Cell Marking Compatibility Classification).** Let $\Omega$ be the coordinate set of a binary $[24,12,8]$ code $\mathcal G_{24}$, let $M_{24}:=\operatorname{Aut}(\mathcal G_{24})\le\operatorname{Sym}(\Omega)$, which is also the automorphism group of its octad system, and identify $V_{24}$ with the unit Hurwitz quaternions through $e_1,e_2,e_3,e_4\leftrightarrow1,i,j,k$. For a bijection $\beta:\Omega\to V_{24}$ as in (U.32.2), define the compatibility group
+$$
+K_\beta:=\{g\in W(F_4):\beta^{-1}g\beta\in M_{24}\},
+\tag{U.71a.1}
+$$
+whose elements are the $24$-cell symmetries acting as code automorphisms after transport, and let $\iota(v):=-v$.
+
+1. *Design and Hessian structures.* For every $\beta$ and every $s\le5$, each $s$-subset of $V_{24}$ lies in exactly $\lambda_s=\binom{24-s}{5-s}/\binom{8-s}{5-s}$ transported octads, $(\lambda_0,\ldots,\lambda_5)=(759,253,77,21,5,1)$, and
+$$
+\sum_{O}\Bigl|\sum_{v\in\beta(O)}v\Bigr|^2=4224,
+\tag{U.71a.2}
+$$
+the sum running over the $759$ octads; in particular some transported octad has nonzero centroid. The transported octad operator of Theorem U.5 is
+$$
+A_{\mathrm{oct}}^{\beta}=176\,(I-\Pi_0),
+\qquad
+\Pi_0:=\tfrac1{24}\mathbf 1\mathbf 1^{\mathsf T},
+\tag{U.71a.3}
+$$
+where $\Pi_0$ is the orthogonal projector onto $\ker L_W$. Thus $A_{\mathrm{oct}}^\beta$ equals $0$ on $\ker L_W$ and $176$ on the $L_W$-eigenspaces for $3,8,15,24$, and it commutes with $L_W$, the $24$-cell adjacency, $\iota$ and $W(F_4)$.
+
+2. *Element obstruction.* An element $g\in W(F_4)$ lies in some $K_\beta$ exactly when its cycle shape on $V_{24}$ is one of $1^{24}$, $2^{12}$, $3^8$, $1^63^6$, $4^6$, $6^4$, $12^2$. Exactly $346$ of the $1152$ elements qualify, and no reflection qualifies.
+
+3. *Quaternion obstruction.* No subgroup of $M_{24}$ isomorphic to the quaternion group $Q_8$ contains an element of cycle shape $4^6$. Hence neither $Q_8^{L}:=\{x\mapsto\epsilon x\}$ nor $Q_8^{R}:=\{x\mapsto x\epsilon\}$, $\epsilon\in\{\pm1,\pm i,\pm j,\pm k\}$, is contained in any $K_\beta$.
+
+4. *Classification.* Put $\omega:=\frac12(-1+i+j+k)$, $\tau(x_1,x_2,x_3,x_4):=-(x_1,x_2,x_4,x_3)$ and $g_6(x):=-\omega x\omega$, and let $c$ be a Coxeter element of $W(F_4)$. The groups
+$$
+K_{18}:=\langle x\mapsto\omega x,\;x\mapsto x\omega,\;\tau\rangle\cong C_3\times S_3,
+\qquad
+\langle c\rangle\cong C_{12},
+\qquad
+\langle g_6\rangle\cong C_6
+\tag{U.71a.4}
+$$
+each equal $K_\beta$ for some $\beta$, and every $K_\beta$ is $W(F_4)$-conjugate to a subgroup of one of them. Consequently $|K_\beta|\le18$, with equality exactly when $K_\beta$ is conjugate to $K_{18}$.
+
+5. *Antipodal line structure.* $\iota\in K_\beta$ exactly when $\beta^{-1}\iota\beta$ is a fixed-point-free involution in $M_{24}$. Such markings exist, since $c^6=g_6^3=\iota$, and for each of them $K_\beta$ is conjugate to a subgroup of $\langle c\rangle$ or of $\langle g_6\rangle$, so $|K_\beta|\le12$. On every such marking $\iota$ preserves exactly $15$ transported octads, each a union of four lines, and the $\iota$-invariant subcode is six-dimensional; its image on $\mathcal L_{12}$ is a self-dual binary $[12,6,4]$ code with weight enumerator $1+15y^4+32y^6+15y^8+y^{12}$, whose fifteen weight-four words are the images of those octads.
+
+*Proof.* Item 1. The bijection $\beta$ carries octads to $8$-subsets of $V_{24}$ and preserves every incidence number, so Theorem U.2 and the block-count formula in the proof of Corollary U.2a give $\lambda_s$. Let $X$ be the $4\times24$ matrix whose columns are the vertices ordered by $\beta$, and let $B$ be the octad incidence matrix. The proof of Theorem U.5 gives $B^{\mathsf T}B=176I+77\mathbf 1\mathbf 1^{\mathsf T}$, and $X\mathbf 1=\sum_vv=0$ by Theorem U.30, so the left side of (U.71a.2) equals $\operatorname{tr}(XB^{\mathsf T}BX^{\mathsf T})=176\operatorname{tr}(XX^{\mathsf T})=176\cdot24$. Theorem U.5 gives $A_{\mathrm{oct}}=176(I-\frac1{24}\mathbf 1\mathbf 1^{\mathsf T})$, which every coordinate permutation preserves, and Proposition U.13a identifies $\ker L_W$ with the constants. The commutation statements hold because $L_W$, the adjacency, $\iota$ and $W(F_4)$ preserve the constants and their orthogonal complement.
+
+Item 2. Conjugation by $\beta$ preserves cycle shapes. The cycle shapes of $M_{24}$ on $\Omega$ are exactly $1^{24}$, $1^82^8$, $2^{12}$, $1^63^6$, $3^8$, $2^44^4$, $1^42^24^4$, $4^6$, $1^45^4$, $1^22^23^26^2$, $6^4$, $1^37^3$, $1^2\,2\,4\,8^2$, $2^210^2$, $1^211^2$, $2\,4\,6\,12$, $12^2$, $1\,2\,7\,14$, $1\,3\,5\,15$, $3\,21$ and $1\,23$ [Conway & Sloane 1999]. Conversely, if $M_{24}$ contains an element $m$ with the cycle shape of $g$, a bijection sending each cycle of $g$ onto a cycle of $m$ of equal length, in cyclic order, conjugates $g$ to $m$. Enumeration of the $1152$ elements of $W(F_4)$ acting on $V_{24}$ (Theorem U.35) gives nineteen cycle shapes; exactly the seven listed occur in $M_{24}$, carried by $1$, $13$, $48$, $32$, $12$, $144$ and $96$ elements. Every reflection is conjugate to the reflection in the short root $e_1$, which fixes $\pm e_2,\pm e_3,\pm e_4$ and pairs the other eighteen vertices (shape $1^62^9$), or to the reflection in the long root $e_1-e_2$, which fixes $\pm e_3,\pm e_4$ and the eight half-vectors with equal first two signs (shape $1^{12}2^6$).
+
+Item 3. The elements of $M_{24}$ of cycle shape $4^6$ form one conjugacy class [Conway & Sloane 1999]. Fix such an element $a$ and put $z:=a^2$, of shape $2^{12}$. A quaternion subgroup containing $a$ contains an element $b$ with $b^2=z$ and $bab^{-1}=a^{-1}$, and then $b\in C_{M_{24}}(z)$. Exhaustive enumeration of $C_{M_{24}}(z)$, of order $7680$, gives $96$ elements inverting $a$, none of which has square $z$. Every nonidentity element of $Q_8^L$ or $Q_8^R$ has shape $2^{12}$, for $\epsilon=-1$, or $4^6$, for the six units of order four; an inclusion $\beta^{-1}Q_8^{L}\beta\le M_{24}$ or $\beta^{-1}Q_8^{R}\beta\le M_{24}$ would therefore contradict the first statement.
+
+Item 4. The map $\tau$ equals $-1$ times the reflection in $e_3-e_4$, so it lies in $W(F_4)$; left and right multiplication by the unit $\omega$ preserve $V_{24}$ and are rotations in $W(F_4)$. With $q:=(j-k)/\sqrt2$ one has $\tau(x)=-q\bar xq^{-1}$, so $\tau^2=1$, and $q\bar\omega q^{-1}=\omega$ gives $\tau(\omega\,\tau(x))=x\omega$; conjugation by $\tau$ therefore interchanges $x\mapsto\omega x$ and $x\mapsto x\omega$. Hence $K_{18}=N\rtimes\langle\tau\rangle$ with $N:=\{x\mapsto\omega^ax\omega^b\}\cong C_3^2$. Since $\tau$ commutes with $x\mapsto\omega x\omega$ and inverts $x\mapsto\omega x\omega^{-1}$, $K_{18}=\langle x\mapsto\omega x\omega\rangle\times\langle x\mapsto\omega x\omega^{-1},\tau\rangle\cong C_3\times S_3$. By item 2, every $K_\beta$ is a subgroup of $W(F_4)$ contained in the set $\mathcal A$ of the $346$ qualifying elements. Exhaustive closure over $\mathcal A$ shows that every subgroup of $W(F_4)$ contained in $\mathcal A$ is generated by two elements of $\mathcal A$. These subgroups number $224$ and form $18$ conjugacy classes, of orders $1$, $2$ (two classes), $3$ (three classes), $4$, $6$ (four classes), $8$, $9$, $12$, $18$ and $24$ (three classes). The maximal members are the conjugates of $K_{18}$ and three classes of order $24$. A group in one of the latter has one involution and six elements of shape $4^6$, which together with the identity form its Sylow $2$-subgroup $Q_8^L$ or $Q_8^R$, so item 3 excludes all three classes, together with the class of order $8$, which consists of $Q_8^L$ and $Q_8^R$. The same enumeration places every remaining class inside a conjugate of $K_{18}$, $\langle c\rangle$ or $\langle g_6\rangle$, and shows that $\langle c\rangle$ and $\langle g_6\rangle$ lie only in groups of order $24$. The Coxeter element acts on the $24$ short roots in two orbits of length equal to the Coxeter number $12$, so it has shape $12^2$, and $g_6$ has shape $6^4$. Both shapes occur in $M_{24}$, so the cycle-matching bijection of item 2, written $\beta_c$ for $c$, places each cyclic group inside some $K_\beta$, and maximality gives equality. For $K_{18}$, realize $\Omega=\mathbb F_{23}\cup\{\infty\}$ and $\mathcal G_{24}$ as the binary span of $\mathbf 1_\Omega$ and the $23$ sets $(N_{23}+s)\cup\{\infty\}$, $s\in\mathbb F_{23}$, where $N_{23}=\{5,7,10,11,14,15,17,19,20,21,22\}$ is the set of quadratic non-residues modulo $23$; this code has parameters $[24,12,8]$ and represents the class of Theorem U.1. Define $\beta_{18}$ by
+$$
+\begin{array}{c|cccccccc}
+v&1&-1&i&-i&j&-j&k&-k\\\hline
+\beta_{18}^{-1}(v)&0&2&1&15&12&13&5&6
+\end{array}
+$$
+and, writing $\frac12(\pm1\pm i\pm j\pm k)$ by its sign string,
+$$
+\begin{array}{c|cccccccc}
+v&{+}{+}{+}{+}&{+}{+}{+}{-}&{+}{+}{-}{+}&{+}{+}{-}{-}&{+}{-}{+}{+}&{+}{-}{+}{-}&{+}{-}{-}{+}&{+}{-}{-}{-}\\\hline
+\beta_{18}^{-1}(v)&7&20&\infty&14&4&19&8&17
+\end{array}
+$$
+$$
+\begin{array}{c|cccccccc}
+v&{-}{+}{+}{+}&{-}{+}{+}{-}&{-}{+}{-}{+}&{-}{+}{-}{-}&{-}{-}{+}{+}&{-}{-}{+}{-}&{-}{-}{-}{+}&{-}{-}{-}{-}\\\hline
+\beta_{18}^{-1}(v)&21&3&16&11&22&10&9&18
+\end{array}
+$$
+Each generator of $K_{18}$, transported by $\beta_{18}$, maps the $24$ spanning words of $\mathcal G_{24}$ to codewords, so $K_{18}\le K_{\beta_{18}}$, and maximality gives $K_{\beta_{18}}=K_{18}$.
+
+Item 5. The first statement is (U.71a.1) for $g=\iota$. The exponents $1,5,7,11$ of $F_4$ are odd, so $c^6=-I=\iota$, and $g_6^3(x)=-\omega^3x\omega^3=-x$. The classes of item 4 that contain $\iota$ lie in conjugates of $\langle c\rangle$ or $\langle g_6\rangle$, because the three involutions of $K_{18}$ are the maps $-s$ for the reflections $s$ in $e_2-e_3$, $e_2-e_4$, $e_3-e_4$. The fixed-point-free involutions of $M_{24}$ form one conjugacy class [Conway & Sloane 1999], so the remaining statements follow from one representative $z=\beta^{-1}\iota\beta$: it preserves exactly $15$ octads, its fixed subcode has dimension $6$, and the images of the fixed codewords on the twelve $z$-orbits are pairwise orthogonal with the stated weight distribution. A six-dimensional self-orthogonal code of length $12$ is self-dual. ∎
+
+**Proposition U.71b (Grassmannian Fixed Planes and Equivariant Line Marking).** Let $M_{24}$ act on $\mathbb C^\Omega$ and $W(F_4)$ on $\mathbb C^{V_{24}}$ by permuting coordinates, and write $E_\lambda:=\ker(L_W-\lambda)$.
+
+1. For $2\le r\le22$ no $r$-dimensional complex subspace of $\mathbb C^\Omega$ is $M_{24}$-invariant; in particular $M_{24}$ fixes no point of $\operatorname{Gr}_{\mathbb C}(12,\mathbb C^\Omega)$.
+
+2. $W(F_4)$ fixes exactly two points of $\operatorname{Gr}_{\mathbb C}(12,\mathbb C^{V_{24}})$: the antipodally even plane $E_\pm(\mathcal S_{\mathrm{line}})=E_0\oplus E_8\oplus E_{24}$ and the odd plane $E_3\oplus E_{15}$.
+
+3. With the normalized inner products of Definition U.32 and Theorem U.13b, the $W(F_4)$-equivariant isometries $J:\mathcal S_{\mathrm{line}}\to\mathbb C^{V_{24}}$ are exactly
+$$
+J=E_\pm\bigl(e^{i\theta_8}P_8+e^{i\theta_{-4}}P_{-4}+e^{i\theta_0}P_0\bigr),
+\qquad \theta_8,\theta_{-4},\theta_0\in\mathbb R ,
+\tag{U.71b.1}
+$$
+with $P_8,P_{-4},P_0$ as in Theorem U.44d.
+
+Consequently every complex reference twelve-plane placed on the code coordinates has a proper stabilizer in $M_{24}$, while on the $24$-cell side the equivariant line marking is $E_\pm$ up to the three phases of (U.71b.1).
+
+*Proof.* Item 1. $M_{24}$ is $5$-transitive on $\Omega$ [Conway & Sloane 1999], so it has two orbits on ordered pairs and the commutant of $\mathbb C^\Omega$ is two-dimensional. The invariant decomposition $\mathbb C^\Omega=\mathbb C\mathbf 1\oplus\mathbf 1^\perp$ therefore consists of two non-isomorphic irreducible summands, and the invariant subspaces are $0$, $\mathbb C\mathbf 1$, $\mathbf 1^\perp$ and $\mathbb C^\Omega$, of dimensions $0,1,23,24$.
+
+Item 2. The proof of Theorem U.44d shows that $W(F_4)$ is transitive on ordered vertex pairs with each inner product. It therefore has five orbits on ordered pairs, indexed by $\langle v,w\rangle\in\{1,\frac12,0,-\frac12,-1\}$, and the commutant of $\mathbb C^{V_{24}}$ is five-dimensional. The operator $L_W$ is a combination of the corresponding relation matrices, so it commutes with $W(F_4)$, and Proposition U.13a gives five nonzero invariant eigenspaces of dimensions $1,4,9,8,2$ for $\lambda=0,3,8,15,24$. A five-dimensional commutant forces these summands to be irreducible and pairwise non-isomorphic, so the invariant subspaces are the sums of eigenspaces. The only dimension sums equal to $12$ are $1+9+2$ and $4+8$. Proposition U.13a makes $E_0$, $E_8$, $E_{24}$ antipodally even and $E_3$, $E_{15}$ odd, and $E_\pm$ is a bijection of $\mathcal S_{\mathrm{line}}$ onto the even functions.
+
+Item 3. The identity $\frac1{24}\sum_v|f(\ell_v)|^2=\frac1{12}\sum_L|f(L)|^2$ makes $E_\pm$ an isometry. Each line adjacent to $\ell_v$ contains exactly one vertex $w$ with $\langle v,w\rangle=\frac12$, so on even functions the vertex adjacency acts as the line adjacency, and Proposition U.13a sends $\mathcal S_8$, $\mathcal S_{-4}$, $\mathcal S_0$ onto $E_0$, $E_{24}$, $E_8$. An equivariant isometry has an invariant twelve-dimensional image isomorphic to $\mathcal S_{\mathrm{line}}$, whose irreducible summands have dimensions $1,2,9$ by Theorem U.44d. The odd plane has summands of dimensions $4$ and $8$, so the image is the even plane. Then $E_\pm^{-1}J$ is a unitary of $\mathcal S_{\mathrm{line}}$ commuting with $W(F_4)$, and Schur's lemma makes it a phase on each of the three non-isomorphic summands. ∎
+
+**Resolution TV-U-12-R1 (Metadata).** Exact domain: all bijections $\beta:\Omega\to V_{24}$ for a binary $[24,12,8]$ code, their compatibility groups (U.71a.1), the $M_{24}$-invariant and $W(F_4)$-invariant points of $\operatorname{Gr}_{\mathbb C}(12,24)$ on the two coordinate carriers, and the $W(F_4)$-equivariant isometries $\mathcal S_{\mathrm{line}}\to\mathbb C^{V_{24}}$. Premises: Theorems U.1, U.2, U.5, U.30, U.35 and U.44d, Proposition U.13a, Definition U.32, and the cycle-shape, single-class and $5$-transitivity facts for $M_{24}$ [Conway & Sloane 1999]. Equivalence: $\beta\sim g\beta m$ for $g\in W(F_4)$ and $m\in M_{24}$, which replaces $K_\beta$ by $gK_\beta g^{-1}$. Budget: all $1152$ elements of $W(F_4)$, all $224$ admissible subgroups, the $7680$ elements of $C_{M_{24}}(z)$ and the three generator checks for $\beta_{18}$, with no search cutoff and no target query. Verifier: cycle-shape comparison, exhaustive subgroup closure and containment, centralizer enumeration, codeword membership of the transported generators, and the orbit counts $2$ and $5$ on ordered pairs. Falsifier: a marking with $|K_\beta|>18$, a marking with $\iota\in K_\beta$ and $|K_\beta|>12$, a quaternion subgroup of $M_{24}$ containing an element of shape $4^6$, a generator of $K_{18}$ that $\beta_{18}$ fails to transport into $M_{24}$, or a third $W(F_4)$-invariant twelve-plane. Provenance class: `proved-lemma` by exact finite group computation and permutation-module representation theory, with the $M_{24}$ class data imported. Downstream consumers: Convention U.14a, Definitions U.32, U.41a and U.69a, Summary U.71, `RT-T5`, `RT-T6` and `TV-U-12`. Nonvacuity: $\beta_{18}$ and the cycle-matching markings for $c$ and $g_6$. This is `positive-discharge` of the classification of the compatibility groups $K_\beta$ and of the design and octad-Hessian compatibility (U.71a.2)--(U.71a.3) for every marking, and `negative-refutation` of the existence of a marking under which $W(F_4)$, or any subgroup of order exceeding $18$, acts by code automorphisms, and of an $M_{24}$-invariant complex reference twelve-plane on the code coordinates. The records $(\beta_{18},K_{18})$ and $(\beta_c,\langle c\rangle)$ populate the maximal compatibility branches; the marking that a coordinatewise physical calculation registers is an entry of $\mathfrak C_{Q,\mathrm{car}}$ under `RT-T6` and of $\mathfrak C_{U,\mathrm{mark}}$ under `RT-T5`. Classification of the finite code-record encoder/response intertwiners of Definition U.32 and of the unitaries $J_{12}$ compatible with a marking, together with simultaneous preservation of the line-amplitude response maps of Definition U.41a under a marking, remains `M+C`-open under `TV-U-12`.
+
 **Proposition U.72 (Mechanism-Separated Electroweak and Vacuum Action Ledger).** The native finite results and their physical action gates are:
 
 1. Theorem T.5 proves the marked-pair incidence value
@@ -4237,6 +4504,68 @@ $$
 for every $a,L,\rho>0$. Divide by $L^{D-2}$ and vary $L$. The constant and $L^2$ coefficients must separately vanish. Since $a^2K_\psi>0$, the first coefficient gives $D-2-2\alpha=0$. For each $\rho$, the second gives a finite linear combination of the distinct functions $a^{p_j}$ that vanishes for all $a>0$. These functions are independent: order the exponents, divide by the largest power, let $a\to\infty$ to remove its coefficient, and repeat. Since $\lambda_jP_j\ne0$, each $\rho^{D-\alpha p_j}-1$ vanishes for every $\rho>0$. Thus $D-\alpha p_j=0$. Solving gives (U.73b.2.2). Conversely, those exponents make every displayed scaling factor one for every field with the stated finite integrals, proving invariance. An invertible differentiable symmetry of the field domain maps critical points to critical points. Differentiating that family gives the linearized equation; the declared fluctuation-domain and tangent-normalizability conditions place its solution in the self-adjoint Hessian kernel. Setting $D=4$ gives $\alpha=1$ and $p_j=4$. ∎
 
 The theorem exhausts canonical kinetic actions with finite sums of homogeneous local potential terms. Higher-derivative conformal actions, nonlocal actions, boundary-anomalous domains, and a PU carrier realization are outside this classified action family.
+
+**Theorem U.73b.3 (Bidegree Classification of Weighted-Dilation Invariance and the Amplitude--Dilation Hessian).** Let $D\ge1$ and let $\mathcal D$ be a field domain of real functions on $\mathbb R^D$ that is invariant under
+$$
+(\Phi_{u,\tau}\phi)(x):=e^{u}\phi(e^{-\tau}x),
+\qquad (u,\tau)\in\mathbb R^2 .
+$$
+A functional $F$ on $\mathcal D$ has bidegree $(p,q)\in(0,\infty)\times\mathbb R$ when
+$$
+F[\Phi_{u,\tau}\phi]=e^{pu+(D-q)\tau}F[\phi]
+\qquad(\phi\in\mathcal D,\ (u,\tau)\in\mathbb R^2).
+\tag{U.73b.3.1}
+$$
+For example, $\int|\nabla^k\phi|^2$ has bidegree $(2,2k)$, $\int\phi\,(-\Delta)^{\sigma}\phi$ has $(2,2\sigma)$, $\int|\phi|^p$ has $(p,0)$, $\int\phi^n$ with $n\in\mathbb N$ has $(n,0)$, $\int|\phi|^n|\nabla\phi|^r$ has $(n+r,r)$, and the nonlocal term $\iint|\phi(x)|^a|\phi(y)|^b|x-y|^{-\gamma}\,dx\,dy$ has $(a+b,\gamma-D)$. Let $S=\sum_{j=1}^mF_j$, where terms of equal bidegree have been combined, the bidegrees $(p_j,q_j)$ are pairwise distinct, and no $F_j$ vanishes identically on $\mathcal D$. Put $w_j:=(p_j,D-q_j)$ and $c_j(\alpha):=D-\alpha p_j-q_j$.
+
+1. For $\alpha\in\mathbb R$, $S$ is invariant under $T^{(\alpha)}_\rho\phi(x):=\rho^{-\alpha}\phi(x/\rho)$ for every $\rho>0$ exactly when $c_j(\alpha)=0$ for every $j$, that is, when every $w_j$ is a positive multiple of $(1,\alpha)$. A weighted-dilation symmetry therefore exists exactly when the vectors $w_j$ are pairwise proportional, and its weight $\alpha=(D-q_j)/p_j$ is then unique. With an order-$2k$ kinetic term of bidegree $(2,2k)$ this weight is $\alpha=(D-2k)/2$; a zero-derivative term of degree $p$ is then admissible exactly when $D>2k$ and $p=2D/(D-2k)$, and for $D=2k$ every term must have $q_j=D$. Kinetic terms of bidegrees $(2,2)$ and $(2,4)$ together exclude every weighted-dilation symmetry. Theorem U.73b.2 is the case of bidegrees $(2,2)$ and $(p_j,0)$.
+
+2. Let $S$ be $C^2$ on an open field domain modeled on a real Banach space $X$, let $\phi_*\in\mathcal D$ be a critical point, and let $(u,\tau)\mapsto\Phi_{u,\tau}\phi_*$ be a $C^2$ map into that domain near $(0,0)$ with $\partial_u\Phi_{u,\tau}\phi_*|_{(0,0)}=\phi_*$ and $\partial_\tau\Phi_{u,\tau}\phi_*|_{(0,0)}=-x\cdot\nabla\phi_*$ in $X$. With $f_j:=F_j[\phi_*]$,
+$$
+\sum_{j=1}^mf_jw_j=0,
+\tag{U.73b.3.2}
+$$
+$$
+D^2S(\phi_*)\bigl[u\phi_*-\tau\,x\cdot\nabla\phi_*,\;u'\phi_*-\tau'\,x\cdot\nabla\phi_*\bigr]
+=\sum_{j=1}^mf_j\,\bigl(w_j\cdot(u,\tau)\bigr)\bigl(w_j\cdot(u',\tau')\bigr).
+\tag{U.73b.3.3}
+$$
+The weight-$\alpha$ dilation tangent $s_\alpha:=-\alpha\phi_*-x\cdot\nabla\phi_*$ corresponds to $(u,\tau)=(-\alpha,1)$ and has self-pairing $\sum_jf_jc_j(\alpha)^2$. When only the spatial law $F_j[\Phi_{0,\tau}\phi]=e^{(D-q_j)\tau}F_j[\phi]$ is available, the $\tau$-components of (U.73b.3.2)--(U.73b.3.3) remain valid; for the kinetic and subtracted-potential terms of Definition U.4 they are the virial identity of Theorem U.8a and the value $-4S_{\mathrm{kin}}(1)$ of Theorem U.8c.
+
+3. The determinant of the $2\times2$ matrix $\sum_jf_jw_jw_j^{\mathsf T}$ in (U.73b.3.3) is
+$$
+\sum_{i<j}f_if_j\,(w_i\times w_j)^2,
+\qquad w\times w':=w^{1}w'^{2}-w^{2}w'^{1}.
+\tag{U.73b.3.4}
+$$
+If $u\phi_*-\tau\,x\cdot\nabla\phi_*$ is a nonzero Hessian-form kernel vector, then $(u,\tau)$ lies in the kernel of that matrix and (U.73b.3.4) vanishes.
+
+4. If $m=2$ and $(f_1,f_2)\ne(0,0)$, then $w_1$ and $w_2$ are proportional, $S$ has the weighted-dilation symmetry of item 1, the matrix $\sum_jf_jw_jw_j^{\mathsf T}$ has rank one, and its kernel is spanned by $(-\alpha,1)$, the coordinate of $s_\alpha$. A two-term action without weighted-dilation symmetry therefore has no critical point with $(f_1,f_2)\ne(0,0)$ at which the hypotheses of item 2 hold.
+
+*Proof.* Item 1. Since $T^{(\alpha)}_\rho=\Phi_{-\alpha\ln\rho,\ln\rho}$, (U.73b.3.1) gives $S[T^{(\alpha)}_\rho\phi]=\sum_j\rho^{c_j(\alpha)}F_j[\phi]$, so vanishing of every $c_j(\alpha)$ gives invariance. Conversely, assume invariance, fix $j$ and choose $\phi_j\in\mathcal D$ with $F_j[\phi_j]\ne0$. Invariance applied to $\Phi_{u,\tau}\phi_j$ gives
+$$
+\sum_ie^{w_i\cdot(u,\tau)}F_i[\phi_j]\bigl(\rho^{c_i(\alpha)}-1\bigr)=0
+\qquad((u,\tau)\in\mathbb R^2).
+$$
+Exponentials with distinct frequency vectors are linearly independent: on a line $(u,\tau)=t\theta$ along which the numbers $w_i\cdot\theta$ are distinct, the largest exponent dominates as $t\to\infty$, and induction removes the terms one at a time. Hence $F_j[\phi_j](\rho^{c_j(\alpha)}-1)=0$ for every $\rho>0$, so $c_j(\alpha)=0$. The identity $c_j(\alpha)=p_j\bigl((D-q_j)/p_j-\alpha\bigr)$ gives the proportionality statement, uniqueness and the listed cases; for bidegrees $(2,2)$ and $(2,4)$ the equations $D-2\alpha-2=0$ and $D-2\alpha-4=0$ are incompatible.
+
+Item 2. Put $G(u,\tau):=S[\Phi_{u,\tau}\phi_*]=\sum_je^{w_j\cdot(u,\tau)}f_j$. The chain rule and $DS(\phi_*)=0$ give $\nabla G(0)=0$, which is (U.73b.3.2). The second-order chain rule gives
+$$
+D^2G(0)[\xi,\xi']=D^2S(\phi_*)[D\Phi\,\xi,D\Phi\,\xi']+DS(\phi_*)[D^2\Phi(\xi,\xi')],
+\qquad
+D\Phi(u,\tau)=u\phi_*-\tau\,x\cdot\nabla\phi_*,
+$$
+whose last term vanishes; differentiating the exponential sum twice gives (U.73b.3.3), and $w_j\cdot(-\alpha,1)=c_j(\alpha)$. The $\tau$-components use only $\Phi_{0,\tau}$. For Definition U.4 the kinetic and subtracted-potential integrals have $D-q=2$ and $D-q=4$, so the $\tau$-component of (U.73b.3.2) reads $2S_{\mathrm{kin}}+4S_{\mathrm{pot}}=0$, and that of (U.73b.3.3) gives $4S_{\mathrm{kin}}+16S_{\mathrm{pot}}=-4S_{\mathrm{kin}}$.
+
+Item 3. Equation (U.73b.3.4) is the Cauchy--Binet formula for $\det\sum_jf_jw_jw_j^{\mathsf T}$. A kernel vector $v=u\phi_*-\tau\,x\cdot\nabla\phi_*$ satisfies $D^2S(\phi_*)[v,v']=0$ for every $v'$ in the span of $\phi_*$ and $x\cdot\nabla\phi_*$, so by (U.73b.3.3) the vector $(u,\tau)$, nonzero because $v\ne0$, lies in the kernel of the matrix.
+
+Item 4. If $f_1=0$, then (U.73b.3.2) gives $f_2w_2=0$, hence $f_2=0$ because $p_2>0$. Therefore $f_1f_2\ne0$ and $w_2=\mu w_1$ with $\mu=-f_1/f_2$, and $\mu>0$ because $p_1,p_2>0$. Item 1 gives the symmetry, with $c_1(\alpha)=c_2(\alpha)=0$. The matrix equals $(f_1+f_2\mu^2)w_1w_1^{\mathsf T}=f_1(1-\mu)w_1w_1^{\mathsf T}$, and $\mu\ne1$ because the bidegrees are distinct, so its rank is one and its kernel is the orthogonal complement of $w_1$, which contains $(-\alpha,1)$. ∎
+
+**Proposition U.73b.4 (Symmetry-Generated Collective Orbits of Radial Critical Points).** Let $\phi_*$ be a bounded continuous nonconstant function on $\mathbb R^D$ that is radial about the origin, let $\alpha\in\mathbb R$, and let each similarity $\sigma(x)=\rho Rx+b$, with $\rho>0$, $R\in O(D)$ and $b\in\mathbb R^D$, act by $(T_\sigma\phi)(x):=\rho^{-\alpha}\phi(\sigma^{-1}x)$. If $T_\sigma\phi_*=\phi_*$, then $\rho=1$. Consequently, for a continuous one-parameter group $\sigma_t$ of similarities, the orbit $t\mapsto T_{\sigma_t}\phi_*$ is periodic only when every $\sigma_t$ is a Euclidean motion, and then $T_{\sigma_t}\phi_*=\phi_*(\cdot-\sigma_t(0))$ lies in the translation family of $\phi_*$, with tangent in $\operatorname{span}\{\partial_\mu\phi_*\}$ when $\phi_*$ is $C^1$. A compact one-dimensional orbit of a one-parameter group is periodic. Hence, for an action invariant under Euclidean motions and, when present, under the weighted dilations of Theorem U.73b.3, no one-parameter group of these symmetries has a compact one-dimensional orbit through a radial critical point outside its translation family, and the compact fifth direction of Definition U.16b requires an additional symmetry or a critical manifold not generated by symmetry.
+
+*Proof.* The rule $\sigma\mapsto T_\sigma$ is a group action, since the dilation factor of $\sigma\sigma'$ is $\rho\rho'$. Suppose $T_\sigma\phi_*=\phi_*$ with $\rho\ne1$. Replacing $\sigma$ by $\sigma^{-1}$ if necessary, assume $\rho>1$. Then $\sigma^{-1}$ is a contraction with a unique fixed point $x_0$, and iteration gives both $\phi_*(x)=\rho^{-n\alpha}\phi_*(\sigma^{-n}x)$, with $\sigma^{-n}x\to x_0$, and $\phi_*(x)=\rho^{n\alpha}\phi_*(\sigma^nx)$. For $\alpha>0$ the first identity and continuity give $\phi_*(x)=0$; for $\alpha=0$ they give $\phi_*(x)=\phi_*(x_0)$; for $\alpha<0$ the second identity and boundedness give $\phi_*(x)=0$. In each case $\phi_*$ would be constant. For a continuous one-parameter group, $\rho(t)=e^{\kappa t}$; if $\kappa\ne0$, then $T_{\sigma_T}\phi_*=\phi_*$ forces $T=0$. If $\kappa=0$, then $\sigma_t(x)=R_tx+b_t$ with $b_t=\sigma_t(0)$, and radiality gives $\phi_*(R_t^{-1}(x-b_t))=\phi_*(x-b_t)$, whose $t$-derivative is $-\dot b_t\cdot\nabla\phi_*(x-b_t)$. The stabilizer of $\phi_*$ in a one-parameter group is a closed subgroup of $\mathbb R$; if it were trivial, the orbit map $\gamma$ would be a continuous bijection of $\mathbb R$ onto a compact one-dimensional orbit, that is, onto a circle or a closed arc. No such bijection exists. Choose $t_0$ with $\gamma(t_0)$ an interior point, and use an arc coordinate on the complement of $\gamma(t_0)$ in the circle, or on the closed arc. A continuous injection of an open interval is strictly monotone in that coordinate with an open-interval image, so the images of $(-\infty,t_0)$ and $(t_0,\infty)$ are disjoint nonempty open intervals whose union is the complement of $\gamma(t_0)$. That complement is a connected open interval for a circle and contains the two endpoints for a closed arc; in neither case is it such a union. ∎
+
+**Resolution TV-U-01-R2 (Metadata).** Exact domain: finite sums of bihomogeneous functionals (U.73b.3.1) on field domains invariant under $\Phi_{u,\tau}$ in every dimension $D\ge1$, including higher-derivative local, fractional and homogeneous-kernel nonlocal terms; their critical points at which the family $\Phi_{u,\tau}\phi_*$ is $C^2$-admissible; and one-parameter similarity orbits of bounded continuous nonconstant radial profiles with any weight $\alpha$. Premises: (U.73b.3.1), $C^2$ regularity on the declared domain, and admissibility of $\Phi_{u,\tau}\phi_*$; no carrier, cosmological or target datum. Equivalence: combination of equal-bidegree terms and positive rescaling of the action. Budget: every configuration of bidegrees, the full two-parameter amplitude--dilation group and all one-parameter subgroups of the similarity group, with no cutoff or regulator. Verifier: linear independence of distinct exponentials, the first- and second-order chain rules, the Cauchy--Binet formula, the contraction-mapping argument, and the absence of continuous bijections from $\mathbb R$ onto a circle. Falsifier: an invariant sum with nonproportional bidegree vectors, a critical point violating (U.73b.3.2) on an admissible family, a two-term action without weighted-dilation symmetry that has an admissible critical point with $(f_1,f_2)\ne(0,0)$, or a bounded continuous nonconstant radial profile fixed by a similarity with $\rho\ne1$. Provenance class: `proved-lemma` by exact scaling calculus. Downstream consumers: Theorems U.8c, U.9 and U.16a, Definition U.16b, Proposition U.73, Theorem U.73b.2, Remark U.73c and `TV-U-01`. Nonvacuity: in $D=4$ the action $\int(\frac12|\nabla\phi|^2-\frac g4\phi^4)$, $g>0$, has bidegrees $(2,2)$ and $(4,0)$, the invariant weight $\alpha=1$, and the nonconstant radial critical points $\phi_*(x)=\sqrt{8/g}\,L/(L^2+|x|^2)$, $L>0$, for which $f_{\mathrm{kin}}=16\pi^2/(3g)=-2f_{4}$ and (U.73b.3.3) equals $-4f_{\mathrm{kin}}(u+\tau)(u'+\tau')$, of rank one with kernel spanned by $(-1,1)$. This is `positive-discharge` of the weighted-dilation invariance classification, the amplitude--dilation virial and Hessian identities, the two-term dichotomy and the symmetry-orbit classification on the stated domains. Boundary-anomalous domains, non-bihomogeneous and running potentials, multi-component fields with compact internal symmetries, and full-Hessian fifth-mode exclusion for bihomogeneous families with at least three terms remain `N+M`-open under `TV-U-01`.
 
 **Remark U.73b.1 (24-Cell Orthogonality Boundary for the Dilatation Gate).** Let $X=V_{24}\subset S^3$ be the 24-cell vertex set and let $d(r,i)=r\varphi'(r)$ be the sampled pure-coordinate dilatation tangent of Theorem U.13. For fixed $r$, $d(r,i)$ is constant in the vertex label $i$. By the explicit coordinate enumeration of Definition U.28 and Lemma U.29 — equivalently the degree-$1$ case of the spherical-design identity of Theorem U.30 — each coordinate sum
 $$

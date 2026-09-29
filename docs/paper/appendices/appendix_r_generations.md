@@ -1386,6 +1386,67 @@ Thus $D$ and $\mathcal G_{24}$ have the same block length, rate and guaranteed u
 
 **Resolution TV-R-04-R1 (Metadata).** Exact domain: binary linear length-$24$, dimension-$12$ codes compared under guaranteed correction of all errors of weight at most three and costs that factor through $(n,k,t)$. Premises: the extended Golay code and standard puncture/zero-extension operations. Equivalence: coordinate permutation for codes and equality of the declared adversarial-weight-three decoder performance. Budget: every error vector of weight at most three. Verifier: rank, minimum distance, correction radius, decoder success and cost equality. Falsifier: a permutation equivalence between the two codes, failure of $D$ to correct some weight-three error, or a strict cost difference under a cost declared to factor through $(n,k,t)$. Provenance class: source-internal explicit linear-code counterexample. Downstream consumers: Theorem R.4.4, $\mathfrak C_{\mathrm{dist}}$ and `TV-R-04`. Proposition R.4.4a gives `negative-refutation` of strict Golay selection from fixed rate plus three-error performance/cost alone by returning an equal competitor. A selector using distance-eight detection, nonzero-coordinate utilization or a finer physical noise channel is a strictly stronger successor proposition.
 
+**Theorem R.4.4b (Coset-Leader Profile and Maximum-Likelihood Ties at Fixed Rate).** For a binary linear $[24,12]$ code $C$, let $\alpha_w(C)$ be the number of cosets of $C$ in $\mathbb F_2^{24}$ whose minimum Hamming weight is $w$, and put
+$$
+(\alpha^\star_0,\alpha^\star_1,\alpha^\star_2,\alpha^\star_3,\alpha^\star_4)=(1,24,276,2024,1771),
+\qquad
+\alpha^\star_w=0\quad(w\ge5).
+\tag{R.4.4b.1}
+$$
+
+1. For every $C$ and every $j\ge0$,
+$$
+\sum_{w\le j}\alpha_w(C)\le\min\Bigl\{2^{12},\ \sum_{w\le j}\binom{24}{w}\Bigr\}=\sum_{w\le j}\alpha^\star_w.
+$$
+2. $\alpha(C)=\alpha^\star$ if and only if $d(C)\ge7$ and $C$ has covering radius $4$.
+3. $\alpha(\mathcal G_{24})=\alpha(D)=\alpha^\star$ for the code $D$ of Proposition R.4.4a.
+4. On the memoryless binary symmetric channel with crossover probability $p\in(0,\tfrac12)$, syndrome decoding to a fixed minimum-weight leader of each coset is maximum-likelihood decoding and succeeds with probability
+$$
+P_{\mathrm{ML}}(C;p)=\sum_{w\ge0}\alpha_w(C)\,p^w(1-p)^{24-w}.
+\tag{R.4.4b.2}
+$$
+For every $C$, $P_{\mathrm{ML}}(C;p)\le\sum_w\alpha^\star_wp^w(1-p)^{24-w}$, with equality if and only if $\alpha(C)=\alpha^\star$.
+5. For every coordinate $j\le23$, the code $D^{(j)}:=\{(c',c'_j):c'\in C_{23}\}$, with $C_{23}$ the puncture of Proposition R.4.4a, has no identically zero coordinate, minimum distance $7$ and $\alpha(D^{(j)})=\alpha^\star$.
+
+Consequently $\mathcal G_{24}$ and $D$ have the same maximum-likelihood block-success function on $(0,\tfrac12)$, and both attain the fixed-rate optimum at every such $p$. Every performance or cost functional that factors through $(n,k)$ and the coset-leader profile $\alpha$ assigns them equal values, and the full-support codes $D^{(j)}$ tie with $\mathcal G_{24}$ under every such functional as well. Theorem P.8.9a.5b extends the bound of item 4 to every binary code of length $24$ with $2^{12}$ words, linear or not, under every decoder.
+
+*Proof.* A coset whose minimum weight is at most $j$ contains a vector of weight at most $j$, distinct cosets are disjoint, and there are $2^{12}$ cosets. This gives the inequality in item 1. The partial sums of $\binom{24}{w}$ for $j=0,1,2,3$ are $1,25,301,2325$, and $2325+1771=2^{12}$, so the minimum equals the partial sum of $\alpha^\star$.
+
+The equality $\sum_{w\le3}\alpha_w=2325$ holds exactly when the vectors of weight at most $3$ lie in distinct cosets. Two such vectors $x\ne y$ share a coset exactly when $x+y$ is a nonzero codeword of weight at most $6$, and every such codeword is such a sum. Hence $\alpha_w=\binom{24}{w}$ for $w\le3$ exactly when $d(C)\ge7$. The remaining $1771$ cosets then have minimum weight at least $4$, and $\alpha=\alpha^\star$ exactly when all of them have minimum weight $4$, that is, when the covering radius is $4$. This proves item 2.
+
+For item 3, puncturing $\mathcal G_{24}$ at its last coordinate gives the $[23,12,7]$ code $C_{23}$ of Proposition R.4.4a. Its radius-$3$ Hamming balls are disjoint and contain $2^{12}\sum_{w\le3}\binom{23}{w}=2^{12}\cdot2048=2^{23}$ vectors, so they cover $\mathbb F_2^{23}$. For $y\in\mathbb F_2^{24}$ choose $c\in\mathcal G_{24}$ whose puncture lies within distance $3$ of the first $23$ coordinates of $y$; then $d(y,c)\le4$. The same argument with the words $(c',0)\in D$, $c'\in C_{23}$, applies to $D$. Both codes have minimum distance at least $7$ and covering radius at most $4$, hence exactly $4$ by item 1, and item 2 gives $\alpha=\alpha^\star$.
+
+For item 4, an error pattern $e$ has likelihood $p^{\operatorname{wt}e}(1-p)^{24-\operatorname{wt}e}$, which strictly decreases with $\operatorname{wt}e$ for $p<\tfrac12$, so decoding to a minimum-weight vector of the received coset is maximum-likelihood. Decoding succeeds exactly when the error equals the selected leader, which gives (R.4.4b.2). List the coset minimum weights of $C$ and the weights counted by $\alpha^\star$ in nondecreasing order as $w_1\le\cdots\le w_{4096}$ and $w^\star_1\le\cdots\le w^\star_{4096}$. If $w_k<w^\star_k$ for some $k$, then with $j=w_k$ at least $k$ cosets of $C$ have minimum weight at most $j$, while fewer than $k$ entries counted by $\alpha^\star$ are at most $j$, contradicting item 1. Thus $w_k\ge w^\star_k$ for every $k$, and strict monotonicity of $w\mapsto p^w(1-p)^{24-w}$ gives the inequality, with equality exactly when $w_k=w^\star_k$ for every $k$.
+
+For item 5, the punctured all-one word lies in $C_{23}$, so $c'\mapsto c'_j$ is nonzero on $C_{23}$ and $D^{(j)}$ has no identically zero coordinate. Deleting the last coordinate maps $D^{(j)}$ bijectively onto $C_{23}$ without increasing weights, so $d(D^{(j)})\ge7$. In the Steiner system $S(5,8,24)$, $\binom{23}{4}/\binom74=253$ octads contain the last coordinate and $\binom{22}{3}/\binom63=77$ of them also contain $j$; an octad through the last coordinate avoiding $j$ punctures to a weight-$7$ word $c'$ with $c'_j=0$, so $(c',0)\in D^{(j)}$ has weight $7$. The covering argument of item 3 applies verbatim, and item 2 gives $\alpha(D^{(j)})=\alpha^\star$. ∎
+
+**Proposition R.4.4c (Undetected-Error Selector at Fixed Rate).** Used for pure error detection on the memoryless binary symmetric channel with crossover probability $p$, a binary linear $[24,12]$ code $C$ with $A_w(C)$ codewords of weight $w$ fails to detect an error with probability
+$$
+P_{\mathrm{ud}}(C;p)=\sum_{w=1}^{24}A_w(C)\,p^w(1-p)^{24-w}.
+\tag{R.4.4c.1}
+$$
+For every $p\in(0,10^{-3}]$ and every such $C$ that is not coordinate-permutation equivalent to $\mathcal G_{24}$,
+$$
+P_{\mathrm{ud}}(C;p)-P_{\mathrm{ud}}(\mathcal G_{24};p)
+\ \ge\ p^7(1-p)^{17}\bigl(1-759r-2576r^5-759r^9-r^{17}\bigr)
+\ >\ \tfrac15\,p^7(1-p)^{17},
+\qquad r=\frac p{1-p}.
+\tag{R.4.4c.2}
+$$
+Thus, for every such $p$, $\mathcal G_{24}$ is the unique minimizer of $P_{\mathrm{ud}}(\,\cdot\,;p)$ on the binary linear $[24,12]$ class up to coordinate permutation, and the undetected-error functional strictly separates $\mathcal G_{24}$ from the code $D$ that Theorem R.4.4b ties with it.
+
+*Proof.* An error goes undetected exactly when it is a nonzero codeword, which gives (R.4.4c.1). The octads of $\mathcal G_{24}$ form the Steiner system $S(5,8,24)$ used in Proposition R.4.4a, so $A_8=\binom{24}{5}/\binom85=759$. The code is doubly even and contains the all-one word, so its nonzero weights lie in $\{8,12,16,24\}$ with $A_{16}=A_8$ and $A_{24}=1$, and $|\mathcal G_{24}|=2^{12}$ gives $A_{12}=4096-2-2\cdot759=2576$. Hence
+$$
+P_{\mathrm{ud}}(\mathcal G_{24};p)=p^7(1-p)^{17}\bigl(759r+2576r^5+759r^9+r^{17}\bigr).
+$$
+If $C$ is not equivalent to $\mathcal G_{24}$, the bound $d\le8$ and the classification of binary linear $[24,12,8]$ codes in Theorem Z.13 give $d:=d(C)\le7$. Then $A_d(C)\ge1$ and, since $0<r<1$,
+$$
+P_{\mathrm{ud}}(C;p)\ge p^d(1-p)^{24-d}=p^7(1-p)^{17}r^{d-7}\ge p^7(1-p)^{17}.
+$$
+Subtraction gives the first inequality in (R.4.4c.2). The bracket decreases in $r$, which increases in $p$; at $p=10^{-3}$, $r=1/999$, so $759r<0.7598$ and the remaining three terms are below $10^{-10}$. ∎
+
+**Resolution TV-R-04-R2 (Metadata).** Exact domain: binary linear $[24,12]$ codes on the memoryless binary symmetric channel, with minimum-weight syndrome decoding for $p\in(0,\tfrac12)$ and pure error detection for $p\in(0,10^{-3}]$. Premises: Proposition R.4.4a, the Steiner property of the octads, and the $[24,12,8]$ classification of Theorem Z.13. Equivalence: coordinate permutation. Budget: all $2^{12}$ cosets, every $p$ in the stated intervals, and every competitor code. Verifier: (R.4.4b.1), the perfect-code count $2^{12}\cdot2048=2^{23}$, the ordered-weight comparison, the weight distribution $(1,759,2576,759,1)$, and the bracket bound in (R.4.4c.2). Falsifier: a binary linear $[24,12]$ code with $P_{\mathrm{ML}}$ above the $\alpha^\star$ value, a coset-leader profile of $\mathcal G_{24}$, $D$ or $D^{(j)}$ different from $\alpha^\star$, or a code inequivalent to $\mathcal G_{24}$ with $P_{\mathrm{ud}}\le P_{\mathrm{ud}}(\mathcal G_{24})$ at some $p\le10^{-3}$. Provenance class: target-independent finite coding theory. Downstream consumers: Theorem R.4.4, Proposition R.4.4a, $\mathfrak C_{\mathrm{dist}}$, Theorem Z.13b and `TV-R-04`. Nonvacuity: $\mathcal G_{24}$, $D$ and every $D^{(j)}$ realize $\alpha^\star$, and $D$ has $A_7(D)=253$. Theorem R.4.4b gives `negative-refutation` of strict Golay selection by every correction functional that factors through $(n,k)$ and the coset-leader profile, including maximum-likelihood block success at every $p\in(0,\tfrac12)$, with or without the requirement that no coordinate be identically zero. Proposition R.4.4c gives `positive-discharge` of strict Golay selection by the undetected-error functional for $p\in(0,10^{-3}]$. A PU-internal derivation that the predictive-recovery objective contains this detection term in that window remains `M`-open, and the selected physical channel and substrate realization remain `C+R`, under `TV-R-04`.
+
 #### R.4.2.1.3 Leech Lattice Construction via Golay Gluing
 
 **Lemma R.4.5 (Conditional Leech Identification from a Registered Discriminant-Form Gluing Datum).** Let
@@ -1479,6 +1540,50 @@ $$
 so adjoining the coset preserves evenness. The index-two extension has covolume $2/2=1$, so $\Lambda_C$ is unimodular.
 
 Finally, every vector in $\nu+L_B(C)$ has the form $(v+2x)/\sqrt8$ with all $24$ numerator coordinates odd. Its squared norm is at least $24/8=3$; because $\Lambda_C$ is even, that norm is an even integer and is therefore at least $4$. The vector $\nu$ attains $4$. Thus $\Lambda_C$ has minimum squared norm $4$, so it is rootless. The Niemeier classification identifies the resulting lattice with the Leech lattice. Coordinate permutations carry equivalent copies of $C$ to isometric lattices. ∎
+
+**Proposition R.4.5a (Coordinatewise Trio Realization of the $(\sqrt2E_8)^3$ Gluing Datum).** Let $C=\mathcal G_{24}$, $K_C$, $L_B(C)$, $\nu$ and $\Lambda_C$ be as in the explicit coordinate construction above. For $S\subset\{1,\ldots,24\}$ write $\mathbb R^S$ and $\mathbb F_2^S$ for the coordinate subspaces and $\mathbf 1_S$ for the indicator word, and for an octad $O$ put
+$$
+E_8(O)=\Bigl\{y\in\mathbb Z^O\cup(\mathbb Z+\tfrac12)^O:\ \sum_{i\in O}y_i\in2\mathbb Z\Bigr\}.
+$$
+
+1. For every octad $O_1$, exactly $30$ octads are disjoint from $O_1$, and they form $15$ complementary pairs in $\{1,\ldots,24\}\setminus O_1$. Hence $C$ has trios $T=\{O_1,O_2,O_3\}$ of pairwise disjoint octads covering all $24$ coordinates.
+2. For every octad $O$, $\Lambda_C\cap\mathbb R^O=\tfrac1{\sqrt2}\,2E_8(O)\cong\sqrt2E_8$. For a trio $T$ the coordinatewise base lattice
+$$
+L_0^T:=\bigoplus_{i=1}^3\bigl(\Lambda_C\cap\mathbb R^{O_i}\bigr)\cong(\sqrt2E_8)^3
+\tag{R.4.5a.1}
+$$
+has $m_0^\times=4$.
+3. The map
+$$
+\phi_T:\ (L_0^T)^*/L_0^T\longrightarrow B_T:=\bigoplus_{i=1}^3A_i,
+\qquad A_i:=E_8(O_i)/2E_8(O_i),
+\qquad \Bigl(\frac{y_i}{\sqrt2}\Bigr)_{i}\longmapsto\bigl(y_i\bmod2E_8(O_i)\bigr)_{i},
+$$
+is an isometry of finite quadratic modules onto $(B_T,q_B)$ with $q_B(y)=\sum_i|y_i|^2/2\bmod2$. Each $A_i$ consists of the zero class, $120$ nonsingular classes, each containing exactly one pair of roots $\pm r$, and $135$ nonzero singular classes, each containing exactly $16$ vectors of squared norm $4$ that form an orthogonal frame. Their minimal squared norms in $(L_0^T)^*$ are $0$, $1$ and $2$; call these component types $0$, $\mathrm N$ and $\mathrm S$.
+4. $H_T:=\phi_T(\Lambda_C/L_0^T)$ is a maximal totally singular subspace of $B_T$ of order $2^{12}$, and the overlattice of Lemma R.4.5 attached to $H_T$ is $\Lambda_C$. Every nonzero $h\in H_T$ has component types, up to order, $(\mathrm S,\mathrm S,0)$, $(\mathrm S,\mathrm N,\mathrm N)$ or $(\mathrm S,\mathrm S,\mathrm S)$; these occur $45$, $2880$ and $1170$ times, and
+$$
+m(h)=4\ \ \text{for the first two types},\qquad m(h)=6\ \ \text{for the third}.
+\tag{R.4.5a.2}
+$$
+Thus $m_H^\times=4$, and items 1 and 3 of Lemma R.4.5 hold for $(L_0^T,\phi_T)$. For every $\mathbb F_2$-linear isomorphism $\psi:B_T\to\mathbb F_2^{24}$ with $\psi(H_T)=C$, the isometry $\psi\circ\phi_T$ onto $(\mathbb F_2^{24},q_B\circ\psi^{-1})$ satisfies items 1–3 of Lemma R.4.5 with $(\psi\circ\phi_T)^{-1}(C)=\Lambda_C/L_0^T$; by item 5, no such $\psi$ maps every $A_i$ onto $\mathbb F_2^{O_i}$. The minimal vectors number $256$ in each $(\mathrm S,\mathrm S,0)$ coset and $64$ in each $(\mathrm S,\mathrm N,\mathrm N)$ coset, so $3\cdot240+45\cdot256+2880\cdot64=196560$.
+5. Let $H_B:=\phi_T(L_B(C)/L_0^T)$, and let $H_\Sigma\subset H_B$ be the image of the vectors $x/\sqrt2$ with $x\in K_C$ and $x\bmod2\in\langle\mathbf 1_{O_1},\mathbf 1_{O_2},\mathbf 1_{O_3}\rangle$. Then $H_T=H_B\sqcup\bigl(\phi_T(\nu)+H_B\bigr)$, $H_\Sigma\cong\mathbb F_2^2$, and reduction modulo $2$ induces an isomorphism
+$$
+H_B/H_\Sigma\ \xrightarrow{\ \cong\ }\ C/\langle\mathbf 1_{O_1},\mathbf 1_{O_2},\mathbf 1_{O_3}\rangle\cong\mathbb F_2^9.
+\tag{R.4.5a.3}
+$$
+No $\mathbb F_2$-linear isomorphism $\psi:B_T\to\mathbb F_2^{24}$ with $\psi(A_i)=\mathbb F_2^{O_i}$ for $i=1,2,3$ carries $H_T$ onto $C$.
+
+*Proof.* (1) A nonzero codeword supported in an octad $O$ has weight at least $8$ and therefore equals $\mathbf 1_O$, so $C\cap\mathbb F_2^O=\langle\mathbf 1_O\rangle$. For any $S$, the orthogonal complement in $\mathbb F_2^S$ of the coordinate projection $\pi_S(C)$ is $C^\perp\cap\mathbb F_2^S=C\cap\mathbb F_2^S$. Hence $\dim\pi_{O_1}(C)=7$, and $C\cap\mathbb F_2^{O_1^c}=\ker\pi_{O_1}$ has dimension $5$. Its $32$ words are doubly even of weight at most $16$; the weight-$16$ word is $\mathbf 1+\mathbf 1_{O_1}$, and a weight-$12$ word $c$ would give the weight-$4$ codeword $c+\mathbf 1+\mathbf 1_{O_1}$. The other $30$ words are therefore octads, and $O\mapsto O_1^c\setminus O$ pairs them.
+
+(2) Every vector of $\nu+L_B(C)$ has all $24$ numerator coordinates odd and so lies in no $\mathbb R^O$. A vector $x/\sqrt2\in L_B(C)$ supported in $O$ has $x\bmod2\in C\cap\mathbb F_2^O=\{0,\mathbf 1_O\}$ and $\sum_ix_i\equiv0\pmod4$; conversely every such $x$ lies in $K_C$. Writing $x=2y$, these conditions say $y\in\mathbb Z^O\cup(\mathbb Z+\tfrac12)^O$ and $\sum_iy_i\in2\mathbb Z$, that is, $x\in2E_8(O)$. The minimum squared norm of $\sqrt2E_8$ is $4$.
+
+(3) Since $E_8$ is unimodular, $(\sqrt2E_8(O_i))^*=\tfrac1{\sqrt2}E_8(O_i)$, so $\phi_T$ is a group isomorphism, and $|y_i/\sqrt2|^2=|y_i|^2/2$ gives the quadratic form. The lattice $E_8$ has $240$ roots and $2160$ vectors of squared norm $4$, the coefficients $240\sigma_3(1)$ and $240\sigma_3(2)$ of its theta series. Nonzero vectors of $2E_8$ have squared norm in $8\mathbb Z_{>0}$. Roots $r\ne\pm r'$ satisfy $|r-r'|^2=4-2r\cdot r'\le6$, so a root class contains exactly $\pm r$. Two norm-$4$ vectors in one class satisfy $|v-v'|^2=8-2v\cdot v'\in\{0,8,16\}$, so they are equal, orthogonal or opposite, and a class contains at most $16$ of them. Roots and norm-$4$ vectors lie in classes with $q_B=1$ and $q_B=0$ respectively. These counts give at least $1+240/2+2160/16=256=|A_i|$ classes, so every count is exact.
+
+(4) The covolume of $\sqrt2E_8$ is $2^4$ and $\Lambda_C$ is unimodular, so $|\Lambda_C/L_0^T|=2^{12}$. Evenness of $\Lambda_C$ makes $q_B$ vanish on $H_T$, and $|H_T|^2=2^{24}=|B_T|$ makes $H_T$ maximal with $H_T^\perp=H_T$; its inverse image in $(L_0^T)^*$ is $\Lambda_C$. For $h=(h_1,h_2,h_3)\ne0$ the coset $h+L_0^T$ is a product of blockwise cosets, so $m(h)$ is the sum of the three component minima. The coset lies in $\Lambda_C\setminus\{0\}$, so $m(h)\ge4$, and $q_B(h)=0$ makes the number of $\mathrm N$ components even. These two conditions leave exactly the three listed types. In particular $H_T\cap A_k=0$, so, since $A_k^\perp=A_i\oplus A_j$ for $\{i,j,k\}=\{1,2,3\}$, the subspace $H_T\cap(A_i\oplus A_j)=(H_T+A_k)^\perp$ has dimension $24-20=4$; these three subspaces meet only in $0$ and contain the $45$ elements of type $(\mathrm S,\mathrm S,0)$. The projection $H_T\to A_k$ is onto, because the orthogonal of its image in $A_k$ is $A_k\cap H_T^\perp=0$; its fibers have $16$ elements, so exactly $120\cdot16=1920$ elements have an $\mathrm N$ component in position $k$. Each $(\mathrm S,\mathrm N,\mathrm N)$ element has two $\mathrm N$ components, so there are $3\cdot1920/2=2880$ of them, and $4095-45-2880=1170$ elements have type $(\mathrm S,\mathrm S,\mathrm S)$. The minima and minimal-vector counts follow from item 3. Isomorphisms $\psi$ with $\psi(H_T)=C$ exist because both subspaces have dimension $12$, and $q_B\circ\psi^{-1}$ makes $\psi\circ\phi_T$ an isometry, so items 1–3 of Lemma R.4.5 transfer from $\phi_T$ to $\psi\circ\phi_T$.
+
+(5) Item 2 gives $L_0^T\subset L_B(C)$, while $\nu\notin L_B(C)$ and $2\nu\in L_B(C)$; hence $H_B$ has index $2$ in $H_T$ with the displayed coset decomposition. Reduction $x\mapsto(x\bmod2)+\langle\mathbf 1_{O_1},\mathbf 1_{O_2},\mathbf 1_{O_3}\rangle$ maps $K_C$ onto $C/\langle\mathbf 1_{O_1},\mathbf 1_{O_2},\mathbf 1_{O_3}\rangle$, and its kernel $K_\Sigma$ contains the numerator lattice $\bigoplus_i2E_8(O_i)$ of $L_0^T$; this gives (R.4.5a.3), and the three disjoint octad words are independent, so the quotient has dimension $9$. A vector $x\in K_\Sigma$ has constant parity on each $O_i$, so its block sums $a_i$ are even with $a_1+a_2+a_3\equiv0\pmod4$. The map $x\mapsto(a_i/2\bmod2)_i$ sends $K_\Sigma$ onto the even-weight plane of $\mathbb F_2^3$, since $2e_j-2e_k$ with $j\in O_1$ and $k\in O_2$ maps to $(1,1,0)$ and the analogous vector with $k\in O_3$ maps to $(1,0,1)$, and its kernel is $\bigoplus_i2E_8(O_i)$. Hence $H_\Sigma\cong\mathbb F_2^2$. Finally $\psi(H_T)\cap\mathbb F_2^{O_1}=\psi(H_T\cap A_1)=0$, whereas $\mathbf 1_{O_1}\in C\cap\mathbb F_2^{O_1}$. ∎
+
+**Resolution TV-R-05-R1 (Metadata).** Exact domain: the explicit coordinate lattice $\Lambda_C$ of every marked Golay copy, every trio of octads, the coordinatewise base lattice $L_0^T$, its discriminant module and all $2^{12}$ glue classes. Premises: the coordinate construction following Lemma R.4.5, the self-duality, double evenness and minimum distance of $\mathcal G_{24}$, and the theta coefficients $240$ and $2160$ of $E_8$. Equivalence: coordinate permutations preserving the trio. Budget: all $256$ classes of each $A_i$ and all glue classes. Verifier: items 1–5, including the type counts $45$, $2880$ and $1170$, the minima (R.4.5a.2), the count $196560$, and the reduction isomorphism (R.4.5a.3). Falsifier: a vector of $\Lambda_C\cap\mathbb R^O$ outside $\tfrac1{\sqrt2}2E_8(O)$, a glue class with $m(h)<4$ or with a type outside the list, a failure of (R.4.5a.3), or a block-compatible $\psi$ with $\psi(H_T)=C$. Provenance class: target-independent lattice and code arithmetic. Downstream consumers: Lemma R.4.5, Proposition R.4.2a, Corollary R.4.2b, Proposition R.4.2c, Proposition R.4.7 and `TV-R-05`. Nonvacuity: item 1 supplies trios, and the class of $\nu$ has type $(\mathrm S,\mathrm N,\mathrm N)$ with $m=4$. Proposition R.4.5a gives `positive-discharge` of the marked discriminant-form, unimodularity, minimum, rootlessness and coordinatewise-compatibility component of `TV-R-05`, and `negative-refutation` of a trio-block-compatible identification of the glue group with the Golay code itself. Strict dynamical vacuum selection, gap and stability on this realization remain `M+C+R` under `TV-R-05`.
 
 #### R.4.2.1.4 Leech Lattice from PCE Constraints
 
@@ -2078,6 +2183,36 @@ D_{gg'}=\|r_g-r_{g'}\|^2\in\{2,4,6,8\}.
 \tag{R.14}
 $$
 Thus discreteness is a theorem after $\mathfrak C_{E_8}$ is fixed; the physical triad, its ordering, and the common metric scale are certificate data fixed before phenomenological comparison.
+
+**Proposition R.5.1a (Weyl Classification of Ordered $E_8$ Root Triads).** For an ordered triple $(r_1,r_2,r_3)$ of distinct roots of $E_8$ put $D_{gg'}=\|r_g-r_{g'}\|^2$, so that $(D_{21},D_{31},D_{32})\in\{2,4,6,8\}^3$ by (R.7).
+
+1. A triple $(D_{21},D_{31},D_{32})$ is realized by distinct roots exactly when either all three entries lie in $\{2,4,6\}$, or exactly one entry equals $8$ and the other two sum to $8$. There are $36$ realizable ordered triples.
+2. Two ordered triples of distinct roots with the same $(D_{21},D_{31},D_{32})$ are conjugate under the Weyl group $W(E_8)$. Hence $W(E_8)$ has exactly $36$ orbits on ordered triads of distinct roots and exactly $12$ orbits on unordered triads, labeled by the realizable multisets $\{D_{21},D_{31},D_{32}\}$.
+3. With $r_1=e_1+e_2$ and with $r_2=e_1+e_3$, $e_3+e_4$, $-e_1+e_3$ or $-e_1-e_2$ for $D_{21}=2,4,6,8$ respectively, the following Type I roots $r_3$ realize every triple of item 1:
+$$
+\begin{array}{c|l}
+D_{21}&(D_{31},D_{32}):\ r_3\\\hline
+2&(2,2){:}\,e_2+e_3;\ (2,4){:}\,e_1-e_3;\ (2,6){:}\,e_2-e_3;\ (4,2){:}\,e_1-e_2;\ (4,4){:}\,e_4+e_5;\ (4,6){:}\,-e_1+e_2;\\
+&(6,2){:}\,-e_2+e_3;\ (6,4){:}\,-e_1+e_3;\ (6,6){:}\,-e_2-e_3;\ (6,8){:}\,-e_1-e_3;\ (8,6){:}\,-e_1-e_2\\
+4&(2,2){:}\,e_1+e_3;\ (2,4){:}\,e_1+e_5;\ (2,6){:}\,e_1-e_3;\ (4,2){:}\,e_3+e_5;\ (4,4){:}\,e_1-e_2;\ (4,6){:}\,-e_3+e_5;\\
+&(4,8){:}\,-e_3-e_4;\ (6,2){:}\,-e_1+e_3;\ (6,4){:}\,-e_1+e_5;\ (6,6){:}\,-e_1-e_3;\ (8,4){:}\,-e_1-e_2\\
+6&(2,2){:}\,e_2+e_3;\ (2,4){:}\,e_1+e_3;\ (2,6){:}\,e_2-e_3;\ (2,8){:}\,e_1-e_3;\ (4,2){:}\,-e_1+e_2;\ (4,4){:}\,e_4+e_5;\\
+&(4,6){:}\,e_1-e_2;\ (6,2){:}\,-e_2+e_3;\ (6,4){:}\,-e_1-e_3;\ (6,6){:}\,-e_2-e_3;\ (8,2){:}\,-e_1-e_2\\
+8&(2,6){:}\,e_1+e_3;\ (4,4){:}\,e_1-e_2;\ (6,2){:}\,-e_1+e_3
+\end{array}
+\tag{R.14a}
+$$
+4. For a certificate $\mathfrak C_{E_8}$ with $D_{31}>D_{32}$, all six pairs $(D_{31},D_{32})$ with $D_{31}>D_{32}$ in $\{2,4,6,8\}$ are realizable. The remaining distance $D_{21}$ ranges over $\{2,4,6\}$ for $(4,2)$ and $(6,4)$, over $\{2,4,6,8\}$ for $(6,2)$, and equals $8-D_{32}$ when $D_{31}=8$. This class therefore consists of $13$ distance triples, each a single $W(E_8)$-orbit; Theorem T.42.1b lists the same $13$ orbits for the class of Definition T.42, with their stabilizers and orbit sizes.
+
+*Proof.* (1) If $D_{21}=8$, then $r_2=-r_1$, so $D_{32}=\|r_3+r_1\|^2=4+2r_1\cdot r_3=8-D_{31}$, and $D_{31},D_{32}\ne8$ because $r_3\notin\{r_1,r_2\}$; the other positions of the entry $8$ are symmetric. Two entries equal to $8$ would make two of the roots coincide. The table (R.14a) realizes the $27$ triples in $\{2,4,6\}^3$ and the $9$ triples with one entry $8$; every listed vector is a Type I root, and each entry follows from $r_g\cdot r_{g'}=2-D_{gg'}/2$.
+
+(2) The Weyl group acts transitively on the roots (Section R.2.2). It therefore suffices to show the following for a set $F$ of fixed roots, first $F=\{r_1\}$ and then $F=\{r_1,r_2\}$: if two roots $s,s'\notin F$ satisfy $s\cdot r=s'\cdot r$ for every $r\in F$, then some product of reflections in roots orthogonal to $F$ fixes $F$ pointwise and carries $s$ to $s'$. Let $U$ be the span of $F$ and put $L=E_8\cap U$, $M=E_8\cap U^\perp$, and $\Phi_U$ for the set of roots orthogonal to $U$. The lattice $L$ equals $\mathbb ZF$, of type $A_1$, $A_1^2$ or $A_2$: it is even, contains $\mathbb ZF$ and lies in $(\mathbb ZF)^*$, and the nonzero classes of $(\mathbb ZF)^*/\mathbb ZF$ have norms $\tfrac12$ for $A_1$, $\tfrac12,\tfrac12,1$ for $A_1^2$, and $\tfrac23,\tfrac23$ for $A_2$ modulo $2$, none of them even. Since $E_8$ is unimodular and $L$ is primitive, $\det M=\det L$, which is $2$, $4$ or $3$. The corresponding sets $\Phi_U$ are the standard orthogonal subsystems $E_7$, $D_6$ and $E_6$, whose root lattices have the same determinants and lie in $M$; hence $M=\mathbb Z\Phi_U$.
+
+Write $s=p_s+m_s$ with $p_s\in U$ and $m_s\in U^\perp$. The inner products $s\cdot r$, $r\in F$, determine $p_s$, and $m_s\in M^*$ because $s\cdot x=m_s\cdot x\in\mathbb Z$ for $x\in M$. If $s$ and $s'$ have the same inner products with $F$, then $m_s-m_{s'}=s-s'\in M$, so $m_s$ and $m_{s'}$ lie in one coset of $M$ in $M^*$ and have the same norm $2-|p_s|^2$. For $F=\{r_1\}$ and for $r_2=-r_1$, $|p_s|^2=y^2/2$ with $y=s\cdot r_1$; for $r_1\cdot r_2=0$, $|p_s|^2=(y^2+z^2)/2$; and for $r_1\cdot r_2=\pm1$, $|p_s|^2=\tfrac23(y^2\mp yz+z^2)$, with $z=s\cdot r_2$. Hence $|m_s|^2\in\{0,\tfrac32,2\}$ for $E_7$, $\{0,1,\tfrac32,2\}$ for $D_6$ and $\{0,\tfrac43,2\}$ for $E_6$. The norms in the cosets of $M^*/M$ are congruent modulo $2$ to $0,\tfrac32$ for $E_7$, to $0,1,\tfrac32,\tfrac32$ for $D_6$, and to $0,\tfrac43,\tfrac43$ for $E_6$. Therefore either $m_s=0$, so that $s=s'$ is the unique root with the given inner products, or $m_s$ and $m_{s'}$ are minimal vectors of the same coset: roots of $\Phi_U$ in the trivial coset, and weights of the minuscule representations $\mathbf{56}$ of $E_7$, the vector and half-spin representations of $D_6$, or $\mathbf{27}$ and $\overline{\mathbf{27}}$ of $E_6$ in the others. The Weyl group $W(\Phi_U)$ acts transitively on the roots and on the weights of each minuscule representation, and it fixes $U$ pointwise, so some $w\in W(\Phi_U)$ maps $m_s$ to $m_{s'}$ and hence $s$ to $s'$. The count of unordered orbits is the number of realizable multisets: $10$ multisets from $\{2,4,6\}$, together with $\{8,2,6\}$ and $\{8,4,4\}$.
+
+(3) and (4) are read off from items 1 and 2 and the table. ∎
+
+**Resolution TV-R-09-R1 (Metadata).** Exact domain: ordered and unordered triads of distinct roots of $E_8$ with their squared-distance triples. Premises: Section R.2.2 and (R.7), the unimodularity of $E_8$, the root subsystems $E_7$, $D_6$ and $E_6$ orthogonal to $A_1$, $A_1^2$ and $A_2$, their discriminant forms, and Weyl transitivity on roots and minuscule weights. Equivalence: $W(E_8)$-conjugacy. Budget: all $240\cdot239\cdot238$ ordered triads. Verifier: the necessity argument of item 1, the $36$ table entries of (R.14a), and the coset argument of item 2. Falsifier: a realizable triple outside item 1, a table entry with a wrong distance, or two triads with the same distance triple in different $W(E_8)$-orbits. Provenance class: target-independent root-system geometry using no mass data. Downstream consumers: $\mathfrak C_{E_8}$, (R.13), (R.14), (R.18), `TV-R-09` and `TV-T-11`. Nonvacuity: (R.14a). Proposition R.5.1a gives `positive-discharge` of the root-triad classification component of `TV-R-09`. Derivation of the PCE localization centers, Hessians and Van Vleck–Morette data, and the physical assignment of a triad to the three sectors, remain `M+C+R` under `TV-R-09`.
 
 ### R.5.3 Yukawa Couplings from Gaussian Overlaps
 

@@ -153,6 +153,50 @@ For a recovery sequence $x_n\to x$ of $\mathcal F_n$, its energies are bounded w
 
 **Resolution TV-CONT-01-R2.** Equation (64i) gives `positive-discharge` of form/$\Gamma$ representative invariance on the vanishing relative-form class, and (64j) is the exact retained-response intertwiner gate on that class. Proposition 35b.2 continues to refute replacement of the vanishing distortion by a fixed bi-Lipschitz constant.
 
+**Proposition 35b.4 (Finite-Dimensional $\Gamma$-Equivalence Classification by Resolvents).** Let $\mathcal Q_d$ be the set of closed nonnegative extended quadratic forms on $\mathbb R^d$: each $q\in\mathcal Q_d$ has a linear domain $V_q\subseteq\mathbb R^d$ and a symmetric positive semidefinite operator $A_q$ on $V_q$ with $q(x)=\langle A_qx,x\rangle$ for $x\in V_q$ and $q(x)=+\infty$ otherwise. With $P_q$ the orthogonal projection onto $V_q$, define the resolvent response
+$$
+R_q=(I_{V_q}+A_q)^{-1}P_q,
+\qquad
+R_qy=\operatorname*{arg\,min}_{z\in\mathbb R^d}\bigl(q(z)+|z-y|^2\bigr).
+\tag{35b.4.1}
+$$
+With $\Gamma$-convergence taken in the Euclidean topology:
+
+1. $q\mapsto R_q$ is a bijection from $\mathcal Q_d$ onto the order interval $\{R=R^{\mathsf T}:0\le R\le I\}$;
+2. for $q_n,q\in\mathcal Q_d$, $q_n$ $\Gamma$-converges to $q$ if and only if $R_{q_n}\to R_q$;
+3. every sequence in $\mathcal Q_d$ has a $\Gamma$-convergent subsequence, and every $\Gamma$-limit of a subsequence lies in $\mathcal Q_d$;
+4. two sequences $(q_n)$ and $(q'_n)$ in $\mathcal Q_d$ have the same $\Gamma$-limit along every subsequence along which either of them $\Gamma$-converges if and only if
+$$
+\|R_{q_n}-R_{q'_n}\|\longrightarrow0,
+\tag{35b.4.2}
+$$
+that is, exactly when the identity map intertwines their resolvent responses uniformly on bounded load sets;
+5. the vanishing relative-form class (64i) gives $\|R_{q_n}-R_{q'_n}\|\le\epsilon_n$, while a fixed ratio $q'_n=cq_n$ with $c\in(0,\infty)\setminus\{1\}$ satisfies (35b.4.2) exactly when, for every compact $K\subset(0,\infty)$, the spectrum of $A_{q_n}$ eventually misses $K$.
+
+On a finite-dimensional retained carrier, $\Gamma$-equivalence is therefore the resolvent class (35b.4.2). It strictly contains the vanishing-distortion class of Proposition 35b.3 and admits a fixed ratio $c\ne1$ exactly when the retained spectrum escapes to $0$ and $\infty$.
+
+*Proof.* For $\lambda>0$ and $y\in\mathbb R^d$, the strictly convex function $z\mapsto q(z)+\lambda^{-1}|z-y|^2$ on $V_q$ has the unique minimizer $R^\lambda_qy$, where $R^\lambda_q=(I_{V_q}+\lambda A_q)^{-1}P_q$, and minimum value
+$$
+e^\lambda_q(y)=\lambda^{-1}\langle(I-R^\lambda_q)y,y\rangle.
+\tag{35b.4.3}
+$$
+With $\lambda=1$ this is (35b.4.1). An eigenvalue $a\ge0$ of $A_q$ corresponds to the eigenvalue $(1+a)^{-1}\in(0,1]$ of $R_q$ on $V_q$, and $R_q=0$ on $V_q^\perp$; hence $R^\lambda_q=\varphi_\lambda(R_q)$ for the continuous function $\varphi_\lambda(r)=r/(\lambda+(1-\lambda)r)$ on $[0,1]$. Item 1 follows by inversion: a symmetric $R$ with $0\le R\le I$ determines $V_q=\operatorname{Ran}R$ and $A_q=(R|_{V_q})^{-1}-I_{V_q}\ge0$.
+
+Suppose $q_n$ $\Gamma$-converges to $q$. Adding the continuous function $|z-y|^2$ preserves $\Gamma$-convergence. The minimizers $z_n=R_{q_n}y$ satisfy $|z_n-y|^2\le q_n(0)+|y|^2=|y|^2$ and are bounded. If $z_{n_k}\to\bar z$, the liminf inequality at $\bar z$ and a recovery sequence for any $z$ give $q(\bar z)+|\bar z-y|^2\le q(z)+|z-y|^2$, so $\bar z=R_qy$ and $R_{q_n}y\to R_qy$. Conversely, let $R_{q_n}\to R_q$. Continuity of the functional calculus gives $R^\lambda_{q_n}\to R^\lambda_q$ for every $\lambda>0$. If $x_n\to x$, then $q_n(x_n)\ge e^\lambda_{q_n}(x_n)\to e^\lambda_q(x)$ by (35b.4.3), and $e^\lambda_q(x)$ increases to $q(x)$ as $\lambda\downarrow0$: on $V_q$ it equals $\langle A_q(I+\lambda A_q)^{-1}x,x\rangle$, and off $V_q$ it is at least $\lambda^{-1}|x-P_qx|^2$. This is the liminf inequality. For $x\in V_q$ put $y=(I_{V_q}+A_q)x$ and $x_n=R_{q_n}y$; then $x_n\to R_qy=x$ and
+$$
+q_n(x_n)=e^1_{q_n}(y)-|x_n-y|^2\longrightarrow e^1_q(y)-|x-y|^2=q(x),
+$$
+which is the recovery inequality; for $x\notin V_q$ it is automatic. This proves item 2.
+
+Item 3 follows from items 1 and 2 and compactness of the order interval, because a $\Gamma$-limit of a subsequence is also the $\Gamma$-limit of each further subsequence. For item 4, if (35b.4.2) holds and $R_{q_{n_k}}\to R$, then also $R_{q'_{n_k}}\to R$, and item 2 identifies the two $\Gamma$-limits. If (35b.4.2) fails, some subsequence keeps $\|R_{q_n}-R_{q'_n}\|\ge\eta>0$, and compactness yields a further subsequence on which both resolvents converge to different limits, hence to different $\Gamma$-limits. For item 5, (64i) gives $(1-\epsilon_n)A_{q_n}\le A_{q'_n}\le(1+\epsilon_n)A_{q_n}$ on the common domain. Operator monotonicity of inversion places $R_{q'_n}$ between $(I+(1\pm\epsilon_n)A_{q_n})^{-1}P_{q_n}$, and every $a\ge0$ satisfies $|(1+a)^{-1}-(1+(1\pm\epsilon_n)a)^{-1}|\le\epsilon_n$, so $\|R_{q'_n}-R_{q_n}\|\le\epsilon_n$. For $q'_n=cq_n$,
+$$
+\|R_{q_n}-R_{cq_n}\|
+=\max_{a\in\operatorname{spec}A_{q_n}}\frac{|c-1|\,a}{(1+a)(1+ca)},
+$$
+and this function of $a$ is continuous and positive on $(0,\infty)$ and tends to $0$ at both ends. ∎
+
+**Resolution TV-CONT-01-R3 (Metadata).** Exact domain: sequences in $\mathcal Q_d$ on one fixed finite-dimensional Euclidean retained carrier, with $\Gamma$-convergence in the Euclidean topology. Premises: the definitions of Proposition 35b.4; no equicoercivity or distortion hypothesis. Equivalence: equality of $\Gamma$-limits along every subsequence along which either sequence $\Gamma$-converges; forms are identified with their resolvents (35b.4.1). Budget: the two resolvent sequences and, for item 5, the spectra of $A_{q_n}$. Verifier: evaluate (35b.4.2) or the spectral function of item 5. Falsifier: two sequences with vanishing resolvent difference and distinct subsequential $\Gamma$-limits, or with nonvanishing resolvent difference and identical subsequential $\Gamma$-limits. Provenance class: source-internal finite-dimensional variational analysis. Downstream consumers: Propositions 35b.2--35b.3, the Mosco item of Theorem 43.5 and `RT-T8`. Nonvacuity: on $\mathbb R$, $q_n(x)=a_nx^2$ and $q'_n(x)=2a_nx^2$ are $\Gamma$-equivalent for $a_n=n$ and inequivalent for $a_n=1$. This is `positive-discharge` of the finite-dimensional form/$\Gamma$ classification and of the retained resolvent-response intertwiner on that class beyond the vanishing-distortion branch. The varying-space and infinite-dimensional Mosco classification and the realization for the physical propagation forms remain `M+R` under `TV-CONT-01`.
+
 For finite diagnostic comparisons on a fixed connected MPU population graph with $2\le |\mathcal V|<\infty$, the corresponding dimensionless propagation-efficiency observable is
 $$
 E_{\mathcal N}
@@ -224,6 +268,26 @@ V_{\mathrm{core}}(r)=V_{\mathrm{core}}(i)=0,
 V_{\mathrm{proxy}}(r)=V_{\mathrm{proxy}}(i)=0.
 $$
 Both configurations are global minimizers. The only regular image available to a comparator at $i$ is $r$, but $V_{\mathrm{core}}(r)=V_{\mathrm{core}}(i)$, so no $\delta(i)>0$ can satisfy (11.43.1). The class is nonempty and consistent, and therefore negatively refutes regular-minimum selection from the bare PCE decomposition alone. Theorem 43 remains valid because its strict-comparator certificate excludes this countermodel. ∎
+
+**Proposition 43b (Exact Proxy-Robust Comparator Criterion).** Let $X$ be a finite admissible class with regular subset $X_{\mathrm{reg}}$, core potential $V_{\mathrm{core}}:X\to\mathbb R$, and registered proxy-coordinate map $\pi_{\mathrm{px}}:X\to\Pi$, so that comparisons with the same proxy coordinates are those of Theorem D.2. The following are equivalent:
+
+1. for every proxy potential $V_{\mathrm{proxy}}=p\circ\pi_{\mathrm{px}}$ with $p:\Pi\to\mathbb R$, every global minimizer of $V=V_{\mathrm{core}}+V_{\mathrm{proxy}}$ is regular;
+2. every irregular $x\in X$ has a regular $r$ with $\pi_{\mathrm{px}}(r)=\pi_{\mathrm{px}}(x)$ and $V_{\mathrm{core}}(r)<V_{\mathrm{core}}(x)$;
+3. every proxy fiber $F=\pi_{\mathrm{px}}^{-1}(\xi)$ that contains an irregular point satisfies
+$$
+F\cap X_{\mathrm{reg}}\ne\varnothing,
+\qquad
+\min_{F\cap X_{\mathrm{reg}}}V_{\mathrm{core}}
+<
+\min_{F\setminus X_{\mathrm{reg}}}V_{\mathrm{core}}.
+\tag{43b.1}
+$$
+
+Item 2 is the strict comparator (11.43.1), with $\mathcal R(x)=r$ and $\delta(x)=V_{\mathrm{core}}(x)-V_{\mathrm{core}}(r)$, in its same-proxy-coordinate form. Hence (43b.1) is a complete one-pass verifier for that form of Theorem 43's certificate, and on finite classes that form is necessary as well as sufficient for regular selection uniformly over proxy potentials. When (43b.1) fails, the proof constructs a proxy potential with an irregular global minimizer.
+
+*Proof.* Items 2 and 3 agree fiberwise, since the least regular core value of a fiber lies below every irregular value of that fiber exactly when it lies below the least one. Item 2 implies item 1 by Theorem 43, because $\pi_{\mathrm{px}}(r)=\pi_{\mathrm{px}}(x)$ gives $V_{\mathrm{proxy}}(r)=V_{\mathrm{proxy}}(x)$ for every $p$. Suppose item 2 fails at an irregular $x$ with $\xi=\pi_{\mathrm{px}}(x)$, so every regular $r\in\pi_{\mathrm{px}}^{-1}(\xi)$ has $V_{\mathrm{core}}(r)\ge V_{\mathrm{core}}(x)$. Put $p(\xi)=0$ and $p(\eta)=M$ for $\eta\ne\xi$, with $M>\max_XV_{\mathrm{core}}-\min_XV_{\mathrm{core}}$. Every point outside $\pi_{\mathrm{px}}^{-1}(\xi)$ then has $V>V(x)$, so the global minimum is attained in that fiber. If a regular $r$ attains it, then $V_{\mathrm{core}}(r)\le V_{\mathrm{core}}(x)\le V_{\mathrm{core}}(r)$ and $x$ attains it as well; otherwise every minimizer is irregular. In both cases $V$ has an irregular global minimizer, so item 1 fails. ∎
+
+**Resolution TV-CONT-02-R2 (Metadata).** Exact domain: finite admissible classes carrying a regular subset, a real core potential and a registered proxy-coordinate map. Premises: proxy potentials factor through the registered proxy coordinates. Equivalence: equality of proxy coordinates and of regular/irregular labels. Budget: one pass over every proxy fiber. Verifier: evaluate (43b.1). Falsifier: a class satisfying (43b.1) with an irregular global minimizer for some $p$, or a class violating (43b.1) for which every $p$ yields only regular global minimizers. Provenance class: source-internal finite optimization. Downstream consumers: Theorem 43, Lemma D.3, Theorem D.2 and the regular-global-core gate. Nonvacuity: Proposition 43a with a constant proxy-coordinate map violates (43b.1) on its single fiber, and a two-point fiber with $V_{\mathrm{core}}(r)=0<1=V_{\mathrm{core}}(i)$ satisfies it. This is `positive-discharge` of the exact finite comparator criterion; Proposition 43a retains the bare-PCE `negative-refutation`. Population of (43b.1), coverage-complete, over the declared PU irregular families and its physical realization remain `C+R` under `TV-CONT-02`.
 
 **Theorem 43.5 (Operational Continuum Branch Package).** On the minimal $M=24$, $D=4$ mode-channel branch, let the microscopic adaptation dynamics use the continuum-control PCE potential $V_n^{\mathrm{cont}}$ of Theorem D.6e. Assume an independent continuum-bridge certificate supplies a competitor sequence with $\mathfrak d_n^*\to0$ in the global core-minimum class. Separately assume the D.6e weak-liminf, strong-recovery, and Cheeger-identification hypotheses; the C.6c generator-core/$\Gamma_2$, domain-closure, ambient, and Sobolev-to-Lipschitz hypotheses; fixed-radius geometric noncollapse and interpolation; and $\mu=\mathcal H^4$ whenever strict noncollapse is claimed. Then the low-noise detailed-balance adaptation dynamics concentrate on the asymptotically defect-free operational-continuum branch, and every selected subsequential limit with $\mathfrak D_n\to0$ satisfies:
 
@@ -338,6 +402,47 @@ $$
 x_i\in\bigcap_{j\ne i}K_j.
 $$
 If $m>d+1$, the $m$ points are affinely dependent, so there are real coefficients $\alpha_i$, not all zero, with $\sum_i\alpha_i=0$ and $\sum_i\alpha_ix_i=0$. The coefficients have both signs. After normalizing their positive and negative parts, one point $y$ is expressed both as a convex combination of the $x_i$ with $\alpha_i>0$ and as a convex combination of those with $\alpha_i<0$. For each $K_j$, one of these two representations omits $x_j$, while every other $x_i$ lies in $K_j$; convexity therefore gives $y\in K_j$. This contradicts empty total intersection. Hence every minimal empty subfamily has at most $d+1$ members, proving the criterion by contraposition. Applying it to (43.5c.2) at each level and choosing $x_n$ in the total intersection gives (43.5c.3). ∎
+
+**Proposition 43.5d (Sharp Helly Numbers of Finite Nonconvex Envelopes).** Let $X_n$ be a finite admissible envelope with $N=|X_n|\ge2$, and let $K_{n,1},\ldots,K_{n,m}\subseteq X_n$ be arbitrary certificate slots. One $x_n$ satisfies every slot exactly when every subfamily of at most $N$ slots has nonempty intersection. The number $N$ is sharp: the $N$ slots $X_n\setminus\{x\}$, $x\in X_n$, meet in every $N-1$ of them and have empty total intersection. Hence no subfamily bound independent of the envelope decides joint feasibility of nonconvex slots, already for finite subsets of $\mathbb R$. Proposition 43.5b is the case $N=2$, with the singleton slots $\{a_n\}$ and $\{b_n\}$ at any tolerance below one.
+
+*Proof.* If the total intersection is empty, every $x\in X_n$ lies outside some slot $K_{n,j(x)}$, and the at most $N$ slots $K_{n,j(x)}$ have empty intersection; the converse is immediate. In the sharp family, the $N-1$ slots other than $X_n\setminus\{x\}$ meet exactly in $\{x\}$, while all $N$ slots have no common point. Taking $X_n$ to be $N$ real numbers for arbitrary $N$ gives the unbounded case. ∎
+
+**Proposition 43.5e (Translation-Invariant $D_4$ Propagation Metrics Converge to Polytope Norms).** Let $\delta_n\downarrow0$, join $x$ and $x+\delta_nr$ in $\delta_nD_4$ for every $r\in\Xi_{D_4}$, and give these edges level-independent translation-invariant weights $w(r)=w(-r)>0$ with maximum $w_{\max}$. Let $d_n$ be the propagation-cost metric (64) with microscopic factor $\delta_n$, and define
+$$
+N_w(v)=\min\Bigl\{\sum_{r\in\Xi_{D_4}}c_rw(r):c_r\ge0,\ \sum_{r\in\Xi_{D_4}}c_rr=v\Bigr\}
+\qquad(v\in\mathbb R^4).
+\tag{43.5e.1}
+$$
+Then:
+
+1. for uniform weights $w\equiv1$,
+$$
+d_n(x,y)=N_1(y-x)=\max\Bigl\{\|y-x\|_\infty,\tfrac12\|y-x\|_1\Bigr\}
+\qquad(x,y\in\delta_nD_4);
+\tag{43.5e.2}
+$$
+2. in general, $N_w$ is the norm whose unit ball is the polytope $\operatorname{conv}\{r/w(r):r\in\Xi_{D_4}\}$, and
+$$
+N_w(y-x)\le d_n(x,y)\le N_w(y-x)+3w_{\max}\delta_n
+\qquad(x,y\in\delta_nD_4);
+\tag{43.5e.3}
+$$
+3. $(\delta_nD_4,d_n,0)$ converges in pointed Gromov--Hausdorff topology to $(\mathbb R^4,N_w,0)$, and no rescaling of the Euclidean metric on $\mathbb R^4$ is isometric to $N_w$; for instance, $N_1(e_1)=N_1(e_1+e_2)=1$;
+4. with $c_w=d_{GH}(B^{N_w}_1,B^{\mathbb R^4}_1)>0$, every radius $\varrho>0$ and all centers $x_n\in\delta_nD_4$ whose $N_w$-balls of radius $4\varrho$ lie in the truncation satisfy
+$$
+\liminf_{n\to\infty}\varrho^{-1}d_{GH}\bigl(B_\varrho(x_n),B^{\mathbb R^4}_\varrho\bigr)\ge c_w.
+\tag{43.5e.4}
+$$
+
+Consequently, whenever the fixed-radius chart range of (D.6e.4) contains a radius $\varrho$ with centers $x_n$ as in item 4, the quantitative-rigidity defect satisfies $\liminf_n\mathfrak H_n\ge c_w^2>0$ along the $\delta_nD_4$ truncations, and items 4 and 6 of $\mathfrak Z_{\mathrm{cont}}$ in Corollary 43.5a fail for every such shell weighting. The same argument, with $3w_{\max}$ replaced by a constant depending on the edge set, applies to level-independent translation-invariant weights on every fixed finite symmetric edge set generating $D_4$, and Theorem C.6c.1 of Appendix C gives the polytope-norm limit for every Bravais propagation-cost network of dimension at least two. With uniform weights, the form (43.5a.1) converges on smooth functions to $\frac12\int|\nabla f|^2dx$ by the proof of Corollary 43.5a, and the intrinsic distance of that limit form is $|y-x|$, while the propagation metric converges to $N_1$; the form and the path metric of this candidate therefore select non-isometric continuum geometries. A $D_4$ population of $\mathfrak Z_{\mathrm{cont}}$ therefore requires propagation costs outside the class of level-independent translation-invariant weights on a fixed finite edge set.
+
+*Proof.* Signed coordinate permutations preserve $D_4$, $\Xi_{D_4}$ and $\max\{\|\cdot\|_\infty,\frac12\|\cdot\|_1\}$. Each shell step changes $\|\cdot\|_\infty$ by at most $1$ and $\|\cdot\|_1$ by at most $2$, so joining $0$ to $v\in D_4$ takes at least $\max\{\|v\|_\infty,\frac12\|v\|_1\}$ steps. Conversely, let $v\ne0$ with $v_1\ge v_2\ge v_3\ge v_4\ge0$; the step $-e_1-e_2$ lowers this maximum by one. If $v_1\ge v_2+v_3+v_4$, the maximum is $v_1$ at $v$ and $v_1-1$ at $v-e_1-e_2$ (when $v_2=0$, $v_1$ is even and at least two). If $v_1<v_2+v_3+v_4$, the maximum is $\frac12\|v\|_1$, $v_2\ge1$, and parity excludes $v=(1,1,1,0)$; hence $\|v-e_1-e_2\|_\infty\le\frac12\|v\|_1-1=\frac12\|v-e_1-e_2\|_1$. Induction on the maximum joins $0$ to $v$ in exactly that number of shell steps. Every shell vector has $\|r\|_\infty=1=\frac12\|r\|_1$, so every representation in (43.5e.1) with $w\equiv1$ costs at least $\max\{\|v\|_\infty,\frac12\|v\|_1\}$; the step counts attain this bound on $D_4$, hence on rational vectors by homogeneity and on $\mathbb R^4$ by continuity. Scaling by $\delta_n$ proves (43.5e.2), and $N_1$ is integer valued on $D_4$ because $D_4$ vectors have even coordinate sum.
+
+Substituting $\lambda_r=c_rw(r)$ identifies (43.5e.1) with the gauge of $\operatorname{conv}\{r/w(r)\}$, which is a norm because $\Xi_{D_4}$ is symmetric and spans $\mathbb R^4$. A path from $x$ to $y$ with $k_r$ steps along $r$ has integers $k_r\ge0$ with $\sum_rk_r\delta_nr=y-x$ and cost $\delta_n\sum_rk_rw(r)\ge N_w(y-x)$. For the upper bound in (43.5e.3), take a basic optimal solution $c^*$ of (43.5e.1) at $v=(y-x)/\delta_n$; it has at most four nonzero entries. The residual $u=\sum_r(c^*_r-\lfloor c^*_r\rfloor)r$ lies in $D_4$ and has $N_1(u)<4$, hence $N_1(u)\le3$. Following $\lfloor c^*_r\rfloor$ steps along each $r$ and then the at most three shell steps that realize $u$ by item 1 gives (43.5e.3). Every point of this path lies within $N_w$-distance $N_w(y-x)+3w_{\max}\delta_n$ of $x$, so (43.5e.2) and (43.5e.3) also hold for the metric of a finite truncation whenever it contains that $N_w$-ball.
+
+By (43.5e.3), the inclusion of $\delta_nD_4$ in $(\mathbb R^4,N_w)$ has distortion at most $3w_{\max}\delta_n$, and its image is a $2w_{\max}\delta_n$-net, since rounding coordinates and correcting parity moves a point by $N_1$-distance at most $\frac54$ and $N_w\le w_{\max}N_1$; this gives the pointed convergence. The unit sphere of $N_w$ contains a facet with two distinct points $u$ and $u'$; then $u/2$ and $u'/2$ are distinct midpoints of $0$ and $(u+u')/2$ inside $B^{N_w}_1$, whereas midpoints in a Euclidean space and in a Euclidean ball are unique. Hence no Euclidean metric is isometric to $N_w$, the compact balls $B^{N_w}_1$ and $B^{\mathbb R^4}_1$ are not isometric, and $c_w>0$. For item 4, pair each lattice point of the $d_n$-ball $B_\varrho(x_n)$ with itself and each point $z$ of the $N_w$-ball of radius $\varrho$ about $x_n$ with a lattice point within $N_w$-distance $2w_{\max}\delta_n$ of $x_n+(1-5w_{\max}\delta_n/\varrho)(z-x_n)$. By (43.5e.3) this correspondence has distortion $O(\delta_n)$. Scaling gives $d_{GH}(B^{N_w}_\varrho,B^{\mathbb R^4}_\varrho)=\varrho c_w$, and the triangle inequality for $d_{GH}$ gives (43.5e.4). Every summand in (D.6e.4) is nonnegative, so $\mathfrak H_n\ge\varrho^{-2}d_{GH}(B_\varrho(x_n),B^{\mathbb R^4}_\varrho)^2$ for each pair $(x_n,\varrho)$ in the fixed-radius chart range, and item 4 of $\mathfrak Z_{\mathrm{cont}}$ requires the same quantity to vanish. For a general finite generating edge set, the residual $u$ ranges over a finite set of lattice vectors, each joined to $0$ by a finite path. Finally, the intrinsic distance $\sup\{f(y)-f(x):|\nabla f|\le1\}$ of $\frac12\int|\nabla f|^2dx$ is $|y-x|$. ∎
+
+**Resolution TV-CONT-03-R2 (Metadata).** Exact domain: finite admissible envelopes with arbitrary certificate slots, and the rescaled lattices $\delta_nD_4$ with level-independent translation-invariant positive weights on a fixed finite symmetric generating edge set, their propagation metrics (64) and the defect (D.6e.4). Premises: Definition 35, Corollary 43.5a's candidate and Theorem D.6e's defect. Equivalence: joint feasibility of the slot family; metric spaces up to pointed isometry. Budget: the $N$ candidates of each envelope; the finite edge set, its weights and the four-dimensional linear program (43.5e.1). Verifier: the covering argument of Proposition 43.5d; the step-count induction for (43.5e.2), the rounding bound (43.5e.3), and the midpoint test on a facet of the unit polytope. Falsifier: a finite envelope whose sharp family is decided by fewer than $N$ slots, a lattice pair violating (43.5e.2) or (43.5e.3), or a Euclidean pointed limit for such a weighting. Provenance class: source-internal combinatorics and discrete metric geometry. Downstream consumers: Theorem 43.5c, Corollary 43.5a, Theorem D.6e, Theorem 44 and `RT-T8`. Nonvacuity: the two-point envelope of Proposition 43.5b and the uniform shell weighting. Proposition 43.5d is `positive-discharge` of the exact Helly number of finite nonconvex envelopes and `negative-refutation` of every envelope-independent subfamily bound. Proposition 43.5e is `negative-refutation` of populating $\mathfrak Z_{\mathrm{cont}}$ on the $\delta_nD_4$ refinement class with level-independent translation-invariant weights on a fixed finite edge set. Refinement classifications beyond finite envelopes remain `M`, and one frozen refinement with propagation costs outside that class carrying global-core membership, noncollapse, curvature transfer, Mosco/Cheeger convergence, recovery and rigidity together remains `C+R` under `TV-CONT-03`.
 
 **11.4 Geometric Convergence to an Operational Continuum Manifold**
 
@@ -463,6 +568,64 @@ B=\mathbb 1_S+\epsilon A
 $$
 is positive, self-adjoint, commutes with every $U\in\mathcal G$, and is not scalar. For the full orthogonal group, commuting with every reflection forces every unit vector to be an eigenvector with one common eigenvalue, proving (45e.2). ∎
 
+**Theorem 45f (Isotypic Classification of Natural Fisher-Propagation Comparisons).** In the setting of Proposition 45e, let
+$$
+\mathcal C_{\mathcal G}=\{A=A^{*_g}:AU=UA\ (U\in\mathcal G)\},
+\qquad
+\mathcal P_{\mathcal G}=\{B\in\mathcal C_{\mathcal G}:B>0\},
+$$
+so that $\mathcal P_{\mathcal G}$ is the set of positive natural comparisons in (45b.3). Decompose $(S,g^{sp})$ into isotypic components
+$$
+S=\bigoplus_{k=1}^{n_{\mathcal G}}S_k,
+\qquad
+S_k\cong Y_k^{\oplus m_k},
+$$
+with pairwise non-isomorphic irreducible real $\mathcal G$-modules $Y_k$, and put $\mathbb K_k=\operatorname{End}_{\mathcal G}(Y_k)$ and $d_k=\dim_{\mathbb R}\mathbb K_k$. Then the $S_k$ are pairwise $g^{sp}$-orthogonal, each $\mathbb K_k$ is isomorphic to $\mathbb R$, $\mathbb C$ or $\mathbb H$ with the $g^{sp}$-adjoint acting as its standard conjugation, and
+$$
+\mathcal C_{\mathcal G}\cong\bigoplus_{k=1}^{n_{\mathcal G}}\operatorname{Herm}_{m_k}(\mathbb K_k),
+\qquad
+\mathcal P_{\mathcal G}\cong\bigoplus_{k=1}^{n_{\mathcal G}}\operatorname{Herm}^+_{m_k}(\mathbb K_k),
+\qquad
+\dim_{\mathbb R}\mathcal C_{\mathcal G}=\sum_{k=1}^{n_{\mathcal G}}\Bigl(m_k+d_k\frac{m_k(m_k-1)}2\Bigr).
+\tag{45f.1}
+$$
+After the scale $\lambda$ of Proposition 45e is removed, a positive natural comparison has exactly $\dim_{\mathbb R}\mathcal C_{\mathcal G}-1$ free real shape parameters. In particular, (45e.2) holds if and only if $S$ is an irreducible $\mathcal G$-module.
+
+*Proof.* The orthogonal complement of a $\mathcal G$-invariant subspace is invariant, so $S$ is an orthogonal sum of irreducible submodules, and orthogonal projections onto invariant subspaces commute with $\mathcal G$. An equivariant map between modules without a common irreducible constituent vanishes. Applied to the orthogonal projection of $S_k$ onto $S_l$ with $k\ne l$, this gives orthogonality; applied to $A\in\mathcal C_{\mathcal G}$, it shows that $A$ preserves each $S_k$. By Schur's lemma $\mathbb K_k$ is a real division algebra, hence $\mathbb R$, $\mathbb C$ or $\mathbb H$ by Frobenius's theorem, and it is closed under the adjoint because $U^*=U^{-1}\in\mathcal G$. A self-adjoint $a\in\mathbb K_k$ has a real eigenvalue $\mu$, and $a-\mu$ is a non-invertible element of $\mathbb K_k$, so $a=\mu$. A skew-adjoint $a\ne0$ satisfies $a^2=-a^*a$, a negative real multiple of the identity by the same argument. Thus the adjoint fixes exactly $\mathbb R$ and negates the pure-imaginary elements, which is the standard conjugation. Write $S_k=\bigoplus_{j=1}^{m_k}Y_k^{(j)}$ orthogonally with equivariant isomorphisms $\varphi_j:Y_k\to Y_k^{(j)}$; since $\varphi_j^*\varphi_j\in\mathbb K_k$ is self-adjoint and positive, rescaling makes each $\varphi_j$ isometric. With $P_j$ the orthogonal projection onto $Y_k^{(j)}$, the block entries $A_{ij}=\varphi_i^*P_iA\varphi_j$ lie in $\mathbb K_k$ and satisfy $(A^*)_{ij}=(A_{ji})^*$. This identifies the part of $\mathcal C_{\mathcal G}$ on $S_k$ with $\operatorname{Herm}_{m_k}(\mathbb K_k)$ and its positive elements with the positive definite Hermitian matrices. Such a matrix has $m_k$ real diagonal entries and $m_k(m_k-1)/2$ free off-diagonal entries in $\mathbb K_k$, which gives (45f.1). Every summand is at least one, so the dimension equals one exactly when $n_{\mathcal G}=1$ and $m_1=1$. Removing the positive scale lowers the dimension of the open cone $\mathcal P_{\mathcal G}$ by one. ∎
+
+**Corollary 45f.1 (First-Shell Stabilizers and Scalarization).** At a regular point whose rank-four carrier is identified, as in Lemma C.6d, with $\mathbb R^4$ carrying the first shell $\Xi_{D_4}$ and with $g^E$ proportional to the Euclidean product, let $\tau$ be the $g^E$-dual direction of $dt_x$, so that $S_x=\tau^\perp$. The full orthogonal symmetry group of $\Xi_{D_4}$ is the Weyl group $W(F_4)$ of order $1152$, which contains $W(D_4)$ of order $192$ [Humphreys 1972; Conway & Sloane 1999]. Suppose the accepted intertwiner group contains the stabilizer $\Gamma_\tau$ of $\tau$ in $\Gamma\in\{W(D_4),W(F_4)\}$.
+
+1. If $\Gamma=W(F_4)$ and $\tau$ is parallel to a shell vector or to one of $\pm e_i$ and $\frac12(\pm1,\pm1,\pm1,\pm1)$, then $\Gamma_\tau$ has order $48$ and acts irreducibly on $S_x$, so every natural comparison is $B=\lambda\mathbb 1_S$.
+2. If $\Gamma=W(D_4)$ and $\tau$ is parallel to one of $\pm e_i$ and $\frac12(\pm1,\pm1,\pm1,\pm1)$, then $\Gamma_\tau$ has order $24$ and acts irreducibly on $S_x$, with the same conclusion.
+3. If $\Gamma=W(D_4)$ and $\tau$ is parallel to a shell vector, then $\Gamma_\tau$ has order $8$ and splits $S_x$ into three pairwise non-isomorphic invariant lines. When the accepted group is $\Gamma_\tau$, the natural comparisons are the positive operators diagonal in this splitting, with two shape parameters.
+
+*Proof.* $W(F_4)$ acts transitively on its $24$ long roots $\Xi_{D_4}$ and on its $24$ short roots $\pm e_i$, $\frac12(\pm1,\pm1,\pm1,\pm1)$ [Humphreys 1972], so item 1 reduces to $\tau=e_1$ and $\tau=e_1+e_2$, and each stabilizer has order $1152/24=48$. For $e_1$, the reflections in $e_2,e_3,e_4$ and in $e_i\pm e_j$ with $2\le i<j\le4$ generate all signed permutations of the last three coordinates. The coordinate sign changes have distinct characters on the three axes, so every invariant subspace is a span of axes, and the permutations leave no proper nonzero span invariant. For $e_1+e_2$, use the orthonormal basis $f_1=(e_1-e_2)/\sqrt2$, $f_2=e_3$, $f_3=e_4$ of $S_x$. The reflections in $e_1-e_2$, $e_3$ and $e_4$ change the signs of $f_1$, $f_2$ and $f_3$, so an invariant subspace is a span of basis vectors. The reflections in $e_3\mp e_4$ send $f_2$ to $\pm f_3$, and the reflection in $a=\frac12(1,-1,1,1)=\frac1{\sqrt2}f_1+\frac12f_2+\frac12f_3$ sends $f_1$ to $-(f_2+f_3)/\sqrt2$ and $f_2$ to $-\frac1{\sqrt2}f_1+\frac12f_2-\frac12f_3$. No proper nonzero span is invariant.
+
+For item 2, the $W(D_4)$-orbits of these vectors have eight elements, so the stabilizers have order $192/8=24$. The stabilizer of $e_1$ consists of the permutations of the last three coordinates combined with an even number of their sign changes, and the argument for $e_1$ applies. The stabilizer of $\frac12(1,1,1,1)$ is the coordinate permutation group $S_4$, acting on $(1,1,1,1)^\perp$ by its irreducible standard representation. Conjugation by a single coordinate sign change normalizes $W(D_4)$, preserves $\Xi_{D_4}$ and covers the vectors with an odd number of minus signs.
+
+For item 3, $W(D_4)$ acts transitively on $\Xi_{D_4}$, and the stabilizer of $e_1+e_2$ consists of the eight products of the transpositions $(12)$ and $(34)$ with the sign change of coordinates $3$ and $4$. The lines spanned by $f_1$, $(f_2+f_3)/\sqrt2$ and $(f_2-f_3)/\sqrt2$ carry the characters $((12),(34),\mathrm{sign})\mapsto(-1,1,1)$, $(1,1,-1)$ and $(1,-1,-1)$, which are distinct. Theorem 45f with $n_{\mathcal G}=3$ and $m_k=d_k=1$ gives $\dim_{\mathbb R}\mathcal C_{\mathcal G}=3$. ∎
+
+**Theorem 45g (Monotone-Metric Lock on Classical Response Directions).** In Corollary 45b, let $\rho_x=\rho(\theta(x))$ be faithful on the retained carrier, with spectral decomposition $\rho_x=\sum_ip_i|i\rangle\langle i|$, $p_i>0$, and write $X_v=d\rho_{\theta(x)}(d\theta_xv)$ for $v\in T_xU$. Let $\mathfrak F$ be the set of operator monotone functions $f:(0,\infty)\to(0,\infty)$ with $f(t)=tf(t^{-1})$ and $f(1)=1$, and for $f\in\mathfrak F$ put
+$$
+h^f_x(v,v)=\frac14\sum_{i,j}\frac{|\langle i|X_v|j\rangle|^2}{p_j\,f(p_i/p_j)}.
+\tag{45g.1}
+$$
+By Petz's classification [Petz 1996], the forms $4h^f$ are exactly the pullbacks of the Riemannian metrics on faithful states that are monotone under all CPTP maps and reduce to the classical Fisher metric on commuting directions; the function $f_A(t)=(1+t)/2$ gives $h^{f_A}=h$ of (45b.1). Let $f_H(t)=2t/(1+t)$ and
+$$
+\kappa_x=\frac{(p_{\max}+p_{\min})^2}{4p_{\max}p_{\min}}.
+$$
+Then:
+
+1. $h_x(v,v)\le h^f_x(v,v)\le h^{f_H}_x(v,v)\le\kappa_xh_x(v,v)$ for every $f\in\mathfrak F$, and $\{h^f_x(v,v):f\in\mathfrak F\}$ is the whole interval $[h_x(v,v),h^{f_H}_x(v,v)]$;
+2. $h^f_x(v,v)=h_x(v,v)$ for every $f\in\mathfrak F$ if and only if $[X_v,\rho_x]=0$, and the common value is then $\frac14\operatorname{tr}(\rho_x^{-1}X_v^2)$;
+3. if $B^f$ is the comparison endomorphism (45b.3) of $h^{f,sp}=h^f|_{S_x\times S_x}$ with respect to $g^{sp}$, then $B\le B^f\le\kappa_xB$ in the $g^{sp}$-order, and $B^f=B$ for every $f\in\mathfrak F$ exactly when $[X_v,\rho_x]=0$ for every $v\in S_x$.
+
+Thus the monotone-metric choice left open in Proposition 45d changes the comparison only along coherent response directions, and by at most the factor $\kappa_x$. On a branch carrying the Čencov-Petz datum of Definition X.8a.2a, PCE-minimality selects $f_A$, and item 3 gives the exact effect of any other normalized monotone choice.
+
+*Proof.* In the eigenbasis, the left and right multiplications $\mathbf L_\rho$ and $\mathbf R_\rho$ by $\rho=\rho_x$ act on the matrix unit $|i\rangle\langle j|$ by $p_i$ and $p_j$, so Petz's metric $K^f_\rho(X,X)=\operatorname{tr}X(\mathbf R_\rho^{1/2}f(\mathbf L_\rho\mathbf R_\rho^{-1})\mathbf R_\rho^{1/2})^{-1}(X)$ is four times (45g.1). For $f_A$ the coefficient is $2/(p_i+p_j)$; solving $X_v=\frac12(L_v\rho_x+\rho_xL_v)$ for the symmetric logarithmic derivative $L_v$ entrywise gives $(L_v)_{ij}=2(X_v)_{ij}/(p_i+p_j)$ and $\operatorname{tr}\rho_xL_v^2=\sum_{i,j}2|(X_v)_{ij}|^2/(p_i+p_j)$, which is $F^Q$ of (23c.2), so $h^{f_A}=h$. Every $f\in\mathfrak F$ satisfies $f_H\le f\le f_A$ [Petz 1996], and the upper bound is the pointwise SLD minimum of Theorem X.8a.2b: $f$ is concave and differentiable, differentiation of $f(t)=tf(t^{-1})$ at $t=1$ gives $f'(1)=\frac12$, so the tangent line at $1$ gives $f\le f_A$, and the same bound for $t/f(t)\in\mathfrak F$ gives $f\ge f_H$. Termwise comparison in (45g.1) gives the first two inequalities of item 1, and $(p_i+p_j)^2/(4p_ip_j)\le\kappa_x$ gives the third. The set $\mathfrak F$ is convex, and $s\mapsto h^{(1-s)f_A+sf_H}_x(v,v)$ is continuous on $[0,1]$, so the intermediate value theorem fills the interval. For item 2, $f(p_i/p_j)=f(1)=1$ whenever $p_i=p_j$, so all $h^f$ agree when $(X_v)_{ij}=0$ for $p_i\ne p_j$, that is, when $[X_v,\rho_x]=0$; the sum then becomes $\frac14\sum_j(X_v^2)_{jj}/p_j$. If $(X_v)_{ij}\ne0$ for some $p_i\ne p_j$, then $f_H(p_i/p_j)<f_A(p_i/p_j)$ because $(1+t)^2>4t$ for $t\ne1$, so $h^{f_H}_x(v,v)>h_x(v,v)$. Item 3 follows by restriction to $S_x$, the definition (45b.3) and polarization. ∎
+
+**Resolution TV-CONT-07-R2 (Metadata).** Exact domain: one finite-dimensional spatial response quotient $(S_x,g^{sp})$ with an arbitrary group of $g^{sp}$-orthogonal intertwiners, and, for Theorem 45g, faithful retained states with the Petz family $\mathfrak F$. Premises: the naturality condition (45e.1), the comparison (45b.3) and Petz's classification of CPTP-monotone metrics. Equivalence: comparisons are equal as $g^{sp}$-self-adjoint operators; representations are compared up to equivariant isometry; monotone metrics are normalized by $f(1)=1$. Budget: the isotypic multiplicities and division-algebra types of $S_x$; the spectrum of $\rho_x$ and the matrix entries of $X_v$; the three stabilizer representations of Corollary 45f.1. Verifier: evaluate (45f.1); compare (45g.1) termwise; list the invariant subspaces of the displayed reflections. Falsifier: a representation whose self-adjoint commutant dimension differs from (45f.1), a reducible $S_x$ with scalar self-adjoint commutant, an $f\in\mathfrak F$ outside the order interval of item 1, or a noncommuting $X_v$ on which all monotone metrics agree. Provenance class: source-internal finite representation theory and matrix analysis with the imported Petz classification. Downstream consumers: Corollary 45b, Definition 45c, Propositions 45d--45e, Definition X.8a.2a and `RT-T8`. Nonvacuity: rotations of $\mathbb R^2$ ($\dim_{\mathbb R}\mathcal C_{\mathcal G}=1$ with $\mathbb K=\mathbb C$), two copies of that representation ($\dim_{\mathbb R}\mathcal C_{\mathcal G}=4$), the order-$8$ root stabilizer of Corollary 45f.1 ($\dim_{\mathbb R}\mathcal C_{\mathcal G}=3$), and the two-level state with $p=(\frac15,\frac45)$ and $X_v=\sigma_x$, for which $h^{f_H}/h=\kappa_x=\frac{25}{16}$. This is `positive-discharge` of the monotone-metric/intertwiner classification. The accepted intertwiner group, acceptance of the Definition X.8a.2a datum on coherent directions and the independent scale certificate $\lambda_{\mathrm{QFI}}$ remain `C` under `TV-CONT-07`.
+
 ## 11.5.2 Continuum Relabeling Symmetry and Diffeomorphism Invariance
 
 The emergent manifold branch of Theorems 44–45 admits coordinate charts without making a chart label an observable. Discrete vertex-relabeling invariance motivates coordinate redundancy.
@@ -527,6 +690,34 @@ $$
 admits a covariant continuum dictionary in which $z_v$ is a scalar multiplied by its metric cell volume and $F_n\to\int_M\phi\,d\operatorname{vol}_g$. The same finite arrays also admit a fixed-chart dictionary in which $z_v$ is a scalar multiplied by coordinate cell volume and the limiting prescription is $\int\phi(x)\,d^4x$ while $\phi$ is transformed as a scalar and the coordinate measure is kept as fixed background data. The latter prescription changes under a diffeomorphism with nonunit Jacobian.
 
 *Proof.* Equation (67f) is unchanged by every simultaneous permutation of the labels and array entries. Both continuum prescriptions are ordinary Riemann-sum limits of (67f) after the corresponding meaning of $z_v$ is chosen. The metric-volume prescription is covariant by change of variables. For the fixed-chart prescription, a coordinate change $x'=\chi(x)$ gives the transformed scalar $\phi'(x')=\phi(\chi^{-1}(x'))$; re-evaluation against fixed $d^4x'$ differs by the missing factor $|\det D\chi^{-1}|$ whenever that Jacobian is not one. Thus the finite symmetry does not select the field type or density weight. Hypotheses 11.5.3.1–11.5.3.3 supply exactly those missing data. ∎
+
+**Proposition 45a.3 (Zeroth-Order Density-Bridge Classification).** Let $U\subseteq\mathbb R^4$ be a connected open chart domain and let $L:U\times\mathbb R\times(0,\infty)\to\mathbb R$ be continuous with $L(x,0,m)=0$. For a continuous compactly supported scalar $\phi$ on $U$ and a continuous positive density coefficient $m$ on $U$, put
+$$
+S_U[\phi,m]=\int_UL\bigl(x,\phi(x),m(x)\bigr)\,d^4x.
+\tag{45a.3.1}
+$$
+Let every compactly supported orientation-preserving diffeomorphism $\chi$ of $U$ act by $\chi_*\phi=\phi\circ\chi^{-1}$ and $\chi_*m=(m\circ\chi^{-1})\,|\det D\chi^{-1}|$. Then $S_U[\chi_*\phi,\chi_*m]=S_U[\phi,m]$ for all $\phi$, $m$ and $\chi$ if and only if
+$$
+L(x,s,m)=m\,f(s)
+\tag{45a.3.2}
+$$
+for one continuous $f$ with $f(0)=0$, that is, $S_U=\int_Uf(\phi)\,d\mu$ with $d\mu=m\,d^4x$. A Lagrangian that does not depend on $m$ is invariant only when it vanishes identically. The fixed-chart dictionary of Proposition 45a.2 is this density-free case, and its covariant dictionary is (45a.3.2) with $f(s)=s$ and $\mu$ the metric volume.
+
+*Proof.* Sufficiency is the change-of-variables formula, because $\chi_*m$ carries the inverse Jacobian. For necessity, substitute $x=\chi(y)$ and write $J=|\det D\chi|$:
+$$
+S_U[\chi_*\phi,\chi_*m]
+=
+\int_UL\bigl(\chi(y),\phi(y),m(y)/J(y)\bigr)J(y)\,d^4y.
+$$
+Invariance says that the continuous function $G(y,s,m)=L(\chi(y),s,m/J(y))J(y)-L(y,s,m)$, which vanishes at $s=0$, integrates to zero along every admissible pair $(\phi,m)$. If $G(y_0,s_0,m_0)\ne0$, take $m\equiv m_0$ and let $\phi$ equal $s_0$ on a ball about $y_0$ on which $G(\cdot,s_0,m_0)$ keeps one strict sign, with values between $0$ and $s_0$ on a thin surrounding shell. As the shell volume tends to zero, the integral tends to the nonzero integral over the ball, a contradiction. Hence
+$$
+L\bigl(\chi(y),s,m/J(y)\bigr)J(y)=L(y,s,m)
+\qquad\text{for all }y,s,m,\chi.
+\tag{45a.3.3}
+$$
+For $y_0\in U$ and $\lambda>0$, the time-$\frac14\ln\lambda$ flow of a compactly supported vector field equal to $y-y_0$ near $y_0$ fixes $y_0$ and has $J(y_0)=\lambda$. Then (45a.3.3) gives $L(y_0,s,m)=\lambda L(y_0,s,m/\lambda)$, and $\lambda=m$ gives $L(y_0,s,m)=mL(y_0,s,1)$. For $y_0,y_1\in U$, finitely many time-one flows of compactly supported vector fields that are constant near segments inside convex balls move $y_0$ to $y_1$; composing with a dilation of the previous type at $y_0$ makes $J(y_0)=1$, and (45a.3.3) gives $L(y_1,s,1)=L(y_0,s,1)$. Thus $f(s)=L(y,s,1)$ is independent of $y$. If $L$ does not depend on $m$, then $mf(s)$ is independent of $m$, so $f=0$. ∎
+
+**Resolution TV-CONT-04-R2 (Metadata).** Exact domain: zeroth-order local functionals (45a.3.1) of one continuous compactly supported scalar and one continuous positive density coefficient on a connected four-dimensional chart domain, with a continuous Lagrangian vanishing at zero field. Premises: scalar transformation of $\phi$ and weight-one density transformation of $m$ under compactly supported orientation-preserving diffeomorphisms. Equivalence: equality of the functionals on all admissible pairs. Budget: the Lagrangian as a function of $(x,s,m)$, one dilation flow and finitely many translation flows. Verifier: substitution of (45a.3.2), the localization step and (45a.3.3). Falsifier: an invariant continuous Lagrangian outside the form (45a.3.2), or a nonzero invariant Lagrangian without density argument. Provenance class: source-internal local variational classification. Downstream consumers: Proposition 45a.2, Hypotheses 11.5.3.1--11.5.3.3 and Theorem 45a. Nonvacuity: $L=ms$ and $L=m\sin s$ are invariant, while $L=s^2$ changes under a volume-changing flow. This is `positive-discharge` of the zeroth-order density-transformation classification and `negative-refutation` of density-free zeroth-order invariance. Positive jet orders, tensor and spinor field types, boundary transformation terms and the local finite-order limit remain `M+R` under `TV-CONT-04`.
 
 **Corollary 45a.1 (Derived Noether Identity for the Matter Sector).** Let $S[\Psi,g]=S_{\mathrm{geom}}[g]+S_{\mathrm{MPU}}[\Psi,g]$ with $S_{\mathrm{MPU}}$ of the scalar-density form of Theorem 45a. With covariant metric variations, define the matter stress-energy tensor by
 $$
@@ -650,6 +841,51 @@ a+2b^{\mathsf T}u+u^{\mathsf T}Cu=0
 \qquad(|u|=1).
 $$
 Replacing $u$ by $-u$ gives $b=0$. Hence $u^{\mathsf T}Cu=-a$ on the unit sphere. Homogeneity and polarization give $C=-aI$, so $q'=-a q$. If $a=0$, then $q'$ is the zero form and its null set is all of $V$, contrary to the hypothesis. Therefore $c=-a\ne0$, and uniqueness follows because $q$ is nonzero. ∎
+
+**Theorem 46a.4 (Characteristic-Cone Classification of Quadratic and Hyperbolic Symbols).** Let $V$ be a real vector space of dimension $n\ge2$. For a homogeneous real polynomial $P$ on $V$ write
+$$
+Z(P)=\{\xi\in V\setminus\{0\}:P(\xi)=0\}.
+$$
+Call $P$ hyperbolic with respect to $\vartheta\in V$ when $P(\vartheta)\ne0$ and $s\mapsto P(\xi+s\vartheta)$ has only real roots for every $\xi\in V$, and strictly hyperbolic when these roots are moreover simple for every $\xi\notin\mathbb R\vartheta$. Let $q\ne0$ be a real quadratic form on $V$.
+
+1. If $q$ is indefinite, every real polynomial vanishing on $Z(q)$ is divisible by $q$.
+2. The nonzero quadratic forms $q'$ with $Z(q')=Z(q)$ are exactly the multiples $cq$ with $c\ne0$ if and only if $q$ is indefinite or has rank one. If $q$ is semidefinite of rank at least two, non-proportional semidefinite forms with the same kernel have the same characteristic set.
+3. $q$ is hyperbolic with respect to $\vartheta$ if and only if $q(\vartheta)\ne0$ and the restriction of $q$ to the $q$-orthogonal complement of $\vartheta$ is semidefinite with the sign opposite to $q(\vartheta)$; equivalently, $q$ or $-q$ has exactly one negative eigenvalue and $\vartheta$ lies in its negative cone.
+4. Let $n\ge3$ and let $q$ be nondegenerate and Lorentzian. A nonzero homogeneous $P$ satisfies $Z(P)=Z(q)$ if and only if
+$$
+P=q^mR,
+\qquad
+m\ge1,
+\tag{46a.4.1}
+$$
+with $R$ homogeneous and semidefinite, $q\nmid R$, and $Z(R)\subseteq Z(q)$; in particular $P$ has even degree. Such a $P$ is hyperbolic with respect to some $\vartheta$ if and only if $R$ is constant, so that $P=cq^m$. Its hyperbolic directions are then exactly the timelike vectors, and it is strictly hyperbolic exactly when $m=1$.
+5. If $q$ is nondegenerate with at least two positive and at least two negative eigenvalues, no homogeneous polynomial $P$ with $Z(P)=Z(q)$ is hyperbolic. No homogeneous polynomial of positive degree with empty characteristic set is hyperbolic.
+
+On a cotangent space, hyperbolicity of a homogeneous constant-coefficient symbol with respect to $\vartheta$ is Gårding's necessary and sufficient condition for a well-posed Cauchy problem with data on the hyperplanes $\langle\vartheta,x\rangle=\mathrm{const}$ [Gårding 1951]. Consequently, when all retained sectors share the characteristic set of one nondegenerate quadratic form in dimension at least three, the one-time well-posedness entry of $\mathfrak C_{\mathrm{sig}}$ excludes the elliptic and ultrahyperbolic alternatives and forces Lorentzian inertia and a symbol $cq^m$; the second-order or strict-hyperbolicity entry then selects $cq$. The symbols $q_U$ and $q_L^2$ of Proposition 46a.2 are the ultrahyperbolic exclusion of item 5 and the non-strict case $m=2$ of item 4.
+
+*Proof.* For item 1, choose coordinates with $q=-t^2+Q_0(y)$, where $t$ is one coordinate and $Q_0$ is a quadratic form in the remaining coordinates $y$ with a positive eigenvalue. Division by the monic polynomial $t^2-Q_0(y)$ in $t$ gives
+$$
+P=qA+tB(y)+C(y).
+$$
+On the nonempty open set $\{y:Q_0(y)>0\}$ both points $(\pm\sqrt{Q_0(y)},y)$ belong to $Z(q)$. If $P$ vanishes on $Z(q)$, then $C\pm\sqrt{Q_0}\,B=0$ there, so $B$ and $C$ vanish on an open set and hence identically.
+
+For item 2, item 1 makes every quadratic $q'$ vanishing on $Z(q)$ a scalar multiple of an indefinite $q$, and $q'\ne0$ makes the scalar nonzero. If $q=\pm\ell^2$ with $\ell$ linear, a quadratic $q'$ vanishing on $\ker\ell\setminus\{0\}$ has the form $\ell\ell'$ with $\ell'$ linear, and $Z(q')=Z(q)$ forces $\ker\ell'\subseteq\ker\ell$, hence $\ell'=c\ell$. If $q=\pm\sum_{i\le k}x_i^2$ with $k\ge2$ in suitable coordinates, the form $\pm(x_1^2+2\sum_{2\le i\le k}x_i^2)$ has the same characteristic set and is not proportional to $q$.
+
+For item 3, $q(\vartheta)\ne0$ gives $V=\mathbb R\vartheta\oplus\vartheta^{\perp_q}$. For $\xi=a\vartheta+\eta$ with $\eta\in\vartheta^{\perp_q}$, the discriminant of $s\mapsto q(\xi+s\vartheta)$ is $-4q(\vartheta)q(\eta)$. All roots are real for every $\xi$ exactly when $q(\vartheta)q(\eta)\le0$ on $\vartheta^{\perp_q}$, and Sylvester's law of inertia turns this into the stated eigenvalue condition.
+
+For item 4, use coordinates with $q=-t^2+|x|^2$, $x\in\mathbb R^{n-1}$, $n-1\ge2$. By item 1, $P=q^mR$ with $m\ge1$ and $q\nmid R$, and $Z(P)=Z(q)\cup Z(R)$, so $Z(P)=Z(q)$ exactly when $Z(R)\subseteq Z(q)$. The argument uses the following fact:
+
+(*) if $R(|x|,x)=0$ or $R(-|x|,x)=0$ for all $x$ in a nonempty open set, then $q\mid R$.
+
+To prove (*), write $R=E(t^2,x)+tO(t^2,x)$ and put $e(x)=E(|x|^2,x)$ and $o(x)=O(|x|^2,x)$. The hypothesis gives $e\pm|x|o=0$ on an open set, hence $e^2=|x|^2o^2$ as polynomials. Because $|x|^2$ is irreducible over $\mathbb R$ for $n-1\ge2$, it divides $e^2$ to an even power and $|x|^2o^2$ to an odd power unless $o=0$; hence $o=e=0$, $R$ vanishes on $Z(q)$, and item 1 gives $q\mid R$.
+
+For $n\ge3$ the complement of $Z(q)\cup\{0\}$ consists of the future timelike cone, the past timelike cone and the connected spacelike region, and $R$ has one sign on each. If the future and spacelike signs differed, then for every future null $\eta=(|x|,x)$ the future timelike points $\eta+\epsilon e_0$ and the spacelike points $\eta-\epsilon e_0$, $0<\epsilon<2|x|$, would give $R(\eta)=0$, contrary to (*); the past cone is treated in the same way. Hence $R$ is semidefinite, and $R(-\xi)=R(\xi)\ne0$ at spacelike $\xi$ makes its degree even. The converse inclusion follows from $Z(q^mR)=Z(q)\cup Z(R)$.
+
+If $P=q^mR$ is hyperbolic with respect to $\vartheta$, so are $q$ and $R$, because the roots of a product are the roots of its factors. Item 3 makes $\vartheta$ timelike; choose the coordinates with $\vartheta=e_0$. If $\deg R\ge1$, every line $\xi+\mathbb Re_0$ with $\xi\notin\mathbb Re_0$ meets $Z(R)\subseteq Z(q)$, so one of the points $(\pm|x|,x)$, where $x\ne0$ is the spatial part of $\xi$, lies in $Z(R)$. The relatively closed sets $A_\pm=\{x\ne0:R(\pm|x|,x)=0\}$ then cover $\mathbb R^{n-1}\setminus\{0\}$, and one of them has nonempty interior by Baire's theorem, contrary to (*). Thus $R$ is constant. Conversely, for $P=cq^m$ and timelike $\vartheta$, item 3 gives two real roots of $q(\xi+s\vartheta)$, simple for $\xi\notin\mathbb R\vartheta$ because $-4q(\vartheta)q(\eta)>0$ when $\eta\ne0$, and $P$ repeats each root $m$ times; a null $\vartheta$ gives $P(\vartheta)=0$, and a spacelike $\vartheta$ violates item 3.
+
+For item 5, item 1 gives $q\mid P$, so hyperbolicity of $P$ would make $q$ hyperbolic, which item 3 excludes for this inertia. If $Z(P)$ is empty and $\deg P\ge1$, then for $\xi\notin\mathbb R\vartheta$ the polynomial $s\mapsto P(\xi+s\vartheta)$ has degree $\deg P$ and no real root. ∎
+
+**Resolution TV-CONT-05-R2 (Metadata).** Exact domain: homogeneous real polynomial symbols on a finite-dimensional cotangent space, compared with one nonzero quadratic form $q$; items 4 and 5 of Theorem 46a.4 use nondegenerate $q$, and item 4 uses $n\ge3$. Premises: hyperbolicity as defined in Theorem 46a.4. Equivalence: equality of real characteristic sets and proportionality of symbols. Budget: one division remainder in a diagonal coordinate, one quadratic discriminant in $s$, and the three sign components of $V\setminus(Z(q)\cup\{0\})$. Verifier: division by $t^2-Q_0$, the discriminant $-4q(\vartheta)q(\eta)$ and the factorization step (*). Falsifier: an indefinite $q$ with a vanishing polynomial that $q$ does not divide, a hyperbolic symbol with Lorentzian characteristic set outside $\{cq^m\}$, or a hyperbolic symbol with elliptic or ultrahyperbolic characteristic set. Provenance class: source-internal real-algebraic classification. Downstream consumers: Definition 46a.1, Proposition 46a.2, Theorem 46a.3, Corollary 46a and `RT-T8`. Nonvacuity: $q_L$, $q_L^2$, $q_L\,(\xi_0^2+|\xi|^2)$ and $q_U$ realize the strictly hyperbolic, non-strict, non-hyperbolic and ultrahyperbolic cases. This is `positive-discharge` of the quadratic-cone rigidity classification over all nonzero quadratic forms, degenerate forms included, of the classification of hyperbolic symbols sharing a nondegenerate quadratic cone in dimension at least three, and of signature selection from one common nondegenerate quadratic cone together with hyperbolicity; Proposition 46a.2 retains the cone-only `negative-refutation`. Symbols of order above two sharing a degenerate quadratic cone remain `M`: in four dimensions $(\xi_0-\xi_1)^3(\xi_0+\xi_1)$ is hyperbolic with respect to $e_0$ and has the characteristic set of the rank-two form $\xi_1^2-\xi_0^2$, yet it is not of the form $cq^m$. Common characteristic sets that are not quadric cones also remain `M`. The common support cone, attained frontier, clock/edge normalization, one-time well-posed closure, frame agreement and exclusions on one realized branch remain `C+R` under `TV-CONT-05`.
 
 ### 11.6.3 Causal-Diamond Reconstruction from Predictive Inclusion
 
@@ -910,6 +1146,33 @@ $$
 U=I^+((-T,o))\cap I^-((T,o)).
 $$
 The static causal-distance criterion keeps $U$ inside $(-T,T)\times B_T(o)$, so the spatial isometry identifies $U$ in the two products; as a diamond, $U$ is causally convex. Every finite family of its subdiamonds consequently has the same inclusion, orientation, volume, and local-density capacity record. The Cauchy surfaces are not homeomorphic because their fundamental groups are respectively trivial and $\mathbb Z$. Theorem 46g avoids this counterexample by requiring the completed diamond basis and its topological-frame extension; each physical finite subrecord remains a test of that completion rather than a replacement for it. ∎
+
+**Proposition 46g.2 (Certified Finite-Band Injection and Reconstruction Envelope).** Work on the finite graph of Definition F.10.4a.4.2, with the sector $PW_\Omega$ and sampling map $\mathcal A_\Omega$ of Definition 46f, and let the cover $\mathcal C_\Omega=\{C_i\}_{i=1}^N$ be a partition of the vertex set into cells that induce connected subgraphs. For each cell let $\gamma(C_i)$ be the smallest nonzero eigenvalue of the operator of the form (F.10.4a.6.1) restricted to the edges inside $C_i$, with $\gamma(C_i)=+\infty$ when $|C_i|=1$, and put $\gamma_*=\min_i\gamma(C_i)$. If $0\le\Omega<\gamma_*$, then $\mathcal A_\Omega$ is injective on $PW_\Omega$ and
+$$
+\Bigl(1-\frac{\Omega}{\gamma_*}\Bigr)\|f\|^2
+\le\|\mathcal A_\Omega f\|^2
+\le\|f\|^2
+\qquad(f\in PW_\Omega).
+\tag{46g.2.1}
+$$
+Consequently the least-squares reconstruction $\tilde f\in PW_\Omega$ from perturbed samples $\mathcal A_\Omega f+e$ obeys
+$$
+\|\tilde f-f\|\le\Bigl(1-\frac{\Omega}{\gamma_*}\Bigr)^{-1/2}\|e\|.
+\tag{46g.2.2}
+$$
+The threshold is sharp: for the one-cell partition of a connected graph with at least two vertices, $\mathcal A_\Omega$ is injective on $PW_\Omega$ exactly when $\Omega<\gamma(V)$.
+
+*Proof.* For $f\in PW_\Omega$ let $a_i$ be the mean of $f$ on $C_i$. Then $|\langle f,\phi_i\rangle|^2=|C_i|\,|a_i|^2$ and
+$$
+\sum_{v\in C_i}|f(v)|^2=|C_i|\,|a_i|^2+\sum_{v\in C_i}|f(v)-a_i|^2.
+$$
+Since $f-a_i$ is orthogonal to the constants on the connected cell, the variational characterization of $\gamma(C_i)$ bounds the last sum by $\mathcal E_{C_i}(f)/\gamma(C_i)$, where $\mathcal E_{C_i}$ keeps only the edges inside $C_i$. The cells are disjoint, so $\sum_i\mathcal E_{C_i}(f)\le\mathcal E_{\mathrm{PU}}(f)=\langle L_{\mathrm{PU}}f,f\rangle\le\Omega\|f\|^2$. Summing over cells gives
+$$
+\|f\|^2\le\|\mathcal A_\Omega f\|^2+\frac{\Omega}{\gamma_*}\|f\|^2,
+$$
+the lower bound in (46g.2.1). The vectors $\phi_i$ are orthonormal because the cells are disjoint, which gives the upper bound. The least-squares solution is $\tilde f=f+\mathcal A_\Omega^+e$ with the pseudoinverse on $PW_\Omega$, whose norm is at most the reciprocal square root of the lower bound, proving (46g.2.2). For the one-cell partition, $\mathcal A_\Omega f$ is a multiple of the mean of $f$, and the kernel of $\mathcal A_\Omega$ on $PW_\Omega$ is spanned by the eigenvectors of $L_{\mathrm{PU}}$ with eigenvalues in $(0,\Omega]$; it is nonzero exactly when $\Omega\ge\gamma(V)$. ∎
+
+**Resolution TV-CONT-06-R2 (Metadata).** Exact domain: finite weighted graphs of Definition F.10.4a.4.2 with a partition cover into connected cells and $0\le\Omega<\gamma_*$. Premises: the counting-measure inner product and the form (F.10.4a.6.1). Equivalence: equality of vectors in $PW_\Omega$. Budget: one smallest nonzero eigenvalue per cell and the partition. Verifier: compute each $\gamma(C_i)$, test $\Omega<\gamma_*$, and read off (46g.2.1)--(46g.2.2). Falsifier: a partition into connected cells with $\Omega<\gamma_*$ and a nonzero $f\in PW_\Omega$ of zero cell means, or a connected one-cell graph with $\Omega\ge\gamma(V)$ and injective sampling. Provenance class: source-internal finite spectral graph theory. Downstream consumers: item 5 of Definition 46f, Theorem 46g and Theorem F.10.4a.4.3. Nonvacuity: every connected graph with at least two vertices, the one-cell partition and $\Omega=\gamma(V)/2$. This is `positive-discharge` of the finite-band injection and error-envelope components of $\mathfrak C_{\mathrm{TB}}^\Omega$ on partition covers, with a sharp threshold; Corollary 46g.1 retains the finite-record `negative-refutation`. The completed basis/topological-frame extension, common valuation, orientation and the physical realization of one accepted $\mathfrak C_{\mathrm{TB}}^\Omega$ remain `C+R` under `TV-CONT-06`.
 
 **Definition 46h (Finite Metric-Response Conditioning Certificate).** Fix one causal-order/inclusion stratum; the discrete inclusion record selects this stratum and is not differentiated. On a compact regular branch, let $\theta\in U\subset\mathbb R^p$ parameterize a declared finite-dimensional local metric envelope $g(\theta)$. Let
 $$
@@ -1327,6 +1590,47 @@ $$
 $$
 which is GKSL. Conjugation covariance of every $H,L_a$ makes the complete superoperator agree on overlaps. At each fibre, diagonalize $H$ and then diagonalize the commuting Hermitian $L_a$ successively inside the invariant eigenspaces. This gives a simultaneous orthonormal eigenbasis at that fibre without asserting a smooth eigenbasis across degeneracies. Direct evaluation on $|i\rangle\langle j|$ gives the scalar generator eigenvalue $-i(E_i-E_j)/\hbar-\tfrac12(\ell_i-\ell_j)^{\mathsf T}C(\ell_i-\ell_j)$. The autonomous scalar differential equation gives (47e.3). The parity statement follows because the Hamiltonian term is linear in the signed differences while the dissipative term is quadratic. The final equivalence follows by the sign of each realized decay rate; positivity on those difference vectors alone need not imply positivity of $C$. ∎
 
+**Theorem 47f (Classification of Pure-Dephasing Semigroups and the Triangle-Phase Gate).** Fix an orthonormal basis $\{|i\rangle\}_{i=1}^d$ of one fibre of $\mathcal W$, and let $(T_t)_{t\ge0}$ be a norm-continuous semigroup of linear maps on the fibre endomorphisms that is diagonal on matrix units, $T_t(|i\rangle\langle j|)=\mu_{ij}(t)|i\rangle\langle j|$. The following are equivalent:
+
+1. every $T_t$ is completely positive and trace preserving;
+2. $\mu_{ij}(t)=e^{t\Lambda_{ij}}$, where $\Lambda$ is Hermitian, has zero diagonal and is conditionally positive semidefinite:
+$$
+\sum_{i,j}\bar c_i\Lambda_{ij}c_j\ge0
+\qquad\text{whenever}\qquad
+\sum_ic_i=0;
+\tag{47f.1}
+$$
+3. there are real $E_1,\ldots,E_d$ and vectors $u_1,\ldots,u_d\in\mathbb C^r$ with $r\le d-1$ such that
+$$
+\Lambda_{ij}=-\frac{i}{\hbar}(E_i-E_j)-\frac12\|u_i-u_j\|^2+i\,\omega_{ij},
+\qquad
+\omega_{ij}=\operatorname{Im}\sum_{a=1}^ru_{ia}\bar u_{ja};
+\tag{47f.2}
+$$
+equivalently, the generator is
+$$
+\mathcal L(\rho)=-\frac{i}{\hbar}[H,\rho]+\sum_{a=1}^r\Bigl(L_a\rho L_a^*-\frac12\{L_a^*L_a,\rho\}\Bigr),
+\qquad
+H=\sum_iE_i|i\rangle\langle i|,
+\qquad
+L_a=\sum_iu_{ia}|i\rangle\langle i|,
+$$
+with commuting normal Lindblad operators.
+
+Moreover, $\Lambda_{ij}=-\frac{i}{\hbar}(E_i-E_j)-\frac12(\ell_i-\ell_j)^{\mathsf T}C(\ell_i-\ell_j)$ for real $E_i$, real vectors $\ell_i$ and a real $C\succeq0$, which is the exponent of (47e.3) in Theorem 47e, if and only if every triangle phase vanishes:
+$$
+\Phi_{ijk}:=\operatorname{Im}(\Lambda_{ij}+\Lambda_{jk}+\Lambda_{ki})=0
+\qquad(1\le i,j,k\le d).
+\tag{47f.3}
+$$
+Condition (47f.3) holds automatically for $d=2$. For $d\ge3$ it can fail: $H=0$ and the single normal operator $L=\operatorname{diag}(1,i,0)$ give $\Phi_{123}=-1$. When (47f.3) holds, the signed branch exchange of Theorem 47e makes the phase odd and the rate even. When it fails, every representation (47f.2) carries the nonzero triangle phases, which are invariant under $E\mapsto-E$ and $u\mapsto-u$, so the exchange leaves an even phase component.
+
+*Proof.* The map $\rho\mapsto M\circ\rho$ of entrywise multiplication by $M$ has Choi matrix $\sum_{i,j}M_{ij}|i\rangle\langle j|\otimes|i\rangle\langle j|$, which is $M$ on the span of the vectors $|i\rangle\otimes|i\rangle$ and zero on its complement, so the map is completely positive exactly when $M\succeq0$ and trace preserving exactly when $M_{ii}=1$. Norm continuity and the semigroup law give $\mu_{ij}(t)=e^{t\Lambda_{ij}}$, with $\Lambda_{ij}$ the generator eigenvalue on $|i\rangle\langle j|$. If item 1 holds, $M(t)=(e^{t\Lambda_{ij}})$ is positive semidefinite, hence Hermitian, for every $t\ge0$, so $\Lambda$ is Hermitian with zero diagonal. For $\sum_ic_i=0$, $c^*M(0)c=|\sum_ic_i|^2=0$ and $c^*M(t)c\ge0$, so the right derivative at $t=0$ gives (47f.1). If item 2 holds, set $K_{ij}=\Lambda_{ij}-\Lambda_{i1}-\Lambda_{1j}$. For every $a\in\mathbb C^d$, the vector $c=a-(\sum_ia_i)e_1$ has zero sum and $c^*\Lambda c=a^*Ka$, so $K\succeq0$ with vanishing first row and column. Writing $K_{ij}=\sum_au_{ia}\bar u_{ja}$ with $u_1=0$ and $r\le d-1$, the zero diagonal gives $\operatorname{Re}\Lambda_{i1}=-\frac12\|u_i\|^2$; putting $E_i=-\hbar\operatorname{Im}\Lambda_{i1}$ and using $\Lambda_{1j}=\overline{\Lambda_{j1}}$ yields (47f.2). Evaluation of the displayed generator on $|i\rangle\langle j|$ returns (47f.2), and GKSL generators produce CPTP semigroups [Gorini, Kossakowski & Sudarshan 1976; Lindblad 1976], so item 3 implies item 1.
+
+For the exponent of (47e.3), $\operatorname{Im}\Lambda_{ij}=-(E_i-E_j)/\hbar$, whose triangle sums vanish. Conversely, if (47f.3) holds, put $E_i=-\hbar\operatorname{Im}\Lambda_{i1}$; the triangle $(i,1,j)$ gives $\operatorname{Im}\Lambda_{ij}=\operatorname{Im}\Lambda_{i1}+\operatorname{Im}\Lambda_{1j}=-(E_i-E_j)/\hbar$. For real $c$ with $\sum_ic_i=0$ the antisymmetric part of $\Lambda$ drops out of (47f.1), so $\operatorname{Re}\Lambda$ is conditionally positive semidefinite, and the construction above with real Gram vectors gives $\operatorname{Re}\Lambda_{ij}=-\frac12|\ell_i-\ell_j|^2$ with $\ell_i\in\mathbb R^{d-1}$ and $C=I$. For $d=2$ every index triple repeats an index, and $\Phi_{iij}=\operatorname{Im}(\Lambda_{ij}+\overline{\Lambda_{ij}})=0$. In the example, $\omega_{12}=\operatorname{Im}(1\cdot\bar i)=-1$ and $\omega_{23}=\omega_{31}=0$. Finally, the $E$-terms cancel in every triangle sum and $\omega$ is quadratic in $u$, which gives the stated invariance of $\Phi_{ijk}$. ∎
+
+**Resolution TV-CONT-09-R2 (Metadata).** Exact domain: norm-continuous semigroups on one finite-dimensional fibre that act diagonally on the matrix units of a fixed orthonormal basis. Premises: the notation of Theorem 47e and the GKSL theorem. Equivalence: equality of the generator matrices $\Lambda$; representations (47f.2) are compared through $\Lambda$. Budget: the $d(d-1)/2$ off-diagonal entries of $\Lambda$ and all index triples. Verifier: test Hermiticity, the zero diagonal and (47f.1) through the Gram matrix $K$, then evaluate (47f.3). Falsifier: a CPTP diagonal semigroup violating (47f.1), a triangle-flat $\Lambda$ that is not an exponent of the form (47e.3), or an exponent of the form (47e.3) with a nonzero triangle phase. Provenance class: source-internal finite-dimensional open-system classification with the imported GKSL theorem. Downstream consumers: Theorem 47c, Corollary 47d, Theorem 47e, Theorem 48c and `TV-S-04`. Nonvacuity: the commuting Hermitian generators of Theorem 47e and the three-level normal example with $\Phi_{123}=-1$. This is `positive-discharge` of the classification of the pure-dephasing branch, including its commuting normal non-Hermitian members, and of the exact triangle gate for the odd-phase/even-rate signature. Population-mixing noncommuting generators, nonlinear branches, and the common carrier for the `TV-S-03` geometry/phase map, the `TV-S-04` CPTP class, source ownership and the calibrated coefficient remain `M+C+R+O` under `TV-CONT-09`.
+
 **Testable PU discriminator against self-gravity collapse models.**
 The deterministic chronometric phase-rate invariant and the saturated chronometric ND-RID dephasing branch scale linearly with the magnitude of the internal energy splitting at the same geometry. For two-branch interferometers engineered so that the branches have the same mass-density distribution but differ by internal clock splitting, the PU chronometric branch predicts the following ratio whenever the reference rate $\Gamma_{\mathrm{ch}}^{(kl)}$ is nonzero:
 $$
@@ -1459,6 +1763,22 @@ $$
 The same row-reduction pass that decides existence therefore classifies and counts every strict-spin or fixed-twist lift on the supplied nerve. Anomaly cancellation, matter coupling, and physical selection among these classes remain separate entries of $\mathfrak C_{\mathrm{tan}}$.
 
 *Proof.* Fix one solution $b_*$. Every other solution has the form $b_*+z$ with $z\in\ker\delta_1$, and every such $z$ gives a solution. Gauge changes identify $z$ and $z+\delta_0c$, so the quotient is the affine space modeled on (48b.5.3). A vector space of dimension $\beta_1(K)$ over $\mathbb F_2$ has $2^{\beta_1(K)}$ elements. Gaussian elimination computes both dimensions and supplies representatives. ∎
+
+**Corollary 48b.6 (Global Hyperbolicity Discharges the Strict-Spin Obstruction).** Let $M_{\mathrm{reg}}$ be connected, oriented, time-oriented and globally hyperbolic, with a smooth four-dimensional Lorentzian metric, as in the branch class of Theorem 46b. Then:
+
+1. $M_{\mathrm{reg}}$ is diffeomorphic to $\mathbb R\times\Sigma$ for a smooth spacelike Cauchy hypersurface $\Sigma$, which is a connected orientable three-manifold, and
+$$
+w_1(M_{\mathrm{reg}})=0,
+\qquad
+w_2(M_{\mathrm{reg}})=0;
+\tag{48b.6.1}
+$$
+2. the strict-spin systems (48b.4.1) are solvable on every finite good-cover nerve of $M_{\mathrm{reg}}$, Theorem 48b applies, and the product bundle $P(M_{\mathrm{reg}},\mathrm{Spin}(1,3)\times U(d_0))$ of Theorem 48 exists globally;
+3. the spin lifts form an affine torsor for $H^1(M_{\mathrm{reg}};\mathbb F_2)\cong H^1(\Sigma;\mathbb F_2)$, and on a finite good cover with nerve $K$ the count of Corollary 48b.5 is $2^{\beta_1(K)}=|H^1(\Sigma;\mathbb F_2)|$, independent of the cover.
+
+*Proof.* The smooth splitting theorem for globally hyperbolic spacetimes [Bernal & Sánchez 2003] supplies a smooth spacelike Cauchy hypersurface $\Sigma$ and a diffeomorphism $M_{\mathrm{reg}}\cong\mathbb R\times\Sigma$ under which $TM_{\mathrm{reg}}$ is the sum of a trivial line bundle and the pullback of $T\Sigma$. The projection $\mathrm{pr}$ to $\Sigma$ is a homotopy equivalence, so $\Sigma$ is connected and $\mathrm{pr}^*$ is injective in cohomology. The Whitney product formula gives $w_i(M_{\mathrm{reg}})=\mathrm{pr}^*w_i(\Sigma)$, so $\Sigma$ is orientable because $M_{\mathrm{reg}}$ is. For a closed orientable three-manifold, Wu's formula gives $w_2=v_2+v_1^2$ with $v_1=w_1=0$ and $v_2=0$, because $\mathrm{Sq}^2$ vanishes on classes of degree one [Milnor & Stasheff 1974]. For general $\Sigma$, every class in $H_2(\Sigma;\mathbb F_2)$ is carried by a compact three-dimensional submanifold $C\subset\Sigma$ with boundary, namely a regular sublevel set of a proper smooth function. Since $C$ embeds in its closed orientable double $DC$, $w_2(\Sigma)|_C=w_2(DC)|_C=0$, and $w_2(\Sigma)=0$ because $H^2(\Sigma;\mathbb F_2)=\operatorname{Hom}(H_2(\Sigma;\mathbb F_2),\mathbb F_2)$. This proves item 1. Item 2 follows from Proposition 48b.4 and Theorem 48b, since cocycles representing the zero classes (48b.6.1) are coboundaries. Item 3 is the classification of spin structures by $H^1(\,\cdot\,;\mathbb F_2)$ [Milnor 1963b], combined with the homotopy equivalence and with the identification of good-cover nerve cohomology with the cohomology of $M_{\mathrm{reg}}$ used in Proposition 48b.4. ∎
+
+**Resolution TV-CONT-08-R2 (Metadata).** Exact domain: connected, oriented, time-oriented, globally hyperbolic smooth four-dimensional Lorentzian branches. Premises: the branch class of Theorem 46b, the smooth splitting theorem, Wu's formula and the classification of spin structures. Equivalence: spin lifts up to isomorphism of double covers of the frame bundle; cocycles modulo coboundaries. Budget: $w_1$, $w_2$ and $H^1(\Sigma;\mathbb F_2)$, together with the rank computations of Corollary 48b.5 on any finite good cover. Verifier: (48b.6.1) and the Gaussian elimination of Proposition 48b.4 on any finite good-cover nerve. Falsifier: an oriented, time-oriented, globally hyperbolic four-dimensional branch with $w_2\ne0$, or a finite good cover whose lift count differs from $|H^1(\Sigma;\mathbb F_2)|$. Provenance class: source-internal global Lorentzian topology with the imported splitting and characteristic-class theorems. Downstream consumers: Theorems 48, 48b and 48c, Corollaries 46a and 48b.1, Definition 48b.2 and $\mathfrak C_{\mathrm{tan}}$. Nonvacuity: Minkowski space with $\Sigma=\mathbb R^3$ (one lift) and $\mathbb R\times T^3$ (eight lifts). This is `positive-discharge` of the strict-spin obstruction and of the lift classification on the whole globally hyperbolic branch, beyond a supplied finite nerve. Non-globally-hyperbolic regular branches keep the finite decision procedure of Proposition 48b.4 and remain `M` under `TV-CONT-08`; selection of one lift, the anomaly/bordism ledger, chiral connection, active field, lower-order interactions and mass response on the common cone remain `C+R`.
 
 **11.8.3 Theorem 48c (Conditional Global CPTP Transport Closure).** Let $P(M_{\mathrm{reg}},\mathrm{Spin}(1,3)\times U(d_0))$ be the principal bundle of Theorem 48, globally exact under Theorem 48b, and let $\mathcal W=S\otimes E$ be its associated spin-internal bundle. Assume:
 

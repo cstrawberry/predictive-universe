@@ -255,6 +255,38 @@ Variance enters only through $F_\lambda$: the multiplicative penalty is $1/F_\la
 
 **Remark.** By Theorem W.5 (active‑cap case), the true‑capacity optimum satisfies $u_{\mathrm T}^*\ge u_{\mathrm J}^*$; the product at the true optimum is therefore $\ge$ its Jensen‑cap value. The bound (W.2.5) is asserted at the Jensen‑cap–saturated optimum.
 
+**Proposition W.10a (Closed-Form Branch Classifier).** Under the standing assumptions, let $u_{\mathrm J}^*=(a_{\mathrm{cap}}-1)/x$ be the Jensen-cap boundary of (W.1.1) and put
+$$
+\Theta(\lambda;d_0):=\frac{1}{u_{\mathrm J}^*}\sum_{i=1}^M\frac{\lambda_i}{1+\lambda_iu_{\mathrm J}^*}.
+\tag{W.2.7}
+$$
+The unconstrained minimizer $u_0$ of (W.0.1) lies on the cap-active branch, on the branch boundary, or on the interior branch of Section W.0 exactly when
+$$
+2\tilde A_{\mathrm{PCE}}<\Theta,\qquad 2\tilde A_{\mathrm{PCE}}=\Theta,\qquad 2\tilde A_{\mathrm{PCE}}>\Theta,
+$$
+respectively. Moreover
+$$
+\Theta\le\frac{Mx^2}{D_{\mathrm{cap}}}\le\frac{S_2}{D_{\mathrm{cap}}},
+\tag{W.2.8}
+$$
+with equality in the first inequality exactly for a flat spectrum. For a flat spectrum $\lambda_i=\lambda$,
+$$
+u_0=\frac{\sqrt{1+2M\lambda^2/\tilde A_{\mathrm{PCE}}}-1}{2\lambda},
+$$
+and the cap-active branch is exactly $2\tilde A_{\mathrm{PCE}}<S_2/D_{\mathrm{cap}}$. For a nonflat spectrum the interval $\Theta\le2\tilde A_{\mathrm{PCE}}<S_2/D_{\mathrm{cap}}$ is nonempty and lies on the branch boundary or the interior branch, so the bound (W.2.3) of Proposition W.8 is necessary but not sufficient for the cap-active branch.
+
+*Proof.* Since $d_0\ge2$ and $M\ge1$, $a_{\mathrm{cap}}>1$, so $u_{\mathrm J}^*>0$ and $g_J(u_{\mathrm J}^*)=M\ln a_{\mathrm{cap}}=\ln d_0$. Lemma W.1 makes $g_J$ strictly increasing, so $g_J(u_0)>\ln d_0$, $g_J(u_0)=\ln d_0$ or $g_J(u_0)<\ln d_0$ exactly when $u_0>u_{\mathrm J}^*$, $u_0=u_{\mathrm J}^*$ or $u_0<u_{\mathrm J}^*$. Because $\phi'(0)=-\Gamma_0S_1<0$, the minimizer satisfies $u_0>0$ and $\phi'(u_0)=0$, and $\phi'$ is strictly increasing because $\phi''>0$ (Lemma W.1). Hence $u_0>u_{\mathrm J}^*$ exactly when $\phi'(u_{\mathrm J}^*)<0$, that is,
+$$
+2A_{\mathrm{PCE}}u_{\mathrm J}^*<\Gamma_0\sum_{i=1}^M\frac{\lambda_i}{1+\lambda_iu_{\mathrm J}^*},
+$$
+which is $2\tilde A_{\mathrm{PCE}}<\Theta$; the other two cases follow in the same way with equality and with the reversed inequality. The function $\lambda\mapsto\lambda/(1+\lambda u_{\mathrm J}^*)$ is strictly concave on $[0,\infty)$, so Jensen's inequality gives
+$$
+\Theta\le\frac{M}{u_{\mathrm J}^*}\,\frac{x}{1+xu_{\mathrm J}^*}=\frac{Mx^2}{(a_{\mathrm{cap}}-1)a_{\mathrm{cap}}}=\frac{Mx^2}{D_{\mathrm{cap}}},
+$$
+with equality exactly when all $\lambda_i$ are equal, while $Mx^2\le S_2$. For $\lambda_i=\lambda$, which is positive because $x>0$, the equation $\phi'(u)=0$ is $2\tilde A_{\mathrm{PCE}}\lambda u^2+2\tilde A_{\mathrm{PCE}}u-M\lambda=0$, whose positive root is displayed, and $\Theta=M\lambda^2/D_{\mathrm{cap}}=S_2/D_{\mathrm{cap}}$. For a nonflat spectrum $\Theta<Mx^2/D_{\mathrm{cap}}\le S_2/D_{\mathrm{cap}}$, and the classifier places the displayed interval outside the cap-active branch. ∎
+
+**Resolution TV-W-01-R1 (Metadata).** Exact domain: the surrogate potential (W.0.1) under the standing assumptions, for every finite nonnegative spectrum with $x>0$, every $\tilde A_{\mathrm{PCE}}>0$, $M\ge1$ and $d_0\ge2$. Premises: Lemma W.1, (W.0.5) and (W.1.1). Equivalence: the branch label as a function of $(\lambda,\tilde A_{\mathrm{PCE}},d_0)$. Budget: every such datum. Verifier: evaluate $\Theta$ from (W.2.7) and compare it with $2\tilde A_{\mathrm{PCE}}$; independently solve $\phi'(u_0)=0$ and evaluate $g_J(u_0)$. Falsifier: a datum whose branch under (W.0.5) differs from the $\Theta$ comparison, or a nonflat spectrum with $\Theta=Mx^2/D_{\mathrm{cap}}$. Provenance class: target-independent one-dimensional convex analysis. Downstream consumers: Proposition W.8, Theorem W.10, Assumption W.3.A, Section W.6 and `TV-W-01`. Nonvacuity: for the flat spectrum $\lambda_i=1$ at $(d_0,M)=(8,7)$, $\Theta=7/D_{\mathrm{cap}}=15.036071\ldots$, so $\tilde A_{\mathrm{PCE}}<7.518035\ldots$ is cap-active and larger values are interior. Proposition W.10a gives `positive-discharge` of the interior, boundary and cap-active classification component of `TV-W-01` on the surrogate class. Derivation of the finite LAN channel capacity and the PCE quadratic cost from a declared probe, and the convergence certificate, remain open under `TV-W-01`.
+
 ---
 
 ## W.3 Weak sector relation (Weinberg angle)
@@ -563,9 +595,181 @@ N_c(2q_f-Y_{u_f}-Y_{d_f})
 $$
 in every family. Thus (W.14b.1) is necessary and sufficient. It has $2F+1$ variables $(q_f,\ell_f,h)$ and one independent linear equation, giving dimension $2F$. There are $F(N_c+1)$ left-handed doublets, proving the parity condition. Finally, two Yukawa equations $Y_{u_f}=q_f+h_j=q_f+h_{j'}$, or their down-type analogues, force $h_j=h_{j'}$. A scalar absent from all such equations contributes to no fermion anomaly polynomial, proving the inert-Higgs statement. ∎
 
-This theorem discharges the arbitrary-family common-Higgs branch and the all-active-multiple-Higgs reduction. General Yukawa graphs with different Higgs assignments, additional sterile or defect representations, and compact primitive-lattice/global-form classification remain separate branches.
+This theorem discharges the arbitrary-family common-Higgs branch and the all-active-multiple-Higgs reduction. General Yukawa graphs with different Higgs assignments, additional sterile or defect representations, and compact primitive-lattice/global-form classification remain separate branches. Theorem W.14c classifies every one-family doublet-Yukawa graph, Theorem W.14e the Yukawa-uncoupled singlet extensions of Theorems W.14 and W.14b, and Theorem W.14f the compact primitive lattices and central global forms of the common-Higgs branch.
 
 **Resolution record W.14b-R1 (`TV-W-05`, common-Higgs family component).** Theorem W.14b gives `positive-discharge` of every finite family count $F\ge1$ with family-diagonal Dirac Yukawa couplings to one common Higgs, including family-nonuniversal charges, and proves that any additional Higgs coupled to the same fixed fermion fields has the same hypercharge. Equivalence is nonzero common real rescaling on the local Lie-algebra branch. The verifier substitutes (W.14b.1) into every perturbative anomaly polynomial and checks the one remaining linear equation; any solution outside (W.14b.1), or any member with a nonzero listed anomaly, falsifies the record. General Yukawa assignment graphs, extra representations, compact primitive lattices, and global form remain outside this component.
+
+**Theorem W.14c (Complete One-Family Local Moduli for Arbitrary Doublet-Yukawa Graphs).** Fix $N_c\ge2$ and one family with the fields and doubled-hypercharge convention of Theorem W.14, optionally enlarged by $\nu_R:(\mathbf1,\mathbf1)_{Y_\nu}$. Let $\mathcal C=\{u,d,e\}$, or $\mathcal C=\{u,d,e,\nu\}$ when $\nu_R$ is present. For $c\in\mathcal C$ let $D(c)=Q_L$ if $c\in\{u,d\}$, $D(c)=L_L$ if $c\in\{e,\nu\}$, and $S(c)=c_R$, and put
+$$
+\delta_c:=Y_{S(c)}-Y_{D(c)}.
+$$
+A doublet-Yukawa graph $\Gamma=(\mathcal H,I)$ consists of a finite set $\mathcal H$ of Higgs doublets $H_a:(\mathbf1,\mathbf2)_{h_a}$ and a set $I\subset\mathcal C\times\mathcal H\times\{\pm1\}$ of incidences. The incidence $(c,a,+1)$ retains the operator $\overline{D(c)}\,\widetilde H_a\,S(c)$ with $\widetilde H_a=i\sigma_2H_a^*$, and $(c,a,-1)$ retains $\overline{D(c)}\,H_a\,S(c)$. Gauge invariance of the retained operators is
+$$
+\delta_c=\varepsilon h_a\qquad\bigl((c,a,\varepsilon)\in I\bigr).
+\tag{W.14c.1}
+$$
+The graph of Theorem W.14 is $\{(u,H,+1),(d,H,-1),(e,H,-1)\}$, and Theorem W.14a adds $(\nu,H,+1)$.
+
+1. The perturbative local gauge and mixed-gravitational anomaly equations alone have the real solution set $V$ equal, without $\nu_R$, to the union of the three lines
+$$
+\begin{aligned}
+\ell_\pm&:\ (Y_Q,Y_u,Y_d,Y_L,Y_e)=q\,(1,\,1\pm N_c,\,1\mp N_c,\,-N_c,\,-2N_c),\\
+\ell_0&:\ (Y_Q,Y_u,Y_d,Y_L,Y_e)=t\,(0,1,-1,0,0),
+\end{aligned}
+\tag{W.14c.2}
+$$
+and, with $\nu_R$, to the union of the three planes
+$$
+\begin{aligned}
+\Pi_\pm&:\ (Y_Q,Y_u,Y_d,Y_L,Y_e,Y_\nu)=(q,\,q+t,\,q-t,\,-N_cq,\,-N_cq\mp t,\,-N_cq\pm t),\\
+\Pi_0&:\ (Y_Q,Y_u,Y_d,Y_L,Y_e,Y_\nu)=(0,\,t,\,-t,\,0,\,-s,\,s),
+\end{aligned}
+\tag{W.14c.3}
+$$
+with $q,t,s\in\mathbb R$. The line $\ell_+$ is (W.4.3), the plane $\Pi_+$ is (W.14a.1) with $h=t$, and the line $\ell_{B-L}:=\Pi_+\cap\Pi_-=\{t=0\}$ carries quark hypercharge $q$ and lepton hypercharge $-N_cq$. The relabeling $u_R\leftrightarrow d_R$ exchanges $\ell_+$ with $\ell_-$; each of the relabelings $u_R\leftrightarrow d_R$ and $e_R\leftrightarrow\nu_R$ exchanges $\Pi_+$ with $\Pi_-$; both preserve $\ell_0$ and $\Pi_0$.
+2. For every graph $\Gamma$, the real solutions of (W.14c.1) together with all perturbative local gauge and mixed-gravitational anomaly equations are exactly the pairs $(Y,h)$ with
+$$
+Y\in V\cap L_\Gamma,
+\qquad
+h_a=\varepsilon\,\delta_c(Y)\ \ \bigl((c,a,\varepsilon)\in I\bigr),
+$$
+and $h_a\in\mathbb R$ free for every doublet without incidence, where
+$$
+L_\Gamma:=\bigl\{Y:\ \varepsilon\,\delta_c(Y)=\varepsilon'\,\delta_{c'}(Y)\ \text{whenever }(c,a,\varepsilon),(c',a,\varepsilon')\in I\bigr\}.
+$$
+3. On the components of $V$,
+$$
+\begin{array}{c|c|c}
+\text{component}&\text{parameters}&(\delta_u,\delta_d,\delta_e\,[,\delta_\nu])\\\hline
+\ell_+&q&N_cq\,(1,-1,-1)\\
+\ell_-&q&N_cq\,(-1,1,-1)\\
+\ell_0&t&(t,-t,0)\\
+\Pi_+&(q,t)&t\,(1,-1,-1,1)\\
+\Pi_-&(q,t)&t\,(1,-1,1,-1)\\
+\Pi_0&(t,s)&(t,-t,-s,s)
+\end{array}
+\tag{W.14c.4}
+$$
+Call $\Gamma$ balanced for a sign vector $\sigma$ on a channel subset $\mathcal C'\subset\mathcal C$ when $\varepsilon\sigma_c=\varepsilon'\sigma_{c'}$ for every two incidences $(c,a,\varepsilon),(c',a,\varepsilon')$ with a common doublet and $c,c'\in\mathcal C'$, including $c=c'$. Put $\sigma_+=(1,-1,-1)$ and $\sigma_-=(-1,1,-1)$ on $(u,d,e)$, $\tau=(1,-1)$ on $(u,d)$, $\kappa=(-1,1)$ on $(e,\nu)$, and $\rho_\pm=(1,-1,\mp1,\pm1)$ on $(u,d,e,\nu)$. Then:
+   - (a) $\ell_\pm\subset L_\Gamma$ if $\Gamma$ is balanced for $\sigma_\pm$ on $\mathcal C$; otherwise $\ell_\pm\cap L_\Gamma=\{0\}$.
+   - (b) $\ell_0\subset L_\Gamma$ if no doublet carries incidences with both $e$ and a quark channel and $\Gamma$ is balanced for $\tau$ on $\{u,d\}$; otherwise $\ell_0\cap L_\Gamma=\{0\}$.
+   - (c) $\Pi_\pm\subset L_\Gamma$ if $\Gamma$ is balanced for $\rho_\pm$ on $\mathcal C$; otherwise $\Pi_\pm\cap L_\Gamma=\ell_{B-L}$.
+   - (d) $\Pi_0\cap L_\Gamma$ is the subspace of $(t,s)$ cut out by $t=0$ if $\Gamma$ is not balanced for $\tau$ on $\{u,d\}$, by $s=0$ if it is not balanced for $\kappa$ on $\{e,\nu\}$, and by $\varepsilon\tau_c\,t=\varepsilon'\kappa_{c'}\,s$ for every doublet carrying incidences $(c,a,\varepsilon)$ with $c\in\{u,d\}$ and $(c',a,\varepsilon')$ with $c'\in\{e,\nu\}$.
+4. Every graph has $N_c+1$ left-handed $SU(2)$ doublets, so the $SU(2)$ global anomaly requires $N_c+1$ even for every $\Gamma$.
+
+*Proof.* The $SU(N_c)^2U(1)$, $SU(2)^2U(1)$ and mixed-gravitational equations are
+$$
+2Y_Q-Y_u-Y_d=0,\qquad N_cY_Q+Y_L=0,\qquad N_c(2Y_Q-Y_u-Y_d)+2Y_L-Y_e-Y_\nu=0,
+$$
+with the $Y_\nu$ term absent without $\nu_R$. Writing $Y_Q=q$, $Y_u=q+t$ and $Y_d=q-t$, they give $Y_L=-N_cq$ and either $Y_e=-2N_cq$ or $Y_e=-N_cq-s$, $Y_\nu=-N_cq+s$. The pure $SU(N_c)^3$ coefficient is $2-1-1=0$, and the perturbative $SU(2)^3$ anomaly vanishes. The cubic hypercharge anomaly becomes
+$$
+\mathcal A_{Y^3}=-6N_cqt^2+2(-N_cq)^3-(-2N_cq)^3=6N_cq\,(N_cq-t)(N_cq+t)
+$$
+without $\nu_R$ and
+$$
+\mathcal A_{Y^3}=-6N_cqt^2-6(-N_cq)s^2=6N_cq\,(s-t)(s+t)
+$$
+with $\nu_R$. Since $N_c\ne0$, the zero set is $q=0$ or $t=\pm N_cq$, respectively $q=0$ or $s=\pm t$; these are (W.14c.2) and (W.14c.3). The relabelings act by $t\mapsto-t$ and $s\mapsto-s$.
+
+The Yukawa equations (W.14c.1) do not enter the anomaly polynomials. A doublet with incidences has $h_a=\varepsilon\delta_c$ for each of them, and these values agree exactly on $L_\Gamma$; a doublet without incidence enters no equation, because scalars contribute to no fermion anomaly polynomial. This proves item 2. Substituting the parametrizations into $\delta_c$ gives (W.14c.4). On $\ell_\pm$ a relation $\varepsilon\delta_c=\varepsilon'\delta_{c'}$ reads $(\varepsilon\sigma_{\pm,c}-\varepsilon'\sigma_{\pm,c'})N_cq=0$, which holds identically or forces $q=0$. On $\ell_0$ a relation between quark channels reads $(\varepsilon\tau_c-\varepsilon'\tau_{c'})t=0$, a relation between $e$ and $e$ reads $0=0$, and a relation between $e$ and a quark channel $c'$ reads $\varepsilon'\tau_{c'}t=0$. On $\Pi_\pm$ a relation reads $(\varepsilon\rho_{\pm,c}-\varepsilon'\rho_{\pm,c'})t=0$ and leaves $q$ free. On $\Pi_0$, $\delta_c=\tau_ct$ for quark channels and $\delta_c=\kappa_cs$ for lepton channels, so the relations are the displayed linear equations. This proves item 3. Finally $Q_L$ supplies $N_c$ doublets and $L_L$ supplies one. ∎
+
+**Corollary W.14d (Yukawa-Graph Criterion for Standard Model Hypercharge).** Let $\Gamma$ be a one-family doublet-Yukawa graph as in Theorem W.14c.
+
+1. Without $\nu_R$, the fermion charge vectors of the solutions of $\Gamma$ form exactly one of the lines $\ell_+$ and $\ell_-$, namely the Standard Model line (W.4.3) or its image under $u_R\leftrightarrow d_R$, if and only if $\Gamma$ is balanced for $\sigma_+$ or for $\sigma_-$ and some doublet carries incidences with $e$ and with a quark channel. On that branch every doublet with an incidence has hypercharge $\pm N_cY_Q$. If no doublet links $e$ with a quark channel and $\Gamma$ is balanced for $\tau$ on $\{u,d\}$, the line $\ell_0$, on which hypercharge acts only on $u_R$ and $d_R$, consists of fermion charge vectors of solutions.
+2. With $\nu_R$, the fermion charge vectors of the solutions of every $\Gamma$ contain $\ell_{B-L}$, with every doublet that carries an incidence neutral there. No one-family doublet-Yukawa graph with a right-handed neutrino has the Standard Model ray as its unique fermion charge ray.
+
+*Proof.* By Theorem W.14c, without $\nu_R$ the fermion charge vectors of the solutions form the union of those lines among $\ell_+,\ell_-,\ell_0$ that lie in $L_\Gamma$. Suppose $\Gamma$ is balanced for $\sigma_+$ and a doublet $a$ carries $(e,a,\varepsilon)$ and $(c,a,\varepsilon')$ with $c\in\{u,d\}$. Then $\ell_+\subset L_\Gamma$, item 3(b) excludes $\ell_0$, and balance for $\sigma_-$ would require $-\varepsilon=\varepsilon'\sigma_{-,c}=-\varepsilon'\sigma_{+,c}$ together with $-\varepsilon=\varepsilon'\sigma_{+,c}$, which is impossible. Hence the union is $\ell_+$; the case $\sigma_-$ is its image under $u_R\leftrightarrow d_R$. Conversely, if the union is $\ell_+$ or $\ell_-$, then $\ell_0\cap L_\Gamma=\{0\}$ and $\Gamma$ is balanced for $\sigma_+$ or $\sigma_-$. Both restrict to $\pm\tau$ on $\{u,d\}$, so $\Gamma$ is balanced for $\tau$ there, and item 3(b) then requires a doublet linking $e$ with a quark channel. On $\ell_\pm$, $h_a=\varepsilon\delta_c=\varepsilon\sigma_{\pm,c}N_cq$ with $Y_Q=q$. The statement on $\ell_0$ is item 3(b). With $\nu_R$, every $\delta_c$ vanishes on $\ell_{B-L}$, so every relation holds and every doublet with an incidence has $h_a=0$ there; $\ell_{B-L}$ is distinct from the Standard Model ray. ∎
+
+**Resolution TV-W-05-R1 (Metadata).** Exact domain: one family of Theorem W.14 at fixed $N_c\ge2$, with or without $\nu_R$, and every finite doublet-Yukawa graph with signed $H_a$ or $\widetilde H_a$ incidences; perturbative local gauge and mixed-gravitational anomalies, with the $SU(2)$ parity recorded separately. Premises: the left-chiral anomaly signs and the doubled-hypercharge convention of Theorem W.14. Equivalence: nonzero common real rescaling; the relabelings $u_R\leftrightarrow d_R$ and $e_R\leftrightarrow\nu_R$ are recorded as explicit component exchanges. Budget: every finite doublet set and every incidence set. Verifier: substitute (W.14c.2)–(W.14c.4) into the anomaly and Yukawa equations, reverse-eliminate, and evaluate the balance conditions. Falsifier: a real solution outside $V\cap L_\Gamma$, a graph whose solution set differs from items 3(a)–(d), or a listed solution with a nonzero perturbative local or mixed-gravitational anomaly. Provenance class: target-independent exact anomaly algebra with no measured charge input. Downstream consumers: Theorems W.14, W.14a and G.8.5a, `TV-W-05`, and `RT-T1`. Nonvacuity: the graph of Theorem W.14 returns $\ell_+$ alone, while the two-doublet graph $\{(u,H_1,+1),(d,H_1,-1),(e,H_2,-1)\}$ returns $\ell_+\cup\ell_-\cup\ell_0$, with $h_2=0$ on $\ell_0$. Theorem W.14c gives `positive-discharge` of the complete one-family arbitrary-graph classification. Corollary W.14d gives `negative-refutation` of hypercharge uniqueness for every one-family graph with $\nu_R$ and for every $\tau$-balanced graph without a doublet linking $e$ with a quark channel. Multi-family graphs outside the family-diagonal common-Higgs branch of Theorem W.14b remain `M`-open under `TV-W-05`.
+
+**Theorem W.14e (Singlet Extensions and the Diagonal Cubic).** For $m\ge1$ put
+$$
+Z_m:=\Bigl\{x\in\mathbb R^m:\ \sum_{i=1}^mx_i=0,\ \ \sum_{i=1}^mx_i^3=0\Bigr\}.
+$$
+Adjoin $n\ge0$ left-handed gauge-singlet Weyl fermions $\chi_j:(\mathbf1,\mathbf1)$ of hypercharges $\sigma_1,\ldots,\sigma_n$, with no Yukawa coupling imposed on them; a right-handed singlet of hypercharge $y$ enters with $\sigma=-y$. For $a>0$ let $n_{\pm a}$ count the singlets of hypercharge $\pm a$. The reduced singlet content of a solution is the multiset obtained by deleting every singlet with $\sigma_j=0$ and, for each $a>0$, $\min(n_a,n_{-a})$ vectorlike pairs of singlets with hypercharges $a$ and $-a$.
+
+1. $Z_1=\{0\}$ and $Z_2=\{(x,-x)\}$; $Z_3$ is the union of the three lines on which one coordinate vanishes and the other two are opposite; $Z_4$ is the union of the three planes $\{x_i+x_j=0,\ x_k+x_l=0\}$ with $\{i,j,k,l\}=\{1,2,3,4\}$.
+2. For $(u,v)\in\mathbb Z^2\setminus\{0\}$ put
+$$
+x(u,v)=\bigl(-(5u-3v)(7u+9v),\ -3(3u+v)(7u-5v),\ -7(u-3v)(u-v),\ (7u-3v)(7u-v),\ 8(7u^2-3v^2)\bigr).
+\tag{W.14e.1}
+$$
+Then $0\ne x(u,v)\in Z_5$. If $(u:v)\in\mathbb P^1(\mathbb Q)$ avoids the eight points $(3:5)$, $(-9:7)$, $(-1:3)$, $(5:7)$, $(3:1)$, $(1:1)$, $(3:7)$ and $(1:7)$, then no coordinate of $x(u,v)$ vanishes and no two coordinates have zero sum. Each proportionality class of the vectors $x(u,v)$ arises from at most two points of $\mathbb P^1(\mathbb Q)$. For example, $x(1,0)=7(-5,-9,-1,7,8)$ and $x(1,-1)=8(2,-9,-7,10,4)$.
+3. Adjoin the singlets to the one-family, one-doublet graph of Theorem W.14 without $\nu_R$. The real solutions are exactly $Y_Q=q\in\mathbb R$, $Y_L=-N_cq$, the Yukawa relations of Theorem W.14 with $Y_H=h$, and
+$$
+(h-N_cq,\ \sigma_1,\ldots,\sigma_n)\in Z_{n+1}.
+\tag{W.14e.2}
+$$
+For $n\le3$, every solution has either empty reduced singlet content and $h=N_cq$, which is the Standard Model line (W.4.3), or $h\ne N_cq$ and reduced content one singlet with $\sigma=N_cq-h$, whose right-handed conjugate carries the Dirac-neutrino hypercharge $-N_cq+h$ of (W.14a.1); the latter reproduces the branch of Theorem W.14a. In particular, for $n=1$ the singlet carries the hypercharge of Theorem W.14a with no Yukawa coupling imposed. For every $n\ge4$ there are infinitely many pairwise nonproportional primitive integral solutions with $h\ne N_cq$ whose reduced singlet content consists of four charged singlets; for $N_c=3$ one of them is
+$$
+Y_Q=1,\ Y_u=3,\ Y_d=-1,\ Y_L=-3,\ Y_e=-5,\ Y_H=2,\qquad(\sigma_1,\sigma_2,\sigma_3,\sigma_4)=(-5,-9,7,8).
+\tag{W.14e.3}
+$$
+4. Adjoin the singlets to the common-Higgs branch of Theorem W.14b, which contains Theorem W.14a at $F=1$. The real solutions are exactly (W.14b.1) together with $(\sigma_1,\ldots,\sigma_n)\in Z_n$. For $n\le4$ the reduced singlet content is empty; for every $n\ge5$ there are infinitely many pairwise nonproportional primitive integral solutions whose reduced singlet content consists of five charged singlets.
+5. The singlets change no nonabelian anomaly coefficient and no $SU(2)$ doublet count.
+
+*Proof.* For $m=3$, substituting $x_3=-x_1-x_2$ gives $\sum_ix_i^3=3x_1x_2x_3$. For $m=4$, substituting $x_4=-x_1-x_2-x_3$ gives
+$$
+\sum_{i=1}^4x_i^3=-3(x_1+x_2)(x_1+x_3)(x_2+x_3),
+$$
+and on the hyperplane $\sum_ix_i=0$ the equation $x_1+x_2=0$ is equivalent to $x_3+x_4=0$. The cases $m=1,2$ are immediate. This proves item 1.
+
+For item 2 put $w=(-9,-5,-1,7,8)$, $e_{12}=(1,-1,0,0,0)$ and $e_{34}=(0,0,1,-1,0)$. Direct expansion gives, for all real $a,b,c$,
+$$
+\sum_i\bigl(ae_{12}+be_{34}+cw\bigr)_i^3=-6c\,(7a^2-28ac-3b^2+24bc).
+$$
+With $a=(28u-24v)u$, $b=(28u-24v)v$ and $c=7u^2-3v^2$, the bracket equals $(28u-24v)^2(7u^2-3v^2)-(28u-24v)^2c=0$, and $ae_{12}+be_{34}+cw=x(u,v)$. All three vectors have coordinate sum zero, so $x(u,v)\in Z_5$. The last coordinate $8(7u^2-3v^2)$ has no rational zero because $3/7$ is not the square of a rational number, so $x(u,v)\ne0$. The coordinates are displayed in (W.14e.1), and the ten pairwise sums are
+$$
+\begin{aligned}
+x_1+x_2&=-14(7u^2-3v^2), & x_1+x_3&=-2(3u+v)(7u-3v), & x_1+x_4&=2(u-3v)(7u-5v),\\
+x_1+x_5&=3(u-v)(7u-v), & x_2+x_3&=-2(5u-3v)(7u-v), & x_2+x_4&=-2(u-v)(7u+9v),\\
+x_2+x_5&=-(u-3v)(7u-3v), & x_3+x_4&=6(7u^2-3v^2), & x_3+x_5&=(7u-5v)(7u+9v),\\
+x_4+x_5&=7(3u+v)(5u-3v). &&&&
+\end{aligned}
+$$
+Every linear factor vanishes exactly at one of the eight listed points. For a fixed nonzero vector $y$, the parameters with $x(u,v)$ proportional to $y$ are common zeros of the binary quadratic forms $y_jx_i(u,v)-y_ix_j(u,v)$. These forms do not all vanish identically: if $y_5\ne0$, the form $y_5x_3-y_3x_5$ is nonzero because $x_3$ and $x_5$ are not proportional, and if $y_5=0$ and $y_i\ne0$, the form $y_ix_5$ is nonzero. A nonzero binary quadratic form has at most two zeros in $\mathbb P^1$.
+
+For item 3, the singlets carry no $SU(N_c)$ or $SU(2)$ charge, so the Yukawa relations and the two nonabelian mixed equations are those of Theorem W.14: $Y_L=-N_cq$, $Y_u=q+h$, $Y_d=q-h$ and $Y_e=-N_cq-h$. The proof of Theorem W.14 evaluates the family's mixed-gravitational and cubic contributions as $-N_cq+h$ and $-(N_cq-h)^3=(h-N_cq)^3$. Adding $\sum_j\sigma_j$ and $\sum_j\sigma_j^3$ gives (W.14e.2). For $n\le3$, item 1 splits the coordinates of $(h-N_cq,\sigma_1,\ldots,\sigma_n)$ into zeros and opposite pairs. The singlet zeros and the pairs of singlets cancel in the reduced content, which is therefore empty when $h=N_cq$ and consists of one singlet of hypercharge $-(h-N_cq)$ otherwise. For $n\ge4$ take $(u:v)$ outside the eight exceptional points, let $y$ be $x(u,v)$ divided by the greatest common divisor of its coordinates, and set $q=1$, $h=N_c+y_1$, $(\sigma_1,\ldots,\sigma_4)=(y_2,\ldots,y_5)$ and $\sigma_j=0$ for $j>4$. Item 2 makes $h\ne N_cq$ and the four singlet hypercharges nonzero with no opposite pair, and $Y_Q=1$ makes the solution primitive. Two such solutions are proportional only when they are equal, which happens for at most two parameter points, so there are infinitely many. The permutation $(-1,-5,-9,7,8)$ of $x(1,0)/7$ with $N_c=3$ gives (W.14e.3).
+
+For item 4, the proof of Theorem W.14b shows that each family contributes zero to the mixed-gravitational anomaly and $-6h^2(N_cq_f+\ell_f)$ to the cubic one, and these contributions sum to zero under (W.14b.1). The singlets therefore satisfy $\sum_j\sigma_j=\sum_j\sigma_j^3=0$ separately. Item 1 splits every point of $Z_n$ with $n\le4$ into zeros and opposite pairs. For $n\ge5$, fix the integral point $q_f=1$, $\ell_f=-N_c$, $h=N_c$ of (W.14b.1), take the five coordinates of each primitive $y$ of item 3 as $\sigma_1,\ldots,\sigma_5$, and set the remaining $\sigma_j=0$; as in item 3, these solutions are primitive and pairwise nonproportional up to the two-point fibers. Item 5 holds because the singlet representation matrices of $SU(N_c)$ and $SU(2)$ vanish. ∎
+
+**Resolution TV-W-05-R2 (Metadata).** Exact domain: $n\ge0$ hypercharged gauge-singlet Weyl fermions without imposed Yukawa couplings, adjoined either to the one-family one-doublet graph of Theorem W.14 or to the common-Higgs branch of Theorem W.14b, with perturbative local gauge and mixed-gravitational anomalies. Premises: Theorems W.14 and W.14b and their sign conventions. Equivalence: nonzero common real rescaling, with neutral singlets and vectorlike singlet pairs removed by the reduced-content rule. Budget: every $n$. Verifier: (W.14e.2) and its W.14b analogue, the factorizations of item 1, the cubic identity and factor list for (W.14e.1), and substitution of (W.14e.3). Falsifier: a solution outside (W.14e.2) or its W.14b analogue, a point of $Z_m$ with $m\le4$ off the listed lines and planes, a nonexceptional parameter giving a zero coordinate or an opposite pair, or a listed solution with a nonzero anomaly. Provenance class: target-independent exact anomaly algebra and diagonal-cubic geometry. Downstream consumers: Theorems W.14, W.14a and W.14b, `TV-W-05`, and `RT-T1`. Nonvacuity: (W.14e.3). Theorem W.14e gives `positive-discharge` of the complete singlet-extension classification on both branches: after reduction the solutions are the Standard Model line and the Theorem W.14a branch for $n\le3$ on the first branch, and the singlet-free branch (W.14b.1) for $n\le4$ on the second. It gives `negative-refutation` of reduced-catalog finiteness for $n\ge4$ on the first branch and $n\ge5$ on the second. Yukawa-coupled singlets on general graphs, non-singlet exotic representations and defect sectors remain `M`-open under `TV-W-05`.
+
+**Theorem W.14f (Compact Primitive Lattices and Center Kernels on the Common-Higgs Branch).** Let $\widetilde G=SU(N_c)\times SU(2)\times U(1)$ with $N_c\ge2$, write elements of the $U(1)$ factor as phases $z$, and let $z$ act on a field of integral hypercharge $y$ by $z^y$. A compact form of a real solution ray is an integral charge vector on that ray; it is primitive when the greatest common divisor of all its fermion and Higgs charges is one.
+
+1. A nonzero real solution vector has a compact form exactly when the ratios of its nonzero charges are rational, and the primitive compact form of such a ray is unique up to sign. On the branch (W.14b.1), the primitive compact forms are, up to sign, the integral points $(q_f,\ell_f,h)\in\mathbb Z^{2F+1}$ with $\sum_f(N_cq_f+\ell_f)=0$ and $\gcd(q_1,\ldots,q_F,\ell_1,\ldots,\ell_F,h)=1$; for $F=1$ they are the coprime pairs $(q,h)$ of (W.14a.1).
+2. For such a primitive point, the subgroup $K\subset\widetilde G$ acting trivially on every fermion and on $H$ is central and cyclic:
+$$
+K=\bigl\langle\bigl(z_g^{-(q_1+h)}I_{N_c},\ z_g^{-h}I_2,\ z_g\bigr)\bigr\rangle\cong\mathbb Z_g,
+\qquad z_g=e^{2\pi i/g},
+\qquad
+g=\gcd\bigl(\{\ell_f+h,\ \ell_f-h,\ q_f-q_1\}_{f=1}^F,\ N_c(q_1+h)\bigr),
+\tag{W.14f.1}
+$$
+and $g\mid2N_c$. The connected global forms through which this representation descends are exactly $\widetilde G/\Xi$ with $\Xi\subset K$, one for each divisor of $g$; the induced representation is faithful exactly for $\Xi=K$. Adjoining singlets of integral hypercharges $\sigma_j$ and further doublets $(\mathbf1,\mathbf2)_{h_b}$ replaces $g$ by $\gcd(g,\sigma_j,h_b-h)$; doublets with $h_b=\pm h$ leave $g$ unchanged.
+3. For $F=1$,
+$$
+g=\gcd\bigl(N_cq-h,\ N_cq+h,\ N_c(q+h)\bigr).
+\tag{W.14f.2}
+$$
+The Standard Model point $(q,h)=(1,N_c)$ has $g=N_c\gcd(2,N_c+1)$, which equals $6$ for $N_c=3$ and reproduces the kernel of Theorem G.8.5b; the point $(q,h)=(1,0)$ on $\ell_{B-L}$ has $g=N_c$. For $N_c=3$, $g=6$ exactly when $q$ and $h$ are odd and $3\mid h$. Hence the $\mathbb Z_6$ quotient is admitted on infinitely many primitive rays of (W.14a.1), for example $(q,h)=(1,3(2k+1))$ for every $k\in\mathbb Z$ and $(q,h)=(5,3)$.
+4. On the components $\ell_0$ and $\Pi_0$ of Theorem W.14c, $K$ is trivial for every primitive form and every set of doublets. On $\ell_\pm$ with doublets of hypercharge $\pm N_cY_Q$ only, $K\cong\mathbb Z_{N_c\gcd(2,N_c+1)}$.
+
+Perturbative anomaly coefficients and the $SU(2)$ doublet count do not depend on $\Xi$.
+
+*Proof.* A real vector is a real multiple of an integral vector exactly when the ratios of its nonzero coordinates are rational, and the integral points of a rational ray are the integral multiples of a primitive vector, unique up to sign. On (W.14b.1) the charges of $Q_{L,f}$, $L_{L,f}$ and $H$ are $q_f$, $\ell_f$ and $h$, and every other charge is an integral combination of them; hence the charge vector is integral exactly when $(q_f,\ell_f,h)$ is, with the same greatest common divisor.
+
+If $(A,B,z)\in\widetilde G$ acts trivially on $u_{R,1}$ and on $L_{L,1}$, then $z^{q_1+h}A=I_{N_c}$ and $z^{\ell_1}B=I_2$, so $A=\zeta I_{N_c}$ and $B=\beta I_2$ are central, with $\zeta^{N_c}=1$ and $\beta=\pm1$. Triviality on $e_{R,f}$, $\nu_{R,f}$, $H$ and $u_{R,f}$ gives
+$$
+z^{\ell_f-h}=z^{\ell_f+h}=1,\qquad \beta=z^{-h},\qquad \zeta=z^{-(q_f+h)}.
+$$
+The last equation for every $f$ requires $z^{q_f-q_1}=1$, and $\zeta^{N_c}=1$ requires $z^{N_c(q_1+h)}=1$. Conversely, these conditions give $z^{2h}=z^{\ell_f+h}z^{-(\ell_f-h)}=1$, hence $\beta=\pm1$, and they make the action trivial on $L_{L,f}$, $d_{R,f}$ and $Q_{L,f}$, where it is $\beta z^{\ell_f}=z^{\ell_f-h}$, $\zeta z^{q_f-h}=z^{-2h}$ and $\zeta\beta z^{q_f}=z^{-2h}$. Thus $z$ ranges over the $g$-th roots of unity and determines $\zeta$ and $\beta$, which proves (W.14f.1). Every field satisfies $\zeta^n\beta^mz^y=1$ for some $n,m\in\{0,1\}$, with $\zeta^{N_c}=\beta^2=1$, so $z^{2N_cy}=1$ for every charge $y$; primitivity and Bezout's identity give $z^{2N_c}=1$, hence $g\mid2N_c$. A central subgroup acts trivially exactly when it lies in $K$, and a cyclic group of order $g$ has exactly one subgroup of each order dividing $g$. An adjoined singlet adds $z^{\sigma_j}=1$, and an adjoined doublet adds $\beta z^{h_b}=z^{h_b-h}=1$, which for $h_b=\pm h$ follows from $z^{2h}=1$.
+
+For $F=1$, $\ell_1=-N_cq$ gives (W.14f.2). At $(1,N_c)$, $g=\gcd(0,2N_c,N_c(N_c+1))=N_c\gcd(2,N_c+1)$, and at $(1,0)$, $g=N_c$. For $N_c=3$, item 2 gives $g\mid6$. Next, $2\mid g$ exactly when $3q-h$ is even, since then $3q+h$ and $3(q+h)$ are even as well; for coprime $q,h$ this means that both are odd. Also $3\mid g$ exactly when $3\mid h$, since then $3$ divides all three entries. The pairs $(1,3(2k+1))$ and $(5,3)$ are coprime and satisfy both conditions.
+
+On $\ell_0$ and $\Pi_0$, $Y_Q=Y_L=0$, so triviality on $L_L$ and $Q_L$ gives $\beta=1$ and $\zeta=1$. Every field then transforms by $z^y$, so $K$ consists of the phases $z$ with $z^y=1$ for every fermion and doublet charge $y$; primitivity and Bezout's identity give $z=1$. On $\ell_+$ with $q=1$, triviality on $e_R$, $L_L$ and $u_R$ gives $z^{2N_c}=1$, $\beta=z^{N_c}$ and $\zeta=z^{-(N_c+1)}$ with $z^{N_c(N_c+1)}=1$, and these conditions make the action trivial on $Q_L$, $d_R$ and on doublets of hypercharge $\pm N_c$. Hence $g=\gcd(2N_c,N_c(N_c+1))$; the relabeling $u_R\leftrightarrow d_R$ gives $\ell_-$. The last sentence holds because the central quotient changes neither the Lie-algebra representation nor the fermion content. ∎
+
+**Resolution TV-W-05-R3 (Metadata).** Exact domain: primitive integral compact forms and central global forms of $\widetilde G$ on the common-Higgs branch (W.14b.1) for every $F\ge1$, with optional hypercharged singlets and further doublets, and on the one-family components of Theorem W.14c. Premises: Theorems W.14a, W.14b and W.14c and the center $\mathbb Z_{N_c}\times\mathbb Z_2\times U(1)$ of $\widetilde G$. Equivalence: sign of the primitive vector; global forms are labeled by the central subgroup $\Xi\subset K$. Budget: every primitive integral point and every central subgroup. Verifier: the congruences of the proof, the explicit generator in (W.14f.1), the divisibility $g\mid2N_c$, and the $N_c=3$ parity and divisibility test. Falsifier: a central element acting trivially outside the cyclic group (W.14f.1), a listed generator acting nontrivially, or a primitive $N_c=3$ point with $g=6$ violating the stated congruences. Provenance class: target-independent finite abelian-group computation. Downstream consumers: Theorems W.14a, W.14b and G.8.5b, `TV-W-05`, the hypercharge-lattice component of `TV-G-07/08`, and `RT-T1`. Nonvacuity: $(q,h)=(1,3)$ reproduces the $\mathbb Z_6$ kernel of Theorem G.8.5b at $N_c=3$, and $(q,h)=(5,3)$ is a distinct primitive ray with the same kernel. Theorem W.14f gives `positive-discharge` of the compact primitive-lattice and central global-form classification on these branches and `negative-refutation` of Standard Model ray selection by $\mathbb Z_6$ global-form compatibility on the plane (W.14a.1). Quotient-specific spin and $\mathrm{Spin}^c$ bordism anomalies and boundary, interface and defect inflow for these global forms remain `M`-open under `TV-W-05`.
 
 **Corollary W.15 (SM normalization and $N_c$).**
 Using the **canonical** SM relation $Q=T_3+\tfrac{Y}{2}$ and $Q(\nu_L)=+\tfrac12+\tfrac{Y_L}{2}=0\Rightarrow Y_L=-1$, we obtain $Y_Q=\tfrac{1}{N_c}$ and $Y_H=1$. Matching $Q(u_L)=+\tfrac23$, $Q(d_L)=-\tfrac13$ fixes $N_c=3$ and

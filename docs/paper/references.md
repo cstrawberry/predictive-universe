@@ -1,5 +1,6 @@
 # References
 
+*   Aaronson, S., & Wigderson, A. (2009). Algebrization: A new barrier in complexity theory. *ACM Transactions on Computation Theory*, *1*(1), Article 2. DOI: 10.1145/1490270.1490272
 *   Abel, C., et al. (2020). Measurement of the permanent electric dipole moment of the neutron. *Physical Review Letters*, *124*(8), 081803. DOI: 10.1103/PhysRevLett.124.081803
 *   Adler, S. L. (1969). Axial-vector vertex in spinor electrodynamics. *Physical Review*, *177*(5), 2426–2438. DOI: 10.1103/PhysRev.177.2426
 *   Agostini, M., Benato, G., Detwiler, J. A., Menéndez, J., & Vissani, F. (2023). Toward the discovery of matter creation with neutrinoless ββ decay. *Reviews of Modern Physics*, *95*, 025002. DOI: 10.1103/RevModPhys.95.025002
@@ -74,6 +75,7 @@
 *   Bennett, C. H. (1982). The thermodynamics of computation—a review. *International Journal of Theoretical Physics*, *21*(12), 905–940. DOI: 10.1007/BF02084158
 *   Berger, M., Gauduchon, P., & Mazet, E. (1971). *Le spectre d'une variété riemannienne*. Lecture Notes in Mathematics, Vol. 194. Springer-Verlag.
 *   Berger, T. (1971). *Rate Distortion Theory: A Mathematical Basis for Data Compression.* Prentice-Hall.
+*   Bernal, A. N., & Sánchez, M. (2003). On smooth Cauchy hypersurfaces and Geroch's splitting theorem. *Communications in Mathematical Physics*, *243*, 461–470.
 *   Berry, M. V. (1984). Quantal phase factors accompanying adiabatic changes. *Proceedings of the Royal Society of London A*, *392*(1802), 45–57. DOI: 10.1098/rspa.1984.0023
 *   Berry, M. V., & Robbins, J. M. (1997). Indistinguishability for quantum particles: spin, statistics and the geometric phase. *Proceedings of the Royal Society A*, *453*(1963), 1771–1790. DOI: 10.1098/rspa.1997.0096
 *   Bertrand, J. (1873). Théorème relatif au mouvement d’un point attiré vers un centre fixe. *Comptes Rendus de l’Académie des Sciences*, *77*, 849–853.
@@ -114,6 +116,7 @@
 *   Brukner, Č. (2018). A no-go theorem for observer-independent facts. *Entropy*, *20*(5), 350. DOI: 10.3390/e20050350
 *   Brunetti, R., Dappiaggi, C., Fredenhagen, K., & Yngvason, J. (Eds.). (2015). *Advances in Algebraic Quantum Field Theory*. Springer.
 *   Brunetti, R., Fredenhagen, K., & Verch, R. (2003). The generally covariant locality principle: A new paradigm for local quantum field theory. *Communications in Mathematical Physics*, *237*(1-2), 31–68. DOI: 10.1007/s00220-003-0815-7
+*   Burago, D., Burago, Y., & Ivanov, S. (2001). *A Course in Metric Geometry* (Graduate Studies in Mathematics, Vol. 33). American Mathematical Society. DOI: 10.1090/gsm/033
 *   Burkhardt, H., & Pietrzyk, B. (2001). Update of the hadronic contribution to the QED vacuum polarization. *Physics Letters B*, *513*(1–2), 46–52. DOI: 10.1016/S0370-2693(01)00393-8
 *   Bartlett, S. D., Rudolph, T., & Spekkens, R. W. (2007). Reference frames, superselection rules, and quantum information. *Reviews of Modern Physics*, *79*, 555–609. DOI: 10.1103/RevModPhys.79.555
 *   Bismut, J.-M., & Goette, S. (2004). Equivariant de Rham torsions. *Annals of Mathematics*, *159*(1), 53–216.
@@ -308,6 +311,7 @@
 *   Gaillard, M. K., & Zumino, B. (1981). Duality rotations for interacting fields. *Nuclear Physics B*, *193*, 221–244.
 *   Gallager, R. G. (1968). *Information Theory and Reliable Communication*. Wiley.
 *   Ganzhinov, M. (2025). Highly symmetric lines. *Linear Algebra and its Applications*, *722*, 12–37. DOI: 10.1016/j.laa.2025.05.002.
+*   Gårding, L. (1951). Linear hyperbolic partial differential equations with constant coefficients. *Acta Mathematica*, *85*, 1–62.
 *   Gavela, M. B., Hernández, P., Orloff, J., & Pène, O. (1994). Standard model CP-violation and baryon asymmetry. *Modern Physics Letters A*, *9*(09), 795–809. DOI: 10.1142/S0217732394000629
 *   Gelfand, I. M., & Naimark, M. A. (1943). On the imbedding of normed rings into the ring of operators in Hilbert space. *Matematicheskii Sbornik*, *12*(54), 197–217.
 *   Gelfond, A. O. (1934). Sur le septième problème de Hilbert. *Bulletin de l'Académie des Sciences de l'URSS. Classe des sciences mathématiques et naturelles* (VIIe série), (4), 623–634.
@@ -398,6 +402,7 @@
 *   Huang, Y.-Z. (1997). Two-dimensional conformal geometry and vertex operator algebras. *Progress in Mathematics*, *148*. Birkhäuser.
 *   Hume, D. (1739). *A Treatise of Human Nature*.
 *   Humphreys, J. E. (1972). *Introduction to Lie Algebras and Representation Theory*. Springer.
+*   Humphreys, J. E. (1990). *Reflection Groups and Coxeter Groups* (Cambridge Studies in Advanced Mathematics, Vol. 29). Cambridge University Press. DOI: 10.1017/CBO9780511623646
 *   Hurwitz, A. (1891). Ueber die angenäherte Darstellung der Irrationalzahlen durch rationale Brüche. *Mathematische Annalen*, *39*, 279–284.
 *   Hurwitz, A. (1898). Über die Composition der quadratischen Formen von beliebig vielen Variablen. *Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen*, 309–316.
 *   Hurwitz, A. (1923). Über die Komposition der quadratischen Formen. *Mathematische Annalen*, *88*, 1–25.
@@ -514,6 +519,7 @@
 *   Lindblad, G. (1973). Entropy, information and quantum measurements. *Communications in Mathematical Physics*, *33*(4), 305–322. DOI: 10.1007/BF01646743
 *   Lindblad, G. (1975). Completely positive maps and entropy inequalities. *Communications in Mathematical Physics*, *40*(2), 147–151. DOI: 10.1007/BF01609396
 *   Lindblad, G. (1976). On the generators of quantum dynamical semigroups. *Communications in Mathematical Physics*, *48*(2), 119–130. DOI: 10.1007/BF01608499
+*   Ling, C.-H. (1965). Representation of associative functions. *Publicationes Mathematicae Debrecen*, *12*, 189–212.
 *   Litim, D. F. (2001). Optimized renormalization group flows. *Physical Review D*, *64*, 105007. DOI: 10.1103/PhysRevD.64.105007
 *   Lloyd, S. (1997). Capacity of the noisy quantum channel. *Physical Review A*, *55*(3), 1613.
 *   Lloyd, S. (2000). Ultimate physical limits to computation. *Nature*, *406*(6799), 1047–1054.
@@ -801,6 +807,7 @@
 *   Wigner, E. P. (1961). Remarks on the mind-body question. In I. J. Good (Ed.), *The Scientist Speculates: An Anthology of Partly-Baked Ideas* (pp. 284–302). William Heinemann.
 *   Wigner, E. P. (1967). Remarks on the mind-body question. In *Symmetries and Reflections* (pp. 171–184). Indiana University Press.
 
+*   Wiley, D. A., Strogatz, S. H., & Girvan, M. (2006). The size of the sync basin. *Chaos*, *16*(1), 015103. DOI: 10.1063/1.2165594
 *   Williams, G., & Watts, D. C. (1970). Non-symmetrical dielectric relaxation behaviour arising from a simple empirical decay function. *Transactions of the Faraday Society*, *66*, 80–85. DOI: 10.1039/TF9706600080
 *   Wilde, M. M. (2017). *Quantum Information Theory* (2nd ed.). Cambridge University Press. DOI: 10.1017/9781316809976
 *   Will, C. M. (2014). The Confrontation between General Relativity and Experiment. *Living Reviews in Relativity*, *17*(1), 4. DOI: 10.12942/lrr-2014-4

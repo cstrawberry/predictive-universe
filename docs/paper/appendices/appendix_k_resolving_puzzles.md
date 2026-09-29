@@ -520,6 +520,113 @@ $$
 $$
 the entropy averages differ although the purity averages coincide. Consequently a second-moment or Page-purity certificate cannot by itself imply the von Neumann Page-entropy estimate of Theorem K.3. The trace-coupled promotion certificate of Definition K.3d.4c is therefore a logically independent input. The witness is exhibited at $d_E=d_L=2$; this is the worked instance establishing logical separation, not a quantitative claim about the magnitude of the purity-entropy gap at higher dimensions, which is governed by the trace-coupled promotion data of Definition K.3d.4c. The witness is consistent with the standard fact that the uniform pure two-qubit stabilizer ensemble is an exact projective $2$-design in the moment sense — its degree-$(2,2)$ polynomial averages match Haar. That moment identity is not a trace-norm coupling of the reduced-state distribution to Haar, and it does not control the non-polynomial entropy functional. The witness exploits exactly this gap between second-moment matching and trace-continuity control. ∎
 
+**Corollary K.3.1b (Second-Moment von Neumann Page Band).** At a registered time $t$, let $d_E(t),d_L(t)\ge1$, let $\rho_E^{\mathrm{PU}}(t)$ be almost surely the early-radiation marginal of a pure state on $\mathbb C^{d_E(t)}\otimes\mathbb C^{d_L(t)}$, and assume the mean-purity bound
+$$
+\mathbb E\,\operatorname{tr}\big((\rho_E^{\mathrm{PU}}(t))^2\big)
+\le
+P_{\mathrm H}(t)+\eta_t,
+\qquad
+P_{\mathrm H}(t):=\frac{d_E(t)+d_L(t)}{d_E(t)d_L(t)+1},
+\qquad
+\eta_t\ge0.
+\tag{K.3.1b.1}
+$$
+An accepted moment certificate satisfying the hypotheses of Corollary K.3.1 supplies (K.3.1b.1) with $\eta_t=c_E\varepsilon_t^{\mathrm{mom}}$. With $d_<(t)$, $d_>(t)$ and $S_{\mathrm{Page}}$ as in Theorem K.3, define
+$$
+\ell_t:=\max\{0,\,-\ln(P_{\mathrm H}(t)+\eta_t)\},
+\qquad
+\Delta_t^{\mathrm{band}}:=\ln d_<(t)-\ell_t.
+\tag{K.3.1b.2}
+$$
+Then:
+
+1. the mean entropy and the Haar Page value lie in one band,
+$$
+\ell_t\le\mathbb E\,S(\rho_E^{\mathrm{PU}}(t))\le\ln d_<(t),
+\qquad
+\ell_t\le S_{\mathrm{Page}}(d_E(t),d_L(t))\le\ln d_<(t),
+$$
+and therefore
+$$
+\left|\mathbb E\,S(\rho_E^{\mathrm{PU}}(t))-S_{\mathrm{Page}}(d_E(t),d_L(t))\right|
+\le\Delta_t^{\mathrm{band}}
+\le\ln\!\left(1+\frac{d_<(t)}{d_>(t)}\right)+\ln\bigl(1+d_<(t)\eta_t\bigr);
+\tag{K.3.1b.3}
+$$
+
+2. uniformly over registered times, $\Delta_t^{\mathrm{band}}<\ln2+\ln(1+d_<(t)\eta_t)$, and at an endpoint with $d_<(t)=1$ the realized entropy, $S_{\mathrm{Page}}$ and $\Delta_t^{\mathrm{band}}$ all vanish;
+
+3. for every $\kappa>1$, the realized radiation state obeys
+$$
+\Pr\left[S(\rho_E^{\mathrm{PU}}(t))>-\ln\bigl(\kappa(P_{\mathrm H}(t)+\eta_t)\bigr)\right]\ge1-\frac1\kappa.
+\tag{K.3.1b.4}
+$$
+
+The band (K.3.1b.3) is the entropy consequence of the Page-purity law (K.3.3) on a pure-marginal carrier. The term von Neumann Page-entropy estimate denotes the certified-error estimate (K.3.2) of Theorem K.3, which requires the trace-coupled promotion of Definition K.3d.4c. At equal dimensions $d_E=d_L=d\ge2$ with $\eta_t=0$, the band width is $\Delta_t^{\mathrm{band}}=\ln\bigl(2d^2/(d^2+1)\bigr)\ge\ln(8/5)$, and the stabilizer ensemble of Corollary K.3.1a has mean entropy $\frac25\ln2$ inside its band $[\ln\frac54,\ln2]$.
+
+*Proof.* The Schmidt decomposition of a pure state on $\mathbb C^{d_E}\otimes\mathbb C^{d_L}$ gives its early marginal rank at most $d_<$, so $S(\rho_E^{\mathrm{PU}}(t))\le\ln d_<(t)$ pointwise. For a density matrix with eigenvalues $p_i$, concavity of the logarithm gives $\sum_ip_i\ln p_i\le\ln\sum_ip_i^2$, that is,
+$$
+S(\rho)\ge-\ln\operatorname{tr}\rho^2.
+$$
+Jensen's inequality for the convex function $-\ln$ over the ensemble, (K.3.1b.1) and monotonicity of $-\ln$ then give
+$$
+\mathbb E\,S(\rho_E^{\mathrm{PU}}(t))
+\ge-\ln\mathbb E\,\operatorname{tr}\big((\rho_E^{\mathrm{PU}}(t))^2\big)
+\ge-\ln\bigl(P_{\mathrm H}(t)+\eta_t\bigr),
+$$
+and $S\ge0$ completes the first band. The Haar ensemble on the same carrier satisfies (K.3.1b.1) with $\eta_t=0$ by the Haar swap calculation in the proof of Corollary K.3.1, and Page's theorem identifies its mean entropy with $S_{\mathrm{Page}}$; the same inequalities and $-\ln P_{\mathrm H}\ge-\ln(P_{\mathrm H}+\eta_t)$ place $S_{\mathrm{Page}}$ in the band. Two points of one interval differ by at most its length, which is the first inequality in (K.3.1b.3). If $\ell_t=-\ln(P_{\mathrm H}+\eta_t)$, then $\Delta_t^{\mathrm{band}}=\ln\bigl(d_<(P_{\mathrm H}+\eta_t)\bigr)$; otherwise $P_{\mathrm H}+\eta_t\ge1$ and $\Delta_t^{\mathrm{band}}=\ln d_<\le\ln\bigl(d_<(P_{\mathrm H}+\eta_t)\bigr)$. Moreover
+$$
+d_<P_{\mathrm H}=\frac{d_<(d_<+d_>)}{d_<d_>+1}<1+\frac{d_<}{d_>},
+\qquad
+P_{\mathrm H}\ge\frac1{d_<},
+$$
+the second because $d_<(d_<+d_>)\ge d_<d_>+1$. Hence $(P_{\mathrm H}+\eta_t)/P_{\mathrm H}\le1+d_<\eta_t$, which proves (K.3.1b.3), and $d_<\le d_>$ gives the uniform bound of item 2. If $d_<(t)=1$, the early marginal is pure or one dimensional, the sum defining $S_{\mathrm{Page}}$ is empty with vanishing correction term, and $P_{\mathrm H}=1$ gives $\ell_t=0=\ln d_<(t)$. For item 3, Markov's inequality gives $\Pr[\operatorname{tr}\rho^2\ge\kappa(P_{\mathrm H}+\eta_t)]\le1/\kappa$, and on the complementary event $S(\rho)\ge-\ln\operatorname{tr}\rho^2>-\ln\bigl(\kappa(P_{\mathrm H}+\eta_t)\bigr)$. The equal-dimension width follows from $P_{\mathrm H}=2d/(d^2+1)\le1$ and increases with $d$; the stabilizer values are those computed in Corollary K.3.1a. ∎
+
+**Corollary K.3.1c (Second-Moment Page Shape on a Fixed-Carrier Doubling Ledger).** Fix an integer $d_{\mathrm{tot}}\ge2$ and registered times $t_0<t_1<\cdots<t_N$ with
+$$
+d_E(t_j)d_L(t_j)=d_{\mathrm{tot}},
+\qquad
+d_E(t_0)=1,
+\qquad
+d_E(t_N)=d_{\mathrm{tot}},
+\qquad
+d_E(t_{j+1})\ge2d_E(t_j).
+\tag{K.3.1c.1}
+$$
+Assume the hypotheses of Corollary K.3.1b at every $t_j$, and write $\bar S_j:=\mathbb E\,S(\rho_E^{\mathrm{PU}}(t_j))$, $\eta_j:=\eta_{t_j}$ and $\ell_j:=\ell_{t_j}$. Then:
+
+1. $\bar S_0=\bar S_N=0$, and $\ell_j>\ln d_<(t_i)$ implies $\bar S_j>\bar S_i$ for all $i,j$;
+
+2. if
+$$
+d_E(t_j)\,\eta_{j+1}<\frac1{d_{\mathrm{tot}}+1}\ \text{ whenever }d_E(t_{j+1})\le\sqrt{d_{\mathrm{tot}}},
+\qquad
+d_L(t_{j+1})\,\eta_j<\frac1{d_{\mathrm{tot}}+1}\ \text{ whenever }d_E(t_j)\ge\sqrt{d_{\mathrm{tot}}},
+\tag{K.3.1c.2}
+$$
+then
+$$
+\bar S_j<\bar S_{j+1}\ \text{ whenever }d_E(t_{j+1})\le\sqrt{d_{\mathrm{tot}}},
+\qquad
+\bar S_j>\bar S_{j+1}\ \text{ whenever }d_E(t_j)\ge\sqrt{d_{\mathrm{tot}}};
+\tag{K.3.1c.3}
+$$
+
+3. under (K.3.1c.2), every index maximizing $\bar S_j$ lies in $\{j_-,j_+\}$, where $j_-$ is the largest index with $d_E(t_{j_-})\le\sqrt{d_{\mathrm{tot}}}$ and $j_+$ is the smallest index with $d_E(t_{j_+})\ge\sqrt{d_{\mathrm{tot}}}$; when $\sqrt{d_{\mathrm{tot}}}$ is a registered early-radiation dimension, $j_-=j_+$ and the maximizer is unique.
+
+Exact second moments, $\eta_j=0$ for every $j$, satisfy (K.3.1c.2). On the $n$-qubit ledger $d_{\mathrm{tot}}=2^n$, $d_E(t_k)=2^k$, the mean von Neumann entropy therefore rises strictly from $k=0$ to $k=\lfloor n/2\rfloor$, falls strictly from $k=\lceil n/2\rceil$ to $k=n$, and turns over at the Page time $k=n/2$ for even $n$ and within $\{(n-1)/2,(n+1)/2\}$ for odd $n$.
+
+*Proof.* Item 2 of Corollary K.3.1b gives $\bar S_0=\bar S_N=0$, since $d_<(t_0)=d_<(t_N)=1$. If $\ell_j>\ln d_<(t_i)$, item 1 of Corollary K.3.1b at both times gives $\bar S_j\ge\ell_j>\ln d_<(t_i)\ge\bar S_i$. For a rising step put $m=d_E(t_j)$ and $m'=d_E(t_{j+1})$, so that $2m\le m'\le\sqrt{d_{\mathrm{tot}}}$ and $d_<(t_j)=m$. Then
+$$
+m\,P_{\mathrm H}(t_{j+1})
+=\frac{mm'+m\,d_{\mathrm{tot}}/m'}{d_{\mathrm{tot}}+1}
+\le\frac{m'^2/2+d_{\mathrm{tot}}/2}{d_{\mathrm{tot}}+1}
+\le\frac{d_{\mathrm{tot}}}{d_{\mathrm{tot}}+1},
+$$
+so (K.3.1c.2) gives $m\bigl(P_{\mathrm H}(t_{j+1})+\eta_{j+1}\bigr)<1$, that is, $\ell_{j+1}>\ln d_<(t_j)$, and item 1 gives $\bar S_{j+1}>\bar S_j$. For a falling step the same computation applies to $m=d_L(t_{j+1})$ and $m'=d_L(t_j)$: then $2m\le m'\le\sqrt{d_{\mathrm{tot}}}$, $d_<(t_{j+1})=m$, and $P_{\mathrm H}$ is symmetric in its two dimensions, so $\ell_j>\ln d_<(t_{j+1})$ and $\bar S_j>\bar S_{j+1}$. For item 3, $d_E(t_j)$ increases strictly with $j$, so the indices with $d_E(t_j)\le\sqrt{d_{\mathrm{tot}}}$ are $0,\ldots,j_-$, those with $d_E(t_j)\ge\sqrt{d_{\mathrm{tot}}}$ are $j_+,\ldots,N$, and $j_+\in\{j_-,j_-+1\}$ with $j_+=j_-$ exactly when $\sqrt{d_{\mathrm{tot}}}$ is registered. A maximizer $j_*<j_-$ would satisfy $d_E(t_{j_*+1})\le\sqrt{d_{\mathrm{tot}}}$ and hence $\bar S_{j_*+1}>\bar S_{j_*}$, while a maximizer $j_*>j_+$ would satisfy $d_E(t_{j_*-1})\ge\sqrt{d_{\mathrm{tot}}}$ and hence $\bar S_{j_*-1}>\bar S_{j_*}$. For $\eta_j=0$ the left sides of (K.3.1c.2) vanish, and the qubit ledger has $d_E(t_{k+1})=2d_E(t_k)$ with $\sqrt{d_{\mathrm{tot}}}=2^{n/2}$. ∎
+
+**Resolution TV-K-02-R1 (Metadata).** Exact domain: every registered time whose early-radiation state is almost surely the marginal of a pure state on the registered $d_E\times d_L$ carrier and obeys (K.3.1b.1), and every fixed-carrier doubling ledger (K.3.1c.1). Premises: the Schmidt rank bound, Page's theorem for the Haar comparison, and a moment error $\eta_t$ supplied by Corollary K.3.1 or directly. Equivalence: ensembles are compared through their mean von Neumann entropies at the registered dimensions, and realized states through the tail event in (K.3.1b.4). Budget: all $d_E,d_L\ge1$, all $\eta_t\ge0$, all registered times including both endpoints, and every ledger step. Verifier: the rank bound, the purity-entropy and Jensen inequalities, the width algebra in (K.3.1b.3), Markov's inequality and the step inequality $mP_{\mathrm H}(t_{j+1})\le d_{\mathrm{tot}}/(d_{\mathrm{tot}}+1)$. Falsifier: a pure-marginal ensemble obeying (K.3.1b.1) with mean entropy outside $[\ell_t,\ln d_<(t)]$, or a doubling ledger obeying (K.3.1c.2) with a nonincreasing rising step. Provenance class: source-internal finite-dimensional entropy inequality. Downstream consumers: Corollaries K.3.1a and K.3d.6, Section K.3.4 and `TV-K-02`. Nonvacuity: the Haar ensemble on every carrier, and the two-qubit stabilizer ensemble of Corollary K.3.1a, whose mean entropies $0,\frac25\ln2,0$ on the ledger $d_{\mathrm{tot}}=4$ lie in their bands and rise and fall as in (K.3.1c.3). This gives `positive-discharge` of the moment-to-entropy conversion at band level, uniformly in time with exact endpoints and an explicit dimension ledger, and of the strict rise/turnover/fall shape on doubling ledgers. The certified-error estimate (K.3.2) still requires $\mathfrak C_{\mathrm{PageTV}}$ or an accepted $\mathfrak C_{\mathrm{REC-TV}}$ promotion, and design mixing for the physical horizon dynamics remains uncertified, so the target is not closed.
+
 **Corollary K.3a (Conditional Black-Hole Anomaly-Inflow Criterion).** Suppose a horizon branch assigns the exterior, horizon, and interface sectors anomaly classes in one abelian anomaly group and supplies a gluing theorem under which the anomaly of the glued generating functional is their sum. Then exterior descent to the gauge/frame quotient requires
 $$
 [\mathcal A_{\mathrm{outside}}]
@@ -948,7 +1055,7 @@ $$
 $$
 so (K.3d.7) follows. The emission channel differs from the certified horizon moment channel by at most $\varepsilon_{\mathrm{emit}}$ in the same moment norm, hence the triangle inequality gives the moment-norm error (K.3d.8). Moment-norm control alone does not imply the trace-coupled entropy-continuity estimate (K.3.1); that stronger conclusion is exactly the additional content of Definition K.3d.4c. ∎
 
-**Corollary K.3d.6 (Page-Curve Promotion Gate).** The von Neumann Page-entropy estimate of Theorem K.3, pointwise in the registered time and for the ensemble mean, is theorem-level only on a branch carrying an accepted horizon entropy-continuity promotion certificate $\mathfrak C_{\mathrm{PageTV}}$ of Definition K.3d.4c. A bare accepted moment-design certificate $\mathfrak C_{\mathrm{Hdesign}}$ with $t_{\mathrm{des}}\ge2$ supplies moment control; for $t_{\mathrm{des}}=2$ the closed theorem-level output is the Page-purity law of Corollary K.3.1. A rise/turnover/fall conclusion additionally requires a time-ordered dimension ledger whose adjacent Page-target gaps dominate the sums of the certified entropy-error radii; half-entropy and zero-endpoint claims require their separate coarse-conservation and final-state gates. Without $\mathfrak C_{\mathrm{PageTV}}$, the structural information-conservation, edge-inflow, and island-blanket results remain theorem-level on their stated branches, but no von Neumann Page-entropy estimate follows.
+**Corollary K.3d.6 (Page-Curve Promotion Gate).** The von Neumann Page-entropy estimate of Theorem K.3, pointwise in the registered time and for the ensemble mean, is theorem-level only on a branch carrying an accepted horizon entropy-continuity promotion certificate $\mathfrak C_{\mathrm{PageTV}}$ of Definition K.3d.4c. A bare accepted moment-design certificate $\mathfrak C_{\mathrm{Hdesign}}$ with $t_{\mathrm{des}}\ge2$ supplies moment control; for $t_{\mathrm{des}}=2$ the closed theorem-level output is the Page-purity law of Corollary K.3.1. A rise/turnover/fall conclusion additionally requires a time-ordered dimension ledger whose adjacent Page-target gaps dominate the sums of the certified entropy-error radii, or whose adjacent moment-level bands of Corollary K.3.1b are separated as in Corollary K.3.1c; half-entropy and zero-endpoint claims require their separate coarse-conservation and final-state gates. Without $\mathfrak C_{\mathrm{PageTV}}$, the structural information-conservation, edge-inflow, and island-blanket results remain theorem-level on their stated branches, but no von Neumann Page-entropy estimate follows.
 
 *Proof.* Theorem K.3 assumes the trace-distance coupling (K.3.1), not merely equality of finitely many Haar moments. Theorem K.3d.5 supplies a certified moment-norm estimate; applying that estimate to the degree-$(2,2)$ purity observable gives Corollary K.3.1. To use Audenaert's entropy-continuity inequality in Theorem K.3, one additionally needs the trace-coupled bound certified by Definition K.3d.4c. Therefore the full entropy Page-curve estimate is promoted exactly on the $\mathfrak C_{\mathrm{PageTV}}$ branch. ∎
 
@@ -1069,6 +1176,44 @@ By Theorem K.3e, $\|\Pi_XF_\Lambda\psi\|^2\le |X||P|/\Lambda$. Substitution give
 **Remark K.3f.1 (Status and Scope).** Theorem K.3e and Corollary K.3f are operator-norm statements for the specified discrete Fourier map on a finite-budget cyclic group. For a unit vector supported on $P$, they give one-step leakage outside $X$ of at least $1-h^{1-\delta_X-\delta_P}$ when $\delta_X+\delta_P<1$. Applying this estimate to a physical evaporation or remnant sector requires a separate protocol map identifying its state and readout supports with $P$ and $X$ and identifying the relevant update with $F_\Lambda$. Excluding indefinite storage additionally requires an iterated-dynamics or mixing theorem.
 
 **Remark K.3f.2 (Conditional Connection to the Center-Ledger Area-Law Criterion).** On the rootless flux-tube branch of Proposition Z.8d, Theorem X.9.5d.4 gives a finite center-ledger criterion for Wilson-loop area law when its unbroken-center and positive-surface-gap hypotheses hold, including the aggregate bound on normalized sheet weights. Corollary K.3f can be applied to that sector only if an additional finite representation identifies the physical Wilson-line protocol with the cyclic Hilbert space, identifies the trapped flux and conjugate update sectors with $\Pi_X$ and $\Pi_P$, and intertwines the physical update with $F_\Lambda$. Under that representation, the condition $\delta_X+\delta_P<1$ gives the leakage bound of Corollary K.3f.
+
+**Theorem K.3f.3 (Closed-Update Storage Floor and Emission Depletion).** Let $U$ be a unitary on a finite-dimensional Hilbert space $\mathcal H$ with spectral decomposition $U=\sum_{\lambda\in\operatorname{spec}U}\lambda E_\lambda$, and put $m:=|\operatorname{spec}U|$. For every orthogonal projection $\Pi$ and every unit vector $\psi$ with $\Pi\psi=\psi$,
+$$
+\lim_{T\to\infty}\frac1T\sum_{t=0}^{T-1}\|\Pi U^t\psi\|^2
+=\sum_{\lambda}\|\Pi E_\lambda\psi\|^2
+\ge\sum_{\lambda}\|E_\lambda\psi\|^4
+\ge\frac1m
+\ge\frac1{\dim\mathcal H},
+\qquad
+\limsup_{t\to\infty}\|\Pi U^t\psi\|^2=1.
+\tag{K.3f.3.1}
+$$
+The value $1/m$ is attained by $\Pi=|\psi\rangle\langle\psi|$ when $\psi$ has weight $1/m$ in each eigenspace. For the update of Definition K.3e, $F_\Lambda^4=\mathrm{id}$, so $m\le4$: a unit vector supported on $P$ returns to itself after every fourth cycle and keeps Cesàro-averaged weight at least $1/4$ in $P$, for every support pair, including every pair with $|X|\cdot|P|<\Lambda$.
+
+Register the emission instrument that, after each application of $F_\Lambda$, measures $\{\Pi_X,\mathrm{id}-\Pi_X\}$, transfers the outcome $\mathrm{id}-\Pi_X$ to the exterior record, and retains the outcome $\Pi_X$. For a unit vector $\psi$ supported on $P$, the probability of retention through $t\ge1$ cycles is
+$$
+p_{\mathrm{ret}}(t)
+=\bigl\|(\Pi_XF_\Lambda)^t\psi\bigr\|^2
+\le\frac{|X|\cdot|P|}{\Lambda}\left(\frac{|X|^2}{\Lambda}\right)^{t-1},
+\tag{K.3f.3.2}
+$$
+so the retained weight tends to zero geometrically when $|X|^2<\Lambda$.
+
+*Proof.* Unitarity gives $U^t=\sum_\lambda\lambda^tE_\lambda$ with $|\lambda|=1$, so
+$$
+\|\Pi U^t\psi\|^2=\sum_{\lambda,\mu}(\bar\lambda\mu)^t\langle E_\lambda\psi,\Pi E_\mu\psi\rangle.
+$$
+For $\lambda\ne\mu$, the number $\bar\lambda\mu\ne1$ has modulus one and $\bigl|T^{-1}\sum_{t=0}^{T-1}(\bar\lambda\mu)^t\bigr|\le2/(T|1-\bar\lambda\mu|)\to0$, so only the diagonal terms survive the Cesàro limit. Since $\Pi\psi=\psi$ and $\|\psi\|=1$, the Cauchy--Schwarz inequality gives $\|\Pi E_\lambda\psi\|\ge|\langle\psi,\Pi E_\lambda\psi\rangle|=|\langle\psi,E_\lambda\psi\rangle|=\|E_\lambda\psi\|^2$. The weights $w_\lambda:=\|E_\lambda\psi\|^2$ sum to one over at most $m$ eigenvalues, so $\sum_\lambda w_\lambda^2\ge1/m$, and $m\le\dim\mathcal H$. For $\Pi=|\psi\rangle\langle\psi|$ one has $\|\Pi E_\lambda\psi\|^2=w_\lambda^2$, which sums to $1/m$ in the equal-weight case. For the recurrence statement, compactness of the unitary group gives a convergent subsequence $U^{t_k}$ with $t_{k+1}-t_k\to\infty$; then $U^{t_{k+1}-t_k}=U^{t_{k+1}}(U^{t_k})^{-1}\to\mathrm{id}$ and $\|\Pi U^{t_{k+1}-t_k}\psi\|^2\to\|\Pi\psi\|^2=1$. Two applications of (K.3e.1) give $(F_\Lambda^2\psi)(N)=\psi(-N)$, hence $F_\Lambda^4=\mathrm{id}$ and every eigenvalue of $F_\Lambda$ is a fourth root of unity; taking $\Pi=\Pi_P$ gives the stated recurrence and floor.
+
+For the emission instrument, the unnormalized retained vector after $t$ cycles is $(\Pi_XF_\Lambda)^t\psi$, and its squared norm is the retention probability. Because $\Pi_X^2=\Pi_X$ and $\Pi_P\psi=\psi$,
+$$
+(\Pi_XF_\Lambda)^t\psi=(\Pi_XF_\Lambda\Pi_X)^{t-1}\,\Pi_XF_\Lambda\Pi_P\psi.
+$$
+Theorem K.3e with the support pairs $(X,P)$ and $(X,X)$ bounds the two factors in operator norm by $\sqrt{|X||P|/\Lambda}$ and $(|X|/\sqrt\Lambda)^{t-1}$, and squaring gives (K.3f.3.2). ∎
+
+Theorem K.3f.3 is the iterated-dynamics statement called for in Remark K.3f.1: closed finite unitary iteration of a trapped sector retains at least the fraction $1/m$ on Cesàro average and returns arbitrarily close to full weight, while the registered emission instrument depletes the sector geometrically when $|X|^2<\Lambda$.
+
+**Resolution TV-K-04-R1 (Metadata).** Exact domain: every unitary update on a finite-dimensional Hilbert space with every projection $\Pi$ and unit vector in its range, the update $F_\Lambda$ of Definition K.3e for every budget and support pair, and the cycle-wise emission instrument $\{\Pi_X,\mathrm{id}-\Pi_X\}$. Premises: finite dimension, unitarity of the closed update, and Theorem K.3e. Equivalence: closed-update storage is measured by the Cesàro-averaged and limit-superior retained weight, and emission by the retention probability of the instrument. Budget: all averaging horizons $T$, all cycle counts, all spectra and multiplicities, and all supports. Verifier: the spectral expansion and geometric-sum estimate, the two Cauchy--Schwarz steps, compactness recurrence, $F_\Lambda^4=\mathrm{id}$, and the factorization behind (K.3f.3.2). Falsifier: a closed finite unitary update with Cesàro-averaged retained weight below $1/m$, or an emission trajectory exceeding (K.3f.3.2). Provenance class: source-internal finite spectral and operator-norm theorem. Downstream consumers: Corollary K.3f, Remarks K.3f.1 and K.3f.2, and `TV-K-04`. Nonvacuity: $F_\Lambda$, whose order is exactly four for $\Lambda\ge3$, and the equal-weight equality case. This gives `negative-refutation` of trapped-sector depletion by any closed finite unitary update and `positive-discharge` of geometric depletion on the emission-instrument branch with $|X|^2<\Lambda$. The exterior, horizon and interface anomaly computation, the protocol-complete identification of the physical trapped sectors and update with $(X,P,F_\Lambda)$, and the realization of the emission instrument remain `M+C+R` under `TV-K-04`, so the target is not closed.
 
 
 ## K.4 Arrow of Time and Temporal Asymmetry
@@ -1640,6 +1785,31 @@ $$
 $$
 
 *Proof.* The ratio cancels the partition function. Since $V_{\mathrm{PCE}}(\pi)=2V_0$ and $V_{\mathrm{PCE}}(0)=0$, substitution gives the displayed result. ∎
+
+**Theorem K.6.6a (Classification of CP-Equivariant Angle Bridges).** Let the angle circle $S^1=\{z\in\mathbb C:|z|=1\}$ carry the CP action $C_{\mathrm{CP}}(z)=\bar z$, which is $\theta\mapsto-\theta$ on $z=e^{i\theta}$ as in Theorem K.6.1 and Proposition K.6.3. Let $f_{\mathcal B}:S^1\to S^1$ be continuous with $f_{\mathcal B}\circ C_{\mathrm{CP}}=C_{\mathrm{CP}}\circ f_{\mathcal B}$, and put $\epsilon_{\mathcal B}:=f_{\mathcal B}(1)$ and $n_{\mathcal B}:=\deg f_{\mathcal B}$. Then:
+
+1. $f_{\mathcal B}(1),f_{\mathcal B}(-1)\in\{1,-1\}$ and
+$$
+f_{\mathcal B}(-1)=\epsilon_{\mathcal B}(-1)^{n_{\mathcal B}};
+\tag{K.6.6a.1}
+$$
+
+2. $f_{\mathcal B}$ is homotopic to $z\mapsto\epsilon_{\mathcal B}z^{n_{\mathcal B}}$ through continuous $C_{\mathrm{CP}}$-equivariant maps, and $(\epsilon_{\mathcal B},n_{\mathcal B})$ is constant along every such homotopy, so the equivariant homotopy classes are in bijection with $\{1,-1\}\times\mathbb Z$;
+
+3. if $f_{\mathcal B}$ transports the registered holonomy coordinate $\vartheta$ to the QCD angle by $e^{i\theta_{\mathrm{QCD}}}=f_{\mathcal B}(e^{i\vartheta})$, the CP-invariant labels $\vartheta\in\{0,\pi\}$ go to $\theta_{\mathrm{QCD}}\in\{0,\pi\}$, and a selector on $\vartheta$ with unique minimizer $\vartheta\equiv0$, such as the first-harmonic cost of Theorem K.6.2 or the all-harmonic cost of Theorem K.6.2a with $Z_1>0$, gives $\theta_{\mathrm{QCD}}\equiv0\pmod{2\pi}$ exactly when $\epsilon_{\mathcal B}=1$; the degree-one representatives $z\mapsto\pm z$ act on sector characters by $e^{i\nu\theta_{\mathrm{QCD}}}=(\pm1)^\nu e^{i\nu\vartheta}$;
+
+4. on a genuinely real mass branch with the determinant orientations $\epsilon_u,\epsilon_d$ of Theorem K.6.8, expressed in the common convention of Theorem K.6.12, the transported vacuum selected at $\vartheta\equiv0$ has
+$$
+z_{\mathrm{CP}}=\epsilon_{\mathcal B}\,\epsilon_u\epsilon_d,
+\tag{K.6.6a.2}
+$$
+so $\bar\theta\equiv0\pmod{2\pi}$ exactly when $\epsilon_{\mathcal B}\epsilon_u\epsilon_d=1$.
+
+Equivariance and unit degree therefore leave the base-point sign $\epsilon_{\mathcal B}$ as the one discrete bridge datum on the invariant labels, and item 2 of Theorem K.6.5 fixes it through the representative $f_{\mathcal B}=\mathrm{id}$ of the class $(1,1)$.
+
+*Proof.* Evaluating $f_{\mathcal B}\circ C_{\mathrm{CP}}=C_{\mathrm{CP}}\circ f_{\mathcal B}$ at the fixed points $\pm1$ of $C_{\mathrm{CP}}$ gives $f_{\mathcal B}(\pm1)=\overline{f_{\mathcal B}(\pm1)}$, so $f_{\mathcal B}(\pm1)\in\{1,-1\}$. Lift $t\mapsto f_{\mathcal B}(e^{it})$ to a continuous $\phi:\mathbb R\to\mathbb R$ with $f_{\mathcal B}(e^{it})=e^{i\phi(t)}$, $\phi(0)\in\{0,\pi\}$ and $\phi(t+2\pi)=\phi(t)+2\pi n_{\mathcal B}$. Equivariance gives $e^{i\phi(-t)}=e^{-i\phi(t)}$, so the continuous function $\phi(-t)+\phi(t)$ takes values in $2\pi\mathbb Z$ and equals its value $2\phi(0)$ at $t=0$. Hence $\psi(t):=\phi(t)-\phi(0)$ is odd and satisfies $\psi(t+2\pi)=\psi(t)+2\pi n_{\mathcal B}$. Then $\psi(\pi)=\psi(-\pi)+2\pi n_{\mathcal B}=-\psi(\pi)+2\pi n_{\mathcal B}$, so $\psi(\pi)=\pi n_{\mathcal B}$ and $f_{\mathcal B}(-1)=\epsilon_{\mathcal B}e^{i\pi n_{\mathcal B}}$, which is (K.6.6a.1). The functions $\psi_s(t):=(1-s)\psi(t)+sn_{\mathcal B}t$, $0\le s\le1$, are odd and satisfy $\psi_s(t+2\pi)=\psi_s(t)+2\pi n_{\mathcal B}$, so $f_s(e^{it}):=\epsilon_{\mathcal B}e^{i\psi_s(t)}$ is well defined, continuous in $(s,t)$ and $C_{\mathrm{CP}}$-equivariant because $\epsilon_{\mathcal B}$ is real; $f_0=f_{\mathcal B}$ and $f_1(z)=\epsilon_{\mathcal B}z^{n_{\mathcal B}}$. Along any equivariant homotopy the degree is constant, and the value at $1$ moves continuously in $\{1,-1\}$, so it is constant. The maps $z\mapsto\epsilon z^n$ realize every pair $(\epsilon,n)$ and are pairwise separated by these invariants, which proves item 2. Item 3 is item 1 evaluated at $z=\pm1$ together with the uniqueness of the selected label, and the character identity is direct substitution. For item 4, Theorem K.6.10 gives $\det(M_uM_d)/|\det(M_uM_d)|=\epsilon_u\epsilon_d$ on the real branch, item 3 gives $e^{i\theta_{\mathrm{QCD}}}=f_{\mathcal B}(1)=\epsilon_{\mathcal B}$, and Theorem K.6.12 multiplies the two factors into $z_{\mathrm{CP}}$. ∎
+
+**Resolution TV-K-06-R1 (Metadata).** Exact domain: all continuous CP-equivariant self-maps of the angle circle with the conjugation action on both sides, their equivariant homotopies, and genuinely real mass branches with sector determinant orientations. Premises: continuity, the conjugation form of CP on the holonomy and QCD circles, and the common convention of Theorem K.6.12 for item 4. Equivalence: equivariant homotopy of angle maps, and equality of the invariant $z_{\mathrm{CP}}$. Budget: every degree, both base-point signs and all four orientation pairs $(\epsilon_u,\epsilon_d)$. Verifier: the fixed points of conjugation, path lifting, the odd-lift identity, the linear equivariant homotopy and evaluation at $z=-1$. Falsifier: an equivariant map with $f_{\mathcal B}(1)\notin\{1,-1\}$, an equivariant homotopy changing $(\epsilon_{\mathcal B},n_{\mathcal B})$, or a map violating (K.6.6a.1). Provenance class: source-internal equivariant-topology classification. Downstream consumers: Theorems K.6.1, K.6.5, K.6.6, K.6.11 and K.6.12, Proposition K.6.4 and `TV-K-06`. Nonvacuity: $z\mapsto z$ and $z\mapsto-z$ are equivariant of degree one and realize both base-point signs. This gives `positive-discharge` of the classification of CP-equivariant angle maps and of the sign ledger (K.6.6a.2), and identifies $\epsilon_{\mathcal B}=1$ as the residual discrete bridge datum after equivariance and unit degree. Constructing the gauge-topology bridge of Proposition K.6.4 with $\epsilon_{\mathcal B}=1$, certifying the determinant orientations of the realized Yukawa class, and realizing the QCD topological coordinate and a positive vacuum selector without imported phases remain `M+C+R+O` under `TV-K-06`, so the target is not closed.
 
 ### K.6.7 The Real Locus of Gr(2,8)
 
@@ -3772,6 +3942,28 @@ which is symmetric negative definite. Conversely, factor $H=A^{\mathsf T}A$ with
 
 The theorem completely classifies the finite linearized truncation, including anomalous mixing. A nonlinear configuration-to-$\Gamma_k$ map, control of discarded operators, and an MPU realization of the selected coefficient coordinates remain the separate bridge data required by Theorem K.10.7.
 
+**Corollary K.10.7c (Metric-Free Obstructions to the Metric-Gradient RG Route).** On an autonomous scale chart of Definition X.9.6c.2 with continuously differentiable beta field $\beta$, suppose that some continuously differentiable positive-definite metric $\mathcal G$ and some twice continuously differentiable potential $V_{\mathrm{RG}}$ satisfy $d_\theta V_{\mathrm{RG}}=\omega_{\mathrm{RG}}=-\mathcal G_{ij}\beta^j\,d\theta^i$. Then:
+
+1. at every zero $\theta_*$ of $\beta$,
+$$
+D\beta(\theta_*)=-\mathcal G(\theta_*)^{-1}\operatorname{Hess}V_{\mathrm{RG}}(\theta_*)
+\tag{K.10.7c.1}
+$$
+is similar to a real symmetric matrix, so its eigenvalues, the linearized scaling exponents at $\theta_*$ including anomalous mixing, are real and it has no nontrivial Jordan block;
+
+2. $V_{\mathrm{RG}}$ strictly decreases along every nonconstant integral curve of $\beta$, so no nonconstant integral curve returns to a point it has visited.
+
+Independently of exactness, if $\omega_{\mathrm{RG}}$ is closed for a positive metric $\mathcal G$ and $\gamma$ is a nonconstant periodic integral curve of $\beta$ with period $P$, then
+$$
+\oint_\gamma\omega_{\mathrm{RG}}=-\int_0^P\mathcal G(\beta,\beta)\,dt<0,
+\tag{K.10.7c.2}
+$$
+so the class (X.9.6c.4.1) is nonzero. Consequently a complex pair of scaling exponents or a nontrivial Jordan block at a fixed point, or a nonconstant periodic RG trajectory, rejects the metric-gradient route on that chart for every continuously differentiable positive metric. On the extended-potential treatment of Theorem X.9.6c.3, the extended field $(\beta,1)$ has no zeros and no returning integral curves, so these two tests are vacuous there and that route is tested by the curl condition (X.9.6c.2.6) and the class (X.9.6c.4.1) for the extended metric.
+
+*Proof.* Theorem X.9.6c.3 gives $\beta=-\mathcal G^{-1}d_\theta V_{\mathrm{RG}}$. Differentiating at a zero $\theta_*$, where $d_\theta V_{\mathrm{RG}}(\theta_*)=0$, removes the term containing the derivative of $\mathcal G^{-1}$ and gives (K.10.7c.1). With $G_*:=\mathcal G(\theta_*)$, the matrix $G_*^{1/2}D\beta(\theta_*)G_*^{-1/2}=-G_*^{-1/2}\operatorname{Hess}V_{\mathrm{RG}}(\theta_*)G_*^{-1/2}$ is real symmetric, hence diagonalizable with real spectrum, and similarity transfers both properties. Along an integral curve, (X.9.6c.3.3) gives $dV_{\mathrm{RG}}/d\log k=-\mathcal G(\beta,\beta)$, which is negative wherever $\beta\ne0$. By uniqueness of integral curves of a continuously differentiable field, a nonconstant integral curve never meets a zero of $\beta$, so $V_{\mathrm{RG}}$ is strictly decreasing along it and takes each value at most once. For (K.10.7c.2), $\dot\gamma=\beta$ gives $\omega_{\mathrm{RG}}(\dot\gamma)=-\mathcal G(\beta,\beta)<0$ along $\gamma$; a closed one-form with a nonzero period around a closed curve is not exact, so its de Rham class is nonzero. The extended field has last component $1$, so it never vanishes and $\log k$ strictly increases along its integral curves. ∎
+
+**Resolution TV-K-14-R1 (Metadata).** Exact domain: every autonomous finite scale chart of Definition X.9.6c.2 with continuously differentiable beta field, every continuously differentiable positive metric and every twice continuously differentiable candidate potential, and every nonconstant periodic integral curve. Premises: the exactness identity (X.9.6c.2.5) for items 1 and 2, and closedness of $\omega_{\mathrm{RG}}$ for (K.10.7c.2). Equivalence: the metric-gradient route is accepted on a chart when some positive metric makes $\omega_{\mathrm{RG}}$ exact. Budget: every fixed point, every integral curve and every closed trajectory of $\beta$. Verifier: differentiation at a zero, symmetric similarity, the descent identity (X.9.6c.3.3), uniqueness of integral curves and the period integral. Falsifier: an exact metric-gradient representation with a complex scaling-exponent pair, a Jordan block at a fixed point, or a nonconstant periodic trajectory. Provenance class: source-internal differential-equation obstruction theorem. Downstream consumers: Theorems K.10.7, K.10.7b and X.9.6c.3, Corollary X.9.6c.4 and `TV-K-14`. Nonvacuity: linear flows of Theorem K.10.7b containing a rotation block, whose complex exponents reject the route, and gradient flows of Morse potentials, which pass both tests. This gives `positive-discharge` of metric-free necessary tests for the metric-gradient route and extends the obstruction list of Theorem K.10.7b to nonlinear autonomous charts. The nonlinear configuration-to-$\Gamma_k$ response map, control of discarded operators, the realized coefficient coordinates, the PCE functional, and the curl and period tests for the realized $-\mathcal G\beta$ remain `M+C+R` under `TV-K-14`, so the target is not closed.
+
 **Corollary K.10.8 (Conditional RG Universality).** Suppose a dimensionless RG flow has a hyperbolic scaling solution with a controlled eigenoperator decomposition and a stable manifold. Perturbations along irrelevant eigenoperators decay toward the infrared according to their full scaling exponents, including anomalous dimensions, while relevant directions require a finite set of macroscopic coordinates. This gives the usual conditional universality statement. Interpreting that decay as PCE selection additionally requires the bridge data of Theorem K.10.7.
 
 *Proof.* Linearizing the dimensionless beta functions about the scaling solution diagonalizes the flow into scaling fields $u_i$ satisfying $\partial_tu_i=y_i u_i+O(u^2)$. Along infrared flow, fields with the irrelevant sign of $y_i$ decay on the stable manifold, whereas the complementary fields parameterize departures from the universality class. The PCE reading is an additional identification because no PCE functional occurs in this linearized RG argument. ∎
@@ -4202,6 +4394,35 @@ $$
 The theorem completely resolves normalization, regulator independence, conditioning, and observer weighting for the declared projective finite class. Selecting and realizing the physical cosmological sample spaces, transition weights, and observer weight remains independent data.
 
 **Resolution TV-K-21-R1 (Metadata).** Exact domain: nonempty finite projective sample spaces with surjective bonding maps, compatible probability measures and finite nonzero observer normalizations. Premises: (K.10.19b.1) and, for conditioned measures, the normalized-density relation (K.10.19b.3). Equivalence: measures agree when all finite-level cylinder probabilities agree. Budget: every finite-level event and every bonding step; no sampled-event restriction is used. Verifier: exact pushforward of the unweighted and normalized weighted measures and the finite conditional-expectation identities. Falsifier: incompatible adjacent marginals, a cylinder with level-dependent probability, or a violation of (K.10.19b.3) by regulator-independent conditioned measures. Provenance class: source-internal projective-measure classification. Downstream consumers: the cosmological-measure program and `TV-K-21`. Theorem K.10.19b gives `positive-discharge` of the mathematical normalization, regulator-independence, conditioning and observer-weighting component on this projective finite class. Populating the physical sample spaces, transition maps, measures, observer weights and observable extractor remains the independent `C+R+O` work.
+
+**Theorem K.10.19c (Clock-Atlas Gluing Criterion and Periodic-Orbit Obstruction).** Let $\mathcal M$ be a smooth symplectic manifold, and let $\mathcal C\in C^\infty(\mathcal M)$ have $0$ as a regular value with $\Sigma:=\mathcal C^{-1}(0)\ne\varnothing$. The Hamiltonian vector field $X_{\mathcal C}$, defined by $X_{\mathcal C}f=\{f,\mathcal C\}$, is tangent to $\Sigma$; assume its flow $\Phi^s$ on $\Sigma$ is complete. A clock chart is a pair $(U,\tau_U)$ with $U\subset\Sigma$ open and $\Phi$-invariant and $\tau_U\in C^\infty(U)$ satisfying $\{\tau_U,\mathcal C\}=1$ on $U$; a clock atlas is a family of clock charts whose domains cover $\Sigma$; a global clock is a clock chart with domain $\Sigma$. Then:
+
+1. $\Sigma$ admits a global clock if and only if it admits a clock atlas and its orbit space $\Sigma/\Phi$ is Hausdorff;
+
+2. a global clock $\tau$ satisfies $\tau(\Phi^sx)=\tau(x)+s$, every orbit meets every level set $\{\tau=s\}$ exactly once, and for every $f\in C^1(\Sigma)$ the relational observable $O_f(s)(x):=f(\Phi^{\,s-\tau(x)}x)$ is constant along orbits and equals $f$ on $\{\tau=s\}$;
+
+3. if $\Phi^Px=x$ for some $x\in\Sigma$ and $P>0$, then no clock chart contains $x$ and no continuous function on $\Sigma$ is strictly increasing along every orbit; for $\mathcal C=\frac12\sum_{i=1}^2(p_i^2+q_i^2)-E$ with $E>0$ on $T^*\mathbb R^2$, every orbit in $\Sigma\cong S^3$ has period $2\pi$;
+
+4. the Hausdorff condition cannot be removed: on $T^*(\mathbb R^2\setminus\{0\})$ with canonical coordinates $(x,y,p_x,p_y)$ and $r:=\sqrt{x^2+y^2}$, the constraint $\mathcal C=p_yr$ has $\Sigma=\{p_y=0\}$ and the clock atlas
+$$
+\tau_+=\ln(r+y)\ \text{ on }\ \Sigma\setminus\{x=0,\ y<0\},
+\qquad
+\tau_-=-\ln(r-y)\ \text{ on }\ \Sigma\setminus\{x=0,\ y>0\},
+\tag{K.10.19c.1}
+$$
+but no continuous function on $\Sigma$ whose restriction to every orbit is a strictly increasing bijection onto $\mathbb R$.
+
+For the deparametrizable class of Theorem K.10.19a, $T$ is a global clock by (K.10.19a.2).
+
+*Proof.* On a clock chart, $\frac{d}{ds}\tau_U(\Phi^sx)=(X_{\mathcal C}\tau_U)(\Phi^sx)=1$ along the complete orbit inside the invariant set $U$, so $\tau_U(\Phi^sx)=\tau_U(x)+s$. For a global clock, $s\mapsto\tau(x)+s$ is a bijection of $\mathbb R$, which gives the level-set statement of item 2, and $O_f(s)(\Phi^{s'}x)=f(\Phi^{\,s-\tau(x)-s'}\Phi^{s'}x)=O_f(s)(x)$, with $O_f(s)(x)=f(x)$ when $\tau(x)=s$.
+
+For item 1, let $\varpi:\Sigma\to Q:=\Sigma/\Phi$ be the quotient map. It is open, because the saturation of an open set is the union of its flow translates, so $Q$ is second countable. For a clock chart $(U_\alpha,\tau_\alpha)$, the level $S_\alpha:=\tau_\alpha^{-1}(0)$ is an embedded hypersurface of $U_\alpha$, since $d\tau_\alpha(X_{\mathcal C})=1$, and $\varrho_\alpha(x):=\Phi^{-\tau_\alpha(x)}x$ is a smooth retraction of $U_\alpha$ onto $S_\alpha$ that is constant on orbits. Hence $\varpi|_{S_\alpha}$ is a homeomorphism onto the open set $\varpi(U_\alpha)$, and on overlaps the transition maps $\varrho_\beta|_{S_\alpha\cap U_\beta}$ are smooth with smooth inverses $\varrho_\alpha|_{S_\beta\cap U_\alpha}$. If $Q$ is Hausdorff, these charts make $Q$ a smooth manifold on which $\varpi$ is smooth, and $Q$ carries a smooth partition of unity $\{\psi_\alpha\}$ subordinate to $\{\varpi(U_\alpha)\}$. The functions $\varphi_\alpha:=\psi_\alpha\circ\varpi$ are smooth, $\Phi$-invariant and locally finite, are supported in $\varpi^{-1}(\varpi(U_\alpha))=U_\alpha$, and sum to one. The function $\tau:=\sum_\alpha\varphi_\alpha\tau_\alpha$, each term extended by zero off the support of $\varphi_\alpha$, is smooth and satisfies $X_{\mathcal C}\tau=\sum_\alpha\bigl[(X_{\mathcal C}\varphi_\alpha)\tau_\alpha+\varphi_\alpha X_{\mathcal C}\tau_\alpha\bigr]=\sum_\alpha\varphi_\alpha=1$, so it is a global clock. Conversely, a global clock is a one-chart atlas, and $\varrho(x):=\Phi^{-\tau(x)}x$ induces a continuous bijection from $Q$ onto the Hausdorff subspace $\tau^{-1}(0)\subset\Sigma$ with continuous inverse $\varpi|_{\tau^{-1}(0)}$.
+
+For item 3, a clock chart containing $x$ would give $\tau_U(x)=\tau_U(\Phi^Px)=\tau_U(x)+P$, and a function strictly increasing along the orbit of $x$ would take different values at $x$ and at $\Phi^Px=x$. For the two-oscillator constraint, $d\mathcal C$ vanishes only at the origin, where $\mathcal C=-E\ne0$, and Hamilton's equations $\dot q_i=p_i$, $\dot p_i=-q_i$ make every orbit $2\pi$-periodic on the sphere $\Sigma$ of radius $\sqrt{2E}$.
+
+For item 4, $d\mathcal C=r\,dp_y+p_y\,dr$ equals $r\,dp_y\ne0$ on $\Sigma$. On $\Sigma$, Hamilton's equations give $\dot x=\dot p_x=\dot p_y=0$ and $\dot y=r$. The orbits are therefore the lines $\{x=h,\ p_x=p\}$ with $h\ne0$, on which $y=|h|\sinh(s+s_0)$ ranges over $\mathbb R$, and the half-lines $\{x=0,\ y>0,\ p_x=p\}$ and $\{x=0,\ y<0,\ p_x=p\}$, on which $y=y_0e^{s}$ and $y=y_0e^{-s}$ respectively. The two domains in (K.10.19c.1) omit whole orbits, the functions are smooth where $r\pm y>0$, and $X_{\mathcal C}\tau_\pm=r\,\partial_y\tau_\pm=1$. Suppose $g$ is continuous on $\Sigma$ and restricts to a strictly increasing bijection onto $\mathbb R$ along every orbit, and write points of $\Sigma$ as $(x,y,p_x)$. Along the half-line $\{x=0,\ y<0,\ p_x=0\}$, $y$ increases with the flow and $g$ is unbounded above, so some $y'<0$ has $g(0,y',0)>g(0,1,0)$. For $h\ne0$, the points $(h,y',0)$ and $(h,1/2,0)$ lie on one orbit in increasing flow order, so $g(h,y',0)<g(h,1/2,0)$, and letting $h\to0$ gives $g(0,y',0)\le g(0,1/2,0)$. On the half-line $\{x=0,\ y>0,\ p_x=0\}$, $g(0,1/2,0)<g(0,1,0)$, which contradicts $g(0,y',0)>g(0,1,0)$. For the deparametrizable class, $\Sigma=\{p_T=-H\}$, $0$ is a regular value because $\partial\mathcal C/\partial p_T=1$, and (K.10.19a.2) states $\{T,\mathcal C\}=1$ on all of $\Sigma$. ∎
+
+**Resolution TV-K-20-R1 (Metadata).** Exact domain: every smooth symplectic manifold with a single constraint having $0$ as a regular value and complete constraint flow on $\Sigma$, every clock atlas on $\Sigma$, and the three displayed constraint families. Premises: regularity of the zero level and completeness of the constraint flow. Equivalence: clocks are compared by their orbit-slice intersections, and relational observables by their values on the clock slices. Budget: every clock chart, every orbit and every point of $\Sigma$. Verifier: integration of $\{\tau,\mathcal C\}=1$ along orbits, the cross-section charts and transition maps of the orbit space, the pulled-back partition of unity, the periodic-orbit contradiction, Hamilton's equations for both witnesses and the limit argument of item 4. Falsifier: a clock chart through a periodic point, a global clock with non-Hausdorff orbit space, or a continuous orbitwise-bijective clock for the constraint $p_yr$. Provenance class: source-internal symplectic and differential-topology classification. Downstream consumers: Theorem K.10.19a and `TV-K-20`. Nonvacuity: the deparametrizable class with global clock $T$, the periodic two-oscillator constraint, and the two-chart constraint $p_yr$. This gives `positive-discharge` of the gluing criterion for globally covered clock atlases of single regular constraints with complete flow, `negative-refutation` of global clocks on constraint surfaces carrying a periodic orbit, and `nonentailment` of a global clock from a clock atlas alone. Constructing the PU continuum constraint, verifying its deparametrized form or its clock atlas with Hausdorff orbit space, and realizing the resulting clock remain `M+C+R` under `TV-K-20`, so the target is not closed.
 
 **Theorem K.10.25a (Separation-Entropy Tracking Budget).** Let $K$ be a nonempty compact metric space and $F:K\to K$ continuous. Equip length-$n$ histories with the maximum metric, and let $s_n(K,2\varepsilon)$ be the maximum number of initial states whose histories are pairwise more than $2\varepsilon$ apart. Any fixed-width binary encoder and decoder that approximate every history within $\varepsilon$ require
 

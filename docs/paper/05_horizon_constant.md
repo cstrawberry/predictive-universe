@@ -456,6 +456,52 @@ Every displayed image is nonvacuous at this numerical-projection level: take $\m
 
 **Resolution TV-HC-02-R2 (Metadata).** Exact domain: the numerical projection obtained by retaining only nonemptiness, natural-valued complexity, the lower bound $3$, and the fixed response/capacity entries. Premises: exactly (17c), with no hidden universal-machine or hierarchy realization premise. Equivalence: equality of the retained complexity image $S$. Budget: every nonempty subset of $\{3,4,\ldots\}$, handled by the symbolic image classifier. Verifier: well-ordering, the membership test $3\in S$ and the identity models. Falsifier: an omitted nonempty image, an image without the displayed minimum, or equality with $3\notin S$. Provenance class: source-internal exact order-theoretic model classification. Downstream consumers: Proposition 5.2.3a and `TV-HC-02`. Nonvacuity: the explicit numerical models $\{3\}$ and $\{4\}$. This is `nonentailment` of equality and of strict inequality from the numerical response/capacity projection only. Classifying the fixed-machine attainable image spectrum and physically admitting a qualifying complexity-$3$ realizer remain `N+R`-open.
 
+**Proposition 5.2.3c (Presentation-Relative Threshold Spectrum and Fiber Bound).** Call $\mathfrak P=(\Sigma,U,\mu_{\mathrm{ref}},\{\mathcal L_n\}_{n\ge0})$ a presentation when it satisfies the hypotheses of Theorem 2.4.1b, and write $\operatorname{Dom}(\mathfrak P)$ for its full-constraint-realizable microstates and $C_P^{\mathfrak P}$ for its complexity. Let $\mathcal Q_{\mathrm{ph}}$ be the set of physically realizable microstates that instantiate the adaptive loop of Definition 13 and exceed its accuracy margin. Membership in $\mathcal Q_{\mathrm{ph}}$ does not refer to the presentation, and Definition 13 gives the qualifying set $\mathcal Q(\mathfrak P)=\mathcal Q_{\mathrm{ph}}\cap\operatorname{Dom}(\mathfrak P)$. Fix a presentation $\mathfrak P$ with $|\Sigma|\ge2$ whose qualifying set $\mathcal Q:=\mathcal Q(\mathfrak P)$ is nonempty and satisfies the hypotheses of Corollary 3, and put
+$$
+m_0:=\min_{\mu\in\mathcal Q}\lceil\log_2d_0(\mu)\rceil.
+\tag{17f}
+$$
+A presentation $\mathfrak P'$ with alphabet $\Sigma$ is **$\mathcal Q$-admissible** when $\mathcal Q(\mathfrak P')=\mathcal Q$ and $C_P^{\mathfrak P'}(\mu)\ge\log_2d_0(\mu)$ for every $\mu\in\mathcal Q$.
+
+1. Every $\mathcal Q$-admissible presentation has $C_{op}\ge m_0\ge3$, and $m_0=3$ exactly when some $\mu\in\mathcal Q$ has $d_0(\mu)=8$.
+2. For $b\in\Sigma$ and $t\ge0$, the padded presentation $\mathfrak P^{+t}$ with $U^{+t}(b^tP,x):=U(P,x)$ and $\mathcal L_n^{+t}:=\{b^tP:P\in\mathcal L_n\}$ is $\mathcal Q$-admissible; its complexity satisfies $C_P^{+t}=C_P^{\mathfrak P}+t$ on $\operatorname{Dom}(\mathfrak P)$, and its threshold is $C_{op}^{+t}=C_{op}+t$.
+3. Fix $a\ne b$ in $\Sigma$ and $\mu_*\in\mathcal Q$ with $\lceil\log_2d_0(\mu_*)\rceil=m_0$. For every integer $m\ge m_0$, the anchored presentation $\mathfrak P_m$ given by
+$$
+U_m(a^m,x):=\mu_*,
+\qquad
+U_m(b^mP,x):=U(P,x),
+\qquad
+\mathcal L_n^{(m)}:=\{a^m\}\cup\{b^mP:P\in\mathcal L_n\},
+\tag{17g}
+$$
+with $U_m$ undefined on every other string, is $\mathcal Q$-admissible. Its complexity satisfies $C_P^{(m)}(\mu_*)=m$ and $C_P^{(m)}=C_P^{\mathfrak P}+m$ on $\operatorname{Dom}(\mathfrak P)\setminus\{\mu_*\}$, and its threshold is $C_{op}^{(m)}=m$.
+4. Consequently,
+$$
+\{C_{op}(\mathfrak P'):\mathfrak P'\ \text{is}\ \mathcal Q\text{-admissible}\}
+=\{m\in\mathbb N:m\ge m_0\}.
+\tag{17h}
+$$
+Equality $C_{op}=K_0=3$ holds for some $\mathcal Q$-admissible presentation exactly when some qualifying microstate has $d_0=8$, and every $\mathcal Q$-admissible presentation with $C_{op}=3$ has a minimizer $\mu$ with $C_P(\mu)=\log_2d_0(\mu)=3$.
+5. The machines of items 2--3 are computable when $U$ is and keep the domain of $U(\cdot,\mu_{\mathrm{ref}})$ prefix-free when it is. With $K_U(y):=\min\{K(P):U(P,\mu_{\mathrm{ref}})=y\}$, they change $K_U$ by exactly $t$, respectively by at most $\max(m,K_U(\mu_*))$, and each is universal when $U$ is. The padded presentations name no microstate; the anchored presentations name $\mu_*$ and are therefore target-informed in the sense of Definition 2.4.1d.
+6. For every presentation $\mathfrak P'=(\Sigma,U',\mu_{\mathrm{ref}},\{\mathcal L'_n\})$ and every $s\in\mathbb N$, at most $|\Sigma|^s$ members of $\mathcal Q(\mathfrak P')$ have complexity $s$. If $U'(\cdot,\mu_{\mathrm{ref}})$ has prefix-free domain, then
+$$
+\sum_{\mu\in\mathcal Q(\mathfrak P')}|\Sigma|^{-C_P^{\mathfrak P'}(\mu)}\le1.
+\tag{17i}
+$$
+In particular, at most $|\Sigma|^3$ qualifying microstates have complexity $3$, and an infinite qualifying class has an unbounded complexity image.
+
+*Proof.* For item 1, the bridge and integrality of $C_P$ give $C_P(\mu)\ge\lceil\log_2d_0(\mu)\rceil\ge m_0$ on $\mathcal Q$, and the bridge with finite $C_P(\mu)$ forces $d_0(\mu)<\infty$. Theorem 15(1) gives $d_0\ge8$ on the Hilbert-carrier branch, so $\lceil\log_2d_0\rceil=3$ exactly when $d_0=8$.
+
+For item 3, the prefixes $a^m$ and $b^m$ differ in their first symbol, so (17g) defines a partial map. Nesting of $\{\mathcal L_n\}$ passes to $\{\mathcal L_n^{(m)}\}$, and neither membership rule refers to $C_P$, $C_{op}$ or an MPU. A program $b^mP$ lies in every level and outputs $\mu$ exactly when $P$ does, and $a^m$ lies in every level and outputs $\mu_*\in\operatorname{Dom}(\mathfrak P)$. Hence $\operatorname{Dom}(\mathfrak P_m)=\operatorname{Dom}(\mathfrak P)$ and $\mathcal Q(\mathfrak P_m)=\mathcal Q$. Minimum-length full realizers give $C_P^{(m)}=m+C_P^{\mathfrak P}$ away from $\mu_*$ and $C_P^{(m)}(\mu_*)=\min(m,m+C_P^{\mathfrak P}(\mu_*))=m$. The bridge persists because $m+C_P^{\mathfrak P}(\mu)\ge C_P^{\mathfrak P}(\mu)\ge\log_2d_0(\mu)$ for $\mu\ne\mu_*$ and $m\ge m_0\ge\log_2d_0(\mu_*)$, and the remaining hypotheses of Corollary 3 are properties of the microstates in $\mathcal Q$. Therefore $C_{op}^{(m)}=m$. Item 2 is the same computation without the anchor. Item 4 combines items 1 and 3 with the integer attainment (17a); for its last clause, Proposition 5.2.3a attains $C_{op}=3$ at some $\mu$, and $3=C_P(\mu)\ge\log_2d_0(\mu)\ge3$.
+
+For item 5, the added rules are finite. The string $a^m$ is incomparable in the prefix order with every $b^mP$, and $b^mP$ is a prefix of $b^mP'$ exactly when $P$ is a prefix of $P'$. The output complexities satisfy $K_{U^{+t}}=K_U+t$, $K_{U_m}=K_U+m$ away from $\mu_*$ and $K_{U_m}(\mu_*)=m$. For every program $P$ and input $x$, $U^{+t}(b^t\sigma P,x)=U(\sigma P,x)$ and $U_m(b^m\sigma P,x)=U(\sigma P,x)$, so a simulation prefix $\sigma$ of $U$ for a machine $V$ yields the simulation prefix $b^t\sigma$, respectively $b^m\sigma$, for $V$.
+
+For item 6, choose for each $\mu\in\mathcal Q(\mathfrak P')$ a minimum-length full realizer $P_\mu$ by Theorem 2.4.1b. Since $U'(P_\mu,\mu_{\mathrm{ref}})=\mu$, distinct microstates have distinct realizers, and $\Sigma$ has $|\Sigma|^s$ strings of length $s$. If the domain is prefix-free, the one-sided infinite sequences extending distinct $P_\mu$ form disjoint cylinders of uniform measure $|\Sigma|^{-K(P_\mu)}$, which gives (17i). Finite fibers force an infinite qualifying class to have an unbounded image. ∎
+
+Items 1--4 lift the nonentailment of Proposition 5.2.3b from its numerical projection to Section 2.4.1 presentations: whenever $\mathcal Q$ contains a member with $d_0=8$, the anchored presentations with $m=3$ and $m=4$ satisfy every hypothesis of Corollary 3 and give $C_{op}=3$ and $C_{op}=4$. Item 6 bounds the fiber multiplicities that (17c) leaves free, while every image set in (17d) remains compatible with (17i) because $\sum_{s\ge3}|\Sigma|^{-s}\le\tfrac14$. Proposition 5.2.3c thus places the value of $C_{op}$ in the registered presentation, which an accepted baseline-identity extension of Definition 2.4.1d fixes; $K_0=3$ does not depend on the reference machine (Section 2.4.1).
+
+**Resolution TV-HC-02-R3 (Metadata).** Exact domain: Section-2.4.1 presentations over a fixed alphabet with at least two symbols that share Definition 13's presentation-independent qualification set $\mathcal Q_{\mathrm{ph}}$, on Corollary 3's branch with $\mathcal Q\ne\varnothing$. Premises: Theorem 2.4.1b's hypotheses, Corollary 3's hypotheses for the base presentation and Theorem 15(1)'s bound $d_0\ge8$. Equivalence: equality of qualifying classes and of $C_{op}$ values; machines are compared through their output-complexity functions. Budget: every integer $m\ge m_0$ through the anchored family, every $t\ge0$ through the padded family, and the complete qualifying class for the fiber bound. Verifier: transport of the realizability domain, the bridge inequalities, the length identities of (17g), injectivity of minimum-length realizers and the cylinder-measure form of (17i). Falsifier: a $\mathcal Q$-admissible presentation with $C_{op}<m_0$, an unattained $m\ge m_0$, a change of $\mathcal Q$ under (17g), or more than $|\Sigma|^s$ qualifying microstates of complexity $s$ in one presentation. Provenance class: source-internal exact presentation classification. Downstream consumers: Definition 13, Corollary 3, Propositions 5.2.3a--5.2.3b, Table 5.1 and `TV-HC-02`. Nonvacuity: every base presentation on Corollary 3's branch with nonempty $\mathcal Q$ yields its anchored family, and when $m_0=3$ the values $m=3$ and $m=4$ give equality and strict inequality. This is `positive-discharge` of the attainable-threshold spectrum (17h) over $\mathcal Q$-admissible presentations and of the fiber bound, and `nonentailment` of $C_{op}=K_0$ and of $C_{op}>K_0$ from Section 2.4.1's presentation axioms together with Corollary 3's hypotheses whenever $\mathcal Q$ contains a member with $d_0=8$. `TV-HC-02` retains `N+R`: the complexity image of the registered target-blind presentation, which (17f)--(17i) constrain but do not fix, and a formal realization of a same-task qualifying microstate with $d_0=8$ and complexity $3$ in that presentation remain live. The anchored presentations are target-informed and do not supply that registration.
+
 **Remark (Scope of the Threshold Relation).** Under the realization-class and complexity-capacity bridge hypotheses of Corollary 3, $C_{op}\ge K_0=3$. Separately, under the multiplicative-composition hypothesis of Theorem 19 and for a held task scale $\hat C_{target}$, Equation (23) gives
 $$
 C-C_{op}

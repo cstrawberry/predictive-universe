@@ -230,8 +230,8 @@ function renderLatex(source, display) {
       return node(row(fence(left) + content + fence(right)));
     }
     if (name === 'middle' || name === 'right') return node(fence(delimiter()));
-    if (/^(big|Big|bigg|Bigg)[lr]?$/.test(name)) {
-      const size = {big:'1.2em',Big:'1.6em',bigg:'2em',Bigg:'2.4em'}[name.replace(/[lr]$/, '')];
+    if (/^(big|Big|bigg|Bigg)[lrm]?$/.test(name)) {
+      const size = {big:'1.2em',Big:'1.6em',bigg:'2em',Bigg:'2.4em'}[name.replace(/[lrm]$/, '')];
       return node(fence(delimiter(), size));
     }
     if (name === 'begin') return environment(rawGroup());
