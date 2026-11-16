@@ -26,11 +26,27 @@ function markdownHeadingSlug(text){
     .replace(/-+/g,'-');
 }
 
+// A bold span that continues onto the next source line is one span: join those lines with a space, as GitHub does.
+function joinBoldLines(lines){
+  const out = [];
+  const opens = line => (String(line).replace(/`[^`]*`/g, '').replace(/\$[^$]*\$/g, '').match(/\*\*/g) || []).length % 2 === 1;
+  for (const line of lines) {
+    if (out.length && opens(out[out.length - 1]) && /\*\*/.test(line)) out[out.length - 1] += ' ' + line.trim();
+    else out.push(line);
+  }
+  return out;
+}
+
 function markdownLeadAnchorSlug(text){
   const match=String(text||'').trim().match(/^(?:[-*+]\s+|\d+[.)]\s+)?\*\*(.+?)\.?\*\*/);
   if(!match) return '';
   return markdownHeadingSlug(match[1].replace(/[.:]\s*$/,''));
 }
+
+// An explicit <a id="x"></a> at the start of a heading, statement or list item names that element;
+// anywhere else it is an invisible anchor. Generated ids are unaffected.
+const MD_LEAD_ANCHOR=/^(\s*(?:[-*+]\s+|\d+[.)]\s+)?)<a\s+(?:id|name)="([\p{L}\p{N}_:.-]+)"\s*><\/a>\s*/u;
+function markdownDropLeadAnchor(text){ return String(text||'').replace(MD_LEAD_ANCHOR,'$1'); }
 
 function uniqueMarkdownSlug(base,counts){
   if(!base) return '';
@@ -51,11 +67,16 @@ function renderMarkdown(src, options = {}){
   }
   function anchorFor(text, heading = false){
     text = sourceText(text);
+    const htmlAnchor = text.match(MD_LEAD_ANCHOR);
+    if(htmlAnchor) text = htmlAnchor[1] + text.slice(htmlAnchor[0].length);
     const explicit = heading && text.match(/\s+\{#([\w:.-]+)(?:\s+\.[\w-]+)*\}\s*$/);
     if(explicit) text = text.slice(0, explicit.index);
     const label = heading ? text : text.trim().match(/^(?:[-*+]\s+|\d+[.)]\s+)?\*\*(.+?)\.?\*\*/)?.[1];
-    const slug = uniqueMarkdownSlug(explicit ? explicit[1] : heading ? markdownHeadingSlug(text) : markdownLeadAnchorSlug(text), headingCounts);
-    if(slug && options.onAnchor) options.onAnchor({ id: slug, label });
+    const base = explicit ? explicit[1] : heading ? markdownHeadingSlug(text) : markdownLeadAnchorSlug(text);
+    let slug;
+    if(htmlAnchor){ if(base) headingCounts[base]=(headingCounts[base]||0)+1; slug = htmlAnchor[2]; }
+    else slug = uniqueMarkdownSlug(base, headingCounts);
+    if(slug && label !== undefined && options.onAnchor) options.onAnchor({ id: slug, label });
     return slug;
   }
 
@@ -198,7 +219,7 @@ function renderMarkdown(src, options = {}){
       const lv=hm[1].length;
       const slug=anchorFor(hm[2].trim(), true);
       const headingText=hm[2].trim().replace(/\s+\{#[\w:.-]+(?:\s+\.[\w-]+)*\}\s*$/, '');
-      out += `<h${lv}${slug?` id="${escHtml(slug)}"`:''}>${inline(headingText)}</h${lv}>`;
+      out += `<h${lv}${slug?` id="${escHtml(slug)}"`:''}>${inline(markdownDropLeadAnchor(headingText))}</h${lv}>`;
       continue;
     }
 
@@ -229,7 +250,9 @@ function renderMarkdown(src, options = {}){
 
     // Default: paragraph (split lines before inline to avoid escaping <br>)
     const leadSlug=anchorFor(b);
-    out += `<p${leadSlug?` id="${escHtml(leadSlug)}"`:''}>`+b.split('\n').map((line, i)=>i ? anchoredLine(line) : inline(line)).join('<br>')+'</p>';
+    const body=markdownDropLeadAnchor(b);
+    if(!body.trim()){ out += leadSlug ? '<span id="'+escHtml(leadSlug)+'"></span>' : ''; continue; }
+    out += `<p${leadSlug?` id="${escHtml(leadSlug)}"`:''}>`+joinBoldLines(body.split('\n')).map((line, i)=>i ? anchoredLine(line) : inline(line)).join('<br>')+'</p>';
   }
 
   out = out.replace(/<\/(ol|ul)><\1>/g,'');
@@ -272,7 +295,7 @@ function renderMarkdown(src, options = {}){
 
   function anchoredLine(line){
     const slug = anchorFor(line);
-    return (slug ? '<span id="'+escHtml(slug)+'">'+inline(line)+'</span>' : inline(line));
+    return (slug ? '<span id="'+escHtml(slug)+'">'+inline(markdownDropLeadAnchor(line))+'</span>' : inline(line));
   }
 
   function escHtml(s){
@@ -280,6 +303,9 @@ function renderMarkdown(src, options = {}){
   }
 
   function inline(s){
+    // Explicit anchors become invisible spans; everything else is escaped.
+    const anchorIds = [];
+    s = s.replace(/<a\s+(?:id|name)="([\p{L}\p{N}_:.-]+)"\s*><\/a>/gu, (_, id) => { anchorIds.push(id); return '\x00AN'+(anchorIds.length-1)+'\x00'; });
     // Sanitize raw text before markdown transforms to prevent XSS from fetched content
     s = escHtml(s);
     s = s.replace(/\\\$/g, '&#36;');
@@ -311,7 +337,7 @@ function renderMarkdown(src, options = {}){
     s = s.replace(/\[ \]/g,'<span class="task-check"></span>');
     // Superscript (e.g. x^2)
     s = s.replace(/\^(\w+)/g,'<sup>$1</sup>');
-    return s.replace(/\x00HT(\d+)\x00/g,(_,n)=>tags[+n]);
+    return s.replace(/\x00HT(\d+)\x00/g,(_,n)=>tags[+n]).replace(/\x00AN(\d+)\x00/g,(_,n)=>'<span id="'+escHtml(anchorIds[+n])+'"></span>');
   }
 
   function parseTable(lines){
@@ -358,7 +384,8 @@ function renderMarkdown(src, options = {}){
     function flushPara(){
       if(!para.length) return;
       const slug = anchorFor(para.join('\n'));
-      h += '<p'+(slug?' id="'+escHtml(slug)+'"':'')+'>' + para.map((line, i)=>i ? anchoredLine(line) : inline(line)).join('<br>') + '</p>';
+      const lines = markdownDropLeadAnchor(para.join('\n')).split('\n');
+      h += '<p'+(slug?' id="'+escHtml(slug)+'"':'')+'>' + joinBoldLines(lines).map((line, i)=>i ? anchoredLine(line) : inline(line)).join('<br>') + '</p>';
       para = [];
     }
     lines.forEach(line=>{
@@ -412,7 +439,7 @@ function renderMarkdown(src, options = {}){
       }
 
       const slug = anchorFor(content);
-      html += '<li'+(slug?' id="'+escHtml(slug)+'"':'')+'>' + inline(content);
+      html += '<li'+(slug?' id="'+escHtml(slug)+'"':'')+'>' + inline(markdownDropLeadAnchor(content));
       if(contLines.length){
         html += contLines.map(l=>'<div class="li-cont">'+anchoredLine(l)+'</div>').join('');
       }

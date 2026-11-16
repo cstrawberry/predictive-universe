@@ -1,0 +1,27 @@
+{
+  "all_pass": true,
+  "exact_rational_time_bounds": {
+    "frozen_H_unitary_error": "21/2000",
+    "expectation_error_from_U": "7/2500000",
+    "between_node_error": "756103/30000000",
+    "input_status": "Caller-certified upper bounds; all returned implications computed exactly as rational numbers."
+  },
+  "positive_tiny_eta_norm_cases": [
+    {
+      "bits": 16,
+      "eta_denominator_power": 160,
+      "all_norm_bounds_positive": true
+    },
+    {
+      "bits": 32,
+      "eta_denominator_power": 512,
+      "all_norm_bounds_positive": true
+    },
+    {
+      "bits": 80,
+      "eta_denominator_power": 2048,
+      "all_norm_bounds_positive": true
+    }
+  ],
+  "nearest_mp_mpf_calls_entire_module": []
+}

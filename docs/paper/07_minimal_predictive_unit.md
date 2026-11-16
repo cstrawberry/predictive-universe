@@ -2,7 +2,7 @@
 
 Having established the foundational principles governing adaptive prediction, complexity, self-reference, and dynamics, we now introduce the core MPU model. The role of MPUs is fixed by the Cogito-to-PPI/PCE bridge developed in the Introduction and Appendix P: the framework first isolates the certified process-root, models its operational content as prediction, and then asks for a least nontrivial finite physical carrier on branches where the qualifying infimum is attained. This section defines those carriers, details their Hilbert and perspectival representations on the stated branches, specifies reset-free internal dynamics and branch-dependent interaction/update dynamics, and separates structural register size from the distribution-sensitive thermodynamic reset ledger.
 
-**7.1 Hypothesis 1 (Hyp 1): The Nominated MPU Reality Model**
+<a id="71-hypothesis-1-hyp-1-the-nominated-mpu-reality-model"></a>**7.1 Hypothesis 1 (Hyp 1): The Nominated MPU Reality Model**
 
 PU nominates a network of interacting Minimal Predictive Units (MPUs), as defined below, as its foundational physical realization. The nomination preserves the Cogito-certified process root while imposing finite implementation, verifiability, maintenance, update use, and response-null compression. These constraints motivate the MPU as a minimal nontrivial predictive carrier. Hypothesis 1 supplies the substrate premise; the quantum, field, matter, and spacetime conclusions additionally require their declared realization and bridge certificates. Appendix P's singleton result assumes the separately supplied chiral-matter and anomaly package and therefore remains downstream of this substrate premise. The nominated dynamics obey:
 *   The Dual Dynamics of reset-free Internal Prediction and registered `Evolve` interaction/update (Section 7.3.3); unitary and stochastic representations require their separately stated branch hypotheses.
@@ -10,7 +10,7 @@ PU nominates a network of interacting Minimal Predictive Units (MPUs), as define
 *   Constraints arising from self-reference limits (SPAP, Theorem 10, Theorem 11) and reflexive interaction dynamics (RID, Definition 6).
 * The registered binary Commit Snapshot quotient has structural log-cardinality $\varepsilon_0=\ln2$. The reusable full-context return channel $\mathcal G$ merges that label at fixed retained data. If the actual input ensemble is separately certified to be conditionally invariant under input-fibre exchange $\phi\mapsto1-\phi$, Theorem 31a gives $H(\Phi\mid R)=\ln2$ and $\varepsilon_{\mathrm{reset}}\ge\ln2$ on Definition 28's registered thermal branch. The separate CNOT diagnostic remains reversible and carries no such floor. Spacetime coupling uses the independent Appendix E/O bridge certificates.
 
-**7.1.1 Definition 23 (Def 23): Minimal Predictive Unit (MPU)**
+<a id="711-definition-23-def-23-minimal-predictive-unit-mpu"></a>**7.1.1 Definition 23 (Def 23): Minimal Predictive Unit (MPU)**
 
 Let $\mathcal Q$ be the qualifying set in Definition 13 for the declared environment, score, random baseline, and margin. Assume $\mathcal Q\ne\varnothing$ and that its complexity infimum is attained. A **Minimal Predictive Unit (MPU)** is a state $\mu_*\in\mathcal Q$ satisfying
 $$
@@ -33,7 +33,7 @@ $$
 $$
 with the residual-budget branch still using the paper's default link-cycle threshold unless this one-register subledger is explicitly present.
 
-**Theorem 23d (Finite Registered MPU-Census Classifier).** Freeze a finite candidate set $\mathcal A$ of typed predictive architectures, their exact original and null-intervened response tables, PPI-admissibility predicates, and one source-exhausted cost $V$ in common units. Assume at least one candidate is admissible, and quotient the admissible candidates by equality of the complete retained response table. For each response class define
+<a id="theorem-23d-finite-registered-mpu-census-classifier"></a>**Theorem 23d (Finite Registered MPU-Census Classifier).** Freeze a finite candidate set $\mathcal A$ of typed predictive architectures, their exact original and null-intervened response tables, PPI-admissibility predicates, and one source-exhausted cost $V$ in common units. Assume at least one candidate is admissible, and quotient the admissible candidates by equality of the complete retained response table. For each response class define
 $$
 v([a]):=\min_{b\in[a]}V(b).
 $$
@@ -41,9 +41,7 @@ Exact enumeration returns every quotient class, its least-cost representatives, 
 
 *Proof.* Every predicate, response equality and cost comparison is decidable on the frozen finite set. Partitioning by table equality is exhaustive. Each response class attains its candidate-cost minimum, and the nonempty finite quotient attains the minimum of $v$. The global class is unique exactly under the displayed strict comparison. ∎
 
-**Resolution TV-MPU-01-R1 (Metadata).** Exact domain: populated finite typed predictive-architecture censuses with a nonempty admissible subcensus, exact original/null response tables, PPI predicates and common-unit costs. Premises: decidability of every supplied predicate and comparison. Equivalence: equality of the complete retained response table, with class cost given by the least representative cost $v$. Budget: every candidate, quotient class and representative in the supplied census. Verifier: exhaustive admissibility, partition and exact cost comparison. Falsifier: an omitted response class, lower-cost omitted representative or claimed strict gap in a tie. Provenance class: source-internal finite classifier schema. Downstream consumers: Definition 23 and `TV-MPU-01`. Nonvacuity: one admissible architecture and a two-class equal-cost census. This is `positive-discharge` for every populated finite census. Theorem 23d alone supplies no exhaustive physical census, common PPI realization or source-exhausted physical cost, so its finite-census result leaves `M+C+R`. Theorem 23e below closes `M` for every frozen bounded total decoder; accepting one decoder and bound as physically exhaustive, populating its records, and realizing them remain `C+R`.
-
-**Theorem 23e (Bounded Description-Census Exhaustion).** Fix an integer $B\ge0$, a finite binary description alphabet, and a total deterministic decoder
+<a id="theorem-23e-bounded-description-census-exhaustion"></a>**Theorem 23e (Bounded Description-Census Exhaustion).** Fix an integer $B\ge0$, a finite binary description alphabet, and a total deterministic decoder
 $$
 \operatorname{Dec}_B:\{w\in\{0,1\}^*:|w|\le B\}
 \longrightarrow \mathcal A_{\mathrm{type}}\sqcup\{\bot\}.
@@ -59,9 +57,54 @@ If its admissible subcensus is nonempty, Theorem 23d returns every retained-resp
 
 *Proof.* The input domain of $\operatorname{Dec}_B$ is finite and is exhausted by length-lexicographic enumeration. Totality assigns one decoded value or $\bot$ to every word. Exact equality removes repeated descriptions without removing a decoded architecture, so (23e.1) contains every architecture admitted by the frozen decoder and bound. The remaining claims are Theorem 23d applied to this proved-complete finite census. ∎
 
-**Resolution TV-MPU-01-R2.** Exact domain: all architectures decoded by one frozen total decoder at description length at most $B$. Premises: the displayed finiteness, totality and decidability conditions and a nonempty admissible subcensus. Equivalence: equality of complete retained response tables, with duplicate descriptions removed first. Budget: all $2^{B+1}-1$ binary words. Verifier: length-lexicographic enumeration, decoder-totality check, exact deduplication and Theorem 23d. Falsifier: an admitted word not enumerated, a decoded architecture absent from $\mathcal A_B$, or an incorrect quotient/minimum/gap result. Nonvacuity is supplied by any decoder admitting the explicit three-register architecture of Section 7.1.3. This gives `positive-discharge` of the mathematical coverage and classifier component for every frozen bounded description universe. Selecting a physically exhaustive decoder and bound, populating the physical response tables, and accepting the common PPI/cost realization remain the `C+R` components.
+<a id="theorem-23f-populated-four-architecture-controlled-source-census"></a>**Theorem 23f (Populated Four-Architecture Controlled-Source Census).** Register the finite controlled-source technology $\mathsf{CSW\!F4}$ with four sealed eight-mode predictive assemblies. Their common supplied stock consists of a basis-signal bank $e_{m,p,i}$, a two-cycle four-slot sequencer, acquisition/comparison and external-evaluator circuits, four fresh consumed-label modules, seven independent interval-source modules, write-once records and battery/signal stock. Eight channels each carry two permanently live one-volt, one-ohm bias branches for a four-second run. The four factory ROMs and their only physical construction commands are
 
-**7.1.2 Interpretive Convention: Minimal Awareness**
+$$
+\begin{array}{c|c|c}
+\text{command}&\text{forecast}&\text{model rule}\\\hline
+00&\text{independent fair bit}&\text{hold}\\
+01&\text{model}&\text{hold}\\
+100&\text{complement of model}&\text{verified update}\\
+101&\text{model}&\text{verified update}.
+\end{array}
+\tag{23f.1}
+$$
+
+The factory supplies these four initialized assemblies, with no writable ROM, expansion port, general interpreter or adjustable component parameter. Temporary null settings are typed response tests. Its elementary source laws are calibrated lossless basis permutations, finite coordinate comparison, and consume-once block selectors: a coefficient family $A_u$ with $\sum_uA_u^*A_u=I$ is a lossless splitter with a fresh uniform interval selector, whose selected branch on an input $z$ has probability $\|A_uz\|^2/\|z\|^2$ by interval length and routes that branch unchanged. Consumed labels and source stock stay owned. These are the ideal controlled-source and supplied-ready-module premises of this registered technology.
+
+Let $B_0,R_1,R_2,J_1,J_2$ be independent fair bits, and let independent $F_1,F_2$ have probability $1/4$ of one. The source law is
+
+$$
+\Pr(B_0,F_1,F_2,R_1,R_2,J_1,J_2)
+=2^{-5}\prod_{t=1}^2(1/4)^{F_t}(3/4)^{1-F_t}.
+\tag{23f.2}
+$$
+
+Initialize $M=B=B_0$ and freeze a null-test mask $(a,b,c)$. In cycle $t$, replace $M$ by $R_t$ if $a=0$; commit $P=J_t$ if $b=0$ or the ROM is $00$, and otherwise use the ROM's model or complemented-model forecast. After commitment reveal $F_t$ and set $B\leftarrow B\oplus F_t$. If $c=1$, acquire $I=B$, record $S=\mathbf1\{P=B\}$ and update $M\leftarrow B$ exactly for the two adaptive ROMs. If $c=0$, emit $I=S=\bot$ and hold $M$. The common external evaluator records correctness but has no writeback connection. Final source disclosure, prefix restriction and coarse-graining respect this commitment order.
+
+Then:
+
+1. The length-three total decoder accepts exactly the four commands in (23f.1) and rejects the other eleven words. Together with the sealed inventory, it is formally exhaustive. The complete original/null census has $4\cdot8\cdot128=4096$ positive-probability source atoms, grouped into 32 normalized laws.
+2. The displayed recurrence has a response-faithful realization on the same supplied stock. In particular, $A_u=|f(u)\rangle\langle u|$ gives normalized memory-replacement and held/updated closing selectors, retaining the consumed input label. The finite records, verification, four-second maintenance and use of the first update at the second forecast provide finite PPI dressing. All four initialized architectures are PPI-admissible and form four distinct retained-response classes, including after forgetting their ROM and source tags.
+3. Write $C_{\mathrm{ready}}=c_b+7c_r+4c_u+c_h$ for the common supplied board, rotor, consumed-module and record charges in joules, including their internal selector and controller supplies. Bias heat is exactly $64\,\mathrm J$, and signal plus sealed absorbers retain one stock $E_0$. For $C=C_{\mathrm{ready}}+E_0+64\,\mathrm J$, $\gamma>0$ and $V=C-\gamma PP$ with $PP=1/(2-A)$, the original-mask comparison is
+   $$
+   \begin{array}{c|c|c|c}
+   \text{command}&A&PP&V-V(101)\\\hline
+   00&1/2&2/3&2\gamma/15\\
+   01&11/16&16/21&4\gamma/105\\
+   100&1/4&4/7&8\gamma/35\\
+   101&3/4&4/5&0.
+   \end{array}
+   \tag{23f.3}
+   $$
+   Thus $101$ uniquely minimizes the source-complete potential on this exhausted class, with strict gap $4\gamma/105$. Every class has a least-cost representative at the fixed supplied-stock boundary.
+4. For the presentation whose exact short outputs are these complete initialized states and whose disjoint escape branch is prefix-universal, register the physical hierarchy $\mathcal L_n=\{00,01,100,101\}$ for every $n$. The initialized states have complexities $2,2,3,3$. With the same task, accuracy baseline $1/2$ and strict margin $1/8$, the full qualifying set is $\{\mu_{101}\}$. Consequently $C_{op}=3$ is attained and $\mu_{101}$ satisfies Definition 23 on this source branch.
+
+*Proof.* Enumeration exhausts the fifteen bounded words; physical coverage is the independent sealed-inventory rule. Every source bit has positive rational probability and the product law sums to one. Conditional basis permutations implement prediction and acquisition. For any basis map $f$, the selector columns obey $\sum_uA_u^*A_u=\sum_u|u\rangle\langle u|=I$, and their fresh interval selector routes the original basis signal to $f(u)$ while the consumed label remains recorded. Four fresh modules cover the two possible memory-null and two closing operations. This realizes each recurrence row. Induction through the finite schedule proves preservation of complete histories, their prefixes and deterministic coarse-grainings; their finite verifier checks the source, comparison, update and ownership relations. Each original/null profile distinguishes its architecture; physical admission does not depend on predictive qualification.
+
+For the original mask, the frozen model succeeds with probabilities $3/4$ and $5/8$, giving mean $11/16$. Verified copy and complement update their model to the last endpoint, giving accuracy $3/4$ and $1/4$ at each cycle. The fair predictor has accuracy $1/2$. The source law and recurrence also determine every null law directly. Sixteen bias branches each dissipate $V_b^2T/R_b=4\,\mathrm J$; all other source charges and the one signal stock are common, with consumed records and unused modules retained. Substitution of the four accuracies into $PP=1/(2-A)$ gives (23f.3), so Theorem 23d returns the stated unique class and gap over all four PPI classes. In the constant physical hierarchy each initialized state has its unique admitted command. The two short commands lack adaptive update, and adaptive complement fails the accuracy margin. Adaptive copy alone qualifies, proving the complete image $C_P(\mathcal Q)=\{3\}$ and item 4. ∎
+
+<a id="712-interpretive-convention-minimal-awareness"></a>**7.1.2 Interpretive Convention: Minimal Awareness**
 
 The ongoing MPU cycle—prediction ($P_{int}$), verification ($V$), and update ($D_{cyc}$) under POP—is interpreted here as the most basic operational form of awareness. On the independently accepted Hilbert/Born/instrument/single-outcome branch, Proposition 9 represents an ideal registered verification as an `Evolve` instrument; the convention then assigns its outcome event this same minimal-awareness language. The convention fixes this interpretation, and the subsequent derivations do not depend on it: they use only the MPU's operational prediction, ND-RID, and POP/PCE properties together with each named branch hypothesis. In particular, $C_{op}\ge K_0$ is used only on Theorem 15 and Corollary 3's (O1)–(O3), (FC), Hilbert-distinguishability, and complexity-capacity branch.
 
@@ -80,13 +123,13 @@ This construction exhibits an eight-dimensional carrier for three binary registe
 
 **2. Internal Prediction (Unitary) Evolution**
 
-The Internal Prediction phase uses the controlled-NOT $U_{pred}=\mathrm{CNOT}_{M\to P}$ with $Q_P$ initialized to $|0\rangle$. For a basis input $|m\rangle_M$,
+The Internal Prediction phase uses the controlled-NOT $U_{\mathrm{pred}}=\mathrm{CNOT}_{M\to P}$ with $Q_P$ initialized to $|0\rangle$. For a basis input $|m\rangle_M$,
 $$
-U_{pred}|m,0,0\rangle=|m,m,0\rangle.
+U_{\mathrm{pred}}|m,0,0\rangle=|m,m,0\rangle.
 $$
 For a general memory state $|\mu\rangle_M=a|0\rangle+b|1\rangle$, linearity gives
 $$
-U_{pred}\bigl((a|0\rangle+b|1\rangle)_M|0\rangle_P|0\rangle_I\bigr)
+U_{\mathrm{pred}}\bigl((a|0\rangle+b|1\rangle)_M|0\rangle_P|0\rangle_I\bigr)
 =a|0,0,0\rangle+b|1,1,0\rangle.
 $$
 This state is entangled between $Q_M$ and $Q_P$ when $ab\ne0$ and therefore is not two copies of $|\mu\rangle$. The circuit coherently correlates the prediction register with the computational-basis value and does not violate no-cloning.
@@ -207,7 +250,7 @@ where:
 *   $R_I(C)=(r_I/\ln2)\ln(C/K_0)$ for $C>K_0$, with continuous boundary value $R_I(K_0)=0$;
 *   $\overline{PP}(C)=\beta-(\beta-\alpha)\exp[-\kappa_{\mathrm{eff}}(C-C_{op})/K_0]$ is the analytic extension of Definition 19.
 
-Assume locally that $C_{op}=\hat C_{target}=K_0$, $\gamma_p=2$, and $r_I>0$. Then $\overline{PP}(K_0)=\alpha$, while physical $PP$ on this branch is restricted to $C>K_0$. The right derivatives of the extensions are
+Assume locally that $C_{op}=\hat C_{\mathrm{target}}=K_0$, $\gamma_p=2$, and $r_I>0$. Then $\overline{PP}(K_0)=\alpha$, while physical $PP$ on this branch is restricted to $C>K_0$. The right derivatives of the extensions are
 $$
 R'_+(K_0)=0,
 \qquad
@@ -258,12 +301,11 @@ $$
 $$
 This is a dimensionless illustrative policy, not a consequence of the dimensional PCE force $\Psi$ in Equation (24). A commit still requires the retained-ledger certificate $\mathfrak C_{\mathrm{act}}$ when that branch is invoked.
 
-
 ### **Minimal Predictive Algebra and the Conditional Dimension Bound $d_0\ge8$**
 
 Theorem 15 supplies a finite-context bound only on its full-context realization class. The algebraic argument below studies a narrower Hilbert branch defined by additional architectural hypotheses.
 
-**Definition (Minimal Predictive Algebra Branch).**
+<a id="definition-minimal-predictive-algebra-branch"></a>**Definition (Minimal Predictive Algebra Branch).**
 Assume the MPU carrier is a complex Hilbert space and that the Memory, Prediction, and Interface roles are represented by three unital subalgebras
 $$
 \mathfrak A_M,\mathfrak A_P,\mathfrak A_I\subseteq\mathfrak A,
@@ -272,7 +314,7 @@ each isomorphic to $M_2(\mathbb C)$, with pairwise commuting ranges. Assume furt
 
 These are independent-register and complex-Hilbert hypotheses. Simultaneous readability of selected record observables alone would require only those selected observables to commute and would not imply three commuting copies of the full qubit matrix algebra. Under the stronger hypotheses above, the following lemma proves the eight-dimensional representation bound. PCE can select the least dimension only after a cost function and the no-additional-benefit condition of the subsequent stability theorem are imposed.
 
-**Lemma (Hilbert-Space Bound for Three Commuting Unital Qubit Factors).**
+<a id="lemma-hilbert-space-bound-for-three-commuting-unital-qubit-factors"></a>**Lemma (Hilbert-Space Bound for Three Commuting Unital Qubit Factors).**
 Let $\mathfrak A$ be a unital C*-algebra with three unital *-monomorphisms
 $$
 \iota_M,\iota_P,\iota_I:M_2(\mathbb C)\to\mathfrak A
@@ -290,15 +332,15 @@ $$
 $$
 The domain is $M_8(\mathbb C)$. If a nonzero two-sided ideal contains a matrix $X$ with $X_{ij}\ne0$, then $e_{ki}Xe_{j\ell}=X_{ij}e_{k\ell}$ puts every matrix unit in that ideal. Thus the only two-sided ideals are zero and the whole algebra. The kernel of $\Phi$ is an ideal, and $\Phi(1)\ne0$, so $\Phi$ is injective. Let $\pi$ be a faithful nondegenerate representation of $\mathfrak A$ and choose a unit vector $v$ in the nonzero range of $\pi(\Phi(e_{11}))$. The eight vectors $v_i:=\pi(\Phi(e_{i1}))v$ satisfy $\langle v_i,v_j\rangle=\langle v,\pi(\Phi(e_{1i}e_{j1}))v\rangle=\delta_{ij}$. Hence the representation space contains eight orthonormal vectors and has dimension at least eight. ∎
 
-**Theorem (PCE Stability of $d_0 = 8$ from Algebraic Completeness).**
-Let the PCE potential for an MPU with an active operational dimension $d$ be $V(d) = V_{cost}(d) - V_{benefit}(d)$, subject to the algebraic lower bound $d \ge 8$. The stability of the minimal dimension $d^*=8$ is a necessary consequence of PCE optimization under the following physically-motivated conditions:
+<a id="theorem-pce-stability-of-d_0-8-from-algebraic-completeness"></a>**Theorem (PCE Stability of $d_0 = 8$ from Algebraic Completeness).**
+Let the PCE potential for an MPU with an active operational dimension $d$ be $V(d) = V_{\mathrm{cost}}(d) - V_{\mathrm{benefit}}(d)$, subject to the algebraic lower bound $d \ge 8$. The stability of the minimal dimension $d^*=8$ is a necessary consequence of PCE optimization under the following physically-motivated conditions:
 
-1.  **Algebraic Sufficiency and Diminishing Returns:** The core predictive benefit, derived from instantiating the complete, self-referential predictive algebra (SPAP/RID), is fully realized at $d=8$. Assume the marginal predictive benefit $\Delta V_{benefit}(d)=V_{benefit}(d)-V_{benefit}(d-1)$ is significant for $d\le 8$ but vanishes for $d>8$. Any additional dimension is a "spectator" that does not contribute to the core predictive task and is subject to rapidly diminishing returns.
-2.  **Monotonic Complexity Cost:** The resource cost of maintaining and integrating an active dimension, $V_{cost}(d)$, is a strictly increasing function of $d$. Adding a dimension always incurs a non-zero physical cost.
+1.  **Algebraic Sufficiency and Diminishing Returns:** The core predictive benefit, derived from instantiating the complete, self-referential predictive algebra (SPAP/RID), is fully realized at $d=8$. Assume the marginal predictive benefit $\Delta V_{\mathrm{benefit}}(d)=V_{\mathrm{benefit}}(d)-V_{\mathrm{benefit}}(d-1)$ is significant for $d\le 8$ but vanishes for $d>8$. Any additional dimension is a "spectator" that does not contribute to the core predictive task and is subject to rapidly diminishing returns.
+2.  **Monotonic Complexity Cost:** The resource cost of maintaining and integrating an active dimension, $V_{\mathrm{cost}}(d)$, is a strictly increasing function of $d$. Adding a dimension always incurs a non-zero physical cost.
 
 Under these conditions, $V(d)$ is strictly increasing for $d>8$, so $d=8$ is the unique minimizer of the static discrete optimization problem on $\{8,9,10,\ldots\}$. This establishes only the unique static minimizer. Decoupling or convergence of larger active sectors requires a separately specified dynamics and convergence theorem.
 
-*Proof.* For any dimension $d > 8$, the change in the potential from adding the $d$-th dimension is $\Delta V(d) = \Delta V_{cost}(d) - \Delta V_{benefit}(d)$. By condition (2), the marginal cost is strictly positive, $\Delta V_{cost}(d) > 0$. By condition (1), the marginal benefit vanishes, $\Delta V_{benefit}(d)=0$. Therefore, the marginal change in the potential is strictly positive: $\Delta V(d) > 0$ for all $d > 8$. This implies that the potential $V(d)$ is a strictly increasing function for $d > 8$. The unique global minimum of $V(d)$ on the allowed domain $d \in \{8, 9, 10, \dots\}$ must therefore occur at the boundary, $d^*=8$. ∎
+*Proof.* For any dimension $d > 8$, the change in the potential from adding the $d$-th dimension is $\Delta V(d) = \Delta V_{\mathrm{cost}}(d) - \Delta V_{\mathrm{benefit}}(d)$. By condition (2), the marginal cost is strictly positive, $\Delta V_{\mathrm{cost}}(d) > 0$. By condition (1), the marginal benefit vanishes, $\Delta V_{\mathrm{benefit}}(d)=0$. Therefore, the marginal change in the potential is strictly positive: $\Delta V(d) > 0$ for all $d > 8$. This implies that the potential $V(d)$ is a strictly increasing function for $d > 8$. The unique global minimum of $V(d)$ on the allowed domain $d \in \{8, 9, 10, \dots\}$ must therefore occur at the boundary, $d^*=8$. ∎
 
 Here $d$ is the **active operational dimension**, the dimension coupled into the predictive loop. For surplus multiplicity sectors of the Minimal Predictive Algebra, Theorems 7.6a and 7.6g classify the dynamics: on the split Hamiltonian branch (7.6g.1) the retained response descends exactly to the multiplicity-one carrier, and a nontrivial finite surplus channel has no asymptotic limit. Admission of the split branch for a physical carrier is a realization record. Theorem 23 remains the conditional Hilbert-rank lower bound $d_0\ge8$.
 
@@ -312,7 +354,7 @@ r(s)=\bigl(\phi(s),p_{\mathrm{stored}}(s),c_{\mathrm{phase}}(s)\bigr),
 $$
 is surjective, and the explicit eight-state construction attains the least context set $B_3=\{0,1\}^3$ on that class. Theorem 15 does not force a tensor-product decomposition or an eight-dimensional physical carrier. The former requires the commuting-subalgebra hypotheses of the Minimal Predictive Algebra discussion; the latter requires mutually perfectly distinguishable Hilbert representatives and, for equality $d_0=8$, the admissible-comparator, response-quotient, strict-cost, and minimal-branch hypotheses of Theorem Z.2.
 
-**Theorem 23a (Minimal Faithful Realization is 3-Qubit).**
+<a id="theorem-23a-minimal-faithful-realization-is-3-qubit"></a>**Theorem 23a (Minimal Faithful Realization is 3-Qubit).**
 Assume the hypotheses of the lemma above, and let
 $$
 \mathfrak{A}_{\min}:=C^*(\mathfrak{A}_M,\mathfrak{A}_P,\mathfrak{A}_I).
@@ -360,7 +402,7 @@ I \otimes I \otimes M_2(\mathbb{C}).
 $$
 ∎
 
-**Corollary 23a.** Once the three functional roles are specified, the minimal predictive state space admits a factorization
+<a id="corollary-23a"></a>**Corollary 23a.** Once the three functional roles are specified, the minimal predictive state space admits a factorization
 $$
 \mathcal{H}_0\cong \mathcal{H}_M \otimes \mathcal{H}_P \otimes \mathcal{H}_I,\qquad
 \dim \mathcal{H}_M=\dim \mathcal{H}_P=\dim \mathcal{H}_I=2,
@@ -375,7 +417,7 @@ under which the three distinguished algebras act on the first, second, and third
 
 **Convention (Clifford Signature).** Throughout this manuscript, real Clifford algebras $\mathrm{Cl}_{\mathbb R}(p,q)$ are taken with the negative-definite convention on the last $q$ generators, so that $\mathrm{Cl}_{\mathbb R}(p,q)$ is the unital associative $\mathbb R$-algebra generated by $\{e_1,\ldots,e_{p+q}\}$ with $e_i^2=+1$ for $i\le p$ and $e_i^2=-1$ for $i>p$. Under this convention the standard real classification gives $\mathrm{Cl}_{\mathbb R}(0,6)\cong M_8(\mathbb R)$.
 
-**Corollary 23a.1 (Complex Clifford Form of the Minimal Predictive Algebra).**
+<a id="corollary-23a1-complex-clifford-form-of-the-minimal-predictive-algebra"></a>**Corollary 23a.1 (Complex Clifford Form of the Minimal Predictive Algebra).**
 On the minimal branch,
 $$
 K_0=3,
@@ -417,9 +459,9 @@ Complexification gives $M_8(\mathbb R)\otimes_{\mathbb R}\mathbb C\cong M_8(\mat
 
 The hypotheses used here contain only a complex matrix algebra, its irreducible complex module, and optionally a carrier real structure. They contain no octonionic multiplication, real cross-product, or Cayley four-form. Since a $\mathrm{Spin}(7)$ stabilizer requires a Cayley four-form on an oriented real 8-dimensional carrier, it does not follow from the stated data. ∎
 
-**Remark 23a.1a (Hurwitz Coherence Check).** On the minimal branch, $d_0=8$ is also the maximal dimension of a normed division algebra over $\mathbb R$. This is a secondary coherence check already compatible with the Appendix Z branch data; it is not an independent derivation of $d_0=8$.
+<a id="remark-23a1a-hurwitz-coherence-check"></a>**Remark 23a.1a (Hurwitz Coherence Check).** On the minimal branch, $d_0=8$ is also the maximal dimension of a normed division algebra over $\mathbb R$. This is a secondary coherence check already compatible with the Appendix Z branch data; it is not an independent derivation of $d_0=8$.
 
-**Corollary 23a.1b (Numerical Hurwitz Coincidence).** The Horizon Constant equals the number of non-real normed division algebras over $\mathbb R$:
+<a id="corollary-23a1b-numerical-hurwitz-coincidence"></a>**Corollary 23a.1b (Numerical Hurwitz Coincidence).** The Horizon Constant equals the number of non-real normed division algebras over $\mathbb R$:
 $$
 K_0=3=\#\{\mathbb C,\mathbb H,\mathbb O\}.
 $$
@@ -430,7 +472,7 @@ $$
 $$
 Removing the real algebra leaves precisely the three pairwise non-isomorphic algebras $\mathbb C$, $\mathbb H$, and $\mathbb O$. Their number is therefore $3=K_0$. ∎
 
-**Theorem 23a.1c (Negative Resolution of the Hurwitz Coincidence).** Let $\mathsf{SPAP}_{\min}$ be the groupoid whose objects are minimal-branch SPAP register configurations
+<a id="theorem-23a1c-negative-resolution-of-the-hurwitz-coincidence"></a>**Theorem 23a.1c (Negative Resolution of the Hurwitz Coincidence).** Let $\mathsf{SPAP}_{\min}$ be the groupoid whose objects are minimal-branch SPAP register configurations
 $$
 (\mathcal H_0,\mathfrak A_M,\mathfrak A_P,\mathfrak A_I)
 $$
@@ -469,11 +511,11 @@ $$
 $$
 This makes it impossible for the essential image to consist of all three non-isomorphic Hurwitz objects. Therefore no such functor exists, and a fortiori the categories are not equivalent. ∎
 
-**Remark 23a.1d (What Survives).** Corollary 23a.1b remains a valid numerical coherence check. Theorem 23a.1c excludes a categorical derivation of the three non-real Hurwitz objects from the canonical minimal-branch SPAP configuration groupoid. A coarser comparison between the ordered three-register tower and the first three nontrivial Cayley-Dickson stages is a separate construction on a different source category.
+<a id="remark-23a1d-what-survives"></a>**Remark 23a.1d (What Survives).** Corollary 23a.1b remains a valid numerical coherence check. Theorem 23a.1c excludes a categorical derivation of the three non-real Hurwitz objects from the canonical minimal-branch SPAP configuration groupoid. A coarser comparison between the ordered three-register tower and the first three nontrivial Cayley-Dickson stages is a separate construction on a different source category.
 
 The compatible real-carrier refinement of Corollary 23a.1 selects the $\mathrm{Cl}_{\mathbb R}(0,6)$ real form. Cayley--Dickson, octonionic, or $\mathrm{Spin}(7)$ data remain additional markings unless the branch separately supplies an octonionic product, a Cayley four-form, or an equivalent stabilizer datum. They are compatible with the $d_0=8$ carrier but do not replace Theorem 15's context count, Theorem 23's Hilbert lower bound, Theorem Z.2's same-class comparator, the Peirce tangent count, or the mode--channel/kissing-number selection.
 
-**Remark 23a.1e (Inner Symmetry of the Three-Register SPAP Frame).** Let
+<a id="remark-23a1e-inner-symmetry-of-the-three-register-spap-frame"></a>**Remark 23a.1e (Inner Symmetry of the Three-Register SPAP Frame).** Let
 
 $$
 \mathcal H_{\mathrm{PU}}^{\mathrm{SPAP}}
@@ -518,8 +560,7 @@ with $S_3$ acting by factor permutation. Thus the semidirect product occurs only
 
 Where a downstream rigidity statement says "fixed up to inner unitary on the predictive carrier," the label-preserving class is $\mathrm{Inn}_{\mathrm{SPAP}}^{\mathrm{lab}}$ unless that statement explicitly permits register relabeling, in which case the frame-normalizer class $\mathrm{Inn}_{\mathrm{SPAP}}^{\mathrm{fr}}$ is used. This naming changes no previously proved rigidity content.
 
-
-**Theorem 23b (Operational Pure-State Geometry on the Minimal Branch).**
+<a id="theorem-23b-operational-pure-state-geometry-on-the-minimal-branch"></a>**Theorem 23b (Operational Pure-State Geometry on the Minimal Branch).**
 On the minimal active branch $d_0=8$, the MPU pure-state description admits the following quotient form.
 
 (i) The normalized amplitude component $|\psi\rangle\in\mathcal H_0$ with $\langle\psi|\psi\rangle=1$, modulo global phase $|\psi\rangle\sim e^{i\theta}|\psi\rangle$, is a ray $[\psi]\in\mathbb P(\mathcal H_0)\cong\mathbb{CP}^7$, endowed with the Fubini-Study metric.
@@ -536,14 +577,14 @@ $$
 
 *Proof.* By Proposition 7, operational outcome probabilities are invariant under a global phase, so the physically relevant pure amplitude is the ray $[\psi]$. Because $\dim \mathcal{H}_0=8$ on the minimal active branch, the ray space is $\mathbb{P}(\mathcal{H}_0)\cong \mathbb{CP}^7$ with its standard Fubini-Study metric. Theorem 25 and Definition 25 below identify the perspective space with $\Sigma\cong U(8)/U(1)^8$ and equip it with a quotient Riemannian metric. The product therefore gives the stated smooth metric structure on $\mathbb{CP}^7\times \Sigma$. Finally, under the three-qubit factorization, a pure state is fully separable if and only if it is a simple tensor $\psi_M\otimes\psi_P\otimes\psi_I$, and these are exactly the points in the image of the Segre embedding. ∎
 
-**Theorem 23c (Predictive-Semantic Geometry of the MPU State Space).**
+<a id="theorem-23c-predictive-semantic-geometry-of-the-mpu-state-space"></a>**Theorem 23c (Predictive-Semantic Geometry of the MPU State Space).**
 Assume the three-qubit factorization of Corollary 23a and the Born rule of Proposition 7. Then the geometry of the pure-state space has direct predictive meaning in two senses.
 
 (i) For any smooth normalized one-parameter family $|\psi(\theta)\rangle$, letting $\gamma(\theta)=[\psi(\theta)]\in \mathbb{CP}^7$, the quantum Fisher information and the Fubini-Study metric satisfy
 $$
 F_Q(\theta)=4\,g_{FS}\big(\dot\gamma(\theta),\dot\gamma(\theta)\big).
 $$
-Hence the Fubini-Study metric is the local optimal statistical-distinguishability metric for predictive state families [Braunstein & Caves 1994].
+Hence the Fubini-Study metric is the local optimal statistical-distinguishability metric for predictive state families (Braunstein and Caves 1994).
 
 (ii) The Segre variety above is exactly the locus of fully factorized pure states. A ray lies outside this locus if and only if it is not fully separable with respect to $\mathcal{H}_M\otimes\mathcal{H}_P\otimes\mathcal{H}_I$, and therefore encodes non-factorizable correlations across the memory/prediction/interface decomposition.
 
@@ -560,7 +601,7 @@ F_Q(\theta)
 -|\langle\psi|\partial_\theta\psi\rangle|^2\right)
 =4g_{FS}(\dot\gamma,\dot\gamma).
 $$
-The Braunstein–Caves theorem (Braunstein & Caves 1994) applies because $\rho_\theta$ is a smooth one-parameter family of normalized density operators on the finite-dimensional carrier $\mathcal H_0$, and its optimization ranges over all POVMs. It identifies $F_Q$ with the supremum of the classical Fisher information of the corresponding Born distributions. This proves part (i).
+The Braunstein–Caves theorem (Braunstein and Caves 1994) applies because $\rho_\theta$ is a smooth one-parameter family of normalized density operators on the finite-dimensional carrier $\mathcal H_0$, and its optimization ranges over all POVMs. It identifies $F_Q$ with the supremum of the classical Fisher information of the corresponding Born distributions. This proves part (i).
 
 For part (ii), by definition the Segre map sends a triple of rays to the ray of their simple tensor. Its image is therefore exactly the set of fully separable rays. A ray outside the image has no simple-tensor representative and hence is not fully separable across the Memory, Prediction, and Interface factors. ∎
 
@@ -629,7 +670,7 @@ h=g_{FS}.
 \tag{23c.6}
 $$
 
-*Proof.* The $C^2$ hypothesis, finite-dimensional carrier, and retained support convention make the SLDs in (23c.2) well defined on each constant-rank support stratum. The Braunstein–Caves information inequality (Braunstein & Caves 1994) applies to every POVM on such a finite-dimensional differentiable state family and gives
+*Proof.* The $C^2$ hypothesis, finite-dimensional carrier, and retained support convention make the SLDs in (23c.2) well defined on each constant-rank support stratum. The Braunstein–Caves information inequality (Braunstein and Caves 1994) applies to every POVM on such a finite-dimensional differentiable state family and gives
 $$
 F^{(E)}\preceq F^Q,
 $$
@@ -647,12 +688,11 @@ F^Q(v,v)=\operatorname{tr}(\rho L_v^2)\ge0.
 $$
 In finite dimension this vanishes exactly when $L_v$ vanishes on the support of $\rho$, which by the SLD equation is equivalent on the retained support stratum to $\partial_v\rho=0$. Conversely, $\partial_v\rho=0$ permits $L_v=0$. Since $\partial_vp_i=\operatorname{tr}((\partial_v\rho)E_i)$, protocol completeness makes this equivalent to vanishing first variation of every retained Born probability. Thus the kernel is exactly the PPI response-null tangent space, proving item 3. Theorem 23c gives $F^Q(v,v)=4g_{FS}(v,v)$ on every pure-state tangent. Polarization then gives $h=g_{FS}$. ∎
 
-
 **7.2 MPU State Representation: Perspectival State and Hilbert Space**
 
 We now detail the necessary mathematical structure for representing the state of an MPU.
 
-**7.2.1 Theorem 23 (Conditional Hilbert-Space Dimension Bound)**
+<a id="721-theorem-23-conditional-hilbert-space-dimension-bound"></a>**7.2.1 Theorem 23 (Conditional Hilbert-Space Dimension Bound)**
 
 Assume the full-context realization hypotheses of Theorem 15, so the retained state has eight response classes, and assume the Hilbert branch represents them as mutually perfectly distinguishable states. Then
 $$
@@ -687,7 +727,7 @@ d_0=\dim\mathcal H_0
 $$
 If the separate active-dimension PCE theorem is assumed and its no-additional-benefit and increasing-cost hypotheses hold, its saturating representative has $d_0=8$. The distinguishability argument alone proves only the lower bound. ∎
 
-**7.2.2 Proposition 4 (Complex Hilbert Representation on the $C^*$-Algebra Branch)**
+<a id="722-proposition-4-complex-hilbert-representation-on-the-c-algebra-branch"></a>**7.2.2 Proposition 4 (Complex Hilbert Representation on the $C^*$-Algebra Branch)**
 
 Assume the retained operational questions form a unital complex $C^*$-algebra $\mathcal A$ and the operational statistics define a positive normalized linear functional $\omega:\mathcal A\to\mathbb C$. Then there are a complex Hilbert space $\mathcal H_\omega$, a unital *-representation $\pi_\omega:\mathcal A\to\mathcal B(\mathcal H_\omega)$, and a cyclic unit vector $\Omega_\omega$ such that
 $$
@@ -723,7 +763,7 @@ $$
 $$
 and $\pi_\omega(\mathcal A)\Omega_\omega$ is dense by construction. Under the additional same-representation support hypothesis in the proposition, the eight nonzero response supports are mutually orthogonal in $\mathcal H_\omega$, so $\dim\mathcal H_\omega\ge8$. ∎
 
-**7.2.3 Definition 24 (Def 24): Perspectival State $S_{(s)}(t)$**
+<a id="723-definition-24-def-24-perspectival-state-s_st"></a>**7.2.3 Definition 24 (Def 24): Perspectival State $S_{(s)}(t)$**
 The complete operational quantum state of an MPU at time $t$ is the perspectival state
 $$
 S_{(s)}(t)=(\rho(t),s),
@@ -731,7 +771,7 @@ $$
 where $\rho(t)$ is a density operator on $\mathcal H_0$ and $s\in\Sigma$ is the perspective index. A pure-state branch is the special case $\rho(t)=|\psi(t)\rangle\langle\psi(t)|$. This typing includes reduced states and general quantum instruments without assigning a state vector to a mixed subsystem. Interaction outcomes under Definition 27 are indexed by the registered context $s$ and updated by the instrument formalism of Appendix M.
 When $\rho=|\psi\rangle\langle\psi|$, the notation $(|\psi\rangle,s)$ is permitted only as shorthand for $(|\psi\rangle\langle\psi|,s)$; it does not change the general density-operator type.
 
-**7.2.4 Theorem 24 (Nondegenerate Projective Contexts and Basis Rays)**
+<a id="724-theorem-24-nondegenerate-projective-contexts-and-basis-rays"></a>**7.2.4 Theorem 24 (Nondegenerate Projective Contexts and Basis Rays)**
 
 On the Born/Hilbert branch, a labeled complete rank-one projective measurement on $\mathcal H_0$ corresponds bijectively to an ordered orthonormal basis modulo an independent phase for each basis vector.
 
@@ -745,7 +785,7 @@ P_iP_j=\delta_{ij}P_i,
 $$
 For each $i$, choose a unit vector $|i\rangle$ spanning $\operatorname{ran}P_i$. Orthogonality of the projectors gives $\langle i|j\rangle=0$ for $i\ne j$, and completeness makes the vectors an ONB. Replacing $|i\rangle$ by $e^{i\theta_i}|i\rangle$ leaves $P_i=|i\rangle\langle i|$ unchanged, and these are the only choices of a unit vector spanning the same rank-one range. Conversely, every ordered ONB defines the labeled projectors $P_i=|i\rangle\langle i|$, with Born probabilities $\operatorname{tr}(\rho P_i)$. Higher-rank projective contexts correspond to orthogonal decompositions into subspaces rather than to ONBs. ∎
 
-**7.2.5 Theorem 25 (Structure of Perspective Space $\Sigma$)**
+<a id="725-theorem-25-structure-of-perspective-space-sigma"></a>**7.2.5 Theorem 25 (Structure of Perspective Space $\Sigma$)**
 
 Let perspectives be identified with ordered ONBs modulo per-vector phases. Then the space of distinct perspectives $\Sigma$ is isomorphic to the complex homogeneous space
 $$
@@ -755,7 +795,7 @@ $$
 
 *Remark:* If outcome labels are physically irrelevant, one may further quotient by the permutation group $S_{d_0}$, giving $U(d_0)/(U(1)^{d_0} \rtimes S_{d_0})$. Here we fix ordered ONBs to retain outcome labels inherent in control and recursion roles.
 
-**7.2.6 Definition 25 (Def 25): Perspective Space $\Sigma$ and Metric**
+<a id="726-definition-25-def-25-perspective-space-sigma-and-metric"></a>**7.2.6 Definition 25 (Def 25): Perspective Space $\Sigma$ and Metric**
 
 Let $T=U(1)^{d_0}$ and identify $\Sigma=U(d_0)/T$. Equip $U(d_0)$ with the bi-invariant Riemannian metric whose inner product at the identity is $g_I(X,Y)=\frac12\operatorname{Re}\operatorname{tr}(X^\dagger Y)$ for skew-Hermitian $X,Y$. Its geodesic distance is
 $$
@@ -771,7 +811,7 @@ d_\Sigma(s_1,s_2)
 $$
 Because the right action of the compact torus $T$ is isometric, this is the geodesic distance of the quotient Riemannian metric and is independent of the representatives. The minimization over all skew-Hermitian logarithms makes the definition global, including matrices with eigenvalue $-1$.
 
-**7.2.7 Corollary 26 (Perspective Space on the Ordered Rank-One Context Branch)**
+<a id="727-corollary-26-perspective-space-on-the-ordered-rank-one-context-branch"></a>**7.2.7 Corollary 26 (Perspective Space on the Ordered Rank-One Context Branch)**
 
 If perspectives are defined to be labeled complete rank-one projective contexts on $\mathcal H_0$, then
 $$
@@ -784,7 +824,7 @@ $$
 
 The operational cycle of an MPU, driven by the nominated POP objective, has two declared dynamical modes acting on the Perspectival State $S_{(s)}(t)=(\rho(t),s)$.
 
-**7.3.1 Theorem 27 (Diagonal Limitation on Universal MPU Outcome Prediction)**
+<a id="731-theorem-27-diagonal-limitation-on-universal-mpu-outcome-prediction"></a>**7.3.1 Theorem 27 (Diagonal Limitation on Universal MPU Outcome Prediction)**
 
 Assume the MPU realization class satisfies the effective-coding and uniform diagonal-closure hypotheses of Theorem 10 for nominated binary `Evolve` outcomes. In particular, for every nominated total binary predictor in the class, its admitted read-before-commit counter-predictive construction belongs to the same class. Then no such predictor correctly predicts every nominated binary `Evolve` outcome throughout that class.
 
@@ -798,7 +838,7 @@ O(S_P)\ne P(\langle S_P\rangle),
 $$
 so $P$ fails on that system. Since $P$ was arbitrary among the nominated predictors covered by the closure, none is correct on the whole class. This conclusion does not assert that each individual `Evolve` event is stochastic or that no restricted deterministic predictor succeeds on a proper subclass. ∎
 
-**7.3.2 Proposition 28 (Stochastic Transition-Kernel Hypothesis on the PPI Quotient)**
+<a id="732-proposition-28-stochastic-transition-kernel-hypothesis-on-the-ppi-quotient"></a>**7.3.2 Proposition 28 (Stochastic Transition-Kernel Hypothesis on the PPI Quotient)**
 
 Let $X_{\mathrm{ret}}$ be the retained finite-response state space and let $\mathcal O$ be a finite outcome set. Assume as branch data that the effective `Evolve` law is stochastic and countably additive on $\mathcal O$, depends measurably on $x\in X_{\mathrm{ret}}$, and has no retained deterministic refinement. Then it is represented by a Markov kernel
 $$
@@ -821,7 +861,7 @@ Each basic unit changes in two ways. Between interactions it develops its curren
 
 The declared MPU cycle has two modes acting on $S_{(s)}(t)=(\rho(t),s)$:
 
-**7.3.3.1 Definition 26 (Def 26): Internal Prediction Evolution**
+<a id="7331-definition-26-def-26-internal-prediction-evolution"></a>**7.3.3.1 Definition 26 (Def 26): Internal Prediction Evolution**
 
 Between `Evolve` interactions, the quantum component undergoes reset-free unitary transport
 $$
@@ -835,7 +875,7 @@ i\hbar\frac{d}{dt}|\psi(t)\rangle=\hat H(t)|\psi(t)\rangle.
 $$
 Here $\hat H(t)$ is self-adjoint and is defined up to the usual scalar phase gauge on the density-operator dynamics. Its interpretation as a physical baseline-energy generator additionally requires Theorem 29's clock and power calibration.
 
-**7.3.3.2 Theorem 29 (Generator and Conditional Energy Calibration)**
+<a id="7332-theorem-29-generator-and-conditional-energy-calibration"></a>**7.3.3.2 Theorem 29 (Generator and Conditional Energy Calibration)**
 
 Let the internal evolution be generated by a self-adjoint Hamiltonian $\hat H$ bounded below by $E_0$, and let $\rho$ be a density operator satisfying
 $$
@@ -869,7 +909,7 @@ $$
 
 For a specified orthogonalization task with positive mean excitation, Corollary 29.1 gives a characteristic time. No state-independent positive duration for every distinguishable transition, stochastic update, edge traversal, or channel use follows from finite Hilbert dimension or a bounded spectrum alone.
 
-**Corollary 29.1 (Margolus–Levitin Recovery on the Unitary Internal Branch).** For internal prediction dynamics
+<a id="corollary-291-margolus-levitin-recovery-on-the-unitary-internal-branch"></a>**Corollary 29.1 (Margolus–Levitin Recovery on the Unitary Internal Branch).** For internal prediction dynamics
 $$
 i\hbar\,\partial_t |\psi\rangle = \hat H |\psi\rangle,
 $$
@@ -889,7 +929,45 @@ t_\perp\ge\frac{\pi\hbar}{2\bar E}
 $$
 for the first time at which the evolved state is orthogonal to the initial state. These hypotheses concern that orthogonalization task and do not imply a positive duration for arbitrary stochastic updates or nonorthogonal transitions. ∎
 
-**7.3.3.3 Definition 27 (Def 27): Registered Interaction/Update Instrument Branch ('Evolve'/ND-RID)**
+<a id="corollary-291a-sharp-energy-of-an-exact-recurrent-orthogonal-clock"></a>**Corollary 29.1a (Sharp Energy of an Exact Recurrent Orthogonal Clock).** Let $N\ge1$ orthonormal context states $|x_k\rangle$, $0\le k<N$, span a finite carrier. Let $H$ be time independent, $\Delta t>0$, and
+$$
+ e^{-iH\Delta t/\hbar}=e^{i\chi}S_N,\qquad
+ S_N|x_k\rangle=|x_{k+1\bmod N}\rangle.
+ \tag{29.1a.1}
+$$
+With $E_g=\min\operatorname{spec}H$ and $E_{\rm exc}=\langle x_k|(H-E_g)|x_k\rangle$, every context obeys
+$$
+ E_{\rm exc}\Delta t\ge\frac h2\left(1-\frac1N\right),\qquad h=2\pi\hbar.
+ \tag{29.1a.2}
+$$
+This is sharp, including all logarithm branches. On the exact eight-state orbit, the tick coefficient is $7h/16$ and the full-cycle coefficient is $7h/2$.
+
+The inequality is the recurrent-clock bound of [Margolus and Levitin (1998), Section 2.2, Equation 13 and Appendix A](references.md), specialized here to the context orbit.
+
+*Proof.* The Fourier vectors
+$$
+ |f_j\rangle=N^{-1/2}\sum_{k=0}^{N-1}e^{2\pi ijk/N}|x_k\rangle
+$$
+diagonalize $S_N$ with distinct eigenvalues. Since $H$ commutes with its exponential, it shares this basis, and every branch is
+$$
+ E_j\Delta t/\hbar=-\chi+2\pi j/N+2\pi n_j,\qquad n_j\in\mathbb Z.
+ \tag{29.1a.3}
+$$
+Choose a ground index $j_*$. After subtracting its energy, the residues of $j-j_*$ run through $0,\ldots,N-1$, so
+$$
+ (E_j-E_g)\Delta t/\hbar=2\pi r_j/N+2\pi q_j,
+ \qquad q_j\in\mathbb Z_{\ge0}.
+$$
+Nonnegativity of the left side forces the displayed sign of $q_j$. Every context has spectral weights $1/N$. Averaging gives $(E_{\rm exc}\Delta t)/\hbar\ge(2\pi/N^2)\sum_{r=0}^{N-1}r=\pi(N-1)/N$. Equality is attained by
+$$
+ H_* =\frac{2\pi\hbar}{N\Delta t}\sum_{j=0}^{N-1}j|f_j\rangle\langle f_j|.
+ \tag{29.1a.4}
+$$
+The same bound applies on a larger finite total carrier when its pure state, including its controllers, traverses $N$ orthogonal equal-time states and recurs up to phase. Indeed their Fourier combinations lie in the $N$ distinct eigenspaces of the one-tick propagator with total weights $1/N$. Within each eigenspace, the energies have exactly the integer branches in (29.1a.3), even if $H$ has several such branches there. Subtract the smallest occupied energy. All occupied energies have nonnegative branch integers relative to its residue; averaging within each residue and then over the uniform residue weights gives the same inequality. Replacing the smallest occupied energy by the ground energy can only increase excitation. A recurrence of a reduced subsystem alone does not supply these total-state premises.
+
+For the eight-state case substitute $N=8$ and then multiply the tick inequality by eight. The isolated unitary has constant mean energy and zero bath heat. Rescaling $H_*\mapsto\lambda H_*$ and $\Delta t\mapsto\Delta t/\lambda$ preserves the context transitions and the product bound. Preparation and readout retain their separate resource owners. The irreversible registered-reset law of Theorem 31a and this recurrent unitary clock are distinct protocols; the result asserts neither a positive absolute energy floor nor joint saturation of reset heat and clock energy. $\square$
+
+<a id="7333-definition-27-def-27-registered-interactionupdate-instrument-branch-evolvend-rid"></a>**7.3.3.3 Definition 27 (Def 27): Registered Interaction/Update Instrument Branch ('Evolve'/ND-RID)**
 
 Upon an interaction $N(t)$ satisfying the branch's arming predicate, the nominated `Evolve` law applies. On a branch carrying $\mathfrak C_{\mathrm{act}}$, arming means that the retained link ledger reaches its certified threshold; otherwise arming remains explicit branch data. A normalized instrument $\{\mathcal I_i^N\}$ and a conditional perspective kernel determine
 $$
@@ -908,7 +986,7 @@ for outcomes with nonzero probability.
 
 The post-event state is therefore $(\rho_i',s')$, with $(|i\rangle_s,s')$ permitted only as the pure-state shorthand of Definition 24. Eventwise stochasticity enters as Proposition 28's branch data, and the instrument and single-run selector are premises of this registered branch (Appendix M.3.2 and M.4). A physical reset cost follows only under Definition 28 and Theorem 31.
 
-**7.3.4 Theorem 28a (Conditional Born-Rule Representation on the Hilbert Branch).**
+<a id="734-theorem-28a-conditional-born-rule-representation-on-the-hilbert-branch"></a>**7.3.4 Theorem 28a (Conditional Born-Rule Representation on the Hilbert Branch).**
 
 Let $\omega:[0,I]\to[0,1]$ be defined on every effect of a finite-dimensional complex Hilbert space, with $\omega(I)=1$, and suppose it is noncontextual and satisfies
 $$
@@ -933,13 +1011,13 @@ SPAP can motivate the search for a nonclassical probabilistic representation, bu
 
 The thermodynamic ledger of an 'Evolve' implementation depends on its physical operations. On a branch satisfying Definition 28, a registered reset obeys $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$, and a positive uniform floor inferred from this entropy bound additionally requires $H_q(P\mid R)\ge h_{\min}>0$. Neither $C_P\ge K_0$ nor the structural alphabet value $\varepsilon_0=\ln2$ activates a reset or proves irreversibility. The relation $C_{op}\ge K_0$ is available only under the realization and complexity-capacity bridge hypotheses of Corollary 3.
 
-**7.4.1 Theorem 30 (Physical State Change from a Retained Distinguishable Record)**
+<a id="741-theorem-30-physical-state-change-from-a-retained-distinguishable-record"></a>**7.4.1 Theorem 30 (Physical State Change from a Retained Distinguishable Record)**
 
 Suppose an `Evolve` event writes a nontrivial retained finite-response record: there is an admitted finite protocol whose response distinguishes the pre-event record class $x$ from the post-event record class $x'$. Then every faithful physical implementation undergoes a transition from a representative $\sigma_x$ to a physically distinguishable representative $\sigma_{x'}$. This conclusion supplies no positive lower bound on the transition duration.
 
 *Proof.* PPI identifies two physical configurations only when every admitted finite protocol has the same response on them. By hypothesis, one admitted protocol distinguishes $x$ and $x'$. Hence their faithful physical representatives cannot lie in the same PPI equivalence class, so $\sigma_{x'}\ne\sigma_x$ in the retained physical state space. An implementation that writes the record therefore changes physical state. The argument uses retained distinguishability; SPAP alone does not require every acquired datum to alter a particular internal variable. ∎
 
-**7.4.2 Proposition 5 (Structural Binary Register and Reset Alternative)**
+<a id="742-proposition-5-structural-binary-register-and-reset-alternative"></a>**7.4.2 Proposition 5 (Structural Binary Register and Reset Alternative)**
 
 Let a reusable cycle act on a reachable logical domain containing a binary prediction record $P$. At closure, either the cycle map is injective on that domain or it is not. In the injective case, any label displaced from $P$ remains recoverable from the post-cycle state and may be included in retained side information $R$. In the noninjective case, at least two reachable logical inputs have the same post-cycle state, so the operation merges or overwrites a logical distinction. The alphabet log-cardinality is
 $$
@@ -949,7 +1027,7 @@ but no ensemble-independent average-heat lower bound follows.
 
 *Proof.* The injective/noninjective alternatives exhaust all maps on the reachable domain. If the map is injective, its inverse on its image recovers the full input, including the displaced binary label, from the retained output. If it is noninjective, there are $x\ne y$ with the same output, so their distinction is erased from the retained state. The number $\ln2$ is the logarithm of the record alphabet size. Average reset heat depends on the actual conditional distribution $q(P\mid R)$ and therefore is not determined by alphabet size alone. ∎
 
-**7.4.3 Definition 28 (Structural and Registered Reset Ledgers)**
+<a id="743-definition-28-structural-and-registered-reset-ledgers"></a>**7.4.3 Definition 28 (Structural and Registered Reset Ledgers)**
 
 Let $P\in\{0,1\}$ be a classical pre-reset record, let $R$ contain every classical record retained and unchanged through the reset, and let $q(P,R)$ be their actual joint law. The registered isothermal branch has a degenerate register Hamiltonian, a bath $B$ initially in a Gibbs state at temperature $T>0$ and independent of all non-bath degrees of freedom, and a joint unitary description including every entropy-bearing resource. Auxiliary non-bath resources begin independent of $(P,R)$; cyclic control restores their initial joint state uncorrelated with $(P,R)$, apart from an ideal work source whose entropy and correlations are unchanged and whose declared energy change is pure work. The register and controller Hamiltonians return to their initial values. The reset leaves $R$ unchanged and returns $P$ to its ready state, so its final conditional entropy vanishes. All entropy terms in the finite-resource balance are finite. Infinite-resource or exact-erasure limits require justified convergence of the conditional entropy difference and mean heat. On this branch define
 $$
@@ -961,7 +1039,7 @@ $$
 $$
 The conditional bound of Reeb and Wolf (2014, Section 5.1, Equation (59)) gives $\varepsilon_{\mathrm{diss}}\ge0$ on this classical specialization. For an imperfect reset its entropy term is $H_q(P\mid R)-H(P_{\mathrm{out}}\mid R_{\mathrm{out}})$; the complete-erasure formulas require the final term to vanish. If no physical reset is registered, $\varepsilon_{\mathrm{reset}}$ is not assigned merely from the alphabet size.
 
-**7.4.4 Theorem 31 (Conditional Physical Reset Bound)**
+<a id="744-theorem-31-conditional-physical-reset-bound"></a>**7.4.4 Theorem 31 (Conditional Physical Reset Bound)**
 
 Under Definition 28,
 $$
@@ -976,7 +1054,13 @@ Because $P$ is binary, $0\le H_q(P\mid R)\le\ln2$. If $H_q(P\mid R)=\ln2$, then 
 
 *Proof.* Definition 28 gives $\varepsilon_{\mathrm{diss}}=\varepsilon_{\mathrm{reset}}-H_q(P\mid R)$, and conditional Landauer gives $\varepsilon_{\mathrm{diss}}\ge0$, proving (45). A classical binary conditional entropy lies in $[0,\ln2]$. When it equals $\ln2$, Equation (45) reads $\varepsilon_{\mathrm{reset}}=\ln2+\varepsilon_{\mathrm{diss}}$, so equality with $\ln2$ is equivalent to zero excess dissipation. Conversely, $\varepsilon_{\mathrm{reset}}=\ln2$ is compatible with any smaller conditional entropy when $\varepsilon_{\mathrm{diss}}=\ln2-H_q(P\mid R)>0$. ∎
 
-**7.4.4a Pure-$\mathbf S$ Observation, Compression and Realized Cost**
+Definition 28 defines $\varepsilon_{\mathrm{diss}}$ as the excess of reset heat over the conditional entropy, and Theorem 31 proves it nonnegative. Lemma O.5.4c decomposes that excess into prediction regret and a normalization deficit. A fixed implementation that satisfies Definition 28 for every joint law of $(P,R)$ on a finite alphabet and has mean dimensionless heat $\omega(p,r)$ from each initial pair $(p,r)$ implements the predictor $\hat q(p\mid r)=e^{-\omega(p,r)}/Z(r)$, where $Z(r)=\sum_pe^{-\omega(p,r)}\le1$, and
+$$
+\varepsilon_{\mathrm{diss}}=\mathbb E_q\Bigl[D_{\mathrm{KL}}\bigl(q(\cdot\mid R)\,\Vert\,\hat q(\cdot\mid R)\bigr)\Bigr]+\mathbb E_q\bigl[-\ln Z(R)\bigr].
+$$
+Zero excess dissipation therefore requires the reset to embody the actual conditional law of its record. Theorem O.5.4d shows that, when one-way functions exist, a reset with an efficiently simulable heat profile dissipates on an $\ell(n)$-bit pseudorandom record computed from a discarded $n$-bit seed at least $(\ell(n)-n)\ln2$, less any inverse polynomial, above the entropy floor.
+
+<a id="744a-pure-mathbf-s-observation-compression-and-realized-cost"></a>**7.4.4a Pure-$\mathbf S$ Observation, Compression and Realized Cost**
 
 Pure-$\mathbf S$ rewriting provides an explicit substrate on which prediction, observation, retained memory and reset can be assigned separate quantities. The selected trajectory supplies execution; the unrestricted construction supplies observer-verified history ideals. A stochastic observation model specifies which histories a finite register retains and how accurately that register predicts its next response.
 
@@ -1201,7 +1285,12 @@ R(D)=1-h_2(D),
 h_2(D)=-D\log_2D-(1-D)\log_2(1-D).
 $$
 To prove optimality, let $e$ be the reconstruction error bit. The source bit is determined by the reconstruction and $e$, so
-$H(U\mid Y)\le H(e)\le h_2(D)$; subtract from $H(U)=1$. For $D\ge1/2$, a constant reconstruction attains zero information. With $B_{\mathrm{obs}}=0$, the benchmark is infeasible for $D<1/2$ and equals zero for $D\ge1/2$.
+
+$$
+H(U\mid Y)\le H(e)\le h_2(D);
+$$
+
+subtract from $H(U)=1$. For $D\ge1/2$, a constant reconstruction attains zero information. With $B_{\mathrm{obs}}=0$, the benchmark is infeasible for $D<1/2$ and equals zero for $D\ge1/2$.
 
 For a different finite kernel, take $T$ to be an equiprobable bit, $\Pi_I(T)$ and $Y$ constant, and $Y'=T$. A constant history reconstruction has zero distortion, but every register-based predictor loses one bit of next-response information. The optimal predictor has probabilities $(1/2,1/2)$ and $\mathcal C_{\mathrm{model}}=0$; a predictor $(3/4,1/4)$ adds
 $$
@@ -1266,7 +1355,12 @@ $$
 $$
 
 *Proof.* Let $S_{a,b}=\{H_a>t_b\}$. Conditional expectation gives
-$\Pr(S_{a,b+1})\le(1-\varepsilon_{a,b})\Pr(S_{a,b})$; iteration proves the product bound. A factor with $\varepsilon_{a,b}=1$ forces zero survival, while otherwise the product is at most $\exp(-\sum_{b<n}\varepsilon_{a,b})$. A divergent sum therefore makes $\Pr(H_a=\infty)=0$. Finite binary addresses form a countable set, so all are eventually opened on one probability-one event. Apply the companion's `fair_path_eventually_strongProjection` and `fair_path_eventually_labelledProjection` on each path in that event. The finite-set bound is the union bound. Independence of successive blocks is unnecessary. ∎
+
+$$
+\Pr(S_{a,b+1})\le(1-\varepsilon_{a,b})\Pr(S_{a,b});
+$$
+
+iteration proves the product bound. A factor with $\varepsilon_{a,b}=1$ forces zero survival, while otherwise the product is at most $\exp(-\sum_{b<n}\varepsilon_{a,b})$. A divergent sum therefore makes $\Pr(H_a=\infty)=0$. Finite binary addresses form a countable set, so all are eventually opened on one probability-one event. Apply the companion's `fair_path_eventually_strongProjection` and `fair_path_eventually_labelledProjection` on each path in that event. The finite-set bound is the union bound. Independence of successive blocks is unnecessary. ∎
 
 The source's finite-obligation extension theorem guarantees a finite continuation opening any nominated finite address set from every reduct. It therefore supplies a constructive reachability witness for a coverage experiment. A random policy additionally supplies the displayed conditional probability bounds. Positive redex probabilities alone do not establish those bounds: for independent opening attempts with $\varepsilon_b=1/(b+2)^2$, the probability of never opening is
 $$
@@ -1292,7 +1386,7 @@ Pure-S reduction is acyclic: no nonempty sequence of native contractions returns
 
 The physical comparison measures the declared distortion and predictive losses together with runtime, peak storage, sampler resources and reset heat. Equation (45) applies to the actual register and complete retained side record. A change of representation or observation policy is evaluated through these same task and cost definitions.
 
-**Theorem 31a (Conditionally Exchange-Invariant Full-Context Reset Bound).** Let $\mathcal G$ be Equation (7.1.3a), let $\Phi$ be the Commit Snapshot label merged by Equation (7.1.3b), and let $R$ contain every record retained and unchanged through closure. Assume the actual pre-closure joint law obeys $q(\phi\mid R=r)=q(1-\phi\mid R=r)$ for every $r$ of positive probability, equivalently invariance under the input-fibre exchange, and assume no retained record resolves $\Phi$. Then
+<a id="theorem-31a-conditionally-exchange-invariant-full-context-reset-bound"></a>**Theorem 31a (Conditionally Exchange-Invariant Full-Context Reset Bound).** Let $\mathcal G$ be Equation (7.1.3a), let $\Phi$ be the Commit Snapshot label merged by Equation (7.1.3b), and let $R$ contain every record retained and unchanged through closure. Assume the actual pre-closure joint law obeys $q(\phi\mid R=r)=q(1-\phi\mid R=r)$ for every $r$ of positive probability, equivalently invariance under the input-fibre exchange, and assume no retained record resolves $\Phi$. Then
 $$
 q(\phi\mid R)=\frac12,
 \qquad
@@ -1309,7 +1403,7 @@ $$
 
 *Proof.* For fixed $R=r$, put $x=q(0\mid r)$. Invariance gives $x=q(1\mid r)=1-x$, hence $x=1/2$. Averaging the conditional binary entropies gives $\ln2$. Equation (7.1.3b) merges the two values at fixed retained data, so Theorem 31 gives (45a). ∎
 
-**7.4.5 Theorem 32 (Registered Reset Bound for `Evolve`)**
+<a id="745-theorem-32-registered-reset-bound-for-evolve"></a>**7.4.5 Theorem 32 (Registered Reset Bound for `Evolve`)**
 
 An `Evolve` implementation satisfying Definition 28 obeys
 $$
@@ -1320,7 +1414,7 @@ Normalization of the quantum instrument determines outcome probabilities and pos
 
 *Proof.* Definition 28 identifies $\varepsilon_{\mathrm{reset}}=\langle Q_{\mathrm{bath}}\rangle/(k_BT)$. Substitution into Theorem 31 gives Equation (46). A trace-preserving instrument supplies a Kraus normalization identity containing no bath temperature, Hamiltonian, work, or heat variable, so normalization alone supplies no additional thermodynamic term. ∎
 
-**7.4.6 Theorem 33 (Conditional Reflexivity Trade-Off)**
+<a id="746-theorem-33-conditional-reflexivity-trade-off"></a>**7.4.6 Theorem 33 (Conditional Reflexivity Trade-Off)**
 
 If a registered branch satisfies $\Delta I\ge\Delta I_{\min}>0$ and $H_q(P\mid R)\ge h_{\min}>0$, then
 $$
@@ -1344,14 +1438,13 @@ P_{\mathrm{reset}}
 $$
 The specialization $P_{\mathrm{reset}}\ge n_{\mathrm{reset}}k_BT\ln2/\tau_{\mathrm{cycle}}$ requires every reset record to be conditionally unbiased. Baseline and reset powers may be added only when their ledgers are disjoint.
 
-
 ## 7.5 The Entropy Unification Principle
 
 ### 7.5.1 The Central Result
 
 The registered reachable binary quotient has structural log-cardinality $\varepsilon_0=\ln2$ (Definition 28; Definition J.1; Theorem J.1). A physical heat ledger arises only on a branch satisfying Definition 28, where Theorem 31 gives $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$ with $\varepsilon_{\mathrm{diss}}\ge0$. A positive uniform physical floor requires an independent ensemble bound. Structural log-cardinality, ensemble entropy, bath heat, channel capacity, and horizon entropy remain distinct quantities.
 
-**Theorem 7.5.1 (Conditional Structural-to-Horizon Chain).** *Assume a reachable binary record, a completed tensor-factor reset, the density certificate of Theorem E.3, and the capacity-achieving, entropy-saturating, additive-ledger hypotheses of Theorem E.6. Then:*
+<a id="theorem-751-conditional-structural-to-horizon-chain"></a>**Theorem 7.5.1 (Conditional Structural-to-Horizon Chain).** *Assume a reachable binary record, a completed tensor-factor reset, the density certificate of Theorem E.3, and the capacity-achieving, entropy-saturating, additive-ledger hypotheses of Theorem E.6. Then:*
 
 $$
 \boxed{
@@ -1359,7 +1452,7 @@ $$
 \xrightarrow{\text{completed reset; Prop E.2a}}
 C_{\max}\le\ln d_0-\ln2
 \xrightarrow{\text{density certificate}}
-N_{eff}=\sigma_{link}\mathcal A+o(\mathcal A)
+N_{\mathrm{eff}}=\sigma_{link}\mathcal A+o(\mathcal A)
 \xrightarrow{\text{E.6 saturation}}
 \frac{S_{\mathrm{rel}}}{k_B}
 =\frac{c^3\mathcal A}{4G_{\mathrm{op}}\hbar}+o(\mathcal A)
@@ -1381,7 +1474,7 @@ only under capacity achievement, entropy saturation, and additive accounting. Th
 
 ### 7.5.2 The Derivation Chain
 
-#### Stage 1: Structural Binary Register ($\varepsilon_0=\ln2$)
+#### <a id="stage-1-structural-binary-register-varepsilon_0-ln2"></a>Stage 1: Structural Binary Register ($\varepsilon_0=\ln2$)
 
 On the declared minimal architecture, the verification/reset-support alphabet has two labels, so its structural log-cardinality is
 $$
@@ -1399,7 +1492,7 @@ $$
 $$
 On the conditionally uniform binary-record branch, the bath heat equals $k_BT\ln2$ exactly when excess dissipation vanishes. The total entropy production is $k_B\varepsilon_{\mathrm{diss}}$, not the bath entropy export.
 
-#### Stage 3: Information-Theoretic Entropy (Reset Support → Capacity Deficit)
+#### <a id="stage-3-information-theoretic-entropy-reset-support-capacity-deficit"></a>Stage 3: Information-Theoretic Entropy (Reset Support → Capacity Deficit)
 
 The fixed-support capacity statement is independent of the physical heat ledger. On a branch registering a completed reset of a factor $\mathcal H_R$ to a fixed ready state, one support factor is absent from the completed output ledger.
 
@@ -1482,7 +1575,6 @@ $$
 \mathcal{H}_0=\mathbb C^2\oplus\mathbb C^6.
 $$
 
-
 The PCE-Attractor density operator (Appendix Z, Section Z.2.5) takes the form:
 
 $$\rho_0 = \frac{I_2}{2} \oplus 0_6 = \mathrm{diag}\left(\frac{1}{2}, \frac{1}{2}, 0, 0, 0, 0, 0, 0\right)$$
@@ -1512,11 +1604,9 @@ $$
 
 On the predictive-recovery MacWilliams Golay branch of Theorem Z.13b—namely Definition Z.13b.0, Theorem Z.13b.0a, and the fixed-rate maximum-distance criterion—the endpoint is a binary linear $[24,12,8]$ code, unique up to coordinate permutation by Theorem U.1. The dual-asymmetry gate alone fixes only $k=12$; it proves neither distance-eight attainment nor Golay uniqueness.
 
-**Remark (Conditional Error-Correction Interpretation).** On the predictive-recovery MacWilliams branch, the $[24,12,8]$ Golay code is a classical redundancy ledger with rate $1/2$. The twelve parity coordinates support reconstruction only after a classical encoder, error model, syndrome map, and decoder have been specified.
+<a id="remark-conditional-error-correction-interpretation"></a>**Remark (Conditional Error-Correction Interpretation).** On the predictive-recovery MacWilliams branch, the $[24,12,8]$ Golay code is a classical redundancy ledger with rate $1/2$. The twelve parity coordinates support reconstruction only after a classical encoder, error model, syndrome map, and decoder have been specified.
 
 A physical identification of the twelve parity coordinates with interface modes requires a response-active encoding/channel/recovery certificate and a non-double-counted resource ledger.
-
-
 
 Channel capacity, code redundancy, and entropy are separate ledgers:
 
@@ -1530,14 +1620,14 @@ For the $[24,12,8]$ code, the redundancy is $12$ coordinates and the rate is $1/
 
 Let the effective channel count satisfy
 $$
-N_{eff}=\sigma_{link}\mathcal A,
+N_{\mathrm{eff}}=\sigma_{link}\mathcal A,
 \qquad
 \sigma_{link}=\frac{\chi}{\eta\delta^2}.
 $$
 If each channel has capacity at most $C_{\max}$ nats, then
 $$
-\frac{S_{boundary}}{k_B}
-\le N_{eff}C_{\max}
+\frac{S_{\mathrm{boundary}}}{k_B}
+\le N_{\mathrm{eff}}C_{\max}
 =\sigma_{link}C_{\max}\mathcal A.
 $$
 Assume the capacity-achieving, entropy-saturating, additive-ledger branch of Theorem E.6. With $S_{\mathrm{boundary}}:=S_{\mathrm{rel}}$, Theorem E.6 defines the positive operational coefficient by
@@ -1572,15 +1662,15 @@ Without the three saturation entries, channel counting supplies only the entropy
 
 ### 7.5.3 The Complete Derivation Chain
 
-**Theorem 7.5.2 (Conditional Entropy and Horizon-Calibration Chain).** *Assume the following branch data: a reachable binary verification record, a completed reset to a ready state, the thermodynamic hypotheses of Definition 28, the tensor-factor reset hypotheses of Proposition E.2a, the geometric density certificate of Theorem E.3, the capacity-achieving, entropy-saturating, additive-ledger branch of Theorem E.6, an independent identification $S_{\mathrm{rel}}=S_{BH}+o(\mathcal A)$, and the external calibration $G_{\mathrm{op}}=G$. Then:*
+<a id="theorem-752-conditional-entropy-and-horizon-calibration-chain"></a>**Theorem 7.5.2 (Conditional Entropy and Horizon-Calibration Chain).** *Assume the following branch data: a reachable binary verification record, a completed reset to a ready state, the thermodynamic hypotheses of Definition 28, the tensor-factor reset hypotheses of Proposition E.2a, the geometric density certificate of Theorem E.3, the capacity-achieving, entropy-saturating, additive-ledger branch of Theorem E.6, an independent identification $S_{\mathrm{rel}}=S_{BH}+o(\mathcal A)$, and the external calibration $G_{\mathrm{op}}=G$. Then:*
 
 | Step | Source | Statement | Role |
 |:-----|:-------|:----------|:-----|
 | 1 | Reachable-record hypothesis | The verification alphabet has two response-relevant labels | Structural input |
 | 2 | Theorem J.1 | Its log-cardinality is $\varepsilon_0=\ln2$ | Structural register size |
-| 3 | Conditional Landauer theorem | $\langle Q_{bath}\rangle/(k_BT)\ge H_q(P\mid R)$ | Distribution-sensitive heat bound |
+| 3 | Conditional Landauer theorem | $\langle Q_{\mathrm{bath}}\rangle/(k_BT)\ge H_q(P\mid R)$ | Distribution-sensitive heat bound |
 | 4 | Proposition E.2a | The completed binary reset gives $C_{\max}\le\ln d_0-\ln2$ | Support-capacity deficit |
-| 5 | Theorem E.3 | $N_{eff}=\sigma_{link}\mathcal A+o(\mathcal A)$ on the density-certificate branch | Channel counting |
+| 5 | Theorem E.3 | $N_{\mathrm{eff}}=\sigma_{link}\mathcal A+o(\mathcal A)$ on the density-certificate branch | Channel counting |
 | 6 | Theorem E.6 | $S_{\mathrm{rel}}/k_B=\sigma_{link}C_{\max}\mathcal A+o(\mathcal A)$ and $\sigma_{link}C_{\max}=c^3/(4G_{\mathrm{op}}\hbar)$ on its saturation branch | Operational area coefficient |
 | 7 | Independent bridges | $S_{\mathrm{rel}}=S_{BH}+o(\mathcal A)$ and $G_{\mathrm{op}}=G$ | Horizon identification and measured coupling |
 
@@ -1656,15 +1746,13 @@ a=2\to M=24
 $$
 The physical reset inequality is a separate implementation statement, and physical error correction requires a registered encoder, channel, syndrome instrument, decoder, and non-double-counted resource ledger.
 
-**Corollary (Conditional Decoder-Failure Entropy).** On such a registered classical binary channel, the $[24,12,8]$ code uniquely corrects error patterns of Hamming weight at most $3$. Patterns outside that radius may create residual uncertainty, but their occurrence and entropy contribution are channel-dependent. This conditional contribution is distinct from the per-cycle physical bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive entropy-derived floor requires }H_q(P\mid R)\ge h_{\min}>0)$ and is not a universal second mechanism operating on every MPU cycle.
+<a id="corollary-conditional-decoder-failure-entropy"></a>**Corollary (Conditional Decoder-Failure Entropy).** On such a registered classical binary channel, the $[24,12,8]$ code uniquely corrects error patterns of Hamming weight at most $3$. Patterns outside that radius may create residual uncertainty, but their occurrence and entropy contribution are channel-dependent. This conditional contribution is distinct from the per-cycle physical bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive entropy-derived floor requires }H_q(P\mid R)\ge h_{\min}>0)$ and is not a universal second mechanism operating on every MPU cycle.
 
 *Proof.* Let $c$ be the transmitted codeword and $r=c+e$ the received word, with Hamming weight $\operatorname{wt}(e)\le3$. Then $d_H(r,c)\le3$, so a codeword within decoding radius three exists. If another codeword $c'\ne c$ also satisfied $d_H(r,c')\le3$, the triangle inequality would give
 $$
 d_H(c,c')\le d_H(c,r)+d_H(r,c')\le6,
 $$
 contradicting the minimum distance $d=8$. Thus radius-three decoding is unique. For errors of weight at least four this argument gives no universal decoding or entropy conclusion; those quantities depend on the registered channel law and decoder. The reset-cost inequality is a separate conditional-entropy statement and does not enter the distance argument. ∎
-
-
 
 **Corollary (Conditional Decoder Failure above the Guaranteed Radius).** For a registered $[24,12,8]$ encoder, channel, and decoder, every error pattern of Hamming weight at most
 $$
@@ -1719,9 +1807,9 @@ its independent source and conservation gates.
 
 ## 7.6 Finite-Carrier and MPU-Dynamics Resolution Records
 
-The following results resolve finite mathematical components of `TV-MPU-03`--`TV-MPU-08`. They preserve the distinction between a response representation and a physical implementation.
+The following results settle finite mathematical questions about the minimal predictive unit. They preserve the distinction between a response representation and a physical implementation.
 
-**Theorem 7.6a (Multiplicity Classification and the Surplus-Dynamics Gate).** Let $\pi:M_8(\mathbb C)\to\mathcal B(\mathcal H)$ be a nonzero unital finite-dimensional representation. There is a finite-dimensional multiplicity space $\mathcal K$ and a unitary identification
+<a id="theorem-76a-multiplicity-classification-and-the-surplus-dynamics-gate"></a>**Theorem 7.6a (Multiplicity Classification and the Surplus-Dynamics Gate).** Let $\pi:M_8(\mathbb C)\to\mathcal B(\mathcal H)$ be a nonzero unital finite-dimensional representation. There is a finite-dimensional multiplicity space $\mathcal K$ and a unitary identification
 $$
 \mathcal H\cong\mathbb C^8\otimes\mathcal K,
 \qquad
@@ -1734,7 +1822,7 @@ The static representation data do not force surplus-sector decoupling or converg
 
 *Proof.* The matrix units of $M_8(\mathbb C)$ decompose $\mathcal H$ into eight mutually isomorphic subspaces exactly as in Theorem 23a, giving (7.6a.1). Every retained observable $A\otimes I$ has expectation $\operatorname{tr}(A\operatorname{tr}_{\mathcal K}\rho)$, proving the comparator statement. The two displayed Hamiltonian classes share the same static representation, while the commutator of $A\otimes B$ with a generic $C\otimes I$ is $[A,C]\otimes B\ne0$. Thus the static algebra admits both dynamical behaviors and entails neither decoupling nor convergence. ∎
 
-**Theorem 7.6b (Finite Stochastic Laws Admit Deterministic Response-Null Refinements).** Let a finite `Evolve` model have finite state set $X$, finite outcome set $O$, and normalized kernel $K(o,x'\mid x)$. There is a deterministic refinement on
+<a id="theorem-76b-finite-stochastic-laws-admit-deterministic-response-null-refinements"></a>**Theorem 7.6b (Finite Stochastic Laws Admit Deterministic Response-Null Refinements).** Let a finite `Evolve` model have finite state set $X$, finite outcome set $O$, and normalized kernel $K(o,x'\mid x)$. There is a deterministic refinement on
 $$
 X\times[0,1)^{\mathbb N}
 $$
@@ -1744,7 +1832,7 @@ whose marginal finite-history law on $(X,O)$ is exactly the law generated by $K$
 
 Therefore no admitted finite response that omits the seed distinguishes intrinsic stochasticity from this hidden deterministic refinement. A separating operational axiom must either expose a seed-dependent response, impose a certified independence condition that the refinement violates, or exclude response-null hidden refinements as primitive branch data.
 
-**Theorem 7.6c (Clock--Generator Gauge Classification).** Let a ray evolution be
+<a id="theorem-76c-clock-generator-gauge-classification"></a>**Theorem 7.6c (Clock--Generator Gauge Classification).** Let a ray evolution be
 $$
 [\psi(t)]=[e^{-iHt/\hbar}\psi(0)].
 $$
@@ -1765,7 +1853,7 @@ so the rays agree. For the converse on a finite-dimensional carrier of dimension
 
 Thus the ray law fixes neither the zero of energy nor the conversion between its abstract parameter and physical time. Theorem 29's registered clock and work/power calibration must fix those two gauges before energy per cycle, power, or a dimensionful action ledger is physically identified.
 
-**Theorem 7.6d (Exact Abstract Golay Encoder and Radius-Three Recovery).** Let $\mathcal G_{24}\subset\mathbb F_2^{24}$ be a binary linear $[24,12,8]$ code on the accepted predictive-recovery branch, let
+<a id="theorem-76d-exact-abstract-golay-encoder-and-radius-three-recovery"></a>**Theorem 7.6d (Exact Abstract Golay Encoder and Radius-Three Recovery).** Let $\mathcal G_{24}\subset\mathbb F_2^{24}$ be a binary linear $[24,12,8]$ code on the accepted predictive-recovery branch, let
 $$
 G:\mathbb F_2^{12}\xrightarrow{\cong}\mathcal G_{24}
 $$
@@ -1786,7 +1874,7 @@ recovers every transmitted codeword.
 
 This is a complete finite algebraic encoder/syndrome/recovery map. A physical record must additionally identify the 24 binary coordinates, realize $G$ and $H$, specify the noise law and syndrome instrument, and account for preparation, storage, recovery, failure, and reset resources without importing the structural $\ln2$ ledger as heat.
 
-**Theorem 7.6e (Source-Exhaustive Binary Reset Classification).** For a binary record $\Phi$ and discrete classical retained side information $R$, write $p_r=q(\Phi=1\mid R=r)$ for each $r$ with $q(r)>0$. Define the binary entropy in nats by $h_{\mathrm{nat}}(p):=-p\ln p-(1-p)\ln(1-p)$, with $0\ln0:=0$. Then
+<a id="theorem-76e-source-exhaustive-binary-reset-classification"></a>**Theorem 7.6e (Source-Exhaustive Binary Reset Classification).** For a binary record $\Phi$ and discrete classical retained side information $R$, write $p_r=q(\Phi=1\mid R=r)$ for each $r$ with $q(r)>0$. Define the binary entropy in nats by $h_{\mathrm{nat}}(p):=-p\ln p-(1-p)\ln(1-p)$, with $0\ln0:=0$. Then
 $$
 H_q(\Phi\mid R)=\sum_{r:q(r)>0}q(r)h_{\mathrm{nat}}(p_r),
 \qquad
@@ -1807,7 +1895,7 @@ Conditional uniformity together with zero excess implies $\varepsilon_{\mathrm{r
 
 In particular, $p_r=\epsilon$ with $0<\epsilon<1/2$ supplies nonempty reset ensembles with arbitrarily small positive conditional entropy as $\epsilon\downarrow0$. Certifying the $\ln2$ equality as Theorem 31a's uniform-source, zero-excess case therefore requires its exchange-invariant source condition and a separately measured zero-excess implementation.
 
-**Theorem 7.6f (Real and Cayley Marking Moduli on $\mathbb C^8$).** Fix the Hermitian complex carrier $V=\mathbb C^8$.
+<a id="theorem-76f-real-and-cayley-marking-moduli-on-mathbb-c8"></a>**Theorem 7.6f (Real and Cayley Marking Moduli on $\mathbb C^8$).** Fix the Hermitian complex carrier $V=\mathbb C^8$.
 
 1. Antiunitary involutions on $V$ form one $U(8)$-orbit with stabilizer $O(8)$, and hence their marking space is $U(8)/O(8)$.
 2. After an involution selects the real carrier $V_{\mathbb R}\cong\mathbb R^8$, positive Cayley four-forms form the $GL^+(8,\mathbb R)$-orbit with stabilizer $\mathrm{Spin}(7)$. With an orientation and Euclidean metric fixed, the compatible forms comprise the corresponding $SO(8)/\mathrm{Spin}(7)$ orbit.
@@ -1817,7 +1905,7 @@ In particular, $p_r=\epsilon$ with $0<\epsilon<1/2$ supplies nonempty reset ense
 
 Compatibility with the three labeled factors can restrict these moduli only after the admissible normalizer and equivalence relation are frozen. That factor-compatible sub-classification and any physical selector remain open.
 
-**Theorem 7.6g (Exact Normalizer Classification for Surplus Dynamics).** Let $\mathcal K$ be finite-dimensional, put $\mathcal A=M_8(\mathbb C)\otimes I_{\mathcal K}$, and let $H=H^*$ on $\mathbb C^8\otimes\mathcal K$. The following are equivalent:
+<a id="theorem-76g-exact-normalizer-classification-for-surplus-dynamics"></a>**Theorem 7.6g (Exact Normalizer Classification for Surplus Dynamics).** Let $\mathcal K$ be finite-dimensional, put $\mathcal A=M_8(\mathbb C)\otimes I_{\mathcal K}$, and let $H=H^*$ on $\mathbb C^8\otimes\mathcal K$. The following are equivalent:
 
 1. $e^{-itH/\hbar}\mathcal A e^{itH/\hbar}=\mathcal A$ for every $t\in\mathbb R$;
 2. $[H,\mathcal A]\subseteq\mathcal A$;
@@ -1865,17 +1953,17 @@ $$
 $$
 A nonzero gap $E_a-E_b$ gives subsequences of times tending to infinity with phases $1$ and $-1$, so $\Gamma_t$ has no operator-norm limit. If every gap vanishes, $H_{\mathcal K}$ is scalar and $\Gamma_t$ is the identity channel for every $t$. This proves both directions of the convergence classification. ∎
 
-Thus (7.6g.1) is the complete finite same-response dynamics class for the representation in Theorem 7.6a, and (7.6g.3) gives the complete finite Hamiltonian convergence classification. A Hamiltonian outside the split class changes at least one retained $M_8(\mathbb C)\otimes I$ response at infinitesimal order. Physical admission of one carrier and generator remains a realization record.
+Thus (7.6g.1) is the complete finite same-response dynamics class for the representation in Theorem 7.6a, and (7.6g.3) gives the complete finite Hamiltonian convergence classification. A Hamiltonian outside the split class changes at least one retained $M_8(\mathbb C)\otimes I$ response at infinitesimal order. Theorem 7.6o supplies the physical spin carrier and split generator realizing this class.
 
-**Theorem 7.6h (Finite-History Response-Quotient Stochasticity Classification).** Let two `Evolve` models with finite retained state and output alphabets be response-equivalent when they induce the same probability for every finite retained history in $(X,O)$. Every normalized kernel on those alphabets is response-equivalent to the deterministic seed refinement of Theorem 7.6b, whose auxiliary seed space need not be finite. Consequently every predicate invariant under retained finite-history response equivalence has the same truth value on the kernel and on that deterministic refinement.
+<a id="theorem-76h-finite-history-response-quotient-stochasticity-classification"></a>**Theorem 7.6h (Finite-History Response-Quotient Stochasticity Classification).** Let two `Evolve` models with finite retained state and output alphabets be response-equivalent when they induce the same probability for every finite retained history in $(X,O)$. Every normalized kernel on those alphabets is response-equivalent to the deterministic seed refinement of Theorem 7.6b, whose auxiliary seed space need not be finite. Consequently every predicate invariant under retained finite-history response equivalence has the same truth value on the kernel and on that deterministic refinement.
 
 Conversely, a predicate separating the two models must use at least one of the following additions: a retained response whose finite-history law differs; access to an implementation-level variable or observable outside the retained history, such as the seed, hidden memory, or an architecture label; or an admissibility/equivalence premise that structurally excludes the deterministic refinement, such as an exogeneity requirement. These three cases exhaust separator classes on the retained finite-history quotient.
 
 *Proof.* Theorem 7.6b proves equality of every finite cylinder probability. Any invariant predicate is constant on an equivalence class and therefore agrees on the two representatives. If a predicate separates them while every retained cylinder law agrees, it either consumes additional implementation data not measurable in the retained finite-history ledger or changes the admissible representative/equivalence class by a structural premise. If a retained cylinder law differs, the first case applies. These alternatives exhaust whether the separator changes the retained response, extends the observation algebra, or restricts the admissible model class. ∎
 
-The nontrivial Bernoulli kernel and its inverse-transform refinement give a nonempty stochastic/deterministic pair. The theorem gives a coverage-complete `nonentailment` result for intrinsic stochasticity on the retained finite-history quotient and a complete classification of separator types for that pair. The response-only route therefore retains `N`; a physical `Evolve` realization must populate and justify one separator class.
+The nontrivial Bernoulli kernel and its inverse-transform refinement give a nonempty stochastic/deterministic pair. The theorem proves, with complete coverage, that the retained finite-history quotient does not entail intrinsic stochasticity, and gives a complete classification of separator types for that pair. The response-only route therefore cannot derive intrinsic stochasticity; Theorem 7.6p populates the exogenous no-signaling separator class on the registered two-MPU realization.
 
-**Theorem 7.6i (Complete Clock--Energy Calibration Fiber).** For a fixed nontrivial projective one-parameter evolution, the set of clock-and-generator presentations is one orbit of the two-parameter action
+<a id="theorem-76i-complete-clock-energy-calibration-fiber"></a>**Theorem 7.6i (Complete Clock--Energy Calibration Fiber).** For a fixed nontrivial projective one-parameter evolution, the set of clock-and-generator presentations is one orbit of the two-parameter action
 $$
 (\lambda,c):(t,H)\longmapsto
 \left(\lambda t,\frac{H+cI}{\lambda}\right),
@@ -1898,7 +1986,7 @@ Equations (7.6i.2)--(7.6i.3) select one presentation in the complete fiber.
 
 This theorem completes the mathematical modulus and normalization classification. Physical clock, reference-energy, work/power and uncertainty records remain the realization and observable components.
 
-**Theorem 7.6j (Finite Golay Encoding, Syndrome-Instrument and Recovery Certificate).** On the accepted $[24,12,8]$ branch of Theorem 7.6d, let
+<a id="theorem-76j-finite-golay-encoding-syndrome-instrument-and-recovery-certificate"></a>**Theorem 7.6j (Finite Golay Encoding, Syndrome-Instrument and Recovery Certificate).** On the accepted $[24,12,8]$ branch of Theorem 7.6d, let
 $$
 \mathcal H_{12}=(\mathbb C^2)^{\otimes12},
 \qquad
@@ -1935,7 +2023,7 @@ This supplies complete positivity and trace preservation, including every failur
 
 The displayed carrier, encoder, correctable noise class, syndrome instrument, decoder and failure record populate a finite model-level recovery certificate. The physical coordinate, implemented gate/instrument, preparation/reset and resource fields remain unpopulated; together with substrate realization and a held-out error experiment, they retain `C+R+E`.
 
-**Theorem 7.6k (Finite Binary Return-Map Exhaustion).** Let $\Phi\in\{0,1\}$ be a pre-return record and let $R$ contain every retained classical side record. A completed classical return map preserves $R$ and sends both inputs to the ready value $0$:
+<a id="theorem-76k-finite-binary-return-map-exhaustion"></a>**Theorem 7.6k (Finite Binary Return-Map Exhaustion).** Let $\Phi\in\{0,1\}$ be a pre-return record and let $R$ contain every retained classical side record. A completed classical return map preserves $R$ and sends both inputs to the ready value $0$:
 $$
 (\phi,r)\longmapsto(0,r).
 \tag{7.6k.1}
@@ -1952,7 +2040,7 @@ For each $r$ with both conditional inputs present, (7.6k.1) is noninjective. Eve
 
 Together with Theorem 7.6e, this classifies every finite reachable-source and return-map branch relevant to the binary entropy floor without identifying record export or uncertified removal with erasure heat. The conditionally uniform, zero-excess mechanism for $\varepsilon_{\mathrm{reset}}=\ln2$ requires its populated source condition and a cyclic isothermal implementation satisfying Definition 28.
 
-**Theorem 7.6l (Labeled Three-Factor Real-Structure Orbits).** Put $V=(\mathbb C^2)^{\otimes3}$ and let
+<a id="theorem-76l-labeled-three-factor-real-structure-orbits"></a>**Theorem 7.6l (Labeled Three-Factor Real-Structure Orbits).** Put $V=(\mathbb C^2)^{\otimes3}$ and let
 $$
 \mathcal A_j=I\otimes\cdots\otimes M_2(\mathbb C)\otimes\cdots\otimes I
 $$
@@ -1968,7 +2056,7 @@ Here $J$ has a factorization $J=J_1\otimes J_2\otimes J_3$ up to phase, $J_j^2=\
 
 The stated involution and labeled-factor-preservation conditions admit all four inequivalent classes and therefore select none. After a global real carrier is selected, a Cayley form remains a point of the separate $SO(8)/\mathrm{Spin}(7)$ marking orbit. The following theorem completes its quotient by every sign-triple stabilizer.
 
-**Theorem 7.6m (Factor-Compatible Cayley Quotients Have No Selected Orbit).** Fix one sign triple $\epsilon=(\epsilon_1,\epsilon_2,\epsilon_3)$ in (7.6l.1), choose the corresponding factor antiunitaries $J_j$, and let $H_\epsilon\le SO(V_{\mathbb R})$ be the image on the fixed real carrier of
+<a id="theorem-76m-factor-compatible-cayley-quotients-have-no-selected-orbit"></a>**Theorem 7.6m (Factor-Compatible Cayley Quotients Have No Selected Orbit).** Fix one sign triple $\epsilon=(\epsilon_1,\epsilon_2,\epsilon_3)$ in (7.6l.1), choose the corresponding factor antiunitaries $J_j$, and let $H_\epsilon\le SO(V_{\mathbb R})$ be the image on the fixed real carrier of
 $$
 \left\{U_1\otimes U_2\otimes U_3:
 U_jJ_j=J_jU_j\right\}.
@@ -1986,9 +2074,7 @@ For every allowed $\epsilon$, $\mathcal Q_\epsilon$ contains more than one point
 
 For a plus factor, the connected commutant of $J_j$ has dimension one; for a minus factor it is $\mathrm{Sp}(1)$ and has dimension three. The tensor-product map has finite kernel. Thus $\dim H_{(+,+,+)}=3$, so that group cannot act transitively on the seven-dimensional $X$. Each even-minus stabilizer has connected component locally isomorphic to $SO(2)\times\mathrm{Sp}(1)\times\mathrm{Sp}(1)$ and dimension seven. If the full stabilizer acted transitively, its identity component would also act transitively on the connected manifold $X$. Its stabilizer would be discrete and finite, so the orbit map would be a finite covering. The fundamental group of the identity component contains the infinite cyclic factor from $SO(2)$, whereas a covering injects it into $\pi_1(X)=\mathbb Z_2$, a contradiction. None of the four complete stabilizers is transitive, so every orbit quotient in (7.6m.2) has at least two points. ∎
 
-**Resolution TV-MPU-08-R2 (Metadata).** Exact domain: the four sign triples in (7.6l.1) and the full compatible Cayley-form orbit of Theorem 7.6f after the real carrier, orientation and Euclidean metric are fixed. Premises: labeled-factor preservation and no selector outside the corresponding complete stabilizer $H_\epsilon$. Equivalence: the left $H_\epsilon$ action on $SO(8)/\mathrm{Spin}(7)$. Budget: all four stabilizer classes and their complete compact orbit spaces. Verifier: compute the factor-commutant dimensions, the finite tensor-product kernels and the fundamental groups in the proof. Falsifier: a transitive $H_\epsilon$ action for any allowed sign triple or a Cayley marking absent from (7.6m.2). Provenance class: source-internal compact-group and homogeneous-space classification. Downstream consumers: Corollary 23a.1 and every real/$\mathrm{Spin}(7)$ carrier use. Nonvacuity: $SO(8)/\mathrm{Spin}(7)\cong\mathbb {RP}^7$ is nonempty. This is `negative-refutation` of Cayley-marking selection from the complete labeled-factor stabilizer class and discharges the remaining mathematical component of `TV-MPU-08`.
-
-**Theorem 7.6n (Explicit Clock--Energy--Work Calibration Record).** Fix $E>0$ and the eight-dimensional MPU carrier with orthonormal basis $|0\rangle,\ldots,|7\rangle$,
+<a id="theorem-76n-explicit-clock-energy-work-calibration-record"></a>**Theorem 7.6n (Explicit Clock--Energy--Work Calibration Record).** Fix $E>0$ and the eight-dimensional MPU carrier with orthonormal basis $|0\rangle,\ldots,|7\rangle$,
 $$
 \mathcal H_E=\mathbb C^8,
 \qquad
@@ -2043,9 +2129,7 @@ U_E(t)|+\rangle
 $$
 which proves (7.6n.2)--(7.6n.3). The registered zero and reference preparations fix the additive gauge by $\langle1|H_E|1\rangle=E$ and $\langle0|H_E|0\rangle=0$; the registered response period fixes the multiplicative clock gauge. Equation (7.6n.4) gives the displayed commuting-stroke values by substitution. The remaining identities follow from $\nu_E=E/(2\pi\hbar)$ and (7.6n.2). ∎
 
-**Resolution TV-MPU-05-R2 (Metadata).** Exact domain: the eight-dimensional MPU carrier (7.6n.1), its active two-level sector and driven commuting stroke. Premises: a declared clock/energy presentation with $E>0$, standard unit dimensions and the displayed preparations. Equivalence: unitary relabeling preserving the registered preparations and response. Budget: two preparations, one binary response, one full-carrier recurrence and one work stroke. Verifier: Equations (7.6n.2)--(7.6n.5), including recurrence, work, power, cycle and uncertainty identities. Falsifier: a wrong recurrence, work integral, unit or displayed identity. Provenance class: source-internal finite model record. Downstream consumers: Theorem 29, Corollary 29.1 and `TV-MPU-05`. Closure still requires independently sourced clock and reference-energy response records and a response-faithful unit/covariance map that selects one point of the complete presentation fiber; `TV-MPU-05` therefore retains `R+O`.
-
-**Theorem 7.6o (Spin Realization of the Response-Autonomous MPU Branch).** Realize the three labeled registers $Q_M,Q_P,Q_I$ of Section 7.1.3 as three distinguishable spin-$\frac12$ particles with spin operators $S^{(j)}_\alpha=\frac\hbar2\sigma^{(j)}_\alpha$, and the multiplicity factor of Theorem 7.6a as a fourth spin-$\frac12$ particle $s$:
+<a id="theorem-76o-spin-realization-of-the-response-autonomous-mpu-branch"></a>**Theorem 7.6o (Spin Realization of the Response-Autonomous MPU Branch).** Realize the three labeled registers $Q_M,Q_P,Q_I$ of Section 7.1.3 as three distinguishable spin-$\frac12$ particles with spin operators $S^{(j)}_\alpha=\frac\hbar2\sigma^{(j)}_\alpha$, and the multiplicity factor of Theorem 7.6a as a fourth spin-$\frac12$ particle $s$:
 $$
 \mathcal H=\mathcal H_0\otimes\mathcal K,
 \qquad
@@ -2087,9 +2171,7 @@ $$
 $$
 Let $\Pi$ be this projector tensored with $I_I$; it has rank two. Then $e^{-it_*H_0/\hbar}=e^{i\pi\Pi}=I-2\Pi$, which is the identity when $Q_M$ is in $|0\rangle$ and acts on $Q_P$ as $I-2|-\rangle\!\langle-|=X$ when $Q_M$ is in $|1\rangle$. This proves (7.6o.2), and the rank of $\Pi$ gives the spectrum. The components of $|1,0,i\rangle=(|1,+,i\rangle+|1,-,i\rangle)/\sqrt2$ have energies $0$ and $E_0$, so the survival amplitude is $\frac12(1+e^{i\pi t/t_*})$. Its first zero is $t=t_*$, and $\langle H_0-E_0\rangle=\frac12\cdot\frac{\pi\hbar}{t_*}$ gives $\pi\hbar/(2\langle H_0-E_0\rangle)=t_*$, proving item 4. The convergence statement of item 5 is (7.6g.3), because $H_{\mathcal K}$ is scalar exactly when $\omega_s=0$. Finally, write $A=aI+A_0$ and $B=bI+B_0$ with traceless $A_0,B_0\ne0$. In the direct sum $M_8(\mathbb C)\otimes M_2(\mathbb C)=(\mathbb CI\oplus\mathfrak{sl}_8)\otimes(\mathbb CI\oplus\mathfrak{sl}_2)$, every operator $C\otimes I+I\otimes D$ has zero component in $\mathfrak{sl}_8\otimes\mathfrak{sl}_2$, whereas $H+A\otimes B$ has the nonzero component $A_0\otimes B_0$ there. ∎
 
-**Resolution TV-MPU-03-R2 (Metadata).** Exact domain: the four-spin carrier $(\mathbb C^2)^{\otimes3}\otimes\mathbb C^2$ with generator (7.6o.1) for every $t_*>0$ and $\omega_s\in\mathbb R$, and its multiplicity-one reduct. Premises: finite-dimensional quantum mechanics of distinguishable spin-$\frac12$ particles with $S=\frac\hbar2\sigma$, the displayed fields and coupling, and no further interaction. Equivalence: unitary equivalence preserving the three labeled register algebras and the surplus factor. Budget: every $t\in\mathbb R$, both surplus eigenvalues and the full retained algebra. Verifier: matrix-unit generation, the projector identity for $H_0$, exponentiation to $U_{\mathrm{pred}}$, the rank-two spectrum and survival amplitude, and Theorem 7.6g. Falsifier: a retained observable outside $M_8(\mathbb C)\otimes I_{\mathcal K}$, a failure of (7.6g.2) at some $t$, a propagator at $t_*$ other than $U_{\mathrm{pred}}\otimes I_I$, or an orthogonalization time below $t_*$. Provenance class: source-internal formal physical-carrier realization. Downstream consumers: Theorems 7.6a, 7.6g and 23a, Corollary 29.1, Section 7.1.3 and `TV-MPU-03`. Nonvacuity: $t_*=1\ \mathrm s$ and $\omega_s=1\ \mathrm s^{-1}$. This is `positive-discharge` of one physical carrier, retained response algebra and generator on the split branch classified by Theorems 7.6a and 7.6g, and it discharges the remaining `R` component of `TV-MPU-03`.
-
-**Theorem 7.6p (Exogenous No-Signaling Separator for a Two-MPU `Evolve` Law).** Let two MPU carriers $A$ and $B$ hold their interface qubits in
+<a id="theorem-76p-exogenous-no-signaling-separator-for-a-two-mpu-evolve-law"></a>**Theorem 7.6p (Exogenous No-Signaling Separator for a Two-MPU `Evolve` Law).** Let two MPU carriers $A$ and $B$ hold their interface qubits in
 $$
 |\Phi^+\rangle=\tfrac1{\sqrt2}\bigl(|00\rangle+|11\rangle\bigr)\in Q_I^A\otimes Q_I^B .
 $$
@@ -2143,9 +2225,7 @@ which proves item 1. If a site's outcome were a function of its setting and $\la
 
 For item 3, the first construction uses the setting-dependent seed laws $\mu_{ab}=K(\cdot\mid a,b)$ on $\Lambda=\{0,1\}^2$ and constant local outputs, which are no-signaling at every seed. The second partitions $[0,1)$, separately for each pair $(a,b)$, into intervals of lengths $K(o_A,o_B\mid a,b)$ and reads one uniform seed, so $\mu$ is fixed while each output depends on both settings. If site $B$ has one setting, let $\lambda=(o_B,u_0,u_1)$, with $o_B$ drawn from the $B$-marginal, which no-signaling makes independent of $a$, and with independent uniform $u_a\in[0,1)$; site $A$ outputs the inverse transform of $K(\cdot\mid a,o_B)$ at $u_a$. Both outputs are deterministic, the seed law is fixed, each output depends only on its own setting and $\lambda$, and integration returns $K$. The single-site statement is the same construction without $o_B$. None of these refinements changes the retained kernel, so (E1)--(E2) acts only on the admissible representative class, which is the third class of Theorem 7.6h. Finally, when $\lambda$ is appended to site $B$'s record, the law $\mu(d\lambda)K_\lambda(o_B\mid a,b)$ is independent of $a$ for every $b$ exactly when (E2) holds at $B$, and symmetrically at $A$. ∎
 
-**Resolution TV-MPU-04-R2 (Metadata).** Exact domain: all two-site kernels with binary settings and binary outcomes together with their seed refinements, the registered class (E1)--(E2), and the two-MPU realization (7.6p.1) on the Hilbert/Born branch. Premises: Definition 27's sharp repeatable instruments, Theorem 28a for the kernel values, and (E1)--(E2) as registered structural premises. Equivalence: equality of the retained two-site kernel; refinements are compared by their seed-conditioned kernels. Budget: all four setting pairs, both outcomes, every measurable guess, and the ablations of each premise and of the setting count. Verifier: the chained inequality, linearity of $S$ under (E1), the Born-rule correlators and the explicit refinements of item 3. Falsifier: a deterministic (E1)--(E2) refinement of (7.6p.1), a guess exceeding (7.6p.2), or a separating kernel with a single setting at one site. Provenance class: source-internal formal separator realization and coverage-complete refinement bound. Downstream consumers: Proposition 28, Definition 27, Theorems 7.6b and 7.6h, single-outcome branches and `TV-MPU-04`. Nonvacuity: the one-point refinement of (7.6p.1). This is `positive-discharge` of one justified registered separator realization in the third class of Theorem 7.6h. Together with Theorems 7.6b and 7.6h it gives `positive-discharge` of `TV-MPU-04`, with the response-only no-go retained as the exact route constraint.
-
-**Theorem 7.6q (Frequency--Energy Unit Map and Exact Covariance Transport).** Fix a nontrivial projective one-parameter evolution on a finite-dimensional carrier, one presentation $(t,H)$ of it, a registered ray recurrence of abstract period $T>0$ in that presentation, and a normalized reference state $\rho_{\mathrm{ref}}$. Write the calibration record of Theorem 7.6i in frequency form,
+<a id="theorem-76q-frequency-energy-unit-map-and-exact-covariance-transport"></a>**Theorem 7.6q (Frequency--Energy Unit Map and Exact Covariance Transport).** Fix a nontrivial projective one-parameter evolution on a finite-dimensional carrier, one presentation $(t,H)$ of it, a registered ray recurrence of abstract period $T>0$ in that presentation, and a normalized reference state $\rho_{\mathrm{ref}}$. Write the calibration record of Theorem 7.6i in frequency form,
 $$
 \boldsymbol r=(f,E_{\mathrm{ref}}),
 \qquad
@@ -2184,9 +2264,49 @@ Thus (7.6q.1)--(7.6q.3) form a response-faithful unit and covariance map that se
 
 *Proof.* With $\lambda=T_{\mathrm{phys}}/T=1/(Tf)$ and $c=\lambda E_{\mathrm{ref}}-\operatorname{tr}(\rho_{\mathrm{ref}}H)$ from (7.6i.2)--(7.6i.3), one has $t'=\lambda t$ and $(H+cI)/\lambda=Tf(H-\operatorname{tr}(\rho_{\mathrm{ref}}H)I)+E_{\mathrm{ref}}I$, which is (7.6q.1). For a fiber point $(\lambda t,(H+cI)/\lambda)$, the conditions $1/(Tf)=\lambda$ and $\operatorname{tr}(\rho_{\mathrm{ref}}H')=E_{\mathrm{ref}}$ determine the displayed record, and every record gives $\lambda>0$ and a real $c$, proving item 1. Under the replacement in item 2, the recurrence occurs at abstract parameter $\lambda_0T$, so $(\lambda_0T)f\bigl((H+c_0I)/\lambda_0-\operatorname{tr}(\rho_{\mathrm{ref}}(H+c_0I))I/\lambda_0\bigr)=Tf(H-\operatorname{tr}(\rho_{\mathrm{ref}}H)I)$ and $\lambda_0t/(\lambda_0Tf)=t/(Tf)$. Taking the trace against $\rho$ and eigenvalue differences in (7.6q.1) gives (7.6q.2); the same computation shows that $T\Delta_\rho$ and $T(E_j-E_k)$ are unchanged along the fiber. Item 4 is the transport of the first two moments under the linear map $\boldsymbol r\mapsto L\boldsymbol r$. ∎
 
-**Resolution TV-MPU-05-R3 (Metadata).** Exact domain: every complete presentation fiber (7.6i.1) of a nontrivial projective evolution with a registered recurrence period and reference state, and every calibration record $(f,E_{\mathrm{ref}})\in(0,\infty)\times\mathbb R$, deterministic or random with finite second moments. Premises: Theorem 7.6i and records in $\mathrm s^{-1}$ and joules. Equivalence: points of one fiber. Budget: the full record space, every finite family of states and every Bohr pair. Verifier: substitution into (7.6i.2)--(7.6i.3), the inverse record, invariance under a change of starting point, and linear moment transport. Falsifier: two records selecting one presentation, a fiber point outside the image, dependence on the starting point, or a covariance other than $L\Sigma L^{\mathsf T}$. Provenance class: source-internal formal observable map. Downstream consumers: Theorems 29, 7.6i and 7.6n, Corollary 29.1, `TV-QM-06` and `TV-MPU-05`. Nonvacuity: Theorem 7.6n's carrier with $\rho_{\mathrm{ref}}=|1\rangle\!\langle1|$ and record $(f,E_{\mathrm{ref}})=(E/2\pi\hbar,E)$, which $\Xi$ maps back to the presentation (7.6n.1). This is `positive-discharge` of the response-faithful unit/covariance map, the `O` component of `TV-MPU-05`. Population of the independently sourced clock and reference-energy records remains `R`-open under `TV-MPU-05`.
+<a id="theorem-76q4-independent-rail-source-calibration-for-every-finite-unitary-generator"></a>**Theorem 7.6q.4 (Independent Rail-Source Calibration for Every Finite Unitary Generator).** Register an ideal bosonic source with positive mode frequencies, prescribed quadratic mode-mixing controls, equal-frequency dual-rail pointers, positive cross-Kerr pointer pulses and occupation instruments. Ready states, clock/drive calibration, control installation, detectors and retained records have their own finite source-service entries. These are physical-theory inputs of the nominated source; the following construction derives their complete finite transition and unit map.
 
-**Theorem 7.6r (Thermal Exchange-Invariant Source and Zero-Excess Swap Return).** Use the full-context cycle of Section 7.1.3 on $\mathcal H_0=Q_M\otimes Q_P\otimes Q_I$. Let $U_{\mathrm{refl}}$ be the permutation of the computational basis that sends $|\phi,p,1\rangle$ to $|1-p,\phi,0\rangle$ and $|m,p,0\rangle$ to $|m,p,1\rangle$, extending the reflex step of Section 7.1.3, and let $R'$ be a finite classical register holding every other record retained through closure. Fix a bath temperature $T>0$, and let the Hamiltonians of $\mathcal H_0$ and $R'$ vanish on the commit and closure strokes. With $h_{\mathrm{nat}}$ as in Theorem 7.6e, write
+Let $H$ be a nonscalar self-adjoint operator on $\mathbb C^d$, $2\le d<\infty$, with eigenbasis $v_j$ and eigenvalues $E_j$. Select $E_a<E_b$, put $\Delta=E_b-E_a$, and supply independent source angular-frequency records $\Omega,\nu>0$, a time standard and action unit $\hbar$. Define
+
+$$
+\alpha=\frac{\hbar\Omega}{\Delta},\qquad
+\omega_j=\nu+\frac{\Omega(E_j-E_{\min})}{\Delta},\qquad
+H_{rail}=\hbar\sum_j\omega_jc_j^\dagger c_j,
+\qquad Sv_j=c_j^\dagger|vac\rangle.
+\tag{7.6q.4a}
+$$
+
+Then:
+
+1. **Full source map.** The one-excitation code is invariant and
+   $$
+   S^\dagger c_j^\dagger c_kS=|v_j\rangle\langle v_k|,\qquad
+   H_c:=S^\dagger H_{rail}S=\alpha(H-E_{\min}I)+\hbar\nu I.
+   \tag{7.6q.4b}
+   $$
+   At physical time $\tau=t/\alpha$, the encoded free channel equals $e^{-iHt/\hbar}(\cdot)e^{iHt/\hbar}$ on every input and spectator extension. The matrix-unit identity transports the full state/effect algebra.
+2. **Independent clock/reference record.** The ray $(v_a+v_b)/\sqrt2$ has abstract period $T=2\pi\hbar/\Delta$ and physical rail period $2\pi/\Omega$. With $\rho_{\mathrm{ref}}=|v_{\min}\rangle\langle v_{\min}|$, the source record $(f,E_{\mathrm{ref}})=(\Omega/(2\pi),\hbar\nu)$ satisfies $Tf=\alpha$. Theorem 7.6q therefore returns exactly $(\tau,H_c)$, with its full energy and Bohr-frequency covariance transport. A common recurrence of all rays is unnecessary.
+3. **Exact finite controls and verification.** Every prescribed finite unitary and pure-state preparation has a positive finite rail-control implementation. Retained classical mixtures supply mixed preparations. On the admitted one-excitation input code, a fresh cross-Kerr pointer supplies the exact binary Lüders leaves $P_\phi(\cdot)P_\phi$ and $(I-P_\phi)(\cdot)(I-P_\phi)$, with complement coherences, both outcomes and arbitrary spectators retained. Thus the complete prepare--evolve--verify transition law of Theorem 8.8e.1 is realized on this calibrated source.
+4. **Work and resource map.** The free signal energy lies in $[\hbar\nu,\hbar\nu+\alpha(E_{\max}-E_{\min})]$. For a signal-only unitary word with control zero at its endpoints,
+   $$
+   W=\int\operatorname{tr}(\rho_\tau\dot H_{\mathrm{total}}(\tau))d\tau
+   =\operatorname{tr}\rho(U^\dagger H_cU-H_c),\qquad
+   |W|\le\alpha(E_{\max}-E_{\min}).
+   \tag{7.6q.4c}
+   $$
+   Joint words use their complete joint endpoint Hamiltonian and spectrum. The physical clock, rail baseline, drive work/storage, pointer, preparation, detector, installation and archives remain separately owned finite source entries. Transferred work and the resulting stored energy are counted once.
+
+*Proof.* Acting on a one-particle state gives $c_j^\dagger c_kc_n^\dagger|vac\rangle=\delta_{kn}c_j^\dagger|vac\rangle$, proving (7.6q.4b). Every $\omega_j$ is positive. Its free encoded propagator at $\tau=t/\alpha$ differs from $e^{-iHt/\hbar}$ by a scalar, proving the full channel identity. The selected two-level superposition has survival probability $\cos^2(\Delta t/(2\hbar))$; its rail form is $\cos^2(\Omega\tau/2)$. No spectator eigenvalue enters this response, including irrational gaps. The chosen reference has energy $\hbar\nu$. Substitution in (7.6q.1) proves item 2 and imports the exact linear covariance theorem for joint positive source records with finite second moments.
+
+For any finite target unitary $U$, put $R(\tau)=e^{-iH_c\tau/\hbar}$. Choose $L>3\pi/(2\nu)$ and a self-adjoint logarithm $K$ with $e^{-iK/\hbar}=R(L)^\dagger U$ and $\|K\|\le\pi\hbar$. Let $s(\tau)=3(\tau/L)^2-2(\tau/L)^3$ and install the quadratic control with code matrix $C(\tau)=s'(\tau)R(\tau)KR(\tau)^\dagger$. Its interaction-picture Hamiltonian is $s'K$, so its exact endpoint is $R(L)e^{-iK/\hbar}=U$. The pulse vanishes at its endpoints, has norm action $\|K\|\le\pi\hbar$ and peak norm at most $3\pi\hbar/(2L)<\hbar\nu$. Hence the full one-particle coefficient matrix stays positive, and its number-conserving second quantization is nonnegative on every occupation sector. Every coefficient and duration is installed before the retained input; no global free recurrence is used.
+
+Rotate the verification ray to one rail by a finite gate $V$. An equal-frequency pointer in $|+\rangle$, acted on by a positive integrated cross-Kerr generator $\pi\hbar n_{\mathrm{target}}n_{\mathrm{pointer}}$ and read in the X basis, has signal Kraus maps $P_{\mathrm{target}}$ and $I-P_{\mathrm{target}}$. It distinguishes the target occupancy without resolving any internal complement state. The known free signal drift $D$ during this pointer word commutes with $P_{\mathrm{target}}$. Implement the paid endpoint gate $V^\dagger D^\dagger$ by the same drift-corrected finite synthesis; its own duration is included in that synthesis. The endpoint Kraus maps are consequently $P_\phi$ and $I-P_\phi$. Detector action is on the isolated pointer; subsequent signal drift is included in the compensation. These are operator identities on all matrix units, so they preserve every reference extension and compose to complete retained instruments. Preparation is a ready one-excitation mode followed by a mode rotation; mixtures use their owned source record. This proves item 3.
+
+Finally, differentiating $\operatorname{tr}(\rho_\tau H_{\mathrm{total}}(\tau))$ makes the unitary commutator term vanish by cyclicity of the trace. Integration gives (7.6q.4c); two expectations in the free signal energy interval differ by at most its width. A joint word uses the full joint free endpoints and its own services. The specified positive baselines, finite control slots and fresh pointer/record stocks complete the stated source ledger. ∎
+
+For scalar $H$, equal-frequency rails realize the identity projective channel and the same preparation and verification instruments. That branch has no nonconstant ray clock to invert. The reset branch of Theorem 8.8e.1 remains separate from this unitary generator calibration.
+
+<a id="theorem-76r-thermal-exchange-invariant-source-and-zero-excess-swap-return"></a>**Theorem 7.6r (Thermal Exchange-Invariant Source and Zero-Excess Swap Return).** Use the full-context cycle of Section 7.1.3 on $\mathcal H_0=Q_M\otimes Q_P\otimes Q_I$. Let $U_{\mathrm{refl}}$ be the permutation of the computational basis that sends $|\phi,p,1\rangle$ to $|1-p,\phi,0\rangle$ and $|m,p,0\rangle$ to $|m,p,1\rangle$, extending the reflex step of Section 7.1.3, and let $R'$ be a finite classical register holding every other record retained through closure. Fix a bath temperature $T>0$, and let the Hamiltonians of $\mathcal H_0$ and $R'$ vanish on the commit and closure strokes. With $h_{\mathrm{nat}}$ as in Theorem 7.6e, write
 $$
 d_{\mathrm{nat}}(a\Vert b):=a\ln\frac ab+(1-a)\ln\frac{1-a}{1-b}
 \qquad(0\le a\le1,\ 0<b<1),
@@ -2252,7 +2372,7 @@ $$
 $$
 has rank $\sum_{q(r)>0}\operatorname{rank}\rho_P^{(r)}\cdot\operatorname{rank}\rho_A\cdot\dim B$, because the Gibbs state $\gamma_B$ has full rank at $T>0$. This exceeds $|\operatorname{supp}q|\operatorname{rank}\rho_A\dim B$ when some $0<p_r<1$. If the reset ended with $H(P_{\mathrm{out}}\mid R_{\mathrm{out}})=0$, the final $(R,P)$ marginal would be supported on $\operatorname{span}\{|r,f(r)\rangle:q(r)>0\}$ for a function $f$, and cyclic control would restore the $A$ marginal $\rho_A$. The support of a multipartite state lies in the tensor product of the supports of its marginals, so the final rank would be at most $|\operatorname{supp}q|\operatorname{rank}\rho_A\dim B$. Unitary evolution preserves rank, a contradiction. ∎
 
-**Corollary 7.6r.1 (Conditional Swap Return for Every Binary Record Law).** Let $P\in\{0,1\}$ and a finite classical $R$ satisfy the register, bath and control premises of Definition 28 with degenerate register Hamiltonian, and put $p_r=q(P=1\mid R=r)$. For $n\ge1$ and each $r$ with $0<p_r<1$ and $\varepsilon_{r,0}:=\ln\frac{1-p_r}{p_r}<n$, use bath elements $B_{r,k}$ with Hamiltonians $\varepsilon_{r,k}k_BT|1\rangle\!\langle1|$ and Gibbs states, where $\varepsilon_{r,k}=\varepsilon_{r,0}+k/n$ for $1\le k\le N_r:=\lceil n(n-\varepsilon_{r,0})\rceil$, and apply the $R$-controlled unitary $\sum_r|r\rangle\!\langle r|\otimes S_{r,N_r}\cdots S_{r,1}$, where $S_{r,k}$ exchanges $P$ and $B_{r,k}$. For $p_r=1$ apply $X_P$ controlled by $r$, and for $p_r=0$ or $\varepsilon_{r,0}\ge n$ apply the identity. Then
+<a id="corollary-76r1-conditional-swap-return-for-every-binary-record-law"></a>**Corollary 7.6r.1 (Conditional Swap Return for Every Binary Record Law).** Let $P\in\{0,1\}$ and a finite classical $R$ satisfy the register, bath and control premises of Definition 28 with degenerate register Hamiltonian, and put $p_r=q(P=1\mid R=r)$. For $n\ge1$ and each $r$ with $0<p_r<1$ and $\varepsilon_{r,0}:=\ln\frac{1-p_r}{p_r}<n$, use bath elements $B_{r,k}$ with Hamiltonians $\varepsilon_{r,k}k_BT|1\rangle\!\langle1|$ and Gibbs states, where $\varepsilon_{r,k}=\varepsilon_{r,0}+k/n$ for $1\le k\le N_r:=\lceil n(n-\varepsilon_{r,0})\rceil$, and apply the $R$-controlled unitary $\sum_r|r\rangle\!\langle r|\otimes S_{r,N_r}\cdots S_{r,1}$, where $S_{r,k}$ exchanges $P$ and $B_{r,k}$. For $p_r=1$ apply $X_P$ controlled by $r$, and for $p_r=0$ or $\varepsilon_{r,0}\ge n$ apply the identity. Then
 $$
 \varepsilon_{\mathrm{reset}}^{(n)}=H_q(P\mid R)-H(P_{\mathrm{out}}\mid R_{\mathrm{out}})+\varepsilon_{\mathrm{diss}}^{(n)},
 \qquad
@@ -2265,9 +2385,7 @@ so $\varepsilon_{\mathrm{reset}}^{(n)}\to H_q(P\mid R)$, and the bound (45) is a
 
 *Proof.* For fixed $r$ with $0<p_r<1$ and $\varepsilon_{r,0}<n$, the argument of Theorem 7.6r with $g_{r,0}=p_r$ gives the heat $k_BT\bigl[h_{\mathrm{nat}}(p_r)-h_{\mathrm{nat}}(g_{r,N_r})+\sum_kd_{\mathrm{nat}}(g_{r,k-1}\Vert g_{r,k})\bigr]$, with relative-entropy sum at most $(e^{1/n}/n)(p_r-g_{r,N_r})\le e^{1/n}/n$ and final population $g_{r,N_r}\le(1+e^n)^{-1}$, because $\varepsilon_{r,N_r}\ge n$. For $p_r\in\{0,1\}$ the controlled flip or the identity acts on a degenerate register, exchanges no heat and leaves $P=0$. For $\varepsilon_{r,0}\ge n$ nothing acts, and $p_r\le(1+e^n)^{-1}$. Every final population therefore lies in $[0,(1+e^n)^{-1}]\subset[0,\frac12]$, where $h_{\mathrm{nat}}$ is increasing, so the bound of (7.6r.3) applies. Averaging over $r$ gives (7.6r.5). The controlled unitary leaves $R$ unchanged and uses no auxiliary memory. In the sequential reset, the side information $(S_{i+1},\ldots,S_m,R)$ is retained and unchanged while $S_i$ is reset, so (7.6r.5) applies to each step, and the chain rule $H_q(S\mid R)=\sum_iH_q(S_i\mid S_{i+1},\ldots,S_m,R)$ gives the limit. ∎
 
-**Resolution TV-MPU-07-R2 (Metadata).** Exact domain: the full-context cycle (7.1.3a)--(7.1.3b) with the source (7.6r.1) and every finite classical retained record $R'$; the swap-return family of Theorem 7.6r for every $n\ge1$; every binary record law in Corollary 7.6r.1; and, for item 5 of Theorem 7.6r, every reset with finite-dimensional resources satisfying the stated premises of Definition 28. Premises: Definition 28 with degenerate register and $R'$ Hamiltonians, two-level bath elements at $T>0$ and cyclic external control. Equivalence: equality of retained record laws, bath-energy records and the channel on $\operatorname{span}\mathcal B_{\mathrm{com}}$. Budget: all $n\ge1$, every bath element and the limit $n\to\infty$. Verifier: the swap bookkeeping, the telescoping identity in (7.6r.2), the bounds (7.6r.3), the comparison (7.6r.4) and the rank count. Falsifier: a bath-energy change other than (7.6r.2), a retained record resolving $\Phi$, a finite member with zero excess, or a finite-dimensional reset completing the erasure of a record with some $0<p_r<1$. Provenance class: source-internal finite thermodynamic realization with a rank no-go. Downstream consumers: Theorems 31, 31a, 7.6e and 7.6k, Equation (7.1.3d), Theorem 7.6s and `TV-MPU-07`. Nonvacuity: $n=1$, one bath element and any $\sigma_{Q_PR'}$. This is `positive-discharge` of the exchange-invariant source and of the cyclic isothermal zero-excess calorimetric return, realized as the justified exact-erasure limit of explicit Definition-28 implementations with every side record and premise audited; item 5 is the coverage-complete finite-resource no-go for exact erasure. With Theorems 7.6e and 7.6k it gives `positive-discharge` of `TV-MPU-07`.
-
-**Theorem 7.6s (Common-Carrier Golay Realization on Twelve MPU Carriers).** Index twelve coordinates by $J=\{\infty,0,1,\ldots,10\}$ and let $B$ be the $J\times J$ binary matrix
+<a id="theorem-76s-common-carrier-golay-realization-on-twelve-mpu-carriers"></a>**Theorem 7.6s (Common-Carrier Golay Realization on Twelve MPU Carriers).** Index twelve coordinates by $J=\{\infty,0,1,\ldots,10\}$ and let $B$ be the $J\times J$ binary matrix
 $$
 B_{\infty\infty}=0,
 \qquad
@@ -2327,16 +2445,3 @@ $$
 \Sigma_3(x)-\Sigma_0(x)=x^2(1-x^2)\bigl(x^{20}+x^{18}+x^{16}+738x^{12}+570x^{10}+2506x^8+1288x^6+829x^4+189x^2+21\bigr),
 $$
 which is nonzero for $p\ne\frac12$. Hence $S$ and $c'$ are dependent given $F=0$, and conditioning on $c'$ strictly lowers the conditional entropy of $S$. Corollary 7.6r.1 leaves each prepared qubit in the mixture $(1-g_j)|0\rangle\!\langle0|+g_j|1\rangle\!\langle1|$ with $g_j\le g$, either a fresh bath state or its untouched product prior, so under the product premise the $24$ prepared qubits and the data are jointly in product form. By linearity the output is $w_0\Omega_{\mathrm{exact}}+(1-w_0)\Omega'$ with $w_0=\prod_j(1-g_j)\ge(1-g)^{24}$, which gives the trace-distance bound, and (7.6r.5) gives the preparation heat. Every gate is generated by a control Hamiltonian that vanishes before and after the gate on registers with zero Hamiltonian, so its net work is zero. Theorem 7.6j supplies (7.6j.3) for the encoder, instrument and recovery realized on $\mathcal H_{\mathrm{sub}}$. ∎
-
-**Resolution TV-MPU-06-R2 (Metadata).** Exact domain: the explicit code (7.6s.1) and its coordinate permutations under Theorem U.1, the twelve-carrier substrate $\mathcal H_{\mathrm{sub}}$, the independent bit-flip channel for every $0<p<1$, the preparations of Corollary 7.6r.1 for every $n\ge1$ and the flag-conditioned syndrome reset. Premises: Theorem 7.6j, Corollary 7.6r.1, Definition 28 for resets, degenerate register Hamiltonians and the displayed gate generators. Equivalence: coordinate permutations of the code together with the matching relabeling of substrate qubits. Budget: all $2^{12}$ codewords, all $2^{24}$ words and $4096$ syndromes, and every gate of both circuits. Verifier: codeword and coset enumeration, the circuit action on computational-basis states, the generator identities, the round statistics (7.6s.2) and the entropy decomposition behind (7.6s.3). Falsifier: a nonzero codeword of weight below eight, a correctable syndrome collision, a circuit output other than $|Gu\rangle$ or $|x,y\rangle|H(x,y)\rangle$, a round statistic or flag-conditioned reset heat different from (7.6s.2)--(7.6s.3), or nonzero net gate work on a degenerate register. Provenance class: source-internal formal substrate realization and exact resource certificate. Downstream consumers: Theorems 7.6d and 7.6j, Stage 4a, the decoder corollaries of Section 7.5.5 and `TV-MPU-06`. Nonvacuity: $u=0$, $e=0$ and $n=1$. This is `positive-discharge` of the substrate-coordinate, gate/instrument, preparation/reset and resource-certificate fields and of their common-carrier realization, with (7.6s.3) the heat of the flag-conditioned reset, equal to the complete-record bound of Theorem 31 when $S$ is independent of the retained code qubits given $F$, and it discharges the remaining `C+R` components of `TV-MPU-06`; the held-out substrate experiment belongs to `ET-MPU-06` in `empirical_targets.md`.
-
-**Resolution ledger 7.6-R1.** All entries below are analytic campaign-resolution artifacts on the displayed finite-dimensional carriers, finite retained alphabets and histories, code blocks, or ensembles. The response-null inverse-transform refinement of Theorems 7.6b and 7.6h may use a standard-Borel auxiliary seed space. Equivalence means equality of the named retained responses or unitary equivalence preserving them, as specified by each row.
-
-| Target | Exact scoped proposition and polarity | Verifier and falsifier | Downstream consumers |
-|:--|:--|:--|:--|
-| `TV-MPU-03` | The finite representation/multiplicity class and the exact response-autonomous Hamiltonian class (7.6g.1) are `positive-discharge`; nontrivial finite surplus-channel convergence receives `negative-refutation`, while static algebra alone still does not select the split branch. | Check (7.6a.1), the derivation-normalizer equivalence, partial-trace intertwining (7.6g.2), and the group-limit argument for (7.6g.3); a preserving Hamiltonian outside the split form or a convergent nonscalar surplus channel falsifies the classification. | Theorems 23a, Z.2 and every $d_0=8$ dynamics promotion. |
-| `TV-MPU-04` | Intrinsic stochasticity from the retained finite-history law alone is `nonentailment`, so the response-only route carries `N`; Theorem 7.6h gives `positive-discharge` of the separator classification for the kernel/refinement pair into changed retained response, added implementation observable, or structural admissibility restriction. | Compare every finite cylinder law with the inverse-transform refinement and type every proposed separator for that pair; a retained-equivalent invariant predicate that distinguishes the representatives, or a separator outside the three registered classes, falsifies the result. | Proposition 28, Definition 27 and single-outcome branches. |
-| `TV-MPU-05` | Absolute energy zero and time/energy scale from ray dynamics alone are `nonentailment`; the complete two-parameter presentation fiber and its unique selection by one independent period and reference-energy record are `positive-discharge`. | Substitute (7.6c.1) and verify (7.6i.1)--(7.6i.3); an additional presentation modulus or two calibrated presentations with the same registered period and reference energy falsifies the classification. | Theorem 29, Corollary 29.1 and action/power ledgers. |
-| `TV-MPU-06` | The finite model-level carrier, encoder, bit-flip noise class, syndrome instrument, conditional recovery and failure record are `positive-discharge`; Theorem 7.6s supplies the populated formal certificate, with the heat of its flag-conditioned syndrome reset, and the common-carrier realization, and the held-out substrate test is owned by `ET-MPU-06`. | Exhaust the weight-$\le3$ error set, verify (7.6j.1)--(7.6j.3), complete positivity and trace preservation; a correctable syndrome collision, recovery failure, or unnormalized recorded map falsifies the result. | Golay recovery, Appendix-U uniqueness and substrate protocols. |
-| `TV-MPU-07` | Conditional-entropy, equality and finite return-map branches are `positive-discharge`; record export or uncertified removal alone has no erasure-heat implication, and universal $\ln2$ without a conditionally uniform source and Definition-28 zero-excess implementation is `nonentailment`. | Evaluate (7.6e.1)--(7.6e.2), classify the retained, persistent-export, certified-reset, uncertified-removal and deterministic cases of Theorem 7.6k, and audit every Definition-28 premise; a missing branch or an uncertified Landauer conclusion falsifies the result. | Theorems 31--33 and thermodynamic/reset ledgers. |
-| `TV-MPU-08` | Unconstrained real/Cayley marking moduli and the four factor-compatible real-structure orbits are `positive-discharge`; selection of one sign class is `nonentailment`; Theorem 7.6m gives `negative-refutation` of Cayley-marking selection for every complete sign-triple stabilizer quotient. | Verify the two unconstrained stabilizers, factor-normalizer reduction, four sign triples in (7.6l.1), and the dimension/fundamental-group obstruction of Theorem 7.6m; an omitted compatible orbit or a transitive complete stabilizer action falsifies the classification. | Corollary 23a.1 and every real/$\mathrm{Spin}(7)$ carrier use. |

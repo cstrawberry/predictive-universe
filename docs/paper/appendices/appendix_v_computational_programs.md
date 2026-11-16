@@ -28,7 +28,7 @@ Numerical conventions: $\ln$ and $\exp$ denote the natural logarithm and exponen
 | $\alpha^{-1}$ (Thomson limit) | Eqs. (V.8)–(V.10) with $K_0=3$, $d_0=8$, $M=24$, $u^*=8^{1/24}-1$; certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ | $\alpha^{-1}_{0}=137.03609205522863\ldots$ | branch comparison budget $\pm0.000060$ before residual closure | exact sinc-core arithmetic plus Section Z.27.9 comparison budget; theorem-level interval requires the residual gate of Definition Z.27.11a and Theorem Z.27.11j.1 |
 | $\Lambda L_P^2$ (vacuum sector) | five-mode reference conversion and observational inversions; four-mode route $m_4\to\kappa_{\mathrm{idx}}\to S_{\mathrm{inst}}\to w_4\to\Lambda_4L_P^2$ | five-mode reference $(2.88\times10^{-122})$ | $\pm0.03\times10^{-122}$ reference budget | U.13b proves only sampled-Hessian nullity; $\mathfrak C_{U,\mathrm{mark}}$, Proposition U.14, $\mathfrak F_U^{(4)}$, and $\mathfrak R_\Lambda^{(4)}$ remain successive gates. Equation (V.5) gives the observational input and the displayed prefactor values are inversions, not forward evaluations |
 
-### V.0.2 Convention Freeze Register
+### V.0.2 Numerical Model and Comparison Register
 
 Each numerical model and prospective test carries one versioned record with the following fields:
 
@@ -37,14 +37,14 @@ Each numerical model and prospective test carries one versioned record with the 
 | Identity | Row ID, source version, exact source-text or manifest hash |
 | Expression | Formula, algorithm, units, Planck convention and all normalizations |
 | Premises | Mathematical declarations, physical maps, accepted certificates and residual class |
-| Inputs | Fixed values, candidate menu, calibrated quantities and permitted parameter ranges |
+| Inputs | Derivation and dependency record under Definition 2.4.1d, fixed conventions, discrete choices and their selection rules, and declared empirical inputs with ranges and uncertainties |
 | History | Calibration data and dates, previous comparisons and selection history |
-| Test | Held-out data identity, registration time, likelihood, covariance and decision rule |
-| Outcome | Comparison status, failed conditions and the prospective test assigned to each model version |
+| Test | Data identity and role, likelihood, covariance and decision rule where applicable. For a prospectively registered test, record the registration time |
+| Outcome | Theoretical status, empirical comparison result, failed conditions, and any planned test for each model version |
 
-The convention inventory includes vacuum nullity and bare $A_{\mathrm{eff}}$, the distinct five-mode reference, primordial $A_Q$ and reheating prescription, electroweak $A_{EW}$ and determinant prefactor, reduced and unreduced Planck masses, and the complete alpha interface/curvature/transport/residual package. Flavor records additionally fix triads, stiffness ratios, effective dimensions, response factors, ordering, phases and the complete selection procedure.
+The convention inventory includes vacuum nullity and bare $A_{\mathrm{eff}}$, the distinct five-mode reference, primordial $A_Q$ and reheating prescription, electroweak $A_{EW}$ and determinant prefactor, reduced and unreduced Planck masses, and the complete $\alpha$ interface/curvature/transport/residual package. Flavor records additionally fix triads, stiffness ratios, effective dimensions, response factors, ordering, phases and the complete selection procedure.
 
-A registration binds a previously fixed source or manifest and records its own identity separately. A date entered after inspecting a comparison leaves that comparison retrospective. New versions retain earlier predictions, calibration choices and failed comparisons.
+Each entry identifies a version of the calculation and records its dependencies and any calibration choices. A measurement supplies an independent test when the model and decision rule are independent of the data used for evaluation, with any shared inputs accounted for. Data used to select a branch or fix a coefficient are calibration data for that branch, and a claim of independent empirical validation identifies the evaluation data and accounts for their dependence on calibration and selection. New versions retain the recorded calculations, calibration choices, and comparison results.
 
 **PMNS phase row.** The convention-level candidate $\delta_{CP}=232.5^\circ$ can be fixed for a future comparison with proposed circular tolerance $20^\circ$. Its record includes the already quoted phase data, every input used to select the candidate, mass ordering, phase convention, joint covariance, and the geometric and physical certificates of Theorem T.24.22. The circular discrepancy is
 $$
@@ -83,13 +83,12 @@ A future likelihood tests the frozen numerical model with that selection history
 
 ### V.1.2 Observational Inputs
 
-- **Cosmological hybrid diagonal-input convention for the 2018 Planck base-$\Lambda$CDM results [Planck Collaboration 2020a]:**
+- **Cosmological hybrid diagonal-input convention for the 2018 Planck base-$\Lambda$CDM results (Planck Collaboration 2020a):**
   $H_0=67.4\pm0.5~\mathrm{km\,s^{-1}\,Mpc^{-1}}$, $\Omega_{\Lambda}=0.6889\pm0.0056$.
   The $H_0$ pair is the rounded Planck TT,TE,EE+lowE+lensing marginal, while the $\Omega_\Lambda$ pair is from the corresponding Planck+BAO column. They are deliberately combined only as a declared diagonal sensitivity convention and are not presented as a draw from one joint Planck posterior.
 - **Planck length from the 2022 CODATA adjustment [Mohr et al. 2025; NIST 2024]:**
   $L_P=1.616255(18)\times 10^{-35}~\mathrm{m}$.
 - **Speed of light:** $c=299{,}792{,}458~\mathrm{m\,s^{-1}}$ (exact).
-
 
 ### V.1.3 Calculation of $\Lambda L_P^2$
 
@@ -167,13 +166,13 @@ Hence even an order-unity uncertainty in $A_{\text{eff}}$ shifts the inferred $\
 
 ## V.2 Certificate-Conditional Derivation of $\alpha_{\mathrm{em}}$ on the Appendix Z Branch
 
-This section evaluates the Appendix Z fine-structure value conditionally on its registered branch and matching data. The inherited package includes the PCE-attractor conditions of Definition 15a, the minimal Hilbert-carrier and rank-two active-projector branches, the unit Predictive-Ward normalization of Theorem Z.14, the independent unit-interface-response specialization $c_{\mathrm{int}}=1$ of Theorem Z.17, the independent democratic visible-response input $L_{\mathrm{vis}}=1/(ad_0)$ of Theorem Z.24, which Lemma Z.24a shows intrinsic isotropy cannot derive, the normalized Chern-flux branch of Lemma Z.14, the separable curvature-response branch of Theorem Z.25, the electromagnetic-projection branch, the $SU(2)$ transport ansatz of Lemma Z.13, and the residual gate. Once those antecedents are supplied, the remaining evaluation is arithmetic.
+This section evaluates the Appendix Z fine-structure value conditionally on its registered branch and matching data. The inherited package includes the PCE-attractor conditions of Definition 15a, the minimal Hilbert-carrier and rank-two active-projector branches, the unit Predictive-Ward normalization of Theorem Z.14, the independent unit-interface-response specialization $c_{\mathrm{int}}=1$ of Theorem Z.17, the independent democratic visible-response input $L_{\mathrm{vis}}=1/(ad_0)$ of Theorem Z.24, which Lemma Z.24a shows intrinsic isotropy cannot derive, the normalized Chern-flux branch of Lemma Z.14, the separable curvature-response branch of Theorem Z.25, the electromagnetic-projection branch, the $SU(2)$ transport ansatz of Lemma Z.13, and the residual gate. Once those antecedents are supplied, the remaining evaluation is arithmetic. Theorems Z.24c and Z.25b supply the visible-response and Chern-to-current entries of this package on the declared charged Peierls source of Theorem Z.26f with its marked slot and two-port interface services, and Theorem Z.26f supplies the sinc transport on the same current tensor. The capacity, bulk, source-admission and complete Thomson-residual conditions remain separate antecedents of the evaluation below.
 
 ### V.2.1 Structural and Branch Inputs
 
 - **MPU Hilbert Space Dimension:** Theorem 23 gives $d_0\ge8$ from Hilbert distinguishability; Theorem Z.2 gives $d_0=8$ only on the active-dimension-saturation branch.
 - **Structural Binary Reference:** $\varepsilon_0=\ln2$ nats is the log-cardinality of the registered binary verification quotient (Definition 28; Theorem J.1).
-- **Attractor Conditions:** Definition 15a requires attainment, a singleton quotient minimizer, flat U(1) SLD-QFI, and the declared capacity-boundary condition.
+- **Attractor Conditions:** Definition 15a requires attainment, a singleton quotient minimizer, flat $U(1)$ SLD-QFI, and the declared capacity-boundary condition.
 
 ### V.2.2 Derived Interface Spectrum on the Registered Branch
 
@@ -241,11 +240,11 @@ $$
 \alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha.
 $$
 
-Equation (V.10) is the exact sinc-core arithmetic of the Appendix Z derivation. Relative to $\alpha^{-1}_{\mathrm{exp}}=137.035999177$, the core value differs by $0.00009287822863\ldots$, about $0.678$ ppm. The displayed Section Z.27.9 budget is a branch comparison budget; theorem-level interval status requires $R_\alpha$ to be fixed before comparison by the residual gate of Definition Z.27.11a and Theorem Z.27.11j.1.
+Equation (V.10) is the exact sinc-core arithmetic of the Appendix Z derivation. Relative to $\alpha^{-1}_{\mathrm{exp}}=137.035999177$, the core value differs by $0.00009287822863\ldots$, about $0.678$ ppm. The displayed Section Z.27.9 budget is a branch comparison budget; theorem-level interval status requires $R_\alpha$ to be derived independently of the measured value by the residual gate of Definition Z.27.11a and Theorem Z.27.11j.1.
 
 ## V.3 Finite Independent Audit Ladder
 
-This section separates short-run reproducibility audits from certificate-level branch closures. An audit in this section is valid only if all inputs are fixed from the cited PU formulas before comparison with observational or validation data. A passed audit confirms that the displayed PU calculation is mechanically reproducible; it does not supply missing RHG, Bismut-Lebeau, RCD, or determinant certificates unless the relevant certificate object is explicitly constructed in the cited appendix.
+This section separates short-run reproducibility audits from certificate-level branch closures. An audit in this section reproduces the cited PU formulas from their declared premises, conventions, and inputs. If the computation uses observational data as inputs, the audit records their role and propagates their uncertainties. A passed audit confirms that the displayed PU calculation is mechanically reproducible; it does not supply missing RHG, Bismut-Lebeau, RCD, or determinant certificates unless the relevant certificate object is explicitly constructed in the cited appendix.
 
 ### V.3.1 Charged-Lepton Log-Ratio Audit
 
@@ -261,9 +260,9 @@ from the effective dimensions, Bures curvature data, and packet-normalization co
 
 **Pass condition.** The computation must reproduce the Appendix T log-ratio values from the stated branch data alone, with an error budget separated into truncation, branch-normalization, and external mass-comparison uncertainty.
 
-**Fail condition.** If the displayed log-ratio values require inserting charged-lepton masses, changing the effective dimensions after comparison, or choosing a packet normalization from the validation result, the audit fails and the affected Appendix T row remains a validation-level or branch-normalized claim rather than a forward calculation.
+**Fail condition.** If the displayed log-ratio values require inserting charged-lepton masses, using the comparison to select effective dimensions, or choosing a packet normalization from the comparison, the source-only audit fails. The affected Appendix T comparison is calibration if it uses those observations to select its inputs.
 
-**Executed source-only audit record.** Freeze the scalar model branch before loading any charged-lepton mass, mass ratio, or mass-derived proxy. Let
+**Executed source-only audit record.** The scalar calculation uses the declared model branch with no charged-lepton mass, ratio, or mass-derived proxy as a dependency. Let
 $$
 s:=\operatorname{sinc}(1/\sqrt3),
 \qquad
@@ -315,23 +314,7 @@ Those rounded comparison values carry no covariance record in this audit and are
 
 Theorem T.39 assigns physical mass-log identification to an accepted $\mathfrak C_{Y\to m}$ containing the complete magnitude and phase matrices, matching map, diagonalizers, ordered singular values, labels, and residual intervals. The current source supplies no accepted $\mathfrak C_{Y\to m}$ and no accepted common packet/VVM certificate with numerical endpoint bounds. Consequently the frozen scalar record determines the displayed conditional model exponents but does not entail $\log(m_\tau/m_\mu)$ or $\log(m_\mu/m_e)$ as physical quantities.
 
-| Resolution-artifact field | `V.3.1-R1` record |
-|---|---|
-| Catalog binding and polarity | `TV-V-03`; `positive-discharge` for the exact conditional arithmetic subproposition and `nonentailment` for physical mass-log identification from the frozen scalar record |
-| Exact domain and equivalence | The two registered adjacent-edge scalar expressions and their algebraic path sum; equality is exact real-number equality under the displayed branch substitutions |
-| Premises | Theorem T.39's scalar-kernel type boundary; Theorem T.24.2.1's registered sinc prescription; Theorem T.42.2's conditional exact coefficient; Theorem T.42.5's registered effective dimensions; Theorem T.42.6's zero-remainder diagnostic specialization |
-| Exhaustive budget and coverage | Both adjacent charged-lepton paths, the dependent path sum, every displayed scalar correction, and the symbolic endpoint remainder bounds |
-| Source snapshot | `appendix_t_electroweak_hierarchy.md` SHA-256 `fdc58676499d7cf1aa327beac089e88db611ff548bb25179649a0fd3da36f73c`; pre-insertion `appendix_v_computational_programs.md` SHA-256 `8c4391b15d3b72183871639fdb8fb1b5322f1178ed025e375825965dbb52d04c` |
-| Verifier, executable and runtime | Exact symbolic substitution in both scalar expressions, 100-decimal evaluation, algebraic path-sum verification, and the displayed Theorem-T.39 realization-type audit; audit source SHA-256 `10c71ff430f94d2a8b155363eb676ea8aa571f23a47150a7880a1c711545dfc5`; Python 3.13.12 executable SHA-256 `a38f63d2b8843820b59746250911cd203dbd76c8dc53693007aaa3bda2007232`; an independent Node.js 22.22.0 binary64 evaluation agreed at displayed binary64 precision |
-| Canonical input and output | Compact sorted ASCII JSON with no terminal LF; input SHA-256 `5048bd397f4e381ff2e691cc3a039683753df742312c84083cc55ab0a6112bfd`; eight-field 80-decimal output SHA-256 `e633f663b418d6e474da34ac6d7f2391e7b1a83852a140e00aedd8b552cb4216` |
-| Integrity invalidator | A source, executable, runtime, input or output hash mismatch; loading a charged-lepton target or proxy before sealing the model output; or changing a registered branch entry after comparison |
-| Falsifier | An exact arithmetic mismatch on the hashed branch, or a derivation of the physical mass logs from the same scalar record without adding any Theorem-T.39 realization field |
-| Provenance class | Source-derived conditional model arithmetic with a target-firewalled execution and a theorem-level mass-realization type audit |
-| Nonvacuity disposition | The displayed branch has explicit positive scalar inputs and finite outputs; the nonentailment concerns the missing map from those scalar outputs to ordered physical singular values, not an empty arithmetic domain |
-| Downstream consumers | The arithmetic remains a regression input; $\mathfrak C_{\mathrm{pkt/VVM}}^\ell$, $\mathfrak C_{Y\to m}$, the flavor selector, matching/RG, residual and prospective comparison obligations remain with `RT-T3` and their Appendix-T atomic targets |
-| Audit result | Pass for reproducibility of the conditional scalar arithmetic; fail under V.3.1's forward physical-log-ratio pass condition, with `nonentailment` at that exact scope |
-
-This closes the finite source-only audit at its arithmetic/nonentailment scope. The flavor, packet/VVM, full-matrix realization, matching, remainder and prospective empirical components remain assigned to the named `RT-T3` records.
+This completes the finite source-only audit at its arithmetic scope, including the non-entailment of the physical mass-log identification. The flavor, packet/VVM, full-matrix realization, matching, remainder and prospective empirical components lie outside it.
 
 ### V.3.2 Golay Residual-Shell Incidence Audit
 
@@ -385,20 +368,6 @@ $$
 =253:77:21:5:1.
 $$
 
-| Regression artifact field | `V.3.2-R1` record |
-|---|---|
-| Catalog binding and polarity | `TV-V-04`; `positive-discharge` of the exact finite regression proposition |
-| Exact domain and equivalence | The complete row span of the hashed displayed $G$ over $\mathbb F_2$; code equivalence is coordinate permutation, while incidence uses the displayed coordinate labels |
-| Premises | The exact hashed generator serialization, arithmetic over $\mathbb F_2$, and the binary $[24,12,8]$ classification cited in Theorem Z.13c |
-| Exhaustive budget and coverage | All $2^{12}=4096$ input words and every labeled $t$-subset for $0\le t\le5$ |
-| Verifier | Exact $\mathbb F_2$ matrix multiplication, row-span enumeration, integer popcount and subset-incidence histograms under Node.js 22.22.0, followed by an independent exact reimplementation; both executions returned the displayed record |
-| Integrity invalidator | A generator-hash mismatch, incomplete $4096$-word or subset coverage, or verifier disagreement |
-| Falsifier | On the exact hashed input with exhaustive valid coverage, a rank, self-orthogonality, weight, code-equivalence, incidence or extracted-ratio mismatch |
-| Provenance class | Source-derived finite computation whose checker inputs are exhausted by the displayed generator and exact source mathematics |
-| Nonvacuity disposition | Positive finite-audit disposition: the hashed input decodes to the displayed $12\times24$ matrix, whose enumerated span contains $4096$ words and $759$ distinct weight-eight supports |
-| Consumers | This finite incidence audit and the combinatorial input to the residual-shell ratios; physical-code status remains owned by the Appendix-Z physical-code branch |
-| Regression result | Pass for the exact finite regression proposition |
-
 This closes the finite code-combinatorics audit at its regression scope. The physical encoder, noise law, syndrome/recovery map, resource ledger and substrate realization remain separate records governed by the Appendix-Z physical-code branch.
 
 ### V.3.3 Backbone Integer-Ledger Audit
@@ -451,21 +420,7 @@ $$
 3. The implication from $M=24$ to binary code dimension $k=12$ additionally uses all four clauses of Definition Z.13b.0 and the conditional rate conclusion of Theorem Z.13b.0a. The typed interface-code admission maps $M$ to code length $n$; $k_{\mathrm{tan}}$ and the binary code dimension $k$ remain distinct typed objects even when both equal $12$. The conditional conclusion is the rate statement $k=n/2$. Distance-eight attainment and coordinate equivalence are witnessed by Theorem Z.13c; retained Golay-code selection requires Theorem Z.13b's separate fixed-rate distance-selection certificate.
 4. The implication to $D=4$ uses Definition Z.9a's normalized Bures/SLD metric, injective response-preserving labeling of distinct equal-radius, nonoverlapping cells by all $24$ modes, response-null-anisotropy quotient and least-feasible positive-support comparison, together with Theorem Z.10's mode-cell bound and Theorem Z.11's exact lower-dimensional exclusion, explicit regular-$24$-cell witness and least-feasible conclusion. This $D$ is the Euclidean tangent-shell dimension; identifying it with physical $3+1$ spacetime requires the separate continuum, time-orientation and metric-reconstruction branch.
 
-| Regression artifact field | `V.3.3-R1` record |
-|---|---|
-| Catalog binding and polarity | `TV-V-05`; `positive-discharge` of the exact branch-qualified implication-audit proposition |
-| Exact domain and equivalence | The four displayed implications, with equality restricted to objects of the same declared type |
-| Premises | Exactly the branch packages and typed source declarations enumerated in items 1–4 |
-| Exhaustive budget and coverage | All four arrows, every named antecedent above and all four required Peirce dimensions |
-| Verifier | Exact integer arithmetic plus a source-and-type check against Theorems 15, 23, Z.1, Z.2, Z.5, Z.10, Z.11 and Z.13b.0a and Definitions Z.9a and Z.13b.0 |
-| Integrity or applicability failure | An omitted antecedent, type merge, unsupported citation, or unpopulated or failed branch premise |
-| Falsifier | An exact arithmetic or type mismatch, or a counterexample satisfying every displayed antecedent while violating the stated conclusion |
-| Provenance class | Source-derived branch audit whose inputs are exhausted by the named declarations and exact arithmetic |
-| Nonvacuity disposition | Positive implication-audit disposition: the nonempty comparison class and admissible witness remain explicit antecedents in item 2 |
-| Consumers | The branch-qualified integer ledger; code realization, spacetime identification and common-carrier coexistence retain their separate gates |
-| Regression result | Pass for the exact branch-qualified regression proposition |
-
-The arithmetic and type checks accept each implication under its displayed branch package, and omitting a listed package invalidates the cited implication. The accepted result is the vector of four branch-qualified implications; promoting it to an unconditional chain requires positive discharge of every displayed branch package or a separate unconditional derivation. This closes the implication-ledger regression at its branch-qualified scope; common-carrier coexistence remains a separate certificate.
+The arithmetic and type checks accept each implication under its displayed branch package, and omitting a listed package invalidates the cited implication. The result is the vector of four branch-qualified implications; promoting it to an unconditional chain requires establishing every displayed branch package or a separate unconditional derivation. This completes the implication-ledger regression at its branch-qualified scope; common-carrier coexistence remains a separate certificate.
 
 ### V.3.4 Primordial $\mathbb{CP}^{11}$ Determinant Audit
 
@@ -475,7 +430,7 @@ $$
 \lambda_\ell=4\ell(\ell+11)+m_Q^2
 $$
 
-and the retained multiplicities $m_\ell-q_\ell$, $\ell\ge0$, of the projected zeta function (U.26b.5) on $\mathbb{CP}^{11}$. The mode inventory is that of Definition U.26b: the constant mode $\ell=0$, with $m_0=1$ and $\lambda_0=m_Q^2$, stays in the determinant unless $P_Q$ removes it.
+and the retained multiplicities $m_\ell-q_\ell$, $\ell\ge0$, of the projected $\zeta$ function (U.26b.5) on $\mathbb{CP}^{11}$. The mode inventory is that of Definition U.26b: the constant mode $\ell=0$, with $m_0=1$ and $\lambda_0=m_Q^2$, stays in the determinant unless $P_Q$ removes it.
 
 **Pass condition.** The audit must output a definite value of
 
@@ -484,11 +439,11 @@ A_Q^{\mathrm{det}}
 =\mathcal J_Q\exp[\tfrac12\zeta_Q'(0)]
 $$
 
-with the finite-part convention, zero-mode quotient, and measure factor fixed before comparison with $A_s$, $r$, or $A_s r$.
+with the finite-part convention, zero-mode quotient, and measure factor specified independently of the observed $A_s$, $r$, or $A_s r$.
 
-**Fail condition.** If $m_Q^2$, $\mathcal J_Q$, or the finite-part convention is not fixed, the audit may verify the formal zeta expression but cannot promote the leading branch $A_Q=1$ to theorem-level determinant closure.
+**Fail condition.** If $m_Q^2$, $\mathcal J_Q$, or the finite-part convention is not fixed, the audit may verify the formal $\zeta$ expression but cannot promote the leading branch $A_Q=1$ to theorem-level determinant closure.
 
-**Executed record.** On the declared Hopf-intertwinor record $\mathfrak D_Q^{\mathcal B}$ of Theorem U.26d, with $m_Q^2=121$, $P_Q=0$, $\mathcal J_Q=1$, $\mu_Q=1$, the positive orientation and the exact tail rule, the audit sums (U.26b.5) over every $\ell\ge0$, including the retained constant mode $\lambda_0=121$ as Definition U.26b prescribes for $P_Q=0$, evaluates $\zeta_Q^{\mathcal B}(0)$ as an exact rational number and gives $A_Q^{\mathrm{det}}=1-5.9409142259565\ldots\times10^{-9}$ from the closed form (U.26d.2). The pass condition holds on that record (Resolution TV-U-04-R1). A record that projects out only the constant mode sets $q_0=1$, which by Definition U.26b also sets $r_Q^{\mathrm{extra}}=1$, replaces $\kappa_Q=11$ by $\kappa_Q^{\mathrm{corr}}=\frac{21}2$ and adds that mode's Jacobian to $\mathcal J_Q$; its zeta function is $\zeta_Q^{\mathcal B}(s)-121^{-s}$, so $\zeta_Q(0)$ decreases by $1$ and $\zeta_Q'(0)$ increases by $\ln121$; it defines a different record. Selection of the primordial determinant record from the primordial carrier and action records remains open under `TV-U-04`.
+**Executed record.** On the declared Hopf-intertwinor record $\mathfrak D_Q^{\mathcal B}$ of Theorem U.26d, with $m_Q^2=121$, $P_Q=0$, $\mathcal J_Q=1$, $\mu_Q=1$, the positive orientation and the exact tail rule, the audit sums (U.26b.5) over every $\ell\ge0$, including the retained constant mode $\lambda_0=121$ as Definition U.26b prescribes for $P_Q=0$, evaluates $\zeta_Q^{\mathcal B}(0)$ as an exact rational number and gives $A_Q^{\mathrm{det}}=1-5.9409142259565\ldots\times10^{-9}$ from the closed form (U.26d.2). The pass condition holds on that record. A record that projects out only the constant mode sets $q_0=1$, which by Definition U.26b also sets $r_Q^{\mathrm{extra}}=1$, replaces $\kappa_Q=11$ by $\kappa_Q^{\mathrm{corr}}=\frac{21}2$ and adds that mode's Jacobian to $\mathcal J_Q$; its $\zeta$ function is $\zeta_Q^{\mathcal B}(s)-121^{-s}$, so $\zeta_Q(0)$ decreases by $1$ and $\zeta_Q'(0)$ increases by $\ln121$; it defines a different record. Selection of the primordial determinant record from the primordial carrier and action records is a separate question.
 
 ### V.3.5 McKay/Bures-Weight No-Go Audit
 
@@ -506,43 +461,9 @@ that is equivalent to the lepton-to-quark tilt normalization $c_\ell/c_d=8/3$ in
 
 **Fail condition.** A raw match of small integers or Dynkin marks is insufficient. The audit fails if it does not prove uniqueness of the normalization or does not separate discrete McKay data from continuous Bures-weight scale choices.
 
-**Resolution record V.3.5-R1 (`TV-V-07`, McKay-only normalization no-go).** Let a finite McKay diagram, its marks, and its representation assignment supply any positive discrete triple
-$$
-(C_1,C_2,C_3)\in\mathbb R_{>0}^3,
-\qquad
-\kappa_i=C_i\chi_i,
-\qquad
-\chi_i>0,
-$$
-while leaving the three sector normalizations $\chi_i$ unconstrained, as required by the McKay-only comparison class. The two positive scale vectors
-$$
-\chi^{(0)}
-=
-\left(\frac1{C_1},\frac1{C_2},\frac{19}{12C_3}\right),
-\qquad
-\chi^{(28)}
-=
-\left(\frac1{C_1},\frac1{C_2},\frac1{C_3}\right)
-\tag{V.3.5-R1.1}
-$$
-give, for the same discrete diagram data,
-$$
-\kappa^{(0)}=\left(1,1,\frac{19}{12}\right),
-\qquad
-21\kappa_1^{(0)}+55\kappa_2^{(0)}-48\kappa_3^{(0)}=0,
-$$
-and
-$$
-\kappa^{(28)}=(1,1,1),
-\qquad
-21\kappa_1^{(28)}+55\kappa_2^{(28)}-48\kappa_3^{(28)}=28.
-\tag{V.3.5-R1.2}
-$$
-Equivalence in the frozen McKay-only class is marked-diagram isomorphism preserving the marks, representation assignment, and discrete triple $(C_1,C_2,C_3)$; it does not identify distinct relative scale vectors $(\chi_1,\chi_2,\chi_3)$. The background positive-triple class is nonempty: at $(C_1,C_2,C_3)=(1,1,1)$, the two displayed scale vectors are $(1,1,19/12)$ and $(1,1,1)$ and give the two displayed residuals.
-
 Thus no positive discrete triple, and hence no finite diagram that supplies only such a triple, forces the Bures-weight equation. The proof is uniform in $(C_1,C_2,C_3)$, so diagram enumeration is unnecessary. Definition V.3.12a and Proposition V.3.12b give the executed exact-arithmetic verifier, integrity record, falsifier, and nonvacuity witnesses.
 
-This is a `negative-refutation` of the complete McKay-only proposition. A theorem that fixes the relative $\chi_i$ would add normalization data and therefore leave this comparison class; it is the separately allowed positive Bures-weight-certificate route of Theorem T.34.1b, not an exception to the no-go. The catalog row is consequently a closed guardrail rather than a live McKay computation.
+This refutes the complete McKay-only proposition. A theorem that fixes the relative $\chi_i$ would add normalization data and therefore leave this comparison class; it is the separately allowed positive Bures-weight-certificate route of Theorem T.34.1b, not an exception to the no-go. The catalog row is consequently a closed guardrail rather than a live McKay computation.
 
 ### V.3.6 RHG Flag-Lift Spectral Certificate Audit
 
@@ -567,31 +488,27 @@ $$
 
 The RHG compatibility operator uses the six Clifford generators of Definition Z.3a and Definition T.78.6, with $E_\alpha=i\gamma_\alpha\in\mathfrak{su}(8)$ for $\alpha=1,\ldots,6$. The separate Radon–Hurwitz arithmetic identity $\rho(24)=8$ is not the number of generators in that construction. The finite Peter-Weyl audit may verify this six-generator algebra, the flag-manifold dimension, the $C_2\le100$ dominant-weight enumeration, and the analytic $P=24$ tail integral.
 
-These checks do not by themselves verify Algorithm T.78.6a. The present text still lacks the explicit RHG block matrices
+These checks do not by themselves verify Algorithm T.78.6a. Theorem G.8.4f.8p.10 supplies the data of that algorithm on the declared branch RHG-NORMAL-POSITIVE-SCALE: the marked twelve-MPU Golay source with defect zero and complete minimum rank on every populated block, the normal metric with $\beta_{\mathrm{RHG}}=63/368$, the structural minimizer
 
 $$
-\mathcal K_b,
+x_{\mathrm{RHG}}=(\mu_0,m_{\mathcal J},\eta)=(0,0,0),
 \qquad
-\Pi_b^{\mathrm{RHG}},
+\operatorname{Hess}(\mu^2+m^2+\eta^2)=2I,
+$$
+
+and the complete weighted spectrum of
+
+$$
+D_s=\frac{63}{368}\nabla_s^*\nabla_s+\lambda_sI,
 \qquad
-J_b^{\mathrm{RHG}},
+(\lambda_C,\lambda_W,\lambda_Y)=(14R,9R,0),
+\qquad
+Q=\mu_Ge^{-S/2},
 $$
 
-the numerical metric normalization $\beta_{\mathrm{RHG}}$, the exact homogeneous connection certificate, the spectrahedral minimizer
+with the positive integers $R,S$ fixed by its forward rule. Its finite parts are certified as the intervals $F_C,F_W\in[1,10^{2000}]$ and $F_Y\in[-10^{225},10^{225}]$, with heat coefficients evaluated through $a_4$; the executed list is $L=16$, and the physical matrix family is specified by a terminating constructor and not materialized. Its physical current and full-trace normalization give $\Delta=T_0F$ with $\Delta_i>10^{1802}$, so these intervals miss the validation tuple and, by Remark T.78.13, the branch is rejected at the comparison below. The marking, the shifts $\kappa_i=10R$, the spectral unit and the channel gains are declared by the construction.
 
-$$
-x_{\mathrm{RHG}}=(\mu_0,m_{\mathcal J},\eta),
-$$
-
-and the heat-kernel/zeta finite parts and tail constants required to certify intervals for $F_s^{\mathrm{RHG}}$.
-
-Consequently no certified physical interval triplet
-
-$$
-(\Delta_1,\Delta_2,\Delta_3)^{\mathrm{RHG}}
-$$
-
-is obtained. The literal hypercharge spectrum in Remark G.8.4e.3 gives zero hypercharge on the two-dimensional active subspace and the one-dimensional inactive complement. On the branch where the active subspace is also trivial under $SU(3)$ and $SU(2)$, Remark T.17a.3 gives the finite index matrix
+The literal hypercharge spectrum in Remark G.8.4e.3 gives zero hypercharge on the two-dimensional active subspace and the one-dimensional inactive complement. On the branch where the active subspace is also trivial under $SU(3)$ and $SU(2)$, Remark T.17a.3 gives the finite index matrix
 
 $$
 T_0=
@@ -602,7 +519,7 @@ T_0=
 \end{pmatrix}.
 $$
 
-The representation indices alone do not identify the physical threshold map for the full sector determinants. Conditional on the candidate matching rule $\Delta=T_0F$, with $F=(F_C,F_W,F_Y)^T$, the second and third rows give $\Delta_2=F_W$ and $\Delta_3=F_C$, while the first gives
+The representation indices alone do not identify the physical threshold map for the full sector determinants. On the declared branch of Theorem G.8.4f.8p.10, which is rejected at the comparison below, the map $\Delta=T_0F$ is derived from the physical current and full-trace normalization; on other branches it is a candidate matching rule. With $F=(F_C,F_W,F_Y)^T$, the second and third rows give $\Delta_2=F_W$ and $\Delta_3=F_C$, while the first gives
 
 $$
 \Delta_1=\frac25\Delta_3+\frac35\Delta_2,
@@ -650,15 +567,15 @@ $$
 \le0.010,
 $$
 
-so its magnitude is at least $4.788-0.010=4.778>0$. No choice of $F_Y$, local finite part, or global spectral data can produce this tuple under the candidate map on the stated representation branch. This incompatibility neither supplies the missing physical normalization map nor selects another representation. The comparison tuple may not be used to choose any entry of $\mathfrak C_{\mathrm{RHG}}$.
+so its magnitude is at least $4.788-0.010=4.778>0$. No choice of $F_Y$, local finite part, or global spectral data can produce this tuple under the map $\Delta=T_0F$ on the stated representation branch. This includes the declared branch of Theorem G.8.4f.8p.10, whose certified intervals give $\Delta_i>10^{1802}$ and miss the tuple; by Remark T.78.13 that branch is rejected at this comparison, not retuned. The comparison tuple may not be used to choose any entry of $\mathfrak C_{\mathrm{RHG}}$.
 
 ### V.3.7 Audit Conclusion
 
-The finite checks confirm the arithmetic that can be evaluated from the present data. The calculation in Section V.3.6 excludes the comparison tuple from the candidate map $\Delta=T_0F$ on the literal-spectrum, active-gauge-trivial branch; this obstruction is independent of spectral approximation. The physical spectral audit remains open because its representation-compatible normalization map, block, minimization, finite-part, and tail records are absent. Separate finite cardinality and arithmetic checks remain closed at their own audit level.
+The finite checks confirm their displayed arithmetic. Section V.3.6 excludes the comparison tuple from $\Delta=T_0F$ on the literal-spectrum, active-gauge-trivial branch, independently of spectral approximation. Theorem G.8.4f.8p.10 supplies the RHG source, least-defect/projector execution, local spectrum, structural minimizer, finite parts, tails and physical matching on the declared branch RHG-NORMAL-POSITIVE-SCALE, whose marking, shifts and spectral unit are fixed by its construction and whose finite parts are certified as intervals; on that branch the comparison tuple stays excluded. Separate finite cardinality audits and independent SM observable-conversion gates retain their own scope.
 
 #### Technical audit ledger
 
-The finite audit ladder verifies the displayed mechanical calculations. The RHG gate remains in the pre-certificate negative-closure status of Theorem T.78.2 and Corollary T.78.5.1, because the RHG block data, spectrahedral minimizer, finite-part computation, and tail constants required by Algorithm T.78.6a are absent (Section V.3.6).
+The finite audit ladder verifies the displayed mechanical calculations. Theorem T.78.2 and Corollary T.78.5.1 retain their pre-certificate scope, and Theorem T.78.14 retains its no-go on the class $\mathscr E_{\mathrm{EW}}^{\mathrm{cur}}$. Theorem G.8.4f.8p.10 supplies the data required by Definition T.78.6 and Algorithm T.78.6a on the declared branch RHG-NORMAL-POSITIVE-SCALE, with finite parts certified as intervals; that branch is rejected at the comparison of Section V.3.6, and the global final-calibrated output remains certificate-pending.
 
 Three additional closed auxiliary audits are recorded as Sections V.3.8–V.3.10 below. They reduce to finite cardinality or exact arithmetic rather than to missing spectral certificates, and are therefore closed at the audit level.
 
@@ -690,13 +607,13 @@ Thus any audit promoting a second-moment or purity certificate to a von Neumann 
 
 ### V.3.10 Same-Branch Zero-Residual Obstruction Audit
 
-The exact sinc-core value differs from the CODATA-2022 Thomson comparison value [Mohr et al. 2025; NIST 2024] by
+The exact sinc-core value differs from the CODATA-2022 Thomson comparison value (Mohr et al. 2025; NIST 2024) by
 
 $$
 0.00009287822863,
 $$
 
-about $0.678$ ppm. By Corollary Z.27.11e.1, this offset is about $4422.8$ recorded measurement standard uncertainties and about $1.644$ times the canonical comparison-budget diagnostic of Remark Z.26d, so no same-branch theorem fixing $R_\alpha=0$ can land at the recorded comparison value. The residual-gated row remains certificate-pending until $R_\alpha$ is fixed by the forward-locked gate of Definition Z.27.11a, Definition Z.27.11g, or Definition Z.27.11j. This audit is closed by exact arithmetic against the recorded ledger value.
+about $0.678$ ppm. By Corollary Z.27.11e.1, this offset is about $4422.8$ recorded measurement standard uncertainties and about $1.644$ times the canonical comparison-budget diagnostic of Remark Z.26d, so no same-branch theorem fixing $R_\alpha=0$ can land at the recorded comparison value. The residual-gated row remains certificate-pending until $R_\alpha$ is fixed by the structural residual gate of Definition Z.27.11a, Definition Z.27.11g, or Definition Z.27.11j. This audit is closed by exact arithmetic against the recorded ledger value.
 
 ### V.3.11 Unique Spectral Calibration Principle
 
@@ -722,7 +639,7 @@ k=12,
 D=4.
 $$
 
-It applies only after the structural branch, response quotient, invariant operator basis, unit conventions, RG or threshold route, and finite spectral symbols have been fixed before comparison.
+It applies only after the structural branch, response quotient, invariant operator basis, unit conventions, RG or threshold route, and finite spectral symbols are supplied with their structural dependencies.
 
 **Definition V.3.11a (Finite Spectral Calibration Datum).** A final spectral calibration datum for a sealed PU branch is a finite tuple
 $$
@@ -771,7 +688,7 @@ If the branch uses only primitive atom multiplicities, then $\nu_{*,\alpha}=\ope
 
 4. $\nu_*^{\mathrm{fs}}\in\Delta(\Omega_*)$ is a full-support feasibility witness satisfying all accepted constraint moments. It is an entry of the datum, not a conclusion inferred from successful numerical comparison.
 
-5. Each $m_a:\Omega_*\to\mathbb R$ is a fixed spectral moment function encoding an already accepted structural constraint, Ward identity, anomaly constraint, index constraint, determinant orientation, threshold condition, flavor condition, horizon condition, vacuum-response condition, or residual-source condition. The required value $c_a^*$ is fixed by that parent certificate before comparison.
+5. Each $m_a:\Omega_*\to\mathbb R$ is a fixed spectral moment function encoding an already accepted structural constraint, Ward identity, anomaly constraint, index constraint, determinant orientation, threshold condition, flavor condition, horizon condition, vacuum-response condition, or residual-source condition. The required value $c_a^*$ is determined by that parent certificate.
 
 6. $\mathcal Q_{\mathrm{ind}}$ is the independent-constraint quotient. It removes affine combinations of the moment equations that are constant on all atoms or implied by other accepted moment equations. The retained index set is $A_{\mathrm{ind}}$.
 
@@ -794,11 +711,11 @@ $$
 
 9. $\mathcal R^*_{\mu\leftarrow\mu_*}$ is the branch-accepted unit, RG, threshold, and matching route from the calibration scale to every comparison scale claimed by the branch.
 
-10. $\mathcal C_{\circlearrowleft}$ is the circular-angle convention. It records whether a periodic coefficient is represented by a real lift, a unit complex moment, or a finite cyclic label, and fixes the angle unit before comparison. Strong-CP, Berry, and theta-like symbols must use this entry.
+10. $\mathcal C_{\circlearrowleft}$ is the circular-angle convention. It records whether a periodic coefficient is represented by a real lift, a unit complex moment, or a finite cyclic label, and specifies the angle unit as a branch convention. Strong-CP, Berry, and theta-like symbols must use this entry.
 
 11. $\mathcal O_*$ is the overlap map to parent sectors. It lists the accepted local records from which the calibration symbols descend, including where claimed the electroweak threshold record, flavor record, four-mode Hessian/carrier marking, Proposition-U.14 action premise, Fredholm weight, vacuum-to-Einstein realization, primordial determinant, vacuum determinant, gravitational coupling symbol, Higgs symbols, Yukawa symbols, neutrino operator symbol, baryogenesis source, dark-susceptibility kernel, horizon recovery/design record, and strong-CP determinant orientation.
 
-12. $\chi_*$ is the forward-lock record. It asserts that no empirical comparison value, validation target, post-comparison residual, fitted phenomenological kernel, or dependent-row output enters $\mathcal A_*$, $\Omega_*$, $\mathcal Q_{\mathrm{null}}$, $\nu_*$, $\nu_*^{\mathrm{fs}}$, $m_a$, $c_a^*$, $\mathcal Q_{\mathrm{ind}}$, $\widehat O_B$, $\sigma_B$, $s_B$, $\mathcal R^*_{\mu\leftarrow\mu_*}$, $\mathcal C_{\circlearrowleft}$, or $\mathcal O_*$ unless it is explicitly registered as an EmpiricalInput. Such an entry blocks theorem-level final calibration for every sector depending on it.
+12. $\chi_*$ is the structural-independence record under Definition 2.4.1d. It verifies acyclic dependencies, including that a compared value, residual inferred from it, or output that depends on the row never selects $\mathcal A_*$, $\Omega_*$, $\mathcal Q_{\mathrm{null}}$, $\nu_*$, $\nu_*^{\mathrm{fs}}$, $m_a$, $c_a^*$, $\mathcal Q_{\mathrm{ind}}$, $\widehat O_B$, $\sigma_B$, $s_B$, $\mathcal R^*_{\mu\leftarrow\mu_*}$, $\mathcal C_{\circlearrowleft}$, or $\mathcal O_*$. Any other empirical data or fitted kernel enters through an explicitly declared EmpiricalInput. Dependent sectors carry its calibration status and uncertainty.
 
 The admissible spectral calibration polytope is
 $$
@@ -880,7 +797,7 @@ t\log t\sum_{\alpha\in Z}\nu_{*,\alpha}^{\mathrm{fs}}+O(t),
 $$
 which is negative for all sufficiently small $t>0$. This contradicts minimality. Hence $\omega_{*,\alpha}>0$ for every $\alpha\in\Omega_*$. ∎
 
-**Theorem V.3.11c.1 (Pythagorean and Nested Spectral Calibration).** Let $\mathcal C$ be an affine moment family satisfying Definition V.3.11a, let $\nu$ have full support, and let
+<a id="theorem-v311c1-pythagorean-and-nested-spectral-calibration"></a>**Theorem V.3.11c.1 (Pythagorean and Nested Spectral Calibration).** Let $\mathcal C$ be an affine moment family satisfying Definition V.3.11a, let $\nu$ have full support, and let
 $$
 \omega_{\mathcal C}
 =\operatorname*{argmin}_{\omega\in\mathcal C}
@@ -911,7 +828,7 @@ $$
 $$
 an affine combination of the normalized moment constraints. Expanding the difference between the two sides of (V.3.11c.1.2), the remaining term is its expectation under $\omega-\omega_{\mathcal C}$ and vanishes because both states have the same constrained moments and normalization. For $\omega\in\mathcal C_2\subseteq\mathcal C_1$, the first projection contributes the constant $D_{KL}(\omega_{\mathcal C_1}\Vert\nu)$; minimizing the remaining term over $\mathcal C_2$ proves (V.3.11c.1.3). ∎
 
-**Theorem V.3.11c.2 (Perturbation Rigidity of Spectral Moments).** On an independent exponential-family chart, let $\theta$ be the multiplier vector and $c(\theta)$ the retained moment vector. Suppose every state on the line segment between two accepted calibrations has covariance Hessian
+<a id="theorem-v311c2-perturbation-rigidity-of-spectral-moments"></a>**Theorem V.3.11c.2 (Perturbation Rigidity of Spectral Moments).** On an independent exponential-family chart, let $\theta$ be the multiplier vector and $c(\theta)$ the retained moment vector. Suppose every state on the line segment between two accepted calibrations has covariance Hessian
 $$
 \operatorname{Cov}_{\omega_\theta}(m)
 \succeq\gamma I,
@@ -964,7 +881,143 @@ $$
 $$
 Integrating, applying (V.3.11c.2.3), multiplying by $|s_B|$, and then using $\|d\|\le\|c'-c\|/\gamma$ gives (V.3.11c.2.4). ∎
 
-**Corollary V.3.11c.3 (Calibration Condition-Number Gate).** A final-calibrated numerical interval must propagate the registered moment uncertainty through an accepted sensitivity bound, such as (V.3.11c.2.4). As the certified floor $\gamma$ decreases, this bound can deteriorate; that fact alone does not establish actual ill-conditioning or nonidentifiability. Acceptance of a coefficient interval requires a sufficient bound for its registered uncertainty, or another certificate determining that coefficient. The no-double-counting conclusion concerns KL increments under exact nesting on one specified atom set and reference measure; it does not assert statistical independence or erase correlated physical or certificate uncertainties.
+<a id="corollary-v311c3-calibration-condition-number-gate"></a>**Corollary V.3.11c.3 (Calibration Condition-Number Gate).** A final-calibrated numerical interval must propagate the registered moment uncertainty through an accepted sensitivity bound, such as (V.3.11c.2.4). As the certified floor $\gamma$ decreases, this bound can deteriorate; that fact alone does not establish actual ill-conditioning or nonidentifiability. Acceptance of a coefficient interval requires a sufficient bound for its registered uncertainty, or another certificate determining that coefficient. The no-double-counting conclusion concerns KL increments under exact nesting on one specified atom set and reference measure; it does not assert statistical independence or erase correlated physical or certificate uncertainties.
+
+<a id="theorem-v311c4-primal-dual-gap-certificate-for-a-computed-calibrated-state"></a>**Theorem V.3.11c.4 (Primal–Dual Gap Certificate for a Computed Calibrated State).** Let $\mathfrak S_*$ be final-calibration admissible with calibrated state $\omega_*$. For $\theta=(\theta_a)_{a\in A_{\mathrm{ind}}}\in\mathbb R^{A_{\mathrm{ind}}}$ define
+$$
+Z(\theta)=\sum_{\alpha\in\Omega_*}\nu_{*,\alpha}\,e^{-\sum_a\theta_am_a(\alpha)},
+\qquad
+\omega^\theta_\alpha=\frac{\nu_{*,\alpha}\,e^{-\sum_a\theta_am_a(\alpha)}}{Z(\theta)},
+\qquad
+d(\theta)=-\sum_{a\in A_{\mathrm{ind}}}\theta_ac_a^*-\log Z(\theta),
+\tag{V.3.11c.4.1}
+$$
+and for $q\in\mathcal C_*$ define the gap
+$$
+G(q,\theta)=D_{\mathrm{KL}}(q\Vert\nu_*)-d(\theta).
+\tag{V.3.11c.4.2}
+$$
+For a real symbol $\sigma$ on $\Omega_*$ write $\operatorname{osc}(\sigma)=\max_\alpha\sigma(\alpha)-\min_\alpha\sigma(\alpha)$. Then:
+
+1. *Exact gap decomposition.* For every $q\in\mathcal C_*$ and every $\theta$,
+$$
+G(q,\theta)
+=D_{\mathrm{KL}}(q\Vert\omega^\theta)
+=D_{\mathrm{KL}}(q\Vert\omega_*)+D_{\mathrm{KL}}(\omega_*\Vert\omega^\theta)\ge0.
+\tag{V.3.11c.4.3}
+$$
+Hence $d(\theta)\le D_{\mathrm{KL}}(\omega_*\Vert\nu_*)\le D_{\mathrm{KL}}(q\Vert\nu_*)$, and $G(q,\theta)=0$ exactly when $q=\omega_*=\omega^\theta$.
+
+2. *Symbol and coefficient bounds.* For every real symbol $\sigma$,
+$$
+\bigl|\langle\sigma\rangle_q-\langle\sigma\rangle_{\omega_*}\bigr|
+\le\operatorname{osc}(\sigma)\sqrt{G(q,\theta)/2},
+\qquad
+\bigl|\langle\sigma\rangle_{\omega^\theta}-\langle\sigma\rangle_{\omega_*}\bigr|
+\le\operatorname{osc}(\sigma)\sqrt{G(q,\theta)/2}.
+\tag{V.3.11c.4.4}
+$$
+If $\overline G\ge G(q,\theta)$ is a certified upper bound, every calibrated coefficient of Definition V.3.11e satisfies
+$$
+\bigl|s_B\langle\sigma_B\rangle_q-c_B(\mu_*)\bigr|
+\le|s_B|\operatorname{osc}(\sigma_B)\sqrt{\overline G/2}.
+\tag{V.3.11c.4.5}
+$$
+
+3. *Feasibility repair and attainment.* Let $A$ be the matrix whose rows are the constant function $1$ and the functions $m_a$, $a\in A_{\mathrm{ind}}$, let $c=(1,(c_a^*)_{a\in A_{\mathrm{ind}}})$, and let $B$ satisfy $AB=I$. For a probability vector $p$ on $\Omega_*$ put $r=c-Ap$ and $\tilde p=p+Br$. If $\tilde p\ge0$, then $\tilde p\in\mathcal C_*$ and
+$$
+\bigl|\langle\sigma\rangle_p-\langle\sigma\rangle_{\omega_*}\bigr|
+\le\tfrac12\operatorname{osc}(\sigma)\lVert Br\rVert_1
++\operatorname{osc}(\sigma)\sqrt{G(\tilde p,\theta)/2}.
+\tag{V.3.11c.4.6}
+$$
+With $p=\omega^\theta$, both terms on the right tend to zero as $\theta$ tends to the multiplier vector of $\omega_*$, so every positive tolerance is met by a finite certificate $(\theta,\tilde p,\overline G)$.
+
+The certificate bounds the optimization error of a computed state at a fixed datum $\mathfrak S_*$. Uncertainty of the registered moments $c_a^*$ is propagated separately through (V.3.11c.2.4).
+
+*Proof.* Let $q\in\mathcal C_*$. Since $\log(q_\alpha/\omega^\theta_\alpha)=\log(q_\alpha/\nu_{*,\alpha})+\sum_a\theta_am_a(\alpha)+\log Z(\theta)$, taking the $q$-expectation and using $\sum_\alpha q_\alpha=1$ and $\langle m_a\rangle_q=c_a^*$ gives
+$$
+D_{\mathrm{KL}}(q\Vert\omega^\theta)
+=D_{\mathrm{KL}}(q\Vert\nu_*)+\sum_{a\in A_{\mathrm{ind}}}\theta_ac_a^*+\log Z(\theta)
+=G(q,\theta).
+\tag{V.3.11c.4.7}
+$$
+By Theorem V.3.11c, $\omega_*$ has full support, so it minimizes the differentiable function $D_{\mathrm{KL}}(\cdot\Vert\nu_*)$ on the relatively open set of full-support members of $\mathcal C_*$. Its gradient $(\log(\omega_{*,\alpha}/\nu_{*,\alpha})+1)_{\alpha\in\Omega_*}$ therefore annihilates every $v\in\mathbb R^{\Omega_*}$ with $\sum_\alpha v_\alpha=0$ and $\sum_\alpha v_\alpha m_a(\alpha)=0$ for all $a\in A_{\mathrm{ind}}$, and so lies in the span of $1$ and the $m_a$. Thus $\omega_*=\omega^{\theta_*}$ for a multiplier vector $\theta_*$, which is unique because the independent-constraint quotient makes $1$ and the $m_a$ linearly independent. Equation (V.3.11c.4.7) at $\theta_*$ and $q=\omega_*$ gives $d(\theta_*)=D_{\mathrm{KL}}(\omega_*\Vert\nu_*)$, and then at $\theta_*$ and general $q$ it gives the Pythagorean identity (V.3.11c.1.2). Equation (V.3.11c.4.7) at $q=\omega_*$ and general $\theta$ gives $D_{\mathrm{KL}}(\omega_*\Vert\omega^\theta)=D_{\mathrm{KL}}(\omega_*\Vert\nu_*)-d(\theta)$. Adding the last two identities proves (V.3.11c.4.3). Nonnegativity of relative entropy gives the two inequalities for $d(\theta)$, and $G(q,\theta)=0$ forces both divergences in (V.3.11c.4.3) to vanish.
+
+For item 2, let $u,w$ be probability vectors on $\Omega_*$ with $w$ of full support, and put $S=\{\alpha:u_\alpha\ge w_\alpha\}$ and $\Delta=u(S)-w(S)=\tfrac12\lVert u-w\rVert_1$. If $S=\Omega_*$ then $u=w$. Otherwise $0<w(S)<1$, and the log-sum inequality applied on $S$ and on its complement gives
+$$
+D_{\mathrm{KL}}(u\Vert w)\ge u(S)\log\frac{u(S)}{w(S)}+\bigl(1-u(S)\bigr)\log\frac{1-u(S)}{1-w(S)}.
+$$
+For fixed $b\in(0,1)$ the function $a\mapsto a\log(a/b)+(1-a)\log((1-a)/(1-b))$ on $[0,1]$ vanishes together with its first derivative at $a=b$ and has second derivative $1/(a(1-a))\ge4$ on $(0,1)$, so it is at least $2(a-b)^2$. Hence $D_{\mathrm{KL}}(u\Vert w)\ge2\Delta^2$, which is Pinsker's inequality. With $m_\sigma$ the midpoint of the range of $\sigma$,
+$$
+\bigl|\langle\sigma\rangle_u-\langle\sigma\rangle_w\bigr|
+=\Bigl|\sum_{\alpha\in\Omega_*}\bigl(\sigma(\alpha)-m_\sigma\bigr)(u_\alpha-w_\alpha)\Bigr|
+\le\tfrac12\operatorname{osc}(\sigma)\lVert u-w\rVert_1
+\le\operatorname{osc}(\sigma)\sqrt{D_{\mathrm{KL}}(u\Vert w)/2}.
+$$
+Apply this to $(u,w)=(q,\omega_*)$ and to $(u,w)=(\omega_*,\omega^\theta)$, whose second members have full support, and bound each divergence by $G(q,\theta)$ through (V.3.11c.4.3). Multiplication by $|s_B|$ gives (V.3.11c.4.5).
+
+For item 3, linear independence of the rows of $A$ supplies a right inverse $B$. Then $A\tilde p=Ap+r=c$, whose first row is normalization, and $\tilde p\ge0$ gives $\tilde p\in\mathcal C_*$. Both $p$ and $\tilde p$ are normalized, so $\sum_\alpha(Br)_\alpha=0$ and
+$$
+\bigl|\langle\sigma\rangle_p-\langle\sigma\rangle_{\tilde p}\bigr|
+=\Bigl|\sum_{\alpha\in\Omega_*}\bigl(\sigma(\alpha)-m_\sigma\bigr)(Br)_\alpha\Bigr|
+\le\tfrac12\operatorname{osc}(\sigma)\lVert Br\rVert_1;
+$$
+item 2 for $\tilde p$ and the triangle inequality give (V.3.11c.4.6). As $\theta\to\theta_*$, $\omega^\theta\to\omega_*$, hence $r\to0$ and $\tilde p\to\omega_*$, which is strictly positive; so $\tilde p\ge0$ for $\theta$ near $\theta_*$, and $G(\tilde p,\theta)=D_{\mathrm{KL}}(\tilde p\Vert\omega^\theta)\to0$ by continuity. ∎
+
+<a id="example-v311c4a-exact-four-atom-certificate"></a>**Example V.3.11c.4a (Exact Four-Atom Certificate).** Let $\Omega_*=\{0,1\}^2$ with atoms ordered $(x,y)=(0,0),(0,1),(1,0),(1,1)$, uniform $\nu_*$, and constraints $\langle x\rangle=1/3$ and $\langle y\rangle=1/4$. Then $\theta_*=(\log2,\log3)$ and $\omega_*=(1/2,1/6,1/4,1/12)$. The rational state $q=(61,19,29,11)/120$ lies in $\mathcal C_*$, and $\log t\le t-1$ gives
+$$
+G(q,\theta_*)=D_{\mathrm{KL}}(q\Vert\omega_*)
+\le\sum_{\alpha\in\Omega_*}\frac{(q_\alpha-\omega_{*,\alpha})^2}{\omega_{*,\alpha}}
+=\frac1{600}.
+$$
+For $\sigma=xy$, $\operatorname{osc}(\sigma)=1$ and (V.3.11c.4.4) certifies $|\langle\sigma\rangle_q-\langle\sigma\rangle_{\omega_*}|\le\sqrt{1/1200}$; the actual difference is $1/120$.
+
+<a id="theorem-v311c5-constraint-fixed-symbols-and-the-reference-measure-interval"></a>**Theorem V.3.11c.5 (Constraint-Fixed Symbols and the Reference-Measure Interval).** Let $\mathfrak S_*$ be final-calibration admissible, let
+$$
+\mathcal L_*=\operatorname{span}_{\mathbb R}\{1,\ m_a:a\in A_{\mathrm{ind}}\}\subseteq\mathbb R^{\Omega_*},
+$$
+and for a real symbol $\sigma$ on $\Omega_*$ put
+$$
+\sigma^-=\min_{\omega\in\mathcal C_*}\langle\sigma\rangle_\omega,
+\qquad
+\sigma^+=\max_{\omega\in\mathcal C_*}\langle\sigma\rangle_\omega.
+\tag{V.3.11c.5.1}
+$$
+Then:
+
+1. *Constraint-fixed symbols.* $\sigma^-=\sigma^+$ if and only if $\sigma\in\mathcal L_*$. For $\sigma=\lambda_0+\sum_a\lambda_am_a$ the common value is
+$$
+\langle\sigma\rangle_\omega=\lambda_0+\sum_{a\in A_{\mathrm{ind}}}\lambda_ac_a^*
+\qquad(\omega\in\mathcal C_*).
+\tag{V.3.11c.5.2}
+$$
+With $A$ the matrix of Theorem V.3.11c.4, item 3, membership $\sigma\in\mathcal L_*$ is the exact rank equality $\operatorname{rank}\binom{A}{\sigma}=\operatorname{rank}A$.
+
+2. *Constraint interval.* If $\sigma\notin\mathcal L_*$, then $\{\langle\sigma\rangle_\omega:\omega\in\mathcal C_*\}=[\sigma^-,\sigma^+]$ with $\sigma^-<\sigma^+$.
+
+3. *Reference-measure interval.* Fix $\Omega_*$, the moment functions and their values, and let the reference measure $\nu$ range over all full-support probability vectors on $\Omega_*$, with $\omega_*(\nu)=\operatorname*{argmin}_{\omega\in\mathcal C_*}D_{\mathrm{KL}}(\omega\Vert\nu)$. The set of calibrated states $\{\omega_*(\nu)\}$ is exactly the set of full-support members of $\mathcal C_*$, and for $\sigma\notin\mathcal L_*$
+$$
+\{\langle\sigma\rangle_{\omega_*(\nu)}:\nu\ \text{of full support}\}=(\sigma^-,\sigma^+).
+\tag{V.3.11c.5.3}
+$$
+
+Consequently a coefficient $c_B(\mu_*)=s_B\langle\sigma_B\rangle_{\omega_*}$ with $s_B\ne0$ is fixed by the accepted constraint moments, for every reference measure and every selection rule on $\mathcal C_*$, exactly when $\sigma_B\in\mathcal L_*$. For $\sigma_B\notin\mathcal L_*$ the reference measure of Definition V.3.11a, item 3, selects through Principle V.3.11b one value in the open interval with endpoints $s_B\sigma_B^-$ and $s_B\sigma_B^+$, and every value of that interval is selected by some full-support reference. The records that fix $\nu_*$, namely the normalized trace, an equal-rank or transitive-symmetry record, and on the Golay branch Corollary V.3.11h, therefore carry the whole dependence of such a coefficient on the reference state.
+
+*Proof.* If $\sigma\in\mathcal L_*$, linearity and the constraints give (V.3.11c.5.2). Let $\sigma\notin\mathcal L_*$. In the Euclidean inner product of $\mathbb R^{\Omega_*}$, $\mathcal L_*$ is the orthogonal complement of
+$$
+N=\Bigl\{v\in\mathbb R^{\Omega_*}:\sum_\alpha v_\alpha=0,\ \sum_\alpha v_\alpha m_a(\alpha)=0\ \text{for all }a\in A_{\mathrm{ind}}\Bigr\},
+$$
+so there is $v\in N$ with $\sum_\alpha\sigma(\alpha)v_\alpha>0$. For a full-support $\omega\in\mathcal C_*$ and $0<\epsilon<\min_{\alpha:v_\alpha\ne0}\omega_\alpha/|v_\alpha|$, the vectors $\omega\pm\epsilon v$ are full-support members of $\mathcal C_*$ and
+$$
+\langle\sigma\rangle_{\omega+\epsilon v}>\langle\sigma\rangle_\omega>\langle\sigma\rangle_{\omega-\epsilon v}.
+\tag{V.3.11c.5.4}
+$$
+Taking $\omega=\nu_*^{\mathrm{fs}}$ gives $\sigma^-<\sigma^+$, which proves item 1; the rank statement restates membership in the row space of $A$. The set $\mathcal C_*$ is compact and convex and $\omega\mapsto\langle\sigma\rangle_\omega$ is linear, so its image is the compact interval $[\sigma^-,\sigma^+]$, which is item 2.
+
+For item 3, Theorem V.3.11c gives full support of every $\omega_*(\nu)$. Conversely, if $\omega\in\mathcal C_*$ has full support, then $\nu=\omega$ is a full-support reference and $D_{\mathrm{KL}}(\cdot\Vert\omega)$ attains its minimum value $0$ on $\mathcal C_*$ at $\omega$ alone, so $\omega_*(\omega)=\omega$. Let $\mathcal C_*^{>0}$ be the convex set of full-support members of $\mathcal C_*$. Its image under $\omega\mapsto\langle\sigma\rangle_\omega$ is an interval contained in $[\sigma^-,\sigma^+]$. For every $\omega\in\mathcal C_*$ and $0<t\le1$ the state $(1-t)\omega+t\nu_*^{\mathrm{fs}}$ lies in $\mathcal C_*^{>0}$, so this image contains values arbitrarily close to $\sigma^-$ and to $\sigma^+$ and hence contains $(\sigma^-,\sigma^+)$. By (V.3.11c.5.4) no member of $\mathcal C_*^{>0}$ attains $\sigma^-$ or $\sigma^+$. This proves (V.3.11c.5.3), and the statement on coefficients follows by multiplying by $s_B$. ∎
+
+<a id="example-v311c5a-constraint-fixed-and-reference-selected-symbols"></a>**Example V.3.11c.5a (Constraint-Fixed and Reference-Selected Symbols).** On $\Omega_*=\{0,1\}^2$ with atoms ordered $(x,y)=(0,0),(0,1),(1,0),(1,1)$ and the single constraint $\langle x\rangle=1/3$, the symbol $x$ has the value $1/3$ on all of $\mathcal C_*$, while $y\notin\mathcal L_*$ has $(\sigma^-,\sigma^+)=(0,1)$. The uniform reference gives $\omega_*=(1/3,1/3,1/6,1/6)$ and $\langle y\rangle_{\omega_*}=1/2$; the reference $(3/8,1/8,1/8,3/8)$ gives $\omega_*=(1/2,1/6,1/12,1/4)$ and $\langle y\rangle_{\omega_*}=5/12$.
 
 **Corollary V.3.11d (Exponential Form on Independent Moment Branches).** If the active moment functions are independent after applying $\mathcal Q_{\mathrm{ind}}$, then the calibrated state has the form
 $$
@@ -1045,7 +1098,7 @@ s_B\sum_{\alpha\in\Omega_*}
 \omega_\alpha^*\sigma_B(\alpha),
 $$
 
-where $s_B$ is the branch-fixed unit or normalization bridge for the coefficient of $I_B$. In dimensionless normalization conventions, $s_B=1$. If $s_B$ is not accepted before comparison, the dimensionless moment may be fixed but the physical coefficient is not final-calibrated.
+where $s_B$ is the branch-fixed unit or normalization bridge for the coefficient of $I_B$. In dimensionless normalization conventions, $s_B=1$. If $s_B$ is unavailable, the branch determines only the dimensionless moment.
 
 For matrix-valued coefficients,
 
@@ -1075,7 +1128,7 @@ $$
 \{c_B(\mu)\}_{B\in\mathcal I_*},
 $$
 
-which must also be fixed before comparison.
+whose dependencies must also be declared under Definition 2.4.1d.
 
 In the normalized gauge-kinetic convention $s_3=s_2=s_Y=1$,
 
@@ -1116,7 +1169,7 @@ $$
 \right).
 $$
 
-An accepted Appendix Z residual certificate may be encoded by USCP only when its local parent record is listed in $\mathcal O_*$ and its certified physical residual descends to the pre-comparison symbol $\sigma_{R_\alpha}$ through the accepted response-preserving projection of Definition V.3.11a. On the branch with unit normalization bridge $s_{R_\alpha}=1$ and a certificate proving the exact residual value, the encoding is
+An accepted Appendix Z residual certificate may be encoded by USCP only when its local parent record is listed in $\mathcal O_*$ and its certified physical residual descends to the certified operator symbol $\sigma_{R_\alpha}$ through the accepted response-preserving projection of Definition V.3.11a. On the branch with unit normalization bridge $s_{R_\alpha}=1$ and a certificate proving the exact residual value, the encoding is
 
 $$
 R_\alpha
@@ -1223,7 +1276,7 @@ $$
 \quad\text{mod }2\pi.
 $$
 
-Without such a representative, the circular symbol must include the accepted angle-unit convention before comparison. Define
+Without such a representative, the circular symbol must include the accepted angle-unit convention. Define
 
 $$
 z_\theta
@@ -1235,7 +1288,7 @@ If $z_\theta\ne0$, then $e^{i\theta_*}=z_\theta/|z_\theta|$ and $\theta_*=\arg z
 
 **Theorem V.3.11f (No Free Continuous Moduli after Final Spectral Calibration).** On a final-calibrated branch carrying an accepted $\mathfrak S_*$, every response-active spectral-moment coefficient is unique at the calibration scale and along its accepted comparison route. A derived coefficient is unique when these inputs lie in the domain of its declared map; in particular, the circular prescription requires $z_\theta\ne0$, or an independently supplied real-representative convention as in Definition V.3.11e. A coefficient whose local parent certificate is absent, or whose defining map is undefined at the calibrated inputs, is not calibrated by $\mathfrak S_*$.
 
-*Proof.* Let $I_B\in\mathcal I_*$ be response-active. By Definition V.3.11a, the parent local certificate for $I_B$ is listed in $\mathcal O_*$, the finite operator $\widehat O_B$, symbol $\sigma_B$, unit bridge $s_B$, and comparison route $\mathcal R^*_{\mu\leftarrow\mu_*}$ are fixed before comparison, and the response-null and independent-constraint quotients have already been applied. By Theorem V.3.11c, the KL projection $\omega_*$ on $\mathcal C_*$ is unique. Hence
+*Proof.* Let $I_B\in\mathcal I_*$ be response-active. By Definition V.3.11a, the parent local certificate for $I_B$ is listed in $\mathcal O_*$, the finite operator $\widehat O_B$, symbol $\sigma_B$, unit bridge $s_B$, and comparison route $\mathcal R^*_{\mu\leftarrow\mu_*}$ are determined by the accepted parent data, and the response-null and independent-constraint quotients have already been applied. By Theorem V.3.11c, the KL projection $\omega_*$ on $\mathcal C_*$ is unique. Hence
 $$
 c_B(\mu_*)
 =
@@ -1283,7 +1336,7 @@ retain the local status of their sector certificates, branches, thresholds, vali
 
 *Proof.* Each listed basic spectral-moment coefficient is unique by Theorem V.3.11f. Derived quantities such as $\alpha$, $G$, $\Lambda$, masses, CKM data, PMNS data, and topological phases use the declared algebraic or circular maps, branch conventions and RG routes. Their uniqueness holds on the domains of those maps. A denominator must be nonzero wherever division is used, and the normalized circular moment requires $z_\theta\ne0$ unless a separate real-representative convention is supplied. A zero circular moment determines no angle under that prescription. Basis rotations inside exact degeneracies are response-null on the branch of Definition V.3.11e. Thus the assertion about derived observables retains these domain conditions; an undefined observable acquires no value from uniqueness of $\omega_*$. Before $\mathfrak S_*$ is accepted, the local sector status remains in force. ∎
 
-**Corollary V.3.11h (Golay-Uniform Reference State Gate).** Suppose a final spectral calibration datum $\mathfrak S_*$ is on the predictive-recovery MacWilliams Golay branch and its atom algebra is the codeword carrier
+<a id="corollary-v311h-golay-uniform-reference-state-gate"></a>**Corollary V.3.11h (Golay-Uniform Reference State Gate).** Suppose a final spectral calibration datum $\mathfrak S_*$ is on the predictive-recovery MacWilliams Golay branch and its atom algebra is the codeword carrier
 $$
 \Omega_*=\mathcal G_{24}.
 $$
@@ -1315,7 +1368,7 @@ $$
 \frac{239085}{2}.
 $$
 
-This gate fixes the automorphism-invariant reference measure and its codeweight moment record on the stated carrier. It does not by itself supply the remaining entries required for final calibration: the response-active operator symbols $\sigma_B$, unit bridges $s_B$, RG/threshold route $\mathcal R^*_{\mu\leftarrow\mu_*}$, and any sector-specific residual symbols still have to be accepted before comparison. A heat-kernel, zeta-determinant, or symmetric-space harmonic computation may supply entries of $\mathfrak S_*$ only after it fixes the finite atom algebra, spectral time/scale or regularization, operator symbols, unit bridges, tail bounds, and route data before comparison. Invariance of an arena alone fixes at most the admissible reference measure on a transitive carrier; it does not derive the calibration polytope or close $R_\alpha$, $A_{\mathrm{eff}}$, or threshold data without those entries.
+This gate fixes the automorphism-invariant reference measure and its codeweight moment record on the stated carrier. It does not by itself supply the remaining entries required for final calibration: the response-active operator symbols $\sigma_B$, unit bridges $s_B$, RG/threshold route $\mathcal R^*_{\mu\leftarrow\mu_*}$, and any sector-specific residual symbols still require accepted certificates. A heat-kernel, zeta-determinant, or symmetric-space harmonic computation may supply entries of $\mathfrak S_*$ only after it fixes the finite atom algebra, spectral time/scale or regularization, operator symbols, unit bridges, tail bounds, and route data under Definition 2.4.1d. Invariance of an arena alone fixes at most the admissible reference measure on a transitive carrier; it does not derive the calibration polytope or close $R_\alpha$, $A_{\mathrm{eff}}$, or threshold data without those entries.
 
 *Proof.* If the additive code acts by regular translations on the atom set, any invariant probability measure is constant on a single transitive orbit. If equal trace ranks are supplied instead, Definition V.3.11a gives $\nu_{*,\alpha}=\operatorname{Tr}P_\alpha/\operatorname{Tr}I_{\mathrm{cal}}=1/4096$. The weight pushforward and moment identities are then precisely Theorem Z.13c.1. The final sentence follows from the list of required entries in Definition V.3.11a and the coefficient map of Definition V.3.11e. ∎
 
@@ -1404,13 +1457,137 @@ $$
 (\mathcal A_*,\Omega_*,\nu_*,\nu_*^{\mathrm{fs}},\mathcal M_*,\mathcal Q_{\mathrm{null}},\mathcal Q_{\mathrm{ind}},\mathcal U_*,\mathcal R^*,\Sigma_*,\Theta_*,\Pi_*,\mathcal I_*,\chi_*^{\mathrm{glob}})
 \tag{V.3.11j.1}
 $$
-where $\mathcal A_*$ is the finite calibration algebra, $\Omega_*$ its finite atom set, $\nu_*$ the invariant reference measure, $\nu_*^{\mathrm{fs}}$ the full-support feasibility witness, $\mathcal M_*$ the accepted constraint moments, $\mathcal Q_{\mathrm{null}}$ the response-null quotient, $\mathcal Q_{\mathrm{ind}}$ the independent-constraint quotient, $\mathcal U_*$ the unit bridges and RG/threshold routes, $\mathcal R^*$ the residual and tail ledger, $\Sigma_*$ the operator-symbol ledger, $\Theta_*$ the circular-angle, determinant-orientation, finite-part, zero-mode, grading, and normalization conventions, $\Pi_*$ the overlap maps to parent sector certificates, $\mathcal I_*$ the list of covered outputs, and $\chi_*^{\mathrm{glob}}=1$ the forward-lock entry.
+where $\mathcal A_*$ is the finite calibration algebra, $\Omega_*$ its finite atom set, $\nu_*$ the invariant reference measure, $\nu_*^{\mathrm{fs}}$ the full-support feasibility witness, $\mathcal M_*$ the accepted constraint moments, $\mathcal Q_{\mathrm{null}}$ the response-null quotient, $\mathcal Q_{\mathrm{ind}}$ the independent-constraint quotient, $\mathcal U_*$ the unit bridges and RG/threshold routes, $\mathcal R^*$ the residual and tail ledger, $\Sigma_*$ the operator-symbol ledger, $\Theta_*$ the circular-angle, determinant-orientation, finite-part, zero-mode, grading, and normalization conventions, $\Pi_*$ the overlap maps to parent sector certificates, $\mathcal I_*$ the list of covered outputs, and $\chi_*^{\mathrm{glob}}=1$ the structural-independence entry under Definition 2.4.1d.
 
 The record may project accepted local certificates from a common spectral source. It cannot replace a missing local certificate, supply an unrecorded finite part, alter a projector, change a tail bound, change a grading, change a normalization, import a comparison value as a moment, or infer a sector symbol from validation data.
 
 **Theorem V.3.11k (Global Calibration Non-Replacement and Full-Vector Classification).** A numerical row is final-calibrated by $\mathfrak S_*^{\mathrm{glob}}$ only if its local parent certificate is accepted and its symbol, unit bridge, finite-part convention, tail bound, circular-angle convention when relevant, determinant orientation, normalization, and overlap map are entries of (V.3.11j.1). An explicitly registered but unaccepted parent remains conditional branch data and does not supply final-calibrated status. The current PU ledger contains no single accepted $\mathfrak S_*^{\mathrm{glob}}$ covering simultaneously the Thomson residual, electroweak threshold, flavor, the four-mode Hessian/carrier, action, Fredholm-weight, and vacuum-to-Einstein realization records, the primordial determinant, baryogenesis, horizon transfer, AQFT/Einstein, and dark-response sectors. Therefore a claim that all such rows are final calibrated is certificate-pending unless it supplies $\mathfrak S_*^{\mathrm{glob}}$ and the cross-sector record $\mathfrak N_{\mathrm{PU}}$ of Definition X.9.6g.7.
 
 *Proof.* Definition V.3.11a fixes one calibrated expectation only after the algebra, atom set, reference measure, constraints, symbols, units, routes, circular conventions, overlap maps, and residuals are fixed. The sectors named here also have determinant, zero-mode, boundary, transport, covariance, or tail entries in their local certificates. Changing any such entry after another dependent row is fixed changes the finite branch by Definition P.14.1m and Theorem P.14.1f. Thus the global record compresses accepted local certificates only by projection; it does not promote absent certificates. ∎
+
+<a id="theorem-v-3-11o-original-global-calibration-obstruction"></a>
+
+<a id="theorem-v311o-fourteen-output-calibration-exclusion-on-the-class-of-theorem-f0y"></a>**Theorem V.3.11o (Fourteen-Output Calibration Exclusion on the Class of Theorem F.0y).** Let $(\mathfrak S_*^{\mathrm{glob}},\mathfrak N_{\mathrm{PU}})$ be a compatible pair whose Einstein-branch record $\mathfrak C_{\mathrm{EH}}$ of Definition 12.5.3k takes its AQFT entry (item 2) from a norm package on the literal F.1/F.2 event-tensor realization satisfying hypotheses (a)–(c) of Theorem F.0y, and whose overlap audit (item 8) identifies the event fibres on which the area channel $\mathcal E_N$ of item 4 acts with event fibres of that package. Then the pair does not complete the fourteen-output datum of Equation (X.9.6g.8) with all its local parent and overlap entries accepted: on this class the mandatory $\mathfrak C_{\mathrm{EH}}$ slot and its nondegenerate same-source Einstein/area response are incompatible. Final calibration of admitted partial output catalogs and the unique-state results of this section retain their stated domains.
+
+*Proof.* **The mandatory field.** Suppose such a full-datum pair exists. Equation (X.9.6g.8) includes $\Theta_{\mathrm{EH}}$, the AQFT/Einstein/metric-response output. Theorem V.3.11k requires the original cross-sector record of Definition X.9.6g.7 for simultaneous completion. Its displayed tuple has the named entry $\mathfrak C_{\mathrm{EH}}$, and item 11 requires that entry to be accepted. Unlike the explicit alternatives in other slots, item 11 supplies no replacement or absent-entry convention. Definition 12.5.3k is the formal owner of this named finite Einstein-branch record, also routed as $\mathfrak C_{\mathrm{EH}}$ in the emergent-metric row of Convention P.14.1k. Definitions V.3.11a(7),(11) and V.3.11j require the actual accepted local record and its overlaps; a spectral symbol or a value for the desired output cannot replace it.
+
+This is a consequence of the requested tuple's field, not an inference from an Einstein equation to a sufficient certificate. Definition 12.1f's separately defined $\mathfrak C_{\mathrm{EAQFT}}$, and its citation in the proof of Theorem X.9.6g.8, do not remove or retype Definition X.9.6g.7's named $\mathfrak C_{\mathrm{EH}}$ field. No necessity claim for the certificate list of Theorem 12.1f.1 is used.
+
+**Nondegenerate source and the AQFT entry.** The original gravitational coefficient map of Definition V.3.11e uses
+$$
+ c_R=\frac{c^3}{16\pi G_*},\qquad
+ G_*=\frac{c^3}{16\pi c_R},\qquad c_R\ne0.
+ \tag{V.3.11o.1}
+$$
+Equation (X.9.6g.8) marks a component pending when its defining map is undefined. Thus $c_R=0$ is not a full Einstein-output completion. The accepted original finite Einstein/action and saturated-area normalization fixes the positive operational coupling on the same branch. Definition 12.5.3k(4),(8), Corollary E.2 and Theorem E.6 give
+$$
+ \frac{\chi C(\mathcal E_N)}{\eta\delta^2}
+ =\frac{c^3}{4G_{\mathrm{op}}\hbar}>0.
+ \tag{V.3.11o.2}
+$$
+The positivity is the original saturated channel-area branch; no empirical value of $G$ is supplied.
+
+Definition 12.5.3k(2) requires either the projective certificate of Definition F.0e with Theorem F.0f's side conditions, or the Mosco–Bochner certificate of Definition F.0c with Theorem F.0d's side conditions. By hypothesis this entry is a norm package on the literal F.1/F.2 event-tensor realization with the common location and mesh (a), the regional support precone (b) and the localized slice core (c) of Theorem F.0y, so that theorem makes every retained event algebra scalar. The hypothesis restricts the class: (a) and (c) are the common-metric and localized-slice readings of Theorem F.0o, which Definitions F.0c and F.0e do not supply, and Theorem F.0y derives (b) only for full matrix event fibres. The argument uses no Wightman, Hadamard or other field of Definition F.0h.
+
+**Contradiction on a retained decoder.** Equation (V.3.11o.2) gives $C(\mathcal E_N)>0$. If every fixed retained decoder effect had equal outcome probabilities on every pair of finite-code outputs, every finite-block mutual information would be zero, and the channel capacity would be zero. Hence one finite code has output preparations $\rho_0,\rho_1$ and an input-independent retained effect $0\le e\le I$ with
+$$
+ \Delta=|\rho_1(e)-\rho_0(e)|>0.
+ \tag{V.3.11o.3}
+$$
+By the overlap hypothesis the effect $e$ is an observable of the finitely many event fibres on which $\mathcal E_N$ acts, and these are event fibres of the package, covered by finitely many retained diamonds. Their retained event algebras are scalar, so the image of their finite tensor algebra is scalar. The original source embedding $\iota_n$ is unital and isometric. Thus $\iota_n(e)=\lambda I$ for some $\lambda$, and injectivity gives $e=\lambda I$, contradicting (V.3.11o.3). A scalar response comparison also has the fixed error floor
+$$
+ \max_{j=0,1}|\rho_j(e)-\lambda|\ge\Delta/2.
+ \tag{V.3.11o.4}
+$$
+This is the triangle inequality, and it requires no refinement-uniform lower bound on capacity or $\Delta$.
+
+The contradiction holds for every candidate pair of the stated class. Substituting an external classical metric, a strong/weak AQFT comparison or a different continuum source for the named entry changes the requested original record, and marking $\Theta_{\mathrm{EH}}$ pending gives a partial catalog, not the full original datum. A record whose AQFT entry lies outside the class of Theorem F.0y is not covered by this argument.
+
+The stated class is therefore empty. Its finite-channel background is nonempty: the completed-reset channel on $\mathbb C^4\otimes\mathbb C^2$,
+$$
+ \Phi(\rho)=\operatorname{Tr}_{\mathbb C^2}(\rho)
+                  \otimes|0\rangle\langle0|,
+$$
+has capacity $\ln4$ by Corollary E.2a.0, and two orthogonal output labels are distinguished by a projection, as in Corollary E.2a.0. ∎
+
+<a id="theorem-v311p"></a>
+
+<a id="theorem-v311p-finite-parent-marginal-gluing-and-rank-test"></a>**Theorem V.3.11p (Finite Parent-Marginal Gluing and Rank Test).** In Definitions V.3.11a and V.3.11j, take the actual common atom set $\Omega$ after the response-null quotient, with the accepted surjective restriction map $\pi_i:\Omega\to\Omega_i$ to each retained parent atom set. Suppose the parent restrictions prescribe full atom laws $p_i$, or impose only the stated linear moment constraints on those laws. There is an exact finite linear test for a full-support joint law on this actual $\Omega$ with the stated constraints. For a parent tree satisfying the conditions below, the full atom-law test reduces to separator agreement, and the rank and relative-entropy selector have closed forms. Pairwise agreement alone can fail on a cyclic cover, even with positive local laws.
+
+*Arbitrary physical support.* For full atom-law restrictions let
+$$
+A_{(i,a),\omega}=\mathbf 1_{\{\pi_i(\omega)=a\}},\qquad y=(p_i(a))_{i,a}.
+$$
+When only local moments are retained, replace the corresponding rows of $A$ by the actual pulled-back moment functions and append a normalization row. In either case the joint law must solve $Ap=y$, $p\ge0$. Its strict-support margin is the value of the finite program
+$$
+t_*=\max_{p,t}\{t:Ap=y,\ \textstyle\sum_\omega p_\omega=1,\ p_\omega\ge t\ge0\}.
+\tag{V.3.11p.1}
+$$
+An infeasible program has no joint law, and a feasible program has a full-support joint law exactly when $t_*>0$. The maximum is attained because the variables range over a compact polytope. The algebraic feasibility and strict-support tests may also be written in terms of the columns $v_\omega=A_{\bullet,\omega}$. Feasibility is $y\in\operatorname{conv}\{v_\omega\}$, and strict-support feasibility is $y$ in the relative interior of that convex hull. Indeed a positive convex combination cannot lie on a proper supporting face. Conversely at a relative interior point take the uniform convex combination $v_{\rm av}$ and continue the line from $v_{\rm av}$ through $y$ a sufficiently short distance past $y$ within the hull. Express the endpoint as a nonnegative combination and write $y$ as its mixture with $v_{\rm av}$. This gives positive weight to every column, including any repeated or nonextreme column. A separating functional for the hull proves infeasibility. A supporting functional at its relative boundary certifies failure of full support by forcing all columns off that face to have zero weight.
+
+After quotienting the constraints by all linear dependencies among the rows and the normalization, the number of independent moment directions is $\operatorname{rank}\binom{A}{\mathbf 1}-1$. On a full-support feasible law, the covariance of retained moments is positive definite exactly on this independent quotient. In fact the variance of a linear combination vanishes exactly when it is constant on $\Omega$. This test uses the actual support and detects rank loss caused by physical exclusions among atom tuples.
+
+*Tree comparison.* Assume the parent sets $\Omega_i$ are linked by a finite tree, with a nonempty finite separator set $\Omega_e$ on each edge $e=(i,j)$ and surjections $\pi_{ie}:\Omega_i\to\Omega_e$ and $\pi_{je}:\Omega_j\to\Omega_e$. Suppose the actual joint atom set $\Omega$ is exactly the set of all edge-compatible tuples, with one atom for each tuple. No further physical exclusions or additional response-active labels are included in this case. Then a given family of strictly positive parent laws glues if and only if the two induced laws agree at each separator. Write the common separator law as $p_e$. The joint law
+$$
+p_{\rm tr}(\omega)
+=\frac{\prod_i p_i(\omega_i)}
+{\prod_{e=(i,j)}p_e(\pi_{ie}(\omega_i))}
+\tag{V.3.11p.2}
+$$
+is normalized, strictly positive and has the prescribed laws. To verify this, root the tree and start with the root law. Each child is drawn conditionally on the separator value of its parent, with probability $p_i(a)/p_e(\pi_{ie}(a))$ on the matching fiber. This conditional probability sums to one and produces the correct child marginal by separator agreement. Induction proves the claim and the factorization. It also proves uniqueness among laws with this parent-to-child conditional factorization.
+
+For this support, the full parent restriction map has rank
+$$
+\operatorname{rank}A=\sum_i|\Omega_i|-\sum_e|\Omega_e|.
+\tag{V.3.11p.3}
+$$
+For a direct proof, a row dependence consists of functions $f_i$ with $\sum_i f_i(\omega_i)=0$ on $\Omega$. At a leaf, for each fixed separator value every pair of leaf symbols in that fiber can be compared with identical other symbols. A compatible tuple of the other symbols exists for every such value by the separator surjections and the tree. Hence the leaf function is pulled back from the leaf separator. Transfer it to the parent and remove the leaf. The resulting induction shows that the whole kernel consists exactly of differences of the same separator function pulled back to either adjacent parent. These separator contributions are independent because one can inspect their leaf rows successively and each pullback is injective. This proves (V.3.11p.3), and the independent normalized moment count is one less.
+
+If the reference law $\nu$ of Definition V.3.11a is the positive tree law built by the same formula from compatible reference marginals $\nu_i,\nu_e$, then (V.3.11p.2) is the unique relative-entropy selector at the fixed full parent laws. For any feasible joint $p$, its expectations of $\log(p_{\rm tr}/\nu)$ depend only on the parent and separator marginals. Thus
+$$
+D(p\Vert\nu)=D(p\Vert p_{\rm tr})
++\sum_iD(p_i\Vert\nu_i)-\sum_eD(p_e\Vert\nu_e).
+\tag{V.3.11p.4}
+$$
+The first term vanishes exactly at $p=p_{\rm tr}$. When only parent moments are fixed, optimize the last two sums over the feasible compatible parent marginals. The factorization extends to boundary laws by using arbitrary normalized child conditionals on zero-probability separators. The chosen conditionals there have no effect on the resulting law. Equation (V.3.11p.4) still holds on the support of every joint law with those marginals, with the convention $0\log0=0$. Thus the reduced optimization is exact, and the strictly convex joint relative entropy selects a unique joint law. Its full-support test is (V.3.11p.1). A reference measure derived on the common physical carrier must pass its own identification with the factorized $\nu$ to use this formula.
+
+*A sharp cyclic failure.* Take three binary labels $X,Y,Z$ and three local parents $XY,YZ,ZX$, each with diagonal probabilities $1/20,1/20$ and off-diagonal probabilities $9/20,9/20$. The marginals on all intersections agree and each parent law has full support. Yet pointwise
+$$
+\mathbf 1_{X\ne Y}+\mathbf 1_{Y\ne Z}+\mathbf 1_{Z\ne X}\le2 .
+$$
+The three prescribed means sum to $27/10>2$, so no joint law exists even on the unrestricted eight-atom support. If the local errors are measured in total variation, at least one is $\ge 7/30$. This lower bound is attained by the uniform joint law on the six nonconstant binary triples. Its three pairwise laws have each disagreement probability $2/3$, split evenly over the two off-diagonal entries, and hence each lies at total variation $7/30$ from its prescribed law. The attaining law has no mass on the constant triples. Positive weight on those triples gives a strictly larger maximum error, with infimum $7/30$ approached by mixing in a small uniform law.
+
+The test concerns the actual finite atom support, its restriction maps, and the accepted local constraints. It supplies the finite feasibility, rank and selector calculation once those entries are given. The physical operator, unit, tail and overlap certificates of Definitions V.3.11j and X.9.6g.7 retain their own tests. $\square$
+
+<a id="theorem-v311q"></a>
+
+<a id="theorem-v311q-local-boost-exclusion-on-the-persistent-worldline-aqft-package"></a>**Theorem V.3.11q (Local Boost Exclusion on the Persistent-Worldline AQFT Package).** Take the nontrivial norm AQFT package of Theorem F.0z.8 on its frozen flat physical charts, or any fixed-source package with the footprint and Pauli properties below. This is a class outside the independent point-event hypothesis of Theorem F.0y. Suppose the Einstein-branch audit identifies the KMS flow of its item 3 with the local geometric Rindler boost action on this actual AQFT entry: on the declared Rindler chart and for any relevant diamond $O$ and boost parameter $s$, the accepted same-source maps require
+$$
+\alpha_s(\mathfrak A(O))=\mathfrak A(\Lambda_s O).
+\tag{V.3.11q.1}
+$$
+Here the two regions must lie in the declared chart and cover, and $\alpha_s$ is a common isometric $*$-automorphism on their regional comparison. Then no nonzero local boost interval satisfies that overlap on this source. There is a finite commutator witness of norm two before the boost and zero on the geometrically transported footprints. Even a single candidate isometric automorphism cannot map both marked Pauli probes within norm less than $1/2$ of contractions in the prescribed transported regional algebras. Consequently the package cannot complete the fourteen-output datum on this geometric same-net overlap branch. A bridge to a different boost realization, including a transformation of the retained material source, has its own physical comparison.
+
+*Actual regional algebras.* In the observation package of Theorem F.0z.8 the site factors are full matrix algebras on persistent rest worldlines. In a fixed local flat chart $(t,\mathbf x)$ their labels are spatial positions. The footprint of $O$ consists of the rest lines meeting it. Every suitable finite set of site cells compactly contained in this footprint is represented by its full finite tensor product in $\mathfrak A(O)$. Its embeddings and the proper-time comparison retain the same site operator on that line. In particular a persistent labelled qubit gives the same two marked norm-one Pauli operators on any two sufficiently small open diamonds along its line that contain that label in their footprints. Disjoint spatial footprints give commuting algebras, since every finite-stage pair has disjoint tensor supports and the commutator is norm continuous under the comparison. These are the footprint and Pauli properties used here. This observation uses the retained site algebras, independently of the product ground state and the values of the onsite gaps. Its source is the actual norm and generator comparison of Theorem F.0z.8, rather than a new independent factor at each spacetime point.
+
+*Two regions in a single boost chart.* Use units $c=1$ in this argument. Center the chart at the edge of the right wedge and choose one retained rest line at $x_1=R>0$ in its interior. Pick two different times $t_1,t_2$ on that line sufficiently close to zero that their centers lie in the chart. Write the boost in the $(t,x_1)$ plane as
+$$
+(t,x_1)\longmapsto
+(t\cosh s+x_1\sinh s,\ x_1\cosh s+t\sinh s).
+\tag{V.3.11q.2}
+$$
+For any fixed sufficiently small $s\ne0$, both transformed centers still lie in the same chart. Their spatial coordinates differ by $(t_2-t_1)\sinh s\ne0$. Choose positive radii of the two original flat double cones so small that their closures and transformed closures lie in the chart, and so that each projected transformed radius in $x_1$ is smaller than one third of this difference in absolute value. This is possible by continuity of the linear map in (V.3.11q.2). For example a standard double cone of radius $r$ satisfies $|t-t_i|+\|\mathbf x-\mathbf x_i\|<r$, so its transformed $x_1$ projection lies within $r\cosh s$ of its transformed center. The projected images are disjoint. The two original footprints both contain the chosen label in their interiors. The retained core comparison in Theorem F.0z.8 therefore includes the same marked site qubit in each, and its finite approximants can be supported at sufficiently fine grades inside those fixed positive margins. This choice fits any common local Rindler cover that carries the diamond comparisons in (V.3.11q.1). The construction uses a compact neighborhood and applies on the unwrapped local time cover of the actual flat torus.
+
+*Obstruction and finite margin.* Let $A$ be the first Pauli of the marked site, read in the first diamond, and let $B$ be an anticommuting Pauli of that same site read in the second. Their products in the common source give $\|[A,B]\|=2$. This is an operator relation of the retained algebras. It can also be tested by preparing the third Pauli's eigenstates and evaluating the Hermitian operator $i[A,B]$ through the ordered finite matrix controls on the site. No independence of the two original observations is needed. If (V.3.11q.1) held, $\alpha_s(A)$ and $\alpha_s(B)$ would belong to commuting algebras, hence their commutator would vanish. Isometric multiplicativity gives $\|[\alpha_s(A),\alpha_s(B)]\|=2$, a contradiction.
+
+More generally, let $A'$ and $B'$ be contractions in the two prescribed transported algebras, and let $\epsilon_A=\|\alpha_s(A)-A'\|$, $\epsilon_B=\|\alpha_s(B)-B'\|$. Since $[A',B']=0$, subtract the two commutators by replacing one argument at a time. Contractivity gives
+$$
+2\le 2\epsilon_A+2\epsilon_B.
+\tag{V.3.11q.3}
+$$
+This proves the stated $1/2$ floor for the maximum of the two errors. The argument uses only the two supported observables. It applies to a comparison in completely bounded norm as well because that norm dominates the operator-norm test on either probe. A sequence of approximately multiplicative maps with norm-isometric comparison on $[A,B]$ gives the same limiting floor. Indeed, if the images are contractions and the two product defects on $AB$ and $BA$ are bounded by $\delta$, the commutator of the images has norm at least $\|\alpha_s([A,B])\|-2\delta$. If the latter comparison tends to $2$ and $\delta\to0$, both localization errors cannot tend to zero. This states the precise defect combination excluded, including when finite local controls are used to approach the prescribed same-net action.
+
+*Use in the Einstein and spectral records.* Definition 12.5.3k consumes the actual AQFT entry in item 2, a finite KMS-descent sequence with its limiting overlap in item 3, and the common branch maps in item 8. On the nominated geometric same-net branch the boost identification is an additional part of those branch maps. A faithful auxiliary state and its modular flow on an abstract different algebra do not furnish (V.3.11q.1). Nor does local covariance between different material-source configurations give the required automorphism of the frozen package. The obstruction is to this typed identification and does not assert that Definition 12.5.3k imposes (V.3.11q.1) on every possible alternative. By the mandatory-slot argument of Theorem V.3.11o, the failed overlap excludes a compatible pair completing (X.9.6g.8) with that Einstein-branch record. The norm package itself remains nontrivial, and its time-slice and scalar/rail geometry conclusions have their original domains. This gives a finite falsifier for one actual outside-class route. Other boost and area bridge realizations retain their own tests. $\square$
 
 **Final calibrated-branch formula.** On a final-calibrated branch,
 
@@ -1435,15 +1612,1276 @@ D_{\mathrm{KL}}(\omega\Vert\nu_*).
 }
 $$
 
+**V.3.11l Finite Matrix-Fiber Calibration and Full Response Readout.**
+
+<a id="theorem-v311l-positive-preparation-informationally-complete-readout-and-their-domains"></a>**Theorem V.3.11l (Positive Preparation, Informationally Complete Readout and Their Domains).** For the specified five-$M_3$ FQ7 response quotient, a same-carrier trace-preserving conditional expectation onto a commutative algebra cannot preserve the full retained protocol family. A distinct, explicitly typed forty-five-label preparation source has a genuine positive channel, full-dimensional proper preparation simplex, actual full-support trace calibration and all forty-four independent moments. A separate informationally complete POVM reconstructs the entire original block response quotient on its physical spectrahedral image; its inverse is not positive on the whole simplex. Quantum products and conditional instruments retain their matrix-fiber/context records. This is a complete finite formal interface on its stated domains, rather than the independently generated physical Thomson source or a simultaneous global calibration.
+
+**Same-carrier obstruction and proof.**
+
+**4. The original FQ7 response quotient is quantum.**
+
+**4.1 Reconstructing the source rather than choosing example matrices.**
+
+FQ7 fixes $H=\mathbb{C}^3\otimes W_5$, with $\dim H=15$,
+
+$$
+\begin{aligned}
+Y &= \operatorname{diag}(-1/3,-1/3,-1/3,1/2,1/2), \\
+T_3 &= \operatorname{diag}(0,0,0,1/2,-1/2), \\
+J &= (1/2)\, I_3 \otimes (T_3+Y).
+\end{aligned}
+$$
+
+Let $P_j=I_3\otimes E_{jj}$, $j=1,\dots,5$. Its registered dephasing is
+
+$$
+D(X)=\sum_j P_j X P_j.
+$$
+
+The original definition chooses a real basis of **all** Hermitian matrices in the range of D as protocol tests. Therefore
+
+$$
+\operatorname{Ran} D = \bigoplus_{j=1}^5 M_3(\mathbb{C}),
+$$
+
+with 45 real Hermitian response directions. The explicit basis consists, in each j-block, of three diagonal matrix units, three real symmetric off-diagonal units, and three imaginary antisymmetric units. Its Gram matrix has rank 45. At the full-support trace state `I15/15`, its covariance has rank 44; the only zero-variance linear combination is a scalar identity.
+
+In this basis all seven original source operators are reconstructed:
+
+$$
+\begin{aligned}
+S_1 &= I_3 \otimes Y^2,\quad S_2=\operatorname{diag}(1,1,0) \otimes Y^2, \\
+S_3 &= \operatorname{diag}(1,1,0) \otimes T_3^2,\quad S_4=\operatorname{diag}(0,0,1) \otimes T_3^2, \\
+S_5 &= E_{11} \otimes F_C,\quad S_6=E_{22} \otimes F_C,\quad S_7=E_{33} \otimes F_C,
+\end{aligned}
+$$
+
+where $F_C=E_{12}+E_{21}$ on the color block. Their exact Gram determinant is $1/1458$, agreeing with the original source. The current has $\operatorname{Tr}J^2=1$ and charged rank 12. This anchors the witnesses to the actual FQ7 candidate, rather than an arbitrary noncommuting toy model.
+
+**4.2 No commutative same-carrier conditional expectation preserves all tests.**
+
+Let E be a trace-preserving conditional expectation from `M15(C)` onto a unital *-subalgebra A. Such an expectation is the Hilbert–Schmidt orthogonal projection: for `B in A`, the bimodule property and trace preservation give
+
+$$
+\operatorname{Tr} B^* E(X)=\operatorname{Tr} E(B^*X)=\operatorname{Tr} B^*X.
+$$
+
+Together with idempotence, this characterizes the orthogonal projection and implies self-adjointness for the Hilbert–Schmidt pairing.
+
+Suppose it preserved the whole registered FQ7 response record:
+
+$$
+\operatorname{Tr} B\, E(X)=\operatorname{Tr} B X\quad\text{for every Hermitian } X \text{ and every } B\in\operatorname{Ran} D.
+$$
+
+Self-adjointness gives $\operatorname{Tr}[E(B)-B]X=0$ for all Hermitian $X$; nondegeneracy implies $E(B)=B$. Thus $\operatorname{Ran} D$ must be contained in $A$.
+
+Take the two **retained** protocol tests
+
+$$
+\begin{aligned}
+X_0 &= (E_{12}+E_{21}) \otimes E_{11}, \\
+Y_0 &= i(E_{21}-E_{12}) \otimes E_{11}.
+\end{aligned}
+$$
+
+Their commutator is
+
+$$
+[X_0,Y_0]=2i(E_{11}-E_{22}) \otimes E_{11},
+$$
+
+with Hilbert–Schmidt norm squared 8. They cannot both belong to a commutative A. This proves the same-carrier obstruction.
+
+There is also a complete rank witness. Any commuting self-adjoint family on a 15-dimensional Hilbert space is simultaneously diagonalizable, so a unital commutative *-algebra has complex dimension at most 15 and Hermitian real dimension at most 15. It cannot preserve an independent 45-dimensional response space; at least 30 response directions are lost. A different MASA cannot evade the argument.
+
+**Exact boundary:** The theorem assumes preservation for all X in the original full response domain. Preserving expectations only in one specially chosen state is weaker and is not ruled out. Nor does this theorem identify FQ7's full response algebra with a global calibration algebra by assumption. An alternate global construction must prove its own interface and cannot cite FQ7 dephasing as if its range were already commutative. Matrix-valued coefficient symbols and protocol-indexed reconstructions remain logically distinct possibilities; none is supplied by this rejection theorem.
+
+**4.3 The five-atom center is full-support feasible but response-invalid.**
+
+The center has primitive rank-three projections $P_{j}$ and normalized-trace weights $\nu_j=1/5$. Its trace-preserving conditional expectation is
+
+$$
+E_Z(X)=\sum_j [\operatorname{Tr}(P_j X)/3]\, P_j.
+$$
+
+It has response rank 5 and normalized covariance rank 4. More seriously, it maps the retained source
+
+$$
+E_Z(S_2)=(2/3)S_1.
+$$
+
+The original cohomology representatives `(S1,S2,S4)` have linear rank 3; their centered images have rank 2. Including normalization, the ranks are 4 before and 2 after this map. Thus a subsequent independent-constraint quotient would conceal two lost scalar response directions; it would not establish that they were response-null in the original problem.
+
+The resulting five-atom *diagnostic* moment matrix has rows
+
+\[
+\begin{pmatrix}
+1&1&1&1&1\\
+1/9&1/9&1/9&1/4&1/4\\
+2/27&2/27&2/27&1/6&1/6\\
+0&0&0&1/12&1/12
+\end{pmatrix}.
+\]
+
+Its prescribed trace moments are `(1,1/6,1/9,1/30)`. The actual trace weights `(1/5,...,1/5)` satisfy every equation and have full support. The constraints fix total color weight 3/5 and total weak weight 2/5. KL divergence from the uniform reference is nonnegative and zero only at the uniform vector, which is feasible; hence its KL minimizer is uniquely uniform.
+
+This establishes, on the source's actual matrices, that feasible full support and unique entropy minimization are insufficient to validate a response quotient.
+
+For a direct witness, set
+
+$$
+\begin{aligned}
+D_0 &= (E_{11}-E_{33}) \otimes E_{11}, \\
+\rho_+ &= I_{15}/15 + D_0/30,\quad \rho_- = I_{15}/15 - D_0/30.
+\end{aligned}
+$$
+
+Both states have trace one and eigenvalues among `1/30,1/15,1/10`; all are positive. They have identical center images `I15/15` and identical atom weights `(1/5,...,1/5)`. Nevertheless
+
+$$
+\operatorname{Tr}(S_2 \rho_+)=31/270,\quad \operatorname{Tr}(S_2 \rho_-)=29/270.
+$$
+
+Their S1 and S4 expectations coincide. Thus the map loses a response associated with an actual non-exact retained cohomology class, not merely an arbitrary off-diagonal operator. These states are witnesses in the original FQ7 response domain; they are **not** claimed to be two accepted global calibrated states satisfying every absent global constraint.
+
+**Positive finite source and proof.**
+
+**1. Result, two directions, and the exact domain.**
+
+There is a positive finite realization of a **45-atom calibration/preparation interface** for the original FQ7 block response algebra, with a separate informationally complete readout. It preserves every original registered response direction, the actual trace source, all 44 independent normalized moments, and finite product/instrument statistics when their full matrix-fiber/context records are retained. The scalar same-carrier conditional-expectation no-go of section 4.2 remains true; this construction uses a different, explicitly typed input preparation carrier.
+
+The two directions must not be confused:
+
+- **Preparation:** a genuine CPTP channel sends a classical 45-outcome preparation record to a convex combination of 45 fixed positive matrix fibers. Its image is a restricted, full-dimensional simplex of block quantum states, containing the original trace state. It does not cover every original state.
+- **Readout:** an actual 45-outcome POVM is injective on the original block response quotient. It reads every original state modulo the already registered FQ7 dephasing. Its linear inverse reconstructs all block responses on the physical image, but is not positive on the whole simplex and is not a CPTP state-recovery channel.
+
+No restricted preparation polytope replaces the original full response domain. The readout handles that full domain; the preparation map realizes the particular original trace state and a declared neighborhood within its own image. Neither operation establishes the FQ7 candidate as a physical Thomson source.
+
+Let
+
+$$
+B = \bigoplus_{j=1}^5 M_3(\mathbb{C})
+$$
+
+be the exact range of the original FQ7 dephasing $D(X)=\sum_j P_j X P_j$, on $\mathbb{C}^3\otimes W_5$. The original tests distinguish all 45 Hermitian directions of $B$. The readout followed by linear reconstruction equals $D$ on arbitrary $M_{15}(\mathbb{C})$, and the identity on $B$. It does not reconstruct W5 off-block coherences that were already null for the original tests.
+
+The seven original Ward-source matrices remain separate source records. In particular S5–S7 have W5 off-block entries and are not asserted to be recovered from the response quotient. Their exact/obstructed cochain roles are not erased or replaced. The retained response classes S1,S2,S4 are preserved.
+
+**2. An exact nine-effect qutrit instrument.**
+
+Use the following fixed basis of traceless Hermitian 3-by-3 matrices, in this order:
+
+$$
+G_1=\operatorname{diag}(1,-1,0),\quad G_2=\operatorname{diag}(0,1,-1),
+$$
+
+and, for $(k,l)=(1,2),(1,3),(2,3)$, include
+
+$$
+X_{kl}=E_{kl}+E_{lk},\quad Y_{kl}=i(E_{lk}-E_{kl}).
+$$
+
+All eight matrices have operator norm one. This is the existing fixed V-coordinate frame of FQ7; no desired output is used to select it. Set $c=1/16$ and define
+
+$$
+\begin{aligned}
+F_0 &= \Bigl(I-c \sum_a G_a\Bigr)/9, \\
+F_a &= (I+c\, G_a)/9,\quad a=1,\ldots,8.
+\end{aligned}
+$$
+
+Then $\sum_a F_a=I$, and each has trace 1/3. Since $\lVert\sum G_a\rVert\le 8$,
+
+$$
+F_0 \ge I/18.
+$$
+
+For $a\ge 1$, $F_a\ge(15/144)I\ge I/18$. Thus all nine effects are strictly positive. Their positive square roots give the actual finite Kraus construction: on each block the isometry
+
+$$
+V \psi = \sum_a |a\rangle \otimes \sqrt{F_a}\, \psi
+$$
+
+satisfies $V^*V=I$. On all five blocks, use the 45 effects
+
+$$
+E_{j,a}=F_a \otimes E_{jj}.
+$$
+
+Their sum is `I15`. Recording the outcome and retaining the quantum residual gives a complete instrument, including every outcome; no success conditioning is used to define the source.
+
+At the original source $\rho_0=I_{15}/15$,
+
+$$
+p_{j,a}=\operatorname{Tr}(E_{j,a}\rho_0)=1/45.
+$$
+
+This is an actual full-support outcome law, not a chosen vector inferred from a desired Thomson number.
+
+**3. Exact readout reconstruction and its nonpositive inverse.**
+
+Let $K_{ab}=\operatorname{Tr}(G_a G_b)$ and define the traceless duals
+
+$$
+H_a=\sum_b (K^{-1})_{ab}\, G_b.
+$$
+
+Explicitly, the first two are $(2G_1+G_2)/3$ and $(G_1+2G_2)/3$; each remaining dual is its corresponding $G$ divided by 2. Hence $\operatorname{Tr}(G_a H_b)=\delta_{ab}$.
+
+Define nine Hermitian dual matrices
+
+$$
+\begin{aligned}
+D_0 &= I/3-(1/c)\sum_a H_a, \\
+D_a &= I/3+(1/c)\Bigl(9H_a-\sum_b H_b\Bigr),\quad a\ge 1.
+\end{aligned}
+$$
+
+Direct expansion gives $\operatorname{Tr}(F_a D_b)=\delta_{ab}$. Therefore, for every unnormalized block matrix $X$,
+
+$$
+X=\sum_a \operatorname{Tr}(F_a X)\, D_a.
+\tag{2}
+$$
+
+On five blocks the same formula reconstructs $D(X)$ for any 15-by-15 $X$. Thus all original block expectation values, including every retained S1/S2/S4 response, are recovered exactly. No scalar center projection occurs.
+
+The inverse is not a physical recovery channel on arbitrary classical probabilities. In fact $(D_0)_{11}=-47/3<0$, while $\operatorname{Tr} D_0=1$. The probability image of quantum states is exactly
+
+$$
+K_{\mathrm{phys}}=\Bigl\{p\ge 0 : \sum p=1,\ R(p)_j=\sum_a p_{j,a} D_a \ge 0 \text{ for every } j\Bigr\}.
+$$
+
+This is a spectrahedral subset of the simplex. For a physical $p$, $R(p)$ is a state by its defining inequality; outside that image the reconstruction can have negative eigenvalues. No stronger positivity is claimed. Moreover, the physical image contains a relative open neighborhood of the trace state and spans the full normalized affine space. Any linear recovery channel agreeing with (2) on all physical inputs must therefore agree with this unique affine inverse on the full simplex; its image of the zeroth point mass would be $D_0$. The negative entry rules out a positive or CPTP inverse, not merely this particular formula.
+
+The individual effects are positive definite on each block, so every full-support block state gives strictly positive outcomes. Even pure qutrit states give positive probabilities within their nonzero block. This does not make the inverse positive on the full simplex.
+
+A useful explicit neighborhood is available. The dual norms satisfy $\lVert D_a\rVert\le 497/3$: the two diagonal $H$ norms are 2/3, the six others have norm 1/2, and $\sum\lVert H_a\rVert\le 13/3$. Thus
+
+$$
+\lVert R(p)-I_{15}/15\rVert \le (497/3)\lVert p-p_0\rVert_1.
+$$
+
+Every normalized $p$ with $\lVert p-p_0\rVert_1<1/2485$ reconstructs a strictly positive state. This is a stated physical chart, not an assertion that all full-support probabilities are physical.
+
+**4. A different positive preparation map.**
+
+Define the nine positive density matrices $R_a=3F_a$ and the 45 full-system fibers
+
+$$
+\rho_{j,a}=R_a \otimes E_{jj}.
+$$
+
+They have trace one. Each $R_a\ge I/6$, and
+
+$$
+(1/45)\sum_{j,a} \rho_{j,a}=I_{15}/15.
+$$
+
+The classical-to-quantum channel is
+
+$$
+P(w)=\sum_{j,a} w_{j,a}\, \rho_{j,a}.
+$$
+
+It is a genuine CPTP map: measure the input record in its fixed 45-label basis and prepare the indicated density matrix. A retained-label version outputs the full classical–quantum state
+
+$$
+\Omega(w)=\sum_\alpha w_\alpha |\alpha\rangle\langle\alpha| \otimes \rho_\alpha.
+$$
+
+For every strictly positive $w$, $P(w)$ has full support. In fact if $t_j=\sum_a w_{j,a}$, its $j$-block is bounded below by $(t_j/6)I_3$. The trace source is attained at uniform weights.
+
+The 45 fibers are linearly independent. Equation (2), or the nonzero 9-by-9 effect Gram determinant, proves this independently in each block. Consequently the preparation image is a 44-dimensional simplex in the 44-dimensional affine space of normalized block states. It contains rho0 in its relative interior.
+
+It still is a proper subset of all block states. Every qutrit fiber is strictly positive on its block; a pure V-state in a nonzero block cannot be a convex combination of them. Its unique affine preparation coefficients contain negative entries by the strict-positivity and affine-independence argument just given. This is the promised exact domain boundary.
+
+**4.1 All response symbols and their physical pullback.**
+
+For each original block observable B, define
+
+$$
+\sigma_B(\alpha)=\operatorname{Tr}(\rho_\alpha B).
+$$
+
+Then
+
+$$
+\operatorname{Tr}(P(w) B)=\sum_\alpha w_\alpha\, \sigma_B(\alpha).
+$$
+
+This is the actual Heisenberg pullback `P*(B)` on the classical input register. It is unital and positive, indeed completely positive. A matrix-valued output can retain the fibers themselves, or a physical effect/operator-valued response on each fiber. All symbols are source-fixed before solving for w.
+
+The 45-by-45 response matrix against the original complete block basis has rank 45. Therefore every original response direction remains present in these symbols. This is stronger than keeping only the scalar cohomology evaluations.
+
+**5. The actual full-support calibration and rank.**
+
+Take the calibration carrier to be the 45 actual preparation labels, with rank-one primitive projectors and the normalized-trace reference $\nu_\alpha=1/45$. They are physically distinct preparation records. Since the fiber response matrix is invertible, distinct labels are separated by the original response family; no label is response-null on that family.
+
+The parent source to be encoded is the original trace state, fixed by the original FQ7 invariant-functional/equal-channel theorem. Impose its **complete** block response moments:
+
+$$
+\sum_\alpha w_\alpha \operatorname{Tr}(\rho_\alpha B_k)=\operatorname{Tr}(B_k)/15
+$$
+
+for the 45-element block basis, with one normalization relation removed. No target fine-structure constant, residual or desired current coefficient occurs among these values.
+
+The exact response matrix is invertible and the unique solution is
+
+$$
+w_\alpha=1/45.
+$$
+
+It is strictly positive. An invertible change of independent moment coordinates gives the first 44 indicator functions, each with value 1/45. Their covariance at w is
+
+$$
+C=(1/45)I_{44}-(1/2025)J_{44}.
+$$
+
+Its eigenvalues are $1/45$ with multiplicity 43 and $1/2025$ with multiplicity one. Hence the Hessian is strictly positive on all 44 independent directions, with floor $1/2025$ and exact determinant $(1/45)^{43}/2025$. No moment rank was removed by centralization.
+
+The feasible polytope is the singleton uniform vector. Its KL minimizer relative to the uniform reference is that same state and has zero KL. This is an actual populated finite moment result, with the source state supplying all constraint values. It does not predict the missing electromagnetic coupling or any other absent global action coefficient.
+
+**5.1 Exact V.3.11 typing.**
+
+For this **input preparation carrier**, the response operator is
+
+$$
+O_B=P^*(B)=\operatorname{diag}(\sigma_B).
+$$
+
+It already belongs to the commutative calibration algebra, so V.3.11a(8)'s direct symbol formula applies. No trace-preserving conditional expectation from the original quantum carrier to its center is asserted. If record coherences are included, diagonal pinching of the classical input record is trace-preserving and preserves this preparation protocol: the preparation channel first reads the record basis and discards its off-diagonal entries, so only those coherences are response-null.
+
+This is a constructive finite source-to-calibration interface at the **formal FQ7 candidate** level. Its positive map, exact original trace source, all response symbols and rank/full-support certificate are supplied. Its import into a chosen global branch is conditional on acceptance of the local physical parent certificate and of this auxiliary source/measurement interpretation. FQ7's independent physical-current/Thomson realization is not obtained by preparing its candidate matrices on a register.
+
+**6. Products, quantum statistics, and conditioning.**
+
+**6.1 Do not multiply classical estimator values as quantum observables.**
+
+Although all record operators `O_B` commute pointwise, the quantum product is retained through the separate symbol for the actual product:
+
+$$
+\sigma_{BC}(\alpha)=\operatorname{Tr}(\rho_\alpha BC).
+$$
+
+In general this is not $\sigma_B(\alpha)\sigma_C(\alpha)$. For example, consider the sequential probability of first obtaining the plus outcome of the V $(1,2)$ $X$ measurement and then V coordinate 1. At the trace state the true joint probability is 1/6; the pointwise-product expectation is a different exact rational number.
+
+Because the response-symbol map is invertible, define its explicitly registered product
+
+$$
+v \star w = S(S^{-1}(v)\, S^{-1}(w)),
+$$
+
+where $S(B)=\sigma_B$. In one qutrit block,
+
+$$
+S^{-1}(v)=\sum_a v_a D_a/3.
+$$
+
+This product is associative, has the constant-one unit, preserves adjoints, and has the original nonzero commutators. These properties follow by transporting ordinary matrix multiplication through an invertible map. They do not turn the pointwise record algebra into a noncommutative calibration algebra. The star operation is a physical-product/context ledger associated with the matrix fibers.
+
+The full spectral distribution of a self-adjoint observable $B$ is equally retained: for each spectral effect $P_{b}$, use $\operatorname{Tr}(\rho_\alpha P_b)$, which is a genuine probability for each $\alpha$. Thus all $B$ moments and its measurement statistics are recovered without identifying estimator variance with quantum variance.
+
+**6.2 Positive contextual fiber updates.**
+
+Consider any explicitly registered finite CP instrument on the retained block algebra, with outcome maps $I_r$. Its maps must descend to the original quotient: $D I_r=D I_r D$. Block-diagonal Kraus operators suffice. A later W5-coherence-interferometry experiment that violates this relation would enlarge the original response domain and is not smuggled into this statement.
+
+For each fiber set
+
+$$
+q(r|\alpha)=\operatorname{Tr} I_r(\rho_\alpha).
+$$
+
+All q are nonnegative and sum to one over a complete instrument. For a positive-probability outcome, retain the new quantum fiber
+
+$$
+\rho_{\alpha,r}=I_r(\rho_\alpha)/q(r|\alpha)
+$$
+
+and the new classical weights
+
+$$
+w_{\alpha|r}=w_\alpha\, q(r|\alpha)/\sum_\beta w_\beta\, q(r|\beta).
+$$
+
+Then the total conditional state is exactly
+
+$$
+\sum_\alpha w_{\alpha|r}\, \rho_{\alpha,r}=I_r(P(w))/\operatorname{Tr} I_r(P(w)).
+$$
+
+This follows by linearity and cancellation of q. Iterating gives every finite registered joint outcome distribution and conditional state, with no signed preparation weights. Zero-probability branches are omitted only after recording their zero probability; no conditional state is assigned there. The updated fibers need not remain among the original 45 preparation vertices, and no such closure is claimed. A finite context record retains the new fibers instead.
+
+Take an actual complete three-outcome projective instrument on V: $|+\rangle\langle+|$, $|-\rangle\langle-|$, and $|3\rangle\langle 3|$, each tensored with $I_{W_5}$. Every original fiber assigns positive probability to each outcome. These outcomes determine the subnormalized and normalized quantum branches and the subsequent coordinate measurement exactly. This is a full product/conditioning witness on the actual FQ7 carrier.
+
+**6.3 Readout-direction context kernels.**
+
+On the IC readout coordinates, an instrument is instead represented by
+
+$$
+T^r_{\alpha,\beta}=\operatorname{Tr}[E_\alpha I_r(D_\beta)].
+$$
+
+For $p$ in the physical image, $T^r p$ is the exact nonnegative subnormalized outcome vector; normalization and composition give the same quantum probabilities. The matrix can have negative entries because the $D_{\beta}$ are not positive. The populated example does. Therefore these are exact reconstruction kernels on a physical spectrahedral domain, not classical stochastic transition matrices on the entire simplex.
+
+The preparation direction and its positive contextual fiber updates avoid that misleading classical-recovery interpretation.
+
+**7. Finite source and resource ownership.**
+
+The matrices above specify a finite formal auxiliary preparation/readout model. They do not by themselves prove an actual Appendix Z current operator or authorize an unrecorded hardware primitive.
+
+A complete finite realization can retain the following registers: preparation label 45, a 45-dimensional copy purifying its uniform classical law, system 15, a three-dimensional purification environment for each rank-three preparation fiber, and a six-dimensional charge-compensation register (a ready state plus the five block labels). The dimension is
+
+$$
+45\cdot 45\cdot 15\cdot 3\cdot 6=546750.
+$$
+
+The preparation label is made uniform by a Fourier-45 unitary followed by coherent copying to the retained label copy. For each label $(j,a)$, use the explicitly determined purification of $\rho_{j,a}$ from its positive square root; a controlled isometry sends the fixed ready state to that purification. Extend the isometry to a unitary by fixed-order Gram–Schmidt on the orthogonal complement. No branch outcome is discarded.
+
+The compensation state indexed by $j$ carries charge $-Q_{\mathrm{em}}(j)$, while the system carries $Q_{\mathrm{em}}(j)$. The input ready state is neutral. Each controlled preparation can therefore be extended within the zero-total-charge subspace; the V-only readout and conditioning operators commute with the charge record. This is a formal conserved-charge bookkeeping construction, not an independent derivation of physical electromagnetic current units.
+
+The IC readout uses the displayed square-root-effect isometry with a 45-dimensional outcome register, and a retained 45-dimensional outcome copy if an explicitly diagonal classical readout is wanted. Keeping every listed register gives dimension
+
+$$
+546750\cdot 45\cdot 45=1107168750 < 8^{11}.
+$$
+
+An MPU embedding can retain all unused basis states, their specified idle generator and any positive storage baseline; they are not traced out to claim a smaller source. This is a finite upper bound, not a minimal apparatus claim.
+
+Every finite unitary $U$ used here has a principal self-adjoint logarithm. On a declared independent clock, take $T=\pi\hbar/Q$ and $H=(i\hbar/T)\log U$; then $\lVert H\rVert\le Q$ and norm-action is at most $\pi\hbar$. Three preparation gates and two readout/copy gates have total controlled time at most $5\pi\hbar/Q$ and **control** norm-action at most $5\pi\hbar$, before additional instrument contexts. The positive baseline is separate: on the displayed eleven-MPU system one may choose $H_{\mathrm{base}}=11QI$. Then the full Hamiltonian is positive, bounded above by $12Q$, and its total norm-action is at most $60\pi\hbar$; that baseline is not subtracted from a later gravitational/energy ledger. Switching each bounded control on and off has total variation at most $2Q$, so the five-gate work-variation bound is $10Q$ under the piecewise-control convention. Initial pure ready states, the retained purification copies, preparation work, storage dimension and unused levels remain explicit resources. No reset or thermodynamic-erasure credit is taken.
+
+This is a specified finite controlled-Hamiltonian formal model. Its admission as hardware of a particular physical Thomson theory remains part of that theory's physical source certificate. It must not be inferred merely from a finite Hilbert dimension or from this exact finite computation.
+
+The rational Hermitian effects have algebraic positive square roots; Fourier-45 phases are algebraic. They therefore have terminating certified finite-precision approximations. A finite implementation also retains its actual controller/program words and their bit lengths; the eleven-MPU bound covers the listed data/ancilla registers, not an unbounded-precision compiler. A $b$-bit program adds at least $\lceil b/3\rceil$ MPU storage factors in the stated encoding, and its positive baseline and time are added to the displayed bounds. No finite word is asserted to store exact nonrational amplitudes, and no uniform cost as error tends to zero is claimed. If the implemented unitaries have operator-norm errors $\epsilon_k$, telescoping gives channel trace-norm error at most $2\sum\epsilon_k$, hence total-variation error at most $\sum\epsilon_k$ for every final finite outcome test. For a bounded response $B$, the expectation error is at most $2\lVert B\rVert\sum\epsilon_k$. Classical input TV error $\eta$ adds at most $2\lVert B\rVert\eta$ in the positive preparation route. Physical instrument approximation errors are charged similarly, once, along the common sequence.
+
+For conditional outputs with an exact outcome probability at least $p_{\min}$ and subnormalized trace-norm error $\delta<p_{\min}$, the normalized-state error is at most $2\delta/p_{\min}$; the selected three-outcome trace-state example has $p_{\min}=1/3$. No stability claim is made at a zero denominator. Finite IC estimator variances use their actual bounded dual symbols, not the physical $B$ variance. Repeated preparations and records are charged per sample; no infinite-sample exact measurement is claimed.
+
+**Retained-environment protocol boundary.** The purification implementation retains its copies and environments physically. The reduced diagonal input pinching preserves the declared preparation/system protocols, which do not coherently interfere with those purifying copies or environments. No claim that every globally accessible environmental coherence is response-null is made. The numerical covariance floor belongs to the stated label-indicator coordinates, not arbitrary rescaled observables.
+
+**V.3.11m Same-Current Gaussian Response and Maxwell Boundary.**
+
+<a id="theorem-v311m-registered-gaussian-current-transport-and-boundary-ambiguity"></a>**Theorem V.3.11m (Registered Gaussian Current Transport and Boundary Ambiguity).** With the exact canonical current/mass/clock/source inputs, primitive charge convention and fixed subtraction/reference rule below, the relative-heavy response has inverse coefficient $64$ at zero momentum and transport strictly below $8/9$ on $0\le q\le Q$. The separately specified thirty-nine-component external-EM Gaussian source has the complete quadratic current functional, all-momentum/finite-source bounds and positive window below. Its exact-source zero-momentum enclosure is the recorded interval near $61.58805461873946$. The full physical support and retained charged services are those of Theorem V.3.11n; no original charged apparatus is declared neutral from a relative cancellation. Within the stated local parity-even invariant degree-two class, omission of the absolute Maxwell boundary leaves exactly one independent coefficient. None of these scoped results is a full Appendix-Z current/core/exhaustion identification or the fourteen-output global calibration.
+
+**Proof and fixed source data.**
+
+**1. Exact inputs and their scope.**
+
+The source inputs are the common action and physical words of Theorem Y.8a, proof components 1–5, with the current/phase source of Theorem Y.11.7j and the following exact consumed data.
+
+- Theorem Y.8a, proof components 1 and 4: the canonical vectorlike heavy action, original $D_{\mathrm{old}}$, all neutral complements, the full/reference/zero-field traces, the T14 proper-time subtraction, $\mu_G=r=(\det D_{\mathrm{old}})^{1/3}$, the independently specified reference $B_*=6/\pi$, and the registered heavy MOM domain $0\le q\le Q$.
+- Theorem Y.8a, proof components 1–3: one physical clock $t_c=\hbar/Q$, the common gauge word, $H_0=(0,Q)$, and all canonical mass/current matrices. $g_*=\sqrt{\pi/6}$, $g_Y=\sqrt{3/5}\,g_*$, and $e_{\mathrm{ref}}^{2}=\pi/16$ are action inputs and their derived dictionary, not spectral selection results.
+- Theorem Y.8a, proof components 2–3, and Theorem Y.11.7j: the same three up and down singular masses, the three charged-lepton masses and three positive Dirac-neutrino masses. All are actual functions of the one heat/positive-line/Quillen source. The quark spectra coincide, but their eigenframes and weak-current phase data remain distinct.
+- The inherited T09 finite canonical Dirac regulator and the W04 physical-current-to-MOM derivation. The W04 **selected reference coefficient is not imported**: its canonical source, current, subtraction conversion and finite comparison estimates are used, and U34 supplies its own reference coefficient.
+- The separate U34 Maxwell component has **zero quantum charged matter bundle** on its photon support. Its pump has frequency $2Q/(\rho\hbar)$ with $\rho=10^{-8}$. The heavy registered MOM formula is not evaluated at that frequency. Its external-current apparatus and all resources remain actual. No theorem here joins that charged-empty component to a charged vacuum by tensor attachment.
+
+The heavy record is a **relative full-minus-retained response**. The retained light/cylinder/auxiliary factors cancel in that comparison because identical factors and currents occur on both sides. They are not absent physical fields, and their absolute polarization is not inferred to vanish. The U34 records of Theorems Y.8a and Y.11.7j do not assert an interacting Standard Model or a global numerical calibration. They enter at their exact scopes; the other targets of those constructions keep their own status.
+
+The registered heavy intervals in units Q are approximately
+
+`(0.2521058944190842, 0.2640704238401130, 0.2756818976261416)`;
+
+`r/Q` is approximately `0.2637770482073389`. The inputs are the actual rational intervals of Definition Y.8a.1; these displays are rounded. Quark masses lie between `0.7Q` and `Q`, charged-lepton masses between `1.5Q` and `2.1Q`. All ideal coefficients are computable-real native action data; a finite register contains approximating words and their errors, not an exact binary representation of $\pi$.
+
+**2. Primitive electromagnetic current and full multiplicity ledger.**
+
+Use connection coordinates, with covariant derivative $d+i\,Q_{\mathrm{em}}\mathcal{A}$. In W5,
+
+$$
+Y=\operatorname{diag}(-1/3,-1/3,-1/3,1/2,1/2),
+$$
+
+$$
+T_3=\operatorname{diag}(0,0,0,1/2,-1/2),
+$$
+
+$$
+Q_{\mathrm{em}}=Y+T_3=\operatorname{diag}(-1/3,-1/3,-1/3,1,0).
+$$
+
+The primitive charge convention is fixed. $\operatorname{Tr}_{W_5} Q_{\mathrm{em}}^{2}=4/3$, $\operatorname{Tr} YT_3=0$, $\operatorname{Tr} Y^{2}=5/6$ and $\operatorname{Tr} T_3^{2}=1/2$. Consequently the EM coefficient of the common connection is
+
+$$
+B_{\mathrm{em}}=B_Y+B_2=(5/3)B_1+B_2.
+$$
+
+When the three unified coefficients and their heavy corrections coincide, $B_{\mathrm{em}}=(8/3)B_i$. Thus the U34 reference is $B_{\mathrm{em},\mathrm{ref}}=16/\pi$, and $A_{\mathrm{ref}}:=4\pi B_{\mathrm{em},\mathrm{ref}}=64$.
+
+The physical connection current is the action derivative. For a massive Dirac field it is $J_{\mathrm{conn}}^{\mu}=\bar\psi\gamma^{\mu}Q_{\mathrm{em}}\psi$, with canonical equal-time CAR and the source's actual spin, flavor and particle/antiparticle operators. In the reference canonical field coordinates, $\mathcal{A}=e_{\mathrm{ref}}A_{\mathrm{can},\mathrm{ref}}$ and $J_{\mathrm{can},\mathrm{ref}}=e_{\mathrm{ref}}J_{\mathrm{conn}}$. After the effective quadratic coefficient is computed, $A_{\mathrm{can},\mathrm{eff}}=\sqrt{B_{\mathrm{eff}}}\,\mathcal{A}$ and $J_{\mathrm{can},\mathrm{eff}}=e_{\mathrm{eff}}J_{\mathrm{conn}}$, $e_{\mathrm{eff}}=B_{\mathrm{eff}}^{-1/2}$. This is a derived field/current pairing; one cannot change only the field or only the numerical charge.
+
+The full EM branch has the following Dirac internal components. Spin multiplicity four is included once in the loop derivation, not again in these charge traces.
+
+| Sector | Components | Primitive charges | Sum charge squared | Sum charge fourth |
+|---|---:|---|---:|---:|
+| Heavy, three W5 flavors | 15 | nine `-1/3`, three `1`, three `0` | 4 | 28/9 |
+| Up quarks, three colors and generations | 9 | `2/3` | 4 | 16/9 |
+| Down quarks, three colors and generations | 9 | `-1/3` | 1 | 1/9 |
+| Charged leptons | 3 | `-1` | 3 | 3 |
+| Dirac neutrinos | 3 | `0` | 0 | 0 |
+| Total | 39 | 33 charged, 6 neutral | 12 | 8 |
+
+There are 156 spin/internal one-particle components before spatial multiplicity. All antiparticle/sea signs are those of the full Dirac source, not separate species added to the trace. The inherited mediator bright/dark/parking and preparation apparatus complements remain gauge-neutral, physically present and source-owned. Their response cancellation is a proved charge-zero factorization, not removal from resources. Quantum charged Higgs, W, non-Abelian gauge and interacting photon fields are **not fields in this Gaussian external-field class**. This declaration is not an estimate that such loops would be negligible in an interacting theory.
+
+**3. Nonempty EM source contract.**
+
+This section defines a branch, denoted **U34-EM-Gaussian-completion**. It is a mathematical physical-source construction that extends U34 and leaves U34 itself unchanged.
+
+Keep the U34 canonical source functions, actual Q/hbar/c, all four mass matrices, positive determinant orientation and representation charges. Hold the neutral Higgs background H0 fixed, turn off weak and non-Abelian external probes, and couple the same primitive EM connection to the complete massive fermion action. EM acts vectorially: the left and right parts of each up/down/electron/Dirac-neutrino mass pair have identical electric charge. Hence the EM restriction is an ordinary vectorlike massive Dirac Gaussian theory even though the complete electroweak representation was chiral. Positive left kinetic rescaling is part of the U34 action (Theorem Y.8a, proof component 1, section 2). No new Yukawa or mass fit occurs.
+
+Each sector's common left/right unitary mass diagonalization commutes with its scalar EM charge. The actual matrices are positive Hermitian ($h$ or $D_{\mathrm{phase}}^{\dagger}h\,D_{\mathrm{phase}}$ times a positive scalar), so this uses no anomalous axial phase rotation or unowned determinant phase. Its complete exterior/Fock lift and the source's fixed $U_{\mathrm{ref}}$ dressing transport all matrices, currents, effects and products. The different up/down frames are not replaced by one common weak frame. When only EM is probed, they produce the displayed mass spectra without erasing those original operator data.
+
+For a finite spatial box/cutoff use the complete canonical G CAR Hamiltonian and all occupations. The filled-sea/reference baseline is retained. The complete U34 charged services, charge providers, controls and other factors remain on the separately retained S support of Theorem V.3.11n, with the specified zero pullback of this G test port and no G–S link. This does not assign them zero charge or zero response to their own connection. On the continuum one-particle domain $H^1(\mathbb{R}^3)$ (or its registered torus analogue),
+
+$$
+h(\mathcal{A})=\hbar c\, \alpha\cdot(-i \nabla+Q_{\mathrm{em}} \mathcal{A})+\beta M
+$$
+
+is self-adjoint for the bounded smooth finite controls used here, because it is a bounded self-adjoint perturbation of the free massive Dirac operator. Finite controls have finite time-integrated norm on each actual finite source. The density/continuum functional is the limit of the owned regulated Gaussian source, not a fictitious finite physical Hamiltonian indexed by Matsubara frequencies.
+
+**Fixed subtraction input.** Apply to every massive EM Dirac species the inherited rule “zero finite quadratic fermion threshold when its mass equals $\mu$”, with common $\mu=r_{\mathrm{old}}$. Set the connection-form reference coefficient at that same label to exactly $B_{\mathrm{em},\mathrm{ref}}(r)=16/\pi$. This is a fully specified physical branch input. The choice of $r$ is inherited from the existing heavy matching experiment and shared clock; it is not selected by comparing the resulting EM coefficient with FQ7 or with an empirical $\alpha$. Extending that rule to the light determinant, which cancels in the U34 relative comparison, is an explicit additional prescription; U34 does not fix the absolute light vacuum polarization. Other extensions are possible; no uniqueness claim is made.
+
+Because $Q_{\mathrm{em}}H_0=0$, this fixed Higgs section is globally compatible with the new EM flux backgrounds; the $H=0$ restriction of the U34 matching experiment for general electroweak magnetic probes is not needed here.
+
+The action is nonempty: it is the stated free massive vectorlike EM source with finitely realizable canonical Gaussian members and the explicit regulator/refinement below. No desired $\alpha$, FQ7 source frame, candidate residual constants, Ward matrix or candidate contraction is an input to this physical calculation. The only comparison with Appendix Z occurs after the response has been derived.
+
+**4. Exact same-current quadratic response.**
+
+For a Dirac species with mass $m$ and internal charge-square trace $t$, the Ward-preserving regulated quadratic scalar is obtained from the actual current twice. With $w=x(1-x)$, its finite difference is
+
+$$
+B(q)-B(q_0)= -t/(2\pi^2) \int_0^1 w \log[(m^2+q^2 w)/(m^2+q_0^2 w)]\, dx.
+\tag{4.1}
+$$
+
+Here q and m are physical energies. In SI the external wave number is `q/(hbar c)`. Neither a mesh spacing nor a new clock enters `q/m`.
+
+**Derivation and sign.** Expand `-Tr log(gamma·(partial+iQ Acal)+m)` twice. The canonical spin trace is
+
+$$
+\operatorname{tr} \gamma_\mu \gamma_a \gamma_\nu \gamma_b =4(\delta_{\mu,a} \delta_{\nu,b}-\delta_{\mu,\nu} \delta_{a,b}+\delta_{\mu,b} \delta_{a,\nu}).
+$$
+
+Feynman parametrization and the regulated vector Ward identity produce the transverse tensor $(q^{2}\delta_{\mu,\nu}-q_\mu q_\nu)$ with scalar difference
+
+$$
+8t \int_0^1 w\, dx \int d^4k/(2\pi)^4\, [(k^2+m^2+q^2w)^{-2}-(k^2+m^2+q_0^2w)^{-2}].
+$$
+
+The radial difference is absolutely integrable and equals $\log[(m^2+q_0^2w)/(m^2+q^2w)]/(16\pi^2)$. This proves (4.1), including the spin factor, fermionic sign and charge normalization. Transversality belongs to the regulator **before** subtraction. We do not obtain it by shifting an unregulated divergent integral or by deleting finite-lattice contact terms.
+
+Only Gaussian fermions are integrated; thus (4.1) is exact for the quadratic external-field functional in this class, not a one-loop truncation of a dynamical photon theory. The proper-time-to-MOM conversion uses the same finite subtraction:
+
+$$
+B(q;\mu)=B_{\mathrm{ref}}(\mu)-\sum_a t_a/(2\pi^2) \int_0^1 w \log[(m_a^2+q^2w)/\mu^2]\, dx.
+\tag{4.2}
+$$
+
+At $q=0$ the correction is $-\sum t_a\log(m_a^2/\mu^2)/(12\pi^2)$. It is a computed conversion, not a new adjustable finite part.
+
+**4.1 Relative-heavy transport.**
+
+For three W5 flavors, $t_j=4/3$. At $\mu=r$, the determinant-root identity cancels the heavy static sum exactly. Put
+
+$$
+I(t)=\int_0^1 x(1-x) \log[1+t x(1-x)]\, dx,
+$$
+
+$$
+T_h(q)=8/(3\pi) \sum_{j=1}^3 I(q^2/d_j^2).
+$$
+
+Then the relative-heavy plus reference response is
+
+$$
+A_h(q)=64-T_h(q),\quad A_h(0)=64.
+\tag{4.3}
+$$
+
+All three masses and all twelve charged internal components are included. The neutral components and spectators remain in the full source. The exact Gaussian integral includes all loop momenta, not only a retained low-momentum block. The registered external momentum range remains $0\le q\le Q$.
+
+Because $d_j>Q/4$, $0\le q^2w/d_j^2<4$. Therefore
+
+$$
+0\le T_h(q)< (4/(3\pi)) \log 5 <8/9.
+\tag{4.4}
+$$
+
+The last strict inequality uses $\pi>3$ and $\log 5<2$. This bound makes no assertion about a missing light or interacting sector, or about $q$ outside the registered window. The integral is increasing in $q$ and decreasing in each mass. The exact source intervals and sharper endpoint are displayed in Definition V.3.11m.1.
+
+**4.2 Complete EM branch.**
+
+For the EM branch, the heavy zero remains exact, while the light static contribution is
+
+$$
+L_0= -1/(3\pi) \Bigl[ (5/3) \sum_j \log(m_{q,j}^2/r^2) + \sum_j \log(m_{e,j}^2/r^2) \Bigr].
+\tag{4.5}
+$$
+
+The factor `5/3` is the sum of the up and down charge-square indices `4/3+1/3`, with their coincident spectra. It is not the FQ7 candidate coefficient in another role. The separate weak frames and all fields are retained.
+
+Define
+
+$$
+T_l(q)=2/\pi \Bigl[ (5/3) \sum_j I(q^2/m_{q,j}^2)+\sum_j I(q^2/m_{e,j}^2) \Bigr].
+$$
+
+The derived complete Gaussian quadratic response is
+
+$$
+A_{\mathrm{full}}(q)=64+L_0-T_h(q)-T_l(q).
+\tag{4.6}
+$$
+
+The populated exact rational enclosure gives $L_0$ approximately $-2.41194538126054$; $A_{\mathrm{full}}(0)$ approximately $61.58805461873946$; total transport from $Q$ approximately $0.72521304829976$; and $A_{\mathrm{full}}(Q)$ approximately $60.86284157043971$. These numbers are outputs of this branch contract, not empirical predictions or a residual assigned to force Appendix Z.
+
+A broad analytic positive window needs no numerical fit. Since $m_q/r<4$, $m_e/r<9$, and all light masses exceed $r$,
+
+$$
+0<-L_0<[5\log 16+3\log 81]/(3\pi)<10/3.
+$$
+
+The last bound follows from $\log 16<3$, $\log 81<5$ and $\pi>3$. With total index 12 and every mass above $Q/4$,
+
+$$
+0\le T_h+T_l <4 \log 5/\pi<8/3.
+$$
+
+Hence $58<A_{\mathrm{full}}(q)\le A_{\mathrm{full}}(0)<64$ throughout $[0,Q]$. In particular the physical canonical coupling is real and finite. The exact endpoint enclosures are much tighter.
+
+**4.3 Beta normalization and distinction from subtraction labels.**
+
+Differentiation under the compact positive integral is justified by the mass gap:
+
+$$
+dA/d\log q= -(4/\pi) \sum_a t_a \int_0^1 q^2 w^2/(m_a^2+q^2w)\, dx.
+\tag{4.7}
+$$
+
+It is strictly negative for $q>0$ when a charged species is present, and tends to zero at $q=0$. Formally at asymptotically large $q$ the Gaussian expression has slope $-2\sum t/(3\pi)$: $-8/(3\pi)$ for heavy only and $-8/\pi$ for the full EM branch. Equivalently $dB/d\log q\to-\sum t/(6\pi^2)$ and $de/d\log q\to\sum t\,e^3/(12\pi^2)$ wherever $B$ remains positive. These high-$q$ identities identify normalization; they do not enlarge U34's admitted external-$q$ domain or assert a physical positive all-scale continuation.
+
+A subtraction-label change is different. Under $\mu\to\mu\exp\ell$, the explicit determinant term in (4.2) increases by $\sum t\,\ell/(6\pi^2)$. The **same physical action** has
+
+$$
+B_{\mathrm{ref}}(\mu \exp \ell)=B_{\mathrm{ref}}(\mu)-\sum t\, \ell/(6\pi^2).
+$$
+
+The total B and every physical response are unchanged. The full EM class has sum $t=12$, while the heavy-only EM class has sum $t=4$. Holding the numerical $B_{\mathrm{ref}}$ fixed while changing $\mu$ is a new physical boundary coefficient, not pure RG relabeling. This is why the finite static shift alone cannot refute a scheme-independent physical Thomson target.
+
+**5. Full matrix response, preparation/readout and actual current boundaries.**
+
+The internal identification between the U34 heavy carrier and $\mathbb{C}^3\otimes W_5$ is the tensor permutation and the actual low-source isometry, with identity on the spin/spatial factors and full neutral complement. It is a *-isomorphism on the retained internal algebra, not a conditional expectation into scalar records. In the mass basis the response is the operator-valued spectral function
+
+$$
+H(q)=\int_0^1 w \log[I+q^2 w D_{\mathrm{old}}^{-2}]\, dx,
+$$
+
+$$
+K(q)=H(q) \otimes Q_{\mathrm{em}}^2.
+$$
+
+Then $T_h(q)=(2/\pi)\operatorname{Tr}K(q)$. Under any source frame change $U$, $D$, $H$, every retained $B$, and every effect transform together. The five W5 blocks each retain the full $M_3$ flavor algebra. Products remain ordered matrix products; noncommuting source tests are not reduced to pointwise products of scalar expectations.
+
+The 45-atom preparation/readout interface of Theorem V.3.11l applies to these actual matrix-valued functions. On each flavor block its nine positive preparation matrices span Herm(3); their dual reconstructs every operator. The response-symbol map is therefore rank 9 on each block and rank 45 globally, with the 44-dimensional normalized moment covariance floor `1/2025` proved there. The state at uniform positive preparation weights is exactly the trace state. Source-dependent matrix kernels are pulled back through that map; they are not selected by adjusting its weights. This covariance is the calibration-register moment covariance, not a newly asserted Gaussian-vacuum susceptibility. The uniform preparation density is not identified with the charged-field vacuum: the vacuum current loop and its canonical contraction trace were derived independently in section 4. The IC readout and preparation directions remain distinct, its inverse is not promoted to a positive recovery on the whole simplex, and conditional instruments retain their updated matrix fibers. The complete quantum conditional/product rules and resource proof of Theorem V.3.11l apply unchanged.
+
+At finite physical cutoff every charge-preserving internal meter B has its actual full CAR lift. Frame changes lift by exterior unitaries, so density operators, effects, **all** ordered products and CP instrument compositions intertwine exactly. The internal tests commute with the primitive charge on each W5 block and hence fit the original finite charge-block control service. Their operation can disturb the source and has paid controls; it is not inserted silently into the vacuum matching history. Fresh protocol runs retain their own preparation, records and errors. The finite source can be compared to a continuum retained Fourier block using the inherited current estimates:
+
+$$
+\epsilon_h \le \hbar c \sum_j[a \Lambda_j^2/2+a^2 \Lambda_j^3/6],
+$$
+
+$$
+\epsilon_{V,j} \le \hbar c\, \lVert Q\rVert[a R_j+a^2 R_j^2/2],
+$$
+
+and a line-integrated link adds its declared sinc error. Every Wilson contact derivative remains in the finite source. On $n$ retained one-particle modes, $\lVert U_a(t)-U_\infty(t)\rVert\le|t|\,n\,\epsilon_h/\hbar$; analogous complete-instrument bounds follow by telescoping. Thus finite tests/products/conditioning are transported on their declared domains without a claim of norm convergence on the full infinite Fock space. Continuum determinant tails are handled separately below, not discarded by this low-mode map.
+
+**The internal charge match is not the whole physical-current gate.** On the heavy internal carrier $J_{\mathrm{FQ7}}=Q_{\mathrm{em}}/2$ has Hilbert--Schmidt norm one, so its algebraic charge normalization agrees. The actual spatial current is $\hbar c\,\alpha_j\otimes Q_{\mathrm{em}}$, and the actual density current is $I_{\mathrm{spin}}\otimes Q_{\mathrm{em}}$, with the source/current unit map above. At zero momentum the positive-energy projector is $(I+\beta)/2$; since $\{\alpha_j,\beta\}=0$, its spatial-current compression is zero. Therefore a naive projection onto one rest spin state cannot identify the nonzero FQ7 matrix with that spatial current and preserve response. Keeping both Dirac signs and the virtual intermediate states is essential; this does not imply zero Thomson scattering or a general FQ7 impossibility.
+
+Nor can one silently normalize the **whole** 39-dimensional charge matrix to Hilbert--Schmidt one and then claim the heavy projection equals $J_{FQ7}$: the full charge-square trace is 12, so that projection has norm squared `1/3`, not 1. The physical primitive charge is fixed; choosing a different mathematical norm must retain its conversion factor. This is a typed normalization warning, not an assumption that Appendix Z demands full-carrier HS normalization.
+
+Finally, the seven FQ7 source operators, their grade/Ward arrows and their evaluation row have not been derived by this Dirac calculation. A faithful interface for all matrices does not identify a physical source-generation complex. No false rank loss is inferred from the fact that one current functional is a single trace.
+
+**6. Complete remainder and a populated finite physical source.**
+
+There are four distinct error types. They are not merged into an unspecified “small remainder”.
+
+**6.1 Exact quadratic law and analytic/numerical integral tails.**
+
+Equation (4.1) is the exact quadratic response of the stated Gaussian action. There is no omitted photon/gauge/Higgs loop in that action. This does not say those sectors are absent in the full original target. Every continuum loop momentum is included in its convergent subtracted scalar difference.
+
+$I(t)$ is evaluated without floating quadrature. Put $r_t=t/(t+4)$. Substitution $2x-1=y$ gives the exact convergent expansion
+
+$$
+I(t)=\log(1+t/4)/6 -(1/2) \sum_{n\ge 1} r_t^n/[n(2n+1)(2n+3)].
+\tag{6.1}
+$$
+
+For $0\le t\le 16$, $r_t\le 4/5$. After $N$ terms the omitted positive sum is at most
+
+$$
+r_t^{N+1}/[2(N+1)(2N+3)(2N+5)(1-r_t)].
+\tag{6.2}
+$$
+
+$N=160$ is used. The log is range-reduced to $[1,2]$ and evaluated by $2\sum z^{2k+1}/(2k+1)$, $z=(y-1)/(y+1)\le 1/3$, with tail at most $2z^{2N+1}/[(2N+1)(1-z^2)]$; $N=80$ is used. Machin's alternating arctangent formula encloses $\pi$. Monotonicity in each mass gives rational outward interval bounds using the exact registered mass intervals. Decimal rounding is outward, never the certificate's underlying arithmetic.
+
+For an independent all-momentum evaluation bound, after the Ward-preserving scalar subtraction write $u=k^2$. For $A=m^2+q^2w$ and $B=m^2$,
+
+$$
+|(u+A)^{-2}-(u+B)^{-2}|\le 2q^2w/(u+B)^3.
+$$
+
+The radial measure is $u\,du/(16\pi^2)$. Hence the omitted radial region $k>K$ changes inverse coefficient by at most
+
+$$
+\Bigl[2 \sum t/(15\pi)\Bigr] q^2/K^2,
+$$
+
+and $k<\kappa$ by at most
+
+$$
+\Bigl[\sum t/(15\pi)\Bigr] q^2 \kappa^4/m_{\min}^6.
+$$
+
+For the full class, $\sum t=12$, $m_{\min}>Q/4$, $q\le Q$, $K=2^{20}Q$, $\kappa=2^{-16}Q$, these are below $2^{-40}$ and $2^{-53}$. These are **evaluation tails of the already Ward-defined convergent scalar**, not a claim that a bare hard cutoff preserves the Ward identity. The closed-form expansion (6.1) uses the entire integral and does not add these optional tails a second time.
+
+**6.2 Finite physical static extraction, with every charge and momentum mode.**
+
+The inherited canonical Landau-torus proof applies to every vectorlike EM mass/charge in this branch. Both signs, full spin degeneracy, all retained occupations, exact zero-field normalization and sea/reference baselines are retained. The source uses no continuum flux variation on one torus. For charge unit `1/3` choose
+
+$$
+B=2^{-24} Q^2,\quad \epsilon=2^{-64} Q^{-2},\quad T=2^{14} Q^{-2},
+$$
+
+$$
+L_x=L_y=L_z=L_\tau=L,\quad L^2=6\pi\, 2^{24} Q^{-2},\quad P_{\mathrm{cut}}=2^{40} Q.
+$$
+
+Then $(1/3)BL^2=2\pi$: all charge weights are exactly flux-compatible, with integer fluxes 1, 2 or 3. Each signed $B$ and zero-field background is an independently prepared source setting. These natural-unit coordinates restore physical spatial length by $\hbar c$ and physical Euclidean duration by $\hbar$. Proper-time $\epsilon$ and $T$ have $\text{energy}^{-2}$ units and are **not** the source clock. Physical clock remains $\hbar/Q$.
+
+The inherited bounds, summed over the complete actual charge/mass list, are
+
+$$
+E_{\mathrm{spec}} \le \log(T/\epsilon)/2\, \exp(-\epsilon P_{\mathrm{cut}}^2/2)\, [h_B(\epsilon/2)+h_0(\epsilon/2)],
+$$
+
+$$
+\delta_L=2 \exp(-L^2/(4T))/(1-\exp(-L^2/(4T))),
+$$
+
+$$
+E_{\mathrm{box}} \le (\epsilon^{-2}-T^{-2})/(16\pi^2)\, [(1+q_{\mathrm{charge}}^2 B^2 T^2/3)((1+\delta_L)^2-1)+((1+\delta_L)^4-1)],
+$$
+
+$$
+E_{\mathrm{UV}} \le [q_{\mathrm{charge}}^2 B^2 |m^2-r^2|\epsilon/3+q_{\mathrm{charge}}^4 B^4 \epsilon^2/90]/(8\pi^2),
+$$
+
+$$
+E_{\mathrm{IR}} \le q_{\mathrm{charge}}^2 B^2/(24\pi^2)\, [\exp(-m^2T)/(m^2T)+\exp(-r^2T)/(r^2T)].
+$$
+
+The nonlinear magnetic remainder satisfies, for all real B,
+
+$$
+-B^4 \sum_{\mathrm{components}} q_{\mathrm{charge}}^4/(360\pi^2 m^4) \le R(B)\le 0.
+\tag{6.3}
+$$
+
+This follows directly from the partial fractions of $x\coth x$ and $-x^4/45\le x\coth x-1-x^2/3\le 0$; integrating the proper-time term gives $m^{-4}$. The full fourth-charge sum is 8, and every mass exceeds $Q/4$. Thus the inverse-coefficient symmetric-curvature bias is strictly below $16(B/Q^2)^2=2^{-44}$.
+
+For action-density error $E$ on each of the evaluated source settings, the curvature estimator $4\pi[W(B)+W(-B)-2W(0)]/B^2$ has error at most $16\pi E/B^2$. With the populated parameters:
+
+- $\epsilon P_{\mathrm{cut}}^2/2=2^{15}$;
+- $m_{\min}^2T>2^{10}$ and $r^2T>2^{10}$;
+- $L^2/(4T)>4096$;
+- $B^2T^2=2^{-20}$;
+- $\sum q^2=12$, $\sum q^4=8$, and $|m^2-r^2|<5Q^2$.
+
+Using only $e>2$, $3<\pi<22/7$ and $\log 2<1$, conservative **inverse-coefficient** budgets are
+
+$$
+\mathrm{UV} <14\cdot 2^{-64},\quad \mathrm{spectral} <2^{200-32768},
+$$
+
+$$
+\mathrm{box} <2^{200-4090},\quad \mathrm{IR} <2^{-1000}.
+$$
+
+For example at $t=\epsilon/2$ the complete 39-component heat sum is below $128\epsilon^{-2}$: $x\coth x<2$, each winding factor is below 2, and the canonical four-spin prefactor is retained. This gives the displayed spectral bound after multiplication by the curvature factor. Box and IR bounds are much looser than the direct values, so no numerically delicate exponential is used. Set the total arithmetic/current-word/static-readout inverse-response allowance to $2^{-60}$. The combined static extraction error, including (6.3), is below $2^{-43}$. These inequalities hold in exact integer and rational arithmetic.
+
+There are finitely many spatial Landau and longitudinal modes below $P_{\mathrm{cut}}$. Here $LQ<2^{15}$, so a conservative charged-mode count across the finite full/zero-field settings is below $2^{180}$; this bound includes 156 spin/internal components. For nonzero flux one may use transverse Landau index below $2^{105}$, longitudinal count below $2^{56}$ and flux degeneracy at most 3; the free reference uses three bounded momentum indices. This overcounts harmlessly. The Fock space contains every occupation. The physical inverse temperature has $\beta Q=LQ>2^{14}$, so its massive thermal-to-vacuum error $N_{\mathrm{exc}}\exp(-\beta m_{\min})/\beta$ is smaller than $2^{-3900}Q$ before density normalization. Neutral factors identical in the response settings cancel exactly but retain their original energy/state/resource entries.
+
+At each fixed finite member, the original source-aware energy and current measurements/controls can be refined to the stated positive allowance. Compact proper-time quadrature has smooth positive endpoints, and certified interval arithmetic terminates. The full EM source uses the same vectorlike spectral/energy protocol; no continuum experiment is claimed to have been physically run. Increasing precision or cutoff increases physical dimension, peak controls, baseline, work, sample/word counts and duration. No uniform finite resource bound is claimed.
+
+The classical field energy is $V B_{\mathrm{em},\mathrm{ref}}B^2/2$ in the same connection units. The source's sea/reference baseline is not removed by a relative determinant cancellation. Fresh settings and records are paid. Finite program error in masses/current is propagated through the following bounds, not credited as a free exact implementation.
+
+**6.3 Input/current/clock error propagation.**
+
+For a species on $m\ge m_0>0$, differentiation gives
+
+$$
+|\partial_m [2t\, I(q^2/m^2)/\pi]| \le 2t/(3\pi m_0).
+$$
+
+For static light shift the same bound applies to each mass. The derivative with respect to the common $\log r$ is $2\sum_{\mathrm{light}}t/(3\pi)=16/(3\pi)$, with **one shared** $r$ uncertainty. Its heavy determinant-root cancellation remains exact when the correlated root is recomputed from the actual $D$, rather than forming independent intervals and calling them zero.
+
+For the reference coefficient $A_{\mathrm{ref}}(g)=32\pi/(3g^2)$ and $g\in[2/3,3/4]$, $|A_{\mathrm{ref}}'(g)|\le 72\pi<227$. A common $g$ word error is propagated once. Its induced light mass changes are correlated source changes already covered by the action/field transfer and are not independently resampled. Physical $q$ and every mass use the same calibrated $Q$; a mere unit change leaves $q/m$ invariant. A genuine clock/calibration perturbation enters the actual ratio and the measured source/current exposure.
+
+A nonzero momentum probe on a finite box must also own its wave-number grid. Equation (4.7) gives $|\partial_q A_{\mathrm{full}}|\le 128/(15Q)$ on $[0,Q]$ using the full index 12 and mass floor $Q/4$. Choosing the lower adjacent allowed Fourier energy gives $0\le q-q_L<2\pi/L$, hence $|A(q)-A(q_L)|<1024/(15LQ)$ in natural energy coordinates. Increasing the flux-compatible integer $n$ until $LQ>1024/(15\epsilon_q)$ makes this error smaller than any requested $\epsilon_{q}$ without changing $Q$, the current or the mass inputs. This is a separate nonzero-$q$ refinement family, with its enlarged spatial mode count and resources; the zero-momentum static extraction contract above is not falsely assigned the same precision at arbitrary $q$.
+
+For fixed B or q, finite source/current-word errors can be reduced below any requested positive budget using the inherited finite compiler and compact positivity margins. If a new physical native-law uncertainty is not covered by the registered intervals, it must be added. We do not assert that the displayed b128 gauge word alone implements every much finer control tolerance.
+
+**6.4 Remainder polarity.**
+
+The exact Gaussian quadratic formula plus the explicit finite source/evaluation errors is a complete remainder statement **for this declared source/protocol class**. It is not a complete Definition-Z.27.11g/j residual certificate. Its missing identification with the original Z core/owners is not “zero remainder”, and the difference $A_{\mathrm{full}}(0)-\alpha_{\mathrm{core}}$ is not licensed as a physical residual just because it can be subtracted arithmetically.
+
+**7. Exact scoped obstructions and the minimal independent datum.**
+
+**7.1 Inherited Gaussian class: running cannot produce the desired graft.**
+
+Fix the U34 heavy source, original common reference $B_*=6/\pi$, primitive EM current, original determinant-root subtraction and allowed $0\le q\le Q$. Then (4.3) proves $A_h(0)=64$ and $568/9<A_h(q)\le 64$. No alteration of the subtraction label with its required counterterm can change these physical values. No splitting of the three positive masses with the same root condition changes the zero-momentum cancellation. The registered positive trace-preserving matrix-fiber adapter does not change the action derivative or insert a new vacuum-polarization term.
+
+Consequently a proposed graft that keeps this complete class and additionally demands the Z core plus the diagnostic FQ7 residual near 137.036 at the **same** endpoint is infeasible. This is a scoped contradiction between a fully specified class and an additional imposed comparison, not a discrepancy between values at unspecified scales and not a proof that the whole original V11 target is false.
+
+The full-EM completion has the derived endpoint interval displayed in Definition V.3.11m.1. Demanding an unequal endpoint while holding its action/current/subtraction/reference data fixed is inconsistent. This does not promote its branch-specific static shift to a scheme-independent refutation of another physical theory.
+
+**7.2 Exact one-dimensional boundary ambiguity theorem.**
+
+Consider a fixed massive vectorlike current theory with all its noncommutative matter/source data, fixed units, and the exact momentum **differences** (4.1), but without an absolute Maxwell boundary coefficient. Restrict possible additional local quadratic terms to parity-even O(4)-invariant gauge terms of degree at most two in momentum. Then the undetermined space is exactly one real dimension, represented by
+
+$$
+\lambda/4 \int \mathcal{F}_{\mu,\nu}\, \mathcal{F}_{\mu,\nu}.
+$$
+
+**Proof.** The most general $O(4)$-covariant symmetric degree-two momentum tensor has $a\,q^2\delta_{\mu,\nu}+b\,q_\mu q_\nu$. The Ward identity forces $a+b=0$. Degree-zero mass terms fail the same identity. The parity-odd topological density has zero quadratic response on the registered trivial/local probe family and is excluded from the parity-even class. Thus only one transverse coefficient remains. Conversely any real $\lambda$ gives exactly this allowed tensor, shifts $B$ by $\lambda$, preserves every difference $B(q)-B(q_0)$, every fermionic determinant ratio/current insertion, all mass and charge matrices, and the full noncommutative response algebra. On a positive window, a small positive $\lambda$ gives another nonempty physical external-field action. For example $\lambda=0$ and $\lambda=1/4$ are explicit target-free choices. Their absolute background work and canonical EM coupling differ, so these are not the same fully fixed U34 datum. ∎
+
+This is a theorem of **nonidentifiability from the stated relative-current data**, not an absence-of-data theorem and not a nonuniqueness theorem for all original global constraints. The U34 boundary fixes that one scalar. It is not available to tune after calculation. In the full EM branch it is likewise fixed with the uniform subtraction input. If an additional charged sector, nonlocal action or higher-derivative term is allowed, there are further independently variable response functions; the one-dimensional theorem does not cover them.
+
+**7.3 Exact remaining original overlap.**
+
+There is an explicit full charged Gaussian response and a faithful matrix-valued record interface. The remaining original datum is a **source-derived identification of this physical current-response functional with the Appendix-Z Thomson theory and its core subtraction/ownership decomposition**. It must establish that the actual gauge/Dirac/spatial/domain/current normalization and generated source complex are the same ones used by the Z core, and it must transport the chosen Maxwell boundary, every additional charged sector, and the complete remainder without replacing a physical contribution by a desired arithmetic difference.
+
+Concretely, the Gaussian side supplies $\lim_{q^2\to 0}(\delta^2\Gamma_{\mathrm{full}})_{\mathrm{transverse}}/q^2=B_{\mathrm{full}}(0)$. The missing source map must identify the Z electromagnetic source/degree/core projections with this actual Hessian in the same connection and current units, rather than identify only their finite charge matrices. For this proposed class, the comparison equation would use the **already derived** $A_{\mathrm{full}}(0)$, not a chosen counterterm. The FQ7 representation/current trace identity alone supplies neither its seven-source exhaustion nor its odd-degree residual functional. The original U34 photon component's absent charged bundle and different physical support also require a genuine matching/interface construction; its high-frequency pump is not covered by the inherited low-$q$ theorem. The original production/entropy/baryon overlaps and other global outputs remain separate exact gates.
+
+An independent physical branch could supply these maps. What is disallowed is defining its physical residue, sign or boundary by solving for the target number and then treating that equation as its source derivation.
+
+**V.3.11n Complete Disjoint-Support Source and Tensor-Only Padding.**
+
+<a id="definition-v311m1-literal-fixed-source-gaussian-current-certificate"></a>**Definition V.3.11m.1 (Literal Fixed-Source Gaussian Current Certificate).** The following original finite certificate instantiates Theorem V.3.11m's declared relative-heavy and new external-EM Gaussian branches, with their same current, mass, subtraction and reference data. Decimal-string endpoint pairs are outward finite-decimal intervals; fraction strings are exact rational inputs. The finite endpoint contract’s $2^{-43}$ bound concerns that Gaussian finite-source calculation. It is not the combined bound after Theorem V.3.11n's additional source extension, whose separately proved $2^{-42}$ bound remains controlling. Neither the endpoint table nor the fixed-source subtraction selects the original universal calibration datum or proves its still-unresolved physical parent overlap.
+
+##### Fixed-source Gaussian current and endpoint certificate
+
+The following tables specify the fixed Gaussian current, endpoint scales and complete charged inventory. Mass and response endpoint pairs are exact outward rational intervals; the four momentum rows use the same source and subtraction convention. The Gaussian finite-source inverse-response allowance is $2^{-43}$; the later enlarged source retains its separately proved $2^{-42}$ allowance.
+
+##### Gaussian current and endpoint data
+
+| Quantity or condition | Value |
+| --- | --- |
+| New Thomson inverse coefficient | $[61.58805461873946116156, 61.58805461873946116483]$ |
+| New static light shift | $[-2.41194538126053883844, -2.41194538126053883517]$ |
+| Normalized covariance floor | $1/2025$ |
+| $\pi$ | $[3.1415926535897932384626433832795028841971, 3.1415926535897932384626433832795028841972]$ |
+| Response rank | $45$ |
+| Unresolved exact input | source-derived current/core-subtraction and physical overlap from this Gaussian response to the original Appendix-Z same-current theory; absent data is not a no-go theorem |
+
+###### Current
+
+| Quantity or condition | Value |
+| --- | --- |
+| J heavy HS squared | $1$ |
+| Coupling current dictionary | $J_{\mathrm{can,ref}}=e_{\mathrm{ref}}J_{\mathrm{connection}}$; $J_{\mathrm{can,eff}}=e_{\mathrm{eff}}J_{\mathrm{connection}}$; $e_{\mathrm{eff}}^2=1/B_{\mathrm{eff}}$ |
+| Full HS rescaled heavy squared | $1/3$ |
+| Rest spatial positive energy compression | $0$ |
+
+###### Q W5
+
+| Row | Column | Value |
+| --- | --- | --- |
+| 1 | 1 | $-1/3$ |
+| 1 | 2 | $0$ |
+| 1 | 3 | $0$ |
+| 1 | 4 | $0$ |
+| 1 | 5 | $0$ |
+| 2 | 1 | $0$ |
+| 2 | 2 | $-1/3$ |
+| 2 | 3 | $0$ |
+| 2 | 4 | $0$ |
+| 2 | 5 | $0$ |
+| 3 | 1 | $0$ |
+| 3 | 2 | $0$ |
+| 3 | 3 | $-1/3$ |
+| 3 | 4 | $0$ |
+| 3 | 5 | $0$ |
+| 4 | 1 | $0$ |
+| 4 | 2 | $0$ |
+| 4 | 3 | $0$ |
+| 4 | 4 | $1$ |
+| 4 | 5 | $0$ |
+| 5 | 1 | $0$ |
+| 5 | 2 | $0$ |
+| 5 | 3 | $0$ |
+| 5 | 4 | $0$ |
+| 5 | 5 | $0$ |
+
+###### Finite endpoint contract
+
+| Quantity or condition | Value |
+| --- | --- |
+| B over Q2 | $1/2^{24}$ |
+| $L^2Q^2$ | $6\cdot\pi\cdot 2^{24}$ |
+| P over Q | $2^{40}$ |
+| Arithmetic inverse response allowance | $2^{-60}$ |
+| Common flux integer | $1$ |
+| Epsilon Q2 | $1/2^{64}$ |
+| Finite charged mode count bound | $2^{180}$ |
+| Inverse coefficient error bound | $2^{-43}$ |
+| Minimal primitive charge | $1/3$ |
+| Proper T Q2 | $2^{14}$ |
+| Temperature $\beta Q$ lower | $2^{14}$ |
+
+The exact outward mass intervals and all four same-source momentum-response rows, including the three heavy-component integrals at each momentum, are given in [the mass and momentum calculations](../related/calculation_companions/appendix_v/v3-11m-gaussian-current-calculations.md#mass-and-momentum-enclosures). These use the same current, mass, subtraction, reference and finite-source conventions of Definition V.3.11m.1.
+
+###### Radial evaluation tails
+
+| Quantity or condition | Value |
+| --- | --- |
+| IR inverse coefficient bound | $2^{-53}$ |
+| $K$ over $Q$ | $2^{20}$ |
+| UV inverse coefficient bound | $2^{-40}$ |
+| $\kappa$ over $Q$ | $2^{-16}$ |
+
+###### Source domains
+
+| Quantity or condition | Value |
+| --- | --- |
+| Inherited heavy | relative-heavy plus registered reference; q/Q in [0,1] |
+| New EM completion | external-EM vectorlike Gaussian source at H0; same masses/current/units, uniform mass-mu subtraction; no interacting photons or quantum gauge/Higgs loops |
+
+###### Species
+
+| Quantity or condition | Value |
+| --- | --- |
+| Dirac internal components | $39$ |
+| Charged components | $33$ |
+| Full spin internal components | $156$ |
+| Heavy charge square | $4$ |
+| Light charge square | $8$ |
+| Spin components per internal | $4$ |
+| Total charge fourth | $8$ |
+| Total charge square | $12$ |
+
+###### Primitive charges
+
+| Index | Value |
+| --- | --- |
+| 1 | $-1/3$ |
+| 2 | $-1/3$ |
+| 3 | $-1/3$ |
+| 4 | $-1/3$ |
+| 5 | $-1/3$ |
+| 6 | $-1/3$ |
+| 7 | $-1/3$ |
+| 8 | $-1/3$ |
+| 9 | $-1/3$ |
+| 10 | $1$ |
+| 11 | $1$ |
+| 12 | $1$ |
+| 13 | $0$ |
+| 14 | $0$ |
+| 15 | $0$ |
+| 16 | $2/3$ |
+| 17 | $2/3$ |
+| 18 | $2/3$ |
+| 19 | $2/3$ |
+| 20 | $2/3$ |
+| 21 | $2/3$ |
+| 22 | $2/3$ |
+| 23 | $2/3$ |
+| 24 | $2/3$ |
+| 25 | $-1/3$ |
+| 26 | $-1/3$ |
+| 27 | $-1/3$ |
+| 28 | $-1/3$ |
+| 29 | $-1/3$ |
+| 30 | $-1/3$ |
+| 31 | $-1/3$ |
+| 32 | $-1/3$ |
+| 33 | $-1/3$ |
+| 34 | $-1$ |
+| 35 | $-1$ |
+| 36 | $-1$ |
+| 37 | $0$ |
+| 38 | $0$ |
+| 39 | $0$ |
+
+<a id="theorem-v311n-full-current-and-instrument-factorization-with-charged-services-retained"></a>**Theorem V.3.11n (Full Current and Instrument Factorization with Charged Services Retained).** On the explicitly declared disconnected external-field support, the complete G Gaussian source and the complete charged S service source of Theorem Y.8a have no links, the test connection has zero S pullback, and the fixed dressing is independent of that test. The full native functional, current/contact, ordered products and normalized instruments then intertwine before subtraction. The primary convention uses the actual normalized service state and an unnormalized G force trace; an optional finite canonical convention has its own positive trace factorization. All extra copies, fields, service charges, energies, clocks, controls and errors remain owned. The optional MPU realization uses complete tensor factors; direct-sum padding is not a response realization. This source construction does not establish the missing whole-original current/support/core or production/photon overlap.
+
+**Proof and complete source contract.**
+
+**1. Charged inventory and independent supports.**
+
+The complete charged inventory and its independent supports are those of Theorem Y.8a, proof component 2:
+
+* Section 2 there retains the light boundary CAR, all cylinder CAR, heavy/complement CAR, reservoirs, apparatus and full Hamiltonian. The complete cylinder one-particle dimension is $32(N^3-N)$, not the selected output-channel dimension. The actual source record has $P=\{0\}$ and $N=28529485087250513172120$. The boundary quadratic-variable count is $(4d_E+144)|P|$, $d_E=2\cdot 2^{72}-1$.
+* Section 5 there retains opposite-charge fermionic partners and both spin-one weak references; their initial reference charges are +1 and -1. Vanishing total charge, B or parity does not make those charged degrees of freedom neutral.
+* Section 6 there contains actual boundary/cylinder transfer. This is a controlled internal S operation; it is dormant during the experiment below. It is not an absent cost.
+* Section 7 there includes all cylinder quark and boundary/reservoir charges in the full pointer. Section 8 there retains twelve reserve fermion modes and the full additional apparatus factor $3\cdot 2^{12}\cdot 5\cdot 3\cdot 2\cdot 2^{4}\cdot 3=17694720$. Their charges remain the source's own operators; no invented charges are assigned to the reserve modes.
+* The threshold protocol of section 8 there establishes a *relative* comparison. Its canceled factors are still physically present. It is not an absolute-response theorem for the present connection.
+
+Let $M_G$ be the finite torus/box family of the canonical massive Dirac regulator; let $M_S$ be a disjoint copy of the complete physical support of Theorem Y.8a, with all its components. Define the physical support $M=M_G\sqcup M_S$. There is the same primitive $U(1)$ representation and connection convention on both. There is no additional dark gauge group. The background connection is
+
+$$
+\begin{aligned}
+A_{\mathrm{total}}(a) = (a,A_{S,\mathrm{idle}}),\qquad i_G^{*}\,\delta A_{\mathrm{total}} &= \delta a,\\
+i_S^{*}\,\delta A_{\mathrm{total}} &= 0.
+\end{aligned}
+\tag{1.1}
+$$
+
+Here $A_{S,\mathrm{idle}}$ is a fixed, registered service background. It may be nonzero. This is an actual restriction of the allowed connection family on disjoint supports, not an assertion that shielding makes an everywhere-present field exactly zero. $S$ fields respond to changes of their own connection; that connection is not varied in this experiment. On disconnected supports a smooth test one-form on $G$ extends by zero to $S$ without an interface or hidden boundary field.
+
+The class is the external-field Gaussian class. No dynamical photon, Coulomb constraint or gauge propagator connecting G and S is integrated. A connected physical photon field or a spatially extended test field with nonzero S pullback is outside this contract until its response is supplied. The U34 photon hardware stays within S with its own state and charges. The zero pullback is a specified port assignment, not a theorem that a real connected photon background would decouple it.
+
+G consists of all 15 heavy, 9 up-quark, 9 down-quark, 3 charged-lepton and 3 Dirac-neutrino internal components, with all four spin components, all regulated spatial modes, both signs of the Dirac spectrum and every CAR occupation. Their primitive charges are respectively (nine $-1/3$, three $+1$, three $0$), nine $+2/3$, nine $-1/3$, three $-1$, three $0$. Thus G has 39 internal components, 33 charged, $\sum q^2=12$, $\sum q^4=8$; these are counts of *response-active G species*, not all charged matter on $M$. The complete source is strictly larger.
+
+The G heavy and light coefficient functions are copied from the source's known classical word $r$, including their distinct matrix frames. Copying known classical coefficients is not cloning an unknown quantum state. The exact primitive rational charges are unchanged. The inherited mass/current/clock functions supply $Q$, $\hbar$, $c$, and $t_c=\hbar/Q$. No Fourier, Matsubara or proper-time parameter is a replacement clock.
+
+**2. Complete source, preparation and time segments.**
+
+At every regulated member R use the graded CAR tensor product, with all response operators even, so that the ordinary tensor formulas below are valid on the even observable algebra. The complete carrier is
+
+$$
+H_R = F(K_{G,R})\otimes H_S\otimes H_A.
+$$
+
+`H_S` is the complete common source carrier of Theorem Y.8a, including its full action, retained sectors and source factors, not merely $H_{33}$'s production output. `H_A` comprises the $G$-local preparation, field actuator, neutral meter/control, source-word, work, purifier and record factors; its stored states and energies are retained. All previous trials and failures have their own owned cells. Where $S$ is not a finite thermal carrier, it retains its actual normalized state; §3 never requires a nonexistent $S$ Gibbs trace.
+
+The physical source has no G–S quantum links at any stage. All cross-support link Hamiltonians, their first and second response derivatives, and any higher response derivative being used are identically zero. In particular, S loaders do not load G. The source's boundary/cylinder transfer and other production drives are parked within S throughout the G response protocol. Classical source-word programming is performed in preparation, from the same known r on both sides; it is not a response-dependent quantum interaction. Its storage and copying operations are paid.
+
+On the **native response segment**, all G preparation and meter couplings are off. In canonical coordinates the complete law is
+
+$$
+\begin{aligned}
+H_{\mathrm{native}}(a;r) &= H_{G,R}(a;r)\otimes I_{SA}\\
+&\quad + I_G\otimes H_{S,\mathrm{idle}}(r)\otimes I_A\\
+&\quad + I_{GS}\otimes H_{A,\mathrm{idle}}(r)+L_R(r)\,I.
+\end{aligned}
+\tag{2.1}
+$$
+
+$L_{R}$ is fixed on the declared test chamber. It includes any added chamber-wide positivity baseline; it has no derivative in $a$. A baseline already contained in $H_{G,R}$, including its filled-sea terms, must not be counted again in $L_{R}$ or discarded. The field-dependent classical gauge action is separately on $G$ and is differentiated, not put into $L_{R}$. The connection apparatus cost and reference term are explicit in §5.
+
+The source dressing of Theorem Y.8a is retained *inside S*: $U=I_G\otimes U_{\mathrm{ref},S}(r,H_*)\otimes I_A$. The stored $H_*$ and $r$ are fixed during this experiment. G is in its canonical source coordinates; a fixed G flavor diagonalization may alternatively be included as a tensor factor. In either description $\partial_a U=0$. No dressing mixes G with S. The physical Hamiltonian, state, all effects and current insertions are transported together by $U$. The actual service charge becomes $UQ_SU^{\dagger}$, not zero. The actuator generates the prescribed external field during preparation; its driving/switching law is outside the native Gaussian segment and is paid separately. Its stored setting and idle Hamiltonian introduce no extra varied native force port. The classical field energy and Maxwell response on G are kept explicitly, rather than hidden in a normalized apparatus factor.
+
+**A nonempty finite implementation.** For G use the finite canonical Dirac member of Definition W.6a.1 and Theorem W.6a.7, with the complete positive/negative spectrum and canonical Grassmann normalization. Its finite CAR Hamiltonian is
+
+$$
+\begin{aligned}
+H_G &= E_{\mathrm{ref}}I - (1/2)\sum_\alpha E_\alpha I\\
+&\quad + \sum_\alpha E_\alpha n_\alpha,\\
+Z_G &= \exp(-\beta E_{\mathrm{ref}})\prod_\alpha 2\cosh(\beta E_\alpha/2) > 0.
+\end{aligned}
+\tag{2.2}
+$$
+
+All $E_{\alpha}$ and the reference are finite at a finite member. Hence the trace exists, is nonzero and includes every occupation. The connection current is differentiated from the first-order action, before using the spectral evaluation list. Flux sectors are separately registered backgrounds, not continuously varied bundles on one fixed torus.
+
+A source-known finite Gaussian Slater vacuum can be prepared by occupation preparation followed by a finite number-conserving one-particle rotation, with its Fock lift. Relative to the filled sea its total charge is the fixed vacuum charge; neither individual charge neutrality nor omitted antiparticles are assumed. For finite native Gibbs tests, a diagonal mixture with the full occupation probabilities may instead be loaded from source-known charge-sector providers local to G. Those additional charged providers would have zero test pullback on a separate G-service support and must be included in $H_{A}$ and the same factorization. They are unnecessary for the vacuum implementation selected here: use the source-known vacuum and the thermal-to-vacuum error from the actual finite spectral trace. This avoids postulating an uncharged purifier of a charged Gibbs mixture. The mathematical native thermal trace (2.2), its limit and spectral evaluation remain valid without such a physical global Gibbs preparation.
+
+Finite vacuum preparation uses an owned charge-compatible reference occupation and local Gaussian controls, with bounded finite Hamiltonians and an added fixed positive baseline. Its work, time and blank/reference state are inputs, not free reset. No unknown state recovery is invoked. Approximate finite controls retain every outcome and error. Charge-superselection sectors are respected by the preparation; operations changing total charge would require the additional charged local provider just described and are not used in the selected protocol.
+
+After the native response segment, **readout** may turn on finite meter couplings on G and its neutral local records. Their Hamiltonian and work are then included in a driven protocol. That driven law is not asserted to have the free Gaussian determinant. Spectral energies/field work are read from separate registered finite experiments, as in the inherited regulator. Records or purifiers from earlier runs are parked under fixed a-independent idle laws. The static response boundary is defined by the native source and its fixed subtraction/reference, not recalibrated by the meter output.
+
+A finite-error readout can use the full spectral energy list and source-known finite phase/energy measurement controls. For $n$ retained excitation energies and $\beta$ fixed, $|\delta\log Z_G|\le\beta|\delta E_{\mathrm{ref}}|+(\beta/2)\sum_\alpha|\delta E_\alpha|$, because $|\tanh|\le 1$. Thus finite energy tolerances can be chosen before readout for any requested functional tolerance. Each such measurement has finite dimension, duration and retained precision records. This is an existence/ownership statement, not a cheap-resource claim. Ordinary measurement probability errors, preparation trace-distance errors and control errors are accounted in §6.
+
+**3. Factorization BEFORE subtraction, with correct normalization.**
+
+There are two distinct state conventions. The primary one keeps the actual service input of S, which can be nonthermal.
+
+**Normalized-service convention.** Let $\sigma_S(r)$ be the fixed positive trace-class normalized service state, independent of $a$. Let $\sigma_{A}$ be the normalized idle control/record state for the predetermined trial. A setting record may differ between separately prepared $a$ backgrounds; it is not thermally reweighted. Its trace is exactly one for every setting. During a native response derivative its stored program is clamped, and only the declared $G$ force port is varied. $S$ may include any source-owned purification. Define the positive, unnormalized native-response functional
+
+$$
+\begin{aligned}
+\Xi_R(a) &= \operatorname{Tr}\bigl[U\bigl(\exp(-\beta H_{G,R}(a))\otimes\sigma_S\otimes\sigma_A\bigr)U^{\dagger}\bigr]\\
+&= Z_{G,R}(a).
+\end{aligned}
+\tag{3.1}
+$$
+
+A fixed $\exp(-\beta L_R)$ may be included on both sides and cancels in the ratio. The service factor is exactly $\operatorname{Tr}\sigma_S\operatorname{Tr}\sigma_A=1$, finite and nonzero. This is the native force-carrier trace with normalized independent services; it is **not** the Gibbs partition of $H_{\mathrm{native}}$. It does not set $Z_{G}$ to one. Normalizing every G state to trace one and then taking its log would erase the vacuum functional; that operation is not used.
+
+The associated expectation of G observables in the native thermal marginal is obtained by dividing $\Xi$ by $Z_{G}$. In the selected physical vacuum implementation the actual marginal is the source-known vacuum; its observables are the corresponding vacuum values. The free-energy/vacuum-energy difference is bounded by the finite spectral trace theorem, $N_{\mathrm{exc}}\exp(-\beta m_{\min})/\beta$; one does not assert that an arbitrary nonthermal full-source preparation is KMS. Full source energy remains $E_G+E_S+E_A+L_R$ and all service entropy/storage is retained.
+
+**Optional finite canonical convention.** If $S$ and $A$ are actually chosen as finite canonical thermal members at the same $\beta$, with finite dimensions $D_S,D_A$ and spectra in $[0,E_S]$, $[0,E_A]$, then
+
+$$
+0 < D_S\exp(-\beta E_S) \le Z_S \le D_S < \infty
+$$
+
+and similarly for A. Commuting tensor sums give, before any subtraction,
+
+$$
+\begin{aligned}
+Z_{\mathrm{total}}(a) &= \exp(-\beta L_R)\,Z_G(a)Z_SZ_A,\\
+Z_{\mathrm{total}}(a)/Z_{\mathrm{total}}(0) &= Z_G(a)/Z_G(0).
+\end{aligned}
+\tag{3.2}
+$$
+
+A nonzero lower spectral bound changes the bounds, not positivity. No infinite/infinite ratio is used. If the full service has no canonical partition, (3.2) is inapplicable and (3.1) is used. The primary construction needs only the existing actual normalized state.
+
+Proofs of (3.1) and (3.2) are trace multiplicativity and cyclicity for a unitary and trace-class positive operators. At finite G all derivatives in a commute with the finite trace; in the normalized-service convention the service trace is the constant one. In the finite canonical case its positive logarithm is constant. Consequently every connected native derivative of order at least one is exactly that of G. No subtraction was used to make a charged service vanish.
+
+For a finite Euclidean Gaussian evaluation, the operator kernel is block diagonal on G and any thermal Gaussian service subblocks. Berezin factorization yields the product of determinants with the same canonical measures, including field-independent normalizations. Non-Gaussian service states are handled by (3.1), not assigned fictitious Dirac determinants. Only after this identity do we divide by the same G zero-field functional and add the **same probe-only** local subtraction and reference action as Theorem V.3.11m. They live on $M_{G}$. No service counterterm or service energy is deleted. Thus the renormalized G functional of this source is exactly the one calculated in Theorem V.3.11m, with the same tails and scheme-compensated boundary.
+
+The normalized-service convention of §3 distinguishes the unnormalized native force-factor trace from the normalized, independent service preparations. Its proof is the trace-class multiplicativity and unitary cyclicity establishing (3.1) and (3.2) above. Equations (1.1)–(2.1) supply the G/S support and law for this construction.
+
+**4. Complete currents, ordered products and conditional instruments.**
+
+On a fixed finite regulator with a fixed local test chart, let $j_G(f)=\delta H_G[a](f)$ and $k_G(f,g)=\delta^2 H_G[a](f,g)$, with the inherited regulated contact terms. Equation (2.1) and $\partial_a U=0$ give
+
+$$
+\begin{aligned}
+j_{\mathrm{total}}(f) &= U[j_G(f)\otimes I_{SA}]U^{\dagger},\\
+k_{\mathrm{total}}(f,g) &= U[k_G(f,g)\otimes I_{SA}]U^{\dagger}.
+\end{aligned}
+\tag{4.1}
+$$
+
+The same identity holds for functional fermionic source-action derivatives. Here $j_{\mathrm{total}}$ denotes the complete matter-current operator for the G port; the explicit classical G Maxwell action contributes its own retained first and second derivatives to the full response in §5. It is not a charged-service correction and is not canceled. Thus the contact term and connected two-current term both factor; it is not just the first current expectation which vanishes on S. For positive native thermal G marginals, differentiating $\log Z_G$ gives the exact finite Duhamel/Kubo covariance plus the contact derivative. Its tensorized counterpart has the identical expression. For the vacuum limit the inherited gap and finite spectral estimates justify the limit on the registered source domain.
+
+Define $\iota(B)=U(B\otimes I_{SA})U^{\dagger}$ on the *full* $G$ observable algebra. Then $\iota$ is an injective unital star homomorphism: $\iota(BC)=\iota(B)\iota(C)$, $\iota(B^*)=\iota(B)^*$. For every $G$ density $\rho$ and every fixed normalized service state,
+
+$$
+\begin{aligned}
+&\operatorname{Tr}[U(\rho\otimes\sigma_{SA})U^{\dagger}\iota(B_1)\cdots\iota(B_k)]\\
+&\quad = \operatorname{Tr}[\rho B_1\cdots B_k].
+\end{aligned}
+\tag{4.2}
+$$
+
+Native time evolution factors, so (4.2) holds for arbitrary time-ordered products as well. Effects and a full registered $G$ instrument $\{K_z\}$ are lifted as $\iota(K_z)$. Their outcome probabilities agree, and for every event of positive probability the conditional $G$ state and all subsequent ordered-product statistics agree. Every outcome including failure is retained. A readout instrument involving $A$ is evaluated on the $G+A$ protocol carrier, with $S$ still a fixed independent factor; it does not retroactively turn the driven law into the native Gaussian law.
+
+The physical total electric charge is $Q_G\otimes I+I\otimes Q_S+Q_A$, conjugated with $U$. It is not identified with $Q_{G}$. Its associated S current with respect to a variation of $A_{S}$ remains available and can be nonzero. The derivative in (4.1) is the directional current for the assigned G-only test port. All 33 charged G species and all their spin/spatial/particle-antiparticle modes contribute to that current exactly once. None of the charged S species is being called neutral.
+
+This full tensor response embedding is distinct from the FQ7/calibration interface of Theorem V.3.11l. The 45-dimensional rank and 44-dimensional normalized moment rank pertain only to the five M3 heavy internal blocks (with the stipulated context/ancilla restrictions). They do not span the 39-field, spin, spatial or full CAR Gaussian algebra. On their restricted heavy internal domain they retain the same matrix-fiber products and covariance bound `1/2025`; no assertion identifies those preparation states with the G vacuum. The larger $\iota$ map has no 45-dimensional rank claim. No conditional expectation into a scalar algebra is used.
+
+**5. The response and boundary are inherited as fixed inputs, not tuned.**
+
+The G physical action uses the inherited canonical mass matrices and primitive current. On $0\le q\le Q$ it therefore has
+
+$$
+\begin{aligned}
+B_G(q;\mu) &= B_{\mathrm{ref}}(\mu)\\
+&\quad - \sum_a t_a/(2\pi^{2})\int_0^1 x(1-x)\\
+&\qquad \log[(m_a^{2}+q^{2}x(1-x))/\mu^{2}]\,dx,\\
+A_G(q) &= 4\pi B_G(q),\qquad \sum_a t_a = 12.
+\end{aligned}
+\tag{5.1}
+$$
+
+Here $\mu=(\det D_{\mathrm{old}})^{1/3}$ is the common scale of the uniform subtraction extension of Theorem V.3.11m, and $B_{\mathrm{ref}}(\mu)=16/\pi$. The test action uses exactly this probe-only Maxwell boundary. This prescription extends the U34 reference and its heavy matching rule, which do not uniquely determine the absolute light extension. The G heavy copy is action-identical to the inherited heavy sector; its identification with the original physical support remains open.
+
+Changing labels $\mu\to\mu\exp\ell$ changes the determinant $B$ by $12\ell/(6\pi^2)$ and the same physical $B_{\mathrm{ref}}$ by its negative. Every physical response is unchanged. Holding the boundary number fixed while changing $\mu$ would change the physical source. No service normalization supplies an adjustable Maxwell counterterm.
+
+Equation (5.1), including all loop momenta of the specified Gaussian class, gives the enclosing interval of Theorem V.3.11m for $A_G(0)$ near 61.58805461873946. It is the response of this external-field source, not an empirical $\alpha$ prediction. No omitted interaction or service contribution is silently estimated to be small: its exact omission follows only from this class definition and support restriction. Returning to a connected original EM support requires its additional response.
+
+The finite-flux extraction remains on G: $B=2^{-24}Q^2$, $L^2=6\pi\cdot 2^{24}/Q^2$, $\epsilon=2^{-64}/Q^2$, $T=2^{14}/Q^2$, $P_{\mathrm{cut}}=2^{40}Q$, $\beta Q\ge 2^{14}$. Minimal primitive charge $1/3$ gives flux $(1/3)BL^2=2\pi$. All G charges have integral flux. The probe-only classical field energy is $VB^2B_{\mathrm{ref}}/2$ in the inherited connection convention, and its actual actuator/preparation work is retained. The finite sea/reference baseline is also retained. Its subtraction is a registered response convention, not permission to erase an absolute source energy.
+
+The fixed-input remainder less than $2^{-43}$ of Definition V.3.11m.1 is inherited for this G functional. Since (3.1) factors at every member, there is **no** additional service truncation/thermal error to add in the primary convention. This statement does not bound the service cost. It also does not justify changing the inherited order of spatial, density, UV/IR and vacuum limits.
+
+**6. Fixed source words, extra resources and errors.**
+
+All settings, including the mass matrices, frame, Q, $\mu$, reference law, $\beta$, spatial regulator, field schedule and readout tolerances, are computed from one registered source word r and its interval enclosures. The G controller stores that same known r before any response. The response calculation is conditional on each actual source word, not a thermal average over a fluctuating r that could reweight S by its partition. r is fixed through each trial and through both members of its comparison. A different finite approximation carries its own propagated error. No mass, normalization or reference is re-prepared or tuned in response to the measured numerical answer. Separate backgrounds and source-known preparation algorithms may depend on the prescribed a, but never on the result of the response readout.
+
+Here is an explicit uniform word-error bound. In dimensionless coordinates $u_a=m_a/Q$, $v=\mu/Q$, $s=q/Q$, suppose $u_a,v>1/4$ and $0\le s\le 1$ along the segment between the exact and approximate inputs. Direct differentiation of (5.1), with $\int x(1-x)=1/6$, gives
+
+$$
+\begin{aligned}
+|\delta A| &\le 4\pi|\delta B_{\mathrm{ref}}|\\
+&\quad + (8/(3\pi))\sum_a t_a|\delta u_a|\\
+&\quad + \Bigl(8\sum_a t_a/(3\pi)\Bigr)|\delta v|\\
+&\quad + (128/15)|\delta s|.
+\end{aligned}
+\tag{6.1}
+$$
+
+For the last coefficient use $\int x^2(1-x)^2=1/30$, $\sum t=12$ and $\pi>3$. If all four coordinate tolerances are at most $\delta$, the sum is less than $44\delta$ (using $3<\pi<22/7$). With $\delta=2^{-56}$, this is below $2^{-50}$. The mass/root intervals of Definition V.3.11m.1 have widths below $2^{-56}$, exactly at their listed endpoints. Correlations among these intervals, including $v$'s determinant-root dependence, are preserved by the actual program; an independent rectangle is used only as a conservative enclosure. The Maxwell reference and $q$ readout must meet their own registered tolerances. Relative $Q$ and clock errors enter $u,v,s$ through interval division rather than silently rescaling the response. The exact boundary is unchanged by finite word approximation.
+
+Combining this extra word allowance with the fixed-input $2^{-43}$ extraction remainder gives a safe bound $2^{-42}$. This is a conservative additive physical approximation bound; the finer response intervals of Definition V.3.11m.1 remain exact-source enclosures. Keeping the $2^{-43}$ total target of Definition V.3.11m.1 requires tightening and re-budgeting its finite parameters.
+
+For an implemented finite protocol, let $\eta$ be the trace-distance error of G preparation ($\lVert\rho-\rho_{\mathrm{ideal}}\rVert_1\le\eta$), and $\eta_{c}$ the diamond-norm error of its complete finite channel. For any bounded registered effect $E$, probability error is at most $(\eta+\eta_c)\lVert E\rVert$, by duality and contractivity; for a bounded response observable $O$ it is at most $(\eta+\eta_c)\lVert O\rVert$. Meter calibration/finite-spectral errors are added separately using the bound after (2.2), then converted by the known volume, duration and $B^2$ denominator. These norms are finite at the selected member. Thus tolerances can be chosen to meet a fixed readout allowance; the chosen number of repetitions and all outcomes are owned. No cutoff-independent norm or free precision is asserted. The $2^{-60}$ arithmetic/readout allowance of Definition V.3.11m.1 is an input tolerance to these finite conversions, not a claim that a single shot has that precision.
+
+**Extra-copy resource receipt.** Let $n_G(R)$ be the complete excitation-mode count of the actual finite canonical G member; its Fock dimension is exactly $2^{n_G}$, before registers. The selected static G member has the loose bound $n_G<2^{180}$. The selected native CAR realization has no padding. If eight-level MPU cells are used, only the complete tensor implementation of the tensor-padding proof below is admitted; a direct-sum idle trace changes the response and is not used.
+
+The entire S remains, including $32(N^3-N)$ cylinder one-particle coordinates, the full boundary count and reserve apparatus above, plus all U34 RG/PCE/clock/storage extras. This source may be much larger than $2^{180}$; that number bounds G alone. The new resource identity is
+
+$$
+\begin{aligned}
+\mathrm{memory}_{\mathrm{new}} &= \mathrm{memory}_{\text{complete U34}} + n_G\ \text{CAR bits}\\
+&\quad + \mathrm{memory}_{\text{new controls/purifiers/work/records}},\\
+\mathrm{energy}_{\mathrm{new}}(t) &= \mathrm{energy}_S(t)+\mathrm{energy}_G(t)+\mathrm{energy}_A(t)+L_R\\
+&\quad + \text{external field and control energy}(t),\\
+\mathrm{duration}_{\mathrm{new}} &= \text{preparation}+\text{native response}+\text{readout}+\text{switching},\\
+&\text{action cost includes integral of each actual control norm } dt/\hbar.
+\end{aligned}
+\tag{6.2}
+$$
+
+Tensor-product memory dimensions multiply; logarithmic information capacities add. The inherited S reserves are not double-counted as new G resources, and G is paid as a fresh field. A source-known n-mode Slater preparation can be compiled with at most `n(n-1)/2` two-mode Givens rotations plus n phase/occupation operations per charge block (sum of block counts is at most this bound). Each gate has a finite angle and bounded finite-generator implementation, with a retained work/clock/precision record. The choice of physical finite time/coupling strength and its positive baseline is paid. Readout precision, blank cells, field loading, failed runs and retained purifiers are additional costs, not hidden in this gate count. No bounded-total-cost continuum limit is claimed.
+
+**Tensor-padding proof.**
+
+**Valid tensor implementation, if MPU cells are required.** At each finite member with $n=n_G$ complete CAR excitation modes, let $k=\lceil n/3\rceil$ and $s=3k-n$. Then $s$ belongs to $\{0,1,2\}$ and
+
+$$
+\begin{aligned}
+(\mathbb{C}^{8})^{\otimes k} &= (\mathbb{C}^{2})^{\otimes 3k}\\
+&= F(\mathbb{C}^{n})\otimes(\mathbb{C}^{2})^{\otimes s}
+\end{aligned}
+\tag{A.1}
+$$
+
+as a full Hilbert-space identification. Choose the occupation basis of $F(\mathbb{C}^n)$, append $s$ actual neutral idle qubits, and group the resulting bits into triples. This specifies a fixed permutation unitary $V$ between complete orthonormal bases. There are no unused direct-sum levels and no projection. The CAR/parity/charge operators are transported through $V$ in their usual full matrix representation; no locality or short-circuit bound is inferred from this grouping.
+
+Let each added qubit have charge zero and fixed Hamiltonian $Q|1\rangle\langle 1|$. Set $H_{\mathrm{pad}}=Q\sum_j|1\rangle\langle 1|_j$, so $0\le H_{\mathrm{pad}}\le sQI$. Its native finite canonical trace at $\beta>0$ is $Z_{\mathrm{pad}}=(1+\exp(-\beta Q))^s$, strictly positive and finite. The full MPU Hamiltonian and connection current are
+
+$$
+\begin{aligned}
+H_{\mathrm{MPU}}(a) &= V[H_G(a)\otimes I+I\otimes H_{\mathrm{pad}}]V^{\dagger},\\
+j_{\mathrm{MPU}}(f) &= V[j_G(f)\otimes I]V^{\dagger}.
+\end{aligned}
+\tag{A.2}
+$$
+
+V, $H_{\mathrm{pad}}$, all pad states and the pad charge are independent of the native connection a. Hence the contact derivative, all ordered products and all G-local lifted instruments intertwine by the complete factorization proof in part4 of this theorem. The exact pre-subtraction finite canonical trace is
+
+$$
+\begin{aligned}
+Z_{\mathrm{MPU}}(a) &= Z_G(a)\,Z_{\mathrm{pad}},\\
+Z_{\mathrm{MPU}}(a)/Z_{\mathrm{MPU}}(0) &= Z_G(a)/Z_G(0).
+\end{aligned}
+\tag{A.3}
+$$
+
+With the primary physical vacuum preparation, choose the actual pad vacuum $|0\rangle^s$ or another fixed normalized state; it contributes one to the normalized-service functional. These are distinct state conventions, just as in §3. The padding is not thermally normalized away from the actual resource count.
+
+All $8^k$ physical levels are present. Memory increases from $n$ to $n+s$ qubits; precisely $s$ additional neutral qubits are owned, with energy bounded by $sQ$ and their actual initialization, controls and records paid. $k$ physical eight-level cells encode all those states. The source unit $Q$ and clock $\hbar/Q$ are unchanged. The basis mapping $V$ and its control realization are fixed finite source-known operations; their precision/work/time is owned. There is no assertion that it is spatially local or efficient. At distinct physical members with distinct mode counts, (A.1) is a separately registered identification, not a fictitious continuous unitary between unequal Hilbert dimensions.
+
+The additional idle factor may be merged into $H_{A}$ and $\sigma_{A}$ of the support theorem. It has zero probe pullback by its chosen neutral representation and no G/S links. Consequently all previous full support/current/resource claims remain valid with this *tensor-only* option. The native-CAR main claim requires neither option.
+
+The excluded direct-sum inference is witnessed by native traces $3/2$ and $5/4$: their ratio is $5/6$, whereas adding a fixed direct-sum trace 1 gives $9/10$. The tensor factorization above preserves the ratio and all lifted responses. For the full source, the fixed-input extraction bound plus the additional word allowance is below $2^{-42}$; the $2^{-43}$ total of Definition V.3.11m.1 requires rebudgeting.
+
 ### V.3.12 Unified Exact Finite-Obstruction and Null-Extension Audit
 
-**Definition V.3.12a (Frozen Seven-Target Exact Audit Contract).** The audit binds exactly
+<a id="definition-v312a-seven-case-exact-audit-contract"></a>**Definition V.3.12a (Seven-Case Exact Audit Contract).** The audit binds exactly
 $$
-\{\texttt{TV-R-03},\texttt{TV-U-01},\texttt{TV-V-07},
-\texttt{TV-Z-01},\texttt{TV-Z-02},\texttt{TV-Z-10},\texttt{TV-Z-11}\}.
+\{\texttt{current\_graph\_roles},\texttt{false\_vacuum\_zero\_mode},\texttt{mckay\_bures},
+\texttt{null\_active\_rank},\texttt{context\_null\_carrier},\texttt{qfi\_capacity\_cW},\texttt{isotropy\_L\_vis}\}.
 \tag{V.3.12a.1}
 $$
-Its input is the source-derived finite manifest in the program below: four current-graph roles and three typed value edges; one representative positive rational check of the quadratic-versus-quartic coefficient mismatch; the three symbolic positive McKay coefficients; the fixed eight-dimensional binary null-extension class; the eight full-context labels; and the two positive response-normalization families. Corollary U.73b and Theorems U.73a and R.3.5e.3 remain the analytic owners of the universal false-vacuum and current-graph conclusions. No comparison value, target parameter, fitted coefficient, network input, random seed, or external package is admitted.
+Its input is the source-derived finite manifest in the program below: four current-graph roles and three typed value edges; one representative positive rational check of the quadratic-versus-quartic coefficient mismatch; the three symbolic positive McKay coefficients; the fixed eight-dimensional binary null-extension class; the eight full-context labels; and the two positive response-normalization families. Corollary U.73b and Theorems U.73a and R.3.5e.3 remain the analytic sources of the universal false-vacuum and current-graph conclusions. No comparison value, target parameter, fitted coefficient, network input, random seed, or external package is admitted.
 
 The source snapshot is the UTF-8 text strictly between the `~~~python` and `~~~` lines below, with LF line endings and one final LF. Save it as `finite_obstruction_audit.py` and execute `python3 finite_obstruction_audit.py`. It uses only exact integers and `fractions.Fraction`; the JSON serializer is canonicalized by sorted keys and compact separators.
 
@@ -1452,16 +2890,13 @@ from fractions import Fraction
 import hashlib
 import json
 
-
 def fstr(value):
     value = Fraction(value)
     return str(value.numerator) if value.denominator == 1 else f"{value.numerator}/{value.denominator}"
 
-
 def canonical_sha(value):
     payload = json.dumps(value, sort_keys=True, separators=(",", ":")).encode("utf-8")
     return hashlib.sha256(payload).hexdigest()
-
 
 def audit_u01():
     # Representative exact-arithmetic regression for the coefficient mismatch.
@@ -1480,7 +2915,6 @@ def audit_u01():
         "proof_owner": "Corollary U.73b and Theorem U.73a",
     }
 
-
 def audit_r03():
     # Exact finite-manifest regression only. Theorem R.3.5e.3 owns the
     # source-clause case split and the no-current-source conclusion.
@@ -1495,7 +2929,6 @@ def audit_r03():
         "executed_scope": "four-role/three-value-edge manifest regression",
         "proof_owner": "Theorem R.3.5e.3",
     }
-
 
 def audit_v07():
     # For every positive discrete triple C, the displayed chi formulas give
@@ -1523,7 +2956,6 @@ def audit_v07():
         "mckay_only_forces_constraint": False,
     }
 
-
 def audit_z01():
     d0 = 8
     ranks = list(range(1, d0))
@@ -1543,7 +2975,6 @@ def audit_z01():
         "strict_cost_witness": costs,
         "unique_minimizer": 2,
     }
-
 
 def audit_z02():
     contexts = 8
@@ -1569,7 +3000,6 @@ def audit_z02():
         "unique_strict_support_minimizer": 8,
     }
 
-
 def audit_z10():
     # K and u are held fixed. The positive Ward scalar c survives unless the
     # independent equal-sum certificate is supplied.
@@ -1588,7 +3018,6 @@ def audit_z10():
         "positive_Q_equal_sum_certificate_solution": [fstr(value) for value in certificate_solutions],
     }
 
-
 def audit_z11():
     # Schur isotropy fixes an invariant form only up to a positive scalar L.
     M = Fraction(24)
@@ -1606,16 +3035,15 @@ def audit_z11():
         "isotropy_forces_Lvis_1_over_16": False,
     }
 
-
 def main():
     checks = {
-        "TV-R-03": audit_r03(),
-        "TV-U-01": audit_u01(),
-        "TV-V-07": audit_v07(),
-        "TV-Z-01": audit_z01(),
-        "TV-Z-02": audit_z02(),
-        "TV-Z-10": audit_z10(),
-        "TV-Z-11": audit_z11(),
+        "current_graph_roles": audit_r03(),
+        "false_vacuum_zero_mode": audit_u01(),
+        "mckay_bures": audit_v07(),
+        "null_active_rank": audit_z01(),
+        "context_null_carrier": audit_z02(),
+        "qfi_capacity_cW": audit_z10(),
+        "isotropy_L_vis": audit_z11(),
     }
     transcript = {
         "schema": "PU-FINITE-OBSTRUCTION-AUDIT-v1",
@@ -1627,24 +3055,23 @@ def main():
     }
     print(json.dumps(transcript, sort_keys=True, separators=(",", ":")))
 
-
 if __name__ == "__main__":
     main()
 ~~~
 
-**Proposition V.3.12b (Executed Seven-Target Exact Audit).** The frozen source has `182` lines and `6573` bytes. Its SHA-256 is `6c62145a5a7dbbe0c75971efe80caddbfadfd1871bffe8879421ff555ec98068`. CPython `3.13.12` (`cpython-313`) on `Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39`, executable SHA-256 `a38f63d2b8843820b59746250911cd203dbd76c8dc53693007aaa3bda2007232`, executed it to completion and returned `status=PASS`, internal canonical check SHA-256 `bba7093f554adb74285bace851c3df08e814fbbf0ce1ab503f67589499bd445b`, and one `2059`-byte LF-terminated canonical JSON transcript whose SHA-256 is `3267b7d14389bb53a81155aed565346b992666902ce7d374e3c9877c81f4c9ac`.
+<a id="proposition-v312b-executed-seven-case-exact-audit"></a>**Proposition V.3.12b (Executed Seven-Case Exact Audit).** The frozen source has `182` lines and `6641` bytes. Its SHA-256 is `afe6d141c6f50eff41b032b641de5b0d59e2a8e0159e6603d0b79f9286e3cf94`. CPython `3.13.12` (`cpython-313`) on `Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39`, executable SHA-256 `a38f63d2b8843820b59746250911cd203dbd76c8dc53693007aaa3bda2007232`, executed it to completion and returned `status=PASS`, internal canonical check SHA-256 `f593e4e3c7e98655692faedcd8a100889a8ec1d28a48abf06fbe36948a85e2e1`, and one `2127`-byte LF-terminated canonical JSON transcript whose SHA-256 is `81f77523d5eb86e68c0083dcff81e998729333b82376901f025117382ffc58ad`.
 
-| Target | Exhausted proposition and result | Exact coverage | Remaining outside the result |
-|---|---|---|---|
-| `TV-U-01` | A fifth Hessian zero mode on the Theorem-U.13b false-vacuum branch: `negative-refutation` | Universal analytic owners Corollary U.73b and Theorem U.73a; one representative exact rational coefficient regression | Other action and exact-scale-family classes |
-| `TV-R-03` | One already supplied current source role compresses all four roles: `negative-refutation` | Theorem R.3.5e.3's complete four-case analytic proof; exact $4$-role/$3$-edge manifest regression | A genuinely new parent invariant |
-| `TV-V-07` | Positive McKay discrete data alone force the Bures equation: `negative-refutation` | Symbolic witnesses valid for every $(C_1,C_2,C_3)>0$; residuals $0$ and $28$ | Only a premise-enlarging normalization theorem; the McKay-only target is closed |
-| `TV-Z-01` | Fixed-$d_0=8$ sharp-binary response-null active-rank classification: `positive-discharge` | Every $1\le a<8$; feasible list $2,\ldots,7$; quotient rank $2$ | Response-active or performance-changing comparators |
-| `TV-Z-02` | Eight-context response-null carrier classification: `positive-discharge` | Dimension lower bound plus parametric $p_di_d=I_8$ for every $d\ge8$; executable instances $8\le d\le32$ | Non-null larger carriers and physical realization |
-| `TV-Z-10` | QFI/capacity alone force $c_{\mathrm W}=1$: `negative-refutation` | Exact positive witnesses $c=1,3/2,2$ and positive-$Q$ equal-sum closure check | Operational current, normalization, bandwidth and spectral certificate |
-| `TV-Z-11` | Isotropy alone forces $L_{\mathrm{vis}}=1/16$: `negative-refutation` | Complete scalar family $Lg_B$, with exact witnesses $L=1,1/16$ | Operator-realized electromagnetic projection and unit bridge |
+| Exhausted proposition and result | Exact coverage | Remaining outside the result |
+|---|---|---|
+| A fifth Hessian zero mode on the Theorem-U.13b false-vacuum branch: refuted | Universal analytic results Corollary U.73b and Theorem U.73a; one representative exact rational coefficient regression | Other action and exact-scale-family classes |
+| One already supplied current source role compresses all four roles: refuted | Theorem R.3.5e.3's complete four-case analytic proof; exact $4$-role/$3$-edge manifest regression | A genuinely new parent invariant |
+| Positive McKay discrete data alone force the Bures equation: refuted | Symbolic witnesses valid for every $(C_1,C_2,C_3)>0$; residuals $0$ and $28$ | Only a premise-enlarging normalization theorem |
+| Fixed-$d_0=8$ sharp-binary response-null active-rank classification: proved | Every $1\le a<8$; feasible list $2,\ldots,7$; quotient rank $2$ | Response-active or performance-changing comparators |
+| Eight-context response-null carrier classification: proved | Dimension lower bound plus parametric $p_di_d=I_8$ for every $d\ge8$; executable instances $8\le d\le32$ | Non-null larger carriers and physical realization |
+| QFI/capacity alone force $c_{\mathrm W}=1$: refuted | Exact positive witnesses $c=1,3/2,2$ and positive-$Q$ equal-sum closure check | Operational current, normalization, bandwidth and spectral certificate |
+| Isotropy alone forces $L_{\mathrm{vis}}=1/16$: refuted | Complete scalar family $Lg_B$, with exact witnesses $L=1,1/16$ | Theorem Z.24c supplies the electromagnetic current, the marked averaging and the unit bridge on a declared Peierls source |
 
-The equivalence relation for each check is its owner record's typed basis-change or graph-relabeling relation; none identifies response-distinct scalar values or changes the candidate class. The verifier is the hashed exact program together with the named analytic owner theorem for every universal or infinite statement. Integrity fails on a source hash, runtime, assertion, canonical-check hash, transcript-length, or transcript-hash mismatch, or when an owner premise is absent. The target-specific falsifiers are stated in the owner resolution records; the transcript supplies only the declared finite fixtures, boundary witnesses, and alternate-scale witnesses. Provenance is source-derived exact mathematics with zero target queries. Nonvacuity is supplied by the displayed standard-basis carriers, all four populated graph roles, both positive scale choices, and the nontrivial Theorem-U.13b branch. Consumers may import only the result column above; no physical carrier, current, action, determinant, observable, or empirical comparison is promoted by this audit. ∎
+The equivalence relation for each check is the typed basis-change or graph-relabeling relation of the theorem it checks; none identifies response-distinct scalar values or changes the candidate class. The verifier is the hashed exact program together with the named analytic theorem for every universal or infinite statement. Integrity fails on a source hash, runtime, assertion, canonical-check hash, transcript-length, or transcript-hash mismatch, or when a premise of the named theorem is absent. The falsifiers are those of the named theorems; the transcript supplies only the declared finite fixtures, boundary witnesses, and alternate-scale witnesses. The checks use only source-derived exact mathematics. Nonvacuity is supplied by the displayed standard-basis carriers, all four populated graph roles, both positive scale choices, and the nontrivial Theorem-U.13b branch. Consumers may import only the result column above; no physical carrier, current, action, determinant, observable, or empirical comparison is promoted by this audit. ∎
 
 ### V.3.13 Pure-$\mathbf S$ Computation, Observation and Topological Realization Audit
 
@@ -1681,7 +3108,7 @@ The 85 root-restarted invocations use 1,324,894 measured microticks; the same co
 
 **Source and Theorem Binding.** A verification record fixes the exact source paths and versions, imported declarations, candidate class, units, meter definitions, input domains and output formats. Raw source hashes identify bytes. A normalized corpus seal uses the owning normalization algorithm and its explicitly enumerated self-reference fields. Each binding identifies its source configuration and distinguishes raw-byte identity from normalized identity.
 
-The source-envelope audit of Proposition P.14.1m.4a and the semantic pilot of Proposition P.14.1m.4b keep their frozen domains. A current global certificate instantiates Definition P.14.1m with the current source-to-vertex map, dependency and overlap manifest, status rows, and the actual semantic evidence required by (C1)--(C18). Successful byte matching establishes source identity; each semantic predicate is discharged by its proof or sound terminating checker.
+The semantic pilot of Proposition P.14.1m.4b keeps its stated domain. A current global certificate instantiates Definition P.14.1m with the current source-to-vertex map, dependency and overlap manifest, status rows, and the actual semantic evidence required by (C1)--(C18). Successful byte matching establishes source identity; each semantic predicate is discharged by its proof or sound terminating checker.
 
 **Completion Accounting.** Let $\mathcal V$ be the registered claim set, let $\sim$ identify declared aliases, and let $\mathcal A\subseteq\mathcal V/{\sim}$ contain exactly the substantive atomic theory claims. The unresolved count is
 $$
@@ -1700,6 +3127,217 @@ The observation audit checks normalization and exact support propagation; normal
 The topology audit expands the displayed braid word, verifies its block permutation and $n_yn_z$ inversion count, checks the typed $\mathbf S$ equation in the cartesian term model, and tests the registered copier on its admitted family. The changing-history witness checks that the physical observation is carried by transitions when the algebraic interpretation identifies redex and contractum. A braided or ribbon matrix realization then checks the named coherence identities and response comparisons on its declared domain.
 
 Each finite run records its exact inputs, arithmetic model, observed outputs and acceptance rule. General source, stochastic and categorical conclusions use their owning proofs; the finite cases establish the stated executable instances.
+
+### V.3.14 Certified Rational Pseudofermion Targets and Numerical Decisions
+
+<a id="theorem-v314a-positive-wilson-spectrum-sinc-approximation-and-full-volume-target-bias"></a>**Theorem V.3.14a (Positive Wilson Spectrum, Sinc Approximation and Full-Volume Target Bias).** Logarithms and relative entropy in this section use natural units. Work in lattice units on a finite four-dimensional lattice with $V$ sites, a four-dimensional Euclidean spin factor and a five-dimensional internal fiber, so $N=20V$ is the complex matrix dimension. Let the Hermitian spin matrices satisfy $\gamma_\mu^2=I$ and $\gamma_\mu\gamma_\nu+\gamma_\nu\gamma_\mu=0$ for $\mu\ne\nu$. Let $\gamma_5$ be a Hermitian unitary anticommuting with all four $\gamma_\mu$. Each transport $T_\mu$ is unitary and spin independent: it commutes with every spin matrix, including $\gamma_5$. Unitary boundary phases are permitted. For $m>0$ and the $r=1$ normalization define
+$$
+D=(m+4)I-\sum_{\mu=1}^4[P_{\mu,-}T_\mu+P_{\mu,+}T_\mu^\dagger],
+\qquad P_{\mu,\pm}=(I\pm\gamma_\mu)/2,\qquad Q=D^\dagger D.
+$$
+Then
+$$
+\operatorname{Re}D\ge mI,\qquad\|D\|\le m+8,\qquad
+ aI\le Q\le bI,\quad a=m^2,\quad b=(m+8)^2,
+\qquad\det D=(\det Q)^{1/2}>0.
+\tag{V.3.14a.1}
+$$
+For $m=1/16$, the 201 positive dyadic shift/residue pairs printed below define one rational function $\widetilde r$ that works simultaneously for every $V\le65536$. Its uniform relative error on the entire spectral interval is less than $3.260\times10^{-13}$. The resulting normalized gauge-marginal target differs from the determinant target by total variation less than $2.137\times10^{-7}$, and the gauge-plus-complex-auxiliary joint targets differ by less than $2.139\times10^{-7}$. These are target-distribution bounds with the numerical-kernel domains stated in Propositions V.3.14b and V.3.14d and Theorem V.3.14c.
+
+**Proof. I. Spectrum and the complex Gaussian determinant.** Spin independence and the orthogonal projectors give a unitary $U_\mu=P_{\mu,-}T_\mu+P_{\mu,+}T_\mu^\dagger$. Its Hermitian part is $(T_\mu+T_\mu^\dagger)/2$, bounded above by $I$. Thus $\operatorname{Re}D\ge mI$. The triangle inequality gives $\|D\|\le m+4+4=m+8$, while $\|Dx\|\|x\|\ge\operatorname{Re}\langle x,Dx\rangle\ge m\|x\|^2$ gives the lower singular-value bound. This proves the bounds on $Q$ without normality of $D$.
+
+The spin assumptions give $D^\dagger=\gamma_5D\gamma_5$. Its characteristic polynomial is real, so nonreal eigenvalues pair with their conjugates. Accretivity places every eigenvalue in the half-plane $\operatorname{Re}z\ge m>0$; real eigenvalues are positive. Their product is positive, and $\det Q=|\det D|^2$ proves (V.3.14a.1). For a complex $N$-component auxiliary field, diagonalizing a positive precision matrix gives
+$$
+\int_{\mathbb C^N}e^{-\phi^\dagger Q^{-1/2}\phi}\,d^{2N}\phi
+=\pi^N(\det Q)^{1/2}.
+\tag{V.3.14a.2}
+$$
+Replacing $Q^{-1/2}$ by a positive rational precision $r(Q)$ therefore gives gauge weight $\det[r(Q)]^{-1}$. The dimension and determinant power in this theorem are those of a complex Gaussian.
+
+**II. A positive rational approximation on a continuous interval.** For $x>0$, the Stieltjes substitution $t=e^s$ gives
+$$
+x^{-1/2}=\frac1\pi\int_{\mathbb R}\frac{e^{s/2}}{x+e^s}\,ds.
+$$
+For $h>0$, $c=(\log a+\log b)/2$ and integer $K\ge0$, set
+$$
+t_j=e^{c+jh},\qquad w_j=\frac h\pi\sqrt{t_j},\qquad
+r(x)=\sum_{j=-K}^K\frac{w_j}{x+t_j}.
+\tag{V.3.14a.3}
+$$
+All shifts and residues are positive. Let $g(z)=[2\cosh(z/2)]^{-1}$. Substitution $u=e^z$ in its Fourier transform gives the Euler $\beta$ integral $\int_0^\infty u^{-1/2-i\omega}(1+u)^{-1}du=\pi/\cosh(\pi\omega)$. Poisson summation, applicable to the exponentially decaying smooth function $g$, consequently gives the absolutely and uniformly convergent expression
+$$
+\sqrt{x}\,r_\infty(x)=1+2\sum_{\ell\ge1}\operatorname{sech}(2\pi^2\ell/h)
+\cos[2\pi\ell(c-\log x)/h].
+\tag{V.3.14a.4}
+$$
+
+Since $\operatorname{sech}y\le2e^{-y}$, the infinite-grid error is at most $E_{\rm grid}=4/(e^{2\pi^2/h}-1)$. For omitted negative indices use $x+e^s\ge x$, and for omitted positive indices use $x+e^s\ge e^s$. Summing geometric series yields, uniformly on $[a,b]$,
+$$
+\begin{aligned}
+E_{\rm low}&=\frac{h}{\pi\sqrt a}\frac{e^{[c-(K+1)h]/2}}{1-e^{-h/2}},\\
+E_{\rm high}&=\frac{h\sqrt b}{\pi}\frac{e^{-[c+(K+1)h]/2}}{1-e^{-h/2}},\\
+E_{\rm low}=E_{\rm high}&=C_h e^{-(K+1)h/2},\qquad
+C_h=\frac h\pi\frac{(b/a)^{1/4}}{1-e^{-h/2}},\\
+\sup_{x\in[a,b]}|\sqrt{x}r(x)-1|&\le E:=E_{\rm grid}+E_{\rm low}+E_{\rm high}.
+\end{aligned}
+\tag{V.3.14a.5}
+$$
+For a prescribed $0<\varepsilon<1$, choosing
+$$
+h=\frac{2\pi^2}{\log(1+12/\varepsilon)},\qquad
+K=\max\left(0,\left\lceil\frac2h\log\frac{3C_h}{\varepsilon}-1\right\rceil\right)
+$$
+makes all three terms at most $\varepsilon/3$. A stored value of $h$ is treated as its exact dyadic value and checked directly in (V.3.14a.5), rather than assumed to equal the real planning formula. The integral/quadrature method belongs to the established fractional-power approach of Bonito and Pasciak (2013); the displayed finite-matrix bounds give the explicit specialization used here.
+
+**III. Determinant, normalized marginal and joint-law bounds.** Fix a positive gauge base weight with finite nonzero normalization. Write $S_r(U,\phi)=\phi^\dagger r(Q(U))\phi$; the rational joint density relative to the gauge base measure and $d^{2N}\phi$ is proportional to $e^{-S_r(U,\phi)}$. The exact joint density uses $Q(U)^{-1/2}$ in place of $r(Q(U))$. If $|\sqrt{x}r(x)-1|\le\varepsilon$ with $0\le\varepsilon<1$ throughout $[a,b]$, functional calculus and the $N$ complex eigenvalues give
+$$
+(1+\varepsilon)^{-N}\le
+\frac{\det[r(Q)]^{-1}}{(\det Q)^{1/2}}
+\le(1-\varepsilon)^{-N}.
+\tag{V.3.14a.6}
+$$
+For any positive unnormalized density ratio $w\in[L,U]$, let $z=\mathbb Ew$. If $L=U$ the normalized laws coincide. Otherwise the endpoint chord of the convex function $|w-z|$ gives $\mathbb E|w-z|\le2(U-z)(z-L)/(U-L)$. Dividing by $2z$ and maximizing at $z=\sqrt{LU}$ proves
+$$
+\operatorname{TV}\le\frac{\sqrt U-\sqrt L}{\sqrt U+\sqrt L}.
+$$
+Applying this with (V.3.14a.6), followed by $\tanh t\le t$ and $\operatorname{atanh}\varepsilon\le\varepsilon/(1-\varepsilon)$, yields
+$$
+\operatorname{TV}_{\rm gauge}
+\le\tanh\!\left[\frac N2\operatorname{atanh}\varepsilon\right]
+\le\frac{N\varepsilon}{2(1-\varepsilon)}.
+\tag{V.3.14a.7}
+$$
+A sufficient relative budget for a requested $0<\tau<1$ is $\varepsilon\le\tanh[(2/N)\operatorname{atanh}\tau]$.
+
+At fixed gauge field the exact and rational complex Gaussian precision ratios are $e_i=\sqrt{x_i}r(x_i)\in[1-\varepsilon,1+\varepsilon]$. Their relative entropy is
+$$
+\operatorname{KL}(\text{exact conditional}\Vert\text{rational conditional})
+=\sum_{i=1}^N(e_i-1-\log e_i)
+\le\frac{N\varepsilon^2}{2(1-\varepsilon)}.
+$$
+Indeed the scalar series for $-\log(1+t)+t$, or its negative-$t$ version bounded termwise by $|t|^k/k$, is at most $t^2/[2(1-|t|)]$. Pinsker's inequality and the marginal/conditional triangle decomposition then give
+$$
+\operatorname{TV}_{\rm joint}\le\operatorname{TV}_{\rm gauge}
++\varepsilon\sqrt{\frac{N}{4(1-\varepsilon)}}.
+\tag{V.3.14a.8}
+$$
+The conditional bound is uniform in the gauge configuration, so this controls the complete joint target law.
+
+**IV. Stored dyadic coefficients and the complete finite certificate.** Suppose each stored residue and shift differs relatively from its ideal value by at most $\delta_w$ and $\delta_t<1$. For each positive term, the denominator's relative perturbation has magnitude at most $\delta_t t_j/(x+t_j)\le\delta_t$. Hence its ratio to the ideal term differs from one by at most $(\delta_w+\delta_t)/(1-\delta_t)$. Positivity preserves that bound under summation. Thus
+$$
+\left|\frac{\widetilde r}{r}-1\right|\le\delta_r:=\frac{\delta_w+\delta_t}{1-\delta_t},\qquad
+E_{\rm stored}\le E+(1+E)\delta_r.
+\tag{V.3.14a.9}
+$$
+For the following data $m=1/16$, $a=1/256$, $b=16641/256$, $\sqrt{ab}=129/256$, $K=100$ and $N\le1310720$. Every coefficient below is an exact dyadic rational; the upper bounds are exact finite decimals. All 201 coefficient pairs are included.
+
+The finite approximation has $201$ poles, indexed by $j=-100,\ldots,100$, and uses
+\[
+m=\frac1{16},\quad V\le65536,\quad N\le1310720,\quad K=100,
+\qquad h=178769486163447\,2^{-48}.
+\]
+The following integers specify the coefficients exactly:
+\[
+\widetilde t_j=a_j2^{b_j},\qquad \widetilde w_j=c_j2^{d_j}.
+\]
+They are dyadic rational source coefficients, not rounded decimal approximations.
+
+All $201$ exact coefficient rows are given in [the dyadic coefficient table](../related/calculation_companions/appendix_v/v3-14a-dyadic-sinc-coefficients.md#coefficients).
+
+The exact finite-decimal upper bounds for discretization, tails, stored coefficient errors and gauge/auxiliary total variation are given in [the certified error budget](../related/calculation_companions/appendix_v/v3-14a-dyadic-sinc-coefficients.md#error-budget).
+
+Here is a finite directed-arithmetic evaluation of the certificate. Enclose $\pi$ using $16\arctan(1/5)-4\arctan(1/239)$, taking the first 256 alternating terms of each arctangent and its next-term remainder. Perform interval operations with 160 decimal significant digits, rounding lower endpoints downward and upper endpoints upward. For exponential and square-root endpoints, correctly round to that precision and enlarge by one adjacent representable value in the outward direction. These monotone operations enclose their exact real values. Evaluate $t_j=(129/256)e^{jh}$, $w_j=(h/\pi)\sqrt{t_j}$ at the exact printed $h$ and compare every specified dyadic coefficient to its ideal interval. Their maximal relative errors are below the printed shift and residue bounds. Evaluate (V.3.14a.5), (V.3.14a.9), and finally (V.3.14a.7)–(V.3.14a.8) at the stored-error upper endpoint. The resulting upper enclosures are below the corresponding printed rational endpoints. This uses the full continuous-spectrum and all-coefficient inequalities, with no sampled spectral grid or stochastic estimate. In particular,
+$$
+E_{\rm stored}<3.260\times10^{-13},\quad
+\operatorname{TV}_{\rm gauge}<2.137\times10^{-7},\quad
+\operatorname{TV}_{\rm joint}<2.139\times10^{-7}.
+\tag{V.3.14a.10}
+$$
+All smaller volumes use the same spectral interval and smaller $N$, so the same coefficient pairs remain valid. The theorem bounds the rational target law; a chain's distance to that target and the correctness of its implemented numerical transitions are separate quantities. $\square$
+
+<a id="proposition-v314b-persistent-conditional-complex-gaussian-pcn"></a>**Proposition V.3.14b (Persistent Conditional Complex-Gaussian pCN).** Fix a gauge field and either positive rational precision of Theorem V.3.14a, writing $r$ for the precision used in the target. The notation $\operatorname{CN}(0,C)$ denotes the complex Gaussian density $(\pi^N\det C)^{-1}e^{-\phi^\dagger C^{-1}\phi}$. For a positive reference covariance $C_0$, an exact independent draw $\eta\sim\operatorname{CN}(0,C_0)$ and $0<\beta\le1$, propose
+$$
+\phi'=\sqrt{1-\beta^2}\,\phi+\beta\eta,\qquad
+\Psi(\phi)=\phi^\dagger r(Q)\phi-\phi^\dagger C_0^{-1}\phi.
+\tag{V.3.14b.1}
+$$
+Accept with
+$$
+\min\{1,e^{-\Psi(\phi')+\Psi(\phi)}\}.
+\tag{V.3.14b.2}
+$$
+This kernel preserves $\operatorname{CN}(0,r(Q)^{-1})$. Composed with an invariant gauge update at fixed $\phi$, it preserves the rational joint target when $\phi$ is retained as persistent Markov state. For $C_0=sI$, use $\eta_i=\sqrt{s}(X_i+iY_i)/\sqrt2$, with independent standard real Gaussians, and include the reference correction $+\Delta\|\phi\|^2/s$ in the log acceptance.
+
+**Proof.** Under the reference law, $(\phi,\phi')$ is a centered complex Gaussian pair with covariance blocks $C_0,C_0$ on the diagonal and $\sqrt{1-\beta^2}C_0$ off the diagonal. This joint law is unchanged by exchanging the two fields, proving proposal reversibility with respect to the reference Gaussian. The target/reference density ratio is proportional to $e^{-\Psi}$. The Metropolis factor in (V.3.14b.2) therefore makes the forward and reverse accepted joint densities equal to their common minimum. Rejection supplies the remaining diagonal mass, proving detailed balance and invariance. Disintegrating the joint target over the gauge field shows that a conditional update of this kind preserves it; the same holds for a gauge-conditional invariant update, so their composition is invariant. Resetting the field to zero before each conditional step is not this kernel. An arbitrary initial field specifies an initial joint state, not an invariant refresh.
+
+For proposed increments before acceptance, at conditional equilibrium and fixed finite dimension and spectrum, write $r_i$ for the precision eigenvalues. For the scalar reference,
+$$
+\operatorname{Var}(\Delta\Psi)=2\beta^2\sum_i\frac{(sr_i-1)^2}{sr_i}+O(\beta^4).
+\tag{V.3.14b.3}
+$$
+To check the coefficient, diagonalize $r(Q)$ and expand the field proposal. The leading term is $2\beta\operatorname{Re}\sum_i(r_i-s^{-1})\overline\phi_i\eta_i$. Independence and circular Gaussian moments give variance $2\beta^2\sum_i(r_i-s^{-1})^2s/r_i$; odd cross terms vanish, giving (V.3.14b.3). Its constants are for the fixed finite spectrum. An extensive covariance mismatch can shrink useful step sizes; no dimension-uniform mixing estimate follows from the invariance proof.
+
+This is the finite complex-Gaussian specialization of the reference-preserving pCN proposal of Cotter et al. (2013). A draw $Q^{1/4}\xi$ instead has covariance $Q^{1/2}$, which differs from $r(Q)^{-1}$ for a rational approximation. Such a draw needs its own correction or bias control before it is a refresh for the rational target. $\square$
+
+<a id="theorem-v314c-true-residual-action-and-force-intervals"></a>**Theorem V.3.14c (True-Residual Action and Force Intervals).** Let $0<a\le b$ and $aI\le Q\le bI$, let $t_j,w_j>0$ be fixed coefficients, and put $A_j=Q+t_jI$. For an approximate solution $y_j$, use the true residual $d_j=\phi-A_jy_j$ and a certified bound $\rho_j\ge\|d_j\|$. Then
+$$
+\|A_j^{-1}\phi-y_j\|\le e_j:=\frac{\rho_j}{a+t_j},\qquad
+\left|S_r-\sum_jw_j\operatorname{Re}(\phi^\dagger y_j)\right|
+\le\|\phi\|\sum_j\frac{w_j\rho_j}{a+t_j}.
+\tag{V.3.14c.1}
+$$
+A quadratic-residual certificate uses
+$$
+\begin{aligned}
+L_j&=2\operatorname{Re}(\phi^\dagger y_j)-y_j^\dagger A_jy_j
+=\operatorname{Re}(\phi^\dagger y_j)+\operatorname{Re}(y_j^\dagger d_j),\\
+\phi^\dagger A_j^{-1}\phi&=L_j+d_j^\dagger A_j^{-1}d_j,\\
+L_j+\frac{\|d_j\|^2}{b+t_j}&\le\phi^\dagger A_j^{-1}\phi
+\le L_j+\frac{\|d_j\|^2}{a+t_j}.
+\end{aligned}
+\tag{V.3.14c.2}
+$$
+With only the upper residual bound, use $L_j$ and $L_j+\rho_j^2/(a+t_j)$ as endpoints. A lower residual-norm enclosure restores the sharper lower endpoint. Sum the intervals with positive $w_j$. If every $\rho_j\le\eta\|\phi\|$, the residual contribution to the action-interval width is at most
+$$
+\eta^2\|\phi\|^2r(a).
+\tag{V.3.14c.3}
+$$
+For a real coordinate $\theta$, differentiable $Q(\theta)$ and $B_\theta=\partial_\theta Q$ with $\|B_\theta\|\le L_B$, keep $\phi$ and the coefficients fixed and let $z_j=A_j^{-1}\phi$. The exact derivative and its approximate-solve expression are
+$$
+\partial_\theta S_r=-\sum_jw_jz_j^\dagger B_\theta z_j,\qquad
+\widehat{\partial_\theta S_r}=-\sum_jw_jy_j^\dagger B_\theta y_j.
+$$
+They satisfy
+$$
+\begin{aligned}
+|\partial_\theta S_r-\widehat{\partial_\theta S_r}|
+&\le L_B\sum_jw_j(2\|y_j\|e_j+e_j^2),\\
+|\partial_\theta S_r-\widehat{\partial_\theta S_r}|
+&\le L_B\sum_j\frac{w_j\rho_j(2\|\phi\|+\rho_j)}{(a+t_j)^2}.
+\end{aligned}
+\tag{V.3.14c.4}
+$$
+For $Q=D^\dagger D$ under Theorem V.3.14a's normalization,
+$$
+L_B\le2(m+8)\|\partial_\theta D\|.
+\tag{V.3.14c.5}
+$$
+
+**Proof.** The solve error is $z_j-y_j=A_j^{-1}d_j$, giving (V.3.14c.1) by the spectral lower bound and Cauchy–Schwarz. Expanding $(z_j-y_j)^\dagger A_j(z_j-y_j)$ proves the identity (V.3.14c.2); bounding $A_j^{-1}$ between $(b+t_j)^{-1}I$ and $(a+t_j)^{-1}I$ gives both endpoints. The width estimate follows by summing the upper residual uncertainties and using $\sum_jw_j/(a+t_j)=r(a)$.
+
+Differentiate the resolvent: $\partial_\theta A_j^{-1}=-A_j^{-1}B_\theta A_j^{-1}$. Writing $z_j=y_j+e$ and expanding the quadratic form bounds its difference by $L_B(2\|y_j\|\|e\|+\|e\|^2)$. Expanding instead around $z_j$ gives $L_B(2\|z_j\|\|e\|+\|e\|^2)$; with $\|z_j\|\le\|\phi\|/(a+t_j)$ and $\|e\|\le\rho_j/(a+t_j)$, this is the second bound in (V.3.14c.4). Finally $\partial_\theta Q=(\partial_\theta D)^\dagger D+D^\dagger\partial_\theta D$ and $\|D\|\le m+8$ prove (V.3.14c.5).
+
+The residual is recomputed from the actual approximate solution, with matrix/vector rounding included in $\rho_j$; a recursive iterative-solver residual alone is insufficient. Enclosures for dot products, $L_j$, matrix derivatives and accumulated forces add their rounding widths to these deterministic solve-error intervals. Field norms are unbounded, so (V.3.14c.3) is conditional on the actual field norm. $\square$
+
+<a id="proposition-v314d-interval-metropolis-decisions"></a>**Proposition V.3.14d (Interval Metropolis Decisions).** For a valid Metropolis–Hastings proposal, enclose the exact negative log acceptance ratio, including its action, Hamiltonian, proposal-density or reference-norm terms as applicable, in $[\Delta_-,\Delta_+]$. Draw an independent uniform $u\in(0,1)$ and put $T=-\log u$. The exact decision can be made by
+$$
+\Delta_+\le T\ \Longrightarrow\ \text{accept},\qquad
+\Delta_->T\ \Longrightarrow\ \text{reject}.
+\tag{V.3.14d.1}
+$$
+Otherwise refine the solves and arithmetic enclosures. If $T$ is itself enclosed in $[T_-,T_+]$, use $\Delta_+\le T_-$ for acceptance and $\Delta_->T_+$ for rejection.
+
+**Proof.** Since $T>0$, the event $\Delta\le T$ has probability $\min(1,e^{-\Delta})$, including $\Delta\le0$. Each displayed comparison therefore implies exactly the Metropolis decision for every value consistent with the intervals. Refinement changes no determined decision. If the nested intervals converge to the true values, a decision is eventually obtained except at equality; equality has probability zero for an independent continuous uniform draw. An unresolved interval is a numerical failure condition, not permission to force an acceptance or rejection and call that step exact. The invariant-kernel conclusion requires the correct proposal law and complete acceptance ratio as well as these certified comparisons. $\square$
 
 ## V.4 Systematic Formalization Program
 
@@ -1929,7 +3567,7 @@ readout; visited-state carrier; and log-cardinality complexity.
 
 **Prove:** a surjection to `Bool × Bool × Bool` requires at least eight visited
 states; construct an explicit eight-state realization; derive the registered
-`K0 = 3` result; formalize assumption-ablation/countermodel cases.
+$K_0=3$ result; formalize assumption-ablation/countermodel cases.
 
 The minimal lemma should expose that full-context surjectivity supplies the
 eight-state cardinality lower bound. Theorem 15's `(O1)`–`(O3)` assumptions
@@ -1952,13 +3590,13 @@ The vertical slice joins three separately proved conclusions: a diagonal-closure
 
 **Prove conditionally and separately:**
 
-- perfect distinguishability gives `d0 ≥ 8`;
-- the declared minimality/comparator branch gives `d0 = 8`;
-- the active binary/no-surplus branch gives `a = 2` and `b = 6`;
-- Peirce/Grassmannian dimensions give tangent dimension `12` and real mode
-  count `M = 24`;
-- the self-dual code-rate branch gives code dimension `k = 12`; and
-- the mode-cell/least-feasible branch gives Euclidean carrier `D = 4`.
+- perfect distinguishability gives $d_0\ge 8$;
+- the declared minimality/comparator branch gives $d_0=8$;
+- the active binary/no-surplus branch gives $a=2$ and $b=6$;
+- Peirce/Grassmannian dimensions give tangent dimension $12$ and real mode
+  count $M=24$;
+- the self-dual code-rate branch gives code dimension $k=12$; and
+- the mode-cell/least-feasible branch gives Euclidean carrier $D=4$.
 
 **Exit gate:** no type conflation and no presentation of the conjunction as one
 unconditional implication chain.
@@ -2038,7 +3676,7 @@ a map, realization theorem, normalization, RG route, or empirical certificate.
 
 ### Package P12 — Certified numerics and empirical interface
 
-Use exact arithmetic or proved directed-rounding intervals for alpha,
+Use exact arithmetic or proved directed-rounding intervals for $\alpha$,
 electroweak, cosmological and other numerical rows. Separate derived inputs,
 calibrations, fitted values, held-out validation values and measurements.
 
@@ -2065,7 +3703,7 @@ estimate.
 | 4 | Define finite protocol, response, predictor and update primitives | P0/P1 formal specifications |
 | 5–6 | Response equivalence, quotient and finite PCE lemmas | First reusable theorem library |
 | 7–8 | Deterministic SPAP statement engineering and proof | Reviewed SPAP theorem plus scope counterexamples |
-| 9–10 | Three-role cardinality and explicit eight-state construction | `K0 = 3`, `Nvis = 8` vertical slice |
+| 9–10 | Three-role cardinality and explicit eight-state construction | $K_0=3$, $N_{\mathrm{vis}}=8$ vertical slice |
 | 11 | Extend the early model witness to the pilot branch intersection; run ablations | Relative-consistency/nonvacuity milestone |
 | 12 | Independent proof/semantic audit and backlog re-estimation | Pilot release and scale/no-scale decision |
 

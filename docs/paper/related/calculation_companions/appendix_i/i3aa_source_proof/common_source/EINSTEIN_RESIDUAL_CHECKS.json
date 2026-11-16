@@ -1,0 +1,45 @@
+{
+  "generic_covariant_Einstein_residual_identities": true,
+  "generic_all_material_residual_identities": true,
+  "nonzero_mixed_candidate": {
+    "level": 2,
+    "index": "22181357224375221861286806086382640068200852450736763502359669923618435143618844218523154686739766024710755665533372797288129232887",
+    "valid_shape": true
+  },
+  "high_precision_candidate_jet_probes": 75,
+  "exact_flat_endpoint_all_mixed_C6": true,
+  "Jet_reciprocal_product_exp_checks": true,
+  "actual_task_base": {
+    "accepted": true,
+    "actual_equation_C_order": 2,
+    "residual_upper": "0",
+    "tolerance": "1/10",
+    "boxes": 4,
+    "bits": 24,
+    "worst": null,
+    "candidate_index": "0",
+    "candidate_level": 2,
+    "source_equations": "Fixed-action material Euler-Lagrange plus Einstein minus actual fixed-action T; all covariant components, derivatives in normalized physical t,x.",
+    "zero_components": "material2,3; off-diagonal except01; Einstein33 equals22."
+  },
+  "actual_task_nonzero": {
+    "accepted": true,
+    "actual_equation_C_order": 2,
+    "residual_upper": "193357777575/35184372088832",
+    "tolerance": "1/10",
+    "boxes": 4,
+    "bits": 24,
+    "worst": [
+      0,
+      0,
+      "Einstein11",
+      "2,0"
+    ],
+    "candidate_index": "1",
+    "candidate_level": 2,
+    "source_equations": "Fixed-action material Euler-Lagrange plus Einstein minus actual fixed-action T; all covariant components, derivatives in normalized physical t,x.",
+    "zero_components": "material2,3; off-diagonal except01; Einstein33 equals22."
+  },
+  "all_pass": true,
+  "scope": "Symbolic Einstein and material residual identities, candidate jet probes and the finite task certificate; the physical price and Hamiltonian are computed in construction/."
+}

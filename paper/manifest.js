@@ -8,7 +8,7 @@ window.PU_PAPER = {
       "label": "Abstract",
       "group": "Main text",
       "number": "00",
-      "hash": "cf9e7cb6e5685fe4a23de6c5be1286967a5536b3294cd345b1f9f152d062f050"
+      "hash": "441cbf567b6f7b95ed8af87ed28d7a2e51085be57249c058d826cb2154265f5d"
     },
     {
       "id": "01_introduction",
@@ -17,7 +17,7 @@ window.PU_PAPER = {
       "label": "Introduction",
       "group": "Main text",
       "number": "01",
-      "hash": "adc67931449490afb82de1bfc5d476368bb15e2378575e75295db05dac43d7ca"
+      "hash": "4bcf880dda9cadce56c52aad72290bd1c1d2ffe46c12dfe2f0342abd81466db4"
     },
     {
       "id": "02_foundations",
@@ -26,7 +26,7 @@ window.PU_PAPER = {
       "label": "Foundations",
       "group": "Main text",
       "number": "02",
-      "hash": "05854d9dcb5aa8904e0554067f70dace8f1b07b700ee7bf0bb46eded97674c7e"
+      "hash": "dddde9534e7303d0d24406538ea27e1fc120cc3827262a2b87a64889093c6afd"
     },
     {
       "id": "03_space_of_becoming",
@@ -35,7 +35,7 @@ window.PU_PAPER = {
       "label": "Space of Becoming",
       "group": "Main text",
       "number": "03",
-      "hash": "d4918eff2be240337bf4955fae2da1204953e789b8b5334ee79a0eb29a4067b5"
+      "hash": "c13c71bedef930578b735f5351b15202d2b4810cfe8a8473eb9dd531f7c9efe8"
     },
     {
       "id": "04_spap",
@@ -44,7 +44,7 @@ window.PU_PAPER = {
       "label": "SPAP",
       "group": "Main text",
       "number": "04",
-      "hash": "120846897e931fba03608848543b752077583c88026e2ccf04d5eba9348db7f2"
+      "hash": "5e90bea6c65b1cdd58c0ea706c05547cd17d22a275a93d7a3a5310b7a67249fe"
     },
     {
       "id": "05_horizon_constant",
@@ -53,7 +53,7 @@ window.PU_PAPER = {
       "label": "Horizon Constant",
       "group": "Main text",
       "number": "05",
-      "hash": "34a64756d7d9f54cd53b7e2e411945b96235c0c631fa90afa2388e9956e30993"
+      "hash": "3b3ff1c147f40ee0f00aea2add3cd4f50ed138ad1af1329028ceb82812c0e3aa"
     },
     {
       "id": "06_complexity_resources",
@@ -62,7 +62,7 @@ window.PU_PAPER = {
       "label": "Complexity & Resources",
       "group": "Main text",
       "number": "06",
-      "hash": "cc90d6d5ecddbae437cfa041d1687e06c8fa8b1af6eda182ef6c1614df13e705"
+      "hash": "5536e7c9a5429f9f71c4063e3e6117b51f292afeddd17765f762c9cdcbf8876b"
     },
     {
       "id": "07_minimal_predictive_unit",
@@ -71,7 +71,7 @@ window.PU_PAPER = {
       "label": "Minimal Predictive Unit",
       "group": "Main text",
       "number": "07",
-      "hash": "f7a7b1d7b3e10754ef42703da39bc3603d3f65acafa5a78fd1037b04d4ec77b4"
+      "hash": "e696d9aba80d86a7aa8ea445894829efd75102ffdc872d836ace07b83cc1ae46"
     },
     {
       "id": "08_quantum_emergence",
@@ -80,7 +80,7 @@ window.PU_PAPER = {
       "label": "Quantum Emergence",
       "group": "Main text",
       "number": "08",
-      "hash": "13392369407b2d1e9575b59c6e93d892accb9ff7ae9b4c240834a9472f569659"
+      "hash": "825aea6eace110cd35e8652506f87958383508e1d3cfacee73eebfdf8c7b05cd"
     },
     {
       "id": "09_consciousness_complexity",
@@ -89,7 +89,7 @@ window.PU_PAPER = {
       "label": "Consciousness Complexity",
       "group": "Main text",
       "number": "09",
-      "hash": "85e29a2c76b3fad404fe798198c3f01fdf2636f733f17acf4fb2db645c48af16"
+      "hash": "e16b5dcfa196bd0ec3c3644d02d9e483c80f8f70b5aa1203a16cbdb07a23c842"
     },
     {
       "id": "10_statistical_influence",
@@ -98,7 +98,7 @@ window.PU_PAPER = {
       "label": "Statistical Influence",
       "group": "Main text",
       "number": "10",
-      "hash": "a2ba6cbddd2ffa8e9cf3bae10c65b392a383a0020d492671eae7c2657d6874a8"
+      "hash": "922fb8f144baf6d2b6424ac1046b223563771d0c52988905dde0f131400488ef"
     },
     {
       "id": "11_spacetime_emergence",
@@ -107,7 +107,7 @@ window.PU_PAPER = {
       "label": "Spacetime Emergence",
       "group": "Main text",
       "number": "11",
-      "hash": "c50eadd7740efcca77beeeb0665d2ba574a2b3e1c73eecfdc5cc5c176cb98154"
+      "hash": "229314c66aba76478a30319903fc06e32d7af784cf718f54db1d8975d8a09a93"
     },
     {
       "id": "12_gravity_derivation",
@@ -116,7 +116,7 @@ window.PU_PAPER = {
       "label": "Gravity Derivation",
       "group": "Main text",
       "number": "12",
-      "hash": "a3652a5929e5ff336cd624bde6099abb3b401fa15d890d6975e2deb9ef6ce863"
+      "hash": "e45d35bc97aac6b2dd585c175671600cbd8cdb49e9659ea59f86778129eb4d4d"
     },
     {
       "id": "13_experimental_predictions",
@@ -125,7 +125,7 @@ window.PU_PAPER = {
       "label": "Experimental Predictions",
       "group": "Main text",
       "number": "13",
-      "hash": "c4fe69feb59fc296d541f27f51951b690bbaf23067f481605e7482646036cd3c"
+      "hash": "efcc9b7fa2c36cc9bf3b9bc697383d3e7148329b260cbf424606b2e32c7c08ad"
     },
     {
       "id": "14_discussion",
@@ -134,7 +134,7 @@ window.PU_PAPER = {
       "label": "Discussion",
       "group": "Main text",
       "number": "14",
-      "hash": "42f59117cd4361d17959994c1a484dd30d0b2f3575502bb07b18572263317860"
+      "hash": "0d6e43c568ae1305a977240934eb2fdba94c0dc6ef72e9eb1e8fddda56187597"
     },
     {
       "id": "15_conclusion",
@@ -143,7 +143,7 @@ window.PU_PAPER = {
       "label": "Conclusion",
       "group": "Main text",
       "number": "15",
-      "hash": "2ef4ed6b3b717f4e8386175de6d6bc89e26af75e3bda894d9e67e84978873a83"
+      "hash": "99738f3b75cff3b3abc4e0a57cebfb6eb2d73fc549b2b594023cf2931c842d69"
     },
     {
       "id": "appendices--appendix_a_core_logic",
@@ -152,7 +152,7 @@ window.PU_PAPER = {
       "label": "Core Logic, Computation Limits, and Property R",
       "group": "Appendices",
       "number": "A",
-      "hash": "5abe9738f3f841e767940bb66bd8f9c9253be5314c8752e014d795598bb2c9be"
+      "hash": "770e5ab2694dd45bb3ce974164bd7aba15ed70abd256ad6e9df804923ed4b07c"
     },
     {
       "id": "appendices--appendix_b_complexity_costs",
@@ -161,7 +161,7 @@ window.PU_PAPER = {
       "label": "Operational Complexity, Costs, and Stress–Energy Tensor Construction",
       "group": "Appendices",
       "number": "B",
-      "hash": "4502877bfb95a5b29476c44aa15e8d429763a6a4278c459cc72fb2ea44e3ecd7"
+      "hash": "b162e9be4d8fccb6752473ea6163756d9cb17a1793df59b96c4387865d87ca19"
     },
     {
       "id": "appendices--appendix_c_regularity_necessity",
@@ -170,7 +170,7 @@ window.PU_PAPER = {
       "label": "Necessity of Geometric Regularity",
       "group": "Appendices",
       "number": "C",
-      "hash": "6082933ed16092a47af47e4956a6269f6911c993f624f8b0a5b9fd2541833482"
+      "hash": "8358e674af43045171b0d72288979211f92d8183ec5a33f45377534b30ddebee"
     },
     {
       "id": "appendices--appendix_d_variational_convergence",
@@ -179,7 +179,7 @@ window.PU_PAPER = {
       "label": "Variational Perspective and Dynamical Convergence to Alignment & Regularity",
       "group": "Appendices",
       "number": "D",
-      "hash": "8722889dfa48a502bcc7ce5b5d9a5cc223482e96475d5ac1fdad0d1f41e9dbf9"
+      "hash": "466fa8b27c1b19ec5ab91da5e5b3a3d5fdf6ea9f6fbb1f006d275c67a1bfed36"
     },
     {
       "id": "appendices--appendix_e_thermo_area_law",
@@ -188,7 +188,7 @@ window.PU_PAPER = {
       "label": "Thermodynamic Limits and Horizon Entropy Area Law",
       "group": "Appendices",
       "number": "E",
-      "hash": "92440308e27798e0e899bf88e103d98e7136f394f295a43e3d03403d9fbae1c1"
+      "hash": "7bdfa09c5ea8148740b8d6a5ef3558d18f444e239b3eb0714ab792297b24b628"
     },
     {
       "id": "appendices--appendix_f_aqft",
@@ -197,7 +197,7 @@ window.PU_PAPER = {
       "label": "AQFT Framework for Continuum Emergence and Locality",
       "group": "Appendices",
       "number": "F",
-      "hash": "4a6c73a3b930c3114e9f90e8f7af5f251c6c500e2f2280d0e526cc32bfdd627e"
+      "hash": "4655a96df5446eeb479ca95b2e7127bf1ab92486b660652bfdf24f8ce63e87c0"
     },
     {
       "id": "appendices--appendix_g_gauge_emergence",
@@ -206,7 +206,7 @@ window.PU_PAPER = {
       "label": "Emergence of Quantum Weights and Gauge Structure",
       "group": "Appendices",
       "number": "G",
-      "hash": "bbb6617aec98c0b656e723cdc58dd605d128108936d05bd804ad85b1a44f5f87"
+      "hash": "3b62c05fdad293ea7e461333bd5b942c7dd741c3a8377aae4cd9ec7bd6689d27"
     },
     {
       "id": "appendices--appendix_h_dimensions",
@@ -215,7 +215,7 @@ window.PU_PAPER = {
       "label": "Dimensional Analysis and Emergent Scales",
       "group": "Appendices",
       "number": "H",
-      "hash": "18740ba292f961d137f842bb4d6dfbbaad266d2ff72c98a9e42d7d8b3611563a"
+      "hash": "0e545899c8e247eceb38235a2a07a3bc19dc2ae6bb5c6c7eeec3807cb51e2ee0"
     },
     {
       "id": "appendices--appendix_i_scaled_gravity",
@@ -224,7 +224,7 @@ window.PU_PAPER = {
       "label": "A PCE-Driven, Environment-Dependent Model for Emergent Gravity",
       "group": "Appendices",
       "number": "I",
-      "hash": "413cb2cd5052ddb2760e0da81a60f2275d425b3d60327dbaaff356ad724cac36"
+      "hash": "3a400079ea9075bac3342ef6076f7a9d2e7039876d868b09177493bbf63c5051"
     },
     {
       "id": "appendices--appendix_j_reflexivity_cost",
@@ -233,7 +233,7 @@ window.PU_PAPER = {
       "label": "The Fundamental Thermodynamic Cost of Reflexivity",
       "group": "Appendices",
       "number": "J",
-      "hash": "15e693ef96da2b4b5e8d15074a00db520cd73683b3bc7f037a2026270f4c6dbe"
+      "hash": "1e232082845749d76ab22f05c921f531cf5f509e1f6e44f5269967c8ae8c377a"
     },
     {
       "id": "appendices--appendix_k_resolving_puzzles",
@@ -242,7 +242,7 @@ window.PU_PAPER = {
       "label": "Resolving Outstanding Puzzles in Fundamental Physics",
       "group": "Appendices",
       "number": "K",
-      "hash": "278e9e25c49e6f0e9a6aaa0c029e52a3ae1e13dfbe4c3a7becd08f2cc69b1621"
+      "hash": "e9275ef64d79746e6a5ac9e0f56d30e227b87a544b6a6fb2dec7b8f503498bd1"
     },
     {
       "id": "appendices--appendix_l_cc_mechanism",
@@ -251,7 +251,7 @@ window.PU_PAPER = {
       "label": "Unified Foundation — Energy Accounting and Thermodynamic Consistency",
       "group": "Appendices",
       "number": "L",
-      "hash": "3ed3416914a2a44c33eaa57a047bfa36f9433ed73e2beeabfe666627ca49dd91"
+      "hash": "31addb7365a384afaed75ba24bdafeb91987d1c8251f4ce1552d15f4b1a5d9e2"
     },
     {
       "id": "appendices--appendix_m_perspectival_quantum_dynamics",
@@ -260,7 +260,7 @@ window.PU_PAPER = {
       "label": "Formalism for Perspectival Quantum Dynamics",
       "group": "Appendices",
       "number": "M",
-      "hash": "c1b16987001f6a32aea846b802054d7e3012d9920e1f99b7ddd3fca2ca10d65f"
+      "hash": "a6e291d54e28102f39c47f79aea2bc32e842f3b039a7cb389a5a5b45f1cef079"
     },
     {
       "id": "appendices--appendix_n_prediction_relativity",
@@ -269,7 +269,7 @@ window.PU_PAPER = {
       "label": "Prediction Relativity and the Unified Cost of Transgression",
       "group": "Appendices",
       "number": "N",
-      "hash": "36bbd44990f9121902976cecff8a21db11166ad53c6eafb23a5defa79ffd0cf7"
+      "hash": "add90ba872f3e4a697c11c7af2729a9b439829f6566aa79ed11b5853a5319a9a"
     },
     {
       "id": "appendices--appendix_o_arrow_of_time",
@@ -278,7 +278,7 @@ window.PU_PAPER = {
       "label": "Temporal Coherence and the Arrow of Time in the Predictive Universe",
       "group": "Appendices",
       "number": "O",
-      "hash": "a49e78ef5180818ea448a41099cc61ab5bb99504ff998d4c476bf2f63f4fecfd"
+      "hash": "6d3b219dff1f4ea744a4c587d6d51fd0ae473811221f179a8729c572e5d56100"
     },
     {
       "id": "appendices--appendix_p_philosophical_foundations",
@@ -287,7 +287,7 @@ window.PU_PAPER = {
       "label": "Philosophical Foundations",
       "group": "Appendices",
       "number": "P",
-      "hash": "d633dd936ab3ffde6a1c10a1e9350e33c582b8581de8a4f20a767e787d0075d4"
+      "hash": "85692286876592e8192ef3fdce97c9c6c34034fbe7b1d8ecb63cfc4ea2be6005"
     },
     {
       "id": "appendices--appendix_q_planck_scale",
@@ -296,7 +296,7 @@ window.PU_PAPER = {
       "label": "Derivation of the Planck-MPU Scale Ratio",
       "group": "Appendices",
       "number": "Q",
-      "hash": "d34c16fca7382c51773175e484fd09f366aba553222ee44a9e89c13d0e0562ec"
+      "hash": "882fed8fe7e18ed294ebbec12c74a8c95375b4183dbe7eda729491b579597b3e"
     },
     {
       "id": "appendices--appendix_r_generations",
@@ -305,7 +305,7 @@ window.PU_PAPER = {
       "label": "Three-Generation Structure and Fermion Mass Hierarchy",
       "group": "Appendices",
       "number": "R",
-      "hash": "ef05fa66eb2a8e7085d307e6a22606704d62f26ee0b75a30d8d77c1dcb4e9d9c"
+      "hash": "18c8075c220fc66346eaa955b9c562c2cf424e093a2ff0d79a8c2b6ab2528ceb"
     },
     {
       "id": "appendices--appendix_s_ccgravity",
@@ -314,7 +314,7 @@ window.PU_PAPER = {
       "label": "Resource Cost, Stress-Energy, and the Gravitational Self-Limitation of CC",
       "group": "Appendices",
       "number": "S",
-      "hash": "e66959ef65f1482fbb34e895bc5b974d43d8598cc324e7dbb22a293e65e0a5f8"
+      "hash": "7c7ba5bcaacc124b29fb70e7ecd6fe7f7bf50c0c80c6b5d58c115efb495362d1"
     },
     {
       "id": "appendices--appendix_t_electroweak_hierarchy",
@@ -323,7 +323,7 @@ window.PU_PAPER = {
       "label": "Electroweak Scale, Mixing, and Higgs Quartic from Golay-Steiner Structure",
       "group": "Appendices",
       "number": "T",
-      "hash": "681d1f549df3a2d285795fed9bdcee67ee6b021b829bdab738857395e9143deb"
+      "hash": "e5129829196f3e4f60eacdd3a0d488eac3d8131ac7d942adae351c8fb3ef74d8"
     },
     {
       "id": "appendices--appendix_u_cosmological_constant",
@@ -332,7 +332,7 @@ window.PU_PAPER = {
       "label": "Vacuum-Weight and Primordial Reference Models with Golay--Steiner Compatibility",
       "group": "Appendices",
       "number": "U",
-      "hash": "9f7216be92053c8c598b884914342580dab6426fc52ac5bd1cc2ae2f44e36756"
+      "hash": "71ea958e0190d712b77121cfab8a4b08351565bfcabb37f86868144b8b15701e"
     },
     {
       "id": "appendices--appendix_v_computational_programs",
@@ -341,7 +341,7 @@ window.PU_PAPER = {
       "label": "Computational Programs and Numerical Consistency Checks",
       "group": "Appendices",
       "number": "V",
-      "hash": "4963d13140e20d3ba71e6c450a5d4cc16d569cd6ce602a9b83681292006dd74e"
+      "hash": "0992dec49df87c15cdaa8eaac99d69104c53d0b5df21470c2a5152186fe6c843"
     },
     {
       "id": "appendices--appendix_w_alphabet_identities",
@@ -350,7 +350,7 @@ window.PU_PAPER = {
       "label": "PU’s Alphabet‑Constant Identities, Robustness, and SM Structure",
       "group": "Appendices",
       "number": "W",
-      "hash": "35f058277d59cb447db6d83c722f064efa295d9ced7411ec9fe36d83c7639664"
+      "hash": "cef8c3bd56ef0cbabe7c3e827b594ad572699719baeef41997ab93b8f25666a7"
     },
     {
       "id": "appendices--appendix_x_effective_action",
@@ -359,7 +359,7 @@ window.PU_PAPER = {
       "label": "PU and the Effective Action",
       "group": "Appendices",
       "number": "X",
-      "hash": "5e80918e7e5253a09ac00887685e7d1319b919bf3c23efcf8872ac87c27ab2a2"
+      "hash": "1d4d29109d5fc193238f687448fbe0649da3a8af5dd89f93b5815f8c8e9f4e94"
     },
     {
       "id": "appendices--appendix_y_baryon_asymmetry",
@@ -368,7 +368,7 @@ window.PU_PAPER = {
       "label": "Baryon Asymmetry from Predictive Anomaly Inflow",
       "group": "Appendices",
       "number": "Y",
-      "hash": "9467cee60b1581eaf2090caf14d86205e0f1c596964a206856f4530c83ea0e23"
+      "hash": "21f0286a8645b27121fa4af301518e8949f75ca5c87f26a112dc5f62fb9361c4"
     },
     {
       "id": "appendices--appendix_z_fine_structure_constant",
@@ -377,7 +377,7 @@ window.PU_PAPER = {
       "label": "Certificate-Conditional Interface Ledger, Fine-Structure Candidate, and Euclidean Response-Carrier Dimension",
       "group": "Appendices",
       "number": "Z",
-      "hash": "8f850e45b443c7e0005f1df127467b44757c5b09cef5779445b8983ca6528c8e"
+      "hash": "f3e105c983eee6e6175974b33d5cec6b9e5d8d8c40e2b8412836b3dbadefe188"
     },
     {
       "id": "glossary",
@@ -386,7 +386,7 @@ window.PU_PAPER = {
       "label": "Glossary of Key Terms",
       "group": "Reference",
       "number": "",
-      "hash": "442d1dfb659994761ed5fc49506750fd880853eeb99ec985fe7872e53ae0da57"
+      "hash": "1983acf768d911df888eee3e6090cdacba0e7b763b312ffe4bb434e6eb242196"
     },
     {
       "id": "references",
@@ -395,7 +395,7 @@ window.PU_PAPER = {
       "label": "References",
       "group": "Reference",
       "number": "",
-      "hash": "e2de201161f2b59658ff42ef9edac1b5be20ae52863553b3dcbbd16b0c1d67b4"
+      "hash": "350000c137fe2a7e8ea272497a20f4589121a91b2a700942a767fd49e099329c"
     },
     {
       "id": "contents",
@@ -404,7 +404,7 @@ window.PU_PAPER = {
       "label": "Table of Contents",
       "group": "Reading guides & related work",
       "number": "",
-      "hash": "74d95e0fe0fdcd21a343ba82e8dd27679cf441b8043ae343958e0281453a104e"
+      "hash": "b717dc5daad52a221defa581b06137a5c3fbf28a483b34925f5dfbd161ebf78a"
     },
     {
       "id": "map",
@@ -413,7 +413,7 @@ window.PU_PAPER = {
       "label": "The Predictive Universe: Structural Walkthrough",
       "group": "Reading guides & related work",
       "number": "",
-      "hash": "4ca9eba7056c2891bd656550f41d16ba2ed6f41a971026daf55f4654a20e38ba"
+      "hash": "38a7b0a3d1e1a5614cd9e5e1bbb41b727a7dc0d8a57c014907bfa193986022bd"
     },
     {
       "id": "related--area_law_spap_qecc",
@@ -458,7 +458,7 @@ window.PU_PAPER = {
       "label": "Proof-Life: A Finite Verification-Gated Toy Universe for Proof Reachability",
       "group": "Reading guides & related work",
       "number": "",
-      "hash": "d81215b79c3023eeb6f634bd8074838dfd2fd378f9c8faa85bd2a55c862005bb"
+      "hash": "0c16ff51d1842ae4ad8de96e5f6fffc770a7c2285947c31bf75cc32c9f3f7d9b"
     }
   ],
   "scenes": [

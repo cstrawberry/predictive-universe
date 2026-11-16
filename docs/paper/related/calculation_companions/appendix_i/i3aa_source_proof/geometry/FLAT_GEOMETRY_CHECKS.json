@@ -1,0 +1,39 @@
+{
+  "0": {
+    "A": 40010,
+    "N": 216,
+    "directions": 6576,
+    "exact_covariance": true,
+    "exact_scheduler_probabilities": true,
+    "rounded_paths": 30,
+    "vertices": 2176782336
+  },
+  "1": {
+    "A": 215084,
+    "N": 512,
+    "directions": 20184,
+    "exact_covariance": true,
+    "exact_scheduler_probabilities": true,
+    "rounded_paths": 30,
+    "vertices": 68719476736
+  },
+  "2": {
+    "A": 831014,
+    "N": 1000,
+    "directions": 49688,
+    "exact_covariance": true,
+    "exact_scheduler_probabilities": true,
+    "rounded_paths": 30,
+    "vertices": 1000000000000
+  },
+  "all_pass": true,
+  "complete_graph": {
+    "Gamma2_min": 13605.794941154192,
+    "N": 6,
+    "R": 1,
+    "all_frequency_bounds": true,
+    "all_vertex_Gamma2_identity_max_abs_error": 1.5133991837501526e-09,
+    "vertices": 1296
+  },
+  "scope": "Finite checks supplement the full indexed proof; they do not infer continuum or physical MPU realization from samples."
+}

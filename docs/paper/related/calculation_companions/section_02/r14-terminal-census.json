@@ -1,0 +1,4079 @@
+{
+  "claim": "R14-full-hierarchy-minimum-v2",
+  "presentation": "R14-ByteExact-StackSemantics-v2",
+  "semantic_spec_sha256": "b3f5feb4637a3d34cdb99355ffc1832255e48f335e5f2f7e42250f5287bf1028",
+  "source_manifest_sha256": "ca40dea552962d3ff8df733905a0a316ebd57835b6dd9f43c9243b42591e3926",
+  "runtime_sha256": "52596da3fcad958d15ba5129249015fb14a721ff3ff0b4f696b1baec664b7c22",
+  "certificate": {
+    "manifest_sha256": "ca40dea552962d3ff8df733905a0a316ebd57835b6dd9f43c9243b42591e3926",
+    "runtime_sha256": "52596da3fcad958d15ba5129249015fb14a721ff3ff0b4f696b1baec664b7c22",
+    "language": "R14-Finite-Local-Induction-v1",
+    "program": "00001111",
+    "length": 8,
+    "code": {
+      "kind": "finite_tree_collision_ready_state",
+      "version": 1,
+      "capacity": 14,
+      "calibration": {
+        "kappa": [
+          1,
+          1
+        ],
+        "time_unit": "tau",
+        "collision_energy": [
+          1,
+          1
+        ],
+        "verifier_energy": [
+          1,
+          1
+        ],
+        "energy_unit": "E",
+        "cell_price": [
+          1,
+          1
+        ],
+        "cell_time_price": [
+          1,
+          1
+        ],
+        "timing_operation_price": [
+          1,
+          1
+        ],
+        "resource_credit_unit": "R"
+      },
+      "motor": {
+        "depth": 30,
+        "initial_depth": 15,
+        "initial_address": "uniform_fiber",
+        "child_rate": [
+          1,
+          1
+        ],
+        "parent_rate": [
+          1,
+          1
+        ],
+        "unit": "kappa"
+      },
+      "environment": {
+        "Y0": [
+          1,
+          2
+        ],
+        "Z1": [
+          1,
+          4
+        ],
+        "Z2": [
+          1,
+          4
+        ],
+        "fallback": [
+          1,
+          2
+        ],
+        "independent": true
+      },
+      "initial": {
+        "memory": "Y0",
+        "forecast_error": "zero",
+        "archive_I0": "Y0",
+        "other_archive": "zero",
+        "counter": 0,
+        "high_water": 0
+      },
+      "gates": [
+        [
+          "XOR",
+          "f1",
+          "m"
+        ],
+        [
+          "XOR",
+          "e1",
+          "f1",
+          "Y1"
+        ],
+        [
+          "XOR",
+          "m",
+          "e1"
+        ],
+        [
+          "XOR",
+          "f2",
+          "m"
+        ],
+        [
+          "XOR",
+          "e2",
+          "f2",
+          "Y2"
+        ],
+        [
+          "XOR",
+          "m",
+          "e2"
+        ]
+      ],
+      "inverse": "reverse_edge_same_XOR",
+      "other_edges": "identity",
+      "retention": {
+        "archive": [
+          "I0",
+          "C1",
+          "O1",
+          "U1",
+          "C2",
+          "O2",
+          "U2",
+          "E1",
+          "E2"
+        ],
+        "rule": "first_high_water_write_once",
+        "history_bits_per_jump": 2,
+        "shadow_bits_per_collision": 68,
+        "predictor_reads_archive": false
+      },
+      "stop": {
+        "jumps": 14,
+        "success_level": 6,
+        "deadline": [
+          14,
+          1
+        ],
+        "absorbing": true
+      },
+      "snapshots": {
+        "times": [
+          [
+            0,
+            1
+          ],
+          [
+            14,
+            2
+          ],
+          [
+            14,
+            1
+          ]
+        ],
+        "rule": "immutable_prefix",
+        "bits_per_snapshot": 14
+      },
+      "resources": {
+        "mutable_bits": 68,
+        "history_bits": 28,
+        "shadow_bits": 1156,
+        "snapshot_bits": 42,
+        "source_bits": 19,
+        "capacity_bits": 4,
+        "root_receipt_bits": 22,
+        "verification_calls": 3,
+        "verifier_input_bits": 1332,
+        "verifier_workspace_bits": 5328,
+        "verifier_accept_bits": 3,
+        "verifier_energy_tokens": 3,
+        "verifier_energy_counter_bits": 4,
+        "verifier_work_price": "epsilon_v",
+        "verifier_gate_bound": "100*(N+1)^2*2^(N+1), N=verifier_input_bits",
+        "controller_rom_bits": "B*2^(B+4)",
+        "verifier_rom_bits": "2^N, N=verifier_input_bits",
+        "timer_hardware": "one finite externally calibrated three-trigger timing device, price ct",
+        "controller_workspace_bits": 304,
+        "controller_gate_bound": "16*(B+4)^2*B*2^(B+4)",
+        "battery_units": 17,
+        "receiver_units": 17,
+        "energy_exchange": "q_minus_one_z_plus_one",
+        "exchange_is_charged_primitive": true,
+        "ready_cell_price": "c0",
+        "collision_price": "epsilon",
+        "maintenance_price": "cm",
+        "timing_price": "ct"
+      },
+      "joint_update": "R-step-v1-as-supplied-in-o03-model.py",
+      "source_primitives": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12"
+      ]
+    },
+    "code_hash": "e304d99fa88644448f56616d8c9bb4be00e28610beae096ade313aa3e7b62efa",
+    "eligible_owners": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12"
+    ],
+    "proof_rules": [
+      "LOCAL_PRIMITIVES",
+      "COMPOSE_STOCHASTIC",
+      "TREE_WORD_INDUCTION",
+      "PROTECTED_PREFIX_INDUCTION",
+      "SEMIGROUP_COEFFICIENT_INDUCTION",
+      "HIERARCHY_PERSISTENCE",
+      "EXHAUSTIVE_STRING_EXCLUSION"
+    ],
+    "exclusions": [
+      {
+        "program": "",
+        "length": 0,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0",
+        "length": 1,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1",
+        "length": 1,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "00",
+        "length": 2,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "01",
+        "length": 2,
+        "classification": "constructor",
+        "capacity": 0,
+        "exclusion_level": 0,
+        "reason": "literal_output_differs"
+      },
+      {
+        "program": "10",
+        "length": 2,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "11",
+        "length": 2,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "000",
+        "length": 3,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "001",
+        "length": 3,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "010",
+        "length": 3,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "011",
+        "length": 3,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "100",
+        "length": 3,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "101",
+        "length": 3,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "110",
+        "length": 3,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "111",
+        "length": 3,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0000",
+        "length": 4,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0001",
+        "length": 4,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0010",
+        "length": 4,
+        "classification": "constructor",
+        "capacity": 1,
+        "exclusion_level": 0,
+        "reason": "literal_output_differs"
+      },
+      {
+        "program": "0011",
+        "length": 4,
+        "classification": "constructor",
+        "capacity": 2,
+        "exclusion_level": 0,
+        "reason": "literal_output_differs"
+      },
+      {
+        "program": "0100",
+        "length": 4,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0101",
+        "length": 4,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0110",
+        "length": 4,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0111",
+        "length": 4,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1000",
+        "length": 4,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1001",
+        "length": 4,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1010",
+        "length": 4,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1011",
+        "length": 4,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1100",
+        "length": 4,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1101",
+        "length": 4,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1110",
+        "length": 4,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1111",
+        "length": 4,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "00000",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "00001",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "00010",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "00011",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "00100",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "00101",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "00110",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "00111",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "01000",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "01001",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "01010",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "01011",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "01100",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "01101",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "01110",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "01111",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "10000",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "10001",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "10010",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "10011",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "10100",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "10101",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "10110",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "10111",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "11000",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "11001",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "11010",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "11011",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "11100",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "11101",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "11110",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "11111",
+        "length": 5,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "000000",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "000001",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "000010",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "000011",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "000100",
+        "length": 6,
+        "classification": "constructor",
+        "capacity": 3,
+        "exclusion_level": 0,
+        "reason": "literal_output_differs"
+      },
+      {
+        "program": "000101",
+        "length": 6,
+        "classification": "constructor",
+        "capacity": 4,
+        "exclusion_level": 0,
+        "reason": "literal_output_differs"
+      },
+      {
+        "program": "000110",
+        "length": 6,
+        "classification": "constructor",
+        "capacity": 5,
+        "exclusion_level": 0,
+        "reason": "literal_output_differs"
+      },
+      {
+        "program": "000111",
+        "length": 6,
+        "classification": "constructor",
+        "capacity": 6,
+        "exclusion_level": 0,
+        "reason": "literal_output_differs"
+      },
+      {
+        "program": "001000",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "001001",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "001010",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "001011",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "001100",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "001101",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "001110",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "001111",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "010000",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "010001",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "010010",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "010011",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "010100",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "010101",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "010110",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "010111",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "011000",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "011001",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "011010",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "011011",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "011100",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "011101",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "011110",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "011111",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "100000",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "100001",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "100010",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "100011",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "100100",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "100101",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "100110",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "100111",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "101000",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "101001",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "101010",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "101011",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "101100",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "101101",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "101110",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "101111",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "110000",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "110001",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "110010",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "110011",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "110100",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "110101",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "110110",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "110111",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "111000",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "111001",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "111010",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "111011",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "111100",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "111101",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "111110",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "111111",
+        "length": 6,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0000000",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0000001",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0000010",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0000011",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0000100",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0000101",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0000110",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0000111",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0001000",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0001001",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0001010",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0001011",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0001100",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0001101",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0001110",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0001111",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0010000",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0010001",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0010010",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0010011",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0010100",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0010101",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0010110",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0010111",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0011000",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0011001",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0011010",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0011011",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0011100",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0011101",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0011110",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0011111",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0100000",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0100001",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0100010",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0100011",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0100100",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0100101",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0100110",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0100111",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0101000",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0101001",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0101010",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0101011",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0101100",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0101101",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0101110",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0101111",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0110000",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0110001",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0110010",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0110011",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0110100",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0110101",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0110110",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0110111",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0111000",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0111001",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0111010",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0111011",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0111100",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0111101",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0111110",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "0111111",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1000000",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1000001",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1000010",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1000011",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1000100",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1000101",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1000110",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1000111",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1001000",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1001001",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1001010",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1001011",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1001100",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1001101",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1001110",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1001111",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1010000",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1010001",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1010010",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1010011",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1010100",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1010101",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1010110",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1010111",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1011000",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1011001",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1011010",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1011011",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1011100",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1011101",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1011110",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1011111",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1100000",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1100001",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1100010",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1100011",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1100100",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1100101",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1100110",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1100111",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1101000",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1101001",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1101010",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1101011",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1101100",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1101101",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1101110",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1101111",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1110000",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1110001",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1110010",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1110011",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1110100",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1110101",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1110110",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1110111",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1111000",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1111001",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1111010",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1111011",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1111100",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1111101",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1111110",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      },
+      {
+        "program": "1111111",
+        "length": 7,
+        "classification": "undefined",
+        "capacity": null,
+        "exclusion_level": 0,
+        "reason": "absorbing_undefined_parser_state"
+      }
+    ],
+    "N_val": 0,
+    "equal_length_census": [
+      {
+        "program": "00000000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00000001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00000010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00000011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00000100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00000101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00000110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00000111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00001000",
+        "classification": "constructor",
+        "capacity": 7,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00001001",
+        "classification": "constructor",
+        "capacity": 8,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00001010",
+        "classification": "constructor",
+        "capacity": 9,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00001011",
+        "classification": "constructor",
+        "capacity": 10,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00001100",
+        "classification": "constructor",
+        "capacity": 11,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00001101",
+        "classification": "constructor",
+        "capacity": 12,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00001110",
+        "classification": "constructor",
+        "capacity": 13,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00001111",
+        "classification": "constructor",
+        "capacity": 14,
+        "survivor": true,
+        "exclusion_level": null
+      },
+      {
+        "program": "00010000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00010001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00010010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00010011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00010100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00010101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00010110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00010111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00011000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00011001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00011010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00011011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00011100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00011101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00011110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00011111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00100000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00100001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00100010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00100011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00100100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00100101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00100110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00100111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00101000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00101001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00101010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00101011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00101100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00101101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00101110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00101111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00110000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00110001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00110010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00110011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00110100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00110101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00110110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00110111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00111000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00111001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00111010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00111011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00111100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00111101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00111110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "00111111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01000000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01000001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01000010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01000011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01000100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01000101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01000110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01000111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01001000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01001001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01001010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01001011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01001100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01001101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01001110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01001111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01010000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01010001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01010010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01010011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01010100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01010101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01010110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01010111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01011000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01011001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01011010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01011011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01011100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01011101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01011110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01011111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01100000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01100001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01100010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01100011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01100100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01100101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01100110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01100111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01101000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01101001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01101010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01101011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01101100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01101101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01101110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01101111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01110000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01110001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01110010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01110011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01110100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01110101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01110110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01110111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01111000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01111001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01111010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01111011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01111100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01111101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01111110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "01111111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10000000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10000001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10000010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10000011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10000100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10000101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10000110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10000111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10001000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10001001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10001010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10001011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10001100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10001101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10001110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10001111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10010000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10010001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10010010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10010011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10010100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10010101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10010110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10010111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10011000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10011001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10011010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10011011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10011100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10011101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10011110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10011111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10100000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10100001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10100010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10100011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10100100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10100101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10100110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10100111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10101000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10101001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10101010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10101011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10101100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10101101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10101110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10101111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10110000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10110001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10110010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10110011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10110100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10110101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10110110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10110111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10111000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10111001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10111010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10111011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10111100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10111101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10111110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "10111111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11000000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11000001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11000010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11000011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11000100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11000101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11000110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11000111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11001000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11001001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11001010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11001011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11001100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11001101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11001110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11001111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11010000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11010001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11010010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11010011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11010100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11010101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11010110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11010111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11011000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11011001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11011010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11011011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11011100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11011101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11011110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11011111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11100000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11100001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11100010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11100011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11100100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11100101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11100110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11100111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11101000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11101001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11101010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11101011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11101100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11101101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11101110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11101111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11110000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11110001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11110010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11110011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11110100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11110101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11110110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11110111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11111000",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11111001",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11111010",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11111011",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11111100",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11111101",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11111110",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      },
+      {
+        "program": "11111111",
+        "classification": "undefined",
+        "capacity": null,
+        "survivor": false,
+        "exclusion_level": 0
+      }
+    ],
+    "exact_minimizers": [
+      "00001111"
+    ],
+    "required_fresh_shadows": 17
+  }
+}

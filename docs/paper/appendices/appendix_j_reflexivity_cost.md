@@ -6,7 +6,7 @@ This appendix analyzes a declared implementation architecture in which a binary 
 
 **J.2 The Declared Binary-Ancilla Reset Architecture**
 
-**Definition J.1 (Reachable Register and Closed-Cycle Map).** Let
+<a id="definition-j1-reachable-register-and-closed-cycle-map"></a>**Definition J.1 (Reachable Register and Closed-Cycle Map).** Let
 $$
 A\subseteq\{0,1\}_{\phi}\times\{0,1\}_p
 $$
@@ -17,12 +17,12 @@ G_{\mathrm{cycle}}:A\longrightarrow\{0,1\}_{\phi'}\times\{p_{\mathrm{ready}}\}.
 $$
 Fixing the second output component is an architectural reset assumption. An injective extension may instead retain the displaced label in side information.
 
-**Lemma J.1 (Conditional Logical Merging in the Declared Binary-Ancilla Architecture).** If $|A|>2$, then $G_{\mathrm{cycle}}$ is noninjective. If all four pairs are reachable, some output has at least two preimages. If $|A|\le2$, cardinality alone gives no noninjectivity conclusion.
+<a id="lemma-j1-conditional-logical-merging-in-the-declared-binary-ancilla-architecture"></a>**Lemma J.1 (Conditional Logical Merging in the Declared Binary-Ancilla Architecture).** If $|A|>2$, then $G_{\mathrm{cycle}}$ is noninjective. If all four pairs are reachable, some output has at least two preimages. If $|A|\le2$, cardinality alone gives no noninjectivity conclusion.
 
 *Proof.* The accessible codomain has two elements. The conclusions follow from the pigeonhole principle. ∎
 **J.3 Conditional Physical Reset Ledger**
 
-**Theorem J.1 (Conditional Cost of the Declared Binary-Ancilla Reset Architecture)**
+<a id="theorem-j1-conditional-cost-of-the-declared-binary-ancilla-reset-architecture"></a>**Theorem J.1 (Conditional Cost of the Declared Binary-Ancilla Reset Architecture)**
 
 Let $P\in\{0,1\}$ be the prediction record in Definition J.1, let $R$ contain every classical record retained and unchanged through reset, and let $q(P,R)$ be their actual joint law. Assume the registered complete-reset branch of Definition 28, including its degenerate register Hamiltonian, initially independent thermal bath, cyclic control with full auxiliary-resource closure, and any required entropy and mean-heat limits. Then
 $$
@@ -74,7 +74,7 @@ This is (J.3). If $H_q(P\mid R)=\ln2$, then $\varepsilon_{\mathrm{reset}}\ge\ln2
 
 **J.4 Conditional Ancilla and Finite-Event Ledgers**
 
-**Remark J.1.1 (Distribution-Dependent Reset Cost).** The binary alphabet fixes only $\ln2$ as a log-cardinality. The registered heat uses the actual conditional entropy $H_q(P\mid R)$. On the conditionally uniform binary branch, equality $\varepsilon_{\mathrm{reset}}=\ln2$ holds exactly when $\varepsilon_{\mathrm{diss}}=0$.
+<a id="remark-j11-distribution-dependent-reset-cost"></a>**Remark J.1.1 (Distribution-Dependent Reset Cost).** The binary alphabet fixes only $\ln2$ as a log-cardinality. The registered heat uses the actual conditional entropy $H_q(P\mid R)$. On the conditionally uniform binary branch, equality $\varepsilon_{\mathrm{reset}}=\ln2$ holds exactly when $\varepsilon_{\mathrm{diss}}=0$.
 
 **Proposition (Conditional Entropy Floor of Reflexive Cycles).** Let $X$ be finite, $\tau:X\to X$ have no fixed points and all its cycles have length at least $L\ge2$. Let $q$ be $\tau$-invariant and let a retained record satisfy $R\circ\tau=R$. Conditional on any positive-probability record value, $q$ is a mixture of uniform distributions on cycles of length at least $L$. Therefore
 
@@ -95,7 +95,7 @@ $$
 
 This gives the reset floor for the invariant-record class. A device test measures conditional bias and correlation on that class. A complete cycle ledger also charges preparation, work and other reversible or irreversible steps.
 
-**Lemma J.1a (Ancilla Extension and Conditional Boundary Displacement).** Let the accessible map in Definition J.1 have a fiber containing two distinct inputs, and let an injective implementation append an auxiliary register $G$ initialized in a fixed state. The two final $G$ states over that fiber must be distinguishable. This is a cardinality statement, not an ensemble-entropy statement.
+<a id="lemma-j1a-ancilla-extension-and-conditional-boundary-displacement"></a>**Lemma J.1a (Ancilla Extension and Conditional Boundary Displacement).** Let the accessible map in Definition J.1 have a fiber containing two distinct inputs, and let an injective implementation append an auxiliary register $G$ initialized in a fixed state. The two final $G$ states over that fiber must be distinguishable. This is a cardinality statement, not an ensemble-entropy statement.
 
 If $G$ is retained, no reset-heat conclusion follows. If $G$ is reset while classical side information $R$ remains available and unchanged, its registered law obeys
 $$
@@ -106,7 +106,7 @@ For a conditionally uniform binary displaced label with no retained copy, the ri
 
 *Proof.* Injectivity forces distinct auxiliary outputs for distinct inputs that share the same accessible output. Conditional Landauer applies only to a subsequent registered reset and uses its actual joint law with all retained side information. ∎
 
-**Theorem J.1b (Complete Finite Fiber--Garbage Classification).** Let $A$ be a nonempty finite set, let $B$ be a finite set, and let $f:A\to B$ be the accessible map on the exact reachable domain. Among all auxiliary alphabets $G$ and label maps $g:A\to G$ for which
+<a id="theorem-j1b-complete-finite-fiber-garbage-classification"></a>**Theorem J.1b (Complete Finite Fiber--Garbage Classification).** Let $A$ be a nonempty finite set, let $B$ be a finite set, and let $f:A\to B$ be the accessible map on the exact reachable domain. Among all auxiliary alphabets $G$ and label maps $g:A\to G$ for which
 $$
 x\longmapsto(f(x),g(x))
 \tag{J.3a}
@@ -134,9 +134,7 @@ No entropy or heat lower bound follows when the reachable law makes $X$ a functi
 
 For fixed values of $(f(X),R)$, the maps $X\mapsto G$ and $G\mapsto X$ are inverse on the conditional support, so their conditional probability vectors differ only by relabeling. Their entropies are therefore equal, giving (J.3c). Conditional Landauer with all unchanged side information gives (J.3d). If $X$ is already determined by $(f(X),R)$, the right side vanishes. ∎
 
-**Resolution TV-JREF-01-R1.** Equations (J.3b)--(J.3d) give `positive-discharge` of the exhaustive finite reachable-domain embedding, minimal-garbage, ensemble-entropy, and registered-reset classification. Lemma J.1 and Lemma J.1a are its binary cardinality slices.
-
-**Theorem J.4a (Finite Registered-Reset Ledger).** Let $D$ contain a finite set $\mathcal E_{\mathrm{ref}}(D)$ of registered classical resets. For event $e$, let $P_e$ be the reset record, $R_e$ all classical information retained and unchanged through that reset, $q_e$ their actual law, and $T_e>0$ the bath temperature. Under the cyclic, degenerate-register hypotheses of Theorem J.1, define
+<a id="theorem-j4a-finite-registered-reset-ledger"></a>**Theorem J.4a (Finite Registered-Reset Ledger).** Let $D$ contain a finite set $\mathcal E_{\mathrm{ref}}(D)$ of registered classical resets. For event $e$, let $P_e$ be the reset record, $R_e$ all classical information retained and unchanged through that reset, $q_e$ their actual law, and $T_e>0$ the bath temperature. Under the cyclic, degenerate-register hypotheses of Theorem J.1, define
 $$
 \varepsilon_{\mathrm{reset}}(e)
 :=\frac{\langle Q_{\mathrm{bath}}(e)\rangle}{k_BT_e}
@@ -153,7 +151,7 @@ $$
 $$
 The structural label ledger for $N_{\mathrm{ref}}$ binary reset supports is $N_{\mathrm{ref}}\ln2$. If the registered event set has $N_{\mathrm{ref}}$ members and every $P_e$ is conditionally uniform binary given $R_e$, the entropy sum in (J.4a.2) equals this structural ledger; on that branch, the total reset ledger has the same value exactly when every $\varepsilon_{\mathrm{diss}}(e)$ vanishes. Numerical equality of the total reset ledger with $N_{\mathrm{ref}}\ln2$ alone implies neither conditional uniformity nor zero excess dissipation. For sequential resets, each $R_e$ includes all earlier records still available and unchanged; this prevents double counting. ∎
 
-**Corollary J.4a.3 (Conditional Guard-Reset Subledger).**
+<a id="corollary-j4a3-conditional-guard-reset-subledger"></a>**Corollary J.4a.3 (Conditional Guard-Reset Subledger).**
 
 Let
 $$
@@ -199,7 +197,7 @@ with equality exactly when every displayed dissipative overhead vanishes.
 
 This corollary counts exactly the physically assigned reset events satisfying its conditional-entropy premise; an entry retained reversibly or never reset contributes no event to $\mathcal E_{\mathrm{guard}}$. A semantic or predetermined guard contributes a reset term exactly when its physical implementation contains an assigned reset satisfying the stated hypotheses.
 
-**Theorem J.4b (Conditional Finite-Work Quantum-Zeno Obstruction).** Consider $N$ equal interrogation cycles over duration $T$, with $\tau=T/N\le\tau_0$. Assume that every surviving cycle closes a registered reset in a cyclic degenerate register at common bath temperature $T_b>0$ and that, uniformly over surviving histories,
+<a id="theorem-j4b-conditional-finite-work-quantum-zeno-obstruction"></a>**Theorem J.4b (Conditional Finite-Work Quantum-Zeno Obstruction).** Consider $N$ equal interrogation cycles over duration $T$, with $\tau=T/N\le\tau_0$. Assume that every surviving cycle closes a registered reset in a cyclic degenerate register at common bath temperature $T_b>0$ and that, uniformly over surviving histories,
 $$
 q_j(\tau\mid H_{j-1})\ge b\tau^2,
 \qquad
@@ -266,9 +264,9 @@ $$
 $$
 which proves (J.4b.4). ∎
 
-**Remark J.4b.1 (Scope Boundary).** The result assigns no cost to an unrecorded projection. It becomes void if $b=0$, if no registered reset is executed, or if no positive uniform conditional-entropy bound is certified.
+<a id="remark-j4b1-scope-boundary"></a>**Remark J.4b.1 (Scope Boundary).** The result assigns no cost to an unrecorded projection. It becomes void if $b=0$, if no registered reset is executed, or if no positive uniform conditional-entropy bound is certified.
 
-**Theorem J.4c (Exact Zeno Survival and Record-Erasure Scaling Classification).** Let a qubit start in $|0\rangle$, evolve under $H=\hbar\omega\sigma_x$, and be projectively interrogated in the $\{|0\rangle,|1\rangle\}$ basis at $N$ equal intervals over a fixed time $T$. Put
+<a id="theorem-j4c-exact-zeno-survival-and-record-erasure-scaling-classification"></a>**Theorem J.4c (Exact Zeno Survival and Record-Erasure Scaling Classification).** Let a qubit start in $|0\rangle$, evolve under $H=\hbar\omega\sigma_x$, and be projectively interrogated in the $\{|0\rangle,|1\rangle\}$ basis at $N$ equal intervals over a fixed time $T$. Put
 $$
 c_N=\cos^2\!\left(\frac{\omega T}{N}\right).
 \tag{J.4c.1}
@@ -319,7 +317,7 @@ H(J)=\frac{a^2}{N}
 $$
 which proves (J.4c.4). Conditional Landauer gives the stated reset-heat lower bound. The raw-reset work bound imports the complete J.4b premises; absence of a reset removes only that reset term. ∎
 
-**Theorem J.4d (Exact Record-Architecture Ledger for Stopped Zeno Runs).** In the setting of Theorem J.4c, stop the run at its first failure. For $j=1,\ldots,N$ let $O_j\in\{0,1,\bot\}$ be the outcome of interrogation $j$, with $O_j=\bot$ exactly when an earlier interrogation returned $1$, and let $A_j:=\mathbf 1[O_j\ne\bot]$ be the active flag. A classical record architecture is a finite family of classical registers with fixed ready symbols, all ready at the start, that acts only on its registers and changes their joint content $M$ only by the following steps:
+<a id="theorem-j4d-exact-record-architecture-ledger-for-stopped-zeno-runs"></a>**Theorem J.4d (Exact Record-Architecture Ledger for Stopped Zeno Runs).** In the setting of Theorem J.4c, stop the run at its first failure. For $j=1,\ldots,N$ let $O_j\in\{0,1,\bot\}$ be the outcome of interrogation $j$, with $O_j=\bot$ exactly when an earlier interrogation returned $1$, and let $A_j:=\mathbf 1[O_j\ne\bot]$ be the active flag. A classical record architecture is a finite family of classical registers with fixed ready symbols, all ready at the start, that acts only on its registers and changes their joint content $M$ only by the following steps:
 
 1. at step $j$, writing $O_j$ once into a ready register;
 2. writing into a ready register a fresh random symbol $\xi$ independent of all earlier variables;
@@ -370,7 +368,1395 @@ x_j^-\log\frac{N}{a^2}\le h_2(x_j)\le x_j^+\Bigl(1+\log\frac{N^2}{a^2}\Bigr).
 $$
 Summing with $\sum_{j=2}^N(j-1)=N(N-1)/2$ gives (J.4d.3); the upper bound uses $N\ge a$, which follows from $N\ge\max\{1,3a^2\}$. The retained-entropy statement is (J.4d.1) without reset terms, and the heat statement is Theorem J.4a applied to each reset. ∎
 
-**Resolution TV-JREF-02-R1 (Metadata).** Exact domain: stopped qubit Zeno runs of Theorem J.4c with $N\ge1$ and every classical record architecture built from steps 1--4 of Theorem J.4d. Premises: the Lüders interrogation law of Theorem J.4c; for the heat statement, the registered-reset hypotheses of Theorem J.4a. Equivalence: step schedules equal up to injective relabeling of register contents. Budget: every $N$, every $a=|\omega T|>0$, and every finite register family, step schedule and random-symbol law. Verifier: exact per-step entropy accounting, the conditional-independence step, the chain rule and the elementary bounds behind (J.4d.3). Falsifier: a cyclic architecture in the class with entropic reset floor below $H(J)$, or a status-tracking architecture without random symbols whose floor differs from $H(J)$. Provenance class: source-internal exact information ledger. Downstream consumers: Theorems J.4b--J.4c, Corollary J.8.9c and `TV-JREF-02`. Nonvacuity: the compressed and memoryless architectures, whose floors are separated by (J.4d.3). This is `positive-discharge` of the classical record-architecture classification for the stopped Zeno run. Architectures that process records in coherent quantum registers require a reset ledger with quantum side information and form the remaining `M` component of `TV-JREF-02`.
+<a id="theorem-j4e-quantum-side-information-reset-balance"></a>**Theorem J.4e (Quantum-Side-Information Reset Balance).**
+
+All entropies use natural logarithms. Write $\beta=(k_BT_b)^{-1}$ for a positive bath temperature and let $Q_B$ be its mean energy increase. Let $P$ be the register to reset, $R$ every accessible retained quantum system, and $B$ a bath initially in the Gibbs state $\tau_B=\exp(-\beta H_B)/Z$ and independent of $PR$. Apply a unitary to $PRB$. Any auxiliary starts and ends in the same state, uncorrelated with everything else; equivalently include it and cancel its entropy. Assume finite entropies and mean energies. Suppose the $R$ marginal is unchanged. Then, for every actual finite process,
+
+$$
+\beta Q_B=S(P\mid R)_{\mathrm{in}}-S(P\mid R)_{\mathrm{out}}+I(PR:B)_{\mathrm{out}}+D(\rho_{B,\mathrm{out}}\Vert\tau_B).
+\tag{J.4e.1}
+$$
+
+In particular an exact pure ready output gives
+
+$$
+\beta Q_B=S(P\mid R)_{\mathrm{in}}+\epsilon,\qquad\epsilon=I(PR:B)_{\mathrm{out}}+D(\rho_{B,\mathrm{out}}\Vert\tau_B)\ge0.
+\tag{J.4e.2}
+$$
+
+The conditional entropy may be negative. Replacing it by a Shannon entropy or silently dropping an accessible quantum R is invalid.
+
+*Proof.*
+
+Gibbs algebra gives $\beta Q_B=S(B_{\mathrm{out}})-S(B_{\mathrm{in}})+D(\rho_{B,\mathrm{out}}\Vert\tau_B)$. Initial independence and joint unitarity give
+
+$$
+S(B_{\mathrm{out}})-S(B_{\mathrm{in}}) = S(PR_{\mathrm{in}})-S(PR_{\mathrm{out}})+I(PR:B)_{\mathrm{out}}.
+$$
+
+Since $S(R_{\mathrm{in}})=S(R_{\mathrm{out}})$, the $PR$ entropy difference is the conditional-entropy difference. Nonnegativity of relative entropy and mutual information proves the inequality. A pure $P_{\mathrm{out}}$ is product with $R$ and has conditional entropy zero. Restored, uncorrelated auxiliaries cancel exactly; an unclosed auxiliary instead belongs in the equation and cannot be omitted. ∎
+
+This proves an actual balance, not universal finite-bath attainability of exact erasure. Positive-entropy exact erasure on the finite Gibbs-bath branch is limited by E.1b. For an approximate ready output at trace distance $\delta$ from $|\mathrm{ready}\rangle\langle\mathrm{ready}|\otimes\rho_R$, the conditional-entropy remainder can be bounded in the fixed dimension of $P$; a limiting assertion requires this remainder and the mean heat to converge.
+
+<a id="theorem-j4f-quantum-memory-grammar-for-stopped-zeno-records"></a>**Theorem J.4f (Quantum-Memory Grammar for Stopped Zeno Records).**
+
+Freeze the *classical Lüders source* of J.4c, stopped at first failure. Put $c=\cos^2(\omega T/N)$, $A_j=1$ when interrogation $j$ is active, $O_j\in\{0,1,\perp\}$, and $J\in\{1,\dots,N,\infty\}$. Then
+
+$$
+\begin{aligned}
+\Pr(J=j) &= c^{j-1}(1-c),\quad \Pr(J=\infty)=c^N,\\
+H(J) &= h_2(c) \sum_{j=1}^N c^{j-1}.
+\end{aligned}
+$$
+
+A quantum-memory architecture has finite-dimensional memory M initially in a fixed pure ready state. Its only steps are:
+
+1. append the classical $O_{j}$ in an orthogonal ready register once
+2. append an independent quantum state $\tau_\xi$ to a fresh register
+3. apply an isometry on $M$ (with any appended pure ancilla counted in $M$)
+4. reset a tensor factor $P_{e}$ to a pure ready state, preserving the marginal state of the remaining memory $R_{e}$
+
+The architecture never acts back on the source qubit or changes its Lüders outcome law. All records needed to choose subsequent operations remain in M. Steps are fixed coherent circuits; an externally chosen outcome-dependent operation is represented by its control record in M. The latent classical history can be correlated with quantum memory, so nonorthogonal history encodings, entanglement within M and negative individual reset conditional entropies are admitted.
+
+Every such architecture satisfies exactly
+
+$$
+\sum_eS(P_e\mid R_e)+S(M_{\mathrm{end}})=H(J)+\sum_{j=1}^NH(A_j\mid M_{j^-})+\sum_\xi S(\tau_\xi).
+\tag{J.4f.1}
+$$
+
+Here $A_{j}$ is a classical flag and $H(A_j|M)$ is the cq conditional entropy. Consequently:
+
+- a fully cyclic architecture obeys $\sum_e S(P_e|R_e)\ge H(J)$
+- equality holds iff every appended $\tau_\xi$ is pure and, at every interrogation of positive probability, the conditional memory states for active and inactive histories have orthogonal supports (or the flag is deterministic)
+- a reset-free architecture retains $S(M_{\mathrm{end}})\ge H(J)$
+- for a fully cyclic architecture, if every reset satisfies (J.4e.1)–(J.4e.2) at a common temperature with closed auxiliaries, its total reset heat is at least $k_BT_bH(J)$
+
+Thus coherent processing of already-classical outcomes does not lower the optimal *cyclic aggregate* floor. Individual terms can be negative and must not be separately replaced by zero.
+
+*Proof.*
+
+Appending $O_{j}$ changes $S(M)$ by $H(O_j|M_{j-})$; appending $\tau_\xi$ changes it by $S(\tau_\xi)$; an isometry preserves $S(M)$; and reset $e$ decreases it by $S(P_e|R_e)$. Telescoping from a pure initial $M$ proves
+
+$$
+\sum_e S(P_e|R_e)+S(M_{\mathrm{end}})=\sum_j H(O_j|M_{j-})+\sum_\xi S(\tau_\xi).
+$$
+
+Conditional on $A_{j}=1$, the source is $|0\rangle$ before the next rotation and its fresh outcome is $\mathrm{Bernoulli}(c)$, independent of all previous outcomes and their quantum encodings. Conditional on $A_j=0$, $O_j=\perp$. Since $O_{j}$ determines $A_{j}$, the cq chain rule therefore gives
+
+$$
+H(O_j|M_{j-}) = H(A_j|M_{j-}) + \Pr(A_j=1)h_2(c).
+$$
+
+Summing the second term gives $H(J)$. For a classical label $A$ encoded in quantum states, $0\le H(A|M)$; this is the entropy-of-mixture inequality $S(\sum p_a\rho_a)\le H(p)+\sum p_aS(\rho_a)$. Its equality condition is pairwise orthogonality of the positive-probability supports, so $H(A|M)=0$ exactly when $A$ is perfectly readable from $M$. Explicitly, with $\rho_M=\sum_a p_a\rho_a$, the Holevo information is $\sum_a p_aD(\rho_a\Vert\rho_M)$. The operator inequality $\rho_M\ge p_a\rho_a$ and monotonicity of the logarithm give $D(\rho_a\Vert\rho_M)\le-\ln p_a$. For $A_a=p_a\rho_a$ and $B_a=\sum_{b\ne a}p_b\rho_b$, the difference from equality is the nonnegative integral
+$$
+\operatorname{Tr}\rho_a[\log(A_a+B_a)-\log A_a]
+=\int_0^\infty\operatorname{Tr}\rho_a[(A_a+tI)^{-1}-(A_a+B_a+tI)^{-1}]\,dt.
+$$
+The formula on $\operatorname{supp}\rho_a$ follows by positive regularization if $A_a$ is singular. Equality makes every nonnegative resolvent integrand vanish, hence $B_a^{1/2}(A_a+tI)^{-1}$ vanishes on that support for every $t>0$. Since $A_a+tI$ preserves and is invertible on the support, this is equivalent to $B_a$ annihilating it. For all positive-weight labels this is exactly pairwise orthogonality. Thus the displayed cyclic aggregate floor allows quantum intermediate memories while fixing its exact equality case. Each $S(\tau_\xi)$ is nonnegative and vanishes exactly for a pure state. These facts prove the floor and equality condition. (J.4e.2) adds only nonnegative excesses. ∎
+
+*Attainment in the classical member.*
+
+The compressed J-register of J.4d is a member. Replace its orthogonal label states by any common unitary rotation, or append and entangle pure work registers reversibly: this gives genuinely coherent intermediate processing while preserving (J.4f.1). Corollary J.8.9c supplies a reset/control realization approaching $k_BT_bH(J)$ for this classical compressed member. Corollary 7.6r.1 gives the corresponding conditional-swap return for finite classical records; its classical-side-information premise is retained. The extension therefore has an attained entropic minimum and the same limiting heat value on that member.
+
+The exact domain restriction matters. Initial accessible side information $Q$ changes the telescope to $S(M_{\mathrm{end}})-S(M_{\mathrm{start}})$, and source correlations that violate the conditional independence used above change the acquisition terms. An initially supplied entangled resource is not free cyclic memory.
+
+<a id="construction-j4g-coherent-zeno-acquisition-and-uncomputation"></a>**Construction J.4g (Coherent Zeno Acquisition and Uncomputation).**
+
+Quantum processing of a classical instrument and a coherent dilation of that instrument are different source classes. Here is a finite construction of the latter, not a claim that the full classical Lüders instrument has become reversible.
+
+Let $\theta=\omega T/N$, $a=\cos\theta$, $b=-i\sin\theta$, and let $M$ have orthonormal labels $\infty,1,\dots,N$. Start in $|0\rangle_S|\infty\rangle_M$. For $j=1,\dots,N$:
+
+1. rotate $S$ by $\exp(-i\theta\sigma_x)$ controlled on $M=\infty$
+2. swap the two basis vectors $|1,\infty\rangle$ and $|1,j\rangle$, fixing every other basis vector
+
+The second step is a genuine unitary on the full finite Hilbert space. Before step $j$ the basis vector $|1,j\rangle$ is unoccupied, so no earlier stopped branch is changed. Induction yields
+
+$$
+\lvert\Psi_N\rangle=a^N\lvert 0,\infty\rangle+b\sum_{j=1}^Na^{j-1}\lvert 1,j\rangle.
+$$
+
+Measuring $M$ now produces exactly the $J$ law above. The control is coherent and dormant branches remain dormant. Apply $X$ on $S$ controlled on $M\ne\infty$. The result is
+
+$$
+\begin{gathered}
+\lvert 0\rangle_S\otimes\lvert\psi_N\rangle_M, \\
+\lvert\psi_N\rangle=a^N\lvert\infty\rangle+b\sum_{j=1}^Na^{j-1}\lvert j\rangle.
+\end{gathered}
+$$
+
+The vector is normalized by a finite geometric sum. A known unitary $U_{N}$ sends $|\psi_N\rangle$ to $|\infty\rangle$. For example extend $|\psi_N\rangle$ to an orthonormal basis and map that basis to the computational basis. This closes the complete $S,M$ cycle with no bath and no reset event.
+
+**Coherent-acquisition scope.** Zeno outcome probabilities alone do not force any positive Landauer reset heat. Coherent acquisition followed by uncomputation is a constructive counterexample to that unqualified inference. It does not leave a readable $J$ result behind; if a result is retained, it belongs in the ledger. It also does not prove zero total control work or a bounded-cost implementation as $N\to\infty$. The full protocol differs from a dephased Lüders instrument on interference-sensitive tests.
+
+<a id="theorem-j4h-nondemolition-leakage-gram-classification"></a>**Theorem J.4h (Nondemolition Leakage Gram Classification).**
+
+Allow the environment to store a normalized state $|e_j\rangle$ when $M=j$, including $j=\infty$, without changing the record label. After returning $S$ to ready, the state is
+
+$$
+\lvert\Omega\rangle_{ME}=\sum_j\alpha_j\lvert j\rangle\lvert e_j\rangle,\quad \lvert\alpha_j\rvert^2=p_j.
+$$
+
+Let $C_{jk}=\langle e_k|e_j\rangle$. Then $C$ is positive semidefinite with diagonal 1, and
+
+$$
+\rho_M=G,\qquad G_{jk}=\alpha_j\overline{\alpha_k}C_{jk}.
+\tag{J.4h.1}
+$$
+
+Conversely every positive semidefinite unit-diagonal C is the Gram matrix of finite-dimensional environment vectors, so (J.4h.1) exhausts this entire nondemolition-leakage class up to an environment isometry. Environment dimension rank C suffices.
+
+If the environment is unavailable during reset, the exact entropy term is $S(G)$, and
+
+$$
+0 \le S(G) \le H(p)=H(J).
+$$
+
+The lower endpoint holds exactly when $G$ has rank one, equivalently all positive-weight $|e_j\rangle$ are parallel up to phases. The upper endpoint holds exactly when $G$ is diagonal, equivalently the positive-weight environment vectors are orthogonal. If an accessible quantum $Q$ remains, the correct term is $S(M|Q)$, with the correlations and marginal-restoration condition in (J.4e.1).
+
+*Proof.*
+
+(J.4h.1) follows by partial trace, and the Gram factorization proves the converse. Pinching G in the record basis gives diag p. Since
+
+$$
+D(G\|\operatorname{diag} p)=H(p)-S(G)\ge 0,
+$$
+
+the upper bound holds, with equality iff $G=\operatorname{diag}p$. Entropy is zero exactly for a rank-one density matrix. On the support of $p$, multiplication by $\operatorname{diag}(\alpha)$ is invertible, so $\operatorname{rank}G=\operatorname{rank}C$ there; a unit-diagonal Gram matrix has rank one exactly when its vectors are parallel. (J.4e.1) provides the reset term. ∎
+
+For fixed finite nonzero $|\omega T|$, $S(G)\le H(J)=\Theta(\log N/N)$, uniformly over all leakage Gram matrices $C$. This is a complete entropy upper bound over the declared coherent acquisition class. It is not a uniform total-work bound and does not assert finite-time attainment of conditional quantum Landauer bounds.
+
+<a id="definition-j4i-finite-thermodynamic-record-source"></a>**Definition J.4i (Finite Thermodynamic Record Source).** A descriptor consists of a finite-dimensional working carrier, a finite tree of finite-outcome instruments, and a finite exact matrix description with positivity, normalization and norm certificates for every command. Coherent controls are matrices on their complete quantum control support. A declared stopping flag makes the commands governed by that flag identities on its stopped sector; separately registered source evolution remains active. A reset command is an unconditional replacement of its named register at that node, with classical outcome-conditioned selection allowed. A coherently controlled nonunitary operation instead supplies one complete CP map on the quantum control and data, including its off-diagonal control action. The descriptor supplies a maximum depth, an explicit identity-padding schedule, and a disposition for every factor: an accessible retained output $R$, a register $P$ to be returned, or a used reservoir cell. All fresh stocks are independent of the unknown input and its spectator. Initially supplied input--spectator correlations belong to that input, rather than to the fresh stock.
+
+The source uses the finite Hilbert/instrument branch of Definition 27, the certified local-unitary service of Definition C.6c.4a, and the independent Gibbs-reservoir and cyclic external-control convention of Theorem 7.6r and Theorem J.4e. Every factor is local to the driven port. Its additional thermal interface supplies the explicitly specified Gibbs cells below and terminal return access to the named $P$ factors. During the experiment, an archive has only its declared write and read ports; terminal return is a separately declared operation. A retained output and an erased register have different owners, even when they previously contained copies of the same label.
+
+Fix reference units $\tau_{\rm ref},u_*,\hbar$ and the positive tariff coefficients of Definition C.6c.4a. A command has a positively specified duration $\delta$, expressed in the fixed unit $\tau_{\rm ref}$. Thus a sequence of shorter commands changes actual time, peak strength and controller requirements, rather than changing the reference units. For a full supported Hermitian generator $L$, $\|L\|\le B$, choose an integer $m$ with $2\pi m\ge B$ and supply the constant total pulse
+$$
+K_{L,\delta}=\frac{\hbar}{\delta}(L+2\pi mI),\qquad
+U=e^{-iL}.
+\tag{J.4i.1}
+$$
+The pulse uses the complete Pauli expansion of $K_{L,\delta}$, including its scalar coefficient. If its support has a registered bare Hamiltonian $H_0$, the applied control is $K_{L,\delta}-H_0$ during the pulse and zero at its endpoints. All other factors retain their specified bare Hamiltonians. This supplies the compensation explicitly. The total active Hamiltonian is positive; the applied control need not be positive.
+
+For an input state $\rho$ on the active support, the two switches have the exact signed work
+$$
+W_{L,\delta}=\operatorname{Tr}[H_0(U\rho U^*-\rho)],
+\qquad
+|W_{\rm on}|+|W_{\rm off}|
+\le2(\|K_{L,\delta}\|+\|H_0\|).
+\tag{J.4i.2}
+$$
+Indeed their sum is $\operatorname{Tr}\rho(K-H_0)+\operatorname{Tr}U\rho U^*(H_0-K)$, and $[U,K]=0$. The record includes the actual signs, duration, compensation and pulse action, rather than replacing them by the bound. Zero bare Hamiltonians give zero signed pulse work. Reservoir bare energies, all idle factors and every simultaneous term are included when computing the source's actual peak and action.
+
+The finite emitted word lists allocation, pure ready stocks, Gibbs cells, coefficient production, control evaluation, pulse switches, record copies, holding intervals, clock records, branch stock, and every return operation. Apply the inherited positive coefficients to these occurrence and interval counters, using $\tau_{\rm ref}$ for time and strength normalization. Thermal energies and the signed mean-work/mean-heat records are separate coordinates. The latter are expectation functionals of the supplied full state and Hamiltonians, not extra nondisturbing work-measurement outcomes. An added calorimeter is its own declared instrument. In particular, a tariff charge is not a heat value. An external prescribed waveform is the named cyclic work service, as in Theorem 7.6r; a closed autonomous controller is a different service contract.
+
+This is an explicit duration-resolved thermal extension of the local services. Definition Q.0.7t.5 retains its zero-idle, fixed-slot, record-retaining endpoint grammar unchanged.
+
+<a id="theorem-j4j-finite-instrument-compilation-with-owned-reservoir-records"></a>**Theorem J.4j (Finite-Instrument Compilation with Owned Reservoir Records).** Every descriptor of Definition J.4i has an explicit finite source realization of its acquisition, coherent-memory, finite-outcome and bounded-stopping operations. The realization preserves all unnormalized selective endpoint maps, their spectator extensions, and every zero-probability leaf. Its full supplier state and work/control records are obtained from the same emitted word. Logical reset commands have the uniformly convergent physical realizations of Theorem J.4k below.
+
+*Proof.* Fix one node and write its instrument as
+$$
+\mathcal I_x(\rho)=\sum_{r=1}^{r_x}K_{xr}\rho K_{xr}^*,
+\qquad \sum_{x,r}K_{xr}^*K_{xr}=I.
+\tag{J.4j.1}
+$$
+A supplied positive Choi matrix gives such a finite list by reshaping the columns of its positive square root; retaining zero columns avoids a rank-selection step. The isometry
+$$
+V|\psi\rangle=\sum_{x,r}K_{xr}|\psi\rangle\otimes|x\rangle_X\otimes|r\rangle_E
+\tag{J.4j.2}
+$$
+therefore satisfies $V^*V=I$. The Kraus register $E$ is an owned physical factor.
+
+Here is an explicit complete unitary extension, including invalid code sectors. Embed the input and output of $V$ into one finite carrier $F$, put $A=VP_{\rm in}$ there, and define
+$$
+U_A=\begin{pmatrix}
+A&(I-AA^*)^{1/2}\\
+(I-A^*A)^{1/2}&-A^*
+\end{pmatrix}.
+\tag{J.4j.3}
+$$
+The singular-value decomposition gives $A f(A^*A)=f(AA^*)A$ for the square-root function in this formula. Multiplying the blocks then gives $U_AU_A^*=U_A^*U_A=I$. On the encoded input in its first summand, $(I-A^*A)^{1/2}$ vanishes, so the output is exactly $V|\psi\rangle$ in that summand. All complementary inputs have the displayed complete unitary action.
+
+Every finite unitary $U$, including $U_A$, has a two-reflection pulse implementation without choosing a logarithm branch. On one fresh selector qubit set
+$$
+F_U=\begin{pmatrix}0&U\\U^*&0\end{pmatrix},\quad
+F_X=\begin{pmatrix}0&I\\I&0\end{pmatrix},\quad
+L_F=\frac\pi2(I-F).
+\tag{J.4j.4}
+$$
+Both $F$ matrices are Hermitian involutions, $e^{-iL_F}=F$ and $\|L_F\|\le\pi$. Since $F_UF_X=\operatorname{diag}(U,U^*)$, the selector starts and ends in $|0\rangle$ and the data undergo $U$. Formula (J.4i.1), with one common scalar shift on the full coherent support, supplies each pulse. For duration $\delta$ and $m=1$, its peak is at most $3\pi\hbar/\delta$, and its zero-bare-Hamiltonian absolute switching-work throughput is at most $6\pi\hbar/\delta$. The selector is not measured.
+
+For a declared classical outcome with $m_X$ labels, embed its pointer in $M=2^{\lceil\log_2 m_X\rceil}$ labels and allocate a fresh $M$-level reservoir $D$ with bare Hamiltonian zero and Gibbs state $I_D/M$. Assign the extra pointer labels explicit invalid-output branches on complementary inputs. Put $Z_D|z\rangle=e^{2\pi iz/M}|z\rangle$ and apply
+$$
+C_{XD}=\sum_{x=0}^{M-1}|x\rangle\!\langle x|\otimes Z_D^x.
+\tag{J.4j.5}
+$$
+The full source retains its state. Its operational outcome interface has no access to $D$. Since $M^{-1}\operatorname{Tr} Z_D^{x-y}=\delta_{xy}$, its reduced state on the working carrier, $X$ and $E$ is exactly
+$$
+\sum_x V_x\rho V_x^*\otimes|x\rangle\!\langle x|_X,
+\qquad V_x=\sum_rK_{xr}\otimes|r\rangle_E.
+\tag{J.4j.6}
+$$
+Reading the diagonal algebra of $X$ gives the required classical outcome; tracing the explicitly designated $E$ gives $\mathcal I_x$. Any durable outcome copy is made by a reversible basis-copy unitary into a counted ready factor. The inaccessible Gibbs cell is neither an uncharged classical random symbol nor a reset of $X$. Its bare energy and heat are zero, its final correlations are retained in the supplier state, and the controlled-phase pulse is charged by (J.4i.1)--(J.4i.2). A coherently retained acquisition omits this dephasing command, rather than treating a nonorthogonal pointer as a classical outcome.
+
+A general supplied state is prepared by applying the same unitary construction to a finite purification, with its purifying factor retained under an owner. A prescribed input state already correlated with a spectator remains an input; the compiler does not manufacture that correlation from independent stocks. A nominal discard means changing the availability of its owned factor, not deleting it from the physical carrier. In particular, a completely specified coherently controlled nonunitary map uses this dilation, rather than a coherent control of an unspecified reset channel. After its last use, its Kraus register can be returned unconditionally by Theorem J.4k; a local trace-preserving return on that register leaves the retained control/data marginal exactly unchanged.
+
+At each endpoint, partial tracing the fresh, subsequently inaccessible $D$ implements exactly (J.4j.6). Every older reservoir is isolated from later working commands. Consequently an induction over the finite tree gives the same joint instrument on all accessible histories, even when a later operation uses an arbitrary retained quantum memory. Coherent stopping is implemented by the corresponding block-diagonal full matrix; classical stopping uses the stored diagonal outcome. Unused tree stocks remain allocated, and short branches receive identity commands. Zero branch maps remain zero; no proof step divides by a branch probability. Equality on matrix units proves the same assertions after every spectator identity extension.
+
+The full reference for this realization contains (J.4j.2)--(J.4j.5), all reservoir cells, their full final joint density operator, and the emitted source records. It is related to the physical source by the computational-basis identification. The bare CP instrument is obtained from this reference by the stated partial traces and outcome restriction. Distinct environmental realizations of the same CP map need not have equal supplier responses. This distinction is fixed by the descriptor.
+
+The input matrices, square roots, finite tensor products, phase matrices and two reflections have finite descriptions and norm certificates. The emitted word therefore has finitely many factors, coefficients, pulses and owned intervals. Equations (J.4i.1)--(J.4i.2) give the finite work/control values. The construction uses no arbitrary CP map as a native unpaid operation. ∎
+
+<a id="theorem-j4k-uniform-quantum-reset-with-an-explicit-gibbs-swap-ledger"></a>**Theorem J.4k (Uniform Quantum Reset with an Explicit Gibbs-Swap Ledger).** Let $P$ consist of $b\ge1$ zero-bare-Hamiltonian qubits in an arbitrary state $\rho_{PR}$, with every accessible retained quantum system included in $R$ and the finite entropy terms of Theorem J.4e. The channel-error assertion also holds for arbitrary external spectators. For an integer $n\ge1$ allocate independent bath qubits $B_{i,k}$, $1\le i\le b$, $1\le k\le n^2$, with
+$$
+H_{i,k}=k_BT_b\frac{k}{n}|1\rangle\!\langle1|,
+\qquad \gamma_k=\operatorname{diag}(1-g_k,g_k),
+\qquad g_k=(1+e^{k/n})^{-1},\quad g_0=\tfrac12.
+\tag{J.4k.1}
+$$
+For each $i$, exchange $P_i$ successively with $B_{i,1},\ldots,B_{i,n^2}$. The return acts as the identity on $R$. Its reduced channel is
+$$
+\mathcal R_{b,n}(\rho_{PR})=\gamma_{n^2}^{\otimes b}\otimes\rho_R,
+\qquad
+\tfrac12\|\mathcal R_{b,n}-\mathcal R_{b,\infty}\|_\diamond
+=1-(1-g_{n^2})^b\le b e^{-n},
+\tag{J.4k.2}
+$$
+where $\mathcal R_{b,\infty}$ replaces $P$ by $|0\rangle^{\otimes b}$. Put $p_i=\operatorname{Tr}\rho_P|1\rangle\!\langle1|_{P_i}$ and
+$$
+q_n=\sum_{k=1}^{n^2}\frac{k}{n}(g_{k-1}-g_k).
+$$
+The actual bath heat and work obey
+$$
+\beta Q_{b,n}=bq_n+\frac1n\sum_i(p_i-\tfrac12),
+\qquad W_{b,n}=Q_{b,n},\qquad \beta=(k_BT_b)^{-1}.
+\tag{J.4k.3}
+$$
+Their quantum-side-information balance is
+$$
+\begin{split}
+\beta Q_{b,n}&=S(P\mid R)_\rho-bh_2(g_{n^2})+\epsilon_{b,n},\\
+\epsilon_{b,n}&=I(P:R)_\rho+D(\rho_P\Vert\gamma_1^{\otimes b})
++b\sum_{k=2}^{n^2}D(\gamma_{k-1}\Vert\gamma_k)\ge0.
+\end{split}
+\tag{J.4k.4}
+$$
+In particular,
+$$
+\beta Q_{b,n}\longrightarrow b\ln2,\qquad
+\epsilon_{b,n}\longrightarrow b\ln2-S(P\mid R)_\rho,
+\tag{J.4k.5}
+$$
+uniformly in the heat statement over all input states and spectators. This is a finite-work reset for arbitrary quantum side information; it approaches the conditional-entropy floor precisely on the branch $S(P\mid R)=b\ln2$.
+
+*Proof.* A swap moves the former contents of $P_i$ into $B_{i,1}$, then the former state of $B_{i,k-1}$ into $B_{i,k}$, and finally the initial state of $B_{i,n^2}$ into $P_i$. Taken jointly, the first bath cells hold exactly the original $P$ state and its correlations with $R$. The output $P$ is independent of the rest. Free bath evolution contributes only known local phases commuting with the Gibbs states and Hamiltonians; these phases can be included in the supplied full state without changing any formula below.
+
+The final replacement state has ready-state mass $(1-g_{n^2})^b$. The difference of the two replacement channels, tensored with any identity, is that fixed output-state difference tensored with the unchanged reference marginal. Its trace norm is $2[1-(1-g_{n^2})^b]$, proving (J.4k.2), including the diamond norm and its bound.
+
+Only the first cell of each chain receives the input-dependent population $p_i$ instead of $g_0$. Its energy correction is $k_BT_b(p_i-g_0)/n$. Every later cell gives the summand in $q_n$, proving the heat formula. The working registers have zero bare energy, the external control is cyclic, and every change of energy is in the listed baths, so the first law gives $W=Q$.
+
+The final bath marginal, up to the known commuting free phases, is $\rho_P$ on its first-cell block times the independent states $\gamma_{k-1}$ on the later cells. Its relative entropy to the initial product Gibbs state is therefore
+$$
+D(\rho_P\Vert\gamma_1^{\otimes b})+
+ b\sum_{k=2}^{n^2}D(\gamma_{k-1}\Vert\gamma_k).
+$$
+Its mutual information with the non-bath output $PR$ is $I(P:R)_\rho$. Substitution into Theorem J.4e gives (J.4k.4); quantum correlations between the first bath cells are included in the joint relative entropy, rather than replaced by a sum of marginal entropies.
+
+For completeness, let $\delta=1/n$. The identity
+$$
+\frac{k}{n}(g_{k-1}-g_k)=h_2(g_{k-1})-h_2(g_k)+D(\gamma_{k-1}\Vert\gamma_k)
+$$
+gives $q_n=\ln2-h_2(g_{n^2})+\sum_{k=1}^{n^2}D(\gamma_{k-1}\Vert\gamma_k)$. Since $g'(s)=-g(s)(1-g(s))$ and $g(s)(1-g(s))=[4\cosh^2(s/2)]^{-1}$,
+$$
+0\le\sum_{k=1}^{n^2}D(\gamma_{k-1}\Vert\gamma_k)
+\le\frac{e^{1/n}}{2n},\qquad
+h_2(g_{n^2})\le(n+2)e^{-n}.
+\tag{J.4k.6}
+$$
+Indeed $g_{k-1}-g_k\le\delta e^\delta g_k(1-g_k)$ and $D(\operatorname{diag}(1-a,a)\Vert\operatorname{diag}(1-c,c))\le(a-c)^2/[c(1-c)]$ bound each relative entropy by $\delta e^\delta(g_{k-1}-g_k)$; summation telescopes. The entropy bound follows from $g_{n^2}\le e^{-n}$, $-\ln g_{n^2}\le n+1$ and $-(1-g)\ln(1-g)\le g$. Thus
+$$
+|\beta Q_{b,n}-b\ln2|
+\le b(n+2)e^{-n}+\frac{be^{1/n}}{2n}+\frac{b}{2n}.
+\tag{J.4k.7}
+$$
+Equations (J.4k.4), (J.4k.6) and $S(P\mid R)_{\rm out}=bh_2(g_{n^2})$ prove the remaining limit.
+
+Each swap $S$ is a Hermitian involution and is generated in any declared positive time $\delta_s$ by $K=\pi\hbar(I-S)/(2\delta_s)$. During that stroke the control is $K-H_{i,k}$ on the active pair; before and after it the control vanishes. The other baths keep their bare Hamiltonians. Equation (J.4i.2) supplies its exact work and a finite absolute switching bound. There are $bn^2$ bath cells and swaps, maximal cell gap $nk_BT_b$, and a finite emitted interval inventory. All used cells remain in the reservoir ledger; none is reused as a fresh Gibbs cell. The source approximation returns the named $P$ factors, while all other non-bath auxiliaries are unchanged or explicitly included in $P$. This proves the required conditional-entropy and mean-heat convergence in the reset-limit contract. ∎
+
+<a id="corollary-j4k1-finite-adaptive-composition-and-the-source-boundary"></a>**Corollary J.4k.1 (Finite Adaptive Composition and the Source Boundary).** In any fixed finite descriptor, replace its unconditional reset commands $e$ on $b_e$ qubits, possibly selected by already classical histories, by Theorem J.4k with parameters $n_e$. Coherent gates between these nodes remain arbitrary; a coherently controlled nonunitary map uses the complete dilation of Theorem J.4j and an unconditional return of its own garbage after its last use. Keep the same retained record convention, padding and supplied quantum commands on both sides. The half trace distance of the entire accessible endpoint output, including its classical history and arbitrary spectator, from the ideal-reset descriptor is at most
+$$
+\max_{\text{root-to-leaf paths}}\ \sum_{e\text{ on the path}} b_e e^{-n_e}.
+\tag{J.4k.8}
+$$
+Any complete primitive-instrument errors add their corresponding half-diamond bounds. This follows by replacing one primitive at a time on the history-extended state and using trace-norm contraction of the subsequent channels. It gives no conditional rare-event bound after dividing by that event's probability. Every finite implementation also retains its own actual supplier state, bath energies, controller records and resource vector; reservoir spaces of different sizes are compared by the displayed heat and entropy limits, not by identifying their full states.
+
+The bath-free source of Definition Q.0.7t.5 cannot perform a complete cyclic reset with $S(P\mid R)>0$. With all its stocks retained, each unitary preserves entropy, each independent stock append adds its entropy, and a computational record service is an isometry followed by pinching, which increases entropy by $D(\sigma\Vert\Delta\sigma)\ge0$. Restoring every auxiliary independently while keeping $R$ fixed and making $P$ pure would decrease that full entropy by $S(P\mid R)>0$. The thermal interface in Definition J.4i supplies the additional bath rather than describing record export as thermal erasure. ∎
+
+<a id="theorem-j4l-stopped-lüders-source-fixed-endpoint-clock-and-full-apparatus-return"></a>**Theorem J.4l (Stopped-Lüders Source, Fixed Endpoint Clock and Full Apparatus Return).** Fix $N\ge1$ and finitely described $T>0$ and $\omega\in\mathbb R$. On the endpoint-observation branch of Definition J.4i there is a finite driven realization of the stopped Lüders experiment of Theorem J.4c at the physical times $t_j=jT/N$. All non-bath acquisition and control registers can be returned, with an error tending to zero, while the complete mean work and bath heat tend to $k_BT_bH(J)$. The actual control strengths, clock, coefficient stock and reservoir allocations remain in their resource ledger. Each finite implementation has finite values; the theorem supplies no uniform strength or tariff ceiling as $N$ increases.
+
+*Proof.* Give the first-failure register $\mathsf J$ the labels $\infty,1,\ldots,N$, padded to $M=2^{\lceil\log_2(N+1)\rceil}$ labels with a specified invalid sector. Initially $S=|0\rangle$ and $\mathsf J=|\infty\rangle$. In macro $j$ apply:
+
+1. $e^{-i(\omega T/N)\sigma_x}$ on $S$;
+2. the permutation exchanging $|1,\infty\rangle$ with $|1,j\rangle$, fixing every other basis vector;
+3. the controlled-phase dephasing (J.4j.5) of $\mathsf J$, using a fresh $M$-level degenerate Gibbs cell $D_j$.
+
+The invalid sector has the full unitary extensions just stated; it is not postselected away. At the end of macro $j$, the new label determines the interrogation output: $O_j=0$ for $\mathsf J=\infty$, $O_j=1$ for $\mathsf J=j$, and $O_j=\bot$ for an earlier failure label. The last alternative is exact stopped padding. A raw output register, if included, receives that deterministic function by a reversible basis copy and retains its owner.
+
+Tracing the isolated $D_j$ gives exactly the nonselective Lüders acquisition on the active branch and the identity instrument on the inactive branch. The selective maps are obtained by the orthogonal label projections of $\mathsf J$. Induction therefore yields the complete stopped instrument and
+$$
+\Pr(J=j)=c^{j-1}(1-c),\quad
+\Pr(J=\infty)=c^N,\qquad c=\cos^2(\omega T/N).
+\tag{J.4l.1}
+$$
+The surviving qubit is $|0\rangle$. A failure at $x$ leaves the terminal qubit $\psi_x=e^{-i\omega(T-xT/N)\sigma_x}|1\rangle$, exactly as in Corollary J.8.9c. The result includes every failure outcome; no success conditioning is used.
+
+Before execution, compile the three unitary commands, their full quantum controls, any requested copies, and all clock/controller calls into a finite macro word, padding all macros to a common length $q_N$. Every call has a positively specified slot duration
+$$
+\delta_N=\frac{T}{Nq_N}.
+\tag{J.4l.2}
+$$
+All coefficient generation and installation precede $t=0$ and have their separate times and charges. During the $Nq_N$ execution slots use (J.4i.1), with the physical bare qubit Hamiltonian $H_S^+=\hbar\omega\sigma_x+\hbar|\omega|I$ included in the compensation of (J.4i.2). Its scalar energy offset is registered once; the original qubit density and instrument law is unchanged. The active support of every slot explicitly includes $S$, even when its desired endpoint operation is $I_S$. An identity/control-only slot therefore cancels $H_S^+$, rather than allowing an extra unlisted free rotation. Thus the actual completion boundary of macro $j$ is $jT/N$, and its exact endpoint instrument is the one just proved. The reference unit $\tau_{\rm ref}$ is unchanged. The full emitted word, not a relabeled clock, supplies the physical duration. Its peak bounds explicitly contain $1/\delta_N$ and its compensation contains $\hbar|\omega|$. The declared observation interface is the completed macro interface; this driven construction has its displayed intramacro dynamics.
+
+After $T$, apply the $\mathsf J$-controlled return
+$$
+U_{\rm ret}=|\infty\rangle\!\langle\infty|\otimes I+
+\sum_{x=1}^N|x\rangle\!\langle x|\otimes
+\sigma_xe^{i\omega(T-xT/N)\sigma_x},
+\tag{J.4l.3}
+$$
+extended unitarily on padding. This returns $S$ to $|0\rangle$ on every branch. Every requested raw outcome, stop flag and classical branch record is a deterministic function of $J$ and the fixed descriptor. Reverse its basis-copy circuit using $\mathsf J$. This returns all those local copies and scratch factors to ready, including their correlations with the dephasing reservoirs. The external control word is fixed and uses full coherent controls, so it creates no additional outcome-conditioned waveform record. Any genuinely retained external output is instead placed in $R$ and kept in the ledger; the fully returned apparatus branch has no such copy.
+
+The remaining accessible random record is $\mathsf J$ with its diagonal law (J.4l.1); the installed descriptor and returned deterministic controller retain their original states. The old cells $D_1,\ldots,D_N$ remain physical reservoir factors, possibly correlated with it, and are isolated from return operations. Throughout cleanup, every stroke and holding interval explicitly maintains the identity endpoint operation on $S$ by the same registered compensation; $H_S^+$ is restored when cleanup finishes. Allocate a separate fresh Gibbs stock for erasure. Encode $\mathsf J$ in $b=\lceil\log_2(N+1)\rceil$ bits and apply the conditional-swap return to the bits in order, conditioning each bit on the still-retained later bits. Here the conditioning registers have a diagonal joint marginal, as required by Corollary 7.6r.1; no quantum side information is treated as a classical condition. The following smoothed swap family gives one finite formula for every sector, including zero-weight sectors.
+
+At bit $i$, let $r$ range over its $m_i=2^{b-i}$ later-bit sectors and let $q_{1r},q_{0r}$ be the actual remaining marginal probabilities. Set
+$$
+\eta_i=\frac{e^{-n}}{m_i},\qquad
+\widetilde p_r=\frac{q_{1r}+\eta_i}{q_{0r}+q_{1r}+2\eta_i},\qquad
+ a_{r,0}=\ln\frac{1-\widetilde p_r}{\widetilde p_r},\qquad A=n+b+1.
+$$
+These formulas have strictly positive denominators and require no test for a zero probability or equality of computable reals. Every sector uses exactly $K=2nA$ fresh cells with gaps $a_{r,k}=a_{r,0}+k/n$ and Gibbs probabilities $g(a_{r,k})=(1+e^{a_{r,k}})^{-1}$, followed by the corresponding controlled swaps. Since $|a_{r,0}|\le\ln(1+m_ie^n)\le A$, the final gap is at least $A\ge n$. Give each cell the nonnegative Hamiltonian $k_BT_b[A I+a_{r,k}|1\rangle\!\langle1|]$; its constant shift is retained and changes neither the Gibbs state nor the heat. Every sector has a separately owned initial Gibbs stock, including the zero-weight sectors. The source emits full controlled matrices on the diagonal later-bit register and all those cells.
+
+For the proof only, write $q_r=q_{0r}+q_{1r}$ and $p_r=q_{1r}/q_r$ when $q_r>0$. The energy calculation of Theorem J.4k gives the sector heat
+$$
+\beta Q_r=h_2(\widetilde p_r)-h_2(g(a_{r,K}))+\eta_r'
++a_{r,1}(p_r-\widetilde p_r),
+\qquad 0\le\eta_r'\le e^{1/n}/n.
+$$
+Its actual final excited probability is $g(a_{r,K})\le e^{-n}$. Also
+$$
+\sum_rq_r|p_r-\widetilde p_r|\le\sum_r\eta_i=e^{-n},\qquad
+|a_{r,1}|\le n+b+2.
+$$
+For Bernoulli laws, coupling their unequal part gives $|h_2(p)-h_2(q)|\le h_2(|p-q|)$: the probability of a coupling mismatch is $|p-q|$, and each conditional binary entropy is bounded by the entropy of its mismatch indicator. Concavity then bounds the weighted conditional-entropy change by $h_2(e^{-n})\le(n+2)e^{-n}$. The same bound applies to the final entropy. Thus averaging sectors gives a per-bit error from its original conditional entropy of at most $(3n+b+6)e^{-n}+e^{1/n}/n$.
+
+Each return leaves the marginal of all later bits unchanged. Hence those original conditional entropies sum to $H(J)$ in the actual reset order. Previously returned bits remain physical retained factors during later returns; their correlations are included when Theorem J.4e is applied, while the direct heat calculation above already uses the actual sector marginals. Summing gives
+$$
+|\beta Q_{N,n}-H(J)|
+\le b\bigl[(3n+b+6)e^{-n}+e^{1/n}/n\bigr],
+\qquad
+\Pr(\mathsf J_{\rm out}\ne\infty)\le b e^{-n}.
+\tag{J.4l.4}
+$$
+The ready code is chosen to represent $\infty$. The unused binary codes have zero probability throughout the ideal acquisition and are nevertheless assigned a complete return map. The final record is diagonal, so its entropy tends to zero, for example by $S(\mathsf J_{\rm out})\le h_2(\varepsilon)+\varepsilon\ln(2^b-1)$ with $\varepsilon\le be^{-n}$ and the continuous endpoint convention. A ready projection of probability $1-\varepsilon$ also gives convergence of the joint record to a product ready factor with its remaining systems, by the usual block decomposition and Cauchy--Schwarz bound $\|\rho-|\infty\rangle\!\langle\infty|\otimes\rho_{\rm rest}\|_1\le2\sqrt\varepsilon+2\varepsilon$.
+
+All acquisition reservoirs have bare Hamiltonian zero, so their heat is exactly zero. The finite pulse strokes act unitarily, and their signed work telescopes to the change in bare energy of the qubit, returned registers and all reservoirs. Initially and finally the qubit has the same mean $H_S^+$ energy $\hbar|\omega|$, every returned non-bath register has zero bare Hamiltonian, and the only bath energy change is $Q_{N,n}$ of the fresh return stock. Hence the complete signed work of this declared driven apparatus is exactly $W_{N,n}=Q_{N,n}$, including compensation and return; its absolute switching throughput and resource tariff are the independently retained finite sums. No acquisition or return reservoir is restored or reused as a fresh reservoir.
+
+For every fixed $N$, (J.4l.4) proves the conditional-entropy and mean-heat convergence required by the reset contract and gives $W_{N,n},Q_{N,n}\to k_BT_bH(J)$. One may also take an explicit diagonal family, for example $n=N^2$, for which the error in (J.4l.4) tends to zero with $N$. Theorem J.4c then gives $H(J)=\Theta(\log N/N)$ for fixed nonzero $|\omega T|$. This is a vanishing mean-work and heat family on the stated driven endpoint source, with the actual refining clock and growing control/reservoir requirements still charged. ∎
+
+Verifiers are the Choi square root, complete Julia-unitary and reflection matrices, Gibbs phase orthogonality, full-history induction, ownership inventory, switch-work identity, exact swap permutation, quantum relative-entropy balance, and the displayed convergence estimates. Falsifiers include a missing Kraus/reservoir factor, a changed stopped or spectator response, an uncharged timing compensation, a record counted as both retained and erased, or a failed heat or error formula. This result covers the complete finite descriptor class of Definition J.4i; Theorems J.4w–J.4y give complete source coordinates, supplier criteria and the reset ledger for the general supplied-source class. Equivalence to a separately fixed intrapulse observation or bounded-controller contract requires its own source and limit data.
+
+<a id="theorem-j4s-faithful-weighted-normal-channels-and-causal-coordinates"></a>**Theorem J.4s (Faithful-Weighted Normal Channels and Causal Coordinates).** Fix the actual typed port schedule, access/isolating boundaries and source/status/interrogation responses. Faithful trace-class weights give exact positive trace-class coordinates for normal channels on separable spaces, and the weighted causal constraints below are necessary and sufficient for an abstract sequential isometric realization. The weight is mathematical reference data, not a newly supplied physical stock. The channel/state correspondence is established literature: Haapasalo, Kraft, Miklin and Uola (2021), Section 4 and Appendix A. The direct reconstruction and causal proof specify the version used here. The following local section numbers belong to Part A; the separate finite-sufficiency proposition is Part B.
+
+**J.4s, Part A — 1. Faithful weighted coordinates and complete reconstruction**
+
+Let $A,B$ be separable Hilbert spaces. Fix a basis $\{|i\rangle\}$ of $A$ and a faithful density
+
+$$
+\tau=\sum_i t_i|i\rangle\langle i|,\quad t_i>0,\quad\sum_i t_i=1,\qquad |\Omega_\tau\rangle=\sum_i\sqrt{t_i}|i\rangle_{A\prime}\otimes|i\rangle_A.
+\tag{J.4s.1}
+$$
+
+A normal channel here means a CPTP map $\Phi:T(A)\to T(B)$, whose bounded-operator dual is normal. Its weighted Choi state is
+
+$$
+J_\tau(\Phi)=(\mathrm{id}_{A\prime}\otimes\Phi)(|\Omega_\tau\rangle\langle\Omega_\tau|).
+$$
+
+**Channel criterion.** $\Phi\to J_\tau(\Phi)$ is an affine bijection between normal channels and positive trace-class operators $J$ on $A'\otimes B$ satisfying
+
+$$
+J\ge0,\qquad\operatorname{Tr}_B J=\tau.
+\tag{J.4s.2}
+$$
+
+In the fixed basis the inverse is uniquely determined by
+
+$$
+\Phi(|i\rangle\langle j|)=\frac{J_{ij}}{\sqrt{t_it_j}},\qquad J_{ij}=(\langle i|\otimes I)J(|j\rangle\otimes I).
+\tag{J.4s.3}
+$$
+
+**Proof.** Necessity follows from complete positivity, normality and trace preservation. The vector in (J.4s.1) is normalized, so J is an ordinary density operator, not an unnormalized infinite Choi form.
+
+For sufficiency, take a countable spectral decomposition $J=\sum_\alpha|v_\alpha\rangle\langle v_\alpha|$, with the eigenvalue square roots included in $v_{\alpha}$. Write $v_{\alpha,i}=(\langle i|\otimes I)v_\alpha$ and define on finite basis combinations
+
+$$
+K_\alpha|i\rangle=\frac{v_{\alpha,i}}{\sqrt{t_i}}.
+$$
+
+For every such x, the marginal identity (J.4s.2) gives
+
+$$
+\sum_\alpha\|K_\alpha x\|^2=\|x\|^2.
+\tag{J.4s.4}
+$$
+
+Every $K_{\alpha}$ is therefore a contraction on this dense domain and extends uniquely to A. The map
+
+$$
+Wx=\sum_\alpha K_\alpha x\otimes|\alpha\rangle.
+$$
+
+extends as an isometry $A\to B\otimes\ell^2(\alpha)$, and $\sum_\alpha K_\alpha^*K_\alpha=I$ strongly. Define
+
+$$
+\Phi(\rho)=\operatorname{Tr}_E(W\rho W^*)=\sum_\alpha K_\alpha\rho K_\alpha^*.
+\tag{J.4s.5}
+$$
+
+The series converges in trace norm for positive $\rho$ because its trace tails vanish, and then for arbitrary trace-class $\rho$ by linear decomposition. This is a normal CPTP channel, with a complete spectator extension. Its $(i,j)$ block in $J_\tau(\Phi)$ equals $J_{ij}$. Finite reference-basis compressions of both positive trace-class operators therefore agree; they converge in trace norm to their respective full operators, proving equality. Equation (J.4s.3) fixes every finite matrix unit. Finite-rank matrix cores are trace-norm dense and channels are trace-norm contractions, so it fixes the whole channel. ∎
+
+There is no use of a globally bounded $\tau^{-1/2}$. The divisions in (J.4s.3) are only finite matrix-unit divisions; (J.4s.4) establishes the globally bounded Kraus operators. Faithfulness gives exact uniqueness, not a bounded inverse error estimate or uniform infinite-input tomography. A different faithful weight is just a different exact coordinate system. The auxiliary $\tau$ is mathematical reference data, not a fresh physical stock or a requirement that the source actually prepare $|\Omega_\tau\rangle$.
+
+For a finite or countable selective instrument, use positive $J_{x}$ with $\sum_x J_x=J$ and (J.4s.2). Positivity of each summand and $\operatorname{Tr}_BJ_x\le\tau$ give trace-nonincreasing CP maps by the same proof, and the sum is the channel. Zero outcomes stay zero; no normalization by their probability occurs. A genuinely classical input/output port is represented by the corresponding diagonal algebra: require input dephasing invariance or output block diagonality as actually registered. A coherent output is not silently dephased.
+
+**J.4s, Part A — 2. A finite causal skeleton**
+
+Fix m ordered events with actual external input $A_{j}$ and newly emitted output $B_{j}$ at event j. Each space is separable; singleton spaces cover absent ports. Once emitted, $B_{j}$ is outside the later source's access, though an external provider may feed information back through a declared later A slot. Choose faithful $\tau_{j}$ on $A_{j}$ and fix the tensor ordering of all reference and output factors.
+
+Let $J_{j}$ be a positive trace-class operator on $A'_1\dots A'_jB_1\dots B_j$, and set $J_{0}=1$. The weighted causal constraints are
+
+$$
+\operatorname{Tr}_{B_j}J_j=J_{j-1}\otimes\tau_j,\qquad j=1,\ldots,m.
+\tag{J.4s.6}
+$$
+
+with tensor permutations understood only through the registered ordering. Iterating (J.4s.6) gives $\operatorname{Tr}_{\text{all }B}J_j=\tau_1\otimes\dots\otimes\tau_{j}$. The channel criterion therefore reconstructs a normal prefix channel
+
+$$
+\Phi_j:\mathcal T(A_1\cdots A_j)\longrightarrow\mathcal T(B_1\cdots B_j).
+$$
+
+The same matrix-unit reconstruction shows (J.4s.6) is equivalent to
+
+$$
+\operatorname{Tr}_{B_j}\Phi_j(\rho)=\Phi_{j-1}(\operatorname{Tr}_{A_j}\rho).
+\tag{J.4s.7}
+$$
+
+for every trace-class $\rho$, including correlated inputs. This is no future-to-past signalling on this ordered skeleton.
+
+**Causal criterion.** Equations (J.4s.6) are necessary and sufficient for an abstract sequential isometric realization with separable memories $M_{j}$,
+
+$$
+W_j:M_{j-1}\otimes A_j\longrightarrow B_j\otimes M_j,\qquad M_0=\mathbb C.
+\tag{J.4s.8}
+$$
+
+Every $B_{j}$ is emitted at its declared event and is never touched again by the source. The terminal $M_{m}$ is the full owned dilation memory, not deleted by the construction.
+
+**Proof.** Necessity follows by tracing the new output and later isometric memory in a sequential realization.
+
+For sufficiency, choose a minimal Stinespring isometry $V_{j}$ of $\Phi_{j}$. Such an isometry exists by (J.4s.4)–(J.4s.5), followed by restriction of its environment to the closed span of all partial output matrix elements. All spaces remain separable. The isometry $V_{j-1}\otimes I_{A_j}$, with $A_{j}$ regarded as part of its environment, is a minimal dilation of $\Phi_{j-1}$ composed with $\operatorname{Tr}_{A_j}$. Minimality follows because the old environmental slice vectors span $M_{j-1}$, and arbitrary $A_{j}$ vectors span the added environment factor. By (J.4s.7), $V_{j}$, with $B_{j}$ also regarded as environment, dilates the same map to $B_1\dots B_{j-1}$.
+
+The minimal-dilation comparison now gives an isometry $W_{j}$ from $M_{j-1}\otimes A_{j}$ to $B_{j}\otimes M_{j}$ such that
+
+$$
+V_j=(I_{B_1\cdots B_{j-1}}\otimes W_j)(V_{j-1}\otimes I_{A_j}).
+\tag{J.4s.9}
+$$
+
+For clarity, this comparison follows directly by mapping every environmental slice $(\langle b|\otimes I)V_{\min}x$ to the corresponding slice of the second dilation. Equality of the two CP maps makes inner products of all finite sums equal; minimality makes the first slice span dense. The map therefore extends to an isometry and gives (J.4s.9). Induction proves (J.4s.8). ∎
+
+This is a constructive Hilbert-space existence theorem; its memories may be infinite-dimensional, and native implementation of each isometry is the separate compatibility condition (J.4x.16). The coefficient data are spectral vectors and exact inner-product identifications; no effective black-box evaluation algorithm is asserted.
+
+**J.4s, Part A — 3. Which original responses these coordinates describe**
+
+The stopped-Lüders source has finite $O_{j}$ in {0,1,bottom} and finite J in {1,...,N,infinity}, with fixed finite N at each architecture. Its actual classical source/status responses and the declared stopping identities remain explicit constraints on the selective maps. The schedule, named tensor factors, available access at each event and disposal/return roles are part of the descriptor and are not quotiented away by (J.4s.6). In particular the construction keeps the typed step schedule and register relabelings of Theorem J.4d.
+
+For a fixed actual incoming law $\rho_{\mathrm{AD}}$ and inaccessible $D$, the response is $(\Phi\otimes\mathrm{id}_D)(\rho_{\mathrm{AD}})$. It preserves that supplied correlation rather than manufacturing $\rho_{A}$ independently. A mathematical normal extension can be parametrized by (J.4s.2) even if the registered experiment tests only this actual law or a smaller declared family. Equality of full $J$ is then a sufficient, possibly finer, comparison; the original quotient is determined by its actual tests. It is not silently enlarged to one uniform simulator for every unknown infinite input.
+
+If an actually registered input includes a faithful purification $|\Omega_\tau\rangle$, exact equality on that one complete input determines the channel on $\operatorname{supp}(\tau)$, by (J.4s.3). Approximate equality there still need not imply uniform diamond convergence. This distinction follows from the coordinate formula itself and adds no new input port to the source.
+
+The original J.4c/d interrogations and status alphabet are discrete, and the displayed reset ledger uses ordinary discrete Shannon/von Neumann entropies. The registered stopped-source and reset interfaces here are discrete; a non-atomic classical outcome algebra would be an additional interface to state explicitly. Equations (J.4s.2)–(J.4s.8) cover separable quantum ports and their finite/countable diagonal sectors; they do not automatically classify a non-atomic classical outcome algebra. If such an interface is explicitly supplied, its normal instrument algebra must be retained separately rather than discretized.
+
+The reconstructed memory is a dilation memory, not automatically an old supplier with its energy, correlations and return roles. Equations (J.4w.2)–(J.4w.3) separately test each independent-stock complete transition by its weighted orthogonal isometries and strong onto/complement condition. Old correlated suppliers remain active factors, and isolated outputs stay excluded from later support. Actual heat, work and return tests must come from that same complete realization, rather than scalar labels appended to the weighted coordinates.
+
+<a id="proposition-j4s1-binary-histories-need-not-have-a-finite-retained-sufficient-system"></a>**Proposition J.4s.1 (Binary Histories Need Not Have a Finite Retained Sufficient System).** A binary stopped-source label and an independent finite-entropy prepared retained stock can yield two conditional states with no exact label-blind encoder–decoder through any finite-dimensional system. The obstruction concerns exact label-blind compression of the retained system; a finite active core and a countable normal-source representation remain available (Part B, Section 4).
+
+**J.4s, Part B — 1. The independent stock and finite acquisition**
+
+Let $R$ have basis $\{|n\rangle:n=0,1,\dots\}$, zero bare Hamiltonian, and the prepared density operator
+
+$$
+p_R=\sum_np_n|n\rangle\langle n|,\qquad p_n=\frac{c}{(n+1)^2},\qquad c=\frac6{\pi^2}.
+$$
+
+It has finite entropy because $\sum_n\log(n+1)/(n+1)^2$ is finite, and zero mean bare energy. It is an independently supplied non-bath stock, not a zero-Hamiltonian Gibbs state on an infinite carrier. Its preparation and final return/disposal remain owned.
+
+Let $\pi$ interchange each adjacent pair:
+
+$$
+\pi(2k)=2k+1,\quad\pi(2k+1)=2k,\qquad V|n\rangle=|\pi(n)\rangle,\quad q_R=Vp_RV^*.
+$$
+
+A finite stopped-Lüders run with $N=1$ and a nontrivial survival probability supplies a binary classical outcome J with both probabilities positive. Retain J and apply V to R exactly on one outcome. The resulting classical–quantum state is
+
+$$
+\rho_{JR}=a|0\rangle\langle0|\otimes p_R+(1-a)|1\rangle\langle1|\otimes q_R,\qquad0<a<1.
+$$
+
+There were no initial $J$–$R$ or protected-reference correlations. Identify $R$ with a parity qubit $Q$ and a countable label $K$ by $|2k+b\rangle=|b\rangle_Q\otimes|k\rangle_K$. Then $V=X_Q\otimes I_{K}$, and the acquisition is CNOT from the classical $J$ register to $Q$, tensored with $I_{K}$. In particular, no arbitrary infinite operator is needed to realize this example. A positive prescribed pulse $H=\pi\hbar(I-\mathrm{CNOT})/(2\delta)$, for duration $\delta>0$, implements it on $JQ$. With zero bare Hamiltonians, the on/off switches have opposite mean work, so signed work is zero and absolute switching work is finite; the finite pulse, clock, coefficient data and prepared stock remain explicit resources.
+
+The conditional likelihood ratios are
+
+$$
+r_{2k}=\frac{q_{2k}}{p_{2k}}=\left(\frac{2k+1}{2k+2}\right)^2,\qquad r_{2k+1}=\frac{q_{2k+1}}{p_{2k+1}}=\left(\frac{2k+2}{2k+1}\right)^2.
+$$
+
+They lie in [1/4,4], and are pairwise distinct: the even subsequence is strictly increasing below 1 and the odd subsequence strictly decreasing above 1. Both $p_{R}$ and $q_{R}$ have the same finite entropy.
+
+**J.4s, Part B — 2. Exact quantum compression is impossible**
+
+**Exact finite-sufficiency obstruction.** No pair of normal CPTP maps
+
+$$
+E:\mathcal T(R)\longrightarrow\mathcal T(\mathbb C^d),\qquad D:\mathcal T(\mathbb C^d)\longrightarrow\mathcal T(R),\qquad d<\infty,
+$$
+
+satisfies $D\,E(p_R)=p_R$ and $D\,E(q_R)=q_R$.
+
+**Proof.** Suppose such maps exist. Define finite-dimensional density operators and a countable POVM by
+
+$$
+\sigma_n=E(|n\rangle\langle n|),\qquad F_m=D^*(|m\rangle\langle m|),\qquad T_{mn}=\operatorname{Tr}(F_m\sigma_n).
+$$
+
+Normality of $D^*$ gives $\sum_m F_m=I$ strongly; hence $T_{mn}\ge 0$ and $\sum_m T_{mn}=1$. Measuring the two recovered diagonal densities yields
+
+$$
+\sum_nT_{mn}p_n=p_m,\qquad\sum_nT_{mn}q_n=q_m.
+$$
+
+As $p_{m}>0$, set $w_{nm}=p_nT_{mn}/p_m$. For every $m$, $\sum_n w_{nm}=1$ and
+
+$$
+r_m=\sum_n w_{nm}r_n.
+$$
+
+All $r_{n}$ are bounded, so every following sum is finite and the nonnegative double sums may be rearranged. The conditional-variance identity gives
+
+$$
+\begin{aligned}\sum_m p_m\sum_nw_{nm}(r_n-r_m)^2&=\sum_m\sum_np_nT_{mn}r_n^2-\sum_mp_mr_m^2\\&=\sum_np_nr_n^2-\sum_mp_mr_m^2=0.\end{aligned}
+$$
+
+Every summand is nonnegative. Therefore $T_{mn}>0$ implies $r_n=r_m$. The ratios are distinct, so $T_{mn}=0$ for $m\ne n$; column normalization gives $T_{nn}=1$. Thus the finite-dimensional states $\sigma_{n}$ are perfectly distinguished by the POVM $\{F_m\}$.
+
+For completeness, this last conclusion is impossible even with a quantum intermediate. Since $0\le F_n\le I$, $\operatorname{Tr}(F_n\sigma_n)=1$ puts $\operatorname{supp}(\sigma_n)$ in the eigenvalue-1 subspace of $F_{n}$. For $m\ne n$, $\operatorname{Tr}(F_n\sigma_m)=0$ puts $\operatorname{supp}(\sigma_m)$ in $\ker(F_n)$. Hence the nonzero supports of $\sigma_{n}$ are pairwise orthogonal. A $d$-dimensional space has at most $d$ such subspaces, whereas there are countably infinitely many $n$. This contradiction proves the theorem. ∎
+
+The proof uses only the two specified input densities, not an unknown-input or all-tester requirement. The encoder and decoder are label-blind maps on R: giving the decoder the conditioning label J, or retaining an information-bearing bypass, changes the assertion. An encoder may use arbitrary independent auxiliary states and a decoder may use arbitrary independent output preparation: their composite maps already include those resources. An independently supplied infinite decoder stock cannot restore the missing label dependence. A retained infinite side register bypassing the finite bottleneck changes the assertion and is allowed by the finite-active-core realization above.
+
+**J.4s, Part B — 3. Exactly what finite dimension does imply**
+
+For every finite $P$ with basis $\{|i\rangle\}$, an arbitrary trace-class $\rho_{\mathrm{PR}}$ has the block representation
+
+$$
+\rho_{PR}=\sum_{i,j=1}^{\dim P}|i\rangle\langle j|\otimes\rho_{ij},\qquad\rho_{ij}=(\langle i|\otimes I)\rho_{PR}(|j\rangle\otimes I).
+$$
+
+Its operator-Schmidt span on $R$ therefore has dimension at most $\dim(P)^2$. A finite history family likewise gives a finite list of conditional operators on $R$. Neither conclusion bounds the rank of those operators or the algebra needed to preserve their relative statistical information. The binary example above has only two conditional operators but an infinite set of distinct likelihood ratios.
+
+If the **whole** $PR$ state is pure, its Schmidt rank across $P:R$ is at most $\dim(P)$; $R$ can then be compressed on that support by a local isometry. Purifying a mixed $PR$ state with an additional $E$ only gives a finite Schmidt rank across $P:(RE)$. Compressing the joint $RE$ span may act on an inaccessible supplier/reference and is not a local compression of $R$. Even a finite list of global pure vectors can have infinite Schmidt rank across an ownership cut.
+
+The finite registers and schedule of Theorem J.4d and the finite M of Theorem J.4f do not supply a finite sufficiency premise for general accessible R. The actual source-generated binary witness already establishes this without postulating arbitrary preexisting P–R correlations.
+
+**J.4s, Part B — 4. Consequence for the exact classification**
+
+The exact object to retain is a finite typed causal skeleton with normal operator-valued response data on its actual retained factors, rather than a finite numerical Gram matrix or an unlabelled finite operator span. At an event with finite source port $X$, a normal complete-output channel is still specified by the finite block array $\Gamma(|i\rangle\langle j|)$, whose entries are trace-class operators on the possibly infinite output. Positivity of the corresponding block operator and the trace-preserving partial trace characterize that channel. This is a finite **array of operator data**, not finite-dimensional physical data.
+
+An actual accessible infinite input requires normal maps on its trace-class algebra, or countable matrix-unit data with the normal extension conditions. An inaccessible reference is carried by the identity map, preserving the actually supplied correlations. The stock-weighted orthogonal-isometry criterion separately tests an independent supplier-unitary fibre; in the faithful countable case it includes the strong onto condition $\sum_s V_sV_s^*=I$. Reused suppliers remain active correlated factors rather than becoming new independent stocks at each cut.
+
+Theorem J.4s retains the normal operator-valued response rather than replacing it by a finite sufficient system. The obstruction does not forbid a finite active core, a countable normal-source representation or a controlled approximation; its acquisition already uses a finite parity core and passive infinite stock.
+
+<a id="theorem-j4w-complete-source-coordinates-and-acquisition-reset-flux"></a>**Theorem J.4w (Complete Source Coordinates and Acquisition–Reset Flux).** Supplied normal Hilbert-density architectures on a finite typed schedule have complete operator-section, supplier, propagator and Hamiltonian coordinates with exact chronological reconstruction. The construction retains arbitrary Hilbert cardinalities, actual unbounded Hamiltonian domains, initial and incoming correlations, isolated outputs and registered free drifts. Its outputs are the actual response family and the same-source reset, heat, work and control ledger.
+
+The input includes every physical factor and preparation, arrival/access/isolation map, native control/calibration/clock record and its evolution relation. The finite/countable classical instrument interface is retained. Source isomorphism is classified by typed coordinate changes; any originally registered logical test/relabeling quotient is obtained by restriction. Entropy and energy identities below retain their separately stated domains, including finite input/output bath energies where used. Logical-to-physical existence for an absent source is the separate inverse problem of Theorems J.4x–y.
+
+**1. Exact normal-channel coordinates without a separability assumption.**
+
+Let $A,B$ be Hilbert spaces, with a fixed orthonormal basis $(e_i)_{i\in I}$ of $A$. A coefficient family is a collection $K_{ij}\in\mathcal T(B)$. For each finite $F\subset I$, form
+
+$$
+C_F=\sum_{i,j\in F}|i\rangle\langle j|\otimes K_{ij}.
+$$
+
+**Finite-section criterion.** A unique normal channel $\Phi:\mathcal T(A)\to\mathcal T(B)$ with $\Phi(|e_i\rangle\langle e_j|)=K_{ij}$ exists if and only if, for every finite $F$,
+
+$$
+C_F\ge0,\qquad \operatorname{Tr}_B C_F=I_F.
+\tag{J.4w.1}
+$$
+
+Using one common family $K_{ij}$ imposes exact compression consistency automatically. Selective instruments use families $K^x_{ij}$ whose finite block matrices are positive, with the finite/countable sum satisfying (J.4w.1). Zero outcomes remain zero.
+
+*Proof.* Necessity is complete positivity and trace preservation. For sufficiency, fix $F$. The positive trace-class $C_F$ has a countable spectral decomposition. Reshaping each spectral vector defines a Kraus operator from the finite-dimensional input $\mathbb C^F$ to $B$. The partial-trace condition gives the Kraus normalization. Thus the matrix-unit prescription defines a CPTP map on $\mathcal T(\mathbb C^F)$. These maps agree on overlapping cores. Each is a trace-norm contraction: its adjoint is unital CP, hence an operator-norm contraction. Their union therefore defines a trace-norm contraction on the finite matrix core of $\mathcal T(A)$.
+
+That core is dense even when $A$ is nonseparable. A trace-class operator has separable range; its countable singular vectors can each be approximated by finite sums of the fixed basis, and then finite-rank approximations converge in trace norm. Extend the prescription uniquely by continuity. Trace preservation and positivity survive this limit; applying the same argument to every finite matrix amplification proves complete positivity. Its bounded-operator adjoint is normal because it has this trace-class predual. Uniqueness follows from density. The instrument statement follows by positive trace tails and linear extension. $\square$
+
+On separable input, a faithful-weight J.4s state packages exactly these sections. On nonseparable input the compatible family is the coordinate object; no faithful trace-class state on the entire carrier is assumed. The family is an exact mathematical classifier, not a finite algorithm for arbitrary real data.
+
+**2. Full suppliers and complete propagator paths.**
+
+Let the independent incoming stock have spectral decomposition
+
+$$
+\sigma_A=\sum_s p_s|s\rangle\langle s|,
+\qquad p_s>0,
+$$
+
+with its actual kernel retained. Its positive spectrum is countable. Let $Y$ be the complete output carrier, not just the exposed port. A complete-source coefficient family is realizable by a unitary on $X\otimes A$ exactly when there are vectors $v_{s,i}\in Y$ such that
+
+$$
+\langle v_{s,i},v_{t,j}\rangle=\delta_{st}\delta_{ij},
+\qquad
+K_{ij}=\sum_s p_s|v_{s,i}\rangle\langle v_{s,j}|,
+\tag{J.4w.2}
+$$
+
+and
+
+$$
+\dim\left(Y\ominus\overline{\operatorname{span}}\{v_{s,i}\}_{s,i}\right)
+=\dim(X\otimes\ker\sigma_A).
+\tag{J.4w.3}
+$$
+
+The proof works for arbitrary Hilbert cardinalities. The columns define an isometry on $X\otimes\operatorname{supp}\sigma_A$. A unitary map between the explicitly retained complements completes it. Conversely every complete unitary supplies these columns and the complement map. The stock-weighted sum converges in trace norm on trace-class inputs. A reused correlated supplier is an input factor of $X$, not another independent $\sigma_A$.
+
+Endpoint channel data do not classify actual control records. For every supplied complete propagator path retain its full complex amplitudes
+
+$$
+u_{ki}(t,s)=\langle f_k,U(t,s)f_i\rangle
+\tag{J.4w.4}
+$$
+
+in a fixed complete-carrier basis, including all unused sectors. Their admissibility conditions are the unitary row/column identities (strong sums), $U(t,t)=I$, the cocycle equation and the source's actual continuity/evolution relation. These conditions reconstruct the same complete propagator. In particular a scalar phase is retained. It can change the generating Hamiltonian and control record even when the density-operator channel is unchanged.
+
+The Hamiltonian is not replaced by a bounded surrogate. Encode each actual self-adjoint $H(t)$ by the matrix coefficients of its spectral projections
+
+$$
+\langle f_k,\mathbf 1_{(-\infty,q]}(H(t))f_i\rangle,
+\qquad q\in\mathbb Q.
+\tag{J.4w.5}
+$$
+
+The projection identities, monotonicity, right-continuous completion and strong limits at $\pm\infty$ recover its spectral measure and its exact self-adjoint domain. The domain is the set of vectors with finite spectral second moment. These data distinguish unbounded Hamiltonians as well as bounded ones. They include the actually supplied bare Hamiltonians, interactions and source-work Hamiltonians according to their original roles.
+
+Equations (J.4w.4)–(J.4w.5), together with the specified source evolution identity, replace an opaque operator/profile label by complete mathematical coordinates. For a source with a common invariant core the identity is $i\hbar\partial_tU(t,s)\psi=H(t)U(t,s)\psi$ on that core. This common-core hypothesis is not imposed universally: a source originally specified by a form-domain, mild or other well-posed propagator retains that precise defining relation and full domain graph. Reconstruction recovers both operators and propagator exactly, so the original relation is preserved. No bare tail is canceled or new profile installed.
+
+For a native source with calibration map $\mathcal C_j$ and actual command/coefficient record $c_j$, require the equality $H_j(t)=(\mathcal C_j c_j)(t)$ with the spectral operator in (J.4w.5), and require its source evolution to produce exactly (J.4w.4). A source specified directly by a propagator calibration instead requires $U_j=\mathcal C_j[c_j]$. These are compatibility equalities on the complete carrier, not freely assignable profile labels. The finite occurrence/control/clock word and any continuously supplied profiles remain typed input records. Their actual operation matrices, physical durations, support, source-calibration maps and coefficient-production operations are recorded, rather than a freely chosen scalar invoice. The inherited resource functional is evaluated on this same word/profile. Two complete endpoint identity channels with different actual control loops remain distinguishable by (J.4w.4)–(J.4w.5) and their occurrence records.
+
+**3. Chronological reconstruction and supplier isolation.**
+
+Keep one global inventory for the finite source schedule. An external reference remains in the complete state but outside the source's active support. Future stock factors receive no source control before arrival. After permanent emission, a factor is outside every later controlled source operation. Every originally registered free drift on those factors remains active; a forbidden control is not a license to cancel their bare evolution. A later return through an originally registered input port is a distinct declared event, with the same actual correlations.
+
+At event $j$, write $A_j$ for the controlled active factor group and $Z_j$ for the other supplied factors. Let $D_j$ be their originally registered independent free propagator. The complete state update is
+
+$$
+\rho_j=(U_j\otimes D_j)\rho_{j-1}(U_j^*\otimes D_j^*),
+\tag{J.4w.6}
+$$
+
+with actual factor reorderings and arrivals. Actual provider-owned dynamics on future or returned inputs are included on the provider factors or composed at their declared input slots; no future marginal is substituted for its joint provider state. In a registered interaction picture, $D_j=I_{Z_j}$; otherwise its actual amplitudes and Hamiltonian remain in (J.4w.4)–(J.4w.5). If a supplied interaction couples two factors, both belong to the active group for that interval; an isolated output cannot have a later source coupling. These statements preserve the original support restrictions without suppressing free source evolution. An independently prepared new stock is appended in its prescribed state. A correlated arrival uses its original joint provider state; it is never reconstructed from its marginal product. For selective operations, carry the owned record and Kraus factors in the complete unitary description, or use the unnormalized normal instrument blocks without dividing by branch probability.
+
+Induction on the finite schedule proves that (J.4w.6) recovers the full actual state on every branch and every cut. It preserves the source/status/interrogation law by the actual registered coefficient equalities. The coordinate partial traces yield the exact exposed responses, while the same complete state yields supplier, return and thermodynamic outputs. No one-event feasibility certificates are concatenated on incompatible old bath states.
+
+Conversely the full columns, complement maps, propagator and Hamiltonian data reconstruct each supplied transition and its source law. Applying (J.4w.6) reconstructs the same marked source architecture, with the same stock arrival, isolation and resource ownership. This converse transports a supplied implementation through its coordinate description. Existence of an implementation for a prescribed normal channel is the inverse problem of Theorems J.4x–J.4y.
+
+**4. Exact response and source-record equivalence.**
+
+A coordinate frame is mathematical, not a new physical reference stock. Typed basis changes act by conjugation on state, channel, propagator and spectral matrices, and transport the tensor-factor labels. A registered classical relabeling acts by its label permutation/isometry; zero branches and actual reachability restrictions are retained. The same action transports all initial stocks, correlations and control profiles.
+
+The full coordinate description is faithful: equality after a typed frame transformation implies equality of every reconstructed complete state/operator/source word under that transformation. Conversely an isomorphism of the marked supplied sources gives exactly that coordinate action. Thus there is an explicit source-isomorphism classification, with exact full-supplier rather than exposed-channel equality.
+
+A registered-response quotient may be coarser. It is obtained by evaluating the coordinate description only on the original admitted tests, together with every source/ledger distinction the registered architecture retains. No new unknown-input port or intrapulse measurement is added. If a full normal-channel input interface is registered, matrix-unit sections determine its responses completely; equivalently finite-rank preparations, finite ancillas and interference-sensitive effects determine every section. On separable carriers these can be taken from countable dense rational test sets, with normal trace-class continuity extending the result. On a restricted actual-law interface, equality is tested on the original input family and its admitted instruments, not on arbitrary new inputs.
+
+**Logical base and physical fibres.** The marked-source invariant is deliberately finer than the original logical quotient. In the classical restriction of Theorem J.4d, use precisely the injective relabelings of reachable register contents and keep the schedule; different ambient padding or suppliers may project to the same logical class. The realization fibre over that class retains every complete physical carrier, source/control path and invoice. Thus no physical heat/work value is falsely asserted to be constant on a purely logical class. More generally the projection evaluates the full coordinates on each originally registered test and then applies its already declared relabeling relation. Equality under this projection is, by definition of the original tests and the reconstruction proof, exactly their original response equivalence. A mathematical coordinate test is not thereby installed as an extra physical input or operation. This restriction gives the exact registered-response quotient while retaining the complete physical realization fibre over each logical class.
+
+**5. Energy, work and reset outputs are derived, not attached.**
+
+For every actual state $\rho$ and supplied self-adjoint energy observable $H$, use its reconstructed spectral measure:
+
+$$
+\operatorname{Tr}(H\rho)
+=\int_{\mathbb R}\lambda\,d\operatorname{Tr}(\rho E_H(\lambda)).
+\tag{J.4w.7}
+$$
+
+If the actual source assumes finite absolute energy, the integral is the limit of bounded spectral truncations. For a lower-bounded Hamiltonian one subtracts its specified finite ground offset and uses monotone convergence on the nonnegative part. Positive and negative infinite parts are kept separate; an undefined difference is not called finite work. This uses the actual integrability premise and covers unbounded energies. Trace-norm channel convergence alone is never used to infer an energy limit.
+
+The bath heat is its actual output-minus-input expectation (J.4w.7). For an external prescribed drive, signed work is the receiver-side complete bare-energy change, including bath heat and every other receiving factor's energy change, under the registered cyclic source convention. If an ideal work store is instead an explicit factor, delivered work is minus its energy change; the receiver-side sum excludes that payer, so battery loss and received work are not counted twice. When the source defines work by a power integral, its actual integrability/evolution identity is retained and verified against the endpoint balance. Structural control charges are separately evaluated from the same supplied occurrence/interval/profile record. They are not equated to heat.
+
+At every actual registered reset, test the retained marginal, auxiliary state/correlation closure, ready error and the Definition-28/J.4e entropy/energy premises on the state reconstructed by (J.4w.6). Write $C_e$ for every returning auxiliary. If its final state equals its initial state and is product with $P_eR_e$, its entropy cancels but its correlations with the bath remain in the mutual information. Under these exact premises the output is
+
+$$
+\beta_e Q_e
+=S(P_e\mid R_e)_{\rm in}-S(P_e\mid R_e)_{\rm out}
++I(P_eR_eC_e:B_e)_{\rm out}
++D(\rho_{B_e,\rm out}\Vert\tau_{B_e}).
+\tag{J.4w.8}
+$$
+
+Every entropy and energy on the right is computed from that same source state. A returning $C_e$ can be removed from the mutual-information factor only under the stronger final product identity $\rho_{P_eR_eC_eB_e}=\rho_{P_eR_eB_e}\otimes\alpha_{C_e}$, as in J.4e's full uncorrelated-auxiliary convention. Otherwise its bath correlations remain in (J.4w.8); an auxiliary failing even the $P_eR_e$ return/product identity stays in the reset block and changes its entropy difference. A correlated reused bath is not a new independent Gibbs source. A combined bath calculation uses its joint state and reference product, not a sum of marginal relative entropies.
+
+Exact reset, approximate reset and limiting exact-erasure branches remain distinct. For a limiting branch the classifier returns the actual sequence and the original required separate state/reference, conditional-entropy, energy and mean-heat convergence predicates. It does not promote small trace distance to the stronger limits.
+
+**6. General acquisition boundary-flux ledger.**
+
+For any complete non-reset exchange $U:M\otimes A\to M'\otimes E$ with actual correlated input and with the following entropy differences well-defined, unitary invariance gives
+
+$$
+S(M')-S(M)=S(A\mid M)_{\rm in}-S(E\mid M')_{\rm out}.
+\tag{J.4w.9}
+$$
+
+With an inaccessible unchanged reference $D$, and finite ordinary entropies $S(MAD)$, $S(M'ED)$, $S(MD)$, $S(M'D)$ and $S(D)$, the corresponding identity is
+
+$$
+S(M'\mid D)-S(M\mid D)
+=S(A\mid MD)_{\rm in}-S(E\mid M'D)_{\rm out}.
+\tag{J.4w.10}
+$$
+
+These are identities for the actual same-source exchange, not a fresh-stock replacement. They follow by expanding conditional entropies and canceling $S(MA)=S(M'E)$ (or the joint entropy with $D$).
+
+Choose the ledger boundary explicitly at every cut. Immediately before and after reset $e$, its memory is exactly $M=P_eR_e$, after auxiliaries satisfying the stated product-return identity have been accounted for. The bath is outside this memory for that reset. Any subsequent decision to retain/reuse that spent bath in memory is an explicit boundary change, contributing its actual correlated acquisition entropy $S(B_e\mid M)_{\rm out}$; it is never inserted into the next memory silently. Any inaccessible spectator used only for (J.4w.10) is not silently inserted into the ordinary-entropy memory of (J.4w.11). With all boundary changes registered in this way and every displayed acquisition flux finite, combine (J.4w.9) and (J.4w.8). Let $F_j$ be the right-hand side of (J.4w.9) for non-reset exchange $j$, including each registered boundary change. Write
+
+$$
+\epsilon_e=I(P_eR_eC_e:B_e)_{\rm out}
++D(\rho_{B_e,\rm out}\Vert\tau_{B_e}).
+$$
+
+Then
+
+$$
+\sum_e(\beta_eQ_e-\epsilon_e)
++S(M_{\rm end})-S(M_{\rm start})
+=\sum_jF_j.
+\tag{J.4w.11}
+$$
+
+Fresh independent stocks, classical outcome writes, coherent acquisitions, correlated supplier arrivals and information exports are all special cases of the flux term. The four-operation identity J.4f is recovered by its specific acquisition independence law. A coherent uncomputation cycle can have zero total flux and no reset event. A Gram-leakage source is recovered by taking its actual emitted environmental factor.
+
+This telescope is not imposed at cuts with undefined $+\infty-\infty$. The full coordinate/chronological classification remains valid there, and the individually registered finite reset balances (J.4w.8) remain the physical outputs. One can instead group cuts whose complete entropy differences exist. For a single global independent product Gibbs supply, assume finite input/output mean energies of every bath under its own Hamiltonian, finite global input/output non-bath entropy, and finite entropy terms in the global joint-unitary balance (or a separately proved limiting extension of this exact identity). Merely being trace-class Gibbs is not a finite-energy premise. The grouped balance is
+
+$$
+\sum_b\beta_b Q_b
+=S(N_{\rm in})-S(N_{\rm out})
++I(N_{\rm out}:B_{\rm all,out})
++D\!\left(\rho_{B_{\rm all,out}}\middle\Vert\bigotimes_b\tau_b\right).
+\tag{J.4w.12}
+$$
+
+It follows from global unitarity, initial Gibbs independence and the Gibbs logarithm. Every emitted non-bath factor remains in $N_{\rm out}$ and every supplier in the joint bath state. Future-arrival constraints are properties of (J.4w.6), unaffected by keeping all future bath factors in a global mathematical inventory.
+
+<a id="theorem-j4x-inverse-logical-channel-supplier-fibres-and-extreme-channel-stock-criterion"></a>**Theorem J.4x (Inverse Logical-Channel Supplier Fibres and Extreme-Channel Stock Criterion).** A normal logical channel and a prescribed independent mixed stock admit a complete unitary supplier exactly when the minimal-environment compression and full-complement equations below hold. These equations parametrize every complete supplier. For an extreme channel on a fixed finite logical register with minimal Kraus rank $k$, a stock of rank $r$ on an $a$-dimensional supplier is feasible exactly when $rk\le a$; the faithful infinite-stock and defect cases are classified below.
+
+The minimal-dilation comparison is the Stinespring construction, and the extremality test is Choi's criterion; both are proved in the form used here. Ticozzi and Viola (2017), Sections 2–3, discuss virtual pure-subsystem resources and the distinction between abstract unitary control and specified physical controls. Native realization here retains the actual coefficient, calibration, clock and stock service. Finite solutions under Definition J.4i's finite-description and certificate premises have the driven implementation of J.4j.
+
+**1. Exact inverse-fibre theorem.**
+
+Let $X,Y,A,E$ be separable Hilbert spaces, with a specified physical identification $X\otimes A\cong Y\otimes E$. The exposed logical input is a normal channel
+
+$$
+\Phi:\mathcal T(X)\longrightarrow\mathcal T(Y).
+$$
+
+Fix a minimal Stinespring isometry
+
+$$
+V:X\longrightarrow Y\otimes K,
+\qquad
+\Phi(\rho)=\operatorname{Tr}_K(V\rho V^*).
+\tag{J.4x.1}
+$$
+
+The independently supplied stock is the actual density
+
+$$
+\sigma_A=\sum_{s\in S}p_s|s\rangle\langle s|,
+\qquad p_s>0,
+\tag{J.4x.2}
+$$
+
+with $\ker\sigma_A$ retained. The positive index set $S$ is finite or countable. The minimal space $K$ and the purification reference used in the proof are mathematical coordinates, not extra delivered pure stocks. The actual stock $A$ contains every independent non-bath and Gibbs stock factor on this event; a previously correlated supplier belongs to $X$ instead.
+
+A complete unitary supplier
+
+$$
+U:X\otimes A\longrightarrow Y\otimes E,
+\qquad
+\Phi(\rho)=\operatorname{Tr}_E[U(\rho\otimes\sigma_A)U^*]
+\tag{J.4x.3}
+$$
+
+exists if and only if there are bounded operators $J_s:K\to E$ with
+
+$$
+\sum_sJ_s^*J_s=I_K\quad\hbox{strongly},
+\tag{J.4x.4}
+$$
+
+$$
+V^*(I_Y\otimes J_s^*J_t)V
+=p_s\delta_{st}I_X,
+\tag{J.4x.5}
+$$
+
+and, defining
+
+$$
+U_s=p_s^{-1/2}(I_Y\otimes J_s)V,
+\tag{J.4x.6}
+$$
+
+the full complement condition
+
+$$
+\dim\left[(Y\otimes E)\ominus
+\overline{\bigoplus_s\operatorname{ran}U_s}\right]
+=\dim(X\otimes\ker\sigma_A).
+\tag{J.4x.7}
+$$
+
+For faithful stock, (J.4x.7) is the essential strong onto equation
+
+$$
+\sum_sU_sU_s^*=I_{Y\otimes E}.
+\tag{J.4x.8}
+$$
+
+The pair consisting of the family $(J_s)$ and a unitary map between the two complements in (J.4x.7) parametrizes every complete supplier $U$ in (J.4x.3), not just its exposed response.
+
+**Proof.**
+
+Given $U$, put $U_sx=U(x\otimes s)$. The columns are isometries with $U_s^*U_t=\delta_{st}I$. Purify the stock using $L=\ell^2(S)$ and form
+
+$$
+Wx=\sum_s\sqrt{p_s}\,U_sx\otimes|s\rangle_L.
+\tag{J.4x.9}
+$$
+
+This is an isometry $X\to Y\otimes E\otimes L$ and a dilation of $\Phi$. Minimality of $V$ gives a unique isometry $J:K\to E\otimes L$ satisfying $W=(I_Y\otimes J)V$. This comparison can be proved directly: map each slice $(\langle y|\otimes I)Vx$ to the corresponding slice of $Wx$. Equality of the channels gives equality of inner products of all finite linear combinations; minimality makes the first slice span dense. The map extends isometrically and uniquely. Define $J_s=(I_E\otimes\langle s|)J$. The isometry of $J$ gives (J.4x.4), and its components give (J.4x.6). Orthogonality of the original columns proves (J.4x.5). The original full unitary supplies (J.4x.7) and its complement map.
+
+Conversely (J.4x.4) defines an isometry $Jk=\sum_sJ_sk\otimes s$. Equation (J.4x.5) makes the columns (J.4x.6) mutually orthogonal isometries. They define a unitary from $X\otimes\operatorname{supp}\sigma_A$ onto their closed range. The supplied complement map extends it to the whole physical carrier. By (J.4x.4), partial trace over $E\otimes L$ after $I_Y\otimes J$ equals partial trace over $K$, so
+
+$$
+\sum_sp_s\operatorname{Tr}_E(U_s\rho U_s^*)
+=\operatorname{Tr}_{E\otimes L}[(I_Y\otimes J)V\rho V^*(I_Y\otimes J^*)]
+=\Phi(\rho).
+$$
+
+Positive trace tails justify the series; linear decomposition gives all trace-class inputs. This proves (J.4x.3) and reconstructs the complete supplier. Uniqueness of $J$ for a fixed minimal $V$, together with the freely chosen full complement map, proves the parametrization statement. $\square$
+
+If $V'=(I_Y\otimes T)V$ is another minimal dilation, with $T$ unitary, use $J'_s=J_sT^*$. Equations (J.4x.4)–(J.4x.8) and the actual $U_s$ are unchanged. Thus the criterion is independent of minimal-dilation gauge.
+
+The input is the exposed normal channel, stock and carrier. The variables are an isometry on its minimal environment satisfying explicit compression and onto equations, and they reconstruct the complete unitary on every sector. Source-control compatibility is a further equation between this reconstructed $U$ and the actual emitted source propagator, not an independently assignable heat/work label.
+
+**2. Extreme logical channels: complete finite-stock rank classification.**
+
+Suppose $X=Y=\mathbb C^d$. Let $\Phi$ be an extreme point of the convex set of CPTP maps on this register, and let its minimal Kraus rank be $k$. Let $A=E=\mathbb C^a$, and let $r=\operatorname{rank}\sigma_A$.
+
+**Exact finite-stock criterion.** A complete supplier (J.4x.3) exists exactly when
+
+$$
+rk\le a.
+\tag{J.4x.10}
+$$
+
+The eigenvalues $p_s$ affect the complete bath state and heat, but not this feasibility criterion. In particular, a faithful finite stock can realize an extreme channel on the same logical register only when the channel is unitary.
+
+**Extremality lemma and proof.**
+
+Choose linearly independent minimal Kraus operators $K_1,\ldots,K_k$ and write $Vx=\sum_\alpha K_\alpha x\otimes|\alpha\rangle$. Define
+
+$$
+\mathcal L(T)=V^*(I_Y\otimes T)V
+=\sum_{\alpha,\beta}T_{\alpha\beta}K_\alpha^*K_\beta.
+\tag{J.4x.11}
+$$
+
+Then $\Phi$ is extreme exactly when $\mathcal L$ is injective. If a nonzero Hermitian $T$ is in its kernel, choose $\epsilon>0$ so $I\pm\epsilon T\ge0$. The coefficient convention is $\Psi_M(\rho)=\sum_{\alpha,\beta}M_{\beta\alpha}K_\alpha\rho K_\beta^*$, for which $M\ge0$ gives complete positivity and $\operatorname{Tr}\Psi_M(\rho)=\operatorname{Tr}[\rho\mathcal L(M)]$. Thus $I\pm\epsilon T$ give distinct CP maps with the same trace-preservation constraint; their mean is $\Phi$. They are distinct because the Choi vectors of the minimal Kraus family are linearly independent. Hence $\Phi$ is not extreme.
+
+Conversely, if $\Phi$ is the mean of two channels, their positive Choi matrices are bounded by twice its Choi matrix. Their supports lie in its minimal Kraus span, so they have positive coefficient matrices $M_\pm$ in that span, with $(M_++M_-)/2=I$ and $\mathcal L(M_\pm)=I$. Injectivity makes $M_\pm=I$. This proves extremality. Complex injectivity is equivalent to Hermitian injectivity by taking Hermitian and anti-Hermitian parts. $\square$
+
+**Proof of (J.4x.10).**
+
+For each positive stock eigenvector, the isometric column $U_s$ induces a channel $\Phi_s$. Since
+
+$$
+\Phi=\sum_sp_s\Phi_s
+$$
+
+and $\Phi$ is extreme, every $\Phi_s=\Phi$. A one-term mixture is immediate. Otherwise, for a finite or countably infinite mixture, group any one positive-weight term against the normalized remainder. Minimal-dilation comparison gives an isometry $T_s:K\to E$ with
+
+$$
+U_s=(I_Y\otimes T_s)V.
+$$
+
+Orthogonal full-unitary columns imply
+
+$$
+\mathcal L(T_s^*T_t)=\delta_{st}I_X
+=\mathcal L(\delta_{st}I_K).
+$$
+
+Injectivity of (J.4x.11) therefore gives
+
+$$
+T_s^*T_t=\delta_{st}I_K.
+\tag{J.4x.12}
+$$
+
+The $r$ environmental copies of the $k$-dimensional minimal space are mutually orthogonal, so $rk\le a$ is necessary. Conversely, when (J.4x.10) holds, choose $r$ such copies and put $U_s=(I_Y\otimes T_s)V$. They are orthogonal isometries and each induces $\Phi$. The occupied input and output column spans each have dimension $rd$; the remaining full input and output dimensions are both $d(a-r)$. An explicit orthonormal-basis map completes the columns to a unitary. The mixture of the identical $\Phi_s$ is $\Phi$, proving sufficiency. $\square$
+
+The complete supplied Gibbs/pure/mixed stock and every unused sector remain part of this construction. A full-rank thermal stock cannot be replaced by a pure Stinespring stock while keeping the same source invoice.
+
+**3. Faithful infinite stocks and exact defect conditions.**
+
+The impossibility for nonunitary extreme channels survives a separable infinite faithful stock; it is not a finite-rank counting artifact.
+
+Indeed (J.4x.12) holds as before. Let $E_s=T_sK$. The range of $U_s$ has dimension $d$ inside $Y\otimes E_s$, whose dimension is $dk$. For $k>1$, choose a nonzero vector in the orthogonal complement of that range inside $Y\otimes E_s$. It is orthogonal to every other column range because their environmental spaces $E_t$ are orthogonal. Thus the strong onto equation (J.4x.8) fails. No faithful stock, finite or countably infinite, can supply a nonunitary extreme channel on a finite unchanged logical register through a full unitary with that stock alone.
+
+More generally let $A=E$ be separable infinite and keep its actual stock kernel. For $k>1$:
+
+- if the stock has finite rank, its infinite-dimensional kernel permits a complete supplier;
+- if the stock has infinite rank and finite-dimensional kernel, no complete supplier exists;
+- if both its support and kernel are infinite-dimensional, a complete supplier exists.
+
+For necessity in the middle case, each of infinitely many mutually orthogonal $E_s$ contributes a nonzero omitted column direction, so the output complement is infinite-dimensional, whereas the input complement has dimension $d\dim\ker\sigma_A<\infty$. For the other two cases choose the orthogonal $k$-dimensional spaces $E_s$. When there are finitely many, leave the rest of $E$ as an infinite complement; when there are infinitely many, choose them to span $E$. In either case the output missing-column complement and $X\otimes\ker\sigma_A$ are both separable infinite, and a basis bijection completes the unitary. These are exact algebraic source-fibre constructions. An arbitrary infinite basis bijection is not silently declared to have a supplied native control service.
+
+For $k=1$, $\Phi$ is unitary on the same finite register and every stock is feasible. The occupied action is $U_s=U_\Phi\otimes e_s$ for orthonormal environmental vectors $e_s$. With faithful stock, onto forces those vectors to form a complete basis, so the full supplier is $U_\Phi\otimes W$ for a bath unitary $W$. No input-dependent information can be hidden in that complete supplier while the logical channel remains exactly unitary on its full input interface.
+
+**4. Concrete coherent-record channel outside the nondemolition Gram class of Theorem J.4h.**
+
+For $0<\eta<1$, take the qubit amplitude-damping channel
+
+$$
+K_0=\begin{pmatrix}1&0\\0&\sqrt\eta\end{pmatrix},
+\qquad
+K_1=\begin{pmatrix}0&\sqrt{1-\eta}\\0&0\end{pmatrix}.
+\tag{J.4x.13}
+$$
+
+The four matrices $K_\alpha^*K_\beta$ are linearly independent: the off-diagonal two are nonzero opposite matrix units, and the diagonal two are independent. The channel is extreme with $k=2$. It changes record-label populations and is not a nondemolition Gram leakage on that record. A qubit stock can realize it exactly if and only if that stock is pure. More generally (J.4x.10) gives its complete finite-stock feasibility condition $2r\le a$.
+
+A full source uses a paid pure qubit $E=|0\rangle$, not a faithful thermal qubit. On the four-dimensional system-plus-stock carrier define
+
+$$
+\begin{aligned}
+U|00\rangle&=|00\rangle,&U|11\rangle&=|11\rangle,\\
+U|10\rangle&=\sqrt\eta\,|10\rangle+\sqrt{1-\eta}\,|01\rangle,&
+U|01\rangle&=\sqrt\eta\,|01\rangle-\sqrt{1-\eta}\,|10\rangle.
+\end{aligned}
+\tag{J.4x.14}
+$$
+
+Every basis sector is included. The two active columns are an orthogonal rotation, so $U$ is unitary. Tracing the owned $E$ gives (J.4x.13) on every input and spectator. $E$ retains the Kraus information and is either exported as a consumed source output or returned by its actual reset service.
+
+For a source-supplied finite-description $\eta$ and its certified angle, an explicit finite driven Hamiltonian sets $\theta=\arccos\sqrt\eta$. The concrete member $\eta=1/2$ has $\theta=\pi/4$ and needs no arbitrary coefficient oracle. Choose a physical duration $\delta>0$, and let
+
+$$
+G=i(|01\rangle\langle10|-|10\rangle\langle01|),
+\qquad
+H_c=\frac{\hbar\theta}{\delta}(I+G).
+\tag{J.4x.15}
+$$
+
+The generator has the complete finite Pauli expression $G=(X\otimes Y-Y\otimes X)/2$, so the displayed pulse contains only the scalar, $X\otimes Y$ and $Y\otimes X$ coefficients on the two actual ports. Use zero bare Hamiltonians on this acquisition pair. The full $H_c$ is nonnegative and bounded, and its pulse gives $e^{-i\theta}U$. The global phase is retained in the complete source path. In (J.4x.16), choose the fibre representative $U_{\rm phys}=e^{-i\theta}U$ and multiply its occupied columns, the $J_s$ and complement map by that common phase; all fibre and state/heat conditions are unchanged, while full-operator source compatibility is literal. Peak control energy is $2\hbar\theta/\delta$ and norm action is $2\hbar\theta$. For the actual initial $\rho\otimes|0\rangle\langle0|$, including any external reference, $\langle G\rangle=0$; the on/off switches have signed works $+\hbar\theta/\delta$ and $-\hbar\theta/\delta$. Net acquisition work and heat are zero, and absolute switching throughput is $2\hbar\theta/\delta$. The pure stock, its preparation, finite scalar coefficient, coupling calibration, physical clock and switch records remain paid source entries. Zero net pulse work does not delete that invoice.
+
+If $E$ must return to ready, apply the one-qubit finite Gibbs ladder of J.4k after its last use. At every finite ladder stage the system channel remains exactly (J.4x.13), because a trace-preserving local map on $E$ cannot change its system/reference marginal. The ladder returns $E$ to its registered approximate ready state with error bounded by $e^{-n}$, while the complete mean cleanup heat and work tend to $k_BT_b\ln2$. All first-cell correlations with the system/reference stay in the joint bath ledger. There are $n^2$ actual Gibbs cells and swaps, finite gaps and explicit positively allocated intervals at every stage. The combined initial stock includes the paid pure $E$ and therefore is not faithful; it does not contradict the faithful-stock obstruction.
+
+This is a complete finite physical acquisition and bounded-mean-work return family within J.4j–k. Equations (J.4x.4)–(J.4x.12) additionally classify its prescribed-stock feasibility and distinguish the logical channel, complete supplier and pure-resource cost.
+
+**5. Same-source thermal and control output.**
+
+For every solution of (J.4x.4)–(J.4x.7), use the reconstructed complete $U$ on the actual supplied joint input. The full output, not just $\Phi$, determines retained marginals, accessible correlations, auxiliary return, bath heat, conditional entropy and joint Gibbs relative entropy. The complete chronological and thermodynamic ledger of Theorem J.4w applies. The source-control compatibility equation is
+
+$$
+U_{\rm emitted}(t_{\rm out},t_{\rm in})
+=U
+\tag{J.4x.16}
+$$
+
+on the complete registered carrier, with the actual free drifts and any allowed source-frame changes shown. Its coefficient/calibration/clock and resource records are those of the same emitted program. Finite matrix solutions satisfying the supplied finite exact-description, coefficient and certificate premises of J.4i are implemented by the complete finite pulse compiler, not by an unnamed infinite native gate.
+
+For a finite causal schedule these constraints are applied on the same chronological active input, keeping old correlated suppliers and unavailable emitted factors in their original roles. A solution at each independent-stock event is necessary; global chronology and same-source intermediate states are also required. The direct-sum/selector and correlated-arrival records are not removed by the logical quotient.
+
+**Fixed finite-stock heat frontiers.**
+
+For a bounded registered bath observable $H_E^B$ on the complete supplier output and its initial bath energy $E_{B,\mathrm{in}}$, the same fibre has the heat-effect operator
+
+$$
+Q_J=V^*\left(I_Y\otimes\sum_sJ_s^*H_E^BJ_s\right)V
+-E_{B,\mathrm{in}}I_X,
+\qquad Q_B(\rho)=\operatorname{Tr}(\rho Q_J).
+\tag{J.4x.17}
+$$
+
+For a lower-bounded unbounded $H_E^B$, the same expression is interpreted as its nonnegative shifted quadratic form on the actual finite-energy domain; it is not asserted to be a bounded all-input effect. For the displayed bounded case, the formula follows by inserting (J.4x.6) into the actual full-output heat expectation; the stock factor $p_s$ cancels its inverse in the two columns. It is not a new independent heat label. A heat observable acting on both exposed and supplier factors instead uses the unsimplified sum $\sum_sp_sU_s^*H_{YE}U_s$.
+
+In fixed finite dimensions the isometry $J:K\to E\otimes L$ lies in a compact Stiefel set. Equations (J.4x.5), exact retained-marginal and auxiliary-return conditions are closed. Once the full carrier dimensions agree, the complement dimension is automatic from finite column orthogonality. Thus every nonempty such constrained fibre is compact, and the continuous actual mean heat (J.4x.17) attains its minimum and maximum. Initial and output energy are fixed actual observables, not freely adjustable optimization variables. For algebraic finite input data these conditions are explicit real polynomial equalities/inequalities in the matrix entries of $J$, after resolving the supplied positive square roots. Real quantifier elimination gives an exact finite feasibility/endpoint decision in principle; no practical complexity bound is claimed. Unbounded energy and infinite carriers use their actual form/integrability conditions instead of this compactness argument.
+
+A faithful-stock implementation of a unitary logical channel is $U_\Phi\otimes W$, as proved above. When the stock is precisely a Gibbs bath, with no additional nonthermal factor, and has finite input/output energy, its heat is
+
+$$
+\beta Q_B=D(W\tau_BW^*\Vert\tau_B)\ge0,
+\tag{J.4x.18}
+$$
+
+because the bath entropy is unchanged and no logical-input/bath correlation is created. The minimum is zero, attained by $W=I$; equality holds exactly when $W\tau_BW^*=\tau_B$. This is the endpoint thermodynamic fibre, with the actual source's control path and invoice still retained.
+
+<a id="theorem-j4y-causal-supplier-fibres-with-complete-correlated-preparations"></a>**Theorem J.4y (Causal Supplier Fibres with Complete Correlated Preparations).** A finite logical normal-comb skeleton and a prescribed physical stock, memory and isolation layout have a complete chronological unitary-supplier realization exactly when the initial-boundary, slice-Gram and full-complement conditions below hold. The construction retains every supplier output and unavailable reference. Its direct preparation-family form also applies to registered actual-law descriptors without assuming a channel on a reduced input from which source correlations have been omitted.
+
+The theorem reconstructs complete unitary suppliers on their allowed active supports. Equality to the actual native source propagator, with its calibration, clock, work and return record, is a separate explicit compatibility condition. All local section numbers below belong to this theorem.
+
+**1. A local unitary-extension test with inaccessible correlations.**
+
+Let $D,X,Y,H$ be Hilbert spaces. Let
+
+$$
+F:D\longrightarrow X\otimes H,
+\qquad
+G:D\longrightarrow Y\otimes H
+\tag{J.4y.1}
+$$
+
+be isometries. $H$ is the complete unchanged hidden group: inaccessible references, previously isolated outputs and mathematical stock-purification references. The controller may act on $X$ and must leave $H$ alone. Fix a basis $(h_a)$ of $H$ and write
+
+$$
+F_a=(I_X\otimes\langle h_a|)F,
+\qquad
+G_a=(I_Y\otimes\langle h_a|)G.
+\tag{J.4y.2}
+$$
+
+Define the full active slice spans
+
+$$
+L_F=\overline{\operatorname{span}}\{F_ax:a,\ x\in D\}\subset X,
+\qquad
+L_G=\overline{\operatorname{span}}\{G_ax:a,\ x\in D\}\subset Y.
+\tag{J.4y.3}
+$$
+
+**Local criterion.** A unitary $U:X\to Y$ with
+
+$$
+(U\otimes I_H)F=G
+\tag{J.4y.4}
+$$
+
+exists exactly when
+
+$$
+F_a^*F_b=G_a^*G_b\quad\hbox{for every }a,b,
+\tag{J.4y.5}
+$$
+
+and
+
+$$
+\dim(X\ominus L_F)=\dim(Y\ominus L_G).
+\tag{J.4y.6}
+$$
+
+Equation (J.4y.5) is equivalently equality of the two normal channels to the hidden factors,
+
+$$
+\operatorname{Tr}_X(F\rho F^*)=
+\operatorname{Tr}_Y(G\rho G^*)
+\quad\hbox{for every trace-class }\rho\hbox{ on }D.
+\tag{J.4y.7}
+$$
+
+It asserts that the desired transition does not change an inaccessible marginal/channel. It does not replace a correlated incoming factor by an independent state.
+
+**Proof and complete parametrization.**
+
+If (J.4y.4) holds, then $G_a=UF_a$, giving (J.4y.5) and the equality of complement dimensions. Conversely define a linear map on finite slice sums by
+
+$$
+\sum_aF_ax_a\longmapsto\sum_aG_ax_a.
+\tag{J.4y.8}
+$$
+
+The two squared norms are the corresponding sums of $\langle x_a,F_a^*F_bx_b\rangle$ and $\langle x_a,G_a^*G_bx_b\rangle$. Equation (J.4y.5) makes them equal. Thus the map is well-defined and isometric, and extends to a unitary $U_0:L_F\to L_G$. Equality (J.4y.6) allows any unitary $U_\perp:X\ominus L_F\to Y\ominus L_G$. Set $U=U_0\oplus U_\perp$.
+
+Its hidden-basis components satisfy $UF_a=G_a$, hence (J.4y.4) holds. This works for arbitrary Hilbert cardinalities; the sums are finite when defining the dense slice span, and vector reconstruction uses the usual Hilbert expansion. Every possible $U$ restricts to the same $U_0$ and differs exactly in the complement map. Matrix elements of the hidden partial trace are the forms $F_a^*F_b$, up to the fixed transpose of the two hidden indices, proving (J.4y.7). $\square$
+
+If $H$ has a supplied free propagator $D_H$ during the event, compare $F$ with $(I_Y\otimes D_H^*)G$. Then the reconstructed full event is $U\otimes D_H$. Isolation therefore forbids controlled coupling, not the registered free dynamics. Independently specified provider evolution can likewise be included on its own declared factor group/event.
+
+**2. Logical normal-comb data.**
+
+Fix a finite ordered logical skeleton, with input $A_j$ and newly emitted output $B_j$ at event $j$. Include a fixed zero-input preparation boundary $B_0$: it contains the actual inaccessible/provider reference factors and any preexisting wires later returned at declared arrivals. This is a typed preparation/provider boundary, not a newly user-accessible measurement port. Work with a normal causal comb on this complete interface, including the registered classical/coherent output algebras. The same minimal-dilation proof as J.4s, now starting from the initial state on $B_0$, gives its minimal prefix dilations
+
+$$
+V_j:A_1\cdots A_j\longrightarrow B_0B_1\cdots B_j\otimes K_j,
+\qquad V_0:\mathbb C\longrightarrow B_0\otimes K_0,
+\tag{J.4y.9}
+$$
+
+and sequential isometries
+
+$$
+W_j:K_{j-1}\otimes A_j\longrightarrow B_j\otimes K_j,
+\qquad
+V_j=(I_{B_0B_1\cdots B_{j-1}}\otimes W_j)(V_{j-1}\otimes I_{A_j}).
+\tag{J.4y.10}
+$$
+
+The minimal dilation and its memory are mathematical reference data. They are not already the physical retained memory, an independently fresh stock, or an accessible system.
+
+For a descriptor already given on a complete normal-comb interface but testing only an actual input law or a restricted family, use the set of normal comb extensions agreeing on exactly those original tests. Its coefficients satisfy the J.4s/finite-section positivity and causality conditions plus the original response equalities. This does not install an arbitrary unknown-input port. An initially correlated source/provider preparation must be retained as complete joint preparation data or as its actual preparation-and-intervention-slot process before invoking this statement. A reduced input assignment with omitted source correlations need not possess a CPTP extension, and no such extension is assumed. Each realization of an allowed complete extension realizes the original tested descriptor after restriction; the actual source supplies the extension only on its correctly typed complete interface.
+
+**3. Physical schedule and stock data.**
+
+Fix the actual physical layout:
+
+- $F_j$: retained active physical memory after event $j$;
+- $E_j$: newly emitted supplier factor which becomes unavailable to later source controls;
+- $S_j$: independent stock first admitted at event $j$, in its actual prescribed trace-class state $\sigma_j$;
+- all role labels, temperatures, energies, Hamiltonian domains, source/status responses, clocks and control records required by the original source.
+
+Let $L_j$ be a mathematical purifying reference for $\sigma_j$, and choose
+
+$$
+|\Omega_j\rangle\in S_j\otimes L_j,
+\qquad \operatorname{Tr}_{L_j}|\Omega_j\rangle\langle\Omega_j|=\sigma_j.
+\tag{J.4y.11}
+$$
+
+It is never a physical pure stock supplied to the controller. Purify the actual supplied joint initial state on $B_0\otimes F_0$, retaining every reference correlation, as
+
+$$
+Z_0:\mathbb C\longrightarrow B_0\otimes F_0\otimes L_0.
+\tag{J.4y.0a}
+$$
+
+Its $B_0$ marginal must equal the registered initial logical state. Minimal-dilation comparison then gives a unique isometry
+
+$$
+J_0:K_0\longrightarrow F_0\otimes L_0,
+\qquad Z_0=(I_{B_0}\otimes J_0)V_0.
+\tag{J.4y.0b}
+$$
+
+This is the initial source-compatibility condition. It does not manufacture initial correlations from the reduced $F_0$ or $B_0$ marginals. If $B_0=\mathbb C$, it reduces to the independent-memory convention $K_0=\mathbb C$ and $J_0(1)=|\Omega_0\rangle$.
+
+A complete physical event has a full unitary
+
+$$
+U_j:F_{j-1}\otimes A_j\otimes S_j
+\longrightarrow B_j\otimes F_j\otimes E_j.
+\tag{J.4y.12}
+$$
+
+All factors, including unused sectors, are included in this equality. A past correlated supplier is inside $F_{j-1}$ if still accessible, or in the unavailable hidden group if isolated. It is never another independent $\sigma_j$. A correlated arrival from a provider is a registered return/link of its existing preparation-boundary wire through the corresponding $A_j$, with its actual provider evolution, not a new independent stock. The original factor identity and arrival time are retained. Linking means applying the supplied provider channel to the actual emitted/held factor and feeding its output to the named input; it does not duplicate that quantum factor or create a new independent marginal. Classical conditioned branches are represented by their owned control records, and zero-probability sectors remain in the full unitary.
+
+Define the accumulated hidden space after event $j$ by
+
+$$
+H_j=F_j\otimes E_1\cdots E_j\otimes L_0\cdots L_j.
+\tag{J.4y.13}
+$$
+
+The $F_j$ factor is accessible; the other displayed factors are not controlled later. Actual independent free drifts on emitted physical factors are retained as in Section 1. The purifying $L$ factors are mathematical references with identity evolution.
+
+**4. Exact inverse causal-fibre criterion.**
+
+The logical comb has a complete physical supplier realization with this stock/layout if and only if there are isometries
+
+$$
+J_j:K_j\longrightarrow H_j
+\tag{J.4y.14}
+$$
+
+and, at each event, the local tests (J.4y.5)–(J.4y.6) below pass.
+
+At step $j$, set the domain $D_j=K_{j-1}\otimes A_j$. After the fixed tensor permutations, the input isometry is
+
+$$
+\mathcal F_j:
+ x\longmapsto (J_{j-1}\otimes I_{A_j})x\otimes|\Omega_j\rangle,
+\tag{J.4y.15}
+$$
+
+viewed with active factor $X_j=F_{j-1}\otimes A_j\otimes S_j$ and untouched factor
+
+$$
+Z_j=E_1\cdots E_{j-1}\otimes L_0\cdots L_j.
+$$
+
+The desired output isometry is
+
+$$
+\mathcal G_j=(I_{B_j}\otimes J_j)W_j,
+\tag{J.4y.16}
+$$
+
+viewed with active output $Y_j=B_j\otimes F_j\otimes E_j$ and the same untouched $Z_j$. Undo only the originally registered free propagator on $Z_j$, if nontrivial, before making the comparison. Require the exact slice-Gram equations
+
+$$
+(\mathcal F_j)_a^*(\mathcal F_j)_b
+=(\mathcal G_j)_a^*(\mathcal G_j)_b
+\quad\hbox{for every hidden basis pair }a,b,
+\tag{J.4y.17}
+$$
+
+and the full active-complement equality
+
+$$
+\dim(X_j\ominus L_{\mathcal F_j})
+=\dim(Y_j\ominus L_{\mathcal G_j}).
+\tag{J.4y.18}
+$$
+
+These conditions contain no unknown existential phrase “has an admissible supplier.” They are explicit operator equalities on the embeddings of the known minimal prefix memories and prescribed stock. The local construction (J.4y.8) gives $U_j$ on its entire reachable slice span, and a complement unitary supplies its full unused action. In particular it cannot act on an old isolated supplier merely because that supplier purifies part of the logical memory.
+
+**Sufficiency.**
+
+Apply the local criterion at every step. It gives full $U_j$ satisfying
+
+$$
+\widehat U_j(J_{j-1}\otimes I_{A_j})
+=(I_{B_j}\otimes J_j)W_j,
+\tag{J.4y.19}
+$$
+
+where $\widehat U_j$ denotes appending the actual stock purification and applying $U_j$ only on the allowed active factors, with all specified free drifts retained. Starting from $J_0$, induction with (J.4y.10) shows that the actual purified physical prefix is
+
+$$
+Z_j^{\rm phys}=(I_{B_0B_1\cdots B_j}\otimes J_j)V_j.
+\tag{J.4y.20}
+$$
+
+Tracing $H_j$ therefore gives the exact registered logical prefix channel. Because equality is between isometries, it holds for every admitted input/reference correlation and every selective history encoded in the original comb. The physical complete output state is obtained from the same sequence of $U_j$ and stocks; no hidden source is reinitialized. This proves a complete supplier realization with the declared causal supports.
+
+**Necessity.**
+
+Start from an actual complete physical realization. Purify only its supplied mixed stocks mathematically. Its prefix isometry $Z_j^{\rm phys}$ is a dilation of the logical prefix channel. Minimality of $V_j$ gives a unique isometry $J_j$ with (J.4y.20). Insert the physical recursion for $Z_j^{\rm phys}$ and the logical recursion (J.4y.10). The resulting equality initially holds on environmental slices of $V_{j-1}\otimes I_{A_j}$. Those slices span a dense subspace of $K_{j-1}\otimes A_j$ by prefix minimality, so it extends to (J.4y.19). Each actual local $U_j$ then proves (J.4y.17)–(J.4y.18). Every full source is thus included, and every solution reconstructs one. $\square$
+
+Changing the minimal logical prefix dilation by a memory unitary changes $W_j$ and $J_j$ by opposite gauge factors and leaves every physical $U_j$ and source output unchanged. Original logical relabeling/test equivalence is applied on the base comb; the fibre keeps distinct full physical suppliers, kernel completions, control paths and invoices.
+
+**5. What is now classified.**
+
+With the initial compatibility (J.4y.0b), the criterion covers every normal logical comb on a finite skeleton and every prescribed complete physical memory/stock/isolation layout in the stated Hilbert category. It includes arbitrary reused correlations, later independent Gibbs arrivals, all emitted supplier outputs and the complete complement actions. For the whole source class one ranges over the admitted layouts; an architecture does not gain a new factor or earlier access by this mathematical range.
+
+A finite-dimensional instance is an explicit finite matrix existence problem. Its embedding-isometry, slice-Gram and source-response conditions are polynomial in real and imaginary entries. Complement data are retained: finite ambient-dimension equality alone does not replace the slice-rank condition when the two slice spans have different ranks, though (J.4y.17) itself makes their ranks equal. With matching physical input/output dimensions the complements then match automatically. Algebraic supplied data permit exact real-algebraic feasibility and source reconstruction in principle. Under J.4i's actual finite-description, coefficient and certificate premises, J.4j gives a finite physical pulse source for each reconstructed finite unitary, with its controller and clock records charged.
+
+In infinite dimensions, the criterion is an exact joint-unitary supplier classification. A solution supplies the full required operator, not its native coefficient installation. If an actual controller source is specified, its propagated operator must equal the reconstructed $U_j$ on the complete carrier, with its original profile/calibration/clock/return record. This compatibility is independently checked; it is not granted by (J.4y.17). The same chronological complete states then give the quantum reset, energy and work outputs of Theorem J.4w.
+
+The inverse criterion classifies complete unitary suppliers. The exact image under a specified native control service is obtained by imposing that service's calibration and full-propagator equalities from Theorem J.4w, with its actual costs and justified limits.
+
+**6. Direct complete-preparation criterion for arbitrary registered input families.**
+
+The local criterion also gives a formulation that does not require any free reduced-input channel or prior normal-comb extension. Let $\Lambda$ be the original registered preparation/test family. For each $\lambda$, retain a purification of its complete actual input, including the actual mixed stock and every source/provider correlation,
+
+$$
+|f_\lambda\rangle\in X\otimes H.
+\tag{J.4y.21}
+$$
+
+The hidden space $H$ contains every inaccessible reference and the mathematical purifying factors; a common space may be obtained by fixed embeddings when the family originally uses different reference dimensions. Candidate complete output purifications
+
+$$
+|g_\lambda\rangle\in Y\otimes H
+\tag{J.4y.22}
+$$
+
+must satisfy exactly the original exposed-output, source/status, retained-marginal and supplier-role constraints. These are explicit reduced-state and effect equalities.
+
+For hidden basis $h_a$, set $f_{\lambda a}=(I_X\otimes\langle h_a|)f_\lambda$ and $g_{\lambda a}=(I_Y\otimes\langle h_a|)g_\lambda$. One common full unitary $U:X\to Y$, acting without access to the hidden factors, realizes all these inputs and outputs exactly if and only if
+
+$$
+\langle f_{\lambda a},f_{\mu b}\rangle
+=\langle g_{\lambda a},g_{\mu b}\rangle
+\quad\hbox{for all }\lambda,\mu,a,b,
+\tag{J.4y.23}
+$$
+
+and
+
+$$
+\dim\left[X\ominus\overline{\operatorname{span}}\{f_{\lambda a}\}\right]
+=
+\dim\left[Y\ominus\overline{\operatorname{span}}\{g_{\lambda a}\}\right].
+\tag{J.4y.24}
+$$
+
+The proof maps every finite linear combination of the input slices to the corresponding combination of output slices. Equation (J.4y.23) makes its norm and inner products independent of the chosen expression, giving a unique unitary between the slice spans; (J.4y.24) extends it to the complete carriers. Conversely a common $U$ preserves all displayed inner products and maps the complements. Hence the reconstructed $U$ satisfies $(U\otimes I_H)f_\lambda=g_\lambda$ for every original preparation. No linear or bounded map from a fictitious free Hilbert space of preparation labels is assumed. The labels are not made available to the controller unless the original physical preparation supplied such a control record.
+
+The cross-preparation equations with $\lambda\ne\mu$ matter. Merely matching each individual input/output pair would allow a different forbidden source operation for each preparation. The common Gram conditions enforce one physically common operation.
+
+For a chronological architecture apply this criterion to candidate complete intermediate state families, using the actual prior output as the next input, the actual newly arriving independent stock or existing correlated provider wire, and exactly the declared active/hidden partition. All isolated physical outputs and mathematical purification references remain on the hidden side until an originally declared provider return makes the relevant physical factor accessible. The reconstructed full unitary at each event then realizes all registered responses on one source word. Every physical source supplies such intermediate families, so necessity and sufficiency hold without any reduced-input CP-assignment assumption.
+
+This is an explicit inverse criterion for original actual-law families, including the Bell-correlated boundary below. Finite supplied families and finite carriers give finite Gram, partial-trace and full-complement constraints and a finite unitary reconstruction. Infinite families/carriers retain their exact index sets and complement dimensions. Native control compatibility, entropy/energy integrability and resource ownership are imposed on the reconstructed complete source as already stated; the Gram equations do not price an absent control service.
+
+**7. Initial-correlation falsifier and its exact repair.**
+
+Let the original input $A$ be fixed in $|0\rangle$, and let a source memory $F_0$ be Bell-entangled with an inaccessible reference $D$. A source SWAP of $A$ and $F_0$ emits a system $B$ Bell-entangled with $D$. There is no channel on the reduced $A$ input, tensored with $\mathrm{id}_D$, that produces this from $|0\rangle\langle0|_A\otimes I_D/2$: that input is product, and such a local channel leaves it product. Thus replacing the actual correlated source boundary by a reduced-input channel would omit an admitted finite physical source.
+
+In the complete-boundary construction choose $B_0=D$, take $V_0$ to be the Bell purification of $I_D/2$, and take $J_0$ to identify its minimal memory $K_0$ with the actual $F_0$. The subsequent logical $W_1$ transfers that memory to $B$; the physical source is exactly the supplied SWAP. Equations (J.4y.0b) and (J.4y.19) then preserve the Bell correlation without any access to $D$. This example verifies why the preparation boundary is indispensable rather than an optional extra input assumption.
+
+Verifiers are the finite-section positivity and trace constraints, full-complement and compression equations, slice-Gram identities, source-calibration equalities, spectral integrals, and exact entropy balances. Falsifiers include a missing unused supplier sector, inconsistent cross-preparation action, a lost initial/provider correlation, free cancellation of isolated-factor drift, an unowned native control profile, a bath heat formed as an undefined infinity-minus-infinity, or trace closeness substituted for an entropy/energy limit. Theorem J.4z gives the export-dependent reset ledger.
+
+Theorem J.4w parametrizes this domain up to source isomorphism by complete operator-section, supplier, propagator and spectral Hamiltonian coordinates; its registered-response quotient is the logical base, and the realization fibre over each logical class retains every complete physical carrier, control path and resource record. Theorems J.4x–J.4y characterize the unitary-supplier part of every fibre: a logical normal channel, or a normal comb on a finite skeleton, with a prescribed stock, memory and isolation layout has a complete unitary supplier exactly when the compression, slice-Gram and full-complement equations hold, and their solutions parametrize every supplier; for an extreme channel of minimal Kraus rank $k$ on a fixed finite register and a stock of rank $r$ on an $a$-dimensional supplier, a supplier exists exactly when $rk\le a$. On every member each registered reset obeys (J.4w.8), with the accessible retained quantum system and all bath correlations kept, and (J.4w.11) is the architecture ledger. When the final memory entropy equals the initial one,
+$$
+\sum_e\bigl[S(P_e\mid R_e)_{\rm in}-S(P_e\mid R_e)_{\rm out}\bigr]=\sum_jF_j,
+\qquad
+\sum_e\beta_eQ_e=\sum_jF_j+\sum_e\epsilon_e\ge\sum_jF_j:
+$$
+the total reset conditional entropy equals the total acquisition boundary flux, and the reset heat exceeds it by the nonnegative excesses of (J.4w.8). Theorem J.4f is the member whose acquisitions append classical outcomes, with cyclic floor $H(J)$; Construction J.4g has zero total flux and no reset; Theorem J.4h has residual entropy $S(G)$. Theorems J.4j–J.4k realize every finite descriptor of Definition J.4i with exact acquisition instruments, owned reservoir records, work and control records and uniformly convergent resets, and Theorem J.4l realizes the stopped-Lüders member with complete apparatus return and work and heat tending to $k_BT_bH(J)$. These theorems establish the source-coordinate parametrization, the supplier criteria, the quantum-side-information reset ledger with its flux identity, and the complete work/control realization on the finite descriptor class. Scope: on infinite-dimensional ports the fibre equations reconstruct the complete supplier, and the native control, calibration and propagator equality (J.4x.16) is a separate condition on each solution; the reset of Theorem J.4k has heat tending to $b\ln2$ and reaches the conditional-entropy floor on the branch $S(P\mid R)=b\ln2$; Theorem J.4l carries no uniform control-strength or tariff ceiling as $N$ grows. Theorem J.4z gives the export-dependent entropy identity and a family of exact cyclic returns that refutes extension of the earlier reset floors.
+
+<a id="theorem-j4z"></a>
+
+<a id="theorem-j4z-export-dependent-reset-ledger-and-unbounded-signed-decrement"></a>**Theorem J.4z (Export-Dependent Reset Ledger and Unbounded Signed Decrement).** Consider the normal finite schedules of Theorem J.4w whose entropy terms below are finite. Include the original stopped Lüders instrument of Theorem J.4c among the protected ports. Write $M$ for working memory at a schedule cut and $E_{<j}$ for the accumulated non-reset exports that are isolated after emission. A non-reset step takes in $A_j$ and may enlarge that archive. At reset $e$, take $M=P_eR_e$ and leave the joint marginal of $R_eE_{<e}$ unchanged. Then the total local reset decrement $L=\sum_e\Delta_e S(P_e\mid R_e)$ satisfies
+$$
+L=S(M_{\rm start}E_0)-S(M_{\rm end}E_{\rm all})
++\sum_j S(A_j\mid M_jE_{<j})_{\rm in}
++\sum_e\left[I(P_e:E_{<e}\mid R_e)_{\rm in}
+-I(P_e:E_{<e}\mid R_e)_{\rm out}\right],
+\tag{J.4z.1}
+$$
+where $\Delta_e$ denotes input minus output. The archive in this formula excludes the reset baths, which remain owned by their separate ledgers. For replacement resets, the last output conditional mutual information vanishes. Thus, with the endpoint entropies and actual incoming conditional entropies specified, the first three terms form a lower bound. Equality holds exactly when every input conditional mutual information at the reset cuts is zero.
+
+Across the full allowed class of finite schedules with paid inputs and retained outputs, cyclic architectures realizing the stopped Lüders instrument have $\inf L=-\infty$. Each finite-entropy ledger has a finite value. In particular the nondemolition Gram class and the classical $H(J)$ lower bound retain their stated source restrictions.
+
+*Proof.* Track the entropy of the enlarged system $ME$. At each non-reset step its change is $S(A_j\mid M_jE_{<j})_{\rm in}$ by unitary invariance and the retention of the new export. At a reset its decrease is $\Delta_e S(P_e\mid R_e E_{<e})$, since the joint marginal of $R_eE_{<e}$ is fixed. The relation $S(P\mid R)-S(P\mid RE)=I(P:E\mid R)$ gives (J.4z.1). Strong subadditivity gives the lower bound and the equality criterion for replacement resets. For exact pure returns of finite-dimensional registers there is also a dimension-dependent floor $L\ge-\sum_e\ln\dim P_e$. For a purification of the input by $D_e$, each reset contributes $S(P_e\mid R_e)=-S(P_e)+I(P_e:D_e)$. Equality in the sum holds exactly when each $P_e$ is maximally mixed and independent of its purifying complement.
+
+For the infimum, compile a finite stopped Lüders descriptor by Theorem J.4j with its original selective maps and retained outcomes. Run the conditional controls from the classical outcome archive. If an outcome also occupies a private control register, exchange that register after its last use with an independent pure ready slot and isolate the displaced copy as an owned output. This is an exact finite unitary exchange with the original public outcome and probe output intact. The working registers return ready, so the source has a cyclic implementation with finite base decrement $L_0$. The extension below also works for any exact cyclic implementation with finite $L_0$.
+
+Append an auxiliary cycle with a private zero-Hamiltonian qubit $P$ initially pure and a counted ready qubit $R$. Read a Boolean $f$ of the retained classical stopped outcome as a control, leaving the outcome register unchanged. Prepare
+$$
+\sqrt{1-p}\,|0,0\rangle+(-1)^f\sqrt p\,|1,1\rangle
+\qquad (0<p\le1/2)
+$$
+on $PR$. At the reset take an independent Gibbs qubit $B$ in $I_2/2$ with zero Hamiltonian and positive temperature. Apply controlled bit addition $R\to P$, then controlled phase $B\to R$. The first gate returns $P$ to $|0\rangle$. The bath bit randomizes the phase on $R$ and gives the same diagonal marginal $\operatorname{diag}(1-p,p)$ for each outcome, before and after the reset. The full marginal on $R$, the retained outcome and every untouched reference is consequently unchanged at this cut. This is an exact pure return on every state of the declared stopped-history source. Its defined reset action is the displayed unitary, including on off-program states.
+
+Write $h_2(p)=-(1-p)\ln(1-p)-p\ln p$. Conditioned on the retained outcome, the input $PR$ is pure and its $R$ marginal has entropy $h_2(p)$. The output $P$ is pure and independent. Thus the reset decrement is $-h_2(p)$. At the output, $B$ retains its Gibbs marginal and has mutual information $h_2(p)$ with $PR$ and the retained outcome. Indeed, conditioned on the outcome and on the fair bath bit, the state of $R$ is pure and its bath-averaged state has entropy $h_2(p)$. This gives (J.4w.8) with zero bath relative entropy and zero heat. Export $R$ and the spent $B$ with their correlations. The private $P$ is again ready and independent. The pure stock, controls, archive, and bath preparation are charged. The finite prescribed gates are realized by Theorem J.4j. For each Hermitian involution $G$ in the reset the positive pulse $\pi\hbar(I-G)/(2\tau)$ implements $G$ in time $\tau>0$ with finite norm action.
+
+The classical outcome controls the auxiliary cycle without changing any protected selective map, including its extensions to untouched references. Each auxiliary return removes a coherent private record and exports its correlations. These operations lie outside the nondemolition Gram class and the four-operation grammar. Repeating with fresh paid stocks at $p=1/2$ gives $L=L_0-k\ln2$ for every finite $k$. Varying $p$ in the final module realizes any negative offset from $L_0$. The family proves the unrestricted infimum with the physical heat accounted for separately by (J.4w.8). With fixed stock dimensions or a fixed archive, the corresponding constrained optimization retains its own bounds. ∎
 
 **J.5 Distinction from Existing Bounds**
 
@@ -383,14 +1769,13 @@ The structural value $\varepsilon_0=\ln2$ counts a binary alphabet. The physical
 3. The fixed binary reset-support certificate of Proposition E.2a gives its own support-dimension capacity bound.
 4. No area-law, gravitational, reflexivity, arrow-of-time, or locality conclusion follows from $\varepsilon_0=\ln2$ alone; each requires the independent bridge cited in its theorem.
 
-
 ---
 
 ## J.8 Finite-Time Dissipation on a Certified Markov-Jump Implementation
 
 The excess $\varepsilon_{\mathrm{diss}}$ in Equation (J.3) is nonnegative and may vanish in a quasistatic limit. A strict finite-time statement requires implementation data beyond Definition J.1 and must distinguish an exact logical reset from a finite-rate physical approximation.
 
-**Definition J.8.1 (Markov-Jump Implementation Certificate).** A certificate $\mathfrak M_{\mathrm{LDB}}$ specifies, for every retained side-information value $r$ of positive probability:
+<a id="definition-j81-markov-jump-implementation-certificate"></a>**Definition J.8.1 (Markov-Jump Implementation Certificate).** A certificate $\mathfrak M_{\mathrm{LDB}}$ specifies, for every retained side-information value $r$ of positive probability:
 
 1. a finite-state, continuously differentiable Markov jump law $p_r(t)$ on $0\le t\le\tau$, with nonnegative rates locally bounded on the closed interval;
 2. local detailed balance with respect to the registered bath temperature and instantaneous control Hamiltonian, together with the degenerate register Hamiltonian, fixed ready label, and cyclic endpoint control of Theorem J.1;
@@ -412,7 +1797,7 @@ Thus $\sum_rq(r)\Sigma_r$ is the irreversible entropy production. It equals the 
 
 Definition J.1 and the existence of a discrete Markov kernel do not populate $\mathfrak M_{\mathrm{LDB}}$: a discrete-time kernel need not be embeddable as a finite-rate continuous-time jump process, and single-bath isothermal operation alone does not imply local detailed balance.
 
-**Imported Result J.8.2 (Classical Stochastic Speed Limit; Shiraishi, Funo, and Saito 2018).** For each finite Markov-jump process satisfying the local-detailed-balance branch above,
+<a id="imported-result-j82-classical-stochastic-speed-limit-shiraishi-funo-and-saito-2018"></a>**Imported Result J.8.2 (Classical Stochastic Speed Limit; Shiraishi, Funo, and Saito 2018).** For each finite Markov-jump process satisfying the local-detailed-balance branch above,
 $$
 \|p_r(\tau)-p_r(0)\|_1^2\le2\Sigma_rN_r.
 \tag{J.8.3}
@@ -426,24 +1811,23 @@ L_r=\|p_r^{\mathrm{out}}-p_r^{\mathrm{in}}\|_{\mathrm{TV}},
 $$
 whenever $L_r>0$.
 
-**Definition J.8.3 (Total-Activity and Displacement Data).** A total-activity certificate $\mathfrak A_N$ supplies $N_{\max}<\infty$ such that $N_r\le N_{\max}$ for every retained $r$. Define
+<a id="definition-j83-total-activity-and-displacement-data"></a>**Definition J.8.3 (Total-Activity and Displacement Data).** A total-activity certificate $\mathfrak A_N$ supplies $N_{\max}<\infty$ such that $N_r\le N_{\max}$ for every retained $r$. Define
 $$
 L^2=\sum_rq(r)L_r^2.
 \tag{J.8.5}
 $$
 The condition $L>0$ is independent implementation data; a logical alphabet with more than one symbol does not imply it for the actual conditional input law.
 
-**Theorem J.8.4 (Positive Entropy-Production Floor at Bounded Total Activity).** If $\mathfrak M_{\mathrm{LDB}}$ and $\mathfrak A_N$ are populated and $L>0$, then
+<a id="theorem-j84-positive-entropy-production-floor-at-bounded-total-activity"></a>**Theorem J.8.4 (Positive Entropy-Production Floor at Bounded Total Activity).** If $\mathfrak M_{\mathrm{LDB}}$ and $\mathfrak A_N$ are populated and $L>0$, then
 $$
 \sum_rq(r)\Sigma_r
-\ge\frac{2L^2}{N_{\max}}
->0.
+\ge\frac{2L^2}{N_{\max}} >0.
 \tag{J.8.6}
 $$
 
 *Proof.* Equation (J.8.4) and $N_r\le N_{\max}$ give $\Sigma_r\ge2L_r^2/N_{\max}$ for every sector with $L_r>0$; sectors with $L_r=0$ contribute the nonnegative bound $\Sigma_r\ge0$. Average over $r$ and use (J.8.5). ∎
 
-**Lemma J.8.5 (Exact Finite-Rate Erasure Obstruction).** Under item 1 of Definition J.8.1, if $p_r^{\mathrm{in}}(x)>0$ for a non-ready state $x$, then $p_r(\tau)(x)>0$. Hence an exact ready-state endpoint cannot be reached in finite time on that sector.
+<a id="lemma-j85-exact-finite-rate-erasure-obstruction"></a>**Lemma J.8.5 (Exact Finite-Rate Erasure Obstruction).** Under item 1 of Definition J.8.1, if $p_r^{\mathrm{in}}(x)>0$ for a non-ready state $x$, then $p_r(\tau)(x)>0$. Hence an exact ready-state endpoint cannot be reached in finite time on that sector.
 
 *Proof.* Let $\lambda_x(t)$ be the total exit rate from $x$. The probability of starting at $x$ and making no jump is at least
 $$
@@ -451,13 +1835,13 @@ p_r^{\mathrm{in}}(x)\exp\!\left(-\int_0^\tau\lambda_x(t)\,dt\right)>0,
 $$
 because local boundedness on the compact interval makes the integral finite. This event contributes to $p_r(\tau)(x)$. ∎
 
-**Remark J.8.6 (Scope).** Theorem J.8.4 applies to finite-error physical resets. An exact logical reset in finite time requires a singular-rate or limiting idealization outside Definition J.8.1; transferring Theorem J.8.4 to Equation (J.3) requires a certified limit theorem. The bound is independent of $\tau$ because it assumes an upper bound on integrated activity. An activity-rate cap $A_r(t)\le A_{\max}$ gives
+<a id="remark-j86-scope"></a>**Remark J.8.6 (Scope).** Theorem J.8.4 applies to finite-error physical resets. An exact logical reset in finite time requires a singular-rate or limiting idealization outside Definition J.8.1; transferring Theorem J.8.4 to Equation (J.3) requires a certified limit theorem. The bound is independent of $\tau$ because it assumes an upper bound on integrated activity. An activity-rate cap $A_r(t)\le A_{\max}$ gives
 $$
 \sum_rq(r)\Sigma_r\ge\frac{2L^2}{A_{\max}\tau},
 $$
 which vanishes as $\tau\to\infty$. A strict channel-capacity deficit follows from an accepted reset-to-capacity transfer certificate $\mathfrak C_{\Sigma C}$ of Definition J.8.10, whose inequality (J.8.10a) connects dissipative excess to the certified achievable boundary-channel rate.
 
-**Construction J.8.7 (Bounded Two-State LDB Erasure Witness).** Let the ready state be $0$, let $R$ be a singleton, and put $p_1(0)=p_0(0)=1/2$. Fix $\beta,\gamma,\Delta,\tau>0$ and define
+<a id="construction-j87-bounded-two-state-ldb-erasure-witness"></a>**Construction J.8.7 (Bounded Two-State LDB Erasure Witness).** Let the ready state be $0$, let $R$ be a singleton, and put $p_1(0)=p_0(0)=1/2$. Fix $\beta,\gamma,\Delta,\tau>0$ and define
 $$
 E_0(t)=0,
 \qquad
@@ -483,7 +1867,7 @@ k(t)=w_{0\leftarrow1}(t)+w_{1\leftarrow0}(t),
 c=\frac{\beta\Delta}{2}.
 $$
 
-**Theorem J.8.8 (Explicit Nonempty Bounded-Activity Erasure Branch).** Construction J.8.7 populates Definition J.8.1 and Definition J.8.3. Its final error $\epsilon_\tau=p_1(\tau)$ satisfies
+<a id="theorem-j88-explicit-nonempty-bounded-activity-erasure-branch"></a>**Theorem J.8.8 (Explicit Nonempty Bounded-Activity Erasure Branch).** Construction J.8.7 populates Definition J.8.1 and Definition J.8.3. Its final error $\epsilon_\tau=p_1(\tau)$ satisfies
 $$
 0<\epsilon_\tau<\frac12,
 \qquad
@@ -535,9 +1919,9 @@ $$
 $$
 Variation of constants gives (J.8.8a); its integrand is nonnegative and is positive on $0<s<\tau$. Bounded rates and Lemma J.8.5 give $\epsilon_\tau>0$. The dynamical activity is at most $w_{0\leftarrow1}+w_{1\leftarrow0}=2\gamma\cosh(\beta E_1/2)\le2\gamma\cosh c$, proving (J.8.8b), and Theorem J.8.4 gives (J.8.8c). Since $k\le2\gamma\cosh c$ and $E_1(s)\ge\Delta/2$ on $\tau/4\le s\le3\tau/4$, (J.8.8d) follows by restricting the integral in (J.8.8a) to that interval. Substitution into (J.8.8c) gives (J.8.8e). Equation (J.8.8f) is (J.8.2). ∎
 
-**Remark J.8.9 (Witness Scope).** The witness proves nonemptiness of the finite-error, bounded-rate, cyclic-control LDB branch and supplies a strictly positive computable entropy-production floor. Exact finite-time erasure is governed by the singular-rate or limiting certificate identified in Remark J.8.6. Quantum ND-RID transfer, a channel-capacity deficit, and horizon saturation or strictness are governed by their separately named transfer certificates.
+<a id="remark-j89-witness-scope"></a>**Remark J.8.9 (Witness Scope).** The witness proves nonemptiness of the finite-error, bounded-rate, cyclic-control LDB branch and supplies a strictly positive computable entropy-production floor. Exact finite-time erasure is governed by the singular-rate or limiting certificate identified in Remark J.8.6. Quantum ND-RID transfer, a channel-capacity deficit, and horizon saturation or strictness are governed by their separately named transfer certificates.
 
-**Construction J.8.9a (Adapted Bounded-Rate Reset Protocol).** Let $\mathcal G=\{0,1,\ldots,m-1\}$ with $m\ge2$ and ready label $0$, and let $p$ be an input law on $\mathcal G$. Fix the bath inverse temperature $\beta=(k_BT)^{-1}$ and parameters $\eta\in(0,1)$, $\Lambda>0$, $\gamma>0$ and $\tau_1>0$; put $\tau=5\tau_1$ and $\varsigma(v)=\sin^2(\pi v/2)$ for $0\le v\le1$. With $u_m$ the uniform law on $\mathcal G$, define
+<a id="construction-j89a-adapted-bounded-rate-reset-protocol"></a>**Construction J.8.9a (Adapted Bounded-Rate Reset Protocol).** Let $\mathcal G=\{0,1,\ldots,m-1\}$ with $m\ge2$ and ready label $0$, and let $p$ be an input law on $\mathcal G$. Fix the bath inverse temperature $\beta=(k_BT)^{-1}$ and parameters $\eta\in(0,1)$, $\Lambda>0$, $\gamma>0$ and $\tau_1>0$; put $\tau=5\tau_1$ and $\varsigma(v)=\sin^2(\pi v/2)$ for $0\le v\le1$. With $u_m$ the uniform law on $\mathcal G$, define
 $$
 \pi^\eta=(1-\eta)p+\eta u_m,
 \qquad
@@ -563,7 +1947,7 @@ w_{j\leftarrow0}(t)=\kappa(t)e^{-\beta E_j(t)}
 $$
 and all other rates vanish. Phases 1 and 5 shape and restore the energies behind a closed barrier, phase 2 opens the barrier at the shaped Gibbs law $\pi^\eta$, phase 3 lifts every non-ready level by $\Lambda$, and phase 4 closes the barrier. With retained side information, one copy runs in each sector $r$ with its own input law $p_r$, its own energies (J.8.9a.1) and the common parameters $(\eta,\Lambda,\gamma,\tau_1)$.
 
-**Theorem J.8.9b (Common-Overlap Reset Certificate and Limiting Exact-Erasure Ledger).** Let $A$, $f$, $q(X,R)$ and a minimizing label map $g$ of Theorem J.1b be given, with $m:=|G|_{\min}\ge2$ in (J.3b). Retain $\tilde R:=(f(X),R)$ unchanged, and in every sector $\tilde r$ with $q(\tilde r)>0$ reset the auxiliary register $G=g(X)$ to the ready label $0$ by Construction J.8.9a with input law $p_{\tilde r}=q(G\mid\tilde R=\tilde r)$. Then the following hold.
+<a id="theorem-j89b-common-overlap-reset-certificate-and-limiting-exact-erasure-ledger"></a>**Theorem J.8.9b (Common-Overlap Reset Certificate and Limiting Exact-Erasure Ledger).** Let $A$, $f$, $q(X,R)$ and a minimizing label map $g$ of Theorem J.1b be given, with $m:=|G|_{\min}\ge2$ in (J.3b). Retain $\tilde R:=(f(X),R)$ unchanged, and in every sector $\tilde r$ with $q(\tilde r)>0$ reset the auxiliary register $G=g(X)$ to the ready label $0$ by Construction J.8.9a with input law $p_{\tilde r}=q(G\mid\tilde R=\tilde r)$. Then the following hold.
 
 1. For every parameter choice the construction populates Definition J.8.1 with side information $\tilde R$ and Definition J.8.3 with $N_{\max}=3\gamma\tau_1m/\eta$. Its rates are continuous and bounded by $\gamma m/\eta$ and satisfy local detailed balance in the form $w_{0\leftarrow j}e^{-\beta E_j}=w_{j\leftarrow0}e^{-\beta E_0}$; the register Hamiltonian is degenerate and the controls are cyclic at $t=0$ and $t=\tau$. Every sector ends with ready-state error $\epsilon_{\tilde r}>0$.
 
@@ -634,9 +2018,7 @@ Substituting the sequence of item 4 into (J.8.9b.2) gives (J.8.9b.3), whose righ
 
 In the binary instance every sector has the uniform input law, which equals $\pi^\eta$ for every $\eta$. Hence $e_1=0$, phases 1 and 2 leave $p$ unchanged, $D(p\Vert\pi^\eta)=0$, $\delta(\tau_1)=0$ and $\zeta_0=1$. The bounds of item 3 reduce to those in (J.8.9b.5), and (J.8.9b.1) with $m=2$ gives its ledger. Each sector law is also the input law of Construction J.8.7, whose copies act only on $G$; Theorem J.8.8 therefore populates Definitions J.8.1 and J.8.3 sector by sector with side information $\tilde R$, and (J.8.2) with $H_q(X\mid f(X))=\log2$ and the common sector error $\epsilon_\tau$ gives (J.8.8f) for the averaged ledger. The per-sector arguments used no property of $p$ beyond its being a law on $\mathcal G$. ∎
 
-**Resolution TV-JREF-01-R2 (Metadata).** Exact domain: every nonempty finite reachable domain whose accessible map $f$ has largest fiber size $m\ge2$, every minimizing label map of Theorem J.1b and every finite joint law $q(X,R)$, reset by Construction J.8.9a. Premises: Theorem J.1b, the finite-state local-detailed-balance class of Definition J.8.1 with one registered bath temperature, and the heat identity (J.8.2). Equivalence: equality of sector input laws and control parameters. Budget: every $(\eta,\Lambda,\gamma,\tau_1)$ and the sequence of Theorem J.8.9b, item 4. Verifier: continuity and rate bounds, the relative-entropy balance, variation of constants for the lumped non-ready mass, and the displayed substitutions. Falsifier: a sector violating (J.8.9b.1) or (J.8.9b.2), or a limit in (J.8.9b.4) different from $H_q(X\mid f(X),R)$. Provenance class: source-internal explicit construction in finite-state stochastic thermodynamics with one thermal reservoir. Downstream consumers: Theorem J.1, Theorem J.1b, Remark J.8.6, Theorem J.8.4, Corollary J.8.9c and `TV-JREF-01`. Nonvacuity: the binary-ancilla instance of Theorem J.8.9b, item 5. This is `positive-discharge` of the common-overlap certificate that ties a J.1b-minimal map and ensemble to one bounded-rate physical reset and its full side-information ledger, and of the limiting certificate named in Remark J.8.6 for the exact-reset value of (J.3d). Together with Resolution TV-JREF-01-R1, every component of `TV-JREF-01` has a `positive-discharge` artifact.
-
-**Corollary J.8.9c (Explicit Cyclic Zeno Reset Realization).** In the stopped run of Theorem J.4d, let the qubit continue under $H=\hbar\omega\sigma_x$ after a failure, and use the compressed architecture: an outcome register $K$ with ready symbol $\bot$ and a first-failure register $\mathsf J$ over $\{\infty,1,\ldots,N\}$ with ready symbol $\infty$. At time $T$ apply the $\mathsf J$-controlled unitary
+<a id="corollary-j89c-explicit-cyclic-zeno-reset-realization"></a>**Corollary J.8.9c (Explicit Cyclic Zeno Reset Realization).** In the stopped run of Theorem J.4d, let the qubit continue under $H=\hbar\omega\sigma_x$ after a failure, and use the compressed architecture: an outcome register $K$ with ready symbol $\bot$ and a first-failure register $\mathsf J$ over $\{\infty,1,\ldots,N\}$ with ready symbol $\infty$. At time $T$ apply the $\mathsf J$-controlled unitary
 $$
 U_{\mathrm{ret}}=|\infty\rangle\langle\infty|_{\mathsf J}\otimes I+\sum_{x=1}^N|x\rangle\langle x|_{\mathsf J}\otimes\sigma_xe^{i\omega(T-xT/N)\sigma_x},
 \tag{J.8.9c.1}
@@ -650,9 +2032,7 @@ with the bounds (J.8.9b.2). Along the sequence of Theorem J.8.9b, item 4, the er
 
 *Proof.* Theorem J.4d shows that the updates of $K$ are injective on the reachable support, return $K$ to $\bot$ after every step, and leave $\mathsf J=J$ at time $T$. If $J=\infty$, the last interrogation leaves $|0\rangle$. If $J=x\le N$, the projection leaves $|1\rangle$ at time $xT/N$, and free evolution gives $\psi_x=e^{-i\omega(T-xT/N)\sigma_x}|1\rangle$ at time $T$. Since $\sigma_x$ commutes with $e^{i\omega s\sigma_x}$, one has $\sigma_xe^{i\omega(T-xT/N)\sigma_x}\psi_x=\sigma_x|1\rangle=|0\rangle$, so (J.8.9c.1) maps every reachable joint state to $|x\rangle_{\mathsf J}\otimes|0\rangle$ and leaves no record of $J$ in the qubit. Every qubit state in the run is a mixture of states $e^{-i\theta\sigma_x}|b\rangle$ with real $\theta$ and $b\in\{0,1\}$, and $\langle b|e^{i\theta\sigma_x}\sigma_xe^{-i\theta\sigma_x}|b\rangle=\langle b|\sigma_x|b\rangle=0$; hence $\langle H\rangle=0$ throughout. The reset of $\mathsf J$ is the sector-wise form of Theorem J.8.9b for a register of $N+1$ labels with trivial side information and input entropy $H(J)$, which gives (J.8.9c.2), its bounds and the limit. ∎
 
-**Resolution TV-JREF-02-R2 (Metadata).** Exact domain: stopped qubit Zeno runs with $N\ge1$, the compressed architecture, the return unitary (J.8.9c.1) and Construction J.8.9a on the $(N+1)$-label first-failure register. Premises: Theorems J.4c, J.4d and J.8.9b. Equivalence: relabeling of register symbols. Budget: every $N$, every $\omega T$ and every parameter choice of Construction J.8.9a. Verifier: the return identity, the vanishing qubit mean energy and Theorem J.8.9b. Falsifier: a reachable joint state not mapped to the ready qubit, or a violation of (J.8.9c.2). Provenance class: source-internal explicit cyclic realization in finite-dimensional quantum dynamics and finite-state stochastic thermodynamics. Downstream consumers: Theorems J.4b--J.4c and `TV-JREF-02`. Nonvacuity: $N=1$ with $0<|\omega T|<\pi/2$. This is `positive-discharge` of the explicit cyclic reset/control realization with its bath and side-information ledger; its reset heat attains the status-tracking floor $k_BT_bH(J)$ of Theorem J.4d in the limit. The coherent quantum-record architectures named in Resolution TV-JREF-02-R1 remain the live component of `TV-JREF-02`.
-
-**Definition J.8.10 (Reset-to-Capacity Transfer Certificate).** A transfer certificate $\mathfrak C_{\Sigma C}$ contains:
+<a id="definition-j810-reset-to-capacity-transfer-certificate"></a>**Definition J.8.10 (Reset-to-Capacity Transfer Certificate).** A transfer certificate $\mathfrak C_{\Sigma C}$ contains:
 
 1. a physical boundary channel $\Phi_{\rm phys}$ induced by the same registered reset carrier, clock and protocol as $\mathfrak M_{\rm LDB}$, and an ideal comparator $\Phi_{\rm id}$ with the same input/output alphabets, code constraints and number of uses;
 2. achievable-rate lower certificates and converse upper certificates for the regularized classical capacities, with a convergence modulus or an additive/single-letter theorem that makes each stated bound valid for arbitrary block length;
@@ -667,7 +2047,7 @@ with the bounds (J.8.9b.2). Along the sequence of Theorem J.8.9b, item 4, the er
 
 The verifier evaluates the channels and witnesses, checks complete positivity and normalization, checks every code and converse inequality at its declared block length, checks the convergence modulus, evaluates (J.8.10a) at the certified $\Sigma$ interval, and checks every overlap square and source partition. Failure of any check rejects the transfer; a positive entropy-production number by itself never populates this certificate.
 
-**Theorem J.8.11 (Strict Leading Horizon-Capacity Coefficient on the Transfer Branch).** Let $\Sigma$ denote the entropy-production quantity in the accepted transfer certificate $\mathfrak C_{\Sigma C}$. Suppose Theorem J.8.4 supplies a lower bound $0<\sigma_{\min}\le\Sigma$, both $\sigma_{\min}$ and $\Sigma$ lie in an interval $I\subseteq[0,\infty)$ on which that certificate proves $g$ nondecreasing, and $\Delta_C:=g(\sigma_{\min})>0$. If $C(\Phi_{\rm id})=2\log2$ and the density/additivity hypotheses of Theorem E.9.1 hold, then
+<a id="theorem-j811-strict-leading-horizon-capacity-coefficient-on-the-transfer-branch"></a>**Theorem J.8.11 (Strict Leading Horizon-Capacity Coefficient on the Transfer Branch).** Let $\Sigma$ denote the entropy-production quantity in the accepted transfer certificate $\mathfrak C_{\Sigma C}$. Suppose Theorem J.8.4 supplies a lower bound $0<\sigma_{\min}\le\Sigma$, both $\sigma_{\min}$ and $\Sigma$ lie in an interval $I\subseteq[0,\infty)$ on which that certificate proves $g$ nondecreasing, and $\Delta_C:=g(\sigma_{\min})>0$. If $C(\Phi_{\rm id})=2\log2$ and the density/additivity hypotheses of Theorem E.9.1 hold, then
 $$
 \limsup_{\mathcal A\to\infty}
 \frac{S_\Sigma^{\rm op}}{\mathcal A}
@@ -681,13 +2061,13 @@ On the additional branch $\chi=\eta=1$ and $\delta^2=8\log2\,L_P^2$, the rightmo
 
 *Proof.* Monotonicity of $g$ on the certified interval gives $C(\Phi_{\rm phys})\le2\log2-\Delta_C$. Substitute this capacity in (E.9.1a), divide by $\mathcal A$, and use $o(\mathcal A)/\mathcal A\to0$. The final substitution is arithmetic. ∎
 
-**Definition J.8.12 (Observer-Algebra/Trace Realization Certificate).** An observer-algebra certificate specifies a represented von Neumann algebra $\mathcal M$, a faithful normal state or semifinite weight $\varphi$, the modular action $\sigma^\varphi$, and, when invoked, a represented crossed product $\mathcal N=\mathcal M\rtimes_{\sigma^\varphi}\mathbb R$. It supplies the domains and self-adjointness data of the observer clock, a faithful semifinite trace $\tau$ or finite-trace corner $p\mathcal Np$, a normalized density $h$, and the convention
+<a id="definition-j812-observer-algebratrace-realization-certificate"></a>**Definition J.8.12 (Observer-Algebra/Trace Realization Certificate).** An observer-algebra certificate specifies a represented von Neumann algebra $\mathcal M$, a faithful normal state or semifinite weight $\varphi$, the modular action $\sigma^\varphi$, and, when invoked, a represented crossed product $\mathcal N=\mathcal M\rtimes_{\sigma^\varphi}\mathbb R$. It supplies the domains and self-adjointness data of the observer clock, a faithful semifinite trace $\tau$ or finite-trace corner $p\mathcal Np$, a normalized density $h$, and the convention
 $$
 S_\tau(h)=-\tau(h\log h)
 $$
 with units, additive constant, regulator, convergence proof and error bound. A restriction claim additionally supplies a normal channel from the retained full algebra to the accessible algebra and the state/code family on which data processing is applied; strict loss requires a certified strict data-processing or capacity-gap constant. A cosmological interpretation additionally supplies on the same branch the Lorentzian continuum, state-selection, stress-tensor, horizon, Einstein-equation and cosmological-constant maps, with a source-exhaustion/no-double-counting table.
 
-**Remark J.8.13 (Algebraic Scope).** An accepted Definition J.8.12 certificate proves its represented algebraic trace and entropy statements. A declared normal restriction channel adds the corresponding data-processing inequality, and a certified strictness constant adds the stated strict loss. Horizon and cosmological conclusions follow when the same certificate also carries the listed continuum, state, stress-tensor, gravitational, observable, and source-exhaustion maps.
+<a id="remark-j813-algebraic-scope"></a>**Remark J.8.13 (Algebraic Scope).** An accepted Definition J.8.12 certificate proves its represented algebraic trace and entropy statements. A declared normal restriction channel adds the corresponding data-processing inequality, and a certified strictness constant adds the stated strict loss. Horizon and cosmological conclusions follow when the same certificate also carries the listed continuum, state, stress-tensor, gravitational, observable, and source-exhaustion maps.
 
 **J.9 Conclusion**
 
@@ -699,4 +2079,3 @@ On the declared binary-ancilla architecture, noninjectivity displaces a binary s
 $$
 \frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}\ge H_q(P\mid R).
 $$
-

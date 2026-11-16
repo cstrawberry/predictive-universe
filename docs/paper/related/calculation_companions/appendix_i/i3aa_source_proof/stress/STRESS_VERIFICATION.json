@@ -1,0 +1,66 @@
+{
+  "symbolic": {
+    "ricci_components": true,
+    "metric_variation_equals_einstein_tensor": true,
+    "rho_formula": true,
+    "momentum_constraint": true,
+    "material_scalar_Euler_Lagrange": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "alternative_initial_hamiltonian_constraint": true
+  },
+  "analytic_bounds": {
+    "epsilon": 0.01,
+    "kinetic_eigenvalue_lower": 0.14898278117446886,
+    "rate_error_times_t_cubed_upper": 0.1633143811787904,
+    "poincare_constant_upper": 36.4425082663879
+  },
+  "numerical_diagnostics": [
+    {
+      "n": 32,
+      "volume_without_yz": 23.576791462164902,
+      "mean_theta": 1.8673504636405105,
+      "variance_theta": 0.11590862218874465,
+      "Q": 0.07727241479249643,
+      "stress_variance": 0.30213006363078454,
+      "source_rate_L2_squared": 3.602481436143519,
+      "gradient_energy": 1.6634951719547757,
+      "elliptic_B": 549.9071870828021,
+      "kinetic_eigenvalue_min_sample": 0.21063505900318075,
+      "max_temporal_rate_ratio": 1.0263466413435207,
+      "gradient_inequality_holds": true
+    },
+    {
+      "n": 64,
+      "volume_without_yz": 23.576791462164895,
+      "mean_theta": 1.8673504636405112,
+      "variance_theta": 0.11590862218874332,
+      "Q": 0.07727241479249554,
+      "stress_variance": 0.3021300636307835,
+      "source_rate_L2_squared": 3.602481436143517,
+      "gradient_energy": 1.663495171954776,
+      "elliptic_B": 549.9071870828018,
+      "kinetic_eigenvalue_min_sample": 0.2100807619263958,
+      "max_temporal_rate_ratio": 1.0271258429670442,
+      "gradient_inequality_holds": true
+    },
+    {
+      "n": 128,
+      "volume_without_yz": 23.57679146216494,
+      "mean_theta": 1.8673504636405092,
+      "variance_theta": 0.11590862218874598,
+      "Q": 0.07727241479249732,
+      "stress_variance": 0.30213006363078754,
+      "source_rate_L2_squared": 3.6024814361435267,
+      "gradient_energy": 1.6634951719547746,
+      "elliptic_B": 549.9071870828035,
+      "kinetic_eigenvalue_min_sample": 0.20993948980035249,
+      "max_temporal_rate_ratio": 1.0273245285031503,
+      "gradient_inequality_holds": true
+    }
+  ],
+  "scope": "Exact continuum action/congruence/elliptic proof. This does not certify a native MPU stock or warped-torus graph family."
+}

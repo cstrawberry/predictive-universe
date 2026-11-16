@@ -4,8 +4,8 @@ message: >-
   Created through human and AI collaboration.
 title: "The Predictive Universe"
 type: software
-version: 0.1.0
-date-released: 2026-09-14
+version: 0.1.2
+date-released: 2026-11-16
 repository-code: "https://github.com/cstrawberry/predictive-universe"
 authors:
   - name: "Cinematic Strawberry"

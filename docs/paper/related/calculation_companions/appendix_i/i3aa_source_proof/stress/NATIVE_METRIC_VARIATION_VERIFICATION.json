@@ -1,0 +1,73 @@
+{
+  "scope": "Instantaneous actual Hamiltonian/metric-variation consistency on all 8^4 native states. Gradient rod data are fixed local cell data for this smoke test. Not a source-history or semiclassical-uniform theorem.",
+  "checks": [
+    {
+      "eta": 0.01,
+      "native_factors": 4,
+      "full_dimension": 4096,
+      "code_states_omitted": 0,
+      "actual_energy": 4.815014448508094,
+      "classical_energy": 4.79973244070964,
+      "energy_difference": 0.015282007798454345,
+      "positive_kinetic": 0.727941114728652,
+      "positive_gradient": 2.5240807632630164,
+      "positive_potential": 1.562992570516426,
+      "actual_isotropic_metric_derivative": 5.029235130626338,
+      "finite_difference_metric_derivative": 5.029235131015497,
+      "derivative_abs_error": 3.8915892730528867e-10,
+      "lapse_derivative_equals_full_energy": true,
+      "zero_point_subtracted": false
+    },
+    {
+      "eta": 0.001,
+      "native_factors": 4,
+      "full_dimension": 4096,
+      "code_states_omitted": 0,
+      "actual_energy": 4.801248859032055,
+      "classical_energy": 4.79973244070964,
+      "energy_difference": 0.0015164183224145589,
+      "positive_kinetic": 0.7230623706519068,
+      "positive_gradient": 2.5246247469792236,
+      "positive_potential": 1.553561741400924,
+      "actual_isotropic_metric_derivative": 5.016122859226275,
+      "finite_difference_metric_derivative": 5.016122859613503,
+      "derivative_abs_error": 3.872280274208606e-10,
+      "lapse_derivative_equals_full_energy": true,
+      "zero_point_subtracted": false
+    },
+    {
+      "eta": 0.0001,
+      "native_factors": 4,
+      "full_dimension": 4096,
+      "code_states_omitted": 0,
+      "actual_energy": 4.799883966343056,
+      "classical_energy": 4.79973244070964,
+      "energy_difference": 0.00015152563341569447,
+      "positive_kinetic": 0.7225756658311427,
+      "positive_gradient": 2.5246792147639847,
+      "positive_potential": 1.5526290857479284,
+      "actual_isotropic_metric_derivative": 5.014839474514341,
+      "finite_difference_metric_derivative": 5.014839474926092,
+      "derivative_abs_error": 4.1175063358878106e-10,
+      "lapse_derivative_equals_full_energy": true,
+      "zero_point_subtracted": false
+    },
+    {
+      "eta": 1e-05,
+      "native_factors": 4,
+      "full_dimension": 4096,
+      "code_states_omitted": 0,
+      "actual_energy": 4.799747592112583,
+      "classical_energy": 4.79973244070964,
+      "energy_difference": 1.5151402942947811e-05,
+      "positive_kinetic": 0.72252700704879,
+      "positive_gradient": 2.524684662237192,
+      "positive_potential": 1.5525359228266016,
+      "actual_isotropic_metric_derivative": 5.014711409570626,
+      "finite_difference_metric_derivative": 5.014711409989658,
+      "derivative_abs_error": 4.190319202734827e-10,
+      "lapse_derivative_equals_full_energy": true,
+      "zero_point_subtracted": false
+    }
+  ]
+}

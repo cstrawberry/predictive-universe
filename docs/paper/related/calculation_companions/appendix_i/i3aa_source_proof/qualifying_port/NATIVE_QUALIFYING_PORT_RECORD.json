@@ -1,0 +1,437 @@
+{
+  "active_dimension_proof": "For a uniform eight-label hidden rule encoded into a d-dimensional complete retained predictive carrier, rho_theta<=I implies (1/8)sum_theta Tr(M_theta rho_theta)<=(1/8)sum_theta Tr(M_theta)=d/8. Shared independent randomness preserves the bound. Extra accessible memory/reference is part of d, not free side information. Threshold15/16 therefore forces d>=8. The literal full loop achieves1 with rho_theta=|theta><theta| and reaches every basis state.",
+  "factors": [
+    {
+      "id": 0,
+      "initial": "ready0",
+      "name": "native_key",
+      "native_dimension": 8,
+      "proper_energy_diagonal": [
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon"
+      ],
+      "role": "candidate_native_MPU"
+    },
+    {
+      "id": 1,
+      "initial": "uniform8",
+      "name": "hidden_rule",
+      "native_dimension": 8,
+      "proper_energy_diagonal": [
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon"
+      ],
+      "role": "counted_private_or_environment_auxiliary"
+    },
+    {
+      "id": 2,
+      "initial": "uniform8",
+      "name": "training_context",
+      "native_dimension": 8,
+      "proper_energy_diagonal": [
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon"
+      ],
+      "role": "counted_private_or_environment_auxiliary"
+    },
+    {
+      "id": 3,
+      "initial": "uniform8",
+      "name": "future_context",
+      "native_dimension": 8,
+      "proper_energy_diagonal": [
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon"
+      ],
+      "role": "counted_private_or_environment_auxiliary"
+    },
+    {
+      "id": 4,
+      "initial": "ready0",
+      "name": "training_feedback",
+      "native_dimension": 8,
+      "proper_energy_diagonal": [
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon"
+      ],
+      "role": "counted_private_or_environment_auxiliary"
+    },
+    {
+      "id": 5,
+      "initial": "ready0",
+      "name": "future_truth",
+      "native_dimension": 8,
+      "proper_energy_diagonal": [
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon"
+      ],
+      "role": "counted_private_or_environment_auxiliary"
+    },
+    {
+      "id": 6,
+      "initial": "ready0",
+      "name": "first_prediction",
+      "native_dimension": 8,
+      "proper_energy_diagonal": [
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon"
+      ],
+      "role": "counted_private_or_environment_auxiliary"
+    },
+    {
+      "id": 7,
+      "initial": "ready0",
+      "name": "future_prediction",
+      "native_dimension": 8,
+      "proper_energy_diagonal": [
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon"
+      ],
+      "role": "counted_private_or_environment_auxiliary"
+    },
+    {
+      "id": 8,
+      "initial": "ready0",
+      "name": "training_error",
+      "native_dimension": 8,
+      "proper_energy_diagonal": [
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon"
+      ],
+      "role": "counted_private_or_environment_auxiliary"
+    },
+    {
+      "id": 9,
+      "initial": "ready0",
+      "name": "future_error",
+      "native_dimension": 8,
+      "proper_energy_diagonal": [
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon"
+      ],
+      "role": "counted_private_or_environment_auxiliary"
+    },
+    {
+      "id": 10,
+      "initial": "ready0",
+      "name": "private_mode",
+      "native_dimension": 8,
+      "proper_energy_diagonal": [
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon"
+      ],
+      "role": "counted_private_or_environment_auxiliary"
+    },
+    {
+      "id": 11,
+      "initial": "ready0",
+      "name": "private_key_dump",
+      "native_dimension": 8,
+      "proper_energy_diagonal": [
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon",
+        "epsilon"
+      ],
+      "role": "counted_private_or_environment_auxiliary"
+    }
+  ],
+  "format": "prospective native8 qualifying-port source",
+  "gates": [
+    {
+      "kind": "mode_controlled_XOR8",
+      "skip_modes": [],
+      "targets": [
+        10,
+        1,
+        4
+      ]
+    },
+    {
+      "kind": "mode_controlled_XOR8",
+      "skip_modes": [],
+      "targets": [
+        10,
+        2,
+        4
+      ]
+    },
+    {
+      "kind": "mode_controlled_XOR8",
+      "skip_modes": [],
+      "targets": [
+        10,
+        1,
+        5
+      ]
+    },
+    {
+      "kind": "mode_controlled_XOR8",
+      "skip_modes": [],
+      "targets": [
+        10,
+        3,
+        5
+      ]
+    },
+    {
+      "kind": "mode_controlled_XOR8",
+      "skip_modes": [],
+      "targets": [
+        10,
+        0,
+        6
+      ]
+    },
+    {
+      "kind": "mode_controlled_XOR8",
+      "skip_modes": [
+        2
+      ],
+      "targets": [
+        10,
+        2,
+        6
+      ]
+    },
+    {
+      "kind": "mode_controlled_XOR8",
+      "skip_modes": [],
+      "targets": [
+        10,
+        6,
+        8
+      ]
+    },
+    {
+      "kind": "mode_controlled_XOR8",
+      "skip_modes": [
+        3
+      ],
+      "targets": [
+        10,
+        4,
+        8
+      ]
+    },
+    {
+      "kind": "mode_controlled_XOR8",
+      "skip_modes": [
+        1
+      ],
+      "targets": [
+        10,
+        8,
+        0
+      ]
+    },
+    {
+      "kind": "drop_high_bit_to_private_dump",
+      "only_mode": 5,
+      "targets": [
+        10,
+        0,
+        11
+      ]
+    },
+    {
+      "kind": "mode_controlled_XOR8",
+      "skip_modes": [],
+      "targets": [
+        10,
+        3,
+        7
+      ]
+    },
+    {
+      "kind": "mode_controlled_XOR8",
+      "skip_modes": [
+        4
+      ],
+      "targets": [
+        10,
+        0,
+        7
+      ]
+    },
+    {
+      "kind": "mode_controlled_XOR8",
+      "skip_modes": [],
+      "targets": [
+        10,
+        7,
+        9
+      ]
+    },
+    {
+      "kind": "mode_controlled_XOR8",
+      "skip_modes": [],
+      "targets": [
+        10,
+        5,
+        9
+      ]
+    },
+    {
+      "kind": "mode_controlled_XOR8",
+      "skip_modes": [],
+      "targets": [
+        10,
+        9,
+        0
+      ]
+    }
+  ],
+  "modes": {
+    "0": "full feedback loop",
+    "1": "baseline/no update",
+    "2": "observation-null",
+    "3": "feedback-null",
+    "4": "inference-null",
+    "5": "trained low-two-bit candidate",
+    "6..7": "noncode identity extension"
+  },
+  "native_MPU_candidate_factor": 0,
+  "native_factor_count": 12,
+  "native_factorization": "|theta>=|M,P,I> with theta=4M+2P+I. The actual native G adapter acts on this same factor during the separately nominated boundary interaction. Its full ready-input algebra, arming, private dump and allowed operations are explicitly retained.",
+  "program_presentation": {
+    "attained_qualifying_minimum_bits": 3,
+    "complexity": "C_P(mu) is minimum admitted binary program length producing the FULL declared conditional/joint physical model state from the same reference. The minimum can be reported in bits or multiplied byln2 for nats.",
+    "reference": "This exact blank finite hardware, independent source registers and fixed prefix interpreter are registered together before comparing models; none are omitted physical resources.",
+    "semantics": "0 prepares mode1;10 prepares mode5;110 prepares mode0. Each produces the complete declared source/model state at the common PRE-CHALLENGE cut after the first10 gates, before any future prediction or feedback. The remainder evaluates that same state; it is not part of its C_P realizer.111p produces any physically admissible finite model state through its encoded preparation; nonhalting/invalid/constraint-violating programs do not realize a model state.",
+    "shorter_program_census": [
+      {
+        "valid": false,
+        "word": ""
+      },
+      {
+        "model": "baseline",
+        "score": "1/8",
+        "valid": true,
+        "word": "0"
+      },
+      {
+        "valid": false,
+        "word": "1"
+      },
+      {
+        "valid": false,
+        "word": "00"
+      },
+      {
+        "valid": false,
+        "word": "01"
+      },
+      {
+        "model": "trained low-two-bit",
+        "score": "1/2",
+        "valid": true,
+        "word": "10"
+      },
+      {
+        "valid": false,
+        "word": "11"
+      }
+    ],
+    "syntax": "0 is the baseline program;10 is the trained low-two-bit program;110 is the full feedback-loop program;111p invokes a fixed universal prefix machine on a nonempty valid prefix program p. All other strings are invalid. This is a prefix-universal presentation, not a dimension proxy.",
+    "universal_branch_guard": "Every111p has length>=4. It can produce more qualifying states, but cannot create a shorter qualifying realizer. A duplicate description of the witness leaves its minimum3.",
+    "witness": "110"
+  },
+  "qualification_state_cut": {
+    "clock_phase": "pre-challenge, after learning/optional key compression",
+    "completed_gates": 10,
+    "same_state_score": "The challenge prediction is evaluated from exactly this produced state. Later future-error updating does not retroactively qualify the baseline.",
+    "state": "Full conditional joint source/model state at this cut; not the final native-key marginal after later feedback."
+  },
+  "qualification_task": {
+    "challenge_access": "Only the native memory and independent future context X1 may influence the predicted output. Hidden rule and all training records have no challenge-time read port; every extra retained accessible predictor is included in the comparison carrier dimension.",
+    "contexts": "X0,X1 independent uniform0..7",
+    "hidden_rule": "theta uniform on0..7, fixed through training and challenge",
+    "qualifying_margin": "13/16",
+    "qualifying_threshold": "15/16",
+    "random_baseline": "1/8",
+    "score": "Pr[future_prediction=Y1]",
+    "target": "Yt=Xt bitwise_xor theta",
+    "training": "Predict, receive feedback, form error, update native memory by actual reversible XOR gates"
+  },
+  "resource_ledger": {
+    "clock_and_area": "The complete local word still needs the common clock/geometry integration; this file does not count an unbuilt controller as zero.",
+    "message_and_qualifying_domain_distinction": "Qualification uses the complete feedback task and the same source state/interpreter. The later normalized boundary instrument is defined on the full native carrier; it is not asserted that every arbitrary encoded density has the same Kolmogorov complexity.",
+    "mixed_native_initial_factors": 3,
+    "native_purity_nats": "9ln8",
+    "proper_rest_energy": "12epsilon, epsilon>0 supplied",
+    "pure_native_initial_factors": 9
+  },
+  "scope": "source-engineered prospective branch, not CSW-F4",
+  "unconsumed_bridge": "Corollary3 complexity-capacity/K0 bridge is not inferred from this census. Program complexity and active carrier dimension have separate proofs."
+}

@@ -4,11 +4,11 @@ Having established the core dynamics of prediction and the necessity of operatin
 
 **4.1 Self-Referential Systems and Computational Requirements**
 
-**4.1.1 Definition 9 (Def 9): Self-Referential System**
+<a id="411-definition-9-def-9-self-referential-system"></a>**4.1.1 Definition 9 (Def 9): Self-Referential System**
 
-A system $S$ is **self-referential** if its state $S(t)$ includes, or its dynamics (e.g., the state transformation function $T$ or $T_{prob}$ from RID, Definition 6; or the internal model update process $D_{cyc}$ from the Fundamental Predictive Loop, Definition 4) depend upon, a model $M$ that represents aspects of the system $S$ itself—such as its state, structure, internal model, or dynamics.
+A system $S$ is **self-referential** if its state $S(t)$ includes, or its dynamics (e.g., the state transformation function $T$ or $T_{\mathrm{prob}}$ from RID, Definition 6; or the internal model update process $D_{cyc}$ from the Fundamental Predictive Loop, Definition 4) depend upon, a model $M$ that represents aspects of the system $S$ itself—such as its state, structure, internal model, or dynamics.
 
-**4.1.2 Definition 10 (Def 10): Property R (Computational Richness)**
+<a id="412-definition-10-def-10-property-r-computational-richness"></a>**4.1.2 Definition 10 (Def 10): Property R (Computational Richness)**
 
 A formal model class $\mathcal{M}$, used by predictive systems $S$, possesses **Property R** (Computational Richness) relative to a consistent formal logical system $\mathcal{F}$ (capable of representing computation, e.g., Peano Arithmetic) if and only if models $M \in \mathcal{M}$ and the associated formalism provide the necessary and sufficient machinery to:
 
@@ -20,14 +20,13 @@ Property R establishes a sufficient level of computational sophistication for th
 
 The **conditional logical construction** (§A.0.2) derives Property R from the predict-verify cycle only together with the stated Logical-Structural Assumptions, placing that conditional result logically before SPAP and avoiding circular use of SPAP in its proof. The **physical instantiation** (§A.0.3-A.0.5) shows how MPU networks whose units lie on Theorem 15's (O1)–(O3), (FC) realization class and carry its three-bit visited-context capacity can achieve **Effective Operational Property R** at a certified PCE optimum and through conditional network composition (Theorems A.0.2 and A.0.6). This physical realization is conditional on the refresh, reduced-cost, Dominant Cost Convexity, and robustness hypotheses of Theorem A.0.2, including a certified stationary point $p_{\mathrm{err}}^*<1/2$, and on either an accepted QEC compatibility certificate $\mathfrak C_{\mathrm{QEC}}$ (§A.0.4; Definition A.0.1q) or an accepted Golay-QEC bootstrap record $\mathfrak C_{\mathrm{GQEC}}$ that supplies the same entries on the protected windows (Definition A.0.1q.1; Theorem A.0.2a). Full Effective Operational Property R additionally requires the working-memory, protected-gate, code-overhead, and finite circuit-execution resources stated in Theorem A.0.6. For complete derivations, proofs, and mathematical validation, see Appendix A.0. The diagonal SPAP proofs below use the following finite subcapacity of Property R: representation of coded systems and predictors, simulation of the nominated predictor on coded inputs, predicate evaluation of the retained binary or threshold outcome, finite Boolean post-processing, logical memory, and uniform finite-program composition. Appendix A.0.2 derives this subcapacity from composition closure, logical memory, uniform specification, scalable finite resources, and arithmetic coding; Theorem A.0.1 and Corollary A.0.1 give the finite circuit/program realization; the proofs of Theorems A.1.1 and A.1.3 supply the deterministic and probabilistic diagonal constructions used in Theorems 10–11. A trace-certified predictor carrying this finite diagonal-closure subcapacity admits no total standard-sound same-cycle truth map on a domain containing its targeted live diagonal sentence (Theorem A.6.2).
 
-**4.1.3 Proposition 2 (Sufficient Conditions for Finite Operational Property R)**
-
+<a id="413-proposition-2-sufficient-conditions-for-finite-operational-property-r"></a>**4.1.3 Proposition 2 (Sufficient Conditions for Finite Operational Property R)**
 
 Let $\mathcal M$ be a model class equipped with (i) an effective coding of its finite programs, inputs, outputs, and finite computation traces by natural numbers; (ii) an implementable universal interpreter $U\in\mathcal M$ for those codes; (iii) closure under uniform finite-program composition and computable Boolean post-processing; and (iv) a consistent formal system $\mathcal F$ that represents the finite-step computation relation of $U$. Then $\mathcal M$ possesses the finite operational subcapacity of Property R used by the SPAP constructions: coded representation, simulation of any nominated program for any specified finite number of steps, and evaluation of every decidable predicate of the resulting finite trace. This conclusion does not include a total decision procedure for unrestricted halting, semantic correctness, or theoremhood.
 
 *Proof.* Hypothesis (i) supplies the representation clause. Given a program code $e$, input code $x$, and step bound $n$, hypothesis (ii) supplies the simulation $U(e,x,n)$ of the first $n$ steps, while hypothesis (iv) represents that finite computation relation in $\mathcal F$. If $q$ is a decidable predicate of the finite trace, its characteristic function is computable; hypothesis (iii) therefore permits composition of the simulation with that characteristic function and with the finite Boolean operations used by SPAP. These are exactly the stated finite representation, simulation, and predicate-evaluation capabilities. No step decides a predicate outside the stipulated decidable finite-trace class. ∎
 
-**4.1.4 Corollary 2a (Conditional Pure-$\mathbf S$ Weak-Path Interpreter Realization)**
+<a id="414-corollary-2a-conditional-pure-mathbf-s-weak-path-interpreter-realization"></a>**4.1.4 Corollary 2a (Conditional Pure-$\mathbf S$ Weak-Path Interpreter Realization)**
 
 Let $\mathcal M$ contain an implementation of the complete operational object
 $$
@@ -61,12 +60,11 @@ Theorem 3 measures each checkpoint and detector parser by primitive constructor,
 
 The fixed regular tree language $\mathcal L_{\mathrm{halt}}$ detects source halting along the selected path. Its finite tree automaton agrees on every finite tree with the read-only halt-field observer. This is a halting observation during continued reduction. Appendix F.1 of Cinematic Strawberry (2026) proves that the same outer-clock architecture cannot make one fixed regular detector agree exactly with source halting on every maximal reduction path: an infinite path can keep reducing the clock while leaving the encoded payload untouched. The obstruction concerns that architecture and the requirement that every halting-input path accept and no nonhalting-input path accept. Its witness can be unfair, so it does not exclude all encodings or every residual-fair policy. Theorem 5's unrestricted-graph result is a persistent enumeration of observer-verified histories, with its source-step checker and protected-address opening conditions; those conditions do not establish source simulation along arbitrary reductions of Theorem 1R's encoding.
 
-
 Hypotheses (i), (iii), and (iv), the SPAP logical-memory and uniform diagonal-closure data, and every physical-realization condition remain supplied by their owning declarations. [Proof-Life](related/proof_life_verification_model.md), Theorem PL.5, separately turns nominated bounded pure-$\mathbf S$ reachability questions into typed finite targets with exact positive or complete negative evidence.
 
 The companion of Cinematic Strawberry (2026) places root-restarted selected-path universality in Theorem 1R, with Theorems 1--3 supplying its simulation and resource results and persistent certificate enumeration in Theorem 5. Corollary 2a uses the selected trajectory because Proposition 2(ii) asks for an implementable deterministic trace. Theorem 5 supplies complementary all-reduct permanence, exact finite range, cofinal recovery, an embedded history tree, and an adjacent-step address-complete path; its observer verifies supplied source transitions.
 
-**4.1.4a Corollary 2b (Pure-$\mathbf S$ Realization of Bounded Trace Computation)**
+<a id="414a-corollary-2b-pure-mathbf-s-realization-of-bounded-trace-computation"></a>**4.1.4a Corollary 2b (Pure-$\mathbf S$ Realization of Bounded Trace Computation)**
 
 Theorem 1R also realizes Proposition 2(ii) by compiling a terminating bounded task. This construction uses the publication encoder $E$, root-restarted controller $F$, and terminal-bit reader $O$ from the Pure-S companion. It fixes the source algorithm before the model code, input and step bound are supplied.
 
@@ -95,7 +93,7 @@ Executing until the first returned bit therefore computes each query. Querying l
 
 This is a derived computability corollary of the companion's checked encoder and output theorem. Corollary 2a gives the existing intermediate-trace route; Corollary 2b constructs bounded answers through terminal output. Its implementation costs include each seed construction, invocation, reader call and retained output. The construction establishes a uniform finite interpreter; a physical execution window uses the resource and reliability conditions of Appendix A.0.6.
 
-**4.1.4b Corollary 2c (Undecidable Future Observation with a Fixed Finite Detector)**
+<a id="414b-corollary-2c-undecidable-future-observation-with-a-fixed-finite-detector"></a>**4.1.4b Corollary 2c (Undecidable Future Observation with a Fixed Finite Detector)**
 
 Let $T_x(j)$ be Theorem 1R's selected trajectory for a deterministic Boolean-tape source instance $x$, and let $\mathcal L_{\mathrm{halt}}$ be its fixed regular tree language. Define
 $$
@@ -121,7 +119,7 @@ For bounded verification, register the selector, encoder, automaton and contract
 
 We now formally establish the core theorems demonstrating the fundamental limitations on guaranteed accurate self-prediction for systems whose formalism can represent coded self-descriptions, simulate the nominated predictor on those descriptions, evaluate the relevant predicates about the predicted outputs, and compose these finite operations with logical memory and Boolean post-processing. Any framework possessing Property R in this finite-program sense satisfies these conditions. These proofs utilize diagonalization arguments, constructing self-referential systems whose behavior logically contradicts the assumption of a perfect predictor. Theorem 10a records the deterministic argument as the Lawvere fixed-point obstruction for the retained prediction-evaluation map; this recharacterizes SPAP without replacing the independent Appendix A.0 derivation of Property R. (Detailed formal proofs in Appendix A.1).
 
-**4.2.1 Definition 11 (Def 11): Dynamic Self-Reference Operator (DSRO)**
+<a id="421-definition-11-def-11-dynamic-self-reference-operator-dsro"></a>**4.2.1 Definition 11 (Def 11): Dynamic Self-Reference Operator (DSRO)**
 
 A Dynamic Self-Reference Operator (DSRO) is a formal representation of a computable function whose output can depend dynamically on the provability (within a formal system $\mathcal{F}$) of statements about its own properties or behavior. Its existence is guaranteed by Kleene’s Second Recursion Theorem (see **Appendix A.1.6**, Theorem A.1.5). Formally, a DSRO $f$ with Gödel index $e = \ulcorner f \urcorner$ satisfies a structure like:
 $$
@@ -129,11 +127,11 @@ f(n) = F(\dots, \text{ProofSearch}_{\le g(n)}[\phi(\dots, e, \dots)], \dots) \qu
 $$
 where $F$ is computable, and ProofSearch represents a bounded search for proofs of formula $\phi$ which may refer to $e$. This formalizes the capability for bounded self-monitoring relevant to SPAP.
 
-**4.2.2 Theorem 10 (Deterministic SPAP on a Uniformly Diagonal-Closed Model Class)**
+<a id="422-theorem-10-deterministic-spap-on-a-uniformly-diagonal-closed-model-class"></a>**4.2.2 Theorem 10 (Deterministic SPAP on a Uniformly Diagonal-Closed Model Class)**
 
 Let $\mathcal M$ be a model class with coded descriptions and the finite operational Property-R capabilities of representation, simulation, decidable binary predicate evaluation, Boolean negation, and uniform finite-program composition. Assume uniform diagonal closure: for every implementable deterministic predictor $P\in\mathcal M$, the recursion/self-reference construction belongs to $\mathcal M$ and yields a system $D(P)$ that can obtain its own code, query $P$ for a nominated binary next-state component of $D(P)$, and apply Boolean negation to the returned bit. Then no deterministic predictor $P_f\in\mathcal M$ perfectly predicts that nominated component for every system in this diagonal-closed class.
 
-*Proof.* Suppose that such a universal perfect predictor $P_f$ exists. By uniform diagonal closure, $S_{diag}:=D(P_f)$ belongs to $\mathcal M$. Let $\hat\phi_{P_f}\in\{0,1\}$ be the value returned by $P_f$ for the nominated next-state component of $S_{diag}$, and define the component by
+*Proof.* Suppose that such a universal perfect predictor $P_f$ exists. By uniform diagonal closure, $S_{\mathrm{diag}}:=D(P_f)$ belongs to $\mathcal M$. Let $\hat\phi_{P_f}\in\{0,1\}$ be the value returned by $P_f$ for the nominated next-state component of $S_{\mathrm{diag}}$, and define the component by
 $$
 \phi_{t+1}=\operatorname{NOT}(\hat\phi_{P_f}). \quad \text{(10)}
 $$
@@ -143,7 +141,7 @@ $$
 $$
 but neither element of $\{0,1\}$ satisfies this equation. This contradiction proves that no such $P_f$ exists. ∎
 
-**4.2.2a Theorem 10a (Lawvere Form of Deterministic SPAP)**
+<a id="422a-theorem-10a-lawvere-form-of-deterministic-spap"></a>**4.2.2a Theorem 10a (Lawvere Form of Deterministic SPAP)**
 
 Let $\mathsf P_{\mathrm{PU}}$ be the retained category of operational predictive contexts and verification protocols, and let $\mathsf{Out}=\{0,1\}$. Suppose the retained predictor class internalizes an evaluation map
 $$
@@ -183,21 +181,21 @@ d(a_d)
 =
 \tau(\operatorname{eval}(a_d,a_d)).
 $$
-Thus $\operatorname{eval}(a_d,a_d)$ is a fixed point of $\tau$. Since $\mathsf{Out}=\{0,1\}$ and $\tau$ is Boolean negation, no fixed point exists. This is exactly the contradiction in Theorem 10 with $a_d$ corresponding to the diagonal predictor-querying system $S_{diag}$. ∎
+Thus $\operatorname{eval}(a_d,a_d)$ is a fixed point of $\tau$. Since $\mathsf{Out}=\{0,1\}$ and $\tau$ is Boolean negation, no fixed point exists. This is exactly the contradiction in Theorem 10 with $a_d$ corresponding to the diagonal predictor-querying system $S_{\mathrm{diag}}$. ∎
 
-**Corollary 10a.1 (Representability Boundary for SPAP).** Theorem 10a applies to a purported total binary evaluator when its retained predicate class contains the negated diagonal predicate and that predicate is represented by an element of the evaluator's domain. This package is inconsistent for Boolean negation. It is not a necessary finite operational capacity of Property R: absence of such a total evaluator does not exclude a model class from the separately stated diagonal-closure hypotheses of Theorems 10–11.
+<a id="corollary-10a1-representability-boundary-for-spap"></a>**Corollary 10a.1 (Representability Boundary for SPAP).** Theorem 10a applies to a purported total binary evaluator when its retained predicate class contains the negated diagonal predicate and that predicate is represented by an element of the evaluator's domain. This package is inconsistent for Boolean negation. It is not a necessary finite operational capacity of Property R: absence of such a total evaluator does not exclude a model class from the separately stated diagonal-closure hypotheses of Theorems 10–11.
 
 *Proof.* Representation of the negated diagonal predicate gives $o=1-o$ for the Boolean value $o=\operatorname{eval}(a_d,a_d)$, which is impossible. Theorem 10 queries one nominated predictor and uses uniform diagonal closure to construct its counter-predictive system; Theorem 11 additionally uses the declared decidable threshold representation. Neither proof assumes an available total evaluator representing every retained binary predicate. Effectively coded partial programs admit bounded simulation and uniform composition with Boolean post-processing, while a total binary evaluator realizing its own negated diagonal predicate is excluded by the displayed contradiction. Thus Theorem 10a identifies a sufficient contradictory evaluator package for a purported universal predictor, rather than characterizing every model class to which Theorems 10–11 apply. ∎
 
-**4.2.3 Theorem 11 (Probabilistic SPAP on a Threshold-Decidable Diagonal Class)**
+<a id="423-theorem-11-probabilistic-spap-on-a-threshold-decidable-diagonal-class"></a>**4.2.3 Theorem 11 (Probabilistic SPAP on a Threshold-Decidable Diagonal Class)**
 
 Let $\mathcal M$ be a coded model class with uniform diagonal closure for nominated binary probabilistic predictors. Assume that each predicted binary marginal $p$ has a finite representation for which the predicate $p>1/2$ versus $p\le1/2$ is decidable inside $\mathcal M$, and that $\mathcal M$ is closed under constructing the Bernoulli law selected by that predicate. Then no probabilistic predictor $P_f\in\mathcal M$ assigns a binary marginal that exactly matches the true marginal for every system in this diagonal class.
 
-*Proof.* Suppose that an exact universal predictor $P_f$ exists. Uniform diagonal closure supplies a system $S'_{diag}\in\mathcal M$ that obtains its own code and computes
+*Proof.* Suppose that an exact universal predictor $P_f$ exists. Uniform diagonal closure supplies a system $S'_{\mathrm{diag}}\in\mathcal M$ that obtains its own code and computes
 $$
-p:=P_f(\phi_{t+1}=1\mid S'_{diag},t).
+p:=P_f(\phi_{t+1}=1\mid S'_{\mathrm{diag}},t).
 $$
-By threshold decidability and the stated closure, $S'_{diag}$ has the one-step law
+By threshold decidability and the stated closure, $S'_{\mathrm{diag}}$ has the one-step law
 $$
 P_{actual}(\phi_{t+1}=1)
 =
@@ -209,7 +207,7 @@ P_{actual}(\phi_{t+1}=1)
 $$
 Exactness requires $p=P_{actual}(\phi_{t+1}=1)$. If $p>1/2$, this equality gives $p=0$, a contradiction. If $p\le1/2$, it gives $p=1$, also a contradiction. The cases exhaust the decidable threshold partition, so no exact universal predictor exists on the stated class. ∎
 
-**Theorem 11a (Diagonal Log-Score Floor of $\ln2$ Nats, or One Bit)**
+<a id="theorem-11a-diagonal-log-score-floor-of-ln2-nats-or-one-bit"></a>**Theorem 11a (Diagonal Log-Score Floor of $\ln2$ Nats, or One Bit)**
 
 Under the hypotheses of Theorem 11, score each diagonal cycle with the logarithmic rule
 $$
@@ -231,7 +229,7 @@ and the infimum is attained uniquely at $p^*=1/2$. Consequently, under the regis
 
 *Proof.* By the law (11), the outcome conditional on the report is deterministic: if $p>1/2$ the outcome is $x=0$ with probability one, so the expected score is $-\ln(1-p)$, which is strictly greater than $\ln2$ because $1-p<1/2$, and equals $+\infty$ at $p=1$. If $p\le1/2$ the outcome is $x=1$ with probability one, so the expected score is $-\ln p\ge\ln2$, with equality if and only if $p=1/2$, and $+\infty$ at $p=0$. The two cases exhaust $[0,1]$, the displayed piecewise formula follows, the infimum over $[0,1]$ is $\ln2$, and it is attained only at $p^*=1/2$. A predictor that minimizes this registered diagonal log-score contribution pointwise therefore reports $p^*=1/2$ and incurs $\ln2$ nats. No conclusion about a global PCE objective follows unless that objective is separately specified to minimize this contribution independently. ∎
 
-**Principle 11b (PPI-Complete Convex SPAP Closure).** Let $X$ be a finite retained response set and let $\tau:X\to X$ be the registered reflexive response map. When a closed SPAP context requires a stationary response but $\tau$ has no pure fixed point, the physical response ledger is completed on $\Delta(X)$ and must satisfy
+<a id="principle-11b-ppi-complete-convex-spap-closure"></a>**Principle 11b (PPI-Complete Convex SPAP Closure).** Let $X$ be a finite retained response set and let $\tau:X\to X$ be the registered reflexive response map. When a closed SPAP context requires a stationary response but $\tau$ has no pure fixed point, the physical response ledger is completed on $\Delta(X)$ and must satisfy
 $$
 q=\tau_*q.
 \tag{11b.1}
@@ -244,7 +242,7 @@ q(\cdot\mid R=r)=\tau_*q(\cdot\mid R=r)
 $$
 A finer variable is response-null only when conditioning on it leaves every admitted finite response law unchanged. In particular, a selector of a retained $x\in X$ is not response-null merely because $x$ lies in a free $\tau$-orbit. Assume $R\circ\tau=R$ and either a finite or countable retained record, or interpret (11b.2) through regular conditional probabilities almost surely. Equations (11b.1)--(11b.2) are a physical closure principle; they are not consequences of the diagonal contradiction by itself.
 
-**Theorem 11b (Unique Binary SPAP Completion).** For
+<a id="theorem-11b-unique-binary-spap-completion"></a>**Theorem 11b (Unique Binary SPAP Completion).** For
 $$
 X=\{0,1\},
 \qquad
@@ -273,7 +271,7 @@ $$
 $$
 A point mass is not invariant because negation exchanges the two points. ∎
 
-**Theorem 11c (Complete Invariant-Measure Classification for a Finite Response Map).** Let $X$ be finite and $\tau:X\to X$. Its functional digraph has directed cycles $C_1,\ldots,C_m$ and transient vertices feeding those cycles. The complete set of invariant probability laws is
+<a id="theorem-11c-complete-invariant-measure-classification-for-a-finite-response-map"></a>**Theorem 11c (Complete Invariant-Measure Classification for a Finite Response Map).** Let $X$ be finite and $\tau:X\to X$. Its functional digraph has directed cycles $C_1,\ldots,C_m$ and transient vertices feeding those cycles. The complete set of invariant probability laws is
 $$
 \left\{
 \sum_{j=1}^m w_j u_{C_j}:
@@ -289,9 +287,7 @@ $$
 $$
 At least one predecessor $y$ would therefore have positive mass, and every such predecessor is transient at distance one greater than $x$, a contradiction. Hence every transient vertex has zero invariant mass. On a cycle $C_j$, invariance gives equal mass to successive vertices. Writing $w_j=\sum_{x\in C_j}q(x)$, each vertex therefore has mass $w_j/|C_j|$. A positive-weight cycle has the uniform conditional law; a zero-weight cycle contributes zero mass and requires no conditioning. The nonnegative cycle weights sum to one and are otherwise arbitrary, giving (11c.1). The simplex is a singleton exactly when $m=1$. ∎
 
-**Resolution TV-SPAP-01-R1 (Metadata).** Exact domain: deterministic maps on nonempty finite retained response sets. Premises: Principle 11b's invariant-completion equation. Equivalence: equality of probability laws on the labeled retained set. Budget: one full functional-graph decomposition of $|X|$ vertices. Verifier: exact cycle/transient decomposition and simplex membership. Falsifier: invariant transient mass, nonuniform cycle mass, or a law outside (11c.1). Provenance class: source-internal finite dynamical classification. Downstream consumers: Principle 11b, Theorem 11b and `TV-SPAP-01`. Nonvacuity: the binary NOT map and two disjoint transpositions. This is `positive-discharge` of the finite mathematical component.
-
-**Theorem 11d (Finite Single-Run Channel Realization of the Invariant Simplex).** In the notation of Theorem 11c, fix any invariant law $q=\sum_jw_ju_{C_j}$. Let $\mathcal H_X$ have the orthonormal basis $\{|x\rangle:x\in X\}$ and define the classical channel
+<a id="theorem-11d-finite-single-run-channel-realization-of-the-invariant-simplex"></a>**Theorem 11d (Finite Single-Run Channel Realization of the Invariant Simplex).** In the notation of Theorem 11c, fix any invariant law $q=\sum_jw_ju_{C_j}$. Let $\mathcal H_X$ have the orthonormal basis $\{|x\rangle:x\in X\}$ and define the classical channel
 $$
 \mathcal E_\tau(\rho)
 =
@@ -324,25 +320,23 @@ with $\mathcal E_\tau$ acting on $X$ and the identity acting on $R$. For every $
 
 *Proof.* Put $K_x=|\tau(x)\rangle\langle x|$ and $L_x=|x\rangle\langle x|$. Then $\mathcal E_\tau(\rho)=\sum_xK_x\rho K_x^\dagger$ and $\mathcal J_x(\rho)=L_x\rho L_x^\dagger$. For every auxiliary dimension $d$ and positive operator $A$, each conjugation $(K_x\otimes I_d)A(K_x^\dagger\otimes I_d)$ and $(L_x\otimes I_d)A(L_x^\dagger\otimes I_d)$ is positive; summation proves complete positivity of the response channel and the instrument maps. Moreover, $\sum_xK_x^\dagger K_x=\sum_xL_x^\dagger L_x=I$, so cyclicity of the trace proves trace preservation of $\mathcal E_\tau$ and of the instrument's branch sum. Each branch has probability $\operatorname{tr}\mathcal J_x(\rho_q)=q(x)$. Applying $\mathcal E_\tau$ to $\rho_q$ gives $\sum_y(\sum_{x:\tau(x)=y}q(x))|y\rangle\langle y|=\rho_q$ by invariance. On each cycle, $\tau$ permutes the basis states, so it preserves the uniform state. The joint state (11d.4) is normalized because its trace is $\sum_jw_j=1$; leaving $R$ unchanged preserves each cycle block. Conditioning on any $j$ with $w_j>0$ divides that block by $w_j$ and gives $u_{C_j}$, proving the conditional claim. ∎
 
-**Resolution TV-SPAP-01-R2 (Metadata).** Exact domain: every invariant law of a deterministic map on a nonempty finite retained response set, with the positive-weight cycle records of Theorem 11c. Premises: the finite functional graph, its invariant weights, the declared basis labels, and Principle 8.0c's single-run response identification. Equivalence: equality of the labeled retained single-run law. Budget: the full finite carrier, one normalized outcome branch per response, every cycle record and the response channel. Verifier: complete positivity, trace preservation, exact branch probabilities and the invariance/intertwining identities. Falsifier: an unnormalized instrument, a retained law different from $q$, or a positive-weight conditional record different from $u_{C_j}$. Provenance class: source-internal finite channel realization. Downstream consumers: Principle 11b, Theorems 11b--11c and `TV-SPAP-01`. Theorem 11d constructs the response map, normalized single-run instrument and retained cycle record for every classified law and gives `positive-discharge` of `TV-SPAP-01`; repeated-trial frequency remains separately owned by `TV-QM-03`.
-
 **Status.** Theorems 10–11 prove the prediction obstruction. Principle 11b is the additional physical rule selecting the convex invariant completion, Theorem 11b proves its unique binary law, and Theorem 11d realizes the full finite invariant simplex as registered single-run response probabilities; convergence of empirical frequencies requires a repeated-trial certificate.
 
-**4.2.4 Corollary 1 (Uniform Prediction Limit)**
+<a id="424-corollary-1-uniform-prediction-limit"></a>**4.2.4 Corollary 1 (Uniform Prediction Limit)**
 
 On a model class satisfying the diagonal-closure hypotheses of Theorems 10–11, no single deterministic or threshold-decidable probabilistic predictor is exact on every constructible self-referential system in the class. Equivalently, for each proposed universal predictor, the corresponding diagonal construction supplies a system and a nominated binary aspect on which that predictor fails. This class-level statement does not imply that every individual system is imperfectly predictable.
 
 *Proof.* Apply Theorem 10 to a proposed deterministic universal predictor and Theorem 11 to a proposed probabilistic universal predictor. Each theorem constructs a counterexample relative to the nominated predictor. Neither theorem quantifies over every system as a counterexample. ∎
 
-**4.2.5 Corollary 2 (Potential Unpredictability of Rich Predictive Classes)**
+<a id="425-corollary-2-potential-unpredictability-of-rich-predictive-classes"></a>**4.2.5 Corollary 2 (Potential Unpredictability of Rich Predictive Classes)**
 
 Let $\mathcal F\subseteq\mathcal M$ be a family of operational models for complex predictive processes, where $\mathcal M$ satisfies the diagonal-closure hypotheses of Theorems 10–11. Assume that, for every nominated deterministic or threshold-decidable probabilistic predictor in $\mathcal M$, the corresponding diagonal construction belongs to $\mathcal F$. Then no such predictor can guarantee perfect self-prediction across every retained system and every nominated binary aspect in $\mathcal F$. Restricted families that do not contain these diagonal constructions may remain perfectly predictable.
 
 *Proof.* Fix a nominated predictor $P\in\mathcal M$. The applicable construction in Theorem 10 or Theorem 11 supplies a diagonal system on which $P$ fails, and the family hypothesis places that system in $\mathcal F$. Thus $P$ is not exact throughout $\mathcal F$. Since $P$ was arbitrary, no nominated predictor is exact throughout the retained family. ∎
 
-**Remark (Conditional Pattern-Specific SPAP Engagement).** SPAP (Theorems 10–11) proves that no total predictor is exact throughout the declared diagonal-closed class. A pattern-specific quantity
+<a id="remark-conditional-pattern-specific-spap-engagement"></a>**Remark (Conditional Pattern-Specific SPAP Engagement).** SPAP (Theorems 10–11) proves that no total predictor is exact throughout the declared diagonal-closed class. A pattern-specific quantity
 $$
-\delta_S(E)=\alpha_{SPAP}-PP_S^{(E)}
+\delta_S(E)=\alpha_{\mathrm{SPAP}}-PP_S^{(E)}
 $$
 is available only after the self-model, performance map, and attainability criterion of Appendix M are specified. A processing-cost lower bound additionally requires the pattern-specific hard-family reduction and implementation certificates of Corollary B.2.1 and Theorem M.10.3. On the independent-register amplification branch, Theorem M.10.4 constructs particular patterns $E^*$ with $\delta_S(E^*)=0$, and Theorem M.10.6 gives the corresponding boundary obstruction under its certificate. Purely external patterns attain the baseline only under the baseline-invariance hypothesis of Corollary M.10.3.1.
 
@@ -365,19 +359,19 @@ Let $\mathcal{R}$ be a class of finite state-description objects (e.g., finite s
    r' \prec r \;\Rightarrow\; \mu(r') < \mu(r).
    $$
 
-**Remark (Well-Foundedness).** The standard characterization of well-founded relations employs rank functions into the ordinals [Kunen 1980, Chapter III]. Since each object $r \in \mathcal{R}$ is finite and acyclic by assumption, the proper-component relation $\prec$ strictly decreases a finite size measure. Accordingly, given the assumed size measure $\mu: \mathcal{R} \to \mathbb{N}$ with $r' \prec r \Rightarrow \mu(r') < \mu(r)$, the rank function may be taken to have codomain $\mathbb{N}$ rather than the full ordinal hierarchy. This restriction to $\mathbb{N}$-valued ranks is justified by the per-object finiteness assumption and suffices for the results that follow.
+<a id="remark-well-foundedness"></a>**Remark (Well-Foundedness).** The standard characterization of well-founded relations employs rank functions into the ordinals (Kunen 1980, Chapter III). Since each object $r \in \mathcal{R}$ is finite and acyclic by assumption, the proper-component relation $\prec$ strictly decreases a finite size measure. Accordingly, given the assumed size measure $\mu: \mathcal{R} \to \mathbb{N}$ with $r' \prec r \Rightarrow \mu(r') < \mu(r)$, the rank function may be taken to have codomain $\mathbb{N}$ rather than the full ordinal hierarchy. This restriction to $\mathbb{N}$-valued ranks is justified by the per-object finiteness assumption and suffices for the results that follow.
 
-**Definition 4.2.6.1 (Unfolded Representation).** A state description is **unfolded** (or **extensional**) for a component if the description literally contains the component's value as a proper subobject under $\prec$, rather than containing a pointer, index, address, or code that must be interpreted to recover it.
+<a id="definition-4261-unfolded-representation"></a>**Definition 4.2.6.1 (Unfolded Representation).** A state description is **unfolded** (or **extensional**) for a component if the description literally contains the component's value as a proper subobject under $\prec$, rather than containing a pointer, index, address, or code that must be interpreted to recover it.
 
 ---
 
-**4.2.6.2 Lemma 4.2.6a (No Proper Self-Containment)**
+<a id="4262-lemma-426a-no-proper-self-containment"></a>**4.2.6.2 Lemma 4.2.6a (No Proper Self-Containment)**
 
 There is no $r \in \mathcal{R}$ such that $r \prec r$.
 
 *Proof.* Suppose $r \prec r$. By the rank condition (Section 4.2.6.1), $\mu(r) < \mu(r)$, which is impossible since no natural number is strictly less than itself. □
 
-**Corollary 4.2.6b (No Infinite Descending Chains).** There is no infinite strictly descending chain
+<a id="corollary-426b-no-infinite-descending-chains"></a>**Corollary 4.2.6b (No Infinite Descending Chains).** There is no infinite strictly descending chain
 $$
 r_0 \succ r_1 \succ r_2 \succ \cdots
 $$
@@ -395,7 +389,7 @@ Taking $i=\mu(r_0)+1$ makes the right-hand side equal to $-1$, contradicting $\m
 
 ---
 
-**4.2.6.3 Theorem 4.2.6c (Infinite Regress Obstruction for Unfolded Complete-State Self-Prediction)**
+<a id="4263-theorem-426c-infinite-regress-obstruction-for-unfolded-complete-state-self-prediction"></a>**4.2.6.3 Theorem 4.2.6c (Infinite Regress Obstruction for Unfolded Complete-State Self-Prediction)**
 
 Let $U$ be a system whose operationally accessible state at the classical register level is described by elements of a state space $X_U$. Fix a time $t^*$ and let
 $$
@@ -417,7 +411,6 @@ $$
 $$
 
 *Remark on Assumption (i).* Assumption (i) holds whenever $\mathrm{Desc}(s)$ is constructed as an unfolded composite description of the operational register state, i.e., an object in $\mathcal{R}$ whose proper components include the value of the designated output register and at least one additional operational component (e.g., another register value, a memory segment, or an internal control state). In that case $\mathrm{Out}(s) \prec \mathrm{Desc}(s)$ holds by construction, and strictness expresses that the described operational state contains more than the output register alone.
-
 
 **(ii) Prediction is published in the output register.** An embedded predictor publishes a candidate state description $d \in \mathcal{R}$ into the output register at time $t^*$, so for the realized state $s_U(t^*)$,
 $$
@@ -465,7 +458,7 @@ Theorem 4.2.6c is a representational impossibility result: it demonstrates that 
 
 2. **Encoded (intensional) representation.** The description does not literally contain the output value as a subobject; instead, it contains a reference, address, or Gödel code. In this regime, self-inclusion becomes a value-level self-consistency constraint rather than a structural embedding constraint.
 
-Encoded self-reference is enabled by the computational machinery formalized as Property R (Definition 10, Section 4.1.2) and exemplified by the Dynamic Self-Reference Operator (DSRO, Definition 11, Section 4.2.1), whose existence is guaranteed by Kleene's Second Recursion Theorem (Theorem A.1.5, Appendix A.1.6) [Kleene 1952]. In this encoded regime, SPAP (Theorem 10, Section 4.2.2; Theorem 11, Section 4.2.3) establishes that no single predictor can guarantee perfect self-prediction uniformly across all retained self-referential systems constructible within a uniform Property-R model class satisfying the finite diagonal-closure conditions of §A.0.2 (Theorem A.0.1; Corollary A.0.1). Theorem 10 constructs $S_{\mathrm{diag}}$ whose reflexive update rule (Equation 10) induces a fixed-point-free correctness constraint, yielding contradiction via diagonalization for any proposed universal predictor on that class.
+Encoded self-reference is enabled by the computational machinery formalized as Property R (Definition 10, Section 4.1.2) and exemplified by the Dynamic Self-Reference Operator (DSRO, Definition 11, Section 4.2.1), whose existence is guaranteed by Kleene's Second Recursion Theorem (Theorem A.1.5, Appendix A.1.6) (Kleene 1952). In this encoded regime, SPAP (Theorem 10, Section 4.2.2; Theorem 11, Section 4.2.3) establishes that no single predictor can guarantee perfect self-prediction uniformly across all retained self-referential systems constructible within a uniform Property-R model class satisfying the finite diagonal-closure conditions of §A.0.2 (Theorem A.0.1; Corollary A.0.1). Theorem 10 constructs $S_{\mathrm{diag}}$ whose reflexive update rule (Equation 10) induces a fixed-point-free correctness constraint, yielding contradiction via diagonalization for any proposed universal predictor on that class.
 
 ---
 
@@ -482,7 +475,7 @@ These mechanisms are distinct:
 
 - **Unfolded representations** fail at the level of finite extensional structure. Under assumptions (i)–(iii), the impossibility is immediate from the requirement that a finite object contain itself as a strict part—no dynamics or computation is involved.
 
-- **Encoded representations** shift the analysis to self-referential value constraints, where diagonal constructions—analogous in structure to Gödel's incompleteness theorems [Gödel 1931] and Turing's undecidability results [Turing 1936]—establish that no single predictor achieves universal perfection across all retained constructible self-referential systems in a uniform Property-R framework satisfying the finite diagonal-closure conditions of §A.0.2 (Theorem A.0.1; Corollary A.0.1).
+- **Encoded representations** shift the analysis to self-referential value constraints, where diagonal constructions—analogous in structure to Gödel's incompleteness theorems (Gödel 1931) and Turing's undecidability results (Turing 1936)—establish that no single predictor achieves universal perfection across all retained constructible self-referential systems in a uniform Property-R framework satisfying the finite diagonal-closure conditions of §A.0.2 (Theorem A.0.1; Corollary A.0.1).
 
 Together, these independent routes demonstrate that perfect complete-state self-prediction cannot be achieved as a general guaranteed capability: unfolded representation fails structurally under the stated assumptions, while encoded representation admits no universal predictor guarantee. 
 
@@ -490,7 +483,7 @@ Together, these independent routes demonstrate that perfect complete-state self-
 
 Beyond the SPAP paradoxes concerning predictive *accuracy*, the structure of Reflexive Interaction Dynamics (RID, Definition 6) leads to fundamental limitations on what can be *computed* about such systems through interaction.
 
-**4.3.1 Theorem 12 (Reflexive Undecidability Statement)**
+<a id="431-theorem-12-reflexive-undecidability-statement"></a>**4.3.1 Theorem 12 (Reflexive Undecidability Statement)**
 
 Let $\mathcal C_{RID}^{\bullet}$ contain, for every Turing-machine code $e$ and input $w$, the effectively coded pointed deterministic RID instance $\mathbf S_{e,w}=(S_{e,w},x_0)$ of Theorem A.2.3, and let its nondeterministic subclass contain those instances as point-mass kernels. Every code supplies its initial state, terminal-bit projection, and registered repeated-tick trajectory. Fix
 $$
@@ -502,7 +495,7 @@ No total interactive algorithm halts and correctly decides $\mathsf{TERM}$ on al
 
 *Proof.* The deterministic assertion is Theorem A.2.3: a total decider would decide whether $e(w)$ halts. For the probabilistic assertion, Theorem A.2.4 exactly enumerates the finite rational interaction tree. Its acceptance probability lies at least $\epsilon$ above $1/2$ on terminating systems and at least $\epsilon$ below $1/2$ on nonterminating systems, again deciding the halting problem. The property $\mathsf{TERM}$ is fixed before the decider is quantified. ∎
 
-**4.3.2 Remark 2 (Relation to SPAP, Incompleteness)**
+<a id="432-remark-2-relation-to-spap-incompleteness"></a>**4.3.2 Remark 2 (Relation to SPAP, Incompleteness)**
 
 Reflexive Undecidability and SPAP establish different quantified limitations. SPAP uses a live prediction-contingent construction to exclude one predictor that is exact on every system in its stated diagonal-closed class. RUD fixes $\mathsf{TERM}$ before quantifying over deciders and excludes a total uniform decider on the effectively coded pointed simulation family; its bounded probabilistic extension uses a computable finite runtime bound and computable complete finite support lists with rational branch probabilities.
 
@@ -510,16 +503,15 @@ Reflexive Undecidability and SPAP establish different quantified limitations. SP
 
 **4.4 Logical Indeterminacy and Other Sources of Uncertainty**
 
-
 The framework recognizes multiple origins for the deviation of predictions from actual outcomes (i.e., prediction error $PE > 0$). The most fundamental source, arising directly from the system's inherent structure, is Logical Indeterminacy:
 
-**Definition 12 (Def 12): Logical Indeterminacy**
+<a id="definition-12-def-12-logical-indeterminacy"></a>**Definition 12 (Def 12): Logical Indeterminacy**
 
 Logical Indeterminacy denotes the following class-relative obstruction. On a coded model class satisfying the diagonal-closure hypotheses of Theorems 10–11, no single retained deterministic or threshold-decidable probabilistic predictor is exact on every constructible self-referential system in that class. Under the computability, Effective Operational Property-R, and interaction-model hypotheses of Theorem 12, some RID properties are not uniformly decidable by a total interacting algorithm. These statements persist when any finite resource bound is enlarged, but they do not assert that every individual system or event is unpredictable, that every 'Evolve' law is stochastic, or that the conclusions survive removal of the theorems' computability and representability hypotheses.
 
 Prediction error can also arise from distinct sources:
 
-1. **Stochasticity:** randomness posited in the underlying dynamics or in the kernels $(V_{prob},T_{prob})$ of ND-RID.
+1. **Stochasticity:** randomness posited in the underlying dynamics or in the kernels $(V_{\mathrm{prob}},T_{\mathrm{prob}})$ of ND-RID.
 2. **Epistemic uncertainty:** incomplete state or parameter information, model inadequacy, or finite time, memory, and energy.
 
 On the complex Hilbert branch carrying noncontextuality and finite-effect additivity, Theorem 28a represents the registered probability ledger by the Born trace rule.
@@ -528,7 +520,7 @@ On the complex Hilbert branch carrying noncontextuality and finite-effect additi
 
 Self-reference not only imposes logical limits but also influences the relationship between complexity and achievable predictive performance, especially near the fundamental boundaries established by SPAP.
 
-**4.5.1 Theorem 13 (Complexity Growth in Self-Modeling)**
+<a id="451-theorem-13-complexity-growth-in-self-modeling"></a>**4.5.1 Theorem 13 (Complexity Growth in Self-Modeling)**
 
 Consider a sequence of recursive self-modeling levels, indexed by $n\in\mathbb N_0$, where $M_n$ includes a representation of $M_{n-1}$ for $n\ge1$. Let $C(M)$ be a measure of complexity (e.g., Predictive Physical Complexity $C_P$, or algorithmic complexity). Assume every consecutive transition incurs an additive, non-shared complexity overhead of at least a common constant $k>0$, so that $C(M_n)\ge C(M_{n-1})+k$ for every $n\ge1$. Then complexity grows at least linearly in the recursion depth $n$.
 *Proof:* By hypothesis, each functionally distinct self-representation level incurs a minimum non-zero overhead $k>0$. Formally, for every $n\ge 1$,
@@ -541,7 +533,7 @@ C(M_n)\ge C(M_0)+nk=c_0+nk,\qquad c_0:=C(M_0). \tag{12}
 $$
 Hence $C(M_n)=\Omega(n)$. ∎
 
-**Proposition 13a (Exact Shared-Support Accounting and Compression Counterexample).** Fix a finite operation alphabet $\Omega$ with positive weights $w:\Omega\to(0,\infty)$. For $j\ge0$, let $A_j\subseteq\Omega$ be the operations needed to realize the registered level-$j$ response, and charge shared operations once. Set $U_{-1}:=\varnothing$ and $C_{-1}:=0$, and for $n\ge0$ put
+<a id="proposition-13a-exact-shared-support-accounting-and-compression-counterexample"></a>**Proposition 13a (Exact Shared-Support Accounting and Compression Counterexample).** Fix a finite operation alphabet $\Omega$ with positive weights $w:\Omega\to(0,\infty)$. For $j\ge0$, let $A_j\subseteq\Omega$ be the operations needed to realize the registered level-$j$ response, and charge shared operations once. Set $U_{-1}:=\varnothing$ and $C_{-1}:=0$, and for $n\ge0$ put
 $$
 U_n:=\bigcup_{j=0}^n A_j,
 \qquad
@@ -559,9 +551,7 @@ so $C_n>C_{n-1}$ exactly when level $n$ needs at least one operation not already
 
 *Proof.* The disjoint union $U_n=U_{n-1}\sqcup\Delta_n$ gives (13a.2). Positive weights give the strictness equivalence. The two stated specializations follow by substitution. ∎
 
-**Resolution TV-SPAP-03-R1 (Metadata).** Exact domain: finite weighted operation alphabets and registered depth-indexed operation supports. Premises: positive weights and one-time charging of shared operations. Equivalence: identity of operation labels after the declared shared-operation quotient. Budget: all supports through the registered depth $n$. Verifier: exact set union, difference and weighted summation. Falsifier: a charged operation outside the union, a duplicate shared charge, or a strict increment with $\Delta_n=\varnothing$. Provenance class: source-internal finite ledger identity and countermodel. Downstream consumers: Theorem 13 and `TV-SPAP-03`. Nonvacuity: the constant-support compression branch and the unit-weight strict branch. This is `positive-discharge` of the support identity and `negative-refutation` of strict ordering from nesting alone; Propositions 13b--13c below classify the implementation quotient and its depthwise minima under the fresh-support premise (13b.1) and realize the support ledger in a qubit-circuit class.
-
-**Proposition 13b (Implementation Quotient and Depthwise Minima under Fresh Support).** Retain the notation of Proposition 13a, write $w(S):=\sum_{\omega\in S}w(\omega)$ for $S\subseteq\Omega$, fix the level-0 support $A_0$, and let
+<a id="proposition-13b-implementation-quotient-and-depthwise-minima-under-fresh-support"></a>**Proposition 13b (Implementation Quotient and Depthwise Minima under Fresh Support).** Retain the notation of Proposition 13a, write $w(S):=\sum_{\omega\in S}w(\omega)$ for $S\subseteq\Omega$, fix the level-0 support $A_0$, and let
 $$
 R:=\Omega\setminus A_0,
 \qquad
@@ -597,9 +587,7 @@ For $1\le n\le r$, a sequence attains $m(n)$ exactly when $|\Delta_j|=1$ for $1\
 
 For item 3, put $D:=\Delta_1\sqcup\cdots\sqcup\Delta_n\subseteq R$. Then $|D|\ge n$ and $C_n=w(A_0)+w(D)$. The $n$ smallest weights in $D$ sum to at least $\sum_{i\le n}w_{(i)}$, and positivity makes $w(D)$ strictly larger than that partial sum when $|D|>n$. Hence $C_n\ge m(n)$, with equality exactly when $|D|=n$, which forces every $|\Delta_j|=1$, and $w(D)=\sum_{i\le n}w_{(i)}$. Conversely, listing a minimum-weight $n$-subset one operation per level attains $m(n)$, and its $n!$ orderings give distinct chains. A minimum-weight $n$-subset consists of every operation of $R$ with weight below $w_{(n)}$ together with $s_n$ of the $t_n$ operations of weight $w_{(n)}$, which gives the count. For item 4, $C_0=w(U_0)=w(A_0)$ by (13a.1). For $r\ge1$ and $n\ge1$, (13a.2) gives $C_n-C_{n-1}=w(\Delta_n)\ge w_{(1)}$, and $m(n)-w(A_0)-nw_{(1)}=\sum_{i\le n}(w_{(i)}-w_{(1)})$ is a sum of nonnegative terms that are nondecreasing in $i$, so it vanishes exactly when $w_{(n)}=w_{(1)}$. Item 5 combines items 2--3 with the monotonicity of $m$ and the inequality $m(n)\ge w(A_0)+nw_{(1)}$. ∎
 
-**Resolution TV-SPAP-03-R2 (Metadata).** Exact domain: finite positive-weight operation alphabets, a fixed level-0 support and all support sequences through a registered depth, under the fresh-support premise (13b.1). Premises: Proposition 13a's ledger and (13b.1). Equivalence: equality of charged chains $U_0\subseteq\cdots\subseteq U_N$. Budget: every support sequence through depth $N$ and every chain of subsets of $\Omega$. Verifier: the chain parametrization, inclusion--exclusion, the exchange bound for $n$-element subsets and exact weighted sums. Falsifier: a chain with a different representative count, a fresh-support sequence beyond depth $r$ or below $m(n)$, a minimizer with a non-singleton increment, or tightness with $w_{(n)}>w_{(1)}$. Provenance class: source-internal exact finite classification. Downstream consumers: Theorem 13, Corollary 14.1 and `TV-SPAP-03`. Nonvacuity: unit weights with $|A_0|=1$ and $r\ge1$. This is `positive-discharge` of the implementation-quotient and depthwise-minimum classification under the frozen premise (13b.1); Proposition 13c supplies the formal support realization.
-
-**Proposition 13c (Qubit Copy-Circuit Realization of the Support Ledger).** Fix $N\ge0$ and qubit registers $I,Q_0,\ldots,Q_N$ with Hilbert space $(\mathbb C^2)^{\otimes(N+2)}$. A circuit is a finite sequence $\gamma=(\gamma_1,\ldots,\gamma_L)$ of gate occurrences, each the unitary channel of a controlled-NOT gate $\mathrm{CNOT}_{x\to y}$ between distinct registers. For $\beta\in\{0,1\}$ the circuit acts on $|\beta\rangle_I\otimes|0\rangle^{\otimes(N+1)}$, and every register is read in the computational basis. The registered level-$j$ response, $0\le j\le N$, requires $Q_j$ to read $\beta$ for both values of $\beta$; for $j\ge1$ the depth-$j$ model $(Q_0,\ldots,Q_j)$ then contains the depth-$(j-1)$ model together with a literal copy of its top content, the unfolded regime of Definition 4.2.6.1. Define light cones by $\operatorname{cone}(y,0)=\varnothing$ and
+<a id="proposition-13c-qubit-copy-circuit-realization-of-the-support-ledger"></a>**Proposition 13c (Qubit Copy-Circuit Realization of the Support Ledger).** Fix $N\ge0$ and qubit registers $I,Q_0,\ldots,Q_N$ with Hilbert space $(\mathbb C^2)^{\otimes(N+2)}$. A circuit is a finite sequence $\gamma=(\gamma_1,\ldots,\gamma_L)$ of gate occurrences, each the unitary channel of a controlled-NOT gate $\mathrm{CNOT}_{x\to y}$ between distinct registers. For $\beta\in\{0,1\}$ the circuit acts on $|\beta\rangle_I\otimes|0\rangle^{\otimes(N+1)}$, and every register is read in the computational basis. The registered level-$j$ response, $0\le j\le N$, requires $Q_j$ to read $\beta$ for both values of $\beta$; for $j\ge1$ the depth-$j$ model $(Q_0,\ldots,Q_j)$ then contains the depth-$(j-1)$ model together with a literal copy of its top content, the unfolded regime of Definition 4.2.6.1. Define light cones by $\operatorname{cone}(y,0)=\varnothing$ and
 $$
 \operatorname{cone}(y,\tau)=
 \begin{cases}
@@ -622,15 +610,13 @@ For item 3, induction along the chain gives $Q_j=\beta$ and $A_j=\{1,\ldots,j+1\
 
 For item 4, item 2 shows that $\bigcup_{j\le n}A_j(\gamma)$ consists of exactly one gate $g_j$ targeting each $Q_j$, $j\le n$, and of no other gate. Since every gate targeting $Q_j$ lies in $A_j(\gamma)$, $g_j$ is the only gate of $\gamma$ that targets $Q_j$, so the final content of $Q_j$ is the content of the control $x_j$ of $g_j$ immediately before $g_j$, and at $\beta=1$ this content is $1$. Every gate targeting $x_j$ before $g_j$ lies in $\operatorname{cone}(x_j,g_j-1)\subseteq A_j(\gamma)$ and is therefore a gate $g_i$ that precedes $g_j$ and has $x_j=Q_i$. If $x_j=I$, no gate targets $I$ before $g_j$. Otherwise $x_j$ starts at $0$, so some gate targets it before $g_j$, and $x_j$ is a register $Q_i$, $i\le n$, whose gate $g_i$ precedes $g_j$. Hence $x_j$ is $I$ or such a $Q_i$, and (13c.1) gives $A_j=\{g_j\}\cup A_{x_j}$ with $A_I:=\varnothing$. The controls therefore form a tree rooted at $I$ in which each parent gate precedes its child gate, and $A_j$ is the set of gates on the path from $I$ to $Q_j$. Nesting puts $g_{j-1}$ on that path, so $Q_0,\ldots,Q_{j-1}$ are ancestors of $Q_j$; an ancestor $Q_i$ with $i>j$ would make $Q_j$ an ancestor of $Q_i$, which a tree excludes. The ancestors of $Q_j$ among $Q_0,\ldots,Q_n$ are therefore exactly $Q_0,\ldots,Q_{j-1}$, the deepest of which is $Q_{j-1}$. Thus the parent of $Q_j$ is $Q_{j-1}$ for $j\ge1$ and the parent of $Q_0$ is $I$, which is $\gamma^{\mathrm{ch}}_n$. Item 5 is the computation $\operatorname{cone}(Q_0,1)=\{1\}$. ∎
 
-**Resolution TV-SPAP-03-R3 (Metadata).** Exact domain: CNOT circuits on the qubit registers $I,Q_0,\ldots,Q_N$ with computational-basis preparation and readout, the unfolded copy responses and the light-cone supports (13c.1). Premises: unitarity of CNOT and the registered level responses. Equivalence: equality of gate-occurrence sequences after restriction to $\bigcup_{j\le n}A_j(\gamma)$. Budget: all circuits of every finite length. Verifier: cone induction, the target-counting bound and the tree argument. Falsifier: a realizing circuit with $C_n<n+1$, a nested minimizer other than the chain, or a deletion outside a cone that changes a readout. Provenance class: source-internal finite quantum-channel realization. Downstream consumers: Propositions 13a--13b, Theorem 13, Corollary 14.1 and `TV-SPAP-03`. Nonvacuity: $\gamma^{\mathrm{ch}}_N$ and the one-gate address circuit. This is `positive-discharge` of the formal support realization: Proposition 13c realizes the unit-weight minimal profile of Proposition 13b, Theorem 13's tight linear branch and Proposition 13a's compression branch in one finite-dimensional unitary model class. With Resolution TV-SPAP-03-R2, the `M` and `R` components of `TV-SPAP-03` are discharged on the frozen premise (13b.1) and this realization class.
+<a id="452-theorem-14-predictive-complexity-divergence-near-alpha_spap"></a>**4.5.2 Theorem 14 (Predictive Complexity Divergence Near $\alpha_{\mathrm{SPAP}}$)**
 
-**4.5.2 Theorem 14 (Predictive Complexity Divergence Near $\alpha_{SPAP}$)**
-
-Let $\delta_{\mathrm{SPAP}}:=\alpha_{SPAP}-\alpha\in(0,1/8]$. Assume a certificate $\mathfrak C_{B.2}$ proves that every admissible strategy in the declared task class contains the Bernoulli hard subfamily of Theorem B.2, preserves independent observations and the sample-cost ledger, and meets the error/confidence requirements uniformly under either Bernoulli law. Then
+Let $\delta_{\mathrm{SPAP}}:=\alpha_{\mathrm{SPAP}}-\alpha\in(0,1/8]$. Assume a certificate $\mathfrak C_{B.2}$ proves that every admissible strategy in the declared task class contains the Bernoulli hard subfamily of Theorem B.2, preserves independent observations and the sample-cost ledger, and meets the error/confidence requirements uniformly under either Bernoulli law. Then
 $$
 C_{\mathrm{uni}}(\delta_{\mathrm{SPAP}})=\Omega\!\left(\frac{\log(1/\delta_{\mathrm{SPAP}})}{\delta_{\mathrm{SPAP}}^2}\right).\tag{13}
 $$
-With a preregistered horizon confidence budget $\beta=1/\mathcal T$ and $\mathcal T\ge1/\delta_{\mathrm{SPAP}}$, the same certificate gives
+For a design with horizon confidence budget $\beta=1/\mathcal T$ and $\mathcal T\ge1/\delta_{\mathrm{SPAP}}$, the same certificate gives
 $$
 \mathcal C_{\mathrm{stat}}(\delta_{\mathrm{SPAP}},\mathcal T)=\Omega\!\left(\frac{\log\mathcal T}{\delta_{\mathrm{SPAP}}^2}\right).\tag{14}
 $$
@@ -656,25 +642,25 @@ $$
 $$
 which proves (14). The proof takes an infimum over a uniformly certified class, so it yields no lower bound from a guarantee for only one selected instance. ∎
 
-**Corollary 14.1 (Finite-Budget Bound on Reflexive Depth and a Conditional SPAP-Near Bound).** Let $B_C(T)$ be the total operational complexity budget over horizon $T$. If each additional self-modeling level incurs the non-shared overhead $k>0$ of Theorem 13 and $B_C(T)\ge c_0$, then every sustainable recursion depth satisfies
+<a id="corollary-141-finite-budget-bound-on-reflexive-depth-and-a-conditional-spap-near-bound"></a>**Corollary 14.1 (Finite-Budget Bound on Reflexive Depth and a Conditional SPAP-Near Bound).** Let $B_C(T)$ be the total operational complexity budget over horizon $T$. If each additional self-modeling level incurs the non-shared overhead $k>0$ of Theorem 13 and $B_C(T)\ge c_0$, then every sustainable recursion depth satisfies
 $$
 n(T)\le\left\lfloor\frac{B_C(T)-c_0}{k}\right\rfloor.
 $$
 
-For the additional SPAP-near conclusion, assume the certificate $\mathfrak C_{B.2}$ of Theorem 14 and a no-double-counting budget bridge under which the theorem's uniform verification/update complexity $C_{\mathrm{uni}}(\delta_{SPAP})$ is charged to $B_C(T)$. If
+For the additional SPAP-near conclusion, assume the certificate $\mathfrak C_{B.2}$ of Theorem 14 and a no-double-counting budget bridge under which the theorem's uniform verification/update complexity $C_{\mathrm{uni}}(\delta_{\mathrm{SPAP}})$ is charged to $B_C(T)$. If
 $$
-\alpha=\alpha_{SPAP}-\delta_{SPAP},
+\alpha=\alpha_{\mathrm{SPAP}}-\delta_{\mathrm{SPAP}},
 $$
 then
 $$
-B_C(T)\ge C_{\mathrm{uni}}(\delta_{SPAP})
-=\Omega\!\left(\frac{\log(1/\delta_{SPAP})}{\delta_{SPAP}^2}\right).
+B_C(T)\ge C_{\mathrm{uni}}(\delta_{\mathrm{SPAP}})
+=\Omega\!\left(\frac{\log(1/\delta_{\mathrm{SPAP}})}{\delta_{\mathrm{SPAP}}^2}\right).
 $$
-Consequently, a finite budget excludes $\delta_{SPAP}\downarrow0$ only on this certified task and budget-bridge branch.
+Consequently, a finite budget excludes $\delta_{\mathrm{SPAP}}\downarrow0$ only on this certified task and budget-bridge branch.
 
 *Proof.* Theorem 13 gives $C(M_n)\ge c_0+nk$; comparison with $B_C(T)$ yields the depth bound. Under $\mathfrak C_{B.2}$, Theorem 14 gives the displayed lower bound for $C_{\mathrm{uni}}$. The budget bridge gives $B_C(T)\ge C_{\mathrm{uni}}$, completing the second implication. ∎
 
-**Corollary 14.1a (Conditional Operational Self-Modeling Lower-Bound Hierarchy).** Choose an operational horizon and a strictly increasing registered physical-budget lower-bound map $b$ from retained operational complexity to physical implementation budget. If the depth-$n$ implementation budget obeys
+<a id="corollary-141a-conditional-operational-self-modeling-lower-bound-hierarchy"></a>**Corollary 14.1a (Conditional Operational Self-Modeling Lower-Bound Hierarchy).** Choose an operational horizon and a strictly increasing registered physical-budget lower-bound map $b$ from retained operational complexity to physical implementation budget. If the depth-$n$ implementation budget obeys
 $$
 B_{\mathrm{phys}}(M_n)\ge b(C(M_n)),
 $$
@@ -696,22 +682,20 @@ b(c_0+n_2k)>b(c_0+n_1k).
 $$
 This compares the certified lower bounds and makes no infimum-attainment claim. ∎
 
-
-
-**Definition 14.1d (Self/World Allocation Ledger $\mathfrak C_{\mathrm{SW}}$).** Let $S$ be a finite Property-R predictor over an operational horizon $T$ with total retained implementation budget $B_C(T)$. A self/world allocation ledger is a finite forward-locked record
+**Definition 14.1d (Self/World Allocation Ledger $\mathfrak C_{\mathrm{SW}}$).** Let $S$ be a finite Property-R predictor over an operational horizon $T$ with total retained implementation budget $B_C(T)$. A self/world allocation ledger is a finite record of the outcome-independent design
 $$
 \mathfrak C_{\mathrm{SW}}
 =
-(\mathcal T_{\mathrm{self}},\mathcal T_{\mathrm{world}},\mathcal T_{\mathrm{sh}},C_{\mathrm{self}},C_{\mathrm{world}},C_{\mathrm{sh}},B_C(T),\delta_{\mathrm{self}},\text{additivity audit},\text{forward lock}),
+(\mathcal T_{\mathrm{self}},\mathcal T_{\mathrm{world}},\mathcal T_{\mathrm{sh}},C_{\mathrm{self}},C_{\mathrm{world}},C_{\mathrm{sh}},B_C(T),\delta_{\mathrm{self}},\text{additivity audit},\text{outcome independence}),
 $$
-where $\mathcal T_{\mathrm{self}}$ is the retained task family that updates or verifies the self-model component of $S$, $\mathcal T_{\mathrm{world}}$ is the retained external-target task family, and $\mathcal T_{\mathrm{sh}}$ records operations that are genuinely shared after the PPI quotient. The additivity audit certifies, with no double counting,
+where $\mathcal T_{\mathrm{self}}$ is the retained task family that updates or verifies the self-model component of $S$, $\mathcal T_{\mathrm{world}}$ is the retained external-target task family, and $\mathcal T_{\mathrm{sh}}$ records operations that are genuinely shared after the PPI quotient. The outcome-independence field verifies that the task families, architecture, costs, budget, and scoring rule are functions of the specified design and declared inputs. A score or adaptive report may depend on observations through the specified rule. The additivity audit certifies, with no double counting,
 $$
 C_{\mathrm{self}}+C_{\mathrm{world}}+C_{\mathrm{sh}}
 \le B_C(T).
 $$
 The parameter
 $$
-\delta_{\mathrm{self}}:=\alpha_{SPAP}-PP_{\mathrm{self}}
+\delta_{\mathrm{self}}:=\alpha_{\mathrm{SPAP}}-PP_{\mathrm{self}}
 $$
 is the certified distance of the self-model task family from the SPAP boundary. The ledger is task- and horizon-relative: it does not assert that every bit of self-modeling competes with every external task, and it does not identify shared representation cost with a separate resource unless the additivity audit does so.
 
@@ -784,7 +768,7 @@ f(\delta_w)
 $$
 and $c_w>0$ by Definition 14.1g. Injectivity gives at most one admissible $\delta_w$. Moreover, $f$ is continuous, with $f(\delta)\to\infty$ as $\delta\downarrow0$ and $f(\delta)\to0$ as $\delta\uparrow1$, so it maps $(0,1)$ bijectively onto $(0,\infty)$. Write $R_B:=B_C-C_{\mathrm{sh}}$. If $R_B>0$, every $r\in(0,R_B)$ gives a distinct admissible pair $\delta_s=f^{-1}(r/c_s)$ and $\delta_w=f^{-1}((R_B-r)/c_w)$ satisfying (14.1h.1). If $R_B\le0$, there is no admissible pair because both task terms are positive. Thus the budget equation has either no admissible pair or infinitely many, and supplies no objective or optimization stationarity condition. ∎
 
-**Proposition 14.1h.a (Complete Finite Self/World Pareto Census).** Let $\mathcal A$ be a nonempty finite census of architectures. For each $a\in\mathcal A$, freeze exact response utilities $(u_s(a),u_w(a))$, a no-double-count cost triple $(c_s(a),c_w(a),c_{sh}(a))$, and a budget $B$. Assume the submitted representations provide terminating exact procedures for the budget inequalities, utility comparisons and declared response-equivalence comparisons; when scalar selection is requested, also assume terminating exact evaluation and comparison of the chosen objective. Let
+<a id="proposition-141ha-complete-finite-selfworld-pareto-census"></a>**Proposition 14.1h.a (Complete Finite Self/World Pareto Census).** Let $\mathcal A$ be a nonempty finite census of architectures. For each $a\in\mathcal A$, freeze exact response utilities $(u_s(a),u_w(a))$, a no-double-count cost triple $(c_s(a),c_w(a),c_{sh}(a))$, and a budget $B$. Assume the submitted representations provide terminating exact procedures for the budget inequalities, utility comparisons and declared response-equivalence comparisons; when scalar selection is requested, also assume terminating exact evaluation and comparison of the chosen objective. Let
 $$
 \mathcal F
 =
@@ -806,9 +790,7 @@ Exhaustive pairwise comparison terminates and returns all and only the Pareto-op
 
 *Proof.* The assumed exact procedures and finiteness make budget filtering and exhaustive dominance comparisons terminate. Equation (14.1h.a.2) is precisely the definition of nondominance, so the returned candidate set is exact. A real function on nonempty finite $\mathcal F$ attains its maximum; the optimum is unique modulo response equivalence exactly when its maximizing set is contained in one equivalence class. ∎
 
-**Resolution TV-SPAP-04-R1 (Metadata).** Exact domain: nonempty finite architecture censuses with exact two-task utilities, no-double-count costs and budget. Premises: a populated common-unit ledger, declared response equivalence and the terminating evaluation/comparison procedures specified in Proposition 14.1h.a; a nonempty feasible set for the scalar-optimizer clause. Equivalence: equality in the declared complete retained response table. Budget: every feasible candidate and every ordered dominance pair. Verifier: exhaustive budget filtering, pairwise dominance and exact scalar-objective comparison. Falsifier: an omitted nondominated candidate, an included dominated candidate, or a strict optimizer tied by an inequivalent candidate. Provenance class: source-internal finite optimization schema. Downstream consumers: Definition 14.1d and `TV-SPAP-04`. Nonvacuity: two feasible candidates with utility pairs $(1,0)$ and $(0,1)$. This is `positive-discharge` of the finite classifier.
-
-**Proposition 14.1h.b (Populated Three-Architecture Allocation Record).** Register two binary success protocols $T_s,T_w$, one self task and one world task, and compare response tables by equality of their two success probabilities. Let
+<a id="proposition-141hb-populated-three-architecture-allocation-record"></a>**Proposition 14.1h.b (Populated Three-Architecture Allocation Record).** Register two binary success protocols $T_s,T_w$, one self task and one world task, and compare response tables by equality of their two success probabilities. Let
 $$
 \begin{array}{c|c|c}
 a&(u_s(a),u_w(a))&(c_s(a),c_w(a),c_{sh}(a))\\ \hline
@@ -818,7 +800,7 @@ a_b&(3/4,3/4)&(1,1,1).
 \end{array}
 \tag{14.1h.b.1}
 $$
-The common unit is one finite stochastic-circuit operation and $B=3$. The operations for $a_s$ and $a_w$ are their respective response gates. Architecture $a_b$ uses those two gates and one shared clock/dispatch gate, which is charged once in $c_{sh}$. All three architectures are feasible and Pareto optimal. For the forward-locked scalar objective
+The common unit is one finite stochastic-circuit operation and $B=3$. The operations for $a_s$ and $a_w$ are their respective response gates. Architecture $a_b$ uses those two gates and one shared clock/dispatch gate, which is charged once in $c_{sh}$. All three architectures are feasible and Pareto optimal. For the specified scalar objective
 $$
 U(u_s,u_w,c_s,c_w,c_{sh})=u_su_w,
 \tag{14.1h.b.2}
@@ -829,9 +811,7 @@ Each row has a finite formal realization: a registered rational-coin channel emi
 
 *Proof.* The costs are respectively $1,1,3$, so every row is feasible. Neither specialist dominates $a_b$, because its retained utility vanishes on one task, and $a_b$ does not dominate either specialist because $3/4<1$ on that specialist's task. The specialists do not dominate one another. Thus the Pareto set is the full census. Equation (14.1h.b.2) has values $0,0,9/16$, proving strict selection. Rational-coin stochastic matrices realize the displayed response laws exactly, and direct inspection proves the operation census and no-double-count claim. ∎
 
-**Resolution TV-SPAP-04-R2 (Metadata).** Exact domain: the three generic two-task stochastic architectures and operation ledger in (14.1h.b.1). Premises: the displayed response tables, costs, budget, response equivalence and forward-locked scalar objective. Equivalence: equality of both retained success probabilities. Budget: all three candidates and the complete operation list $\{s,w,h\}$. Verifier: exhaustive feasibility/dominance comparison, exact objective values and rational-channel realization. Falsifier: an omitted candidate in the declared census, a hidden operation, a duplicated shared cost or a tied inequivalent maximizer. Provenance class: source-internal finite allocation witness. Downstream consumers: Proposition 14.1h.a and the generic finite-census component of `TV-SPAP-04`. This gives `positive-discharge` of one populated generic Pareto/optimizer instance. The Definition-14.1d target remains `C+R`-open until one finite Property-R predictor, horizon, self-model verification/update task, $\delta_{\mathrm{self}}$, forward lock and PPI-shared operation audit are populated on the same formal realization.
-
-**Proposition 14.1h.c (Diagonal Self/World Ledger Fields with a Fixed Self-Report).** Let $\mathcal M$ be the class of finite programs of a fixed universal prefix machine, coded by natural numbers, with Peano arithmetic representing its finite-step computation relation, and retain its predictors that report rational binary marginals. Fix $k_{PP}>0$, a horizon $T\in\mathbb N$ with $T\ge1$, and rationals $r\in(0,1/2]$ and $q\in(1/2,1)$. Score every report by the logarithmic rule of Theorem 11a, with $PP$ given by Definition 7, and let the world process $(X_t)$ be the uniform-stationary symmetric two-state Markov chain with persistence $q$. Let $S=S_{r,q}\in\mathcal M$ carry a nominated bit $\phi$ and execute, in each cycle $t\le T$, the operations
+<a id="proposition-141hc-diagonal-selfworld-ledger-fields-with-a-fixed-self-report"></a>**Proposition 14.1h.c (Diagonal Self/World Ledger Fields with a Fixed Self-Report).** Let $\mathcal M$ be the class of finite programs of a fixed universal prefix machine, coded by natural numbers, with Peano arithmetic representing its finite-step computation relation, and retain its predictors that report rational binary marginals. Fix $k_{PP}>0$, a horizon $T\in\mathbb N$ with $T\ge1$, and rationals $r\in(0,1/2]$ and $q\in(1/2,1)$. Score every report by the logarithmic rule of Theorem 11a, with $PP$ given by Definition 7, and let the world process $(X_t)$ be the uniform-stationary symmetric two-state Markov chain with persistence $q$. Let $S=S_{r,q}\in\mathcal M$ carry a nominated bit $\phi$ and execute, in each cycle $t\le T$, the operations
 $$
 \begin{array}{c|l|c}
 \text{operation}&\text{action}&\text{family}\\ \hline
@@ -844,30 +824,127 @@ v_w&\text{record }(\hat q_t,\mathbf 1\{X_{t+1}=X_t\})&\mathcal T_{\mathrm{world}
 \end{array}
 \tag{14.1h.c.1}
 $$
-Put $\alpha_{SPAP}:=1/(1+k_{PP}\ln2)$, $C_{\mathrm{self}}=3T$, $C_{\mathrm{world}}=2T$, $C_{\mathrm{sh}}=T$ and $B_C(T)=6T$, the common unit being one register operation.
+Put $\alpha_{\mathrm{SPAP}}:=1/(1+k_{PP}\ln2)$, $C_{\mathrm{self}}=3T$, $C_{\mathrm{world}}=2T$, $C_{\mathrm{sh}}=T$ and $B_C(T)=6T$, the common unit being one register operation.
 
 1. $\mathcal M$ has the finite operational subcapacity of Property R by Proposition 2, and it satisfies the diagonal-closure hypotheses of Theorem 11 for its rational-reporting predictors: for each such predictor, the recursion theorem supplies the program that reads the predictor's report on its own nominated bit and commits by (11). The program $S$ is the diagonal system of the constant predictor $r$, augmented by the world operations, so it is a finite Property-R predictor whose self-prediction component is the fixed report $s$.
-2. For each rational-reporting predictor $P$ of $\mathcal M$, let $S_P$ be the diagonal system that item 1 builds against $P$, and let $PP_t(P;S)$ denote the performance of $P$ at cycle $t$ on a system $S$. Then $PP_t(P;S_P)\le\alpha_{SPAP}$ at every cycle, with equality exactly when the report of $P$ there is $1/2$. The constant report $1/2$ has $PP_t=\alpha_{SPAP}$ on every system, so
+2. For each rational-reporting predictor $P$ of $\mathcal M$, let $S_P$ be the diagonal system that item 1 builds against $P$, and let $PP_t(P;S)$ denote the performance of $P$ at cycle $t$ on a system $S$. Then $PP_t(P;S_P)\le\alpha_{\mathrm{SPAP}}$ at every cycle, with equality exactly when the report of $P$ there is $1/2$. The constant report $1/2$ has $PP_t=\alpha_{\mathrm{SPAP}}$ on every system, so
 $$
-\alpha_{SPAP}=\max_{P}\ \inf_{Q,\,t}PP_t(P;S_Q),
+\alpha_{\mathrm{SPAP}}=\max_{P}\ \inf_{Q,\,t}PP_t(P;S_Q),
 $$
-with $P$ and $Q$ ranging over the rational-reporting predictors of $\mathcal M$. Thus $\alpha_{SPAP}$ is the certified class-relative boundary of the predictor-indexed diagonal family $\mathcal D_{\mathcal M}:=\{S_Q\}$: it is the largest performance that a rational-reporting predictor guarantees at every cycle on every member of $\mathcal D_{\mathcal M}$. The program $S_{r,q}$ is the member $S_{P_r}$ of the constant predictor $P_r$ with report $r$, augmented by the world operations $w$ and $v_w$, which do not act on $\phi$. Since $r\le1/2$, law (11) sets its nominated bit to $1$ at every cycle, so the constant report $1$ has $PP_t=1$ on $S_{r,q}$; the boundary $\alpha_{SPAP}$ bounds each predictor on its own diagonal system.
+with $P$ and $Q$ ranging over the rational-reporting predictors of $\mathcal M$. Thus $\alpha_{\mathrm{SPAP}}$ is the certified class-relative boundary of the predictor-indexed diagonal family $\mathcal D_{\mathcal M}:=\{S_Q\}$: it is the largest performance that a rational-reporting predictor guarantees at every cycle on every member of $\mathcal D_{\mathcal M}$. The program $S_{r,q}$ is the member $S_{P_r}$ of the constant predictor $P_r$ with report $r$, augmented by the world operations $w$ and $v_w$, which do not act on $\phi$. Since $r\le1/2$, law (11) sets its nominated bit to $1$ at every cycle, so the constant report $1$ has $PP_t=1$ on $S_{r,q}$; the boundary $\alpha_{\mathrm{SPAP}}$ bounds each predictor on its own diagonal system.
 3. At every cycle, $\phi_{t+1}=1$, the report $r$ of $P_r$ on its own diagonal system has $PE_{\mathrm{self}}=\ln(1/r)$, and its gap to the boundary of item 2 is
 $$
 \delta_{\mathrm{self}}
-=\alpha_{SPAP}-\frac1{1+k_{PP}\ln(1/r)}
+=\alpha_{\mathrm{SPAP}}-\frac1{1+k_{PP}\ln(1/r)}
 =\frac{k_{PP}\ln\bigl(1/(2r)\bigr)}{(1+k_{PP}\ln2)\bigl(1+k_{PP}\ln(1/r)\bigr)},
 \tag{14.1h.c.2}
 $$
 which vanishes exactly at $r=1/2$. The world component has expected per-cycle loss $\eta(q):=-q\ln q-(1-q)\ln(1-q)<\ln2$, the loss of the uninformed report $1/2$.
-4. The record $\mathfrak C_{\mathrm{SW}}(S)$ with these families, costs, budget and $\delta_{\mathrm{self}}$ populates the world and shared families, the cost triple, budget, additivity audit and forward lock of Definition 14.1d, and its $\delta_{\mathrm{self}}$ is the predictor-indexed gap of item 3. The six operations write six distinct retained registers, so the PPI quotient identifies none of them, and $h$ is the only operation whose output both task families read. Every operation occurrence is charged once, and $C_{\mathrm{self}}+C_{\mathrm{world}}+C_{\mathrm{sh}}=B_C(T)$. Every field is a function of $(k_{PP},T,r,q)$ fixed before the first cycle and independent of all realized outcomes, which is the forward lock. Each operation is a classical register map, hence a channel of the form (11d.1), and the world process is a classical Markov channel, so the whole record is populated on one finite formal realization. Its self family is a fixed-report self-prediction task: $s$ writes the same report $r$ in every cycle, and no operation compares $p_t$ with $\phi_{t+1}$.
+4. The record $\mathfrak C_{\mathrm{SW}}(S)$ with these families, costs, budget and $\delta_{\mathrm{self}}$ populates the world and shared families, the cost triple, budget, additivity audit and outcome-independence check of Definition 14.1d, and its $\delta_{\mathrm{self}}$ is the predictor-indexed gap of item 3. The six operations write six distinct retained registers, so the PPI quotient identifies none of them, and $h$ is the only operation whose output both task families read. Every operation occurrence is charged once, and $C_{\mathrm{self}}+C_{\mathrm{world}}+C_{\mathrm{sh}}=B_C(T)$. Every field is a function of $(k_{PP},T,r,q)$ specified by the model independently of the realized trajectory. Each operation is a classical register map, hence a channel of the form (11d.1), and the world process is a classical Markov channel, so the whole record is populated on one finite formal realization. Its self family is a fixed-report self-prediction task: $s$ writes the same report $r$ in every cycle, and no operation compares $p_t$ with $\phi_{t+1}$.
 5. $C_{\mathrm{self}}=3T$ for every $r$. For every $c>0$ and $\delta_0>0$ there is a rational $r<1/2$ with $\delta_{\mathrm{self}}\in(0,\delta_0]$ and $C_{\mathrm{self}}<c\log(1/\delta_{\mathrm{self}})/\delta_{\mathrm{self}}^2$. Hence the populated fields of a record whose self task is a diagonal self-prediction task at predictor-indexed gap $\delta_{\mathrm{self}}$ do not entail a bound $C_{\mathrm{self}}\ge c\log(1/\delta_{\mathrm{self}})/\delta_{\mathrm{self}}^2$; Proposition 14.1e obtains its frontier from a self-model verification/update task covered by the separate certificate $\mathfrak C_{B.2}$ and its cost bridge.
 
-*Proof.* For item 1, the coding, the universal interpreter, composition with Boolean post-processing, and the representation of finite-step computation in Peano arithmetic are the hypotheses of Proposition 2. A rational report has a decidable threshold predicate, the laws selected by (11) are point masses and therefore deterministic commitments, and Kleene's recursion theorem (Theorem A.1.5) gives each diagonal program access to its own code; this is the uniform diagonal closure of Theorem 11. Item 2 applies Theorem 11a to each $P$ on $S_P$: every report $p$ incurs $PE(p)\ge\ln2$ there, with equality exactly at $p=1/2$, and $PE\mapsto1/(1+k_{PP}PE)$ is strictly decreasing. The report $1/2$ incurs $\ln2$ on either outcome, so its infimum over $\mathcal D_{\mathcal M}$ and all cycles is $\alpha_{SPAP}$, while every $P$ has $\inf_{Q,t}PP_t(P;S_Q)\le PP_1(P;S_P)\le\alpha_{SPAP}$; this gives the maximin identity. On $S_{r,q}$ the report $1$ meets the outcome $1$ at every cycle, so its loss is $0$ and its performance is $1$. For item 3, $r\le1/2$ makes (11) commit $\phi_{t+1}=1$, so the logarithmic loss is $-\ln r$, and the displayed identity is $1/(1+a)-1/(1+b)=(b-a)/((1+a)(1+b))$ with $a=k_{PP}\ln2$ and $b=k_{PP}\ln(1/r)$. The Markov chain persists with conditional probability $q$ given the past, so the expected loss of the report $q$ is $\eta(q)$, and $\eta(q)<\ln2$ for $q\ne1/2$ because binary entropy is strictly concave with maximum $\ln2$ at $1/2$. Item 4 is direct inspection of (14.1h.c.1): the output registers are the cycle register, the self report, $\phi$, the self record, the world report and the world record; $s$ and $w$ fire only on the dispatch written by $h$; $s$ writes the constant $r$, $u$ reads $p_t$ through the threshold of (11) and $v_s$ copies the pair $(p_t,\phi_{t+1})$; and the six occurrences per cycle over $T$ cycles give the stated counts. For item 5, (14.1h.c.2) is continuous in $r$, positive for $r<1/2$ and zero at $r=1/2$, so rationals $r\uparrow1/2$ give $\delta_{\mathrm{self}}\downarrow0$, while $\log(1/\delta)/\delta^2\to\infty$ as $\delta\downarrow0$ and $C_{\mathrm{self}}=3T$ stays fixed. ∎
+*Proof.* For item 1, the coding, the universal interpreter, composition with Boolean post-processing, and the representation of finite-step computation in Peano arithmetic are the hypotheses of Proposition 2. A rational report has a decidable threshold predicate, the laws selected by (11) are point masses and therefore deterministic commitments, and Kleene's recursion theorem (Theorem A.1.5) gives each diagonal program access to its own code; this is the uniform diagonal closure of Theorem 11. Item 2 applies Theorem 11a to each $P$ on $S_P$: every report $p$ incurs $PE(p)\ge\ln2$ there, with equality exactly at $p=1/2$, and $PE\mapsto1/(1+k_{PP}PE)$ is strictly decreasing. The report $1/2$ incurs $\ln2$ on either outcome, so its infimum over $\mathcal D_{\mathcal M}$ and all cycles is $\alpha_{\mathrm{SPAP}}$, while every $P$ has $\inf_{Q,t}PP_t(P;S_Q)\le PP_1(P;S_P)\le\alpha_{\mathrm{SPAP}}$; this gives the maximin identity. On $S_{r,q}$ the report $1$ meets the outcome $1$ at every cycle, so its loss is $0$ and its performance is $1$. For item 3, $r\le1/2$ makes (11) commit $\phi_{t+1}=1$, so the logarithmic loss is $-\ln r$, and the displayed identity is $1/(1+a)-1/(1+b)=(b-a)/((1+a)(1+b))$ with $a=k_{PP}\ln2$ and $b=k_{PP}\ln(1/r)$. The Markov chain persists with conditional probability $q$ given the past, so the expected loss of the report $q$ is $\eta(q)$, and $\eta(q)<\ln2$ for $q\ne1/2$ because binary entropy is strictly concave with maximum $\ln2$ at $1/2$. Item 4 is direct inspection of (14.1h.c.1): the output registers are the cycle register, the self report, $\phi$, the self record, the world report and the world record; $s$ and $w$ fire only on the dispatch written by $h$; $s$ writes the constant $r$, $u$ reads $p_t$ through the threshold of (11) and $v_s$ copies the pair $(p_t,\phi_{t+1})$; and the six occurrences per cycle over $T$ cycles give the stated counts. For item 5, (14.1h.c.2) is continuous in $r$, positive for $r<1/2$ and zero at $r=1/2$, so rationals $r\uparrow1/2$ give $\delta_{\mathrm{self}}\downarrow0$, while $\log(1/\delta)/\delta^2\to\infty$ as $\delta\downarrow0$ and $C_{\mathrm{self}}=3T$ stays fixed. ∎
 
-**Resolution TV-SPAP-04-R3 (Metadata).** Exact domain: the program $S_{r,q}$ of Proposition 14.1h.c in the universal-prefix-machine class $\mathcal M$, with rational $r\in(0,1/2]$, rational $q\in(1/2,1)$, $k_{PP}>0$ and horizon $T\ge1$. Premises: Proposition 2, Theorems 11 and 11a, Definition 7 with logarithmic loss, and the operation table (14.1h.c.1). Equivalence: equality of the retained per-cycle records and of the listed operation occurrences. Budget: all $6T$ operation occurrences over the horizon, and every rational-reporting predictor of $\mathcal M$ against its own diagonal system for the boundary. Verifier: Theorem 11a's case analysis on each diagonal system, the maximin identity of item 2, the identity (14.1h.c.2), register-by-register inspection of (14.1h.c.1) and exact occurrence counts. Falsifier: a rational-reporting predictor exceeding $\alpha_{SPAP}$ on its own diagonal system, a used operation missing from (14.1h.c.1) or charged twice, an operation other than $h$ read by both families, or a field depending on a realized outcome. Provenance class: source-internal finite formal ledger-field population and nonentailment. Downstream consumers: Definition 14.1d, Propositions 14.1e and 14.1h.a--14.1h.b, and `TV-SPAP-04`. Nonvacuity: $r=1/4$ gives $\delta_{\mathrm{self}}>0$ and $r=1/2$ gives $\delta_{\mathrm{self}}=0$. This is `positive-discharge` of the Property-R predictor, horizon, the certified boundary $\alpha_{SPAP}$ of the predictor-indexed diagonal family $\mathcal D_{\mathcal M}$ with its maximin identity, the gap $\delta_{\mathrm{self}}$ of the report $r$ against its own diagonal system, forward lock and PPI-shared operation ledger on one finite register realization, and `nonentailment` of Proposition 14.1e's cost bound from those populated fields. `TV-SPAP-04` retains `C+R`: on the fixed system $S_{r,q}$ the constant report $1$ attains $PP=1$, and a Definition-14.1d self-model verification/update task family on one fixed system, with a same-task SPAP boundary certified for that task, its cost and its $\delta_{\mathrm{self}}$, remains to be populated on the same formal realization. Proposition 14.1e's frontier on a populated ledger additionally consumes the certificate $\mathfrak C_{B.2}$ owned by `TV-SPAP-02`.
+<a id="proposition-141hd-populated-predictive-selfworld-frontier-on-one-system"></a>**Proposition 14.1h.d (Populated Predictive Self/World Frontier on One System).** Use the single system, score and admissible committed-report interface of Theorems B.2e–B.2f. Fix a rational $0<\delta\le1/8$, set $a=2\delta$, and choose an odd integer $N$ for which the exact rational majority error
+$$
+e=e_N(a):=\sum_{j=0}^{(N-1)/2}\binom Nj
+(1/2+a)^j(1/2-a)^{N-j}\le\delta.
+\tag{14.1h.d.1}
+$$
+Such an $N$ exists: Hoeffding gives $e_N(a)\le e^{-2Na^2}$, so any odd $N\ge\ln(1/\delta)/(8\delta^2)$ suffices. An exact finite search through odd $N$ using the rational sum (14.1h.d.1) also terminates. Register
+$$
+H_\delta:=\frac1{4/7-\delta}-\frac74
+=\frac{49\delta}{16-28\delta},\qquad
+b:=H_\delta-4\delta e,\qquad
+p_\delta:=1-\sqrt{\frac14+b}.
+\tag{14.1h.d.2}
+$$
+One retained dispatch operation runs first and enables two independent circuit branches. The self branch begins with public preparation; the world branch is enabled by the dispatch directly and has no dependency on completion of self preparation. The public preparation computes these rational data, stores $p_\delta$ by its finite algebraic code and initializes the self counter and the training report $(p_\delta,0,0)$. Let $D_\delta$ be the full Boolean-gate and registered-preparation trace length of this preparation, including any horizon search, input preparation and retained arithmetic. It is determined before any hidden-sign outcome. One explicit implementation computes binomial coefficients by Pascal addition, powers by repeated multiplication and the sum by exact integer arithmetic, keeping fractions as numerator/denominator pairs. Boolean full-adders, schoolbook multiplication and finite comparisons implement every step; retain and charge their complete gate trace. A nominated $N$ may instead be supplied with its exact (14.1h.d.1) check, with that input preparation and check included in $D_\delta$.
 
-**Remark 3: Conceptual Synthesis—Branch-Separated Prediction Relativity.**
+After preparation, the self task acquires $N$ triples from (B.5s) and increments the counter by each $Y$ bit. It reads the counter, commits
+$$
+M=(p_\delta,\widehat q,0),\qquad
+\widehat q=\mathbf1\!\left\{\sum_{i=1}^NY_i>N/2\right\},
+\tag{14.1h.d.3}
+$$
+then acquires one fresh evaluation triple and writes its score to a verification register. The evaluation window contains this final forecast; its registered law includes the preceding training randomness. Independently, the world family makes $K\in\mathbb N$ forecasts of external fair bits, each with report $1/2$, one acquisition and a squared-score verification. The one shared dispatch operation writes the enable token read by both task controllers. The world controller reads neither $\delta$, $N$ nor any self-preparation result. With the registered operations of Theorem B.2f, set
+$$
+C_{\mathrm{self}}=D_\delta+2N+4,\quad
+C_{\mathrm{world}}=3K,\quad C_{\mathrm{sh}}=1,\quad
+B_C(T)\ge D_\delta+2N+5+3K.
+\tag{14.1h.d.4}
+$$
+Here the four final self operations are counter readout, model commitment, evaluation acquisition and score-record write. The horizon $T$ is the finite execution window for this specified execution schedule; the displayed budget counts every used operation. The self/world ledger then has all of the following properties.
+
+1. **Exact same-task gap.** Its Definition-7 window performance is
+$$
+PP_{\mathrm{self}}=\frac1{1+\mathbb E[L]}=
+\frac47-\delta,\qquad
+\delta_{\mathrm{self}}=\alpha_{\mathrm{SPAP}}-PP_{\mathrm{self}}=\delta.
+\tag{14.1h.d.5}
+$$
+This equality holds under each fixed initial sign. The sign is not averaged or resampled. Over training randomness, the probability that the committed model's conditional performance falls below this same target is exactly $e\le\delta$.
+2. **Populated cost bridge.** The actual self verification/update strategy is admitted by Theorem B.2e and satisfies its confidence requirement at the very same $\delta$. Every operation used by that strategy belongs to the self ledger, hence
+$$
+C_{\mathrm{self}}\ge C_{\mathrm{uni}}(\delta_{\mathrm{self}}),\qquad
+C_{\mathrm{world}}\le B_C(T)-1-
+\frac{3}{128\delta_{\mathrm{self}}^2}
+\ln\!\left(\frac1{4\delta_{\mathrm{self}}}\right).
+\tag{14.1h.d.6}
+$$
+In particular Proposition 14.1e holds throughout this rational task family with $c_{\mathrm{SPAP}}=1/128$ and $\delta_0=1/8$.
+3. **One carrier and a complete finite allocation census.** The sign states, self-model update, verification record, external world outcomes and shared dispatch use the same finite realization of Theorem B.2f. For any finite set $\mathcal D$ of distinct registered rational gaps, fix one checked odd $N_\delta$ and its charged preparation trace for each gap. On the registered census of challenge inputs $a=2\delta$, their checked self procedures and $K$ world forecasts, the feasible world allocations are
+$$
+1\le K\le K_{\max}(\delta):=
+\left\lfloor\frac{B_C-1-D_\delta-2N_\delta-4}{3}\right\rfloor
+\tag{14.1h.d.7}
+$$
+whenever the right side is at least one. For utilities $(4/7-\delta,K)$, the Pareto set is obtained by retaining these maximal-$K$ rows and deleting a row whenever a smaller gap has at least as large a $K_{\max}$. The specified objective $J=K+4/7-\delta$ has one strict maximizing response row whenever the feasible census is nonempty: choose the largest $K_{\max}$, then the smallest gap among its ties.
+
+*Proof.* Since $0<\delta\le1/8$ and $e\le\delta$,
+$$
+0<\frac{49}{16}\delta-4\delta^2\le b
+\le H_\delta\le\frac{49}{100}<\frac34.
+$$
+Thus $1/4<1/4+b<1$, and $0<p_\delta<1/2$. Its diagonal outcome is consequently $X=1$ and its squared error is exactly $1/4+b$. Oddness of $N$ excludes a tie. Complementing all $Y$ bits interchanges the two sign laws and the two majority errors, so both errors equal the exact value $e$ in (14.1h.d.1).
+
+Given a correct majority, the future $Y$ classification risk is $1/2-a$; given a wrong one it is $1/2+a$. The always-zero $Z$ classification has risk $a$. The two conditional total risks are therefore
+$$
+R_{\mathrm{good}}=\frac34+b
+=\frac34+H_\delta-4\delta e,
+\qquad
+R_{\mathrm{bad}}=\frac34+b+4\delta
+=\frac34+H_\delta+4\delta(1-e).
+\tag{14.1h.d.8}
+$$
+Both signs have strictly positive error probability because all finite Bernoulli words have positive probability; also $e\le1/8<1$. Hence the good committed predictor strictly exceeds $4/7-\delta$, and the bad one falls strictly below it. The violation probability is exactly $e$. Averaging the risks over the training record, using the registered window law and the tower property, gives
+$$
+\mathbb E[L]=(1-e)R_{\mathrm{good}}+eR_{\mathrm{bad}}
+=\frac34+b+4\delta e=\frac34+H_\delta.
+$$
+Applying Definition 7 to this mean loss proves (14.1h.d.5). The mean is taken before the reciprocal; it is not an average of the two performance values. Thus the deterministic design gap and the conditional-predictor confidence target coincide numerically without identifying their distinct probability laws.
+
+The self procedure uses the same $Y$ hard pair, score and committed-report class as Theorem B.2e. Its checked violation probability makes it an admissible member of the infimum defining $C_{\mathrm{uni}}(\delta)$. The ledger charges all its public preprocessing, acquisitions, updates and final verification, proving the cost bridge. The gate trace for $D_\delta$ is finite because every loop has the fixed finite bound $N$, or terminates at the odd $N$ ensured by Hoeffding. No arithmetic, sign read or model answer is supplied without a charged operation. The cost triple (14.1h.d.4) is independent of every actual outcome. Every occurrence has one owner: the self task uses its preparation, counter and four final operations; each world forecast uses its own three operations; both tasks read the single dispatch output. The two branches are unrolled independently after dispatch, so the world branch has no self-preparation enabling predecessor. The world program has no read path from self preprocessing. This is the complete causal sharing audit. Distinct retained outcome, model and verification registers preserve the listed task responses in the PPI quotient, and the dispatch occurrence is charged once.
+
+For a fully numerical operation instance, take $\delta=d/v=1/8$ and $N=5$. The binomial tail gives $e=53/512$, $b=11219/25600$ and $p_\delta=1-\sqrt{17619}/160$. Use width-$64$ unsigned registers. Prepare the nine distinct constants $0,1,2,4,16,28,49,8,5$ bit by bit. Form $g=2v$, $f=4d$, $h=v+f$, $\ell=v-f$; compute the fifth Pascal row by its ten interior additions and all powers of $g,h,\ell$ through degree five by fifteen multiplications. For $j=0,1,2$, compute each term $\binom5j h^j\ell^{5-j}$ by two multiplications and add it to $E$, initially zero. Check $Ev\le dg^5$ with two multiplications and one comparison. Form
+$$
+t=16v-28d,\quad
+n_b=((49d)v)g^5-(fE)t,\quad d_b=(vg^5)t,\quad
+n_u=d_b+4n_b,\quad d_u=4d_b.
+$$
+Prepare the three possible score numerators using the operations $n_u+d_u$, $n_u+d_u$ and then $(n_u+d_u)+d_u$; the duplicated addition is retained in this nominated trace. Check $1\le n_b$ and $n_u\le d_u$, then prepare the self counter and training model. All intermediates fit in $64$ bits. A full-adder uses two XOR, two AND and one OR gate; subtraction or comparison adds one NOT per bit, and schoolbook multiplication uses $64^2$ AND gates and $64$ additions of width $128$. This trace contains $18$ additions, $3$ subtractions, $3$ comparisons and $36$ multiplications. Its exact charge is
+$$
+D_{1/8}=9\cdot64+18\cdot5\cdot64
++6\cdot6\cdot64+36\cdot11\cdot64^2+2
+=1\,630\,658.
+$$
+Thus $C_{\mathrm{self}}=1\,630\,672$. With one world forecast, $C_{\mathrm{world}}=3$, $C_{\mathrm{sh}}=1$ and $B_C(T)=1\,630\,676$ populate every numerical budget field. The deliberately padded gate trace fixes a complete formal cost instance.
+
+Theorem B.2f realizes each occurrence on the same carrier and preserves the full path law. The sign is one persistent internal state of that system; changing a report changes its $X$ transition through the already fixed kernel, rather than constructing a new adversary for that predictor. The registered finite program is in Proposition 2's Property-R class; finite horizons use its bounded computations and finite storage. The completed ledger thus meets Definition 14.1d with the exact same-task boundary and gap. Additivity and (B.5p) give (14.1h.d.6). For $\delta\le1/8$, $\ln(1/(4\delta))\ge\tfrac13\ln(1/\delta)$, which gives $c_{\mathrm{SPAP}}=1/128$.
+
+Finally, (14.1h.d.7) is the exact integer budget inequality. At fixed gap, an allocation with smaller $K$ is dominated by the maximal feasible $K$. A maximal row is dominated by another exactly when that row has a smaller gap and at least as many world forecasts. This proves the Pareto rule and exhausts the declared census. Two different world counts differ by at least one, while all self utilities lie in an interval of length at most $1/8$; hence $J$ first selects the largest $K$. Among its ties, distinct gaps give distinct utilities and select the smallest gap strictly. ∎
+
+<a id="remark-3-conceptual-synthesis-branch-separated-prediction-relativity"></a>**Remark 3: Conceptual Synthesis—Branch-Separated Prediction Relativity.**
 
 Theorems 10–11 establish a diagonal obstruction to a universally exact predictor on their declared model classes. A quantitative **Prediction Coherence Boundary** requires a registered task, performance functional, model class, and a uniform quantitative bound such as the certified lower-bound branch of Theorem 14. Comparison with the relativistic causal frontier is therefore a structural analogy, not an identification.
 

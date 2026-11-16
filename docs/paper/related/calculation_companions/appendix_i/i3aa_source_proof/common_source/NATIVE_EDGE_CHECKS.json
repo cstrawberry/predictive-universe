@@ -1,0 +1,296 @@
+{
+  "all_pass": true,
+  "capacity_nats": "ln(4)",
+  "curved_weight_join": "smooth floor of actual line-length/rho; successor coefficient binding pending",
+  "energy_stock_and_receipt_identical_native_spectrum": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "exact_receiver_matrix_units": 64,
+  "flat_demo_weight_checks": [
+    {
+      "R": 1,
+      "s": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "weight_interval": [
+        "2",
+        "2"
+      ]
+    },
+    {
+      "R": 1,
+      "s": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "weight_interval": [
+        "2",
+        "2"
+      ]
+    },
+    {
+      "R": 1,
+      "s": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "weight_interval": [
+        "3",
+        "3"
+      ]
+    },
+    {
+      "R": 1,
+      "s": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "weight_interval": [
+        "3",
+        "3"
+      ]
+    },
+    {
+      "R": 2,
+      "s": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "weight_interval": [
+        "3/2",
+        "3/2"
+      ]
+    },
+    {
+      "R": 2,
+      "s": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "weight_interval": [
+        "2",
+        "2"
+      ]
+    },
+    {
+      "R": 2,
+      "s": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "weight_interval": [
+        "3",
+        "3"
+      ]
+    },
+    {
+      "R": 2,
+      "s": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "weight_interval": [
+        "3",
+        "3"
+      ]
+    },
+    {
+      "R": 3,
+      "s": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "weight_interval": [
+        "4/3",
+        "4/3"
+      ]
+    },
+    {
+      "R": 3,
+      "s": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "weight_interval": [
+        "2",
+        "2"
+      ]
+    },
+    {
+      "R": 3,
+      "s": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "weight_interval": [
+        "3",
+        "3"
+      ]
+    },
+    {
+      "R": 3,
+      "s": [
+        6,
+        0,
+        0,
+        0
+      ],
+      "weight_interval": [
+        "3",
+        "3"
+      ]
+    },
+    {
+      "R": 5,
+      "s": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "weight_interval": [
+        "6/5",
+        "6/5"
+      ]
+    },
+    {
+      "R": 5,
+      "s": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "weight_interval": [
+        "2",
+        "2"
+      ]
+    },
+    {
+      "R": 5,
+      "s": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "weight_interval": [
+        "3",
+        "3"
+      ]
+    },
+    {
+      "R": 5,
+      "s": [
+        10,
+        0,
+        0,
+        0
+      ],
+      "weight_interval": [
+        "3",
+        "3"
+      ]
+    },
+    {
+      "R": 10,
+      "s": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "weight_interval": [
+        "11/10",
+        "11/10"
+      ]
+    },
+    {
+      "R": 10,
+      "s": [
+        10,
+        0,
+        0,
+        0
+      ],
+      "weight_interval": [
+        "2",
+        "2"
+      ]
+    },
+    {
+      "R": 10,
+      "s": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "weight_interval": [
+        "3",
+        "3"
+      ]
+    },
+    {
+      "R": 10,
+      "s": [
+        20,
+        0,
+        0,
+        0
+      ],
+      "weight_interval": [
+        "3",
+        "3"
+      ]
+    }
+  ],
+  "full_native_inverse_and_energy_columns": 32768,
+  "full_native_pure_auxiliary_formation_nats": "4*ln(8)",
+  "native_factors_per_isolated_edge": 5,
+  "not_yet_joined": [
+    "global geometry/controller",
+    "actual predictive matter/stress",
+    "RCD/cosmological domain"
+  ],
+  "private_dump_retained_physically": true,
+  "ready_code": [
+    0,
+    2,
+    4,
+    6
+  ],
+  "ready_stock_debit": "theta*w for the actual positive coefficient supplied by the geometry source",
+  "retained_receiver_support_dimension": 4,
+  "whole_input_price_scope": "Ready-code cost ensemble only; full native channel all inputs."
+}

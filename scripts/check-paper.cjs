@@ -17,6 +17,8 @@ assert.equal(scenes.length, 24);
 assert.equal(sections.filter(section => section.group === 'Appendices').length, 26);
 assert(!sections.some(section => section.file.startsWith('related/pure_s_universality/')),
   'The separate Pure S paper is excluded from reader chapters and full-text indexing');
+assert(!sections.some(section => section.file.startsWith('related/calculation_companions/')),
+  'The calculation companions are excluded from reader chapters and full-text indexing');
 const pureS = context.window.PU_PAPER.relatedPapers.find(paper => paper.id === 'related--pure_s_universality--paper');
 assert(pureS && pureS.file.endsWith('.pdf'), 'Pure S has a direct PDF entry');
 assert.equal(fs.readFileSync(path.join(root, 'docs/paper', pureS.file)).subarray(0, 5).toString(), '%PDF-', 'The linked PDF exists');
@@ -35,7 +37,10 @@ for (const section of sections) {
   assert(!html.includes('\x00'), section.file + ' has no unresolved parser placeholders');
   if (!source.includes('undefined')) assert(!html.includes('undefined'), section.file + ' has no undefined output');
   assert(!html.includes('data-unknown-command'), section.file + ' has no unsupported math commands');
-  assert(!/<p(?:\s[^>]*)?>\s*\|/.test(html), section.file + ' has no table rows stranded as paragraphs');
+  assert(!/&lt;a\s+(?:id|name)=/.test(html), section.file + ' renders explicit anchors invisibly');
+  // A stranded row looks like a table row (cells separated by " | ", closing pipe); text that
+  // merely begins with a norm, ket or absolute value is ordinary prose.
+  assert(!/<p(?:\s[^>]*)?>\s*\|[^\n]*?\s\|\s[^\n]*\|\s*(?:\n|<\/p>)/.test(html), section.file + ' has no table rows stranded as paragraphs');
   // Check what readers actually see, including text inside MathML. Counting
   // successfully parsed equations alone misses formulas left as raw Markdown.
   const visible = html.replace(/<annotation\b[\s\S]*?<\/annotation>/g, '')
@@ -77,7 +82,7 @@ const contents = fs.readFileSync(path.join(root, 'docs/paper/contents.md'), 'utf
 assert(contents.includes('](' + pureS.file + ')'), 'The table of contents opens the separate PDF');
 let contentsLinks = 0;
 for (const [, label, file, anchor] of contents.matchAll(/\[([^\]\n]+)\]\(([^)\n]+\.md)(?:#([^)]*))?\)/g)) {
-  if (file.startsWith('related/pure_s_universality/')) {
+  if (file.startsWith('related/pure_s_universality/') || file.startsWith('related/calculation_companions/')) {
     assert(fs.existsSync(path.join(root, 'docs/paper', file)), label + ' opens an existing companion document');
     continue;
   }

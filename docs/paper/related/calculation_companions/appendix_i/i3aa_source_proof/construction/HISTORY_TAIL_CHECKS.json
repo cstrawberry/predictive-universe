@@ -1,0 +1,16 @@
+{
+  "all_pass": true,
+  "actual_H": 10,
+  "actual_O": 200,
+  "rho": 1,
+  "true_difference": 0,
+  "certified": true,
+  "node_count": 641,
+  "test_error_bound_outward": [
+    "25/4",
+    "104857601/16777216"
+  ],
+  "arithmetic_tolerance": "25/121497044871270232057970688",
+  "outward_rounding_bits": 102,
+  "scope": "Nonzero scalar direct-U regression; not actual enormous canonical row"
+}

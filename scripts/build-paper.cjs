@@ -35,11 +35,13 @@ const relatedPapers = [{
   source: 'related/pure_s_universality/paper.md',
   file: 'related/pure_s_universality/output/pdf/pure_s_universality.pdf'
 }];
-const sections = list(docs).filter(file => !file.startsWith('related/pure_s_universality/'))
+// Companion packages open directly as files, outside the reader's chapters and search.
+const companionFolders = ['related/pure_s_universality/', 'related/calculation_companions/'];
+const sections = list(docs).filter(file => !companionFolders.some(folder => file.startsWith(folder)))
   .sort((a, b) => groups.indexOf(group(a)) - groups.indexOf(group(b)) || a.localeCompare(b)).map(file => {
   const markdown = fs.readFileSync(path.join(docs, file), 'utf8');
   const id = file.replace(/\.md$/, '').replaceAll('/', '--');
-  const title = (markdown.match(/^#\s+(.+)$/m)?.[1] || path.basename(file, '.md').replaceAll('_', ' ')).replace(/\*\*/g, '').trim();
+  const title = (markdown.match(/^#\s+(.+)$/m)?.[1] || path.basename(file, '.md').replaceAll('_', ' ')).replace(/<a\s+(?:id|name)="[^"]*"\s*><\/a>/g, '').replace(/\*\*/g, '').trim();
   const number = file.match(/^(\d\d)_/)?.[1];
   const appendix = file.match(/^appendices\/appendix_([a-z])_/)?.[1].toUpperCase();
   const label = number ? shortTitles[Number(number)] : title.replace(/^Appendix\s+[A-Z][\s.:–—-]+/i, '');

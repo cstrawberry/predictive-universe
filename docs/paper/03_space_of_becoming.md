@@ -22,7 +22,7 @@ For the Fundamental Predictive Loop (Definition 4) to operate sustainably and ad
 
 These capabilities must operate in a coordinated, cyclical manner. Definition 13 assigns the task-relative Operational Threshold $C_{op}$ to qualifying implementations of the full loop. The inequality $C_{op}\ge K_0=3$ follows only on the Corollary 3 branch where every qualifying implementation satisfies (O1)–(O3) and (FC), uses a Hilbert carrier for the eight contexts, and obeys $C_P\ge\log_2d_0$.
 
-**Definition 5a (Protocol-Relative Functional Support and Irreducibility).** Let
+<a id="definition-5a-protocol-relative-functional-support-and-irreducibility"></a>**Definition 5a (Protocol-Relative Functional Support and Irreducibility).** Let
 $$
 \mathsf R_{\mathrm{loop}}:=\{b_m,b_p,b_v\}
 $$
@@ -114,7 +114,7 @@ I^{r\leftarrow0}\notin\mathcal Q_{\mathsf P,\epsilon}
 \text{for every }r\in\mathsf R_{\mathrm{loop}}.
 $$
 
-**Proposition 5a (Null-Role Response and Qualification Criteria).** Under Definition 5a, for every $r\in\mathsf T_0(I)$:
+<a id="proposition-5a-null-role-response-and-qualification-criteria"></a>**Proposition 5a (Null-Role Response and Qualification Criteria).** Under Definition 5a, for every $r\in\mathsf T_0(I)$:
 
 1. $r\in\operatorname{Supp}_{\mathsf P,0}(I)$ if and only if there are $P\in\mathsf P$ and $E\subseteq\Omega_P$ such that
    $$
@@ -158,7 +158,7 @@ d_{\mathrm{TV}}(\mu,\nu)
 $$
 Taking the maximum over $P\in\mathsf P$ proves part 1. For part 2, the first displayed inequality is precisely the negation of the strict membership condition for $I^{r\leftarrow0}\in\mathcal Q_{\mathsf P,\epsilon}$, whereas the second places its score at or below the registered baseline. For part 3, a strict decrease that leaves the null-replaced score greater than $A_0+\epsilon$ preserves qualification. Moreover, Definition 5a assigns support only to $r\in\mathsf T_0(I)$, so failure to register an admissible isolated typed null entails no conclusion about absence. ∎
 
-**Corollary 5a.1 (Support Transport under Certified Response–Intervention Equivalence).** Let $I$ and $J$ be full-loop implementations with finite protocol families $\mathsf P_I$ and $\mathsf P_J$. Suppose there are bijections
+<a id="corollary-5a1-support-transport-under-certified-response-intervention-equivalence"></a>**Corollary 5a.1 (Support Transport under Certified Response–Intervention Equivalence).** Let $I$ and $J$ be full-loop implementations with finite protocol families $\mathsf P_I$ and $\mathsf P_J$. Suppose there are bijections
 $$
 F:\mathsf P_I\to\mathsf P_J,
 \qquad
@@ -221,7 +221,7 @@ d_{\mathsf P_I}\!\left(I,I^{r\leftarrow0}\right).
 $$
 Hence support membership is transported by $\tau$; the inverse hypotheses give equality rather than one-sided inclusion. Score invariance transports qualification of the original and every null-replaced implementation, which proves preservation of irreducibility. ∎
 
-**Theorem 5a.2 (Complete Finite Response-Table Support Audit).** Fix the finite protocols, outcome alphabets, score datum and three typed-null contracts of Definition 5a. Assume the submitted representations provide terminating exact procedures for comparing response-law entries and for evaluating the score on the original and three null response tables and comparing these values with $A_0+\epsilon$. For a submitted finite implementation $I$, form the exact table
+<a id="theorem-5a2-complete-finite-response-table-support-audit"></a>**Theorem 5a.2 (Complete Finite Response-Table Support Audit).** Fix the finite protocols, outcome alphabets, score datum and three typed-null contracts of Definition 5a. Assume the submitted representations provide terminating exact procedures for comparing response-law entries and for evaluating the score on the original and three null response tables and comparing these values with $A_0+\epsilon$. For a submitted finite implementation $I$, form the exact table
 $$
 \mathsf T(I)
 =
@@ -242,9 +242,7 @@ Exact finite comparison of this table returns all of the following without inspe
 
 *Proof.* Item 1 is Proposition 5a(1), applied to each of the three finite rows. Item 2 is the definition of functional irreducibility, and all inequalities are exact finite comparisons. Corollary 5a.1 proves item 3. If a table-preserving implementation had smaller support, item 3 would give equal support cardinalities, a contradiction; this proves item 4. The audit uses finitely many calls to the assumed terminating evaluation and comparison procedures, because the protocol, outcome and role sets are finite. ∎
 
-**Resolution TV-BEC-01-R1 (Metadata).** Exact domain: the finite typed protocol/outcome/role tables of Definition 5a. Premises: exact response laws, the registered score datum and all three typed-null rows, with the terminating evaluation and comparison procedures specified in Theorem 5a.2. Equivalence: Corollary 5a.1's typed protocol, outcome and role bijections. Budget: every submitted original and null table cell. Verifier: exact table equality and score comparison. Falsifier: equal complete tables with different support, or an audit result disagreeing with a registered score inequality. Provenance class: source-internal finite classification. Downstream consumers: Definition 5a's support/irreducibility claims and `TV-BEC-01`. Nonvacuity: a one-protocol binary table with baseline null rows and an original row above the margin. This is `positive-discharge` of the mathematical response-table component.
-
-**Theorem 5a.3 (Finite Typed-Null Full Loop and Exact Response Transport).** Let the memory, prediction, task-outcome and verification registers all be $\{0,1\}$. Freeze one protocol with initial current-state datum $1$ and task outcome $y=1$. Realize the three Definition-5 roles by the typed maps
+<a id="theorem-5a3-finite-typed-null-full-loop-and-exact-response-transport"></a>**Theorem 5a.3 (Finite Typed-Null Full Loop and Exact Response Transport).** Let the memory, prediction, task-outcome and verification registers all be $\{0,1\}$. Freeze one protocol with initial current-state datum $1$ and task outcome $y=1$. Realize the three Definition-5 roles by the typed maps
 $$
 M_m(*)=1,
 \qquad
@@ -283,9 +281,7 @@ Use $\mathcal E_f$ for each map in (5a.3.1)--(5a.3.2), tensor computational-basi
 
 *Proof.* On the original loop, $m=p=y=1$, so $M_v$ returns response $1$ and next memory $1$. Replacing $M_m$ or $M_p$ makes $mp=0$; replacing $M_v$ sets its first output to zero. This proves (5a.3.3). The score inequalities are $1>1/2$ for the original and $0\le1/2$ for every null row, so Theorem 5a.2 gives support $\{b_m,b_p,b_v\}$ and irreducibility. For (5a.3.4), put $K_x=|f(x)\rangle\langle x|$. Then $\mathcal E_f(\rho)=\sum_xK_x\rho K_x^\dagger$ and $\sum_xK_x^\dagger K_x=\sum_x|x\rangle\langle x|=I_X$. For every finite auxiliary dimension $d$ and every positive operator $B$, $(\mathcal E_f\otimes\mathrm{id}_d)(B)=\sum_x(K_x\otimes I_d)B(K_x^\dagger\otimes I_d)\ge0$, proving complete positivity. Trace cyclicity gives $\operatorname{Tr}\mathcal E_f(\rho)=\operatorname{Tr}(\rho\sum_xK_x^\dagger K_x)=\operatorname{Tr}\rho$. For a diagonal input $\rho=\sum_xp_x|x\rangle\langle x|$, the output is $\sum_xp_x|f(x)\rangle\langle f(x)|$, whose basis readout is the classical pushforward, including when $f$ is not injective. Therefore all original and null diagrams required by Corollary 5a.1 commute. ∎
 
-**Resolution TV-BEC-01-R2 (Metadata).** Exact domain: the one-protocol binary full loop (5a.3.1)--(5a.3.3) and its complete diagonal-channel transport (5a.3.4). Premises: the frozen initial state and outcome, the displayed typed modules and nulls, and the registered score datum. Equivalence: the typed protocol, outcome and role bijections of Corollary 5a.1. Budget: three role maps, three isolated null maps and both finite carrier presentations. Verifier: exact evaluation of all four response rows, CPTP normalization and the classical--diagonal intertwining identities. Falsifier: any ill-typed null, changed non-target module, noncommuting response square or score/support mismatch. Provenance class: source-internal finite construction. Downstream consumers: Definition 5, Definition/Proposition 5a, Corollary 5a.1 and `TV-BEC-01`. Together with Theorem 5a.2, Theorem 5a.3 gives `positive-discharge` of `TV-BEC-01`.
-
-**Remark 5a.1 (Scope of Knockout and Conservation Claims).** Definition 5a supplies a common intervention form, not one universal physical experiment. Component ablation, gene knockout, and counterfactual deletion instantiate it only when the typed isolated-null contract is certified in the relevant domain. Distributed realization, redundancy, compensation, inadmissible null maps, and collateral changes can prevent role localization. A performance drop certifies loss of qualification only at the registered margin. Collapse to the registered baseline requires the stronger Proposition 5a inequality, and that baseline is chance only when $A_0$ has separately been fixed as the matched-chance score. Corollary 5a.1 requires transport of original and null-intervened response laws, intervention types, and score data; performing the same task, sharing a score, or exceeding chance does not by itself establish functional conservation across carriers.
+<a id="remark-5a1-scope-of-knockout-and-conservation-claims"></a>**Remark 5a.1 (Scope of Knockout and Conservation Claims).** Definition 5a supplies a common intervention form, not one universal physical experiment. Component ablation, gene knockout, and counterfactual deletion instantiate it only when the typed isolated-null contract is certified in the relevant domain. Distributed realization, redundancy, compensation, inadmissible null maps, and collateral changes can prevent role localization. A performance drop certifies loss of qualification only at the registered margin. Collapse to the registered baseline requires the stronger Proposition 5a inequality, and that baseline is chance only when $A_0$ has separately been fixed as the matched-chance score. Corollary 5a.1 requires transport of original and null-intervened response laws, intervention types, and score data; performing the same task, sharing a score, or exceeding chance does not by itself establish functional conservation across carriers.
 
 #### 3.2 Reflexive Interaction Dynamics (RID)
 
@@ -296,17 +292,17 @@ The Verification ($V$) and Update ($D_{cyc}$) phases involve interaction, which 
 Reflexive Interaction Dynamics (RID) formally characterizes interactions where the system's subsequent state depends intrinsically on the outcome of the interaction. (See Appendix A.2.1 for full formal definitions).
 
 *   **Deterministic RID (D-RID):** A D-RID system is a tuple $S = (X, Y, O, V, T)$. Here $X$ is the set of states, $Y$ is the set of interactions, and $O$ is the set of outcomes. $V: X \times Y \to O$ is the deterministic interaction function (outcome $o = V(x, y)$), and $T: X \times Y \times O \to X$ is the deterministic state transformation function (next state $x' = T(x, y, o)$).
-*   **Non-Deterministic RID (ND-RID):** An ND-RID system is a tuple $S = (X, Y, O, V_{prob}, T_{prob})$. $V_{prob}: X \times Y \to \Delta(O)$ is the probabilistic interaction function yielding a distribution over outcomes ($P(o | x, y) = [V_{prob}(x, y)](o)$). $T_{prob}: X \times Y \times O \to \Delta(X)$ is the probabilistic state transformation function yielding a distribution over next states ($P(x' | x, y, o) = [T_{prob}(x, y, o)](x')$).
+*   **Non-Deterministic RID (ND-RID):** An ND-RID system is a tuple $S = (X, Y, O, V_{\mathrm{prob}}, T_{\mathrm{prob}})$. $V_{\mathrm{prob}}: X \times Y \to \Delta(O)$ is the probabilistic interaction function yielding a distribution over outcomes ($P(o | x, y) = [V_{\mathrm{prob}}(x, y)](o)$). $T_{\mathrm{prob}}: X \times Y \times O \to \Delta(X)$ is the probabilistic state transformation function yielding a distribution over next states ($P(x' | x, y, o) = [T_{\mathrm{prob}}(x, y, o)](x')$).
 
-The defining characteristic of RID is the dependence of the transformation ($T$ or $T_{prob}$) on the outcome $o$, creating a reflexive loop where the interaction result influences the subsequent state from which future interactions will originate. The MPU 'Evolve' process (Definition 27) is modeled as an instance of ND-RID.
+The defining characteristic of RID is the dependence of the transformation ($T$ or $T_{\mathrm{prob}}$) on the outcome $o$, creating a reflexive loop where the interaction result influences the subsequent state from which future interactions will originate. The MPU 'Evolve' process (Definition 27) is modeled as an instance of ND-RID.
 
 #### 3.2.2 Lemma 2 (Properties of RID)
 
 The structure of Reflexive Interaction Dynamics (Definition 6) inherently implies several key properties that constrain systems governed by it. (Detailed proofs in Appendix A.2.2).
 
-1.  **Potential Irrecoverability of Prior State:** The state transformation function ($T$ or $T_{prob}$) may not be invertible, meaning the pre-interaction state $x$ cannot always be uniquely determined from the post-interaction state $x'$ and the interaction details $(y, o)$.
+1.  **Potential Irrecoverability of Prior State:** The state transformation function ($T$ or $T_{\mathrm{prob}}$) may not be invertible, meaning the pre-interaction state $x$ cannot always be uniquely determined from the post-interaction state $x'$ and the interaction details $(y, o)$.
 2.  **Information Context Shift:** The outcome $o$ generated by an interaction at step $n$ depends only on the state $x_n$ and interaction $y_n$. The resulting state $x_{n+1}$ then defines a new context for subsequent interactions and predictions. Information gained pertains specifically to the context ($x_n$) in which it was acquired.
-3.  **Predictive Instability/Regress:** If the system dynamics ($T/T_{prob}$) are designed to react to predictions ($y$) in a counter-predictive way (e.g., by altering the state to invalidate accurate predictions based on outcome $o$), then achieving stable, accurate self-prediction can become logically or dynamically impossible, leading to instability or an infinite regress.
+3.  **Predictive Instability/Regress:** If the system dynamics ($T/T_{\mathrm{prob}}$) are designed to react to predictions ($y$) in a counter-predictive way (e.g., by altering the state to invalidate accurate predictions based on outcome $o$), then achieving stable, accurate self-prediction can become logically or dynamically impossible, leading to instability or an infinite regress.
 
 These properties highlight the intrinsic limitations and complexities introduced by the reflexive nature of interactions within the predictive loop. They form part of the basis for the fundamental unpredictability and information constraints explored later in the framework (e.g., Section 4, Theorem 27, Appendix A).
 
@@ -321,13 +317,13 @@ $$
 PP(t) = \frac{1}{1 + k_{PP} \cdot PE(t)} \quad \text{(8)}
 $$
 
-**Definition (Predictive Error $PE$).** Let $\hat{y}(t)$ denote the system's predictive object (a point prediction or a predictive distribution) and $y(t)$ the realized outcome. Fix a proper scoring rule $S(\cdot,\cdot)$ whose loss is finite and nonnegative on every registered prediction/outcome pair (e.g., Brier score, or log‑loss with positive predictive probability for every admitted outcome). Define $PE(t) = S(\hat{y}(t), y(t)) \geq 0$. When $S$ is log‑loss, $PE$ has units of nats (base $e$) or bits (base 2); otherwise $PE$ is made dimensionless by a specified normalization protocol.
+<a id="definition-predictive-error-pe"></a>**Definition (Predictive Error $PE$).** Let $\hat{y}(t)$ denote the system's predictive object (a point prediction or a predictive distribution) and $y(t)$ the realized outcome. Fix a proper scoring rule $S(\cdot,\cdot)$ whose loss is finite and nonnegative on every registered prediction/outcome pair (e.g., Brier score, or log‑loss with positive predictive probability for every admitted outcome). Define $PE(t) = S(\hat{y}(t), y(t)) \geq 0$. When $S$ is log‑loss, $PE$ has units of nats (base $e$) or bits (base 2); otherwise $PE$ is made dimensionless by a specified normalization protocol.
 
-**Definition (Scale $k_{PP}$).** The constant $k_{PP} > 0$ rescales $PE$ in Equation (8) so that a designated operating point $0<PE_*<\infty$ maps to a specified $PP_* \in (0, 1)$, typically chosen within the viability band $(\alpha, \beta)$ defined below. Concretely, $k_{PP} = (1/PP_* - 1)/PE_*$. When $PE$ carries units (nats/bits), $k_{PP}$ has the corresponding reciprocal units so that $k_{PP} \cdot PE$ is dimensionless; if $PE$ is dimensionless, so is $k_{PP}$.
+<a id="definition-scale-k_pp"></a>**Definition (Scale $k_{PP}$).** The constant $k_{PP} > 0$ rescales $PE$ in Equation (8) so that a designated operating point $0<PE_*<\infty$ maps to a specified $PP_* \in (0, 1)$, typically chosen within the viability band $(\alpha, \beta)$ defined below. Concretely, $k_{PP} = (1/PP_* - 1)/PE_*$. When $PE$ carries units (nats/bits), $k_{PP}$ has the corresponding reciprocal units so that $k_{PP} \cdot PE$ is dimensionless; if $PE$ is dimensionless, so is $k_{PP}$.
 
 This definition ensures $PP(t) \in (0, 1]$, with $PP = 1$ corresponding to perfect prediction ($PE = 0$) and $PP \to 0$ as $PE \to \infty$. Higher $PP$ corresponds to higher predictive quality $Q$. The specific choice of $k_{PP}$ anchors $PP$ to the task's typical error scale and does not alter the ordering of predictive quality across models or time.
 
-#### 3.3.2 Theorem 8 (Expected Lower Performance Bound $\alpha > 0$)
+#### <a id="332-theorem-8-expected-lower-performance-bound-alpha-0"></a>3.3.2 Theorem 8 (Expected Lower Performance Bound $\alpha > 0$)
 
 Fix an evaluation window $W$, a registered probability law for evaluating the system and the matched random-chance predictor on that window, and the proper scoring rule $S$ of Definition 7. The conditional notation $\mathbb E[\cdot\mid t\in W]$ below denotes expectation under this registered window law. If this law is obtained by conditioning an ambient sampling law, assume $\Pr(t\in W)>0$. Define the system's expected error and its corresponding window performance by
 $$
@@ -335,26 +331,26 @@ $$
 \qquad
 PP_W:=\frac{1}{1+k_{PP}\overline{PE}_W}.
 $$
-Let $f_{random}$ be a matched random-chance predictor for the same outcome space, scoring rule, and task distribution, and assume
+Let $f_{\mathrm{random}}$ be a matched random-chance predictor for the same outcome space, scoring rule, and task distribution, and assume
 $$
-0<PE_{random}:=\mathbb E\!\left[S(\hat y_{random}(t),y(t))\mid t\in W\right]<\infty.
+0<PE_{\mathrm{random}}:=\mathbb E\!\left[S(\hat y_{\mathrm{random}}(t),y(t))\mid t\in W\right]<\infty.
 $$
-If solving the POP on $W$ requires strict expected super-chance performance, $\overline{PE}_W<PE_{random}$, then
+If solving the POP on $W$ requires strict expected super-chance performance, $\overline{PE}_W<PE_{\mathrm{random}}$, then
 $$
 PP_W>\alpha,
 \qquad
-\alpha:=\frac{1}{1+k_{PP}PE_{random}}\in(0,1).
+\alpha:=\frac{1}{1+k_{PP}PE_{\mathrm{random}}}\in(0,1).
 $$
 
 *Proof.* Because $k_{PP}>0$, the function $x\mapsto(1+k_{PP}x)^{-1}$ is strictly decreasing on $[0,\infty)$. Therefore
 $$
-\overline{PE}_W<PE_{random}
+\overline{PE}_W<PE_{\mathrm{random}}
 \quad\Longrightarrow\quad
 \frac{1}{1+k_{PP}\overline{PE}_W}
 >
-\frac{1}{1+k_{PP}PE_{random}},
+\frac{1}{1+k_{PP}PE_{\mathrm{random}}},
 $$
-which is $PP_W>\alpha$. The assumptions $0<PE_{random}<\infty$ imply $0<\alpha<1$. ∎
+which is $PP_W>\alpha$. The assumptions $0<PE_{\mathrm{random}}<\infty$ imply $0<\alpha<1$. ∎
 
 #### 3.3.3 Theorem 9 (Conditional Upper Performance Bound from a Pathwise Excitation Floor)
 
@@ -389,7 +385,7 @@ $$
 $$
 when $\hat C_{\mathrm{target}}/\kappa_{\mathrm{eff}}>0$. ∎
 
-**Theorem 9a (Exact Endpoints for a Finite Locked Task).** Fix one finite outcome space, task law, evaluation window, proper score $S$, scale $k_{PP}>0$, and a nonempty finite set $\mathcal A$ of attainable predictive laws supplied by the registered dynamics. For $a\in\mathcal A$, let
+<a id="theorem-9a-exact-endpoints-for-a-finite-locked-task"></a>**Theorem 9a (Exact Endpoints for a Finite Locked Task).** Fix one finite outcome space, task law, evaluation window, proper score $S$, scale $k_{PP}>0$, and a nonempty finite set $\mathcal A$ of attainable predictive laws supplied by the registered dynamics. For $a\in\mathcal A$, let
 $$
 R(a):=\mathbb E[S(a,Y)],
 \qquad
@@ -414,9 +410,7 @@ No ordering between two interior numerical endpoints is invariant under independ
 
 *Proof.* A real function on a nonempty finite set attains its minimum and maximum. The map $r\mapsto(1+k_{PP}r)^{-1}$ is strictly decreasing, giving (9a.2). Set inclusion can only decrease the minimum risk and increase the maximum risk, which gives (9a.3) after applying the decreasing map. Strictly increasing recalibrations preserve order inside each branch, fix $1$, and can send any nominated interior value to any nominated interior value; choosing the two images in reverse order proves the final interior statement. ∎
 
-**Resolution TV-BEC-02-R1 (Metadata).** Exact domain: nonempty finite attainable-law sets under one locked task, score, window and positive scale. Premises: nonnegative finite risks under Definition 7's registered score. Equivalence: equality of predictive laws on the locked outcome distribution. Budget: all laws in the submitted finite attainable sets. Verifier: exact risk evaluation, endpoint enumeration and set-inclusion comparison. Falsifier: an endpoint outside (9a.2) or a same-task inclusion violating (9a.3). Provenance class: source-internal finite optimization. Downstream consumers: Theorems 8--9b, Definition 8 and `TV-BEC-02`. Nonvacuity: the singleton zero-risk task and a two-law task with $0<r_1<r_2$. This is `positive-discharge` for the finite locked-data component and `nonentailment` of interior cross-branch ordering under independent calibrations. Theorem 9b and Resolution TV-BEC-02-R2 below discharge the arbitrary-class mathematical extension; physical identification of the locked task and its attainable dynamics remains `R`-open.
-
-**Theorem 9b (Arbitrary Attainable-Class Endpoints and Generator-Only Obstruction).** Retain the locked outcome space, task law, evaluation window, proper score $S$, and scale $k_{PP}>0$ of Theorem 9a, but let $\mathcal A$ be any nonempty, possibly infinite set of attainable predictive laws. Assume that every risk $R(a)=\mathbb E[S(a,Y)]$ is finite and nonnegative, and define
+<a id="theorem-9b-arbitrary-attainable-class-endpoints-and-generator-only-obstruction"></a>**Theorem 9b (Arbitrary Attainable-Class Endpoints and Generator-Only Obstruction).** Retain the locked outcome space, task law, evaluation window, proper score $S$, and scale $k_{PP}>0$ of Theorem 9a, but let $\mathcal A$ be any nonempty, possibly infinite set of attainable predictive laws. Assume that every risk $R(a)=\mathbb E[S(a,Y)]$ is finite and nonnegative, and define
 $$
 r_-:=\inf_{a\in\mathcal A}R(a),
 \qquad
@@ -451,9 +445,7 @@ There is no total algorithm that, from a code for an arbitrary uniformly computa
 
 For the algorithmic claim, fix a program/input pair $(e,w)$ and let $Y=0$ almost surely. At index $n$, simulate $e(w)$ for $n$ steps and output the predictive law with Bernoulli parameter $p_n=0$ if the computation has halted and $p_n=1$ otherwise. This is a uniformly computable sequence. Under $S(p,y)=(p-y)^2$, every risk belongs to $\{0,1\}$. If $e(w)$ never halts, every attainable performance is $1/2$; if it halts, the sequence contains a law of performance $1$. A total decision procedure for $P_{\sup}=1$ would therefore decide the halting problem. ∎
 
-**Resolution TV-BEC-02-R2 (Arbitrary-Class Classification).** Exact domain: nonempty finite or infinite attainable-law sets under one locked task, score, window, and positive scale, with finite nonnegative risk for every admitted law. Premises: Theorems 9a and 9b's frozen task and risk hypotheses. Equivalence: equality of predictive laws on the locked outcome distribution. Budget: the submitted census for the finite case; the full abstract class for the order theorem; and submitted extremum, continuity, or compactness proofs for a concrete nonfinite application. Verifier: exact finite enumeration under Theorem 9a or checked risk bounds and extremum witnesses under Theorem 9b. Falsifier: an endpoint violating (9b.3), an attainment claim without the corresponding risk extremum, a same-task inclusion violating (9b.4), or a total generator-only equality decider succeeding on the halting-coded family. Provenance class: source-internal exact analysis and computability. Downstream consumers: Theorems 8--9b, Definition 8, and `TV-BEC-02`. Nonvacuity: Theorem 9a's finite examples, every nonempty compact continuous-risk class, and the halting-coded binary family. Theorems 9a and 9b give `positive-discharge` of the mathematical endpoint, attainment, and same-task ordering classification and `negative-refutation` of uniform exact extraction from a generator alone.
-
-**Theorem 9c (Populated Two-Law Endpoint Realization).** Freeze a one-cycle window, the deterministic binary task law $Y=0$, the proper binary squared score $S(p,Y)=(p-Y)^2$, and $k_{PP}=1$. Let a two-state classical control register $X=\{x_0,x_1\}$ have controls $a_0,a_1$ with
+<a id="theorem-9c-populated-two-law-endpoint-realization"></a>**Theorem 9c (Populated Two-Law Endpoint Realization).** Freeze a one-cycle window, the deterministic binary task law $Y=0$, the proper binary squared score $S(p,Y)=(p-Y)^2$, and $k_{PP}=1$. Let a two-state classical control register $X=\{x_0,x_1\}$ have controls $a_0,a_1$ with
 $$
 T(x,a_i)=x_i,
 \qquad
@@ -475,13 +467,11 @@ Thus the realized endpoints are attained and equal $P_{\min}=4/5$ and $P_{\max}=
 
 *Proof.* Equation (9c.1) proves reachability and exhausts the two-state carrier. Direct expectation under $Y=0$ gives $R(p)=p^2$, and Definition 7 gives $P(p)=(1+R(p))^{-1}$. Substitution yields (9c.2), which agrees with Theorem 9a. ∎
 
-**Resolution TV-BEC-02-R3 (Metadata).** Exact domain: the one-cycle binary task, two-state control register and two-law attainable class in (9c.1). Premises: the deterministic outcome law, squared score, $k_{PP}=1$, and the two exhaustive controls. Equivalence: equality of predictive laws on the frozen task. Budget: both states, controls, laws, risks and endpoint comparisons. Verifier: one-step reachability, census exhaustion, direct risk evaluation and Definition-7 normalization. Falsifier: any additional attainable readout, incorrect risk, unattained endpoint or task/score drift. Provenance class: source-internal finite realization. Downstream consumers: Theorems 8--9b, Definition 8 and `TV-BEC-02`. Theorem 9c populates the task, score, window, scale, attainable dynamics and both certified risk extrema on one carrier; together with Theorems 9a--9b it gives `positive-discharge` of `TV-BEC-02`.
-
-#### 3.3.4 Remark 1 (Distinct Roles of $\beta_0$, $\beta$, and $\alpha_{SPAP}$)
+#### 3.3.4 Remark 1 (Distinct Roles of $\beta_0$, $\beta$, and $\alpha_{\mathrm{SPAP}}$)
 
 Theorem 9 supplies the task-relative pathwise ceiling $\beta_0$. Definition 8 uses a registered analytic upper endpoint $\beta$; on a branch that also carries Theorem 9 and Theorem 19, consistency requires $\alpha<\beta\le\beta_0$. The logarithmic divergence at $\beta$ follows only from Theorem 19's exact multiplicative residual-composition hypothesis.
 
-The SPAP quantity $\alpha_{SPAP}$ belongs to a separately certified diagonal prediction task. Theorems 10–11 exclude a universal exact self-predictor on their stated diagonal classes but do not produce a system-independent scalar $\alpha_{SPAP}$. Theorem 14 supplies a log-enhanced quadratic lower bound only under its Bernoulli-reduction and resource certificates, and that bound transfers to $C_P$ only when $C_P$ lower-bounds the registered operations. No ordering between $\beta$ and $\alpha_{SPAP}$ follows without a bridge identifying the same system, task, score, and window.
+The SPAP quantity $\alpha_{\mathrm{SPAP}}$ belongs to a separately certified diagonal prediction task. Theorems 10–11 exclude a universal exact self-predictor on their stated diagonal classes but do not produce a system-independent scalar $\alpha_{\mathrm{SPAP}}$. Theorem 14 supplies a log-enhanced quadratic lower bound only under its Bernoulli-reduction and resource certificates, and that bound transfers to $C_P$ only when $C_P$ lower-bounds the registered operations. No ordering between $\beta$ and $\alpha_{\mathrm{SPAP}}$ follows without a bridge identifying the same system, task, score, and window.
 
 #### 3.3.5 Definition 8 (Def 8): The Space of Becoming $(\alpha, \beta)$
 
@@ -513,9 +503,9 @@ Let $(\mathcal F_n)_{n\ge0}$ be a filtration and $(PP_n)_{n\ge0}$ an adapted per
 $$
 \tau:=\inf\{n\ge0:PP_n\notin(\alpha,\beta)\}.
 $$
-Assume that, without a regulatory or protective response, there exist an integer $m\ge1$ and $p_{exit}\in(0,1]$ such that for every $k\ge0$,
+Assume that, without a regulatory or protective response, there exist an integer $m\ge1$ and $p_{\mathrm{exit}}\in(0,1]$ such that for every $k\ge0$,
 $$
-\Pr(\tau\le(k+1)m\mid\mathcal F_{km})\ge p_{exit}
+\Pr(\tau\le(k+1)m\mid\mathcal F_{km})\ge p_{\mathrm{exit}}
 \quad\text{almost surely on }\{\tau>km\}.
 $$
 Then $\Pr(\tau<\infty)=1$. Consequently, a system required by Axiom 3 to remain in $(\alpha,\beta)$ for all cycles almost surely must contain a regulatory or protective mechanism that invalidates this uncontrolled exit-risk condition.
@@ -523,11 +513,11 @@ Then $\Pr(\tau<\infty)=1$. Consequently, a system required by Axiom 3 to remain 
 *Proof.* Adaptedness makes $\tau$ a stopping time. The conditional hypothesis and $\{\tau>(k+1)m\}\subseteq\{\tau>km\}$ give
 $$
 \Pr(\tau>(k+1)m\mid\mathcal F_{km})
-\le(1-p_{exit})\mathbf 1_{\{\tau>km\}}.
+\le(1-p_{\mathrm{exit}})\mathbf 1_{\{\tau>km\}}.
 $$
 Taking expectations and iterating from $\Pr(\tau>0)\le1$ yields
 $$
-\Pr(\tau>km)\le(1-p_{exit})^k
+\Pr(\tau>km)\le(1-p_{\mathrm{exit}})^k
 \qquad(k\ge1).
 $$
 The right-hand side tends to zero, so continuity from above gives
@@ -536,7 +526,7 @@ $$
 $$
 Thus the unregulated process exits almost surely. Any implementation satisfying perpetual operational viability must alter the uncontrolled dynamics through regulation or protection so that the uniform exit-risk premise no longer holds. ∎
 
-**Theorem 1a (Finite Response-Preserving Safety Kernel and Minimum Controller).** Let $X$ be a finite registered state set, $V\subseteq X$ the states whose performance lies in $(\alpha,\beta)$, and $A(x)$ a finite nonempty set of response-preserving admissible controls at $x$. Let $P(\cdot\mid x,a)$ be an exact transition law. Define
+<a id="theorem-1a-finite-response-preserving-safety-kernel-and-minimum-controller"></a>**Theorem 1a (Finite Response-Preserving Safety Kernel and Minimum Controller).** Let $X$ be a finite registered state set, $V\subseteq X$ the states whose performance lies in $(\alpha,\beta)$, and $A(x)$ a finite nonempty set of response-preserving admissible controls at $x$. Let $P(\cdot\mid x,a)$ be an exact transition law. Define
 $$
 W_0:=V,
 \qquad
@@ -549,9 +539,7 @@ The descending sequence stabilizes after at most $|V|$ strict deletions at the g
 
 *Proof.* Finiteness makes the decreasing sequence stabilize. Any $U\subseteq V$ for which every state has an admissible action with transition support in $U$ lies in every $W_n$ by induction, so $U\subseteq W_*$. At $W_*$, choose a witnessing action at every state. Its transition support stays in $W_*$, so induction and the countable union of zero-probability exit events give almost-sure safety for all cycles. If $x\notin V$, safety fails at time zero. For $x\in W_{n-1}\setminus W_n$, every admissible action has positive probability of entering $X\setminus W_{n-1}$. Inductively, each state in this complement has a positive lower bound on its probability of failing safety within $n-1$ further cycles, uniformly over all policies and histories. The complement and each action set are finite, so the minimum of these bounds and of the positive escape probabilities is positive. Their product bounds the probability of failure within $n$ cycles from $x$, including under randomized or history-dependent choices. Induction starts with the time-zero case and excludes every deleted state. A real-valued function on the nonempty finite safe-controller set attains its minimum, and the strictness criterion is the definition of a unique minimizing equivalence class. ∎
 
-**Resolution TV-BEC-03-R1 (Metadata).** Exact domain: finite registered controlled Markov kernels with a finite viable set and response-preserving action sets. Premises: exact transition supports and nonempty admissible actions; $W_*\ne\varnothing$ for the minimum-controller clause. Equivalence: equality of retained task responses, with controller uniqueness taken modulo that declared response equivalence. Budget: at most $|V|$ strict kernel deletions plus exhaustive comparison of the finite deterministic-stationary safe-controller census. Verifier: fixed-point iteration (1a.1), support checks and exact cost comparison. Falsifier: a selected action leaving $W_*$ or an almost-sure safe policy from a deleted state. Provenance class: source-internal finite control classification. Downstream consumers: Proposition 1, Axiom 3 and `TV-BEC-03`. Nonvacuity: a one-state viable self-loop system. The theorem is `positive-discharge` of the finite mathematical controller component.
-
-**Theorem 1b (Two-State Regulator with a Strict Safe Optimum).** Take $X=\{v,o\}$, $\alpha=1/3$, $\beta=2/3$, and registered performance values $PP(v)=1/2$, $PP(o)=1/4$, so $V=\{v\}$. Let the response-preserving admissible sets be $A(v)=\{h_0,h_1\}$ and $A(o)=\{h_o\}$. Their deterministic transition laws are
+<a id="theorem-1b-two-state-regulator-with-a-strict-safe-optimum"></a>**Theorem 1b (Two-State Regulator with a Strict Safe Optimum).** Take $X=\{v,o\}$, $\alpha=1/3$, $\beta=2/3$, and registered performance values $PP(v)=1/2$, $PP(o)=1/4$, so $V=\{v\}$. Let the response-preserving admissible sets be $A(v)=\{h_0,h_1\}$ and $A(o)=\{h_o\}$. Their deterministic transition laws are
 $$
 P(v\mid v,h_0)=P(v\mid v,h_1)=1,
 \qquad
@@ -569,5 +557,46 @@ $h_0$ is the unique strict minimum modulo response equivalence. The matrices def
 
 *Proof.* Both admissible hold actions at $v$ have support in $V$, so Equation (1a.1) stabilizes at $\{v\}$. The separately recorded uncontrolled transition leaves $V$ but does not enter the admissible-action quantifier. A stationary admissible selector is safe exactly when it chooses one of the two hold actions at $v$. Equation (1b.2) makes $h_0$ its strict minimum, and induction on cycles proves perpetual retention of $v$. ∎
 
-**Resolution TV-BEC-03-R2 (Metadata).** Exact domain: the two-state controlled kernel (1b.1), its complete next-state/performance response, the external uncontrolled comparator and deterministic stationary admissible selectors. Premises: the displayed viable band, action supports, response equivalence and exact costs. Equivalence: equality of the retained controlled-cycle response, with controller uniqueness modulo that equality. Budget: both states, every admissible action, the one uncontrolled comparator and the complete two-member safe-controller census. Verifier: fixed-point iteration, transition-support checks, response equality and exact cost comparison. Falsifier: admitting the uncontrolled comparator into $A(v)$, an omitted safe selector, unequal hold responses or a cost tie/reversal. Provenance class: source-internal finite control realization. Downstream consumers: Proposition 1, Axiom 3 and `TV-BEC-03`. Theorem 1b populates the transition law, response-preserving safe-action audit, viable kernel and strict minimum controller on one formal carrier; together with Theorem 1a it gives `positive-discharge` of `TV-BEC-03`.
+<a id="theorem-1c-finite-viability-realization-and-robust-horizon-classification"></a>**Theorem 1c (Finite Viability Realization and Robust-Horizon Classification).** Use the finite state, viable set and action data of Theorem 1a. For $n\ge0$ define
+$$
+v_0(x)=\mathbf1_V(x),\qquad
+v_{n+1}(x)=\mathbf1_V(x)\max_{a\in A(x)}\sum_y P(y\mid x,a)v_n(y).
+\tag{1c.1}
+$$
+Then $v_n(x)$ is the maximal probability of remaining in $V$ at every time from zero through $n$, over all randomized history-dependent admissible policies. A deterministic policy depending only on the current state and remaining horizon attains it. The sequence decreases, and
+$$
+W_* = \{x:v_n(x)=1\text{ for every }n\ge0\}.
+\tag{1c.2}
+$$
+If all transition probabilities are dyadic, every fixed finite-horizon optimum has an exact finite retained-register realization by reversible gates supplied with a finite independent fair-bit stock.
 
+For two kernels $P,\widetilde P$ with the same state/action sets and $\sup_{x,a}\operatorname{TV}(P(\cdot\mid x,a),\widetilde P(\cdot\mid x,a))\le\varepsilon$, their optimal survival values obey
+$$
+|v_n(x)-\widetilde v_n(x)|\le\min\{1,n\varepsilon\}.
+\tag{1c.3}
+$$
+In contrast, suppose $V\ne X$ and the admitted uncertainty class contains
+$$
+\widetilde P(\cdot\mid x,a)=(1-\varepsilon)P(\cdot\mid x,a)+\varepsilon\delta_{x_\dagger},
+\qquad x_\dagger\notin V,\quad 0<\varepsilon\le1.
+\tag{1c.4}
+$$
+Every policy on this kernel has survival probability at most $(1-\varepsilon)^n$ through $n$ steps; its almost-sure safety kernel is empty. Thus a positive full-state total-variation uncertainty ball admits no nonempty robust infinite-horizon safe set when an unsafe state is available. An uncertainty model that forbids the transition in (1c.4) has its own support-preserving safety kernel under Theorem 1a.
+
+*Proof.* At the last stage the conditional survival probability is a linear average of $v_0$. A randomized action cannot exceed the largest of its action values. Backward induction gives (1c.1), proves optimality against history-dependent policies, and constructs a maximizing deterministic action at each state and remaining horizon. Surviving one additional time implies surviving every earlier time, so $v_{n+1}\le v_n$. A state in $W_*$ has survival value one for every horizon under its stationary safe policy. Conversely, Theorem 1a's deletion-rank proof gives a strictly positive bounded-horizon failure probability uniformly over all policies for every deleted state. This proves (1c.2).
+
+Choose a common denominator $2^b$ for the finitely many dyadic transitions, and write $P(y\mid x,a)=m_{xay}/2^b$. Partition the integers $0,\ldots,2^b-1$ into intervals of these lengths and let $F(x,a,u)$ return the interval label. At each stage a fresh independent $b$-bit stock supplies $u$. A reversible computation writes the selected action and then performs
+$$
+|x,a,u,z\rangle\longmapsto|x,a,u,z\mathbin\oplus\operatorname{code}F(x,a,u)\rangle
+$$
+on a sufficiently large blank output register. Extend the action and $F$ tables to unused binary encodings by a fixed default output. Controlled XOR is then a permutation on the entire finite register space, including those encodings, and has the exact required transition law on valid inputs. Retain $x,a,u$, the output and every work register; the next stage reads the new state without deleting the old one. Induction realizes the full controlled trajectory law, not merely its final marginal. The horizon, coin stock, action table, archive and gate schedule are finite and explicitly counted. Any required reset is a separate operation on those retained stocks.
+
+For any fixed history-dependent policy, couple the two transitions whenever the state/action histories agree using a maximal coupling. At each step their conditional disagreement probability is at most $\varepsilon$. A union bound gives probability at most $n\varepsilon$ of a disagreement by time $n$. The survival event can differ only after such a disagreement, so its two probabilities differ by at most $n\varepsilon$. Apply this bound to an optimal policy for either kernel to obtain both directions of (1c.3).
+
+On (1c.4), independently at every step the contamination coin chooses the unsafe state with probability $\varepsilon$, irrespective of the policy. Survival requires avoiding all $n$ such choices and hence has probability at most $(1-\varepsilon)^n$. This tends to zero and every action at every viable state has positive unsafe support, proving the safety-kernel claim. ∎
+
+<a id="corollary-1c1-viability-is-a-component-of-the-life-predicate"></a>**Corollary 1c.1 (Viability Is a Component of the Life Predicate).** Nonempty $W_*$ is not sufficient for life under Definition P.8.9a.10.1. In particular, a one-state viable self-loop with no new-aggregate output port has $W_*=V$ and fails the reproduction-and-inheritance certificate.
+
+*Proof.* The self-loop satisfies the support condition in (1a.1), so its safety kernel is nonempty. Its complete output alphabet contains no new aggregate, so every registered test of producing one has probability zero. It therefore fails item 4 of Definition P.8.9a.10.1 for every positive required success probability. ∎
+
+The viability certificate, the learning score, and the biological predicate have distinct owning observables. The finite predictive tubular colony of Theorem P.8.9a.12.7b already supplies a maintained biochemical predictor, complete transport selector and component-corrected allometry; Theorem P.8.9a.12.8a supplies its separate trisection-branching predictive-colony morphology. Those service-family constructions specify their own reproduction scope. Applying the full life predicate additionally evaluates its complexity, recovery, adaptive response, reproduction and heritable-update entries on the chosen aggregate. Theorem 1c gives an exact viability implementation and finite-error certificate for that evaluation.

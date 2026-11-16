@@ -1,0 +1,38 @@
+{
+  "all_pass": true,
+  "exact_base_and_endpoint_checks": true,
+  "full_candidate_scan_executed": false,
+  "records": [
+    {
+      "accepted": true,
+      "actual_equation_C_order": 2,
+      "bits": 24,
+      "boxes": 4,
+      "candidate_index": "0",
+      "candidate_level": 0,
+      "residual_upper": "0",
+      "source_equations": "Fixed-action material Euler-Lagrange plus Einstein minus actual fixed-action T; all covariant components, derivatives in normalized physical t,x.",
+      "tolerance": "1/10",
+      "worst": null,
+      "zero_components": "material2,3; off-diagonal except01; Einstein33 equals22."
+    },
+    {
+      "accepted": false,
+      "actual_equation_C_order": 2,
+      "bits": 24,
+      "boxes": 4,
+      "candidate_index": "1",
+      "candidate_level": 0,
+      "residual_upper": "25196433718142557/70368744177664",
+      "source_equations": "Fixed-action material Euler-Lagrange plus Einstein minus actual fixed-action T; all covariant components, derivatives in normalized physical t,x.",
+      "tolerance": "1/10",
+      "worst": [
+        0,
+        0,
+        "Einstein11",
+        "2,0"
+      ],
+      "zero_components": "material2,3; off-diagonal except01; Einstein33 equals22."
+    }
+  ]
+}

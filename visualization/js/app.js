@@ -32,6 +32,7 @@
 
     var renderer = PU.renderer.create(canvas);
     if (!renderer) {
+      document.documentElement.classList.add('viz-ready');
       shell.hidden = true;
       if (fallback) fallback.classList.add('is-visible');
       return;
@@ -245,6 +246,7 @@
     renderer.resize();
     setScene(requestedScene());
     setAnnotating(false);
+    document.documentElement.classList.add('viz-ready');
     tick();
   }
 

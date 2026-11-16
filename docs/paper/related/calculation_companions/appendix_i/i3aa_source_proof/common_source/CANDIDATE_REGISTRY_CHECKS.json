@@ -1,0 +1,61 @@
+{
+  "actual_source_residual_and_price_callbacks": "Constructor binding required; no hard-coded winner or unpriced selector claimed.",
+  "all_pass": true,
+  "full_registry_enumerated": false,
+  "records": [
+    {
+      "base_description_bytes": 494,
+      "base_matches_actual_source": true,
+      "one_changed_coefficient_valid": true,
+      "registry": {
+        "Fourier_cutoff": 1,
+        "base_witness_code": 0,
+        "candidate_count_exact": "85070835119440002067063756934692732929",
+        "coefficient_absolute_bound": "1/10000",
+        "coefficient_count": 6,
+        "coefficient_step": "1/10485760000",
+        "degree": 1,
+        "level": 0,
+        "native_code_digits": 43,
+        "radix": 2097153,
+        "shape_rule": "Every mixed Q derivative through total order6 has declared sup bound <=1/10000."
+      }
+    },
+    {
+      "base_description_bytes": 641,
+      "base_matches_actual_source": true,
+      "one_changed_coefficient_valid": true,
+      "registry": {
+        "Fourier_cutoff": 2,
+        "base_witness_code": 0,
+        "candidate_count_exact": "121997466611163914088275190663479607762211006397347053963298880004234930460553560187944321647511564639608916613019415014693283546111589857",
+        "coefficient_absolute_bound": "1/10000",
+        "coefficient_count": 15,
+        "coefficient_step": "1/6887475360000",
+        "degree": 2,
+        "level": 1,
+        "native_code_digits": 152,
+        "radix": 1377495073,
+        "shape_rule": "Every mixed Q derivative through total order6 has declared sup bound <=1/10000."
+      }
+    },
+    {
+      "base_description_bytes": 875,
+      "base_matches_actual_source": true,
+      "one_changed_coefficient_valid": true,
+      "registry": {
+        "Fourier_cutoff": 3,
+        "base_witness_code": 0,
+        "candidate_count_exact": "736335108189615800826735745866129995034885417548724058563620186085579858741291849699226432716579545724031281533102926753259534548703323776769865610247238575648433129955411142855332053325585106071510962514315726475067395039896610943482939012443784200549647500875985854092242285091061538994887950700066065015111681",
+        "coefficient_absolute_bound": "1/10000",
+        "coefficient_count": 28,
+        "coefficient_step": "1/687194767360000",
+        "degree": 3,
+        "level": 2,
+        "native_code_digits": 346,
+        "radix": 137438953473,
+        "shape_rule": "Every mixed Q derivative through total order6 has declared sup bound <=1/10000."
+      }
+    }
+  ]
+}

@@ -6,14 +6,13 @@
 
 This section establishes the core axioms and definitions underpinning the Predictive Universe (PU) framework. Appendix P provides the epistemic bridge for the chosen axiom set. Foundational Certainty P.2.1 certifies $\exists\mathcal{C}$: an indubitable locus of awareness/process. Section P.3 then operationally distills $\mathcal{C}$ into prediction, because a knowledge-bearing process must maintain distinctions, anticipate, verify, and update. The formal axioms below do not add a second immutable substance; they specify the stable finite-response rules by which that process is modeled. POP states the optimization problem faced by such processes, Predictive Capacity states the condition for nontrivial predictive success, Operational Viability states the survival window, PPI states when an operational structure has finite physical content, and PCE selects no-surplus representatives. Under this bridge, MPUs enter later as minimal finite physical representatives of the predictive loop, not as an independently assumed material substrate. Appendix P.1 summarizes the forcing logic and the epistemic status stratification (certainty, theorem, empirical anchor, and framework selection) used throughout the paper. The Cogito's self-verification supplies a retained distinction between the certified occurrence of the process and propositions not certified by that occurrence. Proposition A.0.1 gives a binary retained verification predicate, and Proposition A.0.2 supplies NOT, AND, and OR only when the retained acceptance-set class is closed under complements, finite intersections, and finite unions. The stronger finite-computation/Property-R conclusion is available only on the model-class branch of Theorem A.0.1 and Corollary A.0.1, which additionally assumes composition closure, logical memory, uniform specification, arbitrarily large finite memory and composition depth, and a formal arithmetic capable of coding finite strings, circuits, and bounded computations. On a uniformly diagonal-closed class, SPAP (Theorems 10–11) excludes a single predictor that is exact on every constructible prediction-contingent system. On every effectively coded pointed RID class containing the registered-clock family $\mathbf S_{e,w}$ of Appendix A.2, RUD excludes total uniform decision of the fixed terminal-reachability property $\mathsf{TERM}$; its probabilistic extension additionally assumes a computable finite runtime bound, computable complete finite support lists with rational probabilities, and a fixed positive advantage. The section then defines POP, functional information and knowledge, $C_P$, its operational proxy $\hat C_v$, and the corresponding resource-cost operators.
 
-**2.1 Axiom 1 (Ax 1): The Prediction Optimization Problem (POP)**
-
+<a id="21-axiom-1-ax-1-the-prediction-optimization-problem-pop"></a>**2.1 Axiom 1 (Ax 1): The Prediction Optimization Problem (POP)**
 
 Adaptive systems operating within uncertain environments face the fundamental challenge of optimizing the predictive quality ($Q$) of their internal state or model concerning aspects of their internal and external environment relevant to their continued functioning and goals. This optimization aims to maximize the expected improvement in predictive quality ($\Delta Q$). This improvement is quantified by metrics reflecting reduced uncertainty (e.g., decreased entropy), enhanced accuracy (e.g., increased log-likelihood, reduced prediction error), or reduced Bayes risk, achievable through information processing, interaction, and adaptation. This ongoing optimization is performed subject to limited physical and computational resources, including available energy, processing time, and achievable system complexity ($C_P$). This fundamental, resource-constrained drive to enhance predictive capability is termed the Prediction Optimization Problem (POP).
 
 For concreteness, all predictive-quality functionals $Q$ are assumed measurable and bounded below on the feasible state space. Under every admitted task and update law used in an expected-improvement comparison, require the pre-update and post-update quality variables to be integrable. Then $\Delta Q=Q_{\mathrm{after}}-Q_{\mathrm{before}}$ is integrable and $\mathbb E[\Delta Q]=\mathbb E[Q_{\mathrm{after}}]-\mathbb E[Q_{\mathrm{before}}]$ is finite; conditional expectations on events of positive probability are well-defined as well.
 
-**2.2 Axiom 2 (Ax 2): Predictive Capacity Foundation**
+<a id="22-axiom-2-ax-2-predictive-capacity-foundation"></a>**2.2 Axiom 2 (Ax 2): Predictive Capacity Foundation**
 
 To generate predictions that are demonstrably better than chance (i.e., to achieve a positive expected predictive improvement, $\Delta Q > 0$, relative to a baseline random predictor), a system must possess an internal model ($M_t$) capable of capturing and exploiting discoverable regularities within the relevant data streams. The capacity for effective prediction relies fundamentally on the system's ability to leverage Information (Definition 1) via its internal modeling processes ($M_t$) to achieve a positive expected improvement in predictive quality with respect to future states pertinent to its operational goals (Axiom 1).
 
@@ -21,7 +20,7 @@ To generate predictions that are demonstrably better than chance (i.e., to achie
 
 We define information and knowledge not intrinsically, but functionally in terms of their role within predictive systems operating under POP.
 
-**2.3.1 Definition 1 (Def 1): Information**
+<a id="231-definition-1-def-1-information"></a>**2.3.1 Definition 1 (Def 1): Information**
 
 Within the Predictive Universe framework, information is defined functionally as any physically instantiated (I), substrate-independent (S) pattern or correlation structure (P) that, when processed by a suitable predictive system (E), has the objective potential to yield a positive expected improvement in predictive quality (F) concerning states relevant (R) to that system's Prediction Optimization Problem (POP, Axiom 1). Suitability is task-relative: the system must possess an admissible model class $\mathcal M$ and enough resources to realize at least one procedure witnessing the positive improvement in clause (F). The Horizon Constant $K_0$ is not imposed by this definition; it applies only to the SPAP register realization class of Theorem 15 and transfers to $C_P$ only through Corollary 3's bridge. 
 
@@ -39,7 +38,7 @@ Within the Predictive Universe framework, information is defined functionally as
 
 In essence, information is any physically grounded pattern exploitable by a predictive system to achieve measurable improvements in predictive quality relevant to its adaptive goals.
 
-**2.3.2 Definition 2 (Def 2): Prediction-Based Knowledge**
+<a id="232-definition-2-def-2-prediction-based-knowledge"></a>**2.3.2 Definition 2 (Def 2): Prediction-Based Knowledge**
 
 A system possesses knowledge to the extent that its internal models ($M_t$) can effectively process available information (Definition 1) to generate predictions yielding quantifiable predictive improvement ($\Delta Q > 0$) with respect to variables relevant to its POP. Knowledge is the realized capacity, embodied in the system’s structure and dynamics, for effective prediction. It facilitates measurable improvements in predictive quality (e.g., reduced entropy $\Delta H < 0$, reduced KL divergence $\Delta D_{KL} < 0$, reduced Bayes risk, or increased operational performance). It represents the accumulated, functional residue of successful adaptation cycles that have encoded discovered regularities into the system’s predictive machinery.
 
@@ -49,13 +48,13 @@ Having established the foundational role of prediction and optimization, we now 
 
 **2.4.1 Defining Predictive Physical Complexity ($C_P$)**
 
-To define Predictive Physical Complexity ($C_P$), fix a universal machine $U$, a finite program alphabet, a reference microstate $\mu_{ref}$, and a decreasing sequence of admissible program classes
+To define Predictive Physical Complexity ($C_P$), fix a universal machine $U$, a finite program alphabet, a reference microstate $\mu_{\mathrm{ref}}$, and a decreasing sequence of admissible program classes
 $$
 \mathcal L_0\supseteq\mathcal L_1\supseteq\cdots
 $$
 whose membership conditions are specified without reference to $C_P$, $C_{op}$, an MPU, or any result whose hypotheses already use those objects. For a microstate $\mu$, define
 $$
-\mathcal M_n(\mu):=\{P\in\mathcal L_n:U(P,\mu_{ref})=\mu\}.
+\mathcal M_n(\mu):=\{P\in\mathcal L_n:U(P,\mu_{\mathrm{ref}})=\mu\}.
 $$
 Define
 $$
@@ -74,7 +73,7 @@ exists and is finite. For a submitted microstate, the realizer and exclusion cer
 
 Remark: Level 0 uses algorithmic complexity $K(P)$ as a non-circular bookkeeping device. Exact integer invariants derived later (e.g., $K_0=3$ bits) are fixed by operational distinguishability and minimal register-size arguments expressed in the physically anchored capacity units $C_{cap}=\log_2 d_0$ (Convention 1), and therefore do not depend on the additive-constant ambiguity of $K(P)$ under changes of the reference universal machine. Corollary A.4.1b supplies a recursion-theoretic consistency check: admissible finite verifier transformers can have self-referential fixed-point presentations.
 
-**Lemma 1 (Convergence of Complexity Hierarchy):** If $\mu$ has the common full-constraint witness displayed above, then the hierarchically defined sequence $\{C_{P,n}(\mu)\}$ converges to a finite limit $C_P(\mu)$.
+<a id="lemma-1-convergence-of-complexity-hierarchy"></a>**Lemma 1 (Convergence of Complexity Hierarchy):** If $\mu$ has the common full-constraint witness displayed above, then the hierarchically defined sequence $\{C_{P,n}(\mu)\}$ converges to a finite limit $C_P(\mu)$.
 
 *Proof.*
 
@@ -84,7 +83,7 @@ Remark: Level 0 uses algorithmic complexity $K(P)$ as a non-circular bookkeeping
 
 **Convergence:** By the monotone bounded sequence theorem, the limit $C_P(\mu) := \lim_{n\to\infty} C_{P,n}(\mu)$ exists and is finite. This conditional result supplies no witness when the intersection is empty. QED
 
-**Theorem 2.4.1a (Finite Stabilization and Common Realizer of the Complexity Hierarchy).** Fix a finite program alphabet and an integer-valued prefix-program length $K(P)$. Let
+<a id="theorem-241a-finite-stabilization-and-common-realizer-of-the-complexity-hierarchy"></a>**Theorem 2.4.1a (Finite Stabilization and Common Realizer of the Complexity Hierarchy).** Fix a finite program alphabet and an integer-valued prefix-program length $K(P)$. Let
 $$
 \mathcal M_{n+1}(\mu)\subseteq\mathcal M_n(\mu),
 \qquad
@@ -131,7 +130,7 @@ A_n
 $$
 Every $A_n$ is nonempty, $A_{n+1}\subseteq A_n$, and all $A_n$ lie in the finite set of program strings of length $C_\infty$ over the fixed finite alphabet. A descending sequence of nonempty subsets of a finite set stabilizes, so $\cap_{n\ge n_*}A_n\ne\varnothing$. Any $P_\infty$ in this intersection belongs to all earlier $\mathcal M_n$ as well because the hierarchy is nested. This proves (2.4.1a.4), and (2.4.1a.5) follows from minimality at every stabilized level. ∎
 
-**Corollary 2.4.1a.1 (No Effective Stabilization-Time Claim).** Theorem 2.4.1a proves existence of a finite stabilization index but supplies no bound on $n_*$ from the numerical data $C_{P,0}$ and $B_\mu$ alone. Such a bound requires effective information about the constraint hierarchy and the program-length minima, which the definition of $C_P$ does not assume.
+<a id="corollary-241a1-no-effective-stabilization-time-claim"></a>**Corollary 2.4.1a.1 (No Effective Stabilization-Time Claim).** Theorem 2.4.1a proves existence of a finite stabilization index but supplies no bound on $n_*$ from the numerical data $C_{P,0}$ and $B_\mu$ alone. Such a bound requires effective information about the constraint hierarchy and the program-length minima, which the definition of $C_P$ does not assume.
 
 *Proof.* Let $N$ be any positive integer. Choose two program strings $P_0,P_1$ with $K(P_0)=1$ and $K(P_1)=2$, and define a nested hierarchy by
 $$
@@ -147,7 +146,7 @@ C_{P,n}=2\quad(n\ge N),
 $$
 so the least stabilization index is $N$. Because $N$ is arbitrary while $C_{P,0}=1$ and $B_\mu=2$ are unchanged, those numerical data supply no stabilization-time bound. ∎
 
-**Theorem 2.4.1b (Uniform Stagewise-Bound Criterion for a Full-Hierarchy Realizer).** Retain the finite program alphabet, integer-valued prefix-program length, nested admissible sets, and attained-minimum convention of Theorem 2.4.1a. For $B\in\mathbb N$, define the finite prefix-program census
+<a id="theorem-241b-uniform-stagewise-bound-criterion-for-a-full-hierarchy-realizer"></a>**Theorem 2.4.1b (Uniform Stagewise-Bound Criterion for a Full-Hierarchy Realizer).** Retain the finite program alphabet, integer-valued prefix-program length, nested admissible sets, and attained-minimum convention of Theorem 2.4.1a. For $B\in\mathbb N$, define the finite prefix-program census
 $$
 \mathcal W_{\le B}:=\{P:K(P)\le B\}.
 \tag{2.4.1b.1}
@@ -204,7 +203,7 @@ are nonempty, satisfy $T_{n+1}\subseteq T_n$, and lie in the finite set $\mathca
 
 Theorem 2.4.1a now gives finite stabilization of the integer minima and the equality in (2.4.1b.4). A minimum-length common realizer belongs to every set in (2.4.1b.5), so those sets are nonempty. They are descending subsets of the finite length-$c_\mu$ census and therefore stabilize. A program lies in their stable value exactly when it belongs to every refinement and has length $c_\mu$, which proves (2.4.1b.6). ∎
 
-**Corollary 2.4.1b.a (Empty-Hierarchy Alternative).** Under the hypotheses of Theorem 2.4.1b,
+<a id="corollary-241ba-empty-hierarchy-alternative"></a>**Corollary 2.4.1b.a (Empty-Hierarchy Alternative).** Under the hypotheses of Theorem 2.4.1b,
 $$
 \bigcap_{n\ge0}\mathcal M_n(\mu)=\varnothing
 \quad\Longleftrightarrow\quad
@@ -217,7 +216,7 @@ $$
 
 *Proof.* The first equivalence is the contrapositive of conditions 1 and 2 in Theorem 2.4.1b. The attained-minimum convention identifies failure of the length-$B$ census with $C_{P,n}(\mu)>B$ or $C_{P,n}(\mu)=\infty$, giving the second equivalence. ∎
 
-**Theorem 2.4.1c (Uniform Effective-Stabilization Obstruction).** Suppose the fixed universal-machine presentation admits finite programs $P_0,P_1$ and encoded microstates $\mu_{\mathrm{ref}},\mu$ satisfying
+<a id="theorem-241c-uniform-effective-stabilization-obstruction"></a>**Theorem 2.4.1c (Uniform Effective-Stabilization Obstruction).** Suppose the fixed universal-machine presentation admits finite programs $P_0,P_1$ and encoded microstates $\mu_{\mathrm{ref}},\mu$ satisfying
 $$
 U(P_0,\mu_{\mathrm{ref}})
 =
@@ -248,31 +247,18 @@ e(w)\text{ has halted within }n\text{ transitions}.
 $$
 Membership is uniformly decidable by an $n$-transition simulation, the hierarchy is nested, and $P_1$ is a supplied common witness. Suppose the stated algorithm returns $N$. Simulate $e(w)$ for $N$ transitions. If it has halted, report halting. If it has not halted, a later halt at a transition $T>N$ would give $C_{P,N}=K(P_0)$ and $C_{P,T}=K(P_1)$, contradicting (2.4.1c.1). The second outcome therefore reports nonhalting. This would decide the halting problem, contradicting its undecidability; it is the halting reduction used in the proof of Theorem A.2.3 with $\mathsf{TERM}$ as the fixed target property. ∎
 
-**Definition 2.4.1d (Finite Full-Hierarchy Closure Certificates).** On an effectively arithmetized constraint hierarchy, define the canonical precommit core
+<a id="definition-241d-structural-independence-and-finite-full-hierarchy-closure-certificates"></a>**Definition 2.4.1d (Structural Independence and Finite Full-Hierarchy Closure Certificates).** A theoretical consequence is structurally independent of a comparison observable when its equations, input assignments, normalization, and model selection follow from explicitly declared premises without using that observable or a quantity fitted to it. A dependency audit traces every decision-active field to the theory's axioms, mathematical conventions, declared physical bridge hypotheses, or identified empirical inputs. A zero-adjustable-parameter consequence has no continuous or discrete freedom used to reproduce the comparison value. If several inequivalent branches remain admissible, the individual values are consequences on their respective branches, and a unique prediction requires a selection rule derived from the declared premises. A calibrated consequence identifies its input data and their uncertainties. Agreement with data used to select a branch or estimate its parameters measures fit. Agreement on independent observations tests the specified consequence under the comparison model. Prior knowledge of an observed value does not enter the dependency test.
+
+For an effectively arithmetized constraint hierarchy, the **hierarchy-registration record** is the finite tuple
 $$
-\mathfrak H_{\mathrm{pre}}
+\mathfrak H_0
 =
 \left(
 \iota_H,\Sigma,U,\mathsf{Code}_\mu,\mu_{\mathrm{ref}},K,
 \mathfrak I_H,\mathcal P_{\mathrm{par}},
 \mathsf G_{\mathcal L},\rho_{\mathcal L},
-\mathfrak T_{\mathsf V},\widehat{\mathfrak B}_{\mathrm{pre}},
-\Pi_H^{\mathrm{pre}}
+\mathfrak T_{\mathsf V},\mathfrak D_H,\Pi_H,\chi_H
 \right).
-$$
-Its immutable commitment witness is
-$$
-\kappa_H
-=
-(h_{\mathrm{pre}},t_{\mathrm{lock}},\iota_{\mathrm{commit}},
-\sigma_{\mathrm{cust}}),
-$$
-where $h_{\mathrm{pre}}$ is the hash of the canonical serialization of $\mathfrak H_{\mathrm{pre}}$, and $\iota_{\mathrm{commit}}$ or $\sigma_{\mathrm{cust}}$ authenticates that hash and lock time. The completed **hierarchy-registration record** is the finite tuple
-$$
-\mathfrak H_0
-=
-(\mathfrak H_{\mathrm{pre}},\kappa_H,
-\mathfrak B_{\mathrm{post}},\chi_H).
 \tag{2.4.1d.1}
 $$
 Here $\iota_H$ is a stable identifier; $\Sigma$ is the finite program alphabet; every finite string $P\in\Sigma^*$ is a syntactic program candidate; $U$ is the registered partial prefix machine; and
@@ -282,7 +268,7 @@ K(P)=|P|_\Sigma
 $$
 is total and integer-valued. The set $\mathsf{Code}_\mu$ consists of finite canonical microstate codes with literal decidable equality, and $\mu_{\mathrm{ref}}\in\mathsf{Code}_\mu$ is fixed by the hierarchy registration.
 
-The independently frozen inventory
+The versioned source inventory
 $$
 \mathfrak I_H
 =
@@ -303,42 +289,11 @@ $$
 \varphi.
 \tag{2.4.1d.2}
 $$
-The builder-visible precommit provenance record $\widehat{\mathfrak B}_{\mathrm{pre}}$ contains the prompt and input hashes, a commitment certificate
-$$
-\mathfrak C_Q
-=
-(\iota_{\mathrm{Com}},h_{\mathrm{Com}},\mathsf{par}_{\mathrm{Com}},
-L_{\mathrm{pad}},\mathcal P_{\mathrm{prov}},\Pi_{\mathrm{Com}}),
-$$
-a commitment $c_Q$, the admitted-access boundary, the deterministic hierarchy-builder source, the complete pre-lock read-access transcript, and the responsible process identifier and prior-exposure status. Here $\mathcal P_{\mathrm{prov}}$ is a finite target-independent manifest of the exact commitment, signature, randomness, and clock assumptions, sources, versions, and hashes, while $\Pi_{\mathrm{Com}}$ contains checked proofs that canonical padding is injective and has fixed public length $L_{\mathrm{pad}}$, that opening is exact, that the commitment is perfectly hiding under certified uniform fresh randomness, and that it is binding in the registered security model. The corresponding custodian envelope is
-$$
-\mathfrak Q_H
-=
-(\mathcal Q_H,\mathsf{Cl}_H,\mathcal T_H,\Pi_T,
-r_Q,\pi_{\mathrm{rng}},t_Q,\sigma_Q),
-$$
-where $\mathcal Q_H$ is the finite seed quarantine set, $\mathsf{Cl}_H$ is an independently reviewed finite transform grammar on finite artifact strings, and $\mathcal T_H$ is a finite canonical enumeration. The finite proof tuple $\Pi_T$ verifies that $\mathcal Q_H\subseteq\mathcal T_H$, supplies a grammar derivation of every member of $\mathcal T_H$ from $\mathcal Q_H$, and proves that $\mathcal T_H$ is closed under every rule of $\mathsf{Cl}_H$. Thus $\mathcal T_H$ is exactly the least $\mathsf{Cl}_H$-closed taint set and membership terminates by finite lookup. If $e_Q$ is the canonical serialization of $(\mathcal Q_H,\mathsf{Cl}_H,\mathcal T_H,\Pi_T)$, then
-$$
-c_Q
-=
-\mathsf{Com}_{\mathsf{par}_{\mathrm{Com}}}
-(\mathsf{Pad}_{L_{\mathrm{pad}}}(e_Q);r_Q).
-$$
-The artifact $\pi_{\mathrm{rng}}$ authenticates an independent uniform draw of $r_Q$ in the registered randomness space before the custodian time $t_Q$, and $\sigma_Q$ binds $(\iota_{\mathrm{Com}},c_Q,e_Q,t_Q)$ to the custodian. The responsible process has no read access to the plaintext envelope before unblinding. The post-lock record is
-$$
-\mathfrak B_{\mathrm{post}}
-=
-(\mathsf{Trace}_{\mathrm{post}},t_{\mathrm{open}},\mathfrak Q_H,b_H,
-\pi_{\mathrm{blind}}),
-\qquad
-b_H\in\{\mathsf{dependency\mbox{-}blind},
-\mathsf{target\mbox{-}blind}\},
-$$
-where $\mathsf{Trace}_{\mathrm{post}}$ records access between locking and unblinding and $t_{\mathrm{open}}$ is the authenticated unblinding time.
+The structural-dependency record $\mathfrak D_H$ identifies the sources and dependency graph for the machine $U$, reference code $\mu_{\mathrm{ref}}$, admissibility hierarchy, and all builder inputs, including fixed constants and discrete choices. It declares the rules that fix those fields across the submitted output codes. The target code $\mu$ appears in a submitted output-equality test $U(P,\mu_{\mathrm{ref}})=\mu$ and the resulting realizer or exclusion certificate. The machine, reference input, and constraint generator are fixed by the declared presentation for all such tests. A target value encoded into a special interpreter branch, reference input, or admissibility predicate to make a submitted code cheaper is a target dependency even when the submitted program is short. The same requirement applies when the target dependency enters through an empirically selected presentation or a target-tuned coefficient.
 
 Write
 $$
-\Pi_H^{\mathrm{pre}}
+\Pi_H
 =
 (\pi_{\mathrm{syn}},\pi_{\mathrm{tot}},\pi_{\mathrm{cov}},
 \pi_{\subset},\pi_{\mathrm{dep}}).
@@ -350,11 +305,11 @@ The hierarchy registration is accepted only when $\mathsf V$ verifies finite pro
 2. The coverage map between $\mathcal I_H$ and $\mathcal P_{\mathrm{par}}$ is one-to-one on every $\mathsf E_H$-eligible owner, every excluded owner has its checked typed reason, and $\mathsf G_{\mathcal L}$ generates exactly the hierarchy compiled from that complete eligible manifest.
 3. The relation $\mathcal L_{n+1}\subseteq\mathcal L_n$ holds for every $n$. Every generated schema-dependency edge strictly lowers $\rho_{\mathcal L}$ and terminates in $\mathcal P_{\mathrm{par}}\cup\mathcal A_{\mathsf V}$.
 4. The transitive source-and-dependency manifest of every entry in $\mathcal P_{\mathrm{par}}$ is finite and acyclic. Its leaves are frozen inventory owners or members of the PU-independent trust root. No manifest entry or dependency asserts, or has a checked same-language equivalence to, a common realizer, a hierarchy minimum, a stabilization cutoff, or global hierarchy emptiness; and no entry is defined using $C_P$, $C_{op}$, an MPU, or a downstream result whose hypotheses already use those objects.
-5. Replay of the registered builder on the admitted inputs reproduces the builder-derived hierarchy fields, generated literals, and proof objects byte-for-byte. The pre-lock transcript in $\widehat{\mathfrak B}_{\mathrm{pre}}$ contains no read outside the admitted boundary; every finite prompt, admitted input, builder-source token or literal, generated hierarchy field or literal, and proof input fails membership in $\mathcal T_H$; recomputation gives $h_{\mathrm{pre}}$; and $\kappa_H$ authenticates $(h_{\mathrm{pre}},t_{\mathrm{lock}})$ in an append-only commitment ledger or by the registered custodian signature. After unblinding, the checker verifies $\Pi_{\mathrm{Com}}$, $\Pi_T$, and $\pi_{\mathrm{rng}}$, verifies the displayed opening equation, verifies $t_Q\le t_{\mathrm{lock}}<t_{\mathrm{open}}$, and checks $\sigma_Q$. The record $\mathfrak B_{\mathrm{post}}$ and proof $\pi_{\mathrm{blind}}$ authenticate $t_{\mathrm{open}}$ and the provenance class. Target-blind status additionally requires a responsible process with no prior target access in the registered isolation environment and is relative to the accepted security model in $\mathcal P_{\mathrm{prov}}$. A process with prior exposure, plaintext-envelope access before $t_{\mathrm{open}}$, a failed commitment or taint check, or an incomplete access transcript carries dependency-blind status and does not satisfy this item.
+5. The checker verifies the declared dependency edges and the rules generating the registered hierarchy fields. The dependency graph is finite and acyclic, with leaves in the eligible source inventory, declared presentation and bridge assumptions, and the logical trust root. The checker verifies uniform generation across submitted target codes and audits the source and use of the reference input, interpreter rules, and every decision-active constant. Empirical inputs are identified explicitly. Replay of any deterministic builder used to supply the hierarchy verifies its outputs against the declared inputs. The proof checker validates the submitted derivation relative to these declared sources and premises.
 
-Accordingly, an accepted hierarchy-registration record has $b_H=\mathsf{target\mbox{-}blind}$. A dependency-blind record may be retained as a finite rejected audit record, but it does not satisfy item 5 and cannot supply an accepted $\mathfrak H_0$.
+The checker-extracted dependency graph of every hierarchy proof in $\Pi_H$ must itself be finite and acyclic with leaves in $\mathcal P_{\mathrm{par}}\cup\mathcal A_{\mathsf V}$. The record $\chi_H$ verifies the inventory, dependencies, source and artifact identity, and finite proof replay. Denote the hash of the accepted completed record $\mathfrak H_0$ by $h_H$.
 
-The checker-extracted dependency DAG of every hierarchy proof in $\Pi_H^{\mathrm{pre}}$ must itself be finite and acyclic with leaves in $\mathcal P_{\mathrm{par}}\cup\mathcal A_{\mathsf V}$. The dependency DAGs of the provenance proofs in $\Pi_{\mathrm{Com}}\cup\Pi_T\cup\{\pi_{\mathrm{rng}},\pi_{\mathrm{blind}}\}$ must be finite and acyclic with leaves in $\mathcal P_{\mathrm{prov}}\cup\mathcal A_{\mathsf V}$, and no provenance premise may occur in a hierarchy-proof DAG. The record $\chi_H$ verifies the inventory, access, dependency, source, and artifact hashes, validates $\kappa_H$ against $\mathfrak H_{\mathrm{pre}}$, validates the finite envelope and opening against $c_Q$ and $\mathfrak C_Q$, and verifies that the precommit precedes access to the target microstate, candidate realizer, candidate minimum, exclusion levels, and minimizer family. Denote the hash of the accepted completed record $\mathfrak H_0$ by $h_H$.
+The length $K(P)=|P|_\Sigma$ belongs to the fixed registered presentation. Comparisons across presentations must state a common reference encoding. Under a fixed self-delimiting encoding, the description of a proposed evaluator, any supplied reference data and other nonshared inputs, and the generating program together give a reproducible description-length upper bound. This accounts for target-specific information carried outside the program. An upper bound based on an explicit encoding leaves the exact minimum relative to the reference machine and does not provide a general procedure to compute it. A common derivation across independently measured observables constrains model freedom when the same premises and bridge rules govern all of them.
 
 For every submitted target code, define the extended stage supremum
 $$
@@ -378,7 +333,7 @@ C_P^{(h_H)}(\mu),&
 $$
 The symbol $C_P^{(h_H)}$ in the first branch has the same full-constraint-realizability domain as $C_P$ in Section 2.4.1.
 
-A **baseline-identity extension** $(h_H,h_{\mathrm{base}},\pi_{\mathrm{id}},\chi_{\mathrm{id}})$ is accepted when $h_{\mathrm{base}}=h_{\mathrm{src}}$ is the precommitted source snapshot owning Section 2.4.1, the inventory audit verifies inclusion of every $\mathsf E_H$-eligible physical constraint owner, and $\mathsf V$ verifies
+A **baseline-identity extension** $(h_H,h_{\mathrm{base}},\pi_{\mathrm{id}},\chi_{\mathrm{id}})$ is accepted when $h_{\mathrm{base}}=h_{\mathrm{src}}$ is the registered source snapshot owning Section 2.4.1, the inventory audit verifies inclusion of every $\mathsf E_H$-eligible physical constraint owner, and $\mathsf V$ verifies
 $$
 \Sigma^{(h_H)}=\Sigma^{\mathrm{base}},
 \quad
@@ -418,7 +373,7 @@ C_P^{(h_H)}(\mu)=C_P^{\mathrm{base}}(\mu).
 $
 For an empty full hierarchy, (2.4.1d.3d) remains valid with value $\infty$, while neither side of (2.4.1d.3e) is defined. The record $\chi_{\mathrm{id}}$ verifies the proof dependencies and all snapshot, inventory, generator, and proof hashes.
 
-For a target code $\mu\in\mathsf{Code}_\mu$ submitted after hierarchy commitment, write $\mathcal L_n^{(h_H)}$, $\mathcal M_n^{(h_H)}(\mu)$, $C_{P,n}^{(h_H)}(\mu)$, and $C_{P,\mathrm{ext}}^{(h_H)}(\mu)$ for the hierarchy-relative objects. When an accepted common realizer establishes full-constraint realizability, also write $C_P^{(h_H)}(\mu)$ for the finite value in (2.4.1d.3b). Acceptance of the baseline-identity extension identifies the stagewise and extended objects with their unsuperscripted baseline counterparts for every submitted target and identifies $C_P^{(h_H)}$ with $C_P$ on their common full-realizability domain.
+For a target code $\mu\in\mathsf{Code}_\mu$ evaluated in the registered hierarchy, write $\mathcal L_n^{(h_H)}$, $\mathcal M_n^{(h_H)}(\mu)$, $C_{P,n}^{(h_H)}(\mu)$, and $C_{P,\mathrm{ext}}^{(h_H)}(\mu)$ for the hierarchy-relative objects. When an accepted common realizer establishes full-constraint realizability, also write $C_P^{(h_H)}(\mu)$ for the finite value in (2.4.1d.3b). Acceptance of the baseline-identity extension identifies the stagewise and extended objects with their unsuperscripted baseline counterparts for every submitted target and identifies $C_P^{(h_H)}$ with $C_P$ on their common full-realizability domain.
 
 For a submitted target code $\mu\in\mathsf{Code}_\mu$ and candidate $P_\infty\in\Sigma^*$, write $c=K(P_\infty)$ and
 $$
@@ -528,7 +483,7 @@ h_H,\mu,B,
 \right),
 \tag{2.4.1d.11}
 $$
-where $\mu$ is a canonical finite code, every displayed proof is accepted for $Q\notin\mathcal M_{e_Q}^{(h_H)}(\mu)$, and $\chi_{\varnothing}$ verifies the exhaustive census, the accepted hierarchy and trust-base references, the dependency manifests, and all proof and provenance hashes. 
+where $\mu$ is a canonical finite code, every displayed proof is accepted for $Q\notin\mathcal M_{e_Q}^{(h_H)}(\mu)$, and $\chi_{\varnothing}$ verifies the exhaustive census, the accepted hierarchy and trust-base references, the dependency manifests, and all proof and source hashes. 
 
 A **global exclusion extension** is
 $$
@@ -542,7 +497,7 @@ $$
 $$
 where $\pi_{\mathsf{cap}}$ proves that every full-hierarchy realizer has length at most $B$, or $\pi_{\mathsf{direct}}$ proves that every program fails some finite hierarchy level. The proof and $\chi_{\mathrm{glob}}$ pass the same trust-base, dependency, and hash checks.
 
-**Theorem 2.4.1e (Effective Stabilization from an Accepted Realizer Certificate).** If $\mathfrak C_{\mathrm{real}}(\mu)$ is accepted, then $P_\infty$ is a minimum-length full-constraint realizer for the registered hierarchy and
+<a id="theorem-241e-effective-stabilization-from-an-accepted-realizer-certificate"></a>**Theorem 2.4.1e (Effective Stabilization from an Accepted Realizer Certificate).** If $\mathfrak C_{\mathrm{real}}(\mu)$ is accepted, then $P_\infty$ is a minimum-length full-constraint realizer for the registered hierarchy and
 $$
 C_{P,n}^{(h_H)}(\mu)
 =
@@ -582,7 +537,7 @@ Hence $Q\notin\mathcal M_n^{(h_H)}(\mu)$. The stage-$n$ minimum is at least $c$,
 
 For an accepted exact-minimizer certificate, every supplied member of $S_\infty$ survives every level. Every other length-$c$ program is absent from every level at or beyond its certified exclusion level. At $n\ge N_{\mathrm{arg}}$ the length-$c$ slice is therefore exactly the supplied and verified set $S_\infty$. Equation (2.4.1e.1) identifies that slice with both the stagewise and full-hierarchy minimizer families, proving (2.4.1e.3). ∎
 
-**Corollary 2.4.1e.a (Bounded and Global Emptiness Certificates).** Acceptance of $\mathfrak C_{\varnothing,\le B}(\mu)$ gives
+<a id="corollary-241ea-bounded-and-global-emptiness-certificates"></a>**Corollary 2.4.1e.a (Bounded and Global Emptiness Certificates).** Acceptance of $\mathfrak C_{\varnothing,\le B}(\mu)$ gives
 $$
 \left(
 \bigcap_{n\ge0}\mathcal M_n^{(h_H)}(\mu)
@@ -639,19 +594,9 @@ Theorem 23 later gives this Hilbert-rank bound for MPUs. Equality $d_0=8$ is ava
 
 This completes the non-circular foundation for $C_P$ needed for the subsequent emergence derivations.
 
-**Resolution record 2.4.1-R1 (Full-Hierarchy Classification).** Theorems 2.4.1a--2.4.1e and Corollaries 2.4.1b.a and 2.4.1e.a resolve the mathematical component of `TV-FND-01`. For every hierarchy satisfying the frozen finite-alphabet, integer-length, nesting and attained-stage-minimum hypotheses, Theorem 2.4.1b gives the exhaustive dichotomy
-$$
-\sup_n C_{P,n}(\mu)<\infty
-\Longleftrightarrow
-\bigcap_n\mathcal M_n(\mu)\ne\varnothing,
-$$
-identifies the stable minimum and complete minimizer set, and Corollary 2.4.1b.a classifies the empty alternative. Theorem 2.4.1c is `negative-refutation` of a uniform algorithm that computes the stabilization index from arbitrary uniformly decidable hierarchy code, while Theorem 2.4.1e is `positive-discharge` of effective verification and cutoff extraction from an accepted finite realizer certificate.
+Theorem 2.4.1k supplies the registered baseline-identity, realizer and finite physical response certificates for the classical R14 instance.
 
-**Resolution TV-FND-01-R1 (Metadata).** Exact domain: nested admissible-program hierarchies under the finite-alphabet, integer-length and attained-stage-minimum convention. Premises: Theorems 2.4.1a--2.4.1e's frozen hypotheses. Equivalence: exact equality of registered program strings and minimizer sets. Budget: the full countable hierarchy for the structural theorem and the submitted finite trace for certificate verification. Verifier: the nesting/cardinality proof and Theorem 2.4.1e's exact certificate checker. Falsifier: a bounded-minimum hierarchy with empty full intersection, a minimum-length full realizer outside the stable minimizer set, or an accepted cutoff failing later. Provenance class: source-internal exact mathematics with no empirical input. Downstream consumers: Definition 17, Definition 13 and every branch using domain-defined $C_P$. Nonvacuity: the explicit two-program hierarchies in Corollary 2.4.1a.1 and Theorem 2.4.1c.
-
-The remaining gate is instance-level rather than a missing mathematical alternative: no accepted target-blind hierarchy registration, baseline-identity extension and populated realizer or global-exclusion certificate is supplied for a physical microstate. Finite PPI realization is also separate. Accordingly `TV-FND-01` retains `C+R`; its mathematical hierarchy classification is complete, while certificate population and physical realization remain live.
-
-**Theorem 2.4.1f (Fixed-Checker Incompleteness of Realizer and Exclusion Certificates).** Suppose the sentences for which the trust-base checker $\mathsf V$ of Definition 2.4.1d accepts a proof are exactly the theorems of a first-order theory $T$ extending Peano arithmetic, and every theorem of $T$ holds in the registered interpretation of (2.4.1d.2). Suppose the fixed presentation admits the data (2.4.1c.0) and a primitive recursive sequence of programs $(P'_k)_{k\ge0}$ with
+<a id="theorem-241f-fixed-checker-incompleteness-of-realizer-and-exclusion-certificates"></a>**Theorem 2.4.1f (Fixed-Checker Incompleteness of Realizer and Exclusion Certificates).** Suppose the sentences for which the trust-base checker $\mathsf V$ of Definition 2.4.1d accepts a proof are exactly the theorems of a first-order theory $T$ extending Peano arithmetic, and every theorem of $T$ holds in the registered interpretation of (2.4.1d.2). Suppose the fixed presentation admits the data (2.4.1c.0) and a primitive recursive sequence of programs $(P'_k)_{k\ge0}$ with
 $$
 T\vdash(\forall k)\bigl[U(P'_k,\mu_{\mathrm{ref}})=\mu\ \wedge\ K(P'_k)\ge k\bigr].
 \tag{2.4.1f.1}
@@ -670,15 +615,197 @@ Register the levels of (2.4.1c.2) through the generated sentences $P=P_1\vee(P=P
 
 Thus, for every trust base of the stated kind, full-constraint realizability with its minimum attained at stage $0$ does not entail an accepted minimum-value realizer certificate, and emptiness of the full intersection does not entail an accepted global exclusion extension, even when every bounded exclusion certificate is accepted.
 
-*Proof.* The idle transition makes $\neg H_0$ true, so $\varphi_{e,w}$ holds exactly when $e(w)$ never halts. Suppose $T$ proved $\varphi_{e,w}$ for every nonhalting pair. Because $\mathsf V$ is total, the following procedure is effective: for $s=0,1,2,\ldots$, simulate $e(w)$ for $s$ transitions and test the first $s$ finite strings as $\mathsf V$-proofs of $\varphi_{e,w}$; report halting at the first halt and nonhalting at the first accepted proof. Soundness excludes an accepted proof for a halting pair, and the supposition supplies one for every nonhalting pair. The procedure would therefore decide the halting problem, contradicting its undecidability [Turing 1936], which also underlies Theorem A.2.3. Fix a nonhalting pair with $T\nvdash\varphi_{e,w}$.
+*Proof.* The idle transition makes $\neg H_0$ true, so $\varphi_{e,w}$ holds exactly when $e(w)$ never halts. Suppose $T$ proved $\varphi_{e,w}$ for every nonhalting pair. Because $\mathsf V$ is total, the following procedure is effective: for $s=0,1,2,\ldots$, simulate $e(w)$ for $s$ transitions and test the first $s$ finite strings as $\mathsf V$-proofs of $\varphi_{e,w}$; report halting at the first halt and nonhalting at the first accepted proof. Soundness excludes an accepted proof for a halting pair, and the supposition supplies one for every nonhalting pair. The procedure would therefore decide the halting problem, contradicting its undecidability (Turing 1936), which also underlies Theorem A.2.3. Fix a nonhalting pair with $T\nvdash\varphi_{e,w}$.
 
 For item 1, nonhalting makes every level of (2.4.1c.2) equal to $\{P_0,P_1\}$, which gives the intersection and the constant stage minima, and $T$ proves $(\forall n)\,P_1\in\mathcal L_n^{e,w}$ directly from the generated sentence. Let a certificate $\mathfrak C_{\mathrm{real}}(\mu)$ with candidate $P_\infty$ and $c=K(P_\infty)$ pass the proof checks. Soundness of $\pi_0$ places $P_\infty$ in $\mathcal L_0^{e,w}=\{P_0,P_1\}$. If $P_\infty=P_1$, then $P_0\in\mathcal W_{<c}$, and (2.4.1d.6) requires an accepted proof of $P_0\notin\mathcal M_{e_Q}^{e,w}(\mu)$, which is equivalent to the false sentence $H_{e_Q}$; soundness excludes it. If $P_\infty=P_0$, then $T\vdash P_0\ne P_1$ makes the generated sentence for $P_0\in\mathcal L_n^{e,w}$ $T$-provably equivalent to $\neg H_n$, so the accepted persistence proof $\pi_+$ in (2.4.1d.5) yields $T\vdash\varphi_{e,w}$, contrary to the choice of the pair. An exact-minimizer certificate contains a minimum-value realizer certificate and fails with it.
 
 For item 2, (2.4.1f.1) allows $P=P'_k$ only for $k\le K(P)$, so the generated bounded sentence decides membership by finitely many comparisons and $k$-transition simulations, and it describes the set displayed in (2.4.1f.2). Nesting follows from $k\ge n+1\Rightarrow k\ge n$, and every member of $\mathcal L_n^{\flat}$ outputs $\mu$, so $\mathcal M_n^{\flat}(\mu)=\mathcal L_n^{\flat}$. Because $e(w)$ never halts, every member of $\mathcal L_n^{\flat}$ is some $P'_k$ with $k\ge n$ and has length at least $n$; hence $C_{P,n}^{\flat}(\mu)\ge n$, and every program $P$ fails level $K(P)+1$, which proves emptiness and the displayed exclusion levels. Each sentence $Q\notin\mathcal L_{K(Q)+1}^{\flat}$ is a true instance of a primitive recursive relation and is therefore provable in $T$. In $\mathsf{cap}$ mode, the accepted proof establishes (2.4.1e.1.2). Reasoning in $T$, suppose $H_m$ for some $m$. Monotonicity of halting gives $H_k$ for $k:=\max(m,B+1)$, so the generated sentence with witness index $k$ and (2.4.1f.1) place $P'_k$ in every $\mathcal M_n^{\flat}(\mu)$, while $K(P'_k)\ge k>B$ contradicts (2.4.1e.1.2). Thus $T$ proves that (2.4.1e.1.2) implies $(\forall m)\neg H_m$, and hence $\varphi_{e,w}$. In $\mathsf{direct}$ mode, instantiating (2.4.1e.1.4) at $P'_m$ and using $U(P'_m,\mu_{\mathrm{ref}})=\mu$ gives a level $n$ at which the generated sentence fails for the witness index $m$, so $\neg H_m$; $T$ again derives $\varphi_{e,w}$. Either accepted global proof would therefore give $T\vdash\varphi_{e,w}$. ∎
 
-**Resolution TV-FND-01-R2 (Metadata).** Exact domain: uniformly decidable nested hierarchies over a presentation carrying (2.4.1c.0) and (2.4.1f.1), with trust bases whose checker accepts exactly the theorems of a first-order extension $T$ of Peano arithmetic that is sound for the registered interpretation. Premises: the proof checks of Definition 2.4.1d, soundness (2.4.1d.2), and undecidability of halting. Equivalence: equality of program strings and $T$-provable equivalence of generated membership sentences. Budget: the full countable hierarchy and every finite submitted certificate. Verifier: the parallel simulation and proof-search reduction, the census and soundness contradiction for $\mathfrak C_{\mathrm{real}}(\mu)$, and the $T$-derivations of $\varphi_{e,w}$ from each global exclusion mode. Falsifier: an accepted minimum-value realizer certificate for (2.4.1c.2), or an accepted global exclusion extension for $\{\mathcal L_n^{\flat}\}$, at a nonhalting pair with $T\nvdash\varphi_{e,w}$. Provenance class: source-internal recursion-theoretic nonentailment. Downstream consumers: Definition 2.4.1d, Theorem 2.4.1e, Corollary 2.4.1e.a and `TV-FND-01`. Nonvacuity: the two displayed hierarchies at a nonhalting pair unprovable in $T$, which exists by the reduction in the proof; a universal prefix machine supplies (2.4.1f.1) through a fixed interpreter prefix followed by a unary padding code. This is `nonentailment` of accepted-certificate availability from full-constraint realizability and from emptiness, for every fixed trust base of the stated kind. `TV-FND-01` retains `C+R`: a physical microstate still requires an accepted target-blind registration, a baseline-identity extension and one of the two certificates, and Theorem 2.4.1f makes availability of either certificate a property of the registered hierarchy and trust base; finite PPI realization remains separate.
+<a id="definition-241g-finite-classical-source-presentation"></a>**Definition 2.4.1g (Finite Classical Source Presentation).** The presentation $\mathsf R$ has one source constructor $R_h$ for each integer $h\ge0$. Its physical primitives are finite classical preparations, the specified stochastic collision instruments, reversible Boolean controls, isolated prepared record cells, charged finite controller/readout operations and an externally calibrated timer. Put
+$$
+D=2h+2,\qquad d=h+1,\qquad G=h+3,\qquad
+\kappa=\tau^{-1}>0,\qquad T=h\tau .
+\tag{2.4.1g.1}
+$$
+These are model inputs, including the collision kinetics and clock calibration. The source's closed grammar is:
 
-**Remark on Irreversibility and the Arrow of Time:** Theorem 4 supplies only the ordered present-to-future parameter built into the definition of prediction. Thermodynamic irreversibility is a separate branch statement. For a registered reset, Theorem 31 gives
+| Owner | Complete source object or law |
+|:--|:--|
+| S01 | The full binary tree of depth $D$, finite bit registers, typed counters and valid zero-padded motor addresses. |
+| S02 | Uniform initial motor law on depth $d$; independent fair $Y_0$ and fallback bits; independent increments $Z_1,Z_2$ with probability $1/4$ of one; all declared ready cells and stocks. |
+| S03 | Rate $\kappa$ in both directions on every tree edge, independent of all data and records. The equilibrium-phase control instead assigns each child rate $\kappa/2$ and parent rate $\kappa$. |
+| S04 | The six predictive gates below, their identical reverse-edge inverses, identity on other depth edges, and the separately named frozen-memory control. |
+| S05 | Each finite logical collision $F$ has a fresh shadow and the permutation extension $(x,y)\mapsto(y\mathbin{\oplus}F(x),x)$; conditional drive and supplies are charged. |
+| S06 | Write-once direction/branch history, protected first-high-water archive and fresh shadows, with no archive-to-predictor feedback. |
+| S07 | $Y_1=Y_0\oplus Z_1$, $Y_2=Y_1\oplus Z_2$; independent motor randomness and fallback; no forecast access to future outcomes. |
+| S08 | Absorbing stop at the $h$th jump, first lifted level $6$, or deadline $T$, whichever occurs first; $h=0$ stops immediately. |
+| S09 | The finite classical response grammar, scheduled snapshots, bounded verifier replay and the named orientation-exchange control. Coherent quantum inputs are outside this grammar. |
+| S10 | Every register, shadow, controller/ROM, source, timer, energy store and finite operation has the supplied finite account below. There is no reset during a run. |
+| S11 | Finite stochastic kernels compose by multiplication and conditioning on earlier returned records. Between scheduled operations the waiting kernel is $e^{tQ}$ for the same finite generator; crossing a scheduled time splits the wait and inserts its controller kernel. |
+| S12 | Degenerate bare motor energies, finite nonequilibrium localization/ready-cell resources and charged drive. The projected motor rate ratio is not identified with total source heat. |
+
+Metatheory, coding and proof rules are separate from these physical leaves. Complexity, task qualification, MPU designation and clock conclusions are derived consumers, and other architecture families are outside the source grammar. Dependencies are ranked: S01/S02 have rank zero; S03/S04/S05/S07 rank one; S06/S08 rank two; S09/S10 rank three; S11/S12 rank four. Every dependency is to a lower rank.
+
+The named controls are explicit. The equilibrium-phase configuration changes only the child/parent rates to $\kappa/2,\kappa$, giving aggregate rates $\kappa,\kappa$ and reversible stationary node weights proportional to $2^{-k}$; no thermal-bath interpretation is needed for this kinetic control. Frozen memory suppresses the two updates to $m$ and leaves the other gates, motor and recording rules unchanged. Orientation exchange reads first passages toward negative multiples of three from the retained motor word while keeping the $2\kappa/\kappa$ dynamics; it does not reverse already written records. Its finite circuit/readout events retain the original jump/deadline budget.
+
+Represent a motor vertex by a depth cursor $k$ and its $D$ address bits, padded by zero beyond depth $k$. A forward edge appends its child bit, and a backward edge pops it into a fresh history cell. Initially $k=d$. With lifted level $\ell=k-d$, the gates on edges $0,\ldots,5$ are
+$$
+\begin{array}{c|cccccc}
+\ell&0&1&2&3&4&5\\ \hline
+\text{update}&f_1\mathrel{\oplus}=m&
+e_1\mathrel{\oplus}=f_1\oplus Y_1&
+m\mathrel{\oplus}=e_1&
+f_2\mathrel{\oplus}=m&
+e_2\mathrel{\oplus}=f_2\oplus Y_2&
+m\mathrel{\oplus}=e_2 .
+\end{array}
+\tag{2.4.1g.2}
+$$
+The memory starts at $m=Y_0$ and the four forecast/discrepancy bits at zero. Both children use the same gate. Reverse traversal uses that same involution.
+
+The protected archive is $(I_0,C_1,O_1,U_1,C_2,O_2,U_2,E_1,E_2)$, initially $I_0=Y_0$ with its other fields zero. A high-water counter $r\in\{0,\ldots,6\}$ permits writes only on first attainment of the next positive level. Levels $1,4$ write the forecasts, levels $2,5$ write the observed outcomes and discrepancies, and levels $3,6$ write the updated memory. Three immutable fourteen-bit snapshots at $0,T/2,T$ contain $(r,\text{archive},\text{status})$. Their prefixes define the scheduled retained observer; an unsampled continuously timed history is not inferred from the final count.
+
+For $w(n)=\max\{1,\lceil\log_2 n\rceil\}$ define
+$$
+\begin{aligned}
+B&=D+w(D+1)+5+9+3+2+w(h+1)+2w(G+1),\\
+L_{\mathrm{receipt}}&=d+3+w(h+1),\\
+N&=(h+3)B+2h+42+L_{\mathrm{receipt}}+B+16 .
+\end{aligned}
+\tag{2.4.1g.3}
+$$
+The complete counted registers contain $B$ mutable bits, $2h$ history bits, $(h+3)B$ fresh shadow bits, forty-two snapshot bits, $d+4$ preparation bits, $w(h+1)$ capacity bits, the immutable receipt, $4N$ verifier-workspace bits, three acceptance bits, four verifier-energy counter bits and $4B+32$ controller-workspace bits. Add controller ROM of at most $B2^{B+4}$ bits, verifier ROM of at most $2^N$ bits and a finite three-trigger timer. These ROM and timer resources are part of the carrier account.
+
+Battery/receiver counters $q,z\in\{0,\ldots,G\}$ start at $(G,0)$, have energies $qE,zE$ and exchange $(q,z)\mapsto(q-1,z+1)$ at every collision or scheduled controller operation. Three verifier calls have a distinct three-token energy supply. Prices are one resource credit per prepared bit, one per bit-time $\tau$, and one per timing operation; controller, verifier and their finite preparations are charged. Energy $E$ and resource credit are distinct units. A collision/controller is a supplied charged primitive; its finite logical synthesis is bounded separately, without recursively charging the charge mechanism. The full run has at most $h+3$ such main operations and three verifier operations.
+
+Let $\mu_h$ be the fixed canonical ready-source descriptor of these fields, their preparation and response grammar. The descriptor uses an injective, computable canonical encoding with a decidable inverse on its range: its capacity field determines $h$, after which every field is compared with this constructor. The fixed byte-coding convention is sorted-key UTF-8 JSON with no insignificant whitespace. Codes contain the complete apparatus, not only its motor projection. The reference auxiliary input is the empty string.
+
+Let $\gamma(n)$ be Elias $\gamma$ coding of positive integers. Fix an optimal partial prefix machine $V$ and define
+$$
+U_{\mathsf R}(0\gamma(h+1),z)=\mu_h,\qquad
+U_{\mathsf R}(1^{16}0p,z)=V(p,z).
+\tag{2.4.1g.4}
+$$
+Whole-string constructor parsing rejects trailing bits; all other syntax is undefined. The universal tail is an adopted coding convention. Define a total bounded virtual-step simulation by yielding between finite interpreter stages; every virtual step is a finite computation, with no uniform practical runtime claim.
+
+The source assertion generator cycles through S01–S12. Its integer payload enumerates all finite binary strings in length/lexicographic order, decoding canonical finite descriptions of local owner assertions, typed finite response trees, waiting-kernel coefficient multi-indices and retained prefixes. Malformed payloads denote a repeated local assertion. Protocol trees have primitive, sequence and earlier-record-conditioned case nodes. Each typed word, rational wait, finite coefficient and prefix occurs at a finite index. Physical out-of-budget requests have false admissibility antecedents. Local owner tests compare the complete decoded source with the corresponding constructor fields; response, coefficient and prefix instances additionally use all twelve owner equalities and the composition/induction rules proved below. Put
+$$
+\mathcal L_n^{\mathsf R}=
+\left\{P:
+\begin{array}{l}
+\text{if }U_{\mathsf R}(P,\varnothing)\text{ returns within }n\text{ virtual steps,}\\
+\text{its output decodes and satisfies the first }n\text{ generated assertions}
+\end{array}\right\}.
+\tag{2.4.1g.5}
+$$
+The specialized proof system has ordinary standard integer/rational arithmetic, finite sets/matrices, equality and natural-number/finite-word induction as its logical root. Its derived rules are local primitives, stochastic composition, tree-word cancellation, protected-prefix induction, semigroup-coefficient induction, hierarchy persistence and exhaustive short-string exclusion. The physical premises remain the twelve displayed source leaves.
+
+<a id="theorem-241h-populated-hierarchy-and-exact-minimum-on-the-classical-source"></a>**Theorem 2.4.1h (Populated Hierarchy and Exact Minimum on the Classical Source).** Definition 2.4.1g constructs a nonempty finite physical-model source for every $h$, and its canonical encoding is response-faithful on the complete declared grammar. The hierarchy is uniformly decidable, nested and covers every eligible instantiated source obligation. Every constructor belongs to every stage. In this same fixed presentation,
+$$
+C_{P,n}^{\mathsf R}(\mu_{14})=C_P^{\mathsf R}(\mu_{14})=8
+\quad(n\ge0),\qquad
+\operatorname{argmin}=\{00001111\},\qquad N_{\mathrm{val}}=0.
+\tag{2.4.1h.1}
+$$
+The result is relative to $\mathsf R$, including its source grammar, coding, reference and checker. It does not identify a differently registered baseline with $\mathsf R$.
+
+*Proof.* For every live path with at most $h$ jumps,
+$$
+1=d-h\le k\le d+h=D-1.
+\tag{2.4.1h.2}
+$$
+Thus no live transition touches a missing physical boundary. Every interior vertex has two child edges and one parent edge, giving forward/reverse rates $2\kappa,\kappa$, independently of data. The tree and all declared registers and stocks are finite. The address encoding intertwines each append/pop matrix-unit transition, depth, phase, capacity and bit readout exactly. Physical tree states outside the live sector remain in the carrier.
+
+Each predictive gate is an involution. Two adjacent opposite depth steps apply the same edge gate twice and cancel. Removing such pairs reduces every finite word to its monotone path to the final lifted level. Induction therefore gives, at the first completed second circuit,
+$$
+(m,f_1,e_1,f_2,e_2)=(Y_2,Y_0,Z_1,Y_1,Z_2).
+\tag{2.4.1h.3}
+$$
+The archive records each first new level in forecast/outcome/update order. Fresh-slot writes leave its preceding prefix unchanged, and no protected field enters the motor rates or predictive gates. The device has an actual discrepancy-driven model update, not a relabeled phase counter.
+
+The collision permutation has inverse $(u,v)\mapsto(v,u\oplus F(v))$ and on a zero shadow realizes $(F(x),x)$. Each logical update therefore retains its old state in a paid fresh register. The energy exchange is injective on its ready domain and preserves $q+z=G$; it extends to a permutation of each finite equal-energy sector. The main and verifier stocks cover every admitted operation. The ROM bounds follow by finite truth-table synthesis; the timer and ready-cell supply remain explicit source inputs. No finite closed unitary derivation of the exact Markov law or thermal creation of pure blanks has been assumed.
+
+For primitive source/hardware kernels the address/register map $J$ gives $K_aJ=JK'_a$ and equal pulled-back effects. Multiplication and finite sums preserve these equalities under sequences and adaptive case splits. For any finite segment generator choose $\lambda$ at least its largest exit rate and put $M=I+Q/\lambda$. Then
+$$
+e^{tQ}=e^{-\lambda t}\sum_{j=0}^{\infty}\frac{(\lambda t)^j}{j!}M^j .
+\tag{2.4.1h.4}
+$$
+The weights are nonnegative and sum to one; the matrix series converges absolutely. The relation $QJ=JQ'$ implies $Q^jJ=J(Q')^j$ by induction and hence intertwines the waiting kernels. Splitting at scheduled snapshots and the deadline proves the claim for the complete apparatus. Rational coefficient identities and all retained prefixes follow from the same power/protected-write inductions. These arguments justify the generated instance normalizer on the entire declared source grammar; a finite sample is not used to infer all-word correctness.
+
+For completeness of the machine construction, enumerate finite-table Turing transducers with a fixed output-cleanup convention. For each transducer and auxiliary input, dovetail all inputs and accept a newly halting input only if prefix-incomparable with every earlier accepted input. This gives a partial computable prefix machine; if the original domain was prefix-free, the filter changes no halting pair. Prefix-code the transducer index and simulate this filter to obtain $V$. Every partial computable prefix machine is simulated with a fixed additive index overhead. The constructor namespace starts with zero and the tail with one; both domains are prefix-free, so (2.4.1g.4) is an optimal partial prefix machine. Its interpreter can yield between each finite dovetail stage and constructor operation. Bounded simulation and each local test therefore terminate.
+
+Once a program has returned, every later stage retains its output and includes all previous tests; a program that has not returned is provisionally admitted. This proves nesting. The owner cycle and exhaustive finite payload encoding give both directions of exact source-relative coverage. No owner or generated source equation contains program length, a preferred capacity, task accuracy or MPU designation. The preceding local/intertwining inductions prove every constructor's base and persistence sentences, using the stated derived rules.
+
+Finally, all $2^8-1=255$ syntactic strings shorter than eight are exhausted by whole-string parsing. No universal-tail prefix fits. The only constructors in that census are
+$$
+\begin{array}{c|rrrrrrr}
+h&0&1&2&3&4&5&6\\ \hline
+P&01&0010&0011&000100&000101&000110&000111 .
+\end{array}
+\tag{2.4.1h.5}
+$$
+Each has a different capacity and full descriptor from $\mu_{14}$; all other shorter strings are undefined. Their target-realization exclusion level is zero. The program $0\gamma(15)=00001111$ returns $\mu_{14}$ and persists at every stage. Among all 256 length-eight strings, only this constructor returns that descriptor. The finite proof certificate contains these complete censuses, the source/runtime identities and the seven derived rules; each rule's soundness was established above. Thus (2.4.1h.1) follows. No timeout is a nonhalting proof, and no general proof-checker completeness is claimed. ∎
+
+<a id="corollary-241h1-attained-source-relative-mpu-threshold-and-complete-carrier-account"></a>**Corollary 2.4.1h.1 (Attained Source-Relative MPU Threshold and Complete Carrier Account).** On the same source presentation, forecast $Y_2$ by the returned second forecast on success and by the independent fallback on failure. With baseline $1/2$ and strict accuracy margin $1/8$, the qualifying class has attained operational threshold
+$$
+C_{\mathrm{op}}^{\mathsf R}=8=C_P^{\mathsf R}(\mu_{14}).
+\tag{2.4.1h.6}
+$$
+At $h=14$ the counted carrier has $B=68$, $N=1332$ and 6,978 bits, in addition to the ROM/timer account. The eight-bit result concerns description length.
+
+*Proof.* The success event is independent of the environment, so
+$$
+A(R_h)=\frac12+\frac{s_h}{4},
+\tag{2.4.1h.7}
+$$
+where $s_h$ is its completion probability. A rational first-passage recursion starts with mass one at zero, sends surviving mass $2/3$ forward and $1/3$ backward at each jump, and accumulates mass first reaching six. At fourteen jumps it gives $828608/1594323$. The unlimited live walk has independent Poisson jump count of mean $42$ by $T=14\tau$. Coupling to that walk gives
+$$
+s_{14}\ge\frac{828608}{1594323}-\Pr(\operatorname{Poisson}(42)<14) >\frac{828608}{1594323}-\frac1{256}
+=\frac{210529325}{408146688}>\frac12.
+\tag{2.4.1h.8}
+$$
+Indeed $\mathbb E2^{-N}=e^{-21}$ and Markov's inequality give $\Pr(N<14)\le2^{13}e^{-21}<1/256$, using $e>2$. The success accuracy is $3/4$ and fallback accuracy $1/2$, proving qualification. Every shorter constructor has $h\le6$, so completion is impossible below six jumps and at six requires six forward jumps, giving $s_h\le64/729<1/2$. No universal alias fits below eight bits. This proves the minimum over the entire qualifying source class, including arbitrary program aliases, without requiring a complete census of longer programs or uniqueness of the qualifying architecture.
+
+Substitution in (2.4.1g.3) and its complete register inventory gives 6,978 counted bits. Main energy stock is $17E$, verifier stock $3E$, controller ROM bound $68\cdot2^{72}$ bits and verifier ROM bound $2^{1332}$ bits, with the finite timer and all preparation/maintenance charges retained. No hardware-capacity or gate-count quantity is substituted for prefix complexity. ∎
+
+<a id="proposition-241j-exact-transport-of-hierarchy-minima"></a>**Proposition 2.4.1j (Exact Transport of Hierarchy Minima).** Fix two declared prefix presentations, an output map $F$, and their stagewise realizer sets $\mathcal M_n^S(\mu)$ and $\mathcal M_n^H(F\mu)$. Let $K_S$ and $K_H$ be their nonnegative integer program lengths. Suppose fixed maps $T$ and $R$ satisfy, for every $n$,
+$$
+\begin{aligned}
+P\in\mathcal M_n^S(\mu)&\Longrightarrow
+T(P)\in\mathcal M_n^H(F\mu),\quad K_H(T(P))\le K_S(P),\\
+Q\in\mathcal M_n^H(F\mu)&\Longrightarrow
+R(Q)\in\mathcal M_n^S(\mu),\quad K_S(R(Q))\le K_H(Q).
+\end{aligned}
+\tag{2.4.1j.1}
+$$
+Define the minimum of an empty set to be $+\infty$. Then the stage minima, their extended suprema, and the common-realizer minima agree:
+$$
+\begin{aligned}
+\min_{P\in\mathcal M_n^S(\mu)}K_S(P)
+&=\min_{Q\in\mathcal M_n^H(F\mu)}K_H(Q),\\
+\sup_n C_{P,n}^S(\mu)&=\sup_n C_{P,n}^H(F\mu),\\
+\min_{P\in\cap_n\mathcal M_n^S(\mu)}K_S(P)
+&=\min_{Q\in\cap_n\mathcal M_n^H(F\mu)}K_H(Q).
+\end{aligned}
+\tag{2.4.1j.2}
+$$
+In particular, either both hierarchies have a common realizer or both lack one. If the same hypotheses hold for every output in a qualifying source class $\mathcal Q_S$, and $F(\mathcal Q_S)=\mathcal Q_H$ for the complete qualifying host class with the same task, preparation domain, baseline and prediction margin, their qualifying complexity infima agree as well. Admission and baseline identity are the separate checks of Definition 2.4.1d.
+
+*Proof.* A nonempty set of nonnegative integer program lengths has an attained minimum. The image under $T$ of a source minimum proves $C_{P,n}^H\le C_{P,n}^S$, and $R$ proves the reverse inequality. If exactly one stage set were empty, the map from the other set would give an element of that empty set. Thus simultaneous emptiness gives equality at $+\infty$ too, and taking suprema proves the second equality.
+
+If $P$ belongs to every source stage, the single fixed string $T(P)$ belongs to every host stage. The fixed reverse map has the converse property. Applying the same two minimum inequalities to these intersections proves the last equality, with the same empty-set convention. Fixedness is essential here: stage-dependent choices of translations would not supply a single image program common to all stages. Finally, the surjection $F:\mathcal Q_S\to\mathcal Q_H$ exhausts the host qualifying class, and the established pointwise equality makes the two sets of qualifying complexity values equal. Taking their extended infima completes the proof. ∎
+
+<a id="corollary-241j1-operational-output-maps-and-exact-program-length"></a>**Corollary 2.4.1j.1 (Operational Output Maps and Exact Program Length).** A one-way compiler satisfying $K_H(T(P))\le K_S(P)+d$ gives only the upper inequality $C_{P,n}^H(F\mu)\le C_{P,n}^S(\mu)+d$ on its admitted stage sets. Exact program length is not invariant over arbitrary declared prefix-universal presentations of the same output.
+
+*Proof.* Applying the compiler to a minimum-length source program proves the inequality. To exhibit strict change of exact lengths, choose a computable finite output $\mu_*$ whose minimum under a prefix-universal machine $U$ exceeds one. Such an output exists because $U$ has infinitely many outputs and only finitely many programs of length at most one. Define another presentation by
+$$
+U_*(0)=\mu_*,\qquad U_*(1P)=U(P),
+\qquad U_*(\epsilon)\text{ undefined},
+\tag{2.4.1j.3}
+$$
+where $\epsilon$ is the empty word. The singleton branch $0$ and the branch $1\operatorname{dom}U$ are prefix-disjoint; prefix-freeness inside the latter follows from that of $\operatorname{dom}U$. The second branch simulates every $U$ program with one additional bit, so $U_*$ is prefix-universal. The target has exact minimum one under $U_*$, since $0$ realizes it and the empty word is undefined. Its output remains $\mu_*$ while its shortest description changes. ∎
+
+<a id="remark-on-irreversibility-and-the-arrow-of-time"></a>**Remark on Irreversibility and the Arrow of Time:** Theorem 4 supplies only the ordered present-to-future parameter built into the definition of prediction. Thermodynamic irreversibility is a separate branch statement. For a registered reset, Theorem 31 gives
 $$
 \varepsilon_{\mathrm{reset}}
 =
@@ -687,11 +814,30 @@ H_q(P\mid R)+\varepsilon_{\mathrm{diss}}
 $$
 and a positive uniform floor inferred from this entropy bound requires the independent certificate $H_q(P\mid R)\ge h_{\min}>0$. A directional pathwise ratchet additionally requires the common forward/reverse path-measure and positive pathwise-production hypotheses of Theorem O.3 or O.3a. Statistical mechanics remains a background constraint on physical realizability. Neither SPAP nor the structural value $\varepsilon_0=\ln2$ implies a positive heat cost for every update or a universal microscopic thermodynamic arrow.
 
+<a id="proposition-241j2-definitional-identity-and-equal-complexity-presentations"></a>**Proposition 2.4.1j.2 (Definitional Identity and Equal-Complexity Presentations).** Fix the complete original presentation tuple $\mathfrak B$ of Definition 2.4.1d: its alphabet, partial evaluator, encodings, reference law, length and staged language families. Introducing new names $I.f:=\mathfrak B.f$ for every field, with the same quantifiers over all stages and candidate strings, is a conservative definitional extension. It preserves every stage realizer set, stage minimum, intersection, supremum, full-realizability predicate and qualifying minimum exactly. Equality of those numerical complexity functions alone does not identify the original evaluator or presentation.
+
+*Proof.* Each model of the original signature has exactly one expansion satisfying the defining equations, obtained by assigning every new field its original value. Forgetting the aliases is the inverse map. Substitution therefore preserves every formula on the original objects. In particular the defining success and realization predicates have identical truth values for every candidate string at every stage. The sets over which minima, infima, intersections and suprema are taken are identical; so are every qualification predicate and final minimum. This observation renames already fixed data; it supplies no new value for a field that has not been fixed.
+
+For the final assertion, take any binary universal prefix evaluator $V$ and a staged family $\mathcal J_n$ of its candidate programs. For $b\in\{0,1\}$ define
+$$
+ U_b(bP,r)=V(P,r),\qquad
+ U_b(Q,r)\text{ undefined when }Q\text{ does not begin with }b,
+ \qquad \mathcal L_n^b=\{bP:P\in\mathcal J_n\}.
+ \tag{2.4.1j.2.1}
+$$
+The empty string is undefined. Equip each prefixed presentation with the stage response, retained-reference and qualification predicates pulled back along $bP\mapsto P$ from the same $V$ presentation. In particular no arbitrary extra literal-string qualification is presumed invariant. Logical aliases do not extend the registered program alphabet. In this counterexample both candidate universes are the same binary strings, while the staged families are the displayed prefixed subsets. The two evaluators remain universal and prefix-free on their domains. The bijection $0P\leftrightarrow1P$ preserves literal length and every retained output, law and qualification. Thus, for every target $\mu$ and stage $n$,
+$$
+ C_{P,n}^{(0)}(\mu)=C_{P,n}^{(1)}(\mu),\qquad
+ C_P^{(0)}(\mu)=C_P^{(1)}(\mu),
+ \tag{2.4.1j.2.2}
+$$
+with the same infeasibility convention and subsequent hierarchy operations. Nevertheless $U_0$ and $U_1$ are different partial functions: for any $P$ on which $V$ is defined, $U_0(0P,r)$ is defined and $U_1(0P,r)$ is not. Exact equality of the entire complexity function therefore cannot replace literal presentation identity or the explicit two-way semantic maps in Proposition 2.4.1j. $\square$
+
 **2.4.2 The Operational Complexity Proxy Operator ($\hat{C}_v$)**
 
 Since the theoretical $C_P$ (Equation 1) is generally uncomputable, systems must employ a physically meaningful and accessible operational proxy within their dynamics. Essential properties required for such a proxy include: (1) Spectral Cost Monotonicity (higher proxy eigenvalues have non-decreasing cost eigenvalues under the declared increasing cost function; ordering proxy means alone does not order $\langle\hat R\rangle$ for arbitrary states), (2) Approximate Compositional Additivity (complexity of independent systems adds), and (3) Computational Accessibility (computable spectrum/projectors). Within the quantum setting emerging in the PU framework (Section 8), quantum circuit complexity provides a canonical representative of this admissible proxy class. We therefore use a (coarse-grained) circuit-complexity observable, defined up to affine rescaling within the admissible family, as the operational proxy.
 
-**Theorem 1 (Operational Complexity Operator $\hat{C}_v$):** Fix an admissible coarse-grained proxy family for MPU $v$ at the chosen operational resolution, represented by mutually orthogonal projectors $\{\hat P_d\}_{d=0}^{d_{\max}}$ on $\mathcal{H}_v$ satisfying
+<a id="theorem-1-operational-complexity-operator-hatc_v"></a>**Theorem 1 (Operational Complexity Operator $\hat{C}_v$):** Fix an admissible coarse-grained proxy family for MPU $v$ at the chosen operational resolution, represented by mutually orthogonal projectors $\{\hat P_d\}_{d=0}^{d_{\max}}$ on $\mathcal{H}_v$ satisfying
 $$
 \hat P_d\hat P_{d'}=\delta_{dd'}\hat P_d,
 \qquad
@@ -728,7 +874,7 @@ The expectation value $\langle\psi|\hat C_v|\psi\rangle$ serves as the system's 
 
 The link between theoretical $C_P$ and the operational proxy $\langle\hat C_v\rangle$ is a necessary equality on the joint stable-equilibrium and per-MPU force-identifiability branch of Theorem 2. It is not a consequence of POP or PCE alone. Lemma D.1 supplies the conditional argument: both operational and physical forces vanish at the joint equilibrium, and the registered force-identifiability implication then gives alignment for each MPU without cancellation between distinct MPU coordinates.
 
-**Theorem 2 (Functional Correspondence at Joint Stable Equilibria on the Faithful-Force-Identifiability Branch):** Let $x^*$ be a joint stable equilibrium of the operational and physical adaptation forces of Lemma D.1, so that $F_v^{\mathrm{op}}(x^*)=F_v^{\mathrm{phys}}(x^*)=0$ for every MPU $v$. Assume the per-MPU force-identifiability condition
+<a id="theorem-2-functional-correspondence-at-joint-stable-equilibria-on-the-faithful-force-identifiability-branch"></a>**Theorem 2 (Functional Correspondence at Joint Stable Equilibria on the Faithful-Force-Identifiability Branch):** Let $x^*$ be a joint stable equilibrium of the operational and physical adaptation forces of Lemma D.1, so that $F_v^{\mathrm{op}}(x^*)=F_v^{\mathrm{phys}}(x^*)=0$ for every MPU $v$. Assume the per-MPU force-identifiability condition
 $$
 F_v^{\mathrm{phys}}(x)-F_v^{\mathrm{op}}(x)=0
 \quad\Longleftrightarrow\quad
@@ -741,13 +887,12 @@ $$
 
 *Proof.* At the joint equilibrium, $F_v^{\mathrm{phys}}(x^*)-F_v^{\mathrm{op}}(x^*)=0-0=0$ for every $v$. The force-identifiability implication in Lemma D.1 gives $C_P(v)=\langle\hat C_v\rangle_{x^\star}$ for every $v$, which is Equation (3). ∎
 
-
 **2.4.4 Physical Resource Costs: Functions ($R, R_I$) and Operators ($\hat{R}, \hat{R}_I$)**
 
-The physical realization of systems with complexity $C_P$ incurs resource costs, fundamentally linked to thermodynamics (e.g., Landauer's principle, $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive entropy-derived floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31)). These costs constrain the POP, as they limit feasible model complexity and predictive performance. To make the dynamics tractable without restricting generality beyond what is used in later theorems, we assume only that $R(C_P)$ is nonnegative, strictly increasing, and convex (DSC), and that $R_I(C_P)$ is nonnegative, increasing, and satisfies $R_I(K_0)=0$; when explicit closed forms are required, we use the representative functional forms below. In the general case, these cost rates are functions of both complexity and the effective temperature of the environment, $R(C, T_{eff})$, a dependence that becomes essential in the analysis of Prediction Relativity (Appendix N). We then define the corresponding operators acting on the Hilbert space.
+The physical realization of systems with complexity $C_P$ incurs resource costs, fundamentally linked to thermodynamics (e.g., Landauer's principle, $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive entropy-derived floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31)). These costs constrain the POP, as they limit feasible model complexity and predictive performance. To make the dynamics tractable without restricting generality beyond what is used in later theorems, we assume only that $R(C_P)$ is nonnegative, strictly increasing, and convex (DSC), and that $R_I(C_P)$ is nonnegative, increasing, and satisfies $R_I(K_0)=0$; when explicit closed forms are required, we use the representative functional forms below. In the general case, these cost rates are functions of both complexity and the effective temperature of the environment, $R(C, T_{\mathrm{eff}})$, a dependence that becomes essential in the analysis of Prediction Relativity (Appendix N). We then define the corresponding operators acting on the Hilbert space.
 
-**Definition 3 (Resource–Cost Functions).**
-- **Definition 3a (Physical operational cost $R(C; T_{\text{eff}})$).** Let $\mathfrak t=(\mathcal E,A,f_{random},\epsilon_{acc})$ be the declared task tuple of Definition 13, and let $C_{op}$ denote the threshold produced by that definition for $\mathfrak t$. The physical operational cost is the rate of physical resource consumption required to maintain structures and run processes of complexity $C$ at effective temperature $T_{\text{eff}}$.
+<a id="definition-3-resource-cost-functions"></a>**Definition 3 (Resource–Cost Functions).**
+- <a id="definition-3a-physical-operational-cost-rc-t_texteff"></a>**Definition 3a (Physical operational cost $R(C; T_{\text{eff}})$).** Let $\mathfrak t=(\mathcal E,A,f_{\mathrm{random}},\epsilon_{acc})$ be the declared task tuple of Definition 13, and let $C_{op}$ denote the threshold produced by that definition for $\mathfrak t$. The physical operational cost is the rate of physical resource consumption required to maintain structures and run processes of complexity $C$ at effective temperature $T_{\text{eff}}$.
   - $R$ is non‑decreasing in $C$ ($R'(C)\ge 0$). For $C > C_{op}$ on the declared task tuple, we adopt strict convexity, $R''(C) > 0$, reflecting the increasing coordination, error‑correction, and communication overhead at scale. Strict convexity is a modeling assumption on this cost branch. The complexity variable $C$ is not identified with state-space capacity here, so a count of $2^C$ configurations does not supply a derivation of that assumption. A minimal parametric form is
    $$
     R(C; T_{\text{eff}})
@@ -755,7 +900,7 @@ The physical realization of systems with complexity $C_P$ incurs resource costs,
     \;+\; r_p(T_{\text{eff}})\,\bigl(C - C_{\text{op}}\bigr)^{\gamma_p},
     \quad C\ge C_{\text{op}},\ \gamma_p>1,\ r_p(T_{\text{eff}})>0. \quad \text{(4)}
     $$
-- **Definition 3b (Reflexive‑information cost $R_I(C; T_{\text{eff}})$).** The informational overhead rate associated with self‑referential verification (SPAP). Reflecting diminishing returns beyond the Horizon Constant $K_0$,
+- <a id="definition-3b-reflexive-information-cost-r_ic-t_texteff"></a>**Definition 3b (Reflexive‑information cost $R_I(C; T_{\text{eff}})$).** The informational overhead rate associated with self‑referential verification (SPAP). Reflecting diminishing returns beyond the Horizon Constant $K_0$,
 $$
   R_I(C; T_{\text{eff}})
   \;=\; \frac{r_I(T_{\text{eff}})}{\ln 2}\,\ln\!\Bigl(\frac{C}{K_0}\Bigr),
@@ -767,7 +912,7 @@ $$
 
 The corresponding operators used in operational dynamics are derived via functional calculus.
 
-**Theorem 3 (Resource Cost Operators $\hat{R}, \hat{R}_I$):** Let
+<a id="theorem-3-resource-cost-operators-hatr-hatr_i"></a>**Theorem 3 (Resource Cost Operators $\hat{R}, \hat{R}_I$):** Let
 $$
 \hat C_v = \sum_{d=0}^{d_{\max}} \lambda(d)\hat P_d,
 \qquad
@@ -827,15 +972,15 @@ is an additional low-variance approximation used later in the adaptation dynamic
 
 Several conditions are logically necessary for any system to perform prediction as modeled within this framework.
 
-**Theorem 4 (Necessity of time directionality).** Prediction requires an ordered, directional concept of time allowing distinction between “now” (t) and a strictly later instant (t + Δt, Δt > 0).
+<a id="theorem-4-necessity-of-time-directionality"></a>**Theorem 4 (Necessity of time directionality).** Prediction requires an ordered, directional concept of time allowing distinction between “now” ($t$) and a strictly later instant ($t+\Delta t$, $\Delta t>0$).
 
-*Proof.* By definition, prediction maps information available at t to a distribution over states at t + Δt. Without a partial order with a nonempty forward cone, t + Δt is undefined and the mapping is meaningless. ∎
+*Proof.* By definition, prediction maps information available at $t$ to a distribution over states at $t+\Delta t$. Without a partial order with a nonempty forward cone, $t+\Delta t$ is undefined and the mapping is meaningless. ∎
 
-**Theorem 5 (Necessary Measurability of Prediction and Verification Records).** Empirically assessable prediction requires that the input record $S(t)$ be measurable to the predictor and that the prediction record $\hat S(t+\Delta t)$ and realized outcome $S(t+\Delta t)$ be jointly measurable in an experimental $\sigma$-algebra supporting the chosen discrepancy or scoring function. The input and prediction records need not take distinct values.
+<a id="theorem-5-necessary-measurability-of-prediction-and-verification-records"></a>**Theorem 5 (Necessary Measurability of Prediction and Verification Records).** Empirically assessable prediction requires that the input record $S(t)$ be measurable to the predictor and that the prediction record $\hat S(t+\Delta t)$ and realized outcome $S(t+\Delta t)$ be jointly measurable in an experimental $\sigma$-algebra supporting the chosen discrepancy or scoring function. The input and prediction records need not take distinct values.
 
-*Proof.* The predictor cannot condition on $S(t)$ unless the input record is measurable to it. Verification requires evaluation of a measurable score $S_{score}(\hat S(t+\Delta t),S(t+\Delta t))$ or discrepancy statistic. If the prediction and outcome records admit no jointly measurable comparison, that score is not an experimental random variable and predictive improvement $\Delta Q$ cannot be assessed. No step requires $S(t)$ and $\hat S(t+\Delta t)$ to differ; for example, a persistence predictor may copy the input record. ∎
+*Proof.* The predictor cannot condition on $S(t)$ unless the input record is measurable to it. Verification requires evaluation of a measurable score $S_{\mathrm{score}}(\hat S(t+\Delta t),S(t+\Delta t))$ or discrepancy statistic. If the prediction and outcome records admit no jointly measurable comparison, that score is not an experimental random variable and predictive improvement $\Delta Q$ cannot be assessed. No step requires $S(t)$ and $\hat S(t+\Delta t)$ to differ; for example, a persistence predictor may copy the input record. ∎
 
-**Theorem 6 (Necessity of Present–Future Dependence for Improvement over the No-Input Baseline).** Let $X:=S(t)$ and $Y:=S(t+\Delta t)$ take values in standard Borel spaces $\mathsf X$ and $\mathsf Y$, respectively. Let the predictor output $Z$ be generated from $X$ by a Markov kernel using no information about $Y$ beyond $X$, so that $Y-X-Z$ is a Markov chain. Let $\mathsf A$ be a nonempty standard Borel action space and $\ell:\mathsf A\times\mathsf Y\to\mathbb R$ a jointly measurable loss bounded below by a finite constant. Assume at least one constant action has finite expected risk, and define
+<a id="theorem-6-necessity-of-present-future-dependence-for-improvement-over-the-no-input-baseline"></a>**Theorem 6 (Necessity of Present–Future Dependence for Improvement over the No-Input Baseline).** Let $X:=S(t)$ and $Y:=S(t+\Delta t)$ take values in standard Borel spaces $\mathsf X$ and $\mathsf Y$, respectively. Let the predictor output $Z$ be generated from $X$ by a Markov kernel using no information about $Y$ beyond $X$, so that $Y-X-Z$ is a Markov chain. Let $\mathsf A$ be a nonempty standard Borel action space and $\ell:\mathsf A\times\mathsf Y\to\mathbb R$ a jointly measurable loss bounded below by a finite constant. Assume at least one constant action has finite expected risk, and define
 $$
 B_0:=\inf_{a\in\mathsf A}\mathbb E[\ell(a,Y)].
 $$
@@ -854,10 +999,119 @@ $$
 $$
 The same argument applies to any independent no-input randomization, whereas constant actions approach the defining infimum. Thus randomization has the same infimum $B_0$. The existence of a finite-risk constant action and the lower bound make $B_0$ finite. No decision based only on $Z$ can strictly improve on this baseline when $I(X;Y)=0$, proving the contrapositive. ∎
 
-**Theorem 7 (Representational Medium under Physical Instantiation).** Suppose a prediction process is physically instantiated in the operational PPI sense of Definition P.6.2: its finite input record $S(t)$, internal-model record $M_t$, output record $\hat S(t+\Delta t)$, and update operations are represented by finite protocol-distinguishable physical states and transformations. Then the process requires a physical medium carrying those states and transformations.
+<a id="theorem-7-representational-medium-under-physical-instantiation"></a>**Theorem 7 (Representational Medium under Physical Instantiation).** Suppose a prediction process is physically instantiated in the operational PPI sense of Definition P.6.2: its finite input record $S(t)$, internal-model record $M_t$, output record $\hat S(t+\Delta t)$, and update operations are represented by finite protocol-distinguishable physical states and transformations. Then the process requires a physical medium carrying those states and transformations.
 
 *Proof.* By the stated PPI hypothesis, each of $S(t)$, $M_t$, and $\hat S(t+\Delta t)$ is represented by a protocol-distinguishable physical state, and each processing step is represented by a physical transformation between such states. The collection of physical degrees of freedom supporting those representations and transformations is a representational medium. Therefore every prediction process satisfying the physical-instantiation hypothesis has such a medium. ∎
 
+<a id="definition-241i-byte-exact-r14-response-semantics-and-total-finite-string-interpretation"></a>**Definition 2.4.1i (Byte-Exact R14 Response Semantics and Total Finite-String Interpretation).**
+
+For the same nominal $R_{h}$ constructor family of Definition 2.4.1g and the source-relative theorem 2.4.1h, adopt the following normative specification `R14-ByteExact-StackSemantics-v2`. Constructor bytes, nominal task, shorter/equal-length census and the attained minimum are those of Definition 2.4.1g and Theorem 2.4.1h. Its hierarchy $L^*_n$ is a separate version; equality of its memberships with those of (2.4.1g.5), or identity with a separately fixed wider physical baseline, is not asserted. The observational query grammar and the three charged active services have the distinct meanings specified below.
+
+### R14 response and certificate interpretation
+
+This interpretation preserves the nominal $R_{h}$ source constructor bytes, nominal task, all capacities $h\ge 0$, the program machine (2.4.1g.4) and the physical modeling assumptions of Definition 2.4.1g. The hierarchy $L^*_n$ and its checker require their own version and integrity record.
+
+## 1. Literal code and source-class identity
+
+A physical code is a finite canonical UTF-8 JSON byte string. Numeric fields in the constructor have their displayed integer/rational-pair types; a JSON Boolean or floating-point number does not count as the same literal as an integer. Constructor code equality, owner-field equality, certificate equality and census equality mean canonical **byte** equality. Each constructor retains its bytes from Definition 2.4.1g. The byte-exact interpreter and cumulative owner rules below reject malformed code before rational arithmetic. The canonical source literal and both complete censuses retain their stated byte-equality tests.
+
+Let $L^*_n$ denote the byte-exact hierarchy: run the same bounded $U$ interpretation, then use the byte-exact local owner tests and the following explicit protocol semantics. Until output appears the candidate survives, as in (2.4.1g.5). After output, every emitted conjunction is cumulative. Thus $L^*_{n+1}\subset L^*_n$. Every constructor output is byte-exactly its own source descriptor, so every constructor belongs to all $L^*_n$. No test of $L^*_n$ mentions description length, target capacity fourteen, accuracy or MPU qualification.
+
+## 2. Nominal events are observed stochastic outcomes
+
+The syntax `event(direction,branch)` labels an observed jump cylinder/subkernel. It does not command an otherwise random motor to move in that direction and does not postselect away failure when computing task accuracy.
+
+At a live state $x$, the nominal embedded-jump kernel has two forward alternatives with weights $1/3$ each and one reverse alternative with weight $1/3$. Forward branch $b$ maps $x$ through the full declared append/gate/history/shadow update $F_{+,b}$. Reverse branch $b$ has zero weight unless $b$ is the current final branch bit, in which case it maps through the declared pop/gate/history/shadow update. Summing the three nonzero selected kernels is row-stochastic. For the equilibrium-phase diagnostic branch, these three weights are $1/4,1/4,1/2$, from its declared rates. At stopped states there is no further jump; a failure/no-jump outcome completes any queried instrument.
+
+When a protocol also specifies a time window, event cylinders use the finite CTMC path measure with its independent holding-time law and the declared stopping rule. They are not an extra intervention inserted on top of the waiting process. Equivalently, their weights are the finite-state jump-kernel products integrated over the relevant ordered holding-time simplex. Waiting, event observation and failure are on one common path law. This makes the nominal success event exactly the event used in the first-passage calculation of Corollary 2.4.1h.1.
+
+## 3. Reads, records and finite protocol admissibility
+
+After the diagnostic preparation branch is chosen, the broad `event`, `read`, `wait` and `case` ASTs are mathematical cylinder/effect queries on one fixed source path law. A `case` partitions that law by earlier queried outcomes; it does not feed back into the apparatus, run an additional physical adaptive controller, or create even a transient physical observation record. A rational-time wait node denotes the corresponding represented transition observable/kernel, not a claim that an arbitrary physical sampler can be operated at zero cost.
+
+For a registered field $r$ and value $a$, the represented classical effect is the diagonal projector $1_{r(x)=a}$ and its no-write subkernel. These effects faithfully represent the source's mathematical responses. The actual implemented run-time read/return services are only the three charged scheduled observer services. Only the stipulated snapshot/history/shadow writes create the apparatus records. A request to implement any further active sampling or adaptive-feedback service requires an enlarged source description and resource ledger. This makes exact the distinction, drawn by the scheduled retained observer of Definition 2.4.1g, between a current represented readout and an actually retained record.
+
+The finite query grammar and the physical service grammar are distinct. A finite typed query tree is evaluated on the fixed finite-window path law. The physical service grammar consists of preparation, the autonomous stopped run, and its three scheduled observer services; its assertion has antecedent $\mathrm{Adm}_h(\text{protocol})$. Admissibility includes:
+
+- the window `[0,h/kappa]` and the nominal jump budget `h`;
+- only the three ordered scheduled snapshot writes and three verifier calls;
+- no access to a future source bit through the forecast interface;
+- no deletion, replay overwrite, reset, or uncharged additional retained output;
+- every extra read/event/wait/case node is only a represented mathematical query of the existing law, with no additional physical sampler, controller state, record or apparatus feedback asserted;
+- preparation-only diagnostic controls, as specified next.
+
+The finite physical resource and schedule tests apply to the implemented service sequence. Arbitrary finite query trees are mathematical coarse-grainings and partitions of that same law, so their description length is not silently charged as an apparatus controller. A syntax tree interpreted as a request for extra active physical services is rejected unless those services are already in the charged service sequence. Descriptions outside these conditions express either an explicitly rejected physical request or a conditional assertion with false admissibility antecedent. This is the false-antecedent convention for out-of-budget requests in the assertion generator of Definition 2.4.1g. It is not permission to count a forced or postselected trajectory as the nominal source.
+
+## 4. Diagnostic controls and nominal qualification
+
+The named controls select the declared diagnostic preparation branch. They are not uncharged feedback operations inserted after observing task outcomes. At the level of typed syntax, a control node is permitted; at the level of physical admissibility it occurs in the preparation portion, before the controlled run. The finite set of declared branches can be interpreted explicitly:
+
+- `equilibrium_phase`: replace child-edge rates by `kappa/2`, leaving the parent rate `kappa`, with the matching depth-potential interpretation declared for this control in Definition 2.4.1g;
+- `frozen_memory`: omit the two model-memory update gates, leaving the rest of the instrument unchanged;
+- `orientation_exchange`: use the opposite designated orientation for the compared circuit/clock statistic; this is a diagnostic comparison, not a new successful nominal forecast protocol.
+
+Each comparison has its declared preparation and effective kinetic assumptions. The nominal qualifying class `Q_R` consists of the original unmodified ready apparatus codes and nominal task law, not these intervention-modified task laws. That separation is explicit in owner S04 of Definition 2.4.1g. In particular, neither choosing six forward events nor conditioning on successful completion becomes a qualifying nominal implementation.
+
+The supplied ancestry verifier replays the nominal source and may return `reject` on a frozen-control history. Its finite Boolean accept/reject map is still a well-defined observable on that history. The theorem does not claim that it is a correct mode-specific ancestry verifier for every diagnostic branch. Such a stronger claim would require an additional branch-tagged replay implementation and resource proof.
+
+Any application treating the diagnostic controls as physically implemented alternate preparations must retain their own explicitly adopted energy/kinetic interpretation; the nominal battery/receiver equality is not a derivation of the heat exchanged by the equilibrium control. Owner S12 of Definition 2.4.1g distinguishes projected motor affinity from total apparatus heat.
+
+## 5. Faithfulness proof under this interpretation
+
+Use the finite semantic carrier of Definition 2.4.1g, including all product resource registers, and the injective address/register encoding of Theorem 2.4.1h. Preparation is pushed forward by the same injection. An allowed primitive update is defined by its finite transition table and reversible fresh-shadow implementation. The selected event kernel weights and the read effects above are preserved by the same encoding. Therefore each primitive diagram commutes. Finite sequential kernel composition preserves the equality by multiplication, and mathematical case partitions preserve it by finite sums over the same queried branch values. This is response-law equality, not a claim of additional implemented adaptive feedback. Out-of-budget branches have the same explicit rejected/failure outcome in both realizations.
+
+On every interval between scheduled operations the full stopped finite generator intertwines under the encoding. Consequently all matrix powers, all exponential waiting kernels by the absolutely convergent uniformization series, and all finite compositions crossing the scheduled instants intertwine. This proves every finite admitted response assertion. It does not assert that the stopped phase projection is itself a globally homogeneous three-state Markov chain.
+
+For $h=0$, readiness is already stopped, $T=0$, and the three scheduled operations are ordered by their fixed indices $0,1,2$ at the coincident physical time. There are no motor events. This makes the degenerate all-capacities endpoint well-defined without adding a positive-duration or successful-cycle claim.
+
+## 6. Scope of the response semantics
+
+The response semantics retains the nominal source output, the 255 shorter strings, the exact target minimizer, the success law and the arithmetic of Theorem 2.4.1h and Corollary 2.4.1h.1. It makes explicit the observational meaning necessary for the hierarchy's all-word normalizer: read and control nodes are represented queries of the fixed path law and preparation-only controls, as specified in §§3–4. It does not establish arbitrary active control after preparation, arbitrary extra retained reads, mode-specific ancestry certification, a microscopic finite-bath derivation, or equality with a different baseline machine/hierarchy.
+
+Closure on this semantics requires this interpretation (or an equally precise total one) together with a byte-exact checker/owner test and its integrity hashes.
+
+## 7. Total mathematical parser versus finite host replay
+
+The presentation is named `R14-ByteExact-StackSemantics-v2`. Its mathematical interpreter `U*`, obligation generator `G*`, and certificate validator operate on finite strings with no externally imposed nesting or integer-size cutoff. They use the following total parser specification, which is independent of any host recursion limit:
+
+1. Scan a finite input byte string left to right into JSON punctuation, string, Boolean/null and numeric tokens. Validate string escapes by a finite scan. Accumulate each integer digit by `v := 10v+d`; no fixed digit limit is imposed. Invalid tokens reject.
+2. Maintain an explicit finite stack of array/object frames, each with its grammar state and accumulated children. Opening punctuation pushes a frame, a completed value is appended to its parent, and closing punctuation pops a frame. Reject mismatched delimiters, duplicate keys, impossible grammar states, and trailing tokens. Each transition consumes a token or closes a frame; the finite token sequence bounds total work apart from explicitly finite arithmetic and string operations.
+3. Canonical serialization uses an explicit work stack, sorting each finite object-key set, outputting integers by finite repeated division by ten and using the declared canonical string escaping. A code is canonical iff its serialized bytes equal the original input. Physical source objects contain the constructor's exact integer, Boolean, list and string types. Non-finite float extensions such as NaN/Infinity are not JSON values here.
+4. Validate a protocol AST by a bottom-up explicit work stack. Each node is checked once after its finite list of children. Use the displayed primitive keys/field sets, exact integer tests for time and index data, and the preparation/admissibility clauses above. No maximum nesting depth is imposed. Compute wait counts, resource bounds and coefficient-list compatibility by the same finite postorder traversal.
+5. A raw Turing-machine table is checked by a finite pass through its entries using exact integer state/symbol/move tests. Valid tables have the declared shallow shape; malformed tables loop in the machine semantics. The transducer's finite simulation bound is then evaluated by a finite loop. Prefix filtering dovetails these finite simulations exactly as in the proof of Theorem 2.4.1h.
+
+This is an effective finite-string algorithm. Every loop is bounded by a finite input, finite integer parameter, or a finite stage bound; push/pop structural recursion is implemented by a stack, not an assumption of a bounded host call stack. It yields a genuinely total mathematical generator and the exact intended enumeration of every finite canonical response AST. The local-to-word proof is structural induction over the same AST constructors, so unbounded finite nesting does not add an unproved response case.
+
+Finite **host replay** is fail-closed: it catches decoding/recursion failures. In particular, a deep valid AST that exceeds the host decoder's resources must be labeled `unsupported host replay`, not treated as mathematical evidence of malformed syntax, a tautology, an excluded owner, or a failed `G*` assertion. Catch-and-reject alone is not a proof of complete arbitrary-depth coverage. The mathematical definition above, together with its finite termination proof and response induction, supplies that coverage. The R14 finite verifier has a shallow fixed input schema; arbitrary-depth payloads lie outside its replay.
+
+The normative interpreter/generator is this explicit mathematical finite-string algorithm. A recursion-limited host implementation realizes it on every input only after an iterative parser/traversal replaces its recursion; equality on every input with a recursion-limited host interpreter is not asserted. Both presentations retain the exact constructor outputs of Definition 2.4.1g, including R14, and the full shorter/equal-length censuses.
+
+## 8. Fixed accepted conclusion and trust binding
+
+The finite certificate validator is deliberately specialized. Its only accepted conclusion is the following fixed named theorem, `R14-full-hierarchy-minimum-v2`: under the explicit source premises and normative `R14-ByteExact-StackSemantics-v2` semantics of this definition, the canonical R14 ready-apparatus descriptor has a response-faithful full-hierarchy constructor realizer `00001111`, every stage minimum and its full-hierarchy complexity equal eight, and its exact length-eight target minimizer is that singleton. With the nominal success bound of Corollary 2.4.1h.1, the same source presentation has attained qualifying threshold eight. It does not accept a caller-selected arbitrary sentence.
+
+The finite validator checks the exact original constructor descriptor, complete short/equal-length lists, arithmetic/types, and hashes identifying this interpretation and the unchanged physical source/runtime. The universal and physical soundness arguments are the proofs of Theorem 2.4.1h together with §§1–7 above. They are externally justified induction rules, not a claim of internal self-soundness or a completed general-purpose formal proof assistant. Host rejection of a malformed or unsupported packet asserts nothing about the mathematical truth of any other finite AST or code.
+
+<a id="theorem-241k"></a>
+
+<a id="theorem-241k-registered-r14-source-and-terminal-hierarchy-certificate"></a>**Theorem 2.4.1k (Registered R14 Source and Terminal Hierarchy Certificate).** Take Definition 2.4.1i as the baseline of the finite classical source of Definition 2.4.1g. The baseline uses the byte-exact cumulative hierarchy $L_n^*$ of that definition and the fixed binary machine and ready reference of the source. It has a response-faithful full-hierarchy realizer for the canonical $R_{14}$ descriptor. The baseline-identity and realizer records of Definition 2.4.1d give
+$$
+C_{P,n}^{\mathsf R,*}(\mu_{14})=C_P^{\mathsf R,*}(\mu_{14})=8
+\quad(n\ge0),\qquad
+\operatorname{argmin}=\{\texttt{00001111}\},\qquad
+N_{\rm val}=N_{\rm arg}=0 .
+\tag{2.4.1k.1}
+$$
+
+*Proof.* Register the binary alphabet, the whole-string evaluator (2.4.1g.4) with the stack semantics of Definition 2.4.1i, canonical typed UTF-8 code equality, empty auxiliary reference and binary length. The source owner inventory has the twelve physical rows S01–S12 of Definition 2.4.1g, interpreted by Definition 2.4.1i. Each concrete assertion belongs to its registered row and uses the earlier prerequisites of that row. The underlying clock, controls, source laws, runtime maps and all classical responses keep their literal physical units and records. The code and logical rules, the derived complexity and qualification conclusions, and architectures outside the specified source are the excluded inventory rows. Observational ASTs are evaluated on the same source law. The active preparation, stopped run and three scheduled observer services supply the physical instrument.
+
+The generator enumerates owner rows and all finite payloads as in Definition 2.4.1g. The stack parser of Definition 2.4.1i reads each finite payload and returns its typed finite assertion or the repeated local assertion designated by the generator. Thus every eligible owner and admissible typed instance is reached and each generated assertion has the specified owner. This includes all finite supported observation trees, coefficient indices and retained prefixes. The owner schema rank in Definition 2.4.1g decreases along dependencies. The four composition, cancellation, prefix and coefficient proofs consume the registered local laws. The bounded simulation retains pending candidates and carries every earlier test forward once an output is available. Consequently $L_{n+1}^*\subseteq L_n^*$ and the stage generator is total. Physical admission depends on the source decoding and its laws. Neither an attained length nor the task score is an input to an owner test.
+
+The proof checker for this registered record has the finite arithmetic, equality and natural-number and finite-word induction root of Definition 2.4.1i. Its proof rules are the seven stated source rules with their analytic soundness proofs in Theorem 2.4.1h and Definition 2.4.1i. In particular, the stochastic composition rule preserves normalization, the tree-word rule cancels inverse adjacent depth gates, and protected-prefix induction preserves the write-once fields. Uniformization proves the coefficient rule on each finite motor and commutes with the fixed observer cuts. The persistence rule applies these arguments only to the generated typed assertions and the byte-exact constructor. The exclusion rule compares complete constructor outputs or checks absorbing undefined parser syntax. For the terminal claim the finite validator checks one typed theorem instance, the bound source and semantics, the exact output and both exhaustive word lists. Its soundness follows from these rules and their explicitly declared physical premises. The [registration and terminal certificate](related/calculation_companions/section_02/r14-hierarchy-certificate.md) gives the manifest and finite replay record.
+
+For the baseline extension, both sides of the registration use the literal fields just specified. Their alphabets, evaluators, code spaces, references and lengths agree by equality of the defining fields. At every stage both membership sentences are generated by the same bounded simulation and the same cumulative stack-validated assertion list. Substitution gives the stage identity for every binary word. The theorem uses the corrected baseline throughout. Transport to a different machine or to the earlier hierarchy (2.4.1g.5) would require its own all-stage identity.
+
+The whole-string constructor rule sends $\texttt{00001111}=0\gamma(15)$ to $\mu_{14}$. Every scheduled primitive acts on the carrier of Definition 2.4.1g, with the inverse edge law, protected records and the finite stochastic kernels of Definition 2.4.1i. Theorem 2.4.1h's intertwining induction and the observer restriction in Definition 2.4.1i prove base membership and all-stage persistence. The persistence also covers stages at which the computation has not yet returned, since their bounded admission test leaves it pending. In the list of 255 shorter binary strings the only constructor outputs have $h\in\{0,\ldots,6\}$. Their capacity fields differ from that of $\mu_{14}$. All other shorter strings are undefined by the complete syntax and the universal prefix is longer. At length eight the same parser accepts exactly one constructor returning $\mu_{14}$, because $\gamma$ decoding is injective and the capacity field of a constructor is literal. Thus all exclusions in $\mathcal M_0(\mu_{14})$ use either output inequality or definite undefined syntax. No pending computation is treated as a nonhalting proof. The two complete censuses give (2.4.1k.1) by Theorem 2.4.1e and the exact-minimizer clause of Definition 2.4.1d. The actual qualifying threshold on this source is also eight by Corollary 2.4.1h.1. ∎
 
 ## 2.6 Categorical Unity: Physical Ontology from Predictive Structure
 
@@ -876,9 +1130,9 @@ for its canonical predictive normal form from Definition P.6.1c.2 and Theorem P.
 $$
 \mathfrak{P} := (\mathcal{N}, \mathcal{E}_N, V),
 $$
-where (i) $\mathcal{N}$ is the MPU interaction network (Section 11.1), with vertices given by MPUs (Definition 23) and propagation/throughput costs as in Definition 35, (ii) $\mathcal{E}_N$ is the nominated ND-RID `Evolve` interaction/update channel of Definition 27, which represents actualization only on the separately accepted Hilbert/Born/instrument/single-outcome branch, and (iii) $V$ is the PCE potential over configurations (Definition 20; Appendix D, Definition D.1):
+where (i) $\mathcal{N}$ is the MPU interaction network (Section 11.1), with vertices given by MPUs (Definition 23) and propagation/throughput costs as in Definition 35, (ii) $\mathcal{E}_N$ is the nominated ND-RID `Evolve` interaction/update channel of Definition 27, which represents actualization only on the Hilbert/Born/instrument/single-outcome branch, and (iii) $V$ is the PCE potential over configurations (Definition 20; Appendix D, Definition D.1):
 $$
-V(x)=V_{op}(x)+V_{prop}(x)-V_{benefit}(x)+V_{penalty}(x).
+V(x)=V_{op}(x)+V_{\mathrm{prop}}(x)-V_{\mathrm{benefit}}(x)+V_{\mathrm{penalty}}(x).
 $$
 Definition 2.6a separately registers the finite protocol response functor $\mathcal Y_B$, the sector inclusions $j_i$, and the corestrictions $R_i$ of $j_i^*\mathcal Y_B$ to their finite full images. Each $R_i$ is therefore fixed relative to the registered pair $(\mathcal Y_B,j_i)$. The sector registration is additional finite datum, and a common enriched carrier is an additional completion-certificate field.
 Thermodynamic instantiation distinguishes a structural binary register size from a physical reset cost. A declared reusable binary SPAP implementation has structural log-cardinality $\varepsilon_0=\ln2$ (Proposition 5; Theorem J.1). On a branch satisfying the registered-reset hypotheses of Definition 28, the physical reset ledger obeys
@@ -887,15 +1141,15 @@ $$
 =H_q(P\mid R)+\varepsilon_{\mathrm{diss}}
 \ge H_q(P\mid R),
 $$
-with $\varepsilon_{\mathrm{diss}}\ge0$ (Theorem 31; see also [Landauer 1961]). A positive uniform physical floor inferred from this entropy bound requires an independent bound $H_q(P\mid R)\ge h_{\min}>0$; $\varepsilon_0=\ln2$ alone supplies no ensemble-independent heat floor.
+with $\varepsilon_{\mathrm{diss}}\ge0$ (Theorem 31; see also Landauer 1961). A positive uniform physical floor inferred from this entropy bound requires an independent bound $H_q(P\mid R)\ge h_{\min}>0$; $\varepsilon_0=\ln2$ alone supplies no ensemble-independent heat floor.
 
-**Definition (Physical category).** A physical category $\mathfrak C$ is a family of operational observables used to describe the world: time, space, energy, matter, force, or charge. This phenomenological use of “category” is represented by the registered finite realization data of Definition 2.6a.
+<a id="definition-physical-category"></a>**Definition (Physical category).** A physical category $\mathfrak C$ is a family of operational observables used to describe the world: time, space, energy, matter, force, or charge. This phenomenological use of “category” is represented by the registered finite realization data of Definition 2.6a.
 
-**Definition (Predictive derivation).** At fixed finite resolution, a category is *response-derived relative to an accepted datum* when its response functor is one of the registered corestrictions $R_i$ of $j_i^*\mathcal Y_B$. It is *PPI-physically derived* when, for the corresponding $q\in\operatorname{Rep}\pi_0(\mathscr J_B)$, a categorical-unity record is common-realization-complete over $q$, carries $\mathsf{base\mbox{-}exhausted}$ source status, and supplies an object $\omega\in\mathscr E_q$ with finite-cost PPI dressing. A lift with an independently adopted response-active sector leaf is an augmented predictive projection, with that leaf retained in its premise ledger. Empirical realization identification is the separate record of Definition P.14.9g.
+<a id="definition-predictive-derivation"></a>**Definition (Predictive derivation).** At fixed finite resolution, a category is *response-derived relative to an accepted datum* when its response functor is one of the registered corestrictions $R_i$ of $j_i^*\mathcal Y_B$. It is *PPI-physically derived* when, for the corresponding $q\in\operatorname{Rep}\pi_0(\mathscr J_B)$, a categorical-unity record is common-realization-complete over $q$, carries $\mathsf{base\mbox{-}exhausted}$ source status, and supplies an object $\omega\in\mathscr E_q$ with finite-cost PPI dressing. A lift with an independently adopted response-active sector leaf is an augmented predictive projection, with that leaf retained in its premise ledger. Empirical realization identification is the separate record of Definition P.14.9g.
 
-**Thesis 2.6 (Categorical Unity).** Relative to an accepted registered datum, the six sector response functors are registered corestrictions of the single response-normal-form functor $\mathcal Y_B$; at the distinguished object $p_B$, the values $\kappa_iR_i(p_B)$ are restrictions of $\mathfrak P_0\!\restriction_B$. If a categorical-unity record is common-realization-complete over $q\in\operatorname{Rep}\pi_0(\mathscr J_B)$ with $\mathsf{base\mbox{-}exhausted}$ source status and $\mathscr E_q\ne\varnothing$, the six lifts factor through one common finite-cost PPI-physicalizable carrier. Theorem 2.6b gives the generic finite compatible-lift classification. Definition 2.6c specifies the populated-census and PPI-physicalizability certificate fields, and Theorem 2.6d warrants their conclusions when the required fields are accepted.
+<a id="thesis-26-categorical-unity"></a>**Thesis 2.6 (Categorical Unity).** Relative to an accepted registered datum, the six sector response functors are registered corestrictions of the single response-normal-form functor $\mathcal Y_B$; at the distinguished object $p_B$, the values $\kappa_iR_i(p_B)$ are restrictions of $\mathfrak P_0\!\restriction_B$. If a categorical-unity record is common-realization-complete over $q\in\operatorname{Rep}\pi_0(\mathscr J_B)$ with $\mathsf{base\mbox{-}exhausted}$ source status and $\mathscr E_q\ne\varnothing$, the six lifts factor through one common finite-cost PPI-physicalizable carrier. Theorem 2.6b gives the generic finite compatible-lift classification. Definition 2.6c specifies the populated-census and PPI-physicalizability certificate fields, and Theorem 2.6d warrants their conclusions when the required fields are accepted.
 
-**Definition 2.6a (Registered Finite Categorical-Unity Datum).** Fix a finite protocol budget $B$, a declared exact decidable coefficient domain $\mathbb D_B$, and
+<a id="definition-26a-registered-finite-categorical-unity-datum"></a>**Definition 2.6a (Registered Finite Categorical-Unity Datum).** Fix a finite protocol budget $B$, a declared exact decidable coefficient domain $\mathbb D_B$, and
 $$
 I_6=\{\mathsf t,\mathsf s,\mathsf e,\mathsf m,\mathsf f,\mathsf q\}
 \tag{2.6a.1}
@@ -925,7 +1179,7 @@ for time, space, energy, matter, force, and charge. A registered finite categori
    \kappa_iR_i=j_i^*\mathcal Y_B,
    \tag{2.6a.5}
    $$
-   where $\mathsf R_{i,B}$ is the finite full image of $j_i^*\mathcal Y_B$ and $\kappa_i$ is its full-subcategory inclusion. The semantic audit $\mathfrak A_{\mathrm{sem},B}$ assigns the six labels bijectively, verifies typed protocol eligibility and coverage, records every permitted sector overlap, and verifies that its labels, predicates, and inclusions were frozen before access to the quarantined comparison target.
+   where $\mathsf R_{i,B}$ is the finite full image of $j_i^*\mathcal Y_B$ and $\kappa_i$ is its full-subcategory inclusion. The semantic audit $\mathfrak A_{\mathrm{sem},B}$ assigns the six labels bijectively, verifies typed protocol eligibility and coverage, records every permitted sector overlap, and derives the labels, predicates, and inclusions from the declared finite protocol category and typed eligibility rules. Where the data admit more than one choice, the record supplies its selection rule and verifies that the choice does not depend on the observable used to evaluate the classification.
 
 3. For each $i$, a finite operational realization category $\mathsf O_{i,B}$, a functor $\rho_i:\mathsf O_{i,B}\to\mathsf R_{i,B}$, and a decidable natural-isomorphism-invariant predicate $\mathfrak B_i$ encoding the row-specific PPI, domain, normalization, unit, source, and finite-cost conditions. The local-lift groupoid has objects
    $$
@@ -944,14 +1198,14 @@ for time, space, energy, matter, force, and charge. A registered finite categori
 
 Definition P.6.1d.1 gives the exact serialization, table equations, coverage records, and total table-validity checker for these fields. A submitted datum is **table-valid** exactly when that checker accepts every required type, identity, composition, normalization, intertwining, semantic-coverage, and overlap-coverage check.
 
-**Theorem 2.6b (Registered Response Restrictions and Exact Compatible-Lift Classification).** Every table-valid datum $\mathfrak D_{\mathrm{CU},B}$ satisfies
+<a id="theorem-26b-registered-response-restrictions-and-exact-compatible-lift-classification"></a>**Theorem 2.6b (Registered Response Restrictions and Exact Compatible-Lift Classification).** Every table-valid datum $\mathfrak D_{\mathrm{CU},B}$ satisfies
 $$
 R_i=\operatorname{corestrict}_{\mathsf R_{i,B}}(j_i^*\mathcal Y_B),
 \qquad
 \kappa_iR_i(p_B)\xRightarrow{\sim}j_i^*(\mathfrak P_0\!\restriction_B),
 \tag{2.6b.1}
 $$
-for $i\in I_6$. These conclusions are canonical relative to the frozen inclusions $j_i$; the accepted semantic audit supplies their physical labels and protocol coverage.
+for $i\in I_6$. These conclusions are canonical relative to the frozen inclusions $j_i$; the semantic audit $\mathfrak A_{\mathrm{sem},B}$ of Definition 2.6a supplies their physical labels and protocol coverage.
 
 A local lift exists exactly when
 $$
@@ -981,7 +1235,7 @@ Exhaustive enumeration returns representatives of all components, the complete i
 
 *Proof.* Restriction along $j_i$ followed by corestriction to the finite full image gives (2.6b.1), and applying $j_i^*$ to $\zeta_B$ gives the displayed comparison at $p_B$. Equation (2.6b.2) expands the definition of essential image. Under the stated enriched full-faithfulness premise, every comparison of two lifts has a unique lift through $\rho_i$, so a nonempty local-lift groupoid is terminal up to equivalence. Finally, every object, arrow, predicate, and equality table is finite and decidable; exhaustive enumeration computes the components and stabilizers and yields the four disjoint cases in (2.6b.3). Lemma P.6.1d.2 and Theorem P.6.1d.3 give the complete enriched-lifting and enumeration checks. ∎
 
-**Definition 2.6c (Categorical-Unity Completion Certificate).** A categorical-unity completion certificate for a submitted $\mathfrak D_{\mathrm{CU},B}$ is a finite record with these independently checked modules:
+<a id="definition-26c-categorical-unity-completion-certificate"></a>**Definition 2.6c (Categorical-Unity Completion Certificate).** A categorical-unity completion certificate for a submitted $\mathfrak D_{\mathrm{CU},B}$ is a finite record with these independently checked modules:
 
 1. a versioned proof-kernel and total deterministic checker trust record, together with an exact coefficient bridge;
 2. datum, local-lift, and compatible-lift proofs and exhaustive finite tables;
@@ -996,9 +1250,9 @@ Exhaustive enumeration returns representatives of all components, the complete i
    $$
 5. exhaustive source, no-double-counting ownership, and observable-calibration records;
 6. a selection field equal either to the token $\mathsf{unselected}$ or to a tuple $\mathfrak C_{\mathrm{sel}}$ containing a descended target-independent PPI/PCE cost, a proposed class $[\omega_*]$, a verified strict positive gap, a compatible selected sector tuple, and their proofs;
-7. a forward-lock field, an optional target-blind provenance field, and an optional continuum-completion field.
+7. a structural-independence module for the selection, and an optional continuum-completion module.
 
-Definitions P.6.1d.4–P.6.1d.12 specify the exact finite types, generators, parsers, coverage equalities, source graph, ownership projections, calibration squares, selection inequalities, commitment checks, continuum data, hashes, and replay rules for these modules. Each module has status $\mathsf{accepted}$, $\mathsf{failed}$, $\mathsf{pending}$, or, for an expressly optional module, $\mathsf{not\mbox{-}claimed}$. A module is accepted exactly when every required finite table, proof, dependency, coverage, provenance, and hash check passes; a finite mismatch gives failed status and incomplete evidence gives pending status.
+Definitions P.6.1d.4–P.6.1d.12 specify the exact finite types, generators, parsers, coverage equalities, source graph, ownership projections, calibration squares, selection inequalities, structural-independence checks, continuum data, hashes, and replay rules for these modules. Each module has status $\mathsf{accepted}$, $\mathsf{failed}$, $\mathsf{pending}$, or, for an expressly optional module, $\mathsf{not\mbox{-}claimed}$. A module is accepted exactly when every required finite table, proof, dependency, coverage, source-identity, and hash check passes; a finite mismatch gives failed status and incomplete evidence gives pending status.
 
 The canonical payload $\mathfrak C_{\mathrm{CU},B}^{\circ}$ excludes its final hash, status vector, and checker trace. With the registered hash algorithm $H_{\mathrm{CU}}$, set
 $$
@@ -1012,9 +1266,9 @@ h_{\mathrm{CU}}
 $$
 Acceptance requires hash recomputation and deterministic checker replay; neither checker output occurs in the hashed payload.
 
-The record is **classification-complete** when the trust, datum, local, and compatibility modules are accepted. It is **common-realization-complete over $q$** when it is classification-complete and the global, restriction, $\mathsf E_q$, source, ownership, and calibration modules are accepted. It is **selection-complete** when it is classification-complete and the global, restriction, $\mathsf E_{q_*}$, source, ownership, calibration, selected-tuple, cost-descent, strict-selection, and lock modules are accepted. Target-blind provenance and continuum completion require acceptance of their respective optional modules. Empirical realization identification is the independent comparison record of Definition P.14.9g.
+The record is **classification-complete** when the trust, datum, local, and compatibility modules are accepted. It is **common-realization-complete over $q$** when it is classification-complete and the global, restriction, $\mathsf E_q$, source, ownership, and calibration modules are accepted. It is **selection-complete** when it is classification-complete and the global, restriction, $\mathsf E_{q_*}$, source, ownership, calibration, selected-tuple, cost-descent, strict-selection, and structural-independence modules are accepted. Continuum completion requires acceptance of its optional module. Empirical realization identification is the independent comparison record of Definition P.14.9g.
 
-**Theorem 2.6d (Soundness of the Finite Categorical-Unity Classification).** Assume that the trust module of Definition 2.6c is accepted. The total checker terminates on every finite submitted record. At the registered budget $B$, accepted modules warrant exactly the following conclusions.
+<a id="theorem-26d-soundness-of-the-finite-categorical-unity-classification"></a>**Theorem 2.6d (Soundness of the Finite Categorical-Unity Classification).** Assume that the trust module of Definition 2.6c is accepted. The total checker terminates on every finite submitted record. At the registered budget $B$, accepted modules warrant exactly the following conclusions.
 
 1. A classification-complete record gives Theorem 2.6b's exact compatible-lift classification of $\mathscr J_B$. A response-distinction conclusion additionally requires a separating registered protocol.
 
@@ -1051,13 +1305,13 @@ The record is **classification-complete** when the trust, datum, local, and comp
    =\{[\omega_*]\},
    \tag{2.6d.3}
    $$
-   so $[\omega_*]$ is the unique forward-locked PPI/PCE-selected global class in the declared finite scope and restricts to the accepted compatible sector tuple. Acceptance of the blind module adds its registered provenance class.
+   so $[\omega_*]$ is the unique PPI/PCE-selected global class in the declared finite scope and restricts to the accepted compatible sector tuple. The accepted structural-independence module traces the cost, scope, and selection rule to their declared inputs and verifies that observations used to evaluate the selection do not fix those inputs.
 
 5. Manuscript status is propagated through the independently accepted strict-certificate registry of Definition P.14.1m and Algorithm P.14.1m.0, with the meet rule of Corollary D.8.9d and Convention P.14.1l. A continuum conclusion follows exactly on acceptance of the continuum module. Empirical realization identification follows through the independent calibrated comparison record of Definition P.14.9g and retains Theorem P.14.9h's distinction between external actuality and mathematical completion.
 
 *Proof.* Finiteness and the accepted totality results make every parse, equality, table, proof, coverage, graph, and hash check terminating. Theorem 2.6b proves item 1. The exhaustive object-and-arrow census, restriction bridge, and essential-preimage census prove (2.6d.1)–(2.6d.2). Topological induction on the source graph proves source closure; the ownership projections and calibration squares give item 3. Exhaustive finite comparison and the accepted strict gap prove (2.6d.3). The registry, continuum, and empirical conclusions apply their named owners. The complete module-by-module verification is Theorem P.6.1d.13. ∎
 
-**Corollary 2.6d.a (Strictness and Nonconverses of the Closure Gates).** For every classification-complete record and every $q\in\operatorname{Rep}\pi_0(\mathscr J_B)$,
+<a id="corollary-26da-strictness-and-nonconverses-of-the-closure-gates"></a>**Corollary 2.6d.a (Strictness and Nonconverses of the Closure Gates).** For every classification-complete record and every $q\in\operatorname{Rep}\pi_0(\mathscr J_B)$,
 $$
 \mathscr E_q\simeq\mathbf1
 \Longrightarrow
@@ -1083,15 +1337,235 @@ The reverse implications fail at the finite algebraic groupoid level. The follow
 3. $\mathfrak R(\{\omega_0,\omega_1\}_{\mathrm{disc}},\mathbf1,!)$ has a nonempty essential preimage with two components.
 4. $\mathfrak R(B(\mathbb Z/2),\mathbf1,!)$ has one essential-preimage component and a nontrivial retained automorphism group, so its essential preimage is not equivalent to $\mathbf1$.
 
-Unique cost selection and essential-preimage uniqueness are incomparable at this algebraic level. Lemma P.6.1d.14(c) gives the unique cost minimizer $[\omega_0]$ with $|\pi_0(\mathscr E_q)|=2$. Conversely, $\mathfrak R(\mathbf1,\mathbf1,!)$ has $\mathscr E_q\simeq\mathbf1$ but may carry the token $\mathsf{unselected}$. A selection-complete physical conclusion additionally requires the lemma's compatible physical and forward-lock certificates.
+Unique cost selection and essential-preimage uniqueness are incomparable at this algebraic level. Lemma P.6.1d.14(c) gives the unique cost minimizer $[\omega_0]$ with $|\pi_0(\mathscr E_q)|=2$. Conversely, $\mathfrak R(\mathbf1,\mathbf1,!)$ has $\mathscr E_q\simeq\mathbf1$ but may carry the token $\mathsf{unselected}$. A selection-complete physical conclusion additionally requires the lemma's compatible physical certificates and the structural-independence module.
 
 *Proof.* The implications in (2.6d.a.1) follow from equivalence to the terminal groupoid, connected components, nonemptiness, and full essential preimage. Equation (2.6d.a.2) follows because every object of $\mathscr J_B$ contains one local lift in each sector. Lemma P.6.1d.14 constructs the finite algebraic carriers, semantic arrow maps, restrictions, and cost tables for the displayed examples. Their component and automorphism counts prove the algebraic nonconverses and cost-selection comparisons. Neither these tables nor the generic finite classifier supplies the independent physical witnesses needed to promote the examples to full accepted records. ∎
 
-**Resolution record 2.6d-R1 (Finite Categorical-Unity Classifier).** Theorem 2.6b exhausts every compatible local-lift groupoid of a table-valid finite datum into the four cases `lift-empty`, `lift-rigid`, `lift-unique-with-symmetry`, and `lift-moduli`. Theorem 2.6d then classifies the full common-realization fiber $\mathscr E_q$ by nonemptiness, connected components and automorphisms, and Corollary 2.6d.a proves that none of those gates can be inferred from a weaker one. This is `positive-discharge` of the generic finite mathematical classification in `TV-FND-02` and `nonentailment` of joint existence or uniqueness from six separate local lifts.
+<a id="definition-26e-augmented-finite-ring-source-and-sector-protocols"></a>**Definition 2.6e (Augmented Finite Ring Source and Sector Protocols).** Use three labeled disjoint copies of the complete R14 source of Definition 2.4.1g and Theorem 2.4.1h at the vertices $0,1,2$ of a triangle. Their original independent qualifying runs occupy $[0,14\tau]$. Add the following independently supplied finite quantum, service, gauge and calibration data. Together they define the bounded physical theory $\mathsf T_{\rm ring}$.
 
-**Resolution TV-FND-02-R1 (Metadata).** Exact domain: table-valid finite categorical-unity data and their compatible-lift groupoids. Premises: Definitions 2.6a and 2.6c and Theorems 2.6b--2.6d's source, ownership, restriction and calibration checks. Equivalence: isomorphism in each lift groupoid and in the common essential-preimage fiber. Budget: exhaustive enumeration of the submitted finite tables and arrows. Verifier: the exact groupoid census and completion-certificate checks. Falsifier: a table-valid datum outside the four disjoint cases, an omitted isomorphism class, or a failed claimed converse. Provenance class: source-internal finite classification. Downstream consumers: Thesis 2.6 and every sector map invoking a common realization fiber. Algebraic nonvacuity: the finite groupoid constructions of Lemma P.6.1d.14. Physical nonvacuity additionally requires the compatible eligibility, realization, and acceptance witnesses stated there.
+The constituent task, qualification and minimum inherit the same source-relative hierarchy presentation as Theorem 2.4.1h. The message carrier is $\mathbb C^4$ with labeled basis $|0\rangle,|1\rangle,|2\rangle,|e\rangle$. Put $P_v=|v\rangle\langle v|$, $P_e=|e\rangle\langle e|$ and $P_L=I-P_e$. The low fibers are the three predictive message ports. A returned R14 forecast bit may choose between two registered preparations after the original return; no unreturned field is read or fed back into the qualifying run.
 
-No populated bounded physical-theory census, common essential-preimage record, source-exhaustion module, calibration module or empirical realization-identification record is accepted here. `TV-FND-02` therefore retains `C+R+O`: the finite classifier is complete, while selecting the realized fiber and extracting its observables remain certificate- and realization-gated.
+There are two empty excitation cartridges, with calibrated gaps $\lambda E$ for $\lambda\in\{3,4\}$, equal fixed stock/reservation tariffs and one-bit selectors. There are four retained coordinate presentations
+$$
+g=(1,a,b),\quad a,b\in\{1,-1\},\qquad
+D_g=\operatorname{diag}(1,a,b,1).
+\tag{2.6e.1}
+$$
+Object codes are the eight three-bit words $(\lambda-3,(1-a)/2,(1-b)/2)$. Every other word of length at most three is invalid. Labels, apparatus bounds, physical complement choices, pulse profiles and tariffs are fixed below. Independent compact local phase frames act on the rank-one fibers with character one; the four $g$ are the retained finite coordinate catalogue.
+
+The low preparation catalogue comprises $P_j$ and the projectors onto $(|j\rangle+|k\rangle)/\sqrt2$ and $(|j\rangle+i|k\rangle)/\sqrt2$ for $0\le j<k\le2$, nine preparations in total. The global catalogue adds $P_e$ and the six analogous pair preparations involving $e$, for sixteen in total. The computational basis and the $X/Y$ pair bases with untouched complementary basis vectors give seven low and thirteen global projective instruments. A low instrument also has the outcome $P_e$ on the full carrier. Every outcome is retained, with four labels per ordinary action.
+
+Each triangle edge $\{u,v\}$ has the two Hermitian transport involutions
+$$
+S_{uv}(z)=I-P_u-P_v+
+z|u\rangle\langle v|+\bar z|v\rangle\langle u|,
+\quad z\in\{1,i\},
+\qquad
+B_{uv}=I-P_u-P_v+
+\frac{P_u+P_v+iS_{uv}(1)|_{\{u,v\}}}{\sqrt2}.
+\tag{2.6e.2}
+$$
+There are six transport and three beam actions. Together with the seven low measurements they give sixteen low actions; the six further high pair measurements give twenty-two global actions. A unitary action has one nonzero and three zero Kraus outcomes. At chart $g$, conjugate every quantum state, Kraus operator, effect, source fiber, verification representation and cost operator by $D_g$; all archived message data carry that conjugation.
+
+The native physical decoder is fixed. A projective instrument $\{P_\alpha\}$ uses a fresh zero pointer and the Hermitian involution $W=\sum_\alpha P_\alpha\otimes\operatorname{XOR}_\alpha$. A displayed preparation vector $v$ is phase-fixed with $v_0$ real and nonnegative and uses
+$$
+H_v=I-\frac{(|0\rangle-v)(\langle0|-v^\dagger)}{1-v_0}
+\quad(v\ne|0\rangle),\qquad H_{|0\rangle}=I.
+\tag{2.6e.3}
+$$
+Prepare a fresh zero data register with $H_v$, then SWAP it with the old data; the displaced old state remains in its archive. Thus overriding a preparation retains the old input. Projective-pointer, transport, fee-flip and finite classical lookup involutions use generator $\pi(I-U)/2$; beam splitters use $-\pi S_{uv}(1)/4$ on their edge subspace and zero elsewhere. The classical branch operation is the complete lexicographic finite-table XOR map $(x,y)\mapsto(x,y\mathbin{\rm XOR}f(x))$, with supplied scratch/shadow stock. These are declared native operations.
+
+Fix positive standards $E,\tau,\ell$ with $E\tau\ge100\hbar$. Each slot has sixteen prescribed subslots. A dimensionless generator $D$ acts on $[a,a+\tau/16]$ through
+$$
+H(s)=\hbar\,\frac{32}{\tau}
+\sin^2\!\left(\frac{16\pi(s-a)}{\tau}\right)D.
+\tag{2.6e.4}
+$$
+The envelope has integral one. Gap raising uses the fixed half-cosine monotone profile in its assigned subslot. Source words have the fixed order preparation/control, data/pointer operation, fee flip, gap raise and return, padded to sixteen subslots. All pointer reads are computational pointer instruments. At most one quantum generator is active at a time. A separately owned $32E$ peak reservation covers the stated envelope and receipt-gap peaks within the $1000E$ operating envelope.
+
+Every completed, identity, false-control or failed call pays three fresh fee receipts with gaps $E/2,E/4,E/4$. Flip them while degenerate, then raise their gaps and retain them outside later client gates. Their total endpoint work is $E$. Drive Hamiltonians return to zero at slot boundaries; their transient reservation belongs to the call service. Every failure has its typed outcome and incurred receipt.
+
+For $x\in\{-1/2,0,1/2\}$ define
+$$
+U_{uv}^g=g_u\bar g_v,\qquad
+K_{\{u,v\}}^g=
+(|u\rangle-U_{vu}^g|v\rangle)
+(\langle u|-\bar U_{vu}^g\langle v|),
+\quad
+K^g(x)=(1+x)K_{01}^g+K_{12}^g+K_{20}^g.
+\tag{2.6e.5}
+$$
+The terminal meter first distinguishes $P_e$ from $P_L$. On $P_e$ it pays the extra receipt $\lambda E$. On $P_L$ it draws a retained, source-owned uniform edge and measures its two spectral projectors $K_e^g/2$ and $P_L-K_e^g/2$, paying respectively $6Ew_e(x)$ and zero, where $w_{01}=1+x$, $w_{12}=w_{20}=1$. The mandatory call fee is separate. An independently specified analytic tariff on $-1<x<1$ fixes the registered derivative. The three displayed settings and that derivative are the retained knob data.
+
+After the R14 run, preparation occupies one paid slot, at most two adaptive message actions occupy two slots, and the mandatory cost/readout meter occupies one slot. The second action is any function of the first four-valued outcome; missing actions use paid identities. All complete lifecycles retain the same window
+$$
+T_{\rm cycle}=18\tau,\qquad T_{\rm msg}=4\tau.
+\tag{2.6e.6}
+$$
+A protocol object is a typed prefix of such an experiment with a named retained-outcome projection. Arrows are compatible prefix/projection refinements; composition concatenates these refinement maps and never appends an extra action. Executed commands, all zero-probability branches, failure labels, pointers and receipts remain recorded. The low category excludes cartridge-identifier and gap-read requests and uses low preparations/actions; the global category adds high preparations, high tomography and the calibrated cartridge test. Empty equal-tariff fixed-width cartridges therefore have no extra low metadata response.
+
+The finite source category has two objects $p_0,p_1$, with only identities, the standard initial low states $P_0,P_1$ and the same nominal R14 preparations; $p_B=p_0$. Its response-normal-form objects are their complete normalized response/update/verification tables. The comparison map is identity on the classical forecast/record/update/verifier labels, with the actual R14 and quantum carrier encoding.
+
+Each sector includes the common calibration/tomography subcategory and the following tagged protocols:
+
+| Sector | Retained physical queries |
+| --- | --- |
+| Time | R14 snapshot order, append-only prefixes and service-slot clock |
+| Space | Triangle ports, paid edge transports, site reads and path concatenation |
+| Energy | All R14/native receipts, stock records and terminal energy meter |
+| Matter | The three original qualifying constituents, forecasts, verification, updates and port incidence |
+| Generalized force | The common cost meter at its three knob settings and registered derivative |
+| Charge | Local phase frames, edge interference, pair tomography and calibrated holonomy comparison |
+
+Canonical type tags determine every membership and exclusion. Multiple tags reference the same physical run. Sector restriction is literal restriction of the single response table. Include every nonempty subset overlap of the six sectors, its units and all restriction composites.
+
+The source graph has response-inert finite-set/linear-algebra/arithmetic rules, the POP/PPI/PCE definitions, the twelve complete R14 physical premise owners, and these independent leaves: finite complex carrier/Born/CP-linear and tensor rules; fixed preparation/instrument/pulse decoder; three paid interaction ports; rank-one compact phase frames and character; four charts and marked dressing effects; the two cartridge catalogue; fee/receipt source; ready-stock/ROM/clock/peak service; finite message inventory; random-edge meter; analytic derivative tariff; paid post-run R14 holding; independent standards and resource-credit price; common lifecycle/utility calibration; fixed regulator/marker/error convention; finite code/constructor grammar; and six-sector type grammar. R14 response faithfulness, qualification and minimum are imported derived nodes. Subsequent nodes construct matrices, service, product carrier, responses, code census, sectors, overlaps, ownership, calibration, fiber and observables in that order. Leaves have none of the types nominated-lift, common-carrier, source-status, selected-minimizer or empirical-outcome. Type-preserving renaming/quotation/abbreviation aliases retain their source types. The complete fixed constructor universe consists of finite products, disjoint sums, typed cases, matrix/Kraus composition and projections. Source status is augmented; selection is unselected.
+
+<a id="theorem-26f-populated-bounded-common-fiber-and-observable-realization"></a>**Theorem 2.6f (Populated Bounded Common Fiber and Observable Realization).** Definition 2.6e supplies a table-valid datum and common-realization construction of Definitions 2.6a--2.6c on its finite marked-interface theory. Its six local-lift groupoids and compatible-lift groupoid are terminal. The complete global physical groupoid has eight objects, thirty-two arrows, two components and trivial automorphisms. Its full essential preimage over the compatible tuple is that entire groupoid. The complete source/ownership/calibration modules and a total six-sector observable map are explicitly realized.
+
+*Proof.* **Exact response coefficients and physical execution.** Put $t=e^{-21}$. The exact real response field is
+$$
+\mathbb K=\mathbb Q(\sqrt2,\sqrt3,t),\qquad
+\mathbb K_{\mathbb C}=\mathbb K(i).
+\tag{2.6f.1}
+$$
+Rational functions have coefficients in the algebraic subfield, with reduced exact normal forms. Lindemann transcendence of $t$ makes nonzero represented numerators and denominators genuinely nonzero. Rational interval refinement for the algebraic coefficients and $e^{-21}$ therefore decides the sign of each nonzero represented value.
+
+On the imported schedule the live total R14 rate is $3/\tau$, there are at most fourteen jumps and the only scheduled intervals have length $7\tau$. Integrating the ordered holding-time simplices, including stopping/absorption alternatives, gives polynomials in $t$ with rational Erlang coefficients. The retained path cylinders and scheduled outputs have finite event-word/interval descriptions; their holding times are integrated rather than introduced as new unrestricted real-valued query inputs. Three independent copies multiply these weights. This uses the bounded schedule, not the imported unlimited rational-wait query grammar. Quantum matrix entries are algebraic, so every retained joint response lies in (2.6f.1).
+
+The preparation projectors span $\operatorname{Herm}_3$ on the low sector and $\operatorname{Herm}_4$ globally: basis projectors give diagonal units and each $X/Y$ pair gives the real/imaginary off-diagonal units. The thirteen global measurement bases separate that same space. All projectors and instruments are normalized. Equation (2.6e.3) is a Hermitian involution taking $|0\rangle$ to $v$; the SWAP leaves the new data in $|v\rangle$ and the old data unchanged in its archive. The pointer operation is an involution because its orthogonal projectors resolve identity and its XOR blocks square to identity. Transporters and beam splitters are the stated unitaries. Equation (2.6e.4) gives their fixed pulse propagators without arbitrary complement or logarithm choices.
+
+For each admitted adaptive history, its quantum factor is
+$$
+p(o_1,o_2\mid\rho)
+=\operatorname{Tr}\!\left[
+K_{a_2(o_1),o_2}K_{a_1,o_1}\rho
+K_{a_1,o_1}^\dagger K_{a_2(o_1),o_2}^\dagger
+\right].
+\tag{2.6f.2}
+$$
+Tensor this with the exact R14 record weights and the retained classical controller/meter choices. Summing the last outcome uses Kraus completeness for its chosen second action; summing the first uses completeness again. Thus the full law is normalized for every admitted decision tree, including its impossible branches. Prefixes and retained projections act by finite marginalization and commute with composition. The complete depth-two syntax has $16^5$ low or $22^5$ global action trees: one root choice and four second choices. This structural argument covers every tree without individually materializing it.
+
+**Cost meter and physical resources.** Write $Q_e=K_e^g$. Since $Q_e^2=2Q_e$ and $Q_eP_e=0$, the terminal Kraus family is
+$$
+P_e,\qquad
+\frac{Q_e}{2\sqrt3},\quad
+\frac{P_L-Q_e/2}{\sqrt3}
+\quad(e=01,12,20).
+\tag{2.6f.3}
+$$
+Its adjoint products sum to $I$. Weighting their effects by the actual extra receipt values gives
+$$
+\mathbb E[\text{extra receipt}\mid\rho]
+=E\,\operatorname{Tr}[(K^g(x)+\lambda P_e)\rho].
+\tag{2.6f.4}
+$$
+The largest extra receipt is $9E$. The edge choice, its measurement disturbance and every work receipt are retained; (2.6f.4) is an expectation of a physical normalized instrument.
+
+Own all three original R14 carriers, their ROM/timers and all records. Their original maintenance ends at $14\tau$, so supply the additional four-$\tau$ holding contract on every factor:
+$$
+C_{\rm R14,extra}
+=12[6978+68\,2^{72}+2^{1332}]R+12R.
+\tag{2.6f.5}
+$$
+The counted-register part is $83\,736R$. The last term is the separately fixed timer-package holding fee. This enormous finite supply is separate from the message operating reservoir and keeps the original $[0,14\tau]$ laws intact.
+
+The message source reserves $4096$ classical bits, $64$ qubits, its fixed finite primitive/controller ROM and $1000E$ operating work. The largest pointer has dimension eight. A two-action/four-outcome branch table has five action entries, hence twenty low or twenty-five global action bits, plus its preparation tag. Executed commands/outcomes, at most seven terminal labels, ancestry checks, source trit, scratch, fee bits, displaced data and any retained purification fit the declared reserves. Finite native lookup services and their complete matrix description are supplied and charged; no elementary-gate complexity bound is asserted for one such native operation. Unused stock is still reserved stock.
+
+If $b_{\rm ROM}$ is the exact bit length of the fixed canonical compiled source/controller table, a separate preflight supply delivers
+$$
+C_{\rm stock}=\frac{4160+b_{\rm ROM}}{128}E+E.
+\tag{2.6f.6}
+$$
+Its aggregate invoice load and own record are part of that packaged service. R14 resource credits have a separately fixed positive energy-equivalent price; they are not physical energy by definition. Available reserve, consumed work, preflight stock, holding and control reservation retain separate ledger types. The four slots pay their call fees even on identities/failures. All ordinary receipt branches and the terminal maximum fit the $1000E$ operating source.
+
+Each dimensionless generator has norm at most $\pi$, so its pulse peak is at most $32\pi\hbar/\tau<1.28E$; receipt raising has peak at most $10E$. At most one generator is active. The supplied $32E$ reservation covers these bounds. This verifies the declared hardware feasibility condition rather than assuming independent arbitrary $E,\tau$.
+
+**Six local lifts and all overlaps.** The shared calibration/initial-read data distinguish $p_0,p_1$. For each sector, form its realization category from the actual low restrictions of the eight decoded physical models and quotient the gauge equivalences proved next. Its two preparation objects are exactly the two response-normal-form objects; its retained intertwiners are exactly the displayed physical ones. Thus the realization functor is bijective on these objects and arrows and its lift is forced, with trivial automorphism. All six local-lift groupoids are terminal.
+
+On every overlap, the comparison is identity on the represented shared data. There are
+$$
+6+15+20+15+6+1=63
+\tag{2.6f.7}
+$$
+nonempty sector subsets, including six units, all fifteen pairs and every higher intersection. Any chain of restrictions is the same projection of the common law, so all cycles, higher cells, units, ownership and calibration squares commute. The compatible-lift groupoid therefore has exactly one object $q$ and its identity.
+
+**Complete global object and semantic-arrow census.** The fixed theory leaves only the two cartridge and four chart selectors. The decoder builds every remaining physical/source/control/price field, so the eight object codes exhaust its bounded candidates. Six-bit arrow syntax contains all sixty-four ordered object pairs. At equal $\lambda$, the unique proposed arrow is identity on every labeled classical source, R14, stock, pointer, timer, receipt and ownership coordinate and
+$$
+A\longmapsto D_{g'}D_g^\dagger A D_gD_{g'}^\dagger
+\tag{2.6f.8}
+$$
+on every quantum message operator, including archived data. It intertwines preparations, Kraus maps, updates, verifiers, costs and calibrated units; composition cancels the middle chart and inverse reverses it.
+
+Semantic completeness is independent of that parser. Marked classical coordinate/source/ownership effects separate the complete retained classical carrier, including formally unreachable source-table states, and force the classical map to be identity. These are the declared marked record/source coordinates; padding with no source/dressing role is removed. The physical quantum-transform class is affine/CP-linear. Undoing the two chart maps, preservation of all global preparations and named $X/Y$ effects fixes a basis of $\operatorname{Herm}_4$, hence every quantum message operator. The quantum map must therefore be (2.6f.8). Complex conjugation fails a named $Y$ effect. Common scalar phases induce the same operator map and are already null.
+
+Finally prepare $P_e$ and read the terminal calibrated extra-energy receipt. It is deterministically $3E$ or $4E$, so no arrow changes $\lambda$. There is consequently one arrow for each ordered pair with equal cartridge and none otherwise:
+$$
+\mathscr L_{\Omega,B}\cong
+\operatorname{Pair}(4)\ \sqcup\ \operatorname{Pair}(4),
+\qquad
+|\operatorname{Ob}|=8,\quad|\operatorname{Ar}|=32.
+\tag{2.6f.9}
+$$
+It has two components and only identity automorphisms. This is completeness for the declared marked physical dressing, fixed units and apparatus bounds. The decoding also gives the actual component identification with the registered ambient physical classes and the restriction bridge; it is not an identification based on equal cardinalities.
+
+**Full common essential preimage.** Every low preparation is supported in $P_L$ and every low primitive preserves that support. The low meter never invokes the high cartridge. Induction through all adaptive branches proves that every low probability, executed-command, receipt, update and verification law is independent of $\lambda$. Empty equal-tariff fixed-width cartridges and the explicit low metadata restriction prevent a stock/identifier leak. Chart conjugation preserves the calibrated low laws. Thus the restriction sends all eight objects to $q$ and every admitted arrow to its identity. Its full unframed essential preimage is
+$$
+\mathscr E_q=\mathscr L_{\Omega,B}.
+\tag{2.6f.10}
+$$
+This equality follows from the full low-response induction. It proves nonempty common realization with two global classes, while the high experiment separates them. No uniqueness conclusion is taken from local rigidity.
+
+**Source closure and ownership.** Every source field in Definition 2.6e has a named parent in the finite graph. Topological construction starts with the explicit independent leaves and ends with the common carrier/fiber/observable outputs. The forbidden conclusion types never occur as leaves or literal aliases. A Hilbert carrier or native gate is a supplied source object/operation, not a premise asserting the desired common fiber. This proves closure of the submitted augmented grammar. Imported R14 conclusions are derived from its twelve original physical premise owners; its arithmetic trust input and out-of-family branches keep their respective types.
+
+For ownership refine the finite terminal event-word/scheduled-output, quantum command/outcome and meter/receipt space into disjoint history atoms $h$, keeping zero-weight atoms. Partial overlaps are refined by intersections/differences before aliases are identified. Use a probability atom $e_h$ and a separate resource atom $r_{h,a}$ for each actually owned address $a$ in that history. On their free $\mathbb K$ module set
+$$
+w_{\rm tot}=\sum_h p_h\left(e_h+\sum_a r_{h,a}\right),\quad
+L_{\rm resp}(e_h)=\mathbf e_h,\quad L_{\rm resp}(r_{h,a})=0,\quad
+L_{\rm cost}(e_h)=0,\quad L_{\rm cost}(r_{h,a})=c_{h,a}.
+\tag{2.6f.11}
+$$
+Here $\mathbf e_h$ is the history outcome column and $c_{h,a}$ is its actual energy-equivalent debit. Hence $L_{\rm resp}(w_{\rm tot})$ is the normalized history law and $L_{\rm cost}(w_{\rm tot})=\sum_hp_h\sum_ac_{h,a}$. Address projections are mutually orthogonal idempotents summing to identity. Shared sector views reference the same history/address IDs and cannot duplicate mass or cost. Product probabilities are assembled by the nonlinear source/Kraus construction before this linear ledger. Cost distributions are projections of the history law; provenance-only source rows have zero additive-ledger image. Description complexity is evaluated once as a nonadditive quantity.
+
+**Calibrated observables.** The common standards fix one slot $\tau$, one receipt unit $E$, one reference edge $\ell$, oriented phase $i$ and weight-one character, with empty-receipt energy zero. Unit squares have scales $\tau$, $E$, $\ell$, $E/(18\tau)$ and $E/(18\tau\ell)$ as appropriate. They are independent of comparison outcomes and fixed by arrows. Exact normalized finite responses, the declared regulators and optional deterministic error enclosures pass through projections; enclosure errors compose by triangle inequalities with their linear unit scales.
+
+The six simultaneous observable maps are:
+
+| Coordinate | Realized value and response |
+| --- | --- |
+| $O_t$ | R14 times $(0,7,14)\tau$, service times through $18\tau$, directed verification/update and full retained prefix laws |
+| $O_s$ | The paid edge-cost triangle metric $d(u,v)=\ell$ for distinct ports, its transfer kernels and endpoint laws |
+| $O_e$ | The $60E$ original R14 main/verifier allocations, actual consumption laws, paid stocks/holding/calls and the low cost operator $EK^g(x)$ |
+| $O_m$ | Three labeled original $C_P=C_{\rm op}=8$ constituents on the same R14 presentation, their complete nominal task/record laws and port incidence |
+| $O_f$ | The same common-cost power gradient $-E\operatorname{Tr}(K_{01}^g\rho)/(18\tau\ell)$ and its registered cost-response estimator |
+| $O_q$ | Character one, calibrated oriented edge connections, phase-sensitive tomography and reconstructed triangle holonomy |
+
+For the force coordinate put $x=\xi/\ell$ and define the same scalarized lifecycle functional
+$$
+V(\rho,\xi)=
+\frac{C_{\rm R14}+C_{\rm stock}+C_{\rm calls}
++E\operatorname{Tr}[(K^g(x)+\lambda P_e)\rho]
+-\Gamma_E PP_{\rm R14}}{18\tau},
+\quad
+-\partial_\xi V=-\frac{E}{18\tau\ell}
+\operatorname{Tr}(K_{01}^g\rho).
+\tag{2.6f.12}
+$$
+The fixed energy-valued utility calibration and all other costs are $\xi$ independent. This is the generalized power-gradient branch of §2.6.1, with stated units. At the standard chart its response is zero on $(|0\rangle+|1\rangle)/\sqrt2$ and $-2E/(18\tau\ell)$ on $(|0\rangle-|1\rangle)/\sqrt2$.
+
+For charge, independent local rephasings give
+$$
+U_{uv}\longmapsto e^{i\theta_u}U_{uv}e^{-i\theta_v},
+\qquad
+|\psi_u-U_{uv}\psi_v|^2\ge0,\qquad
+U_{01}U_{12}U_{20}=1.
+\tag{2.6f.13}
+$$
+The quadratic comparison vanishes exactly on the coherent line. This supplies the finite rank-one connection branch of Assumptions G.3.1--G.3.5. The flat holonomy is reconstructed from separately calibrated edge operators; it is not a three-hop operation in the two-action budget. The $1$-versus-$i$ transporters and named pair tomography give nontrivial phase responses. Weight and phase normalization are explicit independent source data.
+
+Every coordinate is invariant under (2.6f.8) by identical classical records, fixed standards and trace cyclicity. Therefore $O=(O_t,O_s,O_e,O_m,O_f,O_q)$ is total, commutes with restrictions/overlaps and descends to $\pi_0(\mathscr L_{\Omega,B})$. Both classes have the same six low coordinates; the additional global high-energy observable separates them. All declared finite tables have deterministic bounded-constructor expansions, and every response/census/ownership identity above holds on that complete expansion.
+
+For finite recognition, fix the canonical encoding of the complete constructor and source proof displayed above. A submitted pair of finite words is accepted exactly when its two components have the prescribed byte types and equal those two canonical encodings, respectively. Length and byte comparison terminate on every finite input; hence this recognizer accepts precisely this fixed complete source theorem. Canonical serialization omits the outer status, integrity digest, and comparison trace. The digest identifies the serialized source and proof. These finite equality tests supplement the structural proof; they do not validate arbitrary later source theories. Soundness uses the stated mathematical and physical premises and the proof above. This completes the finite source/census/fiber/ownership/calibration and observable construction. ∎
 
 ### 2.6.1 Derivation Map (Operational Identifications)
 
@@ -1107,24 +1581,19 @@ No populated bounded physical-theory census, common essential-preimage record, s
 
 This map lists candidate realization functors and branch predicates for the six sector restrictions registered relative to an accepted $\mathfrak D_{\mathrm{CU},B}$. A row contributes a local lift only after its branch predicate and response-isomorphism checks pass; the local tuple lies in $\mathscr J_B$ only after every typed overlap cell passes. On a common-realization-complete record over $q\in\operatorname{Rep}\pi_0(\mathscr J_B)$, a compatible tuple has a common finite-cost PPI-physicalizable carrier in the registered exhaustive class exactly when $\mathscr E_q\ne\varnothing$. Each named branch theorem supplies its law from its own action, state-space, operator, continuum, and realization package; the common branch-indexed PCE variational grammar organizes those branch-specific derivations. “Spacetime unity” is the registered time--space compatibility row within the six-element index set $I_6$.
 
-### 2.6.2 Structural Identities (Inter‑Category Relations as Necessities)
+### <a id="262-structural-identities-inter-category-relations-as-necessities"></a>2.6.2 Structural Identities (Inter‑Category Relations as Necessities)
 
 For a record that is common-realization-complete over $q\in\operatorname{Rep}\pi_0(\mathscr J_B)$, with $\omega\in\mathscr E_q$, the following are branch theorems or cross-sector compatibility equations on the registered common PPI-physicalizable lift. Each retains its named branch, calibration, source, and overlap gates. A coherence cell is an explicitly registered commuting naturality or overlap diagram:
 
 1. **Mass–energy equivalence.** On $\mathfrak B_{mass}$, rest energy is the proper-time action-rate assigned to the maintained relational-information ledger; outside that branch PU does not derive the absolute coefficient.
 
-
-
 2. **Lorentzian spacetime with invariant $c$.** Theorem 46 gives a uniform speed upper bound under its independent nonzero-spacing, positive edge-clock, serialization, and bounded-weight hypotheses. The characteristic orthogonalization timescale that Corollary 29.1 supplies on its time-independent unitary branch and the registered-reset entropy ledger of Theorem 31 supply neither a universal edge-update clock nor a causal frontier. The normalization $c=\delta/\tau_{\min}$ additionally requires uniform weights and one-link frontier attainment. The Appendix Z contract fixes only the Euclidean response-carrier value $D=4$; its $3+1$ spacetime interpretation and Lorentzian signature follow only on the full Corollary 46a/Appendix O branch.
 
 3. **Forces from connections/gradients.** In the continuum effective description, interactions are encoded in the connections required for predictive coherence: the internal connection $A_\mu$ (Appendix G) and the geometric/spin connection (Theorem 48) together form the transport structure whose curvature yields physical interaction content (Theorem 47). On $\mathfrak B_{\mathrm{mass}}^{\mathrm{rate}}(q)$, Theorem N.6 identifies the accepted inertial coefficient with a certified relational action/update ledger only after a mechanical-realization certificate. It does not derive Newton's second law or a force law; those require the independent worldline and mechanical response maps of the declared Lorentzian branch. Where both packages coexist, relational reconfiguration cost is compatible with, but does not replace, the classical force response.
 
-
 4. **Charge conservation.** On the branch carrying the accepted gauge-invariant minimally coupled action and the on-shell matter equations, variation gives $\nabla_\mu F^{\mu\nu}=J^\nu$ (Equation G.6.3), and antisymmetry of $F^{\mu\nu}$ yields $\nabla_\nu J^\nu=0$. Appendix G's quadratic link cost is a constructive realization of this branch; unique selection of minimal coupling and of the complete local operator content requires the explicit operator class, derivative order, equivalence relation, and strict PCE gap stated in Appendix G.
 
 5. **Equivalence principle and response separation.** On canonical $\mathfrak B_{mass}$, probe-independent realization maps $m_I=\beta_I L$ and $m_G=\beta_G L$ give a universal ratio. One independently calibrated reference probe with $m_G=m_I$ fixes that ratio to one for the tested class. The branch requires separate realization-map, metric-universality, source-exhaustion, and reference-calibration records.
-
-
 
 ### 2.6.3 Compressed Ontology Statement
 
@@ -1154,7 +1623,3 @@ $$
 \varepsilon_{\mathrm{phys}}\ge H_q(P\mid R),
 $$
 with a positive floor when the independent bound $H_q(P\mid R)\ge h_{\min}>0$ is accepted (Theorem 31). The potential $V$ belongs to the branch-indexed family of Definition D.1, Definition D.1f, and Theorem D.1g. Definition P.14.9g supplies the separate empirical realization-identification record.
-
-
-
-

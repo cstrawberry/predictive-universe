@@ -1,0 +1,12 @@
+{
+  "full_material_gradient_matches_all_four_forces": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "clock_variation_included": true,
+  "external_time_profile_required": false,
+  "positive_offset_condition": "C_v >= sup_full_native_spectrum |V_ctl,v|; full C_v retained in metric derivative",
+  "scope": "Algebraic controller identity along each registered one-dimensional material path; complete source stock remains separately counted."
+}

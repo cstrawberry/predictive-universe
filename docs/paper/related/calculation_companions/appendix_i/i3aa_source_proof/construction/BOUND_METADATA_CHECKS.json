@@ -1,0 +1,20 @@
+{
+  "all_pass": true,
+  "scope": "Actual-family metadata and same-bank physical budget binding, not enormous full-source execution",
+  "R": 80,
+  "N": "40960000000000000000000000000000000",
+  "V": "2814749767106560000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "directed_edges": "1891225414559307556454400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "J": 1,
+  "oscillator_native_digits": 81,
+  "K": "14134776518227074636666380005943348126619871175004951664972849610340958208",
+  "candidate_count": "85070835119440002067063756934692732929",
+  "common_description_bytes": 181815,
+  "common_description_sha256": "b9d0f71fe5514421e14064601f72d803bdc86f801698fadb4aacd32001401f42",
+  "same_inventory_and_theta_for_codes0and1": true,
+  "exact_rest_count_compression": true,
+  "canonical_spatial_index_all8_cells": true,
+  "full_native_matrices_materialized": false,
+  "normative_canonical_module": "stress/canonical_matter_source.py",
+  "normative_canonical_sha256": "859729570000fa6ee918c91b2d18622fa751b5befaa5085e7d32f50628fc42a5"
+}

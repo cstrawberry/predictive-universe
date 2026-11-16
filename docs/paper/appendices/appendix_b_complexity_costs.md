@@ -1,4 +1,4 @@
-# Appendix B: Operational Complexity, Costs, and Stress–Energy Tensor Construction
+# <a id="appendix-b-operational-complexity-costs-and-stress-energy-tensor-construction"></a>Appendix B: Operational Complexity, Costs, and Stress–Energy Tensor Construction
 
 This appendix provides the detailed construction and justification for key operators used within the Predictive Universe (PU) framework, culminating in the definition of the macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}$. This includes the operational complexity operator $\hat{C}_v$ used as a proxy for the theoretical $C_P$, the associated resource cost operators $\hat{R}$ and $\hat{R}_I$, a certificate-relative lower bound for verification/update complexity near a registered quantitative self-prediction boundary, and the operators representing local energy density and flows, ensuring consistency with the framework's principles and conservation laws.
 
@@ -12,7 +12,7 @@ in nats (natural-log base $e$). The physical interpretation of complexity-derive
 
 The theoretical $C_P$ of Equation (1) need not be computable. On the operational branch, register a finite-resolution measurement and a calibration of its retained complexity bins. These data define an observable proxy.
 
-**Definition B.1 (Coarse-Grained Operational Complexity Observable $\hat C_v$).** On the Hilbert branch, define
+<a id="definition-b1-coarse-grained-operational-complexity-observable-hat-c_v"></a>**Definition B.1 (Coarse-Grained Operational Complexity Observable $\hat C_v$).** On the Hilbert branch, define
 $$
 \hat C_v=\sum_{d=0}^{\infty}\lambda(d)\hat P_d.
 \tag{B.1}
@@ -48,7 +48,7 @@ $$
 $$
 Consequently every attained global minimum of $\hat C$ belongs to $[x^*]$. If proxy-based selection is asserted to exist, also assume that $\hat C$ attains its infimum on $\mathcal A$, for example because $\mathcal A$ is finite and nonempty. The gap inequality alone proves exclusion of competing classes, not attainment. Without a certified gap exceeding $2\varepsilon$, this uniform-error argument does not establish exact class selection.
 
-**Theorem B.1a (Complete Spectral-Proxy Reparameterization and Canonical-Coordinate No-Go).** Suppose the nonzero coarse bins in Definition B.1 are $P_0,\ldots,P_N$ with distinct ordered eigenvalues
+<a id="theorem-b1a-complete-spectral-proxy-reparameterization-and-canonical-coordinate-no-go"></a>**Theorem B.1a (Complete Spectral-Proxy Reparameterization and Canonical-Coordinate No-Go).** Suppose the nonzero coarse bins in Definition B.1 are $P_0,\ldots,P_N$ with distinct ordered eigenvalues
 $$
 \lambda_0<\cdots<\lambda_N.
 $$
@@ -104,7 +104,7 @@ Thus $\hat C_v$ is self-adjoint and positive. The coarse-graining remains branch
 
 The physical realization of predictive capability, quantified by complexity, incurs costs. These costs are represented by operators derived from the operational complexity operator $\hat{C}_v$ and the cost functions defined in the main text (Definition 3).
 
-**Theorem B.1 (Physical and Reflexive-Information Cost Operators).** Let $\hat C_v$ be the self-adjoint coarse-grained observable of Definition B.1. At the declared effective temperature, assume that $R$ and $R_I$ are finite, nonnegative Borel functions on its spectrum. If the assigned eigenvalues extend below $C_{op}$, Equation (4) does not supply $R$ there; those values require a separately specified nonnegative extension. Zero projectors may be omitted.
+<a id="theorem-b1-physical-and-reflexive-information-cost-operators"></a>**Theorem B.1 (Physical and Reflexive-Information Cost Operators).** Let $\hat C_v$ be the self-adjoint coarse-grained observable of Definition B.1. At the declared effective temperature, assume that $R$ and $R_I$ are finite, nonnegative Borel functions on its spectrum. If the assigned eigenvalues extend below $C_{op}$, Equation (4) does not supply $R$ there; those values require a separately specified nonnegative extension. Zero projectors may be omitted.
 
 For $f=R$ or $f=R_I$, define
 $$
@@ -146,7 +146,7 @@ A normalized state has a finite mean cost only when the corresponding positive s
 
 ## B.3 Certificate-Relative Complexity Bound for a Registered Quantitative Task
 
-**Definition B.2 (Unified Complexity Functional $C_{\mathrm{uni}}$)**
+<a id="definition-b2-unified-complexity-functional-c_mathrmuni"></a>**Definition B.2 (Unified Complexity Functional $C_{\mathrm{uni}}$)**
 
 Fix a registered self-prediction task, score, admissible strategy class, verification rule, and a quantitative certificate that defines a scalar performance boundary $\alpha_{\mathrm{SPAP}}$ for that class. For a target performance $\alpha<\alpha_{\mathrm{SPAP}}$, set $\delta_{\mathrm{SPAP}}:=\alpha_{\mathrm{SPAP}}-\alpha$. Theorems 10–11 supply the class-level diagonal obstruction but do not by themselves supply this scalar certificate.
 
@@ -156,7 +156,7 @@ C_{\mathrm{uni}}\bigl(\delta_{\mathrm{SPAP}}\bigr) := \inf_{S\ \delta_{\mathrm{S
 $$
 with value $+\infty$ when the registered strategy class contains no $\delta_{\mathrm{SPAP}}$-accurate member. The functional is therefore task-, score-, class-, and certificate-relative; it is not a universal complexity function obtained from SPAP alone.
 
-**Theorem B.2 (Conditional Log-Enhanced Quadratic Lower Bound).** For every $0<\delta\le1/8$ and every $\delta$-accurate admissible strategy $S$, assume certificate $\mathfrak C_{B.2}$ maps $S$, under either Bernoulli law $p_\pm=1/2\pm2\delta$, to a test based on $N(S,\delta)$ independent observations whose two errors are at most $\beta(\delta)\le\delta$, and proves
+<a id="theorem-b2-conditional-log-enhanced-quadratic-lower-bound"></a>**Theorem B.2 (Conditional Log-Enhanced Quadratic Lower Bound).** For every $0<\delta\le1/8$ and every $\delta$-accurate admissible strategy $S$, assume certificate $\mathfrak C_{B.2}$ maps $S$, under either Bernoulli law $p_\pm=1/2\pm2\delta$, to a test based on $N(S,\delta)$ independent observations whose two errors are at most $\beta(\delta)\le\delta$, and proves
 $$
 \operatorname{Cost}(S;\delta)\ge c_sN(S,\delta)
 $$
@@ -171,7 +171,7 @@ $$
 
 *Proof.* The reduction certificate supplies a test with errors $a,b\le\beta(\delta)$ directly; no parameter-estimation premise is needed. If $\beta=0$, no finite number $N$ of observations can satisfy this certificate: both Bernoulli parameters lie strictly between zero and one, so their finite-sample laws are mutually absolutely continuous and no test, including parameter-independent internal randomization, can have both errors zero. The zero-error lower bound is interpreted as $+\infty$, excluding finite-observation and hence finite-cost strategies because $\operatorname{Cost}\ge c_sN$ with $c_s>0$. For $\beta>0$, an infinite observation count already satisfies the extended lower bound. It remains to consider finite $N$ and $0<\beta\le\delta$.
 
-Let $P_-^N$ and $P_+^N$ be the laws of the $N$ independent observations. [Bretagnolle and Huber, *Estimation des densités : risque minimax* (1978), §2, printed p. 345](https://www.numdam.org/item/SPS_1978__12__342_0.pdf) derive the KL/total-variation bound $\operatorname{TV}(P,Q)\le\sqrt{1-e^{-D(P\|Q)}}$ for two probability laws. Every test has $a+b\ge1-\operatorname{TV}(P_-^N,P_+^N)$; using $1-\sqrt{1-u}\ge u/2$ for $0\le u\le1$ gives the displayed testing inequality with the stated KL orientation:
+Let $P_-^N$ and $P_+^N$ be the laws of the $N$ independent observations. Bretagnolle and Huber (1978, §2, p. 345) derive the KL/total-variation bound $\operatorname{TV}(P,Q)\le\sqrt{1-e^{-D(P\|Q)}}$ for two probability laws. Every test has $a+b\ge1-\operatorname{TV}(P_-^N,P_+^N)$; using $1-\sqrt{1-u}\ge u/2$ for $0\le u\le1$ gives the displayed testing inequality with the stated KL orientation:
 $$
 a+b\ge\frac12\exp[-D(P_-^N\|P_+^N)].
 $$
@@ -210,7 +210,7 @@ N\ge\frac{3}{128\delta^2}\ln\left(\frac1{4\beta}\right).
 $$
 Multiplication by $c_s$ and the infimum over the uniformly certified strategies give (B.5). ∎
 
-**Theorem B.2a (Matching Upper Construction on the Frozen Bernoulli Task).** For $0<\delta\le1/8$, let
+<a id="theorem-b2a-matching-upper-construction-on-the-frozen-bernoulli-task"></a>**Theorem B.2a (Matching Upper Construction on the Frozen Bernoulli Task).** For $0<\delta\le1/8$, let
 $$
 N_+(\delta)
 :=
@@ -244,9 +244,7 @@ $$
 $$
 Under $p_-$, the event $\widehat p\ge1/2$ implies $\widehat p-p_-\ge2\delta>\delta$; under $p_+$, the event $\widehat p\le1/2$ implies $p_+-\widehat p\ge2\delta>\delta$. Thus both test errors obey the same bound. Counting operations gives (B.5g), and Theorem B.2 supplies the matching asymptotic lower bound. ∎
 
-**Resolution TV-SPAP-02-R1 (Metadata).** Exact domain: independent Bernoulli observations with $0<\delta\le1/8$ and failure budget $\beta(\delta)=\delta$. Premises: Theorem B.2's frozen hard pair and lower-cost certificate, admission of the sample-mean algorithm, and its declared $c_u$ per-observation upper ledger. Equivalence: estimators are compared by their induced output/error law on the two registered parameters. Budget: $N_+(\delta)$ observations and their declared finite operation ledger. Verifier: Hoeffding's exact tail substitution together with Theorem B.2's converse. Falsifier: failure of (B.5f), an exceeded operation ledger, or an admissible algorithm below the certified converse. Provenance class: source-internal probabilistic construction. Downstream consumers: Theorem 14, Corollary B.2.1 and `TV-SPAP-02`. Nonvacuity: the two independent Bernoulli laws and the sample-mean algorithm. This is `positive-discharge` of the frozen hard-family rate. Theorem B.2b and Resolution TV-SPAP-02-R2 below negatively resolve SPAP-only entailment; Theorems B.2c–B.2d below supply the task-specific reduction and populated certificate on the registered diagonal-noise self-calibration task, together with its physical operation bridge on a registered unit-cost counter architecture, and Resolution TV-SPAP-02-R3 records the remaining `M+C+R` scope.
-
-**Theorem B.2b (SPAP Does Not Entail a Nonvacuous Bernoulli Hard-Family Certificate).** The diagonal-closure hypotheses and conclusions of Theorems 10--11 do not imply the existence of a reduction certificate $\mathfrak C_{B.2}$ admitting any $\delta$-accurate strategy. More precisely, there is a nonempty coded model class carrying the deterministic and rational-probabilistic SPAP diagonal constructions and an admissible protocol registry for which no such nonvacuous B.2 certificate exists.
+<a id="theorem-b2b-spap-does-not-entail-a-nonvacuous-bernoulli-hard-family-certificate"></a>**Theorem B.2b (SPAP Does Not Entail a Nonvacuous Bernoulli Hard-Family Certificate).** The diagonal-closure hypotheses and conclusions of Theorems 10--11 do not imply the existence of a reduction certificate $\mathfrak C_{B.2}$ admitting any $\delta$-accurate strategy. More precisely, there is a nonempty coded model class carrying the deterministic and rational-probabilistic SPAP diagonal constructions and an admissible protocol registry for which no such nonvacuous B.2 certificate exists.
 
 *Proof.* Take a standard coded class of finite deterministic and rational-probabilistic programs closed under self-description, finite composition, Boolean negation, the rational threshold test $p>1/2$, and the diagonal wrappers of Theorems 10--11. This is a nonempty model class satisfying those theorems' logical hypotheses. Register for each nominated system only the single read-before-commit interaction used by the diagonal construction, and admit one-shot Bernoulli observations at every rational parameter. The registry contains no reset, restart, product, or repeated-trial operation, so it contains no protocol producing two independent observations of one parameter.
 
@@ -262,9 +260,7 @@ N\ge
 $$
 If $\beta=0$, no test using finitely many observations of these two strictly positive Bernoulli laws can have both errors zero. Thus every nonvacuous certificate would require at least two observations, contradicting the one-shot registry. The registered class satisfies SPAP while failing the B.2 certificate premise. ∎
 
-**Resolution TV-SPAP-02-R2 (Logical Nonentailment Boundary).** Exact domain: coded model classes satisfying Theorems 10--11 and protocol registries not assumed closed under restart, products, or independent repetition. Premises: only the stated SPAP representation, simulation, threshold, Boolean, and diagonal-closure hypotheses. Equivalence: equality of the admitted interaction protocols and induced response laws. Budget: the one prediction query and one diagonal commit in the countermodel. Verifier: replay the diagonal wrapper, audit absence of repeated-trial morphisms, and check the displayed B.2 integer lower bound. Falsifier: a derivation of an admitted two-sample independent protocol from the frozen one-shot registry. Provenance class: source-internal logical countermodel. Downstream consumers: Theorem 14, Corollary B.2.1, `TV-SPAP-02`, and alias `TV-BSR-02`. Nonvacuity: the coded finite-program class and its rational one-shot Bernoulli laws. This is `nonentailment` of a nonvacuous $\mathfrak C_{B.2}$ from SPAP alone, not a no-go for a task-specific reduction after independent repeated-trial, hard-law, confidence, and cost records are supplied. The SPAP-only route therefore carries `N`; Theorems B.2c–B.2d below supply the task-specific reduction proof and populated certificate on the registered diagonal-noise self-calibration task, together with its physical-operation bridge on a registered unit-cost counter architecture, and Resolution TV-SPAP-02-R3 records the `M+C+R` scope for which the owner and alias both retain `N+M+C+R`.
-
-**Theorem B.2c (Populated Hard-Family Certificate on the Diagonal-Noise Self-Calibration Task).** Register the task $\mathcal T_{\mathrm{dn}}$ as follows. For $s\in[0,1]$, the fresh-noise diagonal wrapper $W_s$ reads, in every cycle $r\ge1$, the bit $\hat b_r$ announced by the calibrating strategy before commitment and commits
+<a id="theorem-b2c-populated-hard-family-certificate-on-the-diagonal-noise-self-calibration-task"></a>**Theorem B.2c (Populated Hard-Family Certificate on the Diagonal-Noise Self-Calibration Task).** Register the task $\mathcal T_{\mathrm{dn}}$ as follows. For $s\in[0,1]$, the fresh-noise diagonal wrapper $W_s$ reads, in every cycle $r\ge1$, the bit $\hat b_r$ announced by the calibrating strategy before commitment and commits
 $$
 \phi_{r+1}=
 \begin{cases}
@@ -272,7 +268,7 @@ $$
 \operatorname{NOT}(\hat b_r)&\text{with probability }1-s,
 \end{cases}
 $$
-conditionally on the $\sigma$-algebra $\mathcal G_r$ generated by the strategy's internal randomness $U$, all earlier announcements and commitments, and $\hat b_r$. Its success indicator is $Y_r:=\mathbf 1\{\phi_{r+1}=\hat b_r\}$. The wrapper $W_0$ is the diagonal protocol (A.1), $W_s$ with $0<s<1/2$ is the noisy diagonal of Theorem A.1.2 with $p_{err}=s$, and $W_{1/2}$ commits the binary law $1/2$ of Theorem 11b. An admissible strategy $S$ draws $U$ from a law $\lambda$ independent of $s$, runs cycles, performs internal updates, stops after $\tau$ cycles and outputs $\hat s\in[0,1]$, each announcement, stopping decision and output being a function of $U$ and the transcript so far; each cycle outcome is one acquisition in Definition B.2. The registered score is $1-|\hat s-s|$, and the certificate sets $\alpha_{\mathrm{SPAP}}:=1$, the exact-calibration value. Thus $S$ is $\delta$-accurate when
+conditionally on the $\sigma$-algebra $\mathcal G_r$ generated by the strategy's internal randomness $U$, all earlier announcements and commitments, and $\hat b_r$. Its success indicator is $Y_r:=\mathbf 1\{\phi_{r+1}=\hat b_r\}$. The wrapper $W_0$ is the diagonal protocol (A.1), $W_s$ with $0<s<1/2$ is the noisy diagonal of Theorem A.1.2 with $p_{\mathrm{err}}=s$, and $W_{1/2}$ commits the binary law $1/2$ of Theorem 11b. An admissible strategy $S$ draws $U$ from a law $\lambda$ independent of $s$, runs cycles, performs internal updates, stops after $\tau$ cycles and outputs $\hat s\in[0,1]$, each announcement, stopping decision and output being a function of $U$ and the transcript so far; each cycle outcome is one acquisition in Definition B.2. The registered score is $1-|\hat s-s|$, and the certificate sets $\alpha_{\mathrm{SPAP}}:=1$, the exact-calibration value. Thus $S$ is $\delta$-accurate when
 $$
 \Pr_s\bigl(|\hat s-s|>\delta\bigr)\le\delta
 \qquad(s\in[0,1]).
@@ -309,7 +305,7 @@ For item 4, Definition B.2 charges at least one elementary operation to every ac
 
 Items 2–3 place the test on the observations $Y_1,\ldots,Y_N$ and the parameter-independent randomness $U$. The laws $\lambda\otimes\operatorname{Bern}(p_\pm)^{\otimes N}$ have the same total-variation distance and relative entropy as $\operatorname{Bern}(p_\pm)^{\otimes N}$, so the testing argument in the proof of Theorem B.2 applies verbatim with $c_s=1$ and gives (B.5i) and its $\beta$-form; for $N(S,\delta)=\infty$ the bound is immediate. Under $W_s$ the success indicators read by the sample-mean strategy are independent $\operatorname{Bern}(s)$ variables by item 2, so (B.5f) gives $\Pr_s(|\hat s-s|\ge\delta)\le\delta$ for every $s$, which implies $\delta$-accuracy; (B.5g) and (B.5i) give the matching orders. Finally, a strategy with almost surely bounded $\tau$ and $\hat s=s$ almost surely for every $s$ would give, at $\delta=1/8$, a test between $p_\pm$ with both errors zero from finitely many observations, which the zero-error clause in the proof of Theorem B.2 excludes. ∎
 
-**Theorem B.2d (Finite Quantum Operation Realization of the Calibration Ledger).** Work in finite-dimensional quantum mechanics with CPTP maps and instruments. For cycle $r$ use fresh qubits $A_r$, $\Phi_r$ and $E_r$, prepared in $|\hat b_r\rangle$, $|0\rangle$ and
+<a id="theorem-b2d-finite-quantum-operation-realization-of-the-calibration-ledger"></a>**Theorem B.2d (Finite Quantum Operation Realization of the Calibration Ledger).** Work in finite-dimensional quantum mechanics with CPTP maps and instruments. For cycle $r$ use fresh qubits $A_r$, $\Phi_r$ and $E_r$, prepared in $|\hat b_r\rangle$, $|0\rangle$ and
 $$
 \varrho_s:=(1-s)|0\rangle\langle0|+s|1\rangle\langle1|,
 $$
@@ -349,9 +345,95 @@ $$
 $$
 and the two branches carry the stated commitments. The registers $A_r$, $\Phi_r$ and $E_r$ enter only at cycle $r$, so conditional on any classical record the joint state before cycle $r$ is the product of $|\hat b_r\rangle\langle\hat b_r|\otimes|0\rangle\langle0|\otimes\varrho_s$ with the state of the earlier registers, and the conditional outcome probability is $s$. This is the wrapper rule of Theorem B.2c. For item 3, the counter starts at $|0\rangle$ and receives at most $N$ increments, so it stores $\sum_rY_r$; counting $N$ instruments, $N$ controlled updates and one readout gives $2N+1$. Substituting $c_0=1$, $c_u=2$ and $N_+(\delta)$ in (B.5g), and taking the infimum in (B.5i) over $\delta$-accurate strategies, gives (B.5j). ∎
 
-**Resolution TV-SPAP-02-R3 (Metadata).** Exact domain: the registered diagonal-noise self-calibration task $\mathcal T_{\mathrm{dn}}$ with $0<\delta\le1/8$, all admissible adaptive and internally randomized strategies with finite or infinite essential cycle bound, and the finite qubit realization of Theorem B.2d. Premises: the fresh-noise wrapper rule, Definition B.2's acquisition ledger, the score $1-|\hat s-s|$ with $\alpha_{\mathrm{SPAP}}=1$, Theorem B.2's converse, and, for the upper ledger, the unit-cost counter architecture of Theorem B.2d. Equivalence: strategies are compared by their output laws under every $W_s$ and by worst-case operation count. Budget: $N(S,\delta)$ acquisitions for a general strategy and $2N_+(\delta)+1$ realized operations for the sample mean. Verifier: the tower-property induction, measurable transcript factorization, finite-prefix absolute continuity for the stopping bound, threshold-test error bounds, (B.5i), Hoeffding's bound (B.5f), and the CPTP and Born-probability identities of Theorem B.2d. Falsifier: a $\delta$-accurate admissible strategy violating (B.5i), a realized cycle whose conditional success probability differs from $s$, or a sample-mean run exceeding the displayed ledger. Provenance class: source-internal probabilistic reduction and finite quantum channel realization. Downstream consumers: Theorem 14, Corollary 14.1, Corollaries B.2.1–B.2.2, `TV-SPAP-02` and alias `TV-BSR-02`. Nonvacuity: the wrappers $W_{p_\pm}$, the sample-mean strategy and the displayed qubit realization. This is `positive-discharge` of the task-specific hard-law, independence, confidence and cost reduction, of the populated $\mathfrak C_{B.2}$, and of its formal operation realization on $\mathcal T_{\mathrm{dn}}$ with the registered unit-cost counter architecture; Theorem B.2b keeps the SPAP-only `nonentailment` as the guardrail for tasks without a repeated-trial record. On $\mathcal T_{\mathrm{dn}}$ the boundary $\alpha_{\mathrm{SPAP}}=1$ is the exact-calibration value of the score. The same reduction, population and operation realization for an SPAP-limited self-model verification/update task whose $\alpha_{\mathrm{SPAP}}$ bounds predictive performance (Definition 14.1d; Proposition 14.1e) remain `M+C+R`-open under `TV-SPAP-02` and its alias; pattern-specific integration reductions for Corollary B.2.1 are owned by `TV-M-08`.
+<a id="theorem-b2e-fixed-system-predictive-hard-family"></a>**Theorem B.2e (Fixed-System Predictive Hard Family).** Fix one programmable system with a finite universal-prefix-machine controller, a retained self-model $M=(p,q,r)\in[0,1]^3$, a registered source amplitude $a\in(0,1/4]$, an internal sign $\theta\in\{-1,1\}$ and the following transition law for its own three binary state registers:
+$$
+X=\mathbf 1\{p\le1/2\},\qquad
+Y\sim\operatorname{Bern}(1/2+\theta a),\qquad
+Z\sim\operatorname{Bern}(a).
+\tag{B.5k}
+$$
+Every call uses fresh $Y,Z$, independent of the past and of each other conditional on $(a,\theta)$. The sign register is immutable and has one read interface: the channel producing $Y$. The controller reads its own model, the returned bits and finite public control inputs. Its non-acquisition transition kernels are independent of $\theta$, and its initial randomization and public inputs have the same law under both signs. The amplitude specifies the initial fresh-source states in Theorem B.2f; finitely encoded values may additionally be public inputs. This fixes the admissible interface, including the absence of a direct sign read or a batch-sampling primitive. The controller's programs, inputs and finite traces have the coding and bounded interpretation of Proposition 2. Rational reports and real algebraic reports with finite polynomial/isolation codes are admitted; their threshold comparisons are decidable. At any finite horizon, every used code and register is finite.
 
-**Corollary B.2.1 (Conditional Pattern-Specific Cost Inheritance).** Let $\mathcal S_E$ be an admissible integration class with margins $0<\delta_S(E)\le1/8$. Assume one registered task class satisfies the complete reduction certificate of Theorem B.2 with a common $c_s>0$ and confidence function $\beta(\delta)\le\delta$. Suppose a certificate maps every $S\in\mathcal S_E$ to a $\delta_S(E)$-accurate strategy $\mathcal R_E(S)$ in that class and proves
+Set $c(v)=\mathbf 1\{v>1/2\}$ and use the single, input-independent score
+$$
+L((p,q,r),(x,y,z))=(p-x)^2+
+\mathbf 1\{c(q)\ne y\}+\mathbf 1\{c(r)\ne z\},\qquad k_{PP}=1.
+\tag{B.5l}
+$$
+The score is finite, nonnegative and proper for the three reported marginals; propriety in its second and third coordinates is non-strict. A verification/update strategy may randomize and adapt during training, then commits one triple $M$. Evaluate that committed predictive object by its conditional future risk
+$$
+R_{\theta,a}(M)=\mathbb E[L(M,(X,Y,Z))\mid M,a,\theta],
+\qquad P_{\theta,a}(M)=\frac1{1+R_{\theta,a}(M)}.
+\tag{B.5m}
+$$
+The commitment precedes the fresh evaluation outcome. New randomization or report replacement during that evaluation is a different task class. For the registered challenge $a=2\delta$, $0<\delta\le1/8$, a strategy is $\delta$-accurate when
+$$
+\Pr_\theta\{P_{\theta,2\delta}(M)<4/7-\delta\}\le\delta
+\qquad(\theta=-1,1),
+\tag{B.5n}
+$$
+where the probability is over its training record and internal randomization. Then:
+
+1. On this same transition law, for every input and every committed report,
+$$
+R_{\theta,a}(M)\ge\frac34,\qquad
+\alpha_{\mathrm{SPAP}}=\sup_M P_{\theta,a}(M)=\frac47.
+\tag{B.5o}
+$$
+The equality holds for $p=1/2$, $c(q)=\mathbf 1\{\theta=1\}$ and $c(r)=0$. The diagonal component $X$ responds to the currently retained self-report in this one system.
+2. Every $\delta$-accurate strategy reduces to the exact hard pair $\operatorname{Bern}(1/2\pm2\delta)$, with independent observations, both test errors at most $\delta$, and cost at least their essential maximum count. Thus $\mathfrak C_{B.2}$ is populated with $c_s=1$, $\beta(\delta)=\delta$, and
+$$
+C_{\mathrm{uni}}(\delta)\ge
+\frac{3}{128\delta^2}\ln\!\left(\frac1{4\delta}\right).
+\tag{B.5p}
+$$
+3. The sample-mean update is a nonempty finite-cost member of this class. In the unit-cost counter architecture of Theorem B.2d, its acquisition/update ledger uses $2N_+(\delta)+O(1)$ operations, plus its charged public preparation trace. The quantitative boundary in (B.5o) bounds prediction of the system's own future state under (B.5l), rather than calibration error of an unscored parameter.
+
+*Proof.* For a Bernoulli outcome of parameter $t$, the expected classification loss is $t$ when $c(v)=0$ and $1-t$ when $c(v)=1$. Its minimum is $\min(t,1-t)$ and is attained by the truthful report $v=t$, including either decision at $t=1/2$. The squared component has expectation $(p-t)^2+t(1-t)$ under a fixed marginal $t$, minimized at $p=t$. Adding these three proper losses proves propriety for every joint outcome law with the reported marginals; independence is unnecessary for this assertion.
+
+Under the actual report-reactive law (B.5k), the squared contribution is $(1-p)^2$ for $p\le1/2$ and $p^2$ for $p>1/2$. It is at least $1/4$, with equality precisely at $p=1/2$. The other two minimal risks are $1/2-a$ and $a$. Consequently their sum with the diagonal contribution is at least $3/4$, and the reports in item 1 attain it. The maps, score and sign-access interface remain fixed when a report changes. In particular replacing $p=1/2$ by $p=1$ makes $X=0$; the constant-report escape on the fixed system of Proposition 14.1h.c is absent here. The controller models and updates its own transition registers $X,Y,Z$, and the first transition reads that very model, which supplies Definition 9's self-reference.
+
+Fix a strategy and the amplitude $a=2\delta$. Put all its initial randomness and all fresh $Z$ bits into $U$; their joint law $\lambda_a$ is the same under both signs. For every finite $n$,
+$$
+\mathcal L_\theta(U,Y_1,\ldots,Y_n)
+=\lambda_a\otimes\operatorname{Bern}(1/2+\theta a)^{\otimes n}.
+\tag{B.5q}
+$$
+Indeed the conditional law of the next $Y$ given $U$ and the previous record is the displayed Bernoulli law. Iterated conditioning gives (B.5q). Every other retained field, including each diagonal bit, model update and stopping decision, is a function of $U$ and the preceding $Y$ values. Let $N$ be the essential supremum of the number of acquisitions used before commitment. Its value is the same under the two signs: for each finite $n$, the event that training continues beyond $n$ belongs to the finite-prefix sigma-algebra, whose two laws are mutually absolutely continuous because $1/4\le1/2\pm2\delta\le3/4$. If $N$ is finite, dummy ignored samples pad the record, and the committed model is a function of $(U,Y_{1:N})$.
+
+Choose the test $\widehat\theta=1$ exactly when $c(q)=1$. A wrong choice has classification risk $1/2+a$, so even with optimal $p,r$ it has risk at least $3/4+2a$. At $a=2\delta$ its performance gap obeys
+$$
+\frac47-P_{\theta,2\delta}(M)
+\ge \frac{4\delta}{(7/4)(7/4+4\delta)}
+\ge\frac{64}{63}\delta>\delta.
+\tag{B.5r}
+$$
+Thus each testing error is contained in the corresponding violation event in (B.5n). Every acquisition is charged once, so $\operatorname{Cost}\ge N$. The parameter-independent factor $\lambda_a$ does not change the KL divergence or total variation of the Bernoulli products. Theorem B.2 gives (B.5p), including its infinite-count interpretation. With a registered violation budget $0\le\beta\le\delta$, the same reduction gives both testing errors at most $\beta$ and replaces the logarithm in (B.5p) by $\ln(1/(4\beta))$; for $\beta=0$ its value is $+\infty$. In particular $\beta=1/\mathcal T$ supplies Theorem 14's horizon-confidence branch. This argument covers every adaptive randomized controller admitted by the interface, not just the sample-mean update.
+
+For a constructive member, choose the finite integer horizon $N=N_+(\delta)$ from Theorem B.2a and supply that integer to the controller. This is a finite-horizon existence construction for each real $\delta$; an unencoded real tolerance is not read or computed by the controller. Then commit $p=1/2$, $r=0$, and set $q=1$ if the sample mean exceeds $1/2$, otherwise $q=0$. Under either sign, a wrong majority implies a sample-mean error at least $2\delta$, so Theorem B.2a bounds its probability by $\delta$. A correct majority attains (B.5o). The counter requires $N$ acquisition operations, $N$ increments, one counter readout and a fixed number of model-write/evaluation operations. If $D$ counts its public input preparation and arithmetic, its complete cost is at most $D+2N+O(1)$ in the registered counter architecture and at least (B.5p). The size of a rational input code is included in $D$. ∎
+
+<a id="theorem-b2f-common-finite-operation-realization"></a>**Theorem B.2f (Common Finite Operation Realization).** Every finite execution in Theorem B.2e has one response-faithful realization by diagonal qubit states, classical control registers and finite quantum instruments. For the registered amplitude $a$, retain the hidden sign in an internal register $H$. One acquisition channel preserves $H$, reads the stored report and writes a fresh basis triple with the stochastic kernel
+$$
+K_a(x,y,z\mid\theta,M)=
+\mathbf 1\{x=\mathbf 1\{p\le1/2\}\}
+(1/2+\theta a)^y(1/2-\theta a)^{1-y}
+a^z(1-a)^{1-z}.
+\tag{B.5s}
+$$
+The exposed port returns the three outcome bits and never returns $H$. The same fixed instrument is used for every predictor and every challenge. Its initial fresh-source states carry the amplitude, while its two hidden-sign states produce the two hard laws. On any finite control-input/horizon registry its classical registers and fresh qubits form a finite-dimensional carrier.
+
+Use the unit-cost acquisition/counter operations of Theorem B.2d and retain every acquisition's fresh output register. Public preprocessing is implemented by Boolean register operations and charged by its actual finite instruction trace. Each counter readout, model write, final evaluation acquisition and score-record write is one further registered operation. These operations give an exact no-double-counting ledger; all hidden-sign dependence enters through the acquisitions in (B.5s).
+
+*Proof.* Each row of $K_a$ is nonnegative and sums to one. On basis states $i$ of the finite input register and output records $j$, the operators
+$$
+A_{j i}=\sqrt{K_a(j\mid i)}\,|i,j\rangle\langle i|
+\tag{B.5t}
+$$
+obey $\sum_{i,j}A_{ji}^{\dagger}A_{ji}=I$. They define a CPTP instrument, with the $j$ branches completely positive. A fixed gate realization separates the dynamics from its initial-state parameter. Encode $\theta=1$ by $H=0$ and $\theta=-1$ by $H=1$. For each call supply fresh qubits $E,Z$ in the product state $\varrho_{1/2+a}\otimes\varrho_a$, where $\varrho_t=(1-t)|0\rangle\langle0|+t|1\rangle\langle1|$, and a zero target $Y$. The fixed gates $\mathrm{CNOT}_{H\to Y}\mathrm{CNOT}_{E\to Y}$ give $Y=E\oplus H$; classical model control writes $X=\mathbf1\{p\le1/2\}$. Computational-basis readout of $X,Y,Z$ gives (B.5s). The $E$ and $H$ registers remain internal. The product of these fresh-source states over the finite horizon supplies the stated independent trials. These gates and readouts are independent of $a$; its role is entirely in the initial resource state. The retained input $i$ includes $H$ inside the inaccessible module; the controller receives only its registered visible fields and $j$. Reading $H$ is not in the admitted operation alphabet. Direct substitution gives exactly (B.5k); fresh output ancillas and the product kernel give (B.5q) by the conditioning proof of Theorem B.2e. In particular the $Z$ output is sign-independent, and neither the fixed score nor any operation price depends on the correct sign.
+
+Every Boolean instruction is a finite classical map and therefore has a CPTP representation by the same basis-state construction. Reversible counter increments are the unitaries of Theorem B.2d. Threshold decisions on finitely encoded real algebraic reports terminate; the explicit reports used in Proposition 14.1h.d have a syntactic code $1-\sqrt{u}$ with $1/4<u<1$, so their comparison with $1/2$ follows directly from the stored rational $u>1/4$. Initial register preparation and public arithmetic occur in the charged preprocessing trace. Composition of these channels preserves the classical path probabilities, all committed reports and all verification records. It therefore preserves the complete response law and the count of the listed operation occurrences. The architecture has one fixed transition program; increasing the finite horizon supplies additional fresh registers and counter capacity, as in Theorem B.2d. For any finite challenge/circuit census, pad all classical code and counter registers to their maximum required size and reserve the maximum number of fresh qubits in one carrier. The fixed public controller selects the registered branch, while unused registers retain their initial state. This gives a single finite carrier and operation alphabet for the entire census, with no predictor-dependent change of the transition law. ∎
+
+<a id="corollary-b21-conditional-pattern-specific-cost-inheritance"></a>**Corollary B.2.1 (Conditional Pattern-Specific Cost Inheritance).** Let $\mathcal S_E$ be an admissible integration class with margins $0<\delta_S(E)\le1/8$. Assume one registered task class satisfies the complete reduction certificate of Theorem B.2 with a common $c_s>0$ and confidence function $\beta(\delta)\le\delta$. Suppose a certificate maps every $S\in\mathcal S_E$ to a $\delta_S(E)$-accurate strategy $\mathcal R_E(S)$ in that class and proves
 $$
 \operatorname{Cost}_{\mathrm{integrate}}(S,E)
 \ge
@@ -378,7 +460,7 @@ $$
 $$
 Combining this with cost preservation proves the first inequality. The complete Theorem B.2 certificate gives the uniform asymptotic lower bound. ∎
 
-**Corollary B.2.2 (Finite Certificate-Level Cost Floor and Audit Scope).**
+<a id="corollary-b22-finite-certificate-level-cost-floor-and-audit-scope"></a>**Corollary B.2.2 (Finite Certificate-Level Cost Floor and Audit Scope).**
 
 Let $E$ and an admissible integration strategy $S$ satisfy Corollary B.2.1 with
 $$
@@ -426,11 +508,504 @@ U(S,E)
 $$
 The admissible execution class, $c_s$, and the bridge from instrument counts to Definition B.2 operations must be fixed before outcome inspection.
 
+<a id="theorem-b3r-a-complete-finite-relativistic-recoil-dictionary-and-its-flat-metric-tensor"></a>**Theorem B.3r (A Complete Finite Relativistic Recoil Dictionary and Its Flat Metric Tensor).** Use the complete source/apparatus carrier and integer-charge coupling of Theorem B.3n, in units $c=1$, retaining $\hbar$. The changed dispersion below retains the entire finite carrier, its actual source/support momentum and translation algebra, every original observable and every instrument outcome. Both flat Ward rows of its variational tensor hold on the full carrier. Its nonflat action has the explicit conservation counterexample below, so the result is not a full nonlinear covariant-source theorem.
+
+##### I. Actual matrices and complete boundary dictionary
+
+Write $d=\dim\mathcal H_0$, $P=\hbar N/R$, $N=\sum_{j=-s}^sj\Pi_j$, $s\ge1$, $[K_0,N]=0$, $K_0\succeq\Delta I$ and $A\succeq E_0I$, with $\Delta,E_0>0$. Put $H_{\rm fix}=K_0+A$ and $h_{\min}=\Delta+E_0$. The complete $\mathcal H_0$ includes the specified source, bank, clock, supply, coupler, pointer, records, garbage and stored registers. Their matrices are not replaced by a freely chosen diagonal detector. Let $\ell=2\pi R$, $L\ge s$, $K\ge L+2s$, $M>0$, and on $\mathcal R_K=\operatorname{span}\{|r\rangle:-K\le r\le K\}$ put $Q|r\rangle=r|r\rangle$, $P_R=\hbar Q/R$ and $\eta_L=(2L+1)^{-1/2}\sum_{r=-L}^L|r\rangle$. On $\mathcal C=\mathcal H_0\otimes\mathcal R_K$ define
+$$
+(A_K)_{r,u}=\sum_{r+j=u+k}\Pi_jA\Pi_k,\quad C_0=K_0\otimes I+A_K,\quad B=MI+C_0,\quad
+P_t=P\otimes I+I\otimes P_R,\quad H_{\rm rel}=\sqrt{B^2+P_t^2}.
+\tag{B.3r.1}
+$$
+Theorem B.3n gives $C_0\succeq h_{\min}I$, $\|A_K\|\le\|A\|$ and $[C_0,P_t]=0$. Joint scalar rationalization then gives
+$$
+H_{\rm rel}\succeq B\succeq(M+h_{\min})I,\quad [H_{\rm rel},P_t]=0,\quad
+0\preceq D_{\rm rel}:=H_{\rm rel}-B\preceq\frac{P_t^2}{2(M+h_{\min})}.
+\tag{B.3r.2}
+$$
+The former rotor term $P_R^2/(2M)$ is replaced, not added again. Every old internal energy occurs once in the composite mass $B$; a separately relativistic constituent rotor is not derived.
+
+Every old source observable is still $O\otimes I$ and every support observable $I\otimes O_R$. Their spectra, products and spectator extensions are unchanged. In particular
+$$
+e^{-iaP_t/\hbar}(O\otimes I)e^{iaP_t/\hbar}=(e^{-iaP/\hbar}Oe^{iaP/\hbar})\otimes I,\qquad
+\dot P=\frac i\hbar[H_{\rm rel},P],\quad\dot P_R=-\dot P.
+\tag{B.3r.3}
+$$
+Within each total-charge block $\mu\mapsto\sqrt{\mu^2+p_t^2}$ is strictly increasing for positive $\mu$, and hence has the same matrix commutant as $B$. Recoil is nonzero exactly when $[C_0,P]\ne0$, though it need not equal the former $[A_K,P]$ force.
+
+For total integer charge $n$, set $I_n=\{j:|n-j|\le K\}$, $F_n=\sum_{j\in I_n}\Pi_j$ and
+$$
+W_n\psi=\sum_{j\in I_n}\Pi_j\psi\otimes|n-j\rangle,\qquad
+W_n^*C_0W_n=F_nH_{\rm fix}F_n|_{\operatorname{ran}F_n}.
+\tag{B.3r.4}
+$$
+Orthogonality makes $W_n$ unitary from $\operatorname{ran}F_n$ onto the $P_t=\hbar n/R$ sector; substitution of the actual $A_K$ entries proves the last equality. For $|n|\le K-s$, $F_n=I$. Fix one eigenbasis of the entire $H_{\rm fix}$, with eigenvalues $h_a>0$. Give each eigenvector one species of mass $\mu_a=M+h_a$, with momenta $n=-K+s,\ldots,K-s$. At every remaining $n$ diagonalize its actual compression and retain each eigenvector as a separate singleton species with its one allowed momentum and mass $M$ plus that eigenvalue. Equal masses need not merge species. The species incidence and degeneracy bases are fixed before metric variation.
+
+With $m_{\rm int}=2(K-s)+1$, the exact counts are
+$$
+D_{\rm boundary}=2sd,\quad d_{\rm species}=d(2s+1),\quad
+D_{\rm modes}=dm_{\rm int}+2sd=d(2K+1)=\dim\mathcal C.
+\tag{B.3r.5}
+$$
+Each source-charge vector occurs at exactly $2K+1$ support values; subtracting the interior copies proves the boundary count, including zero charge projectors. The adjoint columns of the dictionary unitary $U_{\rm dict}:\mathcal C\to\mathbb C^{D_{\rm modes}}$ are these actual physical vectors. Unitary conjugacy preserves every operator product; no product of compressed field symbols replaces it. Boundary species intentionally have no cross-species spatial interference in the new stress. This changes local metric data and can make old observables species-mixing/nonlocal, without adding a tensor factor or proving fabrication cost/locality.
+##### II. The canonical metric restriction before variation
+
+Use $ds^2=-N^2dt^2+a^2(dx+b\,dt)^2$, $N,a>0$, on a circle of length $\ell$. A species of mass $\mu$ has the canonical complex Klein–Gordon density, momentum and Hamiltonian
+$$
+\begin{aligned}
+\mathcal L_{\rm KG}&=\hbar^2(a/N)|\dot\varphi-b\varphi'|^2-\hbar^2(N/a)|\varphi'|^2-Na\mu^2|\varphi|^2,\\
+\pi&=\hbar^2(a/N)(\dot\varphi^*-b\varphi^{*\prime}),\\
+H_{\rm KG}&=\int[(N/a)(|\pi|^2/\hbar^2+\hbar^2|\varphi'|^2)+Na\mu^2|\varphi|^2+b(\pi\varphi'+\pi^*\varphi^{*\prime})]dx.
+\end{aligned}
+\tag{B.3r.6}
+$$
+The Legendre transform fixes the shift sign: a positive-frequency momentum-$p$ mode has $\pi=i\hbar E\varphi^*$ and shift energy $-bp$. For each allowed $i=(\lambda,n)$ let $p_i=\hbar n/R$, $E_i=\sqrt{\mu_\lambda^2+p_i^2}$ and $f_i=e^{ip_ix/\hbar}/\sqrt{2E_i\ell}$. Restrict the canonical variables before variation to
+$$
+\varphi_\lambda[c]=\sum_{i\in\lambda}c_if_i,\quad
+\pi_\lambda[c]=i\hbar\sum_{i\in\lambda}E_ic_i^*f_i^*,\quad c=U_{\rm dict}\Psi.
+\tag{B.3r.7}
+$$
+Fourier orthogonality gives $\sum_\lambda\int(\pi_\lambda\dot\varphi_\lambda+\pi_\lambda^*\dot\varphi_\lambda^*)dx=(i\hbar/2)(c^*\dot c-\dot c^*c)$. The factor $(2E_i)^{-1/2}$ is essential. The integrals specify finite matrices; $\varphi,\pi$ are not new independent classical fields, oscillators or a field-vacuum factor.
+
+Set density entries to zero between different species, and within one species define
+$$
+Z_{ij}=\frac{e^{i(p_j-p_i)x/\hbar}}{2\ell\sqrt{E_iE_j}},\quad
+D_{ij}=(E_iE_j+p_ip_j)Z_{ij},\quad V_{ij}=\mu_\lambda^2Z_{ij},\quad J_{ij}=(E_ip_j+E_jp_i)Z_{ij}.
+\tag{B.3r.8}
+$$
+Then the actual finite action is
+$$
+H[N,a,b]=U_{\rm dict}^*\left\{\int[(N/a)D+NaV-bJ]dx\right\}U_{\rm dict},\quad
+S=\int[(i\hbar/2)\Psi^*\overset\leftrightarrow\partial_t\Psi-\Psi^*H\Psi]dt.
+\tag{B.3r.9}
+$$
+The canonical restriction retains its Berry boundary term; no on-shell solution or metric-dependent endpoint is falsely held fixed. Gram positivity gives $D,V\succeq0$ and $-D\preceq J\preceq D$. Uniform $N=\nu(t),a=1,b=b(t)$ gives $H=\nu H_{\rm rel}-bP_t$. Smooth bounded histories with $a>0$ on a compact interval give a unique unitary; energy is positive on $N/a>|b|$, with uniform chamber margins when needed. A fixed projected action exists without its flat positive-frequency subspace being invariant under general nonflat KG dynamics.
+
+##### III. The symmetric flat tensor and both full operator Ward rows
+
+At $N=a=1,b=0$, define $\rho=U_{\rm dict}^*(D+V)U_{\rm dict}$, $\pi=U_{\rm dict}^*JU_{\rm dict}$, $\sigma=U_{\rm dict}^*(D-V)U_{\rm dict}$. At fixed canonical preparation, dictionary and cuts,
+$$
+\delta S=\int dt\,dx\,\Psi^*[-\rho\delta N+\pi\delta b+\sigma\delta a]\Psi,\quad
+T^{00}=\rho,\quad T^{01}=T^{10}=\pi,\quad T^{11}=\sigma.
+\tag{B.3r.10}
+$$
+Indeed $\delta g_{00}=-2\delta N$, $\delta g_{01}=\delta b$ and $\delta g_{11}=2\delta a$, identifying the Hilbert variation rather than a chosen flux. Fourier orthogonality gives
+$$
+\int\rho dx=H_{\rm rel},\quad\int\pi dx=P_t,\quad\int\sigma dx=P_t^2/H_{\rm rel}.
+\tag{B.3r.11}
+$$
+For a common species the equal-mass relations give $(E_i-E_j)\rho_{ij}+(p_j-p_i)\pi_{ij}=0$ and $(E_i-E_j)\pi_{ij}+(p_j-p_i)\sigma_{ij}=0$; other entries vanish. Thus, on the entire carrier including boundary modes,
+$$
+\frac i\hbar[H_{\rm rel},\rho]+\partial_x\pi=0,\qquad
+\frac i\hbar[H_{\rm rel},\pi]+\partial_x\sigma=0.
+\tag{B.3r.12}
+$$
+The identities hold for all states and spectator extensions under the one flat unitary. Translation by the actual $P_t$ sends $T(x)$ to $T(x+a)$. Compact spacetime test gradients annihilate divergence; tests reaching a time cut keep endpoint flux. No nonlinear/contact-response Ward theorem is inferred.
+
+The same Gram forms give $\rho+\sigma\pm2\pi=2U_{\rm dict}^*(D\pm J)U_{\rm dict}\succeq0$ and $\rho-\sigma=2U_{\rm dict}^*VU_{\rm dict}\succeq0$, since $D\pm J$ has Gram entries $(E_i\pm p_i)(E_j\pm p_j)Z_{ij}$. Hence null contractions are positive and $|\langle\pi\rangle|\le\langle\rho\rangle$ pointwise. These are properties of this tensor, not microscopic-locality or finite-propagation results for old nonlocal observables.
+
+For a concrete nonzero source/coupler contribution, choose an eigenvector of any invariant source block of $H_{\rm fix}$ of mass $\mu$, including all its detector/coupler energy. The interior modes $p_0=0,p_1=\hbar/R$ have
+$$
+\rho_{01}=\frac{(\mu E_1+\mu^2)e^{ix/R}}{2\ell\sqrt{\mu E_1}},\quad
+\pi_{01}=\frac{\mu p_1e^{ix/R}}{2\ell\sqrt{\mu E_1}},\quad E_1=\sqrt{\mu^2+p_1^2}.
+\tag{B.3r.13}
+$$
+They are nonzero and satisfy $(\mu-E_1)\rho_{01}+p_1\pi_{01}=0$. The energy-defect block of a different spatial action is repaired here by changing dispersion and metric normalization together; retaining its old ports while changing only dispersion would not prove (B.3r.12).
+##### IV. Exact guards and complete service estimates
+
+An arbitrary old input, including source/apparatus/reference entanglement, with support initialized in $\eta_L$ has $|n|\le L+s$. Both $C_0$ and $H_{\rm rel}$ preserve $n$, so $|r|=|n-j|\le L+2s\le K$. Also $|n|\le K-s$, so every visited block is an exact interior copy (B.3r.4); no boundary or guard leakage occurs. The finite shift argument of Theorem B.3n, removing the scalar $M$ phase only for this channel comparison, gives
+$$
+\operatorname{dist}_{\rm ready}(e^{-itC_0/\hbar},e^{-itH_{\rm fix}/\hbar}\otimes I)\le2\sqrt{\frac{2s}{2L+1}},\quad
+\operatorname{dist}_{\rm ready}(e^{-itH_{\rm rel}/\hbar},e^{-itB/\hbar})\le\frac{|t|\hbar(L+s)^2}{2R^2(M+h_{\min})}.
+\tag{B.3r.14}
+$$
+The second bound follows from (B.3r.2) on the whole invariant prepared sector and Duhamel. Ready-isometry operator distance bounds half-diamond distance after any common complete postprocessing. Thus if the specified complete old instrument has error $\epsilon_{\rm src}$ under $H_{\rm fix}$, retaining failure and every old output, then
+$$
+\epsilon_{\rm rel}\le\min\left\{1,\epsilon_{\rm src}+2\sqrt{\frac{2s}{2L+1}}+\frac{|t|\hbar(L+s)^2}{2R^2(M+h_{\min})}\right\}.
+\tag{B.3r.15}
+$$
+This transfers its actual source-class certificate, without asserting a new readout on unregistered inputs. The mathematical ready bound is uniform over the entire old carrier and all spectators. Support traced for comparison remains physically retained; no success conditioning is used. For added error at most $\delta>0$ and finite time, sufficient choices are
+$$
+L\ge s,\quad2L+1\ge32s/\delta^2,\quad K=L+2s,\quad M\ge\frac{|t|\hbar(L+s)^2}{R^2\delta}.
+\tag{B.3r.16}
+$$
+They charge increasing support capacity, phase precision and rest energy.
+
+For comparison with the different rotor Hamiltonian $H_{\rm rot}=B+P_R^2/(2M)$, put $a_t=\hbar^2(L+s)^2/[2R^2(M+h_{\min})]$ and $b_t=\hbar^2(L+2s)^2/(2MR^2)$, both energy bounds. Exactly $H_{\rm rel}-H_{\rm rot}=D_{\rm rel}-P_R^2/(2M)$, so its guard norm is at most $a_t+b_t$ (or the sharper $\max(a_t,b_t)$). Duhamel gives ready half-diamond distance at most $\min(1,|t|(a_t+b_t)/\hbar)$. Combining with the rotor service estimate gives the separate bound $\epsilon_{\rm rel}\le\min[1,\epsilon_{\rm src}+2\sqrt{2s/(2L+1)}+|t|(a_t+2b_t)/\hbar]$. With the placement choice in (B.3r.16), $M\ge|t|\hbar[(L+s)^2+2(L+2s)^2]/(R^2\delta)$ suffices for these added errors. The smaller direct bound (B.3r.15) uses a different middle evolution. In particular, at total charge zero $P_R=-P$ may be nonzero although $H_{\rm rel}=B$; the subsystem rotor kinetic law has changed.
+
+For nonuniform metric perturbations let $E_{\max}=\|H_{\rm rel}\|$ and
+$$
+b_g(t)=E_{\max}[\|N/a-1\|_\infty+\|Na-1\|_\infty+\|b\|_\infty],\quad
+\|H[N,a,b]-H_{\rm rel}\|\le b_g(t).
+\tag{B.3r.17}
+$$
+Gram positivity, $-D\preceq J\preceq D$ and $\int D,\int V\preceq\operatorname{diag}(E_i)$ prove this by positive matrix-form integration. Adding $\hbar^{-1}\int b_g$ to (B.3r.15) bounds the full perturbed instrument. For $\epsilon_a=\|a-1\|_\infty<1$, $\epsilon_N=\|N-1\|_\infty$, one may replace $b_g/E_{\max}$ by $(\epsilon_N+\epsilon_a)/(1-\epsilon_a)+\epsilon_N+\epsilon_a+\epsilon_N\epsilon_a+\|b\|_\infty$. This is a channel bound; increasing mass narrows a fixed-error metric neighborhood and does not prove nonflat conservation.
+
+##### V. Contacts, full raw moments and the exact nonflat obstruction
+
+For affine ADM directions $h=(\nu_h,u_h,v_h)$ and $k=(\nu_k,u_k,v_k)$ at flat, differentiation of the same finite action gives
+$$
+H_h=\int[\nu_h\rho-u_h\sigma-v_h\pi]dx,\quad
+H_{hk}=\int[2u_hu_kD-(\nu_hu_k+\nu_ku_h)\sigma]dx.
+\tag{B.3r.18}
+$$
+Here $D$ is conjugated back to $\mathcal C$. The signed form bounds $-\rho\preceq\sigma\preceq\rho$, $-D\preceq\pi\preceq D\preceq\rho$ yield
+$$
+\begin{aligned}
+\|H_h\|&\le E_{\max}(\|\nu_h\|_\infty+\|u_h\|_\infty+\|v_h\|_\infty),\\
+\|H_{hk}\|&\le E_{\max}[2\|u_h\|_\infty\|u_k\|_\infty+\|\nu_h\|_\infty\|u_k\|_\infty+\|\nu_k\|_\infty\|u_h\|_\infty].
+\end{aligned}
+\tag{B.3r.19}
+$$
+These are not operator-absolute-value inequalities for noncommuting matrices. Propagator derivatives retain both Duhamel time orders and actual matrix products. Every species has at most $m_{\rm int}$ momenta, so finite Cauchy–Schwarz gives $\|\rho(x)\|,\|\pi(x)\|,\|\sigma(x)\|\le m_{\rm int}E_{\max}/\ell$: its positive $\rho$ block has trace $\sum_iE_i/\ell$, and direct-sum species take a maximum, not their sum. Raw finite-point products have the product of these bounds, without a uniform refinement/mass/cutoff claim.
+The limitation is explicit even for homogeneous geometry. On the actual interior zero-momentum mode of mass $\mu$, the frozen restriction gives
+$$
+H[N,a,0]=N\mu(a+a^{-1})/2.
+\tag{B.3r.20}
+$$
+A true positive-frequency zero-momentum KG particle with constant physical mass instead has coordinate Hamiltonian $N\mu$ at static constant $a$, using its metric-dependent symplectic normalization. The first strain derivatives coincide at flat, while the frozen second strain derivative is $\mu$ rather than zero. Directly, unrestricted homogeneous canonical KG evolution applied to the fixed condition $\pi^*=-i\hbar E\varphi$ gives
+$$
+\dot\pi^*+i\hbar E\dot\varphi=N\mu^2(a^{-1}-a)\varphi.
+\tag{B.3r.21}
+$$
+Indeed $\dot\varphi=(N/a)\pi^*/\hbar^2$, $\dot\pi^*=-N(p^2/a+a\mu^2)\varphi$ and $E^2=p^2+\mu^2$. Thus even constant homogeneous strain generally leaves the frozen positive-frequency range. Inhomogeneous histories additionally create omitted Fourier components. These failures are not corrected by choosing an arbitrary primitive for a flux.
+
+There is also a counterexample within the same full finite action, rather than only disagreement with unrestricted KG dynamics. Choose any retained boundary singleton species of nonzero $p$ and mass $\mu$, $E=\sqrt{\mu^2+p^2}$. For static positive periodic nonconstant lapse $N(x)$, $a=1,b=0$, its state changes only by the phase generated by $E$ times the mean lapse. Literal metric variation, including $\sqrt{-g}=N$, gives
+$$
+T^{tt}=\frac{E}{\ell N^2},\quad T^{tx}=T^{xt}=\frac p{\ell N},\quad T^{xx}=\frac{p^2}{\ell E}.
+\tag{B.3r.22}
+$$
+The Christoffels $\Gamma^t_{tx}=\Gamma^t_{xt}=N'/N$, $\Gamma^x_{tt}=NN'$ then give
+$$
+\nabla_\mu T^{\mu x}=\frac{N'}{\ell N}(E+p^2/E),\qquad
+\nabla_\mu T^{\mu t}=\frac{2pN'}{\ell N^2}.
+\tag{B.3r.23}
+$$
+Both are nonzero where $N'\ne0$; $N=1+\epsilon\cos(x/R)$, $0<\epsilon<1$, is an explicit smooth positive-lapse example. Boundary modes cannot be dropped from a full-carrier statement. This defeats nonlinear conservation for this specified action; it does not refute conservation on another explicitly specified prepared class or moving/enlarged source. The prepared service never enters these boundary species, while the full flat tensor and all its guards remain valid.
+
+##### VI. Complete energy and capacity ledger
+
+Capacity is exactly $\dim\mathcal C=d(2K+1)$. Its independent support capacity and pure-preparation tracial deficit are $\log(2K+1)$ nats, retaining the old clock/supply/archives/garbage, coupler baseline $E_0$, support phase preparation and its errors. The actual changed energy is
+$$
+H_{\rm rel}=MI+K_0+A_K+D_{\rm rel},\qquad
+0\le\langle D_{\rm rel}\rangle_{\rho\otimes\eta_L}\le
+\frac{\langle P^2\rangle_\rho+\hbar^2L(L+1)/(3R^2)}{2(M+h_{\min})}.
+\tag{B.3r.24}
+$$
+The estimate uses $\langle P_R\rangle=0$, $\langle P_R^2\rangle=\hbar^2L(L+1)/(3R^2)$; the exact expense is its actual expectation. Interaction energy is the actual $\langle A_K\rangle$. The constant $M$ is removable only in flat-channel comparisons, not metric ports, raw moments, preparation work or energy accounts. There is no added independently occupied center-of-mass/species factor or KG vacuum subtraction. Mass/dictionary engineering and nonlocal metric coupling are installed source data, with no synthesis/local-range/precision optimum inferred from finite diagonalization. The source's translation/observable algebra survives exactly while its dispersion and metric densities change. Original source-local momentum remains measurable as its old operator but is not thereby identified with a chosen new metric-density summand. The theorem establishes the stated full finite flat source certificate and its exact nonflat boundary. $\square$
+
+<a id="theorem-b3s-a-full-finite-car-source-on-homogeneous-metric-histories"></a>**Theorem B.3s (A Full Finite CAR Source on Homogeneous Metric Histories).** Use the entire dictionary of Theorem B.3r, with $D=d(2K+1)$ coordinates and $\sum_ip_i=0$. There is a new finite canonical Dirac source on arbitrary smooth spatially homogeneous $1+1$ ADM histories. It retains the old source/instrument as an explicit faithful corner, with a counted filled negative-energy sea and scalar-volume reserve. Its symmetric variational stress obeys both exact covariant Ward rows on the full $2^{2D}$-dimensional carrier, including occupation-sector coherences. The changed field statistics, metric ports and full carrier are part of the construction.
+
+The zero-sum hypothesis is exact for a complete symmetric-band original fermion source: $\operatorname{Tr}d\Gamma(P_{\rm one})=2^{m-1}\operatorname{Tr}P_{\rm one}=0$ on its full $m$-mode Fock carrier. A constant unitary and tensoring the complete apparatus preserve this trace, and $\operatorname{Tr}P_R=0$. Consequently $\sum_ip_i=\operatorname{Tr}_{\mathcal C}P_t=0$, including every boundary species, without requiring equal positive/negative boundary masses. More generally the theorem applies whenever this same full-carrier identity holds; no prepared-subspace trace substitutes for it.
+
+##### I. Canonical action, fixed Fourier modes and the full carrier
+
+Keep the actual masses/eigenvectors of every interior and boundary compression in (B.3r.4). Introduce one two-component Grassmann Dirac field per species, with precisely that species' allowed momenta. Set $\alpha=\sigma_x$, $\beta=\sigma_z$, $e^0=Ndt$, $e^1=a(dx+b\,dt)$ and $\gamma^0=\beta$, $\gamma^1=\beta\alpha$. Then $\{\gamma^A,\gamma^B\}=-2\eta^{AB}$ for $\eta=\operatorname{diag}(-1,1)$. With the torsion-free spin derivative and $\bar\psi=\psi^*\beta$, the off-shell symmetrized action is
+$$
+S_D=\int dt\,dx\,Na\sum_\lambda\left\{\frac{i\hbar}2[\bar\psi\gamma^\mu D_\mu\psi-(D_\mu\bar\psi)\gamma^\mu\psi]-\mu_\lambda\bar\psi\psi\right\}.
+\tag{B.3s.1}
+$$
+Densitize $\chi=a^{1/2}\psi$. In two dimensions the contracted spin-connection term of this symmetric action is proportional to the identically zero triple antisymmetrized Clifford product. Derivatives of the real factor $a^{-1/2}$ cancel in both symmetric derivatives. Thus, even before restriction to homogeneous coefficients,
+$$
+S_D=\int dt\,dx\sum_\lambda\left\{\frac{i\hbar}2\chi^*\overset\leftrightarrow\partial_t\chi
++\frac{i\hbar}2\chi^*(N\alpha/a-bI)\overset\leftrightarrow\partial_x\chi-N\mu_\lambda\chi^*\beta\chi\right\}.
+\tag{B.3s.2}
+$$
+Restrict before variation to $\chi_\lambda(t,x)=\ell^{-1/2}\sum_{i\in\lambda}e^{ip_ix/\hbar}z_i(t)$, with Grassmann $z_i\in\mathbb C^2$. The canonical term is exactly $\sum_i(i\hbar/2)z_i^*\overset\leftrightarrow\partial_tz_i$. The first-order constraints give fixed CAR under Dirac-bracket quantization. For homogeneous coefficients the one-particle blocks are
+$$
+h_i[g]=N(\alpha p_i/a+\beta\mu_i)-bp_iI_2.
+\tag{B.3s.3}
+$$
+Localized variations are the finite Fourier compression of $-(i\hbar/2)\{N\alpha/a-bI,\partial_x\}+N\beta\mu$. Homogeneous coefficients preserve every allowed mode, including singleton boundary species, so the finite field solves the exact Dirac equation pointwise on that class. Inhomogeneous projected dynamics are not assigned that invariance.
+
+Let $c_{i,A}$, $A=1,2$, satisfy the exact CAR and retain the entire exterior algebra
+$$
+\mathcal F=\Lambda(\mathbb C^{2D}),\quad\dim\mathcal F=2^{2D},\quad
+d\Gamma(X)=\sum c_{i,A}^*X_{iA,jB}c_{j,B},\quad P_F=d\Gamma(\operatorname{diag}_i(p_iI_2)).
+\tag{B.3s.4}
+$$
+Ordering refers to the empty canonical Fock vector, with no subtraction of sea energy. Symmetric quantization would differ by $-\operatorname{Tr}h/2$; here $\operatorname{Tr}h=-2b\sum_ip_i=0$. For a localized compression the spin trace leaves only the spatial mean shift times this same sum, so no metric-dependent scalar is hidden by ordering.
+##### II. The actual reserve, unitary and positive chamber
+
+Add $S_\Lambda=-\rho_\Lambda\int Na\,dt\,dx$, with $\rho_\Lambda\ge0$ and $C_\Lambda=\ell\rho_\Lambda$. The full Hamiltonian and reserve stress are
+$$
+H_g=d\Gamma(\bigoplus_i h_i[g])+C_\Lambda NaI_{\mathcal F},\qquad
+T_\Lambda^{\mu\nu}=-\rho_\Lambda g^{\mu\nu}I_{\mathcal F}.
+\tag{B.3s.5}
+$$
+This installed source has energy density $+\rho_\Lambda$, pressure $-\rho_\Lambda$ and zero orthonormal flux and is conserved. The fixed-carrier action is $\int[(i\hbar/2)\Xi^*\overset\leftrightarrow\partial_t\Xi-\Xi^*H_g\Xi]dt$, with physical endpoint states fixed. Fixed CAR generators and ordering make quantization commute with metric differentiation. Every vector has the common finite domain. For smooth positive $N,a$ on a compact interval, the unique unitary is
+$$
+U_g(t)=e^{-iC_\Lambda\int_0^tNa\,ds/\hbar}\Gamma(V_g(t)),\quad
+i\hbar\dot V_g=(\bigoplus_i h_i)V_g,\quad V_g(0)=I,
+\tag{B.3s.6}
+$$
+where exterior second quantization includes vacuum and all occupation sectors.
+
+Choose $0<N_{\min}\le N\le N_{\max}$, $0<a_{\min}\le a\le a_{\max}$ with $a_{\min}\le1\le a_{\max}$ and $|ab/N|\le v_*<1$. Each $h_i$ has one negative and one positive eigenvalue. With $\omega_i(a)=\sqrt{\mu_i^2+p_i^2/a^2}$ and $\sum_ip_i=0$,
+$$
+\min\operatorname{spec}d\Gamma(h_g)=-N\sum_i\omega_i(a),\quad
+\max\operatorname{spec}d\Gamma(h_g)=N\sum_i\omega_i(a),\quad
+C_\Lambda=\frac{\sum_i\omega_i(a_{\min})+E_*}{a_{\min}}\ (E_*>0)
+\tag{B.3s.7}
+$$
+gives $H_g\succeq N_{\min}E_*I$. The proof uses decreasing $\omega_i(a)$ and increasing $C_\Lambda a$. Outside that chamber finite unitary evolution still exists, without this positivity claim. The reserve grows with the dictionary or shrinking $a_{\min}$; no bounded-resource refinement is inferred.
+
+##### III. Exact variational stress and homogeneous nonlinear Ward identities
+
+Set all following blocks to zero between different species. For equal species let $z_{ij}=e^{i(p_j-p_i)x/\hbar}/\ell$ and $m_{ij}=(p_i+p_j)/2$, and define
+$$
+r_{ij}=\frac{z_{ij}}a(\alpha m_{ij}/a+\beta\mu),\quad
+j_{ij}=z_{ij}m_{ij}I_2/a^2,\quad s_{ij}=z_{ij}\alpha m_{ij}/a^2,\quad
+\rho=d\Gamma(r)+\rho_\Lambda I,\ J=d\Gamma(j),\ \Sigma=d\Gamma(s)-\rho_\Lambda I.
+\tag{B.3s.8}
+$$
+With $n^\mu=(1/N,-b/N)$ and $e^\mu=(0,1/a)$, put
+$$
+T^{\mu\nu}=\rho n^\mu n^\nu+J(n^\mu e^\nu+e^\mu n^\nu)+\Sigma e^\mu e^\nu.
+\tag{B.3s.9}
+$$
+For arbitrary localized variations about a homogeneous history, at fixed canonical $\chi$ and physical cuts, the literal action variation is
+$$
+\delta S=\int dt\,dx[-a\rho\delta N+a^2J\delta b+N\Sigma\delta a]
+=\tfrac12\int dt\,dx\,NaT^{\mu\nu}\delta g_{\mu\nu}.
+\tag{B.3s.10}
+$$
+This follows by substituting $g_{tt}=-N^2+a^2b^2$, $g_{tx}=a^2b$, $g_{xx}=a^2$. Changing from fixed $\chi$ to fixed $\psi$ adds the Dirac equation times its field variation, zero on this exact homogeneous solution class. The symmetric temporal boundary form also vanishes for $\delta\psi=-(\delta a/2a)\psi$, since $\psi^*\delta\psi-\delta\psi^*\psi=0$. Thus all three ports agree with the on-shell symmetric tetrad Hilbert tensor without a metric-dependent incoming state or omitted endpoint work.
+
+Here conservation is a full finite calculation. With $h_i^0=N(\alpha p_i/a+\beta\mu)$, Clifford multiplication gives
+$$
+h_i^0r_{ij}-r_{ij}h_j^0=Nz_{ij}(p_i-p_j)m_{ij}I_2/a^3,\quad
+h_i^0j_{ij}-j_{ij}h_j^0=Nz_{ij}(p_i-p_j)m_{ij}\alpha/a^3.
+\tag{B.3s.11}
+$$
+The shift commutator contributes $b\partial_x$. Explicit differentiation gives $\partial_tr=-(\dot a/a)(r+s)$ and $\partial_tj=-2(\dot a/a)j$. Exact CAR give $[d\Gamma(X),d\Gamma(Y)]=d\Gamma([X,Y])$ without a central remainder. For $\mathcal D_tX=\partial_tX+(i/\hbar)[H_g,X]$ this proves
+$$
+(\mathcal D_t-b\partial_x)\rho+(N/a)\partial_xJ+(\dot a/a)(\rho+\Sigma)=0,\quad
+(\mathcal D_t-b\partial_x)J+(N/a)\partial_x\Sigma+2(\dot a/a)J=0.
+\tag{B.3s.12}
+$$
+These are exactly $\nabla_\mu T^{\mu\nu}=0$ in the homogeneous ADM frame, as operator identities for every state and occupation-sector coherence. The reserve cancels because its energy plus pressure is zero. Equivalently the Heisenberg derivative obeys $\partial_t(NaT^t{}_\nu)+\partial_x(NaT^x{}_\nu)=(Na/2)T^{\alpha\beta}\partial_\nu g_{\alpha\beta}$. Tests at physical cuts retain endpoint flux. The integrated ports are $\int a\rho dx=d\Gamma(\operatorname{diag}_i(\alpha p_i/a+\beta\mu_i))+C_\Lambda aI$ and $\int a^2Jdx=P_F$, so $H_g=N\int a\rho dx-bP_F$. Translation of each density is generated by this same $P_F$.
+For homogeneous affine directions $(\nu,u,v)$ and $(\nu',u',v')$ at flat, the same Hamiltonian gives
+$$
+\begin{aligned}
+H_h&=d\Gamma(\operatorname{diag}_i[(\nu-u)\alpha p_i+\nu\beta\mu_i-vp_iI])+C_\Lambda(\nu+u)I,\\
+H_{hk}&=d\Gamma(\operatorname{diag}_i[(2uu'-\nu u'-\nu'u)\alpha p_i])+C_\Lambda(\nu u'+\nu'u)I.
+\end{aligned}
+\tag{B.3s.13}
+$$
+Higher contacts and time-ordered response follow by differentiation of this actual finite $H_g$, and differ from the Klein–Gordon contacts.
+
+##### IV. Counted sea, exact source corner and the energy-condition boundary
+
+Fix flat normalized eigenspinors $u_i^\pm$ of $\alpha p_i+\beta\mu_i$ with eigenvalues $\pm E_i$, and associated one-particle orbitals $f_i^\pm$. The filled sea and explicit encoding are
+$$
+|S\rangle=c^*(f_1^-)\cdots c^*(f_D^-)|\mathrm{empty}\rangle,\quad E_{\rm sea}=-\sum_iE_i,\quad P_{\rm sea}=\sum_ip_i=0,\quad
+V\psi=\sum_i(U_{\rm dict}\psi)_ic^*(f_i^+)|S\rangle.
+\tag{B.3s.14}
+$$
+CAR give $V^*V=I_{\mathcal C}$. With $P_{\rm code}=VV^*$, $Q_{\rm code}=I-P_{\rm code}$ and $E_{\rm off}=C_\Lambda-\sum_iE_i$,
+$$
+H_{\rm flat}V=V(H_{\rm rel}+E_{\rm off}I),\qquad P_FV=VP_t.
+\tag{B.3s.15}
+$$
+Thus the old flat service is reproduced with its complete physical sea/reserve energy offset. Only channel comparisons may remove its scalar phase. Every old $O$ has representative $\widehat O=VOV^*$; products/adjoints are preserved and its identity is $P_{\rm code}$, not $I_{\mathcal F}$. This is a faithful corner containing all original source/support observables, archives and failure-inclusive readouts. The code is invariant at flat. Its original source/support translation and nonzero recoil law transfer by (B.3s.15). Outside the code, arbitrary pair states are not assigned an old-source-plus-independent-support interpretation.
+
+Every code vector has canonical occupation $D+1$. Consequently all corner representatives, including the images of old odd CAR generators, are even under the new physical fermion parity. Algebraic CAR products keep identity $P_{\rm code}$, but the old constituent grading/statistics does not transfer to the new field grading. Nor is $V^*T_DV$ the old local KG density with a sea subtraction: positive-spinor overlaps change local ports even at flat, although the integrated energy/momentum identities hold.
+
+Hamiltonian positivity is separate from a local null energy condition. In the allowed flat sea state,
+$$
+\langle\rho+\Sigma\pm2J\rangle_{S}=-\ell^{-1}\sum_i(E_i+p_i^2/E_i)<0.
+\tag{B.3s.16}
+$$
+The reserve contributes zero to that null contraction and cannot repair it. Thus the positive KG null-contraction theorem and a positive-heat interpretation are not inherited by the changed CAR source.
+
+##### V. Complete instrument and all pair/hole outputs
+
+Let $\{\mathcal I_y\}$ be the specified old complete instrument on $\mathcal C$, retaining its source, apparatus, support, archives, stored outputs and old failure. Define CP output maps
+$$
+\mathcal J_y(\rho)=\mathcal I_y(V^*\rho V),\qquad
+\mathcal J_{\rm pair}(\rho)=Q_{\rm code}\rho Q_{\rm code},
+\tag{B.3s.17}
+$$
+where the last output has its own orthogonal flagged copy of $Q_{\rm code}\mathcal F$. Traces sum to $\operatorname{Tr}\rho$. A retained Stinespring dilation of the old instrument together with the $Q_{\rm code}$ branch realizes them. All reference correlations in that residual state remain owned. Reading the flag physically dephases cross-flag coherences; before reading, its dilation may retain them. No success normalization, discarded failure branch or free reset is used.
+
+Each block number $n_i=c_{i,1}^*c_{i,1}+c_{i,2}^*c_{i,2}$ commutes with $H_g$. An encoded basis input $i$ therefore has $n_i=2$ and $n_j=1$ for $j\ne i$ at all times. In another block the initially occupied negative orbital may rotate to its positive partner, a particle/hole pair of net momentum zero relative to the declared sea. Pauli exclusion permits at most $D-1$ such pairs and forbids a pair in the doubly occupied block. The full carrier and (B.3s.17) retain all of them; other Fock inputs have defined instrument outputs without an old-source interpretation.
+
+For the exact two-by-two propagator $V_i(t)$ of (B.3s.3), put $A_i=\langle u_i^-,V_iu_i^-\rangle$, $B_i=\langle u_i^+,V_iu_i^-\rangle$. Then $|A_i|^2+|B_i|^2=1$ and the exact no-pair compression is
+$$
+V^*U_gV=U_{\rm dict}^*\operatorname{diag}(d_i)U_{\rm dict},\quad
+d_i=e^{-iC_\Lambda\int Na\,dt/\hbar}\det(V_i)\prod_{j\ne i}A_j,\quad
+\det(V_i)=e^{2ip_i\int b\,dt/\hbar}.
+\tag{B.3s.18}
+$$
+At flat, $d_i=e^{-i(E_{\rm off}+E_i)t/\hbar}$. For encoded basis $i$, the no-pair probability is $\prod_{j\ne i}|A_j|^2$ and all missing probability belongs to the pair flag. The same diagonal compression and full CP instrument act linearly on all superpositions and their references. At a flat final cut its exact energy is
+$$
+\langle H_{\rm flat}\rangle_i=E_{\rm off}+E_i+2\sum_{j\ne i}E_j|B_j|^2\le C_\Lambda+\sum_jE_j-E_i.
+\tag{B.3s.19}
+$$
+Metric loops cannot produce unbounded energy on this finite carrier. The actual driving work satisfies $d\langle H_g\rangle/dt=\langle\partial_tH_g\rangle$, including $C_\Lambda\partial_t(Na)$.
+##### VI. Uniform weak-metric service and the full resource account
+
+Only in a channel comparison remove the known relative reserve phase $C_\Lambda\int(Na-1)dt/\hbar$. Define
+$$
+\begin{aligned}
+B_g(t)&=\sum_i\sqrt{p_i^2(N/a-1)^2+\mu_i^2(N-1)^2}+|b|\sum_i|p_i|,\\
+\eta_g(T)&=\hbar^{-1}\int_0^TB_g(t)dt.
+\end{aligned}
+\tag{B.3s.20}
+$$
+The traceless one-particle perturbation in each local four-dimensional Fock factor has spectrum $\{0,0,+r_i,-r_i\}$, with $r_i$ its square-root summand. Also $\|P_F\|=\sum_i|p_i|$ by $\sum_ip_i=0$. The triangle inequality on the **full** carrier therefore gives
+$$
+\|H_g-H_{\rm flat}-C_\Lambda(Na-1)I\|\le B_g,\qquad
+\inf_{\rm phase}\|(U_g(T)-\mathrm{phase}\,U_{\rm flat}(T))V\|\le\eta_g(T).
+\tag{B.3s.21}
+$$
+Duhamel proves the second estimate and tensoring any reference preserves it. After common complete postprocessing, including (B.3s.17), restricted half-diamond distance is at most $\min(1,\eta_g)$. Composing with the original ready support and the actual complete old readout from (B.3r.15),
+$$
+\epsilon_{\rm CAR}(T)\le\min\left\{1,\epsilon_{\rm src}+2\sqrt{\frac{2s}{2L+1}}+\frac{T\hbar(L+s)^2}{2R^2(M+h_{\min})}+\eta_g(T)\right\}.
+\tag{B.3s.22}
+$$
+The comparison target is the complete old instrument with a zero-probability pair flag, not its conditional-success law. For $|N-1|\le\epsilon_N$, $|a-1|\le\epsilon_a<1$, replace $|N/a-1|$ by $(\epsilon_N+\epsilon_a)/(1-\epsilon_a)$ in (B.3s.20). Large sea/dictionary masses narrow the certified metric neighborhood; strong arbitrary driving need not approximate the old service.
+
+Complete capacity is $\log\dim\mathcal F=2D\log2$. This replaces rather than tensor-adds the old $\log D$ capacity through $V$. For an encoded $\rho$, its tracial relative entropy is $2D\log2-S(\rho)$, an increase of $2D\log2-\log D$. Count this total purity difference once; the specified pure $D$-particle sea is not a second independent charge for the same difference. Every $\mu_i$ already contains the installed source, detector, coupler, clock, storage and placement mass through the actual spectrum. The occupied sea energy $-\sum_iE_i$ and reserve $C_\Lambda$ remain explicit and stress-carrying. The code energy is $C_\Lambda-\sum_iE_i+\langle H_{\rm rel}\rangle$.
+
+Sea preparation, encoding an arbitrary old input, specifying every mass/eigenvector, implementing species-mixing old measurements, retaining pairs/failures and any reset require their actual resources. Canonical-number-conserving evolution alone cannot prepare a filled sea from empty. A Jordan–Wigner representation uses $2D$ qubits as finite matrices; its strings are not local hardware or an uncharged copy of the original bank. Supplied metric histories have work, precision, timing and lifetime resources; this construction does not make them an autonomous geometry source.
+
+The homogeneous invariant-class proof is stronger than a free flat CAR row, but its new source is a genuine enlargement/change. At $p_i=0$ its Dirac block is $N\beta\mu_i$, independent of $a$, whereas the frozen positive-frequency KG source in Theorem B.3r has the strain dependence (B.3r.20). Here one-particle rotations are unitary rather than hyperbolic KG squeezes and exclusion bounds pair occupancy. Thus it removes that KG obstruction's premises rather than refuting it. The theorem supplies exact finite homogeneous nonlinear-metric Ward identities and a counted encoded service; spatially inhomogeneous evolution/refinement and energy-condition-dependent heat conclusions require their own specified source constructions. $\square$
+
+<a id="theorem-b3t-an-explicit-finite-autonomous-occupation-readout-module"></a>**Theorem B.3t (An Explicit Finite Autonomous Occupation-Readout Module).** Fix the complete finite source carrier $\mathcal S$, including its bank, and its specified smooth positive matrix family $K[g]\succeq\Delta I$, $\Delta>0$, on the metric chamber below. Fix $q=2d\ge2$ commuting occupation projections $n_i=d_i^*d_i$ of registered CAR modes, and their fixed ordinary-carrier unitary representation if used. The source family has spatially uniform orientation-preserving time-reparameterization covariance and full-carrier bound $\|K[g]\|\le K_{\max}$. These are defined input matrices and domains; the readout does not create or replace their source. Every new apparatus factor and coupling is specified below.
+
+The full occupation representation is $d_i=Z^{\otimes(i-1)}\otimes|0\rangle\langle1|\otimes I$, with all other source/bank factors retained, or its fixed registered unitary conjugate. This includes the finite CAR family of Theorem B.3s, with its actual homogeneous positive chamber and matrices, before adding this controller. At a flat reference its $K_0=K[g_0]$ commutes with the integer total translation charge $N=RP_F/\hbar$ and can be the input to Theorem B.3n; the newly installed $A$ below is positive as required there. The relativistic constructions subsequently change that total family's dispersion/ports as stated in Theorems B.3r–B.3s; they are not claimed equal to its original off-flat action.
+
+A source mode basis is fixed before geometry or score comparison. For a Fourier-site source the normalized orbital at $x_*$ is $f_{x_*}(x)=[(2J+1)\ell]^{-1/2}\sum_{m=-J}^Je^{im(x-x_*)/R}$, $\ell=2\pi R$, with distinct spin/internal components for the selected occupations. This smooth spectral orbital and its tails are retained; no metric-fitted basis is introduced.
+
+##### I. Registers and the complete reversible word
+
+Let $Q_w=\prod_i n_i^{w_i}(I-n_i)^{1-w_i}$ for $w\in\{0,1\}^q$. Freeze the mode/label ordering: selected spin-up one-hot strings have labels $1,\ldots,d$, every other string has label zero. Write $\lambda(w)$ for the map and use $b=\lceil\log_2(d+1)\rceil$ binary record bits. The physical work register is
+$$
+W=(A_1,\ldots,A_q;B_1,\ldots,B_{q-1};R_1,\ldots,R_b;E_1,\ldots,E_b),\qquad m=2q-1+2b.
+\tag{B.3t.1}
+$$
+Add a separate $m$-bit supply/garbage register $Z$ and an actual $(L+1)$-level clock $C$. Initially $C=|0\rangle$, $Z=|0\rangle^{\otimes m}$, $W=I/2^m$, independently of arbitrary source/reference input. Their pure resources are supplied, not reset outputs. Nonideal/correlated supply has a complete preparation-channel half-diamond certificate $\epsilon_{\rm supply}$. No binary clock padding is silently discarded.
+
+Use the literal permutation gates $X$, CNOT, Toffoli, SWAP and $C_i=(I-n_i)I+n_iX_{A_i}$, unitary on every non-ready ancillary state as well. The finite gate list is:
+
+1. SWAP each $W_j$ with $Z_j$, preparing work while retaining the former mixed state in $Z$.
+2. Copy every occupation into $A_i$ by $C_i$.
+3. For each selected success mode $l$, apply $X$ to all $A_i$ except $A_l$. Compute the AND into clean scratch by $B_1=A_1A_2$, $B_j=B_{j-1}A_{j+1}$ for $j=2,\ldots,q-1$, using Toffoli gates. CNOT the final AND into every set bit of the code of $l$ in $R$. Reverse the AND and $X$ passes.
+4. Reverse all occupation copies, then CNOT each $R_j$ into $E_j$.
+
+Here $L$ denotes this gate-word length, independently of the placement cutoff in Theorem B.3n. Its exact value is
+$$
+L=m+2q+4d(q-1)+\sum_{l=1}^d\operatorname{popcount}(l)+b.
+\tag{B.3t.2}
+$$
+The four passes per success are two $X$ and two Toffoli passes. Source-sensitive gates act on the actual registered even occupation operators and as identity on the remaining independent factors. Trivial action on a bank applies when that bank is a supplied separate spectator factor; under a representation unitary all observable algebras and gate supports are transported together. In the Theorem B.3s specialization the old encoded-bank algebra is a faithful corner, not a new spectator factor: its actual backaction under the physical occupation gates remains retained. The reversible-word and norm proofs require no blanket bank-triviality premise. Their static clock couplings below are explicitly installed; membership of $n_i$ in an observable algebra alone does not install them.
+##### II. A positive clock with finite dyadic couplings
+
+Fix a dimensional energy unit $E_0>0$, integer $p$, precision integer $B\ge0$, and $\gamma=2^pE_0$, $\eta=E_02^{-B}$. The coefficients are the same across comparisons and are independent of outcomes, desired stresses, and success probabilities. Let $U_j=G_j\cdots G_1$, $U_0=I$, and $V_{\rm hist}=\sum_{j=0}^L|j\rangle\langle j|\otimes U_j$. The ideal comparison generator is
+$$
+H_*=\gamma LI-\sum_{j=0}^{L-1}\gamma\sqrt{(j+1)(L-j)}
+(|j+1\rangle\langle j|\otimes G_{j+1}+\mathrm{adjoint}).
+\tag{B.3t.3}
+$$
+It equals $V_{\rm hist}[(\gamma LI-2\gamma J_x)\otimes I]V_{\rm hist}^*$, with full spectrum $2\gamma k$, $k=0,\ldots,L$. The actual dyadic edges are
+$$
+r_j=\eta\left\lfloor\frac{\gamma\sqrt{(j+1)(L-j)}}\eta+\tfrac12\right\rfloor,\quad
+B_0=\gamma L+\eta,\quad
+H_{\rm hist}=B_0I-\sum_{j=0}^{L-1}r_j(|j+1\rangle\langle j|\otimes G_{j+1}+\mathrm{adjoint}).
+\tag{B.3t.4}
+$$
+Each edge error is at most $\eta/2$, so the hopping error has absolute block-row sum at most $\eta$. Hence $H_{\rm hist}\succeq0$ and $\|H_{\rm hist}\|\le2\gamma L+2\eta$. The rounded clock remains conjugate to its explicit rounded Jacobi matrix; perfect transfer belongs only to the ideal comparator. The central $B_0$ is physical clock energy, removable as phase only in channel comparisons.
+
+Each occupation-copy edge expands into clock hopping, clock hopping times $n_i$ and clock hopping times $n_iX_{A_i}$, with the same $r_j$. No high-rank failure projector is installed as an interaction. Ordinary edges use their literal truth-table matrices. These static couplings, including the Toffoli edges, are specified source/controller terms, rather than external pulses, cancellation of $K[g]$ or an inference from a different hardware alphabet. A different implementation retains its own full errors/resources.
+
+##### III. The actual action and its limited covariance
+
+Use $ds^2=-c^2N^2dt^2+a^2(dx+b_fdt)^2$; $b_f$ is the metric shift, distinct from the record-bit count, with $N,a>0$. Freeze a smooth nonnegative spatial profile $w$, $\int wdx=1$, with the chosen source/support frame. For the Fourier-site case one can use the explicit $w(x)=|f_{x_*}(x)|^2$ above. Impose $N^2-a^2b_f^2/c^2\ge z_{\min}^2>0$ and define
+$$
+z[g](t)=\int w(x)\sqrt{N(t,x)^2-a(t,x)^2b_f(t,x)^2/c^2}\,dx.
+\tag{B.3t.5}
+$$
+This is the averaged proper-time rate of fixed-coordinate timelike support lines, specified before any response comparison. Its extended support and frame are part of the model, without a compact-range or support-force conclusion.
+
+Every $W,Z$ bit has storage energy $E_0n_j$. Set
+$$
+H_{\rm bits}=E_0\sum_{j\in W,Z}n_j,\quad A=H_{\rm hist}+H_{\rm bits}+E_0I,\quad
+H_{\rm tot}[g]=K[g]\otimes I+z[g]A,\quad
+S=\int[(i\hbar/2)\Psi^*\overset\leftrightarrow\partial_t\Psi-\Psi^*H_{\rm tot}\Psi]dt.
+\tag{B.3t.6}
+$$
+The rest baseline $E_0I$ is installed package energy. $A$ is source-sensitive, not an apparatus-only matrix. All terms act on one fixed complete carrier; $A\succeq E_0I$ and $H_{\rm tot}\succeq(\Delta+zE_0)I$. No additional geometry-dependent matrix is fitted to the output.
+
+Under a monotone spatially uniform time reparameterization, $N,b_f$ transform as rates, $a$ as a scalar and the canonical state is pulled back. Both $Kdt$ and $zAdt$, and the Berry form, are invariant. Spatial Fourier structure, $w$ and apparatus frame remain specified backgrounds. This is not full spacetime/boost covariance, a spatial momentum Ward identity or a dynamical support stress. Those requested responses need a corresponding source construction rather than an inference from a rest-energy baseline.
+
+At flat $N=a=1,b_f=0$ and affine ADM directions $h=(\nu_h,u_h,v_h)$, $k=(\nu_k,u_k,v_k)$,
+$$
+z_0=1,\quad z_h=\int w\nu_h,\quad z_{hk}=-\int wv_hv_k/c^2,\quad
+H_{{\rm tot},h}=K_h+z_hA,\quad H_{{\rm tot},hk}=K_{hk}+z_{hk}A.
+\tag{B.3t.7}
+$$
+The first shift port vanishes but its contact does not: scalar spatial products are taken before integration. Every clock/coupling/storage/supply/rest term appears once. More generally, with $f=N^2-a^2b_f^2/c^2$, $z_h=\int wf_h/(2\sqrt f)$ and $z_{hk}=\int w[f_{hk}/(2\sqrt f)-f_hf_k/(4f^{3/2})]$, including prescribed nonaffine variations.
+
+At fixed input, output algebra and cut, the first propagator insertion is $-(i/\hbar)\int U(T,s)H_{{\rm tot},h}(s)U(s,0)ds$. The mixed insertion includes its actual $H_{{\rm tot},hk}$ and both ordered first-port insertions. For constant norm bounds these give $T\|H_{{\rm tot},h}\|/\hbar$ and $T\|H_{{\rm tot},hk}\|/\hbar+T^2\|H_{{\rm tot},h}\|\|H_{{\rm tot},k}\|/\hbar^2$. Varying physical supply, output cuts or readout fields adds their actual product-rule terms; these are not silently declared zero in this fixed-cut class.
+##### IV. Complete retained output and unconditional finite-error estimate
+
+Without $K,H_{\rm bits}$ or rounding, the clock reaches $L$ at $T_* =\pi\hbar/(2\gamma)$ and performs the complete word on arbitrary source/reference vectors. Its source-label isometry is
+$$
+V_{\rm lab}=\sum_wQ_w\otimes|0\rangle_{A,B}\otimes|\operatorname{code}(\lambda(w))\rangle_R
+\otimes|\operatorname{code}(\lambda(w))\rangle_E.
+\tag{B.3t.8}
+$$
+The full output includes clock $|L\rangle$ and the former mixed $W$ state retained in $Z$. Every within-failure coherence survives. Reducing only for the separately declared classical-output grammar gives $\sum_yP_y\rho P_y\otimes|\operatorname{code}(y)\rangle\langle\operatorname{code}(y)|_R$, with $P_y=\sum_{\lambda(w)=y}Q_w$. The reduced factors remain physically retained. Querying the entire coherent algebra uses the full dilation output, not that classical marginal.
+
+For arbitrary histories define $\theta(t)=\gamma\int_0^tz[g](s)ds/\hbar$. Since the comparator is proportional to one fixed $H_*$, endpoint overlap has magnitude $|\sin\theta|^L$ and phase common to all source inputs. The exact ready-isometry distance after this common phase choice is
+$$
+e_{\rm clock}(\theta)=\sqrt{2[1-|\sin\theta|^L]},\qquad
+e_{\rm clock}(\theta)\le\sqrt L\,|\theta-\pi/2|.
+\tag{B.3t.9}
+$$
+The inequality uses $1-|\cos\delta|^L\le L\delta^2/2$. Actual finite timing/calibration uncertainty must bound this phase displacement; the clock is not infinitely precise.
+
+Duhamel, the rounded block-row bound and contractivity give actual output half-diamond error relative to the complete ideal endpoint output at most
+$$
+\min\left\{1,\epsilon_{\rm supply}+e_{\rm clock}(\theta(t))+\frac1\hbar\int_0^t
+[\|K[g](s)\|+z[g](s)(\|H_{\rm bits}\|+\eta)]ds+\epsilon_{\rm hw}\right\},\qquad
+\|H_{\rm bits}\|=2mE_0.
+\tag{B.3t.10}
+$$
+The whole source stays on. Here $\epsilon_{\rm hw}=\hbar^{-1}\int\|\Delta H_{\rm hw}(s)\|ds$ is the actual complete coupler/operator error certificate. Uncertainty in $z$ or coefficients may instead enter it, without double counting. Scalar offsets may be phased away only for this channel comparison; their action, energy and contacts remain. A uniform timing-failure probability $p_{\rm time}$ adds unconditionally; on its complementary event bound (B.3t.9) by the registered interval. Correlated preparation uses the complete preparation-channel error, not a marginal-state estimate.
+
+These are full-carrier norm estimates, stable under every external reference. Increasing $\gamma$ decreases source/storage exposure but increases clock energy/norm and tightens timing tolerance. Finite $p,B$ and time uncertainty give the displayed error. The internal controller is autonomous in a fixed geometry, while identifying the final epoch still uses the specified timing uncertainty. No autonomous stop or additional public clock reader is implicitly installed.
+
+Storage is the actual $H_{\rm bits}$ and the hopping remains on after the endpoint. For a holding interval $\tau$, complete retained-state half-distance from its initial holding-cut state is at most $\min(1,\tau\sup\|H_{\rm tot}\|/\hbar)$, added to the endpoint error. This is a finite, possibly short window; no switch, durable latch or indefinite stability is hidden in it.
+
+##### V. Energy, purity, description and timing budgets
+
+New capacity is $\log(L+1)+2m\log2$. Initial extra tracial purity deficit is $\log(L+1)+m\log2$, because $W$ starts maximally mixed while clock and $Z$ are pure. The initial SWAPs put $W$ entropy into $Z$; neither $Z$ nor clock is reusable without its resource cost. At flat initial cut clock-edge expectation is zero and the new energy is $B_0+E_0+mE_0/2$, independent of source input. Exact total energy for an arbitrary state is $\operatorname{Tr}\rho H_{\rm tot}$, retaining the old source expectation. The clock bandwidth is at most $2\gamma L+2\eta$ and storage at most $2mE_0$. Static flat operation conserves total energy despite exchanges. Energy-action over time $t$ is $t$ times that conserved full expectation; holding is charged likewise. Time-dependent geometry instead supplies actual work $\int\operatorname{Tr}[\rho\partial_tH_{\rm tot}]dt$.
+
+Ownership is literal: keep old source ownership, assign $B_0$ to clock, each hopping term to its named clock-edge coupler with its full source/pointer support, each $E_0n_j$ to its bit and rest $E_0$ to the support package. If site energies are requested, divide a coupler equally over its named participants; their sum is the actual total and $\partial_t\epsilon_v+(i/\hbar)[H_{\rm tot},\epsilon_v]$ is its driven local energy derivative. This is neither a momentum-Ward identity nor a physical-proximity claim.
+
+The installed description is the $L$ edge gate names/operand indices, the $L$ integers $r_j/\eta$, $B_0/E_0$ and fixed $p,B$. Since $r_j\le\gamma(L+1)/2+\eta/2$, a finite per-edge coefficient bound is $2+\max(0,p+B)+\lceil\log_2(L+2)\rceil$ binary bits. This describes static couplers, not an uncounted runtime memory; a programmable implementation needs its own factors/action. Description length is not manufacture/calibration cost.
+
+For flat operation put $D_{\rm err}=(K_{\max}+2mE_0+\eta)/\hbar$. If $|t-T_*|\le s$ except probability $p_{\rm time}$, the sufficient error envelope apart from supply/hardware/failure terms is
+$$
+\sqrt L\,\gamma s/\hbar+\pi\hbar D_{\rm err}/(2\gamma)+D_{\rm err}s.
+\tag{B.3t.11}
+$$
+For fixed $s,D_{\rm err}>0$, the first two terms minimize over positive real $\gamma$ at $\gamma=\sqrt{\pi\hbar^2D_{\rm err}/(2\sqrt Ls)}$, with minimum $\sqrt{2\pi\sqrt LsD_{\rm err}}$. The actual permitted dyadic $\gamma$ is evaluated discretely. This optimizes a sufficient bound, not a lower bound on the true channel error. Faster coupling at fixed nonzero time uncertainty therefore does not drive this certificate to zero error; reducing $s$ itself requires the separately counted clock/supply resource.
+The finite comparison class freezes source, geometry/profile, gate alphabet, lexicographic word, dyadic rule, input resources, error tolerance and holding window before a score is evaluated. It may compare finitely specified $p,B$ through the full nonnegative energy/capacity/purity/action vectors above. It neither chooses objective weights from the output nor asserts that this apparatus family exhausts physical alternatives.
+
+The retained coherent grammar is the entire matrix algebra of $\mathcal S,C,W,Z$, with every external reference unchanged and endpoint/holding cuts specified. The norm bound compares its complete dilation output, not only the $R$ marginal. The classical label grammar is its separate stated restriction. A marginal label law alone cannot exclude uncontrolled scratch/environment leakage that destroys within-failure coherence; the actual full-channel hardware certificate is the stated input. A further public reader, durable latch, copying/reset/reuse process or programmable controller would have its own actual factors and action, rather than being created by naming a classical record.
+
+Finally the positivity, energy and contact identities refer to the nominal $H_{\rm tot}[g]$. If implemented hardware is $H_{\rm tot}[g]+\Delta H_{\rm hw}[g]$, its small integrated norm gives only (B.3t.10). Positivity additionally follows from a positive implemented family, or sufficiently from $\|\Delta H_{\rm hw}[g](t)\|<\Delta+z[g](t)E_0$ pointwise. Actual first/contact accuracy uses separate bounds on the first and mixed metric derivatives of a smooth hardware-error family; small value norm alone does not certify them. Varying preparation or output cuts requires the corresponding product rules. This preserves the original full source/input and finite-resource scope: a complete specified autonomous controller with unconditional error and actual total action, without deriving manufacture/calibration expense, source selection or a universal complexity minimizer from finite matrix existence. $\square$
+
 ## B.4 Microscopic Energy Density Operator $\hat{\rho}_v$ and Interaction Structure
 
 The total energy density associated with an individual MPU incorporates contributions from its baseline operation, complexity-related costs, and interactions, including the thermodynamic cost of irreversibility.
 
-**Definition B.3 (Microscopic Energy Density Operator $\hat{\rho}_v$)**
+<a id="definition-b3-microscopic-energy-density-operator-hatrho_v"></a>**Definition B.3 (Microscopic Energy Density Operator $\hat{\rho}_v$)**
 
 For the microscopic construction through Theorem B.4, use a registered finite closed network and a finite-dimensional Hilbert space for each MPU and each included auxiliary system. All Hamiltonian, cost and interaction operators are self-adjoint; their coefficients, the effective volume $V_{\mathrm{MPU}}>0$ and the operational timescale $\tau_0>0$ have no explicit time dependence on the window considered. Thus all finite sums and commutators below are bounded operators on the common tensor-product Hilbert space. Infinite-network or unbounded-operator extensions require separate existence, domain and commutator certificates. On this finite autonomous branch the microscopic energy-density operator is
 $$
@@ -452,7 +1027,7 @@ $$
 $$
 where $\rho_{\mathcal N[v]}$ is the reduced state on that support. This expectation represents the average local energy density assigned to MPU $v$.
 
-**Definition B.4 (Structure of Interaction Operator $\hat{V}_{vv'}$)**
+<a id="definition-b4-structure-of-interaction-operator-hatv_vv"></a>**Definition B.4 (Structure of Interaction Operator $\hat{V}_{vv'}$)**
 
 For every undirected interaction edge $\{v,v'\}$, let $\hat V_{vv'}$ be a registered self-adjoint operator supported on $\mathcal H_v\otimes\mathcal H_{v'}$ or on an explicitly registered enlargement by local auxiliary degrees of freedom, and impose
 $$
@@ -460,7 +1035,7 @@ $$
 \qquad
 \hat V_{vv'}=\hat V_{v'v}.
 $$
-Its matrix elements and coupling scale are branch data; neither the ND-RID kernel nor the entropy ledger determines them. When reduced ND-RID dynamics is dissipative, $\hat V_{vv'}$ denotes the self-adjoint system–auxiliary interaction on the enlarged support, not a non-Hermitian dissipator inserted into $\hat H_{total}$.
+Its matrix elements and coupling scale are branch data; neither the ND-RID kernel nor the entropy ledger determines them. When reduced ND-RID dynamics is dissipative, $\hat V_{vv'}$ denotes the self-adjoint system–auxiliary interaction on the enlarged support, not a non-Hermitian dissipator inserted into $\hat H_{\mathrm{total}}$.
 
 Let $N_{\mathrm{int}}$ be the mean number of completed edge updates and $S_{\mathrm{tot}}$ a registered mean thermodynamic entropy-production ledger. This ledger is not the von Neumann entropy of the complete closed network. Assume an independent dimensionless production-floor certificate $\epsilon\ge0$, with additive accounting such that
 $$
@@ -476,19 +1051,17 @@ $$
 $$
 The lower rate $k_B\epsilon/\tau_{\mathrm{int}}$ applies only on a sustained throughput-saturation branch. The ND-RID kernel and Theorem 32 do not establish $\epsilon>0$: registered reset heat divided by temperature includes the conditional entropy removed from the record and is distinct from total entropy production. A reversible reset can have positive heat export and zero excess production.
 
-
-
 ## B.5 Microscopic Flow Operators and Conservation Laws
 
 To construct the full stress-energy tensor, operators for momentum density and momentum flux are defined by requiring local conservation at the microscopic level. We also make the energy-current explicit under a standard locality assumption.
 
-**Definition B.5 (Microscopic Flow Operators $\hat{\pi}_{v,j}$ and $\hat{p}_{v,jk}$)**
+<a id="definition-b5-microscopic-flow-operators-hatpi_vj-and-hatp_vjk"></a>**Definition B.5 (Microscopic Flow Operators $\hat{\pi}_{v,j}$ and $\hat{p}_{v,jk}$)**
 
 Let $\hat{\rho}_v$ be the microscopic energy density operator from (B.6) and define the corresponding local energy operator $\hat{\epsilon}_v := V_{\mathrm{MPU}} \hat{\rho}_v$ (so $\hat{\epsilon}_v$ has units of energy). Let the total Hamiltonian be
 $$
-\hat{H}_{total} := \sum_v \hat{\epsilon}_v,
+\hat{H}_{\mathrm{total}} := \sum_v \hat{\epsilon}_v,
 $$
-interpreted as the global closed Hamiltonian of the MPU network (including any local auxiliary degrees of freedom used to implement ND-RID as in Definition B.4). We define the time derivative in the Heisenberg picture as $\frac{d}{dt}\hat{O} = \frac{i}{\hbar}[\hat{H}_{total}, \hat{O}]$.
+interpreted as the global closed Hamiltonian of the MPU network (including any local auxiliary degrees of freedom used to implement ND-RID as in Definition B.4). We define the time derivative in the Heisenberg picture as $\frac{d}{dt}\hat{O} = \frac{i}{\hbar}[\hat{H}_{\mathrm{total}}, \hat{O}]$.
 
 Because each $\hat{\epsilon}_v$ is supported on $v$ and its finite set of incident edges, one has $[\hat{\epsilon}_v, \hat{\epsilon}_u]=0$ whenever the supports of $\hat{\epsilon}_v$ and $\hat{\epsilon}_u$ are disjoint. Define the antisymmetric pairwise energy-current operator:
 $$
@@ -527,9 +1100,9 @@ Write $\hat\pi_{v,j}:=\hat\pi_{v,j}^{\mathrm N}$. The stress is defined up to ad
 
 We assemble the density and flux operators into a canonical stress-energy tensor.
 
-**Definition B.6 (Canonical Microscopic Stress-Energy Operator $\hat{T}^{\mu\nu}_{(can)}$)**
+<a id="definition-b6-canonical-microscopic-stress-energy-operator-hattmunu_can"></a>**Definition B.6 (Canonical Microscopic Stress-Energy Operator $\hat{T}^{\mu\nu}_{(can)}$)**
 
-The canonical microscopic stress-energy operator $\hat{T}^{\mu\nu}_{(can)}(v)$ for MPU $v$ is defined by its components in a local frame (0=time, j,k=spatial):
+The canonical microscopic stress-energy operator $\hat{T}^{\mu\nu}_{(can)}(v)$ for MPU $v$ is defined by its components in a local frame ($0=\text{time}$, $j,k=\text{spatial}$):
 
 *   $\hat{T}^{00}_{(can)}(v) = \hat{\rho}_v$ (Energy Density, Eq B.6)
 *   $\hat{T}^{0j}_{(can)}(v) = c \hat{\pi}_{v,j}$ (Energy flux density)
@@ -538,7 +1111,7 @@ The canonical microscopic stress-energy operator $\hat{T}^{\mu\nu}_{(can)}(v)$ f
 
 (By definition $\hat{\pi}_{v,j}:=\hat{q}_{v,j}/c^2$, one has $\hat{T}^{0j}_{(can)}(v)=\hat{T}^{j0}_{(can)}(v)$.)
 
-**Theorem B.3 (Microscopic Conservation Law for $\hat{T}^{\mu\nu}_{(can)}$ on the Momentum-Flux Closure Branch)**
+<a id="theorem-b3-microscopic-conservation-law-for-hattmunu_can-on-the-momentum-flux-closure-branch"></a>**Theorem B.3 (Microscopic Conservation Law for $\hat{T}^{\mu\nu}_{(can)}$ on the Momentum-Flux Closure Branch)**
 
 The canonical tensor $\hat{T}^{\mu\nu}_{(can)}(v)$ satisfies the local conservation law using a discrete spacetime divergence $\partial_\mu^{(v)}$ (where $\partial_0^{(v)} = (1/c)\, d/dt$, $\partial_j^{(v)} = \nabla_j^{(v)}$):
 $$
@@ -558,10 +1131,10 @@ $$
 $$
 by (B.12). ∎
 
-**Theorem B.3a (Energy-Sector Current and Improvement Classification).** On the finite autonomous branch of Definitions B.3–B.5, let $\mathcal N[v]$ be the support set of Definition B.3, write $\dot{\hat O}:=\frac i\hbar[\hat H_{total},\hat O]$, and count a multiple of the identity as supported on every set.
+<a id="theorem-b3a-energy-sector-current-and-improvement-classification"></a>**Theorem B.3a (Energy-Sector Current and Improvement Classification).** On the finite autonomous branch of Definitions B.3–B.5, let $\mathcal N[v]$ be the support set of Definition B.3, write $\dot{\hat O}:=\frac i\hbar[\hat H_{\mathrm{total}},\hat O]$, and count a multiple of the identity as supported on every set.
 
 1. **Circulations.** An antisymmetric family $\hat J'_{v\to u}$ satisfies (B.11) exactly when $\hat C_{vu}:=\hat J'_{v\to u}-\hat J_{v\to u}$ is antisymmetric with $\sum_u\hat C_{vu}=0$ for every $v$.
-2. **Improvements.** The Hermitian families $(\hat\epsilon'_v)$ with $\hat\epsilon'_v$ supported on $\mathcal N[v]$ and $\sum_v\hat\epsilon'_v=\hat H_{total}$ are exactly
+2. **Improvements.** The Hermitian families $(\hat\epsilon'_v)$ with $\hat\epsilon'_v$ supported on $\mathcal N[v]$ and $\sum_v\hat\epsilon'_v=\hat H_{\mathrm{total}}$ are exactly
 $$
 \hat\epsilon'_v=\hat\epsilon_v+\sum_u\hat B_{vu},
 \qquad
@@ -577,13 +1150,316 @@ $$
 $$
 with $\hat C$ as in item 1.
 
-Hence the energy density and energy current derived from $\hat H_{total}$ are unique up to the bond improvements (B.12a) and the circulations of item 1, which are the discrete Noether and Belinfante-type ambiguities of the energy sector. The operators $\hat\epsilon_v$ and $\hat B_{vu}$ carry energy units, $\hat\rho_v$ carries energy per volume, $\hat J_{v\to u}$ and $\hat C_{vu}$ carry energy per volume per time, and $\dot{\hat H}_{total}=0$.
+Hence the energy density and energy current derived from $\hat H_{\mathrm{total}}$ are unique up to the bond improvements (B.12a) and the circulations of item 1, which are the discrete Noether and Belinfante-type ambiguities of the energy sector. The operators $\hat\epsilon_v$ and $\hat B_{vu}$ carry energy units, $\hat\rho_v$ carries energy per volume, $\hat J_{v\to u}$ and $\hat C_{vu}$ carry energy per volume per time, and $\dot{\hat H}_{\mathrm{total}}=0$.
 
-*Proof.* Item 1 is the difference of (B.11) for the two families at fixed $\hat\rho_v$. For item 2, fix for every tensor factor $x$ of the network a Hilbert–Schmidt orthonormal Hermitian basis of the operators on $\mathcal H_x$ containing a multiple of $\mathbb 1_x$. Tensor products $\sigma^{\mathbf a}$ of these elements form an orthonormal Hermitian basis of the operators on the network. A Hermitian operator has real coefficients, and it is supported on a set $R$ exactly when its coefficients vanish on every $\mathbf a$ whose support, the set of factors carrying a non-identity element, leaves $R$. Write $\hat\epsilon'_v-\hat\epsilon_v=\sum_{\mathbf a}d_{v,\mathbf a}\sigma^{\mathbf a}$ and let $V_{\mathbf a}$ be the set of $v$ with $\operatorname{supp}\mathbf a\subseteq\mathcal N[v]$. Then $d_{v,\mathbf a}=0$ for $v\notin V_{\mathbf a}$, and $\sum_{v\in V_{\mathbf a}}d_{v,\mathbf a}=0$ because the two families have the same sum. Choose a root $r_{\mathbf a}\in V_{\mathbf a}$, and for each $v\in V_{\mathbf a}\setminus\{r_{\mathbf a}\}$ add $d_{v,\mathbf a}\sigma^{\mathbf a}$ to $\hat B_{vr_{\mathbf a}}$ and its negative to $\hat B_{r_{\mathbf a}v}$. The resulting bond operators are antisymmetric and Hermitian, satisfy $\operatorname{supp}\hat B_{vu}\subseteq\mathcal N[v]\cap\mathcal N[u]$, and give $\sum_u\hat B_{vu}=\hat\epsilon'_v-\hat\epsilon_v$, since the root row receives $-\sum_{v\ne r_{\mathbf a}}d_{v,\mathbf a}\sigma^{\mathbf a}=d_{r_{\mathbf a},\mathbf a}\sigma^{\mathbf a}$. Conversely, (B.12a) preserves the supports, and antisymmetry gives $\sum_{v,u}\hat B_{vu}=0$. For item 3, the derivation of (B.11) applies to every decomposition of $\hat H_{total}$, so $\hat J'$ satisfies continuity for $\hat\rho'_v:=\hat\epsilon'_v/V_{\mathrm{MPU}}$. The antisymmetric family $\hat J_{v\to u}-\dot{\hat B}_{vu}/V_{\mathrm{MPU}}$ satisfies the same equation because $\dot{\hat\rho}'_v=\dot{\hat\rho}_v+V_{\mathrm{MPU}}^{-1}\sum_u\dot{\hat B}_{vu}$, and item 1 gives (B.12b). The units follow from the energy units of $\hat\epsilon_v$ and the factors $V_{\mathrm{MPU}}^{-1}$ and $\hbar^{-1}$, and $\dot{\hat H}_{total}=\frac i\hbar[\hat H_{total},\hat H_{total}]=0$. ∎
+*Proof.* Item 1 is the difference of (B.11) for the two families at fixed $\hat\rho_v$. For item 2, fix for every tensor factor $x$ of the network a Hilbert–Schmidt orthonormal Hermitian basis of the operators on $\mathcal H_x$ containing a multiple of $\mathbb 1_x$. Tensor products $\sigma^{\mathbf a}$ of these elements form an orthonormal Hermitian basis of the operators on the network. A Hermitian operator has real coefficients, and it is supported on a set $R$ exactly when its coefficients vanish on every $\mathbf a$ whose support, the set of factors carrying a non-identity element, leaves $R$. Write $\hat\epsilon'_v-\hat\epsilon_v=\sum_{\mathbf a}d_{v,\mathbf a}\sigma^{\mathbf a}$ and let $V_{\mathbf a}$ be the set of $v$ with $\operatorname{supp}\mathbf a\subseteq\mathcal N[v]$. Then $d_{v,\mathbf a}=0$ for $v\notin V_{\mathbf a}$, and $\sum_{v\in V_{\mathbf a}}d_{v,\mathbf a}=0$ because the two families have the same sum. Choose a root $r_{\mathbf a}\in V_{\mathbf a}$, and for each $v\in V_{\mathbf a}\setminus\{r_{\mathbf a}\}$ add $d_{v,\mathbf a}\sigma^{\mathbf a}$ to $\hat B_{vr_{\mathbf a}}$ and its negative to $\hat B_{r_{\mathbf a}v}$. The resulting bond operators are antisymmetric and Hermitian, satisfy $\operatorname{supp}\hat B_{vu}\subseteq\mathcal N[v]\cap\mathcal N[u]$, and give $\sum_u\hat B_{vu}=\hat\epsilon'_v-\hat\epsilon_v$, since the root row receives $-\sum_{v\ne r_{\mathbf a}}d_{v,\mathbf a}\sigma^{\mathbf a}=d_{r_{\mathbf a},\mathbf a}\sigma^{\mathbf a}$. Conversely, (B.12a) preserves the supports, and antisymmetry gives $\sum_{v,u}\hat B_{vu}=0$. For item 3, the derivation of (B.11) applies to every decomposition of $\hat H_{\mathrm{total}}$, so $\hat J'$ satisfies continuity for $\hat\rho'_v:=\hat\epsilon'_v/V_{\mathrm{MPU}}$. The antisymmetric family $\hat J_{v\to u}-\dot{\hat B}_{vu}/V_{\mathrm{MPU}}$ satisfies the same equation because $\dot{\hat\rho}'_v=\dot{\hat\rho}_v+V_{\mathrm{MPU}}^{-1}\sum_u\dot{\hat B}_{vu}$, and item 1 gives (B.12b). The units follow from the energy units of $\hat\epsilon_v$ and the factors $V_{\mathrm{MPU}}^{-1}$ and $\hbar^{-1}$, and $\dot{\hat H}_{\mathrm{total}}=\frac i\hbar[\hat H_{\mathrm{total}},\hat H_{\mathrm{total}}]=0$. ∎
 
-**Theorem B.3b (Momentum-Flux Closure Criterion, Nonentailment and a Local Witness).** Register the chart of Definition B.5 as the periodic cubic lattice $\Lambda=\prod_{j=1}^3\mathbb Z/n_j\mathbb Z$ with spacing $a>0$ and backward differences $\nabla_j^{(v)}F:=(F_v-F_{v-e_j})/a$, and let local directional fluxes $\hat q_{v,j}$ satisfy $\dot{\hat\rho}_v+\sum_j\nabla_j^{(v)}\hat q_{v,j}=0$. In items 2–3, $n_1=n$ and $n_2=n_3=1$, each MPU carries a qubit factor with Pauli operators $X_v,Y_v,Z_v$ on which the displayed operators act, and the cost terms of (B.6) vanish.
+<a id="proposition-b3a1-symmetric-wilson-energy-allocation-and-conserved-free-current"></a>**Proposition B.3a.1 (Symmetric Wilson Energy Allocation and Conserved Free Current).** Use natural units $\hbar=c=1$ and a periodic cubic lattice of spacing $a>0$, with at least five sites in each periodic direction. Let the static translation-invariant one-particle massless Wilson Hamiltonian have Bloch symbol
+$$
+h(p)=\sum_{i=1}^3\alpha_i\frac{\sin(ap_i)}a+\beta W(p),
+\qquad W(p)=\sum_{i=1}^3\frac{1-\cos(ap_i)}a,
+\tag{B.3a.1.1}
+$$
+where the Hermitian Clifford matrices satisfy
 
-1. **Criterion.** Operators $\hat p_{v,jk}$ satisfying (B.12) with $\hat\pi_{v,j}=\hat q_{v,j}/c^2$ exist exactly when each total flux $\hat Q_j:=\sum_v\hat q_{v,j}$ commutes with $\hat H_{total}$. Two solutions differ by a family $\hat D_{v,jk}$ with $\sum_k\nabla_k^{(v)}\hat D_{v,jk}=0$.
+$$
+\{\alpha_i,\alpha_j\}=2\delta_{ij}I,
+$$
+
+$\{\alpha_i,\beta\}=0$ and $\beta^2=I$.
+On the finite fermionic Fock space put $H=d\Gamma(h)$. With $P_x$ the one-particle site projection, including the internal identity, define the symmetric local energy allocation and pair current by
+$$
+A_x=\frac12\{P_x,h\},\qquad e_x=d\Gamma(A_x),\qquad
+I_{x\to y}=i[e_x,e_y].
+\tag{B.3a.1.2}
+$$
+Then $\sum_xe_x=H$ and $\dot e_x+\sum_yI_{x\to y}=0$. Only site pairs at range at most two contribute. Give each such pair its unique local lifted displacement $\delta_{xy}$, with component in $\{-2a,-a,0,a,2a\}$ and $\delta_{yx}=-\delta_{xy}$. Define
+$$
+Q_i=\frac12\sum_{x,y}(\delta_{xy})_i I_{x\to y}.
+\tag{B.3a.1.3}
+$$
+This finite-torus current equals $d\Gamma(j_{E,i})$, with exact band symbol
+$$
+j_{E,i}(p)=\frac12\{h(p),\partial_{p_i}h(p)\}
+=\frac12\partial_{p_i}E(p)^2 I
+=\sin(ap_i)\left[\frac{\cos(ap_i)}a+W(p)\right]I,
+\tag{B.3a.1.4}
+$$
+where
+$$
+h(p)^2=E(p)^2I,\qquad
+E(p)^2=\sum_i\frac{\sin^2(ap_i)}{a^2}+W(p)^2.
+$$
+Consequently $[H,Q_i]=0$.
+
+*Proof.* The Clifford relations give the displayed scalar square of $h$. Differentiating it yields the anticommutator in (B.3a.1.4). Since
+$\partial_{p_i}W=\sin(ap_i)$,
+differentiation of its scalar eigenvalue square gives the final expression. Thus $j_{E,i}$ commutes pointwise with $h$, and
+$[d\Gamma(h),d\Gamma(j_{E,i})]=d\Gamma([h,j_{E,i}])=0$.
+
+It remains to identify this band expression with the actual local allocation. Since $\sum_xP_x=I$, $\sum_xA_x=h$. The finite-Fock identity
+$[d\Gamma(A),d\Gamma(B)]=d\Gamma([A,B])$
+then gives the sum rule and local continuity equation. The nearest-neighbor range of $h$ makes $[A_x,A_y]$ zero for site separation greater than two.
+
+On the infinite lattice, the energy-position operator on finitely supported vectors is
+$$
+\sum_xx_iA_x=\frac12\{X_i,h\}.
+$$
+Antisymmetry gives
+$$
+\frac i2\sum_{x,y}(y_i-x_i)[A_x,A_y]
+=i\left[h,\sum_xx_iA_x\right]
+=\frac i2\{[h,X_i],h\}.
+\tag{B.3a.1.5}
+$$
+In the Fourier convention $X_i=i\partial_{p_i}$, $[h,X_i]=-i\partial_{p_i}h$, so (B.3a.1.5) has symbol $\{h,\partial_{p_i}h\}/2$. This calculation is a finite-range kernel identity. The same local kernel terms hold on the torus when the displacements in (B.3a.1.3) are lifted locally. At least five sites in each direction makes every range-two lift unique. Hence it proves the torus identity directly, without using a discontinuous global periodic position operator. Second quantization proves the asserted identification of $Q_i$.
+
+For bounded momenta, Taylor expansion of the exact symbol gives
+$$
+j_{E,i}(p)=\left[p_i+a^2\left(\frac{p_i|p|^2}{2}-\frac{2p_i^3}{3}\right)
++O(a^4|p|^5)\right]I.
+\tag{B.3a.1.6}
+$$
+Indeed $\sin(ap_i)\cos(ap_i)/a=p_i-(2/3)a^2p_i^3+O(a^4|p_i|^5)$ and
+$W=a|p|^2/2+O(a^3|p|^4)$; substitution gives the stated expansion. Thus the difference from $p_iI$ is uniformly $O(a^2P^3)$ on a fixed band $|p|\le P$ with $aP$ small. This is not a uniform estimate on the full ultraviolet lattice band. $\square$
+
+**Unit and source scope.** In Appendix B's volume convention, take $V_{\mathrm{MPU}}=V=a^3$ for this lattice. Then
+$$
+\rho_x=e_x/V,\qquad J_{x\to y}=I_{x\to y}/V,
+\qquad Q_i=\frac V2\sum_{x,y}(\delta_{xy})_iJ_{x\to y}.
+\tag{B.3a.1.7}
+$$
+Here $e_x$ has energy units, $I_{x\to y}$ energy per time and $J_{x\to y}$ energy per volume per time; (B.3a.1.1)–(B.3a.1.7) use the stated natural units. A fixed vacuum-energy scalar subtraction changes neither commutator; it may be distributed as fixed scalar local energy entries. This is an explicit positive conservation example for the registered free Hamiltonian, symmetric energy allocation and lifted winding convention. The current equals continuum translation momentum only to the bounded-band order just proved. Other allocations retain Theorem B.3a's improvement/circulation classification.
+
+Controls, sources and supports can break translation invariance or add time dependence. Their full current balance includes their own terms, and conservation of this free current does not certify a whole-apparatus Ward identity or a gravitational response kernel. In particular the proposition does not identify every retained instrument's local energy allocation with (B.3a.1.2).
+
+<a id="proposition-b3a2-exact-three-site-pair-support-adoption-test"></a>**Proposition B.3a.2 (Exact Three-Site Pair-Support Adoption Test).** On the finite tensor product $\mathcal H_0\otimes\mathcal H_1\otimes\mathcal H_2$, let $J,\kappa>0$, $\Pi_v$ be fixed on-site projections, $h_v=-\kappa\Pi_v$, $b=5J/2$, and let $P_{01},P_{12},P_{20}$ be specified Hermitian operators supported on their indicated pairs. Suppose the prescribed local energy operators are
+$$
+\epsilon_v=h_v+(b+J)I+\frac J2(P_{v-1,v}+P_{v,v+1}),
+\tag{B.3a.2.1}
+$$
+with indices modulo three. Retain the actual independently registered internal and cost operators, in the units and domains of (B.6), and put
+$$
+K_v=\tau_0[R(C_v)+R_I(C_v)-R(C_{op})I],\qquad A_v=h_v-H_v-K_v.
+\tag{B.3a.2.2}
+$$
+If the literal bonds remain $V_{uv}=JP_{uv}$, the energies obey the same-source identity
+$$
+\epsilon_v=H_v+K_v+\tfrac12(V_{v-1,v}+V_{v,v+1})
+\tag{B.3a.2.3}
+$$
+if and only if $H_v+K_v=h_v+(b+J)I$ at every vertex. In particular $H_v=h_v$ would require $K_v=(7J/2)I$; it is not implied by the support or current of the supplied carrier.
+
+Even allowing scalar redistribution between bonds and on-site terms while keeping the prescribed $\epsilon_v$, a pair-supported solution of (B.3a.2.3) exists if and only if each $A_v=a_vI$ is scalar. In that case the unique bonds are
+$$
+V_{01}=JP_{01}+(b+J+a_0+a_1-a_2)I,
+\tag{B.3a.2.4}
+$$
+and its cyclic permutations.
+
+*Proof.* The fixed-bond statement is direct substitution. For the general statement subtract $JP_e$ from each bond and write the three equations (B.3a.2.3). The triangle's invertible unsigned incidence gives the unique full-operator solution
+$$
+V_{01}-JP_{01}=(b+J)I+A_0+A_1-A_2,
+$$
+and its cyclic permutations. Support on $\{0,1\}$ forces the on-site operator $A_2$ to be scalar: expand in tensor-product Hermitian bases with identity and traceless terms, or take its partial trace and subtract. The other two edges force the same at sites 0 and 1. Conversely scalar $A_v$ make the displayed unique operators pair supported and direct substitution verifies every equation. This proves necessity, sufficiency and uniqueness without choosing new cost data. For the algebraic illustration $H_v=h_v$, $K_v=bI$, the formula gives $V_e=J(P_e+I)$; it does not assert those to be any particular source's original prices.
+
+The test presupposes populated original $H_v,C_v,R,R_I,C_{op},\tau_0$, spectral bins, domains, clock and physical units. It is a conditional operator identity, not a construction of an MPU complexity minimizer, a cost calibration or a Gaussian-field source identification. Replacing missing original operators by the values that make the equality hold would change its source. $\square$
+
+<a id="proposition-b3a3-same-source-wilson-current-susceptibility-and-its-uniform-limit"></a>**Proposition B.3a.3 (Same-Source Wilson Current Susceptibility and Its Uniform Limit).** Use the Hamiltonian and the symmetric-allocation currents of Proposition B.3a.1 on a periodic cube with $n\ge5$ sites per side, physical side $L=na$ and volume $\mathcal V=L^3$. Choose the irreducible four-dimensional Clifford representation in that proposition. Take $N_D\ge1$ independent copies and sum their Hamiltonians and currents; denote these sums again by $H$ and $Q_i$. The inverse temperature is denoted by $\vartheta$ to distinguish it from the Clifford matrix in (B.3a.1.1). Fix, independently of any central-data comparison,
+$$
+0<\vartheta_0<\vartheta_1<\infty,\qquad
+|v|\le v_*,\qquad 0<v_*<\frac{2}{5\pi},\qquad
+\rho_{a,L}(\vartheta,v)
+=\frac{e^{-\vartheta(H-v\cdot Q)}}{\operatorname{Tr}e^{-\vartheta(H-v\cdot Q)}}.
+\tag{B.3a.3.1}
+$$
+All these finite densities are faithful. The current $Q_i$ in this formula is the actual unperturbed allocation current (B.3a.1.3). It remains the fixed measured observable under the conjugate control $-v\cdot Q$; the energy current assigned to the perturbed Hamiltonian is a different construction. Define its static drift susceptibility by
+$$
+\chi_{ij}^{a,L}(\vartheta)
+=\left.\frac{\partial}{\partial v_j}
+\operatorname{Tr}\bigl(\rho_{a,L}(\vartheta,v)Q_i\bigr)\right|_{v=0}.
+\tag{B.3a.3.2}
+$$
+Let $\Gamma_{a,L}=(2\pi/L)\mathbb Z^3\cap[-\pi/a,\pi/a)^3$, and write $j_i(p)$ for the scalar coefficient in (B.3a.1.4). Then
+$$
+\begin{aligned}
+\operatorname{Tr}(\rho_{a,L}(\vartheta,0)Q_i)&=0,\\
+\chi_{ij}^{a,L}(\vartheta)
+&=\vartheta\operatorname{Cov}_{\rho_{a,L}(\vartheta,0)}(Q_i,Q_j)\\
+&=4N_D\vartheta\sum_{p\in\Gamma_{a,L}}
+ j_i(p)j_j(p)\,
+ \frac{e^{\vartheta E(p)}}{(1+e^{\vartheta E(p)})^2}.
+\end{aligned}
+\tag{B.3a.3.3}
+$$
+The susceptibility matrix is diagonal with equal positive diagonal entries. The periodic zero mode remains present and contributes zero to (B.3a.3.3).
+
+For every $L_0>0$, there are the explicit finite constants $A,B$ below such that, for all $L\ge L_0$, $a=L/n$, $n\ge5$, and every $\vartheta\in[\vartheta_0,\vartheta_1]$,
+$$
+\left|\frac{\chi_{ij}^{a,L}(\vartheta)}{\mathcal V}
+-\delta_{ij}\frac{7\pi^2}{45}N_D\vartheta^{-4}\right|
+\le Aa^2+\frac BL.
+\tag{B.3a.3.4}
+$$
+In particular the joint limit $a\to0$, $L\to\infty$ is uniform on the whole registered temperature interval. It gives the independent current-response coefficient
+$$
+\lim_{\substack{a\to0\\L\to\infty}}
+\frac{45\vartheta^4}{7\pi^2\mathcal V}
+\chi_{ii}^{a,L}(\vartheta)=N_D.
+\tag{B.3a.3.5}
+$$
+
+*Proof: stability and the complete finite response.* Put $r=|p|$ and $c_*=2/\pi$. The Wilson symbol obeys, throughout its Brillouin cube,
+$$
+E(p)\ge c_*r,\qquad
+|E(p)-r|\le\frac7{12}a^2r^3,\qquad
+|j_i(p)|\le5|p_i|,\qquad
+|j_i(p)-p_i|\le\frac{a^2}{2}|p_i|r^2.
+\tag{B.3a.3.6}
+$$
+For the first inequality, the nonnegative Wilson terms give
+$$
+E(p)^2\ge\frac1{a^2}\sum_i\bigl[\sin^2(ap_i)+(1-\cos(ap_i))^2\bigr]
+=\frac4{a^2}\sum_i\sin^2(ap_i/2)\ge\frac4{\pi^2}r^2.
+$$
+The last inequality uses $|ap_i|\le\pi$. Also
+$|\sin^2u-u^2|\le|u|^4/3$ and $1-\cos u\le u^2/2$, so
+
+$$
+|E^2-r^2|\le(1/3+1/4)a^2r^4;
+$$
+
+dividing by $E+r\ge r$ proves the energy error, with the zero case immediate. The current has the useful exact form
+$$
+j_i(p)=\frac{\sin(ap_i)}a
+\left[1+\sum_{k\ne i}(1-\cos(ap_k))\right].
+$$
+Its bracket lies in $[1,5]$. Combining $|\sin u-u|\le|u|^3/6$ with the bound on $1-\cos u$ proves the two current bounds in (B.3a.3.6).
+
+Since $|j(p)|\le5r$, the two one-particle eigenvalues of $h(p)-v\cdot j(p)I$, each with multiplicity two, retain their signs away from $p=0$:
+$$
+E(p)\pm v\cdot j(p)\ge(c_*-5v_*)r>0.
+\tag{B.3a.3.7}
+$$
+At $p=0$ all four eigenvalues remain zero. Inversion of the periodic momentum grid gives $\sum_pj(p)=0$; at a self-inverse Nyquist component the relevant sine is zero. Hence the finite ground-energy scalar is $-2N_D\sum_pE(p)$ for every allowed $v$. Adding its opposite makes all excitation energies nonnegative and changes neither the Gibbs state nor the susceptibility. This offset is the same for all the registered drift values.
+
+The matrices $h$, $j_iI$ commute. Thus the full Fock operators $H,Q_i$ commute, differentiation of the finite normalized exponential gives the covariance identity in (B.3a.3.3), and no noncommuting Kubo approximation is used. For a gauge-invariant free-fermion density with one-particle covariance $C$, independent occupations give
+$$
+\operatorname{Cov}(d\Gamma(A),d\Gamma(B))
+=\operatorname{tr}\bigl(AB C(I-C)\bigr)
+$$
+when the displayed one-particle matrices commute. At $v=0$, the occupations at energies $\pm E$ are $f_\vartheta(E)$ and $1-f_\vartheta(E)$, where $f_\vartheta(x)=(1+e^{\vartheta x})^{-1}$. Their products $f(1-f)$ coincide. The twofold multiplicities at each sign therefore give the factor four in (B.3a.3.3). The same calculation gives the mean $2N_D\sum_pj_i(p)=0$. Coordinate reflections annihilate off-diagonal susceptibility entries; coordinate permutations equate the diagonal entries. Each diagonal is positive because $n\ge5$ supplies a momentum with nonzero $\sin(ap_i)$ and every thermal occupation product is positive. The four periodic zero modes per copy have occupation $1/2$ and $j(0)=0$, so they remain counted while contributing zero current.
+
+*Finite preparation and readout.* At each finite $(a,L,\vartheta,v)$, diagonalize the same one-particle matrix $h-v\cdot jI$. For every eigenvalue $\lambda$, the field/purifier vector
+$\sqrt{1-f_\vartheta(\lambda)}|00\rangle+\sqrt{f_\vartheta(\lambda)}|11\rangle$, followed by the field-mode rotation, is an exact finite-matrix preparation of (B.3a.3.1) on the selected field receiver. The purifier remains an owned source output outside that receiver. The common diagonalization of $H,Q_i$ gives an exact occupation CP instrument with all bit strings retained; their declared linear combinations give the three current outcomes. These are exact analytic matrices for the entire real parameter family.
+
+Physical finite compilation uses effective parameter descriptions and certified finite approximations. On the admitted finite control model, pair rotations and mode rotations decompose into finitely many even-CAR gates. The tensor encoding of Construction F.10.12i.4 and the preparation/capture constructors of Constructions F.10.12i.3 and F.10.12i.7 give finite implementations on their declared supported graphs. Periodic wrap couplings, encoding auxiliaries and their actual paths must be owned graph data; a periodic symbol alone is not an ambient-space geometric implementation.
+
+Retain every parameter/gate error and every native-drift error. The ideal and approximate trace comparisons use the same compiled input descriptor and append identical actual clock, resource and error-budget record labels on both sides; distinct deterministic invoices are not asserted to be trace-close. For example, if the ideal gate matrices have operator errors $\eta_r$, their actual pulse durations are $t_r$, the unwanted drift on pulse $r$ has norm at most $M_r$, and the initial joint preparation has trace error $\epsilon_{\mathrm{in}}$, a complete preparation-plus-instrument trace-error budget is
+$$
+\epsilon_{\mathrm{out}}
+\le\epsilon_{\mathrm{in}}+2\sum_r(\eta_r+t_rM_r).
+$$
+A separate whole-prefix capture has its own $t_r\|H_{\mathrm{total}}+H_{\mathrm{aux}}\|$ term, as in Construction F.10.12i.7; it is included in the same sum. Duhamel bounds the actual-minus-ideal pulse by $t_rM_r$, telescoping bounds the full Stinespring difference by the sum, and partial trace bounds the resulting state/complete-record trace distance by twice that difference. Every branch outcome is retained. Finite higher-strength pulses can reduce these errors on the supplied finite-control branch, with their strength, actual duration, work, routing, preparation, readout and purifier/record costs charged. No source clock is rescaled and no exact finite hardware capture or free thermal bath is inferred.
+
+This also supplies a finite-error current derivative. Let $R_i=4N_D\sum_p|j_i(p)|$, so $\|Q_i\|\le R_i$. If each of the two complete readouts at $v=\pm\delta e_j$, $0<\delta\le v_*$, has trace error at most $\epsilon$, their expected-current central difference differs from (B.3a.3.2) by at most
+$$
+\frac{R_i\epsilon}{\delta}
++\frac{32}{3}\vartheta_1^3R_iR_j^3\delta^2,
+$$
+with any finite arithmetic or sampling error charged additionally. Indeed the third drift derivative of the exact mean is $\vartheta^3\operatorname{cum}(Q_i,Q_j,Q_j,Q_j)$. The commuting finite probability law gives this cumulant as $\mathbb E[X_cY_c^3]-3\mathbb E[X_cY_c]\mathbb E[Y_c^2]$, bounded in magnitude by $64R_iR_j^3$. The central-difference Taylor remainder is at most $\delta^2/6$ times that derivative bound; trace error changes a $Q_i$ expectation by at most $R_i\epsilon$. Choosing computable $\delta\downarrow0$ and $\epsilon\le\delta^3$ gives a convergent response extraction on each finite carrier with explicit paid resources. The uniform mathematical interval assertions and the finite compiled instances remain distinct.
+
+*Fixed-volume comparison with an explicit remainder.* Write
+$g_\vartheta(r)=e^{\vartheta r}/(1+e^{\vartheta r})^2$. For $r\ge0$,
+$$
+0<g_\vartheta(r)\le e^{-\vartheta r},\qquad
+|g_\vartheta'(r)|\le\vartheta e^{-\vartheta r}.
+$$
+Put $\kappa=c_*\vartheta_0$. From (B.3a.3.6), uniformly on the registered interval,
+$$
+\begin{aligned}
+|j_i j_j-p_ip_j|&\le3a^2r^4,\\
+|j_i j_jg_\vartheta(E)-p_ip_jg_\vartheta(r)|
+&\le a^2\left(3r^4+\frac{7\vartheta_1}{12}r^5\right)e^{-\kappa r}.
+\end{aligned}
+\tag{B.3a.3.8}
+$$
+For the first line insert and subtract $p_i j_j$ and use $|j_j|\le5|p_j|$. For the second, the intermediate energies between $E$ and $r$ are at least $c_*r$, and the mean-value bound applies. On the omitted part of $\Gamma_L=(2\pi/L)\mathbb Z^3$ outside the Brillouin cube, $r\ge\pi/a$, so
+
+$$
+r^2e^{-\vartheta r}\le(a^2/\pi^2)r^4e^{-\vartheta_0r}.
+$$
+
+Summing (B.3a.3.8), with this tail, gives a uniform $a^2$ bound against
+$$
+\frac{4N_D\vartheta}{L^3}
+\sum_{p\in\Gamma_L}p_ip_jg_\vartheta(|p|).
+\tag{B.3a.3.9}
+$$
+Every sum converges absolutely. This comparison uses the full finite Wilson band, including its high modes, rather than applying the bounded-band expansion (B.3a.1.6) outside its domain.
+
+*Uniform volume bounds.* Set $\rho_0=\sqrt3\pi/L_0$ and define the explicit radial moments
+$$
+M_k(\lambda,\rho)
+=4\pi\int_0^\infty r^2(r+\rho)^ke^{-\lambda r}\,dr
+=4\pi\sum_{s=0}^k\binom ks\rho^{k-s}\frac{(s+2)!}{\lambda^{s+3}}.
+\tag{B.3a.3.10}
+$$
+They are finite for the parameters used below. A momentum cell centered at $p\in\Gamma_L$ has side $2\pi/L$ and radius $\rho_L=\sqrt3\pi/L\le\rho_0$. For a point $x$ in that cell, $|p|\le|x|+\rho_0$ and $e^{-\lambda|p|}\le e^{\lambda\rho_0}e^{-\lambda|x|}$. Consequently
+$$
+\frac1{L^3}\sum_{p\in\Gamma_L}|p|^ke^{-\lambda|p|}
+\le\frac{e^{\lambda\rho_0}}{(2\pi)^3}M_k(\lambda,\rho_0).
+$$
+Thus a constant for the lattice comparison is
+$$
+A=\frac{4N_D\vartheta_1}{(2\pi)^3}
+\left[
+ e^{\kappa\rho_0}\left(3M_4(\kappa,\rho_0)
+ +\frac{7\vartheta_1}{12}M_5(\kappa,\rho_0)\right)
+ +\frac{e^{\vartheta_0\rho_0}}{\pi^2}M_4(\vartheta_0,\rho_0)
+\right].
+\tag{B.3a.3.11}
+$$
+
+For $F_\vartheta(p)=p_ip_jg_\vartheta(|p|)$, its continuous gradient, with the value at zero obtained by continuity, obeys
+$$
+|\nabla F_\vartheta(p)|
+\le(2r+\vartheta_1r^2)e^{-\vartheta_0r}.
+$$
+The segment from a cell center to a point $x$ in that cell stays within $\rho_L$ of $x$. The mean-value theorem therefore bounds the Riemann-sum error by
+$$
+\rho_L e^{\vartheta_0\rho_0}
+\bigl[2M_1(\vartheta_0,\rho_0)
++\vartheta_1M_2(\vartheta_0,\rho_0)\bigr].
+$$
+Multiplying by $4N_D\vartheta/(2\pi)^3$ bounds the difference between (B.3a.3.9) and its continuum momentum integral by $B/L$, where
+$$
+B=\frac{4N_D\vartheta_1\sqrt3\pi}{(2\pi)^3}
+ e^{\vartheta_0\rho_0}
+\bigl[2M_1(\vartheta_0,\rho_0)
++\vartheta_1M_2(\vartheta_0,\rho_0)\bigr].
+\tag{B.3a.3.12}
+$$
+This proves that the volume bound and the lattice bound are simultaneous and uniform; no order of the two limits is imposed.
+
+*Evaluation and units.* Rotation invariance of the continuum integral gives
+$$
+\frac{4N_D\vartheta}{(2\pi)^3}
+\int_{\mathbb R^3}p_ip_jg_\vartheta(|p|)\,d^3p
+=\delta_{ij}\frac{2N_D}{3\pi^2}\vartheta^{-4}
+\int_0^\infty\frac{x^4e^x}{(1+e^x)^2}\,dx.
+$$
+Integration by parts and the absolutely integrable exponential series give
+$$
+\int_0^\infty\frac{x^4e^x}{(1+e^x)^2}\,dx
+=4\int_0^\infty\frac{x^3}{1+e^x}\,dx
+=24(1-2^{-3})\zeta(4)=\frac{7\pi^4}{30}.
+$$
+The continuum integral is therefore $\delta_{ij}(7\pi^2/45)N_D\vartheta^{-4}$. Combining (B.3a.3.11) and (B.3a.3.12) proves (B.3a.3.4) and (B.3a.3.5). In the source's natural units, $Q_i$ and $H$ have energy units, $v$ is dimensionless, $\chi$ has energy units, and $\chi/\mathcal V$ has energy-density units. Both sides of (B.3a.3.4) consequently have units of length to the power $-4$; (B.3a.3.5) is dimensionless. ∎
+
+<a id="theorem-b3b-momentum-flux-closure-criterion-nonentailment-and-a-local-witness"></a>**Theorem B.3b (Momentum-Flux Closure Criterion, Nonentailment and a Local Witness).** Register the chart of Definition B.5 as the periodic cubic lattice $\Lambda=\prod_{j=1}^3\mathbb Z/n_j\mathbb Z$ with spacing $a>0$ and backward differences $\nabla_j^{(v)}F:=(F_v-F_{v-e_j})/a$, and let local directional fluxes $\hat q_{v,j}$ satisfy $\dot{\hat\rho}_v+\sum_j\nabla_j^{(v)}\hat q_{v,j}=0$. In items 2–3, $n_1=n$ and $n_2=n_3=1$, each MPU carries a qubit factor with Pauli operators $X_v,Y_v,Z_v$ on which the displayed operators act, and the cost terms of (B.6) vanish.
+
+1. **Criterion.** Operators $\hat p_{v,jk}$ satisfying (B.12) with $\hat\pi_{v,j}=\hat q_{v,j}/c^2$ exist exactly when each total flux $\hat Q_j:=\sum_v\hat q_{v,j}$ commutes with $\hat H_{\mathrm{total}}$. Two solutions differ by a family $\hat D_{v,jk}$ with $\sum_k\nabla_k^{(v)}\hat D_{v,jk}=0$.
 2. **Nonentailment.** Let $n\ge6$, $\hat H_v=hZ_v+gX_v$ and $\hat V_{v,v+1}=JZ_vZ_{v+1}$ with $ghJ\ne0$. Pairwise currents vanish beyond nearest neighbors, the directional flux
 $$
 \hat q_{v,1}=\frac{a\,gJ}{\hbar V_{\mathrm{MPU}}}\bigl(Y_vZ_{v+1}-Z_vY_{v+1}\bigr)
@@ -591,7 +1467,7 @@ $$
 $$
 satisfies the continuity equation, and
 $$
-[\hat H_{total},\hat Q_1]
+[\hat H_{\mathrm{total}},\hat Q_1]
 =
 \frac{2i\,a\,ghJ}{\hbar V_{\mathrm{MPU}}}\sum_v\bigl(Z_vX_{v+1}-X_vZ_{v+1}\bigr)\ne0.
 \tag{B.12d}
@@ -612,29 +1488,1417 @@ $$
 \frac{a^2}{c^2\hbar^2V_{\mathrm{MPU}}}\Bigl[2J^3\bigl(\mathsf b_v+\mathsf b_{v+1}-\mathsf f_{v-1}-\mathsf f_v\bigr)+4J^2h\,\mathsf t_v+8J^2h\,Z_{v+1}\Bigr],
 \tag{B.12f}
 $$
-with all other components zero, satisfies (B.12) with $\hat\pi_{v,1}=\hat q_{v,1}/c^2$, so $[\hat H_{total},\hat Q_1]=0$. Among stresses supported within distance $3$ of $v$, the component $\hat p_{v,11}$ in (B.12f) is unique up to a common multiple of the identity. On this class the energy density, energy flux, bridge momentum density and stress all derive from $\hat H_{total}$, and $\hat\pi_{v,1}$ is the local density of the conserved generator $\hat Q_1/c^2$. The flux carries energy per area per time, $\hat\pi_{v,1}$ momentum per volume, and $\hat p_{v,11}$ energy per volume.
+with all other components zero, satisfies (B.12) with $\hat\pi_{v,1}=\hat q_{v,1}/c^2$, so $[\hat H_{\mathrm{total}},\hat Q_1]=0$. Among stresses supported within distance $3$ of $v$, the component $\hat p_{v,11}$ in (B.12f) is unique up to a common multiple of the identity. On this class the energy density, energy flux, bridge momentum density and stress all derive from $\hat H_{\mathrm{total}}$, and $\hat\pi_{v,1}$ is the local density of the conserved generator $\hat Q_1/c^2$. The flux carries energy per area per time, $\hat\pi_{v,1}$ momentum per volume, and $\hat p_{v,11}$ energy per volume.
 
-*Proof.* For item 1, every $\nabla_k^{(v)}$ is a difference of lattice translates, so $\sum_v\nabla_k^{(v)}F=0$ on the periodic lattice. Summing (B.12) over $v$ gives $\frac d{dt}\sum_v\hat\pi_{v,j}=0$, which under the bridge is $[\hat H_{total},\hat Q_j]=0$. Conversely, expand $\dot{\hat\pi}_{v,j}$ in a Hermitian operator basis; each coefficient is a real function $f$ on $\Lambda$ with $\sum_vf(v)=0$. The adjoint of the divergence $(F_k)_k\mapsto\sum_k\nabla_kF_k$ is $f\mapsto(-\nabla^+_kf)_k$ with forward differences $\nabla^+_k$, whose kernel on the connected lattice consists of the constants, so the divergence maps onto the zero-sum functions. Solving $\sum_k\nabla_kF_k=-f$ coefficientwise gives $\hat p_{v,jk}$, and the difference of two solutions has zero divergence.
+*Proof.* For item 1, every $\nabla_k^{(v)}$ is a difference of lattice translates, so $\sum_v\nabla_k^{(v)}F=0$ on the periodic lattice. Summing (B.12) over $v$ gives $\frac d{dt}\sum_v\hat\pi_{v,j}=0$, which under the bridge is $[\hat H_{\mathrm{total}},\hat Q_j]=0$. Conversely, expand $\dot{\hat\pi}_{v,j}$ in a Hermitian operator basis; each coefficient is a real function $f$ on $\Lambda$ with $\sum_vf(v)=0$. The adjoint of the divergence $(F_k)_k\mapsto\sum_k\nabla_kF_k$ is $f\mapsto(-\nabla^+_kf)_k$ with forward differences $\nabla^+_k$, whose kernel on the connected lattice consists of the constants, so the divergence maps onto the zero-sum functions. Solving $\sum_k\nabla_kF_k=-f$ coefficientwise gives $\hat p_{v,jk}$, and the difference of two solutions has zero divergence.
 
-For item 2, the supports of $\hat\epsilon_v$ and $\hat\epsilon_u$ are disjoint at ring distance at least $3$, and at distance $2$ they share one site on which both act by $Z$, so only nearest-neighbor currents survive. In $[\hat\epsilon_v,\hat\epsilon_{v+1}]$ the only noncommuting pairs are $gX_v$ with $\tfrac J2Z_vZ_{v+1}$ and $\tfrac J2Z_vZ_{v+1}$ with $gX_{v+1}$, which give $[\hat\epsilon_v,\hat\epsilon_{v+1}]=igJ(Z_vY_{v+1}-Y_vZ_{v+1})$ and (B.12c) through $\hat q_{v,1}=a\hat J_{v\to v+1}$. Continuity follows from $\dot{\hat\rho}_v=-\hat J_{v\to v+1}-\hat J_{v\to v-1}$. In $\sum_v[\hat H_{total},\hat q_{v,1}]$ the $gX$ contributions cancel within each bond, the $JZZ$ contributions telescope to zero around the ring, and the field terms give $2ih\,gJ(Z_vX_{v+1}-X_vZ_{v+1})$ per bond, which proves (B.12d); for $n\ge3$ its Pauli strings are distinct, so the commutator is nonzero. If $\hat q'_{v,1}$ also satisfies continuity, the directions $2,3$ having zero divergence, then $\hat q'_{v,1}-\hat q_{v,1}$ is independent of $v$. When both fluxes are supported within distance $2$ of $v$, this operator is supported in the intersection of all such neighborhoods, which is empty for $n\ge6$, so it is a multiple of the identity. Then $[\hat H_{total},\hat Q'_1]=[\hat H_{total},\hat Q_1]\ne0$, and item 1 excludes (B.12).
+For item 2, the supports of $\hat\epsilon_v$ and $\hat\epsilon_u$ are disjoint at ring distance at least $3$, and at distance $2$ they share one site on which both act by $Z$, so only nearest-neighbor currents survive. In $[\hat\epsilon_v,\hat\epsilon_{v+1}]$ the only noncommuting pairs are $gX_v$ with $\tfrac J2Z_vZ_{v+1}$ and $\tfrac J2Z_vZ_{v+1}$ with $gX_{v+1}$, which give $[\hat\epsilon_v,\hat\epsilon_{v+1}]=igJ(Z_vY_{v+1}-Y_vZ_{v+1})$ and (B.12c) through $\hat q_{v,1}=a\hat J_{v\to v+1}$. Continuity follows from $\dot{\hat\rho}_v=-\hat J_{v\to v+1}-\hat J_{v\to v-1}$. In $\sum_v[\hat H_{\mathrm{total}},\hat q_{v,1}]$ the $gX$ contributions cancel within each bond, the $JZZ$ contributions telescope to zero around the ring, and the field terms give $2ih\,gJ(Z_vX_{v+1}-X_vZ_{v+1})$ per bond, which proves (B.12d); for $n\ge3$ its Pauli strings are distinct, so the commutator is nonzero. If $\hat q'_{v,1}$ also satisfies continuity, the directions $2,3$ having zero divergence, then $\hat q'_{v,1}-\hat q_{v,1}$ is independent of $v$. When both fluxes are supported within distance $2$ of $v$, this operator is supported in the intersection of all such neighborhoods, which is empty for $n\ge6$, so it is a multiple of the identity. Then $[\hat H_{\mathrm{total}},\hat Q'_1]=[\hat H_{\mathrm{total}},\hat Q_1]\ne0$, and item 1 excludes (B.12).
 
-For item 3, $\hat\epsilon_v$ is supported on $\{v-1,v,v+1\}$, so currents vanish beyond distance $2$. Direct expansion gives $\hat J_{v\to v+2}=\frac{J^2}{2\hbar V_{\mathrm{MPU}}}(Y_vZ_{v+1}X_{v+2}-X_vZ_{v+1}Y_{v+2})$ and (B.12e), and the identity $\dot{\hat\rho}_v=-\sum_u\hat J_{v\to u}$ rearranges into $\dot{\hat\rho}_v+(\hat q_{v,1}-\hat q_{v-1,1})/a=0$ because the pairs straddling the bonds $(v-1,v)$ and $(v,v+1)$ differ exactly by the currents leaving $v$. Expanding the commutators of the bond and field terms of $\hat H_{total}$ with the six Pauli strings of (B.12e) gives
+For item 3, $\hat\epsilon_v$ is supported on $\{v-1,v,v+1\}$, so currents vanish beyond distance $2$. Direct expansion gives $\hat J_{v\to v+2}=\frac{J^2}{2\hbar V_{\mathrm{MPU}}}(Y_vZ_{v+1}X_{v+2}-X_vZ_{v+1}Y_{v+2})$ and (B.12e), and the identity $\dot{\hat\rho}_v=-\sum_u\hat J_{v\to u}$ rearranges into $\dot{\hat\rho}_v+(\hat q_{v,1}-\hat q_{v-1,1})/a=0$ because the pairs straddling the bonds $(v-1,v)$ and $(v,v+1)$ differ exactly by the currents leaving $v$. Expanding the commutators of the bond and field terms of $\hat H_{\mathrm{total}}$ with the six Pauli strings of (B.12e) gives
 $$
-\frac i\hbar[\hat H_{total},\hat q_{v,1}]
+\frac i\hbar[\hat H_{\mathrm{total}},\hat q_{v,1}]
 =
 -\frac{a}{\hbar^2V_{\mathrm{MPU}}}\bigl(\tilde p_v-\tilde p_{v-1}\bigr),
 \qquad
 \tilde p_v:=2J^3\bigl(\mathsf b_v+\mathsf b_{v+1}-\mathsf f_{v-1}-\mathsf f_v\bigr)+4J^2h\,\mathsf t_v+8J^2h\,Z_{v+1}.
 $$
-Dividing by $c^2$ gives (B.12) for (B.12f), and summation over $v$ gives $[\hat H_{total},\hat Q_1]=0$. The components $\hat p_{v,11}$ of two stresses satisfying (B.12) differ by an operator independent of $v$; if both are supported within distance $3$ of $v$, it lies in the empty intersection of these neighborhoods for $n\ge8$ and is a multiple of the identity. The units follow from $[\hat\rho_v]=$ energy per volume and the factors $a$ and $c^{-2}$. ∎
+Dividing by $c^2$ gives (B.12) for (B.12f), and summation over $v$ gives $[\hat H_{\mathrm{total}},\hat Q_1]=0$. The components $\hat p_{v,11}$ of two stresses satisfying (B.12) differ by an operator independent of $v$; if both are supported within distance $3$ of $v$, it lies in the empty intersection of these neighborhoods for $n\ge8$ and is a multiple of the identity. The units follow from $[\hat\rho_v]=$ energy per volume and the factors $a$ and $c^{-2}$. ∎
 
-**Resolution TV-BSR-03-R1 (Metadata).** Exact domain: finite autonomous MPU networks of Definitions B.3–B.5 on a periodic cubic chart, with the transverse-field Ising ring and the XX ring as explicit instances carrying qubit factors. Premises: Definitions B.3–B.5, the continuity equation (B.11), and (B.12) with the relativistic bridge. Equivalence: equality of operator families, with densities compared modulo (B.12a), currents modulo circulations and stresses modulo divergence-free families. Budget: finite rings and Pauli strings on at most four consecutive sites. Verifier: the product-basis support decomposition and root construction, the adjoint-kernel range argument, and the exact Pauli commutator identities (B.12c)–(B.12f). Falsifier: a local decomposition difference not of the form (B.12a), a local flux for the Ising ring admitting (B.12), or a failure of the displayed stress identity for the XX ring. Provenance class: source-internal operator classification with explicit countermodel and witness. Downstream consumers: Definition B.5, Theorems B.3–B.4, Definition B.6, `TV-BSR-03` and `TV-BSR-04`. Nonvacuity: the two rings. This is `positive-discharge` of the energy-sector ambiguity classification, the momentum-flux closure criterion and one local all-current witness, and `nonentailment` of the momentum-flux closure branch from the energy data of Definitions B.3–B.5. Local stress primitives on higher-dimensional charts, the translation-Noether identification in item (i) of Definition B.5, the spin current and angular-momentum conservation used by Theorem B.4, and population and realization on the MPU network remain `M+C+R`-open under `TV-BSR-03`.
+<a id="theorem-b3c-uniform-local-stress-on-translation-covariant-charts"></a>**Theorem B.3c (Uniform Local Stress on Translation-Covariant Charts).** Fix dimension $d\ge1$, a common finite-dimensional on-site matrix algebra, and the lattice translations $\tau_z$ on its algebra of finite-support operators. Let $h$ be a Hermitian local energy operator, identified with $\hat\epsilon_0$ on Definition B.5's branch, and let $q_j$ be Hermitian directional energy-flux densities. On a periodic chart, periodize them as $H_\Lambda=\sum_{v\in\Lambda}\tau_vh$ and $q_{v,j}=\tau_vq_j$. Compute the finite local commutator
+$$
+f_j:=\frac{i}{\hbar}\sum_{z:\operatorname{supp}\tau_zh\cap\operatorname{supp}q_j\ne\varnothing}
+[\tau_zh,q_j].
+\tag{B.12g}
+$$
+Suppose $h$, every $q_j$ and every $f_j$ are supported in $Q_R=[-R,R]^d\cap\mathbb Z^d$, with integer $R\ge0$, and take all side lengths of $\Lambda$ greater than $4R$. Then the following are equivalent:
+
+1. Each total directional flux $Q_j=\sum_vq_{v,j}$ commutes with $H_\Lambda$.
+2. There are Hermitian finite-support $g_{jk}$, independent of the chart side lengths, such that
+$$
+f_j=\sum_{k=1}^d(I-\tau_{-e_k})g_{jk}.
+\tag{B.12h}
+$$
+They can be chosen supported in $Q_R$. With the spacing $a$ and momentum bridge of Definition B.5,
+$$
+p_{v,jk}=-\frac{a}{c^2}\tau_vg_{jk}
+\tag{B.12i}
+$$
+gives the exact local stress equation on every nonwrapping periodization. Thus exact conservation of the total flux supplies uniformly local stress on this translation-covariant finite-range class.
+
+Choose an on-site Hermitian product basis containing $I$ and with each basis factor of operator norm at most one. If $\|f\|_{\mathrm{coef},1}$ denotes the sum of absolute product-basis coefficients, the construction gives
+$$
+\sum_k\|g_{jk}\|\le\sum_k\|g_{jk}\|_{\mathrm{coef},1}
+\le2dR\|f_j\|_{\mathrm{coef},1}.
+\tag{B.12j}
+$$
+For two such uniform local stress solutions, their difference is a sum of constant scalar-identity currents and local discrete curls. More precisely, on each nonidentity translation orbit their Laurent coefficients $D_k(z)$ satisfy
+$$
+D_k=\sum_l(1-z_l^{-1})C_{kl},\qquad C_{kl}=-C_{lk},
+\tag{B.12k}
+$$
+with finite Laurent polynomials $C_{kl}$. This classifies the local improvement ambiguity. It does not identify the conserved bridge momentum with the generator of an independently supplied continuous translation symmetry.
+
+*Proof.* A product-basis string with nonempty finite support has trivial translation stabilizer on $\mathbb Z^d$. Indeed, invariance under a nonzero $z$ would include the unbounded set $x+\mathbb Zz$ in its finite support. Partition the finitely many nonidentity strings in $f_j$ into translation orbits and choose one representative $A_\alpha$ per orbit. There is a unique finite expansion
+$$
+f_j=c_0I+\sum_\alpha\sum_zc_{\alpha z}\tau_zA_\alpha.
+$$
+The translates of each occurring string have support in $Q_R$. Periodization with side lengths greater than $4R$ introduces neither an orbit identification between two inequivalent such strings nor a nontrivial stabilizer. To check the first assertion, align one nonidentity site of two allegedly identified strings. The aligning displacement has a lift bounded by $2R$ coordinatewise, and differences between aligned sites are bounded by $4R$, smaller than the side length, so equality modulo the period is equality in the lift. For the stabilizer assertion, a nontrivial translation in some coordinate would make the projected support contain a coset of a nontrivial cyclic subgroup. If that subgroup has order $s\ge2$, its points are equally spaced and every containing circular arc has length at least $n_j(1-1/s)\ge n_j/2$. The projected support lies in an interval of length at most $2R<n_j/2$, a contradiction. The identity and distinct orbit sums are therefore linearly independent product-basis combinations. Hence
+$$
+\sum_v\tau_vf_j=0
+\quad\Longleftrightarrow\quad
+c_0=0\ \text{ and }\ \sum_zc_{\alpha z}=0\text{ for every }\alpha.
+\tag{B.12l}
+$$
+The left side is $i[H_\Lambda,Q_j]/\hbar$.
+
+For an orbit with zero coefficient sum, fix a translation $z_0$ occurring in it. Then
+$$
+\sum_zc_{\alpha z}\tau_zA_\alpha
+=\sum_zc_{\alpha z}(\tau_zA_\alpha-\tau_{z_0}A_\alpha).
+$$
+Join $z_0$ to $z$ by a coordinate-monotone nearest-neighbor path. A positive $e_k$ step from $w$ to $w+e_k$ contributes $(I-\tau_{-e_k})\tau_{w+e_k}A_\alpha$; a negative step contributes $-(I-\tau_{-e_k})\tau_wA_\alpha$. Telescoping each path gives (B.12h). Every intermediate translated support lies coordinatewise between the endpoint supports, so remains in $Q_R$. Each path has at most $2dR$ steps. The coefficient triangle inequality and the operator-norm bound on basis strings give (B.12j). If $R=0$, (B.12l) forces $f_j=0$ and one takes $g_{jk}=0$.
+
+Conversely, summing (B.12h) over a periodic chart telescopes to zero, proving conservation. Dividing it by $c^2$ and inserting (B.12i) gives $\dot\pi_{v,j}+\sum_k\nabla_kp_{v,jk}=0$. The units agree: $f_j$ has units of directional energy flux per time, and $a f_j/c^2$ has units of energy per volume.
+
+For the ambiguity, nonidentity translation orbits are free modules over the Laurent polynomial ring $\mathcal R=\mathbb R[z_1^{\pm1},\ldots,z_d^{\pm1}]$. Put $t_k=1-z_k^{-1}$. A difference is divergence free exactly when $\sum_kt_kD_k=0$. We prove the stated curl representation by induction on $d$. For $d=1$, $t_1D_1=0$ implies $D_1=0$ because $\mathcal R$ is a domain. For $d>1$, set $z_d=1$ and apply the induction hypothesis to the first $d-1$ entries. Lift its antisymmetric coefficients to $\mathcal R$ and subtract that curl. Each remaining $D_k$, $k<d$, vanishes at $z_d=1$, so is divisible by $t_d$ in the Laurent ring; write $D_k=t_dC_{kd}$. The original equation becomes $t_d(D_d+\sum_{k<d}t_kC_{kd})=0$, giving $D_d=-\sum_{k<d}t_kC_{kd}$. Set $C_{dk}=-C_{kd}$. This proves (B.12k). The identity orbit is fixed by every translation and contributes arbitrary constant scalar currents. These arguments prove both necessity and sufficiency of the classification. ∎
+
+<a id="proposition-b3d-coordinate-leibniz-boundary-on-finite-periodic-charts"></a>**Proposition B.3d (Coordinate-Leibniz Boundary on Finite Periodic Charts).** On a nonempty periodic cubic chart with the backward derivative of Theorem B.3b, no single-valued coordinate $x^j$ satisfies $\nabla_jx^j=1$ at every vertex. Consequently Theorem B.4's coordinate Leibniz premise cannot hold on a retained class containing all constant identity-valued vector fields on that chart. On a lifted chart away from its seam, with $x^j_v=av_j$, the exact product rule is
+$$
+\nabla_j(x^\mu A)_v
+=(\nabla_jx^\mu)_vA_{v-e_j}+x^\mu_v\nabla_jA_v.
+\tag{B.12m}
+$$
+For $\mu=j$ it differs from the unshifted rule in Theorem B.4 by $-a\nabla_jA_v$. If $x^j_v=av_j$ is represented periodically with $v_j\in\{0,\ldots,n_j-1\}$, then
+$$
+\nabla_jx^j_v=1-n_j\mathbf1_{\{v_j=0\}}.
+\tag{B.12n}
+$$
+
+*Proof.* The sum of every periodic backward difference is zero, whereas the sum of $1$ is the number of vertices. This proves the first assertion. Substituting a constant identity field into the coordinate Leibniz premise would imply the excluded equality. For (B.12m), expand its right side as
+$$
+\frac{x_v-x_{v-e_j}}aA_{v-e_j}
++x_v\frac{A_v-A_{v-e_j}}a
+=\frac{x_vA_v-x_{v-e_j}A_{v-e_j}}a.
+$$
+Away from the seam, $\nabla_jx^j=1$, so subtracting the proposed unshifted rule yields $A_{v-e_j}-A_v=-a\nabla_jA_v$. At the seam, $x^j_v=0$ and $x^j_{v-e_j}=a(n_j-1)$; elsewhere the difference is $a$, proving (B.12n). ∎
+
+<a id="theorem-b3e-prescribed-density-local-spin-flux-existence"></a>**Theorem B.3e (Prescribed-Density Local Spin-Flux Existence).**
+
+**Fixed input class and time convention.**
+
+Use $d$ spatial directions, spacing $a>0$, $c>0$, indices $0,\ldots,d$, and $D_0=c^{-1}d/dt$, $D_j=(I-\tau_{-e_j})/a$. The time derivative includes explicit time dependence of coordinates; $D_0x^0=1$ for $x^0=ct$. Coordinates on the lift are $x^j=av_j$. Spatial translations commute with the autonomous Hamiltonian derivation and hence with time evolution.
+
+At reference time zero, fix Hermitian finite-support translation-covariant densities $T^{\mu\nu}$, satisfying $\sum_\lambda D_\lambda T^{\lambda\nu}=0$ on every sufficiently large nonwrapping periodization. This is precisely the conservation branch being consumed, not a consequence newly asserted here. Independently prescribe Hermitian local $s^{\mu\nu}=-s^{\nu\mu}$ with $s^{\mu\mu}=0$. These are the desired $S^{0\mu\nu}$; their choice cannot be changed in solving the problem. Define
+
+$$
+f^{\mu\nu}=T^{\mu\nu}-T^{\nu\mu}-\frac{i}{c\hbar}[H,s^{\mu\nu}].
+\tag{B.3e.1}
+$$
+
+The commutator means the finite sum over Hamiltonian terms meeting the support of $s$. Require the resulting $f$'s to lie in $Q_R=[-R,R]^d$, and period lengths $n_j>4R$, enlarged as necessary so all input commutators coincide with their unwrapped versions. All defining operators, including the chosen fluxes, evolve by the same autonomous Heisenberg evolution. Identities proved at reference time then hold at every time. “Uniformly local” below means support of these defining densities independent of period lengths; it does not claim that evolved Heisenberg observables keep compact support uniformly in time.
+
+For each independent $\mu<\nu$ the following are equivalent:
+
+(a) Spatial spin fluxes $S_v^{j\mu\nu}=\tau_v S_0^{j\mu\nu}$ exist as finite-support defining densities independent of period lengths, satisfying the following defining local identity, equivalently on every sufficiently large nonwrapping periodization:
+$$
+\sum_\lambda D_\lambda S^{\lambda\mu\nu}=T^{\mu\nu}-T^{\nu\mu},
+\qquad S^{0\mu\nu}=s^{\mu\nu}.
+\tag{B.3e.2}
+$$
+
+(b) On one nonwrapping periodization, $\sum_v f_v^{\mu\nu}=0$.
+
+(c) In the finite Hermitian product-basis expansion of $f^{\mu\nu}$, the identity coefficient and the sum of coefficients in each nonidentity translation orbit vanish.
+
+When they hold, $S^{j\mu\nu}$ may be supported in $Q_R$ and satisfy
+$$
+\sum_j\|S^{j\mu\nu}\|\le 2adR\|f^{\mu\nu}\|_{\mathrm{coef},1}.
+\tag{B.3e.3}
+$$
+
+Choose $S^{j\nu\mu}=-S^{j\mu\nu}$. Differences of two solutions with this same prescribed $s$ are scalar-identity currents plus finite Laurent-polynomial curls in their spatial flux index, separately for each $\mu<\nu$. The spin density is unchanged by this ambiguity.
+
+*Proof.* Subtract $D_0s$ from (B.3e.2). The problem is exactly $\sum_j(I-\tau_{-e_j})S^{j\mu\nu}=af^{\mu\nu}$. Summation proves (a)$\Rightarrow$(b); Theorem B.3c's nonwrapping product-basis independence proves (b)$\Leftrightarrow$(c). For (c)$\Rightarrow$(a), choose one reference translate in each occurring orbit and connect each remaining translate to it by a coordinate-monotone path. Telescope its coefficient times the translate difference along that path, multiplying the resulting currents by $a$. Every intermediate string support remains in $Q_R$. Each path has length at most $2dR$, yielding (B.3e.3). Antisymmetric extension in $\mu,\nu$ is consistent because $f$ is antisymmetric. Theorem B.3c's Laurent syzygy proof gives the stated full ambiguity. Evolving all operators together preserves these equalities and $\tau$-covariance. ∎
+
+The exact global condition, written without suppressing the prescribed density, is
+$$
+\sum_v(T_v^{\mu\nu}-T_v^{\nu\mu})
+=\frac{i}{c\hbar}\left[H_\Lambda,\sum_v s_v^{\mu\nu}\right].
+\tag{B.3e.4}
+$$
+
+Thus zero total torque is required only when the prescribed total spin density is conserved. Assigning a new $s$ to absorb failure of (B.3e.4) changes the input problem and is not licensed by this theorem.
+
+<a id="corollary-b3e1-fixed-representative-spin-obstruction"></a>**Corollary B.3e.1 (Fixed-Representative Spin Obstruction).**
+
+On a finite carrier take the normalized matrix trace of (B.3e.4). Every Hamiltonian commutator has trace zero. Hence nonzero trace of $\sum_v(T^{\mu\nu}_v-T^{\nu\mu}_v)$ excludes every prescribed spin density, and even every alternative density with autonomous Heisenberg time dependence. In particular, adding $\chi I$, $\chi\ne0$, to $T^{12}$ of any symmetric conserved stress leaves energy-momentum conservation intact but produces an impossible global torque equation. This is a failure for that fixed stress representative; removing that divergence-free stress improvement changes the record and is not a physical no-go against every representative. It shows why energy-momentum conservation alone cannot imply spin completion. Arbitrarily time-dependent externally driven spin densities are outside this autonomous statement.
+
+<a id="theorem-b3f-finite-spacing-angular-calculus-and-exact-periodic-seam-defect"></a>**Theorem B.3f (Finite-Spacing Angular Calculus and Exact Periodic Seam Defect).**
+
+Use the fixed input class of Theorem B.3e and a spin current satisfying (B.3e.2).
+
+Put $\epsilon_{\lambda\mu}=a$ if $\lambda=\mu\in\{1,\ldots,d\}$, zero otherwise, and define with no sum in the definition
+$$
+\begin{aligned}
+L^{\lambda\mu\nu}&=(x^\mu+\epsilon_{\lambda\mu})T^{\lambda\nu}-(x^\nu+\epsilon_{\lambda\nu})T^{\lambda\mu},\\
+J^{\lambda\mu\nu}&=L^{\lambda\mu\nu}-S^{\lambda\mu\nu}.
+\end{aligned}
+\tag{B.3f.1}
+$$
+
+On a lifted chart without crossing a seam, (B.3e.2) is equivalent to $\sum_\lambda D_\lambda J^{\lambda\mu\nu}=0$.
+
+*Proof of the lifted identity.* For spatial $\lambda$, the actual shifted product rule gives
+$$
+D_\lambda[(x^\mu+\epsilon_{\lambda\mu})A^\lambda]
+=\delta_{\lambda\mu}A^\lambda+x^\mu D_\lambda A^\lambda.
+\tag{B.3f.2}
+$$
+For $\lambda=\mu$ spatial, the otherwise missing $aD_\lambda A^\lambda$ is provided by the added $aA^\lambda$; other spatial cases have no correction. For $\lambda=0$ the ordinary time product rule applies. Summing gives divergence $L=T^{\mu\nu}-T^{\nu\mu}$, since divergence $T$ vanishes. This proves the orbital assertion, without assuming the false unshifted discrete Leibniz law. ∎
+
+A local lifted divergence identity gives a conserved integrated angular charge only with additional summability or appropriate boundary conditions. The coordinate-containing $L$ and $J$ have the expected origin dependence: translating the coordinate origin adds a constant linear combination of the already conserved $T$ currents. They are not falsely claimed to be translation-invariant densities. The $aT$ correction introduces no extra field support; it carries the same length$\times$stress units as $xT$ and $S$.
+
+**Exact periodic seam defect.**
+
+Take $x^j=av_j$ with $v_j\in\{0,\ldots,n_j-1\}$, and use the same current (B.3f.1) with periodic fields. Define $\sigma_j(v)=n_j\mathbf1_{\{v_j=0\}}$. If an index is zero, its $\sigma$-term below is omitted. Then
+$$
+\sum_\lambda D_\lambda J_v^{\lambda\mu\nu}
+=-\sigma_\mu(v)T_{v-e_\mu}^{\mu\nu}
++\sigma_\nu(v)T_{v-e_\nu}^{\nu\mu}.
+\tag{B.3f.3}
+$$
+
+*Proof of the seam identity.* Proposition B.3d gives $D_jx^j=1-\sigma_j(v)$. The corrected product calculation above leaves exactly $-\sigma_j(v)A^j_{v-e_j}$. Subtract the spin divergence and cancel the torque. ∎
+
+Thus periodic Belinfante symmetry/conservation does not imply globally conserved coordinate angular momentum. Equation (B.3f.3) is a retained boundary record, not a discarded small-$a$ error. For spatial $\mu,\nu$, summing gives
+$$
+D_0\sum_v J_v^{0\mu\nu}
+=-n_\mu\sum_{v_\mu=0}T_{v-e_\mu}^{\mu\nu}
++n_\nu\sum_{v_\nu=0}T_{v-e_\nu}^{\nu\mu}.
+\tag{B.3f.4}
+$$
+
+The seam contributions can vanish for special data; they are not generically zero. Moving the seam changes the coordinate convention and its corresponding boundary record.
+
+<a id="theorem-b3m-paid-three-mpu-stress-noether-and-physical-spin-realization"></a>**Theorem B.3m (Paid Three-MPU Stress, Noether and Physical-Spin Realization).**
+
+#### B.3m.1 Result and exact receiving scope
+
+Three actual, separately qualified MPU tensor factors, their individually owned fee pairs and one shared arming flag form one finite autonomous source. Its original B.6 microscopic energies sum to the actual Hamiltonian. Its raw pair currents are retained, together with an explicitly registered B.3a divergence-free circulation. The improved current generates the genuine cyclic permutation of the complete physical packets. An independent Fourier/half-density action supplies geometric translation Noether momentum; an explicit off-shell superpotential identifies its local representative with the same current divided by $c^{2}$. The source has physical $SU(2)$ spin, exact spin transport, symmetric conserved stress and the corrected finite-spacing angular/seam ledger.
+
+The chart is the explicit cubic periodic chart $\mathbb{Z}/3\times\mathbb{Z}/1\times\mathbb{Z}/1$, spacing $a$ and cell volume $V=a^{3}$. This is an instance of Theorem B.3b, not a claim that every higher-dimensional chart or every large lattice is represented by three vertices. The previously proved B.3c higher-dimensional local-stress theorem and B.3e–f/B.4a spin/finite-spacing calculus retain their original domains. Here their algebraic conservation and improvement identities are instantiated directly at this finite source; their large nonwrapping locality bounds are not invoked for a wrapping triangle.
+
+The source qualifies relative to a fresh, explicit prefix presentation with two fixed active peers. Each admitted vertex has $C_P=C_{\mathrm{op}}=4$. This is a physical-model-relative minimum, not an architecture-independent optimum or a minimum obtained by naming the clock's seventeen alternatives as seventeen MPUs. Every native spin complement, both flag sectors and every wallet sector remain in the operator domain. Preparation, fees and service lifetime are finite and declared. There is no claim of an indefinitely reusable closed computer, instantaneous constant power, supplier dissipation, continuum metric action, BSR04 limit or S02 constitutive-cost identification.
+
+#### B.3m.2 Actual carriers, physical spin and fixed source law
+
+Each MPU factor is $M_i=\mathbb{C}^{17}_{\mathrm{clock}}\otimes(\mathbb{C}^{2})^{\otimes 40}$, $i=0,1,2$. The forty physical spin-1/2 factors are grouped into ten full four-spin blocks named $M,P,I,Y_0,Y_1,Y_2,A_1,F_1,A_2,F_2$. A scalar clock has spin zero. In each block use
+
+$$
+\lvert 0_L\rangle=\lvert s\rangle_{12}\lvert s\rangle_{34},\quad \lvert s\rangle=(\lvert 01\rangle-\lvert 10\rangle)/\sqrt{2},
+$$
+
+$$
+\lvert 1_L\rangle=[\lvert 0011\rangle+\lvert 1100\rangle-(\lvert 0101\rangle+\lvert 0110\rangle+\lvert 1001\rangle+\lvert 1010\rangle)/2]/\sqrt{3}.
+$$
+
+Both vectors are physical total-spin singlets. Put $E_{ab}=|a_L\rangle\langle b_L|$, $Q=E_{00}+E_{11}$ and $X_L=E_{01}+E_{10}$. The full-space gate
+
+$$
+U_{b\to c}=I+E_{11}^{(b)} \otimes (X_L^{(c)}-Q^{(c)})
+\tag{B.3m.1}
+$$
+
+is a Hermitian unitary. It is identity on the relevant noncode complements and commutes with the physical collective spin of each block. No complement is projected away.
+
+Each cell also owns a spin-zero wallet/receipt pair $W_i=\mathbb{C}^{2}_{B_i}\otimes\mathbb{C}^{2}_{R_i}$. The packet is $L_i=M_i\otimes W_{i}$. The receipt is the provider's record for that cell and lies outside the customer's spendable-resource algebra, even though it is inside the closed source. A complete packet permutation moves both the MPU and its labeled service record. The provider is not an unswapped external reference. One additional factor $\mathbb{C}^{2}_F$ is a shared protected arming flag, counted once. The complete carrier is
+
+$$
+H=\mathbb{C}^{2}_F \otimes L_0 \otimes L_1 \otimes L_2.
+\tag{B.3m.2}
+$$
+
+The same finite dimension is used for every candidate mask $w=(w_0,w_1,w_2)$. For each cell independently draw $Y_0$ fair, innovations $e_1,e_2$ with probability $1/4$ of 1, and independent $Z$ fair. Set $Y_1=Y_0\oplus e_1$, $Y_2=Y_1\oplus e_2$. The active mask $w_i=1$ prepares $M=Y_0$, while $w_i=0$ prepares $M=Z$. All other work bits are logical zero; the clock is 0. $Z$ is an ensemble coordinate, not a retained hidden register. Thus each source is the pushforward of the same sixteen-atom preparation measure; the complete comparison source has 4096 atoms. The environmental $Y$ law is identical across masks. Initial past-information coupling is part of the prepared apparatus, not future-outcome advice. The preparation record also sets $F=1$ and every fee pair to $|10\rangle$. All stock and entropy are supplied once; no missing fresh tape or heat bath is inferred.
+
+The active process density has rank eight, and its purity is
+
+$$
+r=2(1/2)^{2}[(3/4)^{2}+(1/4)^{2}]^{2}=25/128.
+\tag{B.3m.3}
+$$
+
+The initial clock and fee states are pure, so the complete active packet has the same purity. This quantity matters for swap-energy accounting; identical mixed packets do not have swap expectation one.
+
+#### B.3m.3 Independent pure prediction, complete clock word and actual finite fee
+
+Choose the physical wallet gap $e>0$ first and fix $\hbar,c>0$. Register
+
+$$
+\begin{aligned}
+\delta&=\pi \hbar/(4e),\quad \tau_0=16 \delta,\quad \kappa=8e/17,\quad b=e/8, \\
+J&=\hbar/(1000 \tau_0),\quad a=(\hbar c/J)\sqrt{8\pi/(9\sqrt{3})},\quad V=a^{3}.
+\end{aligned}
+\tag{B.3m.4}
+$$
+
+There is no $\delta=a/c$ convention. The service window is $[0,\tau_0]$. All couplings are constant during it.
+
+The independently nominated local internal-prediction Hamiltonian is
+
+$$
+h_i=2e(I-U_{M_i\to P_i}).
+\tag{B.3m.5}
+$$
+
+It is positive, has spectrum $\{0,4e\}$ with multiplicities, ground reference $E_0=0$, and $\exp(-i\delta h_i/\hbar)=U_{M_i\to P_i}$. It acts only on local $M,P$ and commutes with the local environment, verification and feedback records. The apparatus has a separately registered fixed calibration setting $F=0,J=0$, in which the process is exactly the pure unitary generated by $\sum h_{i}$. This is a real coupling-menu diagnostic on the same carrier, not an assertion of strict dormant verification intervals inside the armed coherent-clock process. At the nominal $J>0$ setting the swap interaction is ungated, so arbitrary $F=0$ states need not follow isolated local prediction.
+
+The armed sixteen-gate word consists, for $r=1,2$, of
+
+$$
+M\to P,\quad P\to A_r,\quad Y_r\to I,\quad I\to P,\quad P\to F_r,\quad F_r\to M,\quad F_r\to P,\quad M\to I.
+\tag{B.3m.6}
+$$
+
+When $w_i=0$ only the two $F_r\to M$ gates become identity. Define $G_0=I$ and $G_j=U_j\cdots U_1$ for $j=1,\dots,16$. With $j+1$ read modulo 17, let
+
+$$
+\begin{aligned}
+D_w&=\sum_j |j+1\rangle\langle j| \otimes G_{j+1} G_j^*, \\
+\Pi_k&=(1/17)\sum_{r=0}^{16} \exp(2\pi i\, kr/17)D_w^r, \\
+K_w&=\sum_{k=-8}^{8} k\Pi_k,\quad C_w=\kappa(34I+K_w).
+\end{aligned}
+\tag{B.3m.7}
+$$
+
+The inverse closing edge is included. The block gauge $\operatorname{diag}(G_j)$ conjugates $D_{w}$ to the ordinary 17-cycle. Hence $D_w^{17}=I$, $\exp(-ij\delta C_w/\hbar)=D_w^{j}$ and the actual state at $j\delta$ is $|j\rangle\otimes G_j\psi$ for a clock-0 input. All noncode states are included. $C_{w}$ has spectrum $\kappa$ times $26,\dots,42$, and its ready mean is $34\kappa=16e$. At fractional times tracing the clock yields the convex mixture $\sum_j|\alpha_j(t)|^{2}G_j\rho G_j^*$. Every prefix's $M$ marginal is fair for both uncoupled masks, so the uncoupled armed trajectory has $\langle h_i\rangle=e$ at every time. This last all-time assertion will be used for the qualified all-active coupled family only; it is not inferred for the mixed-mask interacting process.
+
+On the active word, round r transforms
+
+$$
+(m,0,0,y,0,0)_{(M,P,I,Y_r,A_r,F_r)} \to (y,0,0,y,m,m\oplus y).
+\tag{B.3m.8}
+$$
+
+The actual first-round prediction, acquisition, discrepancy, retained-feedback and update cuts are $\delta,3\delta,4\delta,5\delta,6\delta$, and the second-round cuts are eight $\delta$ later. The inactive model keeps $M=Z$. Thus the uncoupled active forecasts are $A_1=Y_0,A_2=Y_1$, both scoring $3/4$; the inactive forecasts are $Z$, both scoring $1/2$. The matched uninformed fair forecast baseline is $1/2$ and the qualification threshold is strictly above $5/8$. The feedback is used, with an actual model change probability $1/4$ per round; disabling feedback after the active seed lowers the second uncoupled score to $5/8$.
+
+For each fee pair put
+
+$$
+\begin{aligned}
+n&=|1\rangle\langle 1|,\quad X_{\mathrm{fee}}=|10\rangle\langle 01|+|01\rangle\langle 10|,\quad P_{\mathrm{one}}=|10\rangle\langle 10|+|01\rangle\langle 01|, \\
+B_i&=e(n_{B_i}+n_{R_i})+b(P_{\mathrm{one},i}-X_{\mathrm{fee},i}).
+\end{aligned}
+\tag{B.3m.9}
+$$
+
+This is a positive physical stock plus transfer generator, not a ledger-only term. At $\tau_0$, $|10\rangle$ evolves to $|01\rangle$ up to phase. The actual wallet debit is
+
+$$
+D_i(t)=e \sin^{2}(\pi t/(2\tau_0)),\quad 0\le t\le \tau_0;\quad R_0=[D_i(\tau_0)-D_i(0)]/\tau_0=e/\tau_0.
+\tag{B.3m.10}
+$$
+
+The debit is monotone on this window, and the receipt measures the same e transfer independently. R0 is complete-service mean power. It is not an instantaneous constant rate or heat dissipation. Finite-unitary refunds outside the window are not admitted service ports. Fee stock and controller energy appear in $B_{i}$ once; paying e is not the same operation as adding another eI to an already complete Hamiltonian.
+
+#### B.3m.4 The actual interacting Hamiltonian and full-space ownership
+
+Let $F=|1\rangle\langle 1|$ on the shared factor and $A_i=C_{w_i}-h_i$. Let $s_{i}$ swap complete packets $i$ and $i+1$, with indices modulo 3. It swaps their clocks, all forty spins, wallets and receipts, but fixes $F$. Register the actual symmetric edge interaction
+
+$$
+V_{i,i+1}=F(A_i+A_{i+1})/2 +(B_i+B_{i+1})/2 +J(I+s_i).
+\tag{B.3m.11}
+$$
+
+Each V is supported on its two endpoint packets and the explicitly shared flag. There is no unowned controller. The source Hamiltonian is independently defined by these physical terms:
+
+$$
+\begin{aligned}
+H_{\mathrm{actual}}&=\sum_i h_i+\sum_{\mathrm{edges}} V \\
+&=(1-F)\sum h_i+F\sum C_{w_i}+\sum B_i+J(3I+S),\quad S=s_0+s_1+s_2.
+\end{aligned}
+\tag{B.3m.12}
+$$
+
+All terms are finite, self-adjoint and fixed. The full operator is positive: both flag branches have positive onsite generators, $B_{i}\ge 0$ and each $I+s_i\ge 0$. Moreover $C_w-h\ge(208/17-4)eI>0$, so the exposed controller offsets do not conceal an unstable negative total source. Their actual values are displayed rather than defining $h$ by subtracting a desired cost from $H$. The $F$-dependent coupling is nontrivial on the full carrier. The swap interaction is deliberately ungated: the eventual physical translation is a full-space packet permutation in both flag sectors.
+
+On the all-active branch the local packet generator is identical, $C+B$. Its sum commutes $S$. The initial density is $\rho_{\mathrm{packet}}^{\otimes 3}$ and commutes every complete-packet swap. Therefore the nominal one-time density under (B.3m.12) is exactly the product of the three uncoupled packet densities at every time. This proves the exact $3/4$ appointed-cut scores, fee law and $\langle h_i\rangle=e$ on the qualified ready trajectory. It does not equate the coupled and uncoupled channels for arbitrary interventions or external references.
+
+The fee law is stronger than that symmetry argument: it holds for every mask. The identical pure fee vector $|10\rangle^{\otimes 3}$ is fixed by each fee permutation. Since $\sum B_i$ commutes all complete swaps, factor out its evolution. On that symmetric fee vector the remaining complete swaps act only on the process factors. Thus the fee state remains $|\eta_t\rangle^{\otimes 3}$, independent of the possibly correlated mixed-mask process. Every candidate pays the same actual $e$ per booked cell. The inactive interacting process is not asserted to retain $\langle h_i\rangle=e$.
+
+#### B.3m.5 Fresh fixed-peer MPU qualification and minimum
+
+For each root i, fix both peers active and use the SAME physical F and fee factors, not copies. The root descriptor is canonical sorted JSON plus newline:
+
+{"clock_rails":17,"coupling_window_ratio":"1/1000","cycle_slots":16,"peer_write_enable":[1,1],"root_write_enable":w,"schema":"BSR03-ThreePacketPaidRoot-v1","shared_arming":1,"wallet_pairs":3}.
+
+It names the entire recipe (B.3m.1)–(B.3m.12), including the common4096-atom source, interactions, ready preparation, finite service window and finite-instrument response dictionary. Its realization is the identity identification of all named factors and operators with the actual source. All its finite matrix exponentials and instruments are intertwined exactly. This statement compares the descriptor with its own coupled realization; it does not compare arbitrary coupled interventions with uncoupled ones.
+
+For the inactive root, compare $H_{\mathrm{actual}}$ to the decoupled Hamiltonian after deleting only $JS$ and its irrelevant scalar $3JI$. Since $\lVert S\rVert=3$,
+
+$$
+\lVert U_J(t)-U_0(t)\rVert\le 3Jt/\hbar.
+\tag{B.3m.13}
+$$
+
+For every initial density and every effect $0\le E\le I$, the change in its probability is at most $3Jt/\hbar$: purify the density, bound pure-state trace distance by the vector norm, then use contractivity of the partial trace. For $t\le\tau_0$ this is $\le 3/1000$. Consequently both inactive scores are at most $503/1000<5/8$. The active one-time prepared scores are exactly $3/4$. For a fixed inserted finite instrument sequence, telescope its contractions through the unitary channels; the same bound with the sum of the waiting times applies to unconditional outcome probabilities. Thus even if sequential readouts break symmetry, active scores are at least $747/1000>5/8$ and inactive scores at most $503/1000$. No normalized postselection bound is asserted. Actual use of error feedback survives the same test: the active lower bound exceeds the feedback-disabled second-score upper bound $628/1000$ by $119/1000$.
+
+Define the new prefix machine by the literal algorithm in Construction B.3m.1a: on the disjoint constructor branch $0\,\gamma(h+1)$, emit this descriptor with $w=\min(1,h)$; all $h\ge 1$ are literal aliases. A separate seventeen-bit prefix 11111111111111110 carries the reviewed total binary-table universal prefix interpreter. It has no qualification oracle, decimal JSON execution bound or hidden $h$-dependent hardware. The parser accepts a physical source only when output bytes equal one of the two literal descriptors. The decreasing hierarchy retains nonhalted programs and halted valid descriptors; an actual target realizer must halt with its target.
+
+All fifteen programs shorter than four bits are exhausted. Only 01 emits a source, namely inactive w0. The two four-bit programs0010 and 0011 emit active w1. The universal prefix cannot contribute a shorter program. Thus each actual root has
+
+$$
+C_P(D_0)=2,\quad C_P(D_1)=4,\quad Q_{\mathrm{root}}=\{D_1\},\quad C_{\mathrm{op}}=4.
+\tag{B.3m.14}
+$$
+
+This is a fresh census for this larger interacting apparatus. It does not inherit four bits merely because an earlier two-vertex descriptor had that length. The source model itself is independent of the score test; every retained halting source has an explicit physical realization. The three root embeddings permute actual packet labels and are identity on the same shared flag. They do not prove additive global description length.
+
+#### B.3m.6 Explicit operational proxy, real consumption and B.6 identity
+
+Because the coupled channel is not $D_w^{16}$ on arbitrary inputs, register a distinct effective-depth experiment. Its finite primitive gate set consists of the complete-source autonomous $\tau_0$ propagators for the eight masks, their inverses and identity; the $h_{i}$ CNOT diagnostic is also registered separately. These are global coupled-source primitives, not one isolated local gate per MPU. The reference is the full product with all clocks 0, all logical bits 0, F1 and every wallet/receipt $|10\rangle$. The applied booked service is one such physical pulse. The resolution intentionally has one depth bin $[0,1]$ and the one-outcome instrument $\rho\to I\rho I$. Each local proxy is the marginal of this complete-service instrument: $P_0=I$ on its entire actual MPU factor, including every noncode state, $P_d=0$ for $d>0$, $\lambda_0=K_0=3$ complexity units. Thus $\hat{C}_i=3I$. The bin is fixed from the physical pulse protocol, independently of the source qualification and program census. No minimum state-preparation complexity, isolated-gate count or equilibrium force-identifiability alignment is asserted.
+
+Use the independently registered service-price extension
+
+$$
+R(C)=R_0[1+(C-4)_+^{2}],\quad C\ge 3;\quad R_I(C)=0.
+\tag{B.3m.15}
+$$
+
+The literal price breakpoint 4 is part of the menu, not a call to the minimum oracle. The occupied service bin 3 has the actual measured price (B.3m.10); the off-bin extension is explicitly model data. Fresh theorem (B.3m.14) then gives $R(\hat{C}_i)=R(3)I=R(4)I=R(C_{\mathrm{op}})I=R_0I$. On the qualified nominal family and on the isolated diagnostic calibration,
+
+$$
+\langle h_i\rangle-E_0=e=R(C_{\mathrm{op}})\tau_0,\quad E_0=0.
+\tag{B.3m.16}
+$$
+
+The $h_{i}$ gap/period and the separate wallet debit were independently specified and measured in the nominated mathematical source. This is the original Theorem 29 state-family calibration, not an all-state energy expectation identity. The same finite paid-source convention does not establish supplier preparation cost or irreversible dissipation.
+
+Original B.6 therefore gives the honest energies
+
+$$
+\begin{aligned}
+\epsilon_i&=h_i+\tau_0[R(\hat C_i)-R(C_{\mathrm{op}})I+R_I(\hat C_i)] \\
+&\quad +1/2(V_{i-1,i}+V_{i,i+1}) \\
+&=h_i+1/2(V_{i-1,i}+V_{i,i+1}),\quad \sum \epsilon_i=H_{\mathrm{actual}}.
+\end{aligned}
+\tag{B.3m.17}
+$$
+
+All source energy is counted once. In the nominal all-active family,
+
+$$
+\langle H_{\mathrm{actual}}\rangle=411e/8+(459/128)J,\quad\langle\epsilon_i\rangle=137e/8+(153/128)J,\quad\langle\sum h_i\rangle=3e,\ \langle\sum C_i\rangle=48e,\ \langle\sum B_i\rangle=27e/8.
+\tag{B.3m.18}
+$$
+
+Indeed $\langle s_i\rangle=\operatorname{Tr}\rho_{\mathrm{packet}}^{2}=25/128$, giving three times $J(1+25/128)$. Each paid receipt gains $e$; total spend $3e$ is not the full energy (B.3m.18). $R_I=0$ is honest because no irreversible reset is performed during this closed finite service. Neither wallet transfer nor the independently stored $h_{i}$ energy is added again after the baseline cancellation.
+
+#### B.3m.7 Raw currents and the permitted, source-derived circulation
+
+From now on take identical active $C_{i}$, as required for the admitted translation-covariant source. All statements still retain both F sectors and all packet states. Define
+
+$$
+T_0=(F\sum A_i+\sum B_i)/4,\quad g_i=h_i+(F A_i+B_i)/4.
+$$
+
+Then the actual energies (B.3m.17) are
+
+$$
+\epsilon_i=T_0+g_i+J I +(J/2)(s_{i-1}+s_i).
+\tag{B.3m.19}
+$$
+
+$T_0$ commutes every swap. All $g_{i}$ are identical copied local expressions with the same central $F$. Let $C=s_0s_1$, the actual cyclic packet permutation; $C^{3}=I$. Define
+
+$$
+Q(g)=\sum_i(g_i-g_{i+1})s_i.
+$$
+
+Direct expansion using $s_ig_i=g_{i+1}s_i$, commutation on disjoint factors and telescoping of the $T_0$ commutators gives
+
+$$
+\sum_i[\epsilon_i,\epsilon_{i+1}]=(3J^{2}/4)(C-C^*)+J\, Q(g),\quad Q(g)^*=-Q(g).
+\tag{B.3m.20}
+$$
+
+This identity includes the fee terms and the noncommuting bare-prediction/controller split. The raw currents are retained as
+
+$$
+j_i=i[\epsilon_i,\epsilon_{i+1}]/(\hbar V),\quad j_{\mathrm{reverse}}=-j_i.
+\tag{B.3m.21}
+$$
+
+They give $\dot{\rho}_i+j_i-j_{i-1}=0$, $\rho_i=\epsilon_i/V$. The mixed $Q$ term generally prevents conservation of their oriented sum; it is not discarded or falsely claimed zero.
+
+Original B.3a and R1 permit antisymmetric divergence-free circulations. Register the same Hermitian source-derived correction on each forward edge:
+
+$$
+k_{\mathrm{circ}}=-iJ\, Q(g)/(3\hbar V),\quad j'_i=j_i+k_{\mathrm{circ}}.
+\tag{B.3m.22}
+$$
+
+The reverse edge has the negative correction. At every vertex its incoming/outgoing corrections cancel exactly. Every neighborhood of this three-cycle contains all three MPU factors; its actual enlarged support includes F and all three fee pairs. The correction is therefore source-supported on the declared fixed chart. It is not a uniformly finite-range recipe on arbitrarily large rings and is not an additional physical heat stream. No energy allocation, action, fee or state changes. The choice of current representative is now explicit.
+
+Its total is
+
+$$
+\sum j'_i=(3iJ^{2}/(4\hbar V))(C-C^*),
+\tag{B.3m.23}
+$$
+
+which commutes $H_{\mathrm{actual}}$, since the nominal onsite sum and the swap class sum commute $C$. This is the substantive use of the allowed circulation ambiguity rather than a fit of $\epsilon_{i}$ to $H_{\mathrm{total}}/3$. It also preserves the same finite action's energy Noether localization: under $\delta\psi=-(i/\hbar)\sum_i\lambda_i\epsilon_i\psi$, direct differentiation gives
+
+$$
+\delta L=V\sum_i\dot\lambda_i\langle\rho_i\rangle+V\sum_i(D+\lambda)_i\langle a\,j_i\rangle.
+$$
+
+Replacing $j_{i}$ by $j_i+k_{\mathrm{circ}}$ changes this by $Va\langle k_{\mathrm{circ}}\rangle\sum_i(D+\lambda)_i=0$. Thus the improved energy flux is a representative of the actual source action's local energy current, with precisely the permitted circulation ambiguity. No extra time-dependent Hamiltonian or new energy density has been introduced.
+
+#### B.3m.8 Actual cubic chart, tensor dictionary and translation calibration
+
+The vertices are $(i,0,0)$ of the periodic cubic chart $\mathbb{Z}_3\times\mathbb{Z}_1\times\mathbb{Z}_1$, with three full packet algebras $\operatorname{End}(L_i)$, the shared scalar flag algebra and physical cell volume $V=a^{3}$. The interaction graph is the three-cycle, so the oriented face $i\to i+1$ is the physical edge of (B.3m.11). Use backward differences $D_1X_i=(X_i-X_{i-1})/a$, $D_2=D_3=0$ on this retained field class and $D_0=c^{-1}\partial_t$. Route
+
+$$
+q_{i,1}=a\, j'_i,\quad q_{i,2}=q_{i,3}=0,\quad \pi_{i,1}=q_{i,1}/c^{2},\quad \pi_{i,2}=\pi_{i,3}=0.
+\tag{B.3m.24}
+$$
+
+The energy equation $\dot{\rho}+D_1q_1=0$ is exact. The integrated momentum is
+
+$$
+\begin{aligned}
+P=V\sum \pi_{i,1}&=(3aJ^{2}/(4\hbar c^{2}))\, i(C-C^*) \\
+&=(2\pi \hbar/(3a \sqrt{3}))\, i(C-C^*),
+\end{aligned}
+\tag{B.3m.25}
+$$
+
+using (B.3m.4). On C's eigenvalues1,exp(±2pi i/3), the last expression has eigenvalues0,∓2pi hbar/(3a). Consequently
+
+$$
+\exp(-iaP/\hbar)=C,\quad [H_{\mathrm{actual}},P]=0.
+\tag{B.3m.26}
+$$
+
+This is a full-carrier equality, not a sector restriction. For every physical packet observable O,
+
+$$
+C\, O_i\, C^*=O_{i+1},\quad C\, F\, C^*=F.
+\tag{B.3m.27}
+$$
+
+It transports the entire logical/source tape, all physical noncode spin operators, local clock and fee-record algebra. It is not a circulation gadget acting on an unrelated spectator or a translation acting only on clock labels. The independent one-site tensor support map is $i\mapsto\operatorname{End}(L_i)$; edge support is (B.3m.11). The current, stress and improvement may use its full three-site neighborhood. No stricter micro-local continuum support is asserted.
+
+#### B.3m.9 Independent geometric action and complete orbit-Fourier dictionary
+
+Here is an explicit geometric realization, rather than identifying a conserved logarithm with momentum by name. Choose the complete ordinary product basis of $L_0\otimes L_1\otimes L_2$, with no projection onto the logical code or ready family. $C$ sends $(x,y,z)$ to $(z,x,y)$. Partition that basis into orbits $O$. Each has length 1 or 3. For a length 3 orbit choose the lexicographically least representative $v$ and write $v_r=C^{r}v$. Define
+
+$$
+\lvert O,m\rangle=(1/\sqrt{3})\sum_{r=0}^{2}\exp(2\pi imr/3)\lvert v_r\rangle,\quad m=-1,0,1.
+$$
+
+Then $C|O,m\rangle=\exp(-2\pi im/3)|O,m\rangle$. A fixed orbit has only $m=0$. Include $F$ as an independent fiber label. The same orbit fiber carries all three of its Fourier modes. This is important: using mutually orthogonal spectral subspaces as different fibers would remove scalar-profile off-diagonal elements.
+
+Let the spatial torus have lengths $3a,a,a$. Set $\omega=2\pi/(3a)$ and map
+
+$$
+J_{\mathrm{geom}} |f,O,m\rangle = e_{f,O} \exp(i m \omega x_1)/\sqrt{3a^{3}},
+\tag{B.3m.28}
+$$
+
+constant in $x_2,x_3$. The $e_{f,O}$ are an orthonormal finite fiber basis. The retained band $E$ has exactly $\dim H$ dimensions; fixed orbits have only the zero mode. This is a complete isometry, including every noncode, fee and flag sector. Every actual observable $A$ has the explicit faithful finite kernel $J_{\mathrm{geom}}AJ_{\mathrm{geom}}^*$: its matrix coefficient between $(f,O,m),(f',O',n)$ multiplies $e^{im\omega x_1-in\omega y_1}/(3a^{3})$. Operator products, instruments, expectations and all finite response words are preserved. Such kernels generally have full torus support; they are not point-local multipliers. Their declared tensor support remains the actual packet support from (B.3m.27).
+
+The independently defined geometric translation $T_s\Psi(x)=\Psi(x-se_1)$ has $p_1=-i\hbar\partial_1$ and $p_2=p_3=0$ on $E$. Equations (B.3m.25),(B.3m.28) give $p_1J_{\mathrm{geom}}=J_{\mathrm{geom}}P$, and $T_{a}$ corresponds exactly to $C$, including the full tensor-algebra map (B.3m.27). Since $[H,P]=0$, $E$ reduces $p$ and $H$ has no matrix elements between different frequencies. A bounded translation-invariant ambient extension is
+
+$$
+\tilde H=J_{\mathrm{geom}} H_{\mathrm{actual}} J_{\mathrm{geom}}^* + h_* (I-\Pi_E),\quad h_*\ \text{real}.
+\tag{B.3m.29}
+$$
+
+No new physical ambient modes are occupied. For smooth histories in a moving band use the exact quadratic action
+
+$$
+\tilde L=(i \hbar/2)(\langle\Psi,\dot\Psi\rangle-\langle\dot\Psi,\Psi\rangle)-\langle\Psi,\tilde H \Psi\rangle.
+\tag{B.3m.30}
+$$
+
+Its restriction is precisely the original finite Schrödinger action generated by the cost/source Hamiltonian(12). It is not an independent constitutive action. Global geometric translations preserve it and have charge P. Different off-reference extensions need not have equal metric variations; no Hilbert tensor is inferred here.
+
+For local geometry choose the real profiles
+
+$$
+\chi_i(x_1)=(1/3)\sum_{r=-2}^{2} \exp[ir \omega(x_1-ia)],\quad \sum_i \chi_i=1.
+\tag{B.3m.31}
+$$
+
+These signed globally supported profiles are displacement localizations, not positive effects or cell indicators. The ordinary half-density action of a smooth orientation-preserving circle diffeomorphism $f$ is $U_f\Psi(x_1)=\sqrt{(f^{-1})'(x_1)}\,\Psi(f^{-1}(x_1))$, with untouched transverse coordinates and fiber. Its infinitesimal generator is $A_\chi=(\chi p_1+p_1\chi)/2$. Compress it to $E$ and pull back:
+
+$$
+A_i=J_{\mathrm{geom}}^* \Pi_E A_{\chi_i} \Pi_E J_{\mathrm{geom}},\quad \pi_{\mathrm{can},i}=A_i/V.
+\tag{B.3m.32}
+$$
+
+Within the same orbit fiber its exact matrix entry is
+
+$$
+(A_i)_{m,n}=\hbar \omega(m+n)\exp[-2\pi i(m-n)i/3]/6;
+\tag{B.3m.33}
+$$
+
+between different fibers it is zero. Fixed-orbit entries vanish. Thus $\sum A_i=P$. No identity $A_i=\{\text{site projector},P\}/2$ is assumed. Formula (33) is derived from actual scalar Fourier coefficients and unequal orbit multiplicities are retained.
+
+Local diffeomorphisms need not preserve $E$. Let it move to $U_{f}E$ in (B.3m.30). At the reference band, the normal component of a local variation pairs to zero against $\Psi,\dot{\Psi},\tilde{H}\Psi$, all lying in $E$. Consequently the exact first variation on arbitrary reference histories is that of $\delta\psi=-(i/\hbar)\sum\lambda_iA_i\psi$ in the finite action. This argument neither projects a coordinate product back without a correction nor claims a fixed band is invariant under every local diffeomorphism.
+
+#### B.3m.10 Exact off-shell Noether improvement and stress
+
+For a periodic family X define
+
+$$
+(GX)_i=(a/3)\sum_{r=0}^{2} r X_{i-r},\quad D_1 GX=-X+\bar X.
+\tag{B.3m.34}
+$$
+
+The operator identity follows by finite reindexing. Since $[H,P]=0$, set
+
+$$
+\begin{aligned}
+p_{\mathrm{can},i}&=G \cdot \pi_{\mathrm{can},i},\quad p_i=G \cdot \pi_{i,1}, \\
+\Delta_i&=\pi_{i,1}-\pi_{\mathrm{can},i},\quad B_{\mathrm{imp},i}=-G\Delta_i.
+\end{aligned}
+\tag{B.3m.35}
+$$
+
+The sum of $\Delta$ is zero. Therefore
+
+$$
+D_1 B_{\mathrm{imp}}=\Delta,\quad \pi_1=\pi_{\mathrm{can}}+D_1 B_{\mathrm{imp}},\quad p=p_{\mathrm{can}}-\dot B_{\mathrm{imp}},\quad \dot \pi_1+D_1 p=0.
+\tag{B.3m.36}
+$$
+
+All matrices use the complete actual source. They have the full finite three-packet neighborhood support, and their covariance follows from (B.3m.27),(B.3m.31). This is the explicitly chosen zero-mean momentum-stress representative, not just an unspecified stress with the same divergence.
+
+The finite action's independent geometric variation satisfies, off shell,
+
+$$
+\delta L=V\sum_i \dot\lambda_i \langle\pi_{\mathrm{can},i}\rangle +V\sum_i(D_+\lambda)_i \langle p_{\mathrm{can},i}\rangle,\quad D_+\lambda_i=(\lambda_{i+1}-\lambda_i)/a.
+\tag{B.3m.37}
+$$
+
+For an arbitrary differentiable $\psi$ define $r\psi=i\hbar\dot{\psi}-H\psi$ and
+
+$$
+R_X=(i/\hbar)(r\psi^*X\psi-\psi^*Xr\psi),\quad d\langle X\rangle/dt=\langle\dot X\rangle+R_X.
+\tag{B.3m.38}
+$$
+
+$$
+\begin{aligned}
+&\text{Let } b_i=\langle B_{\mathrm{imp},i}\rangle,\quad j_{N0}=\langle\pi_{\mathrm{can}}\rangle+D_1 b=\langle\pi_1\rangle, \\
+&j_{N1}=\langle p_{\mathrm{can}}\rangle-d\, b/dt=\langle p\rangle-R_{B_{\mathrm{imp}}}.
+\end{aligned}
+\tag{B.3m.39}
+$$
+
+The improvement has identically zero divergence off shell. Its exact localized Noether identity is
+
+$$
+\begin{aligned}
+\delta L&=V\sum_i \dot\lambda_i\, j_{N0,i}+V\sum_i(D_+\lambda)_i\, j_{N1,i} \\
+&\quad +V\, d/dt \sum_i(D_+\lambda)_i b_i.
+\end{aligned}
+\tag{B.3m.40}
+$$
+
+The last term is retained at time endpoints. On source solutions $R_{\mathrm{Bimp}}=0$, so the exact momentum and stress operators are precisely $\pi=q/c^{2}$ and $p$. This earns B.5(i)–(iii) for this representative and action; it does not merely assert equality of integrated charges. On a proper chart arc, $V\sum_{\mathrm{arc}}\Delta=(V/a)(\mathrm{Bimp}_{\mathrm{last}}-\mathrm{Bimp}_{\mathrm{before}})$, with the compensating stress-boundary change. Whole periodic sums vanish. The ambient $h_*$ does not enter this first variation.
+
+Define the source tensor in coordinates $x_0=ct$ by
+
+$$
+T_{00}=\rho,\quad T_{01}=T_{10}=q_1/c=c\, \pi_1,\quad T_{11}=p,\quad \text{all other components zero}.
+\tag{B.3m.41}
+$$
+
+It is symmetric and $D_\mu T^{\mu\nu}=0$ exactly. In particular its energy row is the same physical $\rho$ and chosen source-supported current representative, not an unrelated Fourier energy density. The energy equation comes from (B.3m.17),(B.3m.21),(B.3m.22); its momentum column is the just-proved Noether representative. This is the microscopic B.5/B.6 object; continuum metric-variation identification remains the separate BSR04 condition.
+
+#### B.3m.11 Prescribed physical spin, transport, angular seams and Belinfante tensor
+
+Let $S_i^{\ell}=(\hbar/2)\sum_{40\text{ physical spins in }i}\sigma^{\ell}$ be the genuine generator of collective physical rotations of packet $i$'s spins. Clocks, $F$ and fees are spin zero. Each onsite $C_{wi}$ and $h_{i}$ commutes $S_i^{\ell}$. Packet swaps satisfy $s_iS_i^{\ell}=S_{i+1}^{\ell}s_i$. Hence total $S_{\mathrm{tot}}^{\ell}$ is conserved and generates the actual tensor-product $SU(2)$ representation, nontrivial on the retained noncode sectors. It is not a Pauli label assigned after choosing stress. The same finite Schrödinger action is invariant under $\exp(-i\theta_\ell S_{\mathrm{tot}}^{\ell}/\hbar)$. Its Noether charge is this independently specified physical spin. Localizing that actual unitary variation by the cell's $S_{i}$ gives its density $S_i/V$ and the spin-transfer divergence derived next; the local continuity is not the only evidence of a rotation interpretation.
+
+Define the actual oriented spin-transfer current
+
+$$
+I_i^\ell=(iJ/(\hbar V))(S_i^\ell-S_{i+1}^\ell)s_i.
+\tag{B.3m.42}
+$$
+
+It is Hermitian, reverses sign on the reversed bond, and
+
+$$
+\dot{(S_i^\ell/V)}+I_i^\ell-I_{i-1}^\ell=0.
+\tag{B.3m.43}
+$$
+
+The current is nonzero as an operator: a state with distinct local spin labels is exchanged by $s_{i}$, and the prefactor difference has nonzero matrix elements. Its expectation may vanish on the all-singlet ready family. No nonzero mean spin or heat flux is required for qualification.
+
+Prescribe, before constructing an improvement, the physical rotational spin density and flux by
+
+$$
+\begin{aligned}
+S^{0jk}_i&=(c/V)\sum_\ell \epsilon_{jk\ell} S_i^\ell, \\
+S^{1jk}_i&=a\sum_\ell \epsilon_{jk\ell} I_i^\ell, \\
+S^{2jk}&=S^{3jk}=0,\quad S^{\lambda 0j}=0,
+\end{aligned}
+\tag{B.3m.44}
+$$
+
+with antisymmetry in $j,k$. Units are length times stress. Equations (43),(B.3m.44) give $D_\lambda S^{\lambda\mu\nu}=0=T^{\mu\nu}-T^{\nu\mu}$. Thus the independently prescribed physical density passes the exact torque test. No spin density is altered to absorb a failed stress equation.
+
+Backward differences do not obey the unshifted coordinate Leibniz premise of original B.4. Use the already proved corrected B.3f calculus explicitly. On the lifted cubic coordinates $x_j=av_j,x_0=ct$, define $\eta_{\lambda\mu}=a$ when $\lambda=\mu$ is spatial and 0 otherwise, and
+
+$$
+\begin{aligned}
+L^{\lambda\mu\nu}&=(x_\mu+\eta_{\lambda\mu})T^{\lambda\nu} \\
+&\quad -(x_\nu+\eta_{\lambda\nu})T^{\lambda\mu}, \\
+J_{\mathrm{ang}}&=L-S.
+\end{aligned}
+\tag{B.3m.45}
+$$
+
+The exact shifted product rule yields zero divergence away from the seams. On the actual periodic chart, with $n=(3,1,1)$, $\sigma_j(v)=n_j\,1_{v_j=0}$, the COMPLETE defect is
+
+$$
+\begin{aligned}
+D_\lambda J_{\mathrm{ang}}^{\lambda\mu\nu} \\
+&=-\sigma_\mu(v)T^{\mu\nu}_{v-e_\mu}+\sigma_\nu(v)T^{\nu\mu}_{v-e_\nu},
+\end{aligned}
+\tag{B.3m.46}
+$$
+
+omitting $\sigma$ terms for time indices. The one-cell transverse seams are included; zero transverse flux makes the corresponding applicable terms zero. The boost seam involving q1 is retained and can be nonzero. No globally single-valued periodic coordinate or globally conserved coordinate angular charge is falsely claimed. The lift and periodic boundary records are precisely the corrected source scope of B.3f, not extra continuum gates.
+
+Finally set
+
+$$
+\begin{aligned}
+B_{\mathrm{spin}}^{\lambda\mu\nu}&=[S^{\mu\lambda\nu}+S^{\nu\lambda\mu}-S^{\lambda\mu\nu}]/2, \\
+\Theta^{\mu\nu}&=T^{\mu\nu}+D_\lambda B_{\mathrm{spin}}^{\lambda\mu\nu}.
+\end{aligned}
+\tag{B.3m.47}
+$$
+
+Antisymmetry gives $\mathrm{Bspin}^{\lambda\mu\nu}=-\mathrm{Bspin}^{\mu\lambda\nu}$ and
+$\mathrm{Bspin}^{\lambda\mu\nu}-\mathrm{Bspin}^{\lambda\nu\mu}=-S^{\lambda\mu\nu}$.
+All mixed $D$ commute (the Hamiltonian is autonomous and translation covariant). Thus $\Theta$ is symmetric and conserved exactly, and $V\sum_i\Theta^{0\nu}=V\sum_iT^{0\nu}$. This is a direct finite-source proof of the B.4a algebra; it does not invoke its nonwrapping locality theorem on a three-cycle. It preserves actual total $H$, $P$ and the explicitly measured source inventory. The microscopic receiving object of Definition B.7 is this $\Theta$, with its original physical spin and precise seam record.
+
+#### B.3m Complexity units
+
+All numerals in the program/proxy/price formulas are numerical coordinates in one fixed base complexity unit $u_{C}$. In unit-bearing notation the fresh minimum is $C_{\mathrm{op}}=4u_C$, the proxy is $\hat{C}=3u_CI$, and the exact service-price extension in §6 is
+
+$$
+R(C)=R_0[1+((C-4u_C)_+/u_C)^{2}],\quad C\ge 3u_C;\quad R_I(C)=0.
+$$
+
+Thus the bracket is dimensionless, $R$ has power units, and $\tau_0R$ has energy units. The coordinate formula printed in the main proof is this same equation with $c_{\mathrm{complexity}}=C/u_C$. Program lengths use one $u_{C}$ per binary symbol. The proxy calibration does not identify its value with program length: it remains $3u_C$ versus $4u_C$, with the independently measured equality of their price values. This merely makes the fixed numerical-coordinate convention explicit.
+
+The other dimensions are literal in the main proof: $e,J,\kappa,b,h,C,B,V_{ij}$ and $\epsilon$ are energies; $\tau_0,\delta$ are times; $a$ is length; $V=a^{3}$ is volume; $q$ is energy per area per time; $\pi=q/c^{2}$ is momentum per volume; $p$ is stress; and $S^{\lambda\mu\nu}$ has length times stress units.
 
 ## B.7 Symmetric Physical Microscopic Stress-Energy Tensor $\hat{\Theta}_{\mu\nu}^{(MPU)}$
 
 The canonical tensor is symmetrized using the Belinfante-Rosenfeld procedure to obtain the physically relevant tensor.
 
-**Theorem B.4 (Belinfante-Rosenfeld Symmetrization)**
+<a id="construction-b3m1a-literal-three-packet-source-and-prefix-interpreter"></a>**Construction B.3m.1a (Literal Three-Packet Source and Prefix Interpreter).**
+
+The following finite grammar defines the two exact source descriptor words, constructor aliases, transducer tables, prefix filtering and decreasing finite-stage hierarchy used in Theorem B.3m. Its physical response meaning is the complete paid three-packet source and its all-history factor identification in that theorem. The finite-string semantics below do not test qualification or a desired complexity minimum. All $h\ge 1$ have identical descriptor bytes; the zero-write descriptor is the separate $h=0$ branch. The serialization and recurrences below fix the source words and their mathematical semantics.
+
+#### Source words and the exact prefix machine
+
+**Exact descriptor words.** For $h\in\mathbb N$, the physical descriptor $D_h$ has the following fields. The row order is lexicographic order of the displayed ASCII keys.
+
+| Key | Value |
+|---|---|
+| `clock_rails` | $17$ |
+| `coupling_window_ratio` | the ASCII string `1/1000` |
+| `cycle_slots` | $16$ |
+| `peer_write_enable` | the ordered pair $[1,1]$ |
+| `root_write_enable` | $1_{\{h>0\}}$ |
+| `schema` | the ASCII string `BSR03-ThreePacketPaidRoot-v1` |
+| `shared_arming` | $1$ |
+| `wallet_pairs` | $3$ |
+
+Serialize this finite map by writing an opening brace, its key–value pairs in the displayed order separated by commas, and a closing brace. A key and its string value are enclosed in double quotes; a colon separates key from value. Integers use their ordinary unsigned decimal digits, the pair is written with square brackets and a comma, and there is no whitespace inside the braces. Append one line-feed byte, of value $10$. Replace each resulting ASCII byte by its eight-bit most-significant-bit-first binary expansion. Denote the resulting binary word by $d_h$. This specifies every byte. In particular $d_h=d_1$ for all $h\ge1$, while $d_0\ne d_1$.
+
+**Self-delimiting headers and transducer tables.** For $n\ge1$, let $\gamma(n)=0^{\ell-1}\operatorname{bin}(n)$, where $\ell=|\operatorname{bin}(n)|$. Reading $z$ initial zeros followed by a one consumes the next $z$ bits as well and returns the integer represented by those $z+1$ bits. An incomplete header is invalid. Put $\vartheta=1^{16}0$. The two disjoint program forms are
+$$
+ 0\gamma(h+1)\quad(h\in\mathbb N),\qquad
+ \vartheta\gamma(e+1)p\quad(e\in\mathbb N,\ p\in\{0,1\}^*).
+$$
+The first form consumes the whole program; trailing bits make it invalid. The second form leaves precisely $p$ after its two headers. All other strings are undefined.
+
+The raw table with index $e\ge1$ is specified by the bits following the leading one in $\operatorname{bin}(e)$; equivalently $e=2^{|b|}+\operatorname{val}(b)$. Read $\gamma(q_0+1)$, then $\gamma(r+1)$, then $r$ rows, each containing five headers
+$$
+ \gamma(q+1)\gamma(a+1)\gamma(q'+2)\gamma(b'+1)\gamma(m+2).
+$$
+The allowed values are $q,q_0\ge0$, $a,b'\in\{0,1,2\}$, $q'\ge-1$ and $m\in\{-1,0,1\}$. Repeated input pairs $(q,a)$, out-of-range values, incomplete headers or trailing bits invalidate the table; an invalid index, including $e=0$, denotes the empty table with initial state zero. Symbol $2$ is blank and state $-1$ is halt. A transition writes $b'$, changes state to $q'$, and displaces the head by $m$, in that order. With side word $z$ and raw program $p$, the initial tape is $\gamma(|z|+1)zp$ in cells starting at zero, the other cells are blank, and the head starts at zero. A missing transition is undefined. A halted output consists of cells zero through the cell before the first blank. This is the exact finite-table transducer convention; a finite cleanup suffix converts any ordinary finite output convention into it.
+
+**Prefix filtering and the exact virtual clock.** For fixed $e,z$, consider stages $s=0,1,\ldots$. At stage $s$, visit all binary words of lengths $0,1,\ldots,s$, in length and then lexicographic order. Simulate the raw table for exactly $s$ transitions, allowing earlier halt. A previously unseen halted word is retained precisely when it is prefix-incomparable with every previously retained word; otherwise reject it permanently. Previously retained and rejected words keep their status. The value of the filtered machine on $p$ is the output at the first retention of $p$; if this never occurs it is undefined. This order is part of the definition, including ties between newly halted words.
+
+The interpreter emits one virtual tick on dispatch. A constructor emits one further tick and returns $d_h$ at the next observation. A universal program emits one tick immediately before each candidate visit in the preceding stage order, including already retained or rejected candidates, and returns at the observation at which its suffix $p$ is retained. An invalid program emits ticks forever. Thus $\operatorname{sim}_n(p,z)$ is the output if halt is observed in the first $n$ observations and is undefined otherwise; a constructor halts at observation three. This fixes the finite-stage convention as well as the partial function.
+
+The physical decoder accepts exactly $d_0,d_1$ and returns respectively zero and one. In particular a binary output whose length is not a multiple of eight, a noncanonical byte word, or any other descriptor has no physical decoding. The decreasing stage family is
+$$
+ \mathcal H_n=\{p:\operatorname{sim}_n(p,\varnothing)
+ \text{ is undefined or belongs to }\{d_0,d_1\}\}.
+$$
+Only a detected invalid output removes a program. The source qualification and the three-packet physical responses remain those of Theorem B.3m.
+
+**Prefix and universality proof.** The filtering rule preserves prefix-incomparability at every stage, hence its retained domain is prefix-free. Every finite prefix-free raw transducer domain passes this filter unchanged, because none of its halting programs is comparable with another. The $\gamma$ headers are self-delimiting, the constructor and universal forms have different first bits, and the fixed transducer index contributes only the constant header length $17+|\gamma(e+1)|$. Therefore the specified interpreter is an optimal partial prefix machine under the given output convention. The exact descriptor words prove the constructor-alias and physical-decoder identities above. No halting test or qualification oracle occurs in this construction.
+
+<a id="theorem-b3n-finite-conserving-support-for-an-integer-charge-service"></a>**Theorem B.3n (Finite Conserving Support for an Integer-Charge Service).** Let $\mathcal H_0$ be the complete finite source and apparatus carrier, including its supply, clock, records and garbage. Fix $R,\hbar,c,\Delta,E_0>0$, an integer $s\ge1$, and self-adjoint matrices $N,K_0,A$ on this carrier satisfying
+$$
+N=\sum_{j=-s}^s j\Pi_j,\qquad P=\hbar N/R,\qquad
+[K_0,N]=0,\qquad K_0\succeq\Delta I,\qquad A\succeq E_0I,
+\qquad H_{\rm fix}=K_0+A.
+\tag{B.3n.1}
+$$
+Zero spectral projectors are permitted. The matrix $A$ contains every installed detector coupling and baseline; its source dependence need not commute with $N$. Choose integers $L\ge s$, $K\ge L+2s$ and $M>0$. Add the finite support $\mathcal R_K=\operatorname{span}\{|r\rangle:-K\le r\le K\}$ and register
+$$
+\begin{aligned}
+Q|r\rangle&=r|r\rangle,&P_R&=\hbar Q/R,&
+|\eta_L\rangle&=(2L+1)^{-1/2}\sum_{r=-L}^L|r\rangle,\\
+\langle r|A_K|u\rangle&=\sum_{j,k:\ r+j=u+k}\Pi_jA\Pi_k,&
+H_K&=K_0\otimes I+A_K+\frac{P_R^2}{2M}+Mc^2I,&
+P_{\rm tot}&=P\otimes I+I\otimes P_R.
+\end{aligned}
+\tag{B.3n.2}
+$$
+These are the actual finite matrices, with the original source and apparatus observables retained as $O\otimes I$. Then
+$$
+A_K\succeq E_0I,\quad\|A_K\|\le\|A\|,\quad
+H_K\succeq(\Delta+E_0+Mc^2)I,\quad[H_K,P_{\rm tot}]=0,
+\qquad
+\dot P=\frac i\hbar[A_K,P],\quad\dot P_R=-\dot P.
+\tag{B.3n.3}
+$$
+At any physical duration $t\ge0$, on every original input and arbitrary spectator reference with the independent support preparation $\eta_L$, the reduced original-carrier channel differs from evolution under $H_{\rm fix}$ by half-diamond distance at most
+$$
+e_{\rm supp}(t)=\min\left\{1,
+2\sqrt{\frac{2s}{2L+1}}+
+\frac{t\hbar(L+2s)^2}{2MR^2}\right\}.
+\tag{B.3n.4}
+$$
+Consequently any complete instrument obtained by common postprocessing of the original service, with comparison error $\epsilon_0$, has new error at most one and at most $\epsilon_0$ plus the unclipped right side of (B.3n.4). This includes every failure branch and retained output. The support is physically retained even if a channel comparison does not query it. For every $\delta>0$ and finite $t$, sufficient finite choices are
+$$
+L\ge s,\qquad 2L+1\ge\frac{32s}{\delta^2},\qquad
+K=L+2s,\qquad M\ge\frac{t\hbar(L+2s)^2}{R^2\delta}.
+\tag{B.3n.5}
+$$
+The independent support preparation and its phase origin are additional resources. No bounded-density, bounded-resource or physical-minimality statement accompanies $\delta\downarrow0$.
+
+*Proof. Positivity and exact finite guards.* Use $\ell^2(\mathbb Z)$ only as a proof space. Let $S|r\rangle=|r+1\rangle$ and
+$$
+V=\sum_j\Pi_j\otimes S^{-j},\qquad
+A_\infty=V(A\otimes I)V^*,\qquad
+A_K=(I\otimes P_K)A_\infty(I\otimes P_K)|_{\mathcal H_0\otimes\mathcal R_K}.
+\tag{B.3n.6}
+$$
+The orthogonal charge projections make $V$ unitary. Compression of the positive form proves the first two bounds in (B.3n.3). Every nonzero entry in (B.3n.2) preserves $r+j$, so $A_K$ commutes with $N+Q$. The same holds for $K_0$, $Q^2$ and the rest offset. This proves positivity, conservation and the two opposite Heisenberg forces on the full finite carrier.
+
+Since $[K_0,N]=0$, the zero-kinetic auxiliary evolution is exactly
+$$
+U_\infty(t)=V[e^{-itH_{\rm fix}/\hbar}\otimes I]V^*.
+\tag{B.3n.7}
+$$
+An input supported in $|r|\le L$ has total charge in $[-L-s,L+s]$. Any later source charge is still in $[-s,s]$, hence its support charge lies in $[-L-2s,L+2s]$. The condition $K\ge L+2s$ makes the restriction to the prepared invariant sectors exact, for all original inputs and all times. No state outside the finite support is consumed.
+
+For $|j|\le s\le L$, direct overlap of the two finite intervals gives
+$$
+\langle\eta_L|S^j|\eta_L\rangle=1-\frac{|j|}{2L+1},\qquad
+\|(V-I)(\,\cdot\,\otimes\eta_L)\|\le\sqrt{\frac{2s}{2L+1}}.
+\tag{B.3n.8}
+$$
+The same estimate holds for $V^*$ and with every spectator. A two-term telescope of $VU_{\rm fix}V^*-U_{\rm fix}$ bounds its ready-isometry distance by twice this value. Isometry norm distance bounds half-diamond distance after any common reduction or instrument. On the invariant total-charge sectors, the kinetic perturbation has norm at most $\hbar^2(L+2s)^2/(2MR^2)$. Duhamel therefore adds at most $t\hbar(L+2s)^2/(2MR^2)$ to the ready-isometry distance. The global $Mc^2$ phase is removed only in this channel comparison. The triangle inequality proves (B.3n.4). The two variable terms are each at most $\delta/2$ under (B.3n.5).
+
+**Resource and uniform-metric action.** The added capacity and independent tracial purity debit are each $\log(2K+1)$ nats. In the supplied ready state,
+$$
+\left\langle\frac{P_R^2}{2M}\right\rangle
+=\frac{\hbar^2L(L+1)}{6MR^2}.
+\tag{B.3n.9}
+$$
+The actual interaction energy is $\langle A_K\rangle$, positive and bounded above by $\|A\|$, rather than $\langle A\rangle$ or an assigned fee. Every original source, clock, supply, archive, storage and detector term remains once in $H_K$. The old $E_0$ is the original payload/coupler baseline; $M$ is a distinct bare placement-body parameter. The construction is nonrelativistic and proves no mass-energy/inertia identification. In particular actual products must be used: $A_K^2$ need not be the compression of $A_\infty^2$.
+
+For spatially uniform lapse $\nu(t)>0$ and shift $b(t)$, the complete registered family and Berry action are
+$$
+H_K[\nu,b]=\nu H_K-bP_{\rm tot},\qquad
+S_K=\int\left[\frac{i\hbar}{2}\Psi^*\overset{\leftrightarrow}{\partial_t}\Psi
+-\Psi^*H_K[\nu,b]\Psi\right]dt.
+\tag{B.3n.10}
+$$
+Every energy term is in the lapse port. Under $\Psi'=e^{-i\xi(t)P_{\rm tot}/\hbar}\Psi$ and $b'=b-\dot\xi$, the Berry increment $\dot\xi\langle P_{\rm tot}\rangle$ cancels the shift change. Monotone time changes transform $\nu$ and $b$ as rates, so this family has the stated rigid-translation and time-coordinate covariance. Its affine lapse/shift contacts vanish because this uniform family is linear. This does not assign it the contacts of a different fixed-support action.
+
+Charge projectors and couplers may be nonlocal; the finite matrix prescription supplies no bounded-range fabrication or cost optimum. Preparation/calibration errors of the added support must be supplied for an implemented service. Exact global momentum and this uniform action do not by themselves supply a spatially varying metric action, local symmetric stress, a boost/heat map, emergent geometry or the refinement hypotheses of Definition B.8a. $\square$
+
+<a id="corollary-b3na-occupation-readout-transfers-a-nonzero-integrated-momentum"></a>**Corollary B.3n.a (Occupation Readout Transfers a Nonzero Integrated Momentum).** Let $J,d\ge1$ be integers, let $R,\hbar>0$, and put $n=2J+1$, $q=2d$. Take the complete fermionic Fock space over $\mathbb C^n\otimes\mathbb C^q$. For $-J\le m\le J$ use momentum $p_m=\hbar m/R$ and
+$$
+P=d\Gamma(\operatorname{diag}(p_m)\otimes I_q),\qquad
+|f\rangle=n^{-1/2}\sum_{m=-J}^J e^{-imx_*/R}|m\rangle.
+\tag{B.3n.a.1}
+$$
+Let $n_a$ be occupation of the orthonormal orbital $f\otimes e_a$. Select the $d$ spin-up internal labels. The complete success and failure projections are
+$$
+Q_\ell=n_\ell\prod_{a\ne\ell}(I-n_a),\qquad
+Q_0=I-\sum_{\ell\,\mathrm{spin\!\ up}}Q_\ell,
+\qquad \mathcal D(\rho)=\sum_wQ_w\rho Q_w.
+\tag{B.3n.a.2}
+$$
+They form a genuine full-carrier instrument; one may append its orthogonal outcome record. On the one-particle input with momentum $p_j$ and one selected spin-up label $\ell$,
+$$
+\operatorname{Tr}[P\mathcal D(|j,\ell\rangle\langle j,\ell|)]-p_j
+=-\frac{2\hbar j}{Rn},\qquad
+\|P\|=\frac{\hbar s}{R},\quad s=\frac{qJ(J+1)}2.
+\tag{B.3n.a.3}
+$$
+If an actual complete instrument approximates this one in half-diamond norm by at most $\epsilon$, its source momentum change satisfies
+$$
+\left|\Delta\langle P\rangle+\frac{2\hbar j}{Rn}\right|
+\le2\|P\|\epsilon.
+\tag{B.3n.a.4}
+$$
+Thus for $j\ne0$, $\epsilon<|j|/(ns)$ forces a nonzero transfer; at $\epsilon\le |j|/(2ns)$ its magnitude is at least $\hbar|j|/(Rn)$.
+
+*Proof.* On this one-particle internal sector all $n_a$ with $a\ne\ell$ vanish. Exactly two outcome projections act nontrivially: $Q=|f\rangle\langle f|$ and $I-Q$. Every other full-carrier label is retained with zero probability on this input. Since $|\langle m|f\rangle|^2=1/n$ and $\langle f|P|f\rangle=0$,
+$$
+\Delta\langle P\rangle=-2\operatorname{Re}\langle j|QP|j\rangle
++2\langle j|QPQ|j\rangle=-2p_j/n.
+\tag{B.3n.a.5}
+$$
+The extremal Fock momentum fills all positive-$m$ orbitals in each of the $q$ components, giving the norm in (B.3n.a.3); the opposite filling gives its negative. Conjugating the source momentum, full instrument and input together by the same bank unitary, or appending a spectator, preserves these identities. Half-diamond control gives source trace distance at most $2\epsilon$, and $|\operatorname{Tr}[P(\rho-\sigma)]|\le\|P\|\|\rho-\sigma\|_1$ proves (B.3n.a.4).
+
+In particular a proposed periodic local Ward row $\partial_t\pi+\partial_x\sigma=0$ whose whole integrated metric momentum port is this source $P$ would imply $\Delta\langle P\rangle=0$ after integration around the circle. It cannot describe a service obeying the strict error bound above while assigning no opposite apparatus momentum. A periodic improvement term cannot change that integral, and a scalar metric-proportional term has zero flat mixed momentum port. This is a test of that fixed-port promotion, not a prohibition on the conserving source-plus-support port of Theorem B.3n. Momentum impulse is not horizon heat, and no boost/Clausius or local-stress completion is inferred. $\square$
+
+<a id="theorem-b3o-frozen-fiber-circle-obstruction-and-moving-frame-transport"></a>**Theorem B.3o (Frozen-Fiber Circle Obstruction and Moving-Frame Transport).** Let $P,C,S$ be Hermitian matrices on any nonzero finite-dimensional Hilbert space, let $a=\hbar/R>0$, and use normalized Hilbert--Schmidt norm $\|X\|_2^2=\operatorname{Tr}(X^*X)/\dim\mathcal H$. Put
+$$
+E_1=[P,C]+iaS,\qquad E_3=[C,S]-iaP.
+\tag{B.3o.1}
+$$
+Then
+$$
+\sqrt{\|E_1\|_2^2+\|E_3\|_2^2}
+\ge a\sqrt{\|P\|_2^2+\|S\|_2^2}\ge a\|P\|_2.
+\tag{B.3o.2}
+$$
+In particular an exact finite Hermitian representation of
+$$
+[P,C]=-iaS,\qquad[P,S]=iaC,\qquad[C,S]=iaP
+\tag{B.3o.3}
+$$
+is trivial. Projective central terms are excluded from this assertion. For the half-density generators $G_f=-i\hbar(f\partial_x+f'/2)$ on the circle, the corresponding basis is
+$$
+P=G_1,\qquad C=G_{\cos(x/R)},\qquad S=-G_{\sin(x/R)}.
+\tag{B.3o.4}
+$$
+The minus sign fixes this bracket convention.
+
+*Proof of the obstruction.* Trace cyclicity gives $\operatorname{Tr}(P[C,S])=\operatorname{Tr}([P,C]S)$. Substituting (B.3o.1) yields
+$$
+ia\operatorname{Tr}(P^2+S^2)=\operatorname{Tr}(E_1S-PE_3).
+\tag{B.3o.5}
+$$
+Normalized Hilbert--Schmidt Cauchy--Schwarz on each trace and then on the two-component vector proves (B.3o.2). If both residuals vanish, $P=S=0$, and the middle relation of (B.3o.3) forces $C=0$.
+
+There is an explicit full-Fock specialization. For integers $J\ge1$ and $q\ge1$ take the entire fermionic Fock space over $\mathbb C^{2J+1}\otimes\mathbb C^q$, with
+$$
+P=d\Gamma\bigl(\operatorname{diag}(\hbar m/R)_{m=-J}^J\otimes I_q\bigr).
+\tag{B.3o.6}
+$$
+Normalized trace makes the occupations independent Bernoulli variables with mean $1/2$ and variance $1/4$. The mean momentum vanishes and
+$$
+\|P\|_2^2=(\hbar/R)^2\frac{qJ(J+1)(2J+1)}{12}.
+\tag{B.3o.7}
+$$
+Unitary bank conjugation and spectator tensor factors preserve this norm. An independent zero-trace support momentum adds its variance, rather than cancelling it. Thus a putative realization of (B.3o.3) with that complete source-plus-support momentum satisfies
+$$
+\max(\|E_1\|,\|E_3\|)
+\ge\frac{\hbar^2}{R^2}\sqrt{\frac{qJ(J+1)(2J+1)}{24}}.
+\tag{B.3o.8}
+$$
+Indeed operator norm dominates normalized Hilbert--Schmidt norm, and the maximum of two nonnegative numbers is at least their Euclidean norm divided by $\sqrt2$. The bound excludes vanishing frozen-fiber defects at fixed physical $R,\hbar,J,q$. If an additional specified family identifies $R$ with a shrinking localization scale, it has the displayed $R^{-2}$ scaling; no identification with a horizon area is implied.
+
+**Moving finite fibers.** The obstruction concerns honest Hermitian generators on one fixed finite fiber. A different kinematic construction transports the fiber. On the auxiliary one-particle half-density space $L^2(S^1)$, an orientation-preserving smooth diffeomorphism acts by
+$$
+(U_\phi f)(x)=\sqrt{(\phi^{-1})'(x)}\,f(\phi^{-1}(x)).
+\tag{B.3o.9}
+$$
+Change of variables proves unitarity and $U_\phi U_\psi=U_{\phi\circ\psi}$. If $E_0:\mathbb C^n\to L^2(S^1)$ is the original finite Fourier isometry, put
+$$
+E_\phi=U_\phi E_0,\qquad P_\phi=E_\phi E_\phi^*.
+\tag{B.3o.10}
+$$
+The finite fibers have the same dimension but are generally different subspaces. $U_\psi$ maps the entire $\phi$ fiber to the $\psi\circ\phi$ fiber. Transporting their Fock lifts, every source matrix, bank, spectator and complete instrument together preserves all products and outcome probabilities. The auxiliary infinite-dimensional space defines these finite embeddings; it is not an extra physical oscillator or field factor.
+
+For a differentiable orthonormal frame $E(t)$, define $\Gamma=E^*\dot E$, which is anti-Hermitian. Substitute $\psi=E(t)c$ in the Berry action. Its coordinate form is
+$$
+i\hbar c^*\dot c-c^*[E^*hE-i\hbar\Gamma]c.
+\tag{B.3o.11}
+$$
+The connection term is therefore mandatory. A frame or metric variation differentiates $E$ on both sides and differentiates $\Gamma$; retaining only the old fixed-projector ports gives a different action. Positivity belongs to the transported energy $E^*hE$, while its coordinate generator also includes the connection.
+
+This changes-frame construction does not recompute and identify unrelated Fourier cutoffs in new charts. Its smoothing profiles, finite basis, source/site projectors, bank convention and complete detector supports must be transported as one installed frame. It supplies neither a dynamical frame nor a local support force. Theorem B.3n supplies a finite global recoil model, while local moving-frame stress, its action and a common refinement remain separate constructions. A local stress identity or a metric-dependent bundle does not itself require (B.3o.3); hence the frozen-fiber obstruction is not a general gravity impossibility theorem. $\square$
+
+<a id="theorem-b3p-a-physical-spin-mobile-prediction-source-and-its-specified-momentum-obstruction"></a>**Theorem B.3p (A physical-spin mobile prediction source and its specified momentum obstruction).**
+
+For $a,V,\hbar,\Omega,\mu>0$, there is an autonomous positive Hamiltonian on fifty-one physical spin-$1/2$ factors with a five-cell mobile register, a separate local acquisition register, an exact four-gate endpoint, positive full-space local energies and populated energy transport. It is invariant under the physical $SU(2)$ action. Its commutator-derived energy current has the explicit nonconserved integral below. The construction therefore separates a realized local predictive energy source from the additional momentum premise in Theorem B.3b.
+
+*Part I. Physical tensor factors and an exact singlet encoding.* Place five nine-spin cells $C_j$ at $x_j=ja$, $j=0,\ldots,4$. In each cell, the first eight spins have singlet multiplicity
+
+$$
+\binom84-\binom83=14. \tag{B.3p.1}
+$$
+
+Choose the nine singlets specified below, labelled $|\mathrm{vac}\rangle$ and $|s\rangle$, $s=(M,P,I)\in\{0,1\}^3$, and leave the ninth spin as a spectator. The active cell dimension is $9\cdot2=18$ inside $2^9=512$; the other $494$ dimensions remain in the physical Hilbert space. A six-spin environmental register $E$ at $x_E=3a/2$ uses the two singlets of its first four spins as $|0\rangle_E,|1\rangle_E$ and retains two spectator spins. Its active dimension is $2\cdot4=8$ inside $64$, with complement dimension $56$. Thus
+
+$$
+\mathcal H_{\mathrm{phys}}=(\mathbb C^2)^{\otimes51},\qquad 5\cdot9+6=51. \tag{B.3p.2}
+$$
+
+An arbitrary fixed grouping into seventeen triples specifies native three-spin carriers; qualification as an MPU is a separate predicate.
+
+Here is a complete deterministic definition of the singlets, including their normalization. For an ordered even list of spin indices, enumerate its noncrossing perfect matchings by pairing its first index with the second, fourth, sixth, and subsequent even-positioned indices in that order. For each such pair, recursively enumerate the inside matchings first and the outside matchings second. The empty list has one empty matching. For a matching $\mathcal M$ of $N$ spins, orient each pair $(a,b)$ with $a<b$, and set
+
+$$
+ v_{\mathcal M}=2^{-N/4}\sum_{\beta\in\{0,1\}^{N/2}}
+ (-1)^{\sum_r\beta_r}|x(\mathcal M,\beta)\rangle,\qquad
+ x_{a_r}=\beta_r,\quad x_{b_r}=1-\beta_r. \tag{B.3p.3}
+$$
+
+The first physical bit is the most significant bit of the displayed computational basis. Each vector is a product of normalized pair singlets and is annihilated by total physical spin. For $N=4$, the matching order is $(01)(23),(03)(12)$, with Gram matrix
+
+$$
+ G_4=\begin{pmatrix}1&-1/2\\-1/2&1\end{pmatrix}. \tag{B.3p.4}
+$$
+
+For $N=8$, the matching order is
+
+| $j$ | Noncrossing matching $\mathcal M_j$ |
+|---:|---|
+| $1$ | $(01)(23)(45)(67)$ |
+| $2$ | $(01)(23)(47)(56)$ |
+| $3$ | $(01)(25)(34)(67)$ |
+| $4$ | $(01)(27)(34)(56)$ |
+| $5$ | $(01)(27)(36)(45)$ |
+| $6$ | $(03)(12)(45)(67)$ |
+| $7$ | $(03)(12)(47)(56)$ |
+| $8$ | $(05)(12)(34)(67)$ |
+| $9$ | $(05)(14)(23)(67)$ |
+| $10$ | $(07)(12)(34)(56)$ |
+| $11$ | $(07)(12)(36)(45)$ |
+| $12$ | $(07)(14)(23)(56)$ |
+| $13$ | $(07)(16)(23)(45)$ |
+| $14$ | $(07)(16)(25)(34)$ |
+
+In that order the integer Gram matrix is:
+
+$$
+8G_8=\begin{pmatrix}
+8 & -4 & -4 & 2 & -4 & -4 & 2 & 2 & -4 & -1 & 2 & 2 & -4 & 2\\
+-4 & 8 & 2 & -4 & 2 & 2 & -4 & -1 & 2 & 2 & -1 & -4 & 2 & -1\\
+-4 & 2 & 8 & -4 & 2 & 2 & -1 & -4 & 2 & 2 & -1 & -1 & 2 & -4\\
+2 & -4 & -4 & 8 & -4 & -1 & 2 & 2 & -1 & -4 & 2 & 2 & -1 & 2\\
+-4 & 2 & 2 & -4 & 8 & 2 & -1 & -1 & 2 & 2 & -4 & -1 & 2 & -1\\
+-4 & 2 & 2 & -1 & 2 & 8 & -4 & -4 & 2 & 2 & -4 & -1 & 2 & -1\\
+2 & -4 & -1 & 2 & -1 & -4 & 8 & 2 & -1 & -4 & 2 & 2 & -1 & 2\\
+2 & -1 & -4 & 2 & -1 & -4 & 2 & 8 & -4 & -4 & 2 & 2 & -1 & 2\\
+-4 & 2 & 2 & -1 & 2 & 2 & -1 & -4 & 8 & 2 & -1 & -4 & 2 & -1\\
+-1 & 2 & 2 & -4 & 2 & 2 & -4 & -4 & 2 & 8 & -4 & -4 & 2 & -4\\
+2 & -1 & -1 & 2 & -4 & -4 & 2 & 2 & -1 & -4 & 8 & 2 & -4 & 2\\
+2 & -4 & -1 & 2 & -1 & -1 & 2 & 2 & -4 & -4 & 2 & 8 & -4 & 2\\
+-4 & 2 & 2 & -1 & 2 & 2 & -1 & -1 & 2 & 2 & -4 & -4 & 8 & -4\\
+2 & -1 & -4 & 2 & -1 & -1 & 2 & 2 & -1 & -4 & 2 & 2 & -4 & 8
+\end{pmatrix}.
+$$
+
+Use positive-normalization Gram–Schmidt in this order:
+
+$$
+ r_k=v_k-\sum_{\ell<k}e_\ell\langle e_\ell,v_k\rangle,\qquad
+ e_k=r_k/\sqrt{\langle r_k,r_k\rangle}. \tag{B.3p.5}
+$$
+
+For a reproducible exact rank check, compute $G=LDL^*$ with unit diagonal $L$ using
+
+$$
+ d_k=G_{kk}-\sum_{r<k}|L_{kr}|^2d_r,\qquad
+ L_{ik}=\frac{G_{ik}-\sum_{r<k}L_{ir}d_r\overline{L_{kr}}}{d_k}\quad(i>k). \tag{B.3p.6}
+$$
+
+The pivots of $G_4$ are $1,3/4$; those of $G_8$ are
+
+$$
+ 1,\frac34,\frac34,\frac9{16},\frac12,\frac34,\frac9{16},
+ \frac9{16},\frac12,\frac{27}{64},\frac38,\frac38,\frac13,\frac5{16}. \tag{B.3p.7}
+$$
+
+Every pivot is positive. These independent singlets exhaust the singlet dimensions: the spin-zero multiplicity is the dimension of the zero-weight space minus the dimension of the weight-one space, namely $\binom N{N/2}-\binom N{N/2-1}$. Take $e_0$ as the mobile vacuum and $e_{1+4M+2P+I}$ as the occupied label, and take the two four-spin vectors as the environmental basis. Equations (B.3p.3)–(B.3p.7) define exact isometries without numerical encoding files.
+
+*Part II. Autonomous local acquisition on the full physical space.* Let $n_j$ project onto the eight occupied mobile singlets, tensor spectator identity, and be zero on the first-eight-spin code complement. Define $T_j$ on its source subspace by
+
+$$
+ T_j:\ |s\rangle_j|\mathrm{vac}\rangle_{j+1}
+ \longmapsto |\mathrm{vac}\rangle_j(U_j|s\rangle)_{j+1}, \tag{B.3p.8}
+$$
+
+with the environmental label included for $j=1$. The four gates are
+
+$$
+ U_0=\mathrm{CNOT}_{M\to P},\quad U_1=\mathrm{CNOT}_{E\to I},\quad
+ U_2=\mathrm{CNOT}_{P\to I},\quad U_3=\mathrm{CNOT}_{I\to M}. \tag{B.3p.9}
+$$
+
+Extend $T_j$ by zero on other occupancy patterns and the relevant code complements. Only $T_1$ acts on $E$; its environmental complement blocks that edge, while unaffected edges retain their dynamics. Spectators stay at their own spatial locations. Source and target subspaces are orthogonal and the displayed map is unitary between them, so
+
+$$
+ T_j^2=0,\qquad T_jT_j^*T_j=T_j,\qquad
+ K_j=T_j+T_j^*,\qquad \operatorname{spec}K_j\subseteq\{-1,0,1\}. \tag{B.3p.10}
+$$
+
+Set
+
+$$
+ g_j=\Omega\sqrt{(j+1)(4-j)},\qquad h_j=g_j(I+K_j),\qquad
+ H=\mu\sum_{j=0}^4n_j+\sum_{j=0}^3h_j. \tag{B.3p.11}
+$$
+
+Here $I$ is the full identity on the registered support, including complements. Each $h_j$ has eigenvalues among $0,g_j,2g_j$, hence $H\ge0$ on all of $\mathcal H_{\mathrm{phys}}$. It is bounded, self-adjoint and time independent. The matrix units in (B.3p.8) are finite polynomials in actual physical Pauli matrices. Ordinary propagation terms act on eighteen spins, the acquisition term on twenty-four, and $\mu n_j$ on nine. These are specified many-spin block-local interactions. Each nonzero hop moves exactly one occupation, so $[H,\sum_jn_j]=0$ in every token-number and complement sector.
+
+*Part III. Endpoint and populated predictive records.* In the invariant active one-token sector the seven spectator bits factor out, and the remaining space is $\mathbb C^5\otimes\mathbb C^8\otimes\mathbb C^2$. Write
+
+$$
+ W_0=I,\quad W_j=U_{j-1}\cdots U_0,\quad
+ W=\sum_{j=0}^4|j\rangle\langle j|\otimes W_j,\quad
+ C=\sum_{j=0}^3g_j=\Omega(4+2\sqrt6). \tag{B.3p.12}
+$$
+
+Direct conjugation gives
+
+$$
+ H_{\mathrm{one}}=(C+\mu)I+W(A\otimes I_{16})W^*,\qquad
+ A=\sum_{j=0}^3g_j(|j+1\rangle\langle j|+|j\rangle\langle j+1|)=2\Omega J_x, \tag{B.3p.13}
+$$
+
+where $J_x$ is dimensionless spin two. The spin-two representation is the symmetric fourth power of spin $1/2$; applying $\cos\theta I-i\sin\theta\sigma_x$ to its four factors gives
+
+$$
+ \alpha_j(t)=e^{-i(C+\mu)t/\hbar}(-i)^j\sqrt{\binom4j}
+ \sin^j\theta\cos^{4-j}\theta,\qquad \theta=\Omega t/\hbar. \tag{B.3p.14}
+$$
+
+The branch at position $j$ has work/environment state $W_j|\psi\rangle$. At $T=\pi\hbar/(2\Omega)$ this proves the exact endpoint, also for inputs entangled with a reference,
+
+$$
+ e^{-iHT/\hbar}|0\rangle|\psi\rangle
+ =e^{-i(C+\mu)T/\hbar}(-i)^4|4\rangle U_3U_2U_1U_0|\psi\rangle. \tag{B.3p.15}
+$$
+
+This is the engineered perfect-transfer chain of Christandl et al. (2004), with the gate dressing in (B.3p.12); Kay (2010) discusses its computational use. Its position probabilities are $p_j=\binom4j\sin^{2j}\theta\cos^{8-2j}\theta$. In particular, $p(T/2)=(1,4,6,4,1)/16$: intermediate prefixes are coherent position branches, while the endpoint is deterministic.
+
+Initialize the token as $(m,0,0)$ in $C_0$ and $E=e$, with the other cells empty. The full prefix truth table is
+
+| Position | $(M,P,I;E)$ |
+|---|---|
+| $0$ | $(m,0,0;e)$ |
+| $1$ | $(m,m,0;e)$ |
+| $2$ | $(m,m,e;e)$ |
+| $3$ | $(m,m,e\oplus m;e)$ |
+| $4$ | $(e,m,e\oplus m;e)$ |
+
+Thus the second gate acquires the separate environmental bit into an initially empty interface. The original prediction and the mismatch remain retained at the endpoint. For the explicit initial law
+
+$$
+ \Pr(0,0)=\Pr(1,1)=\frac38,\qquad
+ \Pr(0,1)=\Pr(1,0)=\frac18, \tag{B.3p.16}
+$$
+
+$m,e$ are fair, the stored pre-acquisition prediction has accuracy $3/4$ against an independent fair baseline $1/2$, and the final memory equals $e$ surely. This is a task with the stated supplied initial correlation. $E$'s computational value is conserved; coherent environmental inputs may become entangled with the token.
+
+For completeness the same-clock single-gate-null diagnostics are
+
+| Gate replaced by identity | Final memory accuracy | Prediction accuracy |
+|---|---:|---:|
+| none | $1$ | $3/4$ |
+| $U_0$ | $1/2$ | $1/2$ |
+| $U_1$ | $1/2$ | $3/4$ |
+| $U_2$ | $1/2$ | $3/4$ |
+| $U_3$ | $3/4$ | $3/4$ |
+
+Each row follows by substituting an identity in the four explicit Boolean gates and averaging (B.3p.16); it is a distinct-source diagnostic. Occupied-token bit observables obey
+
+$$
+ \langle P_{\mathrm{bit}}\rangle=\frac{1-p_0}{2},\qquad
+ \langle I_{\mathrm{bit}}\rangle=\frac{p_2}{2}+\frac{p_3+p_4}{4},\qquad
+ \Pr(M_{\mathrm{occupied}}\ne m)=\frac{p_4}{4}. \tag{B.3p.17}
+$$
+
+These follow from the five truth-table rows and the probabilities $p_j$, and populate the prediction, acquisition and comparison branches during execution.
+
+*Part IV. Positive energies, exact continuity and nonzero transported energy.* Put $h_{-1}=h_4=0$ and
+
+$$
+ \epsilon_j=\mu n_j+\frac12(h_{j-1}+h_j),\quad \rho_j=\epsilon_j/V,\quad
+ J_{j\to k}=\frac{i}{\hbar V}[\epsilon_j,\epsilon_k]. \tag{B.3p.18}
+$$
+
+The $\epsilon_j$ are positive and sum to the full $H$. Their support is the cell star $\{j-1,j,j+1\}$, with $E$ included only where the star contains acquisition edge $\{1,2\}$. A density star there can contain thirty-three spins; the eighteen/twenty-four-spin bound above concerns individual Hamiltonian terms. The currents are Hermitian, antisymmetric, and zero for disjoint supports. The full-space Heisenberg equation gives
+
+$$
+ \dot\rho_j+\sum_kJ_{j\to k}=0,\qquad
+ q_c=a\sum_{j\le c<k}J_{j\to k},\qquad
+ \dot\rho_j+\frac{q_j-q_{j-1}}a=0,\quad q_{-1}=q_4=0. \tag{B.3p.19}
+$$
+
+The last equation follows by subtracting the two adjacent cut sums; each contributing commutator remains in the bounded neighborhood of its cut. No restriction to a computational subspace was used. For $\mu=0$, the half-bond contribution is
+
+$$
+ q_c=\frac{ai}{2\hbar V}\bigl([h_{c-1},h_c]+[h_c,h_{c+1}]\bigr). \tag{B.3p.20}
+$$
+
+Neighboring amplitudes in (B.3p.14) have relative phase $\pm i$, so their hopping-energy expectations vanish. Consequently the prepared execution has
+
+$$
+ \langle\epsilon_j(t)\rangle=\frac12(g_{j-1}+g_j)+\mu p_j(t),\qquad
+ \langle H\rangle=C+\mu. \tag{B.3p.21}
+$$
+
+At $\mu=0$ all current expectations vanish even though the token moves. For $\mu>0$, differentiate the cumulative binomial probabilities in (B.3p.19). At $\theta=\pi/4$, the derivatives $dp_j/dt=(\Omega/\hbar)(2j-4)\binom4j/8$ give
+
+$$
+ ( \langle q_0\rangle,\langle q_1\rangle,\langle q_2\rangle,\langle q_3\rangle )_{T/2}
+ =\frac{\mu\Omega a}{\hbar V}\left(\frac12,\frac32,\frac32,\frac12\right). \tag{B.3p.22}
+$$
+
+This populated transport holds for every initial one-token work/environment state, since (B.3p.14) is input independent.
+
+*Part V. Physical spin and the momentum test.* All singlet matrix units commute with simultaneous physical rotations of the relevant eight- or four-spin block; spectators carry identity. Hence the full $H,h_j,n_j$ commute with $u(g)^{\otimes51}$, and each whole nine-spin cell and the six-spin environmental cell separately conserves its physical total spin. The constituent three-spin groups can exchange angular operators internally. For a registered term $t$ supported in $m$ complete native groups, let $S_v^\alpha$ be the sum of the three physical spins in group $v$. Define
+
+$$
+ I^{\alpha}_{v\to u,t}=-\frac{i}{m\hbar}[t,S_v^\alpha-S_u^\alpha] \tag{B.3p.23}
+$$
+
+for groups in that support, and zero otherwise. Antisymmetry and $[t,\sum_uS_u^\alpha]=0$ give
+
+$$
+ \sum_uI^{\alpha}_{v\to u,t}=-\frac{i}{\hbar}[t,S_v^\alpha],\qquad
+ \dot S_v^\alpha+\sum_uI^{\alpha}_{v\to u}=0. \tag{B.3p.24}
+$$
+
+These are finite-support hyperedge currents on the full space. Their expectations vanish in the prepared singlet-code execution: vector spin operators have zero compression between singlets, and spectator contributions commute. The populated transport in (B.3p.22) is energy transport.
+
+For the precise momentum test remove $W$ in the one-token sector, set $J_z|j\rangle=(j-2)|j\rangle$, and let $X=a(J_z+2I)$. The energy polarization $B_E=\sum_jja\epsilon_j$ is, modulo a scalar identity,
+
+$$
+ B_E=\mu X+\tfrac12\{A,X\},\qquad
+ Q_E:=V\sum_cq_c=\dot B_E
+ =\frac{2a\Omega}{\hbar}\bigl(\mu J_y+\Omega\{J_x,J_y\}\bigr). \tag{B.3p.25}
+$$
+
+Indeed the cut sums in (B.3p.19) give $V\sum_cq_c=\sum_{j<k}a(k-j)i[\epsilon_j,\epsilon_k]/\hbar=\dot B_E$. The spin-two commutators then yield
+
+$$
+ [H,Q_E]=\frac{4ia\Omega^2}{\hbar}
+ \bigl(\mu J_z+\Omega\{J_x,J_z\}\bigr)\ne0. \tag{B.3p.26}
+$$
+
+Its diagonal is $(ia\Omega^2\mu/\hbar)(-8,-4,0,4,8)$, whereas the anticommutator has zero diagonal. Thus $\mu>0$ prevents cancellation. For this specified current, $\pi=q/c^2$ cannot give a conserved integrated momentum with periodic or zero-boundary stress flux. The open inhomogeneous chain has no common spatial translation symmetry. This conclusion concerns this current bridge; it leaves other momentum assignments subject to their own source equations.
+
+The scales $\Omega,\mu$ and identity reserves in (B.3p.11) specify the physical Hamiltonian. The model realizes the algebraic energy allocation with on-cell energy $\mu n_j$ and the registered local environmental support. Its time-dependent mean $\mu p_j$ is not a calibration of $R(C_{\mathrm{op}})\tau_0$. MPU qualification, its attained complexity minimum, the PCE selection rule and a reusable erasure cycle retain their owning definitions. Theorem B.3m supplies its separate accepted source with those registered MPU and stress premises; the present theorem adds a different local acquisition construction and an exact test of the specified momentum bridge. $\square$
+
+<a id="theorem-b3q-two-positive-five-spin-energy-allocations-with-current-generated-translation"></a>**Theorem B.3q (Two positive five-spin energy allocations with current-generated translation).**
+
+On five actual physical qubits, two positive local allocations of one static three-spin-interaction Hamiltonian have conserved commutator-derived routed currents. With the respective explicit positive calibrations below, each current generates the literal one-site physical tensor translation on the complete thirty-two-dimensional Hilbert space. The midpoint allocation also supplies a stationary state with nonzero populated circulation. The allocation, routing and five-site size are part of each statement.
+
+*Part I. Physical Hamiltonian, positive allocations and routed continuity.* Let $j$ be read modulo five, let $a,\hbar,c,V>0$, and put
+
+$$
+ n_j=|1\rangle_j\langle1|,\quad Z_j=I-2n_j,\quad
+ \sigma_j^-=|0\rangle_j\langle1|,\quad \sigma_j^+=(\sigma_j^-)^*,\quad
+ t_j=\sigma^+_{j+2}Z_{j+1}\sigma^-_j,\quad
+ b_j=v(t_j+t_j^*)+rI. \tag{B.3q.1}
+$$
+
+For $v>0$, $\mu\ge0$, $r\ge v$, define the midpoint and endpoint-split allocations, respectively, by
+
+$$
+ \epsilon_j^{\mathrm M}=\mu n_j+b_{j-1},\qquad
+ \epsilon_j^{\mathrm E}=\mu n_j+\frac12(b_{j-2}+b_j),\qquad
+ H=\sum_j\epsilon_j^{\mathrm M}=\sum_j\epsilon_j^{\mathrm E}
+ =\mu\sum_jn_j+\sum_jb_j. \tag{B.3q.2}
+$$
+
+The hopping operator $t_j$ maps the occupied/empty endpoint subspace isometrically to its orthogonal reverse, with the middle $Z$ supplying a sign. Thus $t_j+t_j^*$ has spectrum in $\{-1,0,1\}$, and $b_j\ge(r-v)I$. Both allocations are positive; $r>v$ makes them strictly positive. The midpoint density acts on $\{j-1,j,j+1\}$; the endpoint-split density has radius two and can touch all five spins on this ring. The physical bond also has the Pauli expression
+
+$$
+ v(t_{j-1}+t_{j-1}^*)=\frac v2
+ (X_{j-1}Z_jX_{j+1}+Y_{j-1}Z_jY_{j+1}). \tag{B.3q.3}
+$$
+
+For either allocation $\epsilon$, use the actual pair current and the unique shortest path between every pair. Orient each such pair $j\to j+d$, $d=1,2$, forwards on the ring. If $I_{jk}=i[\epsilon_j,\epsilon_k]/\hbar$, define an integrated edge flow $\Phi_e$ by adding $aI_{jk}$ to each oriented edge on that path. Then
+
+$$
+ Q=\sum_e\Phi_e=\frac{ia}{\hbar}\sum_{j=0}^4
+ \bigl([\epsilon_j,\epsilon_{j+1}]+2[\epsilon_j,\epsilon_{j+2}]\bigr). \tag{B.3q.4}
+$$
+
+Each unordered pair occurs once. Antisymmetry cancels its contribution at every interior vertex of its path, leaving its source and sink. Hence with $\rho_j=\epsilon_j/V$ and $q_e=\Phi_e/V$,
+
+$$
+ \dot\rho_j+\frac{q_j-q_{j-1}}a=0,\qquad Q=V\sum_eq_e. \tag{B.3q.5}
+$$
+
+These are full physical-space identities. The routing contains no added homogeneous circulation. The reserve $rI$ affects neither current.
+
+*Part II. Derivation of both conserved currents.* The midpoint commutator expansion gives
+
+$$
+ Q_{\mathrm M}=\frac{2ia}{\hbar}\left(
+ \mu\sum_j[n_j,b_j]+\sum_j[b_j,b_{j+2}]\right). \tag{B.3q.6}
+$$
+
+To compute this and the endpoint variant, take the Jordan–Wigner operators $c_j=(\prod_{\ell<j}Z_\ell)\sigma_j^-$ in a fixed number sector with $M$ excitations and parity $P=(-1)^M$. Their boundary extension is
+
+$$
+ c_{j+5}=-Pc_j,\qquad t_j=c^*_{j+2}c_j,\qquad
+ F_s=\sum_{j=0}^4c^*_{j+s}c_j. \tag{B.3q.7}
+$$
+
+The boundary extension makes the second equality include the physical wrap bonds. The fermion bilinear identity
+
+$$
+ [c_a^*c_b,c_d^*c_e]=\delta_{bd}c_a^*c_e-\delta_{ae}c_d^*c_b \tag{B.3q.8}
+$$
+
+gives
+
+$$
+ \sum_j[n_j,b_j]=-v(F_2-F_2^*),\qquad
+ \sum_j[b_j,b_{j+2}]=-v^2(F_4-F_4^*). \tag{B.3q.9}
+$$
+
+For the endpoint calculation write $B_j=c^*_{j+2}c_j+c_j^*c_{j+2}$ and $A_j=B_{j-2}+B_j$. Put $C_s=\sum_j[B_j,B_{j+s}]$ and $C=C_2=F_4^*-F_4$. Equation (B.3q.8) on five sites gives $C_0=C_{\pm1}=0$, $C_3=-C$, and
+
+$$
+ \sum_j[A_j,A_{j+d}]=2C_d+C_{d+2}+C_{d-2},\qquad
+ \sum_j[A_j,A_{j+1}]=-C,\quad \sum_j[A_j,A_{j+2}]=2C. \tag{B.3q.10}
+$$
+
+Thus shortest routing weights the pure hopping part by $-C+2(2C)=3C$, and the half-weight density contributes $3v^2C/4$. The mixed number–hopping part of the routed commutator is $-2\mu v(F_2-F_2^*)$. Substitution in (B.3q.4) proves
+
+$$
+ \begin{aligned}
+ Q_{\mathrm M}&=-\frac{2ia}{\hbar}
+ [\mu v(F_2-F_2^*)+v^2(F_4-F_4^*)],\\
+ Q_{\mathrm E}&=-\frac{ia}{\hbar}
+ [2\mu v(F_2-F_2^*)+\tfrac34v^2(F_4-F_4^*)].
+ \end{aligned} \tag{B.3q.11}
+$$
+
+In the convention $|k\rangle\propto\sum_je^{ikj}|j\rangle$, the $F_s$ symbol is $e^{-isk}$. The same Fourier basis therefore diagonalizes
+
+$$
+ H=5rI+\sum_k[\mu+2v\cos(2k)]n_k,\qquad
+ Q_{\mathrm A}=\sum_k\mathfrak q_{\mathrm A}(k)n_k,\quad \mathrm A\in\{\mathrm M,\mathrm E\}, \tag{B.3q.12}
+$$
+
+with
+
+$$
+ \begin{aligned}
+ \mathfrak q_{\mathrm M}(k)&=-\frac a{\hbar}
+ [4\mu v\sin(2k)+4v^2\sin(4k)],\\
+ \mathfrak q_{\mathrm E}(k)&=-\frac a{\hbar}
+ [4\mu v\sin(2k)+\tfrac32v^2\sin(4k)].
+ \end{aligned} \tag{B.3q.13}
+$$
+
+This proves $[H,Q_{\mathrm A}]=0$ on each parity sector and hence on all thirty-two dimensions. The coefficient $3/2$ is determined by the endpoint density and the specified shortest routing, rather than an infinite-chain velocity formula. Each symbol is $\pi$-periodic.
+
+*Part III. Two exact calibrations and all-number-sector endpoint.* Define
+
+$$
+ E_0=\frac{\hbar c}a,\qquad s=\sin\frac\pi5,\qquad
+ t=\sin\frac{2\pi}5,\qquad \phi=\frac{1+\sqrt5}2. \tag{B.3q.14}
+$$
+
+The respective parameters are
+
+$$
+ \begin{array}{c|c|c|c}
+ \text{allocation}&v/E_0&\mu/v&r\\ \hline
+ \mathrm M&\sqrt{\frac{2\pi}{25}(3s-t)}&2+\sqrt5&r\ge v\\
+ \mathrm E&\sqrt{\frac{16\pi}{75}(3s-t)}&\frac38(2+\sqrt5)&r=v
+ \end{array}. \tag{B.3q.15}
+$$
+
+Both have $v,\mu>0$ because $t/s=\phi<3$. Increasing the endpoint reserve also leaves its endpoint unchanged. For the midpoint calibration, $v^2/E_0^2=\pi/(10s\phi^2)$ and $\mu=\phi^3v$.
+
+Put $\bar v=v/E_0$, $\bar\mu=\mu/E_0$ and $\kappa_{\mathrm A}(k)=a\mathfrak q_{\mathrm A}(k)/(\hbar c^2)$. The odd-number grid is $K_o=\{2\pi m/5:m=0,\ldots,4\}$. There $\sin4k=-\sin k$, and either calibration yields exactly
+
+$$
+ \kappa_{\mathrm A}(k)=2C_1\sin k+2C_2\sin2k,\qquad
+ C_1=\frac{4\pi}{25}(3s-t),\quad
+ C_2=-\frac{4\pi}{25}(s+3t). \tag{B.3q.16}
+$$
+
+Indeed $C_1=2\bar v^2$ for $\mathrm M$, $C_1=3\bar v^2/4$ for $\mathrm E$, and $C_2=-2\bar\mu\bar v$ in both cases. The identities
+
+$$
+ \frac{s+3t}{3s-t}=2+\sqrt5,\qquad s^2+t^2=\frac54 \tag{B.3q.17}
+$$
+
+give the full grid table
+
+| $k$ | $0$ | $2\pi/5$ | $4\pi/5$ | $6\pi/5$ | $8\pi/5$ |
+|---|---:|---:|---:|---:|---:|
+| $\kappa_{\mathrm A}(k)$ | $0$ | $-2\pi/5$ | $6\pi/5$ | $-6\pi/5$ | $2\pi/5$ |
+
+Thus $e^{-i\kappa_{\mathrm A}(k)}=e^{ik}$ on $K_o$. For even $M$, the grid is $K_e=\{(2m+1)\pi/5\}=K_o+\pi$ modulo $2\pi$. Since $\kappa_{\mathrm A}$ is $\pi$-periodic,
+
+$$
+ e^{-i\kappa_{\mathrm A}(k)}=-e^{ik}\qquad(k\in K_e). \tag{B.3q.18}
+$$
+
+Let $T_-$ be the actual cyclic tensor-factor permutation that sends every occupied physical site $j$ to $j-1$. A state with occupied allowed modes $k_1,\ldots,k_M$ has $T_-$ eigenvalue $e^{i\sum_\alpha k_\alpha}$. To check the physical wrap sign, use its coordinate-determinant wavefunction. A coordinate crossing the ring boundary contributes $e^{i5k}=(-1)^{M-1}$; cyclic reordering of the determinant rows contributes the same sign, so they cancel. The current exponential gives the same eigenvalue: for odd $M$ it multiplies the $e^{ik_\alpha}$, and for even $M$ its additional factor is $(-1)^M=1$. Vacuum and full occupancy are included. These Fourier bases exhaust each number sector, proving
+
+$$
+ \boxed{\exp\left[-\frac{iaQ_{\mathrm A}}{\hbar c^2}\right]=T_-
+ \quad\text{on }(\mathbb C^2)^{\otimes5},\qquad \mathrm A\in\{\mathrm M,\mathrm E\}.} \tag{B.3q.19}
+$$
+
+The currents here were derived from the respective positive energy densities before their parameters were fixed.
+
+*Part IV. A populated stationary circulation and the source class.* For the midpoint calibration the physical one-excitation state
+
+$$
+ |\psi\rangle=\frac1{\sqrt5}\sum_{j=0}^4e^{2\pi ij/5}|j\rangle \tag{B.3q.20}
+$$
+
+is a common $H,Q_{\mathrm M},T_-$ eigenstate. Equations (B.3q.12), (B.3q.15) and the grid table give
+
+$$
+ E_\psi=5r+\mu+2v\cos\frac{4\pi}5=5r+\phi^2v,\qquad
+ Q_\psi=-\frac{2\pi\hbar c^2}{5a},\qquad
+ T_-|\psi\rangle=e^{2\pi i/5}|\psi\rangle. \tag{B.3q.21}
+$$
+
+Every local density is stationary. Translation covariance makes the five oriented edge-flow means equal, and (B.3q.4) fixes their sum. Therefore
+
+$$
+ \langle\Phi_e\rangle=-\frac{2\pi\hbar c^2}{25a},\qquad
+ \langle q_e\rangle=-\frac{2\pi\hbar c^2}{25aV}\ne0 \tag{B.3q.22}
+$$
+
+on each edge. This is same-source stationary energy circulation together with the current-generated physical translation endpoint.
+
+Both constructions concern these five physical qubits and the registered allocations in (B.3q.2). Their symmetry is excitation-number $U(1)$, rather than physical $SU(2)$. The midpoint allocation assigns a whole three-spin bond to its middle cell; Definition B.6 has its own half-endpoint requirement. The endpoint allocation has half weights but its bond contains the real intermediate cell, whose three-site support must be explicitly admitted when applying Definition B.6. The qubits here carry no MPU-qualification or attained-minimum assertion. A singlet embedding would be a different full-space source, including its complementary sectors. The exact five-site endpoint is a finite-size calibration; the nonwrapping size hypothesis in Theorem B.3c remains as stated. Finally $c$ in (B.3q.14) is the specified positive calibration scale; continuous Noether stress, a common metric action and the PCE cost calibration retain their separate source premises. The accepted source in Theorem B.3m and its original closure are unchanged. $\square$
+
+<a id="theorem-b4-belinfante-rosenfeld-symmetrization"></a>**Theorem B.4 (Belinfante-Rosenfeld Symmetrization)**
 
 Let $\hat{S}^{\lambda\mu\nu}(v)$ be a spin current operator antisymmetric in $\mu,\nu$. Assume that the registered discrete derivative satisfies the coordinate Leibniz identities
 $$
@@ -694,15 +2958,43 @@ $$
 $$
 since the assumed commutation of mixed discrete derivatives makes the double divergence symmetric in $(\mu,\lambda)$ while $\hat{B}^{\lambda\mu\nu}$ is antisymmetric in $(\lambda,\mu)$. ∎
 
-**Definition B.7 (Physical Microscopic Stress-Energy Operator)**
+<a id="corollary-b4a-finite-spacing-symmetric-conserved-improvement"></a>**Corollary B.4a (Finite-Spacing Symmetric Conserved Improvement).**
+
+Use the fixed input class and exact prescribed-density identity of Theorem B.3e, with the corrected angular/seam calculus of Theorem B.3f. This corollary uses the coordinate-free superpotential algebra; it does not assume that backward differences satisfy Theorem B.4's unshifted coordinate-Leibniz premise.
+
+For any such $S$, define the same superpotential as Theorem B.4:
+$$
+B^{\lambda\mu\nu}=\frac{S^{\mu\lambda\nu}+S^{\nu\lambda\mu}-S^{\lambda\mu\nu}}{2},
+\qquad
+\Theta^{\mu\nu}=T^{\mu\nu}+\sum_\lambda D_\lambda B^{\lambda\mu\nu}.
+\tag{B.4a.1}
+$$
+
+Then $\Theta$ is exactly symmetric and conserved at finite $a$, both on the lift and on the periodic chart. On the periodic chart its integrated energy-momentum charges are unchanged:
+$$
+\sum_v\Theta_v^{0\nu}=\sum_vT_v^{0\nu}.
+\tag{B.4a.2}
+$$
+
+*Proof.* Antisymmetry of $S$ gives
+$$
+B^{\lambda\mu\nu}=-B^{\mu\lambda\nu},
+\qquad B^{\lambda\mu\nu}-B^{\lambda\nu\mu}=-S^{\lambda\mu\nu}.
+\tag{B.4a.3}
+$$
+These identities and (B.3e.2) prove symmetry of $\Theta$. Commutativity of $D_\lambda$ and $D_\mu$ cancels its double-divergence correction, proving conservation. For its charge, $B^{00\nu}=0$ and each spatial divergence sums to zero. ∎
+
+$T$, $S$, $B$ and $\Theta$ are translation-covariant local defining densities. The $Q_R$ and norm bounds in Theorem B.3e apply to its spatial $S$, not to $\Theta$: spatial differentiation can add one lattice step, and $D_0S$ can enlarge the reference-time stencil by the Hamiltonian interaction range. Both enlargements stay independent of period lengths.
+
+<a id="definition-b7-physical-microscopic-stress-energy-operator"></a>**Definition B.7 (Physical Microscopic Stress-Energy Operator)**
 
 We identify the symmetric, conserved tensor $\hat{\Theta}_{\mu\nu}^{(MPU)}(v)$ from Eq (B.14) as the physical microscopic stress-energy tensor operator for MPU $v$.
 
-## B.8 Macroscopic Stress–Energy Tensor $T_{\mu\nu}^{(MPU)}$
+## <a id="b8-macroscopic-stress-energy-tensor-t_munumpu"></a>B.8 Macroscopic Stress–Energy Tensor $T_{\mu\nu}^{(MPU)}$
 
 On a regular continuum branch, each convergent subsequence has a macroscopic source tensor obtained from the corresponding coarse-grained MPU operator field. When the metric-variation identification hypotheses of Theorem B.8c hold for that limit, variation of the continuum MPU action gives the same tensor. Existence of one such limit does not prove uniqueness across subsequences; full-family convergence requires additional hypotheses, such as the unique-cluster-point condition of Corollary B.8b.1.
 
-**Definition B.8 (Macroscopic MPU Stress-Energy Tensor $T_{\mu\nu}^{(MPU)}$)**
+<a id="definition-b8-macroscopic-mpu-stress-energy-tensor-t_munumpu"></a>**Definition B.8 (Macroscopic MPU Stress-Energy Tensor $T_{\mu\nu}^{(MPU)}$)**
 
 The macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}(x)$ at spacetime point $x$ is the expectation value of the emergent operator field $\hat{\Theta}_{\mu\nu}(x)$ (formalized in Appendix F, Def F.4) in the relevant physical state $\omega$:
 $$
@@ -724,7 +3016,7 @@ T^{(\mathrm{MPU})}_{\mu\nu}
 $$
 Thus Corollary B.8d.1 identifies the expectation-value source, Belinfante continuum source, horizon heat-flux source, and metric variational source as the same $T_{\mu\nu}^{(MPU)}$ on the stated branch.
 
-**Theorem B.5 (Macroscopic Covariant Conservation of $T_{\mu\nu}^{(MPU)}$)**
+<a id="theorem-b5-macroscopic-covariant-conservation-of-t_munumpu"></a>**Theorem B.5 (Macroscopic Covariant Conservation of $T_{\mu\nu}^{(MPU)}$)**
 
 On the regular branch, assume the limiting tensor measure of Theorem B.8b satisfies $\mathbf T\ll dV_g$. Then its $L^1_{\mathrm{loc}}$ density $T_{\mu\nu}^{(MPU)}(x)$ satisfies
 $$
@@ -741,11 +3033,248 @@ for every compactly supported smooth test one-form $\psi$. Under the stated abso
 
 On the smooth variational branch, Theorem F.1 applies to the diffeomorphism-invariant on-shell action and gives covariant conservation of its metric-variation tensor. Theorem B.8c identifies that tensor with the continuum measure density, and Corollary B.8d.1 identifies it with the coarse-grained MPU source. Hence the microscopic and variational routes concern the same tensor. Distributional equality agrees with pointwise equality when the tensor is smooth. ∎
 
+<a id="theorem-b8i-homogeneous-scalar-common-action-and-horizon-flux"></a>**Theorem B.8i (Homogeneous Scalar Common Action and Horizon Flux).**
+
+The common scalar source, full potential, physical stress, reference and finite precursor convention are those of Theorem F.1c and Lemmas F.1c.1–F.1c.16.
+
+#### B.8i — 1. Original conditions that need to be proved
+
+The current BSR04 residual says: “The original common-action condition, first variation/density/horizon quadrature and response-faithful coarse-grained MPU family, with the same D.6d action.” Its stronger-question record excludes demands for arbitrary off-shell residual-free histories, universal stress positivity, or every possible source completion.
+
+The relevant canonical conditions are:
+
+- Definition B.8a: local bounded tensor total variation, **exact** discrete weak conservation (B.20), and compactly supported consistent discrete test gradients;
+- Theorem B.8b.3: common action/first-variation convergence along the whole chosen family, equivalently the corresponding Cauchy/full-family uniqueness condition;
+- B.8c: the same matter action and physical tensor with vanishing (here $O(h)$) mean first-variation remainder;
+- B.8d: a continuous limiting source on a retained smooth local horizon, actual discrete flux consistency and convergent face quadrature;
+- source realization using the same admitted MPU/auxiliary record and reference fibre.
+
+Generic F05's vanishing lattice Ward residual alone would not imply B.20. The specialization below supplies exact conservation independently. B.8d does not require Clausius entropy, a nonzero heat bath, a new measured G, every horizon family, or a horizon OVD restriction.
+
+#### B.8i — 2. Same actual source, a nontrivial coherent subfamily
+
+Use the accepted physical cylinder with a fixed spatial cubic torus. Work on an open finite observation slab $I\times T^{3}$. Retain an unforced observation buffer around its closure wider than the largest retained physical metric-stencil radius; all preparation/echo operations lie outside that buffer. Thus the homogeneous physical vertex identities hold even at the first and last sampling rows. This is a second-countable regular spacetime domain. The actual same-$H$ thermal reference and original fixed material/volume/pure reference fibre are unchanged. All reservations and the final charged teacher remain in the full lifecycle ledger.
+
+At every ideal normal spatial lattice stage choose the **spatial zero Fourier mode** with physical mean
+
+$$
+\chi(t)=A\cos(Mt+\theta),\qquad\phi(t)=m+\chi(t),
+$$
+
+and the corresponding homogeneous initial position/momentum displacement of the same thermal state. Choose and freeze nonzero A and $\theta$ across the entire refinement family. They may be chosen from a sufficiently small fixed compact amplitude interval and compact phase interval within the admitted smooth-field budget; estimates are uniform over these choices. This does not permit arbitrarily alternating A or $\theta$ with h. This is an actual Weyl displacement, already part of F J1–J5, and solves the actual unforced lattice equation because every registered spatial derivative annihilates constants and the zero-mode frequency is exactly M. No drive is active on I.
+
+The preparation of its initial displacement, inverse and output uses the same allowed paid source. It is not a separate continuum field appended afterward. The source's mean-field amplitude is expressed in physical field coordinates, so the finite canonical coordinate at a cell is the physical field times the existing square-root cell-volume normalization.
+
+For the metric stencil specialize to a translation/cubic-invariant centered local first-jet stencil, an allowed choice in the accepted S3/G1 construction. Its linearized curvature is the centered realization of
+
+$$
+\delta R=\partial_{\mu}\partial_{\nu}f^{\mu\nu}-\Box(\operatorname{tr}_{\eta}f).
+$$
+
+The mass margin and full regular-metric controller construction remain those of Theorem F.1c and Lemmas F.1c.1–F.1c.16. This specialization guarantees the exact cancellation of the homogeneous improvement's 00 and 0i components; only its spatial diagonal coefficient changes with time. A merely consistent arbitrary stencil should not be substituted here without this check.
+
+The same-$H$ thermal/ready mean is canceled at each normal lattice stage by the already fixed material reference, using its actual finite-regulator energy and pressure, as F J3 specifies. The reference is fixed across all $A,\theta$. The actual pure/volume complement is retained. In natural units, write $\beta_0=M^{2}m^{2}/2$. The continuum renormalized matter mean is therefore
+
+$$
+T_{M}^{\mu\nu}(t)=T_{-\xi}^{\mu\nu}[\chi(t)]+\beta_{0}\eta^{\mu\nu}.
+$$
+
+The ideal lattice mean has the same component pattern, with the actual consistent discrete improvement pressure $p_h(t)$:
+
+$$
+\begin{aligned}
+\Theta_{h}^{00} &= \rho-\beta_{0}, \\
+\Theta_{h}^{0i} &= \Theta_{h}^{i0}=0, \\
+\Theta_{h}^{ij} &= [p_{h}(t)+\beta_{0}]\delta_{ij}, \\
+\rho &= M^{2}A^{2}/2.
+\end{aligned}
+$$
+
+The energy $\rho$ is constant by the actual zero-mode Hamiltonian, not by imposing the desired tensor. Spatial gradients vanish. The actual ADM shift vertex has zero homogeneous mean. Cubic symmetry and the spatial-metric vertex supply the diagonal pressure. The curvature-sign flag is already the accepted $z=-$ sector.
+
+For the continuum improvement convention in F J1/J11 and S12 with $\xi$ replaced by -xi,
+
+$$
+\begin{aligned}
+p(t) &= \dot{\chi}(t)^{2}/2-M^{2}\chi(t)^{2}/2+\xi\,d^{2}(\chi(t)^{2})/dt^{2} \\
+&= -(1/2+2\xi)M^{2}A^{2}\cos(2Mt+2\theta).
+\end{aligned}
+$$
+
+The actual centered $p_{h}$ converges uniformly on compact time intervals to $p$, with its usual retained smooth-stencil error $O(h)$, or $O(h^{2})$ for centered second-order realization. The remaining ordinary scalar spatial terms are already exact on this zero mode.
+
+If additional area-port completion flags are retained without individual subtraction, place them at rest as permitted by their registered observation schedule. They contribute a time-independent $00$ dust component, zero $0i$/$ij$ components and total observation energy $O(h^{2})$. They are exactly conserved in the argument below and vanish in the continuum measure. No surface-density term is silently removed with an inappropriate homogeneous reference.
+
+#### B.8i — 3. Exact B.8a admissibility
+
+Use the regular product spacetime sampling grid with exact flat cell volumes $\mu_h=\Delta t_h\,a_h^{3}$, $\Delta t_h$ comparable to $a_h=h$, and **retain every endpoint cell row**. Spatial test differences are centered and periodic. Close the temporal test-gradient conservatively, rather than dropping rows whose centered stencil would leave $I$. For time rows $j=1,\dots,J$ set
+
+$$
+\begin{aligned}
+F_{j+1/2} &= (\psi_{j}+\psi_{j+1})/2\quad\text{at internal faces}, \\
+F_{1/2} &= F_{J+1/2}=0, \\
+D_{t}\psi_{j} &= [F_{j+1/2}-F_{j-1/2}]/\Delta t_{h}.
+\end{aligned}
+$$
+
+This is the usual centered difference in every interior row. At the first row it is $(\psi_1+\psi_2)/(2\Delta t_h)$, and at the last it is $-(\psi_{J-1}+\psi_J)/(2\Delta t_h)$. Every column sums to zero exactly. This auxiliary test-gradient closure makes no assertion that physical time is periodic and does not change the source dynamics. A dropped-row rule would fail the exact B.8a(ii) quantifier for tests near the slab boundary at a fixed $h$; it is not used here.
+
+For any compact test one-form $\psi$, the discrete weak sum is the sum of
+
+$$
+\sum_{n,x}\mu_{h}(\rho-\beta_{0})\,D_{t}\psi_{0}(n,x)
+$$
+
+and
+
+$$
+\sum_{n,x,i}\mu_{h}[p_{h}(t_{n})+\beta_{0}]\,D_{i}\psi_{i}(n,x).
+$$
+
+The first sum is exactly zero by telescoping in time, because its coefficient is time-independent and the test is compactly supported. Each second sum is exactly zero by spatial periodic telescoping, because its coefficient is independent of x. Cross terms are absent. A static extra dust weight at any site also telescopes in time separately. Thus (B.20) holds **exactly**, without substituting an asymptotically small Ward defect for zero.
+
+The matrix is symmetric. On every compact time interval, $\rho$ and $p_{h}$ are uniformly bounded by the fixed amplitude/frequency/stencil budgets. The total added dust energy is uniformly bounded and in fact tends to zero. Hence the tensor-valued sampling measures have uniformly bounded local total variation.
+
+For each fixed compact test $\psi$, its positive distance from the boundary makes all endpoint-adjacent sample values zero once $h$ is sufficiently small. The conservative closure then coincides with ordinary centered differences everywhere it is nonzero. The nonzero stencil support lies in one fixed slightly larger compact $K_{\psi}$, and the gradient error there is $O(h^{2})$, hence $O(h)$. Exact telescoping above holds for every $h$, while this consistency/support statement has precisely the eventually-small-$h$ quantifier of B.8a(iii). This establishes all three clauses of Definition B.8a.
+
+This is the accepted **normal h-source**. Actual finite Hermite precursors realize its specified observables with errors. They are not falsely asserted to be exactly translation-symmetric or to satisfy B.20 solely because their limits do. The original B.3 extension and X01/F05 receipt already admit this ordered convention; no new bounded-cost or exact finite-CCR requirement is introduced.
+
+#### B.8i — 4. Same D.6d action, full-family limit and density
+
+Let $S_h^M$ be the normalized matter action, namely the physical signature-controlled counterpart of
+
+$$
+\begin{aligned}
+&\hbar[\Gamma_{h}(\phi,g)-\Gamma_{h}(0,g)] \\
+&\quad=\tau_{*}T_{h}[V_{h}(g,\phi)-V_{h}(g,0)].
+\end{aligned}
+$$
+
+Use this action, not the generic artificial linear functional sometimes used to prove the abstract common-action equivalence. For the actual coherent means, F J14 and the accepted finite-current/reference correction give
+
+$$
+\delta_{g}S_{h}^{M}[f]=1/2\,\langle T_{h},\operatorname{ren}(f)\rangle+O(h).
+$$
+
+Sampling the smooth homogeneous mean adds only the ordinary time/space quadrature error. After any separately retained $O(h^{2})$ dust term,
+
+$$
+\begin{aligned}
+&\delta_{g}S_{h}^{M}[f] \\
+&\quad=1/2\sum_{v}\mu_{h}\Theta_{h}^{\mu\nu}(v)f_{\mu\nu}(x_{v})+O(h).
+\end{aligned}
+$$
+
+The constants are finite on the compact amplitude/phase and test-seminorm family. The new finite-source value/jet errors can be chosen below $h^{2}$ as already proved.
+
+Uniform convergence $p_h\to p$ and ordinary Riemann sums show the **whole chosen h-family** converges locally weak-* to
+
+$$
+T_{M}^{\mu\nu}(t)\,dt\,dx,
+$$
+
+not just a chosen subsequence. Its limit is smooth, symmetric and absolutely continuous. Consequently
+
+$$
+\begin{aligned}
+\delta_{g}S_{h}^{M}[f] &\to \delta_{g}S^{M}[f] \\
+&= 1/2\int f_{\mu\nu}T_{M}^{\mu\nu}\,dt\,dx.
+\end{aligned}
+$$
+
+This is B.8b.3's actual common-action condition with the same D.6d matter action. The theorem yields unique source/density and paired-subsequence independence at the stated scope. No universal uniqueness across unrelated admissible source families is inferred; the canonical alternating-source counterexample remains intact.
+
+#### B.8i — 5. Actual null-face flux map, with pressure retained
+
+Fix a small local flat Rindler neighborhood inside $I\times T^{3}$, independently of the scalar amplitude. Take a compact rectangular transverse patch, a null generator $k=(1,1,0,0)$, the affine parameter $\lambda=t$ with fixed origin, and $\chi_{\mathrm{boost}}=-\kappa\lambda k$. In these coordinates the horizon is a segment of $x_1=t$ plus the transverse patch. Choose its dimensions smaller than the torus chart so no global periodic boost is claimed. $\kappa$ and the length/time units are those independently registered for this geometric experiment.
+
+The finite **source observable** is the contraction of the existing local ADM/Hilbert energy-momentum vertices with the face normal and this boost field. In particular it contains the actual energy-density, momentum-density and normal-pressure operators,
+
+$$
+\hat{\Theta}_{00,h}+2\hat{\Theta}_{01,h}+\hat{\Theta}_{11,h},
+$$
+
+with the covariant-index and orientation convention fixed as above. These operators are the differentiated actual S9 Hamiltonian, including its actual curvature insertion and fixed reference complements; they are not assigned from a desired horizon answer. The metric-response experiment measures the corresponding linear combination of lapse, shift and spatial-strain work/force insertions. This is the local energy-momentum current contracted with a registered boost field. Its pressure contribution is essential: the ordinary spatial energy current alone has zero homogeneous mean and would give the wrong result.
+
+On a face patch $f$ centered at $\lambda_{f}$ with physical transverse area $\Delta A_f$ and affine width $\Delta\lambda_f$, record its integrated boost-current response
+
+$$
+\begin{aligned}
+q_{h}(f) &= -\kappa\lambda_{f}\Delta A_{f}\Delta\lambda_{f} \\
+&\quad\langle\hat{\Theta}_{00,h}+2\hat{\Theta}_{01,h}+\hat{\Theta}_{11,h}\rangle.
+\end{aligned}
+$$
+
+Equivalently one may integrate the actual time-dependent vertex across the face interval; midpoint sampling incurs the explicit smooth quadrature error. The face observation is available at each finite spatial normal stage and is implemented by the same local response operators; each finite Hermite precursor has the corresponding finite observable and supplied precision/readout budget. No unobserved new heat bath or independently defined stress tensor is inserted.
+
+The homogeneous mean of the contraction is
+
+$$
+\rho+p_{h}(\lambda_{f}).
+$$
+
+The constant pure/volume term beta0 $\eta$ has zero null contraction. The thermal/material complements are exactly those registered before choosing the coherent field; their bare values remain separately available. The statement is about this registered renormalized source/flux convention, not an assertion that unreferenced thermal bath energy has disappeared.
+
+Since $p_h\to p$ uniformly on the fixed patch,
+
+$$
+\begin{aligned}
+&\Bigl|\sum_{f}q_{h}(f) \\
+&\qquad-\sum_{f}[-\kappa\lambda_{f}][\rho+p(\lambda_{f})]\Delta A_{f}\Delta\lambda_{f}\Bigr| \\
+&\quad\le C_{H}\sup_{H}|p_{h}-p|+O(h^{2}),
+\end{aligned}
+$$
+
+where the $O(h^{2})$ term covers any unsubtracted fixed late area-flag stock. Each such static worldline has one oriented crossing and boost charge bounded by $C_{H}$ times its actual energy, so summing their positive energies gives this bound. Refinement of the face mesh produces the ordinary Riemann sum. These are exactly B.8d's flux-consistency and quadrature hypotheses, now on the actual source vertices.
+
+This construction does **not** identify $q_{h}$ with the final prediction-meter charge. That charge is late, physically retained and globally priced; the local observation flux belongs to the same earlier field source through its transfer/current map.
+
+#### B.8i — 6. Horizon limit, nonvacuity and finite realization
+
+For a one-sided patch with $-\ell\le\lambda\le 0$ and transverse area $A_{H}$,
+
+$$
+\begin{aligned}
+\delta Q &= -\kappa A_{H}\int_{-\ell}^{0} \\
+&\qquad\lambda[\rho+p(\lambda)]\,d\lambda.
+\end{aligned}
+$$
+
+This is the same limiting tensor as §4. Its continuity gives B.8d. It has the usual $O(A_H\ell^{3})$ local expansion; the exact boost here has no additional $O(\lambda^{2})$ geometric remainder. For a concrete nonzero witness choose $\theta=\pi/4$ at the affine origin. Then $p(0)=0$ and
+
+$$
+\begin{aligned}
+\delta Q &= \kappa A_{H}\rho\ell^{2}/2+O(A_{H}\ell^{3}), \\
+\rho &= M^{2}A^{2}/2>0.
+\end{aligned}
+$$
+
+Thus the proof is not restricted to a zero-flux source. No energy-condition theorem for every phase is needed or asserted; nonminimal improvement can change the null contraction elsewhere.
+
+The first limit is the actual normal spatial/source limit for a fixed patch. The shrinking-patch statement is then the continuum theorem's expansion. If a single diagonal is desired, select the spatial/inner tolerances after each patch so their total error is $o(A_H\ell^{2})$. No uniformity over every shrinking horizon family is needed for BSR04; that stronger normalized horizon task is owned separately.
+
+For each fixed outer stage, the required energy/pressure/curvature-face operators, source-state jets and time samples form a finite list of polynomial observables with finite coefficients on the common Gaussian domain. The weighted tensor-Hermite approximation of Lemma F.1c.2a therefore supplies actual finite registers and gates approximating all of them and the full PCE/source action to any prescribed error. Choose their maximum below the nominated summable budget before selecting $N_{h}$. The mandatory finite-commutator boundary correction from the root receipt is included. The original host, physical clock, supplied stocks, preparation/echo, final target and final meter remain those of Theorem F.1c.
+
+Response faithfulness here is the inherited actual source-to-field map and its explicitly identified observables, not a claim that the stress mean alone determines every source state. The discarded/source-complement records are retained; the pressure/lapse/shift response map does not replace them by an abstract continuum tensor. Coarse-graining uses their actual normalized expectations and actual spatial coordinates, with no new coefficient fitted to the desired flux.
+
+#### B.8i — 7. BSR04 conclusion and limits
+
+Sections 2–6 prove, on one originally admitted nontrivial subfamily:
+
+1. an actual response-realized PCE/MPU scalar source with the accepted complete ledger;
+2. an admissible symmetric coarse-graining satisfying B.8a literally;
+3. the common first-variation limit of the same D.6d matter action;
+4. a smooth unique density and full-family convergence;
+5. actual same-source, pressure-inclusive horizon-flux consistency and quadrature;
+6. finite paid realizers under the already admitted ordered extension.
+
+The proof does not supply the entropy/capacity overlap of Lemmas 12.1h.1–12.1h.5 and Theorem 12.1h.6, the full normalized direction protocol of Theorems 12.1g and 12.1h and Theorem 44b.8, the joint finite Einstein branch of Proposition 12.1f.3 and Corollaries 12.1f.8–12.1f.9, the complete implementation quotient of Theorem 22e, or a physical temperature relation. BSR04's source/flux uniqueness is conditional on the chosen same-family common action; it does not contradict the canonical nonuniqueness example across alternating sources.
+
 ## B.9 Correspondence with Standard Forms
 
 The emergent tensor reproduces known physical forms.
 
-**Definition B.8a (Admissible Coarse-Graining).** On the second-countable smooth regular manifold $M_{\mathrm{reg}}$, choose an auxiliary positive fiber norm for tensor total variation. A refinement family with symmetric discrete tensors $\Theta_h^{\mu\nu}(v)$ and sampling measures
+<a id="definition-b8a-admissible-coarse-graining"></a>**Definition B.8a (Admissible Coarse-Graining).** On the second-countable smooth regular manifold $M_{\mathrm{reg}}$, choose an auxiliary positive fiber norm for tensor total variation. A refinement family with symmetric discrete tensors $\Theta_h^{\mu\nu}(v)$ and sampling measures
 $$
 \mathbf T_h^{\mu\nu}
 :=
@@ -778,7 +3307,7 @@ Two admissible families are $\varepsilon$-equivalent if
 $|\mathbf T_h-\widetilde{\mathbf T}_h|(K)
 =O(h)|\mathbf T_h|(K)$ for every compact $K$.
 
-**Theorem B.8b (Belinfante Continuum Limit and Conservation).** Let $(\mathbf T_h)$ be admissible on the Lorentzian branch of Theorem 45 and Corollary 46a. Then:
+<a id="theorem-b8b-belinfante-continuum-limit-and-conservation"></a>**Theorem B.8b (Belinfante Continuum Limit and Conservation).** Let $(\mathbf T_h)$ be admissible on the Lorentzian branch of Theorem 45 and Corollary 46a. Then:
 
 (a) There exist $h_j\to0$ and a symmetric tensor-valued Radon measure $\mathbf T$ such that $\mathbf T_{h_j}\rightharpoonup\mathbf T$ locally weak-$*$, meaning convergence against every compactly supported continuous dual tensor field.
 
@@ -788,7 +3317,11 @@ $$
 $$
 
 (c) If $\mathbf T\ll dV_g$, then
-$d\mathbf T^{\mu\nu}=T_{(\mathrm{MPU})}^{\mu\nu}dV_g$
+
+$$
+d\mathbf T^{\mu\nu}=T_{(\mathrm{MPU})}^{\mu\nu}dV_g
+$$
+
 for a symmetric $L^1_{\mathrm{loc}}$ density satisfying
 $\nabla_\mu T_{(\mathrm{MPU})}^{\mu\nu}=0$ in distributions.
 
@@ -805,7 +3338,7 @@ c_\psi h\,|\mathbf T_h|(K_\psi)\longrightarrow0.
 $$
 The local weak-$*$ limit proves (b). Under absolute continuity, the Radon–Nikodym theorem applied to the finitely many tensor components in each local chart gives the $L^1_{\mathrm{loc}}$ density in (c). The densities agree under coordinate changes, and substitution in (b) gives their distributional divergence identity. ∎
 
-**Corollary B.8b.1 (Paired-Subsequence Independence of Admissible Coarse-Graining).** If $(\mathbf T_h)$ and $(\widetilde{\mathbf T}_h)$ are $\varepsilon$-equivalent admissible coarse-grainings and $h_j\to0$ is a subsequence along which $\mathbf T_{h_j}\rightharpoonup\mathbf T$, then every further subsequence along which $\widetilde{\mathbf T}_{h_j}\rightharpoonup\widetilde{\mathbf T}$ satisfies $\widetilde{\mathbf T}=\mathbf T$. When both limits have local-equilibrium densities, those densities agree almost everywhere. If either full family has a unique weak-$*$ cluster point, both full families converge to that same limit.
+<a id="corollary-b8b1-paired-subsequence-independence-of-admissible-coarse-graining"></a>**Corollary B.8b.1 (Paired-Subsequence Independence of Admissible Coarse-Graining).** If $(\mathbf T_h)$ and $(\widetilde{\mathbf T}_h)$ are $\varepsilon$-equivalent admissible coarse-grainings and $h_j\to0$ is a subsequence along which $\mathbf T_{h_j}\rightharpoonup\mathbf T$, then every further subsequence along which $\widetilde{\mathbf T}_{h_j}\rightharpoonup\widetilde{\mathbf T}$ satisfies $\widetilde{\mathbf T}=\mathbf T$. When both limits have local-equilibrium densities, those densities agree almost everywhere. If either full family has a unique weak-$*$ cluster point, both full families converge to that same limit.
 
 *Proof.* For every compactly supported continuous tensor test field $\phi$,
 $$
@@ -816,7 +3349,7 @@ $$
 $$
 Passing to the paired limits gives $\langle\mathbf T-\widetilde{\mathbf T},\phi\rangle=0$ for all such $\phi$, hence equality as Radon measures. Radon–Nikodym uniqueness gives equality of densities. Uniqueness of a cluster point upgrades subsequential convergence to convergence of the family. ∎
 
-**Proposition B.8b.2 (Admissibility Does Not Imply Source or Horizon-Flux Uniqueness).** On a flat compact coordinate box with periodic boundary conditions, fix a nonzero constant symmetric tensor $S^{\mu\nu}$ and a sequence $h_n\downarrow0$. Let the $h_n$-lattices use exact cell volumes and consistent finite-difference gradients. Define discrete tensors by the cell averages of
+<a id="proposition-b8b2-admissibility-does-not-imply-source-or-horizon-flux-uniqueness"></a>**Proposition B.8b.2 (Admissibility Does Not Imply Source or Horizon-Flux Uniqueness).** On a flat compact coordinate box with periodic boundary conditions, fix a nonzero constant symmetric tensor $S^{\mu\nu}$ and a sequence $h_n\downarrow0$. Let the $h_n$-lattices use exact cell volumes and consistent finite-difference gradients. Define discrete tensors by the cell averages of
 $$
 T_n^{\mu\nu}
 =
@@ -839,7 +3372,7 @@ so horizon flux is not unique either.
 
 Therefore a uniqueness theorem must add a common-action/variation limit, a Cauchy or unique-cluster-point condition, or paired $o(1)$ equivalence strong enough to invoke Corollary B.8b.1. The current admissibility class by itself refutes the universal all-coarse-grainings premise.
 
-**Theorem B.8b.3 (Common-Action and Cauchy Classification of Continuum-Source Uniqueness).** Let $(\mathbf T_h)_{h\in\mathcal I}$ be an admissible coarse-graining on the branch of Theorem B.8b, indexed by mesh sizes $\mathcal I\subset(0,\infty)$ accumulating only at $0$, and let $\mathcal D_{\mathrm{sym}}$ be the space of compactly supported smooth symmetric tensor fields $\delta g_{\mu\nu}$ on $M_{\mathrm{reg}}$. The following are equivalent.
+<a id="theorem-b8b3-common-action-and-cauchy-classification-of-continuum-source-uniqueness"></a>**Theorem B.8b.3 (Common-Action and Cauchy Classification of Continuum-Source Uniqueness).** Let $(\mathbf T_h)_{h\in\mathcal I}$ be an admissible coarse-graining on the branch of Theorem B.8b, indexed by mesh sizes $\mathcal I\subset(0,\infty)$ accumulating only at $0$, and let $\mathcal D_{\mathrm{sym}}$ be the space of compactly supported smooth symmetric tensor fields $\delta g_{\mu\nu}$ on $M_{\mathrm{reg}}$. The following are equivalent.
 
 1. **Unique cluster point.** The family has exactly one local weak-$*$ cluster point as $h\to0$.
 2. **Cauchy condition.** For every $\delta g\in\mathcal D_{\mathrm{sym}}$, the numbers $\int\delta g_{\mu\nu}\,d\mathbf T_h^{\mu\nu}$ form a Cauchy net as $h\to0$.
@@ -864,7 +3397,7 @@ Hence $\mathbf T=\mathbf T'$. For (1)$\Rightarrow$(4), if the full family did no
 
 Under the four conditions every subsequential limit equals $\mathbf T$, so Theorems B.8b and B.8c produce the same tensor, and the identity of Theorem B.8c gives $\delta_gS[\delta g]=\tfrac12\int\delta g_{\mu\nu}\,d\mathbf T^{\mu\nu}=L(\delta g)$ for every action $S$ admitted by its hypotheses along a subsequence. Radon–Nikodym uniqueness gives the density, and the quadrature of Theorem B.8d is determined by that density. Corollary B.8b.1 gives the paired transfer. In Proposition B.8b.2 the displayed discrete actions have variation $\tfrac12\int\delta g_{\mu\nu}\,d\mathbf T_{h_n}^{\mu\nu}$; Riemann sums give the limits $\tfrac12\int S^{\mu\nu}\delta g_{\mu\nu}\,d^4x$ along odd $n$ and $0$ along even $n$. These are the first variations of the two displayed Gâteaux-differentiable actions, which differ because $S\ne0$, while condition (3) fails along the full family. ∎
 
-**Proposition B.8b.4 (Null-Gradient Witness for the Common-Action Branch and Its Horizon Flux).** On the flat torus $\mathbb T^4_L:=(\mathbb R/L\mathbb Z)^4$ with coordinates $(t,x,y,z)$ and metric $\eta=\operatorname{diag}(-1,1,1,1)$, fix $A>0$, put $w_\mu:=\partial_\mu(t-x)=(1,-1,0,0)$, and let $\varphi:=A(t-x)\bmod AL$ be the circle-valued field with $d\varphi=A\,w$. Its action
+<a id="proposition-b8b4-null-gradient-witness-for-the-common-action-branch-and-its-horizon-flux"></a>**Proposition B.8b.4 (Null-Gradient Witness for the Common-Action Branch and Its Horizon Flux).** On the flat torus $\mathbb T^4_L:=(\mathbb R/L\mathbb Z)^4$ with coordinates $(t,x,y,z)$ and metric $\eta=\operatorname{diag}(-1,1,1,1)$, fix $A>0$, put $w_\mu:=\partial_\mu(t-x)=(1,-1,0,0)$, and let $\varphi:=A(t-x)\bmod AL$ be the circle-valued field with $d\varphi=A\,w$. Its action
 $$
 S_\varphi[g]:=-\frac12\int_{\mathbb T^4_L}g^{\mu\nu}\partial_\mu\varphi\,\partial_\nu\varphi\,\sqrt{|g|}\,d^4x
 \tag{B.20a.3}
@@ -917,9 +3450,7 @@ $$
 $$
 The constant tensor $S=T_\varphi$ is symmetric with $S_{\mu\nu}k^\mu k^\nu\ne0$, so it is admissible input for Proposition B.8b.2, whose even cluster point has zero flux. ∎
 
-**Resolution TV-BSR-04-R1 (Metadata).** Exact domain: admissible coarse-grainings of Definition B.8a on the branch of Theorem B.8b, their discrete metric actions and variations on $\mathcal D_{\mathrm{sym}}$, and horizon patches satisfying Theorem B.8d, with the flat-torus witness of Proposition B.8b.4. Premises: Definition B.8a, Theorems B.8b–B.8d, Corollary B.8b.1 and Proposition B.8b.2. Equivalence: equality of tensor-valued Radon measures and of metric first variations on $\mathcal D_{\mathrm{sym}}$. Budget: the full mesh family $h\to0$ with finitely many lattice sites at each mesh. Verifier: subsequence extraction from Theorem B.8b(a), uniform density of $\mathcal D_{\mathrm{sym}}$, Riemann sums, periodic summation by parts for centered differences, the metric variation (B.20a.4) and the closed-form flux (B.20a.5). Falsifier: an admissible family satisfying the Cauchy or common-action condition with two distinct cluster points, or a failure of the displayed admissibility, variation or flux identities. Provenance class: source-internal measure-theoretic classification and explicit continuum witness. Downstream consumers: Theorems B.5, B.8c and B.8d, Corollary B.8d.1, the gravity derivation of §12 and `TV-BSR-04`. Nonvacuity: Proposition B.8b.4 and the alternating family of Proposition B.8b.2. This is `positive-discharge` of the common-action/Cauchy uniqueness classification and of one variational source with its same-branch horizon flux; the admissibility-only class keeps `N` through Proposition B.8b.2. Population of the common-action condition for the coarse-grained MPU family and the action of Theorem D.6d, and the response-faithful realization of that family, remain `C+R`-open under `TV-BSR-04`.
-
-**Theorem B.8c (Variational Identification of the Continuum Source Tensor).** Let
+<a id="theorem-b8c-variational-identification-of-the-continuum-source-tensor"></a>**Theorem B.8c (Variational Identification of the Continuum Source Tensor).** Let
 $$
 S_{(\mathrm{MPU})}[g,\Phi]
 =
@@ -1006,7 +3537,7 @@ $$
 $$
 ∎
 
-**Theorem B.8d (Horizon-Flux Closure).** Let $\mathcal H$ be a smooth compact local horizon patch in a local Rindler region with null generator $k^\mu$, affine parameter $\lambda$, and approximate boost Killing field $\chi^\mu=-\kappa\lambda k^\mu+O(\lambda^2)$. Assume (H B.8d.1) continuity of $T_{(\mathrm{MPU})}^{\mu\nu}$ on $\mathcal H$. Let $\mathcal H_h$ be discrete face-unions approximating $\mathcal H$. Assume the flux-consistency certificate
+<a id="theorem-b8d-horizon-flux-closure"></a>**Theorem B.8d (Horizon-Flux Closure).** Let $\mathcal H$ be a smooth compact local horizon patch in a local Rindler region with null generator $k^\mu$, affine parameter $\lambda$, and approximate boost Killing field $\chi^\mu=-\kappa\lambda k^\mu+O(\lambda^2)$. Assume (H B.8d.1) continuity of $T_{(\mathrm{MPU})}^{\mu\nu}$ on $\mathcal H$. Let $\mathcal H_h$ be discrete face-unions approximating $\mathcal H$. Assume the flux-consistency certificate
 $$
 \left|
 \sum_{f\subset\mathcal H_h}q_h(f)
@@ -1077,7 +3608,7 @@ C_TC_kC_\chi A_\ell
 $$
 The leading integral is at most of order $A_\ell\ell^2$ under the same boundedness assumptions. This proves the integrated absolute error estimate; it does not assert a nonzero leading coefficient or a relative-error estimate when the leading contraction vanishes. ∎
 
-**Corollary B.8d.1 (Source-Term Identity).** On $M_{\mathrm{reg}}$, assume the hypotheses of Theorems B.8b and B.8c, absolute continuity $\mathbf T\ll dV_g$, and the continuity, flux-consistency, and Riemann-sum hypotheses of Theorem B.8d. Then the tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ coincides simultaneously with: (1) the continuum Belinfante limit of Theorem B.8b; (2) the metric variational source of Theorem B.8c, written equivalently as
+<a id="corollary-b8d1-source-term-identity"></a>**Corollary B.8d.1 (Source-Term Identity).** On $M_{\mathrm{reg}}$, assume the hypotheses of Theorems B.8b and B.8c, absolute continuity $\mathbf T\ll dV_g$, and the continuity, flux-consistency, and Riemann-sum hypotheses of Theorem B.8d. Then the tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ coincides simultaneously with: (1) the continuum Belinfante limit of Theorem B.8b; (2) the metric variational source of Theorem B.8c, written equivalently as
 $$
 T_{(\mathrm{MPU})}^{\mu\nu}
 =
@@ -1099,7 +3630,7 @@ $$
 $$
 \mathfrak C_{\mathrm{eng}}
 =
-(\Phi_F,\;T_{\mathrm{eff}},\;N_{\mathrm{str}},\;C_{\mathrm{ret}}^{\mathrm{nat}},\;\mathcal W_{\mathrm{free}},\;\mathcal O_{\mathrm{oh}},\;\mathcal R_{\mathrm{src}},\;\text{coarse-graining window},\;\text{forward lock})
+(\Phi_F,\;T_{\mathrm{eff}},\;N_{\mathrm{str}},\;C_{\mathrm{ret}}^{\mathrm{nat}},\;\mathcal W_{\mathrm{free}},\;\mathcal O_{\mathrm{oh}},\;\mathcal R_{\mathrm{src}},\;\text{coarse-graining window},\;\text{outcome independence})
 $$
 where $\Phi_F$ records the available-work flux supplied by the complete free-energy and work ledger, $T_{\mathrm{eff}}>0$ is the temperature of the registered reset bath, and $n_{\mathrm{str}}(t)$ counts retained structural quanta in an individual record. The rate-certificate fields are $N_{\mathrm{str}}(t):=\mathbb E[n_{\mathrm{str}}(t)]$ and $C_{\mathrm{ret}}^{\mathrm{nat}}(t):=\varepsilon_0N_{\mathrm{str}}(t)$ when that structural normalization is used. The record $\mathcal W_{\mathrm{free}}$ specifies all paying sources and storage changes, $\mathcal O_{\mathrm{oh}}\ge0$ records mean overhead without double counting charged reset work, and $\mathcal R_{\mathrm{src}}$ records any Source-Principle relocation of payment. Proposition B.8f states the additional reset, counting, interval-budget and rate-regularity premises.
 
@@ -1166,11 +3697,11 @@ $$
 \|\Delta T_{\mathrm{growth}}(I)\|
 \le K_I\Delta N_{\mathrm{str}}(I).
 $$
-Then $\|\Delta T_{\mathrm{growth}}(I)\|\le K_IB_I$. Any initial source contribution has its own registered bound. Negligible contamination of the Appendix U $\Lambda$ branch follows only if the total source bound lies below the residual budget specified before comparison.
+Then $\|\Delta T_{\mathrm{growth}}(I)\|\le K_IB_I$. Any initial source contribution has its own registered bound. Negligible contamination of the Appendix U $\Lambda$ branch follows only if the total source bound lies below the independently certified residual budget for that vacuum branch.
 
 *Proof.* The stress tensor of Definition B.8 is the variational source of the retained cost action by Theorem B.8c and Corollary B.8d.1. The averaging certificate converts the local rate bound into the recorded cosmological source term. Comparison with the accepted residual budget is an ordinary strict-certificate comparison; without it the result is a bound, not a negligibility theorem. ∎
 
-**Corollary B.8d.2 (Vacuum Normalization and $\Lambda$-Absorption).** The continuum Belinfante tensor is defined up to an additive metric-proportional constant absorbed into the cosmological constant. Under
+<a id="corollary-b8d2-vacuum-normalization-and-lambda-absorption"></a>**Corollary B.8d.2 (Vacuum Normalization and $\Lambda$-Absorption).** The continuum Belinfante tensor is defined up to an additive metric-proportional constant absorbed into the cosmological constant. Under
 $$
 T'_{\mu\nu}:=T_{\mu\nu}^{(\mathrm{MPU})}+\sigma g_{\mu\nu},
 $$
@@ -1192,7 +3723,7 @@ G_{\mu\nu}+(\Lambda+K\sigma)g_{\mu\nu}=KT'_{\mu\nu}.
 $$
 This is the stated transformation. ∎
 
-**Theorem B.6 (Correspondence with Standard Physical Forms)**
+<a id="theorem-b6-correspondence-with-standard-physical-forms"></a>**Theorem B.6 (Correspondence with Standard Physical Forms)**
 
 The macroscopic tensor $T_{\mu\nu}^{(MPU)}(x)$ (Def B.8) reproduces standard forms:
 (a) **Vacuum State $\omega_{vac}$:** In a Poincaré-invariant vacuum, symmetry implies that the vacuum expectation of the stress-energy tensor is proportional to the metric:
@@ -1214,6 +3745,300 @@ $$
 
 *Proof.* (a) In a Poincaré-invariant vacuum, translation invariance makes $T_{\mu\nu}^{(MPU)}\big|_{vac}$ constant, and Lorentz invariance restricts a constant symmetric rank-two tensor to a multiple of $g_{\mu\nu}$. In the convention of Equation (76), that vacuum multiple is absorbed into $\Lambda$ by definition of the renormalized excitation tensor, giving (B.17). (b) In the local rest frame and signature $(-,+,+,+)$, isotropy gives $T_{0i}=0$, $T_{ij}=p_{th}\delta_{ij}$, and $T_{00}=e_{th}$. The displayed covariant tensor has exactly those components. Here $e_{th}$ has energy-density units; if a mass density $\rho_m$ is used instead, then $e_{th}=\rho_m c^2$. ∎
 
+<a id="lemma-b8h0-zero-storage-host-and-owned-auxiliary-interface"></a>**Lemma B.8h.0 (Zero-Storage Host and Owned Auxiliary Interface).**
+
+#### B.8h.0.1 The baseline is independently checked
+
+Use the task-local 75-bit host of Theorem C.6c.P17a with its original degenerate storage $H_{\mathrm{core}}=0$ and finite ideal gates. ROM loading consists of its actual sixteen $X$ writes. The core's data, ROM and cursor storage energies are zero before and after each gate. The accepted gate generator is $H_U=\pi\hbar(I-U)/(2\tau_U)$, with its registered duration and exact $U$.
+
+For a square pulse with zero storage Hamiltonian, the initial switching work is $\operatorname{tr}(\rho H_U)$. During the pulse this expectation is conserved because $H_{U}$ generates the evolution. The final switching work is $-\operatorname{tr}(U\rho U^*H_U)=-\operatorname{tr}(\rho H_U)$. Thus the total work of the actual pulse is exactly zero for every input density matrix. This is an operator identity $[U,H_U]=0$, not cancellation only on one favorable task realization. The control receives back the supplied pulse energy. Its peak stored energy, timing, support and quantum fluctuations are still physical and retained.
+
+All finitely many original ROM/data/cursor gates have this property. The registered reset-free basis copies and reversible source/circuit operations also use the actual finite unitary primitives. If an instrument dissipates or an actuator has loss, that nonzero debit must be added; the ideal source does not assume a loss and then delete it. The ideal finite instrument/source branch is the same branch already used by the accepted host.
+
+Fix one common intervention window $[t_0,t_1]$ and comparator before assigning either rate. At $t_{0}$ both protocols receive the identical retained prepared core/source/controller resources and the same uncharged service flag. Initial preparation precedes $t_{0}$ and remains in the absolute source action/cost. During $[t_0,t_1]$ the baseline performs the nominated reversible core operations and leaves the optional flag uncharged; the event-service protocol performs the same operations and additionally runs its required flag-loading service. Both clocks end at the same $t_{1}$, retaining every output. The actual work meter runs over this same interval in both cases, with $\tau_0=t_1-t_0$. Thus their measured work values are exactly 0 and $E_{\mathrm{res},h}$, respectively, rather than using different accounting windows to force an excess.
+
+Prepare the original blank core and source/controller resources before this common running window, with their actual finite work/free-energy/service ledger. No reset occurs in the window. All old states, outcome records and correlations remain. The running-work meter records their actual cyclic control energy exchange; it does not bill their prior preparation a second time or claim that preparation had zero cost.
+
+For this explicitly incremental finite-window net-work convention, the independently recorded running baseline is
+
+$$
+R_0=0,\quad H_{\mathrm{core}}=0,\quad R_0 \tau_0=\langle H_{\mathrm{core}}\rangle=0.
+\tag{Z1}
+$$
+
+Theorem 29 permits this nonnegative zero value and uses the independently registered $\tau_{0}$. It makes no positive universal tick claim. If R is instead defined to include an amortized initial blank/source/controller charge, its value is different and Z1 is not that convention's calibration. This boundary must remain in any downstream use.
+
+The autonomous B.3 observation window is a dormant-core storage/readout interval between its owned driven stages. A dormant core does not perform its whole qualifying adaptive loop during that interval. Its original declared arming and task schedule, including genuine pre-target prediction and update, remains the actual surrounding source protocol. No new universal requirement forces every stage into the autonomous window, and no internal pulse term is discarded when it is present.
+
+#### B.8h.0.2 Positive excess is a required physical service record
+
+The added source uses a declared ready/completion flag $F$ with Hamiltonian $H_F=E_{\mathrm{res},h}|1\rangle\langle 1|$. Its initial zero flag is part of the supplied blank service apparatus. The actual finite service loads $F$ to one only after the required initialization/calibration/readout checks have completed; its arming port accepts an event only with $F=1$. Its instrument retains all checks and produces the ready record, so the flag has an operational role in the source. It is not an unrelated reservoir attached only to fit B.6.
+
+Use an exact cyclic loading drive on that flag. The supplied work is the directly metered energy difference $E_{\mathrm{res},h}$. The loaded record is retained throughout the observation window and never reset there. Its charge-one sector is invariant under the admitted event Hamiltonian. If the apparatus admits flag failure, de-excitation, or a coherent superposition with the unready sector, those branches require the explicit $|1\rangle\langle 1|$ operator and their own price/source blocks; the scalar-sector identity below may not be used outside its domain.
+
+On the common intervention window of Section 1, the local operational price for the source's additional ready-record service is the actually measured $E_{\mathrm{res},h}/\tau_0$. It is separate from source/donor interaction energy and from prior blank preparation. No later recipient energy gain is charged again as this service cost.
+
+On each unchanged core register the single genuine coarse bin $\hat{C}=3$ I. It resolves no exact depths. The actual source cost values and one permitted convex interpolation are
+
+$$
+\begin{aligned}
+R(1)&=0,\quad R(3)=E_{\mathrm{res},h}/\tau_0, \\
+R(C)&=E_{\mathrm{res},h}(C-1)^2/(4 \tau_0),\quad C\ge 1, \\
+R_I(3)&=0.
+\end{aligned}
+\tag{Z2}
+$$
+
+Only the displayed sampled values enter the spectral identity. The registered interpolation makes no claim of physical implementations at every unmeasured real complexity. The $R_{I}$ value is its stated canonical baseline at $K_{0}$, not a deletion of a nonzero registered verification/reset overhead.
+
+Consequently, on the admitted invariant ready-record sector,
+
+$$
+\tau_0[(R+R_I)(\hat C)-R(C_{\mathrm{op}})I]=E_{\mathrm{res},h} I,\quad C_{\mathrm{op}}=1.
+\tag{Z3}
+$$
+
+The theoretical $C_{P}=1$ of the unchanged admitted core and the proxy value 3 remain distinct. Exact Theorem 2 equilibrium identification is not asserted. The required service belongs to the source configuration being measured at the operational proxy coordinate; the scalar baseline $R(C_{\mathrm{op}})$ is the independently measured unchanged-core comparator. These references must not be exchanged after the fact.
+
+#### B.8h.0.3 Genuine auxiliary interaction and exact source pullback
+
+Use two unchanged core vertices $v,u$ with conserved loaded-ROM projectors $P_r(v),P_r(u)$. Load their ROMs before introducing nonzero auxiliary energy. Put the actual finite material source Hamiltonian $G_{h}$ on explicitly registered local auxiliaries and use
+
+$$
+V_{vu}=P_r(v)P_r(u) \otimes G_h.
+\tag{Z4}
+$$
+
+This is a genuine conditional coupling: it vanishes if a core is not loaded. On the admitted loaded-ROM sector it equals the original physical $G_{h}$, leaving all source probabilities and actual proper-time evolution unchanged. The bare storage Hamiltonians of these auxiliaries in this design are zero; their conditional physical energy is supplied by Z4 and its actual preparation stroke.
+
+On the charge-one service sector the actual closed observation Hamiltonian is
+
+$$
+H_{\mathrm{total}}=2 E_{\mathrm{res},h} I+V_{vu}.
+$$
+
+The two B.6 local energies are exactly
+
+$$
+\epsilon_v=E_{\mathrm{res},h} I+V_{vu}/2,\quad \epsilon_u=E_{\mathrm{res},h} I+V_{vu}/2.
+\tag{Z5}
+$$
+
+Z3 proves the spectral identity on the full core Hilbert space and admitted service sector. For any actual local material split $G_h=\epsilon_S+\epsilon_D$, the supported improvement
+
+$$
+B_{vu}=P_r(v)P_r(u) \otimes (\epsilon_S-G_h/2)
+$$
+
+gives the physical recipient/donor split, as in C11, and the corresponding current correction in Theorem B.3a. This consumes the real auxiliary interaction/current, not a statistical energy assigned from its probabilities. The same construction may be used with the fixed finite Gaussian-mark donor or another actually constructed bounded material $G_{h}$; each keeps its own state, kernel and support proof.
+
+<a id="theorem-b8h-complete-reset-source-frw-averaging-and-residual-certificate"></a>**Theorem B.8h (Complete Reset-Source, FRW Averaging and Residual Certificate).**
+
+#### B.8h.1 Exact normal reset, paid source, and finite approximants
+
+Fix $\theta=k_BT>0$ and $W=2\theta\ln 2$. More generally $W>\theta\ln 2$ works. Let the Gibbs bath basis consist of finite binary words $v$ with energy $W|v|$. Its partition and moments are
+
+$$
+\begin{aligned}
+&r=2\exp(-W/\theta)<1,\qquad Z=(1-r)^{-1}, \\
+&E_{B}=Wr/(1-r),\qquad S_{B}/k_{B}=(W/\theta)r/(1-r)-\ln(1-r).
+\end{aligned}
+$$
+
+All energy moments are finite. At the chosen $W$, $r=1/2$ and $E_B=W$. A degenerate fair scratch $P$, independent of every unchanged retained record $R$, is supplied along with a two-level gap-$W$ battery initially excited and pure. Its state is explicitly supplied nonthermal work stock. The reset module's entire initial energy is $E_0=W+E_B=2W$.
+
+Pair each $|b,v,\text{battery}=1\rangle$ with $|0,vb,\text{battery}=0\rangle$. These are disjoint orthogonal pairs with identical bare energy $W(|v|+1)$. The direct-sum generator $Y=i\sum(|\text{out}\rangle\langle\text{in}|-|\text{in}\rangle\langle\text{out}|)$ is bounded self-adjoint, has norm one and strongly commutes with $H_0=H_B+H_A$. The global unitary $\exp(-i\pi Y/2)$ swaps each pair, with the reverse phase and untouched orthogonal complement, so it is genuinely unitary and not a non-surjective erasure map.
+
+Every input ends with $P=0$ and $\text{battery}=0$, both pure and uncorrelated; the bath stores the erased bit in the last letter. Heat and work are deterministically $W$. The bath entropy increases by $\ln 2$ and its relative entropy to its initial Gibbs law is $W/\theta-\ln 2$. Thus Definition 28 and Theorem 31 hold with $H(P|R)=\ln 2$, positive excess production $\ln 2$ at the chosen $W$, cyclic non-bath endpoint energies, and pure-work battery withdrawal. No non-bath memory keeps the erased input.
+
+At finite depth D retain all pairs with parent depth below D and leave boundary inputs fixed. This is a finite unitary on an actual finite Gibbs bath. Its boundary probability is
+
+$$
+\delta_{D}=(1-r)r^{D}/(1-r^{D+1}).
+$$
+
+The output-error probability is $\delta_D/2$, battery residual excitation is $\delta_{D}$, heat/work are $W(1-\delta_D)$, and residual memory/battery entropies are $h(\delta_D/2)$, $h(\delta_D)$. Work-source correlations are at most $2h(\delta_D)$. These imperfect finite precursors are not called exact Definition-28 resets. The exact normal limit is proved directly above; finite trace, entropy, heat and all energy moments converge, with moment tails $O((D+1)^{k}r^{D})$ and entropy tails $O((D+1)r^{D})$. This is the justified exact-erasure extension expressly allowed by Definition 28.
+
+For the complete finite source, retain every unsuccessful boundary/arming branch rather than postselecting. A union bound over $155J$ reset modules gives total preparation/main-reset error at most $155J\delta_{D}$; the finite provider/count responses inherit this explicit error. Raising the two imperfect ready blanks' gaps can add at most $JW\delta_{D}$ mean prehistory work/energy, and is recorded as such, not zeroed. Unloaded finite-precursor handoff sectors have their actual source/work change retained in the same geometric energy-tail bound. The finite source energy $E_{\mathrm{total},D}$ therefore differs from the normal value by an explicit $O(JW(D+1)r^{D})$ bound. On the observation slab every actual finite pulse commutes with its actual bare energy and all branches remain in the source, so full mean conservation is exact even before $D\to\infty$. Choose $D(h)$ so these absolute source/response errors are below $h^{2}$. The strict comparison has a factor-two margin, so sufficiently fine actual finite precursors also pass with their positive error allowance retained.
+
+#### B.8h.2 Actual predictive transaction and retained count
+
+Each event receives a fair degenerate cue $X_{j}$, with registered later target $Y_j=X_j$. Before cue access the optimal log loss is $\ln 2$; after acquiring a protected provider $D_j=X_j$ the loss is zero. Supply a provider bit $D_{j}$ and a completion flag $F_{j}$, each prepared to zero in prehistory by a separate tree reset; retain all those preparation baths and batteries.
+
+First execute the main independent scratch reset $P_{j}$. During this reset X,D,F and all other R are unchanged, so the full conditional entropy remains ln2. Afterwards rotate the two disjoint pairs
+
+$$
+|x,0,0\rangle_{X,D,F}\leftrightarrow|x,x,1\rangle_{X,D,F},\quad x=0,1,
+$$
+
+with their bounded signed Y generator. This is an actual local cue-controlled provider write and completion event. The $x=0$ branch is still observable as completed because F becomes one. Its real pulse rays have zero Y mean at every time. Keep the data and flag protected under identity storage until the later target query.
+
+The count is the sum of the physical completed-provider flag projectors at registered accounting endpoints. Each retained addressed provider contributes one binary structural label, so $C_{\mathrm{ret}}^{\mathrm{nat}}=(\ln 2)N_{\mathrm{str}}$. All additional marker/address/control stock is explicitly owned even though the structural normalization counts only the binary predictor content. The actual response map reads $D$ on $F=1$ and returns the exact future $Y$. The actual joint output law is $\Pr(X=Y=D=x,F=1)=1/2$. No predictor is declared merely from an unexecuted schedule.
+
+The scratch bits are independent of the entire retained provider record. B.8f requires a distinct charged reset assignment; it does not require that the erased scratch equal the newly retained predictive label. Event j is assigned once to its own preceding main reset, with schedule and interval endpoints frozen before all histories. Consequently all assignment indicators are pre-reset-history measurable, without postselection by heat or outcome.
+
+#### B.8h.3 Full unchanged-host inventory and source ownership
+
+The three-module provider construction is embedded on the admitted unchanged zero-storage 75-bit host interface of Lemma B.8h.0. Use two hosts per event. Prepare their 150 initially fair degenerate bits directly into the fixed desired loaded-ROM/ready codeword with 150 independent tree modules. The exact reset-to-$s$ construction pairs $|b,v,1\rangle$ with $|s,vb,0\rangle$ for each fixed desired bit $s$; all energy, entropy and finite-cutoff proofs are unchanged. No original positive ROM gate is executed in this lifecycle. Preserve their actual core, decoder, and original positive pulse law. The original host capability is dormant on this lifecycle: no new full qualifying/adaptive-loop, calibration-source, or apparatus-certification run is claimed. Only the enumerated direct paid codeword preparations are executed before the new auxiliary tasks. The new energy-preserving ready-load swaps are controlled by the actual conserved loaded-ROM projectors; unready sectors remain unarmed. This is the explicitly performed finite readiness check and charge service, not an assertion that an additional unenumerated historical calibration/readout instrument ran. No exact-complexity claim is made for the enlarged aggregate.
+
+Prepare two additional ready-flag blanks with two tree modules. Their gap is zero while being reset; after the flag is pure zero, raise its unoccupied excited level to W, with zero mean energy change. Load each flag to one by swapping energy W from a distinct supplied excited gap-W battery. The flag-loading interaction conserves its bare energy; the battery ends ground. Retain the loaded ready flags and the discharged batteries. Their total additional source is 2W, not twice that amount.
+
+Per event the census is therefore:
+
+$$
+\begin{aligned}
+&150\text{ host-bit preparation modules} \\
+&\quad+2\text{ ready-blank preparation modules} \\
+&\quad+2\text{ provider/completion preparation modules} \\
+&\quad+1\text{ main scratch reset module} \\
+&\quad=155\text{ tree modules},
+\end{aligned}
+$$
+
+plus two supplied $W$ work batteries whose energy ends in the two ready flags. All used baths stay at their actual comoving locations. Preparation initially uses the actual $G_{\mathrm{material}}$ on its auxiliaries. Once both ROMs are loaded, perform the finite handoff $H(s)=[(1-s)I+sP_{\mathrm{loaded}}(v)P_{\mathrm{loaded}}(u)]G_{\mathrm{material}}$, with $s$ from 0 to 1. On the occupied exact loaded sector this remains identically $G_{\mathrm{material}}$, so switching work, physical metric source and stored energy are unchanged. There is no second activation debit and no additional bare copy of $G_{\mathrm{material}}$. After this handoff the actual loaded-ROM projector coupling is $P_{\mathrm{loaded}}(v)P_{\mathrm{loaded}}(u)\otimes G_{\mathrm{material}}$, where $G_{\mathrm{material}}$ is precisely this source Hamiltonian; on the admitted sector it is the constructed source, and on unarmed sectors it does not claim a completed event. The B.6 half-edge allocation counts this material energy exactly once.
+
+Thus for J events the complete observation source is
+
+$$
+\begin{aligned}
+E_{\mathrm{material}} &= J(155E_{0}+2W)=312JW=624J\theta\ln 2, \\
+E_{\mathrm{total}} &= E_{\mathrm{material}}=312JW.\ \text{No }E_{\mathrm{ctrl}}\text{ work-supply factor is present in this final source.}
+\end{aligned}
+$$
+
+All performed reset, ready-load and provider-write rotations conserve their bare energies and have zero selected switching-power mean; positive work is supplied only by the explicitly counted tree and ready-loading batteries. No positive original ROM drive is performed, so no fictitious unowned switching headroom is needed. The external drive profiles and timing standards are the admitted ideal controlled-source parameters; no autonomous physical clock, powered receiver or extra mounting mass is claimed. Carrier addresses are physical comoving positions sampled in the ensemble, not hidden infinite-precision digital strings.
+
+Choose reset/load pulse strength $|\hbar\Omega|\le W/2$. Every coupled reset/load block has bare energy at least $W$, so its total Hamiltonian stays nonnegative. Condition provider writing on the two loaded ready flags; their $2W$ bare energy likewise keeps that Hamiltonian nonnegative for the same strength bound. The interaction is off on unarmed sectors. Its nonzero norm, variance and actual duration remain resources.
+
+There is a finite actual prehistory-fit design. With the independently fixed $\Lambda$ and $u_0=\operatorname{asinh}(\sqrt{200})$, choose $L_{\mathrm{pre}}=(t_0-t_B)/2>0$ and $159J$ sequential preparation slots, including $154J$ tree preparations, $2J$ ready loads, $2J$ zero-mean unoccupied-level gap raises and $J$ loaded-projector handoffs. Let $\delta=L_{\mathrm{pre}}/(159J)$; a $\sin^{2}$ pulse of peak $\pi/\delta$ has area $\pi/2$. Choose $W\ge 2\pi\hbar/\delta$ and $\theta=W/(2\ln 2)$, then choose the forward volume below using that $W$. All pulses fit after the regular cosmological starting time and before $t_0$; later main resets/provider writes fit a finite observation interval. This is a forward source choice, not a changed residual allowance.
+
+#### B.8h.4 Free-energy/reset/overhead and full payer map
+
+Each initial pure battery is declared input nonthermal work stock, not a free thermal resource. Each tree reset transfers $W$ from its battery to its own bath; the used bath retains its actual entropy and energy. Per provider there are 154 preparation resets before the main interval, two $W$ ready-flag loading debits, and the one main reset. Total displayed lifecycle work withdrawal is $157W$. The initial bath stock is $155(E_0-W)$; final bath gains and loaded flags give
+
+$$
+155(E_{0}-W)+157W=155E_{0}+2W.
+$$
+
+This is the same source as the inventory, not an additional heat summand.
+
+On the main reset pulse with proper-time angle $\alpha_{j}$, the actual bath/battery energy transfer is
+
+$$
+\begin{aligned}
+&E_{A}=W\cos^{2}\alpha_{j},\qquad E_{B}=E_{B,\mathrm{initial}}+W\sin^{2}\alpha_{j}, \\
+&\Phi_{F,j}=W\sin(2\alpha_{j})\,\dot{\alpha}_{j}\ge 0.
+\end{aligned}
+$$
+
+Choose monotone pulses. Their integrable $\Phi_{F}$ records **stored work withdrawals**. For admitted intervals consisting of complete scheduled reset/provider blocks, $\int\Phi_F=nW$, $W_{\mathrm{reset}}=nW$, and the provider-write mean work is zero. Prehistory preparation belongs to its own overhead/lifecycle entries; if an interval includes it, its debits are included without adding structural events. Any declared overhead is nonnegative and separately enumerated.
+
+Therefore B.8f holds with $h_{\min}=\ln 2$ and
+
+$$
+\Delta N_{\mathrm{str}}=n\le B_{I}=nW/(\theta\ln 2)=2n.
+$$
+
+No all-subinterval instantaneous derivative is asserted for a jump record, and no reversible saturation is claimed.
+
+#### B.8h.5 Actual action, metric source, and D.6c/D.6d closure
+
+For each comoving source worldline $X$ and a frozen actual drive $\Omega$, set $\ell=\sqrt{-g_{mn}\dot{X}^m\dot{X}^n}$. The actual Hamiltonian is $\ell(H_0+\hbar\Omega Y)$. Its canonical action is the half-density symplectic term minus the Hamiltonian integral. Since $[H_0,Y]=0$ and each initially occupied pair rotates through real coefficients, $\langle Y\rangle=0$ and $\langle H_0\rangle=E_0$ throughout. Thus all physical first metric insertions are the genuine proper-worldline energy $E_0u^mu^n$; switching-power mean vanishes. Pulse norm and variance remain nonzero resources. Provider writes and degenerate storage have zero mean source; ready flags contribute their actual positive dust energies.
+
+The action variation holds internal fields fixed before evaluating the solution. Equivalently, for each equal-energy pair write $z=\sqrt{p}\exp(-i\phi)(\cos\alpha,\sin\alpha)$. Its real internal ray has zero Berry term; canonical $L=\hbar p\dot{\phi}-\ell pE$. At **fixed conserved occupation p**, Routh reduction of the cyclic phase gives $L_R=-\ell pE$. Summing gives the actual fixed-occupation matter action, not a naive differentiation of a substituted zero on-shell canonical action. Occupations are ensemble/action data, not an accessible purification that retains the erased bit.
+
+The Euclidean partner is the positive proper-length functional
+
+$$
+F_{\mathrm{tree},E}=\int n_{\mathrm{com}}(x)\,E_{\mathrm{module}}\sqrt{g_{00}}\,dt\,d^{3}x,
+$$
+
+with all sources in $E_{\mathrm{module}}$. Its Lorentzian signature partner has minus proper length. Freeze a compact regular uniformly positive Riemannian metric class and fixed occupation data. The actual finite-source cell quadratures obey, for every retained convergent sequence,
+
+$$
+\begin{aligned}
+|F_{h}[g_{h}]-F[g]| \\
+&\le C\,(\text{cell quadrature error}+\lVert g_{h}-g\rVert_{C^{0}} \\
+&\qquad+|E_{\mathrm{module},D}(h)-E_{\mathrm{module}}|),
+\end{aligned}
+$$
+
+and the same estimate holds for first metric variations on compact test families. Bounded derivatives and ellipticity make $C$ uniform. Thus D.6c universal cell consistency, liminf and common recovery hold. Add this nonnegative bounded-on-class functional to the same curvature/volume cell averages and accepted D.6d coefficient normalization. For the curvature term on a compact $C^k$ regular class ($k$ at least 3), use actual local curvature samples/stencils with uniform consistency and exact cell weights; their weighted error is bounded by $C(\lVert g_h-g\rVert_{C^2}+\omega_R(h))$, tending to zero. Exact volume-cell sums give the volume term. Common smooth sampling/interpolation gives one recovery for all three components. Bounded curvature and finite volume give the uniform lower bound; compact $K$ gives equicoercivity and properness. These prove, rather than assume, the relevant general D.6b/c hypotheses. The constrained determinant-one $\Gamma$ domain is separate from the physical first-variation neighborhood: the actual full proper-time action is defined for all compact metric directions, while trace-changing variations are not falsely called tangents to determinant-one $K$. This proves the new matter summand through D.6c.1/D.6d without claiming an arbitrary curved thermal scalar theorem.
+
+$H_{0}$ is a B.6 source Hamiltonian counted once. No new repeatedly consumed $R=H_0/\tau$ is introduced. The separate B.8f flux is actual battery work; conservative source energy and consumed work are not confused. A broader normalized/full-PCE theorem for the enlarged source is not asserted or required by the displayed D.6c–d premises.
+
+#### B.8h.6 Common expanding FRW mean and exact conservation
+
+Let the supplied addresses be independent uniform comoving locations in a finite three-torus of volume $V_{\mathrm{com}}$. Each realization is a local source; the discrete mean is lattice-homogeneous and its cell reconstruction is homogeneous. The common physical mean is dust:
+
+$$
+\rho(t)=E_{\mathrm{total}}/[V_{\mathrm{com}}a(t)^{3}],\quad T_{00}=\rho,\quad T_{0i}=T_{ij}=0
+$$
+
+in the comoving orthonormal frame. This is the physical expectation of the source, not a statement that every finite random realization is exactly FRW or that its fluctuations vanish.
+
+In synchronous time use the exact compatible cell volume $\mu_h=\int_{\mathrm{cell}}a(t)^{3}\,dt\,d^{3}x$ and the physical volume-weighted cell source $\Theta_{h00}=\rho_{\mathrm{com},D}\Delta t\,\Delta x^{3}/\mu_h$. Their product is exactly constant in time. This is the actual cell average of $\rho(t)$, rather than identifying a sampled volume with an exact cell volume. Since $\Gamma^\lambda_{00}=0$, only $\partial_t\psi_0$ is paired. Conservative test face differences with zero external faces telescope exactly at every mesh, including finite reset cutoffs. Other gradient components use consistent Christoffel stencils. On compact positive-$a$ slabs all total-variation, compact support and consistency conditions of B.8a follow. Smooth full-family density and the same-action first-variation limit establish B.8b/c. The local null contraction $\rho(u\cdot k)^{2}$ and actual boost weight have ordinary convergent face quadrature, proving the source/horizon overlap of B.8d.1.
+
+The same gravity-plus-dust action has the expanding flat Einstein–dust–Lambda solution, in energy-density units,
+
+$$
+\begin{aligned}
+H^{2} &= 8\pi G\rho/(3c^{2})+\Lambda c^{2}/3, \\
+\dot{H} &= -4\pi G\rho/c^{2}, \\
+u(t) &= u_{0}+c\sqrt{3\Lambda}\,(t-t_{0})/2, \\
+\rho(t) &= \rho_{\Lambda}\operatorname{csch}^{2}u(t), \\
+a(t) &= [\sinh u(t)/\sinh u_{0}]^{2/3}, \\
+\rho_{\Lambda} &= \Lambda c^{4}/(8\pi G).
+\end{aligned}
+$$
+
+The source continuity equation $\dot{\rho}+3H\rho=0$ and both field equations hold by direct substitution. Reset pulses use the same comoving proper time $t$. $\Lambda,c,G$ are independently nominated fixed coefficients on the same mathematical branch, not values inferred from an engine cost.
+
+For a determinant-one retained coordinate class, use $d\sigma=a^{3}dt$. Then $g_{\sigma\sigma}=-a^{-6}$ and $g_{ij}=a^{2}\delta_{ij}$, with determinant $-1$; its Riemannian counterpart has determinant $+1$. The physical Hamiltonian gets the actual $\ell=a^{-3}$ and the transported same drive. The source is $T_{\sigma\sigma}=\rho_{\mathrm{com}}a^{3}$, and the exact paired test gradient is $a^{-3}D_\sigma(a^{3}\psi_\sigma)$. Its contraction again telescopes. Freeze a compact regular determinant-one neighborhood containing this transported slab and use the displayed absolute cell estimates; if a historical smaller $K$ excludes it, this is an explicit new regular recovery class, not an unsupported assertion that it belonged to $K$. No flat F05 scalar state is transported into curved dynamics.
+
+#### B.8h.7 Averaging coefficient, source norm, and observable maps
+
+Use the spatial physical-volume average on the fixed comoving torus and time slab $I$. Its homogeneity scale is $a(t)V_{\mathrm{com}}^{1/3}$. The source norm is the maximum absolute orthonormal tensor component. The total source bound is $\sup_I\rho(t)=\rho(t_0)$.
+
+Compare executing the reset/provider protocol with the same initially supplied inventory idle at the same cosmic time. Both have the same total stress: execution only transfers battery energy to its own bath, and provider writes have zero mean source. Thus the **retained-growth response** is exactly zero and $K_{I}=0$. This is not the total time difference caused by cosmological dilution. Bath-only growth is $nW/[V_{\mathrm{com}}a^{3}]$, paired with opposite battery loss and never added twice.
+
+Operational maps are explicit:
+
+- Actual energy measurements $H_B,H_A$ and the ready flag charges give all payer/source values.
+- The post-write $F,D$ observables give count and exact prediction responses.
+- The physical metric insertion from the same Hamiltonian gives dust density and local null flux.
+- The averaged density is the actual volume-normalized owned energy.
+- On the common FRW branch $\Lambda_H=3H^{2}/c^{2}$ has contamination $8\pi G\rho/c^{4}$, while $\Lambda_{\mathrm{geom}}=(3H^{2}+2\dot{H})/c^{2}$ equals the nominated $\Lambda$.
+
+For finite response errors, $|\delta\Lambda_{\mathrm{geom}}|\le[6|H|\epsilon_H+3\epsilon_H^{2}+2\epsilon_{\dot{H}}]/c^{2}$. These ideal response maps do not claim an uncharged autonomous detector. They do not replace the observable in a separately specified empirical Appendix U likelihood.
+
+#### B.8h.8 Independently registered budget and strict forward comparison
+
+Fix $\epsilon=1/100$ and $R=\rho_\Lambda/100$ before the source comparison. This is a mathematical one-percent vacuum-dominance allowance in the full orthonormal tensor norm, with fixed $\Lambda,c,G$ and physical energy-density units.
+
+With the explicit full inventory now fixed, choose the forward density by
+
+$$
+\begin{aligned}
+V_{\mathrm{com}} &= 200E_{\mathrm{total}}/\rho_{\Lambda}, \\
+a(t_{0}) &= 1,\quad u_{0}=\operatorname{asinh}(\sqrt{200}).
+\end{aligned}
+$$
+
+Then the common solution has $\rho(t_0)=\rho_\Lambda/200$ and $a(t)\ge 1$ throughout any later finite observation slab containing the actual finite-duration protocol. Consequently
+
+$$
+\begin{aligned}
+&\text{initial full-source bound}+\text{total-growth bound} \\
+&\quad=\rho_{\Lambda}/200+0 \\
+&\quad<\rho_{\Lambda}/100=R,
+\end{aligned}
+$$
+
+with exact ratio 1/2. Every tree bath, battery, host-purity preparation and positive ready flag is included. The one-Hubble estimator's source contamination is at most Lambda/200, while the two-response model identity cancels dust exactly. The full-source comparison, not that cancellation, proves the registered bound.
+
+This is not an empirical cosmological error claim and does not solve Appendix U's separate carrier/action/prefactor problem. It is a populated original mathematical engine/backreaction certificate on one common branch with a genuinely preaccepted residual allowance.
+
 ## B.10 Construction Pathway (Summary)
 
 The appendix builds a physical stress-and-energy description in stages. It begins with computational and energy records, adds local flow and momentum information, and then passes to a large-scale conserved source when the required physical and geometric links are available.
@@ -1230,5 +4055,3 @@ This appendix gives a typed construction pathway for $T_{\mu\nu}^{(MPU)}$:
 6. Theorem B.6 identifies vacuum and perfect-fluid forms after the corresponding symmetry, renormalization, and local-equilibrium hypotheses are supplied.
 
 The resulting tensor is suitable as the source in Equation (76) only on a branch that also carries the metric-continuum, variational, horizon-flux, normalization, and overlap certificates required by the gravity derivation.
-
-

@@ -28,8 +28,8 @@ const source = fs.readFileSync(contentsPath, 'utf8');
 const unresolved = [];
 let links = 0;
 const updated = source.replace(/\[([^\]\n]+)\]\(([^)\n]+\.md)(?:#([^)]*))?\)/g, (original, label, file, fragment) => {
-  // Companion verification documents open directly, outside the 51-section reader.
-  if (file.startsWith('related/pure_s_universality/')) {
+  // Companion documents open directly, outside the 51-section reader.
+  if (file.startsWith('related/pure_s_universality/') || file.startsWith('related/calculation_companions/')) {
     assert(fs.existsSync(path.join(docs, file)), 'Missing companion document: ' + file);
     return original;
   }

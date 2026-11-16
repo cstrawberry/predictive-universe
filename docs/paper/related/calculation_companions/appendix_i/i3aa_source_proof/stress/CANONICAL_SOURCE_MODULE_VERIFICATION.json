@@ -1,0 +1,36 @@
+{
+  "full_native_inventory": {
+    "scalar_J": 1,
+    "cells": 1,
+    "canonical_modes": 4,
+    "K": 8,
+    "full_dimension": 4096,
+    "native8_factors": 4,
+    "omitted_native_states": 0,
+    "eta": 0.001,
+    "coordinate_period": 6.283185307179586,
+    "physical_energy_multiplier": "ell/kappa",
+    "zero_point_subtracted": false,
+    "norm_Q": 0.014749667232547354,
+    "registered_Q_budget": 2,
+    "norm_P_density_bound": 0.0023474824490204685,
+    "controls": "autonomous q0 material potential",
+    "matrix_evaluator_certification": "floating evaluation; not an interval certificate"
+  },
+  "max_hermiticity_error": 2.710505431213761e-20,
+  "max_relative_actual_metric_derivative_error": 6.394348254318955e-11,
+  "candidate_base_residual_replay_error": 8.621575675604731e-16,
+  "different_candidate_changes_actual_force_density": 0.0013932485943935647,
+  "max_coefficient_interval_width": 5.048709793414476e-29,
+  "executed_control_interval": {
+    "certified": true,
+    "interval": [
+      "-757303267065216119654758929/39614081257132168796771975168",
+      "322646071905018724743471381/19807040628566084398385987584"
+    ],
+    "panels": 128,
+    "bits": 4
+  },
+  "numerical_control_integral": -0.0014097754367793638,
+  "coverage": "Actual all-state entry/metric derivative smoke checks, candidate residual map, executed outward coefficient/control interval primitives. Not a large finite-U history replay."
+}

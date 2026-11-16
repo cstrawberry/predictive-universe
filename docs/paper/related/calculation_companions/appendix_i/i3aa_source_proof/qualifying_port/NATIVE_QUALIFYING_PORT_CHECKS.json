@@ -1,0 +1,20 @@
+{
+  "actual_gates": 15,
+  "all8_native_states_active": true,
+  "all_pass": true,
+  "attained_program_minimum_bits": 3,
+  "common_controller_geometry_integration_not_yet_claimed": true,
+  "complete_mode_scores": {
+    "0": "1",
+    "1": "1/8",
+    "2": "1/8",
+    "3": "1/8",
+    "4": "1/8",
+    "5": "1/2"
+  },
+  "dimension_at_most7_strictly_fails_threshold": true,
+  "exact_program_shorter_census_complete": true,
+  "full_native_gate_involution_columns": 7680,
+  "record_sha256": "c8eb79b08f37436bac00792c9c9a7bff8463e9d3e48252c0c24b2fe4133aba34",
+  "source_cases": 3072
+}

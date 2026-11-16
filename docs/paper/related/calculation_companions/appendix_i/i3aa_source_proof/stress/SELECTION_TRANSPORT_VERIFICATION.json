@@ -1,0 +1,15 @@
+{
+  "symbolic_exact_branch_solves_transport": true,
+  "bounds": {
+    "F00_lower": 0.1897,
+    "F01_abs_upper": 0.02,
+    "trace_Fii_t_abs_upper": 0.3019102805431928,
+    "A_abs_upper": 0.03514320857494289,
+    "C_abs_upper": 0.3003956075761665,
+    "D_abs_upper": 5.3241960991038475,
+    "transport_L_upper": 5.419772491457977,
+    "residual_multiplier_upper": 1.7571604287471445
+  },
+  "valid_declared_roundings": true,
+  "scope": "Uniform candidate |B|<=log 3, fixed Phi=id, fixed diagonal shear-free metric class, tau in [1,2]."
+}

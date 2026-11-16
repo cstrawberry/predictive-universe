@@ -305,6 +305,10 @@
     try { localStorage.setItem('pu-reader-theme', theme); } catch (_) {}
     syncThemeLabel();
   });
+  // Load the visualizations in the background so the tab opens instantly; the scenes stay paused while hidden.
+  const preloadFrame = () => { if (!frame.hasAttribute('src')) frame.src = new URL(frame.dataset.src + '#' + currentScene, rootURL).href; };
+  const schedulePreload = () => ('requestIdleCallback' in window ? requestIdleCallback(preloadFrame, { timeout: 1200 }) : setTimeout(preloadFrame, 200));
+  if (document.readyState === 'complete') schedulePreload(); else window.addEventListener('load', schedulePreload, { once: true });
   frame.addEventListener('load', () => { frameReady = true; sendFrame({ type: 'visibility', visible: view === 'visualizations' }); sendFrame({ type: 'scene', key: currentScene }); });
   window.addEventListener('message', event => {
     if (event.source !== frame.contentWindow || (rootURL.origin !== 'null' && event.origin !== rootURL.origin) || event.data?.channel !== 'pu-visualization') return;
